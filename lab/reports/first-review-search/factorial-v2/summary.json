@@ -1,0 +1,648 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-first-review/factorial-v2",
+  "runs": 864,
+  "groups": {
+    "all": {
+      "six_month_window": 260,
+      "promotion": 64,
+      "review": 476,
+      "alive_promoted": 40,
+      "eliminated": 604
+    },
+    "arm:coverage/balanced/mentor": {
+      "eliminated": 7,
+      "promotion": 0,
+      "review": 9,
+      "alive_promoted": 0,
+      "six_month_window": 5
+    },
+    "arm:coverage/balanced/none": {
+      "eliminated": 9,
+      "promotion": 0,
+      "review": 5,
+      "alive_promoted": 0,
+      "six_month_window": 3
+    },
+    "arm:coverage/balanced/project": {
+      "six_month_window": 2,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "eliminated": 10
+    },
+    "arm:coverage/balanced/report": {
+      "six_month_window": 2,
+      "promotion": 0,
+      "review": 6,
+      "alive_promoted": 0,
+      "eliminated": 10
+    },
+    "arm:coverage/network/mentor": {
+      "eliminated": 8,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "six_month_window": 4
+    },
+    "arm:coverage/network/none": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 8,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:coverage/network/project": {
+      "eliminated": 9,
+      "promotion": 0,
+      "review": 6,
+      "alive_promoted": 0,
+      "six_month_window": 3
+    },
+    "arm:coverage/network/report": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 6,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:coverage/recovery/mentor": {
+      "eliminated": 11,
+      "promotion": 0,
+      "review": 6,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:coverage/recovery/none": {
+      "eliminated": 11,
+      "promotion": 0,
+      "review": 5,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:coverage/recovery/project": {
+      "eliminated": 12,
+      "promotion": 0,
+      "review": 5,
+      "alive_promoted": 0
+    },
+    "arm:coverage/recovery/report": {
+      "six_month_window": 3,
+      "promotion": 0,
+      "review": 8,
+      "alive_promoted": 0,
+      "eliminated": 9
+    },
+    "arm:coverage/reports/mentor": {
+      "eliminated": 9,
+      "promotion": 1,
+      "review": 9,
+      "alive_promoted": 1,
+      "six_month_window": 3
+    },
+    "arm:coverage/reports/none": {
+      "six_month_window": 1,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "eliminated": 11
+    },
+    "arm:coverage/reports/project": {
+      "eliminated": 8,
+      "promotion": 0,
+      "review": 10,
+      "alive_promoted": 0,
+      "six_month_window": 4
+    },
+    "arm:coverage/reports/report": {
+      "eliminated": 12,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0
+    },
+    "arm:coverage/risk/mentor": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 6,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:coverage/risk/none": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:coverage/risk/project": {
+      "six_month_window": 3,
+      "promotion": 1,
+      "review": 6,
+      "alive_promoted": 1,
+      "eliminated": 9
+    },
+    "arm:coverage/risk/report": {
+      "eliminated": 8,
+      "promotion": 1,
+      "review": 9,
+      "alive_promoted": 0,
+      "six_month_window": 4
+    },
+    "arm:coverage/skill/mentor": {
+      "eliminated": 12,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0
+    },
+    "arm:coverage/skill/none": {
+      "eliminated": 12,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0
+    },
+    "arm:coverage/skill/project": {
+      "eliminated": 8,
+      "promotion": 0,
+      "review": 10,
+      "alive_promoted": 0,
+      "six_month_window": 4
+    },
+    "arm:coverage/skill/report": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:first/balanced/mentor": {
+      "eliminated": 6,
+      "promotion": 2,
+      "review": 6,
+      "alive_promoted": 2,
+      "six_month_window": 6
+    },
+    "arm:first/balanced/none": {
+      "six_month_window": 4,
+      "promotion": 2,
+      "review": 7,
+      "alive_promoted": 1,
+      "eliminated": 8
+    },
+    "arm:first/balanced/project": {
+      "six_month_window": 7,
+      "promotion": 0,
+      "review": 9,
+      "alive_promoted": 0,
+      "eliminated": 5
+    },
+    "arm:first/balanced/report": {
+      "six_month_window": 5,
+      "promotion": 2,
+      "review": 5,
+      "alive_promoted": 2,
+      "eliminated": 7
+    },
+    "arm:first/network/mentor": {
+      "eliminated": 8,
+      "promotion": 3,
+      "review": 6,
+      "alive_promoted": 2,
+      "six_month_window": 4
+    },
+    "arm:first/network/none": {
+      "six_month_window": 4,
+      "promotion": 1,
+      "review": 6,
+      "alive_promoted": 1,
+      "eliminated": 8
+    },
+    "arm:first/network/project": {
+      "eliminated": 8,
+      "promotion": 2,
+      "review": 6,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:first/network/report": {
+      "eliminated": 8,
+      "promotion": 1,
+      "review": 5,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:first/recovery/mentor": {
+      "eliminated": 2,
+      "promotion": 1,
+      "review": 10,
+      "alive_promoted": 1,
+      "six_month_window": 10
+    },
+    "arm:first/recovery/none": {
+      "six_month_window": 8,
+      "promotion": 3,
+      "review": 8,
+      "alive_promoted": 3,
+      "eliminated": 4
+    },
+    "arm:first/recovery/project": {
+      "six_month_window": 9,
+      "promotion": 2,
+      "review": 9,
+      "alive_promoted": 2,
+      "eliminated": 3
+    },
+    "arm:first/recovery/report": {
+      "six_month_window": 10,
+      "promotion": 3,
+      "review": 10,
+      "alive_promoted": 3,
+      "eliminated": 2
+    },
+    "arm:first/reports/mentor": {
+      "eliminated": 10,
+      "promotion": 2,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:first/reports/none": {
+      "eliminated": 9,
+      "promotion": 2,
+      "review": 5,
+      "alive_promoted": 1,
+      "six_month_window": 3
+    },
+    "arm:first/reports/project": {
+      "six_month_window": 5,
+      "promotion": 4,
+      "review": 7,
+      "alive_promoted": 3,
+      "eliminated": 7
+    },
+    "arm:first/reports/report": {
+      "eliminated": 7,
+      "promotion": 2,
+      "review": 6,
+      "alive_promoted": 2,
+      "six_month_window": 5
+    },
+    "arm:first/risk/mentor": {
+      "six_month_window": 6,
+      "promotion": 3,
+      "review": 8,
+      "alive_promoted": 2,
+      "eliminated": 6
+    },
+    "arm:first/risk/none": {
+      "eliminated": 11,
+      "promotion": 3,
+      "review": 4,
+      "alive_promoted": 1,
+      "six_month_window": 1
+    },
+    "arm:first/risk/project": {
+      "eliminated": 9,
+      "promotion": 2,
+      "review": 4,
+      "alive_promoted": 2,
+      "six_month_window": 3
+    },
+    "arm:first/risk/report": {
+      "six_month_window": 3,
+      "promotion": 1,
+      "review": 5,
+      "alive_promoted": 0,
+      "eliminated": 9
+    },
+    "arm:first/skill/mentor": {
+      "eliminated": 12,
+      "promotion": 2,
+      "review": 3,
+      "alive_promoted": 0
+    },
+    "arm:first/skill/none": {
+      "eliminated": 8,
+      "promotion": 1,
+      "review": 5,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:first/skill/project": {
+      "eliminated": 11,
+      "promotion": 1,
+      "review": 3,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:first/skill/report": {
+      "eliminated": 11,
+      "promotion": 1,
+      "review": 4,
+      "alive_promoted": 1,
+      "six_month_window": 1
+    },
+    "arm:uniform/balanced/mentor": {
+      "eliminated": 5,
+      "promotion": 1,
+      "review": 8,
+      "alive_promoted": 1,
+      "six_month_window": 7
+    },
+    "arm:uniform/balanced/none": {
+      "six_month_window": 4,
+      "promotion": 1,
+      "review": 8,
+      "alive_promoted": 0,
+      "eliminated": 8
+    },
+    "arm:uniform/balanced/project": {
+      "eliminated": 8,
+      "promotion": 1,
+      "review": 9,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:uniform/balanced/report": {
+      "six_month_window": 5,
+      "promotion": 0,
+      "review": 10,
+      "alive_promoted": 0,
+      "eliminated": 7
+    },
+    "arm:uniform/network/mentor": {
+      "six_month_window": 4,
+      "promotion": 0,
+      "review": 8,
+      "alive_promoted": 0,
+      "eliminated": 8
+    },
+    "arm:uniform/network/none": {
+      "six_month_window": 5,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "eliminated": 7
+    },
+    "arm:uniform/network/project": {
+      "eliminated": 10,
+      "promotion": 3,
+      "review": 7,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:uniform/network/report": {
+      "six_month_window": 2,
+      "promotion": 0,
+      "review": 8,
+      "alive_promoted": 0,
+      "eliminated": 10
+    },
+    "arm:uniform/recovery/mentor": {
+      "eliminated": 7,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "six_month_window": 5
+    },
+    "arm:uniform/recovery/none": {
+      "six_month_window": 5,
+      "promotion": 0,
+      "review": 9,
+      "alive_promoted": 0,
+      "eliminated": 7
+    },
+    "arm:uniform/recovery/project": {
+      "six_month_window": 9,
+      "promotion": 1,
+      "review": 10,
+      "alive_promoted": 1,
+      "eliminated": 3
+    },
+    "arm:uniform/recovery/report": {
+      "eliminated": 8,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 4
+    },
+    "arm:uniform/reports/mentor": {
+      "six_month_window": 5,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "eliminated": 7
+    },
+    "arm:uniform/reports/none": {
+      "eliminated": 8,
+      "promotion": 1,
+      "review": 5,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:uniform/reports/project": {
+      "six_month_window": 4,
+      "promotion": 0,
+      "review": 7,
+      "alive_promoted": 0,
+      "eliminated": 8
+    },
+    "arm:uniform/reports/report": {
+      "eliminated": 10,
+      "promotion": 2,
+      "review": 5,
+      "alive_promoted": 1,
+      "six_month_window": 2
+    },
+    "arm:uniform/risk/mentor": {
+      "eliminated": 5,
+      "promotion": 1,
+      "review": 11,
+      "alive_promoted": 0,
+      "six_month_window": 7
+    },
+    "arm:uniform/risk/none": {
+      "six_month_window": 8,
+      "promotion": 0,
+      "review": 8,
+      "alive_promoted": 0,
+      "eliminated": 4
+    },
+    "arm:uniform/risk/project": {
+      "eliminated": 8,
+      "promotion": 2,
+      "review": 7,
+      "alive_promoted": 1,
+      "six_month_window": 4
+    },
+    "arm:uniform/risk/report": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:uniform/skill/mentor": {
+      "eliminated": 12,
+      "promotion": 0,
+      "review": 5,
+      "alive_promoted": 0
+    },
+    "arm:uniform/skill/none": {
+      "six_month_window": 4,
+      "promotion": 1,
+      "review": 10,
+      "alive_promoted": 0,
+      "eliminated": 8
+    },
+    "arm:uniform/skill/project": {
+      "eliminated": 12,
+      "promotion": 1,
+      "review": 6,
+      "alive_promoted": 0
+    },
+    "arm:uniform/skill/report": {
+      "eliminated": 10,
+      "promotion": 0,
+      "review": 5,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "energy:balanced": {
+      "six_month_window": 54,
+      "promotion": 9,
+      "review": 89,
+      "alive_promoted": 7,
+      "eliminated": 90
+    },
+    "energy:network": {
+      "eliminated": 104,
+      "promotion": 10,
+      "review": 80,
+      "alive_promoted": 5,
+      "six_month_window": 40
+    },
+    "energy:recovery": {
+      "six_month_window": 65,
+      "promotion": 10,
+      "review": 91,
+      "alive_promoted": 10,
+      "eliminated": 79
+    },
+    "energy:reports": {
+      "six_month_window": 38,
+      "promotion": 14,
+      "review": 76,
+      "alive_promoted": 9,
+      "eliminated": 106
+    },
+    "energy:risk": {
+      "eliminated": 99,
+      "promotion": 14,
+      "review": 79,
+      "alive_promoted": 7,
+      "six_month_window": 45
+    },
+    "energy:skill": {
+      "eliminated": 126,
+      "promotion": 7,
+      "review": 61,
+      "alive_promoted": 2,
+      "six_month_window": 18
+    },
+    "main:mentor": {
+      "eliminated": 145,
+      "promotion": 16,
+      "review": 122,
+      "alive_promoted": 9,
+      "six_month_window": 71
+    },
+    "main:none": {
+      "six_month_window": 63,
+      "promotion": 15,
+      "review": 118,
+      "alive_promoted": 9,
+      "eliminated": 153
+    },
+    "main:project": {
+      "six_month_window": 68,
+      "promotion": 20,
+      "review": 128,
+      "alive_promoted": 12,
+      "eliminated": 148
+    },
+    "main:report": {
+      "six_month_window": 58,
+      "promotion": 13,
+      "review": 108,
+      "alive_promoted": 10,
+      "eliminated": 158
+    },
+    "story:coverage": {
+      "six_month_window": 53,
+      "promotion": 3,
+      "review": 156,
+      "alive_promoted": 2,
+      "eliminated": 235
+    },
+    "story:first": {
+      "six_month_window": 109,
+      "promotion": 46,
+      "review": 145,
+      "alive_promoted": 32,
+      "eliminated": 179
+    },
+    "story:uniform": {
+      "eliminated": 190,
+      "promotion": 15,
+      "review": 175,
+      "alive_promoted": 6,
+      "six_month_window": 98
+    }
+  },
+  "failures": {
+    "Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 356,
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 245,
+    "You resign. Work that needs other people cannot get done, and staying would only get worse.": 2,
+    "Obsolete — you are the weakest technical link on the team. Your manager suggests a role, somewhere else, that matches what you can actually do.": 1
+  },
+  "question_nodes": 211,
+  "story_nodes": 208,
+  "available_question_answers": 518,
+  "tried_question_answers": 496,
+  "story_available_answers": 500,
+  "story_tried_answers": 486,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 75
+    },
+    {
+      "support_text": false,
+      "promotion": true,
+      "count": 7
+    },
+    {
+      "support_text": true,
+      "promotion": false,
+      "count": 337
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 57
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 9,
+    "output": 5
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}

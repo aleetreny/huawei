@@ -1,0 +1,191 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-first-review/reserve-energy-confirmation",
+  "runs": 36,
+  "groups": {
+    "all": {
+      "eliminated": 26,
+      "promotion": 2,
+      "review": 25,
+      "alive_promoted": 0,
+      "six_month_window": 10
+    },
+    "arm:coverage/skip/low": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:coverage/skip/mentor": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:coverage/skip/none": {
+      "eliminated": 2,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "arm:coverage/skip/project": {
+      "eliminated": 4,
+      "promotion": 1,
+      "review": 4,
+      "alive_promoted": 0
+    },
+    "arm:coverage/skip/repair": {
+      "six_month_window": 1,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "eliminated": 3
+    },
+    "arm:coverage/skip/report": {
+      "six_month_window": 1,
+      "promotion": 1,
+      "review": 3,
+      "alive_promoted": 0,
+      "eliminated": 3
+    },
+    "arm:coverage/skip/resources": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "arm:coverage/skip/rotation": {
+      "six_month_window": 2,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "eliminated": 2
+    },
+    "arm:coverage/skip/showcase": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "energy:skip": {
+      "eliminated": 26,
+      "promotion": 2,
+      "review": 25,
+      "alive_promoted": 0,
+      "six_month_window": 10
+    },
+    "main:low": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "main:mentor": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "main:none": {
+      "eliminated": 2,
+      "promotion": 0,
+      "review": 4,
+      "alive_promoted": 0,
+      "six_month_window": 2
+    },
+    "main:project": {
+      "eliminated": 4,
+      "promotion": 1,
+      "review": 4,
+      "alive_promoted": 0
+    },
+    "main:repair": {
+      "six_month_window": 1,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "eliminated": 3
+    },
+    "main:report": {
+      "six_month_window": 1,
+      "promotion": 1,
+      "review": 3,
+      "alive_promoted": 0,
+      "eliminated": 3
+    },
+    "main:resources": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "main:rotation": {
+      "six_month_window": 2,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "eliminated": 2
+    },
+    "main:showcase": {
+      "eliminated": 3,
+      "promotion": 0,
+      "review": 2,
+      "alive_promoted": 0,
+      "six_month_window": 1
+    },
+    "story:coverage": {
+      "eliminated": 26,
+      "promotion": 2,
+      "review": 25,
+      "alive_promoted": 0,
+      "six_month_window": 10
+    }
+  },
+  "failures": {
+    "Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 21,
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 5
+  },
+  "question_nodes": 170,
+  "story_nodes": 167,
+  "available_question_answers": 424,
+  "tried_question_answers": 359,
+  "story_available_answers": 406,
+  "story_tried_answers": 348,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 6
+    },
+    {
+      "support_text": true,
+      "promotion": false,
+      "count": 17
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 2
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 9,
+    "output": 3
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}

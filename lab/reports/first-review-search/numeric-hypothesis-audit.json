@@ -1,0 +1,10 @@
+{
+  "all_review_count": 1379,
+  "clean_review_count": 1122,
+  "definition_clean": "No Old landmines or Trust crisis in the same transition; post-settlement observations still not exact review inputs",
+  "hypothesis": "post-transition Skill >= 8, Network >= 3, Output >= 3, Dignity >= 2 predicts promotion in clean transitions",
+  "positive_predictions": 370,
+  "errors": [],
+  "clean_promotions": 370,
+  "not_a_promotion_formula": true
+}
