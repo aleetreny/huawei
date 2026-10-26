@@ -39,6 +39,10 @@ uv run careerlab export                                           # registry -> 
 
 `enqueue` refuses work that `gate.json` does not authorise. Real-game Claude workers were opened by the user's decision of 26 Oct (see `gate.json` and `ESTADO.md`). `uv run careerlab lint <policy dir>` checks a proposed policy without registering it.
 
+## Results panel
+
+`lab/panel/index.html` shows the leaderboard, scores over time, the bots and other machines' results. Rebuild its data with `uv run python scripts/panel/build.py` after `git fetch origin`. See [panel/README.md](panel/README.md).
+
 ## Playing from a second machine (T11)
 
 The cloud race owns the canonical registry and `lab/registry/`. Any other machine plays under its own **origin**:
