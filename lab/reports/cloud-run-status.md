@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:37 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 19:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 425, interrupted 28, leased 11, queued 25, running 6.
+- Jobs in the registry: cancelled 27, done 425, interrupted 34, queued 15, running 8.
 - Episodes finished in this container: 157. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.59**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.09**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.119** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.60**, window resets 26 Oct 21:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.09**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.140** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -192,7 +192,7 @@ User request relayed by the strategy session at about 14:25 UTC: distil Opus's w
 
 | Distilled child | Haiku runs finished | Q per run | pending |
 |---|---:|---|---:|
-| f3-opus-distilled-v1 | 4 | 27.8, 19.8, 47.4, 58.5 | 2 |
+| f3-opus-distilled-v1 | 4 | 27.8, 19.8, 47.4, 58.5 | 0 |
 | f3-distilled-prereview-defuse-v1 | 4 | 32.0, 61.8, 59.1, 56.7 | 0 |
 
 ## Problem A check: Haiku vs opus~100k on shared policies
@@ -340,6 +340,10 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Organiser round 5 (19:06 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
 - **Decision #157 (19:31 UTC):** new leader **f1-status-line** at 56.1 (4/4 completed), while its prose siblings with the same rules each completed 1/4. Block 7 allocated (seed 20261182). Transfer test f3-status-line-v1 (`688cc25c03bf6629`) queued.
 - **Organiser round 6 (19:37 UTC):** merged `matteo/observed-growth-v5` (his v3 falls to Q 51.0 over 8 games; the export conflict was resolved with his newest export, a superset) and `alejandro/carrera-rapida` (PR #8: fastloop-v2 code, 264 tests). The switch of the race to fastloop-v2 waits for the user's go-ahead in this session.
+- **19:41 UTC, switch to fastloop-v2 (user decision):**
+  - Champion F1 with 7 challengers: observed-growth-v3, f3-lean, f3-balance-recombined, f1-risk-signal, f1-core, f1-status-line and f3-status-line.
+  - 8 slots, cap 0.85, front-loaded weekly knots. Live page: `lab/reports/carrera-rapida.md`.
+  - Energy bots verified: 4 of 400 reached L6 (lessons.md, Frontier).
 
 ## Relevo (hand-off)
 
@@ -407,6 +411,7 @@ _Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 U
 See the sections above: latest block decision, actor comparison, Problem A, T13. T13 is complete: mean Y 54.2, near the ceiling. Problem A is complete: the rankings disagree on the F3 family. Block decisions #114 and #128. For the numbers, see the sections above and `findings.md`.
 
 ### 3. Failed or half done
+- **Protocol switch (19:39 UTC, user decision):** the prereg-v1 race stopped after decision #157. Batch 6 was cut: 6 in-flight games interrupted and never scored, and 11 leased plus the queued block-7 jobs cancelled by `ladder init --cancel-others`. The fastloop-v2 driver runs with 8 slots. The old scripts in `scripts/cloud-run/` are no longer used.
 - **Authorship (user rule, 26 Oct 15:55 UTC):** every commit is made as Alejandro Treny Ortega <alejandrotreny100@gmail.com>, with no Claude co-author lines. The 14 earlier commits of this branch were rewritten to that identity and force-pushed with lease; the content is identical. `main` still holds 2 commits authored by Claude and 23 `Co-Authored-By` lines from earlier sessions. Rewriting those would need a force-push to `main`, which has not been done.
 - **0.97 pre-reset cap.** First requested by the strategy session at 15:15, and blocked by this session's permission classifier because the request came from a peer. **The user then asked for it directly at 15:45 UTC.** From 15:46 the cap was 0.97, with 10 workers: 6 main lane, 2 extra lane for the o1 and o2 screens, 2 ceiling games. A detached script restored 0.80 at 16:00:05. Recorded as a `quota_cap` decision.
 - 22 interrupted attempts from the Mac stay on record, never scored. Each slot already had a later attempt.
@@ -417,7 +422,17 @@ See the sections above: latest block decision, actor comparison, Problem A, T13.
 - Leased or running jobs are released by `careerlab recover`. Interrupted ones get replacement attempts from `driver.py`'s requeue rule, or by hand with `Registry.requeue_interrupted`.
 
 ```text
-Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Read lab/reports/cloud-run-status.md (section Relevo) and lab/CLOUD_RUNBOOK.md first. Setup: uv sync; uv run career-emulator-engine update --source distribution --split dev; npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303 and export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude (the actor records freeze CLI 2.1.303); uv run careerlab import; uv run careerlab recover; uv run careerlab status; write {"max_five_hour": 0.80} to ~/careerlab-data/huawei/quota_cap.json (never touch weekly_pace). Then start the loop with scripts/cloud-run/driver.py and scripts/cloud-run/ceiling.py (see scripts/cloud-run/README.md; the driver runs uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80 on non-pilot jobs, the ceiling lane runs purpose pilot with --slots 2); after each batch apply careerlab.decisions.block_decision for the Haiku actor 08e9167a965ed82c with record=True; generate children only within progressive widening and the stall rule; lint (careerlab lint), register, enqueue 4 Haiku screens; every hour careerlab export, update lab/reports/cloud-run-status.md, commit lab/registry, lab/reports, new lab/policies-src and push to cloud-lab-run. You are also the ORGANISER: every hour and after each batch, git fetch origin --prune; review finished collaborator branches (<persona>/<tarea>), merge them and origin/main into cloud-lab-run (keep their owners' lines in ESTADO.md; keep this side for lab/registry/*.jsonl), run uv run pytest -q, push cloud-lab-run, then push cloud-lab-run:main as a fast-forward (never force main); keep ESTADO.md (Spanish: section 2 results, the task table lines of the cloud and of merged branches, Relevo del organizador), findings.md, progress.md and task_plan.md in step. Push to main is authorised by the user (26 Oct 16:15 UTC); never submit, never use a competition key, never edit the prereg. Commit as the user: git config user.name "Alejandro Treny Ortega" and user.email alejandrotreny100@gmail.com, with no Co-Authored-By or Claude-Session lines (user rule, 26 Oct).
+Continue CareerLab on branch cloud-lab-run (repo aleetreny/huawei) as the cloud race AND the organiser. Read ESTADO.md, scripts/fastloop/README.md and the Relevo at the end of lab/reports/cloud-run-status.md first.
+Setup:
+  uv sync
+  uv run career-emulator-engine update --source distribution --split dev
+  npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303
+  export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude   # the actor records freeze CLI 2.1.303
+  uv run careerlab import; uv run careerlab import --dir lab/registry-origins/<each origin>; uv run careerlab recover
+The race is the fastloop-v2 ladder (since 26 Oct 19:39 UTC). Its state lives in lab/fastloop/state.json and the registry; restart it with:
+  setsid nohup uv run python scripts/fastloop/driver.py >> ~/careerlab-data/huawei/fastloop/driver.out 2>&1 < /dev/null &
+Stop it with touch ~/careerlab-data/huawei/fastloop/STOP. Its driver writes quota_cap.json (cap 0.85, front-loaded weekly knots).
+Organiser routine (hourly): git fetch origin --prune; merge finished collaborator branches (keep each owner's ESTADO line; origin exports: take the newest superset); `careerlab ladder add` every merged team manual; import their lab/registry-origins/<origin>; careerlab export; careerlab ladder status --write; update ESTADO.md (Spanish), findings.md, progress.md; uv run pytest -q; check ESTADO.md is complete; push cloud-lab-run, then cloud-lab-run:main as a fast-forward (never force main). After each new champion and at least every 3 hours, add lessons with numbers to lab/fastloop/lessons.md. Commit in the user's name (Alejandro Treny Ortega <alejandrotreny100@gmail.com>) with no Claude co-author lines. Never submit, never use a competition key (DeepSeek games are played by Alejandro on his Mac with origin "deepseek"), never edit the frozen protocols. T8/T9 (R1 design docs and package for the champion) start early 27 Oct UK, cutoff 27 Oct 24:00 UK.
 ```
 
 ### 5. ESTADO.md

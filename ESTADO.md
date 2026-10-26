@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 19:33 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 19:41 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -21,7 +21,16 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
-**Clasificación actual** (Claude Haiku jugando; decisión de bloque del 26 oct a las 19:31 UTC, registro #157):
+**Desde las 19:39 UTC juega la carrera rápida (fastloop-v2, T14)**, por decisión de Alejandro:
+- Campeón inicial: F1 equilibrio. Aspirantes: f1 línea de estado, f3 línea de estado, f3 ligera, f3 recombinada, observed-growth-v3 (Matteo), f1 señal de riesgo y f1 núcleo.
+- 8 huecos y tope 0,85. Ritmo semanal adelantado: 45 % el 28 oct, 75 % el 31 oct y 90 % al final.
+- Diseñadores automáticos con Opus.
+- La tanda en curso se cortó: sus 6 partidas quedaron interrumpidas, sin nota, y la cola anterior se canceló.
+- Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md). Lecciones para los diseñadores: [lab/fastloop/lessons.md](lab/fastloop/lessons.md).
+
+**El nivel 6 es alcanzable (comprobado en los datos de los bots, T10):** 4 de 400 bots llegaron a L6 y terminaron con Q de 67 a 76. Los cuatro ascendieron en cada una de las tres primeras evaluaciones, aunque la primera fue una C, y acabaron con Skill al máximo. Ninguna partida con IA ha pasado de L5.
+
+**Última clasificación del sistema anterior** (prereg-v1; Claude Haiku; decisión del 26 oct a las 19:31 UTC, registro #157):
 
 | Manual | Nota estimada (partidas) | Estado |
 |---|---:|---|
@@ -80,7 +89,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
-| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: decisión #157, nuevo líder **f1 línea de estado** (56,1, 4 de 4 terminadas); tanda 6 en juego; bloque 7 repartido; prueba de transferencia `f3 línea de estado` en cola | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
+| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | **sustituida por T14** el 26 oct a las 19:39 UTC. Su última decisión fue la #157 (líder f1 línea de estado, 56,1) | `lab/reports/cloud-run-status.md` (histórico y relevo de la nube) |
 | T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | hecha: reglas en `distilled-rules.md`; 2 hijas registradas y jugando (resultados provisionales en la sección 2) | `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
 | T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | hecha: F8 (`f8-secure-growth-v1`) registrada y jugando | `lab/policies-src/f8-secure-growth/` |
 | T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo | nube: o1 hueco de ascenso y o2 a tope jugando; o3 "padrinos" en espera (se parece a F4 + F5). Matteo: `value-conversion-v1` juntada con `main` y en cola (4 partidas); `observed-growth-v1` (síntesis tras leer F3/F8, no ciega) lista para registrar, lint OK; piloto local aislado con Haiku: 64,78, L5, 48 meses; 4 partidas Haiku más (origen `matteo`, fuera de las decisiones): Q media 40,85, 1 de 4 terminada (70,94, L5 en el mes 42), 3 despedidas en el mes 24; `observed-growth-v2` (rama `matteo/observed-growth-v2`, 4 partidas Haiku, mismo actor): Q media 43,18, 2 de 4 terminadas, 0 despidos y 2 crisis de confianza (casi no usa Defuse); `observed-growth-v3` (rama `matteo/observed-growth-v3`, limpieza de riesgo restaurada, 4 partidas Haiku, mismo actor): Q media 71,43, 4 de 4 terminadas en L5, 0 despidos y 0 crisis; **corrección:** 4 partidas nuevas de v3 dan 1 de 4 y Q media 30,65, así que v3 con 8 partidas queda en Q media 51,04 y 5 de 8 terminadas (el primer lote tuvo suerte); `observed-growth-v4`: Q media 32,76, 1 de 4; `observed-growth-v5` (v3 + preferencia por dinero, rama `matteo/observed-growth-v5`): Q media 30,32, 1 de 4; ninguna se propone | `lab/policies-src/o*-*/`, `lab/policies-src/matteo-value-conversion/`, `lab/policies-src/matteo-feedback-growth/`, informes `lab/reports/matteo-t4-value-conversion.md`, `lab/reports/matteo-observed-growth.md`, `lab/reports/matteo-observed-growth-haiku-4.md`, `lab/reports/matteo-observed-growth-v2.md`, `lab/reports/matteo-observed-growth-v3.md` y `lab/reports/matteo-observed-growth-v5.md`; datos en `lab/registry-origins/matteo/` |
@@ -89,11 +98,11 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 | T7 | Vídeo `presentation.mp4` para el corte 1, en inglés, máximo 10 minutos y respondiendo a las 5 preguntas oficiales | equipo (personas) | pendiente | guion base en [jury-story.md](research/careerlab/jury-story.md) |
 | T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
 | T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
-| T10 | Bots sin IA para estudiar el reparto de energía (no gasta cuota) | nube | hecha (400 partidas; lecciones en la sección 2) | `lab/reports/energy-bots/README.md` |
+| T10 | Bots sin IA para estudiar el reparto de energía (no gasta cuota) | nube | hecha (400 partidas). Comprobado a las 19:41: 4 bots llegaron a L6 | `lab/reports/energy-bots/README.md`; detalle en `lab/fastloop/lessons.md` (Frontier) |
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | **hecha** (26 oct, 17:55): Y media 54,2, 5 de 6 terminadas → "cerca del techo"; el esfuerzo pasa a fiabilidad y tokens | `lab/reports/opus-ceiling/README.md`; resúmenes en `lab/reports/teacher-digests/opus-ceiling/` |
-| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | lista para arrancar: la nube la pone en marcha con [scripts/fastloop/README.md](scripts/fastloop/README.md) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
+| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | en marcha desde las 19:39 UTC: campeón F1, 7 aspirantes, 8 huecos (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
 
 ## Relevo del organizador (26 oct, 16:20 UTC)
 
@@ -111,7 +120,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 - Bots de energía terminados (T10). Techo de Opus en marcha (T13).
 - Juntadas con `main`: `cloud-lab-run`, `leah/workspace` (T11) y `matteo-t4-growth` (T4).
 
-**Siguiente:** decisión de la tanda 1 hacia las 17:00 UTC y regla de estancamiento. El techo de Opus se mide contra sus umbrales. Los documentos de entrega (T8 y T9) empiezan el 27 oct a primera hora (UK).
+**Siguiente:** la carrera rápida juega sola. La organizadora sigue la rutina de `scripts/fastloop/README.md` cada hora: juntar ramas, `ladder add` para los manuales del equipo, export, `ladder status --write`, commit y push, y lecciones tras cada campeón nuevo o cada 3 horas. Los documentos de entrega (T8 y T9) empiezan el 27 oct a primera hora (UK), con el campeón de ese momento.
 
 ## 5. Decisiones ya tomadas (no hace falta volver a discutirlas)
 

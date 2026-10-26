@@ -177,3 +177,4 @@
   - Status-line format: fill `Act | Risk | Weakest` before every choice, then serve the first need, with a fixed note shape.
   - Transfer test queued: f3-status-line-v1 (`688cc25c03bf6629`), f3-balance-recombined's exact rules in the same format.
   - Matteo's observed-growth-v3 in the race: 61, 19, 52, 64 (his own-origin 71.4 does not replicate).
+- 19:41 UTC: race switched to fastloop-v2 by user decision. F1 is champion; challengers are observed-growth-v3, f3-lean, f3-balance-recombined, f1-risk-signal, f1-core, f1-status-line and f3-status-line. Energy-bot check: 4 of 400 bots reached **L6** (Q 66.9–75.6). Each was promoted at each of the first three reviews despite a first-review C, and ended with Skill 100. No LLM game has passed L5.
