@@ -1,0 +1,11 @@
+{
+  "family": "f4-visible-delivery",
+  "name": "f4-visible-delivery-v1",
+  "parents": [],
+  "hypothesis": "Reviews and promotion respond mainly to visible Output and recognised results; making Prepare report materials, High-intensity work and Showcase/Report/Fight-for-resources the default, interrupted only when a qualitative wellbeing floor is breached, yields better review grades, earlier promotions and higher salary-driven Wealth and Level than balanced or invest-first play, outweighing the wellbeing cost.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Highest share of Output-producing Energy and main actions of all families; most High-intensity work; best early review grades (more A/S, fewer C/D) and the earliest first promotion; recovery appears in bursts triggered by floor breaches rather than steadily; lower end-of-run Health/Dignity than F1 and F5; higher risk of health-direction elimination than F1.",
+  "refutation": "Refuted if F4's review grades and final Level are not better than F1 and F2 on paired runs, or if its mean quantitative_score is below F1 with more eliminations. Manipulation fails if floor breaches occur so often that its Output-action share is not clearly higher than F1's.",
+  "skill_count": 1,
+  "notes": "The wellbeing floor is defined qualitatively (lower part of the published 0–10 range, falling trend, warnings, Network near zero, Wealth below zero). Review cadence is the published six-month schedule."
+}

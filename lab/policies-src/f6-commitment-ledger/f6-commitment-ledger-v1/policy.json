@@ -1,0 +1,11 @@
+{
+  "family": "f6-commitment-ledger",
+  "name": "f6-commitment-ledger-v1",
+  "parents": [],
+  "hypothesis": "Storylines and consequences span months and the agent's context may be compressed; a compact ledger of open storylines, promises and risks rewritten into every take_action note (recoverable with check_latest_logs) plus one joint plan for each quarter's Energy and main action produces more consistent follow-up choices and less redundant quarterly spending, improving survival and quantitative_score over F1, which has the same base priorities but no ledger.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Every note begins with 'LEDGER'; a written plan naming both the Energy actions and the main action at the first Energy step of each quarter, and a main action matching that plan in most quarters; continuation events chosen consistently with recorded promises (fewer reversals than F1); Defuse legacy risk once per accumulated or legacy risk warning, as in F1; recovery share and Energy spread otherwise close to F1; a check_latest_logs call after context resets; longer notes and somewhat higher output tokens per month than F1.",
+  "refutation": "Refuted if F6's continuation consistency, survival and mean quantitative_score are not better than F1's on paired runs, or if the gain is smaller than the token-efficiency cost of the longer notes. Manipulation fails if notes do not carry the ledger or quarterly plans are not written before the Energy steps.",
+  "skill_count": 1,
+  "notes": "Note length is limited by the server; the Skill only says to shorten the ledger if a note is rejected (no length number). Base priorities are F1's: the Act/Watch/Fine classification, story rules, Energy rules, main-action rule and across-run rules are F1's lines verbatim (enforced by tests/test_compliance.py). F6 adds only the ledger, its recovery with check_latest_logs, two ledger story tie-breaks (consistency with promises, closing open items), the joint quarterly plan and the end-of-run closing of open items. Legacy-risk warnings trigger Defuse once, as in F1, and C or D reviews go to `weak` (Act Output), not `risks`. So F6 vs F1 isolates the ledger and whole-quarter planning."
+}

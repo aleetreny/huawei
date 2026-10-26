@@ -1,0 +1,11 @@
+{
+  "family": "p0-minimal",
+  "name": "p0-minimal-v1",
+  "parents": [],
+  "hypothesis": "With only the interface procedure and no strategy, the agent's decisions follow the model's generic workplace priors: recovery happens only after a visible drop, Defuse legacy risk is rare and not timed to warnings, and Energy goes to whatever looks productive. Every strategy family must beat this floor on paired runs for its strategy content (not merely having a Skill) to count as effective.",
+  "change": "initial family seed",
+  "predicted_behaviour": "No stable ordering of Energy actions across quarters; share of recovery actions (Health recovery, Mental recovery) lower than F1 and F5; Defuse legacy risk chosen rarely and with no consistent lag after risk warnings; no visible corrective shift after a C or D review; shortest notes and the lowest tokens per month of all families.",
+  "refutation": "If P0 shows the same behavioural signatures as a strategy family (recovery share, warning-to-defuse lag, post-review shift) within run-to-run noise, that family's text does not change behaviour. If P0 matches a family's mean quantitative_score and survival on paired runs, that family's content adds nothing measurable.",
+  "skill_count": 1,
+  "notes": "Deliberately strategy-free baseline ('play carefully, current-run information only'). It lacks priorities and near-limit guidance on purpose, so its document-quality score is expected to be low; it exists for live-play and token comparisons, not as a submission candidate."
+}

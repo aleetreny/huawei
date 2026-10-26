@@ -1,0 +1,11 @@
+{
+  "family": "f7-one-vs-many",
+  "name": "f7-three-skills-v1",
+  "parents": [],
+  "hypothesis": "The number of Skills a strategy is packaged into does not by itself change play: the same risk-review, story-decision and quarterly-planning text delivered as three Skills (this policy) or as one Skill (f7-single-skill-v1) produces the same decisions and outcomes within run-to-run noise; any difference is attributable to Skill discovery and loading, not to strategy.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Same action mix (recovery share, defuse timing, main-action distribution) as f7-single-skill-v1; possibly more Skill-loading steps and slightly more tokens per month; risk of applying only the phase Skill and skipping risk-review on some turns.",
+  "refutation": "Refuted if, on paired runs, the three-Skill and single versions differ beyond noise in action mix, mean quantitative_score or survival, or if this version shows Skill-routing failures (risk-review skipped, quarterly guidance applied to story events). A difference in tokens per month alone does not refute equal play but decides the packaging on token efficiency.",
+  "skill_count": 3,
+  "notes": "Strategy lines are byte-identical to f7-single-skill-v1 apart from front matter and headings (enforced by tests/test_compliance.py); manifest instruction is identical in both. Split: risk-review, story-decisions, quarterly-planning."
+}

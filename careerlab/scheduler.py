@@ -153,7 +153,7 @@ class Scheduler:
                 cfg = ClaudeWorkerConfig(**{k: raw[k] for k in ClaudeWorkerConfig.__dataclass_fields__ if k in raw})
                 run_dir = self.settings.runs_dir / job["job_id"]
                 self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir))
-                await run_claude_episode(self.settings, cfg, Path(policies[job["policy_id"]]) / "bundle", job["job_id"], run_dir)
+                await run_claude_episode(self.settings, cfg, Path(policies[job["policy_id"]]), job["job_id"], run_dir)
                 outcome = self.registry.ingest(job["job_id"], run_dir)
                 counts[outcome] = counts.get(outcome, 0) + 1
                 self._beat({"running": "claude", "done": sum(counts.values())})

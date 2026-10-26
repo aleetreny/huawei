@@ -235,7 +235,7 @@ class Registry:
         for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
             rows = [dict(r) for r in self.db.execute(f"SELECT * FROM {table} ORDER BY rowid").fetchall()]
             for row in rows:
-                for key in ("trajectory_path", "run_dir", "bundle_path"):
+                for key in ("trajectory_path", "run_dir", "bundle_path", "db_root"):
                     if row.get(key):
                         row[key] = _portable(row[key])
             path = out_dir / f"{table}.jsonl"

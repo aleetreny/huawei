@@ -63,6 +63,11 @@ The initial families are deliberately distinct: minimal baseline, steady balance
 - **Blocks** interleave all active arms. A block gives each arm one complete episode by default; top-two Thompson sampling assigns any extra slots. At least 20 % of slots go to new candidates, and the number of children per family grows as ⌈(1 + N_f)^0.5⌉.
 - **Decisions** are taken at block boundaries, on prefix-complete data. They use normal–normal partial pooling within families (τ² floor 9) and a Bayesian-bootstrap robustness refit; a decision that flips is recorded as inconclusive and gets another block.
 - **Dormancy is reversible.** A policy goes dormant after at least 4 terminal episodes if `P(μ ≥ μ_leader − 4) < 0.05`. Its reason and review trigger are recorded. Audits draw dormant policies with logged probability 0.2 per block, so we can estimate false rejections and reopen candidates. Only invalid, duplicate or non-compliant artefacts are retired.
+- **A node's own value is not its family's potential.** The archive keeps two separate quantities and never lets one bound the other:
+  - a policy's posterior performance;
+  - its family's development potential, meaning the recent child-minus-parent gains, the number of untested child hypotheses and its behavioural distance from the leader.
+
+  Generation slots follow potential; evaluation slots follow the posterior. A weak parent can still be the best place to branch.
 - **Sample sizes follow the observed variance** (`n ≈ 9 σ_U² / Δ²` with an upper-bound σ re-estimated each block), not a fixed number. When the budget cannot reach the precision target, the result is labelled an estimate.
 
 ### 2.4 Validation and submission

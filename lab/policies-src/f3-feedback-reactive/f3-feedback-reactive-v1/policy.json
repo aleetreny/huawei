@@ -1,0 +1,11 @@
+{
+  "family": "f3-feedback-reactive",
+  "name": "f3-feedback-reactive-v1",
+  "parents": [],
+  "hypothesis": "In-run feedback (warnings, HR/risk hints, review grades, action outcomes) carries information about accumulated hidden risk and performance before the visible statistics do; a Clear/Raised/Escalating signal state that triggers Defuse legacy risk, problem-closing story choices and a corrective plan after C/D reviews reduces risk- and performance-driven eliminations and raises the risk-control ending dimension relative to P0 and F1.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Defuse legacy risk chosen far more often than in other families and concentrated in the first Energy phase after a risk signal (short warning-to-defuse lag); main action shifts to Report results / Showcase results or the named factor in the quarter after a C or D; story notes cite the signal that drove the choice; fewer repeated warnings after a defuse; slightly lower Skill/Output growth when signals are frequent; occasional check_latest_logs calls right after warnings.",
+  "refutation": "Refuted if, on paired runs, F3 does not reduce risk-direction eliminations or repeated warnings relative to P0 and F1, or its risk-control ending dimension is not higher; also refuted as useless if warnings are so rare in practice that F3's behaviour does not differ from F1. A higher defuse rate without fewer later warnings means the response does not reach the underlying risk.",
+  "skill_count": 1,
+  "notes": "Signal words are generic categories, not quotes from any event. The risk entry in status_updates is read only when the current observation lists it."
+}

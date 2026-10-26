@@ -1,0 +1,11 @@
+{
+  "family": "f2-invest-early",
+  "name": "f2-invest-early-v1",
+  "parents": [],
+  "hypothesis": "Late-benefit hypothesis: Skill and Network built before pushing visible Output make later Output and promotion attempts more effective, so a BUILD stage followed by a CONVERT stage triggered by the run's own evidence (weak review, Output lagging grown capability, a missed promotion window, few reviews left) reaches a higher final Level and quantitative_score than balanced (F1) or output-first (F4) play.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Early quarters dominated by Skill learning, Network maintenance, Build a mentorship and Apply for rotation; Skill and Network rise faster and Output slower than in F4 before the switch; a visible switch point in the notes ('BUILD' to 'CONVERT') that follows a weak review, a missed promotion or Output lagging, not a fixed month; after the switch, Prepare report materials and Showcase/Report main actions dominate; first reviews weaker than F4, later promotions faster per window than F4 at comparable Output.",
+  "refutation": "Refuted if F2's final Level and mean quantitative_score are not higher than both F1 and F4 on paired runs, or if its early weak reviews cause more repeated-low-performance eliminations than F4 with no later compensation. Manipulation fails if the switch point does not track the listed evidence (e.g. it never switches, or switches at the same month regardless of state).",
+  "skill_count": 1,
+  "notes": "Conversion conditions are state- and feedback-based by design (no calendar months). The 'few reviews remain' condition uses only the published 48-month length and six-month review cadence, stated qualitatively."
+}
