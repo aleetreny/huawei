@@ -134,9 +134,9 @@ def cmd_run(args: argparse.Namespace) -> int:
     sched = Scheduler(s, Registry(s.registry_path))
     print("recovered:", sched.recover())
     if args.kind == "scripted":
-        print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit)))
+        print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit, purpose=args.purpose)))
     else:
-        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit)))
+        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose)))
     return 0
 
 
@@ -215,6 +215,7 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--kind", choices=["scripted", "claude-cli"], default="scripted")
     run.add_argument("--slots", type=int, default=8)
     run.add_argument("--limit", type=int)
+    run.add_argument("--purpose")
     run.set_defaults(fn=cmd_run)
     sub.add_parser("recover").set_defaults(fn=cmd_recover)
     sub.add_parser("resume").set_defaults(fn=cmd_resume)

@@ -30,3 +30,16 @@ Each version must differ in content (identical content is not rescored). The off
 - Every target episode is registered as a job: actor `jiuwenswarm-target`, route `competition-key`, one private slot per concurrent run. The scheduler refuses target work beyond the planned share unless the orchestrator records a decision.
 - Token counts in `score_report.json` are summed after every episode, and the estimated spend is compared with the plan. If an episode costs more than twice the pilot estimate, target work pauses until the cause is understood.
 - Interrupted target episodes are never scored. The runner gives an early exit a `quantitative_score`; that is a game result and is kept.
+
+## How many families to race on the target (playbook P34 planner, `stats.budget_planner`)
+
+Assumed episode SD σ = 12 Y-points (to be measured). The table gives the expected true mean of the chosen family relative to the average family, with the selection share of the budget split equally. Entries marked "infeasible" give fewer than 4 episodes per family, the protocol's dormancy minimum.
+
+| Selection episodes | τ (between-family SD) | K=2 | K=3 | K=4 | K=5 | K=6 |
+|---|---|---|---|---|---|---|
+| 11 (B=20) | 8 | 3.8 | infeasible | infeasible | infeasible | infeasible |
+| 22 (B=40) | 4 | 1.7 | 2.2 | 2.5 | 2.6 | infeasible |
+| 22 (B=40) | 8 | 4.2 | 5.9 | 6.9 | 7.5 | infeasible |
+| 44 (B=80) | 8 | 4.3 | 6.3 | 7.5 | 8.2 | 8.8 |
+
+Decision: Claude screening narrows the ten initial policies to **4–5 families** for the target race. With fewer than about 40 affordable target episodes, race 2–3. Rerun the planner after the pilot with the measured σ and the first-block τ.

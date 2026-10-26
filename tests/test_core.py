@@ -187,3 +187,26 @@ def test_bridge_refuses_non_local_servers(capsys):
 
     assert main(["--url", "https://example.com/mcp", "new"]) == 2
     assert "only talks to a local" in capsys.readouterr().out
+
+
+def test_live_owner_jobs_are_never_recovered_or_double_claimed(tmp_path):
+    reg, pid, aid, eid = _registry(tmp_path)
+    jobs = reg.enqueue(pid, aid, eid, "screen", 2)
+    reg.lease("A", 2)
+    counts = reg.recover(lambda owner: owner == "A")  # a second scheduler starting up while A is alive
+    assert counts["still_running"] == 2 and counts["released"] == 0
+    assert not reg.mark_running(jobs[0], 1, "x", owner="B")  # B cannot run A's job
+    assert reg.mark_running(jobs[0], 1, "x", owner="A")
+    assert not reg.mark_running(jobs[0], 1, "x", owner="A")  # and A cannot start it twice
+
+
+def test_owner_alive_uses_local_pid(tmp_path):
+    import os
+    import socket
+
+    from careerlab.config import Settings
+    from careerlab.scheduler import Scheduler
+
+    sched = Scheduler(Settings(data_dir=tmp_path), Registry(tmp_path / "r.sqlite3"))
+    assert sched.owner_alive(f"{socket.gethostname()}:{os.getpid()}:abc")
+    assert not sched.owner_alive(f"{socket.gethostname()}:999999:abc")

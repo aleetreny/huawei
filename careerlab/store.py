@@ -128,6 +128,9 @@ class Registry:
     def enqueue(self, policy_id: str, actor_id: str, env_id: str, purpose: str, replicates: int, priority: float = 0.0) -> list[str]:
         """Add replicates beyond those already queued or done for this cell; idempotent."""
         created = []
+        for table, key, value in (("policies", "policy_id", policy_id), ("actors", "actor_id", actor_id), ("environments", "env_id", env_id)):
+            if not self.db.execute(f"SELECT 1 FROM {table} WHERE {key}=?", (value,)).fetchone():
+                raise ValueError(f"unknown {key} {value!r}")
         with self.tx():
             top = self.db.execute("SELECT COALESCE(MAX(replicate),-1) FROM jobs WHERE policy_id=? AND actor_id=? AND env_id=? AND purpose=?",
                                   (policy_id, actor_id, env_id, purpose)).fetchone()[0]
@@ -139,21 +142,31 @@ class Registry:
                 created.append(job_id)
         return created
 
-    def lease(self, owner: str, limit: int, lease_s: float = 3600.0, actor_kind: str | None = None) -> list[sqlite3.Row]:
+    def lease(self, owner: str, limit: int, lease_s: float = 3600.0, actor_kind: str | None = None,
+              purpose: str | None = None) -> list[sqlite3.Row]:
         with self.tx():
             query = "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='queued'"
             args: list[Any] = []
             if actor_kind:
                 query += " AND a.kind=?"
                 args.append(actor_kind)
+            if purpose:
+                query += " AND j.purpose=?"
+                args.append(purpose)
             rows = self.db.execute(query + " ORDER BY j.priority DESC, j.replicate, j.created_at LIMIT ?", (*args, limit)).fetchall()
             for row in rows:
                 self.db.execute("UPDATE jobs SET status='leased', lease_owner=?, lease_expires=?, updated_at=? WHERE job_id=? AND status='queued'",
                                 (owner, time.time() + lease_s, time.time(), row["job_id"]))
         return rows
 
-    def mark_running(self, job_id: str, pid: int, run_dir: str) -> None:
-        self.db.execute("UPDATE jobs SET status='running', pid=?, run_dir=?, updated_at=? WHERE job_id=?", (pid, run_dir, time.time(), job_id))
+    def mark_running(self, job_id: str, pid: int, run_dir: str, owner: str | None = None) -> bool:
+        """Claim a leased job for execution; False if another scheduler owns or ran it (no duplicate runs)."""
+        if owner is None:
+            self.db.execute("UPDATE jobs SET status='running', pid=?, run_dir=?, updated_at=? WHERE job_id=?", (pid, run_dir, time.time(), job_id))
+            return True
+        cur = self.db.execute("UPDATE jobs SET status='running', pid=?, run_dir=?, updated_at=? WHERE job_id=? AND status='leased' AND lease_owner=?",
+                              (pid, run_dir, time.time(), job_id, owner))
+        return cur.rowcount == 1
 
     def set_session(self, job_id: str, session_id: str, db_root: str | None = None) -> None:
         self.db.execute("UPDATE jobs SET session_id=?, db_root=COALESCE(?, db_root), updated_at=? WHERE job_id=?",
@@ -197,8 +210,8 @@ class Registry:
         """Reconcile leased/running jobs with real processes after a restart."""
         counts = {"ingested": 0, "interrupted": 0, "still_running": 0, "released": 0}
         for job in self.db.execute("SELECT * FROM jobs WHERE status IN ('leased','running')").fetchall():
-            if job["pid"] and _pid_alive(job["pid"]) and owner_alive(job["lease_owner"]):
-                counts["still_running"] += 1
+            if owner_alive(job["lease_owner"]):
+                counts["still_running"] += 1  # a live scheduler owns it, leased or running: never touch
                 continue
             run_dir = Path(job["run_dir"]) if job["run_dir"] else None
             if run_dir and (run_dir / "result.json").exists():

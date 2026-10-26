@@ -1044,3 +1044,35 @@ def decision_is_robust(cells: Mapping[str, tuple[str, Sequence[float]]], protoco
     return Robustness("robust", leaders, dormant,
                       f"robust: leader {next(iter(leaders.values()))} and dormant set {next(iter(dormant.values()))} "
                       f"agree across {', '.join(fits)}", leader_flip, flips)
+
+
+# --------------------------------------------------------------------------- budget planner (playbook P34)
+
+
+def budget_planner(sigma: float, tau: float, budget: int, ks: Sequence[int] = (2, 3, 4, 5, 6, 8),
+                   delta: float = 4.0, n_min: int = 4, selection_share: float = 0.55, reps: int = 20000,
+                   rng: np.random.Generator | None = None) -> list[dict[str, float]]:
+    """How many candidate families a target budget can race.
+
+    Assumes normal true means across families (SD ``tau``), normal episode noise
+    (SD ``sigma``), equal allocation of the selection share of ``budget`` and
+    choice by the sample mean. Returns, per K, the expected regret of the chosen
+    family, the expected true mean of the chosen family relative to the family
+    distribution (the quantity that trades breadth against precision) and the
+    probability that it is within ``delta`` of the best raced family. K is
+    infeasible when K * n_min episodes exceed the selection share (prereg
+    dormancy minimum). Rerun with measured sigma and tau after the target pilot.
+    """
+    rng = rng or np.random.default_rng(0)
+    out = []
+    for k in ks:
+        n = int(selection_share * budget // k)
+        feasible = n >= n_min
+        mu = rng.normal(0.0, tau, size=(reps, k))
+        est = mu + rng.normal(0.0, sigma / math.sqrt(max(n, 1)), size=(reps, k))
+        pick = mu[np.arange(reps), est.argmax(axis=1)]
+        regret = mu.max(axis=1) - pick
+        out.append({"K": k, "episodes_each": n, "feasible": feasible, "expected_regret": float(regret.mean()),
+                    "expected_chosen_mean": float(pick.mean()),
+                    "p_within_delta": float((regret <= delta).mean())})
+    return out
