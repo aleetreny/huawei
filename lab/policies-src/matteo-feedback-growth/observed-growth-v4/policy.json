@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v4",
+  "parents": [
+    "observed-growth-v3"
+  ],
+  "idea_origin": "Matteo chose changes 1-3 after the v3 pilots: unblock the slow late promotion, trim redundant risk cleanup, pursue wealth explicitly. Evidence: 4 v3 Haiku episodes (lab/reports/matteo-observed-growth-v3.md).",
+  "operator": "targeted revision of v3",
+  "hypothesis": "v3 saturates health, skill and risk control but finishes at L5 with wealth 41-52: the late promotion takes about 18 months while Output stays flat, and Defuse is spent 13-15 times per career with risk control at 100. Pushing whichever promotion input rose least (not only Skill), skipping a repeated Defuse after a mild remark when nothing new happened, and preferring concrete pay and strong grades will reach the late promotions sooner and raise wealth without bringing back trust crises.",
+  "change": "From v3: the stalled-Skill rule becomes a bottleneck rule over Skill, Network and Output with action lists per input; High-intensity work allowed for Output when Health is near full; Defuse skipped after a mild remark if Defuse was spent at the previous quarter-end and nothing else happened; story preference for concrete pay and recognised roles; aim for strong grades. Review-cycle phasing, Health reserve and story-choice bans kept.",
+  "predicted_behaviour": "Quarter-end notes name the input that rose least and spend on it. Output-raising actions appear when Output is flat at higher levels. Fewer Defuse per career than v3 (13-15) but no trust crisis. Final level at least L5 with earlier late promotions, and higher wealth than v3.",
+  "refutation": "Compare with v3 under the same actor and harness. Reject if any trust crisis appears, if completion falls below v3, or if mean Q and wealth do not improve. If notes do not name a bottleneck input or Defuse count is unchanged, mark the mechanism unexecuted. Four episodes cannot detect a gain of a few points; treat a small difference as noise.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v4, built on matteo/observed-growth-v3. v1-v3 unchanged."
+}
