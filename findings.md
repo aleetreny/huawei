@@ -159,4 +159,13 @@
   - Output at its run high at the review does: all 14 games promoted at review 1 had it, against 12/24 others. When Output or Network dropped through story choices after the last quarterly phase, 14/60 reviews were good, against 34/66 otherwise.
   - New candidates: f7-trend-marking, f7-delivery-stories, and f7-promotion-drive (stall slot, playbook P12).
 - Problem A (preliminary): Haiku and opus~100k rank the shared policies differently (6 shared policies, Spearman −0.26, different top). opus~100k does worse with the F3 family than with F1 and P0.
+- T13 Opus ceiling, complete (`lab/reports/opus-ceiling/README.md`): 6 games on opus@max~100k with the clean-room all-general-knowledge Skill.
+  - Mean Y 54.2 (90 % t interval 41.6–66.7), mean Q 56.2, 5 of 6 completed. The one loss was the C C D D dismissal at month 24.
+  - Against the pre-stated thresholds (reference 60.21): **"near the ceiling"**, so effort should shift to reliability and token efficiency.
+  - Completed games lose 16.2 points on level and 12.8 on wealth, identical to the 45 other completed cloud games (16.2 and 12.6). The level and wealth plateau does not move with the strongest player.
+  - Tokens: 0.13–0.16 M per month.
+- Problem A, complete (6 opus~100k runs on the Haiku top 3):
+  - On the 6 shared policies, Spearman 0.20, with the same top (F1).
+  - opus~100k completes 2 of 6 games with F3-family Skills (posterior about 38–39), against 4 of 4 with F1 and P0 (61.6–65.6). Haiku rates the F3 family mid-table.
+  - The Haiku ranking does not transfer to a stronger model, which adds weight to the target pilot (T6).
 
