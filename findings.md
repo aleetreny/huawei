@@ -71,3 +71,15 @@
   - five-hour window 19 % → 21 % (an upper bound: other agents were also running).
 
   For comparison, the scripted floors average 10–13 and exit around month 6. If cached tokens count in the official `total_tokens`, a history-accumulating agent would use about 650 k tokens per month, so `E` ≈ 94 rather than 100. Context management is therefore a small but real lever.
+- **Incident (13:47 UTC), caught before any duplicate ran:** a second scheduler, started for Haiku screening while the E-W1 scheduler was running, called `recover()` at start-up. The heartbeat was refreshed only when an episode finished, so the live scheduler looked dead: its 22 leased-but-unstarted jobs were released and re-leased, and 4 of them started in the second process. The live scheduler still held those jobs in memory, which would have produced duplicate runs into the same directories. The orchestrator killed the second scheduler and its workers, then fixed the code:
+  - an owner counts as alive if its PID exists on this host, otherwise if its own per-owner heartbeat (refreshed every 20 s) is fresh;
+  - `recover()` never touches jobs whose owner is alive;
+  - a job is claimed atomically before it starts (`status='leased' AND lease_owner=me`);
+  - leasing can be filtered by purpose.
+
+  Tests were added. The 4 killed calibrate attempts are re-run by the original scheduler, and 2 killed screen attempts were re-queued as new attempts. No interrupted run was scored.
+- **Early Claude-worker diagnostics (first 13 real-game LLM episodes, 26 Oct 14:05 UTC; n is tiny):** results are bimodal: either the 48 months are completed (Q ≈ 51–57) or the run is eliminated (Q ≈ 17–45). Early exits come from two published failure directions:
+  - "Dismissed for capability — a second weak half-year review": 5 cases, all at month 24;
+  - "Trust crisis — a second major blow-up": 4 cases, at months 23–39.
+
+  The dismissed runs show weak review grades in the run's own feedback, for example C, C, then D at month 24 ("Half-year performance bonus (C)", "half-year review fell short… the next one has to be better"). That feedback is explicit and arrives during the run, so a policy can react to it legitimately, without any threshold. This is the main generation diagnostic for block 2: a review-recovery response to weak-review feedback, and risk defusing after blow-up warnings. Sonnet and Opus are not yet better than Haiku on these policies (n = 1–2 per cell; no conclusion).

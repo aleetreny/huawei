@@ -58,24 +58,41 @@ class Scheduler:
         self.heartbeat = settings.data_dir / "scheduler.heartbeat.json"
 
     def _beat(self, state: dict[str, Any]) -> None:
-        tmp = self.heartbeat.with_suffix(".tmp")
+        beat_dir = self.settings.data_dir / "heartbeats"
+        beat_dir.mkdir(parents=True, exist_ok=True)
+        path = beat_dir / f"{self.owner.replace(':', '_')}.json"
+        tmp = path.with_suffix(".tmp")
         tmp.write_text(json.dumps({"owner": self.owner, "pid": os.getpid(), "at": time.time(), **state}))
-        os.replace(tmp, self.heartbeat)
+        os.replace(tmp, path)
+
+    async def _heartbeat_loop(self) -> None:
+        while True:
+            self._beat({"alive": True})
+            await asyncio.sleep(20)
 
     def owner_alive(self, owner: str | None) -> bool:
-        if not owner or not self.heartbeat.exists():
+        """A lease owner is alive if its process exists on this host or its own heartbeat is fresh."""
+        if not owner:
             return False
-        beat = json.loads(self.heartbeat.read_text())
-        return beat.get("owner") == owner and time.time() - beat.get("at", 0) < 120
+        host, _, rest = owner.partition(":")
+        pid = rest.split(":", 1)[0]
+        if host == socket.gethostname() and pid.isdigit():
+            try:
+                os.kill(int(pid), 0)
+                return True
+            except OSError:
+                return False
+        beat_file = self.settings.data_dir / "heartbeats" / f"{owner.replace(':', '_')}.json"
+        return beat_file.exists() and time.time() - json.loads(beat_file.read_text()).get("at", 0) < 120
 
     def recover(self) -> dict[str, int]:
         counts = self.registry.recover(self.owner_alive)
         self.registry.decide("recover", None, counts, "reconciled leased/running jobs with real processes at start-up")
         return counts
 
-    async def run_scripted(self, slots: int = 8, limit: int | None = None) -> dict[str, int]:
+    async def run_scripted(self, slots: int = 8, limit: int | None = None, purpose: str | None = None) -> dict[str, int]:
         """Run queued scripted-actor jobs on a rotating stdio server pool."""
-        jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="scripted")
+        jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="scripted", purpose=purpose)
         if not jobs:
             return {}
         counts: dict[str, int] = {}
@@ -93,7 +110,8 @@ class Scheduler:
                 except asyncio.QueueEmpty:
                     return
                 run_dir = self.settings.runs_dir / job["job_id"]
-                self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir))
+                if not self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir), owner=self.owner):
+                    continue
                 actor = make_scripted(rules[job["policy_id"]]["rule_set"], _seed(job["job_id"]))
                 async with pool.lease() as client:
                     await run_driven_episode(client, actor, job["job_id"], run_dir,
@@ -102,8 +120,10 @@ class Scheduler:
                 counts[outcome] = counts.get(outcome, 0) + 1
                 self._beat({"running": "scripted", "done": sum(counts.values())})
 
+        beat = asyncio.create_task(self._heartbeat_loop())
         async with ServerPool(self.settings, self.settings.servers_dir / f"sched-{uuid.uuid4().hex[:6]}", slots=slots) as pool:
             await asyncio.gather(*(worker(pool) for _ in range(slots)))
+        beat.cancel()
         return counts
 
     async def resume_scripted(self) -> dict[str, int]:
@@ -140,8 +160,8 @@ class Scheduler:
         self.registry.decide("resume", None, counts, "observe-first continuation of interrupted scripted episodes")
         return counts
 
-    async def run_claude(self, concurrency: int = 2, limit: int | None = None) -> dict[str, int]:
-        jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli")
+    async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None) -> dict[str, int]:
+        jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli", purpose=purpose)
         counts: dict[str, int] = {}
         sem = asyncio.Semaphore(concurrency)
         actors = {r["actor_id"]: json.loads(r["config"]) for r in self.registry.db.execute("SELECT * FROM actors")}
@@ -152,13 +172,16 @@ class Scheduler:
                 raw = actors[job["actor_id"]]
                 cfg = ClaudeWorkerConfig(**{k: raw[k] for k in ClaudeWorkerConfig.__dataclass_fields__ if k in raw})
                 run_dir = self.settings.runs_dir / job["job_id"]
-                self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir))
+                if not self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir), owner=self.owner):
+                    return
                 await run_claude_episode(self.settings, cfg, Path(policies[job["policy_id"]]), job["job_id"], run_dir)
                 outcome = self.registry.ingest(job["job_id"], run_dir)
                 counts[outcome] = counts.get(outcome, 0) + 1
                 self._beat({"running": "claude", "done": sum(counts.values())})
 
+        beat = asyncio.create_task(self._heartbeat_loop())
         await asyncio.gather(*(one(j) for j in jobs))
+        beat.cancel()
         return counts
 
 
