@@ -74,6 +74,8 @@ def main() -> None:
         if n == 0:
             time.sleep(60)
             continue
+        while subprocess.run(["pgrep", "-f", "careerlab run --kind claude-cli --slots [0-9]+ --max-five-hour"], capture_output=True).returncode == 0:
+            time.sleep(30)  # a main-lane scheduler from an earlier driver is still running: never overlap batches
         rounds_left = int((END - time.time() - 20 * 60) // ROUND_S)
         if rounds_left < 1:
             log("no time left for another round; stopping")
