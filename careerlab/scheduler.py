@@ -161,19 +161,26 @@ class Scheduler:
         return counts
 
     async def wait_for_quota(self, max_five_hour: float) -> None:
-        """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator)."""
+        """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator)
+        or the seven-day window is ahead of its pace to the last cutoff (see `weekly_allowance`)."""
         while True:
             cap_file = self.settings.data_dir / "quota_cap.json"  # live override, editable while schedulers run
-            cap = max_five_hour
+            cap, pace = max_five_hour, None
             if cap_file.exists():
                 try:
-                    cap = float(json.loads(cap_file.read_text())["max_five_hour"])
+                    cfg = json.loads(cap_file.read_text())
+                    pace = cfg.get("weekly_pace")
+                    cap = float(cfg["max_five_hour"])
                 except (ValueError, KeyError):
                     pass
+            now = time.time()
             util, resets_at = latest_quota(self.settings.runs_dir)
-            if util is None or util < cap or (resets_at and time.time() > resets_at):
+            week, week_resets = latest_quota(self.settings.runs_dir, window="seven_day")
+            five_ok = util is None or util < cap or bool(resets_at and now > resets_at)
+            week_ok = week is None or not week_resets or now > week_resets or week < weekly_allowance(now, week_resets, pace)
+            if five_ok and week_ok:
                 return
-            self._beat({"waiting_for_quota": util, "resets_at": resets_at})
+            self._beat({"waiting_for_quota": util, "resets_at": resets_at, "seven_day": week, "seven_day_resets_at": week_resets})
             await asyncio.sleep(60)
 
     async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None,
@@ -203,8 +210,28 @@ class Scheduler:
         return counts
 
 
-def latest_quota(runs_dir: Path, newest: int = 40) -> tuple[float | None, float | None]:
-    """Latest five-hour utilisation and reset time seen by any worker (from its rate-limit events)."""
+COMPETITION_END = 1793577600.0  # 2 Nov 2026 00:00 UTC, i.e. the last cutoff (1 Nov 24:00 UK)
+
+
+def weekly_allowance(now: float, resets_at: float, pace: dict[str, float] | None = None) -> float:
+    """Share of the seven-day window the lab may have used by `now`.
+
+    A straight line from `initial` at the window start to `final` at the last
+    cutoff (or the window end, if sooner). Running at the five-hour cap in every
+    window would empty the week in about two days; the line spreads it over the
+    competition and keeps the rest for the team's own chats. `pace` (from
+    quota_cap.json "weekly_pace") overrides start, end, initial or final.
+    """
+    pace = pace or {}
+    start = pace.get("start", resets_at - 7 * 86400)
+    end = pace.get("end", min(resets_at, COMPETITION_END))
+    initial, final = pace.get("initial", 0.10), pace.get("final", 0.90)
+    frac = min(max((now - start) / max(end - start, 1.0), 0.0), 1.0)
+    return initial + (final - initial) * frac
+
+
+def latest_quota(runs_dir: Path, newest: int = 40, window: str = "five_hour") -> tuple[float | None, float | None]:
+    """Latest utilisation and reset time of one rate-limit window ("five_hour" or "seven_day") seen by any worker."""
     streams = sorted(runs_dir.glob("*/stream-*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True)[:newest]
     best: tuple[float, float, float] | None = None
     for path in streams:
@@ -212,9 +239,9 @@ def latest_quota(runs_dir: Path, newest: int = 40) -> tuple[float | None, float 
         for line in path.open(encoding="utf-8", errors="replace"):
             if '"rate_limit_event"' not in line:
                 continue
-            window = json.loads(line).get("rate_limit_info", {}).get("unifiedWindows", {}).get("five_hour", {})
-            if window.get("utilization") is not None and (best is None or mtime >= best[0]):
-                best = (mtime, float(window["utilization"]), float(window.get("resetsAt") or 0))
+            window_info = json.loads(line).get("rate_limit_info", {}).get("unifiedWindows", {}).get(window, {})
+            if window_info.get("utilization") is not None and (best is None or mtime >= best[0]):
+                best = (mtime, float(window_info["utilization"]), float(window_info.get("resetsAt") or 0))
     return (best[1], best[2]) if best else (None, None)
 
 
