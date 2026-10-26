@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:15 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 15:33 UTC**, chat organizador (rama `main`).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -38,7 +38,9 @@ Llevamos 99 partidas con IA (modelos de Claude haciendo de DeepSeek) y 150 con b
   - Opus con memoria corta termina 5 de 6. Opus jugando casi sin manual saca entre 62 y 67, así que sirve de "maestro".
 - Los bots que eligen al azar mueren hacia el mes 6. De las 73.858 partidas de Matteo, ninguna llegó al final.
 
-**Lo que aún no sabemos:** cómo juega DeepSeek con nuestros manuales. Hace falta la clave de la API (tarea T5).
+**Lo que aún no sabemos:**
+- Cómo juega DeepSeek con nuestros manuales. Hace falta la clave de la API (tarea T5).
+- Cuál es el techo del juego, es decir, si queda mucho margen o ya estamos cerca (tarea T13).
 
 **Cuota de Claude (cuenta Max):**
 - Se renueva hoy, 26 oct, a las 16:00 hora UK, y esa semana tiene que durar hasta el 1 nov.
@@ -59,17 +61,48 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha | rama `cloud-lab-run`: `lab/reports/cloud-run-status.md`, cada hora |
-| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | en marcha | `cloud-lab-run`: `lab/reports/teacher-digests/distilled-rules.md` |
-| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | pedida | `cloud-lab-run`: `lab/policies-src/` |
-| T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | libre (¿Matteo?) | libre | rama `<persona>/ideas-fuera`: `lab/policies-src/<familia>/<nombre>-v1/` |
+| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | escrita a las 15:03 (reglas y 2 hijas de F3); se juegan tras la tanda 1 | `cloud-lab-run`: `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
+| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | manual F8 escrito a las 15:03; se juega tras la tanda 1 | `cloud-lab-run`: `lab/policies-src/` (f8-secure-growth-v1) |
+| T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo si quiere | nube: en cola | rama `<persona>/ideas-fuera`: `lab/policies-src/<familia>/<nombre>-v1/` |
 | T5 | Envío preliminar y clave de la API | Alejandro | pendiente | apuntar aquí la fecha en que llegue la clave |
 | T6 | Piloto con DeepSeek: 2 partidas para medir coste y tokens ([target-budget.md](research/careerlab/target-budget.md)) | organizador | espera a T5 | `lab/reports/target-pilot/` |
 | T7 | Vídeo `presentation.mp4` para el corte 1, en inglés, máximo 10 minutos y respondiendo a las 5 preguntas oficiales | equipo (personas) | pendiente | guion base en [jury-story.md](research/careerlab/jury-story.md) |
-| T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | borrador de la nube, revisa el equipo | en marcha | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
-| T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | organizador | espera a T7 y T8 | `lab/submissions/r1/` |
-| T10 | Bots sin IA para estudiar el reparto de energía (opcional, no gasta cuota) | libre | opcional | `lab/reports/energy-bots/` |
+| T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
+| T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
+| T10 | Bots sin IA para estudiar el reparto de energía (opcional, no gasta cuota) | nube, en segundo plano | opcional | `lab/reports/energy-bots/` |
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | organizador | sólo si alguien más va a jugar | código en `careerlab/` |
-| T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | organizador | cada día | `main` |
+| T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | nube (organizadora) | cada día | `main` |
+| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | pedida | `cloud-lab-run`: `lab/reports/opus-ceiling/` |
+
+## Relevo del organizador (26 oct, 15:33 UTC)
+
+**Desde el 26 oct a las 16:00 UTC, la organizadora es la sesión de la nube "CareerLab continuous race in the cloud"** (rama `cloud-lab-run`). Juega las partidas y, además, hace de organizadora:
+- junta sus resultados con `main` (T12);
+- mantiene este archivo al día;
+- más adelante, prepara la entrega (T8 y T9 a partir del 27 oct).
+
+Todo se hace en la nube, así que el Mac puede estar apagado. **Para hablar con ella**, abre esa sesión en claude.ai/code o en la app y escríbele directamente. No hace falta otro chat. Si se parase, su relevo (al final de `lab/reports/cloud-run-status.md`) trae un prompt listo para abrir otra sesión de nube que haga lo mismo. Nunca debe haber dos a la vez.
+
+**Hecho hoy por el primer chat organizador (local)**
+- El laboratorio funciona.
+- 99 partidas con IA y 150 con bots. El método se ha comprobado en el juego de juguete.
+- El freno semanal de cuota está en marcha, y este archivo existe con sus reglas.
+
+**Mensajes que ese chat envió a la nube**
+- 14:38: destilar las partidas de Opus (T2).
+- 14:45: freno semanal y familia "sobrevivir y crecer" (T3).
+- 15:06: no editar ESTADO.md (ya no vale: ahora es la organizadora).
+- 15:11: techo de Opus (T13).
+- 15:15: tope al 0,97 hasta las 16:00 y después volver al 0,80.
+- 15:20: escribir el relevo completo antes de terminar.
+- 15:33: pasar a ser también la organizadora, sin documentos de entrega hasta el 27 oct.
+
+**Prioridades de la nube hasta el 27 oct:** sólo pruebas.
+- La carrera (T1), con las hijas de T2 y la familia de T3 dentro.
+- El techo de Opus (T13).
+- Ideas de fuera (T4), escritas por un agente que no ve nuestros manuales.
+- Bots sin IA (T10), que no gastan cuota.
+- Todo dentro del freno semanal y documentando cada hora.
 
 ## 5. Decisiones ya tomadas (no hace falta volver a discutirlas)
 
@@ -84,13 +117,39 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 **Empezar un chat nuevo.** Basta con escribir: *"Lee ESTADO.md y haz la tarea T4"*. Un chat por tarea. Si un chat se alarga mucho, deja lo hecho por escrito y abre otro: los chats largos gastan más cuota en cada mensaje.
 
 **Ramas**
-- `main` contiene lo común y comprobado. Sólo el organizador escribe directamente en `main`, para actualizar este archivo y juntar ramas terminadas.
-- Cada tarea va en su propia rama, llamada `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`. La nube usa `cloud-lab-run`. La rama antigua `Matteo` se queda como está.
+- `main` contiene lo común y comprobado. Sólo el organizador escribe directamente en `main` (ahora, la sesión de la nube), para actualizar este archivo y juntar ramas terminadas.
+- Cada tarea va en su propia rama:
+  - Si la app de Claude abre el chat en una copia aparte del proyecto (*worktree*), crea la rama sola con el prefijo de cada persona: en la app de Alejandro, `alejandro/...` (cambiado el 26 oct). Matteo puede poner `matteo` en **Ajustes → Claude Code → Branch prefix**. Usa esa rama tal cual.
+  - Si no, créala con el nombre `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`.
+- **El chat organizador es la excepción:** se abre directamente en la carpeta del proyecto, en `main`, sin copia aparte, porque es quien junta las ramas y edita este archivo.
+- Ramas que existen ahora:
+
+  | Rama | Para qué | Estado |
+  |---|---|---|
+  | `main` | lo común y comprobado | — |
+  | `cloud-lab-run` | la carrera de la nube | activa; el organizador la junta con `main` cada día |
+  | `Matteo` | trabajo antiguo de Matteo (su diseño ya está en la carrera como M3) | se deja como está |
+  | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
 - Al terminar una tarea:
   1. Las pruebas tienen que pasar (`uv run pytest -q`).
   2. El resultado queda donde dice la tabla.
   3. Actualiza tu línea en la tabla.
   4. Pide en GitHub que se junte con `main` (*Pull Request*).
+
+**Documentar siempre (obligatorio)**
+
+Lo que sólo está en un chat se pierde cuando el chat termina, se queda sin cuota o se resume. Por eso cualquier chat o sesión, incluida la nube, documenta en el repo:
+- **Antes de terminar.** También si se va a quedar sin cuota o sin contexto: en cuanto lo veas venir, documenta primero y sigue después.
+- **Cada hora** si es un trabajo largo, con commit y push.
+
+Qué hay que dejar escrito, en una sección **Relevo** al final del informe de tu tarea (o de `lab/reports/cloud-run-status.md` en la nube):
+1. Qué has hecho y por qué: las decisiones, con su motivo.
+2. Los resultados con números, y dónde están los datos.
+3. Lo que falló o quedó a medias, y cómo lo dejaste.
+4. Qué queda pendiente y cuál es el siguiente paso concreto, con los comandos para retomarlo.
+5. Tu línea de la tabla de tareas actualizada.
+
+Después, commit y push a tu rama. Una tarea no está terminada hasta que su relevo está en GitHub.
 
 **Partidas**
 - **Sólo la nube lanza partidas** (`careerlab run`). Si dos ordenadores juegan a la vez, sus resultados se numeran igual y se pisan al juntarlos. Para jugar desde otro sitio, primero hay que hacer T11.
@@ -108,13 +167,19 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 - Tocar la rama de otro o editar el protocolo congelado.
 - Los resúmenes de partidas en `lab/reports/teacher-digests/` contienen texto del juego de desarrollo. Sirven para estudiar, pero no se copian frases a los manuales, y por eso el repo tiene que seguir siendo **privado**.
 
-**El organizador.** No es un chat fijo, es un papel. Una vez al día, o al acabar una tanda, se abre un chat nuevo con este encargo: *"Eres el organizador. Lee ESTADO.md y `lab/reports/cloud-run-status.md` de la rama `cloud-lab-run`, junta las ramas terminadas, decide lo siguiente y actualiza ESTADO.md."* El diario técnico del organizador, en inglés, está en [task_plan.md](task_plan.md), [findings.md](findings.md) y [progress.md](progress.md).
+**El organizador.** Es un papel, no un chat fijo. Desde el 26 oct lo hace la sesión de la nube que juega. Entre sus tareas:
+- juntar las ramas terminadas con `main`;
+- actualizar este archivo;
+- decidir lo siguiente y escribir su relevo.
+
+Si algún día se vuelve a separar en un chat local, ese chat se abre en la carpeta del proyecto, en `main`, sin copia aparte. El diario técnico, en inglés, está en [task_plan.md](task_plan.md), [findings.md](findings.md) y [progress.md](progress.md).
 
 ## 7. Para Matteo
 
 - Tu diseño de tres Skills entró en la carrera como **M3**. Con Haiku está dormido (38 frente a 60 del líder), pero se puede despertar y el laboratorio lo revisa de vez en cuando.
 - La tarea que mejor encaja con tu cuota es **T4**: proponer manuales que no se nos hayan ocurrido, sobre todo de crecimiento (ascensos y dinero) y sin copiar los nuestros.
 - No lances partidas desde tu ordenador hasta que esté hecha T11.
+- En la app de Claude, pon `matteo` como prefijo de ramas (**Ajustes → Claude Code → Branch prefix**). Así tus ramas se llamarán `matteo/...` y se sabrá de quién es cada una.
 
 ## 8. Mapa de documentos
 
