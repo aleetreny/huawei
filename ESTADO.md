@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:15 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 15:30 UTC**, chat organizador (rama `main`).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -38,7 +38,9 @@ Llevamos 99 partidas con IA (modelos de Claude haciendo de DeepSeek) y 150 con b
   - Opus con memoria corta termina 5 de 6. Opus jugando casi sin manual saca entre 62 y 67, así que sirve de "maestro".
 - Los bots que eligen al azar mueren hacia el mes 6. De las 73.858 partidas de Matteo, ninguna llegó al final.
 
-**Lo que aún no sabemos:** cómo juega DeepSeek con nuestros manuales. Hace falta la clave de la API (tarea T5).
+**Lo que aún no sabemos:**
+- Cómo juega DeepSeek con nuestros manuales. Hace falta la clave de la API (tarea T5).
+- Cuál es el techo del juego, es decir, si queda mucho margen o ya estamos cerca (tarea T13).
 
 **Cuota de Claude (cuenta Max):**
 - Se renueva hoy, 26 oct, a las 16:00 hora UK, y esa semana tiene que durar hasta el 1 nov.
@@ -70,6 +72,7 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 | T10 | Bots sin IA para estudiar el reparto de energía (opcional, no gasta cuota) | libre | opcional | `lab/reports/energy-bots/` |
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | organizador | sólo si alguien más va a jugar | código en `careerlab/` |
 | T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | organizador | cada día | `main` |
+| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | pedida | `cloud-lab-run`: `lab/reports/opus-ceiling/` |
 
 ## 5. Decisiones ya tomadas (no hace falta volver a discutirlas)
 
