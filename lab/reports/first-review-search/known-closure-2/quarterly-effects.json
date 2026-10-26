@@ -1,0 +1,432 @@
+[
+  {
+    "run": 1,
+    "step": 10,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 3,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 1,
+    "step": 11,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 5,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 1,
+    "step": 12,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 7,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 1,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 3,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 1,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 1,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 10,
+    "action": "Network maintenance",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 10,
+    "action": "Network maintenance",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 11,
+    "action": "Prepare report materials",
+    "level": "L1",
+    "stat": "Output",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 11,
+    "action": "Prepare report materials",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 12,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 6,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 2,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 3,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 2,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 7,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 2,
+    "step": 24,
+    "action": "Network maintenance",
+    "level": "L2",
+    "stat": "Network",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 24,
+    "action": "Network maintenance",
+    "level": "L2",
+    "stat": "Dignity",
+    "before": 8,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 25,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Output",
+    "before": 3,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 2,
+    "step": 25,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Skill",
+    "before": 10,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 25,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Network",
+    "before": 5,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 3,
+    "step": 10,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 4,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 11,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 6,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 12,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 8,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 1,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 9,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 3,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 3,
+    "step": 23,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 6,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 24,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 8,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 3,
+    "step": 25,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 10,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 3,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Output",
+    "before": 5,
+    "advertised": 2,
+    "actual": 1
+  },
+  {
+    "run": 3,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Skill",
+    "before": 12,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 3,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Network",
+    "before": 5,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 10,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 7,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 4,
+    "step": 11,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 9,
+    "advertised": 2,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 12,
+    "action": "Health recovery",
+    "level": "L1",
+    "stat": "Health",
+    "before": 10,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 4,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": -1,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 4,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 9,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 4,
+    "step": 13,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 23,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 9,
+    "advertised": 2,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 24,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 10,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 4,
+    "step": 25,
+    "action": "Health recovery",
+    "level": "L2",
+    "stat": "Health",
+    "before": 10,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 4,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Output",
+    "before": 5,
+    "advertised": 2,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Skill",
+    "before": 11,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 26,
+    "action": "Apply for a key project",
+    "level": "L2",
+    "stat": "Network",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "frozen_available_pairs": 528,
+  "initially_tried_pairs": 527,
+  "initial_targets": 1,
+  "closed_targets": 1,
+  "remaining": [],
+  "evidence": [
+    {
+      "question": "df11785dea15a7d1cda0",
+      "answer": 2,
+      "run": 2,
+      "step": 22,
+      "month": 6,
+      "choice": {
+        "choice": 2,
+        "action": "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule"
+      }
+    }
+  ],
+  "new_available_pairs": 0,
+  "frozen_catalogue_complete": true,
+  "totals": {
+    "eliminated": 2,
+    "six_month_window": 3
+  },
+  "elapsed_seconds": 1.3
+}

@@ -1,0 +1,71 @@
+{
+  "frozen_available_pairs": 526,
+  "initially_tried_pairs": 521,
+  "initial_targets": 5,
+  "closed_targets": 5,
+  "remaining": [],
+  "evidence": [
+    {
+      "question": "62590001dc1d070e49df",
+      "answer": 2,
+      "run": 83,
+      "step": 20,
+      "month": 6,
+      "choice": {
+        "choice": 2,
+        "action": "Decline, citing your current workload"
+      }
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "answer": 2,
+      "run": 97,
+      "step": 21,
+      "month": 6,
+      "choice": {
+        "choice": 2,
+        "action": "Let the rise decide it, and drop the idea of leaving on the spot"
+      }
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "answer": 3,
+      "run": 588,
+      "step": 20,
+      "month": 6,
+      "choice": {
+        "choice": 3,
+        "action": "Say you will stay, and keep looking on the quiet"
+      }
+    },
+    {
+      "question": "ae9ad6afa12adc953619",
+      "answer": 2,
+      "run": 246,
+      "step": 21,
+      "month": 6,
+      "choice": {
+        "choice": 2,
+        "action": "Deny you told him"
+      }
+    },
+    {
+      "question": "eac3fd1ff4c1ed32ce84",
+      "answer": 2,
+      "run": 485,
+      "step": 22,
+      "month": 6,
+      "choice": {
+        "choice": 2,
+        "action": "Tell yourself you are just tired and keep going round the clock"
+      }
+    }
+  ],
+  "new_available_pairs": 2,
+  "frozen_catalogue_complete": true,
+  "totals": {
+    "eliminated": 136,
+    "six_month_window": 456
+  },
+  "elapsed_seconds": 114.4
+}

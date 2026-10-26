@@ -1,0 +1,36 @@
+{
+  "catalogue": "lab/reports/first-review-search/questions.json",
+  "input_sha256": "1c3511032369fd18360b017fabf3d12999d24137810e414a36fbb7857ae28454",
+  "runs": 512,
+  "workers": 4,
+  "choice_seed": 330026,
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "initial_frontier": {
+    "frozen_available_pairs": 528,
+    "initially_tried_pairs": 527,
+    "initial_targets": 1,
+    "closed_targets": 0,
+    "remaining": [
+      {
+        "question": "df11785dea15a7d1cda0",
+        "choice": 2,
+        "title": "Grey-area items on a travel expense claim"
+      }
+    ],
+    "evidence": [],
+    "new_available_pairs": 0,
+    "frozen_catalogue_complete": false
+  },
+  "stop": "frozen targets closed, or run cap; all started games finish their six-month window"
+}
