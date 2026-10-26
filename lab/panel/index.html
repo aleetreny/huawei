@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Lab Panel</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --wash: rgba(11,11,11,0.04);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+  --good: #0ca30c; --warn: #fab219; --crit: #d03b3b; --good-text: #006300;
+  --accent: #2a78d6; --accent-wash: rgba(42,120,214,0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+    --good-text: #0ca30c; --accent: #3987e5; --accent-wash: rgba(57,135,229,0.14);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+  --good-text: #0ca30c; --accent: #3987e5; --accent-wash: rgba(57,135,229,0.14);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page); color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 64px; }
+header.top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: 26px; line-height: 1.2; margin: 4px 0 4px; font-weight: 650; letter-spacing: -.01em; }
+.sub { color: var(--ink-2); margin: 0; max-width: 70ch; }
+.meta { color: var(--muted); font-size: 12px; text-align: right; }
+.meta b { color: var(--ink-2); font-weight: 600; }
+button, select {
+  font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 5px 10px; cursor: pointer;
+}
+button:hover, select:hover { background: var(--wash); }
+button:focus-visible, select:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 0 0 18px; position: sticky; top: 0; z-index: 5;
+  background: var(--page); padding: 10px 0; border-bottom: 1px solid var(--grid); }
+.filters .label { color: var(--muted); font-size: 12px; margin-right: 2px; }
+.chip { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px;
+  background: var(--surface); cursor: pointer; user-select: none; font-size: 13px; }
+.chip[aria-pressed="false"] { opacity: .45; }
+.key { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex: none; }
+.key.line { width: 14px; height: 2px; border-radius: 1px; }
+.spacer { flex: 1; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; min-width: 0; }
+.span-12 { grid-column: span 12; } .span-8 { grid-column: span 8; } .span-7 { grid-column: span 7; }
+.span-6 { grid-column: span 6; } .span-5 { grid-column: span 5; } .span-4 { grid-column: span 4; } .span-3 { grid-column: span 3; }
+@media (max-width: 900px) { .span-8, .span-7, .span-6, .span-5, .span-4 { grid-column: span 12; } .span-3 { grid-column: span 6; } }
+@media (max-width: 520px) { .wrap { padding: 20px 16px 48px; } .span-3 { grid-column: span 12; } .meta { text-align: left; } }
+.card h2 { font-size: 15px; margin: 0 0 2px; font-weight: 650; }
+.card .desc { color: var(--ink-2); margin: 0 0 14px; font-size: 13px; max-width: 75ch; }
+.section-title { grid-column: span 12; margin: 18px 0 -4px; display: flex; align-items: baseline; gap: 10px; }
+.section-title h3 { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 650; }
+.section-title span { color: var(--muted); font-size: 12px; }
+
+.hero { display: flex; flex-direction: column; justify-content: space-between; }
+.hero .value { font-size: 56px; font-weight: 650; line-height: 1; letter-spacing: -.02em; margin: 10px 0 6px; }
+.hero .value small { font-size: 18px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
+.tile .label, .hero .label { color: var(--ink-2); font-size: 13px; }
+.tile .value { font-size: 28px; font-weight: 650; line-height: 1.1; margin: 8px 0 4px; }
+.tile .note, .hero .note { color: var(--muted); font-size: 12px; }
+.badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 650; letter-spacing: .03em;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink-2); white-space: nowrap; }
+.badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
+.badge.leader::before { background: var(--good); } .badge.dormant::before { background: var(--muted); }
+.badge.repeat::before { background: var(--accent); }
+
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--muted); font-size: 11px; font-family: inherit; }
+svg .ink { fill: var(--ink); } svg .ink2 { fill: var(--ink-2); }
+.gridline { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+.axisline { stroke: var(--axis); stroke-width: 1; shape-rendering: crispEdges; }
+.hit { fill: transparent; cursor: default; }
+.mark-hover { filter: brightness(1.12); }
+
+.legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--ink-2); font-size: 12px; margin: -4px 0 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+#tip { position: fixed; pointer-events: none; z-index: 20; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; font-size: 12px; min-width: 140px; max-width: 280px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12); opacity: 0; transition: opacity .08s; }
+#tip .v { font-size: 15px; font-weight: 650; }
+#tip .r { display: flex; align-items: center; gap: 7px; color: var(--ink-2); }
+#tip .m { color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; cursor: pointer; user-select: none; position: sticky; top: 0; background: var(--surface); }
+th[aria-sort="ascending"]::after { content: " ↑"; } th[aria-sort="descending"]::after { content: " ↓"; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.table-wrap { max-height: 460px; overflow: auto; border-radius: 8px; }
+.empty { border: 1px dashed var(--axis); border-radius: 12px; padding: 18px; color: var(--ink-2); }
+.empty code, .desc code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; background: var(--wash); padding: 1px 5px; border-radius: 5px; }
+.empty pre { margin: 10px 0 0; background: var(--wash); padding: 10px 12px; border-radius: 8px; overflow-x: auto; font-size: 12px; }
+.caveat { color: var(--muted); font-size: 12px; margin-top: 26px; max-width: 90ch; }
+.row-flex { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; padding: 4px 10px; font-size: 12px; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Gradient Depression · Huawei TechArena UK 2026</div>
+      <h1>Career Survival results panel</h1>
+      <p class="sub">Every scored game from the cloud race, the scripted bots and other machines' runs, in one place. Scores are on the dev dataset, with Claude models standing in for DeepSeek, so they guide decisions rather than predict the official score.</p>
+    </div>
+    <div class="meta">
+      <div>Race data <b id="m-ref"></b> · built <b id="m-built"></b></div>
+      <div style="margin-top:8px"><button id="theme" type="button" aria-label="Toggle colour theme">Theme</button></div>
+    </div>
+  </header>
+
+  <div class="filters" role="toolbar" aria-label="Filters">
+    <span class="label">Players</span>
+    <span id="model-chips" style="display:contents"></span>
+    <span class="spacer"></span>
+    <span class="label">Purpose</span>
+    <select id="purpose" aria-label="Game purpose"></select>
+  </div>
+
+  <div class="grid">
+    <div class="card span-4 hero" id="hero"></div>
+    <div class="card span-8" style="padding:0;border:0;background:none">
+      <div class="grid" id="tiles" style="height:100%"></div>
+    </div>
+
+    <div class="section-title"><h3>Leaderboard</h3><span>the race's pre-registered decisions</span></div>
+    <div class="card span-8">
+      <div class="row-flex">
+        <div><h2>Estimated score per manual</h2></div>
+        <div class="seg" id="block-seg" role="group" aria-label="Decision snapshot"></div>
+      </div>
+      <p class="desc" id="lb-desc"></p>
+      <div id="leaderboard"></div>
+    </div>
+    <div class="card span-4">
+      <h2>How the leader moved</h2>
+      <p class="desc">Each snapshot's estimate for the manuals that ever led or came second. One line per manual; the end label is the latest value.</p>
+      <div id="snapshots"></div>
+    </div>
+
+    <div class="section-title"><h3>Evolution</h3><span>every scored game, in the order it finished</span></div>
+    <div class="card span-12">
+      <h2>Score of every AI game over time</h2>
+      <p class="desc">Each dot is one finished game: filled dots reached month 48, rings were eliminated early. The step line is the best score so far. Hover a dot for the manual, model and how the game ended.</p>
+      <div class="legend" id="scatter-legend"></div>
+      <div id="scatter"></div>
+    </div>
+
+    <div class="section-title"><h3>Where the points go</h3><span>completed AI games only</span></div>
+    <div class="card span-7">
+      <h2>Points earned per scoring dimension</h2>
+      <p class="desc">Average points earned out of each dimension's weight, for games that reached month 48. The grey track is what's still on the table.</p>
+      <div id="dims"></div>
+    </div>
+    <div class="card span-5">
+      <h2>Still alive by month</h2>
+      <p class="desc">Share of games still running at each month. Steep drops mark where careers end.</p>
+      <div class="legend" id="survival-legend"></div>
+      <div id="survival"></div>
+    </div>
+
+    <div class="section-title"><h3>Bots</h3><span>scripted players, no AI and no quota</span></div>
+    <div class="card span-6">
+      <h2>Energy-mix bots (T10)</h2>
+      <p class="desc">40 games per arm. Story events always take the first option; only the quarterly Energy plan changes. Bar = mean score, label = games completed out of 40.</p>
+      <div id="energy"></div>
+    </div>
+    <div class="card span-6">
+      <h2>Leah's local bot sweep</h2>
+      <p class="desc" id="expl-desc"></p>
+      <div id="exploration"></div>
+    </div>
+
+    <div class="section-title"><h3>Other machines</h3><span>results exported under an origin (T11)</span></div>
+    <div class="card span-12" id="origins"></div>
+
+    <div class="section-title"><h3>All games</h3><span>table view of everything above</span></div>
+    <div class="card span-12">
+      <div class="row-flex"><h2>Scored games</h2><span class="desc" id="table-count" style="margin:0"></span></div>
+      <div class="table-wrap"><table id="table"></table></div>
+    </div>
+  </div>
+
+  <p class="caveat">Sources: <code>lab/registry/*.jsonl</code> on the race branch, <code>lab/registry-origins/*/</code>, <code>lab/reports/energy-bots/README.md</code>, Matteo's run summaries and <code>lab/panel/data/exploration.json</code>. Interrupted games are never scored and don't appear. Rebuild with <code>uv run python scripts/panel/build.py</code> after <code>git fetch</code>.</p>
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+"use strict";
+const D = window.PANEL_DATA;
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const MODELS = ["Haiku", "Sonnet", "Opus"];
+const COLOR = { Haiku: "var(--s1)", Sonnet: "var(--s2)", Opus: "var(--s3)", Bot: "var(--s4)" };
+const DIM_LABEL = { level: "Career level", wealth: "Total wealth", resilience: "Health & dignity", skill: "Professional skill", risk_control: "Risk control", network: "Workplace network" };
+const fmtTime = (t) => new Date(t * 1000).toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+const fmt1 = (x) => (x == null ? "–" : (+x).toFixed(1));
+const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : NaN);
+
+// ---------- theme
+const themeBtn = $("#theme");
+const prefersDark = () => matchMedia("(prefers-color-scheme: dark)").matches;
+const currentTheme = () => document.documentElement.dataset.theme || (prefersDark() ? "dark" : "light");
+try { const t = localStorage.getItem("panel-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+const syncThemeLabel = () => { themeBtn.textContent = currentTheme() === "dark" ? "Light theme" : "Dark theme"; };
+themeBtn.addEventListener("click", () => {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("panel-theme", next); } catch (e) {}
+  syncThemeLabel();
+});
+syncThemeLabel();
+
+// ---------- helpers
+function el(tag, attrs = {}, parent) {
+  const n = tag.startsWith("svg:") ? document.createElementNS(NS, tag.slice(4)) : document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "text") n.textContent = v; else if (k === "class") n.setAttribute("class", v); else n.setAttribute(k, v);
+  }
+  if (parent) parent.appendChild(n);
+  return n;
+}
+const svgEl = (tag, attrs, parent) => el("svg:" + tag, attrs, parent);
+function svgRoot(host, w, h) { host.replaceChildren(); return svgEl("svg", { viewBox: `0 0 ${w} ${h}`, role: "img" }, host); }
+const widthOf = (host, min = 320) => Math.max(min, Math.round(host.clientWidth || host.parentElement.clientWidth || 760));
+function niceTicks(max, n = 4) {
+  const step = Math.pow(10, Math.floor(Math.log10(max / n)));
+  const err = max / n / step; const mult = err >= 7.5 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1;
+  const s = step * mult; const out = []; for (let v = 0; v <= max + 1e-9; v += s) out.push(+v.toFixed(6)); return out;
+}
+function barPath(x, y, w, h, r = 4) { // horizontal bar, rounded data end (right), square at baseline (left)
+  r = Math.min(r, h / 2, w); if (w <= 0) return "";
+  return `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`;
+}
+// tooltip
+const tip = $("#tip");
+function showTip(evt, rows) {
+  tip.replaceChildren();
+  for (const r of rows) {
+    const d = el("div", { class: r.cls || "r" }, tip);
+    if (r.key) el("span", { class: "key line", style: `background:${r.key}` }, d);
+    el("span", { text: r.text }, d);
+  }
+  const pad = 14, rect = tip.getBoundingClientRect();
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + rect.width > innerWidth - 8) x = evt.clientX - rect.width - pad;
+  if (y + rect.height > innerHeight - 8) y = evt.clientY - rect.height - pad;
+  tip.style.left = x + "px"; tip.style.top = y + "px"; tip.style.opacity = 1;
+}
+const hideTip = () => { tip.style.opacity = 0; };
+addEventListener("scroll", hideTip, { passive: true });
+function hover(node, rowsFn, lift) {
+  node.setAttribute("tabindex", "0");
+  const on = (e) => { showTip(e.clientX != null ? e : centerOf(node), rowsFn()); if (lift) lift.classList.add("mark-hover"); };
+  const off = () => { hideTip(); if (lift) lift.classList.remove("mark-hover"); };
+  node.addEventListener("pointermove", on); node.addEventListener("pointerleave", off);
+  node.addEventListener("focus", on); node.addEventListener("blur", off);
+}
+const centerOf = (n) => { const b = n.getBoundingClientRect(); return { clientX: b.x + b.width / 2, clientY: b.y }; };
+
+// ---------- state & filters
+const ai = D.games.filter((g) => g.model !== "Bot");
+const bots = D.games.filter((g) => g.model === "Bot");
+const state = { models: new Set(MODELS.filter((m) => ai.some((g) => g.model === m))), purpose: "all", block: D.blocks.length - 1 };
+const chips = $("#model-chips");
+for (const m of MODELS) {
+  const n = ai.filter((g) => g.model === m).length; if (!n) continue;
+  const c = el("span", { class: "chip", role: "button", "aria-pressed": "true", tabindex: "0" }, chips);
+  el("span", { class: "key", style: `background:${COLOR[m]}` }, c); el("span", { text: `${m} · ${n}` }, c);
+  const toggle = () => {
+    if (state.models.has(m) && state.models.size === 1) return;
+    state.models.has(m) ? state.models.delete(m) : state.models.add(m);
+    c.setAttribute("aria-pressed", state.models.has(m)); render();
+  };
+  c.addEventListener("click", toggle); c.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+}
+const purposes = ["all", ...new Set(ai.map((g) => g.purpose))];
+const sel = $("#purpose");
+for (const p of purposes) el("option", { value: p, text: p === "all" ? "All purposes" : p }, sel);
+sel.addEventListener("change", () => { state.purpose = sel.value; render(); });
+const filtered = () => ai.filter((g) => state.models.has(g.model) && (state.purpose === "all" || g.purpose === state.purpose));
+
+$("#m-ref").textContent = `${D.race_ref} @ ${D.race_commit}`;
+$("#m-built").textContent = fmtTime(D.built);
+
+// ---------- hero & tiles
+function renderHero(games) {
+  const host = $("#hero"); host.replaceChildren();
+  const last = D.blocks[D.blocks.length - 1];
+  const top = last ? [...last.rows].sort((a, b) => b.posterior_mean - a.posterior_mean)[0] : null;
+  el("div", { class: "label", text: "Leading manual, estimated score" }, host);
+  const v = el("div", { class: "value" }, host);
+  v.append(top ? fmt1(top.posterior_mean) : "–"); el("small", { text: " / 100" }, v);
+  el("div", { style: "font-weight:600", text: top ? top.policy : "No decision yet" }, host);
+  el("div", { class: "note", text: last ? `${last.actor} · decision #${last.id}, ${fmtTime(last.t)} · ±${fmt1(top.posterior_sd)} sd` : "" }, host);
+}
+function renderTiles(games) {
+  const host = $("#tiles"); host.replaceChildren();
+  const done = games.filter((g) => g.completed);
+  const best = games.reduce((b, g) => (!b || g.score > b.score ? g : b), null);
+  const cost = games.reduce((s, g) => s + (g.cost || 0), 0);
+  const botTotal = bots.length + D.energy_bots.reduce((s, r) => s + r.n, 0) + (D.exploration ? D.exploration.games.length : 0);
+  const tiles = [
+    ["AI games scored", games.length.toLocaleString(), `${[...state.models].join(", ")}`],
+    ["Reached month 48", `${games.length ? Math.round((100 * done.length) / games.length) : 0}%`, `${done.length} of ${games.length} games`],
+    ["Best single game", best ? fmt1(best.score) : "–", best ? `${best.policy} · ${best.actor}` : ""],
+    ["Bot games", botTotal.toLocaleString(), `race ${bots.length} · energy ${D.energy_bots.length * 40} · local ${D.exploration ? D.exploration.games.length : 0}`],
+  ];
+  for (const [label, value, note] of tiles) {
+    const t = el("div", { class: "card span-3 tile" }, host);
+    el("div", { class: "label", text: label }, t); el("div", { class: "value", text: value }, t); el("div", { class: "note", text: note }, t);
+  }
+  if (cost) host.lastChild.title = `List-price cost of the AI games shown: $${cost.toFixed(0)}`;
+}
+
+// ---------- leaderboard
+const seg = $("#block-seg");
+D.blocks.forEach((b, i) => {
+  const btn = el("button", { type: "button", "aria-pressed": String(i === state.block), text: new Date(b.t * 1000).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" }) }, seg);
+  btn.title = `Decision #${b.id}`;
+  btn.addEventListener("click", () => { state.block = i; [...seg.children].forEach((c, j) => c.setAttribute("aria-pressed", String(j === i))); renderLeaderboard(); });
+});
+function renderLeaderboard() {
+  const host = $("#leaderboard");
+  const b = D.blocks[state.block];
+  if (!b) { host.replaceChildren(el("div", { class: "empty", text: "No block decision recorded yet." })); return; }
+  $("#lb-desc").textContent = `Snapshot #${b.id} (${fmtTime(b.t)}), ${b.actor} playing. Bar = posterior mean, whisker = ±1 sd. Dashed marks: Matteo's manual runs, played by a stronger model, shown for scale only.`;
+  const rows = [...b.rows].sort((a, c) => c.posterior_mean - a.posterior_mean);
+  const leader = rows[0].policy;
+  const W = widthOf(host), narrow = W < 600, rowH = 30, left = narrow ? 128 : 210, right = narrow ? 54 : 150, top = 22, H = top + rows.length * rowH + 26, xMax = 80;
+  const svg = svgRoot(host, W, H);
+  const x = (v) => left + (v / xMax) * (W - left - right);
+  for (const t of niceTicks(xMax, 4)) {
+    svgEl("line", { x1: x(t), x2: x(t), y1: top - 6, y2: H - 4, class: t ? "gridline" : "axisline" }, svg);
+    svgEl("text", { x: x(t), y: top - 10, "text-anchor": "middle", text: t }, svg);
+  }
+  for (const m of D.matteo) {
+    svgEl("line", { x1: x(m.score), x2: x(m.score), y1: top - 2, y2: H - 16, stroke: "var(--ink-2)", "stroke-width": 1, "stroke-dasharray": "3 3" }, svg);
+  }
+  if (D.matteo.length) {
+    const ms = D.matteo.map((m) => m.score);
+    svgEl("text", { x: x(Math.min(...ms)) - 4, y: H - 4, "text-anchor": "end", class: "ink2", text: `Matteo manual runs ${ms.map(fmt1).join(" / ")}` }, svg);
+  }
+  rows.forEach((r, i) => {
+    const y = top + i * rowH, cy = y + rowH / 2;
+    const status = D.status[r.policy];
+    const dormant = r.action === "DORMANT" || status === "dormant";
+    const color = dormant ? "var(--axis)" : "var(--s1)";
+    const g = svgEl("g", {}, svg);
+    const pname = narrow && r.policy.length > 19 ? r.policy.slice(0, 18) + "…" : r.policy;
+    svgEl("text", { x: left - 10, y: cy + 4, "text-anchor": "end", class: r.policy === leader ? "ink" : "ink2", "font-weight": r.policy === leader ? 650 : 400, text: pname }, g);
+    const bar = svgEl("path", { d: barPath(x(0), cy - 9, x(r.posterior_mean) - x(0), 18), fill: color }, g);
+    const lo = Math.max(0, r.posterior_mean - r.posterior_sd), hi = r.posterior_mean + r.posterior_sd;
+    svgEl("line", { x1: x(lo), x2: x(hi), y1: cy, y2: cy, stroke: "var(--ink)", "stroke-width": 1.5, opacity: .55 }, g);
+    for (const v of [lo, hi]) svgEl("line", { x1: x(v), x2: x(v), y1: cy - 4, y2: cy + 4, stroke: "var(--ink)", "stroke-width": 1.5, opacity: .55 }, g);
+    if (!narrow) svgEl("text", { x: x(hi) + 6, y: cy + 4, class: "ink", "font-weight": 600, text: fmt1(r.posterior_mean) }, g);
+    else svgEl("text", { x: x(0) + 6, y: cy + 4, style: `fill:${dormant ? "var(--ink)" : "#fff"}`, "font-weight": 600, text: fmt1(r.posterior_mean) }, g);
+    const tag = r.policy === leader ? "leader" : dormant ? "dormant" : "repeat";
+    svgEl("text", { x: W - right + (narrow ? 18 : 40), y: cy + 4, class: "ink2", text: narrow ? `n=${r.n_prefix}` : `${tag} · n=${r.n_prefix}` }, g);
+    svgEl("circle", { cx: W - right + (narrow ? 10 : 32), cy: cy, r: 3.5, fill: tag === "leader" ? "var(--good)" : tag === "dormant" ? "var(--muted)" : "var(--accent)" }, g);
+    const hit = svgEl("rect", { x: 0, y, width: W, height: rowH, class: "hit" }, g);
+    hover(hit, () => [
+      { cls: "v", text: `${fmt1(r.posterior_mean)} ± ${fmt1(r.posterior_sd)}` },
+      { text: r.policy },
+      { cls: "m", text: `P(best) ${(r.p_best * 100).toFixed(1)}% · runs in prefix ${r.n_prefix}` },
+      { cls: "m", text: r.reason || "" },
+    ], bar);
+  });
+}
+function renderSnapshots() {
+  const host = $("#snapshots");
+  if (D.blocks.length < 2) { host.replaceChildren(el("div", { class: "empty", text: "Needs at least two decisions." })); return; }
+  const names = new Set();
+  for (const b of D.blocks) [...b.rows].sort((a, c) => c.posterior_mean - a.posterior_mean).slice(0, 2).forEach((r) => names.add(r.policy));
+  const series = [...names].slice(0, 4);
+  const W = widthOf(host, 300), H = 240, l = 30, r = 130, t = 12, bt = 26;
+  const vals = D.blocks.flatMap((b) => b.rows.filter((x) => names.has(x.policy)).map((x) => x.posterior_mean));
+  const lo = Math.floor((Math.min(...vals) - 3) / 5) * 5, hi = Math.ceil((Math.max(...vals) + 3) / 5) * 5;
+  const svg = svgRoot(host, W, H);
+  const x = (i) => l + (i / (D.blocks.length - 1)) * (W - l - r), y = (v) => t + (1 - (v - lo) / (hi - lo)) * (H - t - bt);
+  for (let v = lo; v <= hi; v += 5) { svgEl("line", { x1: l, x2: W - r, y1: y(v), y2: y(v), class: "gridline" }, svg); svgEl("text", { x: l - 6, y: y(v) + 4, "text-anchor": "end", text: v }, svg); }
+  D.blocks.forEach((b, i) => svgEl("text", { x: x(i), y: H - 8, "text-anchor": "middle", text: new Date(b.t * 1000).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" }) }, svg));
+  const pal = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)"];
+  const ends = [];
+  series.forEach((name, k) => {
+    const pts = D.blocks.map((b, i) => { const row = b.rows.find((x) => x.policy === name); return row ? [x(i), y(row.posterior_mean), row.posterior_mean, b] : null; }).filter(Boolean);
+    svgEl("path", { d: pts.map((p, j) => (j ? "L" : "M") + p[0] + "," + p[1]).join(""), fill: "none", stroke: pal[k], "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    pts.forEach((p) => {
+      svgEl("circle", { cx: p[0], cy: p[1], r: 4, fill: pal[k], stroke: "var(--surface)", "stroke-width": 2 }, svg);
+      const hit = svgEl("circle", { cx: p[0], cy: p[1], r: 12, class: "hit" }, svg);
+      hover(hit, () => [{ cls: "v", text: fmt1(p[2]) }, { key: pal[k], text: name }, { cls: "m", text: `decision #${p[3].id}` }]);
+    });
+    const last = pts[pts.length - 1]; ends.push({ y: last[1], name, val: last[2], k, x: last[0] });
+  });
+  ends.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 26) ends[i].ly = (ends[i - 1].ly ?? ends[i - 1].y) + 26;
+  for (const e of ends) {
+    const ly = e.ly ?? e.y;
+    if (ly !== e.y) svgEl("line", { x1: e.x + 6, x2: e.x + 12, y1: e.y, y2: ly, stroke: "var(--axis)" }, svg);
+    svgEl("text", { x: e.x + 14, y: ly + 1, class: "ink", "font-weight": 600, text: fmt1(e.val) }, svg);
+    svgEl("text", { x: e.x + 14, y: ly + 13, class: "ink2", text: e.name.length > 18 ? e.name.slice(0, 17) + "…" : e.name }, svg);
+  }
+}
+
+// ---------- scatter over time
+function renderScatter(games) {
+  const host = $("#scatter");
+  const leg = $("#scatter-legend"); leg.replaceChildren();
+  for (const m of MODELS) if (state.models.has(m) && games.some((g) => g.model === m)) { const s = el("span", {}, leg); el("span", { class: "key", style: `background:${COLOR[m]};border-radius:50%` }, s); s.append(m); }
+  const s2 = el("span", {}, leg); el("span", { class: "key line", style: "background:var(--ink)" }, s2); s2.append("Best so far");
+  if (!games.length) { host.replaceChildren(el("div", { class: "empty", text: "No games for this filter." })); return; }
+  const W = widthOf(host), H = 300, l = 36, r = 18, t = 10, b = 28;
+  const ts = games.map((g) => g.t); const t0 = Math.min(...ts), t1 = Math.max(...ts) + 1;
+  const svg = svgRoot(host, W, H);
+  const x = (v) => l + ((v - t0) / (t1 - t0)) * (W - l - r), y = (v) => t + (1 - v / 100) * (H - t - b);
+  for (const v of [0, 25, 50, 75, 100]) { svgEl("line", { x1: l, x2: W - r, y1: y(v), y2: y(v), class: v ? "gridline" : "axisline" }, svg); svgEl("text", { x: l - 8, y: y(v) + 4, "text-anchor": "end", text: v }, svg); }
+  const hours = Math.max(1, Math.round((t1 - t0) / 3600));
+  const room = Math.max(2, Math.floor((W - l - r) / 120));
+  const stepH = [0.5, 1, 2, 3, 6, 12, 24].find((h) => (t1 - t0) / (h * 3600) <= room) || 24;
+  for (let v = Math.ceil(t0 / (stepH * 3600)) * stepH * 3600; v <= t1; v += stepH * 3600)
+    svgEl("text", { x: x(v), y: H - 8, "text-anchor": "middle", text: fmtTime(v) }, svg);
+  const sorted = [...games].sort((a, c) => a.t - c.t);
+  let best = -1, d = "";
+  for (const g of sorted) { if (g.score > best) { d += (d ? `H${x(g.t)}` : `M${x(g.t)},${y(g.score)}`) + `V${y(g.score)}`; best = g.score; } }
+  d += `H${x(t1)}`;
+  svgEl("path", { d, fill: "none", stroke: "var(--ink)", "stroke-width": 2, "stroke-linejoin": "round", opacity: .8 }, svg);
+  for (const g of sorted) {
+    const cx = x(g.t), cy = y(g.score);
+    const dot = svgEl("circle", { cx, cy, r: g.completed ? 4.5 : 4, fill: g.completed ? COLOR[g.model] : "var(--surface)", stroke: g.completed ? "var(--surface)" : COLOR[g.model], "stroke-width": 2 }, svg);
+    const hit = svgEl("circle", { cx, cy, r: 9, class: "hit" }, svg);
+    hover(hit, () => [
+      { cls: "v", text: fmt1(g.score) },
+      { key: COLOR[g.model], text: `${g.policy}` },
+      { cls: "m", text: `${g.actor} · ${g.purpose}` },
+      { cls: "m", text: g.completed ? "completed all 48 months" : `eliminated at month ${g.months}` },
+      { cls: "m", text: fmtTime(g.t) },
+    ], dot);
+  }
+  
+}
+
+// ---------- dimensions
+function renderDims(games) {
+  const host = $("#dims");
+  const done = games.filter((g) => g.completed);
+  if (!done.length) { host.replaceChildren(el("div", { class: "empty", text: "No completed games for this filter." })); return; }
+  const keys = Object.keys(D.weights);
+  const W = widthOf(host), rowH = 40, l = W < 480 ? 112 : 140, r = W < 480 ? 78 : 110, H = keys.length * rowH + 30;
+  const svg = svgRoot(host, W, H);
+  const x = (v) => l + (v / 30) * (W - l - r);
+  for (const t of [0, 10, 20, 30]) { svgEl("line", { x1: x(t), x2: x(t), y1: 8, y2: H - 22, class: t ? "gridline" : "axisline" }, svg); svgEl("text", { x: x(t), y: H - 6, "text-anchor": "middle", text: t + " pts" }, svg); }
+  let totalGap = 0;
+  keys.forEach((k, i) => {
+    const w = D.weights[k];
+    const got = mean(done.map((g) => ((g.dims[k] ?? 0) * w) / 100));
+    totalGap += w - got;
+    const cy = 14 + i * rowH + 12;
+    svgEl("text", { x: l - 10, y: cy + 4, "text-anchor": "end", class: "ink2", text: DIM_LABEL[k] }, svg);
+    svgEl("path", { d: barPath(x(0), cy - 8, x(w) - x(0), 16), fill: "var(--grid)" }, svg);
+    const bar = svgEl("path", { d: barPath(x(0), cy - 8, Math.max(0, x(got) - x(0) - 0), 16), fill: "var(--s1)" }, svg);
+    svgEl("text", { x: x(w) + 8, y: cy + 4, class: "ink", "font-weight": 600, text: `${fmt1(got)} / ${w}` }, svg);
+    if (W >= 480) svgEl("text", { x: x(w) + 64, y: cy + 4, text: `−${fmt1(w - got)}` }, svg);
+    const hit = svgEl("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, class: "hit" }, svg);
+    hover(hit, () => [{ cls: "v", text: `${fmt1(got)} of ${w} points` }, { text: DIM_LABEL[k] }, { cls: "m", text: `${fmt1(w - got)} points missing on average · ${done.length} completed games` }], bar);
+  });
+  const note = el("p", { class: "desc", style: "margin:8px 0 0" }, host);
+  note.textContent = `On average ${fmt1(totalGap)} points are missing per completed game. The two biggest gaps are the levers for growth.`;
+}
+
+// ---------- survival
+function renderSurvival(games) {
+  const host = $("#survival"); const leg = $("#survival-legend"); leg.replaceChildren();
+  const groups = [...MODELS.filter((m) => state.models.has(m)), "Bot"].map((m) => ({ m, gs: m === "Bot" ? bots : games.filter((g) => g.model === m) })).filter((x) => x.gs.length);
+  for (const { m, gs } of groups) { const s = el("span", {}, leg); el("span", { class: "key line", style: `background:${COLOR[m]}` }, s); s.append(`${m === "Bot" ? "Race bots" : m} (${gs.length})`); }
+  const W = widthOf(host, 300), H = 250, l = 36, r = 14, t = 10, b = 26;
+  const svg = svgRoot(host, W, H);
+  const x = (v) => l + (v / 48) * (W - l - r), y = (v) => t + (1 - v) * (H - t - b);
+  for (const v of [0, .25, .5, .75, 1]) { svgEl("line", { x1: l, x2: W - r, y1: y(v), y2: y(v), class: v ? "gridline" : "axisline" }, svg); svgEl("text", { x: l - 6, y: y(v) + 4, "text-anchor": "end", text: Math.round(v * 100) + "%" }, svg); }
+  for (const mth of [0, 6, 12, 18, 24, 30, 36, 42, 48]) svgEl("text", { x: x(mth), y: H - 8, "text-anchor": "middle", text: mth }, svg);
+  const curves = groups.map(({ m, gs }) => {
+    const alive = (mth) => gs.filter((g) => g.completed || g.months >= mth).length / gs.length;
+    const pts = []; for (let mth = 0; mth <= 48; mth++) pts.push([mth, alive(mth)]);
+    let d = `M${x(0)},${y(1)}`; for (const [mth, v] of pts) d += `H${x(mth)}V${y(v)}`;
+    svgEl("path", { d, fill: "none", stroke: COLOR[m], "stroke-width": 2, "stroke-linejoin": "round" }, svg);
+    return { m, pts };
+  });
+  const cross = svgEl("line", { y1: t, y2: H - b, class: "axisline", opacity: 0 }, svg);
+  const hit = svgEl("rect", { x: l, y: t, width: W - l - r, height: H - t - b, class: "hit" }, svg);
+  const move = (e) => {
+    const box = svg.getBoundingClientRect(); const px = ((e.clientX - box.left) / box.width) * W;
+    const mth = Math.max(0, Math.min(48, Math.round(((px - l) / (W - l - r)) * 48)));
+    cross.setAttribute("x1", x(mth)); cross.setAttribute("x2", x(mth)); cross.setAttribute("opacity", 1);
+    showTip(e, [{ cls: "m", text: `Month ${mth}` }, ...curves.map((c) => ({ key: COLOR[c.m], text: `${Math.round(c.pts[mth][1] * 100)}% still playing · ${c.m === "Bot" ? "race bots" : c.m}` }))]);
+  };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerleave", () => { hideTip(); cross.setAttribute("opacity", 0); });
+}
+
+// ---------- horizontal bar list (energy, exploration)
+function barList(host, rows, { max = 80, labelW = 230, valueFmt = fmt1, note, tipRows }) {
+  const W = widthOf(host), rowH = 26, r = 110;
+  labelW = Math.min(labelW, Math.round(W * 0.42));
+  const H = rows.length * rowH + 24;
+  const svg = svgRoot(host, W, H);
+  const maxChars = Math.floor(labelW / 6.4);
+  const x = (v) => labelW + (v / max) * (W - labelW - r);
+  for (const t of niceTicks(max, 4)) { svgEl("line", { x1: x(t), x2: x(t), y1: 2, y2: H - 20, class: t ? "gridline" : "axisline" }, svg); svgEl("text", { x: x(t), y: H - 6, "text-anchor": "middle", text: t }, svg); }
+  rows.forEach((row, i) => {
+    const cy = 4 + i * rowH + rowH / 2;
+    svgEl("text", { x: labelW - 10, y: cy + 4, "text-anchor": "end", class: "ink2", text: row.label.length > maxChars ? row.label.slice(0, maxChars - 1) + "…" : row.label }, svg);
+    const bar = svgEl("path", { d: barPath(x(0), cy - 8, x(row.value) - x(0), 16), fill: row.color || "var(--s1)" }, svg);
+    svgEl("text", { x: x(row.value) + 6, y: cy + 4, class: "ink", "font-weight": 600, text: valueFmt(row.value) }, svg);
+    if (note) svgEl("text", { x: W - 4, y: cy + 4, "text-anchor": "end", text: note(row) }, svg);
+    const hit = svgEl("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, class: "hit" }, svg);
+    hover(hit, () => tipRows(row), bar);
+  });
+}
+function renderEnergy() {
+  const host = $("#energy");
+  if (!D.energy_bots.length) { host.replaceChildren(el("div", { class: "empty", text: "Energy-bot report not found on the race branch." })); return; }
+  const rows = [...D.energy_bots].sort((a, b) => b.q - a.q).map((r) => ({ ...r, label: r.arm, value: r.q }));
+  barList(host, rows, { max: 40, note: (r) => `${r.completed}/40 done`,
+    tipRows: (r) => [{ cls: "v", text: `${fmt1(r.q)} mean score` }, { text: r.arm }, { cls: "m", text: `${r.completed}/40 completed · ${r.blackouts} blackouts · ${fmt1(r.months)} mean months` }, { cls: "m", text: r.other !== "—" ? `other exits: ${r.other}` : "" }] });
+}
+function renderExploration() {
+  const host = $("#exploration");
+  const E = D.exploration;
+  if (!E) { $("#expl-desc").textContent = ""; host.replaceChildren(el("div", { class: "empty", text: "Not built. Run scripts/panel/build.py --exploration <folder of harness games>." })); return; }
+  const by = {};
+  for (const g of E.games) (by[g.policy] ||= []).push(g);
+  const all = Object.entries(by).map(([p, gs]) => ({ label: p, value: mean(gs.map((g) => g.score)), n: gs.length, done: gs.filter((g) => g.completed).length, best: Math.max(...gs.map((g) => g.score)) }));
+  all.sort((a, b) => b.value - a.value);
+  const base = all.filter((r) => ["random", "first", "careful"].includes(r.label));
+  const rows = [...all.slice(0, 8), ...base.filter((b) => !all.slice(0, 8).includes(b))].map((r) => ({ ...r, color: ["random", "first", "careful"].includes(r.label) ? "var(--axis)" : "var(--s1)" }));
+  $("#expl-desc").textContent = `${E.games.length.toLocaleString()} games across ${all.length} scripted policies, played through the official tools on this Mac. Top 8 by mean score, plus the baselines in grey.`;
+  barList(host, rows, { max: 50, note: (r) => `${r.done}/${r.n} done`,
+    tipRows: (r) => [{ cls: "v", text: `${fmt1(r.value)} mean score` }, { text: r.label }, { cls: "m", text: `${r.done} of ${r.n} completed · best ${fmt1(r.best)}` }] });
+}
+
+// ---------- origins
+function renderOrigins() {
+  const host = $("#origins"); host.replaceChildren();
+  const names = Object.keys(D.origins || {});
+  el("h2", { text: names.length ? "Results from other machines" : "No other machine has exported results yet" }, host);
+  if (!names.length) {
+    const e = el("div", { class: "empty" }, host);
+    e.append("Games played on a second machine with an origin set (T11) appear here after ");
+    el("code", { text: "careerlab export" }, e); e.append(" writes ");
+    el("code", { text: "lab/registry-origins/<origin>/" }, e); e.append(" and the panel is rebuilt.");
+    el("pre", { text: "uv run careerlab origin set leah\nuv run careerlab enqueue --policy <id> --actor scripted:quarterly-wellbeing --n 20 --purpose screen --why \"...\"\nuv run careerlab run --kind scripted --slots 4\nuv run careerlab export\nuv run python scripts/panel/build.py" }, e);
+    return;
+  }
+  const grid = el("div", { class: "grid", style: "margin-top:12px" }, host);
+  for (const n of names) {
+    const gs = D.origins[n];
+    const done = gs.filter((g) => g.completed);
+    const best = gs.reduce((b, g) => (!b || g.score > b.score ? g : b), null);
+    const t = el("div", { class: "card span-3 tile", style: "background:var(--page)" }, grid);
+    el("div", { class: "label", text: `Origin ${n}` }, t);
+    el("div", { class: "value", text: gs.length ? fmt1(mean(gs.map((g) => g.score))) : "–" }, t);
+    el("div", { class: "note", text: `${gs.length} games · ${done.length} completed · best ${best ? fmt1(best.score) : "–"}` }, t);
+  }
+  renderHeadToHead(host, names);
+}
+
+// Same player, different manual: each origin manual against the race leader and the race average for that model.
+function renderHeadToHead(host, names) {
+  const last = D.blocks[D.blocks.length - 1];
+  const leader = last ? [...last.rows].sort((a, b) => b.posterior_mean - a.posterior_mean)[0].policy : null;
+  const rows = [];
+  const cell = (label, gs, mine) => {
+    const done = gs.filter((g) => g.completed);
+    const dim = (k) => (done.length ? mean(done.map((g) => ((g.dims[k] ?? 0) * D.weights[k]) / 100)) : null);
+    rows.push({ label, gs, mine, value: mean(gs.map((g) => g.score)), done: done.length, level: dim("level"), wealth: dim("wealth") });
+  };
+  for (const n of names) {
+    const cells = {};
+    for (const g of D.origins[n]) if (g.model !== "Bot") (cells[`${g.policy}|${g.model}`] ||= []).push(g);
+    for (const [key, gs] of Object.entries(cells)) {
+      const [policy, model] = key.split("|");
+      cell(`${n}: ${policy} · ${model}`, gs, true);
+      const ref = ai.filter((g) => g.model === model && g.policy === leader);
+      if (ref.length && !rows.some((r) => r.label.startsWith("race leader") && r.label.endsWith(model))) cell(`race leader ${leader} · ${model}`, ref, false);
+      const all = ai.filter((g) => g.model === model);
+      if (all.length && !rows.some((r) => r.label === `race, all manuals · ${model}`)) cell(`race, all manuals · ${model}`, all, false);
+    }
+  }
+  if (!rows.length) return;
+  el("h2", { text: "Same player, different manual", style: "margin-top:22px" }, host);
+  el("p", { class: "desc", text: "Each dot is one game (filled = reached month 48, ring = eliminated). Bar = mean score. Blue rows are this machine's manuals; grey rows are the race's games with the same model, for reference. Different machines may run a different Claude CLI version, so this is a rough read, not a race decision." }, host);
+  const wrap = el("div", {}, host);
+  const W = widthOf(wrap), narrow = W < 640, rowH = 34, l = narrow ? 150 : 300, r = narrow ? 70 : 220, H = rows.length * rowH + 26;
+  const svg = svgRoot(wrap, W, H);
+  const x = (v) => l + (v / 100) * (W - l - r);
+  for (const t of [0, 25, 50, 75, 100]) { svgEl("line", { x1: x(t), x2: x(t), y1: 2, y2: H - 20, class: t ? "gridline" : "axisline" }, svg); svgEl("text", { x: x(t), y: H - 6, "text-anchor": "middle", text: t }, svg); }
+  const maxChars = Math.floor((l - 12) / 6.4);
+  rows.forEach((row, i) => {
+    const cy = 4 + i * rowH + rowH / 2;
+    svgEl("text", { x: l - 10, y: cy + 4, "text-anchor": "end", class: row.mine ? "ink" : "ink2", "font-weight": row.mine ? 600 : 400, text: row.label.length > maxChars ? row.label.slice(0, maxChars - 1) + "…" : row.label }, svg);
+    const bar = svgEl("path", { d: barPath(x(0), cy - 7, x(row.value) - x(0), 14), fill: row.mine ? "var(--accent-wash)" : "var(--wash)" }, svg);
+    svgEl("line", { x1: x(row.value), x2: x(row.value), y1: cy - 10, y2: cy + 10, stroke: row.mine ? "var(--accent)" : "var(--ink-2)", "stroke-width": 2 }, svg);
+    for (const g of row.gs) svgEl("circle", { cx: x(g.score), cy, r: 4, fill: g.completed ? (row.mine ? "var(--accent)" : "var(--muted)") : "var(--surface)", stroke: g.completed ? "var(--surface)" : (row.mine ? "var(--accent)" : "var(--muted)"), "stroke-width": 2 }, svg);
+    const stats = `${fmt1(row.value)} · ${row.done}/${row.gs.length} done`;
+    svgEl("text", { x: x(100) + 10, y: cy + 4, class: "ink", "font-weight": 600, text: narrow ? fmt1(row.value) : stats }, svg);
+    if (!narrow) svgEl("text", { x: x(100) + 118, y: cy + 4, text: row.level == null ? "" : `level ${fmt1(row.level)} · wealth ${fmt1(row.wealth)}` }, svg);
+    const hit = svgEl("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, class: "hit" }, svg);
+    hover(hit, () => [{ cls: "v", text: `${fmt1(row.value)} mean score` }, { text: row.label }, { cls: "m", text: `${row.done} of ${row.gs.length} completed` },
+      { cls: "m", text: row.level == null ? "no completed games" : `completed games: level ${fmt1(row.level)}/30, wealth ${fmt1(row.wealth)}/20` }], bar);
+  });
+}
+
+// ---------- table
+const cols = [["policy", "Manual"], ["actor", "Player"], ["origin", "Origin"], ["purpose", "Purpose"], ["outcome", "Outcome"], ["months", "Months", 1], ["score", "Score", 1], ["cost", "Cost $", 1], ["t", "Finished", 1]];
+let sortKey = "t", sortDir = -1;
+function renderTable(games) {
+  const all = [...games, ...Object.values(D.origins || {}).flat().filter((g) => g.model !== "Bot" ? state.models.has(g.model) : true)];
+  const tbl = $("#table"); tbl.replaceChildren();
+  const head = el("tr", {}, el("thead", {}, tbl));
+  for (const [k, label, num] of cols) {
+    const th = el("th", { class: num ? "num" : "", text: label, scope: "col", tabindex: "0" }, head);
+    if (k === sortKey) th.setAttribute("aria-sort", sortDir > 0 ? "ascending" : "descending");
+    const go = () => { sortDir = sortKey === k ? -sortDir : (num ? -1 : 1); sortKey = k; renderTable(games); };
+    th.addEventListener("click", go); th.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
+  }
+  const body = el("tbody", {}, tbl);
+  all.sort((a, b) => ((a[sortKey] ?? -1) > (b[sortKey] ?? -1) ? 1 : -1) * sortDir);
+  for (const g of all) {
+    const tr = el("tr", {}, body);
+    for (const [k, , num] of cols) {
+      let v = g[k];
+      if (k === "score") v = fmt1(v); else if (k === "cost") v = v ? v.toFixed(2) : "–"; else if (k === "t") v = fmtTime(v); else if (k === "origin") v = v === "race" ? "race" : v;
+      el("td", { class: num ? "num" : "", text: v ?? "–" }, tr);
+    }
+  }
+  $("#table-count").textContent = `${all.length} games`;
+}
+
+function render() {
+  const games = filtered();
+  renderHero(games); renderTiles(games); renderScatter(games); renderDims(games); renderSurvival(games); renderTable(games);
+}
+const renderAll = () => { renderLeaderboard(); renderSnapshots(); renderEnergy(); renderExploration(); renderOrigins(); render(); };
+renderAll();
+let lastW = innerWidth, rt;
+addEventListener("resize", () => { if (innerWidth === lastW) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(renderAll, 120); });
+})();
+</script>
+</body>
+</html>
