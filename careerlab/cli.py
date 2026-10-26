@@ -84,7 +84,14 @@ def cmd_register(args: argparse.Namespace) -> int:
     if errors and not args.allow_lint_errors:
         print("compliance errors:\n" + "\n".join(map(str, errors)))
         return 2
-    policy_id = reg.register_policy(src / "bundle", meta["family"], meta["name"], meta.get("parents", []),
+    parents = []
+    for parent in meta.get("parents", []):  # policy.json may name parents; the registry stores ids
+        row = reg.db.execute("SELECT policy_id FROM policies WHERE policy_id=? OR name=?", (parent, parent)).fetchone()
+        if row is None:
+            print(f"unknown parent {parent!r}: register it first")
+            return 2
+        parents.append(row[0])
+    policy_id = reg.register_policy(src / "bundle", meta["family"], meta["name"], parents,
                                     meta["hypothesis"], meta.get("change", ""), created_by=args.by, meta=meta)
     print(policy_id)
     return 0
@@ -136,7 +143,8 @@ def cmd_run(args: argparse.Namespace) -> int:
     if args.kind == "scripted":
         print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit, purpose=args.purpose)))
     else:
-        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose)))
+        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose,
+                                           max_five_hour=args.max_five_hour)))
     return 0
 
 
@@ -216,6 +224,7 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--slots", type=int, default=8)
     run.add_argument("--limit", type=int)
     run.add_argument("--purpose")
+    run.add_argument("--max-five-hour", type=float, default=0.75, help="pause new Claude episodes above this five-hour utilisation")
     run.set_defaults(fn=cmd_run)
     sub.add_parser("recover").set_defaults(fn=cmd_recover)
     sub.add_parser("resume").set_defaults(fn=cmd_resume)

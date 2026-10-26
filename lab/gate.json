@@ -52,7 +52,7 @@
         "claude-cli": {
           "allowed": true,
           "max_episodes": null,
-          "reason": "CLI now on the Max account (verified 26 Oct 13:05 UTC)."
+          "reason": "CLI now on the Max account (verified 26 Oct ~12:05 UTC)."
         },
         "native-subagent": {
           "allowed": true,
