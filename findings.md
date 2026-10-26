@@ -91,3 +91,9 @@
   - Context: Opus~100k used about 0.12 M cache-read tokens per survived month, Haiku about 0.41 M. Both are under the 500 k/month full-efficiency line, if cached tokens count the same way in the official total.
   - Speed: about 0.2–0.28 minutes per game month, so 10–13 minutes per full episode.
 - **Quota throttling:** at 13:00 UTC, with 24 parallel workers, the shared five-hour window rose about 0.9 points per minute (30 % → 44 % in about 15 minutes). The orchestrator stopped the 12-slot scheduler and re-queued its 12 unfinished episodes. It also added a governor: `careerlab run --max-five-hour 0.55` holds new episodes above the cap until the 16:00 reset, because this orchestrator session shares the window.
+- **First pre-registered block decision (Haiku actor, 13:25 UTC; `careerlab/decisions.py`, recorded in the registry):** prefix-complete runs, family-pooled posterior, robust across normal, Student-t and Bayesian-bootstrap fits.
+  - Leader: F3 feedback-reactive, posterior Y 61.3 (SD 1.8), P(best) 0.57, 3 runs.
+  - Second: F1 steady-balance, 58.0 (7.2).
+  - Then F7 three-skills 50.0 and F7 single-skill 48.8.
+  - P0 minimal goes **DORMANT** (4 runs, P(μ ≥ μ_leader − 4) = 0.008). This is reversible and stays subject to audits.
+  - Every other cell repeats (fewer than 4 runs). The five block-2 children have 1–2 runs each and are not yet above their parents.
