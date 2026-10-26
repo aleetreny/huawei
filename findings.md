@@ -153,4 +153,10 @@
 - Organiser actions:
   - merged `leah/workspace` (T11: origins; the registry migrated in place while the race ran) and `matteo-t4-growth` (T4 value-conversion, registered as `91b30e8096ff6766`). 230 tests pass.
   - At the user's request, commits are authored as Alejandro Treny Ortega, with no Claude co-author lines. The 14 earlier `cloud-lab-run` commits were rewritten and force-pushed (that branch only).
+- Block-3 trace diagnosis (Haiku games with local digests; `lab/reports/cloud-run-diagnostics/block3-generation.md`):
+  - The weak-review streak is about leaving Level 1. No game got a B while still at Level 1 after its first review (0 of 47 reviews). Mean Q by first promotion: at review 1, 57.3 (12/14 completed); at review 2, 47.0 (7/11); none by review 2, 22.0 (0/13).
+  - Energy and main-action mixes do not separate the groups.
+  - Output at its run high at the review does: all 14 games promoted at review 1 had it, against 12/24 others. When Output or Network dropped through story choices after the last quarterly phase, 14/60 reviews were good, against 34/66 otherwise.
+  - New candidates: f7-trend-marking, f7-delivery-stories, and f7-promotion-drive (stall slot, playbook P12).
+- Problem A (preliminary): Haiku and opus~100k rank the shared policies differently (6 shared policies, Spearman −0.26, different top). opus~100k does worse with the F3 family than with F1 and P0.
 
