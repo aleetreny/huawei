@@ -71,7 +71,59 @@ Vienen de `competition-rules.rst` y de ESTADO.md:
 - Los efectos de las opciones se comprueban con títulos reservados.
 - Se dan intervalos de confianza y no se cuentan anécdotas.
 
-## 5. Estado
+## 5. Qué hemos descubierto (resumen; detalle y números en [hallazgos.md](hallazgos.md))
+
+En unas 15.000 partidas de bots por la vía oficial, la mecánica central del juego en dev queda casi entera:
+
+1. **La nota final es una fórmula fija** (H11, comprobada en 2.639 partidas): nivel, dinero, salud+dignidad, habilidad, riesgo final y red. El nivel y el dinero (que sale del sueldo, y por tanto del nivel) son lo que separa una partida buena de una excelente.
+2. **Ascender es casi determinista** (H2, H6, H14, H18). En cada evaluación semestral se asciende si, **al empezar el mes de la evaluación**, se cumplen tres condiciones:
+   - Skill, Network y Output superan el umbral de su nivel;
+   - la Dignidad no está baja;
+   - el riesgo oculto no está disparado.
+
+   Cada nivel tiene un techo por indicador y lo que lo supera se pierde. En L1 y L2 el umbral coincide con el techo o queda justo debajo; desde L4 el cuello de botella es sólo la Skill.
+3. **La nota de la evaluación sigue al nivel** (H7): C y D mientras no se asciende, B y A después. **Quien llega al mes 24 todavía en L1 es despedido** (H8).
+4. **El juego es determinista salvo el sorteo de eventos y las explosiones de riesgo** (H12): cada respuesta tiene siempre el mismo efecto y la historia sigue siempre el mismo camino.
+5. **Lo que decide la partida son las respuestas a los eventos** (H13): jugarlas al azar en un solo semestre cuesta entre 10 y 40 puntos, y el reparto trimestral al azar sólo entre 0 y 4.
+6. **El riesgo oculto lo crean las respuestas** (H5, H9, H16):
+   - el comentario mensual de RR. HH. lo mide bien;
+   - ocultar, engañar, cotillear, saltarse pasos o culpar suben un 12–19 % la probabilidad de explosión en 3 meses;
+   - dos explosiones terminan la partida.
+7. **El carácter de una respuesta predice sus efectos en historias no vistas** (H16): R² de 0,4 a 0,6 para riesgo, dignidad, salud, Network y Skill, con títulos reservados. La integridad casi no cuesta nada. La excepción es el Output, que sale de dedicar el tiempo a la entrega propia.
+8. **La 1.ª evaluación se pierde casi siempre por un punto de Output o de Network cedido en el último mes** (H15). Proteger ese mes sube la nota del bot de 61 a 66 (H17).
+
+**Referencias con bots:**
+
+| Bot | Nota media |
+|---|---:|
+| Aleatorio | ~12, muere hacia el mes 6 |
+| Oráculo con el catálogo de dev (no es una Skill) | ~66 (84–89 % terminan; L6 en el mes 48) |
+| "Bot de principios" (sólo rasgos generales de las respuestas) | 45 sin conocer la mecánica; 53 conociéndola |
+| Mejores manuales con Haiku, como referencia | ~55 |
+
+## 6. Estrategia por etapas (lo que haría un jugador perfecto)
+
+| Etapa | Objetivo | Claves |
+|---|---|---|
+| Meses 1–5 | Llegar a la 1.ª evaluación con Skill, Network y Output en su techo de L1, Dignidad sana y riesgo bajo | El Output es el que más falla: el reparto del mes 3 (informes y proyecto clave) y, en los meses 4–5, no dedicar tiempo a lo que no sea la entrega propia. En el mes 5, no ceder ningún punto |
+| Meses 6–17 (L2 y L3) | Ascender en cada evaluación | Los umbrales siguen cerca de los techos. En L3 hace falta un salto grande de Network y Output: ayudar, colaborar y la mentoría |
+| Meses 18–35 (L4) | Juntar Skill, el único cuello de botella | Respuestas que construyen capacidad, rotación o mentoría y aprendizaje cuando la salud lo permita. Unos 15 meses de Skill a buen ritmo |
+| Meses 36–48 (L5–L6) | Seguir con la Skill y cerrar bien | En los últimos meses, cerrar riesgos y recuperar salud y dignidad, que cuentan en la nota final |
+| Siempre | No explotar | Respuestas íntegras; Defuse en cuanto el comentario de RR. HH. deja de ser tranquilo; nada de sobreesfuerzo; tras una explosión, ningún riesgo |
+
+## 7. De hallazgos a Skill
+
+- Manual candidato: [`lab/policies-src/bb-mechanics/bb-mechanics-v1`](../../policies-src/bb-mechanics/bb-mechanics-v1/).
+  - Una Skill: explica la mecánica sin números y da un procedimiento para evaluar respuestas por su carácter, la regla de proteger el mes previo a cada evaluación y reglas trimestrales cortas.
+  - `careerlab lint` no da avisos.
+  - **Todavía no se ha jugado con IA.**
+- Prueba a nivel de decisión ([sección 8](#8-prueba-a-nivel-de-decisión)): 150 preguntas reales dadas a Haiku con tres instrucciones, puntuando sus elecciones con los efectos medidos.
+
+## 8. Prueba a nivel de decisión
+
+(en curso)
+
+## 9. Estado
 
 Ver [progreso.md](progreso.md) para el diario con horas.
 

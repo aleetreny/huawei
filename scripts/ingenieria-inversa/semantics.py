@@ -117,6 +117,8 @@ def main() -> None:
             lab = labels.get((node, int(k)))
             if lab:
                 e["tags"], e["integrity"] = lab
+            if (node, int(k)) in delivery:
+                e["delivery"] = delivery[(node, int(k))]
             out_nodes[node][k] = e
     out = {"source": "out-of-fold trait predictions (titles held out)", "ceil": model.get("ceil", {}), "nodes": out_nodes,
            "report": report}

@@ -7,7 +7,7 @@ description: How promotion, reviews, hidden risk and story answers work in this 
 
 ## How the game works
 - **Story answers decide most of your career.** They carry most of the growth, and careless answers are what end runs. Quarterly actions only adjust.
-- **Promotion is checked at the review moment.** A half-year review looks at Skill, Network and Output as they stand when the review month begins, before that month's events and its quarter-end allocation. All three must be high enough for your level; one short input blocks the promotion.
+- **Promotion is checked at the review moment.** A half-year review looks at Skill, Network and Output as they stand when the review month begins, before that month's events and its quarter-end allocation. All three must be high enough for your level; one short input blocks the promotion. Low Dignity blocks it too, and built-up hidden risk makes it less likely.
 - **Every level has a ceiling for each growth input.** A gain beyond it is lost. You have hit a ceiling when an action that should raise an input does not change it. Being at all three ceilings when a review begins is the strongest position you can reach.
 - **Weak reviews come from staying put.** Grades improve as you climb, and repeated weak reviews end the run, so an early promotion out of the entry level matters more than anything else early on.
 - **Hidden risk explodes.** It is built by answers, not shown as a number. The HR partner's monthly remark measures it: calm is fine; any concern means it is building. An explosion costs Dignity, Wealth and recent results; a second one ends the run.
@@ -35,6 +35,7 @@ description: How promotion, reviews, hidden risk and story answers work in this 
 ## Quarterly actions
 - Health not comfortable: Health recovery first. Risk concern or a warning: Defuse legacy risk; if the concern repeats, also Lay low and reduce risk as the main action.
 - Then lift the input furthest below its ceiling: Prepare report materials for Output, Network maintenance for Network, Skill learning for Skill. Main action: whichever adds to the inputs you lack; Apply for a key project adds to all three.
+- Avoid High-intensity work: its hidden risk costs more than the Output it buys.
 - Spend all Energy; it does not roll over.
 
 ## Risk discipline
