@@ -230,3 +230,24 @@ def test_export_import_round_trip(tmp_path):
     assert other.cell_scores(pid, aid) == [42.0]
     import_jsonl(other, tmp_path / "export", tmp_path / "data", tmp_path / "lab")  # idempotent
     assert other.db.execute("SELECT COUNT(*) FROM evaluations").fetchone()[0] == 1
+
+
+def test_digest_pairs_actions_with_the_observation_before_them(tmp_path):
+    from careerlab.digest import game_lines
+
+    obs = {"current_state": {"time": {"current_month": 6}, "status": {"health": 7, "level": "L2"}},
+           "current_event": {"title": "A choice"}, "choices": [{"choice": 1, "action": "Be honest"}, {"choice": 2, "action": "Bluff"}],
+           "events": "[Half-year talk] Half-year performance bonus (C): +0.075"}
+    stream = [
+        {"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "a", "name": "mcp__career-emulator-engine__observe", "input": {}}]}},
+        {"type": "user", "message": {"content": [{"type": "tool_result", "tool_use_id": "a", "content": [{"type": "text", "text": json.dumps(obs)}]}]}},
+        {"type": "assistant", "message": {"content": [{"type": "tool_use", "id": "b", "name": "mcp__career-emulator-engine__take_action",
+                                                       "input": {"choice": 1, "notes": "keep trust"}}]}},
+        {"type": "user", "message": {"content": [{"type": "tool_result", "tool_use_id": "b", "content": '{"success":false,"error":"too costly"}'}]}},
+    ]
+    (tmp_path / "stream-0.jsonl").write_text("\n".join(json.dumps(e) for e in stream))
+    lines, grades = game_lines(tmp_path)
+    assert grades == ["C"]
+    assert lines[0].startswith("  > [Half-year talk]")
+    assert lines[1].startswith("- M6 [7/?/?/?/L2/?/?/?] A choice → [1] Be honest (declined: [2] Bluff)")
+    assert "notes: keep trust" in lines[1] and "REJECTED: too costly" in lines[1]

@@ -117,3 +117,5 @@
   - Compact context helps the strongest model; Sonnet is consistently weak in this game.
   - Synthetic method comparison (R = 100, `lab/reports/synthetic-method-comparison/`): racing and the full method beat best-of-N and refine-the-leader. The full method cuts false rejections 39 % → 10 % and gives unbiased confirmation. Truncated screening is the only clearly harmful ablation.
   - Cloud execution verified, and `lab/CLOUD_RUNBOOK.md` carries the lab on unattended.
+  - Opus teacher digests (14:50 UTC, `careerlab digest --model opus`, `lab/reports/teacher-digests/opus/`): 14 Opus games, 8 completed. Every game opens with a C review. Eliminations at month 24 follow C C D D (second weak review) or a trust crisis after B grades; completed games climb from B to A after month 30. Opus never played F3, so distilled F3 children carry rules learned under F1, P0 and M3.
+  - Install pitfall: in this iCloud folder the venv's `.pth` files carry the macOS `hidden` flag, which Python 3.13 skips, so `careerlab` stopped importing. Fix: `chflags nohidden .venv/lib/python3.13/site-packages/*.pth`.
