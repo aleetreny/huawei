@@ -2,20 +2,17 @@
 
 26 October 2026. This document replaces the "Recomendación" of `research/hierarchical-lab/README.md` as the team's working decision. The earlier package stays as a record. Its verified errors are listed in [errata.md](errata.md), and the full audit with verifier verdicts is in [audit-2026-10-26.json](audit-2026-10-26.json). The pre-registered statistics are in [`lab/protocol/prereg-v1.md`](../../lab/protocol/prereg-v1.md); measured infrastructure facts are in [`findings.md`](../../findings.md).
 
-## 0. Status at a glance
+## 0. Status at a glance (updated 26 Oct, 14:05 UTC)
 
-| Area | State on 26 October |
+| Area | State |
 |---|---|
-| Official MCP client | Built and tested (`careerlab/`). Only stdio is used, only the five official tools are called, and the engine settings match the official runner. |
-| Isolation, retention and recovery | Measured through the official tools only (section 5). |
-| Registry, planner, resume after kill | Built and tested on real dev: 150 scripted episodes, one `kill -9` mid-run, 10 episodes resumed in their own sessions, no interruption scored. |
-| Pre-registered statistics | Frozen (v1, hashes in the registry) before any policy-selection data. |
-| Synthetic testbed and method comparison | Being built by the build workflow (`careerlab/synthetic`, `careerlab/search`); results go in `lab/reports/`. |
-| Initial behaviour families (Skill bundles) | Being written with a compliance linter (`lab/policies-src`). |
-| Target actor (deepseek-v4-flash in JiuwenSwarm 0.2.4b3) | **Blocked.** No competition key; the preliminary package that earns it was deleted in `cf6116d`. A self-funded route needs a user budget and an organiser answer. |
-| Claude workers on the real game | **Gated** (`lab/gate.json`). The rules do not address them, and the organiser message is drafted but not sent. The CLI on this Mac is logged in to a Pro account at 79 % of its weekly limit, not the Max x20 plan. |
+| Official MCP client, pool, registry, planner, resume, quota governor | Built and tested: 14 core tests plus the statistics, compliance and synthetic suites. In use on real dev and verified in a Claude Code cloud container (`lab/reports/cloud-portability-2026-10-26.md` on branch `cloud-portability-test`). |
+| Pre-registered statistics | Frozen v1. Block decisions apply it automatically (`careerlab/decisions.py`). |
+| Real-game evidence (Claude proxy actors, by user decision) | About 100 Claude episodes: one Haiku smoke test, the E-W1 worker comparison (six actor configurations × P0/F1/M3) and screening of 17 policies with Haiku plus part with Sonnet. Haiku block decision: **F3 feedback-reactive leads (posterior Y ≈ 61), F1 second (≈ 56)**; P0 dormant. Two F3 children are queued. |
+| Synthetic method validation | 100 replications per method at equal budget with known truth (`lab/reports/synthetic-method-comparison/`). |
+| Target actor (deepseek-v4-flash in JiuwenSwarm 0.2.4b3) | Waiting for the competition key. Slots and runner are installed; the budget plan is in `target-budget.md`. |
 
-No strategy has been shown to win. Everything below is a procedure, measured infrastructure, or a claim that is explicitly pending.
+No result yet comes from the designated model; every real-game number is a Claude-proxy estimate.
 
 ## 1. What the audit changed
 
@@ -99,7 +96,7 @@ Every candidate records its **idea origin** separately from the **experiment run
 |---|---|
 | Known mechanisms (cited) | Racing / irace; best-arm identification and top-two Thompson sampling; hierarchical partial pooling; betting confidence sequences; GEPA/EvoTest reflective prompt evolution; quality-diversity archives; options; micro-randomised trials and SMART designs; prefix-complete analysis of asynchronous sampling. |
 | Team adaptation | Objective `Y` that reproduces the official per-run contribution, including the early-exit token cap. A gate that ties actor use to written authorisation. Target-anchored selection with cheap actors restricted to execution screening and traces. A reversible archive with audited dormancy. Specialisation accepted only against both the `never` and `always` arms with a placebo. A submission rule for a maximum over three versions. Infrastructure that respects the measured retention limit and resumes in-session after observing first. |
-| Demonstrated so far | The infrastructure facts in section 5 and the kill / resume test. Synthetic comparisons are pending (they show behaviour under known mechanisms, not real-game gains). **No real-game policy improvement has been demonstrated yet.** |
+| Demonstrated so far | **Infrastructure:** the facts in section 5, the kill / resume test and a cloud run.<br>**Synthetic, known truth, 100 replications:** racing and the CareerLab method beat best-of-N and refine-the-leader (true Y 57.1 and 56.5 against 55.1 and 53.4). The full method cuts false rejections from 39 % (plain racing) to 10 %, and its fresh confirmation removes the winner's curse (estimate bias 0.0 against +7.3 in-sample). Truncated-episode screening is the only harmful ablation (−2.0 [−3.1, −0.9]); the others are not distinguishable at this budget.<br>**Real game, Claude proxies:** a ranking of behaviour families and two transferable diagnostics (weak-review dismissal at month 24, trust crisis). **Not yet demonstrated on the designated model.** |
 
 ## 3. The three problems
 

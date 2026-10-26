@@ -1,0 +1,2500 @@
+{
+ "R": 30,
+ "budget": 4000,
+ "oracle_best_y": 67.49609040000007,
+ "truth_n": 500,
+ "per_method": {
+  "best_of_n": {
+   "selected": 54.994916800000006,
+   "best_proposed": 56.70843893333334,
+   "best_target_evaluated": 56.70843893333334,
+   "n_proposed": 40.0,
+   "exploration_gap": 10.78765146666673,
+   "selection_gap": 1.7135221333333348,
+   "selection_gap_target_evaluated": 1.7135221333333348
+  },
+  "refine_leader": {
+   "selected": 53.57130826666669,
+   "best_proposed": 55.46275733333334,
+   "best_target_evaluated": 55.46275733333334,
+   "n_proposed": 40.0,
+   "exploration_gap": 12.033333066666728,
+   "selection_gap": 1.8914490666666524,
+   "selection_gap_target_evaluated": 1.8914490666666524
+  },
+  "racing": {
+   "selected": 56.17135146666668,
+   "best_proposed": 59.12431679999999,
+   "best_target_evaluated": 58.83793866666666,
+   "n_proposed": 84.0,
+   "exploration_gap": 8.371773600000083,
+   "selection_gap": 2.95296533333331,
+   "selection_gap_target_evaluated": 2.666587199999981
+  },
+  "full": {
+   "selected": 55.90948053333334,
+   "best_proposed": 57.142906666666676,
+   "best_target_evaluated": 57.09196106666668,
+   "n_proposed": 43.13333333333333,
+   "exploration_gap": 10.353183733333395,
+   "selection_gap": 1.2334261333333387,
+   "selection_gap_target_evaluated": 1.1824805333333401
+  },
+  "no_diversity": {
+   "selected": 54.22466026666666,
+   "best_proposed": 55.18879626666668,
+   "best_target_evaluated": 55.18879626666668,
+   "n_proposed": 32.0,
+   "exploration_gap": 12.307294133333393,
+   "selection_gap": 0.9641360000000176,
+   "selection_gap_target_evaluated": 0.9641360000000176
+  },
+  "no_reopen": {
+   "selected": 56.00647893333335,
+   "best_proposed": 56.92313813333335,
+   "best_target_evaluated": 56.92313813333335,
+   "n_proposed": 47.2,
+   "exploration_gap": 10.572952266666718,
+   "selection_gap": 0.9166592000000051,
+   "selection_gap_target_evaluated": 0.9166592000000051
+  },
+  "no_calibration": {
+   "selected": 57.184549866666664,
+   "best_proposed": 58.42956000000001,
+   "best_target_evaluated": 58.35246453333334,
+   "n_proposed": 51.56666666666667,
+   "exploration_gap": 9.066530400000062,
+   "selection_gap": 1.245010133333345,
+   "selection_gap_target_evaluated": 1.1679146666666753
+  },
+  "partial_screening": {
+   "selected": 53.860629333333335,
+   "best_proposed": 58.29718986666668,
+   "best_target_evaluated": 54.93460586666668,
+   "n_proposed": 76.86666666666666,
+   "exploration_gap": 9.198900533333394,
+   "selection_gap": 4.436560533333342,
+   "selection_gap_target_evaluated": 1.0739765333333438
+  },
+  "no_specialization": {
+   "selected": 55.58119253333335,
+   "best_proposed": 57.557502933333346,
+   "best_target_evaluated": 57.47811040000001,
+   "n_proposed": 43.1,
+   "exploration_gap": 9.938587466666725,
+   "selection_gap": 1.9763103999999956,
+   "selection_gap_target_evaluated": 1.8969178666666622
+  },
+  "target_only": {
+   "selected": 56.74252213333333,
+   "best_proposed": 57.95635733333333,
+   "best_target_evaluated": 57.95635733333333,
+   "n_proposed": 40.86666666666667,
+   "exploration_gap": 9.539733066666741,
+   "selection_gap": 1.2138351999999983,
+   "selection_gap_target_evaluated": 1.2138351999999983
+  }
+ },
+ "rows": [
+  {
+   "method": "best_of_n",
+   "r": 0,
+   "selected": 63.47899199999998,
+   "best_proposed": 63.47899199999998,
+   "best_target_evaluated": 63.47899199999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 1,
+   "selected": 57.32736000000002,
+   "best_proposed": 57.32736000000002,
+   "best_target_evaluated": 57.32736000000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 2,
+   "selected": 56.43649599999993,
+   "best_proposed": 56.43649599999993,
+   "best_target_evaluated": 56.43649599999993,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 3,
+   "selected": 56.26307199999997,
+   "best_proposed": 56.26307199999997,
+   "best_target_evaluated": 56.26307199999997,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 4,
+   "selected": 51.41668800000002,
+   "best_proposed": 52.88875199999996,
+   "best_target_evaluated": 52.88875199999996,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 5,
+   "selected": 49.68889599999999,
+   "best_proposed": 57.214288000000025,
+   "best_target_evaluated": 57.214288000000025,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 6,
+   "selected": 55.83888000000004,
+   "best_proposed": 55.83888000000004,
+   "best_target_evaluated": 55.83888000000004,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 7,
+   "selected": 54.80217600000006,
+   "best_proposed": 54.80217600000006,
+   "best_target_evaluated": 54.80217600000006,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 8,
+   "selected": 50.30262400000004,
+   "best_proposed": 55.889568000000025,
+   "best_target_evaluated": 55.889568000000025,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 9,
+   "selected": 47.267328,
+   "best_proposed": 50.03016000000008,
+   "best_target_evaluated": 50.03016000000008,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 10,
+   "selected": 58.04171200000002,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 11,
+   "selected": 48.653072000000016,
+   "best_proposed": 50.75574400000006,
+   "best_target_evaluated": 50.75574400000006,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 12,
+   "selected": 53.16300800000003,
+   "best_proposed": 54.033584,
+   "best_target_evaluated": 54.033584,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 13,
+   "selected": 55.97115199999995,
+   "best_proposed": 56.85528000000005,
+   "best_target_evaluated": 56.85528000000005,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 14,
+   "selected": 50.73040000000003,
+   "best_proposed": 51.48616000000001,
+   "best_target_evaluated": 51.48616000000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 15,
+   "selected": 58.76088,
+   "best_proposed": 59.678816,
+   "best_target_evaluated": 59.678816,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 16,
+   "selected": 61.946127999999995,
+   "best_proposed": 61.946127999999995,
+   "best_target_evaluated": 61.946127999999995,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 17,
+   "selected": 58.30553600000005,
+   "best_proposed": 58.30553600000005,
+   "best_target_evaluated": 58.30553600000005,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 18,
+   "selected": 58.386224,
+   "best_proposed": 58.386224,
+   "best_target_evaluated": 58.386224,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 19,
+   "selected": 52.038992000000015,
+   "best_proposed": 57.336736,
+   "best_target_evaluated": 57.336736,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 20,
+   "selected": 49.34937600000003,
+   "best_proposed": 60.35932800000003,
+   "best_target_evaluated": 60.35932800000003,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 21,
+   "selected": 58.555999999999955,
+   "best_proposed": 58.555999999999955,
+   "best_target_evaluated": 58.555999999999955,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 22,
+   "selected": 61.86567999999994,
+   "best_proposed": 61.86567999999994,
+   "best_target_evaluated": 61.86567999999994,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 23,
+   "selected": 57.44691200000004,
+   "best_proposed": 57.44691200000004,
+   "best_target_evaluated": 57.44691200000004,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 24,
+   "selected": 56.90064000000004,
+   "best_proposed": 56.90064000000004,
+   "best_target_evaluated": 56.90064000000004,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 25,
+   "selected": 56.71153600000001,
+   "best_proposed": 56.71153600000001,
+   "best_target_evaluated": 56.71153600000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 26,
+   "selected": 55.64935999999998,
+   "best_proposed": 57.14664000000001,
+   "best_target_evaluated": 57.14664000000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 27,
+   "selected": 51.286784,
+   "best_proposed": 55.056575999999986,
+   "best_target_evaluated": 55.056575999999986,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 28,
+   "selected": 46.51174400000002,
+   "best_proposed": 51.47766399999998,
+   "best_target_evaluated": 51.47766399999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "best_of_n",
+   "r": 29,
+   "selected": 56.74985600000008,
+   "best_proposed": 58.73652800000001,
+   "best_target_evaluated": 58.73652800000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 0,
+   "selected": 59.59758399999998,
+   "best_proposed": 64.299568,
+   "best_target_evaluated": 64.299568,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 1,
+   "selected": 49.87153599999998,
+   "best_proposed": 50.97848000000002,
+   "best_target_evaluated": 50.97848000000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 2,
+   "selected": 51.776480000000035,
+   "best_proposed": 56.83185599999999,
+   "best_target_evaluated": 56.83185599999999,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 3,
+   "selected": 55.63878399999999,
+   "best_proposed": 57.21542400000002,
+   "best_target_evaluated": 57.21542400000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 4,
+   "selected": 56.59620799999995,
+   "best_proposed": 59.963216,
+   "best_target_evaluated": 59.963216,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 5,
+   "selected": 53.48380800000005,
+   "best_proposed": 55.90158400000003,
+   "best_target_evaluated": 55.90158400000003,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 6,
+   "selected": 57.31476799999999,
+   "best_proposed": 60.58508799999995,
+   "best_target_evaluated": 60.58508799999995,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 7,
+   "selected": 53.436928,
+   "best_proposed": 53.436928,
+   "best_target_evaluated": 53.436928,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 8,
+   "selected": 54.95337600000001,
+   "best_proposed": 54.95337600000001,
+   "best_target_evaluated": 54.95337600000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 9,
+   "selected": 52.368160000000046,
+   "best_proposed": 52.368160000000046,
+   "best_target_evaluated": 52.368160000000046,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 10,
+   "selected": 55.24537600000004,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 11,
+   "selected": 53.768640000000026,
+   "best_proposed": 55.964143999999955,
+   "best_target_evaluated": 55.964143999999955,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 12,
+   "selected": 52.81630400000001,
+   "best_proposed": 54.657648000000044,
+   "best_target_evaluated": 54.657648000000044,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 13,
+   "selected": 56.88710400000004,
+   "best_proposed": 59.54644799999999,
+   "best_target_evaluated": 59.54644799999999,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 14,
+   "selected": 59.43368000000004,
+   "best_proposed": 59.85695999999998,
+   "best_target_evaluated": 59.85695999999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 15,
+   "selected": 51.993071999999955,
+   "best_proposed": 53.90249599999994,
+   "best_target_evaluated": 53.90249599999994,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 16,
+   "selected": 53.90492800000001,
+   "best_proposed": 57.005472000000005,
+   "best_target_evaluated": 57.005472000000005,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 17,
+   "selected": 58.81750400000001,
+   "best_proposed": 59.66734400000005,
+   "best_target_evaluated": 59.66734400000005,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 18,
+   "selected": 47.89505600000001,
+   "best_proposed": 47.89505600000001,
+   "best_target_evaluated": 47.89505600000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 19,
+   "selected": 54.71091200000002,
+   "best_proposed": 55.43422400000002,
+   "best_target_evaluated": 55.43422400000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 20,
+   "selected": 48.40174400000002,
+   "best_proposed": 49.84883199999998,
+   "best_target_evaluated": 49.84883199999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 21,
+   "selected": 51.393632000000004,
+   "best_proposed": 53.47264000000003,
+   "best_target_evaluated": 53.47264000000003,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 22,
+   "selected": 52.90707200000004,
+   "best_proposed": 53.98295999999998,
+   "best_target_evaluated": 53.98295999999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 23,
+   "selected": 52.99057600000004,
+   "best_proposed": 59.345056000000035,
+   "best_target_evaluated": 59.345056000000035,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 24,
+   "selected": 57.285504,
+   "best_proposed": 57.93639999999994,
+   "best_target_evaluated": 57.93639999999994,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 25,
+   "selected": 53.616527999999974,
+   "best_proposed": 54.280912000000015,
+   "best_target_evaluated": 54.280912000000015,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 26,
+   "selected": 49.166304,
+   "best_proposed": 49.166304,
+   "best_target_evaluated": 49.166304,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 27,
+   "selected": 50.46726400000002,
+   "best_proposed": 53.00568,
+   "best_target_evaluated": 53.00568,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 28,
+   "selected": 45.86548800000005,
+   "best_proposed": 48.073008000000016,
+   "best_target_evaluated": 48.073008000000016,
+   "n_proposed": 40
+  },
+  {
+   "method": "refine_leader",
+   "r": 29,
+   "selected": 54.53492799999995,
+   "best_proposed": 56.26574400000001,
+   "best_target_evaluated": 56.26574400000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "racing",
+   "r": 0,
+   "selected": 57.186032,
+   "best_proposed": 63.47899199999998,
+   "best_target_evaluated": 63.47899199999998,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 1,
+   "selected": 58.92927999999998,
+   "best_proposed": 60.187264000000035,
+   "best_target_evaluated": 60.015727999999996,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 2,
+   "selected": 61.38862400000004,
+   "best_proposed": 62.973855999999955,
+   "best_target_evaluated": 62.941856000000016,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 3,
+   "selected": 47.08223999999994,
+   "best_proposed": 56.26307199999997,
+   "best_target_evaluated": 56.26307199999997,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 4,
+   "selected": 56.466751999999964,
+   "best_proposed": 60.074671999999936,
+   "best_target_evaluated": 60.074671999999936,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 5,
+   "selected": 57.55297599999993,
+   "best_proposed": 60.08819200000003,
+   "best_target_evaluated": 60.08819200000003,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 6,
+   "selected": 61.607375999999995,
+   "best_proposed": 64.35294399999998,
+   "best_target_evaluated": 64.35294399999998,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 7,
+   "selected": 54.57436800000002,
+   "best_proposed": 56.34340799999997,
+   "best_target_evaluated": 55.82433600000005,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 8,
+   "selected": 55.76232000000002,
+   "best_proposed": 57.484656000000015,
+   "best_target_evaluated": 57.484656000000015,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 9,
+   "selected": 59.977712000000004,
+   "best_proposed": 60.217167999999994,
+   "best_target_evaluated": 59.977712000000004,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 10,
+   "selected": 60.69438400000002,
+   "best_proposed": 62.11227199999993,
+   "best_target_evaluated": 62.11227199999993,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 11,
+   "selected": 53.22087999999997,
+   "best_proposed": 57.676335999999964,
+   "best_target_evaluated": 57.676335999999964,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 12,
+   "selected": 52.79660799999995,
+   "best_proposed": 53.78673599999994,
+   "best_target_evaluated": 52.79660799999995,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 13,
+   "selected": 55.878912000000014,
+   "best_proposed": 61.253008000000015,
+   "best_target_evaluated": 61.253008000000015,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 14,
+   "selected": 54.23039999999999,
+   "best_proposed": 58.76518399999994,
+   "best_target_evaluated": 55.38849599999999,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 15,
+   "selected": 62.13659199999997,
+   "best_proposed": 62.41193599999998,
+   "best_target_evaluated": 62.13659199999997,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 16,
+   "selected": 57.50523199999996,
+   "best_proposed": 61.11176000000005,
+   "best_target_evaluated": 61.11176000000005,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 17,
+   "selected": 61.63422400000002,
+   "best_proposed": 62.012624,
+   "best_target_evaluated": 61.63422400000002,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 18,
+   "selected": 59.047136,
+   "best_proposed": 59.29361600000005,
+   "best_target_evaluated": 59.29361600000005,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 19,
+   "selected": 52.94811200000011,
+   "best_proposed": 57.336736,
+   "best_target_evaluated": 57.336736,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 20,
+   "selected": 58.93927999999999,
+   "best_proposed": 61.36830399999999,
+   "best_target_evaluated": 60.422112,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 21,
+   "selected": 57.322911999999995,
+   "best_proposed": 61.77489599999996,
+   "best_target_evaluated": 61.77489599999996,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 22,
+   "selected": 53.023759999999996,
+   "best_proposed": 54.52355199999999,
+   "best_target_evaluated": 54.52355199999999,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 23,
+   "selected": 57.44691200000004,
+   "best_proposed": 59.78756799999997,
+   "best_target_evaluated": 58.38374399999993,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 24,
+   "selected": 53.80616000000003,
+   "best_proposed": 53.831040000000016,
+   "best_target_evaluated": 53.80616000000003,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 25,
+   "selected": 55.90964799999997,
+   "best_proposed": 58.481264000000046,
+   "best_target_evaluated": 58.481264000000046,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 26,
+   "selected": 57.79536000000003,
+   "best_proposed": 59.14857600000004,
+   "best_target_evaluated": 58.91475199999997,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 27,
+   "selected": 45.067231999999976,
+   "best_proposed": 56.381055999999965,
+   "best_target_evaluated": 56.381055999999965,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 28,
+   "selected": 47.836240000000004,
+   "best_proposed": 51.47766399999998,
+   "best_target_evaluated": 51.47766399999998,
+   "n_proposed": 84
+  },
+  {
+   "method": "racing",
+   "r": 29,
+   "selected": 57.37288000000008,
+   "best_proposed": 59.731151999999994,
+   "best_target_evaluated": 59.731151999999994,
+   "n_proposed": 84
+  },
+  {
+   "method": "full",
+   "r": 0,
+   "selected": 63.47899199999998,
+   "best_proposed": 63.970032,
+   "best_target_evaluated": 63.970032,
+   "n_proposed": 46
+  },
+  {
+   "method": "full",
+   "r": 1,
+   "selected": 60.558127999999996,
+   "best_proposed": 60.85788800000009,
+   "best_target_evaluated": 60.85788800000009,
+   "n_proposed": 39
+  },
+  {
+   "method": "full",
+   "r": 2,
+   "selected": 53.834672000000005,
+   "best_proposed": 55.85951999999994,
+   "best_target_evaluated": 55.85951999999994,
+   "n_proposed": 36
+  },
+  {
+   "method": "full",
+   "r": 3,
+   "selected": 51.01779200000005,
+   "best_proposed": 56.26307199999997,
+   "best_target_evaluated": 56.26307199999997,
+   "n_proposed": 42
+  },
+  {
+   "method": "full",
+   "r": 4,
+   "selected": 47.07947199999995,
+   "best_proposed": 52.88875199999996,
+   "best_target_evaluated": 52.88875199999996,
+   "n_proposed": 40
+  },
+  {
+   "method": "full",
+   "r": 5,
+   "selected": 56.438367999999954,
+   "best_proposed": 57.214288000000025,
+   "best_target_evaluated": 57.214288000000025,
+   "n_proposed": 48
+  },
+  {
+   "method": "full",
+   "r": 6,
+   "selected": 59.05020800000002,
+   "best_proposed": 59.05020800000002,
+   "best_target_evaluated": 59.05020800000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "full",
+   "r": 7,
+   "selected": 55.73192000000002,
+   "best_proposed": 55.73192000000002,
+   "best_target_evaluated": 55.73192000000002,
+   "n_proposed": 50
+  },
+  {
+   "method": "full",
+   "r": 8,
+   "selected": 53.23267200000001,
+   "best_proposed": 56.567840000000025,
+   "best_target_evaluated": 56.567840000000025,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 9,
+   "selected": 54.54859200000003,
+   "best_proposed": 54.82979200000004,
+   "best_target_evaluated": 54.82979200000004,
+   "n_proposed": 41
+  },
+  {
+   "method": "full",
+   "r": 10,
+   "selected": 55.65632000000001,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 45
+  },
+  {
+   "method": "full",
+   "r": 11,
+   "selected": 53.26055999999992,
+   "best_proposed": 53.90667199999997,
+   "best_target_evaluated": 53.90667199999997,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 12,
+   "selected": 49.265375999999996,
+   "best_proposed": 49.30905600000002,
+   "best_target_evaluated": 49.30905600000002,
+   "n_proposed": 42
+  },
+  {
+   "method": "full",
+   "r": 13,
+   "selected": 62.14411199999998,
+   "best_proposed": 62.14411199999998,
+   "best_target_evaluated": 62.14411199999998,
+   "n_proposed": 41
+  },
+  {
+   "method": "full",
+   "r": 14,
+   "selected": 57.22512000000002,
+   "best_proposed": 57.22512000000002,
+   "best_target_evaluated": 57.22512000000002,
+   "n_proposed": 42
+  },
+  {
+   "method": "full",
+   "r": 15,
+   "selected": 58.357615999999965,
+   "best_proposed": 59.678816,
+   "best_target_evaluated": 59.678816,
+   "n_proposed": 40
+  },
+  {
+   "method": "full",
+   "r": 16,
+   "selected": 51.66152000000002,
+   "best_proposed": 51.738608,
+   "best_target_evaluated": 51.738608,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 17,
+   "selected": 59.54649600000001,
+   "best_proposed": 59.54649600000001,
+   "best_target_evaluated": 59.54649600000001,
+   "n_proposed": 46
+  },
+  {
+   "method": "full",
+   "r": 18,
+   "selected": 58.386224,
+   "best_proposed": 59.24217600000003,
+   "best_target_evaluated": 59.24217600000003,
+   "n_proposed": 43
+  },
+  {
+   "method": "full",
+   "r": 19,
+   "selected": 54.87308800000006,
+   "best_proposed": 57.336736,
+   "best_target_evaluated": 57.336736,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 20,
+   "selected": 53.95001600000004,
+   "best_proposed": 53.95001600000004,
+   "best_target_evaluated": 53.95001600000004,
+   "n_proposed": 41
+  },
+  {
+   "method": "full",
+   "r": 21,
+   "selected": 64.585856,
+   "best_proposed": 64.585856,
+   "best_target_evaluated": 64.585856,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 22,
+   "selected": 54.084143999999995,
+   "best_proposed": 55.80006399999999,
+   "best_target_evaluated": 55.80006399999999,
+   "n_proposed": 50
+  },
+  {
+   "method": "full",
+   "r": 23,
+   "selected": 57.44691200000004,
+   "best_proposed": 57.44691200000004,
+   "best_target_evaluated": 57.44691200000004,
+   "n_proposed": 40
+  },
+  {
+   "method": "full",
+   "r": 24,
+   "selected": 57.296320000000016,
+   "best_proposed": 58.27431999999996,
+   "best_target_evaluated": 58.27431999999996,
+   "n_proposed": 42
+  },
+  {
+   "method": "full",
+   "r": 25,
+   "selected": 56.70883199999995,
+   "best_proposed": 58.239904,
+   "best_target_evaluated": 56.71153600000001,
+   "n_proposed": 47
+  },
+  {
+   "method": "full",
+   "r": 26,
+   "selected": 55.64935999999998,
+   "best_proposed": 58.606384000000006,
+   "best_target_evaluated": 58.606384000000006,
+   "n_proposed": 45
+  },
+  {
+   "method": "full",
+   "r": 27,
+   "selected": 51.41577599999999,
+   "best_proposed": 55.056575999999986,
+   "best_target_evaluated": 55.056575999999986,
+   "n_proposed": 44
+  },
+  {
+   "method": "full",
+   "r": 28,
+   "selected": 52.032128000000014,
+   "best_proposed": 52.10632000000004,
+   "best_target_evaluated": 52.10632000000004,
+   "n_proposed": 43
+  },
+  {
+   "method": "full",
+   "r": 29,
+   "selected": 58.76782399999998,
+   "best_proposed": 58.81803200000003,
+   "best_target_evaluated": 58.81803200000003,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_diversity",
+   "r": 0,
+   "selected": 51.74043200000003,
+   "best_proposed": 51.74043200000003,
+   "best_target_evaluated": 51.74043200000003,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 1,
+   "selected": 53.563439999999964,
+   "best_proposed": 53.563439999999964,
+   "best_target_evaluated": 53.563439999999964,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 2,
+   "selected": 58.86702399999993,
+   "best_proposed": 59.03619199999996,
+   "best_target_evaluated": 59.03619199999996,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 3,
+   "selected": 43.694815999999975,
+   "best_proposed": 49.77497599999998,
+   "best_target_evaluated": 49.77497599999998,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 4,
+   "selected": 54.526656,
+   "best_proposed": 54.526656,
+   "best_target_evaluated": 54.526656,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 5,
+   "selected": 52.852048000000025,
+   "best_proposed": 52.852048000000025,
+   "best_target_evaluated": 52.852048000000025,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 6,
+   "selected": 54.117520000000006,
+   "best_proposed": 54.117520000000006,
+   "best_target_evaluated": 54.117520000000006,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 7,
+   "selected": 57.570415999999966,
+   "best_proposed": 57.570415999999966,
+   "best_target_evaluated": 57.570415999999966,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 8,
+   "selected": 49.12772799999998,
+   "best_proposed": 49.12772799999998,
+   "best_target_evaluated": 49.12772799999998,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 9,
+   "selected": 41.30870400000001,
+   "best_proposed": 45.88233599999993,
+   "best_target_evaluated": 45.88233599999993,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 10,
+   "selected": 59.592592,
+   "best_proposed": 59.812592000000045,
+   "best_target_evaluated": 59.812592000000045,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 11,
+   "selected": 48.374176000000006,
+   "best_proposed": 48.374176000000006,
+   "best_target_evaluated": 48.374176000000006,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 12,
+   "selected": 54.833648,
+   "best_proposed": 55.75648000000007,
+   "best_target_evaluated": 55.75648000000007,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 13,
+   "selected": 55.07139200000003,
+   "best_proposed": 55.07139200000003,
+   "best_target_evaluated": 55.07139200000003,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 14,
+   "selected": 52.46865600000002,
+   "best_proposed": 54.17358399999995,
+   "best_target_evaluated": 54.17358399999995,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 15,
+   "selected": 51.81320000000001,
+   "best_proposed": 52.329232,
+   "best_target_evaluated": 52.329232,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 16,
+   "selected": 59.96332799999994,
+   "best_proposed": 62.820656000000064,
+   "best_target_evaluated": 62.820656000000064,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 17,
+   "selected": 55.83238400000002,
+   "best_proposed": 56.210624000000024,
+   "best_target_evaluated": 56.210624000000024,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 18,
+   "selected": 57.32326400000007,
+   "best_proposed": 57.32326400000007,
+   "best_target_evaluated": 57.32326400000007,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 19,
+   "selected": 58.016464,
+   "best_proposed": 58.943104000000005,
+   "best_target_evaluated": 58.943104000000005,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 20,
+   "selected": 53.580208000000006,
+   "best_proposed": 54.43460800000002,
+   "best_target_evaluated": 54.43460800000002,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 21,
+   "selected": 58.555999999999955,
+   "best_proposed": 58.555999999999955,
+   "best_target_evaluated": 58.555999999999955,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 22,
+   "selected": 58.795936000000054,
+   "best_proposed": 58.795936000000054,
+   "best_target_evaluated": 58.795936000000054,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 23,
+   "selected": 57.44691200000004,
+   "best_proposed": 57.44691200000004,
+   "best_target_evaluated": 57.44691200000004,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 24,
+   "selected": 48.83652800000005,
+   "best_proposed": 50.90534400000002,
+   "best_target_evaluated": 50.90534400000002,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 25,
+   "selected": 52.711728000000036,
+   "best_proposed": 52.711728000000036,
+   "best_target_evaluated": 52.711728000000036,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 26,
+   "selected": 56.38575999999998,
+   "best_proposed": 56.38575999999998,
+   "best_target_evaluated": 56.38575999999998,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 27,
+   "selected": 47.71419200000001,
+   "best_proposed": 54.31292799999997,
+   "best_target_evaluated": 54.31292799999997,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 28,
+   "selected": 59.67974400000007,
+   "best_proposed": 60.24196800000006,
+   "best_target_evaluated": 60.24196800000006,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_diversity",
+   "r": 29,
+   "selected": 62.374912000000066,
+   "best_proposed": 62.865856000000036,
+   "best_target_evaluated": 62.865856000000036,
+   "n_proposed": 32
+  },
+  {
+   "method": "no_reopen",
+   "r": 0,
+   "selected": 63.09353600000001,
+   "best_proposed": 63.90638399999999,
+   "best_target_evaluated": 63.90638399999999,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_reopen",
+   "r": 1,
+   "selected": 61.05025600000003,
+   "best_proposed": 61.05025600000003,
+   "best_target_evaluated": 61.05025600000003,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_reopen",
+   "r": 2,
+   "selected": 55.79249600000001,
+   "best_proposed": 56.875952000000034,
+   "best_target_evaluated": 56.875952000000034,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 3,
+   "selected": 57.33286399999998,
+   "best_proposed": 57.33286399999998,
+   "best_target_evaluated": 57.33286399999998,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 4,
+   "selected": 59.10115200000005,
+   "best_proposed": 59.10115200000005,
+   "best_target_evaluated": 59.10115200000005,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 5,
+   "selected": 56.25073599999998,
+   "best_proposed": 57.214288000000025,
+   "best_target_evaluated": 57.214288000000025,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_reopen",
+   "r": 6,
+   "selected": 55.40012799999999,
+   "best_proposed": 57.79116800000006,
+   "best_target_evaluated": 57.79116800000006,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 7,
+   "selected": 58.34475199999998,
+   "best_proposed": 58.42608000000001,
+   "best_target_evaluated": 58.42608000000001,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_reopen",
+   "r": 8,
+   "selected": 56.567840000000025,
+   "best_proposed": 57.61310400000002,
+   "best_target_evaluated": 57.61310400000002,
+   "n_proposed": 48
+  },
+  {
+   "method": "no_reopen",
+   "r": 9,
+   "selected": 51.76646399999998,
+   "best_proposed": 51.96636800000001,
+   "best_target_evaluated": 51.96636800000001,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_reopen",
+   "r": 10,
+   "selected": 56.79779200000001,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 62
+  },
+  {
+   "method": "no_reopen",
+   "r": 11,
+   "selected": 53.90667199999997,
+   "best_proposed": 58.178415999999984,
+   "best_target_evaluated": 58.178415999999984,
+   "n_proposed": 58
+  },
+  {
+   "method": "no_reopen",
+   "r": 12,
+   "selected": 47.924207999999986,
+   "best_proposed": 49.265375999999996,
+   "best_target_evaluated": 49.265375999999996,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 13,
+   "selected": 62.31465600000002,
+   "best_proposed": 62.31465600000002,
+   "best_target_evaluated": 62.31465600000002,
+   "n_proposed": 52
+  },
+  {
+   "method": "no_reopen",
+   "r": 14,
+   "selected": 52.457359999999994,
+   "best_proposed": 52.457359999999994,
+   "best_target_evaluated": 52.457359999999994,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 15,
+   "selected": 59.00059200000001,
+   "best_proposed": 61.14992000000004,
+   "best_target_evaluated": 61.14992000000004,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_reopen",
+   "r": 16,
+   "selected": 51.66152000000002,
+   "best_proposed": 52.86875200000003,
+   "best_target_evaluated": 52.86875200000003,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_reopen",
+   "r": 17,
+   "selected": 58.30524800000001,
+   "best_proposed": 59.56158400000001,
+   "best_target_evaluated": 59.56158400000001,
+   "n_proposed": 62
+  },
+  {
+   "method": "no_reopen",
+   "r": 18,
+   "selected": 58.386224,
+   "best_proposed": 59.24217600000003,
+   "best_target_evaluated": 59.24217600000003,
+   "n_proposed": 48
+  },
+  {
+   "method": "no_reopen",
+   "r": 19,
+   "selected": 56.324399999999955,
+   "best_proposed": 57.336736,
+   "best_target_evaluated": 57.336736,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_reopen",
+   "r": 20,
+   "selected": 51.723216000000015,
+   "best_proposed": 53.09564800000003,
+   "best_target_evaluated": 53.09564800000003,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_reopen",
+   "r": 21,
+   "selected": 57.195424000000045,
+   "best_proposed": 57.195424000000045,
+   "best_target_evaluated": 57.195424000000045,
+   "n_proposed": 54
+  },
+  {
+   "method": "no_reopen",
+   "r": 22,
+   "selected": 54.14937599999996,
+   "best_proposed": 54.20158399999998,
+   "best_target_evaluated": 54.20158399999998,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 23,
+   "selected": 57.44691200000004,
+   "best_proposed": 57.44691200000004,
+   "best_target_evaluated": 57.44691200000004,
+   "n_proposed": 46
+  },
+  {
+   "method": "no_reopen",
+   "r": 24,
+   "selected": 54.47481600000005,
+   "best_proposed": 54.47481600000005,
+   "best_target_evaluated": 54.47481600000005,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_reopen",
+   "r": 25,
+   "selected": 55.23548800000002,
+   "best_proposed": 56.84864,
+   "best_target_evaluated": 56.84864,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_reopen",
+   "r": 26,
+   "selected": 56.00324799999999,
+   "best_proposed": 56.00324799999999,
+   "best_target_evaluated": 56.00324799999999,
+   "n_proposed": 50
+  },
+  {
+   "method": "no_reopen",
+   "r": 27,
+   "selected": 54.96268799999999,
+   "best_proposed": 55.37710400000002,
+   "best_target_evaluated": 55.37710400000002,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 28,
+   "selected": 49.451952000000055,
+   "best_proposed": 52.53843199999998,
+   "best_target_evaluated": 52.53843199999998,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_reopen",
+   "r": 29,
+   "selected": 57.77235200000002,
+   "best_proposed": 58.81803200000003,
+   "best_target_evaluated": 58.81803200000003,
+   "n_proposed": 58
+  },
+  {
+   "method": "no_calibration",
+   "r": 0,
+   "selected": 63.970032,
+   "best_proposed": 63.970032,
+   "best_target_evaluated": 63.970032,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_calibration",
+   "r": 1,
+   "selected": 59.610432,
+   "best_proposed": 60.591136000000034,
+   "best_target_evaluated": 60.591136000000034,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_calibration",
+   "r": 2,
+   "selected": 53.834672000000005,
+   "best_proposed": 53.834672000000005,
+   "best_target_evaluated": 53.834672000000005,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_calibration",
+   "r": 3,
+   "selected": 53.526000000000025,
+   "best_proposed": 56.26307199999997,
+   "best_target_evaluated": 56.26307199999997,
+   "n_proposed": 46
+  },
+  {
+   "method": "no_calibration",
+   "r": 4,
+   "selected": 57.96480000000001,
+   "best_proposed": 57.96480000000001,
+   "best_target_evaluated": 57.96480000000001,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_calibration",
+   "r": 5,
+   "selected": 56.95848,
+   "best_proposed": 59.797392000000045,
+   "best_target_evaluated": 59.797392000000045,
+   "n_proposed": 51
+  },
+  {
+   "method": "no_calibration",
+   "r": 6,
+   "selected": 57.48790400000003,
+   "best_proposed": 59.71041599999995,
+   "best_target_evaluated": 59.71041599999995,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_calibration",
+   "r": 7,
+   "selected": 57.09875200000004,
+   "best_proposed": 57.09875200000004,
+   "best_target_evaluated": 57.09875200000004,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_calibration",
+   "r": 8,
+   "selected": 57.87729600000003,
+   "best_proposed": 57.87729600000003,
+   "best_target_evaluated": 57.87729600000003,
+   "n_proposed": 70
+  },
+  {
+   "method": "no_calibration",
+   "r": 9,
+   "selected": 53.64539199999998,
+   "best_proposed": 55.70651199999998,
+   "best_target_evaluated": 54.54859200000003,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_calibration",
+   "r": 10,
+   "selected": 56.46888000000006,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 58
+  },
+  {
+   "method": "no_calibration",
+   "r": 11,
+   "selected": 56.57327999999994,
+   "best_proposed": 56.57327999999994,
+   "best_target_evaluated": 56.57327999999994,
+   "n_proposed": 60
+  },
+  {
+   "method": "no_calibration",
+   "r": 12,
+   "selected": 58.26326400000002,
+   "best_proposed": 60.844880000000025,
+   "best_target_evaluated": 60.844880000000025,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_calibration",
+   "r": 13,
+   "selected": 56.85528000000005,
+   "best_proposed": 57.62808000000001,
+   "best_target_evaluated": 57.62808000000001,
+   "n_proposed": 59
+  },
+  {
+   "method": "no_calibration",
+   "r": 14,
+   "selected": 58.13828800000001,
+   "best_proposed": 58.13828800000001,
+   "best_target_evaluated": 58.13828800000001,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_calibration",
+   "r": 15,
+   "selected": 61.96787200000003,
+   "best_proposed": 61.96787200000003,
+   "best_target_evaluated": 61.96787200000003,
+   "n_proposed": 59
+  },
+  {
+   "method": "no_calibration",
+   "r": 16,
+   "selected": 54.654192000000045,
+   "best_proposed": 54.654192000000045,
+   "best_target_evaluated": 54.654192000000045,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_calibration",
+   "r": 17,
+   "selected": 58.481919999999974,
+   "best_proposed": 62.283647999999985,
+   "best_target_evaluated": 61.128704,
+   "n_proposed": 74
+  },
+  {
+   "method": "no_calibration",
+   "r": 18,
+   "selected": 58.386224,
+   "best_proposed": 58.53513599999997,
+   "best_target_evaluated": 58.53513599999997,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_calibration",
+   "r": 19,
+   "selected": 60.54625600000003,
+   "best_proposed": 60.54625600000003,
+   "best_target_evaluated": 60.54625600000003,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_calibration",
+   "r": 20,
+   "selected": 54.106224,
+   "best_proposed": 54.65382400000003,
+   "best_target_evaluated": 54.65382400000003,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_calibration",
+   "r": 21,
+   "selected": 56.42884800000003,
+   "best_proposed": 56.897616000000006,
+   "best_target_evaluated": 56.897616000000006,
+   "n_proposed": 48
+  },
+  {
+   "method": "no_calibration",
+   "r": 22,
+   "selected": 52.353263999999996,
+   "best_proposed": 54.20158399999998,
+   "best_target_evaluated": 54.20158399999998,
+   "n_proposed": 48
+  },
+  {
+   "method": "no_calibration",
+   "r": 23,
+   "selected": 58.036015999999975,
+   "best_proposed": 60.30283200000001,
+   "best_target_evaluated": 60.30283200000001,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_calibration",
+   "r": 24,
+   "selected": 59.373056000000005,
+   "best_proposed": 62.558848000000026,
+   "best_target_evaluated": 62.558848000000026,
+   "n_proposed": 50
+  },
+  {
+   "method": "no_calibration",
+   "r": 25,
+   "selected": 52.56161599999999,
+   "best_proposed": 58.57747199999997,
+   "best_target_evaluated": 58.57747199999997,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_calibration",
+   "r": 26,
+   "selected": 55.64935999999998,
+   "best_proposed": 57.14664000000001,
+   "best_target_evaluated": 57.14664000000001,
+   "n_proposed": 88
+  },
+  {
+   "method": "no_calibration",
+   "r": 27,
+   "selected": 54.61001599999999,
+   "best_proposed": 55.056575999999986,
+   "best_target_evaluated": 55.056575999999986,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_calibration",
+   "r": 28,
+   "selected": 61.28289600000001,
+   "best_proposed": 61.28289600000001,
+   "best_target_evaluated": 61.28289600000001,
+   "n_proposed": 51
+  },
+  {
+   "method": "no_calibration",
+   "r": 29,
+   "selected": 58.825984,
+   "best_proposed": 60.181087999999995,
+   "best_target_evaluated": 60.181087999999995,
+   "n_proposed": 55
+  },
+  {
+   "method": "partial_screening",
+   "r": 0,
+   "selected": 42.960704000000014,
+   "best_proposed": 63.47899199999998,
+   "best_target_evaluated": 44.012431999999954,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 1,
+   "selected": 57.32736000000002,
+   "best_proposed": 60.591136000000034,
+   "best_target_evaluated": 57.32736000000002,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 2,
+   "selected": 59.74376000000003,
+   "best_proposed": 63.70182399999999,
+   "best_target_evaluated": 59.74376000000003,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 3,
+   "selected": 58.30099199999994,
+   "best_proposed": 59.81313599999998,
+   "best_target_evaluated": 58.30099199999994,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 4,
+   "selected": 55.515360000000044,
+   "best_proposed": 57.66319999999997,
+   "best_target_evaluated": 55.515360000000044,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 5,
+   "selected": 57.399423999999954,
+   "best_proposed": 62.287327999999995,
+   "best_target_evaluated": 62.287327999999995,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 6,
+   "selected": 55.83888000000004,
+   "best_proposed": 58.167696000000056,
+   "best_target_evaluated": 58.167696000000056,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 7,
+   "selected": 48.12716799999996,
+   "best_proposed": 54.80217600000006,
+   "best_target_evaluated": 50.96228800000002,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 8,
+   "selected": 53.355280000000015,
+   "best_proposed": 55.95096000000006,
+   "best_target_evaluated": 55.95096000000006,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 9,
+   "selected": 52.01211199999997,
+   "best_proposed": 54.54859200000003,
+   "best_target_evaluated": 52.864847999999974,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 10,
+   "selected": 58.04171200000002,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 11,
+   "selected": 51.55217600000004,
+   "best_proposed": 57.803952000000024,
+   "best_target_evaluated": 51.55217600000004,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 12,
+   "selected": 57.49588799999996,
+   "best_proposed": 57.49588799999996,
+   "best_target_evaluated": 57.49588799999996,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 13,
+   "selected": 56.836176000000044,
+   "best_proposed": 56.85528000000005,
+   "best_target_evaluated": 56.836176000000044,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 14,
+   "selected": 50.73040000000003,
+   "best_proposed": 53.75481599999999,
+   "best_target_evaluated": 52.009792000000026,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 15,
+   "selected": 58.357615999999965,
+   "best_proposed": 59.678816,
+   "best_target_evaluated": 59.678816,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 16,
+   "selected": 52.052240000000026,
+   "best_proposed": 55.84208000000002,
+   "best_target_evaluated": 53.196239999999946,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 17,
+   "selected": 51.28432000000002,
+   "best_proposed": 58.30553600000005,
+   "best_target_evaluated": 51.502368000000004,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 18,
+   "selected": 59.33086400000001,
+   "best_proposed": 59.33086400000001,
+   "best_target_evaluated": 59.33086400000001,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 19,
+   "selected": 52.038992000000015,
+   "best_proposed": 57.336736,
+   "best_target_evaluated": 57.336736,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 20,
+   "selected": 49.34937600000003,
+   "best_proposed": 60.35932800000003,
+   "best_target_evaluated": 49.34937600000003,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 21,
+   "selected": 46.813215999999926,
+   "best_proposed": 58.555999999999955,
+   "best_target_evaluated": 48.365712,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 22,
+   "selected": 54.89041600000007,
+   "best_proposed": 61.86567999999994,
+   "best_target_evaluated": 54.89041600000007,
+   "n_proposed": 74
+  },
+  {
+   "method": "partial_screening",
+   "r": 23,
+   "selected": 58.48036800000001,
+   "best_proposed": 58.48036800000001,
+   "best_target_evaluated": 58.48036800000001,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 24,
+   "selected": 52.69718400000005,
+   "best_proposed": 56.90064000000004,
+   "best_target_evaluated": 52.69718400000005,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 25,
+   "selected": 48.24715199999998,
+   "best_proposed": 59.592896,
+   "best_target_evaluated": 51.54811199999994,
+   "n_proposed": 77
+  },
+  {
+   "method": "partial_screening",
+   "r": 26,
+   "selected": 60.328032,
+   "best_proposed": 60.328032,
+   "best_target_evaluated": 60.328032,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 27,
+   "selected": 55.442992000000096,
+   "best_proposed": 57.16784,
+   "best_target_evaluated": 57.16784,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 28,
+   "selected": 48.52040000000004,
+   "best_proposed": 51.47766399999998,
+   "best_target_evaluated": 50.34902400000006,
+   "n_proposed": 78
+  },
+  {
+   "method": "partial_screening",
+   "r": 29,
+   "selected": 52.74831999999994,
+   "best_proposed": 58.73652800000001,
+   "best_target_evaluated": 52.74831999999994,
+   "n_proposed": 78
+  },
+  {
+   "method": "no_specialization",
+   "r": 0,
+   "selected": 63.970032,
+   "best_proposed": 63.970032,
+   "best_target_evaluated": 63.970032,
+   "n_proposed": 45
+  },
+  {
+   "method": "no_specialization",
+   "r": 1,
+   "selected": 55.65673600000005,
+   "best_proposed": 57.32736000000002,
+   "best_target_evaluated": 57.32736000000002,
+   "n_proposed": 40
+  },
+  {
+   "method": "no_specialization",
+   "r": 2,
+   "selected": 56.43649599999993,
+   "best_proposed": 56.43649599999993,
+   "best_target_evaluated": 56.43649599999993,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 3,
+   "selected": 56.504527999999965,
+   "best_proposed": 56.504527999999965,
+   "best_target_evaluated": 56.504527999999965,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_specialization",
+   "r": 4,
+   "selected": 51.41668800000002,
+   "best_proposed": 58.79190400000005,
+   "best_target_evaluated": 58.79190400000005,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_specialization",
+   "r": 5,
+   "selected": 56.3233120000001,
+   "best_proposed": 59.442560000000036,
+   "best_target_evaluated": 59.442560000000036,
+   "n_proposed": 49
+  },
+  {
+   "method": "no_specialization",
+   "r": 6,
+   "selected": 55.40012799999999,
+   "best_proposed": 56.256415999999966,
+   "best_target_evaluated": 56.256415999999966,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 7,
+   "selected": 59.01038399999999,
+   "best_proposed": 59.227264000000034,
+   "best_target_evaluated": 59.227264000000034,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_specialization",
+   "r": 8,
+   "selected": 57.95867200000003,
+   "best_proposed": 57.95867200000003,
+   "best_target_evaluated": 57.95867200000003,
+   "n_proposed": 50
+  },
+  {
+   "method": "no_specialization",
+   "r": 9,
+   "selected": 54.47457600000003,
+   "best_proposed": 54.47457600000003,
+   "best_target_evaluated": 54.47457600000003,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_specialization",
+   "r": 10,
+   "selected": 58.04171200000002,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 55
+  },
+  {
+   "method": "no_specialization",
+   "r": 11,
+   "selected": 50.95111999999998,
+   "best_proposed": 55.11683199999997,
+   "best_target_evaluated": 55.11683199999997,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_specialization",
+   "r": 12,
+   "selected": 39.253856,
+   "best_proposed": 49.265375999999996,
+   "best_target_evaluated": 49.265375999999996,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_specialization",
+   "r": 13,
+   "selected": 59.38241600000002,
+   "best_proposed": 60.14449600000001,
+   "best_target_evaluated": 60.14449600000001,
+   "n_proposed": 38
+  },
+  {
+   "method": "no_specialization",
+   "r": 14,
+   "selected": 52.457359999999994,
+   "best_proposed": 52.457359999999994,
+   "best_target_evaluated": 52.457359999999994,
+   "n_proposed": 41
+  },
+  {
+   "method": "no_specialization",
+   "r": 15,
+   "selected": 58.357615999999965,
+   "best_proposed": 59.678816,
+   "best_target_evaluated": 59.678816,
+   "n_proposed": 39
+  },
+  {
+   "method": "no_specialization",
+   "r": 16,
+   "selected": 51.66152000000002,
+   "best_proposed": 54.159503999999984,
+   "best_target_evaluated": 54.159503999999984,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_specialization",
+   "r": 17,
+   "selected": 63.662800000000026,
+   "best_proposed": 63.662800000000026,
+   "best_target_evaluated": 63.662800000000026,
+   "n_proposed": 39
+  },
+  {
+   "method": "no_specialization",
+   "r": 18,
+   "selected": 60.079856000000014,
+   "best_proposed": 61.08598399999997,
+   "best_target_evaluated": 61.08598399999997,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_specialization",
+   "r": 19,
+   "selected": 55.96676800000004,
+   "best_proposed": 58.582144000000035,
+   "best_target_evaluated": 58.582144000000035,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 20,
+   "selected": 53.46244799999999,
+   "best_proposed": 54.353264000000046,
+   "best_target_evaluated": 54.353264000000046,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 21,
+   "selected": 56.98224000000005,
+   "best_proposed": 56.98224000000005,
+   "best_target_evaluated": 56.98224000000005,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_specialization",
+   "r": 22,
+   "selected": 53.593743999999916,
+   "best_proposed": 54.99435199999993,
+   "best_target_evaluated": 54.99435199999993,
+   "n_proposed": 47
+  },
+  {
+   "method": "no_specialization",
+   "r": 23,
+   "selected": 53.63864,
+   "best_proposed": 57.44691200000004,
+   "best_target_evaluated": 57.44691200000004,
+   "n_proposed": 44
+  },
+  {
+   "method": "no_specialization",
+   "r": 24,
+   "selected": 51.68393600000007,
+   "best_proposed": 57.68272000000007,
+   "best_target_evaluated": 55.300943999999994,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_specialization",
+   "r": 25,
+   "selected": 51.27025600000006,
+   "best_proposed": 56.71153600000001,
+   "best_target_evaluated": 56.71153600000001,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 26,
+   "selected": 55.68775999999999,
+   "best_proposed": 57.23003200000009,
+   "best_target_evaluated": 57.23003200000009,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 27,
+   "selected": 53.285296000000024,
+   "best_proposed": 55.056575999999986,
+   "best_target_evaluated": 55.056575999999986,
+   "n_proposed": 43
+  },
+  {
+   "method": "no_specialization",
+   "r": 28,
+   "selected": 61.24280000000008,
+   "best_proposed": 64.06054399999995,
+   "best_target_evaluated": 64.06054399999995,
+   "n_proposed": 42
+  },
+  {
+   "method": "no_specialization",
+   "r": 29,
+   "selected": 59.62208000000002,
+   "best_proposed": 59.62208000000002,
+   "best_target_evaluated": 59.62208000000002,
+   "n_proposed": 45
+  },
+  {
+   "method": "target_only",
+   "r": 0,
+   "selected": 63.47899199999998,
+   "best_proposed": 65.19844799999998,
+   "best_target_evaluated": 65.19844799999998,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 1,
+   "selected": 60.558127999999996,
+   "best_proposed": 60.591136000000034,
+   "best_target_evaluated": 60.591136000000034,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 2,
+   "selected": 57.19550400000004,
+   "best_proposed": 57.19550400000004,
+   "best_target_evaluated": 57.19550400000004,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 3,
+   "selected": 57.95963200000001,
+   "best_proposed": 57.95963200000001,
+   "best_target_evaluated": 57.95963200000001,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 4,
+   "selected": 51.41668800000002,
+   "best_proposed": 55.939504000000035,
+   "best_target_evaluated": 55.939504000000035,
+   "n_proposed": 41
+  },
+  {
+   "method": "target_only",
+   "r": 5,
+   "selected": 60.430415999999944,
+   "best_proposed": 60.430415999999944,
+   "best_target_evaluated": 60.430415999999944,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 6,
+   "selected": 59.21822400000003,
+   "best_proposed": 60.827472000000014,
+   "best_target_evaluated": 60.827472000000014,
+   "n_proposed": 39
+  },
+  {
+   "method": "target_only",
+   "r": 7,
+   "selected": 57.924944,
+   "best_proposed": 60.22654399999997,
+   "best_target_evaluated": 60.22654399999997,
+   "n_proposed": 39
+  },
+  {
+   "method": "target_only",
+   "r": 8,
+   "selected": 59.050591999999995,
+   "best_proposed": 59.050591999999995,
+   "best_target_evaluated": 59.050591999999995,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 9,
+   "selected": 57.32563199999994,
+   "best_proposed": 57.32563199999994,
+   "best_target_evaluated": 57.32563199999994,
+   "n_proposed": 39
+  },
+  {
+   "method": "target_only",
+   "r": 10,
+   "selected": 56.860352000000034,
+   "best_proposed": 58.04171200000002,
+   "best_target_evaluated": 58.04171200000002,
+   "n_proposed": 43
+  },
+  {
+   "method": "target_only",
+   "r": 11,
+   "selected": 57.038927999999956,
+   "best_proposed": 58.170367999999996,
+   "best_target_evaluated": 58.170367999999996,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 12,
+   "selected": 52.73195199999997,
+   "best_proposed": 53.956703999999995,
+   "best_target_evaluated": 53.956703999999995,
+   "n_proposed": 41
+  },
+  {
+   "method": "target_only",
+   "r": 13,
+   "selected": 57.748992,
+   "best_proposed": 57.946191999999996,
+   "best_target_evaluated": 57.946191999999996,
+   "n_proposed": 41
+  },
+  {
+   "method": "target_only",
+   "r": 14,
+   "selected": 50.73040000000003,
+   "best_proposed": 52.009792000000026,
+   "best_target_evaluated": 52.009792000000026,
+   "n_proposed": 40
+  },
+  {
+   "method": "target_only",
+   "r": 15,
+   "selected": 58.357615999999965,
+   "best_proposed": 59.80110399999998,
+   "best_target_evaluated": 59.80110399999998,
+   "n_proposed": 37
+  },
+  {
+   "method": "target_only",
+   "r": 16,
+   "selected": 56.77136,
+   "best_proposed": 56.77136,
+   "best_target_evaluated": 56.77136,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 17,
+   "selected": 58.94428800000003,
+   "best_proposed": 63.553343999999996,
+   "best_target_evaluated": 63.553343999999996,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 18,
+   "selected": 55.643167999999996,
+   "best_proposed": 56.48129599999998,
+   "best_target_evaluated": 56.48129599999998,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 19,
+   "selected": 60.193375999999994,
+   "best_proposed": 62.51567999999998,
+   "best_target_evaluated": 62.51567999999998,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 20,
+   "selected": 50.25647999999999,
+   "best_proposed": 53.68084800000002,
+   "best_target_evaluated": 53.68084800000002,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 21,
+   "selected": 58.513760000000005,
+   "best_proposed": 58.513760000000005,
+   "best_target_evaluated": 58.513760000000005,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 22,
+   "selected": 56.365152000000045,
+   "best_proposed": 57.33102399999996,
+   "best_target_evaluated": 57.33102399999996,
+   "n_proposed": 43
+  },
+  {
+   "method": "target_only",
+   "r": 23,
+   "selected": 53.20499200000005,
+   "best_proposed": 58.55598400000002,
+   "best_target_evaluated": 58.55598400000002,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 24,
+   "selected": 48.04342399999999,
+   "best_proposed": 48.989055999999984,
+   "best_target_evaluated": 48.989055999999984,
+   "n_proposed": 41
+  },
+  {
+   "method": "target_only",
+   "r": 25,
+   "selected": 56.71153600000001,
+   "best_proposed": 56.71153600000001,
+   "best_target_evaluated": 56.71153600000001,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 26,
+   "selected": 59.57755199999996,
+   "best_proposed": 59.57755199999996,
+   "best_target_evaluated": 59.57755199999996,
+   "n_proposed": 41
+  },
+  {
+   "method": "target_only",
+   "r": 27,
+   "selected": 56.949999999999946,
+   "best_proposed": 57.39177600000001,
+   "best_target_evaluated": 57.39177600000001,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 28,
+   "selected": 53.77604799999998,
+   "best_proposed": 54.44249600000007,
+   "best_target_evaluated": 54.44249600000007,
+   "n_proposed": 42
+  },
+  {
+   "method": "target_only",
+   "r": 29,
+   "selected": 59.29753600000001,
+   "best_proposed": 59.50425600000001,
+   "best_target_evaluated": 59.50425600000001,
+   "n_proposed": 39
+  }
+ ]
+}
