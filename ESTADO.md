@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 19:41 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 20:40 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -28,6 +28,13 @@ Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con 
 - La tanda en curso se cortó: sus 6 partidas quedaron interrumpidas, sin nota, y la cola anterior se canceló.
 - Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md). Lecciones para los diseñadores: [lab/fastloop/lessons.md](lab/fastloop/lessons.md).
 
+**Primera hora de la carrera rápida (20:40 UTC):**
+- **Campeón nuevo desde las 20:03: f3 recombinada**, con 10 de 12 terminadas, nota media 54,6 y P(mejor que F1) 0,74.
+- Se quedaron a las puertas f3 ligera (11 de 12, 55,5) y observed-growth-v3 (10 de 12, 55,4). Les faltó poco: 0,55 y 0,59 frente al 0,60 exigido.
+- **Corrección: el formato "línea de estado" no se confirma.** f1 línea de estado bajó a 5 de 8 terminadas (52,7) y su prueba de transferencia, f3 línea de estado, quedó en 3 de 8 (39,5). El 4 de 4 inicial fue suerte, igual que el 71,4 de la v3 de Matteo en su ordenador.
+- Descartadas: f1 núcleo (1 de 4) y f1 señal de riesgo (1 de 4).
+- Los diseñadores automáticos ya han metido sus primeros manuales: `stretch-1026-200334` y `targeted-1026-201334`.
+
 **El nivel 6 es alcanzable (comprobado en los datos de los bots, T10):** 4 de 400 bots llegaron a L6 y terminaron con Q de 67 a 76. Los cuatro ascendieron en cada una de las tres primeras evaluaciones, aunque la primera fue una C, y acabaron con Skill al máximo. Ninguna partida con IA ha pasado de L5.
 
 **Última clasificación del sistema anterior** (prereg-v1; Claude Haiku; decisión del 26 oct a las 19:31 UTC, registro #157):
@@ -41,7 +48,7 @@ Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con 
 | f2 convertir tras evaluación · f1 revisión de riesgo | 48,4 · 46,9 | siguen en juego |
 | F7 tres skills y sus hijas, l1-review-clock, F8, value-conversion, observed-growth | 42–45 | siguen en juego, por debajo |
 
-**Hallazgo de la tarde: cómo se escribe el manual importa.** `f1 línea de estado` usa las mismas reglas que sus dos hermanas, pero obliga a rellenar antes de cada decisión una línea fija `Act | Risk | Weakest` y a servir la primera necesidad. Ella terminó 4 de 4 partidas; sus hermanas, escritas en prosa, 1 de 4 cada una. Con 4 partidas es una pista, no una prueba. Por eso se juegan más partidas de ella, y la prueba de transferencia `f3 línea de estado` (las reglas exactas de f3 recombinada en el mismo formato) dirá si el formato ayuda también a otra familia. Si se confirma, es justo lo que necesita un modelo más débil como DeepSeek.
+**(Corregido a las 20:40: no se confirmó con más partidas.)** **Hallazgo de la tarde: cómo se escribe el manual importa.** `f1 línea de estado` usa las mismas reglas que sus dos hermanas, pero obliga a rellenar antes de cada decisión una línea fija `Act | Risk | Weakest` y a servir la primera necesidad. Ella terminó 4 de 4 partidas; sus hermanas, escritas en prosa, 1 de 4 cada una. Con 4 partidas es una pista, no una prueba. Por eso se juegan más partidas de ella, y la prueba de transferencia `f3 línea de estado` (las reglas exactas de f3 recombinada en el mismo formato) dirá si el formato ayuda también a otra familia. Si se confirma, es justo lo que necesita un modelo más débil como DeepSeek.
 
 El observed-growth-v3 de Matteo sacó en la carrera 61, 19, 52 y 64 (3 de 4 terminadas): no repite el 71,4 de su ordenador.
 
@@ -105,7 +112,7 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | **hecha** (26 oct, 17:55): Y media 54,2, 5 de 6 terminadas → "cerca del techo"; el esfuerzo pasa a fiabilidad y tokens | `lab/reports/opus-ceiling/README.md`; resúmenes en `lab/reports/teacher-digests/opus-ceiling/` |
-| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | en marcha desde las 19:39 UTC: campeón F1, 7 aspirantes, 8 huecos (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
+| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | en marcha desde las 19:39 UTC; campeón **f3 recombinada** desde las 20:03; diseñadores automáticos funcionando (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
 
 ## Relevo del organizador (26 oct, 16:20 UTC)
 
@@ -200,6 +207,7 @@ Después, commit y push a tu rama. Una tarea no está terminada hasta que su rel
 - Poner en los manuales títulos de eventos, respuestas fijas a eventos, meses concretos o umbrales no publicados. `careerlab lint` lo vigila.
 - Tocar la rama de otro o editar el protocolo congelado.
 - Los resúmenes de partidas en `lab/reports/teacher-digests/` contienen texto del juego de desarrollo. Sirven para estudiar, pero no se copian frases a los manuales, y por eso el repo tiene que seguir siendo **privado**.
+- **Datos con texto del juego:** `lab/reports/first-review-search/` (Matteo, 38,8 MB) contiene un catálogo de eventos de desarrollo con sus opciones y resultados. Es material de estudio en el repo privado, como los resúmenes de partidas. **No se pasa nunca a los diseñadores ni se copia a un manual**: las respuestas por evento están prohibidas, se escriban como se escriban.
 
 **El organizador.** Es un papel, no un chat fijo. Desde el 26 oct lo hace la sesión de la nube que juega. Entre sus tareas:
 - juntar las ramas terminadas con `main`;
