@@ -8,7 +8,7 @@ Rama: `alejandro/ideas-por-probar`, desde main `305762a`. PR #3 anterior ya inte
 - [x] Verificar reglas en fuente oficial accesible, dejando explícitas las incertidumbres.
 - [x] Crear sección navegable con ideas falsables, incluido diseño de exploración aleatoria útil.
 - [x] Relevo, línea propia de ESTADO y validación (255 tests, enlaces y diff-check).
-- [ ] Commit/push y PR nueva.
+- [x] Commit `913ac77`, push y [PR #6](https://github.com/aleetreny/huawei/pull/6) abierta a main.
 
 No se lanzan partidas, no se construye un catálogo de respuestas ni se cambia el protocolo congelado.
 
