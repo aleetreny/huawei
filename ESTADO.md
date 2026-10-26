@@ -65,6 +65,8 @@ Llevamos 124 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con 
 
 Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nuevas las añade el organizador.
 
+Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicacion-repo` — terminada, pendiente de integrar mediante PR**. Explicación de estructura, tareas y resultados con Relevo en [este informe](research/careerlab/explicacion-repo-2026-10-26.md); 230 tests OK, sin partidas ni cambios del laboratorio. No añade una tarea de desarrollo a T1–T13.
+
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 (44 partidas) en juego desde las 16:00; decisión al acabarla | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
