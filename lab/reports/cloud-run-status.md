@@ -1,15 +1,15 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 15:18 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 15:24 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 249, interrupted 22, leased 40.
+- Jobs in the registry: done 249, interrupted 22, leased 44.
 - Episodes finished in this container: 0. Batches completed: 0.
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.84**, window resets 26 Oct 16:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.897** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
-- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): policy not registered yet; predictions pre-stated in the README.
+- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs leased 4; finished games: none yet.
 
 ## Latest pre-registered block decision (Haiku actor)
 
@@ -77,6 +77,12 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: distil (teacher, single-rule attribution); idea origin: user request 26 Oct: Opus teacher distillation (lab/reports/teacher-digests/distilled-rules.md).
 - Hypothesis: Every Opus game opened with a C, and the most common Opus exit (3 of 6 losses, plus the eliminated Sonnet F3 run) is C, C, D, D. The D after a weak review followed risk that rebuilt once the agent stopped defusing: of 29 reviews that followed a C or D, none of the 7 preceded by Defuse legacy risk in the last Energy phase before the review was a D, against 7 of the 22 without it. In the decisive case (a third review after C, C) the split is 4 of 4 defused and no D versus 4 of 4 not defused and D, within every seed group and within P0 and M3. Adding one line to f3-lean that sets Defuse legacy risk and Prepare report materials in the second Energy phase after any C or D, whatever the signal state, removes that route for Haiku: no D after a weak review in a 4-run screen and mean quantitative_score at least f3-lean's and F3's.
+- Haiku runs so far: no finished runs yet.
+
+### x0-opus-ceiling-v1 (`47cbeec8b03ad2a0`, family ceiling)
+
+- Parents: f3-feedback-reactive-v1; operator: synthesis of general knowledge (measurement arm, not a submission candidate); idea origin: T13 user request 26 Oct: Opus ceiling measurement with all general knowledge.
+- Hypothesis: The current leader (F3 feedback-reactive, posterior Y about 60 with Haiku) is limited by two things: the player's reasoning and the policy's coverage (every family so far optimises survival only, and completed careers lose most of their missing ground on career level and wealth). Giving the strongest reasoner (Claude Opus at maximum effort) all our general knowledge in one Skill, namely F3's signal states and responses, f3-balance-recombined's strict precedence, an F8-style growth mode, the decision-relevant published handbook rules and the general form of distilled rules R1-R5, measures how far above the leader the game's ceiling lies when only legally usable, general knowledge is supplied. Expected: completion close to Opus's best observed rate and a mean quantitative_score clearly above F3's, with most of the gain on level and wealth.
 - Haiku runs so far: no finished runs yet.
 
 ## Teacher distillation
@@ -233,7 +239,7 @@ _Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 U
 | f8-secure-growth-v1 | 5f8c9648b6abd9b0 | f8-secure-growth (new) | F3, f3-lean (text) | Keep F3's risk and weak-review responses; when no signal is active, push for promotion and pay. That should lift level and wealth without more exits. T3, and the stall slot (playbook P10). |
 | f3-opus-distilled-v1 | c03a1bf3ca04c5e7 | f3-feedback-reactive | F3, f3-lean | f3-lean + distilled R1–R5 from 14 Opus games (T2). |
 | f3-distilled-prereview-defuse-v1 | f41d6382cab6ec76 | f3-feedback-reactive | F3, f3-lean | f3-lean + R1 only (attribution child, T2). |
-| x0-opus-ceiling-v1 | (pending) | ceiling | F3 | T13 measurement arm, clean room. |
+| x0-opus-ceiling-v1 | 47cbeec8b03ad2a0 | ceiling | F3 | T13 measurement arm, written in a clean room (no digests) by a subagent, 599 words. Combines F3, the Protect > Risk > Review > Grow precedence, the handbook rules and R1–R3. 4 games on opus@max~100k, pilot lane. |
 
 **Decisions recorded by this session**
 - `enqueue`: Problem A, 2 × opus~100k each for F3, f3-balance-recombined and f3-lean.
@@ -264,7 +270,7 @@ Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Rea
 - **T1:** running in the cloud; batch 1 starts at the 16:00 UTC reset.
 - **T2:** distilled-rules.md done; two F3 children registered and queued.
 - **T3:** f8-secure-growth-v1 registered and queued.
-- **T13:** README with pre-stated thresholds committed; ceiling policy being written (clean room).
+- **T13:** README with pre-stated thresholds committed (a494d44) before registration. x0-opus-ceiling-v1 (47cbeec8b03ad2a0) registered; 4 games queued in their own 2-slot lane.
 - **T8:** pending (end of the run).
 - **Decision for the team:** the 0.97 pre-reset cap was blocked here and needs the user's own approval in the cloud session.
 - **Decision for the team:** whether R1's cadence-relative timing counts as a calendar trigger under prereg §10 (note at the end of distilled-rules.md).
