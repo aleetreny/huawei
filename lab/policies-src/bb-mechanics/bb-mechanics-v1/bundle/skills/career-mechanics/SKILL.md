@@ -26,7 +26,8 @@ description: How promotion, reviews, hidden risk and story answers work in this 
    - Dignity: being transparent, following the proper process, protecting confidential information, setting fair boundaries.
    - Health: rest. Overwork drains it.
 3. Pick the safe answer that builds the input furthest below where your level needs it, without costing Health or Dignity when either is low. Passive or people-pleasing answers cost Dignity and Network: avoid them.
-4. **In the month before a review month**, never give away a point of Skill, Network or Output while a safe answer keeps it.
+4. Between honest answers, prefer the tactful one: correct things in writing or after the meeting, steer back without a scene, share your reasoning with the team. A public stand or confrontation costs Network even when you are right.
+5. **In the month before a review month**, never give away a point of Skill, Network or Output while a safe answer keeps it.
 
 ## Climbing
 - Bring Skill, Network and Output to their ceilings and hold them there into each review.
@@ -39,5 +40,6 @@ description: How promotion, reviews, hidden risk and story answers work in this 
 - Spend all Energy; it does not roll over.
 
 ## Risk discipline
+- Built-up risk goes off when something exposes it: a cover-up or excuse that can unravel, or a step that puts you under formal scrutiny (a signed complaint, a formal investigation, a stand-off with management). With a clean record such principled stands are safe; while the HR remark shows concern, Defuse first and avoid both.
 - After an explosion, take no risky answer for the rest of the run, and Defuse at every quarter while concern remains.
 - Towards the end of the run, close open risks and recover Health and Dignity: the ending counts them.
