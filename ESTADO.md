@@ -73,6 +73,8 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 
 Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicacion-repo` — terminada, pendiente de integrar mediante PR**. Explicación de estructura, tareas y resultados con Relevo en [este informe](research/careerlab/explicacion-repo-2026-10-26.md); 230 tests OK, sin partidas ni cambios del laboratorio. No añade una tarea de desarrollo a T1–T13.
 
+Línea de investigación solicitada por Alejandro: **Codex — `alejandro/investigacion-decisiones` — protocolo y auditoría preparados, pendiente de integrar mediante PR**. [Diseño](research/careerlab/decision-research/README.md) y [Relevo](lab/reports/decision-research/README.md): regresión exploratoria para generar reglas, ensayos aleatorios de una regla y confirmación según v1. Auditoría: 166 partidas Claude terminales canónicas, 99 trazas verificadas en este Mac y 67 no localizadas aquí; metadatos experimentales por verificar. No se han ajustado regresiones ni lanzado partidas; siguiente fase: extracción temporal en la nube. No reasigna T1–T13.
+
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 hecha (decisión #114, líder F7 tres skills); tanda 2 (value-conversion) en juego; tanda 3 repartida por el protocolo (24 repeticiones + hijas nuevas) | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
