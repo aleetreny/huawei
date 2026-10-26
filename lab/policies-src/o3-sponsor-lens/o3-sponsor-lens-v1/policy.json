@@ -1,0 +1,13 @@
+{
+  "family": "o3-sponsor-lens",
+  "name": "o3-sponsor-lens-v1",
+  "parents": [],
+  "idea_origin": "T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure",
+  "operator": "new family (outside designer)",
+  "hypothesis": "Promotions and grades are earned socially; reading each event by who is involved and who will remember it, raising problems early, and spending Energy mainly on wear-free visible actions (Prepare report materials, Network maintenance) with Report results to your manager and key projects as main actions raises Network, visible Output and review grades, giving higher level and bonus with almost no Health cost and fewer blow-ups.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Notes name the people affected and what the choice signals to them; Energy is mostly Prepare report materials plus Network maintenance, with Skill learning or High-intensity work only when those clearly lag; main actions alternate Apply for a key project and Report results to your manager, with Showcase results or Report results before reviews; story choices favour open escalation, shared credit and helping senior people or other teams; Network ends clearly higher than in balanced play, Health stays high with few recovery actions.",
+  "refutation": "Refuted if, in a 4-run Haiku screen against the team's current reference policy in the same screen, mean final level is not higher, or mean final Network is not higher, or any run ends as Obsolete or Dismissed for capability (a sign that wear-free allocation starves Skill), or more runs end early than the reference.",
+  "skill_count": 1,
+  "notes": "Central idea: promotion and pay come from backers who see your work, so read every event by roles and spend Energy on wear-free visibility and relationships first. Sources actually used: the official handbook read through show_employee_handbook and the score structure in the T4 brief; the public readthedocs rules pages were unreachable (egress policy denied the host), so none of their content was used."
+}
