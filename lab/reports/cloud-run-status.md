@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 21:38 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 23:25 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: cancelled 27, done 519, interrupted 36, queued 3, running 8.
-- Episodes finished in this container: 237. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.10**, window resets 27 Oct 02:00 UTC; governor cap 0.85. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.14**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.162** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: cancelled 27, done 554, interrupted 36, queued 3.
+- Episodes finished in this container: 272. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.24**, window resets 27 Oct 02:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.16**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.181** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -74,11 +74,12 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
-| f3-feedback-reactive | 80 | 9 | 10 |
+| f3-feedback-reactive | 103 | 11 | 13 |
 | f1-steady-balance | 41 | 7 | 4 |
 | f7-one-vs-many | 34 | 6 | 3 |
 | matteo-feedback-growth | 33 | 6 | 6 |
 | l1-review-clock | 12 | 4 | 2 |
+| fast-bold | 12 | 4 | 0 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
 | f4-visible-delivery | 9 | 4 | 1 |
@@ -346,104 +347,95 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
   - Energy bots verified: 4 of 400 reached L6 (lessons.md, Frontier).
 - **20:40 UTC, fastloop hour 1:** champion f3-balance-recombined (crowned 20:03); the status-line effect is not confirmed (5/8 and 3/8); lessons.md updated; 6 branches merged; observed-growth-v6 added to the ladder.
 - **21:38 UTC, fastloop hour 2:** champion targeted-1026-201334 (designer; Output and Network kept in stories until the first promotion), crowned 21:29. Lessons updated. No new collaborator branches.
+- **22:24 UTC, PAUSED by the user** to review the strategy. fastloop STOP was set at 22:22, and the 8 in-flight games and 1 designer finish on their own. Since 16:00: 237 Haiku games (mean Q 46.6, SD 19.3), 15 Opus games and 9 designer runs, which is 16 % of the week. To resume: `rm ~/careerlab-data/huawei/fastloop/STOP ~/careerlab-data/huawei/fastloop/STOP-SCHEDULER`, then start the driver as in `scripts/fastloop/README.md`.
+- **22:40 UTC:** fully stopped. The driver exited, with no games and no designers running. The last design, targeted-1026-221555, is registered but unplayed. Queued jobs stay queued.
+- **23:30 UTC, final:** stopped for good by Alejandro's decision at 22:50 UTC (independent chats, PR #14). The organiser role ended with the closing commit. No processes remain, STOP files are in place, and `recover` found nothing to fix. The 256 Haiku digests were saved to `lab/reports/teacher-digests/haiku-cloud/`.
 
 ## Relevo (hand-off)
 
-_Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 UTC._
+_Final hand-off of the cloud session. Written 26 Oct 2026, 23:30 UTC._
+
+**State:** stopped for good by Alejandro's decision (26 Oct, 22:50 UTC). The team now works with independent chats (PR #14). This session is no longer the organiser. It merges no branches, writes nothing to `main` after this closing commit, and launches nothing.
 
 ### 1. What this session did, and why
 
-**Setup (14:12–14:20 UTC)**
-- Branch `cloud-lab-run` from `main` ad8c8f9. Ran `uv sync` and the dev dataset update, then `careerlab import`: 249 evaluations, 22 policies, 7 actors, 88 decisions.
-- `careerlab recover` found nothing to release. Wrote `quota_cap.json` with `{"max_five_hour": 0.80}`.
-- **Claude CLI pinned to 2.1.303** (`npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303`, then `CAREERLAB_CLAUDE_EXE`).
-  - Prereg §1 freezes the CLI version in every actor record. The container ships 2.1.310, which would have created new actor cells and cut the new runs off from the 99 Mac episodes.
-  - Checked: `claude-cli:haiku` → `08e9167a965ed82c`, `claude-cli:opus~100k` → `eaaedd84f8f22e6d`, both the existing ids.
-- **Quota seed:** the governor reads quota only from local worker streams, and there were none. A one-line probe stream in `runs/_quota-probe/` makes it hold correctly (five-hour 0.84 at 14:15, reset 16:00).
-- **Two reporting fixes, no decision-rule change** (commit f1b1b5d):
-  - `decisions.block_decision` recorded `robust: null` because it read attributes that `Robustness` does not have.
-  - `analysis.load_cells` dropped every episode whose `result.json` is not on this machine; it now falls back to the evaluation row.
+- **Setup (14:12 UTC):**
+  - Branch `cloud-lab-run` from `main` ad8c8f9, and the Mac registry imported.
+  - **Claude CLI pinned to 2.1.303**, the version frozen in the registry's actor records. With 2.1.310 every run would have landed in a new actor cell.
+  - The quota governor was seeded with a probe stream, because a fresh container has no worker streams to read quota from.
+- **T1, the prereg-v1 race (16:00–19:39 UTC):**
+  - Batches of Haiku screens, a recorded block decision after each batch, allocation by top-two Thompson sampling, and dormant audits.
+  - Decisions #114, #128, #142, #150 and #157. Leaders in turn: F7 three-skills, F1, f1-status-line.
+  - The stall rule fired from #114 onwards.
+- **T2 (Opus distillation):** `lab/reports/teacher-digests/distilled-rules.md` and two F3 children. Neither beat its parent.
+- **T3:** f8-secure-growth. **T4:** o1, o2 (o3 held), plus Matteo's and Leah's manuals merged and screened. **T10:** 400 energy bots. **T13:** Opus ceiling.
+- **Generation from traces:**
+  - Block 3: three F7 children (diagnosis in `lab/reports/cloud-run-diagnostics/block3-generation.md`).
+  - Block 5: three F1 children (`block5-generation.md`).
+  - f3-status-line as a transfer test of the status-line format.
+- **Organiser from 16:00 UTC (user decision):** merged collaborator branches into `main` hourly, with tests passing and fast-forward only. Updated ESTADO.md. Commits in Alejandro's name with no Claude lines; the branch's earlier commits were rewritten at the user's request.
+- **T14, switch to fastloop-v2 (19:39 UTC, user decision):** README procedure. f1-status-line and f3-status-line were added at the user's confirmation.
+- **Pause (22:22 UTC) and full stop (22:40 UTC, user decision):** fastloop STOP set. The last games and the last designer finished on their own.
 
-**Merges from `main`:** 7945fe4 (digests), 3db7af9 (seven-day pacing), d66911f (ESTADO.md, `careerlab lint`). Registry exports: kept this side, as asked.
+Every decision is in the registry (`lab/registry/decisions.jsonl`), with its reason: `enqueue`, `block_decision`, `allocate`, `reprioritise`, `hold`, `quota_cap`, `protocol_switch` and the ladder's own decisions.
 
-**Scheduler**
-- `scratchpad/driver.py`, detached: run the queue, then replacement attempts for interrupted slots, then the recorded Haiku block decision, then a marker file.
-- It was restarted three times before any episode started, to load new code (14:47, pacing; 15:13, ceiling lane; 15:16, priorities). Each time `careerlab recover` released the leases; no episode ran twice.
-- T13 ceiling lane: `scratchpad/ceiling.py`, `--purpose pilot --slots 2`. Ceiling jobs get priority −100, and the main lane uses `--limit` = queued non-pilot jobs, so it never leases them.
+### 2. Results with numbers (Claude-proxy only, dev split; not official scores)
 
-**Policies created**
+- **Volume since the 16:00 reset:** 237 Haiku games (mean Q 46.6, SD 19.3 per game), 15 Opus games and 9 Opus designer runs. That was about 16 % of the weekly quota.
+- **Noise is the main fact.** The SD per game is about 15 Y-points, so separating two manuals by 4 points needs about 130 games each. Every early lead faded with more games:
+  - f1-status-line went from 4/4 to 5/8;
+  - Matteo's v3 went from 71.4 to 51.0;
+  - the fastloop champion targeted-1026-201334 went from 53.9 to 51.6.
+  - The top manuals (f3-lean, f3-balance-recombined, F1, targeted-1026-201334) all sit at about 51–56 mean Q with 10–11 of 12 completed.
+- **T13 ceiling** (`lab/reports/opus-ceiling/README.md`): Opus at maximum effort with all general knowledge scored mean Y 54.2 (90 % interval 41.6–66.7), 5 of 6 completed, which reads as **"near the ceiling"**. It loses the same points on level (16.2) and wealth (12.8) as everyone else.
+- **How games are lost:** every month-24 capability dismissal followed four weak reviews, and those players never left Level 1 by the second review. If the first promotion came at review 1, mean Q was 57; with none by review 2, it was 22. The second loss route is a trust crisis after piled-up risk warnings.
+- **Level 6 is reachable** (T10 raw runs): 4 of 400 energy bots reached L6 (Q 66.9–75.6). All four were promoted at each of the first three reviews, despite a first-review C, and ended with Skill 100. No LLM game has passed L5.
+- **Problem A:** Haiku and opus~100k agree on the top shared policy (F1) but not on the F3 family. opus~100k completed 2/6 with it. Spearman over 6 shared policies is 0.20.
+- **Fastloop history:** F1, then f3-balance-recombined (20:03), then targeted-1026-201334 (21:29, designer). See `lab/reports/carrera-rapida.md`, `lab/fastloop/history.md` and `lab/fastloop/lessons.md` (one line per finished challenger, with numbers; Frontier section with the L6 check).
 
-| Policy | Id | Family | Parents | Hypothesis in one line |
-|---|---|---|---|---|
-| f8-secure-growth-v1 | 5f8c9648b6abd9b0 | f8-secure-growth (new) | F3, f3-lean (text) | Keep F3's risk and weak-review responses; when no signal is active, push for promotion and pay. That should lift level and wealth without more exits. T3, and the stall slot (playbook P10). |
-| f3-opus-distilled-v1 | c03a1bf3ca04c5e7 | f3-feedback-reactive | F3, f3-lean | f3-lean + distilled R1–R5 from 14 Opus games (T2). |
-| f3-distilled-prereview-defuse-v1 | f41d6382cab6ec76 | f3-feedback-reactive | F3, f3-lean | f3-lean + R1 only (attribution child, T2). |
-| x0-opus-ceiling-v1 | 47cbeec8b03ad2a0 | ceiling | F3 | T13 measurement arm, written in a clean room (no digests) by a subagent, 599 words. Combines F3, the Protect > Risk > Review > Grow precedence, the handbook rules and R1–R3. 4 games on opus@max~100k, pilot lane. |
-| o1-promotion-gap-v1 | 006571b3bb85b323 | o1-promotion-gap (new, T4) | none | Promotion is held shut by the stat lagging furthest behind the level. Name that one gap, build it after a review and make output visible before the next one. Outside designer, no access to our Skills. |
-| o2-run-hot-v1 | 663c8cd2a1cafe68 | o2-run-hot (new, T4) | none | Health and Dignity are fuel: run Full growth quarters and throttle to Cruise or Cool only on falling stats or warnings. Outside designer. |
-| o3-sponsor-lens-v1 | not registered (held) | o3-sponsor-lens (T4) | none | Held: it largely combines F4 and F5, both of which trail; only its role-based reading of events is new. Recorded as a `hold` decision. |
-| value-conversion-v1 | 91b30e8096ff6766 | matteo-value-conversion (T4, Matteo) | none | Convert responsibility into career value inside story decisions (scope, resources, pay). Not blind: the author saw our broad conclusions. |
-| observed-growth-v1 | f03981dac92f8b6c | matteo-feedback-growth (Matteo) | f8, value-conversion | A concise priority order with checks that each investment actually paid off. Matteo's isolated Haiku pilot scored 64.8. |
-| l1-review-clock-v1 | f1830961d168beb9 | l1-review-clock (Leah) | none | Keep a Health reserve, read risk from feedback, and grow Output, Skill and Network together for each promotion window. Her own game (origin leah) scored 60.9. |
-| f7-trend-marking-v1 | 188c7c484fa3519b | f7-one-vs-many | f7-three-skills | Mark Skill, Network and Output at risk by trend (below their recent high), not by size or grade. Trace-driven child of the leader. |
-| f7-delivery-stories-v1 | 1d62c4e5121233e6 | f7-one-vs-many | f7-three-skills | While Output or Network is below its recent high, prefer finishing or showing your own work in stories. Traces show drops between the last quarterly phase and the review precede weak grades. |
-| f7-promotion-drive-v1 | 7ded9840c5c439d9 | f7-one-vs-many | f7-three-skills, f8 | Stall slot, playbook P12 (decision #114): promotion drive until a review raises Level. Learning goal in its policy.json. |
-| f1-core-v1 | (see registry) | f1-steady-balance | F1 | P20 subtraction: F1 without its unused and self-contradicting text. |
-| f1-risk-signal-v1 | (see registry) | f1-steady-balance | F1 | Core plus Defuse right after recovery on any non-reassuring risk feedback or a blow-up. |
-| f1-status-line-v1 | (see registry) | f1-steady-balance | F1, f3-lean | Stall slot P22 (decision #142): the same rules written as a fixed status line. |
-| l1-review-clock-v2/v3, observed-growth-v2/v3 | 6e26797a…, 35576a66…, f2715987…, fe970f0d… | collaborators | their v1 | Leah's and Matteo's iterations, merged by the organiser. |
+**Where the data are:**
+- `lab/registry/*.jsonl`: 564 evaluations, 620 jobs and 252 decisions; origins in `lab/registry-origins/`.
+- Digests: `lab/reports/teacher-digests/haiku-cloud/` (256 Haiku games, saved at the end), `opus-ceiling/` (6) and `opus-cloud/` (10).
+- Reports: `lab/reports/opus-ceiling/`, `lab/reports/energy-bots/` and `lab/reports/cloud-run-diagnostics/`.
 
-**Decisions recorded by this session**
-- `enqueue`: Problem A, 2 × opus~100k each for F3, f3-balance-recombined and f3-lean.
-- `enqueue`: 4 Haiku screens each for f8 and the two distilled children.
-- `reprioritise`: 4 Mac-queued calibrate replacements (default opus, opus@low) to −10, because of the weekly pace.
-- `reprioritise`: the 6 Problem-A opus~100k jobs to −5, behind the Haiku replicates.
-- `enqueue`: 4 Haiku screens each for o1 and o2 (T4).
-- `hold`: o3-sponsor-lens (overlaps F4 and F5).
-- Block decision #114 after batch 1: leader f7-three-skills 55.2; stall rule fires; f5 and f2 dormant.
-- `allocate`: 24 block-3 repeat slots by top-two Thompson sampling, seed 20261140, no audit.
-- `enqueue`: 2 more T13 ceiling games (pre-stated rule for mixed results).
-- `enqueue`: 4 Haiku screens each for value-conversion, observed-growth, l1-review-clock and the three F7 children.
-- `recover`: several entries.
-- Block decisions appear after each batch.
+### 3. What failed or is half done, and how it was left
 
-**Progressive widening.** Prereg §6 counts N_f as terminal episodes in the family subtree, all actors. For F3 that is 9 (F3 5, f3-balance-recombined 2, f3-lean 2), so the cap is 4: 2 children existed and both distilled children fit. The report table counts Haiku-only N_f, which is stricter.
+- **Errors I made, both corrected:**
+  - An edit script emptied ESTADO.md on `main` for about 5 minutes (18:30). It was restored at 18:35, and a line-count guard was added before every push to `main`.
+  - Several times written into the docs were estimates rather than clock times; they were corrected where noticed.
+- **Interrupted games:** 6 games cut at the switch to fastloop (19:39) and 22 imported from the Mac. They stay on record and were never scored.
+- **Queue:** jobs still queued under the ladder stay queued. Nothing will run them, because no scheduler is running.
+- **Unplayed:** targeted-1026-221555 (the last designer manual) is registered but has no games.
+- **Not merged:** `alejandro/laboratorio-adaptativo` (WIP, touches core modules).
+- **Lost when the container is reclaimed:** the raw run folders and stream transcripts under `~/careerlab-data/huawei/runs/`, the energy-bot raw runs (`~/careerlab-data/energy-bots/`) and the designer working folders (`~/careerlab-data/huawei/fastloop/design/`). Their readable content is kept in the digests, the reports and the policy folders. The live SQLite registry is fully represented by the JSONL export.
+- **Still open:** the team must decide whether R1's cadence-relative timing, and o1's, counts as a calendar trigger under prereg §10. See the note at the end of `distilled-rules.md`.
 
-### 2. Results so far
-See the sections above: latest block decision, actor comparison, Problem A, T13. T13 is complete: mean Y 54.2, near the ceiling. Problem A is complete: the rankings disagree on the F3 family. Block decisions #114 and #128. For the numbers, see the sections above and `findings.md`.
+### 4. Pending, and the exact next step
 
-### 3. Failed or half done
-- **Protocol switch (19:39 UTC, user decision):** the prereg-v1 race stopped after decision #157. Batch 6 was cut: 6 in-flight games interrupted and never scored, and 11 leased plus the queued block-7 jobs cancelled by `ladder init --cancel-others`. The fastloop-v2 driver runs with 8 slots. The old scripts in `scripts/cloud-run/` are no longer used.
-- **Authorship (user rule, 26 Oct 15:55 UTC):** every commit is made as Alejandro Treny Ortega <alejandrotreny100@gmail.com>, with no Claude co-author lines. The 14 earlier commits of this branch were rewritten to that identity and force-pushed with lease; the content is identical. `main` still holds 2 commits authored by Claude and 23 `Co-Authored-By` lines from earlier sessions. Rewriting those would need a force-push to `main`, which has not been done.
-- **0.97 pre-reset cap.** First requested by the strategy session at 15:15, and blocked by this session's permission classifier because the request came from a peer. **The user then asked for it directly at 15:45 UTC.** From 15:46 the cap was 0.97, with 10 workers: 6 main lane, 2 extra lane for the o1 and o2 screens, 2 ceiling games. A detached script restored 0.80 at 16:00:05. Recorded as a `quota_cap` decision.
-- 22 interrupted attempts from the Mac stay on record, never scored. Each slot already had a later attempt.
+Nothing is pending for this session. **The cloud race is stopped, and per the user's decision it is not to be resumed.** If the team ever wants the ladder again, the state is in `lab/fastloop/state.json` and the registry. A new cloud session would have to:
 
-### 4. Next step and how to resume
-- The loop scripts are committed in `scripts/cloud-run/` (README there). Copy `next.md`, `teacher.md` and `relevo.md` from the sections of this report into `$CLOUD_RUN_DIR` to keep the status file continuous.
-- If this session is gone, start a new cloud session on branch `cloud-lab-run` with the prompt below.
-- Leased or running jobs are released by `careerlab recover`. Interrupted ones get replacement attempts from `driver.py`'s requeue rule, or by hand with `Registry.requeue_interrupted`.
+1. run `uv sync`, then `uv run career-emulator-engine update --source distribution --split dev`;
+2. install CLI 2.1.303 (`npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303`) and export `CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude`;
+3. run `uv run careerlab import` and `uv run careerlab import --dir lab/registry-origins/<origin>` for each origin, then `uv run careerlab recover`;
+4. remove `~/careerlab-data/huawei/fastloop/STOP` and `STOP-SCHEDULER`, and start `scripts/fastloop/driver.py` as in `scripts/fastloop/README.md`.
 
-```text
-Continue CareerLab on branch cloud-lab-run (repo aleetreny/huawei) as the cloud race AND the organiser. Read ESTADO.md, scripts/fastloop/README.md and the Relevo at the end of lab/reports/cloud-run-status.md first.
-Setup:
-  uv sync
-  uv run career-emulator-engine update --source distribution --split dev
-  npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303
-  export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude   # the actor records freeze CLI 2.1.303
-  uv run careerlab import; uv run careerlab import --dir lab/registry-origins/<each origin>; uv run careerlab recover
-The race is the fastloop-v2 ladder (since 26 Oct 19:39 UTC). Its state lives in lab/fastloop/state.json and the registry; restart it with:
-  setsid nohup uv run python scripts/fastloop/driver.py >> ~/careerlab-data/huawei/fastloop/driver.out 2>&1 < /dev/null &
-Stop it with touch ~/careerlab-data/huawei/fastloop/STOP. Its driver writes quota_cap.json (cap 0.85, front-loaded weekly knots).
-Organiser routine (hourly): git fetch origin --prune; merge finished collaborator branches (keep each owner's ESTADO line; origin exports: take the newest superset); `careerlab ladder add` every merged team manual; import their lab/registry-origins/<origin>; careerlab export; careerlab ladder status --write; update ESTADO.md (Spanish), findings.md, progress.md; uv run pytest -q; check ESTADO.md is complete; push cloud-lab-run, then cloud-lab-run:main as a fast-forward (never force main). After each new champion and at least every 3 hours, add lessons with numbers to lab/fastloop/lessons.md. Commit in the user's name (Alejandro Treny Ortega <alejandrotreny100@gmail.com>) with no Claude co-author lines. Never submit, never use a competition key (DeepSeek games are played by Alejandro on his Mac with origin "deepseek"), never edit the frozen protocols. T8/T9 (R1 design docs and package for the champion) start early 27 Oct UK, cutoff 27 Oct 24:00 UK.
-```
+That should happen only on an explicit new decision by Alejandro.
 
-### 5. ESTADO.md
-This session is the organiser and updates ESTADO.md on `main` itself (first at 16:20 UTC). The items below record the state at that time.
-- **T1:** running in the cloud; batch 1 starts at the 16:00 UTC reset.
-- **T2:** distilled-rules.md done; two F3 children registered and queued.
-- **T3:** f8-secure-growth-v1 registered and queued.
-- **T13:** README with pre-stated thresholds committed (a494d44) before registration. x0-opus-ceiling-v1 (47cbeec8b03ad2a0) registered; 4 games queued in their own 2-slot lane.
-- **T4:** o1-promotion-gap and o2-run-hot registered and queued (4 Haiku each). o3-sponsor-lens held because it overlaps F4 and F5. o1's timing is cadence-relative, like R1, so the same compliance question applies.
-- **T10:** done (`lab/reports/energy-bots/README.md`), 400 bot episodes, no quota. Health is the first constraint when stories ignore it: every mix without a Health point per quarter blacked out. Recovering only once Health is low is too late. Defuse + Health was the best mix. No mix fixes the first review. Surviving bots end at the same level and wealth as the LLM players.
-- **T8:** not before 27 Oct; drafts start about 05:00 UTC.
-- **Decision for the team:** whether R1's cadence-relative timing counts as a calendar trigger under prereg §10 (note at the end of distilled-rules.md).
+My recommendation from the strategy review (22:30 UTC):
+
+1. Stop screening many variants on Claude: the budget cannot separate them.
+2. For R1, prefer the simplest of the statistically tied top manuals (f3-lean-v1: 250 words, 11/12 completed, Q 55.5), following prereg §11's tie rule.
+3. Spend effort where the score moves:
+   - DeepSeek reality checks, on Alejandro's Mac;
+   - the early-promotion lever, studied with bots and Matteo's first-review search, which cost no Claude quota;
+   - token efficiency, the design documents and the video.
+
+### 5. Task lines
+
+This session no longer writes ESTADO.md. For the team:
+
+- **T1** was replaced by T14.
+- **T2, T3, T10 and T13** are done.
+- **T14 (fastloop)** is stopped for good at 22:40 UTC. The last champion was targeted-1026-201334 (13 games, Q 51.6, 10/13 completed).
+- **T12** ended with this closing commit.
+- **T8 and T9** (R1 documents and package) were not started by this session.
