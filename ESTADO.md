@@ -142,7 +142,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
   | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
   | `matteo/observed-growth-v3` | observed-growth-v3 de Matteo | juntada con `main` el 26 oct, 18:15; en la carrera (4 partidas); su piloto en casa: 4 de 4 terminadas, Q media 71,4 (otra celda; se comprueba en la carrera) |
   | `alejandro/investigacion-decisiones` | línea de investigación de decisiones (Codex), sólo analiza exports | juntada con `main` el 26 oct, 18:32 (PR #3) |
-  | `matteo/observed-growth-v4` y `-v5` | iteraciones de Matteo | juntadas con `main` el 26 oct, 19:10 como fuente. v4 no se juega (su propio piloto la dejó por debajo de v3); v5 en espera del resultado de v3 en la carrera |
+  | `matteo/observed-growth-v4` y `-v5` | iteraciones de Matteo | juntadas con `main` el 26 oct, 19:06 como fuente. v4 no se juega (su propio piloto la dejó por debajo de v3); v5 en espera del resultado de v3 en la carrera |
   | `alejandro/laboratorio-adaptativo` | laboratorio adaptativo y presupuesto (Alejandro) | **sin juntar**: está marcada WIP y cambia módulos del núcleo (`decisions.py`, `cli.py`); se junta cuando esté terminada |
   | `matteo/observed-growth-v2` | observed-growth-v2 de Matteo | juntada con `main` el 26 oct, 17:57; en la carrera (4 partidas); sus partidas de origen `matteo` importadas |
   | `alejandro/explicacion-repo` | explicación del repositorio (Codex) | juntada con `main` el 26 oct, 16:55 |

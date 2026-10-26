@@ -1,11 +1,11 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:05 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 19:06 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 408, interrupted 28, leased 10, queued 21, running 6.
-- Episodes finished in this container: 140. Batches completed: 4 (last at 2026-10-26 19:03:01 UTC).
+- Jobs in the registry: done 409, interrupted 28, leased 9, queued 21, running 6.
+- Episodes finished in this container: 141. Batches completed: 4 (last at 2026-10-26 19:03:01 UTC).
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.53**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.07**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.116** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
@@ -72,7 +72,7 @@ Gain over the last three decisions: -3.02 → stall trigger **fires**.
 | f7-one-vs-many | 34 | 6 | 3 |
 | f3-feedback-reactive | 26 | 6 | 4 |
 | f1-steady-balance | 19 | 5 | 4 |
-| matteo-feedback-growth | 13 | 4 | 4 |
+| matteo-feedback-growth | 14 | 4 | 4 |
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
@@ -205,7 +205,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 175 | 0 | 0.54 | 44.9 (18.9) | 43.6 | 37.6 | 0.01 | 9.0 | 0.24 | 0.513 | 0.75 |
+| haiku | 176 | 0 | 0.53 | 44.8 (18.9) | 43.5 | 37.5 | 0.01 | 8.9 | 0.24 | 0.512 | 0.75 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -242,6 +242,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | o2-run-hot-v1 | 4 | [24.7, 38.6, 61.9, 19.7] | [24, 29, 48, 24] | 35.2 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | observed-growth-v1 | 9 | [52.4, 55.0, 24.4, 69.9, 18.8, 58.7, 20.1, 15.3, 68.2] | [48, 48, 24, 48, 24, 48, 24, 19, 48] | 41.8 | Dismissed for capability — a second weak; Dismissed for capability — a second weak; Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | observed-growth-v2 | 4 | [21.2, 23.0, 15.2, 62.8] | [9, 9, 24, 48] | 30.7 | Blackout — your health hits zero. The sc; Blackout — your health hits zero. The sc; Dismissed for capability — a second weak |
+| haiku | observed-growth-v3 | 1 | [18.6] | [20] | 19.9 | Blackout — your health hits zero. The sc |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
 | haiku | value-conversion-v1 | 7 | [65.1, 37.1, 46.2, 69.9, 28.1, 46.7, 23.5] | [48, 31, 40, 48, 22, 45, 24] | 42.6 | Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
@@ -322,7 +323,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
   - New F1 children, nested: f1-core (P20 subtraction), f1-risk-signal (core plus Defuse on any non-reassuring risk feedback), and the stall slot f1-status-line (P22: the same rules as a status line). 4 Haiku screens each.
 - **Organiser round 4 (18:32 UTC):** restored ESTADO.md, which the block-5 commit had emptied for about 5 minutes on main (an edit script opened it for writing before reading). Merged `matteo/observed-growth-v3` (his own pilot: 4/4 completed, mean Q 71.4, a different actor cell, now being checked in the race) and `alejandro/investigacion-decisiones` (decision research that only analyses exports; PR #3). Imported origin `matteo` (0 conflicts).
 - **Decision #150 (19:03 UTC):** F1 52.2 (n = 12), f3-balance-recombined 51.2, f3-lean 51.1, f1-review-risk 50.4, F3 50.1. With more data the top posteriors bunch around 50–52, and none has P(best) ≥ 0.2. **Block 6 allocated:** 18 slots (seed 20261176); its stall slot is 1 more game of f7-promotion-drive. Batch 5 (F1 children and observed-growth-v3) is running.
-- **Organiser round 5 (19:10 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
+- **Organiser round 5 (19:06 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
 
 ## Relevo (hand-off)
 
