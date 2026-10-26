@@ -6,6 +6,8 @@ Research checked on **26 October 2026**. The user has withdrawn and deleted the 
 
 ## Start here
 
+- **[CareerLab method decision (26 Oct, after critical audit)](research/careerlab/method-decision.md)** — current working method, measured infrastructure, gates and timeline
+- [CareerLab usage and reproducible install](lab/README.md) · [pre-registered protocol v1](lab/protocol/prereg-v1.md) · [errata of the earlier research](research/careerlab/errata.md)
 - [Current deep research: hierarchical policy search, archives and model fidelity](research/hierarchical-lab/README.md)
 - [Annotated bibliography: 55 selected primary sources](research/hierarchical-lab/bibliography.md)
 - [Current exploration from scratch](research/from-zero-lab.md)

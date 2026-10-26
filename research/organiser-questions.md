@@ -2,6 +2,18 @@
 
 Prepared 26 October 2026. **Not sent.** Intended channel: [official Discord](https://discord.gg/Ds4JC3gJjj). The [rules](https://techarena-career-sim.readthedocs.io/en/latest/competition-rules.html#interpretation-and-questions) require clarification before an ambiguous method is used. Record the organiser's actual reply and date; an unanswered question is not approval.
 
+## 0. Message to send now (supersedes A–C for speed) — not sent yet
+
+Drafted 26 October 2026 after the CareerLab audit. The earlier ten questions were too long to get a quick answer and asked organisers to invent limits. This version asks for yes/no on concrete caps. The team must post it in the official Discord, since Claude cannot post on the team's behalf. Record the reply verbatim in the log below and in `lab/gate.json`.
+
+> Hello, team Gradient Depression here. Before using these development methods we would like a yes/no on each. All use the unmodified official server over stdio, the dev split and only the five tools, and nothing is read from packages or the database.
+> 1. A non-LLM script choosing ordinary actions in development games, with up to 8 server processes in parallel (each with its own CAREER_EMULATOR_DB) and at most 20,000 games in total this week?
+> 2. Our own Claude models (personal subscription, not the competition key) playing development games, one single agent per game, at most 4 in parallel and 500 games in total, to compare general strategies?
+> 3. Running JiuwenSwarm 0.2.4b3 locally with deepseek-v4-flash through our own paid OpenRouter key (same model name, no provider settings) for extra development runs?
+> 4. Keeping our own run logs and comparing outcomes statistically to choose between general Skill versions? The submission would contain no event answers, tables or thresholds.
+> For transparency: we have already run about 900 scripted infrastructure test games, and a teammate earlier ran a random-choice batch. Thank you!
+
+
 ## A. Ask before any unusual-scale experiment
 
 Hello, we are team Gradient Depression. We want to improve general decision procedures while following the five official MCP tools and the current-run-information requirement. Could you clarify the following before we implement any bulk experiments?
@@ -29,6 +41,7 @@ For A1–A2, our precise proposed architecture is an **external development labo
 
 | Question | Organiser/date/link | Exact scope of clarification | Consequence for plan |
 |---|---|---|---|
+| 0.1–0.4 | Pending; not sent | No permission established | `lab/gate.json`: scripted real-dev capped at 1,500 sessions; Claude actors and team-funded target closed. |
 | A1–A3 | Pending; not sent | No permission established | No bulk-call or controlled-seed assumption. |
 | B4–B6 | Pending; not sent | No permission established | No numerical hidden-rule learning, external-model development pipeline or persistent cross-game policy memory assumed permitted. |
 | C7–C10 | Pending; not sent | No further details established | Use published scoring and conservative packaging; do not invent missing limits. |
