@@ -1,0 +1,137 @@
+{
+  "records": 1183,
+  "batches": {
+    "closure": {
+      "twelve_month_window": 193,
+      "reached_7": 359,
+      "first_promotion_by_6": 267,
+      "first_promoted_alive_at_7": 264,
+      "second_promotion_by_12": 126,
+      "second_promotion_and_alive": 121,
+      "alive_through_12": 193,
+      "eliminated": 174
+    },
+    "discovery": {
+      "twelve_month_window": 16,
+      "reached_7": 45,
+      "first_promotion_by_6": 33,
+      "first_promoted_alive_at_7": 31,
+      "second_promotion_by_12": 9,
+      "second_promotion_and_alive": 7,
+      "alive_through_12": 16,
+      "eliminated": 32
+    },
+    "exploration": {
+      "twelve_month_window": 418,
+      "reached_7": 719,
+      "first_promotion_by_6": 512,
+      "first_promoted_alive_at_7": 488,
+      "second_promotion_by_12": 308,
+      "second_promotion_and_alive": 266,
+      "alive_through_12": 418,
+      "eliminated": 350
+    }
+  },
+  "outcomes": {
+    "twelve_month_window": 627,
+    "eliminated": 556
+  },
+  "titles": 126,
+  "story_questions": 264,
+  "questions": 266,
+  "story_available_answers": 642,
+  "story_tried_answers": 642,
+  "available_answers": 659,
+  "tried_answers": 659,
+  "untried": [],
+  "new_titles_vs_first_six": [
+    "A Glassdoor post about the company is doing the rounds",
+    "A colleague accidentally posts internal architecture online",
+    "A colleague rushed to hospital: a warning for you",
+    "A database migration window clashes with peak trading",
+    "A dependent team is late — do you escalate in the open?",
+    "A new manager is hired in, and you start again on trust",
+    "A security hole that would be expensive to fix",
+    "Abnormal health-check results: push through or see a doctor",
+    "Admitting you are not coping, and asking for help",
+    "Annual bonus cut and paid in instalments",
+    "At the demo, your manager praises Product and not engineering",
+    "Balancing a promising idea against delivery pressure",
+    "Christmas at home clashing with the on-call rota",
+    "Colleagues want you to join a group pay demand",
+    "Communicating a breaking change on a public API",
+    "Cost-cutting hits perks — join the complaining?",
+    "Funding and listing rumours — bet on the share options?",
+    "Load-test results clash with what product expected",
+    "Pay-review percentages are out — dwell on the ranking?",
+    "Should you leave the company a bad Glassdoor review?",
+    "Team morale is on the floor — should you step up?",
+    "The new manager from outside wants you to inform on the team",
+    "The new manager's first team meeting: make an impression?",
+    "The pay rise did not come through — coast in protest?",
+    "Whether to tell your manager about a health problem",
+    "Whether to volunteer as lunch-and-learn speaker",
+    "Whether to volunteer as organiser of the annual team offsite",
+    "You bring an outside offer back to negotiate pay",
+    "You find out a peer got a bigger increase",
+    "You notice a remote colleague is often offline",
+    "You survive a round of cuts and inherit the work",
+    "You think the project bonus split is unfair",
+    "Your annual bonus falls short, and you go to your manager",
+    "Your company is acquired and the culture flips",
+    "Your first reaction to finding out a newer hire is paid more",
+    "Your manager blames 'the climate' to keep your increase down",
+    "Your manager gives you a rise — with a lot more work attached"
+  ],
+  "new_story_stages_vs_first_six": 52,
+  "failures": {
+    "month-9/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 95,
+    "month-11/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 50,
+    "month-12/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 129,
+    "month-7/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 21,
+    "month-8/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 51,
+    "month-9/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 19,
+    "month-10/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 27,
+    "month-6/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 37,
+    "month-11/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 29,
+    "month-10/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 15,
+    "month-8/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 47,
+    "month-13/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 2,
+    "month-3/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 1,
+    "month-12/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 8,
+    "month-7/Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 12,
+    "month-10/Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 1,
+    "month-9/Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 1,
+    "month-5/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 7,
+    "month-12/Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 1,
+    "month-4/Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 3
+  },
+  "review_clocks": {
+    "5->6": 1172,
+    "11->12": 767
+  },
+  "second_review_grades": {
+    "C": 375,
+    "B": 392
+  },
+  "metrics": {
+    "reached_7": 1123,
+    "first_promotion_by_6": 812,
+    "first_promoted_alive_at_7": 783,
+    "second_promotion_by_12": 443,
+    "second_promotion_and_alive": 394,
+    "alive_through_12": 627
+  },
+  "conditional_first_promoted_alive_at_7": {
+    "n": 783,
+    "second_promotion": 443,
+    "second_promotion_and_alive": 394
+  },
+  "limits": [
+    "Coverage of encountered questions only, not all hidden states or possible histories",
+    "Adaptive research bots approximate the manual and consult public empirical effects; no Skill evaluation",
+    "Associations and temporal edges do not establish causal effects",
+    "Full raw prefixes retained; catalogue coverage restricted to action-before month 7–12",
+    "Technical interruptions remain separate from failures"
+  ]
+}

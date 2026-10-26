@@ -1,0 +1,28 @@
+{
+  "runs_cap": 1536,
+  "workers": 4,
+  "seed": 440026,
+  "prior": [
+    "/Users/matteozabban/careerlab-data/matteo-second-review/discovery",
+    "/Users/matteozabban/careerlab-data/matteo-second-review/exploration"
+  ],
+  "profiles": "balanced,risk,low-dignity",
+  "modes": "frontier",
+  "stop_known_complete": true,
+  "manual_sha256": "4159eb073cd4765cd90675c04c38f29b0eee143e2dbb860d0425c6f36f2b24a8",
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "actor": "local Python bot, no LLM",
+  "scope": "fresh games months 1-12, coverage counted only in 7-12",
+  "limits": "Manual-inspired approximation plus empirical effects, adaptive updates, no state clones or causal guarantees"
+}
