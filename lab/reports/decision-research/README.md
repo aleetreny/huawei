@@ -2,6 +2,8 @@
 
 26 oct 2026 · Codex · rama `alejandro/investigacion-decisiones` · base `3c1c993`.
 
+**Actualización: primera exploración realizada sobre datos de main `9b8fbe9`.** [Informe actual](cycles/002/interpretation.md), [cómo continuar en este chat](../../../research/careerlab/decision-research/CONTINUAR.md) y [registro de insights](../../../research/careerlab/decision-research/insights.jsonl). Las secciones siguientes conservan la auditoría inicial de 322 evaluaciones; no deben confundirse con el snapshot exploratorio posterior de 360. Relevo actualizado al final.
+
 ## Qué se ha hecho y por qué
 
 Alejandro pidió abrir una línea robusta para averiguar qué decisiones mejoran el score y convertirlas en mejores estrategias. Se ha preparado el [protocolo de trabajo](../../../research/careerlab/decision-research/README.md) y una auditoría reproducible antes de ajustar regresiones: confundir trazas disponibles con todas las partidas puede cambiar las conclusiones.
@@ -57,3 +59,12 @@ Para H1, el organizador congela hashes de padre/variante y el manifiesto de asig
 Auditorías ejecutadas sin conexión al juego. Validación final: **243 tests pasan** en 31,22 s, con una advertencia previa de deprecación de Authlib. `git diff --check`, compilación del script y enlaces locales de los dos informes comprobados. La suite usa el entorno existente con `UV_PROJECT_ENVIRONMENT` y `uv run --no-sync pytest -q`, sin reinstalar dependencias ni leer el interior del motor.
 
 Línea propia añadida a `ESTADO.md`; no se reasignan T1–T13 ni se crea un número de tarea del organizador. Se solicita integrar en main mediante PR. La extracción, regresión y partidas son la siguiente fase de investigación, no entregables que se anuncien como hechos.
+
+## Relevo actualizado: exploración inicial
+
+- **Hecho:** extractor temporal sobre 99 trazas locales de 204 partidas Claude terminales del snapshot `9b8fbe9`; análisis de estados del Haiku principal (53 partidas) con validación anidada por políticas y familias, ciclos inmutables, copias verificadas del código, manifiestos, insights y cola de pruebas. No se lanzan partidas ni se cambian manuales.
+- **Resultados:** al segundo corte, 2/14 carreras aún L1 completan frente a 26/38 ya promovidas. El modelo de estados reduce RMSE por familias de 18,37 a 14,94. Son señales históricas condicionadas; no efectos de acciones. Los modelos de comportamiento no se ajustan (20/17 prefijos completos, por debajo del mínimo 30).
+- **Corrección:** `001` conserva la primera ejecución; `002` corrige sólo el inventario de soporte y añade linaje, con 0 partidas nuevas y predicciones idénticas. No contar ambos como evidencia independiente. Se guardan copias de código que coinciden exactamente con los hashes de cada manifiesto.
+- **Pendiente:** recuperar las 105 trazas no localizadas en este Mac, revisar historias sin ver Q y preparar H-DR-01 en la nube. La etiqueta temporal incompleta se conserva como tal; no se reconstruye desde notas del actor.
+- **Retomar:** leer CONTINUAR y ejecutar el pipeline con el siguiente ciclo `003`, revisar cobertura/linaje antes de extraer conclusiones. Fuente del detalle y comandos: `cycles/002/interpretation.md`, sección Relevo.
+- **Validación/publicación:** tests finales y commit en el progress local; línea propia de ESTADO actualizada, push a la rama y PR #3. El organizador integra main. Este chat continúa el análisis sin depender de estado sólo conversacional.

@@ -1,0 +1,857 @@
+{
+  "completed_score_gap": {
+    "mean_loss_by_dimension": {
+      "level": 16.178571428571427,
+      "network": 3.392857142857143,
+      "resilience": 0.21428571428571427,
+      "risk_control": 4.071428571428571,
+      "skill": 3.303928571428571,
+      "wealth": 13.283214285714285
+    },
+    "mean_missing_Q": 40.44464285714286,
+    "n": 28,
+    "population": "Verified local primary actor completed games only; descriptive accounting"
+  },
+  "landmark_associations": {
+    "12": {
+      "feature_support": {
+        "dignity": {
+          "distinct_values": 5,
+          "eligible": 52,
+          "max": 10,
+          "min": 4,
+          "observed": 52
+        },
+        "growth_share": {
+          "distinct_values": 3,
+          "eligible": 17,
+          "max": 1.0,
+          "min": 0.3333333333333333,
+          "observed": 17
+        },
+        "health": {
+          "distinct_values": 7,
+          "eligible": 52,
+          "max": 10,
+          "min": 4,
+          "observed": 52
+        },
+        "level": {
+          "distinct_values": 3,
+          "eligible": 52,
+          "max": 3,
+          "min": 1,
+          "observed": 52
+        },
+        "network": {
+          "distinct_values": 6,
+          "eligible": 52,
+          "max": 7,
+          "min": 2,
+          "observed": 52
+        },
+        "output": {
+          "distinct_values": 8,
+          "eligible": 52,
+          "max": 6,
+          "min": -1,
+          "observed": 52
+        },
+        "recovery_share": {
+          "distinct_values": 5,
+          "eligible": 17,
+          "max": 0.4444444444444444,
+          "min": 0.0,
+          "observed": 17
+        },
+        "report_share": {
+          "distinct_values": 5,
+          "eligible": 17,
+          "max": 0.5555555555555556,
+          "min": 0.1111111111111111,
+          "observed": 17
+        },
+        "risk_share": {
+          "distinct_values": 3,
+          "eligible": 17,
+          "max": 0.4444444444444444,
+          "min": 0.0,
+          "observed": 17
+        }
+      },
+      "missing_or_not_active": 1,
+      "n": 52,
+      "promotion": {
+        "difference_mean_Q": 26.83342105263158,
+        "episode_bootstrap_interval_95": [
+          17.448672932330823,
+          34.091934210526325
+        ],
+        "groups": [
+          {
+            "completed": 2,
+            "mean_Q": 26.240000000000002,
+            "n": 14,
+            "promoted": false
+          },
+          {
+            "completed": 26,
+            "mean_Q": 53.07342105263158,
+            "n": 38,
+            "promoted": true
+          }
+        ],
+        "status": "descriptive_only",
+        "warning": "Conditional historical association; bootstrap does not remove policy confounding, adaptive allocation or selection."
+      }
+    },
+    "6": {
+      "feature_support": {
+        "dignity": {
+          "distinct_values": 4,
+          "eligible": 53,
+          "max": 10,
+          "min": 6,
+          "observed": 53
+        },
+        "growth_share": {
+          "distinct_values": 2,
+          "eligible": 20,
+          "max": 1.0,
+          "min": 0.0,
+          "observed": 20
+        },
+        "health": {
+          "distinct_values": 8,
+          "eligible": 53,
+          "max": 10,
+          "min": 2,
+          "observed": 53
+        },
+        "level": {
+          "distinct_values": 2,
+          "eligible": 53,
+          "max": 2,
+          "min": 1,
+          "observed": 53
+        },
+        "network": {
+          "distinct_values": 4,
+          "eligible": 53,
+          "max": 3,
+          "min": 0,
+          "observed": 53
+        },
+        "output": {
+          "distinct_values": 5,
+          "eligible": 53,
+          "max": 3,
+          "min": -1,
+          "observed": 53
+        },
+        "recovery_share": {
+          "distinct_values": 3,
+          "eligible": 20,
+          "max": 0.6666666666666666,
+          "min": 0.0,
+          "observed": 20
+        },
+        "report_share": {
+          "distinct_values": 2,
+          "eligible": 20,
+          "max": 0.3333333333333333,
+          "min": 0.0,
+          "observed": 20
+        },
+        "risk_share": {
+          "distinct_values": 2,
+          "eligible": 20,
+          "max": 0.6666666666666666,
+          "min": 0.0,
+          "observed": 20
+        }
+      },
+      "missing_or_not_active": 0,
+      "n": 53,
+      "promotion": {
+        "difference_mean_Q": 19.506566951566953,
+        "episode_bootstrap_interval_95": [
+          11.698944800569794,
+          27.0533547008547
+        ],
+        "groups": [
+          {
+            "completed": 10,
+            "mean_Q": 35.90074074074074,
+            "n": 27,
+            "promoted": false
+          },
+          {
+            "completed": 18,
+            "mean_Q": 55.40730769230769,
+            "n": 26,
+            "promoted": true
+          }
+        ],
+        "status": "descriptive_only",
+        "warning": "Conditional historical association; bootstrap does not remove policy confounding, adaptive allocation or selection."
+      }
+    }
+  },
+  "models": [
+    {
+      "baseline_mae": 15.852699283311393,
+      "baseline_rmse": 17.766059559874908,
+      "cohort": "all_fresh_states",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "folds": [
+        {
+          "alpha": 0.1,
+          "fold": 0,
+          "held_groups": [
+            "cbc7402d11222ac7",
+            "d3b71fe027da29e7",
+            "ed78f44ccd41adf8"
+          ],
+          "standardized_beta": [
+            1.2481515732998039,
+            9.211362908432378,
+            9.133290945000489,
+            0.3147504355936589,
+            -3.0231822269893307
+          ],
+          "test_n": 11,
+          "train_n": 42
+        },
+        {
+          "alpha": 10.0,
+          "fold": 1,
+          "held_groups": [
+            "19618e7795be8da1",
+            "7107952fc3bdf27f",
+            "dd82cc1584e7370d"
+          ],
+          "standardized_beta": [
+            5.230165436407798,
+            3.478096314374409,
+            2.939801214328643,
+            0.40705193491719827,
+            -2.565258239372572
+          ],
+          "test_n": 10,
+          "train_n": 43
+        },
+        {
+          "alpha": 10.0,
+          "fold": 2,
+          "held_groups": [
+            "3207e8f585cbe240",
+            "8f3b218e62aac0ec",
+            "b907b3d9fea2a6f5"
+          ],
+          "standardized_beta": [
+            4.021268550948524,
+            3.415745443637142,
+            3.1157439505438314,
+            -0.020901559004836617,
+            -2.386165005047558
+          ],
+          "test_n": 10,
+          "train_n": 43
+        },
+        {
+          "alpha": 100.0,
+          "fold": 3,
+          "held_groups": [
+            "0b226c3c067d423f",
+            "5d7996b1da3e0d01",
+            "954bf3788461f2d8",
+            "e373478ad46b58f6"
+          ],
+          "standardized_beta": [
+            2.209141805778957,
+            1.7219339744315367,
+            1.6795267836381156,
+            -0.006422852504436601,
+            -0.7464900425043389
+          ],
+          "test_n": 11,
+          "train_n": 42
+        },
+        {
+          "alpha": 10.0,
+          "fold": 4,
+          "held_groups": [
+            "3cf417f5daf7ad85",
+            "845f5269f562506b",
+            "cc098e54e25efc64",
+            "dd49c06cd04e433e"
+          ],
+          "standardized_beta": [
+            3.6198191807011986,
+            4.243208982912775,
+            4.301503364196356,
+            -1.7377088356261197,
+            -1.7307802277638809
+          ],
+          "test_n": 11,
+          "train_n": 42
+        }
+      ],
+      "groups": 17,
+      "landmark": 6,
+      "mae": 13.49826398251757,
+      "model": "state",
+      "n": 53,
+      "rmse": 15.931806540580672,
+      "split": "policy_id",
+      "status": "ok"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 12,
+      "landmark": 6,
+      "model": "behaviour",
+      "n": 20,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity",
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 12,
+      "landmark": 6,
+      "model": "state_and_behaviour",
+      "n": 20,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "groups": 12,
+      "landmark": 6,
+      "model": "state_on_behaviour_cohort",
+      "n": 20,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "baseline_mae": 16.530021449228315,
+      "baseline_rmse": 18.463993155258546,
+      "cohort": "all_fresh_states",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "folds": [
+        {
+          "alpha": 10.0,
+          "fold": 0,
+          "held_groups": [
+            "p0-minimal"
+          ],
+          "standardized_beta": [
+            4.965308592960545,
+            5.915654447450892,
+            4.747355404817146,
+            0.28835476363691376,
+            -0.7182952282182723
+          ],
+          "test_n": 8,
+          "train_n": 45
+        },
+        {
+          "alpha": 10.0,
+          "fold": 1,
+          "held_groups": [
+            "f3-feedback-reactive",
+            "f7-one-vs-many"
+          ],
+          "standardized_beta": [
+            4.811381576788042,
+            3.7174014331081717,
+            2.986698643015058,
+            -2.2728232819390715,
+            -2.0750528111252153
+          ],
+          "test_n": 13,
+          "train_n": 40
+        },
+        {
+          "alpha": 10.0,
+          "fold": 2,
+          "held_groups": [
+            "f1-steady-balance",
+            "f5-relationship-capital"
+          ],
+          "standardized_beta": [
+            3.305085760552395,
+            4.259623693810183,
+            6.541509085834212,
+            -0.31454660983084415,
+            -2.286825391712531
+          ],
+          "test_n": 10,
+          "train_n": 43
+        },
+        {
+          "alpha": 10.0,
+          "fold": 3,
+          "held_groups": [
+            "f6-commitment-ledger",
+            "m3-teammate"
+          ],
+          "standardized_beta": [
+            4.048005388003778,
+            4.623483787521064,
+            2.5011881296045586,
+            0.012918233345972144,
+            -2.463348893615523
+          ],
+          "test_n": 10,
+          "train_n": 43
+        },
+        {
+          "alpha": 10.0,
+          "fold": 4,
+          "held_groups": [
+            "f2-invest-early",
+            "f4-visible-delivery"
+          ],
+          "standardized_beta": [
+            2.4837826191481303,
+            3.7038982709238937,
+            3.835447613874905,
+            0.13401306365989332,
+            -2.6739898777981677
+          ],
+          "test_n": 12,
+          "train_n": 41
+        }
+      ],
+      "groups": 9,
+      "landmark": 6,
+      "mae": 13.94847506598719,
+      "model": "state",
+      "n": 53,
+      "rmse": 16.039243469706417,
+      "split": "family",
+      "status": "ok"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 8,
+      "landmark": 6,
+      "model": "behaviour",
+      "n": 20,
+      "split": "family",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity",
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 8,
+      "landmark": 6,
+      "model": "state_and_behaviour",
+      "n": 20,
+      "split": "family",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "groups": 8,
+      "landmark": 6,
+      "model": "state_on_behaviour_cohort",
+      "n": 20,
+      "split": "family",
+      "status": "insufficient_support"
+    },
+    {
+      "baseline_mae": 15.660194094523364,
+      "baseline_rmse": 17.68939387370443,
+      "cohort": "all_fresh_states",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "folds": [
+        {
+          "alpha": 10.0,
+          "fold": 0,
+          "held_groups": [
+            "954bf3788461f2d8",
+            "cbc7402d11222ac7",
+            "ed78f44ccd41adf8"
+          ],
+          "standardized_beta": [
+            7.5835393193638465,
+            0.550537071715651,
+            4.346159488315803,
+            0.3665940454237567,
+            1.0058642215791234
+          ],
+          "test_n": 10,
+          "train_n": 42
+        },
+        {
+          "alpha": 10.0,
+          "fold": 1,
+          "held_groups": [
+            "19618e7795be8da1",
+            "7107952fc3bdf27f",
+            "b907b3d9fea2a6f5"
+          ],
+          "standardized_beta": [
+            6.9639933226183,
+            1.573518041764782,
+            3.176930167228063,
+            0.5874717614652337,
+            0.5199640978985908
+          ],
+          "test_n": 10,
+          "train_n": 42
+        },
+        {
+          "alpha": 100.0,
+          "fold": 2,
+          "held_groups": [
+            "3207e8f585cbe240",
+            "8f3b218e62aac0ec",
+            "d3b71fe027da29e7"
+          ],
+          "standardized_beta": [
+            2.3053751537987934,
+            1.2741094357716964,
+            1.8192019418245367,
+            0.22476692800220643,
+            -0.9730651283034124
+          ],
+          "test_n": 10,
+          "train_n": 42
+        },
+        {
+          "alpha": 10.0,
+          "fold": 3,
+          "held_groups": [
+            "0b226c3c067d423f",
+            "5d7996b1da3e0d01",
+            "cc098e54e25efc64",
+            "e373478ad46b58f6"
+          ],
+          "standardized_beta": [
+            7.607199821751769,
+            0.2181762280233679,
+            3.1030749539626603,
+            0.7531380624444117,
+            0.7063545651309724
+          ],
+          "test_n": 11,
+          "train_n": 41
+        },
+        {
+          "alpha": 10.0,
+          "fold": 4,
+          "held_groups": [
+            "3cf417f5daf7ad85",
+            "845f5269f562506b",
+            "dd49c06cd04e433e",
+            "dd82cc1584e7370d"
+          ],
+          "standardized_beta": [
+            8.366718867910278,
+            -0.8526377610865122,
+            3.54608075250509,
+            0.25868334476879196,
+            0.7600789975613047
+          ],
+          "test_n": 11,
+          "train_n": 41
+        }
+      ],
+      "groups": 17,
+      "landmark": 12,
+      "mae": 12.21988035800269,
+      "model": "state",
+      "n": 52,
+      "rmse": 14.519030878668788,
+      "split": "policy_id",
+      "status": "ok"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 10,
+      "landmark": 12,
+      "model": "behaviour",
+      "n": 17,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity",
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 10,
+      "landmark": 12,
+      "model": "state_and_behaviour",
+      "n": 17,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "groups": 10,
+      "landmark": 12,
+      "model": "state_on_behaviour_cohort",
+      "n": 17,
+      "split": "policy_id",
+      "status": "insufficient_support"
+    },
+    {
+      "baseline_mae": 16.327087296126653,
+      "baseline_rmse": 18.365497033416784,
+      "cohort": "all_fresh_states",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "folds": [
+        {
+          "alpha": 10.0,
+          "fold": 0,
+          "held_groups": [
+            "p0-minimal"
+          ],
+          "standardized_beta": [
+            8.398302159600751,
+            1.1578536946200155,
+            4.06867915994413,
+            0.392642738773753,
+            0.5462777743577776
+          ],
+          "test_n": 8,
+          "train_n": 44
+        },
+        {
+          "alpha": 1.0,
+          "fold": 1,
+          "held_groups": [
+            "f3-feedback-reactive",
+            "f7-one-vs-many"
+          ],
+          "standardized_beta": [
+            12.356384588098422,
+            -2.5448429375313095,
+            3.0752723285962427,
+            0.16667619013050594,
+            1.7510425069236772
+          ],
+          "test_n": 13,
+          "train_n": 39
+        },
+        {
+          "alpha": 10.0,
+          "fold": 2,
+          "held_groups": [
+            "f1-steady-balance",
+            "f5-relationship-capital"
+          ],
+          "standardized_beta": [
+            6.902975021674981,
+            1.3781732001502638,
+            3.7264648575122066,
+            -0.292838157879322,
+            0.6744197740425846
+          ],
+          "test_n": 10,
+          "train_n": 42
+        },
+        {
+          "alpha": 10.0,
+          "fold": 3,
+          "held_groups": [
+            "f6-commitment-ledger",
+            "m3-teammate"
+          ],
+          "standardized_beta": [
+            6.803315212882605,
+            -0.1629067705031617,
+            3.8784511652034226,
+            -0.27758831632916464,
+            -0.882703690752004
+          ],
+          "test_n": 9,
+          "train_n": 43
+        },
+        {
+          "alpha": 10.0,
+          "fold": 4,
+          "held_groups": [
+            "f2-invest-early",
+            "f4-visible-delivery"
+          ],
+          "standardized_beta": [
+            6.714429571842672,
+            -1.0580984079468658,
+            3.1440273925461666,
+            1.470496818386452,
+            0.9874514144102475
+          ],
+          "test_n": 12,
+          "train_n": 40
+        }
+      ],
+      "groups": 9,
+      "landmark": 12,
+      "mae": 12.374518185322176,
+      "model": "state",
+      "n": 52,
+      "rmse": 14.940570528789793,
+      "split": "family",
+      "status": "ok"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 6,
+      "landmark": 12,
+      "model": "behaviour",
+      "n": 17,
+      "split": "family",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity",
+        "growth_share",
+        "report_share",
+        "risk_share",
+        "recovery_share"
+      ],
+      "groups": 6,
+      "landmark": 12,
+      "model": "state_and_behaviour",
+      "n": 17,
+      "split": "family",
+      "status": "insufficient_support"
+    },
+    {
+      "cohort": "complete_behaviour_prefix",
+      "features": [
+        "level",
+        "output",
+        "network",
+        "health",
+        "dignity"
+      ],
+      "groups": 6,
+      "landmark": 12,
+      "model": "state_on_behaviour_cohort",
+      "n": 17,
+      "split": "family",
+      "status": "insufficient_support"
+    }
+  ],
+  "prediction_population": "Games still active with a verified observation at the landmark; conditional discovery only",
+  "primary_actor": "08e9167a965ed82c",
+  "primary_verified_quality_n": 53,
+  "whole_game_behaviour_support_descriptive_only": {
+    "episodes_with_any_non_project_main_in_complete_episodes": 17,
+    "episodes_with_complete_behaviour": 17,
+    "main_actions_in_complete_episodes": 206,
+    "story_transitions_same_month": 4701,
+    "story_transitions_with_output_or_network_drop": 1177
+  }
+}

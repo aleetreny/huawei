@@ -4,7 +4,9 @@
 
 La pregunta útil es: **¿qué cambio concreto de instrucciones mejora la carrera completa, con qué modelo y a qué coste de supervivencia?** Cada hallazgo debe terminar en una regla general que podamos probar y, si funciona, incorporar a un manual.
 
-Esta línea complementa la carrera. No modifica `lab/protocol/prereg-v1.*`, sus criterios de selección, la cuota ni la cola de trabajos. No es un documento de entrega. No se han lanzado partidas, ajustado regresiones ni demostrado efectos causales en esta tarea.
+Esta línea complementa la carrera. No modifica `lab/protocol/prereg-v1.*`, sus criterios de selección, la cuota ni la cola de trabajos. No es un documento de entrega. La fase inicial entregó el protocolo y la auditoría; la [primera exploración](../../../lab/reports/decision-research/cycles/002/interpretation.md) ya implementa extracción y regresión predictiva de estados. Los modelos de comportamiento se detienen por falta de soporte. No se han lanzado partidas ni demostrado efectos causales.
+
+Para seguir trabajando en este chat: [CONTINUAR.md](CONTINUAR.md). Conclusiones acumuladas: [insights.jsonl](insights.jsonl). Próximas pruebas: [hypotheses.json](hypotheses.json).
 
 ## 1. Qué aporta sobre lo que ya existe
 
@@ -34,7 +36,7 @@ El script [decision_research_audit.py](../../../scripts/decision_research_audit.
 
 ## 3. Construir el conjunto de decisiones
 
-Se propone el siguiente esquema de extracción; **aún no está implementado**. La auditoría disponible no certifica el alineamiento temporal.
+El siguiente esquema guía la extracción. Ya están implementados el alineamiento por llamada/sesión, estados numéricos, opciones mediante claves hash y categorías estrictas de cuatro acciones trimestrales públicas. Las acciones sin observación nueva quedan sin estado, y los prefijos incompletos no entran en regresiones de comportamiento. Quedan pendientes las etiquetas semánticas de historias revisadas por personas y los metadatos de futuros ensayos aleatorios.
 
 Una tabla por partida y otra por intento de acción, enlazadas mediante `origin`, `job_id`, `session_id` y un índice de decisión. Cada fila de decisión debe contener:
 
@@ -114,8 +116,8 @@ Esto estudia mecanismos locales; no basta para demostrar mejora de la carrera co
 
 ## 8. Entregables y siguiente paso
 
-1. **Ahora, hecho:** protocolo de trabajo y auditoría reproducible, sin gasto de partidas/API.
-2. **Siguiente implementación:** extracción temporal verificada y etiquetas generales; exportar las trazas faltantes o ejecutar en la nube; incorporar epoch/bloque/rol experimental con fuente verificable. Si no hay suficientes datos comparables, saltar la regresión y conservar sólo el diagnóstico.
+1. **Hecho:** protocolo, auditoría, extractor temporal, pipeline de ciclos, ridge anidado de estados y primer informe, sin gasto de partidas/API. El primer ciclo tenía un inventario de soporte de comportamientos que incluía valores parciales; se conserva como `001` y se corrige en `002`, sin modificar predicciones ni añadir partidas.
+2. **Siguiente implementación:** recuperar trazas faltantes o ejecutar en nube; revisar etiquetas de historias y procedencia de epoch/bloque/rol experimental. Si no hay suficientes datos comparables para comportamientos, mantener el diagnóstico; no rebajar el mínimo para obtener coeficientes.
 3. **Primer ciclo experimental:** congelar un padre y una variante de H1, registrar el manifiesto antes de lanzar y reservar la tanda en la cuota existente. Sólo el organizador de la nube encola partidas.
 4. **Producto de cada ciclo:** ficha de hipótesis, evidencia y límites, diff de una regla, adherencia, estimación de Y y supervivencia, decisión y siguiente prueba. Ninguna regla pasa a una Skill sólo por un coeficiente o una partida récord.
 

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "queue": [
+    {
+      "id": "MEASURE-01",
+      "priority": 1,
+      "question": "¿Podemos recuperar suficientes prefijos con estado fresco para estudiar comportamientos?",
+      "next_action": "Ejecutar el mismo extractor sobre trazas de nube y comparar cobertura por outcome y actor, sin nuevas partidas.",
+      "success_condition": "Al menos 30 juegos de un actor/entorno con prefijo completo y cinco grupos; verificar además variación y soporte real por acción.",
+      "if_insufficient": "Proponer observación/instrumentación por decisión para futuros trabajos. No inferir estados intermedios ni cambiar silenciosamente el actor existente.",
+      "status": "ready_for_data_recovery"
+    },
+    {
+      "id": "H-DR-01",
+      "priority": 2,
+      "question": "¿Una regla explícita de recuperación del estancamiento mejora Y manteniendo protecciones?",
+      "intervention": "Una sola instrucción: ante feedback de falta de progreso y sin alerta que requiera protección, priorizar entrega visible y apoyo al ascenso; mantener las demás reglas del padre.",
+      "design": "Asignación aleatoria por partida nueva, padre congelado frente a variante, mismo actor/entorno/época, bloques equilibrados.",
+      "primary_outcome": "Y de toda la partida, incluidas las eliminaciones, conforme a v1.",
+      "secondary_outcomes": ["completar", "causas de eliminación", "ascensos", "adherencia"],
+      "falsification": "La instrucción cambia la ejecución, pero no mejora Y, o el aumento de crecimiento se acompaña de peores resultados completos.",
+      "blockers": ["verificar diff de candidatas existentes contra su padre", "congelar manifiesto y presupuesto en nube", "reservar confirmación fresca"],
+      "status": "hypothesis_not_queued"
+    },
+    {
+      "id": "H-DR-02",
+      "priority": 3,
+      "question": "¿Un recordatorio de proteger entrega y relaciones reduce pérdidas evitables de historias y mejora la carrera?",
+      "intervention": "Una regla general de comparar opciones por impacto en entrega/relaciones cuando esos factores se deterioran, con prioridad de integridad y seguridad conservada.",
+      "design": "Primero etiquetado manual de una muestra sin ver Q; después padre frente a variante de una regla con asignación aleatoria por partida.",
+      "primary_outcome": "Y de la carrera completa; las transiciones locales son mecanismos secundarios.",
+      "falsification": "Las pérdidas observadas son principalmente costes necesarios, o el recordatorio altera elecciones sin mejorar Y.",
+      "blockers": ["auditoría de etiquetas y costes de seguridad", "confirmar cobertura temporal", "cuota y manifiesto del organizador"],
+      "status": "needs_blinded_audit"
+    }
+  ]
+}
