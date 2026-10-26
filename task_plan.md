@@ -8,7 +8,7 @@ A tested, resumable laboratory that generates, evaluates and archives Career Sur
 
 ## Next Step
 
-Hand off to the cloud session (runbook), then: target cost/fidelity pilot as soon as the key arrives; R1 package (video + design docs) for 27 Oct 24:00 UK.
+Team-facing state, pending tasks (T1–T12) and working rules now live in `ESTADO.md` (Spanish). This plan keeps the orchestrator's technical detail. Next: the organiser role merges `cloud-lab-run` daily; target pilot when the key arrives; R1 package for 27 Oct 24:00 UK.
 
 ## Current Phase
 
@@ -73,7 +73,8 @@ Phase 5
 | Work on `main` | It is the user's branch; teammate work lives on `origin/Matteo` and is read-only. |
 | Root planning files are the global plan; workers write elsewhere | User requirement; single integrator avoids conflicting writes. |
 | Claude workers run as isolated `claude -p` processes driven by the programmatic planner | Frozen, logged actor config and token accounting per episode; native subagents stay for building/analysis. |
-| Real-game Claude actors and large batches gated on written organiser clarification | Rules: silence is not permission; user instruction to check clarifications first. |
+| Real-game Claude actors and large batches gated on written organiser clarification | Superseded 26 Oct: the user decided to proceed without asking (risk recorded in `ESTADO.md` §5). |
+| One shared entry point: `ESTADO.md`, imported by `CLAUDE.md`, pointed to by `AGENTS.md` | New chats and the teammate's agent start from the same state at low context cost; only the cloud race plays games until runs from several machines can merge safely (T11). |
 
 ## Errors Encountered
 
