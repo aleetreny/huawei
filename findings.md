@@ -183,3 +183,5 @@
   - **The status-line representation effect is not confirmed:** f1-status-line 5/8 (Q 52.7), f3-status-line 3/8 (Q 39.5). The early 4/4 was luck.
   - Discarded: f1-core 1/4 and f1-risk-signal 1/4.
   - Merged Matteo's first-review-search: 38.8 MB of raw data, including a dev-event catalogue with choice outcomes. Research only, never for designers or Skills; warning added to ESTADO.md.
+- Fastloop hour 2 (21:38 UTC): first designer-made champion, **targeted-1026-201334**, crowned at 21:29 (10/12 completed, Q 53.9, P(better than f3-balance-recombined) 0.61). It adds to f3-balance-recombined: until the first promotion, keep Output and Network in stories.
+  - Failed: stretch-1026-200334, which replaced Lay low with results actions when risk escalates (4/8, 46.7); targeted-1026-202436, which protected Skill, Network and Output in every story (2/4, 42.8); observed-growth-v6 (5/8, 47.1).

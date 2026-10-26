@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 20:40 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 21:38 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: cancelled 27, done 479, interrupted 36, queued 5, running 4.
-- Episodes finished in this container: 197. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.76**, window resets 26 Oct 21:00 UTC; governor cap 0.85. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.11**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.151** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: cancelled 27, done 519, interrupted 36, queued 3, running 8.
+- Episodes finished in this container: 237. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.10**, window resets 27 Oct 02:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.14**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.162** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -74,10 +74,10 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
-| f3-feedback-reactive | 48 | 7 | 7 |
+| f3-feedback-reactive | 80 | 9 | 10 |
 | f1-steady-balance | 41 | 7 | 4 |
 | f7-one-vs-many | 34 | 6 | 3 |
-| matteo-feedback-growth | 25 | 6 | 6 |
+| matteo-feedback-growth | 33 | 6 | 6 |
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
@@ -345,6 +345,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
   - 8 slots, cap 0.85, front-loaded weekly knots. Live page: `lab/reports/carrera-rapida.md`.
   - Energy bots verified: 4 of 400 reached L6 (lessons.md, Frontier).
 - **20:40 UTC, fastloop hour 1:** champion f3-balance-recombined (crowned 20:03); the status-line effect is not confirmed (5/8 and 3/8); lessons.md updated; 6 branches merged; observed-growth-v6 added to the ladder.
+- **21:38 UTC, fastloop hour 2:** champion targeted-1026-201334 (designer; Output and Network kept in stories until the first promotion), crowned 21:29. Lessons updated. No new collaborator branches.
 
 ## Relevo (hand-off)
 
