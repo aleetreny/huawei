@@ -57,10 +57,11 @@ class Oracle(Base):
     def __init__(self, seed: int, shared: dict[str, Any] | None = None, model: str | None = None,
                  eps: float = 0.0, explore_from: int = 99, explore_to: int = 0, w_net: float = 2.0,
                  w_out: float = 2.0, w_skill: float = 1.0, risk_w: float = 1.5, gamma: float = 0.6,
-                 health_floor: int = 5, blow_cost: float = 25.0, w_below: float = 3.0, **params: Any):
+                 health_floor: int = 5, blow_cost: float = 25.0, w_below: float = 3.0, review_boost: float = 1.0,
+                 **params: Any):
         super().__init__(seed, eps=eps, explore_from=explore_from, explore_to=explore_to, w_net=w_net, w_out=w_out,
                          w_skill=w_skill, risk_w=risk_w, gamma=gamma, health_floor=health_floor, blow_cost=blow_cost,
-                         w_below=w_below, **params)
+                         w_below=w_below, review_boost=review_boost, **params)
         self.sh = shared or {}
         self.nodes = self.sh.get("nodes", {})
         self.caps = self.sh.get("caps", {})
@@ -84,8 +85,9 @@ class Oracle(Base):
                 ctx["blowups"] = ctx.get("blowups", 0) + 1
                 ctx["risk"] = 0
 
-    def explore_now(self, month: int) -> bool:
-        if self.p["explore_from"] <= month <= max(self.p["explore_to"], self.p["explore_from"]):
+    def explore_now(self, month: int, kind: str = "story") -> bool:
+        lo, hi = self.p["explore_from"], max(self.p["explore_to"], self.p["explore_from"])
+        if lo <= month <= hi and self.p.get("explore_kind", "all") in ("all", kind):
             return True
         return self.p["eps"] > 0 and self.rng.random() < self.p["eps"]
 
@@ -108,7 +110,8 @@ class Oracle(Base):
             t = min(thr.get(stat, cap), cap)
             below = min(new, t) - min(old, t)          # progress (or loss) under the promotion minimum
             above = (new - old) - below                # progress between the minimum and the ceiling
-            v += weights[stat] * (self.p["w_below"] * below + above)
+            boost = self.p["review_boost"] if month % 6 == 5 else 1.0  # last month before a review
+            v += weights[stat] * (self.p["w_below"] * boost * below + above)
         h, dg = st["health"], st["dignity"]
         dh, dd = d.get("health", 0), d.get("dignity", 0)
         nh, nd = min(10, h + dh), min(10, dg + dd)
@@ -191,7 +194,7 @@ class Oracle(Base):
     def energy(self, obs, choices, ctx):
         st = dict(obs["current_state"]["status"])
         month = obs["current_state"]["time"]["current_month"]
-        if self.explore_now(month):
+        if self.explore_now(month, "quarter"):
             return self.rng.choice(affordable(obs, choices))["choice"], "x"
         ok = by_action(affordable(obs, choices))
         spent = ctx["spent"].setdefault(month, [])
@@ -227,7 +230,7 @@ class Oracle(Base):
     def main(self, obs, choices, ctx):
         st = obs["current_state"]["status"]
         month = obs["current_state"]["time"]["current_month"]
-        if self.explore_now(month):
+        if self.explore_now(month, "quarter"):
             return self.rng.choice(choices)["choice"], "x"
         ok = by_action(choices)
         best, best_v = None, -1e9
@@ -240,3 +243,61 @@ class Oracle(Base):
         if best is None:
             return choices[0]["choice"], "g"
         return ok[best]["choice"], "g"
+
+
+class Principles(Oracle):
+    """What general rules alone could achieve: answer effects come from a trait model fitted on other
+    stories (out-of-fold predictions), ceilings are discovered in-run (a predicted gain that does not
+    register means the stat is at its ceiling), and no promotion minimum is known in advance."""
+
+    name = "principles"
+
+    def __init__(self, seed: int, shared: dict[str, Any] | None = None, know_caps: bool = False,
+                 know_thresholds: bool = False, **params: Any):
+        super().__init__(seed, shared=shared, know_caps=know_caps, know_thresholds=know_thresholds, **params)
+        if not know_caps:
+            self.caps = {}
+
+    def decide(self, obs, ctx):
+        st = obs["current_state"]["status"]
+        lv = int(str(st["level"])[1:])
+        last = ctx.get("last")
+        if last and not self.p["know_caps"]:
+            before, pred, month = last
+            if month == obs["current_state"]["time"]["current_month"] and int(str(before["level"])[1:]) == lv:
+                for stat in GROWTH:
+                    if pred.get(stat, 0) >= 1 and st[stat] - before[stat] < 0.5 and st[stat] >= before[stat]:
+                        ctx.setdefault("caps", {})[(lv, stat)] = st[stat]
+        choice, tag = super().decide(obs, ctx)
+        pred = {}
+        for c in obs.get("choices") or []:
+            if c["choice"] == choice:
+                if c.get("status_updates"):
+                    pred = {k.lower(): v for k, v in c["status_updates"].items()}
+                elif phase(obs) == "main_action":
+                    pred = MAIN_FX.get(c.get("action", ""), {})
+                else:
+                    pred, _ = self.option_fx(self._node_id(obs), choice)
+        ctx["last"] = (dict(st), pred, obs["current_state"]["time"]["current_month"])
+        ctx["_level"] = lv
+        return choice, tag
+
+    def cap(self, level: int, stat: str) -> float:
+        if self.p["know_caps"]:
+            return super().cap(level, stat)
+        return self._ctx_caps.get((level, stat), 1e9) if hasattr(self, "_ctx_caps") else 1e9
+
+    def new_game(self, game_id):
+        ctx = super().new_game(game_id)
+        self._ctx_caps = ctx.setdefault("caps", {})
+        return ctx
+
+    def gain(self, st, d, month, ctx):
+        if self.p["know_thresholds"]:
+            return super().gain(st, d, month, ctx)
+        saved = THRESH.copy()
+        try:
+            THRESH.clear()  # no promotion minima: everything up to the (detected) ceiling counts as 'below'
+            return super().gain(st, d, month, ctx)
+        finally:
+            THRESH.update(saved)

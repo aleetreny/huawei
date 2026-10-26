@@ -10,3 +10,6 @@
 - 22:55 Oráculo v1 (modelo m01, sólo L1–L2): termina 42 %, nota 48,5; muere sobre todo por crisis de confianza. Lote **b01** lanzado: 6.000 partidas del oráculo v1 con un 10 % de decisiones al azar, para tener datos de L3–L6 con contrafactuales.
 - 23:05 Con b00 y el b01 parcial: techos y umbrales de L1 a L5 (H6), notas (H7) y despido (H8). Medida del riesgo a 3 meses por respuesta (H9).
 - 23:15 Oráculo v2 (modelo m03, pesos por umbral y castigo de explosiones): 84 % terminadas, nota media 62,7 (H10).
+- 23:00 Parado b01 en 2.400 partidas. Lanzado **b02-stages**: 17 brazos × 300 partidas (oráculo v2; al azar sólo los eventos o sólo el reparto trimestral de un semestre).
+- 23:05 Etiquetado de las 954 respuestas por rasgos generales (4 agentes Sonnet, en el scratchpad, sin pasar texto al repo) para probar si los rasgos predicen los efectos con títulos reservados (`semantics.py`).
+- 23:10 Hallazgos H11–H15: fórmula de la nota final exacta; efectos deterministas; eventos exclusivos de niveles altos; los eventos deciden la partida; umbrales de L4 y L5 (la Skill es el cuello de botella); la 1.ª evaluación se pierde en el último mes. Lanzado **b03-review-boost** (protección del mes previo a cada evaluación ×1, ×5, ×20).

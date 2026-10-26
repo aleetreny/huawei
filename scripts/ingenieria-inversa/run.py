@@ -50,8 +50,14 @@ def proc_main(k: int, args: argparse.Namespace, per: int, kwargs: dict) -> None:
     cls = policy_classes()[args.policy]
     shared = cls.load_shared(**kwargs) if hasattr(cls, "load_shared") else None
 
+    arms = kwargs.pop("arms", None)
+
     def factory(i: int):
-        return cls(args.seed + i, shared=shared, **kwargs) if shared is not None else cls(args.seed + i, **kwargs)
+        kw = dict(kwargs)
+        if arms:
+            kw.update(arms[i % len(arms)])
+            kw["arm"] = i % len(arms)
+        return cls(args.seed + i, shared=shared, **kw) if shared is not None else cls(args.seed + i, **kw)
 
     counts = asyncio.run(harness.run_batch(DATA / args.batch, f"p{k}", factory, per, args.slots,
                                            start_index=args.offset + k * per))
