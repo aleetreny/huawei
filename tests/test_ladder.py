@@ -135,6 +135,42 @@ def test_status_page_is_plain_spanish(tmp_path):
     assert "| a | bold |" in ladder.history_md(state, reg)
 
 
+def test_continuous_scheduler_runs_the_highest_priority_job_queued_meanwhile(tmp_path, monkeypatch):
+    import asyncio
+    import json
+
+    from careerlab import scheduler as sched_mod
+    from careerlab.config import Settings
+
+    settings = Settings(data_dir=tmp_path / "data", lab_dir=tmp_path / "lab")
+    reg = Registry(settings.registry_path)
+    aid = reg.register_actor("claude-cli", {"model": "haiku"})
+    eid = reg.register_environment({"environment": "test"})
+    bundle = tmp_path / "b"
+    bundle.mkdir()
+    (bundle / "SKILL.md").write_text("x")
+    pid = reg.register_policy(bundle, "fam", "p", [], "h", "c", "test")
+    reg.enqueue(pid, aid, eid, "screen", 2, priority=1.0)
+    order, stop = [], tmp_path / "STOP"
+
+    async def fake_episode(settings_, cfg, bundle_dir, job_id, run_dir):
+        order.append(job_id)
+        if len(order) == 1:  # a better job arrives while the first game is running
+            reg.enqueue(pid, aid, eid, "ladder", 1, priority=50.0)
+        await asyncio.sleep(0.01)
+        run_dir.mkdir(parents=True, exist_ok=True)
+        (run_dir / "result.json").write_text(json.dumps({"job_id": job_id, "outcome": "completed", "quantitative_score": 60.0,
+                                                          "survival_months": 48, "ending_score": {"completed": True, "dimensions": []}}))
+        if len(order) == 3:
+            stop.touch()
+
+    monkeypatch.setattr(sched_mod, "run_claude_episode", fake_episode)
+    s = sched_mod.Scheduler(settings, reg)
+    counts = asyncio.run(s.run_claude_continuous(1, stop, poll_s=0.01))
+    assert counts == {"completed": 3}
+    assert order[1].startswith("ladd-")  # leased before the older, lower-priority screen job
+
+
 def test_weekly_pace_knots_front_load_the_week():
     knots = {"knots": [[0, 0.10], [100, 0.45], [400, 0.90]]}
     assert weekly_allowance(-5, 1e9, knots) == 0.10

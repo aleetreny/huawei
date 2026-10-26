@@ -143,15 +143,18 @@ def main() -> int:
     work = s.data_dir / "fastloop" / "design" / name
     games = champion_games(reg, state)
     n_digests = write_digests(games, work / "digests")
-    skills = sorted(str(p.relative_to(REPO)) for p in Path(champ["bundle_path"]).glob("skills/*/SKILL.md"))
+    bundle, fastloop = Path(champ["bundle_path"]).resolve(), (s.lab_dir / "fastloop").resolve()
+    skills = sorted(str(p.relative_to(REPO)) if p.is_relative_to(REPO) else str(p) for p in bundle.glob("skills/*/SKILL.md"))
+    extra = [work] + [d for d in (bundle, fastloop) if not d.is_relative_to(REPO)]
     prompt = render((BRIEFS / f"{args.kind}.md").read_text(), {
+        "lessons": str(fastloop / "lessons.md"), "history": str(fastloop / "history.md"),
         "champion": champ["name"], "family": family, "name": name, "kind": args.kind, "out_dir": str(out.relative_to(REPO)),
         "skill_paths": ", ".join(skills), "digest_dir": str(work / "digests") if n_digests else "(no local game digests: rely on the record and the lessons)",
         "summary": summary(games), "stuck_count": str(state.get("finished_since_crown", 0))})
     (work / "prompt.md").write_text(prompt, encoding="utf-8")
     started = time.time()
     try:
-        rc, text = run_designer(prompt, [work])
+        rc, text = run_designer(prompt, extra)
     except subprocess.TimeoutExpired:
         rc, text = 124, "designer timed out"
     err = check_folder(out, name) if rc == 0 else f"designer exit {rc}"

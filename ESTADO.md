@@ -17,6 +17,8 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 **El laboratorio funciona.** Juega partidas por la vía oficial, muchas a la vez, se recupera de fallos y guarda todo. Las instrucciones están en [lab/README.md](lab/README.md).
 
+**Cambio de sistema (26 oct, noche): carrera rápida.** Decisión de Alejandro: ir más rápido. Hay un campeón y los manuales nuevos suben una escalera de 2, 4, 8 y 12 partidas. Tras cada escalón se calcula la probabilidad de que el aspirante sea mejor que el campeón: si es baja, el manual se descarta y no juega más; si con 8 o 12 partidas es alta, pasa a ser campeón. Un diseñador automático (Opus) lee las peores partidas del campeón y escribe variantes, y cuando nos atascamos escribe ideas valientes. Explicación sencilla: [lab/fastloop/README.md](lab/fastloop/README.md). Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md) (tarea T14).
+
 Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
 **Clasificación actual** (Claude Haiku jugando; decisión de bloque del 26 oct a las 19:03 UTC, registro #150):
@@ -82,8 +84,8 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 | T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | hecha: reglas en `distilled-rules.md`; 2 hijas registradas y jugando (resultados provisionales en la sección 2) | `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
 | T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | hecha: F8 (`f8-secure-growth-v1`) registrada y jugando | `lab/policies-src/f8-secure-growth/` |
 | T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo | nube: o1 hueco de ascenso y o2 a tope jugando; o3 "padrinos" en espera (se parece a F4 + F5). Matteo: `value-conversion-v1` juntada con `main` y en cola (4 partidas); `observed-growth-v1` (síntesis tras leer F3/F8, no ciega) lista para registrar, lint OK; piloto local aislado con Haiku: 64,78, L5, 48 meses; 4 partidas Haiku más (origen `matteo`, fuera de las decisiones): Q media 40,85, 1 de 4 terminada (70,94, L5 en el mes 42), 3 despedidas en el mes 24; `observed-growth-v2` (rama `matteo/observed-growth-v2`, 4 partidas Haiku, mismo actor): Q media 43,18, 2 de 4 terminadas, 0 despidos y 2 crisis de confianza (casi no usa Defuse); `observed-growth-v3` (rama `matteo/observed-growth-v3`, limpieza de riesgo restaurada, 4 partidas Haiku, mismo actor): Q media 71,43, 4 de 4 terminadas en L5, 0 despidos y 0 crisis; pendiente: registrarla y evaluarla en la nube con el actor de la carrera | `lab/policies-src/o*-*/`, `lab/policies-src/matteo-value-conversion/`, `lab/policies-src/matteo-feedback-growth/`, informes `lab/reports/matteo-t4-value-conversion.md`, `lab/reports/matteo-observed-growth.md`, `lab/reports/matteo-observed-growth-haiku-4.md`, `lab/reports/matteo-observed-growth-v2.md` y `lab/reports/matteo-observed-growth-v3.md`; datos en `lab/registry-origins/matteo/` |
-| T5 | Envío preliminar y clave de la API | Alejandro | pendiente | apuntar aquí la fecha en que llegue la clave |
-| T6 | Piloto con DeepSeek: 2 partidas para medir coste y tokens ([target-budget.md](research/careerlab/target-budget.md)) | organizador | espera a T5 | `lab/reports/target-pilot/` |
+| T5 | Envío preliminar y clave de la API | Alejandro | **hecha**: clave recibida el 26 oct (OpenRouter, 50 USD, 0 gastados a las 19:05 UTC). Está sólo en el `.env` del programa oficial en el Mac de Alejandro, fuera de Git | — |
+| T6 | DeepSeek sólo en las puertas de [fastloop-v2](lab/protocol/fastloop-v2.md): 1 partida del campeón para comprobar el programa oficial y el coste; 2 antes de cada corte si el campeón ha cambiado | Alejandro (su Mac, chat `alejandro/carrera-rapida`) | código listo (`careerlab/target.py`); primera partida en cuanto el campeón esté confirmado | origen `deepseek`: `lab/registry-origins/deepseek/` |
 | T7 | Vídeo `presentation.mp4` para el corte 1, en inglés, máximo 10 minutos y respondiendo a las 5 preguntas oficiales | equipo (personas) | pendiente | guion base en [jury-story.md](research/careerlab/jury-story.md) |
 | T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
 | T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
@@ -91,6 +93,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | **hecha** (26 oct, 17:55): Y media 54,2, 5 de 6 terminadas → "cerca del techo"; el esfuerzo pasa a fiabilidad y tokens | `lab/reports/opus-ceiling/README.md`; resúmenes en `lab/reports/teacher-digests/opus-ceiling/` |
+| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | lista para arrancar: la nube la pone en marcha con [scripts/fastloop/README.md](scripts/fastloop/README.md) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
 
 ## Relevo del organizador (26 oct, 16:20 UTC)
 
@@ -119,6 +122,8 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 - **Quién juega:** la carrera la juega la nube. Desde T11, otro ordenador puede jugar con su propio origen (ver *Partidas* en la sección 6).
 - **26 oct, Alejandro:** Claude no debe aparecer como contribuidor en GitHub. Los commits van a nombre de una persona y sin líneas `Co-Authored-By` de Claude. La nube hace los suyos a nombre de Alejandro.
 - **26 oct, Alejandro:** la nube hace push a `main` como organizadora (tras pasar los tests).
+- **26 oct (noche), Alejandro:** carrera rápida. [fastloop-v2](lab/protocol/fastloop-v2.md) sustituye las reglas de reparto y elección de prereg-v1 para la carrera de Haiku; prereg-v1 no se edita y sus datos se reutilizan. Se descartan pronto los manuales que no funcionan, las partidas van a los aspirantes con opciones, y cuando nos atascamos se prueban ideas valientes. El ritmo semanal de cuota se adelanta: hasta un 45 % de la semana el 28 oct, un 75 % el 31 oct y un 90 % el 2 nov.
+- **26 oct (noche), Alejandro:** la clave de DeepSeek sólo se usa cuando sea seguro que aporta algo: las puertas de fastloop-v2, con el gasto exacto medido en cada partida y 15 USD de reserva para el último corte. Nunca para explorar.
 
 ## 6. Reglas de trabajo
 
@@ -142,6 +147,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
   | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
   | `matteo/observed-growth-v3` | observed-growth-v3 de Matteo | juntada con `main` el 26 oct, 18:15; en la carrera (4 partidas); su piloto en casa: 4 de 4 terminadas, Q media 71,4 (otra celda; se comprueba en la carrera) |
   | `alejandro/investigacion-decisiones` | línea de investigación de decisiones (Codex), sólo analiza exports | juntada con `main` el 26 oct, 18:32 (PR #3) |
+  | `alejandro/carrera-rapida` | carrera rápida (T14) y partidas de DeepSeek (T6) | pendiente de juntar; la nube la junta y cambia de sistema |
   | `matteo/observed-growth-v4` y `-v5` | iteraciones de Matteo | juntadas con `main` el 26 oct, 19:06 como fuente. v4 no se juega (su propio piloto la dejó por debajo de v3); v5 en espera del resultado de v3 en la carrera |
   | `alejandro/laboratorio-adaptativo` | laboratorio adaptativo y presupuesto (Alejandro) | **sin juntar**: está marcada WIP y cambia módulos del núcleo (`decisions.py`, `cli.py`); se junta cuando esté terminada |
   | `matteo/observed-growth-v2` | observed-growth-v2 de Matteo | juntada con `main` el 26 oct, 17:57; en la carrera (4 partidas); sus partidas de origen `matteo` importadas |

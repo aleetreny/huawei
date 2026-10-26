@@ -164,6 +164,7 @@ class Driver:
     def run(self) -> None:
         self.log(f"driver start pid={os.getpid()}")
         self.write_pace()
+        self.report()  # history.md exists before the first designer reads it
         while not (self.dir / "STOP").exists():
             try:
                 self.ensure_scheduler()

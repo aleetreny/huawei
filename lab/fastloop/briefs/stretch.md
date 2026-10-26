@@ -8,8 +8,8 @@ Its record: <<summary>>.
 ## Read before writing
 
 1. Digests of the champion's latest race games, worst first: <<digest_dir>> (start with index.md). Look hardest at the completed games.
-2. `lab/fastloop/lessons.md`: what is proven (keep it), what failed (do not repeat it).
-3. `lab/fastloop/history.md`: every manual already tried in this race and its result.
+2. `<<lessons>>`: what is proven (keep it), what failed (do not repeat it).
+3. `<<history>>`: every manual already tried in this race and its result.
 
 ## Task: the frontier
 

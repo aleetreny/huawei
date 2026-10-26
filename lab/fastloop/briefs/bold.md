@@ -6,8 +6,8 @@ The race is stuck: <<stuck_count>> challengers built on the champion **<<champio
 
 ## Read before writing
 
-1. `lab/fastloop/lessons.md`: the guardrails are proven; keep them. Everything else may change.
-2. `lab/fastloop/history.md`: what was already tried in this race. Pick a premise it does not show, or one that failed for a reason you can fix.
+1. `<<lessons>>`: the guardrails are proven; keep them. Everything else may change.
+2. `<<history>>`: what was already tried in this race. Pick a premise it does not show, or one that failed for a reason you can fix.
 3. The champion's Skills (<<skill_paths>>) and its worst games: <<digest_dir>> — to see what the champion cannot do.
 4. The game's published rules: the handbook text quoted in lessons.md and in the champion's Skills.
 
