@@ -170,3 +170,4 @@
   - The Haiku ranking does not transfer to a stronger model, which adds weight to the target pilot (T6).
 
 - Block decision #142 (18:11 UTC): the three trace-driven F7 children (trend marking, delivery stories, promotion drive) score 42–45 after 4 Haiku games each. Family pooling pulls their parent f7-three-skills down to 51.5. New leader f1-steady-balance, 54.6 (n = 8). `careerlab digest` now skips imported games that have no local run folder.
+- Block-5 diagnosis (18:29 UTC, `lab/reports/cloud-run-diagnostics/block5-generation.md`): F1's exposure is blow-ups. It took Defuse after only 11 of 22 non-reassuring risk remarks and never after a blow-up. Across 86 Haiku games, Defuse after a risk remark cut blow-ups within three months from 10 % to 2 % (mild) and from 20 % to 8 % (strong). All 37 D grades came with a risk remark in the review month. Three nested F1 children are queued: core (P20), risk-signal, and status-line (P22, stall slot).
