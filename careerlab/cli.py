@@ -120,6 +120,16 @@ def _actor(reg: Registry, spec: str) -> tuple[str, str]:
     raise SystemExit(f"unknown actor kind {kind}")
 
 
+def cmd_lint(args: argparse.Namespace) -> int:
+    from careerlab.compliance import collect_titles, lint_bundle
+
+    s = load_settings()
+    titles = collect_titles(s.runs_dir) if s.runs_dir.exists() else set()
+    findings = lint_bundle(Path(args.path) / "bundle", titles)
+    print("\n".join(map(str, findings)) or "no findings")
+    return 2 if any(f.severity == "error" for f in findings) else 0
+
+
 def cmd_enqueue(args: argparse.Namespace) -> int:
     from careerlab.scheduler import check_gate
 
@@ -237,6 +247,9 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--by", default="orchestrator")
     r.add_argument("--allow-lint-errors", action="store_true")
     r.set_defaults(fn=cmd_register)
+    lt = sub.add_parser("lint", help="check a policy folder (policy.json + bundle/) against the compliance rules, without registering it")
+    lt.add_argument("path")
+    lt.set_defaults(fn=cmd_lint)
     e = sub.add_parser("enqueue")
     e.add_argument("--policy", required=True)
     e.add_argument("--actor", required=True, help="scripted[:python-executor] | claude-cli:<model>[@effort][~autocompact][#plugin]")
