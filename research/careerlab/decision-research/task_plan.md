@@ -30,7 +30,7 @@ Base de datos actualizada: `origin/main` en `9b8fbe9`, integrada en esta rama; P
 - [x] Ejecutar análisis descriptivo y modelos predictivos pequeños donde haya soporte.
 - [x] Publicar ejecuciones 001/002 (mismos datos; corrección de inventario), registro de insights y cola de hipótesis con siguientes pruebas.
 - [x] Tests (255), Relevo y línea propia de ESTADO.
-- [ ] Commit/push y actualizar PR #3 con la exploración y estructura continua.
+- [x] Commit `6995b05`, push y PR #3 actualizada con la exploración y estructura continua (abierta y fusionable).
 
 La continuación ocurre en este chat por ciclos manuales reproducibles. No se crea una automatización ni se lanzan partidas.
 
