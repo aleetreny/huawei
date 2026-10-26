@@ -1,0 +1,1 @@
+{"actor_id": "dff20fcea96c188d", "config": "{\"jiuwenswarm\": \"0.2.4b3\", \"kind\": \"jiuwenswarm-target\", \"mode\": \"agent\", \"model_name\": \"deepseek-v4-flash\", \"route\": \"competition-key\", \"runner_commit\": \"00b084a8\", \"timeout_s\": 7200.0}", "created_at": 1793043874.861212, "kind": "jiuwenswarm-target"}

@@ -80,6 +80,12 @@ Race Haiku [REG] unless marked.
 | v5: pay preference plus strong grades | 1/4, Q 30.3 [MG5] | — |
 | Energy mix alone (400 bots) | no mix avoided the first C [EB] | — |
 
+## DeepSeek (the official player)
+
+- **Gate 1, 26 Oct 19:51–20:11 UTC:** F1 (Haiku: 10/12 completed, mean 56.1) played once by deepseek-v4-flash through the official runner. Dismissed at month 24, never left L1 (level 10, skill 7.5, network 3.3, risk control 40; Q 18.8). Same exit pattern as Haiku's losses: stuck at the first level until the second-year dismissal. One game: no conclusion about transfer yet [DS1].
+- Cost 0.185 USD for 24 months; 16.0 M input and 0.06 M output tokens (about 0.67 M input tokens per month, mostly the framework's growing context, not the Skill text); 374 tool calls in 20 minutes [DS1].
+- **DS1:** `lab/registry-origins/deepseek/` (job `deepseek-pilo-19618e77-dff20f-00000-a1`); trajectory on Alejandro's Mac under `~/careerlab-data/huawei-deepseek/runs/`.
+
 ## 4. Frontier
 
 - The 131 completed LLM g still miss about 38.6 points: level 16.1, wealth 12.7, network 3.4, risk control 3.1, skill 2.9, resilience 0.4. In the 44 completed g with Q ≥ 65, the gaps are level 15.0, wealth 11.5 and everything else 4.8 [REG].
