@@ -1,0 +1,11 @@
+{
+  "family": "f1-steady-balance",
+  "name": "f1-steady-balance-v1",
+  "parents": [],
+  "hypothesis": "Classifying every principal dimension each turn (Act / Watch / Fine) and repairing the weakest before it compounds keeps more runs alive to month 48 and yields a higher mean quantitative_score than growth-first families, because the ending rates all dimensions together and the published failure directions are about persistent weakness.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Highest share of Energy spent on Health recovery, Mental recovery and Network maintenance among strategy families except F5; Energy spread over at least two different actions in most quarters; main actions rotate rather than repeat; recovery chosen at the first sign of a falling trend rather than only after a warning; smallest spread between the strongest and weakest end-of-run dimension; fewer eliminations from health or dignity directions than P0 and F4; slower promotion than F4.",
+  "refutation": "Refuted if, on paired runs, F1 neither survives longer nor completes more often than P0 and F4, or if its mean quantitative_score is below F2 and F4 without a survival advantage. Manipulation fails if its recovery share and Energy spread are not measurably higher than P0's.",
+  "skill_count": 1,
+  "notes": "Act/Watch/Fine bands are qualitative and relative to published ranges and the run's own trends; no threshold numbers. Shares its base priorities with F6, so F6 vs F1 isolates the ledger and whole-quarter planning."
+}

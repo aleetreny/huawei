@@ -164,3 +164,26 @@ def test_take_action_observes_before_retrying(drop, expected_t, attempts):
     before = asyncio.run(client.observe("s"))
     result = asyncio.run(client.take_action("s", 1, "", before=before))
     assert result.applied and server.t == expected_t and result.attempts == attempts
+
+
+def test_report_uses_protocol_outcome_and_counts_interruptions(tmp_path):
+    from careerlab.report import cell_report
+
+    reg, pid, aid, eid = _registry(tmp_path)
+    jobs = reg.enqueue(pid, aid, eid, "screen", 3)
+    reg.lease("me", 3)
+    for j in jobs[:2]:
+        run(FakeClient(), tmp_path, j)
+        reg.ingest(j, tmp_path / j)
+    run(FakeClient(vanish_at=1), tmp_path, jobs[2])
+    reg.ingest(jobs[2], tmp_path / jobs[2])
+    cell = cell_report(reg)["groups"][0]["cells"][0]
+    # Q = 42 and completed without token counts: Y = 0.8*42 + 0.1*100 (imputed E for a completed run).
+    assert cell["n"] == 2 and cell["interrupted_attempts"] == 1 and abs(cell["mean_Y"] - 43.6) < 1e-9
+
+
+def test_bridge_refuses_non_local_servers(capsys):
+    from careerlab.bridge import main
+
+    assert main(["--url", "https://example.com/mcp", "new"]) == 2
+    assert "only talks to a local" in capsys.readouterr().out

@@ -1,0 +1,25 @@
+{
+  "family": "m3-teammate",
+  "name": "m3-sustainable-career-v0-1",
+  "parents": [],
+  "hypothesis": "From the teammate's design documents: 'Use current evidence to identify the most urgent constraint, address it proportionately, and pursue growth when the career remains sustainable' (decision_report.md). Frequent early health and trust failures in a random baseline 'motivates testing explicit risk assessment' (skills_design.md): a risk review before each decision, routed into separate story and quarterly Skills, should survive longer and score higher than unguided play, while avoiding both 'relentless short-term output maximization and indefinite defensive play'.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Dynamic priorities: recovery when Health is deteriorating, return to growth once the need is addressed; Defuse legacy risk only after warnings about unresolved liabilities (not automatic); story notes stating the main trade-off; occasional check_latest_logs when feedback is ambiguous; repeated Energy actions allowed while a need persists; largest Skill text of all families (about 1,300 words over three Skills), so higher input tokens per month than F1-F6.",
+  "refutation": "The teammate's documents make 'no claim of superior score or survival'. For the lab: refuted if, on paired runs, M3 does not beat P0 on survival and mean quantitative_score, or does not reduce early health- and trust-direction eliminations relative to P0. If M3 matches a much shorter family (F1 or F7) on outcomes, its extra tokens are not justified.",
+  "skill_count": 3,
+  "notes": "Imported verbatim, read-only, from origin/Matteo @ 27cd3c1 (author Matteo Zabban): solution/skills/{career-event-decisions,career-quarterly-planning,career-risk-review}/SKILL.md; text not edited. The teammate branch had no manifest.json, so the manifest here is ours with an empty instruction (the official runner shows the agent only Skills and the manifest instruction). The teammate README, which says to read the risk Skill first, is kept in provenance/README.md and is not part of the bundle. Compliance lint gives review findings only: negated mentions of internal packages, databases, hidden evaluation data and development-only scoring weights in career-risk-review, and a negated reverse-engineering mention; none is prohibited conduct, but removing them would save tokens in a later revision.",
+  "provenance": {
+    "source_ref": "origin/Matteo",
+    "commit": "27cd3c1d0cb01f549ef840da1c2f15fde2ff7006",
+    "author": "Matteo Zabban",
+    "files": [
+      "solution/skills/career-event-decisions/SKILL.md",
+      "solution/skills/career-quarterly-planning/SKILL.md",
+      "solution/skills/career-risk-review/SKILL.md",
+      "solution/README.md"
+    ],
+    "import_method": "git show origin/Matteo:<path> > <file>, compared byte-for-byte with 27cd3c1",
+    "imported": "2026-10-26",
+    "verbatim": true
+  }
+}

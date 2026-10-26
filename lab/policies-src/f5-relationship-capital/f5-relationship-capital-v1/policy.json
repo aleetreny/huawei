@@ -1,0 +1,11 @@
+{
+  "family": "f5-relationship-capital",
+  "name": "f5-relationship-capital-v1",
+  "parents": [],
+  "hypothesis": "Network and Dignity act as protective capital: prioritising Network maintenance, Repair a key relationship and mentorship, and resolving story events by trust, coordination and transparent communication, reduces trust- and dignity-direction eliminations and improves reviews and promotion enough to beat output-first (F4) and baseline (P0) play on mean quantitative_score.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Network maintenance bought in most quarters (highest rate of any family); most Repair a key relationship main actions, concentrated after conflict feedback; story notes cite trust, coordination or boundaries; highest end-of-run Network and Dignity; fewer eliminations from dignity or trust directions than P0 and F4; Skill and Output growth below F2 and F4.",
+  "refutation": "Refuted if, on paired runs, F5 does not reduce dignity/trust-direction eliminations relative to P0 and F4, or if its higher Network/Dignity does not translate into equal-or-better reviews and a higher mean quantitative_score than F4. Manipulation fails if its Network-maintenance rate is not the highest.",
+  "skill_count": 1,
+  "notes": "Story questions describe behaviour categories (trust, coordination, boundaries), not answers to particular events."
+}

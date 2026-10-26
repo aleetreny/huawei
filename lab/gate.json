@@ -1,7 +1,7 @@
 {
   "purpose": "Authorisation gate checked by careerlab.scheduler before any job is queued. Edited only by the orchestrator after a written organiser reply or an explicit user decision; every edit is a new registry decision.",
   "updated": "2026-10-26",
-  "clarification_status": "No written organiser clarification exists in the official docs or the participation repository (no issues, no discussions) as of 2026-10-26. Discord not readable from this session; query drafted in research/organiser-questions.md section 0, not sent.",
+  "clarification_status": "USER DECISION 26 Oct 2026 (team lead, in chat): do not ask the organisers; methods not prohibited by the rules are approved by the team. The lab records this decision; the rules still say silence is not permission and organisers have final interpretation, so the drafted message in research/organiser-questions.md section 0 is kept but will not be sent unless the team changes its mind. Submission-content rules (no event answers, no unpublished thresholds or weights as rules, single agent, designated model) are unaffected and still enforced by the compliance linter.",
   "environments": {
     "real-dev": {
       "description": "Official career-emulator-engine-mcp 1.0.6 + career-emulator-techarena 1.0.8 (dev split), stdio transport only, official runner engine env.",
@@ -9,28 +9,30 @@
       "actors": {
         "scripted": {
           "allowed": true,
-          "max_episodes": 1500,
-          "reason": "Docs allow development MCP clients over stdio and inspection of own run outputs. Cap keeps use at ordinary development scale until organisers answer; includes infrastructure tests already run.",
+          "max_episodes": null,
+          "reason": "User decision 26 Oct: approved without organiser query. Throughput still limited by the measured ~20-session database retention (pool rotation).",
           "prior_sessions": 752,
           "prior_sessions_note": "Infrastructure probes, isolation, capacity and throughput tests run on 26 Oct before the registry existed: 574 complete episodes plus about 166 diagnostic sessions. Plus 12 partial pilot sessions from a kill test made before a registry schema change (kept in careerlab-data/orphaned)."
         },
         "claude-cli": {
-          "allowed": false,
-          "reason": "External LLM actors playing dev games are not addressed by the rules (silence is not permission). Pending organiser answer to research/organiser-questions.md section 0."
+          "allowed": true,
+          "reason": "User decision 26 Oct: Claude workers (CLI on the Max account) may play dev games to discover what works before the key arrives. Results stay in their own actor cells; they never pool with target cells.",
+          "max_episodes": null
         },
         "native-subagent": {
-          "allowed": false,
-          "reason": "Same as claude-cli."
+          "allowed": true,
+          "reason": "User decision 26 Oct, same scope as claude-cli.",
+          "max_episodes": null
         },
         "jiuwenswarm-target": {
-          "allowed": false,
+          "allowed": true,
           "routes": {
             "competition-key": {
-              "allowed_when": "the organiser e-mail delivers the key",
+              "allowed_when": "as soon as the organiser e-mail delivers the key; budget plan in research/careerlab/target-budget.md",
               "reason": "Official runner + designated model + competition key is the documented development use (api-key.rst: development and evaluation activity, USD 50, competition week). Blocked only because no key exists yet; the key needs a verified preliminary submission."
             },
             "team-openrouter": {
-              "allowed_when": "organiser answers message item 3 with yes AND the user approves a USD budget",
+              "allowed_when": "user approves a USD budget (organiser question waived by user decision)",
               "reason": "Not addressed by the docs."
             }
           },
@@ -49,8 +51,8 @@
         },
         "claude-cli": {
           "allowed": true,
-          "max_episodes": 12,
-          "reason": "Harness smoke tests only; CLI account reports Pro with 79% weekly use (see findings.md). Raise after the user re-authenticates the CLI with the Max account."
+          "max_episodes": null,
+          "reason": "CLI now on the Max account (verified 26 Oct 13:05 UTC)."
         },
         "native-subagent": {
           "allowed": true,

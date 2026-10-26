@@ -100,10 +100,15 @@ def _actor(reg: Registry, spec: str) -> tuple[str, str]:
         code = hashlib.sha256(Path(scripted.__file__).read_bytes()).hexdigest()[:16]
         return reg.register_actor("scripted", {"name": name or "python-executor", "code_sha256": code}), kind
     if kind == "claude-cli":
-        model, _, effort = name.partition("@")
+        # <model>[@effort][~autocompact][#plugin]  e.g. opus@low~100k, haiku#plugin
         from careerlab.actors.claude_cli import ClaudeWorkerConfig, cli_version
 
-        cfg = ClaudeWorkerConfig(model=model, effort=effort or None, cli_version=cli_version(load_settings()))
+        skills_mode = "plugin" if name.endswith("#plugin") else "inline"
+        name = name.removesuffix("#plugin")
+        name, _, compact = name.partition("~")
+        model, _, effort = name.partition("@")
+        cfg = ClaudeWorkerConfig(model=model, effort=effort or None, autocompact=compact or None,
+                                 skills_mode=skills_mode, cli_version=cli_version(load_settings()))
         return reg.register_actor("claude-cli", cfg.record()), kind
     raise SystemExit(f"unknown actor kind {kind}")
 
@@ -166,6 +171,15 @@ def cmd_status(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_report(args: argparse.Namespace) -> int:
+    from careerlab.report import cell_report, markdown
+
+    s = load_settings()
+    rep = cell_report(Registry(s.registry_path), purpose=args.purpose)
+    print(markdown(rep) if args.markdown else json.dumps(rep, indent=2))
+    return 0
+
+
 def cmd_export(args: argparse.Namespace) -> int:
     s = load_settings()
     print(Registry(s.registry_path).export_jsonl(s.lab_dir / "registry"))
@@ -190,7 +204,7 @@ def main(argv: list[str] | None = None) -> int:
     r.set_defaults(fn=cmd_register)
     e = sub.add_parser("enqueue")
     e.add_argument("--policy", required=True)
-    e.add_argument("--actor", required=True, help="scripted[:python-executor] | claude-cli:<model>[@effort]")
+    e.add_argument("--actor", required=True, help="scripted[:python-executor] | claude-cli:<model>[@effort][~autocompact][#plugin]")
     e.add_argument("--n", type=int, required=True)
     e.add_argument("--purpose", default="pilot", choices=["pilot", "screen", "calibrate", "audit", "confirm", "infra"])
     e.add_argument("--environment", default="real-dev", choices=["real-dev", "synthetic"])
@@ -205,6 +219,10 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("recover").set_defaults(fn=cmd_recover)
     sub.add_parser("resume").set_defaults(fn=cmd_resume)
     sub.add_parser("status").set_defaults(fn=cmd_status)
+    rp = sub.add_parser("report")
+    rp.add_argument("--purpose")
+    rp.add_argument("--markdown", action="store_true")
+    rp.set_defaults(fn=cmd_report)
     sub.add_parser("export").set_defaults(fn=cmd_export)
     args = parser.parse_args(argv)
     return args.fn(args)
