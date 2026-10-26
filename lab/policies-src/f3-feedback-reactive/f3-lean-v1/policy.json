@@ -1,0 +1,101 @@
+{
+  "family": "f3-feedback-reactive",
+  "name": "f3-lean-v1",
+  "parents": ["f3-feedback-reactive-v1"],
+  "idea_origin": "playbook:P20",
+  "operator": "refine (subtraction)",
+  "hypothesis": "F3's lead (posterior Y 61.3, 3 of 3 Haiku runs completed) comes from a small core: a Clear/Raised/Escalating signal state that sends Energy to Defuse legacy risk and story choices to disclose/fix/close options after risk wording, plus a factor-targeted main action and Prepare report materials after a C or D. The rest of the parent's text (log consultation, outcome tracking, a change-the-factor fallback, end-of-run caution, Network/Wealth floor, alternative actions) is either never executed or competes with the core for the small model's attention. Under P20 (more rules can hurt execution; adding review-recovery rules to F1 cut it from 56.2 to 49.1), a Skill of about half the parent's length that keeps only the core will match or beat F3 on mean quantitative_score and completion, and will be executed more faithfully by weaker actors.",
+  "change": "One Skill, same name (feedback-response), 250 words by wc including front matter (229 body) against the parent's 483. Kept, compressed: turn loop (observe, read events and last result first, update state, take_action with choice and a short note 'state, signal seen, response', affordable retry on success false, stop at ending_score); the risk-signal definition (warning, HR, compliance, complaint, audit or legacy-problem wording, statistic warning, rising risk entry in status_updates); the three states with their responses (Clear: best visible trade-off and lift the weakest statistic in quarterly phases; Raised: Defuse legacy risk first in the next Energy phase and prefer disclose/fix/close story options; Escalating: Defuse every Energy phase, Lay low and reduce risk as main action, no new story commitments); step-down after a whole quarter without a new risk signal; weak review plan after a C or D or 'results fall short' feedback until the next review (main action by named factor, spare Energy on Prepare report materials); recovery overrides growth when Health or Dignity is low or named in a warning. One non-subtractive edit: the Escalating main action now applies 'unless a weak review plan is active', resolving a conflict the parent left open (both rules claim the main action). Everything removed is listed in removed_rules.",
+  "removed_rules": [
+    {
+      "parent_section": "intro",
+      "rule": "H1 heading and 'The run's own feedback can reveal risk before the statistics show it. Treat feedback as the primary signal.'",
+      "why": "Rationale with no decision content; the description and the signal-state section carry the instruction."
+    },
+    {
+      "parent_section": "Turn loop step 4",
+      "rule": "Call check_latest_logs with a small count only when a warning refers to earlier decisions you cannot see.",
+      "why": "Never executed: 0 check_latest_logs calls in all 4 F3 runs on real dev (3 Haiku, 1 Sonnet). Dead text that costs tokens every turn."
+    },
+    {
+      "parent_section": "Turn loop step 1 and 3",
+      "rule": "'the event description' in the reading order, and 'observe and' before picking an affordable option after success false.",
+      "why": "Wording compression; the event text is read anyway and the observation after a rejected action is part of the normal loop."
+    },
+    {
+      "parent_section": "Signals",
+      "rule": "Outcome signal: what your last choice actually changed, compared with what you expected.",
+      "why": "A third signal class with no response attached in the parent; notes in the Haiku runs cite risk and review signals, not outcome comparisons. Only 'read the result of your last action first' is kept."
+    },
+    {
+      "parent_section": "Signals",
+      "rule": "Performance signal definition: S, A and B acceptable; C and D weak.",
+      "why": "Folded into the weak review plan trigger ('after a C or D'); the separate definition duplicated it."
+    },
+    {
+      "parent_section": "Signal state",
+      "rule": "Escalating also entered on 'a statistic warning together with another signal'.",
+      "why": "Special case of 'repeated or stronger signals'; removed as a secondary clause."
+    },
+    {
+      "parent_section": "Responses: Clear",
+      "rule": "Explicit list 'weakest of Health, Dignity, Skill, Network and Output'.",
+      "why": "Compressed to 'the weakest statistic'; same behaviour, fewer tokens."
+    },
+    {
+      "parent_section": "Responses: Escalating",
+      "rule": "'or Repair a key relationship as the main action, whichever matches the signal'.",
+      "why": "Secondary alternative that asks the model to classify the signal again; the risk response keeps one main action (Lay low and reduce risk), and Repair a key relationship stays in the weak review plan for relationship feedback."
+    },
+    {
+      "parent_section": "Weak review plan step 2",
+      "rule": "Alternative main actions Showcase results (results) and Apply for rotation (capability).",
+      "why": "One decisive action per factor; kept Report results to your manager (Output, Network and Dignity, a superset of Showcase results' published effects) and Build a mentorship (same published effects as Apply for rotation)."
+    },
+    {
+      "parent_section": "Weak review plan step 3",
+      "rule": "'keeping recovery first when Health or Dignity is low'.",
+      "why": "Duplicate of the global recovery line, which is kept."
+    },
+    {
+      "parent_section": "Weak review plan step 4",
+      "rule": "If the next grade is still weak, change the factor instead of repeating the plan.",
+      "why": "In the eliminated F3 run (Sonnet, dismissed for capability at month 24) the actor followed it after the second C at month 12 ('change factor to capability/relationships'), switched that quarter's main action from Apply for a key project to Build a mentorship, and the next review was a D. Without it, a new C or D simply restarts the plan with the factor the new feedback names."
+    },
+    {
+      "parent_section": "Limits",
+      "rule": "Keep Network and Wealth above zero.",
+      "why": "Secondary guard not tied to feedback; no F3 run came near either failure direction, and Clear-state play lifts the weakest statistic."
+    },
+    {
+      "parent_section": "Limits",
+      "rule": "Apply the same rules all run.",
+      "why": "Meta-instruction with no decision content."
+    },
+    {
+      "parent_section": "Limits",
+      "rule": "Near the end, avoid any choice that adds unresolved risk.",
+      "why": "End-of-run trigger that is not feedback-driven and sits close to calendar play; in Haiku runs it produced Defuse legacy risk with state Clear ('late in the run, clear unresolved risk first'), i.e. precautionary spending without a signal. Risk handling is left to Raised and Escalating."
+    },
+    {
+      "parent_section": "Limits",
+      "rule": "'in the lower part of its 0-10 range' as the recovery condition.",
+      "why": "Compressed to 'low'; same meaning."
+    },
+    {
+      "parent_section": "front matter",
+      "rule": "Description clauses 'including defusing accumulated risk and a corrective plan after a weak review' and 'right after observe'.",
+      "why": "The description only needs to make the single Skill load on every turn."
+    }
+  ],
+  "added_or_changed": [
+    {
+      "rule": "Escalating main action Lay low and reduce risk applies 'unless a weak review plan is active'.",
+      "why": "Parent conflict: Escalating and the weak review plan both claim the main action. In the eliminated Sonnet F3 run, after the D at month 18 with HR warnings the actor entered Escalating, chose Lay low and reduce risk as that quarter's main action ('Escalating ... Lay low and reduce risk'), and was dismissed for capability at the next review (another D). A weak review leads to dismissal at the very next review, whereas Escalating keeps Defuse legacy risk in every Energy phase, so the review plan takes the main action. This makes the child not a pure ablation."
+    }
+  ],
+  "predicted_behaviour": "Notes start with Clear, Raised or Escalating and stay short (Haiku parent notes averaged 138-188 characters; expect similar or shorter, always far under 1,000). Defuse legacy risk appears in the first Energy phase after risk wording and in every Energy phase while Escalating, at a rate close to the parent's (11-18 per Haiku run) but rarely in Clear state (the parent's end-of-run precautionary Defuse disappears). After a C or D, the main action until the next review is Report results to your manager, Build a mentorship or Repair a key relationship according to the feedback, never Lay low and reduce risk, with Prepare report materials in spare Energy; the following review is B or better at least as often as under the parent. No check_latest_logs calls. Input tokens per turn slightly lower than the parent (Skill text about half as long).",
+  "refutation": "Refuted if, on paired runs against f3-feedback-reactive-v1 with the same actor, the child's mean quantitative_score or completion rate is lower (P20 subtraction did not help). Harmful subtraction if trust-crisis exits or risk_control scores worsen relative to the parent (restore the end-of-run caution first, then the Network/Wealth floor), or if capability dismissals rise (restore the Showcase/rotation alternatives). Manipulation fails if notes stop carrying a signal state, if Defuse does not follow risk wording within the next Energy phase, or if Lay low and reduce risk is still chosen while a weak review plan is active; then the text is not being executed and the result says nothing about subtraction. If the child only matches the parent, the removed text was inert (cheaper to submit, no score effect).",
+  "skill_count": 1,
+  "notes": "Subtraction child of F3 for the next generation within the progressive-widening limit (sibling: an F3 x F1 recombination, P14). Evidence used: findings.md block decisions (F3 61.3, F1 56.2, f1-review-risk 49.1) and the 4 F3 trajectories on real dev (Haiku: 3 completed, Q 59.7-66.6, first review C then B/A; Sonnet: C, C, D, D, dismissed at month 24). Skill name kept as feedback-response so parent vs child differs only in content. No numbers, counts, calendar triggers or named events in the Skill: grades S-D, published action names and the 0-10 range are public; 'whole quarter' is the published quarterly cadence used relative to the last signal. Compliance lint with 116 known run titles: 0 findings. Word count: 250 by wc including front matter, 229 body, parent 483. parents holds the policy NAME as instructed; map it to the registered id before careerlab register."
+}

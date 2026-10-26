@@ -97,3 +97,16 @@
   - Then F7 three-skills 50.0 and F7 single-skill 48.8.
   - P0 minimal goes **DORMANT** (4 runs, P(μ ≥ μ_leader − 4) = 0.008). This is reversible and stays subject to audits.
   - Every other cell repeats (fewer than 4 runs). The five block-2 children have 1–2 runs each and are not yet above their parents.
+- **Block-2 children (Haiku, 3 runs each; second block decision at 13:36 UTC, robust across noise models):**
+
+  | Child | Posterior Y | Parent | Parent Y |
+  |---|---|---|---|
+  | f2-convert-on-review | 45.9 | F2 | 31.1 |
+  | f1-review-risk | 49.1 | F1 | 56.2 |
+  | f4-review-first | 45.1 | F4 | 44.9 |
+  | p0-review-guard | 41.2 | P0 | 40.8 |
+  | m3-subtracted | 40.1 | M3 | 39.9 |
+
+  Converting to visible delivery after the first weak review rescued the invest-early idea. Bolting extra rules onto an already good policy (F1) hurt it, which matches playbook P20. The other review guards did not help. F3 remains the leader at 61.3.
+
+  Next generation, within the progressive-widening limit (2 children for the F3 family): an F3 subtraction (P20) and an F3 × F1 recombination (P14).
