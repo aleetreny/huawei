@@ -222,6 +222,15 @@ class Registry:
                             ("done" if outcome in TERMINAL_OUTCOMES else "interrupted", result.get("session_id"), time.time(), job_id))
         return outcome
 
+    def cancel_queued(self, policy_id: str, actor_id: str, note: str) -> list[str]:
+        """Withdraw this origin's queued jobs of one manual and actor (fast race: a challenger that left plays no more)."""
+        args = (policy_id, actor_id, self.origin)
+        with self.tx():
+            jobs = [r[0] for r in self.db.execute("SELECT job_id FROM jobs WHERE status='queued' AND policy_id=? AND actor_id=? AND origin=?", args)]
+            self.db.execute("UPDATE jobs SET status='cancelled', note=?, updated_at=? WHERE status='queued' AND policy_id=? AND actor_id=? AND origin=?",
+                            (note, time.time(), *args))
+        return jobs
+
     def requeue_interrupted(self, job_id: str, note: str) -> str:
         """A new attempt for the same replicate slot; the interrupted attempt stays on record."""
         job = self.db.execute("SELECT * FROM jobs WHERE job_id=?", (job_id,)).fetchone()
