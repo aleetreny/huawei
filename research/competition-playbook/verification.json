@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-26",
+  "status": "passed",
+  "scope": "Research-library integrity and coverage only; no policy/game benchmark or reproduction of historical results.",
+  "check_count": 25,
+  "checks": [
+    "json_parse",
+    "35_unique_source_ids",
+    "35_unique_canonical_source_urls",
+    "source_metadata_complete",
+    "source_sha_syntax",
+    "17_unique_cases",
+    "14_competition_groups",
+    "case_to_source_integrity",
+    "case_fields_complete",
+    "36_unique_cards",
+    "card_to_case_integrity",
+    "all_cases_have_cards",
+    "card_fields_complete",
+    "12_counterintuitive_cards",
+    "all_cards_unrun_proposals",
+    "launch_disabled",
+    "no_automatic_game_agent_ingestion",
+    "five_scopes_covered",
+    "search_counts",
+    "exact_search_strings_retained",
+    "json_markdown_sources.md",
+    "json_markdown_cases.md",
+    "json_markdown_strategy-cards.md",
+    "local_links_and_explicit_anchors",
+    "no_trailing_whitespace"
+  ],
+  "counts": {
+    "sources": 35,
+    "cases": 17,
+    "competition_groups": 14,
+    "cards": 36,
+    "counterintuitive_cards": 12,
+    "local_links": 105,
+    "explicit_anchor_links": 75,
+    "search_calls": 13,
+    "requested_result_slots": 90,
+    "unique_discovery_urls": 85
+  },
+  "placing_evidence_counts": {
+    "organiser_confirmed": 3,
+    "organiser_category_confirmed": 1,
+    "platform_and_host_confirmed": 1,
+    "author_reported": 5,
+    "platform_labelled": 3,
+    "author_and_participant_institution_reported": 1,
+    "author_reported_with_organiser_comments": 1,
+    "organiser_joint_first_prize": 1,
+    "competition_report_confirmed_category": 1
+  },
+  "limitations": [
+    "Author-reported placings remain labelled; metadata checks do not independently prove a ranking.",
+    "A champion using a mechanism does not establish its causal contribution or transfer to CareerSim.",
+    "Source scopes are selected sections/code, not complete execution audits.",
+    "No game experiments or external actor-model calls were run for this research."
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "cutoff_date": "2026-10-26",
+  "purpose": "Selected primary sources for competition cases. Scope varies and is explicit; no code execution or game-policy improvement established.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Resultados de NetHack Challenge 2021",
+      "url": "https://nethackchallenge.com/report.html",
+      "type": "organiser_report",
+      "review_scope": "resultados y discusión",
+      "quality": "Organizadores; confirma ganadores general y por categoría, y que no hubo ascensiones.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S02",
+      "title": "Insights from the NeurIPS 2021 NetHack Challenge",
+      "url": "https://proceedings.mlr.press/v176/hambro22a/hambro22a.pdf",
+      "type": "competition_paper",
+      "review_scope": "secciones de AutoAscend, RAPH y resultados",
+      "quality": "Informe con organizadores y participantes; comparación de métodos, sin reproducción propia.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S03",
+      "title": "AutoAscend: repositorio de los autores",
+      "url": "https://github.com/maciej-sypetkowski/autoascend",
+      "type": "author_repository",
+      "review_scope": "README y estructura declarada",
+      "quality": "Autores del ganador; herramientas de evaluación y memoria. Su modificación del entorno no se transfiere.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S04",
+      "title": "AutoAscend: primitivas de estrategia",
+      "url": "https://github.com/maciej-sypetkowski/autoascend/blob/master/autoascend/strategy.py",
+      "type": "author_code",
+      "review_scope": "líneas 1–210",
+      "quality": "Código seleccionado: condition, until, preempt, repeat. No ejecutado.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "7eef7b63119ac5e0bc4105473d21d378fc1bc09c"
+    },
+    {
+      "id": "S05",
+      "title": "Lux AI Season 2: primer puesto, Ryan Anderson",
+      "url": "https://www.kaggle.com/competitions/lux-ai-season-2/writeups/ry-andy-1st-place-solution",
+      "type": "author_writeup",
+      "review_scope": "método y discusión con el anfitrión",
+      "quality": "Plataforma marca primer puesto y el anfitrión felicita al autor; distingue la edición original de NeurIPS.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S06",
+      "title": "Lux S2 NeurIPS: README del agente C++",
+      "url": "https://github.com/ryandy/Lux-S2-neurips-public",
+      "type": "author_repository",
+      "review_scope": "README",
+      "quality": "Autor declara primero de 64 equipos. No se recuperó una tabla oficial independiente.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S07",
+      "title": "Lux S2 NeurIPS: selección de acciones",
+      "url": "https://github.com/ryandy/Lux-S2-neurips-public/blob/main/src/agent_act.cpp",
+      "type": "author_code",
+      "review_scope": "bucle act y orden de acciones",
+      "quality": "Código seleccionado: prioridades y simulación futura; no ejecutado ni auditado completamente.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "c4201df0751576be1519f155ffda1ea69fb319e9"
+    },
+    {
+      "id": "S08",
+      "title": "Lux AI Season 3: Flat Neurons, primer puesto",
+      "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/flat-neurons-1st-place-approach-by-flat-neurons",
+      "type": "author_writeup",
+      "review_scope": "método, entrenamiento, pruebas y límites",
+      "quality": "Plataforma marca primer puesto; relato de autores, con gran presupuesto y atribuciones no reproducidas.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S09",
+      "title": "Lux AI Season 3: imitación, tercer puesto",
+      "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/adg4b-imitation-learning-3rd-place-solution",
+      "type": "author_writeup",
+      "review_scope": "método, datos y limitaciones",
+      "quality": "Plataforma marca tercero. Contraste deliberado; no se presenta como campeón.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S10",
+      "title": "Kore 2022: primer puesto, Harm Buisman",
+      "url": "https://www.kaggle.com/competitions/kore-2022/writeups/harm-buisman-1st-place-solution",
+      "type": "author_writeup",
+      "review_scope": "agente ganador, historial de cambios y discusión",
+      "quality": "Plataforma marca primero y el segundo comenta; debilidad reconocida y evaluación inestable.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S11",
+      "title": "Halite 2020: repositorio ttvand",
+      "url": "https://github.com/ttvand/Halite",
+      "type": "author_repository",
+      "review_scope": "README",
+      "quality": "Autor identifica el repositorio como ganador; no fue posible recuperar su hilo completo ni una tabla oficial.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S12",
+      "title": "Halite: política por tareas y coordinación",
+      "url": "https://github.com/ttvand/Halite/blob/master/Logic/rule_actions_v3.py",
+      "type": "author_code",
+      "review_scope": "get_config_actions, get_ship_scores y mapa de funciones",
+      "quality": "Se revisaron secciones concretas del código. No se demuestra qué archivo exacto corresponde al envío ganador.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "13018f35986a4a05dcdbcc67c152ac14fa9c96c3"
+    },
+    {
+      "id": "S13",
+      "title": "Halite: evaluación y evolución de configuraciones",
+      "url": "https://github.com/ttvand/Halite/blob/master/Logic/main_rule_based.py",
+      "type": "author_code",
+      "review_scope": "configuración y bucle de evaluación/promoción",
+      "quality": "Repositorio del autor; combina pruebas contra versiones/pool y evolución sin gradiente. No valida nuestros umbrales.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "9230c0eecc0c51dd0b547aa486f330c00c204607"
+    },
+    {
+      "id": "S14",
+      "title": "Halite II: post-mortem de reCurs3",
+      "url": "https://recursive.cc/blog/halite-ii-post-mortem.html",
+      "type": "author_writeup",
+      "review_scope": "arquitectura, fases, máscara y optimización",
+      "quality": "Relato directo del ganador; incluye decisiones que fallaron. Extracción acotada, no lectura de todo enlace externo.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S15",
+      "title": "Halite II: anuncio de ganadores",
+      "url": "https://www.twosigma.com/articles/halite-ii-concludes-winners-announced/",
+      "type": "organiser_report",
+      "review_scope": "anuncio completo",
+      "quality": "Two Sigma confirma reCurs3 primero y cierre el 29 de enero de 2018.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S16",
+      "title": "HandyRL y Hungry Geese: relato técnico DeNA",
+      "url": "https://engineering.dena.com/blog/2021/12/distributed-reinforcement-learning-with-handyrl/",
+      "type": "author_engineering_report",
+      "review_scope": "sección Hungry Geese en japonés",
+      "quality": "Autores explican RL+MCTS y fragilidad ante rivales; síntesis nuestra del original japonés.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S17",
+      "title": "DeNA: victoria de HandyRL en Hungry Geese",
+      "url": "https://dena.ai/news/kaggle-hungry-geese/",
+      "type": "participant_institution_report",
+      "review_scope": "anuncio de resultado",
+      "quality": "Institución de los autores declara primer puesto entre 875 equipos. No es corroboración independiente del mismo equipo.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S18",
+      "title": "RPS: Where is my bag, repositorio ganador",
+      "url": "https://github.com/thisisbowen/RPS-Kaggle-1st-Place-Solution",
+      "type": "author_repository",
+      "review_scope": "README, método y evaluación",
+      "quality": "Autor declara primer puesto; cuenta fallos, selección Dirichlet y ruido de leaderboard.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S19",
+      "title": "RPS: segundo puesto, Georg Streich",
+      "url": "https://www.kaggle.com/competitions/rock-paper-scissors/writeups/georg-streich-2nd-place-solution",
+      "type": "author_writeup",
+      "review_scope": "selección de expertos y código publicado",
+      "quality": "Segundo puesto según plataforma; confirma interés de varios horizontes, no prueba rendimiento en CareerSim.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S20",
+      "title": "Huawei Ireland 2024: repositorio Linan/Nansen",
+      "url": "https://github.com/linanwx/huawei2024",
+      "type": "author_repository",
+      "review_scope": "introducción, operadores y estructura; se excluye catálogo genérico como evidencia",
+      "quality": "Declara primero algorítmico y tercero general. Listar algoritmos en README no demuestra haberlos usado con éxito.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S21",
+      "title": "Huawei Ireland 2024: retrospectiva de Nansen Li",
+      "url": "https://nansenli.com/post/2024/10/huawei2024/",
+      "type": "author_writeup",
+      "review_scope": "relato completo",
+      "quality": "Mismo equipo que S20; no evidencia independiente. Describe ventaja, velocidad y fallo de presentación.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S22",
+      "title": "Huawei Ireland 2024: infraestructura de vecindarios SA",
+      "url": "https://github.com/linanwx/huawei2024/blob/main/tech_arena_24_phase_2/real_diff_SA_basic.py",
+      "type": "author_code",
+      "review_scope": "gestión de capacidad, estado y operación abstracta",
+      "quality": "Código seleccionado confirma estructura. No se reprodujo el envío ni su mejora de velocidad.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "7d2ae3819af34442a2c1c8fb80077ca6f03d0580"
+    },
+    {
+      "id": "S23",
+      "title": "Huawei Ireland 2024: CP-SAT y Pattern Search",
+      "url": "https://github.com/acheong08/hwta-ireland-2024",
+      "type": "author_repository",
+      "review_scope": "README de phase2",
+      "quality": "Segundo puesto declarado por autores; etiqueta y descripción muy breves.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S24",
+      "title": "Huawei Ireland 2024: modelo CP-SAT",
+      "url": "https://github.com/acheong08/hwta-ireland-2024/blob/phase2/solver/sat.py",
+      "type": "author_code",
+      "review_scope": "variables de acción, restricciones y objetivo",
+      "quality": "Código real de OR-Tools con compra, capacidad, costes y beneficio. No se prueba optimalidad del modelo real.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "b97a3fee770a46fe703f6003a4d70e8195418e1d"
+    },
+    {
+      "id": "S25",
+      "title": "Huawei Ireland 2024: heurísticas de capacidad",
+      "url": "https://github.com/acheong08/hwta-ireland-2024/blob/phase2/heuristics.py",
+      "type": "author_code",
+      "review_scope": "heuristic_solve y ranking de rentabilidad",
+      "quality": "Módulo seleccionado; la contribución de cada componente al segundo puesto no está aislada.",
+      "accessed_at": "2026-10-26",
+      "primary": true,
+      "observed_git_blob_sha": "9a92ef2231606b39ac1508b9c6878ab51990a34d"
+    },
+    {
+      "id": "S26",
+      "title": "AWTF 2025: enfoque de Psyho",
+      "url": "https://github.com/FakePsyho/cpcontests/blob/master/atcoder/awtf2025/approach.md",
+      "type": "author_writeup",
+      "review_scope": "simplificación, cronología, prueba de escalado y límites",
+      "quality": "Relato del campeón. Distingue ideas implementadas de posibles mejoras no probadas.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S27",
+      "title": "AWTF 2025: editorial del problema",
+      "url": "https://atcoder.jp/contests/awtf2025heuristic/tasks/awtf2025heuristic_a/editorial",
+      "type": "organiser_page",
+      "review_scope": "listado de editoriales y fecha",
+      "quality": "AtCoder etiqueta a Psyho como primer puesto; concurso del 16 de julio de 2025.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S28",
+      "title": "AHC058: análisis de ALE-Agent",
+      "url": "https://sakana.ai/ahc058/",
+      "type": "author_practitioner_report",
+      "review_scope": "métodos, recursos y comentarios de organizadores citados",
+      "quality": "Autoría del equipo, con comentarios de itigo y wata. Puesto primero según su relato; tabla oficial enlazada no extraída aquí.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S29",
+      "title": "ICFP 2025: colaboración Unagi/ShinkaEvolve",
+      "url": "https://sakana.ai/icfp-2025/",
+      "type": "author_practitioner_report",
+      "review_scope": "experimento SAT, resultados y transferencia de ideas",
+      "quality": "Autor participante Takuya Akiba; 320 pruebas/~USD60 son de un subexperimento, no de toda la victoria.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S30",
+      "title": "ICFP 2025: premios oficiales",
+      "url": "https://icfpcontest2025.github.io/prizes.html",
+      "type": "organiser_page",
+      "review_scope": "premios completos",
+      "quality": "Primer premio enumera MOYOU y Unagi. No atribuir victoria exclusiva a Unagi.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S31",
+      "title": "Flatland 2020: Scalable Rail Planning and Replanning",
+      "url": "https://jiaoyangli.me/files/2021-ICAPS.pdf",
+      "type": "winner_paper",
+      "review_scope": "métodos, LNS, fallos de CBS y recuperación",
+      "quality": "Autores de la solución ganadora OR; resultados propios y comparación de componentes, no reproducción nuestra.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S32",
+      "title": "Flatland Competition 2020: informe de organizadores",
+      "url": "https://proceedings.mlr.press/v133/laurent21a/laurent21a.pdf",
+      "type": "competition_paper",
+      "review_scope": "contexto y sección del ganador OR",
+      "quality": "Confirma An_Old_Driver como primero OR. Distinguir categorías OR y RL.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S33",
+      "title": "Career Survival: reglas vinculantes",
+      "url": "https://techarena-career-sim.readthedocs.io/en/latest/competition-rules.html",
+      "type": "official_rules",
+      "review_scope": "interfaz, modo, conocimiento permitido e interpretación",
+      "quality": "Reconsultadas para clasificar compatibilidad de adaptaciones; no extrapolar permisos de otros concursos.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S34",
+      "title": "Huawei Ireland 2025: relato de Dynamo A",
+      "url": "https://darasi.me/blog/2025/huawei-tech-arena/",
+      "type": "author_result_announcement",
+      "review_scope": "anuncio breve",
+      "quality": "Resultado declarado por ganador; no publica detalle suficiente del pipeline para reconstruir una ficha técnica.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    },
+    {
+      "id": "S35",
+      "title": "Huawei Ireland 2024: página oficial final",
+      "url": "https://huawei.agorize.com/en/challenges/ireland-tech-arena-ai-for-cloud-x/pages/final-results?lang=en",
+      "type": "organiser_page",
+      "review_scope": "texto accesible de evento",
+      "quality": "Texto confirma evento, pero no deja verificar aquí los puestos algorítmicos de los repositorios.",
+      "accessed_at": "2026-10-26",
+      "primary": true
+    }
+  ]
+}

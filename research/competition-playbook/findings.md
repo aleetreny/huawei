@@ -1,0 +1,21 @@
+# Hallazgos — competiciones comparables
+
+- Estado inicial comprobado: rama main, commit 78969db, sin cambios locales al inicio de este objetivo.
+- La revisión anterior ofrece un mapa de precedentes, pero muchos casos sólo tienen una descripción breve. Esta ampliación exige mecanismos concretos, procedencia y protocolos de prueba.
+- El CareerSim actual no tiene un campeón histórico verificado en el material revisado. No mezclar países/años/modalidades de Huawei ni ediciones de Lux.
+- La mayor limitación de transferencia será que otros concursos permiten simuladores abiertos, clonación, semillas y entrenamiento que aquí no están documentados o pueden estar prohibidos.
+- La base será investigación para consulta del orquestador, no una tabla de respuestas narrativas para el agente evaluado.
+- NetHack 2021: organizadores confirman AutoAscend como ganador general y simbólico. Ningún agente ascendió en más de medio millón de evaluaciones; ganar la competición no equivale a completar el juego. El método usa memoria explícita y estrategias interrumpibles (exploración → combate → curación).
+- Lux S3: el relato de primer puesto Flat Neurons documenta RL, profesor congelado y piscina de oponentes; contradice una conclusión universal de que las reglas siempre ganan. La imitación de terceros fue considerada pero no utilizada por el campeón.
+- Ireland 2024: Nansen declara primero algorítmico y tercero general, con ventaja algorítmica 4–5% y una mejora de velocidad del evaluador de 1000x. Son cifras del autor, no mediciones nuestras; su simulador abierto no autoriza optimizaciones internas del CareerSim actual.
+- El relato de Ireland 2025 encontrado contiene anuncio y resultado, pero no detalle técnico suficiente para reconstruir una estrategia ganadora. Tratarlo como contexto, no ficha técnica fuerte.
+- El formato Exa actual combina varios resultados en un bloque de texto. Se corrigió el parser para dividir por cada encabezado Title y conservar los 36 candidatos reales de las cuatro búsquedas iniciales.
+- Hungry Geese: el relato japonés de los autores describe una combinación RL + MCTS, millones de partidas de entrenamiento y vulnerabilidad a supuestos de cooperación aprendidos en self-play. Su victoria final dependió también de resultados de otros rivales; no presentar primero en ranking como prueba de dominancia universal.
+- Flatland 2020: los autores ganadores OR describen cómo CBS exacto se atascó; planificación priorizada sencilla + LNS adaptativo rindió mejor bajo sus límites. Seleccionan vecindarios por bloqueo/demora, no sólo perturbaciones aleatorias.
+- RPS: el autor del repositorio ganador describe una mejora al eliminar if-elses y usar selección probabilística. Reconoce evaluación local inconsistente y leaderboard ruidoso. RPS permite observar jugadas del rival y valorar expertos contrafactuales; el CareerSim no devuelve los resultados de acciones no elegidas.
+- AtCoder AWTF 2025: Psyho probó 10x tiempo para diagnosticar margen de mejora, simplificó a un grupo/trayectoria y reparó al final. Sus millones de simulaciones son iteraciones de un evaluador interno barato, no millones de episodios con LLM.
+- ICFP 2025: la página oficial concede primer premio a MOYOU y Unagi; citar a ambos y evitar presentar Unagi como ganador exclusivo. El experimento ShinkaEvolve de 320 pruebas/~USD60 optimizó una parte SAT de la solución humana, no todo el esfuerzo ganador.
+- AHC058: autores describen construcción diversa, valor de inversiones aún no productivas y reconstrucciones grandes de planes. Sus cifras de llamadas/coste y atribuciones de componentes son resultados del equipo; no una predicción del rendimiento de nuestra flota.
+- Se verificaron módulos públicos seleccionados de estrategias AutoAscend, CP-SAT/heurísticas Huawei, agente C++ Lux y Halite. No se ejecutó ese código ni se inspeccionó el motor actual.
+- Algunas páginas Kaggle devolvieron error de carga y una URL supuesta de writeup Halite no existía. Se usaron el repositorio original y secciones concretas de su código, conservando la limitación de lectura.
+- Un listado recursivo de GitHub produjo una salida excesiva; se pasó a filtrar rutas/metadatos antes de imprimir. No se leyeron los archivos de datos enumerados.
