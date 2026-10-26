@@ -115,12 +115,12 @@ Los techos se miden con los recortes. Los umbrales son el mínimo de cada indica
 
 La nota casi no depende de nada más: subir de nivel arrastra la nota, y la D llega por quedarse en L1.
 
-## H8. El despido llega en el mes 24 a quien sigue en L1 (todos los despidos de b00+b01)
+## H8. El despido: un aviso en L1 y, si sigue en L1, despedido (567 despidos de b00–b08)
 
-- Los 76 despidos ocurrieron en la 4.ª evaluación (mes 24), con secuencias C C D D (55), C C C D (10), C C D C (9) y C C C C (1). Todas con L1 al llegar a la 3.ª y 4.ª evaluación, salvo 6 que ascendieron en la 4.ª y aun así fueron despedidas.
-- Con notas flojas en la 3.ª y la 4.ª pero ya en L2, ninguna partida fue despedida (8 de 8 siguieron).
-- En la 3.ª evaluación (mes 18) no se despide a nadie.
-- **Lectura práctica:** el primer año es una ventana de gracia. Hay que salir de L1 como muy tarde en la 3.ª evaluación (mes 18); si se llega al mes 24 en L1 con notas flojas, el despido es casi seguro. La regla exacta está por precisar (¿cuenta el aviso "the next one has to be better"?).
+- **Los 567 despidos ocurren en la 4.ª evaluación (mes 24) y todos sin haber salido de L1.** Secuencias: C C D D (396), C C D C (79), C C C D (66) y C C C C (26).
+- **Los 567 recibieron en la 3.ª evaluación el aviso "This half-year review fell short… the next one has to be better"**, que sólo aparece estando aún en L1.
+- Con dos notas flojas seguidas ya en L2 o más arriba (136 casos, de la 4.ª a la 7.ª evaluación), **nadie fue despedido**.
+- **Lectura práctica:** el primer año es de gracia. Seguir en L1 en la 3.ª evaluación trae el aviso, y seguir en L1 en la 4.ª es el despido. Para una Skill, la señal útil es el propio aviso: cuando llega, la siguiente evaluación es a vida o muerte y todo debe ir a cumplir lo que pide el ascenso.
 
 ## H9. Riesgo: el comentario de RR. HH. es un buen termómetro, y ciertas respuestas lo disparan (b00 + b01)
 
@@ -424,6 +424,15 @@ Se compara Haiku con el manual campeón (B) y con el borrador `bb-mechanics-v1` 
 - La versión explícita no mejora: 3 preguntas de 50, dentro del ruido. El contexto ya decía que perder un punto costaba el ascenso, y Haiku sigue sin aceptar costes de salud.
 - **Se vuelve a la redacción breve.** Lo que el manual sí cambia es el comportamiento ante el riesgo (H23).
 - **Para la Skill:** el margen está en lo que el modelo no puede adivinar (calendario de la evaluación, techos, dignidad, señales de riesgo y detonantes) más que en insistir en dilemas que ya entiende.
+
+## H25. Referencia final: el mejor bot de investigación saca 68 (b09, oráculo v3, 1.200 partidas; 26 oct 23:55 UTC)
+
+El oráculo v3 combina efectos reales de dev, pesos por umbral, protección del mes previo, Skill priorizada desde L3 y detonantes.
+
+- **Resultado:** nota media 67,9 (mediana 71,0, máxima 79,3); 92 % terminadas; 71 % llegan a L6. **Ninguna llega a L7**: los umbrales de L6 a L7 siguen sin verse.
+- **Calendario típico:** L2 en el mes 6 (83 %), L3 en el 12 (81 %), L4 en el 18 (69 %), L5 en el 36 y L6 en el 42–48.
+- **Partidas terminadas, puntuaciones normalizadas:** nivel 58, dinero 45, salud+dignidad 90, habilidad 99, riesgo 75, red 89. **Lo que queda está en el nivel y el dinero**, limitados por la Skill que pide L4 y L5. Con estos umbrales, L7 en 48 meses no parece alcanzable.
+- **Derrotas que quedan:** ruina 39, despido 27, crisis de confianza 23, agotamiento 4. **La ruina llega pronto** (meses 8–11, en L1–L2): el sueldo es de 0,3–0,4 al mes y unas pocas respuestas que cuestan dinero, o una explosión (−2), vacían la cartera. Los manuales candidatos piden ahora evitar respuestas que cuestan dinero mientras éste es bajo.
 
 ## Traducción permitida a principios de Skill (borrador)
 

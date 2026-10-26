@@ -94,12 +94,17 @@ En unas 15.000 partidas de bots por la vía oficial, la mecánica central del ju
 
 **Referencias con bots:**
 
-| Bot | Nota media |
-|---|---:|
-| Aleatorio | ~12, muere hacia el mes 6 |
-| Oráculo con el catálogo de dev (no es una Skill) | ~66 (84–89 % terminan; L6 en el mes 48) |
-| "Bot de principios" (sólo rasgos generales de las respuestas) | 45 sin conocer la mecánica; 53 conociéndola |
-| Mejores manuales con Haiku, como referencia | ~55 |
+| Bot | Nota media | Terminan |
+|---|---:|---:|
+| Aleatorio | ~12 | 0 % (muere hacia el mes 6) |
+| Bot que aplica el borrador con una percepción simple de rasgos | 45–48 | ~50 % |
+| Mejores manuales con Haiku, como referencia | ~55 | — |
+| Oráculo con el catálogo de dev (no es una Skill), con protección del mes previo | 66,6 | 90 % |
+| Oráculo que además evita los detonantes | **68,6** | **93 %** |
+| Oráculo v3 definitivo (b09, 1.200 partidas) | **67,9** (mediana 71,0) | 92 %; 71 % llegan a L6, ninguno a L7 |
+
+9. **Las explosiones tienen detonantes** (H20, H21): con riesgo acumulado, las mentiras que se descubren y exponerse a una revisión formal hacen estallar lo enterrado. Evitarlo da +2 puntos y reduce las crisis a menos de la mitad.
+10. **Haiku ya juzga bien cada respuesta por sí solo** (H22–H24): elige la mejor en el 81–84 % de los casos, con o sin manual. Lo que el manual cambia de verdad es el comportamiento con riesgo acumulado (detonantes del 10 % al 5 %). El margen de una Skill está en la mecánica que el modelo no puede adivinar, no en sermones éticos.
 
 ## 6. Estrategia por etapas (lo que haría un jugador perfecto)
 
@@ -111,13 +116,14 @@ En unas 15.000 partidas de bots por la vía oficial, la mecánica central del ju
 | Meses 36–48 (L5–L6) | Seguir con la Skill y cerrar bien | En los últimos meses, cerrar riesgos y recuperar salud y dignidad, que cuentan en la nota final |
 | Siempre | No explotar | Respuestas íntegras; Defuse en cuanto el comentario de RR. HH. deja de ser tranquilo; nada de sobreesfuerzo; tras una explosión, ningún riesgo |
 
-## 7. De hallazgos a Skill
+## 7. De hallazgos a Skill: dos manuales candidatos
 
-- Manual candidato: [`lab/policies-src/bb-mechanics/bb-mechanics-v1`](../../policies-src/bb-mechanics/bb-mechanics-v1/).
-  - Una Skill: explica la mecánica sin números y da un procedimiento para evaluar respuestas por su carácter, la regla de proteger el mes previo a cada evaluación y reglas trimestrales cortas.
-  - `careerlab lint` no da avisos.
-  - **Todavía no se ha jugado con IA.**
-- Prueba a nivel de decisión ([sección 8](#8-prueba-a-nivel-de-decisión)): 150 preguntas reales dadas a Haiku con tres instrucciones, puntuando sus elecciones con los efectos medidos.
+| Candidato | Palabras | Qué tiene | Estado |
+|---|---:|---|---|
+| [`bb-mechanics-v1`](../../policies-src/bb-mechanics/bb-mechanics-v1/) | 779 | mecánica explicada, turno a turno, procedimiento completo de respuestas, ascenso, trimestre y riesgo (con detonantes) | lint sin avisos; sin jugar con IA |
+| [`bb-mechanics-lean-v1`](../../policies-src/bb-mechanics/bb-mechanics-lean-v1/) | 455 | lo mismo, sólo lo que el modelo no puede adivinar o lo que cambió decisiones en los bancos | lint sin avisos; sin jugar con IA |
+
+Ninguno lleva números, meses, títulos ni umbrales. Cada regla se apoya en lo que el agente ve en la partida: el comentario de RR. HH., un indicador que deja de subir o el mes en que llega la evaluación. Así sigue valiendo si cambian los eventos o los parámetros.
 
 ## 8. Prueba a nivel de decisión
 
@@ -135,7 +141,7 @@ Ver [progreso.md](progreso.md) para el diario con horas.
 
 ## Relevo
 
-**Actualizado: 26 oct 2026, 23:40 UTC.** Rama `alejandro/ingenieria-inversa`, worktree `.claude/worktrees/ingenieria-inversa`.
+**Actualizado: 26 oct 2026, 23:58 UTC.** Rama `alejandro/ingenieria-inversa`, worktree `.claude/worktrees/ingenieria-inversa`.
 
 **1. Qué se ha hecho y por qué**
 - **Arnés de bots** de partida completa por las 5 herramientas (`scripts/ingenieria-inversa/`), rápido y compacto: unas 15 partidas por segundo con 12 servidores, y unos 15 KB por partida. Los bots no gastan cuota, así que se puede estudiar el juego como caja negra a escala.
@@ -150,7 +156,8 @@ Ver [progreso.md](progreso.md) para el diario con horas.
   | b05 | 400 | ajuste de la prioridad a la Skill |
   | b06 | 400 | bot de principios |
   | b07 | 540 | detonantes |
-  | b08 | ~240 | bot que aplica el manual |
+  | b08 | 400 | bot que aplica el manual |
+  | b09 | 1.200 | oráculo v3 definitivo: cifra de referencia y techo de nivel |
 
 - **Etiquetado de las 954 respuestas por rasgos generales** (4 agentes Sonnet y otro para la "entrega propia"), para comprobar con títulos reservados si las reglas generales predicen los efectos.
 - **Dos bancos de decisión con Haiku** (150 preguntas cada uno) para ver si el manual cambia las elecciones.
@@ -167,11 +174,11 @@ Ver [progreso.md](progreso.md) para el diario con horas.
 - Al parar b00 se usó un `pkill` global de los servidores del juego. Cuando se comprobó no había partidas de otras sesiones en este Mac, pero no hay que repetirlo: cada lote guarda ahora su `pgid.txt` y se para con `kill -TERM -<pgid>`.
 
 **4. Pendiente y siguiente paso**
-1. Medir el banco 3 (regla del mes previo reescrita).
+1. Hecho: banco 3 (la regla reescrita no cambia nada; se dejó breve), versión corta del manual, regla del aviso de despido y regla del dinero bajo.
 2. **Decidir con Alejandro si se juegan partidas con Haiku del manual `bb-mechanics-v1`** (gasta cuota compartida) o si se usa en la siguiente versión.
-3. Una versión más corta del manual: ahora tiene ~800 palabras y los manuales cortos se siguen mejor.
+3. Elegir entre `bb-mechanics-v1` (819 palabras) y `bb-mechanics-lean-v1` (499) tras jugarlos.
 4. Opcional y muy barato (~0,05 USD), si Alejandro lo autoriza: el banco de decisiones con DeepSeek, para ver si juzga las respuestas como Haiku.
-5. Sigue abierto: la regla exacta del despido, el riesgo oculto numérico y los umbrales de L6 → L7.
+5. Sigue abierto: el riesgo oculto numérico y los umbrales de L6 → L7 (no se alcanzan en 48 meses con estos umbrales). La regla del despido ya está (H8).
 
 Comandos para retomar:
 

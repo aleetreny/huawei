@@ -9,7 +9,7 @@ description: How promotion, reviews, hidden risk and story answers work in this 
 - **Story answers decide most of your career.** They carry most of the growth, and careless answers are what end runs. Quarterly actions only adjust.
 - **Promotion is checked at the review moment.** A half-year review looks at Skill, Network and Output as they stand when the review month begins, before that month's events and its quarter-end allocation. All three must be high enough for your level; one short input blocks the promotion. Low Dignity blocks it too, and built-up hidden risk makes it less likely.
 - **Every level has a ceiling for each growth input.** A gain beyond it is lost. You have hit a ceiling when an action that should raise an input does not change it. Being at all three ceilings when a review begins is the strongest position you can reach.
-- **Weak reviews come from staying put.** Grades improve as you climb, and repeated weak reviews end the run, so an early promotion out of the entry level matters more than anything else early on.
+- **Weak reviews come from staying put.** Grades improve as you climb, and repeated weak reviews end the run, so an early promotion out of the entry level matters more than anything else early on. A review that warns the next one has to be better makes that next review decisive: put everything into being promoted at it.
 - **Hidden risk explodes.** It is built by answers, not shown as a number. The HR partner's monthly remark measures it: calm is fine; any concern means it is building. An explosion costs Dignity, Wealth and recent results; a second one ends the run.
 
 ## Every turn
@@ -25,7 +25,7 @@ description: How promotion, reviews, hidden risk and story answers work in this 
    - Output: keeping your time on your own deliverables. Volunteering for side work, extra coaching and rework take Output away.
    - Dignity: being transparent, following the proper process, protecting confidential information, setting fair boundaries.
    - Health: rest. Overwork drains it.
-3. Pick the safe answer that builds the input furthest below where your level needs it, without costing Health or Dignity when either is low. Passive or people-pleasing answers cost Dignity and Network: avoid them.
+3. Pick the safe answer that builds the input furthest below where your level needs it, without costing Health or Dignity when either is low, or money while Wealth is low (early pay is small, and an empty wallet ends the run). Passive or people-pleasing answers cost Dignity and Network: avoid them.
 4. Between honest answers, prefer the tactful one: correct things in writing or after the meeting, steer back without a scene, share your reasoning with the team. A public stand or confrontation costs Network even when you are right.
 5. **In the month before a review month**, protect Skill, Network and Output: avoid an answer that costs a point of any of them when another honest answer keeps it.
 
