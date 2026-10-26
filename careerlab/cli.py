@@ -73,29 +73,48 @@ def cmd_bench(args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_register(args: argparse.Namespace) -> int:
-    s = load_settings()
-    reg = s.registry()
-    src = Path(args.path).resolve()
+def _register(reg: Registry, src: Path, by: str, allow_lint_errors: bool = False, titles: set[str] | None = None) -> str:
+    """Lint and register a policy folder; returns its id or raises ValueError with the reason."""
     meta = json.loads((src / "policy.json").read_text())
     errors = []
     if not (src / "bundle" / "scripted.json").exists():
         from careerlab.compliance import lint_bundle
 
-        errors = [f for f in lint_bundle(src / "bundle") if f.severity == "error"]
-    if errors and not args.allow_lint_errors:
-        print("compliance errors:\n" + "\n".join(map(str, errors)))
-        return 2
+        errors = [f for f in lint_bundle(src / "bundle", titles) if f.severity == "error"]
+    if errors and not allow_lint_errors:
+        raise ValueError("compliance errors:\n" + "\n".join(map(str, errors)))
     parents = []
     for parent in meta.get("parents", []):  # policy.json may name parents; the registry stores ids
         row = reg.db.execute("SELECT policy_id FROM policies WHERE policy_id=? OR name=?", (parent, parent)).fetchone()
         if row is None:
-            print(f"unknown parent {parent!r}: register it first")
-            return 2
+            raise ValueError(f"unknown parent {parent!r}: register it first")
         parents.append(row[0])
-    policy_id = reg.register_policy(src / "bundle", meta["family"], meta["name"], parents,
-                                    meta["hypothesis"], meta.get("change", ""), created_by=args.by, meta=meta)
-    print(policy_id)
+    return reg.register_policy(src / "bundle", meta["family"], meta["name"], parents,
+                               meta["hypothesis"], meta.get("change", ""), created_by=by, meta=meta)
+
+
+def _known_titles(s) -> set[str]:
+    """Story-event titles from local runs plus the committed teacher digests (as scripts/cloud-run/lint.py)."""
+    import re
+
+    from careerlab.compliance import collect_titles
+
+    titles = set(collect_titles(s.runs_dir)) if s.runs_dir.exists() else set()
+    for f in (s.lab_dir / "reports" / "teacher-digests").rglob("*-a[0-9].md"):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"- M\d+ \[[^\]]*\] (.+?) → ", line)
+            if m and not m.group(1).startswith("Quarterly "):
+                titles.add(m.group(1).strip())
+    return titles
+
+
+def cmd_register(args: argparse.Namespace) -> int:
+    s = load_settings()
+    try:
+        print(_register(s.registry(), Path(args.path).resolve(), args.by, args.allow_lint_errors))
+    except ValueError as exc:
+        print(exc)
+        return 2
     return 0
 
 
@@ -154,6 +173,9 @@ def cmd_run(args: argparse.Namespace) -> int:
     print("recovered:", sched.recover())
     if args.kind == "scripted":
         print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit, purpose=args.purpose)))
+    elif args.continuous:
+        stop = Path(args.stop_file) if args.stop_file else s.data_dir / "fastloop" / "STOP-SCHEDULER"
+        print(asyncio.run(sched.run_claude_continuous(args.slots, stop, max_five_hour=args.max_five_hour, purpose=args.purpose)))
     else:
         print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose,
                                            max_five_hour=args.max_five_hour)))
@@ -239,6 +261,70 @@ def cmd_export(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_ladder(args: argparse.Namespace) -> int:
+    """Fast race (lab/fastloop/README.md): init, add, step, status."""
+    import time
+
+    from careerlab import ladder
+
+    s = load_settings()
+    reg = s.registry()
+    path = s.lab_dir / "fastloop" / "state.json"
+    cfg = ladder.LadderConfig()
+    now = time.time()
+    if args.action == "init":
+        if path.exists() and not args.force:
+            print(f"{path} exists; use --force to start over")
+            return 2
+        actor = args.actor or "08e9167a965ed82c"
+        state = ladder.new_state(reg, actor, cfg, now, ladder.resolve_policy(reg, args.ref) if args.ref else None)
+        if args.cancel_others:  # nothing else plays: only the champion and the challengers added next
+            for (pid,) in reg.db.execute("SELECT DISTINCT policy_id FROM jobs WHERE status='queued' AND actor_id=? AND origin=?",
+                                         (actor, reg.origin)).fetchall():
+                if pid != state["champion"]:
+                    jobs = reg.cancel_queued(pid, actor, "fast race started: only the champion and its challengers play")
+                    reg.decide("ladder_cancel", pid, {"jobs": jobs}, "fast race started (fastloop-v2)")
+        reg.decide("ladder_init", state["champion"], {"actor_id": actor, "env_id": state["env_id"]}, args.why or "fast race started (fastloop-v2)")
+        ladder.save_state(path, state)
+        print(json.dumps({"champion": state["entries"][state["champion"]]["name"], "state": str(path)}))
+        return 0
+    state = ladder.load_state(path)
+    if args.action == "add":
+        src = Path(args.ref)
+        try:
+            if (src / "policy.json").exists():
+                from careerlab.compliance import _lint_policy_json
+
+                bad = [f for f in _lint_policy_json(src.resolve(), src.resolve() / "bundle", (s.lab_dir / "policies-src").resolve())
+                       if f.severity == "error"]
+                if bad:
+                    raise ValueError("compliance errors:\n" + "\n".join(map(str, bad)))
+                pid = _register(reg, src.resolve(), "fastloop", titles=_known_titles(s))
+            else:
+                pid = ladder.resolve_policy(reg, args.ref)
+        except ValueError as exc:
+            print(exc)
+            return 2
+        name = ladder.policy_names(reg)[pid]
+        state = ladder.add(state, pid, name, args.kind, now, first=args.first, note=args.why or "")
+        reg.decide("ladder_add", pid, {"kind": args.kind, "first": args.first}, args.why or f"{args.kind} challenger")
+        ladder.save_state(path, state)
+        print(json.dumps({"policy_id": pid, "name": name, "kind": args.kind}))
+        return 0
+    if args.action == "step":
+        new, actions = ladder.run_step(reg, path, cfg, apply_changes=args.apply, in_flight=args.in_flight or [], now=now)
+        print(json.dumps([vars(a) for a in actions], indent=1))
+        return 0
+    if args.action == "status":
+        page = ladder.report_es(state, cfg, now)
+        if args.write:
+            (s.lab_dir / "reports" / "carrera-rapida.md").write_text(page, encoding="utf-8")
+            (s.lab_dir / "fastloop" / "history.md").write_text(ladder.history_md(state, reg), encoding="utf-8")
+        print(page)
+        return 0
+    return 2
+
+
 def cmd_origin(args: argparse.Namespace) -> int:
     from careerlab.config import ORIGIN_FILE, check_origin
 
@@ -289,7 +375,22 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--limit", type=int)
     run.add_argument("--purpose")
     run.add_argument("--max-five-hour", type=float, default=0.75, help="pause new Claude episodes above this five-hour utilisation")
+    run.add_argument("--continuous", action="store_true", help="claude-cli: lease one job per free slot until --stop-file exists (fast race)")
+    run.add_argument("--stop-file", help="default: <data dir>/fastloop/STOP-SCHEDULER")
     run.set_defaults(fn=cmd_run)
+    ld = sub.add_parser("ladder", help="fast race: one champion, challengers climb 2/4/8/12 games (lab/fastloop/README.md)")
+    ld.add_argument("action", choices=["init", "add", "step", "status"])
+    ld.add_argument("ref", nargs="?", help="init: champion name or id (default: best expected score with 8+ games); add: policy folder or name/id")
+    ld.add_argument("--kind", default="targeted", choices=["targeted", "stretch", "bold", "external"])
+    ld.add_argument("--first", type=int, default=2, choices=[2, 4], help="add: 4 for a manual with strong evidence from elsewhere")
+    ld.add_argument("--actor", help="init: race actor id (default: the Haiku race cell 08e9167a965ed82c)")
+    ld.add_argument("--cancel-others", action="store_true", help="init: cancel every other queued job of the race actor")
+    ld.add_argument("--force", action="store_true")
+    ld.add_argument("--apply", action="store_true", help="step: write the actions to the registry and the state file")
+    ld.add_argument("--in-flight", nargs="*", help="step: kinds of designs already being written")
+    ld.add_argument("--write", action="store_true", help="status: also write lab/reports/carrera-rapida.md and lab/fastloop/history.md")
+    ld.add_argument("--why")
+    ld.set_defaults(fn=cmd_ladder)
     sub.add_parser("recover").set_defaults(fn=cmd_recover)
     sub.add_parser("resume").set_defaults(fn=cmd_resume)
     sub.add_parser("status").set_defaults(fn=cmd_status)
