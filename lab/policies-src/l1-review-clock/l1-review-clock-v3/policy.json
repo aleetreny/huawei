@@ -1,0 +1,15 @@
+{
+  "family": "l1-review-clock",
+  "name": "l1-review-clock-v3",
+  "parents": [
+    "f1830961d168beb9"
+  ],
+  "idea_origin": "Leah's local scripted sweep (1,562 games, lab/panel) and the race's score gap (lab/panel/README.md)",
+  "operator": "refine (trace-driven)",
+  "hypothesis": "In four Haiku games of v1/v2, the two that promoted fast (L3 by month 12, one L4 by month 18) gained about 34 Skill and 12 Network from story events in their first 18 months, against 4-5 Skill from quarterly actions; the two stuck at L1 gained 7-8 Skill and lost Network in stories, took restful options (story Health net positive) and spent 2-point Energy on Defuse early. v2's extra Defuse and Report-results switching made this worse (L1 at month 24). Making story choices the explicit growth engine (own the problem, facts and a plan, accept a small Health cost), refusing comfortable do-nothing options, spending Energy on one-point actions, and delaying routine Defuse until after the first promotion should make early promotion the norm, while post-promotion Defuse keeps risk control.",
+  "change": "From v1: new section 'Story events are the growth engine' (prefer owning the hard part, root cause, facts/numbers/plan, staged fixes; avoid comfortable deferral; small Health cost acceptable unless Health is low). Energy prefers three one-point actions (Health recovery to near top, Prepare report materials, Network maintenance). Risk: before the first promotion Defuse only on a warning or a piled-up remark; after it, Defuse whenever the remark is not relaxed and keep it relaxed toward the end. Dropped v2's Report-results switching.",
+  "predicted_behaviour": "Story Skill gain over the first 18 months of 25 or more in most games; promotion to L2 at the first review and L3 by the second in most games; Defuse rare before the first promotion and regular after; risk_control above v1's 5.0; no High-intensity work.",
+  "refutation": "Refuted if games still stall at L1 through the second review as often as v1/v2 (2 of 4), or if the mean score is not above v1's. Harmful if blackouts appear (Health cost rule too loose) or trust crises rise (late Defuse too weak).",
+  "skill_count": 1,
+  "notes": "Written by Leah 26 Oct from the first four Haiku games (research/leah/l1-review-clock-first-read.md). No numbers, months, titles or unpublished thresholds in the Skill; 'first promotion' is a state condition."
+}

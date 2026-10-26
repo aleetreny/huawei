@@ -1,0 +1,15 @@
+{
+  "family": "l1-review-clock",
+  "name": "l1-review-clock-v2",
+  "parents": [
+    "f1830961d168beb9"
+  ],
+  "idea_origin": "Leah's local scripted sweep (1,562 games, lab/panel) and the race's score gap (lab/panel/README.md)",
+  "operator": "refine (targeted fix)",
+  "hypothesis": "v1's first Haiku game (60.9, L5) matched F3 on level and beat it on wealth but lost 1.7 points on risk control (5.0 of 10, only 5 Defuse actions, triggered solely by a worried HR remark or a warning) and 1.5 on network (Network fell in the closing quarters), while Output stalled for the last third. Defusing on any non-relaxed remark plus at least once per review period and through the end of the run, and switching the main action to Report results to your manager when Output stalls or Network falls, should recover most of those points without costing level or wealth.",
+  "change": "Same Skill name and structure as v1. Risk tone becomes Risk control: Defuse in every Energy phase with a non-relaxed remark or any risk wording since the last quarter, at least once per review period even when relaxed, and through the end of the run. Window plan: Report results to your manager replaces the key project for a quarter when Output did not rise or Network fell; Build a mentorship when Skill trails; Network maintenance in spare Energy whenever Network fell.",
+  "predicted_behaviour": "Defuse legacy risk about twice as often as v1 (10 or more per game); risk_control 7.5 or more of 10 at the end; Report results to your manager appears in several quarters; Network does not fall in the closing quarters; level and wealth points within one point of v1; High-intensity work never appears.",
+  "refutation": "Refuted if risk_control and network points are not higher than v1's, or if level or wealth points fall by more than they gain (net score not above v1). Not executed if Defuse count stays near v1's or Report results never appears.",
+  "skill_count": 1,
+  "notes": "Written by Leah 26 Oct after v1's first read (research/leah/l1-review-clock-first-read.md). Lint-clean; no numbers, months, titles or unpublished thresholds in the Skill."
+}
