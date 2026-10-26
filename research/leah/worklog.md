@@ -2,7 +2,32 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
-## 26 Oct 2026, 16:30 UTC: results panel
+## 26 Oct 2026, 16:30 UTC: Leah's manual, l1-review-clock-v1 (first read blocked)
+
+- **What.** A new single-Skill manual, `lab/policies-src/l1-review-clock/l1-review-clock-v1/` (lint: no findings). It plans each quarter around the published review and promotion cadence:
+  - a preventive Health reserve in every Energy phase;
+  - the HR remark and warnings as a risk gauge, driving Defuse legacy risk and Lay low;
+  - Apply for a key project as the default main action, with a catch-up action for whichever of Skill, Network or Output trails;
+  - Prepare report materials for spare Energy, and never High-intensity work;
+  - story options judged on honest, scoped delivery.
+- **Why.** The race's gap is in level and wealth, and my local bot sweep found that this quarterly pattern was the best scripted plan. The hypothesis, predicted behaviour and refutation are in `policy.json`.
+- **Comparison set up.**
+  - Registered as `f1830961d168beb9` under origin `leah`.
+  - 5 Haiku games queued: `leah-scre-f1830961-614d6e-0000{0..4}-a1`.
+  - Same Haiku settings as the race cell, but Claude CLI 2.1.295 on a Pro account against the cloud's 2.1.303 on Max, so it's a rough read rather than a race decision.
+  - The panel's *Other machines* section now draws a game-by-game head-to-head against the race leader and the race average for the same model.
+- **Blocked.**
+  - All 5 attempts stopped before creating a game: "OAuth session expired and could not be refreshed", and `claude auth status` now shows `loggedIn: false`.
+  - No game was played and no quota was used. The attempts are kept on record as interrupted and are never scored.
+- **Resume after signing in** (`claude auth login`):
+
+  ```sh
+  uv run python -c "from careerlab.config import load_settings; r=load_settings().registry(); [r.requeue_interrupted(j[0], 'replacement after CLI sign-in') for j in r.db.execute(\"SELECT job_id FROM jobs WHERE origin='leah' AND purpose='screen' AND status='interrupted'\")]"
+  uv run careerlab run --kind claude-cli --slots 2 --max-five-hour 0.6
+  uv run careerlab export && uv run python scripts/panel/build.py
+  ```
+
+## 26 Oct 2026, 16:20 UTC: results panel
 
 - **What.** A static results panel at `lab/panel/index.html`, generated from committed results by `scripts/panel/build.py`. It shows the race leaderboard per decision snapshot, every AI game over time, where the points go per scoring dimension, survival by month, the T10 energy bots, my local 1,562-game bot sweep and other machines' exports.
 - **Why.** The race's results were spread over JSONL files and Markdown reports. One page makes progress and the remaining gap visible to the whole team.
@@ -34,6 +59,7 @@ Everything done on branch `leah/workspace`, newest first. Each entry links to th
 ## Open threads
 
 - **PR from `leah/workspace` to `main`** for T11 and the panel. Leah asked to hold it for now.
+- **Play the 5 Haiku games of l1-review-clock-v1** once the CLI is signed in again, then compare with F3 in the panel.
 - **Register Matteo's v0.2 Skills** as a race policy and test them under origin `leah`.
 - **A rule-safe scripted strategy bot**, to probe the level and wealth gap without Claude quota.
 - **After T11 merges,** the organiser updates ESTADO §6 *Partidas* and adds an origin filter to `scripts/cloud-run/driver.py`, as the T11 report explains.
