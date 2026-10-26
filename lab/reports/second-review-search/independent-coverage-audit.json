@@ -1,0 +1,5959 @@
+{
+  "scope": "Every encountered public question/answer in action-before months 7–12, not all histories",
+  "counts": {
+    "records": 1183
+  },
+  "archives": [
+    {
+      "batch": "closure",
+      "sha256": "e687f622f048e9f1ea6d69d1bedaf4524fb8f70a2cd4119dd4417c3e2408e6b9"
+    },
+    {
+      "batch": "discovery",
+      "sha256": "8a596ec5405ac1cabf7a7e473762283348683cd742ea5bd3ba8fea2ccfa73eef"
+    },
+    {
+      "batch": "exploration",
+      "sha256": "1d7114af31f4f1f6381644b70c5d1d7d8938bc0c4f29ef0ec7738f9ac2af4197"
+    }
+  ],
+  "required": 659,
+  "witnessed": 659,
+  "story_required": 642,
+  "story_witnessed": 642,
+  "complete": true,
+  "missing": [],
+  "witnesses": [
+    {
+      "question": "0010f3028d099cc37c7a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 41,
+      "month": 11,
+      "action": "Help this time, and be clear: next time he drafts it first and you review"
+    },
+    {
+      "question": "0010f3028d099cc37c7a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 138,
+      "step": 33,
+      "month": 9,
+      "action": "Decline gently: 'I'm swamped. You start it and I'll jump in if you're stuck'"
+    },
+    {
+      "question": "0010f3028d099cc37c7a",
+      "choice": 3,
+      "batch": "closure",
+      "run": 5,
+      "step": 26,
+      "month": 7,
+      "action": "Quietly take it on again so as not to sour the relationship"
+    },
+    {
+      "question": "00e033f627f55fffdfa7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 44,
+      "step": 32,
+      "month": 9,
+      "action": "Admit you suggested the cover story"
+    },
+    {
+      "question": "00e033f627f55fffdfa7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 140,
+      "step": 27,
+      "month": 7,
+      "action": "Blame Quinn"
+    },
+    {
+      "question": "021528910bedb6729b89",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 5,
+      "step": 26,
+      "month": 7,
+      "action": "Argue for an in-house kernel as a long-term technical asset"
+    },
+    {
+      "question": "021528910bedb6729b89",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 25,
+      "month": 7,
+      "action": "Adopt the open-source stack and aim for fast delivery"
+    },
+    {
+      "question": "02e87049e1e676d522c1",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 34,
+      "step": 37,
+      "month": 10,
+      "action": "Stop cutting and steer the contest back onto value"
+    },
+    {
+      "question": "02e87049e1e676d522c1",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 57,
+      "step": 28,
+      "month": 8,
+      "action": "Keep betting everything on price: win the deal now and worry later"
+    },
+    {
+      "question": "0335adf15d0db4f6051d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 38,
+      "step": 29,
+      "month": 8,
+      "action": "Own it: apologise properly to Chloe and admit you were out of order"
+    },
+    {
+      "question": "0335adf15d0db4f6051d",
+      "choice": 2,
+      "batch": "closure",
+      "run": 37,
+      "step": 43,
+      "month": 12,
+      "action": "Brush it off as ‘just dinner banter’ and insist you did nothing wrong"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 10,
+      "step": 34,
+      "month": 9,
+      "action": "High-intensity work"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 141,
+      "step": 35,
+      "month": 9,
+      "action": "Skill learning"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 3,
+      "batch": "closure",
+      "run": 0,
+      "step": 35,
+      "month": 9,
+      "action": "Network maintenance"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 4,
+      "batch": "closure",
+      "run": 0,
+      "step": 34,
+      "month": 9,
+      "action": "Defuse legacy risk"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 5,
+      "batch": "closure",
+      "run": 32,
+      "step": 37,
+      "month": 9,
+      "action": "Mental recovery"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 6,
+      "batch": "closure",
+      "run": 4,
+      "step": 47,
+      "month": 12,
+      "action": "Health recovery"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 7,
+      "batch": "closure",
+      "run": 1,
+      "step": 35,
+      "month": 9,
+      "action": "Prepare report materials"
+    },
+    {
+      "question": "04047988ffcbc799025b",
+      "choice": 8,
+      "batch": "discovery",
+      "run": 10,
+      "step": 35,
+      "month": 9,
+      "action": "Reserve energy (no action)"
+    },
+    {
+      "question": "0679c322b3269814203b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 30,
+      "month": 8,
+      "action": "Send the weekly update and the git history to your manager"
+    },
+    {
+      "question": "0679c322b3269814203b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 15,
+      "step": 27,
+      "month": 7,
+      "action": "Drop it"
+    },
+    {
+      "question": "06f84b2fd3b18780235d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 25,
+      "month": 7,
+      "action": "Steer him out, half-coaxing, half-supporting, and get him home with someone to look after him"
+    },
+    {
+      "question": "06f84b2fd3b18780235d",
+      "choice": 2,
+      "batch": "closure",
+      "run": 53,
+      "step": 25,
+      "month": 7,
+      "action": "Stay and watch, joining the crowd treating it as entertainment"
+    },
+    {
+      "question": "06f84b2fd3b18780235d",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 22,
+      "step": 29,
+      "month": 8,
+      "action": "Get well away so none of it lands on you, and leave him to it"
+    },
+    {
+      "question": "0727d0f2ed469e3691c6",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 38,
+      "month": 10,
+      "action": "Stop using work kit for the personal project immediately, and move it onto your own machines"
+    },
+    {
+      "question": "0727d0f2ed469e3691c6",
+      "choice": 2,
+      "batch": "closure",
+      "run": 83,
+      "step": 34,
+      "month": 9,
+      "action": "Ask your manager and compliance whether the current use sits inside policy, and get it in writing"
+    },
+    {
+      "question": "07e126f9b8663ad0c2c2",
+      "choice": 1,
+      "batch": "closure",
+      "run": 38,
+      "step": 41,
+      "month": 11,
+      "action": "Take the on-call and keep the relationship"
+    },
+    {
+      "question": "07e126f9b8663ad0c2c2",
+      "choice": 2,
+      "batch": "closure",
+      "run": 224,
+      "step": 33,
+      "month": 9,
+      "action": "Refuse and draw a line"
+    },
+    {
+      "question": "08151241cabf120c7952",
+      "choice": 1,
+      "batch": "closure",
+      "run": 224,
+      "step": 31,
+      "month": 8,
+      "action": "Admit at once that you got that wrong, apologise properly, and get back to the demo"
+    },
+    {
+      "question": "08151241cabf120c7952",
+      "choice": 2,
+      "batch": "closure",
+      "run": 101,
+      "step": 28,
+      "month": 8,
+      "action": "Keep doubling down with another excuse"
+    },
+    {
+      "question": "0871cca00d6180e49d3c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 66,
+      "step": 31,
+      "month": 8,
+      "action": "Join the review and share how you keep work and personal kit separate"
+    },
+    {
+      "question": "0871cca00d6180e49d3c",
+      "choice": 2,
+      "batch": "closure",
+      "run": 10,
+      "step": 39,
+      "month": 10,
+      "action": "Keep your head down. You don't need to preach about a personal choice"
+    },
+    {
+      "question": "090bbfa486ec5ebc5fa4",
+      "choice": 1,
+      "batch": "closure",
+      "run": 24,
+      "step": 45,
+      "month": 12,
+      "action": "Don't spread it or take sides, and pay attention only to facts that affect you"
+    },
+    {
+      "question": "090bbfa486ec5ebc5fa4",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 116,
+      "step": 46,
+      "month": 12,
+      "action": "Forward it eagerly to every chat, adding your own embellishments"
+    },
+    {
+      "question": "090bbfa486ec5ebc5fa4",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 316,
+      "step": 44,
+      "month": 12,
+      "action": "Leave an anonymous comment adding more detail"
+    },
+    {
+      "question": "09c22ce4af29eb854513",
+      "choice": 1,
+      "batch": "closure",
+      "run": 250,
+      "step": 45,
+      "month": 12,
+      "action": "Tell your manager, tactfully, that you need a lighter load for a while and will keep quality up"
+    },
+    {
+      "question": "09c22ce4af29eb854513",
+      "choice": 2,
+      "batch": "closure",
+      "run": 15,
+      "step": 45,
+      "month": 12,
+      "action": "Tell nobody. Treat it quietly and push through"
+    },
+    {
+      "question": "0a1598daf2de3194f995",
+      "choice": 1,
+      "batch": "closure",
+      "run": 19,
+      "step": 32,
+      "month": 9,
+      "action": "Stop now, rest, see a doctor if needed, and work at a steadier pace from tomorrow"
+    },
+    {
+      "question": "0a1598daf2de3194f995",
+      "choice": 2,
+      "batch": "closure",
+      "run": 17,
+      "step": 30,
+      "month": 8,
+      "action": "Drink some water, wait it out, and grind through to the end"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 1,
+      "batch": "closure",
+      "run": 12,
+      "step": 27,
+      "month": 7,
+      "action": "Tell no one and act as if you never heard it"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 10,
+      "step": 38,
+      "month": 10,
+      "action": "Hint that Ethan should keep his head down and not resign in a hurry"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 3,
+      "batch": "closure",
+      "run": 23,
+      "step": 29,
+      "month": 7,
+      "action": "Tell him he is on the list and what the package looks like"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 4,
+      "batch": "closure",
+      "run": 5,
+      "step": 39,
+      "month": 10,
+      "action": "Tell Ethan only about the published redundancy process and support channels, and nothing you overheard"
+    },
+    {
+      "question": "0cb94bb9b99f7f238dbc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 34,
+      "step": 44,
+      "month": 12,
+      "action": "If you write, stick to facts: no exaggeration, no confidential detail, no personal attacks"
+    },
+    {
+      "question": "0cb94bb9b99f7f238dbc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 426,
+      "step": 45,
+      "month": 12,
+      "action": "Write a long, emotional recap of every grievance, including unverified claims"
+    },
+    {
+      "question": "0cb94bb9b99f7f238dbc",
+      "choice": 3,
+      "batch": "closure",
+      "run": 13,
+      "step": 45,
+      "month": 12,
+      "action": "Hold off, and use the frustration to decide properly whether to stay or go"
+    },
+    {
+      "question": "10e31593ad2172e3a0a4",
+      "choice": 1,
+      "batch": "closure",
+      "run": 60,
+      "step": 46,
+      "month": 12,
+      "action": "Ask for 20% of the sprint to explore, and commit to dropping it if there is no breakthrough in two weeks"
+    },
+    {
+      "question": "10e31593ad2172e3a0a4",
+      "choice": 2,
+      "batch": "closure",
+      "run": 95,
+      "step": 45,
+      "month": 12,
+      "action": "Explore in your own time, and only ask for formal resource once you have early results"
+    },
+    {
+      "question": "114a3ec1f8ca55441507",
+      "choice": 1,
+      "batch": "closure",
+      "run": 12,
+      "step": 29,
+      "month": 8,
+      "action": "Take it seriously: a few days' annual leave, a saner pace, and a workload talk with your manager if needed"
+    },
+    {
+      "question": "114a3ec1f8ca55441507",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 10,
+      "step": 44,
+      "month": 12,
+      "action": "Bottle it, pretend you are fine, and keep running on empty"
+    },
+    {
+      "question": "114a3ec1f8ca55441507",
+      "choice": 3,
+      "batch": "closure",
+      "run": 44,
+      "step": 27,
+      "month": 7,
+      "action": "Give in to the urge to coast and start phoning the work in"
+    },
+    {
+      "question": "12c3a2e2117850438969",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 11,
+      "step": 46,
+      "month": 12,
+      "action": "Rewrite on a modern framework as a three-to-five-year foundation"
+    },
+    {
+      "question": "12c3a2e2117850438969",
+      "choice": 2,
+      "batch": "closure",
+      "run": 32,
+      "step": 40,
+      "month": 10,
+      "action": "Refactor in stages on the current architecture"
+    },
+    {
+      "question": "12c3a2e2117850438969",
+      "choice": 3,
+      "batch": "closure",
+      "run": 28,
+      "step": 42,
+      "month": 11,
+      "action": "Ship the smallest performance patches and ride out this cycle"
+    },
+    {
+      "question": "12df6b448627fccc13cd",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 34,
+      "month": 9,
+      "action": "Smile and quietly remind him vaping inside isn't allowed and the shelter is downstairs"
+    },
+    {
+      "question": "12df6b448627fccc13cd",
+      "choice": 2,
+      "batch": "closure",
+      "run": 83,
+      "step": 28,
+      "month": 7,
+      "action": "Frown and put up with it without saying anything"
+    },
+    {
+      "question": "12df6b448627fccc13cd",
+      "choice": 3,
+      "batch": "closure",
+      "run": 65,
+      "step": 28,
+      "month": 7,
+      "action": "Post a snide note in the channel: \"some people might show a bit of consideration\""
+    },
+    {
+      "question": "14ae322f7c1dfd8195ee",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 30,
+      "month": 8,
+      "action": "Publish the full version and build a personal brand"
+    },
+    {
+      "question": "14ae322f7c1dfd8195ee",
+      "choice": 2,
+      "batch": "closure",
+      "run": 62,
+      "step": 44,
+      "month": 11,
+      "action": "Post a cut-down version and keep the core parameters back"
+    },
+    {
+      "question": "14ae322f7c1dfd8195ee",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 43,
+      "step": 26,
+      "month": 7,
+      "action": "Don't share it, and keep it to yourself"
+    },
+    {
+      "question": "1567246a4384a2cdf44a",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 33,
+      "step": 38,
+      "month": 10,
+      "action": "Stop at once and give the conclusion, the risk and your request in three sentences"
+    },
+    {
+      "question": "1567246a4384a2cdf44a",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 102,
+      "step": 30,
+      "month": 8,
+      "action": "Keep reading the pack at your own pace"
+    },
+    {
+      "question": "16156f4419883d230aac",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 27,
+      "month": 7,
+      "action": "Having already paid quietly at the desk, say, \"This one's on us. You can host next time\""
+    },
+    {
+      "question": "16156f4419883d230aac",
+      "choice": 2,
+      "batch": "closure",
+      "run": 38,
+      "step": 34,
+      "month": 9,
+      "action": "Wrestle over the bill at the table until it gets awkward"
+    },
+    {
+      "question": "16156f4419883d230aac",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 79,
+      "step": 27,
+      "month": 7,
+      "action": "Go along with it and let the client pay"
+    },
+    {
+      "question": "1697b5e5c66f396a4620",
+      "choice": 1,
+      "batch": "closure",
+      "run": 87,
+      "step": 46,
+      "month": 12,
+      "action": "Weigh the extra work against the increase, take what is fair, and say so if it would overload you"
+    },
+    {
+      "question": "1697b5e5c66f396a4620",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 70,
+      "step": 44,
+      "month": 12,
+      "action": "Get carried away by the rise and accept every new piece of work without counting the load"
+    },
+    {
+      "question": "1697b5e5c66f396a4620",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 210,
+      "step": 47,
+      "month": 12,
+      "action": "Take the rise but quietly dodge the extra work"
+    },
+    {
+      "question": "186abf971eb503bcfd48",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 42,
+      "month": 11,
+      "action": "Own it, walk through the feedback in person, and offer constructive suggestions"
+    },
+    {
+      "question": "186abf971eb503bcfd48",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 33,
+      "month": 9,
+      "action": "Deny it, suggest other possible sources, and protect the anonymity"
+    },
+    {
+      "question": "1a2eb320892cccd08ef6",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 8,
+      "step": 29,
+      "month": 8,
+      "action": "Apologise to your manager and submit a plan for working together better"
+    },
+    {
+      "question": "1a2eb320892cccd08ef6",
+      "choice": 2,
+      "batch": "closure",
+      "run": 233,
+      "step": 45,
+      "month": 12,
+      "action": "Insist Chloe shifted the blame first and ask your manager for a fair ruling"
+    },
+    {
+      "question": "1c0fe20ef29ddd6c3063",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 41,
+      "month": 11,
+      "action": "If you go, offer to take turns next time. If not, help Jo get ready"
+    },
+    {
+      "question": "1c0fe20ef29ddd6c3063",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 42,
+      "month": 11,
+      "action": "Take the win or the loss and put nothing more into the relationship"
+    },
+    {
+      "question": "1e9373120161b2df5a7a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 189,
+      "step": 47,
+      "month": 12,
+      "action": "Cut weekend use as advised, and move most of the development onto personal kit in your own time"
+    },
+    {
+      "question": "1e9373120161b2df5a7a",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 44,
+      "step": 28,
+      "month": 7,
+      "action": "Keep using it, but avoid commit times colleagues can see, and stay quiet about it"
+    },
+    {
+      "question": "1f0bf865b80ada87b5bc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 33,
+      "month": 9,
+      "action": "Say you do not know, every time, and change the subject"
+    },
+    {
+      "question": "1f0bf865b80ada87b5bc",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 31,
+      "step": 29,
+      "month": 8,
+      "action": "Keep to what is public, but hint that the team may change"
+    },
+    {
+      "question": "1f0bf865b80ada87b5bc",
+      "choice": 3,
+      "batch": "closure",
+      "run": 42,
+      "step": 27,
+      "month": 7,
+      "action": "Tell her about the draft merger plan and that Leo may be moved"
+    },
+    {
+      "question": "20675b1c01b7bc3194d3",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 0,
+      "step": 44,
+      "month": 12,
+      "action": "Help them take the post down, then report the accidental disclosure to security and say it was a mistake"
+    },
+    {
+      "question": "20675b1c01b7bc3194d3",
+      "choice": 2,
+      "batch": "closure",
+      "run": 40,
+      "step": 43,
+      "month": 12,
+      "action": "Message them privately to take it down now, on the understanding that it goes no further"
+    },
+    {
+      "question": "20f82cb5af27b6e04930",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 69,
+      "step": 40,
+      "month": 10,
+      "action": "Take them out for lunch privately, straight away"
+    },
+    {
+      "question": "20f82cb5af27b6e04930",
+      "choice": 2,
+      "batch": "closure",
+      "run": 12,
+      "step": 44,
+      "month": 12,
+      "action": "Write a formal recognition note and copy their manager"
+    },
+    {
+      "question": "20f82cb5af27b6e04930",
+      "choice": 3,
+      "batch": "closure",
+      "run": 13,
+      "step": 39,
+      "month": 10,
+      "action": "Do nothing special for now and help them next time they need it"
+    },
+    {
+      "question": "2189daa19279a65dcf21",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 41,
+      "month": 11,
+      "action": "Take the consecutive shifts and cover the three peak-trading days"
+    },
+    {
+      "question": "2189daa19279a65dcf21",
+      "choice": 2,
+      "batch": "closure",
+      "run": 2,
+      "step": 42,
+      "month": 11,
+      "action": "Decline the swap and ask your manager to rebalance by the rules"
+    },
+    {
+      "question": "219796ea776d2c775386",
+      "choice": 1,
+      "batch": "closure",
+      "run": 15,
+      "step": 28,
+      "month": 8,
+      "action": "Build sign-off and a change log into the process to protect both the client and the team"
+    },
+    {
+      "question": "219796ea776d2c775386",
+      "choice": 2,
+      "batch": "closure",
+      "run": 308,
+      "step": 32,
+      "month": 9,
+      "action": "Fix how you communicate, ignore the timeline, and just work longer hours"
+    },
+    {
+      "question": "21b90248955cafffb365",
+      "choice": 1,
+      "batch": "closure",
+      "run": 5,
+      "step": 27,
+      "month": 7,
+      "action": "Keep the physio appointment and shift delivery by half a day"
+    },
+    {
+      "question": "21b90248955cafffb365",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 32,
+      "step": 28,
+      "month": 7,
+      "action": "Move the appointment to the weekend and push through delivery first"
+    },
+    {
+      "question": "21b90248955cafffb365",
+      "choice": 3,
+      "batch": "closure",
+      "run": 344,
+      "step": 29,
+      "month": 7,
+      "action": "Stick on a heat patch, tough it out, and leave physio for later"
+    },
+    {
+      "question": "22f6b37524d69060c3e5",
+      "choice": 1,
+      "batch": "closure",
+      "run": 55,
+      "step": 29,
+      "month": 8,
+      "action": "Stop, and go back to ordinary, honest conversation"
+    },
+    {
+      "question": "22f6b37524d69060c3e5",
+      "choice": 2,
+      "batch": "closure",
+      "run": 44,
+      "step": 39,
+      "month": 10,
+      "action": "Keep finding new ways to compliment them"
+    },
+    {
+      "question": "26a3c794dfa9e474bc67",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 40,
+      "month": 11,
+      "action": "Give the root cause straight, and promise a write-up of the investigation and fix afterwards"
+    },
+    {
+      "question": "26a3c794dfa9e474bc67",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 153,
+      "step": 29,
+      "month": 8,
+      "action": "Fudge it: 'Small issue, doesn't affect anything'"
+    },
+    {
+      "question": "27004f907057db1eacef",
+      "choice": 1,
+      "batch": "closure",
+      "run": 5,
+      "step": 29,
+      "month": 8,
+      "action": "Cooperate with the investigation"
+    },
+    {
+      "question": "27004f907057db1eacef",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 30,
+      "month": 8,
+      "action": "Deny it"
+    },
+    {
+      "question": "278fffd71441caf08d68",
+      "choice": 1,
+      "batch": "closure",
+      "run": 290,
+      "step": 48,
+      "month": 12,
+      "action": "Use the next meeting's pre-read to put business value in a summary your manager will see"
+    },
+    {
+      "question": "278fffd71441caf08d68",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 31,
+      "step": 27,
+      "month": 7,
+      "action": "Keep encouraging colleagues privately and do not raise it with your manager again"
+    },
+    {
+      "question": "27fd68ea887552a5f95d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 31,
+      "month": 9,
+      "action": "Go ahead with the apology"
+    },
+    {
+      "question": "27fd68ea887552a5f95d",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 35,
+      "step": 29,
+      "month": 8,
+      "action": "Go with the fake-hack story instead"
+    },
+    {
+      "question": "298ee724a5e47c71c173",
+      "choice": 1,
+      "batch": "closure",
+      "run": 24,
+      "step": 29,
+      "month": 8,
+      "action": "Say it is your own choice, and remind people what the policy actually allows"
+    },
+    {
+      "question": "298ee724a5e47c71c173",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 45,
+      "month": 12,
+      "action": "Smile it off. Keep your own standard without commenting on anyone else's"
+    },
+    {
+      "question": "2993e674f6698ea048cb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 172,
+      "step": 43,
+      "month": 12,
+      "action": "Invite product to review the scripts and scenarios with you"
+    },
+    {
+      "question": "2993e674f6698ea048cb",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 2,
+      "step": 46,
+      "month": 12,
+      "action": "Stand by the numbers and ask to cut scope or slip the date"
+    },
+    {
+      "question": "2993e674f6698ea048cb",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 190,
+      "step": 44,
+      "month": 12,
+      "action": "Tweak the test parameters until they 'pass', as product asked"
+    },
+    {
+      "question": "29faa6dc4c2a1b00c2ab",
+      "choice": 1,
+      "batch": "closure",
+      "run": 46,
+      "step": 39,
+      "month": 10,
+      "action": "Spend two weeks building a full CI automation suite"
+    },
+    {
+      "question": "29faa6dc4c2a1b00c2ab",
+      "choice": 2,
+      "batch": "closure",
+      "run": 4,
+      "step": 26,
+      "month": 7,
+      "action": "Keep manual review and let new joiners follow the existing process"
+    },
+    {
+      "question": "2a88f2a1294992fb8297",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 28,
+      "month": 8,
+      "action": "Fill your manager in on the facts so you do not become the permanent fall guy"
+    },
+    {
+      "question": "2a88f2a1294992fb8297",
+      "choice": 2,
+      "batch": "closure",
+      "run": 164,
+      "step": 28,
+      "month": 7,
+      "action": "Swallow it and do not pursue it"
+    },
+    {
+      "question": "2b0337fbf8924f090951",
+      "choice": 1,
+      "batch": "closure",
+      "run": 63,
+      "step": 32,
+      "month": 9,
+      "action": "Stand by what you observed, admit your view is partial, and suggest more openness about how decisions are made"
+    },
+    {
+      "question": "2b0337fbf8924f090951",
+      "choice": 2,
+      "batch": "closure",
+      "run": 16,
+      "step": 43,
+      "month": 12,
+      "action": "Ease off, admit you may have lacked some information, and say you still rate their management overall"
+    },
+    {
+      "question": "2b6c879605dc3891ce8d",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 202,
+      "step": 45,
+      "month": 12,
+      "action": "Help them ask your manager for flexible working, and try to keep them in the team"
+    },
+    {
+      "question": "2b6c879605dc3891ce8d",
+      "choice": 2,
+      "batch": "closure",
+      "run": 363,
+      "step": 46,
+      "month": 12,
+      "action": "Tell them to decide in their own time, and stay out of it"
+    },
+    {
+      "question": "2c2373ee508787b3c407",
+      "choice": 1,
+      "batch": "closure",
+      "run": 182,
+      "step": 30,
+      "month": 8,
+      "action": "Accept, read the docs properly, and prepare comments"
+    },
+    {
+      "question": "2c2373ee508787b3c407",
+      "choice": 2,
+      "batch": "closure",
+      "run": 6,
+      "step": 40,
+      "month": 10,
+      "action": "Decline and keep the time for your own team's delivery"
+    },
+    {
+      "question": "2c9dc76583a7d2285cd1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 42,
+      "month": 11,
+      "action": "A: Working dinner at a business restaurant, staying two hours"
+    },
+    {
+      "question": "2c9dc76583a7d2285cd1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 10,
+      "step": 30,
+      "month": 8,
+      "action": "B: Working lunch in the office café, then an afternoon demo covering everything in one go"
+    },
+    {
+      "question": "2c9dc76583a7d2285cd1",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 34,
+      "step": 29,
+      "month": 8,
+      "action": "C: Fully remote demo, no in-person visit"
+    },
+    {
+      "question": "2e962c9bda99e889c476",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 40,
+      "month": 11,
+      "action": "Brief your manager privately and factually, ask Chloe what support she wants, and raise it with the account lead"
+    },
+    {
+      "question": "2e962c9bda99e889c476",
+      "choice": 2,
+      "batch": "closure",
+      "run": 95,
+      "step": 44,
+      "month": 12,
+      "action": "Decide it was handled and there is no need to raise it"
+    },
+    {
+      "question": "33427281ff655bea9ba3",
+      "choice": 1,
+      "batch": "closure",
+      "run": 25,
+      "step": 44,
+      "month": 12,
+      "action": "Volunteer as organiser"
+    },
+    {
+      "question": "33427281ff655bea9ba3",
+      "choice": 2,
+      "batch": "closure",
+      "run": 148,
+      "step": 45,
+      "month": 12,
+      "action": "Do not volunteer, and save your energy for the scheduled project"
+    },
+    {
+      "question": "3367fb549be07711f670",
+      "choice": 1,
+      "batch": "closure",
+      "run": 30,
+      "step": 46,
+      "month": 12,
+      "action": "Count the share options as a possible bonus and decide on the fundamentals of the job"
+    },
+    {
+      "question": "3367fb549be07711f670",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 143,
+      "step": 45,
+      "month": 12,
+      "action": "Turn down a better offer in front of you and stay put for options that have been over-promised"
+    },
+    {
+      "question": "3367fb549be07711f670",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 105,
+      "step": 45,
+      "month": 12,
+      "action": "Ignore the options entirely, count only cash, and leave as soon as something better comes up"
+    },
+    {
+      "question": "3371acfeda23ea7636e0",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 10,
+      "step": 30,
+      "month": 8,
+      "action": "Refuse to campaign. In the review, stick to the facts"
+    },
+    {
+      "question": "3371acfeda23ea7636e0",
+      "choice": 2,
+      "batch": "closure",
+      "run": 38,
+      "step": 40,
+      "month": 10,
+      "action": "Agree to talk him up, in return for later support"
+    },
+    {
+      "question": "3371acfeda23ea7636e0",
+      "choice": 3,
+      "batch": "closure",
+      "run": 47,
+      "step": 38,
+      "month": 10,
+      "action": "Warn your manager privately that someone is trading favours for support"
+    },
+    {
+      "question": "3371acfeda23ea7636e0",
+      "choice": 4,
+      "batch": "closure",
+      "run": 4,
+      "step": 42,
+      "month": 11,
+      "action": "Start buying coffees yourself and join the favours game"
+    },
+    {
+      "question": "35db2cae4cae3bd74bfc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 45,
+      "step": 45,
+      "month": 12,
+      "action": "Collect yourself, gather your results, and ask your manager for a pay review at the right moment"
+    },
+    {
+      "question": "35db2cae4cae3bd74bfc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 317,
+      "step": 46,
+      "month": 12,
+      "action": "Start coasting in protest and stop doing the work properly"
+    },
+    {
+      "question": "35db2cae4cae3bd74bfc",
+      "choice": 3,
+      "batch": "closure",
+      "run": 27,
+      "step": 45,
+      "month": 12,
+      "action": "Complain round the team about how unfair the company is, and spread the discontent"
+    },
+    {
+      "question": "36e37fc332f917b6af17",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 644,
+      "step": 43,
+      "month": 12,
+      "action": "Ask to delay the migration and protect peak trading first"
+    },
+    {
+      "question": "36e37fc332f917b6af17",
+      "choice": 2,
+      "batch": "closure",
+      "run": 306,
+      "step": 44,
+      "month": 12,
+      "action": "Cut testing short and go ahead as planned"
+    },
+    {
+      "question": "36e37fc332f917b6af17",
+      "choice": 3,
+      "batch": "closure",
+      "run": 270,
+      "step": 45,
+      "month": 12,
+      "action": "Propose dual-write with a two-week canary cutover"
+    },
+    {
+      "question": "371d3f849a8d2e05ea4a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 9,
+      "step": 32,
+      "month": 9,
+      "action": "Insist on a pre-launch fix and attach a complete proposed patch"
+    },
+    {
+      "question": "371d3f849a8d2e05ea4a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 33,
+      "month": 9,
+      "action": "Accept the canary plan and add monitoring and a rollback playbook"
+    },
+    {
+      "question": "39c098ca66e010ee1e72",
+      "choice": 1,
+      "batch": "closure",
+      "run": 59,
+      "step": 45,
+      "month": 12,
+      "action": "Take the lead with facilities and get the extras in"
+    },
+    {
+      "question": "39c098ca66e010ee1e72",
+      "choice": 2,
+      "batch": "closure",
+      "run": 10,
+      "step": 31,
+      "month": 9,
+      "action": "You had the idea. They can chase it themselves"
+    },
+    {
+      "question": "3a1d1aa5b0b9f0ae291c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 3,
+      "step": 26,
+      "month": 7,
+      "action": "Roll back immediately and take responsibility"
+    },
+    {
+      "question": "3a1d1aa5b0b9f0ae291c",
+      "choice": 2,
+      "batch": "closure",
+      "run": 20,
+      "step": 27,
+      "month": 7,
+      "action": "Make sure everyone knows whose feature it was"
+    },
+    {
+      "question": "3a5409bdf896e244aa75",
+      "choice": 1,
+      "batch": "closure",
+      "run": 66,
+      "step": 29,
+      "month": 8,
+      "action": "Recover by joining a later group game to show you are still part of things"
+    },
+    {
+      "question": "3a5409bdf896e244aa75",
+      "choice": 2,
+      "batch": "closure",
+      "run": 59,
+      "step": 30,
+      "month": 8,
+      "action": "Sit the rest of the night out with a face like thunder, speaking to nobody"
+    },
+    {
+      "question": "3a7d5988cd50418f5024",
+      "choice": 1,
+      "batch": "closure",
+      "run": 36,
+      "step": 27,
+      "month": 7,
+      "action": "Tell them at once, with a cause analysis, a recovery plan and a new timetable"
+    },
+    {
+      "question": "3a7d5988cd50418f5024",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 26,
+      "month": 7,
+      "action": "Wait until delivery day in case you still make it"
+    },
+    {
+      "question": "3a7d5988cd50418f5024",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 3,
+      "step": 25,
+      "month": 7,
+      "action": "Report 'on time', then quietly work late and try to catch up"
+    },
+    {
+      "question": "3bc9332bab15586e5636",
+      "choice": 1,
+      "batch": "closure",
+      "run": 146,
+      "step": 28,
+      "month": 7,
+      "action": "Step out and say you were just passing, without admitting you listened"
+    },
+    {
+      "question": "3bc9332bab15586e5636",
+      "choice": 2,
+      "batch": "closure",
+      "run": 309,
+      "step": 28,
+      "month": 7,
+      "action": "Step out, say you heard your name, and ask whether this is a normal process"
+    },
+    {
+      "question": "3bd9a48ec551ad5cc12f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 82,
+      "step": 27,
+      "month": 7,
+      "action": "Take the move"
+    },
+    {
+      "question": "3bd9a48ec551ad5cc12f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 41,
+      "month": 11,
+      "action": "Stay on the Lynx team"
+    },
+    {
+      "question": "3e1c0fad653ced9c70cf",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 69,
+      "step": 45,
+      "month": 12,
+      "action": "Ask your manager for extra people on the benefits proposal in return"
+    },
+    {
+      "question": "3e1c0fad653ced9c70cf",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 47,
+      "step": 30,
+      "month": 8,
+      "action": "Work late to catch up on the proposal yourself, without asking for anything"
+    },
+    {
+      "question": "3f305487f5bd85b0e672",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 23,
+      "step": 32,
+      "month": 9,
+      "action": "Name Quinn’s specific contribution in the meeting that finalises the slides"
+    },
+    {
+      "question": "3f305487f5bd85b0e672",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 29,
+      "month": 8,
+      "action": "Ask Rowan privately to correct the credit"
+    },
+    {
+      "question": "3f305487f5bd85b0e672",
+      "choice": 3,
+      "batch": "closure",
+      "run": 56,
+      "step": 39,
+      "month": 10,
+      "action": "Tell Quinn to take it to your manager themselves"
+    },
+    {
+      "question": "3f305487f5bd85b0e672",
+      "choice": 4,
+      "batch": "closure",
+      "run": 128,
+      "step": 27,
+      "month": 7,
+      "action": "Stay out of it to avoid annoying Rowan"
+    },
+    {
+      "question": "3f9bd2095029c03ddc31",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 32,
+      "step": 27,
+      "month": 7,
+      "action": "Tell compliance you may have overstepped the line"
+    },
+    {
+      "question": "3f9bd2095029c03ddc31",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 11,
+      "step": 29,
+      "month": 8,
+      "action": "Stay silent"
+    },
+    {
+      "question": "40d7b3885578e4bb492f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 28,
+      "month": 8,
+      "action": "Clarify your actual contribution and what you want with your manager"
+    },
+    {
+      "question": "40d7b3885578e4bb492f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 49,
+      "step": 43,
+      "month": 12,
+      "action": "Drop it and go back to focusing on the live project"
+    },
+    {
+      "question": "42435b8aee796297267b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 44,
+      "month": 12,
+      "action": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item"
+    },
+    {
+      "question": "42435b8aee796297267b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 56,
+      "step": 34,
+      "month": 9,
+      "action": "Claim as usual, taking colleagues' advice that 'everyone does this, it's fine'"
+    },
+    {
+      "question": "42b938c6ac9dc5b29dde",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 44,
+      "month": 12,
+      "action": "Laugh it off and gently draw a line: 'Let's not go there. Talk about something else?'"
+    },
+    {
+      "question": "42b938c6ac9dc5b29dde",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 20,
+      "step": 25,
+      "month": 7,
+      "action": "Be blunt: 'That's private. Please don't ask'"
+    },
+    {
+      "question": "42b938c6ac9dc5b29dde",
+      "choice": 3,
+      "batch": "closure",
+      "run": 29,
+      "step": 27,
+      "month": 7,
+      "action": "Answer each question, not wanting to embarrass a new colleague"
+    },
+    {
+      "question": "447266990ff4dbb43c2b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 5,
+      "step": 32,
+      "month": 9,
+      "action": "Own up that you joined in"
+    },
+    {
+      "question": "447266990ff4dbb43c2b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 311,
+      "step": 28,
+      "month": 8,
+      "action": "Deny it"
+    },
+    {
+      "question": "47aa10a90a3264d96012",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 45,
+      "month": 12,
+      "action": "Own your misjudgement of the risk, and ask for a more formal way of tracking cross-team dependencies"
+    },
+    {
+      "question": "47aa10a90a3264d96012",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 574,
+      "step": 45,
+      "month": 12,
+      "action": "Point to the other team's history of slipping, and stress you could only judge what you could see"
+    },
+    {
+      "question": "49123d03e29bb77734ab",
+      "choice": 1,
+      "batch": "closure",
+      "run": 32,
+      "step": 33,
+      "month": 9,
+      "action": "Go to the karaoke bar, keep your drinking in check, and join in"
+    },
+    {
+      "question": "49123d03e29bb77734ab",
+      "choice": 2,
+      "batch": "closure",
+      "run": 9,
+      "step": 27,
+      "month": 7,
+      "action": "Decline politely and make sure you are sharp at the morning stand-up"
+    },
+    {
+      "question": "49123d03e29bb77734ab",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 8,
+      "step": 27,
+      "month": 7,
+      "action": "Show your face for half an hour, then leave"
+    },
+    {
+      "question": "49d420dc04eaa91e9371",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 70,
+      "step": 28,
+      "month": 8,
+      "action": "Cool things down: move from ‘who was wrong’ to ‘how we get this right’, and propose better sign-off"
+    },
+    {
+      "question": "49d420dc04eaa91e9371",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 23,
+      "step": 38,
+      "month": 10,
+      "action": "Insist you did nothing wrong, and wait for them to blink first"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 27,
+      "step": 43,
+      "month": 12,
+      "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 18,
+      "step": 39,
+      "month": 10,
+      "action": "Praise Jo, and briefly add your own recent relevant work"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 3,
+      "batch": "closure",
+      "run": 8,
+      "step": 31,
+      "month": 9,
+      "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 4,
+      "batch": "closure",
+      "run": 35,
+      "step": 27,
+      "month": 7,
+      "action": "Hint at gaps in Jo's recent work"
+    },
+    {
+      "question": "4b5e4cf484abb708f023",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 27,
+      "month": 7,
+      "action": "Draft a joint improvement plan, copy your manager, and invite Chloe to co-author it"
+    },
+    {
+      "question": "4b5e4cf484abb708f023",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 153,
+      "step": 40,
+      "month": 10,
+      "action": "Write only your own part and make clear where it ends"
+    },
+    {
+      "question": "4cac1c33ea209531c741",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 40,
+      "month": 11,
+      "action": "Answer with a quantified worst case and a clear request for resources"
+    },
+    {
+      "question": "4cac1c33ea209531c741",
+      "choice": 2,
+      "batch": "closure",
+      "run": 47,
+      "step": 37,
+      "month": 10,
+      "action": "Stay vague with 'shouldn't be too bad', offering no real assessment"
+    },
+    {
+      "question": "4d9a3352e869e139b978",
+      "choice": 1,
+      "batch": "closure",
+      "run": 25,
+      "step": 45,
+      "month": 12,
+      "action": "Fill it in honestly, with examples and no swearing"
+    },
+    {
+      "question": "4d9a3352e869e139b978",
+      "choice": 2,
+      "batch": "closure",
+      "run": 95,
+      "step": 27,
+      "month": 7,
+      "action": "Score everything as blandly positive"
+    },
+    {
+      "question": "4d9a3352e869e139b978",
+      "choice": 3,
+      "batch": "closure",
+      "run": 34,
+      "step": 26,
+      "month": 7,
+      "action": "Set out the moving goalposts, the credit-taking and the weekend messages as plain facts, without insults"
+    },
+    {
+      "question": "4da4a270399af0e43345",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 42,
+      "step": 32,
+      "month": 9,
+      "action": "Stop sitting on the fence, commit, and win trust back by being consistent"
+    },
+    {
+      "question": "4da4a270399af0e43345",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 22,
+      "step": 41,
+      "month": 11,
+      "action": "Keep both options vaguely alive, one more day at a time"
+    },
+    {
+      "question": "4dd8aae8f74f75eaae16",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 34,
+      "step": 27,
+      "month": 7,
+      "action": "Prioritise the live project, pause the new work, and tell your manager"
+    },
+    {
+      "question": "4dd8aae8f74f75eaae16",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 22,
+      "step": 31,
+      "month": 9,
+      "action": "Carry both, working weekends to do it"
+    },
+    {
+      "question": "4e2736f6845e2b766d38",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 44,
+      "month": 12,
+      "action": "Learn how the new organisation works and where the openings are, adapt, and find where you still add value"
+    },
+    {
+      "question": "4e2736f6845e2b766d38",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 69,
+      "step": 46,
+      "month": 12,
+      "action": "Cling to the old culture, resist the new rules, and keep saying how much better it used to be"
+    },
+    {
+      "question": "4e2736f6845e2b766d38",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 199,
+      "step": 43,
+      "month": 12,
+      "action": "Play the chaos, commit to nobody, and wait to see who wins"
+    },
+    {
+      "question": "56148c02730208e976ab",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 175,
+      "step": 45,
+      "month": 12,
+      "action": "Compare the two on depth and long-term return, and argue yours is worth the bigger investment"
+    },
+    {
+      "question": "56148c02730208e976ab",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 203,
+      "step": 46,
+      "month": 12,
+      "action": "Back the quicker option, and get your work put on the roadmap for later"
+    },
+    {
+      "question": "56a136c934290844622d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 33,
+      "month": 9,
+      "action": "Ask Quinn to take the lock, and tell Chris: “You keep the big picture”"
+    },
+    {
+      "question": "56a136c934290844622d",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 46,
+      "step": 41,
+      "month": 11,
+      "action": "Say outright that Chris’s approach is wrong"
+    },
+    {
+      "question": "56a136c934290844622d",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 31,
+      "month": 8,
+      "action": "Follow Chris’s guesses so he is not made to look small"
+    },
+    {
+      "question": "58210c4fdb7342668907",
+      "choice": 1,
+      "batch": "closure",
+      "run": 30,
+      "step": 40,
+      "month": 10,
+      "action": "Name the problem directly and mark it as must-fix"
+    },
+    {
+      "question": "58210c4fdb7342668907",
+      "choice": 2,
+      "batch": "closure",
+      "run": 298,
+      "step": 44,
+      "month": 12,
+      "action": "Use questions so she spots the issue herself"
+    },
+    {
+      "question": "58210c4fdb7342668907",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 28,
+      "month": 7,
+      "action": "Approve it, and explain on Slack afterwards"
+    },
+    {
+      "question": "5825e236479b6253ef8f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 29,
+      "month": 8,
+      "action": "Tell him the truth: it never reached your manager, and suggest he watch his drinking next time"
+    },
+    {
+      "question": "5825e236479b6253ef8f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 269,
+      "step": 37,
+      "month": 10,
+      "action": "Turn it into a story and tell it round the office in full colour"
+    },
+    {
+      "question": "5853c7cecae840084bbb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 347,
+      "step": 41,
+      "month": 10,
+      "action": "Apologise to Chris"
+    },
+    {
+      "question": "5853c7cecae840084bbb",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 81,
+      "step": 44,
+      "month": 12,
+      "action": "Keep going round him"
+    },
+    {
+      "question": "588a735f62c42334bff7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 96,
+      "step": 45,
+      "month": 12,
+      "action": "Fix the endpoint now and check the other services"
+    },
+    {
+      "question": "588a735f62c42334bff7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 4,
+      "step": 30,
+      "month": 8,
+      "action": "Fix this service only"
+    },
+    {
+      "question": "588a735f62c42334bff7",
+      "choice": 3,
+      "batch": "closure",
+      "run": 131,
+      "step": 41,
+      "month": 10,
+      "action": "Leave it for on-call"
+    },
+    {
+      "question": "58a3e3a0e8cf0bca3ed2",
+      "choice": 1,
+      "batch": "closure",
+      "run": 45,
+      "step": 30,
+      "month": 8,
+      "action": "Admit you were not part of the core work"
+    },
+    {
+      "question": "58a3e3a0e8cf0bca3ed2",
+      "choice": 2,
+      "batch": "closure",
+      "run": 98,
+      "step": 28,
+      "month": 7,
+      "action": "Invent a contribution that matches your manager’s story"
+    },
+    {
+      "question": "592857d6c4d4259aa15e",
+      "choice": 1,
+      "batch": "closure",
+      "run": 25,
+      "step": 42,
+      "month": 11,
+      "action": "Block the review and require a fix before merge"
+    },
+    {
+      "question": "592857d6c4d4259aa15e",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 42,
+      "month": 11,
+      "action": "Merge it and help him fix it this evening"
+    },
+    {
+      "question": "592857d6c4d4259aa15e",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 9,
+      "step": 29,
+      "month": 8,
+      "action": "Comment but do not block"
+    },
+    {
+      "question": "592d8cf08efa83324335",
+      "choice": 1,
+      "batch": "closure",
+      "run": 267,
+      "step": 44,
+      "month": 12,
+      "action": "Take it on and push for a team standard on being open about AI use"
+    },
+    {
+      "question": "592d8cf08efa83324335",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 39,
+      "month": 10,
+      "action": "Suggest a more experienced colleague lead it, and stay involved"
+    },
+    {
+      "question": "59d4bb8fd12ed9e84ef8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 26,
+      "month": 7,
+      "action": "Tell him the aisle is too tight and suggest sorting the clutter together"
+    },
+    {
+      "question": "59d4bb8fd12ed9e84ef8",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 34,
+      "step": 26,
+      "month": 7,
+      "action": "Squeeze past every day and say nothing"
+    },
+    {
+      "question": "59d4bb8fd12ed9e84ef8",
+      "choice": 3,
+      "batch": "closure",
+      "run": 59,
+      "step": 29,
+      "month": 7,
+      "action": "While he is away, pile all of it onto his desk"
+    },
+    {
+      "question": "5a7afa19b0be2a2ea269",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 38,
+      "month": 10,
+      "action": "Politely challenge that framing on the spot, with data and business impact"
+    },
+    {
+      "question": "5a7afa19b0be2a2ea269",
+      "choice": 2,
+      "batch": "closure",
+      "run": 32,
+      "step": 30,
+      "month": 8,
+      "action": "Let it go in the meeting and speak to your manager afterwards"
+    },
+    {
+      "question": "5a7afa19b0be2a2ea269",
+      "choice": 3,
+      "batch": "closure",
+      "run": 290,
+      "step": 47,
+      "month": 12,
+      "action": "Let it pass in the room, then privately encourage colleagues and spell out what the work achieved"
+    },
+    {
+      "question": "5d7ef9ba9e8c6a4d57af",
+      "choice": 1,
+      "batch": "closure",
+      "run": 45,
+      "step": 25,
+      "month": 7,
+      "action": "Take it in good humour: a quick gag or a bit of audience interaction, just enough to lift the room"
+    },
+    {
+      "question": "5d7ef9ba9e8c6a4d57af",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 43,
+      "month": 12,
+      "action": "Smile and say, ‘Thanks, but not tonight’"
+    },
+    {
+      "question": "5d7ef9ba9e8c6a4d57af",
+      "choice": 3,
+      "batch": "closure",
+      "run": 47,
+      "step": 41,
+      "month": 11,
+      "action": "Shut it down flat with “I’m not doing that”, and let the room go quiet"
+    },
+    {
+      "question": "5e6691c1c089ad0c6b7f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 39,
+      "month": 10,
+      "action": "Reframe updates in business language, but keep the technical value in the write-up"
+    },
+    {
+      "question": "5e6691c1c089ad0c6b7f",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 115,
+      "step": 27,
+      "month": 7,
+      "action": "Keep speaking up for engineering value in public and accept the political friction"
+    },
+    {
+      "question": "5e6c5c9afb3c69675016",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 45,
+      "month": 12,
+      "action": "Rebuild your sleep and exercise routine, and start actively managing your health"
+    },
+    {
+      "question": "5e6c5c9afb3c69675016",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 209,
+      "step": 45,
+      "month": 12,
+      "action": "Feel shaken for a bit, then get busy and forget"
+    },
+    {
+      "question": "5e6c5c9afb3c69675016",
+      "choice": 3,
+      "batch": "closure",
+      "run": 33,
+      "step": 46,
+      "month": 12,
+      "action": "Use the moment to start a team conversation about cutting pointless overtime"
+    },
+    {
+      "question": "5eb4e0c00b0a01f58ed8",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 11,
+      "step": 44,
+      "month": 12,
+      "action": "Run a review, own the bad call, and show the fix already in place"
+    },
+    {
+      "question": "5eb4e0c00b0a01f58ed8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 245,
+      "step": 29,
+      "month": 8,
+      "action": "Argue that 'nobody could have seen this then'"
+    },
+    {
+      "question": "5f1a73478de26a93c387",
+      "choice": 1,
+      "batch": "closure",
+      "run": 256,
+      "step": 45,
+      "month": 12,
+      "action": "Agree the fix in the 1:1, then record the problem and the decision in the design doc"
+    },
+    {
+      "question": "5f1a73478de26a93c387",
+      "choice": 2,
+      "batch": "closure",
+      "run": 76,
+      "step": 39,
+      "month": 10,
+      "action": "Anonymise it as a \"performance review lesson\" and share it with both teams"
+    },
+    {
+      "question": "5f2611200426ebb83d9f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 105,
+      "step": 44,
+      "month": 12,
+      "action": "Keep up your own pace, and privately give nearby colleagues some encouragement and a calmer view of things"
+    },
+    {
+      "question": "5f2611200426ebb83d9f",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 207,
+      "step": 45,
+      "month": 12,
+      "action": "Join the gloom, pile into the complaining, and make the pessimism louder"
+    },
+    {
+      "question": "5f2611200426ebb83d9f",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 198,
+      "step": 47,
+      "month": 12,
+      "action": "Treat it as none of your business, look after yourself, and ignore the team's mood"
+    },
+    {
+      "question": "5f38d6a7847e3577b165",
+      "choice": 1,
+      "batch": "closure",
+      "run": 324,
+      "step": 47,
+      "month": 12,
+      "action": "Be open about the extra complexity, and ask the team to decide whether it is worth continuing"
+    },
+    {
+      "question": "5f38d6a7847e3577b165",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 623,
+      "step": 45,
+      "month": 12,
+      "action": "Promise to finish the implementation yourself, without team time, in return for permission to keep going"
+    },
+    {
+      "question": "615b2e056e23da100b35",
+      "choice": 1,
+      "batch": "closure",
+      "run": 22,
+      "step": 31,
+      "month": 9,
+      "action": "Step up, run the last rehearsals and the night itself, and get the number on stage cleanly"
+    },
+    {
+      "question": "615b2e056e23da100b35",
+      "choice": 2,
+      "batch": "closure",
+      "run": 24,
+      "step": 30,
+      "month": 8,
+      "action": "Decline the lead: “I’ll keep rehearsing, but I’m not running the thing”"
+    },
+    {
+      "question": "624dec369b574242bbba",
+      "choice": 1,
+      "batch": "closure",
+      "run": 39,
+      "step": 45,
+      "month": 12,
+      "action": "Keep to the current pattern"
+    },
+    {
+      "question": "624dec369b574242bbba",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 81,
+      "step": 34,
+      "month": 9,
+      "action": "Go to more lunches to stay more visible"
+    },
+    {
+      "question": "62590001dc1d070e49df",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 25,
+      "month": 7,
+      "action": "Take it on and set out clearly how the mentoring will work"
+    },
+    {
+      "question": "62590001dc1d070e49df",
+      "choice": 2,
+      "batch": "closure",
+      "run": 6,
+      "step": 28,
+      "month": 8,
+      "action": "Decline, citing your current workload"
+    },
+    {
+      "question": "62b12eb45e7225c83604",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 104,
+      "step": 28,
+      "month": 8,
+      "action": "Help Ethan rework the write-up and keep the friendship"
+    },
+    {
+      "question": "62b12eb45e7225c83604",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 46,
+      "step": 28,
+      "month": 8,
+      "action": "Keep your distance and stay strictly professional"
+    },
+    {
+      "question": "635a13c05e8f37651f57",
+      "choice": 1,
+      "batch": "closure",
+      "run": 42,
+      "step": 28,
+      "month": 8,
+      "action": "Apologise and accept the reprimand"
+    },
+    {
+      "question": "635a13c05e8f37651f57",
+      "choice": 2,
+      "batch": "closure",
+      "run": 47,
+      "step": 28,
+      "month": 8,
+      "action": "Say Sonya tricked it out of you"
+    },
+    {
+      "question": "6375bb3c41d2f4149463",
+      "choice": 1,
+      "batch": "closure",
+      "run": 28,
+      "step": 45,
+      "month": 12,
+      "action": "Take it as a warning: look hard at the company's prospects and adjust your own plans"
+    },
+    {
+      "question": "6375bb3c41d2f4149463",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 233,
+      "step": 45,
+      "month": 12,
+      "action": "Complain in public and lead the moaning"
+    },
+    {
+      "question": "6375bb3c41d2f4149463",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 220,
+      "step": 45,
+      "month": 12,
+      "action": "Tell yourself at least they are still paying it, and try not to think about it"
+    },
+    {
+      "question": "637bec756c41b3656f8b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 3,
+      "step": 32,
+      "month": 9,
+      "action": "Accept the promise. Credit in the docs is enough"
+    },
+    {
+      "question": "637bec756c41b3656f8b",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 20,
+      "step": 28,
+      "month": 7,
+      "action": "Ask them to say at the next update that the idea originally came from you"
+    },
+    {
+      "question": "639a96e0b44c4421dc00",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 31,
+      "month": 9,
+      "action": "Sign the draft and put the main fault on Sam"
+    },
+    {
+      "question": "639a96e0b44c4421dc00",
+      "choice": 2,
+      "batch": "closure",
+      "run": 64,
+      "step": 31,
+      "month": 9,
+      "action": "Rewrite it to match what happened: who skipped review, and which check in the process failed"
+    },
+    {
+      "question": "64c940b154c7886a8c2b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 102,
+      "step": 45,
+      "month": 12,
+      "action": "Raise your actual contribution with whoever ran the split or your manager, and ask for a fairer adjustment"
+    },
+    {
+      "question": "64c940b154c7886a8c2b",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 160,
+      "step": 45,
+      "month": 12,
+      "action": "Swallow it, say nothing, and go cold on the project from here"
+    },
+    {
+      "question": "64c940b154c7886a8c2b",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 171,
+      "step": 45,
+      "month": 12,
+      "action": "Lose your temper and threaten to coast on the next project, saying nobody should count on you"
+    },
+    {
+      "question": "65d2e3f9e56005788fcd",
+      "choice": 1,
+      "batch": "closure",
+      "run": 27,
+      "step": 44,
+      "month": 12,
+      "action": "Walk in as if you have just come for water and say hello as normal"
+    },
+    {
+      "question": "65d2e3f9e56005788fcd",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 46,
+      "step": 26,
+      "month": 7,
+      "action": "Leave quietly and act as if you heard nothing"
+    },
+    {
+      "question": "65d2e3f9e56005788fcd",
+      "choice": 3,
+      "batch": "closure",
+      "run": 5,
+      "step": 42,
+      "month": 11,
+      "action": "Stay in the corner and listen to the rest"
+    },
+    {
+      "question": "660c19973e9e88840ff3",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 9,
+      "step": 38,
+      "month": 10,
+      "action": "Review line by line and list every improvement"
+    },
+    {
+      "question": "660c19973e9e88840ff3",
+      "choice": 2,
+      "batch": "closure",
+      "run": 3,
+      "step": 27,
+      "month": 7,
+      "action": "Focus on core logic and risk, and leave the nits to the author"
+    },
+    {
+      "question": "667cd136d203b05d83fe",
+      "choice": 1,
+      "batch": "closure",
+      "run": 36,
+      "step": 30,
+      "month": 8,
+      "action": "Check what is feasible, then offer phased delivery: the core first, the rest after"
+    },
+    {
+      "question": "667cd136d203b05d83fe",
+      "choice": 2,
+      "batch": "closure",
+      "run": 167,
+      "step": 26,
+      "month": 7,
+      "action": "To keep them happy, promise both the core and the full version by the original date"
+    },
+    {
+      "question": "66ab6f5983c01987e66b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 9,
+      "step": 34,
+      "month": 9,
+      "action": "DM her a doc link and suggest checking the wiki or asking the owner before using @channel"
+    },
+    {
+      "question": "66ab6f5983c01987e66b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 2,
+      "step": 27,
+      "month": 7,
+      "action": "Call Tessa out in the channel: \"Could you read the docs before asking?\""
+    },
+    {
+      "question": "66ab6f5983c01987e66b",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 53,
+      "step": 30,
+      "month": 8,
+      "action": "Ignore it like everyone else and leave the question hanging"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 1,
+      "batch": "closure",
+      "run": 203,
+      "step": 46,
+      "month": 12,
+      "action": "Back a written case through a staff representative, and do not corner anyone"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 46,
+      "step": 45,
+      "month": 12,
+      "action": "Decline the group pressure and make your own pay-review case on your contribution"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 147,
+      "step": 44,
+      "month": 12,
+      "action": "Join in, and block the doorway so your manager cannot leave until you have an answer"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 4,
+      "batch": "discovery",
+      "run": 40,
+      "step": 45,
+      "month": 12,
+      "action": "Want to join but fear the blowback, so half-agree and then pull out at the last minute"
+    },
+    {
+      "question": "69843c907fffa45cf3fe",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 21,
+      "step": 30,
+      "month": 8,
+      "action": "Learn from it and propose a simple team rule: if you're ill, stay off, and the team covers"
+    },
+    {
+      "question": "69843c907fffa45cf3fe",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 10,
+      "step": 37,
+      "month": 10,
+      "action": "Be glad you didn't catch it, and leave it there"
+    },
+    {
+      "question": "6a4fdc4d9e76fd821ea9",
+      "choice": 1,
+      "batch": "closure",
+      "run": 45,
+      "step": 28,
+      "month": 8,
+      "action": "Quit while you are ahead: hand the stage back and return to your table"
+    },
+    {
+      "question": "6a4fdc4d9e76fd821ea9",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 83,
+      "step": 29,
+      "month": 8,
+      "action": "Ride the moment and keep hosting, even as you start to run out of steam"
+    },
+    {
+      "question": "6d15d3e34b52bc30ef8f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 22,
+      "step": 28,
+      "month": 8,
+      "action": "Show up, and work with the organiser on a tighter rehearsal plan so the day job still fits"
+    },
+    {
+      "question": "6d15d3e34b52bc30ef8f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 26,
+      "step": 26,
+      "month": 7,
+      "action": "Attend every rehearsal and let the day job pile up"
+    },
+    {
+      "question": "6d15d3e34b52bc30ef8f",
+      "choice": 3,
+      "batch": "closure",
+      "run": 98,
+      "step": 41,
+      "month": 11,
+      "action": "Skip a lot of sessions — “I’m not here to dance when there’s real work”"
+    },
+    {
+      "question": "6de9ed2b92cf4c326c75",
+      "choice": 1,
+      "batch": "closure",
+      "run": 3,
+      "step": 29,
+      "month": 8,
+      "action": "Turn down the snack session firmly and suggest lunch another day"
+    },
+    {
+      "question": "6de9ed2b92cf4c326c75",
+      "choice": 2,
+      "batch": "closure",
+      "run": 213,
+      "step": 47,
+      "month": 12,
+      "action": "Give in, chat for a quarter of an hour, and catch up in the evening"
+    },
+    {
+      "question": "6f6fbdcfee252ee208cf",
+      "choice": 1,
+      "batch": "closure",
+      "run": 9,
+      "step": 26,
+      "month": 7,
+      "action": "Use your manager's line and blame the upstream community"
+    },
+    {
+      "question": "6f6fbdcfee252ee208cf",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 32,
+      "month": 9,
+      "action": "Admit you got the assessment wrong and accept whatever sanction is appropriate"
+    },
+    {
+      "question": "7087786222f34f85b3e9",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 43,
+      "month": 12,
+      "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+    },
+    {
+      "question": "7087786222f34f85b3e9",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 32,
+      "step": 25,
+      "month": 7,
+      "action": "Make the call: set the temperature most people like, and tell them both to stop"
+    },
+    {
+      "question": "7087786222f34f85b3e9",
+      "choice": 3,
+      "batch": "closure",
+      "run": 8,
+      "step": 25,
+      "month": 7,
+      "action": "Keep your head down and work. It's not your problem"
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 18,
+      "step": 46,
+      "month": 12,
+      "action": "Go back to why you wanted to leave, and only stay if the package actually fixes that"
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "choice": 2,
+      "batch": "closure",
+      "run": 5,
+      "step": 33,
+      "month": 9,
+      "action": "Let the rise decide it, and drop the idea of leaving on the spot"
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 22,
+      "step": 38,
+      "month": 10,
+      "action": "Say you will stay, and keep looking on the quiet"
+    },
+    {
+      "question": "70de304d58128484e2c0",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 6,
+      "step": 28,
+      "month": 8,
+      "action": "Go to your manager, admit you did not label it, and say you should have thought it through"
+    },
+    {
+      "question": "70de304d58128484e2c0",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 28,
+      "month": 7,
+      "action": "Wait to be asked, then stress that there was no clear rule at the time"
+    },
+    {
+      "question": "72154315656d4fbb0e29",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 0,
+      "step": 46,
+      "month": 12,
+      "action": "Escalate the risk to senior leadership and ask for a firm delivery commitment"
+    },
+    {
+      "question": "72154315656d4fbb0e29",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 44,
+      "month": 12,
+      "action": "Keep coordinating privately, give them another week's buffer, and prepare a stopgap"
+    },
+    {
+      "question": "723ec1ad94fd801da3dc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 5,
+      "step": 41,
+      "month": 11,
+      "action": "Skip the blame game: work out the mismatch and propose prototypes or visual specs before building more"
+    },
+    {
+      "question": "723ec1ad94fd801da3dc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 23,
+      "step": 31,
+      "month": 9,
+      "action": "Pull up the chat log and argue that they already confirmed it"
+    },
+    {
+      "question": "723ec1ad94fd801da3dc",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 33,
+      "month": 9,
+      "action": "Rework the lot without question, doing whatever they say"
+    },
+    {
+      "question": "72f6a1a9c3a2854687a1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 9,
+      "step": 42,
+      "month": 11,
+      "action": "Brief Chris on Hale's questions and your answers"
+    },
+    {
+      "question": "72f6a1a9c3a2854687a1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 103,
+      "step": 33,
+      "month": 9,
+      "action": "Don't make a fuss, and keep delivering as normal"
+    },
+    {
+      "question": "72f6a1a9c3a2854687a1",
+      "choice": 3,
+      "batch": "closure",
+      "run": 320,
+      "step": 31,
+      "month": 8,
+      "action": "Quietly take Hale's team out to lunch to build on the impression"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 46,
+      "step": 27,
+      "month": 7,
+      "action": "Give him a fair B and write clear points for improvement"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 2,
+      "batch": "closure",
+      "run": 68,
+      "step": 26,
+      "month": 7,
+      "action": "Give him an A, taking the slot from a colleague you know less well"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 10,
+      "step": 26,
+      "month": 7,
+      "action": "Give him a C, because the incident has to show in the rating"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 4,
+      "batch": "closure",
+      "run": 60,
+      "step": 39,
+      "month": 10,
+      "action": "Recuse yourself and ask your manager to have someone else rate Ethan"
+    },
+    {
+      "question": "77e5ff211f375d0feb2b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 176,
+      "step": 39,
+      "month": 10,
+      "action": "Face the real issue: discuss your career path with your manager so that staying changes something"
+    },
+    {
+      "question": "77e5ff211f375d0feb2b",
+      "choice": 2,
+      "batch": "closure",
+      "run": 5,
+      "step": 38,
+      "month": 10,
+      "action": "Muddle on, and let your attitude sour"
+    },
+    {
+      "question": "780e7ab477ba3f4e6c67",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 8,
+      "step": 30,
+      "month": 8,
+      "action": "Check in afterwards and help him limit the damage"
+    },
+    {
+      "question": "780e7ab477ba3f4e6c67",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 22,
+      "step": 31,
+      "month": 9,
+      "action": "Be glad you stayed out of it, and leave it there"
+    },
+    {
+      "question": "78b455955331a10bf4e1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 45,
+      "month": 12,
+      "action": "Compare contributions, find what you can improve, and if needed ask your manager how the assessment was done"
+    },
+    {
+      "question": "78b455955331a10bf4e1",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 107,
+      "step": 44,
+      "month": 12,
+      "action": "Stew in jealousy, take against that colleague, and compete with them behind their back"
+    },
+    {
+      "question": "78b455955331a10bf4e1",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 236,
+      "step": 44,
+      "month": 12,
+      "action": "Ask around what everyone got and spread the comparison to whoever will listen"
+    },
+    {
+      "question": "7952b8ed4f689d6403f9",
+      "choice": 1,
+      "batch": "closure",
+      "run": 85,
+      "step": 44,
+      "month": 12,
+      "action": "Revert immediately, pin the version, and find the cause"
+    },
+    {
+      "question": "7952b8ed4f689d6403f9",
+      "choice": 2,
+      "batch": "closure",
+      "run": 5,
+      "step": 40,
+      "month": 10,
+      "action": "Hack the code to match the new version"
+    },
+    {
+      "question": "7952b8ed4f689d6403f9",
+      "choice": 3,
+      "batch": "closure",
+      "run": 7,
+      "step": 45,
+      "month": 12,
+      "action": "Disable Dependabot"
+    },
+    {
+      "question": "79e3c97e2a52a289275c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 95,
+      "step": 40,
+      "month": 10,
+      "action": "Admit the rating was too generous"
+    },
+    {
+      "question": "79e3c97e2a52a289275c",
+      "choice": 2,
+      "batch": "closure",
+      "run": 68,
+      "step": 27,
+      "month": 7,
+      "action": "Insist Ethan deserved an A"
+    },
+    {
+      "question": "7a661b5e34b29fd87fa6",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 26,
+      "month": 7,
+      "action": "Check in privately, ask her to go home, and offer to cover the urgent part"
+    },
+    {
+      "question": "7a661b5e34b29fd87fa6",
+      "choice": 2,
+      "batch": "closure",
+      "run": 97,
+      "step": 37,
+      "month": 10,
+      "action": "Tell your manager her coming in ill is a health risk, and suggest sick leave while the team covers"
+    },
+    {
+      "question": "7a661b5e34b29fd87fa6",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 10,
+      "step": 31,
+      "month": 9,
+      "action": "Put on a mask, move away from the noise and the germs, and say nothing"
+    },
+    {
+      "question": "7aca4d833bf3b3f377c0",
+      "choice": 1,
+      "batch": "closure",
+      "run": 42,
+      "step": 43,
+      "month": 12,
+      "action": "Lead with the work: explain clearly what you are doing and ask what they expect, without grovelling or bristling"
+    },
+    {
+      "question": "7aca4d833bf3b3f377c0",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 70,
+      "step": 43,
+      "month": 12,
+      "action": "Rush to pick their side and lay the flattery on"
+    },
+    {
+      "question": "7aca4d833bf3b3f377c0",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 246,
+      "step": 43,
+      "month": 12,
+      "action": "Watch them coldly, resist, and talk about how much better the last one was"
+    },
+    {
+      "question": "7bbd2c4107a0a6040d6c",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 45,
+      "step": 28,
+      "month": 7,
+      "action": "Use it as a prompt to change your habits, and set a timer to stand up"
+    },
+    {
+      "question": "7bbd2c4107a0a6040d6c",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 32,
+      "step": 29,
+      "month": 8,
+      "action": "Once you feel better, go back to sitting all day"
+    },
+    {
+      "question": "7c07fb8f93306b9e7868",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 23,
+      "step": 33,
+      "month": 9,
+      "action": "Walk your manager through the facts and ask for a fair rating"
+    },
+    {
+      "question": "7c07fb8f93306b9e7868",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 21,
+      "step": 46,
+      "month": 12,
+      "action": "Take on some of Rowan’s work to thaw the relationship"
+    },
+    {
+      "question": "7d9602917fa92a4e4120",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 27,
+      "month": 7,
+      "action": "Arrange a time after work to hear them out, without disruption or commitment"
+    },
+    {
+      "question": "7d9602917fa92a4e4120",
+      "choice": 2,
+      "batch": "closure",
+      "run": 56,
+      "step": 31,
+      "month": 8,
+      "action": "Talk it through at your desk, loud enough that colleagues overhear"
+    },
+    {
+      "question": "7d9602917fa92a4e4120",
+      "choice": 3,
+      "batch": "closure",
+      "run": 53,
+      "step": 32,
+      "month": 9,
+      "action": "Hang up and block them, since even talking feels disloyal"
+    },
+    {
+      "question": "81ec700479be95d5ddd7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 176,
+      "step": 44,
+      "month": 11,
+      "action": "Mentor intensively so they can work independently within two weeks"
+    },
+    {
+      "question": "81ec700479be95d5ddd7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 42,
+      "month": 11,
+      "action": "Keep a light touch, let them explore, and stay focused on your own work"
+    },
+    {
+      "question": "820fa043e74919d2c6dc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 18,
+      "step": 42,
+      "month": 11,
+      "action": "Thank Jo in the talk for her earlier groundwork, then go and speak to her afterwards"
+    },
+    {
+      "question": "820fa043e74919d2c6dc",
+      "choice": 2,
+      "batch": "closure",
+      "run": 68,
+      "step": 37,
+      "month": 10,
+      "action": "Keep the talk on what you got out of it and reinforce your manager's good impression"
+    },
+    {
+      "question": "8222d6708408b8c7a8dc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 254,
+      "step": 27,
+      "month": 7,
+      "action": "Accept, and listen to how the project is going"
+    },
+    {
+      "question": "8222d6708408b8c7a8dc",
+      "choice": 2,
+      "batch": "closure",
+      "run": 51,
+      "step": 29,
+      "month": 7,
+      "action": "Decline and catch the last train home"
+    },
+    {
+      "question": "824494077f1427b84ad0",
+      "choice": 1,
+      "batch": "closure",
+      "run": 22,
+      "step": 40,
+      "month": 11,
+      "action": "Stop the release completely and roll the merge back"
+    },
+    {
+      "question": "824494077f1427b84ad0",
+      "choice": 2,
+      "batch": "closure",
+      "run": 17,
+      "step": 29,
+      "month": 8,
+      "action": "Force the hotfix through"
+    },
+    {
+      "question": "82bc424da5bc25075308",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 9,
+      "step": 30,
+      "month": 8,
+      "action": "Put your head down and let next quarter’s delivery speak"
+    },
+    {
+      "question": "82bc424da5bc25075308",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 107,
+      "step": 33,
+      "month": 9,
+      "action": "Ask HR anonymously whether naming people who did not contribute is allowed"
+    },
+    {
+      "question": "82c66d84af797d83b374",
+      "choice": 1,
+      "batch": "closure",
+      "run": 277,
+      "step": 33,
+      "month": 9,
+      "action": "Sign up for the certification and spend both days learning properly"
+    },
+    {
+      "question": "82c66d84af797d83b374",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 41,
+      "month": 11,
+      "action": "Work through the weekend to deliver the project on Monday morning"
+    },
+    {
+      "question": "82c66d84af797d83b374",
+      "choice": 3,
+      "batch": "closure",
+      "run": 22,
+      "step": 26,
+      "month": 7,
+      "action": "Stick to the family weekend and pick work up next week as planned"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 48,
+      "month": 12,
+      "action": "Apply for a key project"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 2,
+      "step": 49,
+      "month": 12,
+      "action": "Report results to your manager"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 11,
+      "step": 50,
+      "month": 12,
+      "action": "Fight for resources"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 4,
+      "batch": "closure",
+      "run": 306,
+      "step": 36,
+      "month": 9,
+      "action": "Apply for rotation"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 5,
+      "batch": "discovery",
+      "run": 33,
+      "step": 37,
+      "month": 9,
+      "action": "Showcase results"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 6,
+      "batch": "closure",
+      "run": 37,
+      "step": 48,
+      "month": 12,
+      "action": "Build a mentorship"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 7,
+      "batch": "discovery",
+      "run": 10,
+      "step": 36,
+      "month": 9,
+      "action": "Repair a key relationship"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 8,
+      "batch": "closure",
+      "run": 0,
+      "step": 36,
+      "month": 9,
+      "action": "Lay low and reduce risk"
+    },
+    {
+      "question": "83204810128f0754ec2f",
+      "choice": 9,
+      "batch": "discovery",
+      "run": 23,
+      "step": 36,
+      "month": 9,
+      "action": "No action"
+    },
+    {
+      "question": "83927782025a75737fcb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 20,
+      "step": 30,
+      "month": 8,
+      "action": "Play to your strengths: use technical depth and total cost of ownership to justify the higher price"
+    },
+    {
+      "question": "83927782025a75737fcb",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 34,
+      "step": 31,
+      "month": 9,
+      "action": "Slash the price at the last minute to match them, and skate through the actual pitch"
+    },
+    {
+      "question": "83927782025a75737fcb",
+      "choice": 3,
+      "batch": "closure",
+      "run": 30,
+      "step": 33,
+      "month": 9,
+      "action": "Take a swipe at the rival: imply their tech is weak and they have botched jobs before"
+    },
+    {
+      "question": "843c90a5b7ac76ba8845",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 39,
+      "month": 10,
+      "action": "Refuse the files and tell him to use the proper handover"
+    },
+    {
+      "question": "843c90a5b7ac76ba8845",
+      "choice": 2,
+      "batch": "closure",
+      "run": 59,
+      "step": 35,
+      "month": 9,
+      "action": "Take the link without opening it, and plan to delete it later"
+    },
+    {
+      "question": "843c90a5b7ac76ba8845",
+      "choice": 3,
+      "batch": "closure",
+      "run": 38,
+      "step": 33,
+      "month": 9,
+      "action": "Take it and report it to Information Security"
+    },
+    {
+      "question": "85973978d8712a1b09c8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 138,
+      "step": 39,
+      "month": 10,
+      "action": "Tell him, 'If you're really stuck, come to me', and help without doing it for him"
+    },
+    {
+      "question": "85973978d8712a1b09c8",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 34,
+      "step": 28,
+      "month": 8,
+      "action": "Keep your distance. You are done being used as spare capacity"
+    },
+    {
+      "question": "86af6fb4eac8dfb1e349",
+      "choice": 1,
+      "batch": "closure",
+      "run": 203,
+      "step": 34,
+      "month": 9,
+      "action": "Come forward and say you received a link you had not yet deleted"
+    },
+    {
+      "question": "86af6fb4eac8dfb1e349",
+      "choice": 2,
+      "batch": "closure",
+      "run": 188,
+      "step": 29,
+      "month": 8,
+      "action": "Deny knowing anything"
+    },
+    {
+      "question": "86e6bb1b860f0d95f32a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 130,
+      "step": 44,
+      "month": 12,
+      "action": "Reply at once to look professional"
+    },
+    {
+      "question": "86e6bb1b860f0d95f32a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 27,
+      "step": 38,
+      "month": 10,
+      "action": "Reply in the morning and spell out your working hours"
+    },
+    {
+      "question": "86e6bb1b860f0d95f32a",
+      "choice": 3,
+      "batch": "closure",
+      "run": 53,
+      "step": 33,
+      "month": 9,
+      "action": "Suggest to your manager privately that important items go by email"
+    },
+    {
+      "question": "86e6bb1b860f0d95f32a",
+      "choice": 4,
+      "batch": "closure",
+      "run": 2,
+      "step": 30,
+      "month": 8,
+      "action": "Copy Tara and start sending late-night updates yourself"
+    },
+    {
+      "question": "87cd0bc8ac1ffce6d746",
+      "choice": 1,
+      "batch": "closure",
+      "run": 32,
+      "step": 42,
+      "month": 11,
+      "action": "Finally cut out caffeine and get back to regular sleeping hours"
+    },
+    {
+      "question": "87cd0bc8ac1ffce6d746",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 94,
+      "step": 42,
+      "month": 11,
+      "action": "Increase the dose and keep pushing"
+    },
+    {
+      "question": "8945397b4afad63b76fa",
+      "choice": 1,
+      "batch": "closure",
+      "run": 67,
+      "step": 37,
+      "month": 10,
+      "action": "Get Jordan off the hook: steer the attention elsewhere and give them a way out"
+    },
+    {
+      "question": "8945397b4afad63b76fa",
+      "choice": 2,
+      "batch": "closure",
+      "run": 329,
+      "step": 26,
+      "month": 7,
+      "action": "Leave them to deal with it"
+    },
+    {
+      "question": "897cead61bcfcacc0e9d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 15,
+      "step": 42,
+      "month": 11,
+      "action": "Use the numbers to show the team is over capacity, and suggest cutting scope"
+    },
+    {
+      "question": "897cead61bcfcacc0e9d",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 19,
+      "step": 26,
+      "month": 7,
+      "action": "Nod and take it on"
+    },
+    {
+      "question": "897cead61bcfcacc0e9d",
+      "choice": 3,
+      "batch": "closure",
+      "run": 32,
+      "step": 44,
+      "month": 11,
+      "action": "Raise it privately with your manager after the meeting"
+    },
+    {
+      "question": "89c95e64b3e77cb7e55f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 290,
+      "step": 46,
+      "month": 12,
+      "action": "Step in late with a middle option so both of them have a way out"
+    },
+    {
+      "question": "89c95e64b3e77cb7e55f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 28,
+      "month": 8,
+      "action": "Stay out of it. It's still not your problem"
+    },
+    {
+      "question": "8a49b751043ad778cb00",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 59,
+      "step": 28,
+      "month": 7,
+      "action": "Try to explain the constraints of the rating system"
+    },
+    {
+      "question": "8a49b751043ad778cb00",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 10,
+      "step": 27,
+      "month": 7,
+      "action": "Accept that the friendship is over"
+    },
+    {
+      "question": "8aa733a3dc382fba9c6a",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 394,
+      "step": 43,
+      "month": 12,
+      "action": "Follow the 90-day process and publish a deprecation notice"
+    },
+    {
+      "question": "8aa733a3dc382fba9c6a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 7,
+      "step": 44,
+      "month": 12,
+      "action": "Privately agree a longer compatibility layer with the reluctant team"
+    },
+    {
+      "question": "8aa733a3dc382fba9c6a",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 319,
+      "step": 43,
+      "month": 12,
+      "action": "Switch v2 off and force them to upgrade"
+    },
+    {
+      "question": "8b3254122fafdfd1fccd",
+      "choice": 1,
+      "batch": "closure",
+      "run": 22,
+      "step": 25,
+      "month": 7,
+      "action": "Tell them what is really bothering you, agree a fix, then stay with a clear head"
+    },
+    {
+      "question": "8b3254122fafdfd1fccd",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 15,
+      "step": 38,
+      "month": 10,
+      "action": "Feel too awkward to be honest, take the rise and leave the real problem unsolved"
+    },
+    {
+      "question": "8bba01c0fc41eaf6ad9b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 93,
+      "step": 45,
+      "month": 12,
+      "action": "Come clean now and adjust the plan"
+    },
+    {
+      "question": "8bba01c0fc41eaf6ad9b",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 260,
+      "step": 46,
+      "month": 12,
+      "action": "Keep hiding it and gamble that nobody notices"
+    },
+    {
+      "question": "8ce6b05abd7011f5c1ff",
+      "choice": 1,
+      "batch": "closure",
+      "run": 184,
+      "step": 43,
+      "month": 12,
+      "action": "Be straight: you want to stay, here is what the market pays, and would they review your pay"
+    },
+    {
+      "question": "8ce6b05abd7011f5c1ff",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 392,
+      "step": 45,
+      "month": 12,
+      "action": "Use the offer as an ultimatum: “Match this number or I go today”"
+    },
+    {
+      "question": "8ce6b05abd7011f5c1ff",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 318,
+      "step": 44,
+      "month": 12,
+      "action": "Inflate the offer and quote your manager a much higher number"
+    },
+    {
+      "question": "8e14d1ba113f2601ea10",
+      "choice": 1,
+      "batch": "closure",
+      "run": 152,
+      "step": 47,
+      "month": 12,
+      "action": "Check in privately: ask how they are, and whether they need help or a change to the arrangement"
+    },
+    {
+      "question": "8e14d1ba113f2601ea10",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 200,
+      "step": 45,
+      "month": 12,
+      "action": "Leave it and trust that managing by outcomes will sort it out"
+    },
+    {
+      "question": "8ede133c213fc89cf58b",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 44,
+      "month": 12,
+      "action": "Record what you help with in messages and ticket notes so credit is traceable, and reset the split"
+    },
+    {
+      "question": "8ede133c213fc89cf58b",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 35,
+      "step": 28,
+      "month": 8,
+      "action": "Leave it. It's less hassle to keep helping"
+    },
+    {
+      "question": "8f35ba310632290a2421",
+      "choice": 1,
+      "batch": "closure",
+      "run": 326,
+      "step": 41,
+      "month": 11,
+      "action": "Apologise in person at once, present a detailed recovery plan, and fix how you communicate"
+    },
+    {
+      "question": "8f35ba310632290a2421",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 29,
+      "month": 8,
+      "action": "Explain why you were a victim of this too"
+    },
+    {
+      "question": "9246459f67a493605501",
+      "choice": 1,
+      "batch": "closure",
+      "run": 46,
+      "step": 45,
+      "month": 12,
+      "action": "Give a fair picture of the team and the work, without informing on anyone or running them down"
+    },
+    {
+      "question": "9246459f67a493605501",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 513,
+      "step": 45,
+      "month": 12,
+      "action": "Embellish complaints about colleagues to please the new manager"
+    },
+    {
+      "question": "9246459f67a493605501",
+      "choice": 3,
+      "batch": "closure",
+      "run": 326,
+      "step": 45,
+      "month": 12,
+      "action": "Refuse outright and brusquely, even to give a normal briefing"
+    },
+    {
+      "question": "92bd832f6387d1df2a03",
+      "choice": 1,
+      "batch": "closure",
+      "run": 5,
+      "step": 34,
+      "month": 9,
+      "action": "Decline, explain it is confidential company property that can't go outside, and keep things civil"
+    },
+    {
+      "question": "92bd832f6387d1df2a03",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 58,
+      "step": 30,
+      "month": 8,
+      "action": "Send the internal material because you feel you can't say no"
+    },
+    {
+      "question": "92bd832f6387d1df2a03",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 39,
+      "month": 10,
+      "action": "Send it, plus extra they didn't ask for, to look generous"
+    },
+    {
+      "question": "92d60e1102fbc4dd82a8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 32,
+      "step": 31,
+      "month": 8,
+      "action": "Push to get your work into team OKRs or the quarterly highlights"
+    },
+    {
+      "question": "92d60e1102fbc4dd82a8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 266,
+      "step": 42,
+      "month": 11,
+      "action": "Keep to your own patch and stop speaking for the team"
+    },
+    {
+      "question": "9302bd4b70b4302bb0b8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 31,
+      "step": 28,
+      "month": 8,
+      "action": "Tell him face to face what you actually need"
+    },
+    {
+      "question": "9302bd4b70b4302bb0b8",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 3,
+      "step": 40,
+      "month": 10,
+      "action": "Deny it and say it may be a misunderstanding"
+    },
+    {
+      "question": "935ce04cf1c887774aa2",
+      "choice": 1,
+      "batch": "closure",
+      "run": 170,
+      "step": 44,
+      "month": 12,
+      "action": "Talk to Lou: ask her not to pass it on, and set the line from now on"
+    },
+    {
+      "question": "935ce04cf1c887774aa2",
+      "choice": 2,
+      "batch": "closure",
+      "run": 29,
+      "step": 31,
+      "month": 8,
+      "action": "Call her out for gossiping, in the team channel or in front of people"
+    },
+    {
+      "question": "938cad663f1eecc81fd0",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 94,
+      "step": 31,
+      "month": 9,
+      "action": "Go to your manager and admit you dropped a vague hint"
+    },
+    {
+      "question": "938cad663f1eecc81fd0",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 58,
+      "step": 45,
+      "month": 12,
+      "action": "Stay silent"
+    },
+    {
+      "question": "94e12d5b444b75bc4908",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 159,
+      "step": 37,
+      "month": 10,
+      "action": "Quietly borrow the open-source kernel, rebrand it, and hit the milestone"
+    },
+    {
+      "question": "94e12d5b444b75bc4908",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 143,
+      "step": 44,
+      "month": 12,
+      "action": "Keep the work original, ask for a delay, and write the risk into the update"
+    },
+    {
+      "question": "94ee3e7a75fb3f15bc13",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 37,
+      "month": 10,
+      "action": "Lead with the conclusion: key results first, then the risk and the plan to deal with it"
+    },
+    {
+      "question": "94ee3e7a75fb3f15bc13",
+      "choice": 2,
+      "batch": "closure",
+      "run": 38,
+      "step": 42,
+      "month": 11,
+      "action": "Give only the good news: hide the risk and stick to highlights throughout"
+    },
+    {
+      "question": "94ee3e7a75fb3f15bc13",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 33,
+      "step": 31,
+      "month": 9,
+      "action": "Walk through the process in detail, still not reaching the point ten minutes in"
+    },
+    {
+      "question": "95a21cb34765bc9c8927",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 8,
+      "step": 28,
+      "month": 7,
+      "action": "Bring breakfast in the next day for the people who stayed"
+    },
+    {
+      "question": "95a21cb34765bc9c8927",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 33,
+      "step": 43,
+      "month": 11,
+      "action": "Offer no explanation and let your work speak for itself"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 34,
+      "step": 33,
+      "month": 9,
+      "action": "Go with Quinn to apologise to Chris in person straight away"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 44,
+      "step": 31,
+      "month": 8,
+      "action": "Suggest sending a follow-up claiming the account was hacked"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 28,
+      "step": 27,
+      "month": 7,
+      "action": "Stay out of it and leave Quinn to deal with it"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 4,
+      "batch": "closure",
+      "run": 7,
+      "step": 30,
+      "month": 8,
+      "action": "Call IT first and ask whether the email can still be recalled"
+    },
+    {
+      "question": "996daa4b258fecec8ab3",
+      "choice": 1,
+      "batch": "closure",
+      "run": 66,
+      "step": 45,
+      "month": 12,
+      "action": "Come prepared and give a clear, professional update on your work and thinking, without hogging the floor"
+    },
+    {
+      "question": "996daa4b258fecec8ab3",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 381,
+      "step": 46,
+      "month": 12,
+      "action": "Talk over people, overstate your role, and put colleagues down to make yourself look good"
+    },
+    {
+      "question": "996daa4b258fecec8ab3",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 11,
+      "step": 45,
+      "month": 12,
+      "action": "Keep your head down and say nothing all meeting, terrified of saying the wrong thing"
+    },
+    {
+      "question": "99fba8eae37aa1b10782",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 32,
+      "month": 9,
+      "action": "In the debrief, name Quinn’s contribution"
+    },
+    {
+      "question": "99fba8eae37aa1b10782",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 68,
+      "step": 32,
+      "month": 9,
+      "action": "Say nothing"
+    },
+    {
+      "question": "9ae6f1428d463060ce82",
+      "choice": 1,
+      "batch": "closure",
+      "run": 119,
+      "step": 44,
+      "month": 11,
+      "action": "Start joining lunch occasionally, specifically to catch up"
+    },
+    {
+      "question": "9ae6f1428d463060ce82",
+      "choice": 2,
+      "batch": "closure",
+      "run": 18,
+      "step": 31,
+      "month": 8,
+      "action": "Keep skipping the café, and book 1:1s with the people who matter"
+    },
+    {
+      "question": "9ba3015a48fd74242c0a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 39,
+      "month": 10,
+      "action": "Spend ten minutes with them at lunch explaining the boundary and that you mean no ill will"
+    },
+    {
+      "question": "9ba3015a48fd74242c0a",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 21,
+      "step": 42,
+      "month": 10,
+      "action": "Offer no explanation and keep focusing on the work"
+    },
+    {
+      "question": "9bff63e83208242c4425",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 82,
+      "step": 32,
+      "month": 9,
+      "action": "Adopt the new framework and use this low-risk module to build experience"
+    },
+    {
+      "question": "9bff63e83208242c4425",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 26,
+      "month": 7,
+      "action": "Stick with the mature stack and put reliable delivery first"
+    },
+    {
+      "question": "9c19b9e6c7fd7c9a815c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 118,
+      "step": 42,
+      "month": 11,
+      "action": "Offer to follow up with the VP on how the metric is defined"
+    },
+    {
+      "question": "9c19b9e6c7fd7c9a815c",
+      "choice": 2,
+      "batch": "closure",
+      "run": 6,
+      "step": 31,
+      "month": 9,
+      "action": "Leave it there so your manager is not made to look small"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 26,
+      "month": 7,
+      "action": "Walk through the timeline and the email trail, and set out who owned what"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 27,
+      "month": 7,
+      "action": "Take some of the blame for now to steady the client, and leave Chloe for later"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 3,
+      "batch": "closure",
+      "run": 233,
+      "step": 44,
+      "month": 11,
+      "action": "Hit back in the room: Chloe did not provide the integration environment on time"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 4,
+      "batch": "discovery",
+      "run": 18,
+      "step": 26,
+      "month": 7,
+      "action": "Stay silent and ask your manager to unpick it"
+    },
+    {
+      "question": "9f48c1d9caad36d658c8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 44,
+      "month": 12,
+      "action": "Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep"
+    },
+    {
+      "question": "9f48c1d9caad36d658c8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 5,
+      "step": 31,
+      "month": 8,
+      "action": "Join in and have a moan"
+    },
+    {
+      "question": "9f48c1d9caad36d658c8",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 9,
+      "step": 39,
+      "month": 10,
+      "action": "Leave the channel and stay out of it"
+    },
+    {
+      "question": "9f48c1d9caad36d658c8",
+      "choice": 4,
+      "batch": "closure",
+      "run": 2,
+      "step": 46,
+      "month": 12,
+      "action": "Message Chris privately about team morale, without saying how you know"
+    },
+    {
+      "question": "a0df1e71074770c2fd87",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 47,
+      "step": 29,
+      "month": 8,
+      "action": "Volunteer for the incident team"
+    },
+    {
+      "question": "a0df1e71074770c2fd87",
+      "choice": 2,
+      "batch": "closure",
+      "run": 1,
+      "step": 26,
+      "month": 7,
+      "action": "Offer two hours of remote Q&A in the channel, but do not join on site"
+    },
+    {
+      "question": "a0df1e71074770c2fd87",
+      "choice": 3,
+      "batch": "closure",
+      "run": 46,
+      "step": 32,
+      "month": 9,
+      "action": "Stay quiet and stick to your own work"
+    },
+    {
+      "question": "a116f653986d7aa36dec",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 58,
+      "step": 44,
+      "month": 12,
+      "action": "Hint that things may move soon and she should be careful, without naming the document"
+    },
+    {
+      "question": "a116f653986d7aa36dec",
+      "choice": 2,
+      "batch": "closure",
+      "run": 10,
+      "step": 45,
+      "month": 12,
+      "action": "Say you cannot comment on internal plans or promise that any role is safe, so she must weigh the risk herself"
+    },
+    {
+      "question": "a116f653986d7aa36dec",
+      "choice": 3,
+      "batch": "closure",
+      "run": 50,
+      "step": 27,
+      "month": 7,
+      "action": "Tell her privately what is planned and ask her to keep it strictly confidential"
+    },
+    {
+      "question": "a136865e7b39b5be88fc",
+      "choice": 1,
+      "batch": "closure",
+      "run": 19,
+      "step": 43,
+      "month": 12,
+      "action": "Check your rating, the bonus rules and last year’s figures, then book a conversation about how it was calculated"
+    },
+    {
+      "question": "a136865e7b39b5be88fc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 225,
+      "step": 43,
+      "month": 12,
+      "action": "Storm into the office and demand to know why it is so low"
+    },
+    {
+      "question": "a136865e7b39b5be88fc",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 448,
+      "step": 43,
+      "month": 12,
+      "action": "Say nothing to their face, and snipe about the company in the team channel"
+    },
+    {
+      "question": "a203dafa5b608d9cda56",
+      "choice": 1,
+      "batch": "closure",
+      "run": 33,
+      "step": 47,
+      "month": 12,
+      "action": "Acknowledge the climate, then bring the conversation back to your actual contribution and market rates"
+    },
+    {
+      "question": "a203dafa5b608d9cda56",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 185,
+      "step": 46,
+      "month": 12,
+      "action": "Lose heart at 'the climate' and cut your ask to something tiny"
+    },
+    {
+      "question": "a203dafa5b608d9cda56",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 201,
+      "step": 45,
+      "month": 12,
+      "action": "Get heated and snap that the climate is nothing to do with you, and the conversation turns into a row"
+    },
+    {
+      "question": "a313e10e3eac2f386baf",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 32,
+      "month": 9,
+      "action": "Help Quinn write a proper wash-up"
+    },
+    {
+      "question": "a313e10e3eac2f386baf",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 34,
+      "step": 44,
+      "month": 12,
+      "action": "Step back and stay out"
+    },
+    {
+      "question": "a599898c637ac410affb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 27,
+      "step": 39,
+      "month": 10,
+      "action": "Set up an on-call rota, with no replies on days you are not on call"
+    },
+    {
+      "question": "a599898c637ac410affb",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 105,
+      "step": 40,
+      "month": 10,
+      "action": "Keep to your hours anyway, whatever the reaction"
+    },
+    {
+      "question": "a693e55a9b1313c03940",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 28,
+      "month": 8,
+      "action": "Take the main responsibility and say your oversight as mentor failed"
+    },
+    {
+      "question": "a693e55a9b1313c03940",
+      "choice": 2,
+      "batch": "closure",
+      "run": 29,
+      "step": 39,
+      "month": 10,
+      "action": "Say in the room that the whole fault is Sam's"
+    },
+    {
+      "question": "a699a48e2046ad54d160",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 4,
+      "step": 44,
+      "month": 12,
+      "action": "Follow the sick-leave procedure, and privately agree the support and return-to-work plan you need"
+    },
+    {
+      "question": "a699a48e2046ad54d160",
+      "choice": 2,
+      "batch": "closure",
+      "run": 48,
+      "step": 43,
+      "month": 12,
+      "action": "Grit it out, try exercise and meditation, and deal with it after the project"
+    },
+    {
+      "question": "a7b6addbeab1a87dab84",
+      "choice": 1,
+      "batch": "closure",
+      "run": 8,
+      "step": 39,
+      "month": 10,
+      "action": "Make more effort socially, without crossing your own lines"
+    },
+    {
+      "question": "a7b6addbeab1a87dab84",
+      "choice": 2,
+      "batch": "closure",
+      "run": 82,
+      "step": 26,
+      "month": 7,
+      "action": "Refuse to play along and double down on technical output"
+    },
+    {
+      "question": "a7b6addbeab1a87dab84",
+      "choice": 3,
+      "batch": "closure",
+      "run": 4,
+      "step": 41,
+      "month": 11,
+      "action": "Tell Helen, the HR business partner, that the promotion criteria are too vague"
+    },
+    {
+      "question": "a7b6addbeab1a87dab84",
+      "choice": 4,
+      "batch": "closure",
+      "run": 193,
+      "step": 45,
+      "month": 12,
+      "action": "Start looking elsewhere and ease off here"
+    },
+    {
+      "question": "a7e9f222e44b514ee4fc",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 33,
+      "step": 27,
+      "month": 7,
+      "action": "Admit you gave her a vague outline over dinner"
+    },
+    {
+      "question": "a7e9f222e44b514ee4fc",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 31,
+      "step": 30,
+      "month": 8,
+      "action": "Deny it"
+    },
+    {
+      "question": "a8103e386a97a8b81208",
+      "choice": 1,
+      "batch": "closure",
+      "run": 124,
+      "step": 45,
+      "month": 12,
+      "action": "Tell HR the truth about how the leak spread"
+    },
+    {
+      "question": "a8103e386a97a8b81208",
+      "choice": 2,
+      "batch": "closure",
+      "run": 50,
+      "step": 28,
+      "month": 7,
+      "action": "Deny it was you"
+    },
+    {
+      "question": "a85cb10008613b91a70a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 16,
+      "step": 37,
+      "month": 10,
+      "action": "Keep the one-pager to business value and what you would bring back, without knocking Jo"
+    },
+    {
+      "question": "a85cb10008613b91a70a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 37,
+      "month": 10,
+      "action": "Compare the two of you in the one-pager and imply you are the better fit"
+    },
+    {
+      "question": "a9362fb2b9c29a7db9bf",
+      "choice": 1,
+      "batch": "closure",
+      "run": 314,
+      "step": 43,
+      "month": 12,
+      "action": "Block the release until the hole is fully fixed and has passed a security audit"
+    },
+    {
+      "question": "a9362fb2b9c29a7db9bf",
+      "choice": 2,
+      "batch": "closure",
+      "run": 85,
+      "step": 43,
+      "month": 12,
+      "action": "Accept a later fix, but put temporary mitigations and monitoring in first"
+    },
+    {
+      "question": "a968fc96e977b4cf4994",
+      "choice": 1,
+      "batch": "closure",
+      "run": 19,
+      "step": 33,
+      "month": 9,
+      "action": "Set a steady revision plan over several months, broken into daily tasks you can finish"
+    },
+    {
+      "question": "a968fc96e977b4cf4994",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 11,
+      "step": 40,
+      "month": 10,
+      "action": "Sign up, then study in fits and starts, and cram at the last minute"
+    },
+    {
+      "question": "a968fc96e977b4cf4994",
+      "choice": 3,
+      "batch": "closure",
+      "run": 46,
+      "step": 42,
+      "month": 11,
+      "action": "Drop the idea because it looks too hard"
+    },
+    {
+      "question": "a971aa9122bbb7e600f7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 13,
+      "step": 30,
+      "month": 8,
+      "action": "Accept the plan and give the live project your full attention"
+    },
+    {
+      "question": "a971aa9122bbb7e600f7",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 22,
+      "step": 30,
+      "month": 8,
+      "action": "Ask your manager if you can join the new project part-time"
+    },
+    {
+      "question": "a971aa9122bbb7e600f7",
+      "choice": 3,
+      "batch": "closure",
+      "run": 16,
+      "step": 27,
+      "month": 7,
+      "action": "Approach Owen privately: you supply the technical design, they stay the lead"
+    },
+    {
+      "question": "a98f64d9175fc8fcadf8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 32,
+      "month": 9,
+      "action": "Tell her gently that strong scent gives you headaches, and ask if she could wear less"
+    },
+    {
+      "question": "a98f64d9175fc8fcadf8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 80,
+      "step": 28,
+      "month": 7,
+      "action": "Praise it insincerely and keep sitting there with a headache"
+    },
+    {
+      "question": "a98f64d9175fc8fcadf8",
+      "choice": 3,
+      "batch": "closure",
+      "run": 155,
+      "step": 31,
+      "month": 8,
+      "action": "Turn to other colleagues and moan that she \"stinks the place out\""
+    },
+    {
+      "question": "aa364b018b077712b0bc",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 20,
+      "step": 28,
+      "month": 8,
+      "action": "Find a moment to soften it: you just don't discuss your private life, and it wasn't personal"
+    },
+    {
+      "question": "aa364b018b077712b0bc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 21,
+      "step": 47,
+      "month": 12,
+      "action": "Don't soften it. The boundary matters more than her feelings"
+    },
+    {
+      "question": "aa4946f3c929eb07b881",
+      "choice": 1,
+      "batch": "closure",
+      "run": 59,
+      "step": 39,
+      "month": 10,
+      "action": "Stop it now: tell the client and your manager where things stand, and reset scope and change control"
+    },
+    {
+      "question": "aa4946f3c929eb07b881",
+      "choice": 2,
+      "batch": "closure",
+      "run": 275,
+      "step": 28,
+      "month": 8,
+      "action": "Keep taking whatever comes, and have the team work late to carry it"
+    },
+    {
+      "question": "ab0727539ef9c44913c1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 41,
+      "month": 11,
+      "action": "Reset: limit caffeine, keep a regular sleep routine and recover gradually"
+    },
+    {
+      "question": "ab0727539ef9c44913c1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 32,
+      "step": 41,
+      "month": 10,
+      "action": "Keep relying on caffeine and finish what is in front of you first"
+    },
+    {
+      "question": "adb60eb71c7f3b8e7571",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 10,
+      "step": 39,
+      "month": 10,
+      "action": "Admit you overheard, but say you did not name the list"
+    },
+    {
+      "question": "adb60eb71c7f3b8e7571",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 95,
+      "step": 31,
+      "month": 8,
+      "action": "Help Ethan understand the consultation and how to prepare for it"
+    },
+    {
+      "question": "ae3eff17a224ab501cbd",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 38,
+      "month": 10,
+      "action": "Note in the PR that it was AI-assisted, and explain what you changed"
+    },
+    {
+      "question": "ae3eff17a224ab501cbd",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 27,
+      "month": 7,
+      "action": "Say nothing extra, and let it read as ordinary engineering"
+    },
+    {
+      "question": "ae9ad6afa12adc953619",
+      "choice": 1,
+      "batch": "closure",
+      "run": 83,
+      "step": 31,
+      "month": 8,
+      "action": "Cooperate and explain exactly how it got out"
+    },
+    {
+      "question": "ae9ad6afa12adc953619",
+      "choice": 2,
+      "batch": "closure",
+      "run": 233,
+      "step": 33,
+      "month": 9,
+      "action": "Deny you told him"
+    },
+    {
+      "question": "af450be58cfe84849dca",
+      "choice": 1,
+      "batch": "closure",
+      "run": 35,
+      "step": 30,
+      "month": 8,
+      "action": "Go to Jo, clarify or apologise, and try to repair it"
+    },
+    {
+      "question": "af450be58cfe84849dca",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 19,
+      "step": 28,
+      "month": 8,
+      "action": "Offer no explanation and focus on the trip"
+    },
+    {
+      "question": "af6d77551c117c67b940",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 25,
+      "month": 7,
+      "action": "Tell your manager you are covering Faye for now, and ask for a realistic plan"
+    },
+    {
+      "question": "af6d77551c117c67b940",
+      "choice": 2,
+      "batch": "closure",
+      "run": 2,
+      "step": 29,
+      "month": 8,
+      "action": "Carry all of it without telling anyone, and work late to catch up"
+    },
+    {
+      "question": "b0816f87a837d11997ea",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 37,
+      "month": 10,
+      "action": "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value"
+    },
+    {
+      "question": "b0816f87a837d11997ea",
+      "choice": 2,
+      "batch": "closure",
+      "run": 80,
+      "step": 34,
+      "month": 9,
+      "action": "Keep hitting refresh as it gets messier, without switching plan"
+    },
+    {
+      "question": "b0816f87a837d11997ea",
+      "choice": 3,
+      "batch": "closure",
+      "run": 101,
+      "step": 25,
+      "month": 7,
+      "action": "In a panic, say it is a problem on the client's network"
+    },
+    {
+      "question": "b24a9e0b98254e33b8c1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 43,
+      "month": 12,
+      "action": "Open with something light: an industry anecdote, or an honest take on the evening"
+    },
+    {
+      "question": "b24a9e0b98254e33b8c1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 44,
+      "step": 33,
+      "month": 9,
+      "action": "Seize the moment and lay the praise on thick so they remember you"
+    },
+    {
+      "question": "b24a9e0b98254e33b8c1",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 11,
+      "step": 32,
+      "month": 9,
+      "action": "Freeze, eat, and say almost nothing all night"
+    },
+    {
+      "question": "b51095020c08904e26f1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 12,
+      "step": 32,
+      "month": 9,
+      "action": "Explain politely that you have something urgent and ask to jump in for two pages"
+    },
+    {
+      "question": "b51095020c08904e26f1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 29,
+      "step": 34,
+      "month": 9,
+      "action": "Walk over, cancel his job and print yours first"
+    },
+    {
+      "question": "b51095020c08904e26f1",
+      "choice": 3,
+      "batch": "closure",
+      "run": 290,
+      "step": 28,
+      "month": 7,
+      "action": "Wait in silence while the meeting starts without you"
+    },
+    {
+      "question": "b73def3034a63de89fc7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 56,
+      "step": 38,
+      "month": 10,
+      "action": "Give your manager the facts on how the work was really split, and redraw the line"
+    },
+    {
+      "question": "b73def3034a63de89fc7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 5,
+      "step": 30,
+      "month": 8,
+      "action": "Swallow it. A falling-out is not worth it"
+    },
+    {
+      "question": "b7fe478b43d8b16be660",
+      "choice": 1,
+      "batch": "closure",
+      "run": 86,
+      "step": 31,
+      "month": 8,
+      "action": "Find a better moment and admit you denied it to protect how anonymous feedback is meant to work"
+    },
+    {
+      "question": "b7fe478b43d8b16be660",
+      "choice": 2,
+      "batch": "closure",
+      "run": 11,
+      "step": 34,
+      "month": 9,
+      "action": "Live with it, let the work speak, and trust time to clear the misunderstanding"
+    },
+    {
+      "question": "b853f0c7f29012670d54",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 29,
+      "month": 8,
+      "action": "Agree a handover time with him, and bring in the project schedule if it needs writing down"
+    },
+    {
+      "question": "b853f0c7f29012670d54",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 6,
+      "step": 31,
+      "month": 8,
+      "action": "Work late to cover it and say nothing"
+    },
+    {
+      "question": "b853f0c7f29012670d54",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 45,
+      "month": 12,
+      "action": "Call him out in the main channel as always holding things up"
+    },
+    {
+      "question": "bcdf5a53350e72d5faae",
+      "choice": 1,
+      "batch": "closure",
+      "run": 103,
+      "step": 27,
+      "month": 7,
+      "action": "Publicly recognise their independent development and delivery, and make clear you never questioned that"
+    },
+    {
+      "question": "bcdf5a53350e72d5faae",
+      "choice": 2,
+      "batch": "closure",
+      "run": 47,
+      "step": 40,
+      "month": 11,
+      "action": "Leave it. Let the team decide who contributed what"
+    },
+    {
+      "question": "c26b8af24c14ddba7d37",
+      "choice": 1,
+      "batch": "closure",
+      "run": 222,
+      "step": 44,
+      "month": 12,
+      "action": "Prioritise the new work, discuss resources and limits with your manager, and push for support or something in return"
+    },
+    {
+      "question": "c26b8af24c14ddba7d37",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 715,
+      "step": 43,
+      "month": 12,
+      "action": "Take the lot in silence and carry it at any cost"
+    },
+    {
+      "question": "c26b8af24c14ddba7d37",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 571,
+      "step": 43,
+      "month": 12,
+      "action": "Push back by coasting: the more that arrives, the more you half-do it"
+    },
+    {
+      "question": "c3ad32ba3fed96273cb7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 30,
+      "step": 45,
+      "month": 12,
+      "action": "Congratulate her and ask what she got out of it"
+    },
+    {
+      "question": "c3ad32ba3fed96273cb7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 299,
+      "step": 26,
+      "month": 7,
+      "action": "Congratulate her in public, then tell your manager privately you want the next one"
+    },
+    {
+      "question": "c4604f963bb450e827ab",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 32,
+      "month": 9,
+      "action": "Refuse, and keep the chat to personal matters"
+    },
+    {
+      "question": "c4604f963bb450e827ab",
+      "choice": 2,
+      "batch": "closure",
+      "run": 29,
+      "step": 35,
+      "month": 9,
+      "action": "Share non-confidential industry gossip"
+    },
+    {
+      "question": "c4604f963bb450e827ab",
+      "choice": 3,
+      "batch": "closure",
+      "run": 5,
+      "step": 28,
+      "month": 7,
+      "action": "Tell him about the draft merger plan, as a way of repaying the favour"
+    },
+    {
+      "question": "c4ab6d613e9a2ec7fb7a",
+      "choice": 1,
+      "batch": "closure",
+      "run": 22,
+      "step": 43,
+      "month": 12,
+      "action": "Hold a review and add a release checklist"
+    },
+    {
+      "question": "c4ab6d613e9a2ec7fb7a",
+      "choice": 2,
+      "batch": "closure",
+      "run": 119,
+      "step": 34,
+      "month": 9,
+      "action": "Just say the merge went wrong"
+    },
+    {
+      "question": "c4b23f2155d735ea5d12",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 91,
+      "step": 43,
+      "month": 12,
+      "action": "Change tack at once: skip the broken step, talk about overall value, and demo it afterwards"
+    },
+    {
+      "question": "c4b23f2155d735ea5d12",
+      "choice": 2,
+      "batch": "closure",
+      "run": 98,
+      "step": 38,
+      "month": 10,
+      "action": "Keep hammering at the bug until time runs out"
+    },
+    {
+      "question": "c5cf43f710a848e64909",
+      "choice": 1,
+      "batch": "closure",
+      "run": 60,
+      "step": 45,
+      "month": 12,
+      "action": "Hold your nerve, keep delivering, build your case for next time, and agree a date to revisit it"
+    },
+    {
+      "question": "c5cf43f710a848e64909",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 307,
+      "step": 44,
+      "month": 12,
+      "action": "Protest by coasting and drag your feet on everything you can"
+    },
+    {
+      "question": "c5cf43f710a848e64909",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 133,
+      "step": 45,
+      "month": 12,
+      "action": "In a huff, tell the whole office 'I'll walk', with no actual plan"
+    },
+    {
+      "question": "c7d4b068456766f4a8b5",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 34,
+      "step": 30,
+      "month": 8,
+      "action": "Keep lunching with the team every day"
+    },
+    {
+      "question": "c7d4b068456766f4a8b5",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 27,
+      "month": 7,
+      "action": "Drop back to Tuesdays and Thursdays once you have the key information"
+    },
+    {
+      "question": "c9140e1a56ced7e3cddb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 268,
+      "step": 45,
+      "month": 12,
+      "action": "Negotiate a fair swap with a colleague, and offer to cover them later"
+    },
+    {
+      "question": "c9140e1a56ced7e3cddb",
+      "choice": 2,
+      "batch": "closure",
+      "run": 79,
+      "step": 45,
+      "month": 12,
+      "action": "Quietly accept the shift and skip going home"
+    },
+    {
+      "question": "c9140e1a56ced7e3cddb",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 163,
+      "step": 45,
+      "month": 12,
+      "action": "Skip the on-call shift without warning anyone"
+    },
+    {
+      "question": "cb730e4833582a8f3094",
+      "choice": 1,
+      "batch": "closure",
+      "run": 37,
+      "step": 27,
+      "month": 7,
+      "action": "Water them today and set a calendar reminder"
+    },
+    {
+      "question": "cb730e4833582a8f3094",
+      "choice": 2,
+      "batch": "closure",
+      "run": 128,
+      "step": 32,
+      "month": 9,
+      "action": "Apologise and ask a colleague to cover this once"
+    },
+    {
+      "question": "cb730e4833582a8f3094",
+      "choice": 3,
+      "batch": "closure",
+      "run": 53,
+      "step": 29,
+      "month": 8,
+      "action": "Treat it as too small to matter"
+    },
+    {
+      "question": "cb7cd0f86360f885cc1d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 23,
+      "step": 27,
+      "month": 7,
+      "action": "Kindly suggest she gossips less and focuses on the work while she's new, for her own sake"
+    },
+    {
+      "question": "cb7cd0f86360f885cc1d",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 35,
+      "step": 31,
+      "month": 8,
+      "action": "Keep deflecting without spelling it out, and stay out of it"
+    },
+    {
+      "question": "cc53762c8bc823dbb4d1",
+      "choice": 1,
+      "batch": "closure",
+      "run": 32,
+      "step": 34,
+      "month": 9,
+      "action": "Show interest and ask how to prepare for promotion"
+    },
+    {
+      "question": "cc53762c8bc823dbb4d1",
+      "choice": 2,
+      "batch": "closure",
+      "run": 250,
+      "step": 40,
+      "month": 11,
+      "action": "Talk about the project and leave promotion out, so it does not look transactional"
+    },
+    {
+      "question": "cd32f106adbd762f2f07",
+      "choice": 1,
+      "batch": "closure",
+      "run": 3,
+      "step": 31,
+      "month": 8,
+      "action": "Speak to them privately afterwards, mention the discussion two weeks ago, and check where the idea came from"
+    },
+    {
+      "question": "cd32f106adbd762f2f07",
+      "choice": 2,
+      "batch": "closure",
+      "run": 47,
+      "step": 39,
+      "month": 10,
+      "action": "Share your earlier thinking with the team, without directly challenging their claim to the idea"
+    },
+    {
+      "question": "ce9330b27ef1f63b8ab7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 7,
+      "step": 43,
+      "month": 12,
+      "action": "Help sales revise the annex and push a phase-two forecasting proof of concept"
+    },
+    {
+      "question": "ce9330b27ef1f63b8ab7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 178,
+      "step": 33,
+      "month": 9,
+      "action": "Stick to the accurate scope and stay out of the wrangling with sales"
+    },
+    {
+      "question": "ceca8bafd65f3ae3abc9",
+      "choice": 1,
+      "batch": "closure",
+      "run": 21,
+      "step": 29,
+      "month": 8,
+      "action": "Offer staged payments plus a measurable ROI model procurement can repeat upstairs"
+    },
+    {
+      "question": "ceca8bafd65f3ae3abc9",
+      "choice": 2,
+      "batch": "closure",
+      "run": 83,
+      "step": 26,
+      "month": 7,
+      "action": "Keep talking technology and dodge the pricing question"
+    },
+    {
+      "question": "cf15ec0fa824eb814dee",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 37,
+      "month": 10,
+      "action": "Change the subject without a scene, pull the talk back to the work, and give Chloe a way out"
+    },
+    {
+      "question": "cf15ec0fa824eb814dee",
+      "choice": 2,
+      "batch": "closure",
+      "run": 37,
+      "step": 40,
+      "month": 11,
+      "action": "Join in and laugh along, to keep the ‘atmosphere’"
+    },
+    {
+      "question": "cf15ec0fa824eb814dee",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 40,
+      "step": 25,
+      "month": 7,
+      "action": "Say firmly that the remark is not on, and bring the talk back to the work"
+    },
+    {
+      "question": "d0cbd41207e16ec50d08",
+      "choice": 1,
+      "batch": "closure",
+      "run": 334,
+      "step": 27,
+      "month": 7,
+      "action": "Let your project results strengthen your position"
+    },
+    {
+      "question": "d0cbd41207e16ec50d08",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 188,
+      "step": 35,
+      "month": 9,
+      "action": "Moan that it was a nine-day wonder"
+    },
+    {
+      "question": "d159697172f938f9caeb",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 32,
+      "step": 28,
+      "month": 8,
+      "action": "Talk to Maya privately and find her a way to keep warm, to soften the blunt call"
+    },
+    {
+      "question": "d159697172f938f9caeb",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 46,
+      "step": 28,
+      "month": 8,
+      "action": "Majority rules. Nobody needs extra looking after"
+    },
+    {
+      "question": "d16f1676ba76ca7e083e",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 40,
+      "step": 29,
+      "month": 8,
+      "action": "Leave the client relationship with the account lead, and ask Chloe only what support she wants"
+    },
+    {
+      "question": "d16f1676ba76ca7e083e",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 54,
+      "step": 28,
+      "month": 8,
+      "action": "Decide you were in the right, and make no effort to repair it"
+    },
+    {
+      "question": "d1adea292926e3e813ab",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 15,
+      "step": 44,
+      "month": 12,
+      "action": "Reschedule: pair first, then fix the bug"
+    },
+    {
+      "question": "d1adea292926e3e813ab",
+      "choice": 2,
+      "batch": "closure",
+      "run": 4,
+      "step": 29,
+      "month": 8,
+      "action": "Point him at the docs and comments and let him work through it"
+    },
+    {
+      "question": "d1adea292926e3e813ab",
+      "choice": 3,
+      "batch": "closure",
+      "run": 22,
+      "step": 38,
+      "month": 10,
+      "action": "Pair for an hour and do the rest asynchronously"
+    },
+    {
+      "question": "d1bc3bb6495b950bacea",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 28,
+      "month": 8,
+      "action": "Talk numbers: do the small one for free, and put the other two through change control with plan trade-offs"
+    },
+    {
+      "question": "d1bc3bb6495b950bacea",
+      "choice": 2,
+      "batch": "closure",
+      "run": 89,
+      "step": 26,
+      "month": 7,
+      "action": "Still dreading the conversation after the assessment, cram all of it into the current plan"
+    },
+    {
+      "question": "d25683135cb5e4db749e",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 43,
+      "step": 28,
+      "month": 8,
+      "action": "Reorder your priorities: catch up on the work and put a limit on rehearsals"
+    },
+    {
+      "question": "d25683135cb5e4db749e",
+      "choice": 2,
+      "batch": "closure",
+      "run": 26,
+      "step": 29,
+      "month": 8,
+      "action": "Keep putting rehearsals first and let the work wait"
+    },
+    {
+      "question": "d383609114d7f63ab9eb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 75,
+      "step": 45,
+      "month": 12,
+      "action": "Go to the gym as planned and get the work done efficiently tomorrow"
+    },
+    {
+      "question": "d383609114d7f63ab9eb",
+      "choice": 2,
+      "batch": "closure",
+      "run": 21,
+      "step": 28,
+      "month": 7,
+      "action": "Skip the gym, stay late, and clear the work tonight"
+    },
+    {
+      "question": "d383609114d7f63ab9eb",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 34,
+      "step": 30,
+      "month": 8,
+      "action": "Try to do both: gym first, then stay up late to finish the work"
+    },
+    {
+      "question": "d4968018089c0f473b27",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 30,
+      "month": 8,
+      "action": "Quietly point out the definition problem now and suggest correcting it in the room"
+    },
+    {
+      "question": "d4968018089c0f473b27",
+      "choice": 2,
+      "batch": "closure",
+      "run": 2,
+      "step": 40,
+      "month": 10,
+      "action": "Hold off for now and email privately after the meeting"
+    },
+    {
+      "question": "d4968018089c0f473b27",
+      "choice": 3,
+      "batch": "closure",
+      "run": 323,
+      "step": 32,
+      "month": 9,
+      "action": "Say nothing and let the briefing run"
+    },
+    {
+      "question": "d55e086f34a676cecc5f",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 27,
+      "month": 7,
+      "action": "Joke: \"Bring some next time and we can swap\", and leave it there"
+    },
+    {
+      "question": "d55e086f34a676cecc5f",
+      "choice": 2,
+      "batch": "closure",
+      "run": 56,
+      "step": 30,
+      "month": 8,
+      "action": "Keep sharing, because you don't like to say anything"
+    },
+    {
+      "question": "d55e086f34a676cecc5f",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 22,
+      "step": 27,
+      "month": 7,
+      "action": "Lock the snacks away and stop sharing, without explaining"
+    },
+    {
+      "question": "d62c02f389f05d6f89ee",
+      "choice": 1,
+      "batch": "closure",
+      "run": 4,
+      "step": 25,
+      "month": 7,
+      "action": "Neither accept nor refuse in the meeting, and promise an impact assessment and proposal afterwards"
+    },
+    {
+      "question": "d62c02f389f05d6f89ee",
+      "choice": 2,
+      "batch": "closure",
+      "run": 59,
+      "step": 34,
+      "month": 9,
+      "action": "Afraid of annoying them, agree to all of it on the spot"
+    },
+    {
+      "question": "d62c02f389f05d6f89ee",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 17,
+      "step": 26,
+      "month": 7,
+      "action": "Refuse there and then: 'It's not in the contract. We can't do it'"
+    },
+    {
+      "question": "d77c562aadcacf5e5922",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 93,
+      "step": 32,
+      "month": 8,
+      "action": "Reply to the email at once with the facts, and take ownership of the fixes"
+    },
+    {
+      "question": "d77c562aadcacf5e5922",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 18,
+      "step": 27,
+      "month": 7,
+      "action": "Excuse it as \"not the moment to speak\""
+    },
+    {
+      "question": "d793e819246892e32dd4",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 44,
+      "step": 29,
+      "month": 8,
+      "action": "Catch them before people leave and introduce yourself briefly, enough to leave a decent impression"
+    },
+    {
+      "question": "d793e819246892e32dd4",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 11,
+      "step": 38,
+      "month": 10,
+      "action": "Stay silent until it is over, and miss the whole evening"
+    },
+    {
+      "question": "d7a59595be7aa011d2fe",
+      "choice": 1,
+      "batch": "closure",
+      "run": 119,
+      "step": 29,
+      "month": 7,
+      "action": "Keep working the relationships"
+    },
+    {
+      "question": "d7a59595be7aa011d2fe",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 40,
+      "month": 11,
+      "action": "Go back to the technical path"
+    },
+    {
+      "question": "db163c0798e4cb8201ac",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 21,
+      "step": 25,
+      "month": 7,
+      "action": "Halt the release as soon as you notice and roll the merge back"
+    },
+    {
+      "question": "db163c0798e4cb8201ac",
+      "choice": 2,
+      "batch": "closure",
+      "run": 9,
+      "step": 41,
+      "month": 11,
+      "action": "Carry on with the release and gamble that the code path will not be hit"
+    },
+    {
+      "question": "db163c0798e4cb8201ac",
+      "choice": 3,
+      "batch": "closure",
+      "run": 17,
+      "step": 26,
+      "month": 7,
+      "action": "Quietly hotfix the wrongly merged files out"
+    },
+    {
+      "question": "dc3504fc9a7ed5fed336",
+      "choice": 1,
+      "batch": "closure",
+      "run": 127,
+      "step": 45,
+      "month": 12,
+      "action": "Volunteer to speak"
+    },
+    {
+      "question": "dc3504fc9a7ed5fed336",
+      "choice": 2,
+      "batch": "closure",
+      "run": 34,
+      "step": 45,
+      "month": 12,
+      "action": "Suggest that Priya, who knows this area well, gives the talk"
+    },
+    {
+      "question": "dc3504fc9a7ed5fed336",
+      "choice": 3,
+      "batch": "closure",
+      "run": 327,
+      "step": 45,
+      "month": 12,
+      "action": "Don't sign up. Stay on delivery"
+    },
+    {
+      "question": "ddba1544407e812ebf52",
+      "choice": 1,
+      "batch": "closure",
+      "run": 13,
+      "step": 26,
+      "month": 7,
+      "action": "Use the spec as a yardstick and close the gaps in your current role until you could get it"
+    },
+    {
+      "question": "ddba1544407e812ebf52",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 23,
+      "step": 42,
+      "month": 11,
+      "action": "Spend the days daydreaming about leaving, refreshing job boards, and letting the day job drift"
+    },
+    {
+      "question": "ddba1544407e812ebf52",
+      "choice": 3,
+      "batch": "closure",
+      "run": 2,
+      "step": 43,
+      "month": 11,
+      "action": "Envy it and do nothing, telling yourself you would never get there anyway"
+    },
+    {
+      "question": "de8d090c6e08553050c8",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 9,
+      "step": 29,
+      "month": 8,
+      "action": "Ask that the pack name only those who did the work, or limit your line to the kick-off"
+    },
+    {
+      "question": "de8d090c6e08553050c8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 20,
+      "step": 32,
+      "month": 8,
+      "action": "Sign it quietly and treat it as a favour from your manager"
+    },
+    {
+      "question": "de8d090c6e08553050c8",
+      "choice": 3,
+      "batch": "closure",
+      "run": 48,
+      "step": 41,
+      "month": 11,
+      "action": "Suggest submitting Lynx Payments instead, with you as the lead author"
+    },
+    {
+      "question": "df11785dea15a7d1cda0",
+      "choice": 1,
+      "batch": "closure",
+      "run": 101,
+      "step": 30,
+      "month": 8,
+      "action": "Repay it, admit you should have been stricter, and promise to stick to the policy"
+    },
+    {
+      "question": "df11785dea15a7d1cda0",
+      "choice": 2,
+      "batch": "closure",
+      "run": 86,
+      "step": 44,
+      "month": 12,
+      "action": "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule"
+    },
+    {
+      "question": "e15e78ffbd711593528c",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 32,
+      "month": 9,
+      "action": "Take Sam on and help clear the backlog"
+    },
+    {
+      "question": "e15e78ffbd711593528c",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 11,
+      "step": 30,
+      "month": 8,
+      "action": "Refuse again and say you do not have the capacity"
+    },
+    {
+      "question": "e1fcabc5aa5ad600fd83",
+      "choice": 1,
+      "batch": "closure",
+      "run": 289,
+      "step": 44,
+      "month": 12,
+      "action": "After the demo, email the client (cc'd) with the technical highlights"
+    },
+    {
+      "question": "e1fcabc5aa5ad600fd83",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 20,
+      "step": 44,
+      "month": 12,
+      "action": "Jump in on the call to explain how engineering built it"
+    },
+    {
+      "question": "e1fcabc5aa5ad600fd83",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 59,
+      "step": 46,
+      "month": 12,
+      "action": "Say nothing"
+    },
+    {
+      "question": "e3ded0affde319f9ba9e",
+      "choice": 1,
+      "batch": "closure",
+      "run": 34,
+      "step": 27,
+      "month": 7,
+      "action": "Acknowledge the improvement in the meeting so that it sticks"
+    },
+    {
+      "question": "e3ded0affde319f9ba9e",
+      "choice": 2,
+      "batch": "closure",
+      "run": 296,
+      "step": 28,
+      "month": 7,
+      "action": "Wait and see"
+    },
+    {
+      "question": "e687420fc05fdd442658",
+      "choice": 1,
+      "batch": "closure",
+      "run": 0,
+      "step": 31,
+      "month": 9,
+      "action": "Lead training for the whole group and step up as the technical expert"
+    },
+    {
+      "question": "e687420fc05fdd442658",
+      "choice": 2,
+      "batch": "closure",
+      "run": 13,
+      "step": 28,
+      "month": 8,
+      "action": "Worry about being replaced and start holding things back again"
+    },
+    {
+      "question": "e831e3665ccca3f92b82",
+      "choice": 1,
+      "batch": "closure",
+      "run": 19,
+      "step": 44,
+      "month": 12,
+      "action": "Look once, put it away, and spend your energy getting better so your next review is stronger"
+    },
+    {
+      "question": "e831e3665ccca3f92b82",
+      "choice": 2,
+      "batch": "closure",
+      "run": 8,
+      "step": 44,
+      "month": 12,
+      "action": "Keep staring at the ranking, feel more aggrieved each time, and let it hit your mood and your work"
+    },
+    {
+      "question": "e831e3665ccca3f92b82",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 66,
+      "step": 44,
+      "month": 12,
+      "action": "Take the comparison table to your manager and demand an explanation of every difference"
+    },
+    {
+      "question": "e9721e1b821fda77b5ca",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 20,
+      "step": 27,
+      "month": 7,
+      "action": "Keep the strict gates and make the team meet the higher bar"
+    },
+    {
+      "question": "e9721e1b821fda77b5ca",
+      "choice": 2,
+      "batch": "closure",
+      "run": 46,
+      "step": 40,
+      "month": 11,
+      "action": "Loosen the thresholds so the team can ease into the CI workflow"
+    },
+    {
+      "question": "e9b50304e3be7ab077a8",
+      "choice": 1,
+      "batch": "closure",
+      "run": 53,
+      "step": 28,
+      "month": 8,
+      "action": "Apologise to Will, and put in a fair word for him with your manager"
+    },
+    {
+      "question": "e9b50304e3be7ab077a8",
+      "choice": 2,
+      "batch": "closure",
+      "run": 56,
+      "step": 29,
+      "month": 8,
+      "action": "Shrug it off — you didn’t pour the drinks"
+    },
+    {
+      "question": "ea21e12d970a3cbe05c7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 38,
+      "month": 10,
+      "action": "Tell them directly but politely that you need to focus today and to come back later"
+    },
+    {
+      "question": "ea21e12d970a3cbe05c7",
+      "choice": 2,
+      "batch": "closure",
+      "run": 98,
+      "step": 30,
+      "month": 8,
+      "action": "Put headphones on, look busy, and give them the cold shoulder"
+    },
+    {
+      "question": "ea21e12d970a3cbe05c7",
+      "choice": 3,
+      "batch": "closure",
+      "run": 3,
+      "step": 28,
+      "month": 7,
+      "action": "Chat for a few minutes, then steer back to work and mention today's deadline"
+    },
+    {
+      "question": "ea21e12d970a3cbe05c7",
+      "choice": 4,
+      "batch": "discovery",
+      "run": 23,
+      "step": 26,
+      "month": 7,
+      "action": "Tell your manager that Luke keeps breaking your concentration"
+    },
+    {
+      "question": "eac3fd1ff4c1ed32ce84",
+      "choice": 1,
+      "batch": "closure",
+      "run": 29,
+      "step": 30,
+      "month": 8,
+      "action": "Get checked straight away and make yourself keep a proper sleep routine"
+    },
+    {
+      "question": "eac3fd1ff4c1ed32ce84",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 35,
+      "step": 27,
+      "month": 7,
+      "action": "Tell yourself you are just tired and keep going round the clock"
+    },
+    {
+      "question": "ec764af1d22cb0a78d8a",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 29,
+      "step": 29,
+      "month": 8,
+      "action": "Tell the whole story, pull the broken version, and set a delivery plan that will actually hold"
+    },
+    {
+      "question": "ec764af1d22cb0a78d8a",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 3,
+      "step": 29,
+      "month": 8,
+      "action": "Keep patching it and play down how bad it was"
+    },
+    {
+      "question": "ec874e379e7767334554",
+      "choice": 1,
+      "batch": "closure",
+      "run": 8,
+      "step": 26,
+      "month": 7,
+      "action": "Switch to lunching with colleagues at least three days a week"
+    },
+    {
+      "question": "ec874e379e7767334554",
+      "choice": 2,
+      "batch": "closure",
+      "run": 18,
+      "step": 30,
+      "month": 8,
+      "action": "Keep skipping the café, and let a strong afternoon prove the point"
+    },
+    {
+      "question": "ec874e379e7767334554",
+      "choice": 3,
+      "batch": "closure",
+      "run": 39,
+      "step": 33,
+      "month": 9,
+      "action": "Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest"
+    },
+    {
+      "question": "ef5c5c484ad48a658343",
+      "choice": 1,
+      "batch": "closure",
+      "run": 30,
+      "step": 39,
+      "month": 10,
+      "action": "Pull it back immediately and return to what your own proposal actually delivers"
+    },
+    {
+      "question": "ef5c5c484ad48a658343",
+      "choice": 2,
+      "batch": "closure",
+      "run": 32,
+      "step": 39,
+      "month": 10,
+      "action": "Keep going on about their past failures"
+    },
+    {
+      "question": "f1121c180b171cb86197",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 16,
+      "step": 28,
+      "month": 8,
+      "action": "Change tack, find time to catch up, and fill the hole you left"
+    },
+    {
+      "question": "f1121c180b171cb86197",
+      "choice": 2,
+      "batch": "closure",
+      "run": 131,
+      "step": 31,
+      "month": 8,
+      "action": "Stick to “the job matters more than dancing” and keep missing it"
+    },
+    {
+      "question": "f1b6d4a94a91dd3109eb",
+      "choice": 1,
+      "batch": "closure",
+      "run": 1,
+      "step": 32,
+      "month": 9,
+      "action": "Comment publicly on the shared design doc, with the load-test data attached"
+    },
+    {
+      "question": "f1b6d4a94a91dd3109eb",
+      "choice": 2,
+      "batch": "closure",
+      "run": 49,
+      "step": 45,
+      "month": 12,
+      "action": "Take their owner aside for a 1:1 and walk through the load-test results privately"
+    },
+    {
+      "question": "f1c441606c214c908aa4",
+      "choice": 1,
+      "batch": "exploration",
+      "run": 58,
+      "step": 27,
+      "month": 7,
+      "action": "Write a full risk assessment and submit it formally to the tech committee"
+    },
+    {
+      "question": "f1c441606c214c908aa4",
+      "choice": 2,
+      "batch": "closure",
+      "run": 182,
+      "step": 31,
+      "month": 8,
+      "action": "Defer to their judgement and file your comments as an appendix"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 51,
+      "step": 28,
+      "month": 7,
+      "action": "Offer to share the umbrella and walk to the station together"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 67,
+      "step": 29,
+      "month": 8,
+      "action": "Lend Jordan the umbrella and make a dash through the rain for a cab"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 3,
+      "batch": "closure",
+      "run": 6,
+      "step": 29,
+      "month": 8,
+      "action": "Suggest sharing a cab and splitting the fare"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 4,
+      "batch": "exploration",
+      "run": 81,
+      "step": 27,
+      "month": 7,
+      "action": "Say the umbrella only covers one, so you will each make your own way"
+    },
+    {
+      "question": "f29efdc73f5b4c7cfd94",
+      "choice": 1,
+      "batch": "closure",
+      "run": 140,
+      "step": 28,
+      "month": 8,
+      "action": "Tell security and rush out a fallback from scratch"
+    },
+    {
+      "question": "f29efdc73f5b4c7cfd94",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 29,
+      "month": 8,
+      "action": "Sit on the report and bet it will not be triggered soon"
+    },
+    {
+      "question": "f3e37b4a4495574d18b7",
+      "choice": 1,
+      "batch": "closure",
+      "run": 6,
+      "step": 33,
+      "month": 9,
+      "action": "Say in the room that what is live is next-day sync, and forecasting is a later proposal"
+    },
+    {
+      "question": "f3e37b4a4495574d18b7",
+      "choice": 2,
+      "batch": "discovery",
+      "run": 47,
+      "step": 47,
+      "month": 12,
+      "action": "Keep quiet in the room and clarify in writing after the meeting"
+    },
+    {
+      "question": "f3e37b4a4495574d18b7",
+      "choice": 3,
+      "batch": "closure",
+      "run": 26,
+      "step": 27,
+      "month": 7,
+      "action": "Stay silent and let the review pass"
+    },
+    {
+      "question": "f7bcebe8591ca1beadf6",
+      "choice": 1,
+      "batch": "closure",
+      "run": 2,
+      "step": 38,
+      "month": 10,
+      "action": "Stop the blind rework and put a proper sign-off in place before going further"
+    },
+    {
+      "question": "f7bcebe8591ca1beadf6",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 46,
+      "step": 29,
+      "month": 8,
+      "action": "Keep reworking on demand, exactly as they say"
+    },
+    {
+      "question": "f83868dcab1a15f54324",
+      "choice": 1,
+      "batch": "closure",
+      "run": 290,
+      "step": 42,
+      "month": 10,
+      "action": "Produce the review recording and the scope pack in your defence"
+    },
+    {
+      "question": "f83868dcab1a15f54324",
+      "choice": 2,
+      "batch": "closure",
+      "run": 26,
+      "step": 28,
+      "month": 7,
+      "action": "Go along with sales and accept “poor communication” as the explanation"
+    },
+    {
+      "question": "f8ed59cca187aa36e9ee",
+      "choice": 1,
+      "batch": "closure",
+      "run": 30,
+      "step": 30,
+      "month": 8,
+      "action": "Say in a couple of sentences what you do and why it matters, then stop without taking over the table"
+    },
+    {
+      "question": "f8ed59cca187aa36e9ee",
+      "choice": 2,
+      "batch": "closure",
+      "run": 152,
+      "step": 39,
+      "month": 10,
+      "action": "Treat it as a long status update, and sneak in a request while you are at it"
+    },
+    {
+      "question": "f95d02291063c7ade004",
+      "choice": 1,
+      "batch": "closure",
+      "run": 171,
+      "step": 44,
+      "month": 12,
+      "action": "Take leave now for specialist tests and hand over your work cleanly"
+    },
+    {
+      "question": "f95d02291063c7ade004",
+      "choice": 2,
+      "batch": "closure",
+      "run": 0,
+      "step": 43,
+      "month": 12,
+      "action": "Push through this delivery and book the follow-up for the end of the month"
+    },
+    {
+      "question": "f95d02291063c7ade004",
+      "choice": 3,
+      "batch": "discovery",
+      "run": 24,
+      "step": 44,
+      "month": 12,
+      "action": "Decide health checks always scare people, and ignore it"
+    },
+    {
+      "question": "fb8028b887815804f4d3",
+      "choice": 1,
+      "batch": "closure",
+      "run": 342,
+      "step": 46,
+      "month": 12,
+      "action": "In the wash-up, admit the process was too rigid, and propose a graded response for future emergencies"
+    },
+    {
+      "question": "fb8028b887815804f4d3",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 7,
+      "step": 29,
+      "month": 8,
+      "action": "Stress quality first, and point out that a hotfix introducing a new fault would have cost more"
+    },
+    {
+      "question": "fbc58cf33400241af0f3",
+      "choice": 1,
+      "batch": "closure",
+      "run": 10,
+      "step": 43,
+      "month": 12,
+      "action": "Admit the risk, and propose a pre-authorised emergency path that sets out when the process can be shortened"
+    },
+    {
+      "question": "fbc58cf33400241af0f3",
+      "choice": 2,
+      "batch": "closure",
+      "run": 77,
+      "step": 28,
+      "month": 8,
+      "action": "Stress that this success shows the team's skill with incidents, and argue for keeping the current flexibility"
+    },
+    {
+      "question": "fbe394a47e26cfc1de05",
+      "choice": 1,
+      "batch": "closure",
+      "run": 205,
+      "step": 45,
+      "month": 12,
+      "action": "Stick to the full process, and turn on a degraded mode to limit the impact on the client"
+    },
+    {
+      "question": "fbe394a47e26cfc1de05",
+      "choice": 2,
+      "batch": "closure",
+      "run": 10,
+      "step": 42,
+      "month": 11,
+      "action": "Ship on a shortened path while the team prepares a rollback and completes the review within an hour"
+    },
+    {
+      "question": "fd98a10e3b7601a3edfc",
+      "choice": 1,
+      "batch": "discovery",
+      "run": 17,
+      "step": 29,
+      "month": 8,
+      "action": "Go to the client, smooth things over, explain where the line is, and offer a workable change proposal"
+    },
+    {
+      "question": "fd98a10e3b7601a3edfc",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 46,
+      "step": 44,
+      "month": 12,
+      "action": "Stand firm: 'I wasn't wrong. The contract is the contract'"
+    },
+    {
+      "question": "fe8a07be53ed7b7b7fdf",
+      "choice": 1,
+      "batch": "closure",
+      "run": 141,
+      "step": 45,
+      "month": 12,
+      "action": "Accept the company is under pressure, focus on making yourself more valuable, and stay out of the griping"
+    },
+    {
+      "question": "fe8a07be53ed7b7b7fdf",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 196,
+      "step": 44,
+      "month": 12,
+      "action": "Lead the public complaining and stir people into having a go at the company"
+    },
+    {
+      "question": "fe8a07be53ed7b7b7fdf",
+      "choice": 3,
+      "batch": "exploration",
+      "run": 140,
+      "step": 46,
+      "month": 12,
+      "action": "Protest by coasting: the perks have gone, so you do less work"
+    },
+    {
+      "question": "ff9eab783796e40c982d",
+      "choice": 1,
+      "batch": "closure",
+      "run": 97,
+      "step": 41,
+      "month": 11,
+      "action": "Explain privately, ask how she is, and help her hand over what cannot wait"
+    },
+    {
+      "question": "ff9eab783796e40c982d",
+      "choice": 2,
+      "batch": "exploration",
+      "run": 82,
+      "step": 37,
+      "month": 10,
+      "action": "Leave it. You did nothing wrong and there is no need to explain"
+    }
+  ]
+}
