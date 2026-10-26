@@ -214,6 +214,67 @@ El oráculo v2 juega bien toda la partida salvo un semestre, en el que decide al
   | Todas las respuestas restaban (mala suerte con el evento) | 113 |
 - La primera evaluación tiene una parte de lotería por los eventos del último mes. Proteger ese mes con cuidado (no ceder Network u Output si hay alternativa segura) debería subir el ascenso del 70 % a ~80 %. Se está midiendo en el lote b03.
 
+## H16. El carácter de una respuesta predice sus efectos en historias que no se han visto (26 oct 23:30 UTC)
+
+**Método.**
+- Cuatro agentes (Sonnet) etiquetaron las 954 respuestas de dev con rasgos generales: asumir, transparencia, proceso, calidad, confidencialidad, ayudar, colaborar, escalar, poner límites, visibilidad, atajo, ocultar, engañar, cotillear, enfrentarse, pasividad, sobreesfuerzo, complacer, aprender y autocuidado. Además, una nota de integridad de −2 a +2.
+- Se ajusta una regresión de rasgos a efectos con **validación por títulos reservados**: cada predicción sale de un modelo que no vio esa historia, como pasará con los eventos cerrados de la evaluación.
+
+| Efecto | R² con títulos reservados | Correlación |
+|---|---:|---:|
+| Dignidad | 0,58 | 0,76 |
+| Explosión de riesgo a 3 meses | 0,50 | 0,71 |
+| Salud | 0,49 | 0,71 |
+| Network | 0,42 | 0,65 |
+| Skill | 0,40 | 0,63 |
+| Riesgo según RR. HH. | 0,40 | 0,62 |
+| **Output** | **0,02** | 0,20 |
+| Dinero | 0,00 | 0,13 |
+
+**Medias por integridad** (exceso de explosión a 3 meses frente a las demás respuestas de la misma pregunta):
+
+| Integridad | Respuestas | Explosión | Skill | Network | Output | Dignidad |
+|---:|---:|---:|---:|---:|---:|---:|
+| −2 | 91 | **+19 puntos** | 0,0 | −0,45 | +0,1 | **−1,4** |
+| −1 | 286 | +11 | −0,1 | −0,4 | −0,1 | −0,5 |
+| 0 | 101 | +3 | +0,1 | −0,2 | **+0,5** | +0,2 |
+| +1 | 125 | −5 | +0,6 | +0,5 | +0,1 | +0,7 |
+| +2 | 350 | **−13** | **+0,8** | +0,5 | +0,2 | **+1,1** |
+
+**Rasgos más claros:**
+
+| Rasgo | Explosión a 3 meses | Otros efectos medios |
+|---|---:|---|
+| Ocultar | +17 puntos | |
+| Engañar | +16 | Dignidad −1,6 |
+| Cotillear | +15 | |
+| Atajo | +12 | |
+| Enfrentarse o culpar | +12 | **Network −1,6** |
+| Complacer sin criterio | +10 | Dignidad −0,8, Salud −0,6 |
+| Sobreesfuerzo | +8 | **Salud −1,9** |
+| Pasividad | +8 | Network −0,4, Dignidad −0,4 |
+| Aprender | | Skill +1,3 |
+| Calidad | | Skill +1,2 |
+| Asumir el problema | | Skill +0,9, Network +0,4, Output +0,3 |
+| Ayudar | | **Network +1,4** |
+| Colaborar | | **Network +1,3**, Skill +0,8 |
+| Transparencia, proceso, confidencialidad, escalar bien, límites | | Dignidad +1,0 a +1,3; algo de riesgo menos |
+| Autocuidado | | Salud +1,1 |
+
+- **Lectura.** La integridad casi no tiene coste: las respuestas íntegras dan más Skill, Network y Dignidad, y bastante menos riesgo.
+- **La excepción es el Output.** Lo dan las respuestas que se centran en entregar el propio trabajo (no ofrecerse para extras, seguir con el proyecto previsto). Lo quitan las que desvían tiempo: voluntariados, mentoría intensiva, rehacer a demanda, investigaciones, parar un despliegue. Una pasada extra de etiquetado mide ese eje.
+- **Consecuencia para la Skill.** Una regla general sobre el carácter de la respuesta, del tipo "descarta lo que oculta, engaña, cotillea, toma atajos o culpa; entre lo demás, elige lo que alimenta el indicador que te falta", se apoya en efectos que generalizan a historias nuevas.
+
+## H17. Proteger el mes previo a cada evaluación sube la nota unos 5 puntos (b03, 64 partidas por brazo)
+
+| Oráculo v2 | Nota media | Terminan | Ascenso en la 1.ª evaluación | Llegan a L5 |
+|---|---:|---:|---:|---:|
+| Sin protección | 61,4 ± 4,3 | 80 % | 70 % | 75 % |
+| Protección ×5 en el mes previo | 66,5 ± 2,7 | 86 % | 84 % | 91 % |
+| Protección ×20 | 66,4 ± 3,0 | 86 % | 88 % | 91 % |
+
+"Protección" quiere decir que, en el mes anterior a cada evaluación, perder un punto de un indicador por debajo de su umbral pesa mucho más. Basta con no regalar esos puntos cuando hay alternativa. La ganancia viene de ascender a tiempo, y ascender a tiempo arrastra todo lo demás.
+
 ## Traducción permitida a principios de Skill (borrador)
 
 | Hallazgo | Principio general, sin números | Cómo lo comprueba el agente en la partida |

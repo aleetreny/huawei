@@ -58,10 +58,11 @@ class Oracle(Base):
                  eps: float = 0.0, explore_from: int = 99, explore_to: int = 0, w_net: float = 2.0,
                  w_out: float = 2.0, w_skill: float = 1.0, risk_w: float = 1.5, gamma: float = 0.6,
                  health_floor: int = 5, blow_cost: float = 25.0, w_below: float = 3.0, review_boost: float = 1.0,
-                 **params: Any):
+                 skill_focus_from: int = 99, w_skill_hi: float = 1.0, **params: Any):
         super().__init__(seed, eps=eps, explore_from=explore_from, explore_to=explore_to, w_net=w_net, w_out=w_out,
                          w_skill=w_skill, risk_w=risk_w, gamma=gamma, health_floor=health_floor, blow_cost=blow_cost,
-                         w_below=w_below, review_boost=review_boost, **params)
+                         w_below=w_below, review_boost=review_boost, skill_focus_from=skill_focus_from,
+                         w_skill_hi=w_skill_hi, **params)
         self.sh = shared or {}
         self.nodes = self.sh.get("nodes", {})
         self.caps = self.sh.get("caps", {})
@@ -99,7 +100,8 @@ class Oracle(Base):
     def gain(self, st: dict[str, Any], d: dict[str, float], month: int, ctx: dict[str, Any]) -> float:
         lv = int(str(st["level"])[1:])
         v = 0.0
-        weights = {"skill": self.p["w_skill"], "network": self.p["w_net"], "output": self.p["w_out"]}
+        w_skill = self.p["w_skill_hi"] if lv >= self.p["skill_focus_from"] else self.p["w_skill"]
+        weights = {"skill": w_skill, "network": self.p["w_net"], "output": self.p["w_out"]}
         thr = THRESH.get(lv, {})
         for stat in GROWTH:
             x = st[stat]
@@ -272,12 +274,12 @@ class Principles(Oracle):
         pred = {}
         for c in obs.get("choices") or []:
             if c["choice"] == choice:
+                # only quarterly actions have exactly known effects; a story answer's effect is a guess,
+                # so a gain that does not register there says nothing reliable about a ceiling
                 if c.get("status_updates"):
                     pred = {k.lower(): v for k, v in c["status_updates"].items()}
                 elif phase(obs) == "main_action":
                     pred = MAIN_FX.get(c.get("action", ""), {})
-                else:
-                    pred, _ = self.option_fx(self._node_id(obs), choice)
         ctx["last"] = (dict(st), pred, obs["current_state"]["time"]["current_month"])
         ctx["_level"] = lv
         return choice, tag
@@ -301,3 +303,23 @@ class Principles(Oracle):
             return super().gain(st, d, month, ctx)
         finally:
             THRESH.update(saved)
+
+
+class Integrity(Principles):
+    """Simplest general rule: pick the most principled answer (trait label), break ties by the
+    trait-predicted growth value. Quarterly play is the same as the other bots."""
+
+    name = "integrity"
+
+    def story(self, obs, choices, ctx):
+        st = obs["current_state"]["status"]
+        month = obs["current_state"]["time"]["current_month"]
+        if self.explore_now(month):
+            return self.rng.choice(choices)["choice"], "x"
+        node = self._node_id(obs)
+        opts = self.nodes.get(node, {})
+        def key(c):
+            e = opts.get(str(c["choice"]), {})
+            d, n = self.option_fx(node, c["choice"])
+            return (e.get("integrity", 0), self.gain(st, d, month, ctx) if n else 0.0)
+        return max(choices, key=key)["choice"], "g"
