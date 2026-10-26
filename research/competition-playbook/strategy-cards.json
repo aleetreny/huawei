@@ -1,0 +1,894 @@
+{
+  "cutoff_date": "2026-10-26",
+  "purpose": "Reusable research experiment ideas grounded in competition cases, not a deployed Skill, event-answer catalogue, hidden game model or proven winning policy.",
+  "common_protocol": {
+    "launch_enabled": false,
+    "authorisation": "Actual experiments must use the permitted platform/interface and any necessary written scope clarification. This research does not establish permission for mass batches, external actors, training or session cloning.",
+    "primary_game_metric": "Mean terminal quantitative_score under the designated target actor and a fixed protocol. Survival and other diagnostics do not replace official scoring.",
+    "preregister": [
+      "Freeze policy artifact, actor/configuration and environment epoch.",
+      "Choose minimum worthwhile effect, error tolerance, confidence procedure and evaluation budget before looking at selection outcomes.",
+      "Use an uncertainty procedure compatible with repeated looks and multiple candidates; see the existing hierarchical mathematical appendix.",
+      "Separate operational failures, in-flight jobs and valid early game termination.",
+      "Run to real termination; administrative interruption has no invented terminal score.",
+      "Confirm promising candidates on fresh data; do not relabel old selection episodes as confirmation.",
+      "Keep actor-model cells separate and include randomly audited cheap rejections when applicable.",
+      "Dormancy of a fixed candidate is reversible and never bounds unseen descendants."
+    ],
+    "comparison": "Match model, tools, protocol and research resources. Do not call unlike historical random games a causal baseline.",
+    "inconclusive": "If intervals are too wide, report inconclusive and choose the next sample by value of information and remaining budget; no universal fixed episode count.",
+    "attribution": "All cards are our adaptations of mechanisms described by the case sources. A champion's use of a component is not a causal ablation or proof it transfers.",
+    "data_handling": "Only public/current-run feedback and permitted own outputs; no engine/package/database inspection or fixed answers. Preserve raw evidence outside Git by default, with portable approved summaries.",
+    "portability": "Descriptions do not require cloned game states, seeds or arbitrary initialisation. Any unavailable capability remains gated.",
+    "no_automatic_consumption_by_game_agent": true
+  },
+  "cards": [
+    {
+      "id": "P01",
+      "title": "Memoria de obligaciones con evidencia",
+      "scope": "policy",
+      "triggers": [
+        "olvida_compromisos",
+        "efectos_tardios"
+      ],
+      "case_ids": [
+        "C01",
+        "C07"
+      ],
+      "hypothesis": "Un registro pequeño de compromisos vigentes evita decisiones incompatibles.",
+      "intervention": "Añadir al mismo actor una tabla breve: compromiso, evidencia del episodio, próxima oportunidad y estado; retirar entradas resueltas.",
+      "control": "La política anterior con memoria libre y presupuesto de contexto comparable.",
+      "metrics": "Puntuación terminal; omisiones de compromisos y coste de contexto.",
+      "decision_rule": "Si no disminuyen las omisiones o el mantenimiento desplaza el razonamiento útil, revisar o archivar.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P02",
+      "title": "Modos interrumpibles con vuelta al plan",
+      "scope": "policy",
+      "triggers": [
+        "crisis_recurrentes",
+        "plan_rigido"
+      ],
+      "case_ids": [
+        "C01",
+        "C02"
+      ],
+      "hypothesis": "Una emergencia puede interrumpir el crecimiento sin hacer permanente el modo defensivo.",
+      "intervention": "Especificar entrada, salida y objetivo al que volver para cada modo; usar sólo avisos y estado público.",
+      "control": "La misma política con una lista de prioridades sin estado de modo.",
+      "metrics": "Puntuación; crisis evitables; tiempo defensivo tras resolverse el motivo.",
+      "decision_rule": "Si aumentan las oscilaciones o se mantiene defensa innecesaria, probar reglas de salida más claras.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P03",
+      "title": "Acción como transacción verificable",
+      "scope": "engineering",
+      "triggers": [
+        "acciones_invalidas",
+        "errores_herramientas"
+      ],
+      "case_ids": [
+        "C01",
+        "C08"
+      ],
+      "hypothesis": "Separar intención, elección válida y confirmación reduce fallos de ejecución.",
+      "intervention": "Envolver la llamada oficial con comprobación de identificador/fase/asequibilidad pública; ante ambigüedad observar antes de repetir.",
+      "control": "Cliente actual con la misma política y sin cambiar sus prioridades.",
+      "metrics": "Acciones inválidas/duplicadas, episodios interrumpidos y latencia; score secundario.",
+      "decision_rule": "Si sólo añade llamadas sin reducir errores, mantener únicamente las comprobaciones que aporten valor.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P04",
+      "title": "Objetivo persistente pero revocable",
+      "scope": "policy",
+      "triggers": [
+        "cambia_objetivo_sin_motivo",
+        "plan_rigido"
+      ],
+      "case_ids": [
+        "C03",
+        "C07"
+      ],
+      "hypothesis": "Distinguir objetivo de carrera, trimestre y acción reduce el cambio caprichoso sin impedir corregir.",
+      "intervention": "Pedir objetivo actual, razón para mantenerlo y evidencia que lo invalidaría; revisar tras feedback relevante.",
+      "control": "Selección desde cero en cada decisión.",
+      "metrics": "Puntuación; cambios sin evidencia; objetivos mantenidos pese a contradicción.",
+      "decision_rule": "Si la persistencia genera coste hundido, modificar la condición de invalidez antes de ampliar la memoria.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P05",
+      "title": "Resolver conflictos de prioridades antes de gastar",
+      "scope": "policy",
+      "triggers": [
+        "prioridades_contradictorias",
+        "recursos_mal_asignados"
+      ],
+      "case_ids": [
+        "C03",
+        "C08"
+      ],
+      "hypothesis": "Un plan conjunto evita que una mejora marginal bloquee una necesidad crítica.",
+      "intervention": "Antes del trimestre, identificar usos que compiten por el mismo presupuesto y elegir un orden coherente; reobservar tras actuar.",
+      "control": "Greedy de una acción cada vez sin plan conjunto.",
+      "metrics": "Puntuación; oportunidades necesarias que quedan sin presupuesto; acciones inválidas.",
+      "decision_rule": "Si el plan inicial se vuelve rígido ante consecuencias nuevas, conservar planificación pero reabrir la decisión.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P06",
+      "title": "Enumeración de planes públicamente válidos",
+      "scope": "policy",
+      "triggers": [
+        "acciones_invalidas",
+        "recursos_mal_asignados"
+      ],
+      "case_ids": [
+        "C13"
+      ],
+      "hypothesis": "Un filtro exacto de costes conocidos puede mejorar fiabilidad sin conocer efectos ocultos.",
+      "intervention": "Enumerar combinaciones pequeñas compatibles con el presupuesto público y comparar su utilidad cualitativa; ejecutar sólo la siguiente acción.",
+      "control": "El mismo razonador sin enumeración explícita.",
+      "metrics": "Validez; puntuación terminal; tiempo y tokens adicionales.",
+      "decision_rule": "Si filtra opciones válidas o trata beneficios supuestos como ciertos, corregir el filtro antes de evaluar utilidad.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P07",
+      "title": "Especialista en el subproblema que falla",
+      "scope": "policy",
+      "triggers": [
+        "fallo_local_recurrente",
+        "modelo_no_sigue"
+      ],
+      "case_ids": [
+        "C02"
+      ],
+      "hypothesis": "Una revisión acotada puede resolver el cuello de botella sin complicar toda la política.",
+      "intervention": "Identificar por trazas la fase con errores y cambiar sólo su procedimiento; medir después toda la política.",
+      "control": "Política general y alternativa con instrucciones extra en todas las fases.",
+      "metrics": "Puntuación; errores de esa fase; regresiones en fases restantes.",
+      "decision_rule": "Si el fallo persiste en la fase o la coordinación empeora, estudiar capacidad del actor y no añadir más reglas.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P08",
+      "title": "Recuperación con condición explícita de salida",
+      "scope": "policy",
+      "triggers": [
+        "sobrevive_sin_progresar",
+        "defensa_permanente"
+      ],
+      "case_ids": [
+        "C01",
+        "C09"
+      ],
+      "hypothesis": "La prudencia puede dominar el comportamiento aun cuando ya se resolvió la necesidad.",
+      "intervention": "Añadir una reevaluación pública del motivo de recuperación y retorno a crecimiento cuando deje de justificarla.",
+      "control": "Política defensiva actual.",
+      "metrics": "Puntuación; progreso; recaídas y duración defensiva.",
+      "decision_rule": "Si las recaídas explican una pérdida de score, ensayar una transición más gradual; no imponer un calendario oculto.",
+      "effort": "small",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P09",
+      "title": "Abandonar un objetivo que dejó de ser viable",
+      "scope": "policy",
+      "triggers": [
+        "coste_hundido",
+        "plan_rigido"
+      ],
+      "case_ids": [
+        "C07"
+      ],
+      "hypothesis": "Reformular un compromiso de crecimiento agotado puede liberar capacidad para terminar mejor.",
+      "intervention": "Permitir renunciar o renegociar cuando las opciones ofrecidas y el feedback lo justifican, registrando la alternativa concreta.",
+      "control": "Política que insiste en rescatar el objetivo previo.",
+      "metrics": "Puntuación; coste de insistencia; consecuencias de compromisos abandonados.",
+      "decision_rule": "Si abandona demasiado pronto o genera otras obligaciones peores, archivar esa variante sin descartar toda la familia.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P10",
+      "title": "Familia menos defensiva, con respuesta a avisos",
+      "scope": "policy",
+      "triggers": [
+        "sobrevive_sin_progresar",
+        "riesgo_no_calibrado"
+      ],
+      "case_ids": [
+        "C09",
+        "C10"
+      ],
+      "hypothesis": "Puede haber oportunidades de progreso desaprovechadas por aversión genérica al riesgo.",
+      "intervention": "Comparar una política que prioriza oportunidades cuando no hay evidencia pública de urgencia, manteniendo respuesta a avisos reales.",
+      "control": "Política equilibrada/defensiva congelada.",
+      "metrics": "Media terminal; duración y distribución de salidas tempranas; no sólo mejores partidas.",
+      "decision_rule": "Si la ganancia aparente desaparece en media o depende de pocos éxitos extremos, hibernar la candidata.",
+      "effort": "small",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P11",
+      "title": "Inversión que tarda en producir",
+      "scope": "policy",
+      "triggers": [
+        "proxy_temprano_enganoso",
+        "crecimiento_estancado"
+      ],
+      "case_ids": [
+        "C05",
+        "C15"
+      ],
+      "hypothesis": "El valor de capacidad futura puede no aparecer en la mejora inmediata del panel.",
+      "intervention": "Crear una familia que considere aprendizaje, relaciones o capacidades como inversiones justificadas por horizonte y estado; usar episodios completos.",
+      "control": "Familia centrada en rendimiento inmediato.",
+      "metrics": "Puntuación terminal; probabilidad de llegar a fases tardías; progreso acumulado.",
+      "decision_rule": "Si no hay mejora terminal confirmada, no usar una narrativa de inversión para excusar resultados indefinidamente.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P12",
+      "title": "Concentración temporal en una dimensión",
+      "scope": "policy",
+      "triggers": [
+        "equilibrio_sin_avance",
+        "crecimiento_estancado"
+      ],
+      "case_ids": [
+        "C03",
+        "C09",
+        "C15"
+      ],
+      "hypothesis": "Mejorar un cuello de botella de forma concentrada puede superar pequeños avances en todo.",
+      "intervention": "Probar una prioridad dominante temporal apoyada en feedback, con excepciones por urgencia y condición de salida.",
+      "control": "Política que busca equilibrio en cada decisión.",
+      "metrics": "Puntuación; resolución del cuello de botella; deterioro y salidas por otras dimensiones.",
+      "decision_rule": "Si los daños colaterales superan el avance o el cuello de botella estaba mal identificado, cambiar la hipótesis.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P13",
+      "title": "Construir algo válido y reparar lo que falla",
+      "scope": "search",
+      "triggers": [
+        "muchas_propuestas_invalidas",
+        "complejidad_sin_mejora"
+      ],
+      "case_ids": [
+        "C14",
+        "C17"
+      ],
+      "hypothesis": "Un esqueleto sencillo puede dar una base mejor que una política ambiciosa incompleta.",
+      "intervention": "Generar una política completa breve; añadir una reparación general por fallo observado sin rehacer las partes que funcionan.",
+      "control": "Generación libre de una política compleja desde cero.",
+      "metrics": "Mejor política confirmada por presupuesto; proporción de candidatas ejecutables.",
+      "decision_rule": "Si la base restringe sistemáticamente ideas útiles, abrir otra familia en vez de acumular reparaciones sin límite.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P14",
+      "title": "Destruir y reconstruir módulos relacionados",
+      "scope": "search",
+      "triggers": [
+        "plateau_local",
+        "cambios_atomicos_no_ayudan"
+      ],
+      "case_ids": [
+        "C15",
+        "C17"
+      ],
+      "hypothesis": "Algunas mejoras requieren cambiar juntas prioridades, memoria y condiciones de modo.",
+      "intervention": "Seleccionar un conjunto ligado a un fallo; retirar sus decisiones de diseño y regenerarlo como un bloque coherente.",
+      "control": "Mutaciones de un único módulo con igual presupuesto total.",
+      "metrics": "Mejor score confirmado; tasa de mejora y coste de evaluación de bloques.",
+      "decision_rule": "Si produce sobre todo regresiones, reducir el bloque o cambiar su selección; no confundir tamaño con innovación.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P15",
+      "title": "Vecindarios elegidos por el bloqueo observado",
+      "scope": "search",
+      "triggers": [
+        "plateau_local",
+        "mutaciones_sin_diagnostico"
+      ],
+      "case_ids": [
+        "C07",
+        "C17"
+      ],
+      "hypothesis": "Cambiar lo que causa la interacción puede rendir más que elegir al azar qué párrafo editar.",
+      "intervention": "Relacionar fallos con módulos causales plausibles y generar variantes específicas de esas interacciones; conservar hipótesis alternativas.",
+      "control": "Mutaciones aleatorias de módulos con las mismas oportunidades de prueba.",
+      "metrics": "Ganancia confirmada por propuesta y por coste; diagnósticos refutados.",
+      "decision_rule": "Si las atribuciones no predicen mejoras, ampliar el diagnóstico o volver a mutaciones diversas.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P16",
+      "title": "Aceptar retrocesos como escalones de investigación",
+      "scope": "search",
+      "triggers": [
+        "plateau_local",
+        "solo_refina_lider"
+      ],
+      "case_ids": [
+        "C12",
+        "C15"
+      ],
+      "hypothesis": "Una candidata peor puede ser un punto de partida útil para descendientes.",
+      "intervention": "Mantener una población de desarrollo con cambios desfavorables y dar un presupuesto acotado a sus descendientes; el campeón se conserva aparte.",
+      "control": "Refinamiento exclusivamente del líder.",
+      "metrics": "Mejor descendiente confirmado por presupuesto; origen de las mejoras.",
+      "decision_rule": "Si consume presupuesto sin aportar descendientes distintos o útiles, dormir esa línea; un máximo ruidoso no basta para reactivarla.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P17",
+      "title": "Reinicios con familias realmente diferentes",
+      "scope": "search",
+      "triggers": [
+        "poca_diversidad",
+        "plateau_local"
+      ],
+      "case_ids": [
+        "C05",
+        "C15",
+        "C17"
+      ],
+      "hypothesis": "El estancamiento puede deberse a empezar todas las variantes desde la misma representación.",
+      "intervention": "Abrir familias con prioridades, memoria o descomposición distintas y comprobar diferencias de comportamiento en episodios.",
+      "control": "Más revisiones del mismo líder con igual presupuesto.",
+      "metrics": "Mejor política confirmada; cobertura conductual y coste de generación.",
+      "decision_rule": "Si los textos distintos inducen el mismo comportamiento, reformular la diversidad antes de escalar agentes.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P18",
+      "title": "Aprender qué operador de mutación sirve ahora",
+      "scope": "search",
+      "triggers": [
+        "operadores_desiguales",
+        "presupuesto_mal_asignado"
+      ],
+      "case_ids": [
+        "C15",
+        "C17"
+      ],
+      "hypothesis": "Cambios pequeños, reconstrucciones y simplificaciones tienen productividad distinta según la fase.",
+      "intervention": "Registrar operador, coste y mejoras confirmadas; adaptar asignación conservando oportunidades exploratorias para operadores menos usados.",
+      "control": "Frecuencia uniforme de operadores.",
+      "metrics": "Ganancia final por presupuesto; cambios en productividad y falsos éxitos.",
+      "decision_rule": "Si la adaptación premia ruido o mata operadores de beneficio tardío, ampliar confirmación y mantener una cola justa.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P19",
+      "title": "Selector simple entre familias complementarias",
+      "scope": "search",
+      "triggers": [
+        "ranking_cambiante",
+        "poca_diversidad"
+      ],
+      "case_ids": [
+        "C11"
+      ],
+      "hypothesis": "Una mezcla de asignación de experimentos puede explorar mejor que una cadena rígida de decisiones.",
+      "intervention": "Comparar un selector probabilístico sencillo de familias con el controlador actual; actualizar sólo con evaluaciones realmente observadas.",
+      "control": "Asignación uniforme y refinamiento del líder.",
+      "metrics": "Mejor política objetivo confirmada bajo presupuesto equivalente.",
+      "decision_rule": "Si no supera alternativas simples, conservar el controlador más legible; no imputar recompensas a políticas no jugadas.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P20",
+      "title": "Eliminar instrucciones para mejorar ejecución",
+      "scope": "policy",
+      "triggers": [
+        "modelo_no_sigue",
+        "complejidad_sin_mejora"
+      ],
+      "case_ids": [
+        "C11",
+        "C14"
+      ],
+      "hypothesis": "Un selector o política más corta puede funcionar mejor por menor contradicción y carga de contexto.",
+      "intervention": "Retirar por grupos reglas redundantes o poco justificadas y congelar cada versión; conservar sólo procedimientos esenciales.",
+      "control": "Política larga y versión de igual longitud con mera reescritura.",
+      "metrics": "Puntuación; seguimiento de instrucciones; tokens y errores.",
+      "decision_rule": "Si la reducción elimina una capacidad útil, restaurarla con una formulación más clara y confirmar el conjunto.",
+      "effort": "small",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P21",
+      "title": "Una prioridad principal y pocas excepciones",
+      "scope": "policy",
+      "triggers": [
+        "prioridades_contradictorias",
+        "complejidad_sin_mejora"
+      ],
+      "case_ids": [
+        "C09",
+        "C14"
+      ],
+      "hypothesis": "Reducir grados de libertad puede hacer consistente al actor sin empobrecer la estrategia útil.",
+      "intervention": "Crear una familia con un objetivo dominante observable y excepciones de urgencia explícitas; compararla con variantes de distintos objetivos.",
+      "control": "Política con muchas prioridades simultáneas.",
+      "metrics": "Puntuación; coherencia; fallos causados por prioridades ignoradas.",
+      "decision_rule": "Si gana sólo en una región, tratarla como especialista y medir su integración; no declararla universal.",
+      "effort": "small",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P22",
+      "title": "Necesidad → objetivo → opción",
+      "scope": "policy",
+      "triggers": [
+        "razonamiento_desordenado",
+        "modelo_no_sigue"
+      ],
+      "case_ids": [
+        "C08",
+        "C16"
+      ],
+      "hypothesis": "Una representación intermedia puede facilitar decisiones de opciones sin convertirlas en una tabla.",
+      "intervention": "Pedir un registro conciso de necesidad con evidencia, objetivo elegido y comparación de opciones ofrecidas.",
+      "control": "Elección directa desde el texto y variante de longitud comparable.",
+      "metrics": "Puntuación; coherencia entre necesidad y acción; coste de tokens.",
+      "decision_rule": "Si añade prosa sin mejorar consistencia, simplificar la representación o retirarla.",
+      "effort": "small",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P23",
+      "title": "Archivo de regresiones y campeón congelado",
+      "scope": "evaluation",
+      "triggers": [
+        "mejora_local_regresion_global",
+        "solo_mira_ultima_version"
+      ],
+      "case_ids": [
+        "C05",
+        "C08"
+      ],
+      "hypothesis": "El progreso aparente puede esconder pérdida de capacidades ya conseguidas.",
+      "intervention": "Mantener referencias congeladas y diagnósticos de fallos conocidos; confirmar rendimiento de políticas completas en nuevos episodios.",
+      "control": "Promoción que compara sólo con la última versión en el lote de selección.",
+      "metrics": "Score confirmado y regresiones por familia de fallo; coste total de comprobación.",
+      "decision_rule": "Si el archivo guía sobreajuste a un conjunto pequeño, reservar una validación nueva y rotar la cobertura diagnóstica.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P24",
+      "title": "Diversidad de condiciones, no sólo del propio estilo",
+      "scope": "evaluation",
+      "triggers": [
+        "fragilidad_escenarios",
+        "sobreajuste_dev"
+      ],
+      "case_ids": [
+        "C05",
+        "C10"
+      ],
+      "hypothesis": "Los supuestos aprendidos de una colección estrecha pueden fallar en estados poco frecuentes.",
+      "intervention": "Registrar condiciones públicas de episodios completos y comprobar cobertura; añadir familias que produzcan recorridos distintos sin controlar semillas ocultas.",
+      "control": "Repeticiones sólo de la candidata que más se usa.",
+      "metrics": "Media terminal y heterogeneidad; frecuencia de exposición a condiciones relevantes.",
+      "decision_rule": "Si una aparente mejora depende de seleccionar escenarios tras ver resultados, repetir con diseño prefijado.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P25",
+      "title": "Diagnosticar capacidad con actores compartidos",
+      "scope": "evaluation",
+      "triggers": [
+        "modelo_no_sigue",
+        "ranking_entre_modelos"
+      ],
+      "case_ids": [
+        "C02",
+        "C10"
+      ],
+      "hypothesis": "El actor barato puede penalizar políticas complejas por ejecución, no por valor estratégico.",
+      "intervention": "Evaluar políticas congeladas de distintas familias con actores distintos y configuración fija; revisar también rechazos baratos sobre el objetivo.",
+      "control": "Elegir todas las candidatas exclusivamente con el actor barato.",
+      "metrics": "Acuerdo de ranking con incertidumbre; falsos descartes; score objetivo por coste.",
+      "decision_rule": "Si la fidelidad es baja, reducir su autoridad de selección o usar un actor más capaz; no arreglar sesgo sólo con más réplicas baratas.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P26",
+      "title": "Estructura adicional frente a contexto compacto",
+      "scope": "evaluation",
+      "triggers": [
+        "modelo_no_sigue",
+        "latencia_alta"
+      ],
+      "case_ids": [
+        "C02",
+        "C16"
+      ],
+      "hypothesis": "Un actor pequeño puede necesitar pasos claros; uno potente quizá rinda mejor con contexto mínimo.",
+      "intervention": "Cruzar política breve/estructurada con Haiku/Sonnet/Opus disponibles como diagnóstico de desarrollo, sin mezclar celdas.",
+      "control": "Una única configuración por modelo elegida intuitivamente.",
+      "metrics": "Puntuación por actor/configuración; seguimiento; latencia y tokens.",
+      "decision_rule": "Si una configuración mejora velocidad pero degrada score objetivo, no promoverla sólo por throughput.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P27",
+      "title": "Comprobar la intuición antes de actuar",
+      "scope": "policy",
+      "triggers": [
+        "decisiones_optimistas",
+        "trampas_tardias"
+      ],
+      "case_ids": [
+        "C10"
+      ],
+      "hypothesis": "Un segundo paso breve puede detectar compromisos y pérdidas irreversibles omitidos por la primera elección.",
+      "intervention": "Dentro del mismo agente, revisar la opción provisional contra evidencia contraria, horizonte y obligaciones, y decidir una vez.",
+      "control": "Elección directa; no cambiar modelo a mitad de la condición experimental.",
+      "metrics": "Score terminal; acciones reconsideradas que evitan un fallo; coste de revisión.",
+      "decision_rule": "Si siempre ratifica la intuición o sobrecorrige hacia defensa permanente, rediseñar la pregunta de comprobación.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P28",
+      "title": "Registro de hipótesis contradictorias",
+      "scope": "policy",
+      "triggers": [
+        "decisiones_optimistas",
+        "repite_error_de_interpretacion"
+      ],
+      "case_ids": [
+        "C01",
+        "C07",
+        "C10"
+      ],
+      "hypothesis": "Separar lo observado de lo supuesto puede evitar repetir una interpretación errónea.",
+      "intervention": "Anotar sólo incertidumbres activas del episodio con evidencia a favor/en contra; actualizar tras feedback sin convertirlas en reglas ocultas.",
+      "control": "Memoria que sólo conserva conclusiones afirmativas.",
+      "metrics": "Puntuación; errores repetidos de interpretación; tamaño de memoria.",
+      "decision_rule": "Si el registro provoca indecisión o acumula hipótesis irrelevantes, podar por utilidad actual y comprobar una versión breve.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P29",
+      "title": "Auditoría de información disponible al decidir",
+      "scope": "evaluation",
+      "triggers": [
+        "mejora_sospechosa",
+        "sesgo_de_supervivientes"
+      ],
+      "case_ids": [
+        "C06"
+      ],
+      "hypothesis": "Una explicación retrospectiva puede estar usando el final o una acción no observada.",
+      "intervention": "Revisar decisiones con el historial público hasta ese momento; marcar explícitamente el dato futuro y evitar usarlo como entrada del actor.",
+      "control": "Análisis retrospectivo sin separación temporal.",
+      "metrics": "Fracción de diagnósticos que dependen de fuga; mejoras que sobreviven a nueva evaluación.",
+      "decision_rule": "Si la ventaja desaparece al retirar información futura, retirar la afirmación y rehacer el experimento.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P30",
+      "title": "Revisión acotada de fallo con alternativas",
+      "scope": "search",
+      "triggers": [
+        "muchas_revisiones_sin_mejora",
+        "mutaciones_sin_diagnostico"
+      ],
+      "case_ids": [
+        "C07",
+        "C12",
+        "C16"
+      ],
+      "hypothesis": "Un fallo bien descrito puede producir una intervención mejor que una recomendación general.",
+      "intervention": "Para cada revisión, conservar evidencia del fallo, dos explicaciones plausibles, cambio elegido y predicción comprobable.",
+      "control": "Prompt genérico de 'mejora la estrategia'.",
+      "metrics": "Mejoras confirmadas por revisión; diagnósticos refutados; coste de generación.",
+      "decision_rule": "Si las historias de fallo no predicen efectos, ajustar el análisis en vez de convertirlas en certezas.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P31",
+      "title": "Perfil de tiempo por componente del laboratorio",
+      "scope": "engineering",
+      "triggers": [
+        "latencia_alta",
+        "pocas_partidas_utiles"
+      ],
+      "case_ids": [
+        "C04",
+        "C09",
+        "C12",
+        "C14",
+        "C16"
+      ],
+      "hypothesis": "El cuello de botella puede ser orquestación, red, contexto o escritura y no el número de workers.",
+      "intervention": "Medir inicio, llamadas LLM, MCP, parseo, integrador y persistencia; optimizar componentes propios manteniendo el mismo trabajo.",
+      "control": "Ejecutor actual con mismo actor/política/protocolo.",
+      "metrics": "Episodios terminales por hora; coste; tasa de errores y concordancia de resultados.",
+      "decision_rule": "Si aumenta throughput a costa de truncar episodios o perder evidencia, revertir esa optimización.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "first_line_if_trigger_observed"
+    },
+    {
+      "id": "P32",
+      "title": "Presupuesto de razonamiento según incertidumbre",
+      "scope": "policy",
+      "triggers": [
+        "latencia_alta",
+        "errores_decisiones_dificiles"
+      ],
+      "case_ids": [
+        "C04",
+        "C09"
+      ],
+      "hypothesis": "Un procedimiento breve para casos claros puede liberar recursos para los ambiguos.",
+      "intervention": "Probar dos niveles de análisis dentro de una política del mismo actor, activados por contradicción o impacto observado; registrar la activación.",
+      "control": "Presupuesto uniforme breve y uniforme largo.",
+      "metrics": "Score terminal, coste y errores según nivel; política completa como unidad.",
+      "decision_rule": "Si el selector se equivoca al decidir qué es fácil, simplificarlo o dejar el nivel uniforme que funcione mejor.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P33",
+      "title": "Reanudación y deduplicación de experimentos",
+      "scope": "engineering",
+      "triggers": [
+        "trabajo_perdido",
+        "resultados_duplicados"
+      ],
+      "case_ids": [
+        "C01",
+        "C08"
+      ],
+      "hypothesis": "La productividad útil mejora si una interrupción no reinicia todo ni duplica muestras.",
+      "intervention": "Registrar tarea, política/hash, actor, proceso/sesión y aceptación; al reanudar comprobar estado real y usar sólo interfaces oficiales.",
+      "control": "Ejecución que sólo conserva resúmenes al final del lote.",
+      "metrics": "Episodios recuperables; duplicados; pérdida de evidencia; coste repetido.",
+      "decision_rule": "Si un proceso o sesión no puede verificarse, registrar incompleto antes que inventar continuidad o score.",
+      "effort": "medium",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P34",
+      "title": "Prueba de escalado antes de multiplicar workers",
+      "scope": "search",
+      "triggers": [
+        "plateau_local",
+        "pocas_partidas_utiles"
+      ],
+      "case_ids": [
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "hypothesis": "Más presupuesto ayuda sólo si la curva de descubrimiento conserva margen.",
+      "intervention": "Comparar búsquedas completas con presupuestos crecientes, incluyendo coordinación y confirmación; medir mejora por coste y tiempo.",
+      "control": "Presupuesto base y cambio de representación con presupuesto comparable.",
+      "metrics": "Mejor política confirmada al cerrar cada búsqueda; variación entre búsquedas.",
+      "decision_rule": "Si el margen se agota, cambiar representación/operadores; no justificar escala con un único resultado máximo.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "laboratory_scope_must_be_authorised",
+      "priority": "conditional"
+    },
+    {
+      "id": "P35",
+      "title": "Especialista contextual con probabilidad de llegar",
+      "scope": "policy",
+      "triggers": [
+        "regla_mes8_sospechosa",
+        "beneficio_solo_supervivientes"
+      ],
+      "case_ids": [
+        "C03",
+        "C07",
+        "C09"
+      ],
+      "hypothesis": "Una candidata mala global puede aportar un modo útil, pero su contexto debe ser alcanzable.",
+      "intervention": "Integrar una continuación en una política completa con prefijo fijado; aleatorizar políticas desde el inicio y medir también frecuencia de llegada.",
+      "control": "Política general y regla temporal simple como hipótesis alternativa.",
+      "metrics": "Puntuación terminal global; llegada al contexto; distribución de estado y resultados condicionales como diagnóstico.",
+      "decision_rule": "Si sólo gana entre supervivientes seleccionados y pierde en media completa, no promover la integración.",
+      "effort": "medium",
+      "counterintuitive": true,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    },
+    {
+      "id": "P36",
+      "title": "Reserva de evidencia y tiempo para el jurado",
+      "scope": "presentation",
+      "triggers": [
+        "deadline_cerca",
+        "mejora_no_explicable"
+      ],
+      "case_ids": [
+        "C12",
+        "C16"
+      ],
+      "hypothesis": "La puntuación algorítmica puede no compensar una explicación débil o incoherente.",
+      "intervention": "Guardar decisiones, pruebas fallidas, cambios y evidencias durante el desarrollo; reservar una fase de síntesis y validación de entregables.",
+      "control": "Preparar la presentación sólo al acabar la búsqueda.",
+      "metrics": "Cobertura de requisitos oficiales y trazabilidad; avance de score por tiempo restante.",
+      "decision_rule": "Si una narrativa no puede apoyarse en una prueba real, recortarla o presentarla como hipótesis pendiente.",
+      "effort": "small",
+      "counterintuitive": false,
+      "evidence_status": "adaptation_proposed_not_tested",
+      "execution_status": "not_run",
+      "permission_class": "general_procedure_candidate_review_required",
+      "priority": "conditional"
+    }
+  ]
+}

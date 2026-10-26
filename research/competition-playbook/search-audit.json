@@ -1,0 +1,561 @@
+{
+  "date": "2026-10-26",
+  "cutoff": "2026-10-26",
+  "provider": "Exa",
+  "searches": [
+    {
+      "id": "nethack",
+      "query": "Original authors' technical report and official results for the 2021 NetHack Challenge winner AutoAscend, explaining hierarchical heuristics, long-horizon resource management, recovery and lessons against reinforcement learning.",
+      "numResults": 8,
+      "candidates": [
+        {
+          "title": "Insights from the NeurIPS 2021 NetHack Challenge",
+          "url": "https://proceedings.mlr.press/v176/hambro22a/hambro22a.pdf",
+          "excerpt": "4.2.1. Team AutoAscend: Symbolic There are two main parts to our framework:\n\nParsing and maintaining the knowledge about the game state. This consists of parsing ASCII pop-ups, remembering dungeon level state including non-current levels, using commands like #terrain to check covered objects by items and seen traps, keeping track of monsters including peaceful monsters, inventory and contents of the hero’s bag, etc.\n\n10. See https://github.com/Miffyli/nle-sample-factory-baseline, maintained by c"
+        },
+        {
+          "title": "maciej-sypetkowski/autoascend",
+          "url": "https://github.com/maciej-sypetkowski/autoascend",
+          "excerpt": "# AutoAscend -- 1st place NetHack agent for the NetHack Challenge at NeurIPS 2021\n\n## Description\nThe general overview of the approach can be find here (1:14:00 -- 1:21:21).\nFor more context about the challenge and NetHack see the entire video.\nSome example episode visualizations are rendered in this playlist.\n\n...\n\n## Code structure\nThe base strategy class with description used for defining strategies is defined in `autoascend/strategy.py`.\nStrategy consists of entering condition and agent's be"
+        },
+        {
+          "title": "NetHack Challenge | NeurIPS 2021 NetHack Challenge website",
+          "url": "https://nethackchallenge.com/report.html",
+          "excerpt": "#### Best Agent Not Making Use of a Neural Network (Symbolic):\n\n- Winners - Team AutoAscend\n- Runners Up - Team Students of Stone\n\n#### Best Agent Making Significant Use of a Neural Network (Neural):\n\n- Winners - Team RAPH\n- Runners Up - Team Kakao Brain NetHack\n\n#### Best Agent From Independent/Academic Lab:\n\n- Winners - Team AutoAscend\n- Runners Up - Team Students of Stone\n\n#### Best Overall Agent:\n\n- Winners - Team AutoAscend\n- Runners Up - Team Students of Stone\n\nFull Leaderboard Results\n\nTh"
+        },
+        {
+          "title": "[2203.11889] Insights from the NeurIPS 2021 NetHack Challenge",
+          "url": "https://ar5iv.labs.arxiv.org/html/2203.11889",
+          "excerpt": "s. This lead extends fivefold when looking at the top-scoring episode from each track. Nonetheless, deep ... learning bots made significant progress, offering a nearly fivefold improvement in median score over our NeurIPS\n\n---\n\n"
+        },
+        {
+          "title": "Appendix A. AI Crowd Evaluation",
+          "url": "https://proceedings.mlr.press/v176/hambro22a/hambro22a-supp.pdf",
+          "excerpt": "Appendix C. AutoAscend \nWe implemented numerous behaviours and features targeting di↵erent aspects of the game. \nWe list the most important ones to show the comprehensiveness of our solution. \nExploration related \n• Untrapping traps and chests, looting containers \n• Keeping track of all dungeon level states including glyphs, items (also stacked), search count per every tile, altars with their alignment, corpse ages, shop positions and types, stairs with the information where they lead \n• Detecti"
+        },
+        {
+          "title": "The 1st place (3/4 tracks) solution source code - NeurIPS 2021 - The NetHack Challenge - AIcrowd Forum",
+          "url": "https://discourse.aicrowd.com/t/the-1st-place-3-4-tracks-solution-source-code/7580",
+          "excerpt": "3/4 tracks) solution source code - NeurIPS 2021 - The NetHack Challenge - AIcrowd\n...\n# The 1st place (3/4 tracks) solution source code \n\n michal_sypetkowski April 8, 2022, 9:21pm 1 \n\nHi all! We have released our (AutoAscend team) solution source code here\n\n---\n\n"
+        },
+        {
+          "title": "Insights from the NeurIPS 2021 NetHack Challenge Byeon$ Jo$ Kim$ Kim$ Kwon$ Lee$",
+          "url": "https://export.arxiv.org/pdf/2203.11889",
+          "excerpt": "a hybrid neural \nalgorithmic method, where some skills can be trained, and others – hard ... coded. In our case, \nwe opted for a simplified higher-level policy and\n...\npriority and triggers \nof each skill were designed manually and determined based on\n\n---\n\n"
+        },
+        {
+          "title": "Dungeons and Data: A Large-Scale NetHack Dataset",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10177322/1/187_dungeons_and_data_a_large_scal.pdf",
+          "excerpt": "5.1 NLD-AA \nTo our knowledge, AutoAscend 6 is currently the best open-sourced artificial agent for playing \nNetHack 3.6.6, having achieved first place in the 2021 NeurIPS NetHack Challenge by a considerable \nmargin [15]. AutoAscend is a symbolic bot, forgoing any neural network and instead relying on a \npriority list of hard-coded subroutines. These subroutines are complex, context dependant, and make \nsignificant use of NetHack domain knowledge and all NetHack actions. For instances, the bot ke"
+        }
+      ]
+    },
+    {
+      "id": "lux",
+      "query": "First-place solution writeups and public author repositories for Lux AI Season 2 NeurIPS 2023 and Lux AI Season 3 2025, explaining planning, hidden information, hybrid heuristics and reinforcement learning.",
+      "numResults": 10,
+      "candidates": [
+        {
+          "title": "1st place approach by Flat Neurons | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/flat-neurons-1st-place-approach-by-flat-neurons",
+          "excerpt": "1st place approach by Flat Neurons | Kaggle\n\n# 1st place approach by Flat Neurons\n\nNeurIPS 2024 - Lux AI Season 3\n\nSolution Writeup · 1st place · Apr 8, 2025\n\nHello and welcome! Here’s an extensive overview of our design, training pipeline, and testing strategy for the Lux AI Season 3 challenge.\n\n## Core Idea\n\nWe used multi-agent reinforcement learning (RL), primarily employing the IMPALA algorithm with enhancements like dynamic reward scaling and adaptive entropy.\n\n## Action Space\n\nWe ended up "
+        },
+        {
+          "title": "1st place solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-2/writeups/ry-andy-1st-place-solution",
+          "excerpt": "1st place solution | Kaggle\n\n# 1st place solution\n\nSolution Writeup · 1st place · Dec 13, 2023\n\nFirst of all, I have to acknowledge @ttigga and @danmctree for co-producing the most uncertain and stressful race to the finish I could have imagined. Huge congrats to both of you.\n\n## Background\n\nThe Lux game specification can be found here.\n\n## Overall Strategy\n\nI competed in the Lux Beta just before this competition began, but threw out most of my strategic code when the post-beta rule changes were"
+        },
+        {
+          "title": "tonykozlovsky/lux-ai3-pub",
+          "url": "https://github.com/tonykozlovsky/lux-ai3-pub",
+          "excerpt": "## README\n\n# Winning solution of Lux Ai 3 competition\n\nHello and welcome! Here’s an extensive overview of our design, training pipeline, and testing strategy for the Lux AI Season 3 challenge.\n\n## Core Idea\n\nWe used multi-agent reinforcement learning (RL), primarily employing the IMPALA algorithm with enhancements\n\n---\n\n"
+        },
+        {
+          "title": "Imitation Learning: 3rd Place Solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/adg4b-imitation-learning-3rd-place-solution",
+          "excerpt": "Imitation Learning: 3rd Place Solution | Kaggle\n\n# Imitation Learning: 3rd Place Solution\n\nNeurIPS 2024 - Lux AI Season 3\n\nSolution Writeup · 3rd place · Mar 25, 2025\n\nAt the beginning of the competition, I initially attempted to build a rule-based agent. However, by mid-January, I had hit my limits. After spending weeks trying to improve the solution without any progress, I decided to give the Imitation Learning (IL) approach a shot. Several days were spent downloading and preparing the data, f"
+        },
+        {
+          "title": "ryandy/Lux-S2-neurips-public",
+          "url": "https://github.com/ryandy/Lux-S2-neurips-public",
+          "excerpt": "# Repository: ryandy/Lux-S2-neurips-public\n\n1st place solution - Lux AI Season 2 NeurIPS Edition\n\n- Stars: 2\n- Forks: 0\n- Watchers: 2\n- Open issues: 0\n- Primary language: C++\n- Languages: C++ (98.3%), Batchfile (0.6%), Shell (0.5%), Python (0.4%), CMake (0.3%), Dockerfile\n- License: Apache License 2.0 (Apache-2.0)\n- Default branch: main\n- Homepage: https://www.kaggle.com/c/lux-ai-season-2-neurips-stage-2\n- Created: 2023-12-09T16:53:27Z\n- Last push: 2023-12-09T17:15:48Z\n- Contributors: 1 (top: ry"
+        },
+        {
+          "title": "PPO using Jux - Lux AI Season 2 - NeurIPS Stage 2 Competition Solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-2-neurips-stage-2/writeups/scott-goodfriend-ppo-using-jux-lux-ai-season-2-neu",
+          "excerpt": "PPO using Jux - Lux AI Season 2 - NeurIPS Stage 2 Competition Solution | Kaggle\n\n# PPO using Jux - Lux AI Season 2 - NeurIPS Stage 2 Competition Solution\n\nSolution Writeup · 31st place\n\nKaggle competition: Lux AI Season 2 - NeurIPS Stage 2\n\nKaggle code submission: https://www.kaggle.com/sgoodfriend/lux2-neurips2-ppo-using-jux\n\nTraining repo: https://github.com/sgoodfriend/rl-algo-impls. Best submission is from 28e662d.\n\nJUX fork: https://github.com/sgoodfriend/jux. Biggest changes are to support"
+        },
+        {
+          "title": "ryandy/Lux-S2-public",
+          "url": "https://github.com/ryandy/Lux-S2-public",
+          "excerpt": "# ryandy/Lux-S2-public\n\n1st place solution - Lux AI Season 2\n\n- Stars: 7\n- Forks: 0\n- Watchers: 7\n- Open issues: 0\n- License: Apache License 2.0\n- Homepage: https://www.kaggle.com/competitions/lux-ai-season-2/overview\n- Default branch: main\n- Created: 2023-12-08T00:49:01Z\n\n## Languages\n\n- Python\n\n## Top Contributors\n\n- ryandy (2 contributions)\n\n---\n\n## README\n\n# Lux AI Season 2 - ry_andy_\n\nThis Python agent placed 1st out of 646 teams in Lux AI Season 2.\n\nThe Lux AI Challenge is a competition wh"
+        },
+        {
+          "title": "4th Place Solution - Imitation Learning Approach | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/yumeneko-4th-place-solution-imitation-learning-app",
+          "excerpt": "4th Place Solution - Imitation Learning Approach | Kaggle\n\n# 4th Place Solution - Imitation Learning Approach\n\nNeurIPS 2024 - Lux AI Season 3\n\nSolution Writeup · 4th place · Mar 25, 2025\n\nFirst of all, thank you to everyone involved in this competition. This was my first simulation competition, and it was incredibly exciting to watch my agent grow stronger over time. The source code is available here : https://github.com/KASSII/Kaggle_LuxAI-s3\n\n## Overview\n\n- My solution is based on Imitation Le"
+        },
+        {
+          "title": "8th Place Solution - Imitation Learning | Kaggle",
+          "url": "https://www.kaggle.com/competitions/lux-ai-season-3/writeups/gregor-lied-8th-place-solution-imitation-learning",
+          "excerpt": "8th Place Solution - Imitation Learning | Kaggle\n\n# 8th Place Solution - Imitation Learning\n\nNeurIPS 2024 - Lux AI Season 3\n\nSolution Writeup · 8th place · Apr 21, 2025\n\n## Introduction\n\nFirst, I'd like to thank the team of Lux AI and Kaggle for organizing this competition. I especially enjoyed the new features such as the dynamic environment and the presence of FoW. I look forward to competing with you all in the (hopefully) upcoming fourth season of Lux AI!!\n\nThe source code is available here:"
+        },
+        {
+          "title": "kuto5046/kaggle-luxai-s3",
+          "url": "https://github.com/kuto5046/kaggle-luxai-s3",
+          "excerpt": "## README\n\n# kaggle luxai season3\nNeurIPS 2024 - Lux AI Season 3\n\n## setup & run\n```bash\nuv sync\n```\n### imitation learning\nYou have to prepare the episode data in local.\n```bash\nuv run exp/best/data_processor.py\nuv run exp/best/train.py\n```\n\n### reinforcement learning\nI tried RL but not good.\n```bash\nuv run exp/rl_best/rl.py\n```\n\n---\n## Solution\nOur solution is following.\nhttps://www.kaggle.com/competitions/lux-ai-season-3/discussion/568789\n\n### Summary\n\n- Imitation learning based on match resu"
+        }
+      ]
+    },
+    {
+      "id": "kaggle_games",
+      "query": "Original first-place solution reports for Kaggle Hungry Geese 2021, Halite 2020 and Kore 2022 game AI competitions, with search methods, risk control, planning horizons and code.",
+      "numResults": 10,
+      "candidates": [
+        {
+          "title": "1st place solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/kore-2022/writeups/harm-buisman-1st-place-solution",
+          "excerpt": "1st place solution | Kaggle\n\n# 1st place solution\n\nKore 2022\n\nSolution Writeup · 1st place · Jul 27, 2022\n\n## The competition\n\nThanks @bovard and all fellow competitors for the great fun during this interesting competition. I joined this competition to get into reinforcement learning, but while playing around with the great Kore Beta 1st place solution by @egrehbbt I managed to get up in the ranks quickly, mainly by changing the expansion strategy. I decided to focus on the rule-based approach a"
+        },
+        {
+          "title": "ttvand/Halite",
+          "url": "https://github.com/ttvand/Halite",
+          "excerpt": "## README\n\n# Halite IV winning Solution!\nThis repo contains the code for my submission to the 2020 Halite Kaggle simulations competition. In the end, it was confirmed that it is also the winning submission! \nThere is a separate folder for rule based and Deep Learning agents. All source code is contained in the Logic folder.\n\nPlease have a look at the Kaggle forum for a discussion of the rule based strategy.\n\n---\n\n"
+        },
+        {
+          "title": "1st Place Solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/kore-2022-beta/writeups/adg4b-1st-place-solution",
+          "excerpt": "1st Place Solution | Kaggle\n\n# 1st Place Solution\n\nKore 2022 - Beta\n\nSolution Writeup · 1st place · Apr 8, 2022\n\nAhoy, there!\n\nMy solution is a simple rules-based agent which sequentially performs some basic operations:\n\n- shipyard defence - We can find out where and when our shipyard will be attacked, and we have time to form a defense. Knowing how many ships are currently in the shipyard and how many my ships will arrive in the near future, I can say exactly what minimum number of additional s"
+        },
+        {
+          "title": "Halite IV - Resource Management in Space | Lucas Schnack",
+          "url": "https://schnack.dev/blog/kaggle/halite-iv-resource-management/",
+          "excerpt": "### Parameters\n\nFirst of all, I have to admit that our approach utilizes no fancy ML techniques or otherwise disproportionate complex algorithms. Instead, our bot is a 100% rule-based bot with lots of parameters. Initially, we considered using deep reinforcement learning but figured out the problem was not optimal for this approach because we couldn't find a way to make a player-based approach work. Therefore we settled for a bot with many parameters that would then be tuned by a simple evolutio"
+        },
+        {
+          "title": "itswin/Kore-2022",
+          "url": "https://github.com/itswin/Kore-2022",
+          "excerpt": "## Game Overview\n\n![Kore gameplay](kore-gameplay.gif)\n\nVisualization by [Tong Hui Kang](https://www.kaggle.com/competitions/kore-2022/discussion/320987).\n\nKore-2022 is a turn-based game played on a 21x21 tiled board, where your objective is to collect the most kore, your primary resource, by round 400 or destroy your opponent before that. The overall theme is that you must calculate many steps ahead, as the effects of any single action often are not immediately apparent. There are two basic unit"
+        },
+        {
+          "title": "Winning Kaggle’s Reinforcement-Learning Competitions | Kaggle",
+          "url": "https://www.kaggle.com/writeups/zoli800/winning-kaggles-reinforcement-learning-competitio",
+          "excerpt": "### 2. What past competitions actually rewarded\n\nCompleted events reject any simple story about rules versus learning.\n\n| Competition | Placement and method | Dominant design choice | Practical lesson |\n| --- | --- | --- | --- |\n| Halite 2020 | 1st, explicit planning | Score mining, returning, conversion, and attacks; assign non-conflicting tasks; model opponent collision risk and conversion behavior online | Hierarchical task scoring, conflict resolution, and opponent modeling were sufficient t"
+        },
+        {
+          "title": "Halite II post-mortem",
+          "url": "https://recursive.cc/blog/halite-ii-post-mortem.html",
+          "excerpt": "# Halite II post-mortem\n\n## Introduction\n\nIt was some hard work, but after 3 months I won the Halite 2 AI competition with a decisive lead, and I am very happy with that! It's definitely one of the toughest competitions I have participated in, but also a very fun one. Since Halite is a game with such a deep focus on strategy, for this post-mortem I will describe in details the inner workings of my bot, all the strategies it takes as well as the intent behind them. If there are other topics you w"
+        },
+        {
+          "title": "Hungry Geese",
+          "url": "https://www.kaggle.com/competitions/hungry-geese/discussion/264053",
+          "excerpt": "Hungry Geese | Kaggle\n\nIf the issue persists, it's likely a problem on our side.\n\nError: Too many requests at E (https://www.kaggle.com/static/assets/app.js?v=0aafaf6e7b67ed06:1:1805290) at https://www.kaggle.com/static/assets/app.\n\n---\n\n"
+        },
+        {
+          "title": "HandyRLで切り開く並列強化学習 | BLOG - DeNA Engineering",
+          "url": "https://engineering.dena.com/blog/2021/12/distributed-reinforcement-learning-with-handyrl/",
+          "excerpt": "## Hungry Geese への挑戦 \n\nサッカーで優勝ができなかったためkaggleにリベンジするため、引き続いてkaggleで行われた Hungry Geeseコンペティション に再び田中さんとのコンビで参加しました。\n\n今回はただ結果を出すだけでなく同時にHandyRLのアピールを行い、多くの人にサポートを受けて戦いたいという意図から、早い時期からライブラリと同名のHandyRLというチームで参加しました。\n\nHungry Geeseは4人で対戦するヘビゲームで、7 x 11のトーラス格子上で行います。\n\nヘビゲームはヘビ（以下、このゲームに合わせて、「ガチョウ」と呼びます）の頭を上下左右に動かして、食べ物を食べて体を長くすることを競うゲームです。ただし相手や自分の体にぶつかったら死んでしまうので、逃げ道を確保しつつ長くしていく必要があります。\n\n \n\nHungryGeeseでは四人対戦ですが、対戦結果は長く生き残ることが優先で、規定のターン数まで生き残った場合と同時に死んだ場合のみ長さの比較が行われます。\n\nこう聞くと、生き残ることを最優先にするべきなように聞こえますが、必"
+        },
+        {
+          "title": "8th place solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/hungry-geese/writeups/tcor3-8th-place-solution",
+          "excerpt": "8th place solution | Kaggle\n\n# 8th place solution\n\nHungry Geese\n\nSolution Writeup · 8th place · Aug 10, 2021\n\nSince we rushed to participate in the competition around the last month of the competition, we had not sufficiently refined our solution and hence were not willing to publish it. However, this post urged me to do so (lol), so I'll share it briefly.\n\nThe English text is mostly generated by automatic translation. If there are any parts that are difficult to understand, please feel free to "
+        }
+      ]
+    },
+    {
+      "id": "huawei",
+      "query": "Huawei Ireland Tech Arena 2024 winners original solution explanations Linan Wang Nansen Li simulated annealing pricing deployment acheong08 CP-SAT pattern search, plus 2025 Dynamo winning LLM efficiency solution.",
+      "numResults": 8,
+      "candidates": [
+        {
+          "title": "linanwx/huawei2024",
+          "url": "https://github.com/linanwx/huawei2024",
+          "excerpt": "# Server Cluster Management Optimization\n\nThis repository contains our solution for the Huawei Ireland Research Center's Tech Arena 2024 competition, where we achieved first place in the algorithm section of the server cluster management model problem, significantly outperforming the second place. However, due to a lack of emphasis on the PPT and presentation, we finished third overall in the final competition.\n\n## Problem Description\n\n### Problem 1: Server Cluster Management Model\n\nThe objectiv"
+        },
+        {
+          "title": "acheong08/hwta-ireland-2024",
+          "url": "https://github.com/acheong08/hwta-ireland-2024",
+          "excerpt": "# acheong08/hwta-ireland-2024\n\nHuawei Tech Arena 2024 (2nd place)\n\n- Stars: 4\n- Forks: 0\n- Watchers: 4\n- Open issues: 1\n- Default branch: phase2\n- Created: 2024-08-19T16:47:05Z\n- Status: ARCHIVED\n\n## Languages\n\n- HTML\n- Python\n\n## Top Contributors\n\n- acheong08 (125 contributions)\n- hvlijter (9 contributions)\n- vsajan (1 contributions)\n\n---\n\n## README\n\n# Huawei Tech Arena Ireland 2024\n\nHuawei Tech Arena\n\nUsing CP-SAT and Pattern Search for server fleet management/optimization, accounting for serv"
+        },
+        {
+          "title": "Summary of Huawei Ireland Research Center Tech Arena 2024 Competition",
+          "url": "https://nansenli.com/post/2024/10/huawei2024/",
+          "excerpt": ", 2024\n\n## Background\n\nI’m Nansen, and I participated in the 2024 Huawei Ireland Research Center Server Cluster Management Optimization Competition. Here, I’d like to share my experience in this competition and summarize some key takeaways.\n\nOur algorithm code can be found here: huawei2024\n\n## Competition Results\n\nWe achieved first place in the algorithm section, scoring approximately 4%-5% higher than the second to fourth places, giving us a significant advantage. However, we faced considerable"
+        },
+        {
+          "title": "Huawei Tech Arena - Ireland Tech Arena - AI for Cloud X",
+          "url": "https://huawei.agorize.com/en/challenges/ireland-tech-arena-ai-for-cloud-x/pages/final-results?lang=en",
+          "excerpt": "## Server Fleet Management At Scale\n\nTeams of 1 - 5 people\n\n### HACKATHON FINAL\n\nThe Huawei Ireland2024 Tech Arena attracted a total of 70 participants on-site. After 2 weeks of hacking and guidance from Huawei's dedicated experts, all teams applied the training to the 2-day Hacking Phase. At the end of these 2-days, the 70 participants had the opportunity to pitch their innovative projects on the 21st and 22nd of September.\n\nMassive congratulations to all the finalists for impressing the Huawei"
+        },
+        {
+          "title": "Meet the students aiming to shape the future of cloud computing",
+          "url": "https://www.siliconrepublic.com/enterprise/cloud-computing-stem-students-huawei-tech-arena-fleed-management",
+          "excerpt": "The winning team of the Huawei Tech Arena competition were commended for being able to effectively communicate their results.\n\nSTEM students recently got the chance to go head-to-head in a cloud computing competition that allowed them to show off their analytical modelling and optimisation skills.\n\nAt the Huawei 2024 Ireland Tech Arena, teams were tasked with optimising data centre inventory with the top performers taking part in a two-day hackathon in Dublin.\n\nThe\n\n...\n\nThis year’s challenge fo"
+        },
+        {
+          "title": "Huawei Tech Arena 2024 - Kwun.AI",
+          "url": "https://kwun2099.com/contents/huawei",
+          "excerpt": "# Introduction\n\nThe whole problem has three parts: maximizing usage, maximizing lifespan, and maximizing profit. These three goals conflict with each other, as improving one can reduce the others. Each goal is made up of many smaller variables. • Usage means how well the system can handle changing server demands at different times. • Lifespan is how long a server can be used before it needs to be replaced. • Profit is the total profit gained by meeting demand.\n\nThe goal is to find the best combi"
+        },
+        {
+          "title": "Antonio Cheong - CV",
+          "url": "https://duti.dev/resume.pdf",
+          "excerpt": "Skills Programming Languages Golang, Python, Typescript, Zig, Java, Kotlin, Lua, Rust, SQL Development Linux, Git, Ghidra, Neovim, GitHub Actions, Postgres, MariaDB DevOps Podman/Docker, Kubernetes, systemd, Jenkins, Terraform, S3, etc. Web Technologies Svelte, HTML/CSS/TS, Spring Boot, Flask, React, Figma\n\nProjects and Achievements Ordered by relevance\n\nHuawei Tech Arena 2024 - 2nd Place\n\n• CP-SAT, linear programming, and genetic algorithms to solve cloud computing fleet management, server allo"
+        },
+        {
+          "title": "Huawei Ireland Tech Arena 2025 - CRT-AI",
+          "url": "https://www.crt-ai.ie/huawei-ireland-tech-arena-2025/",
+          "excerpt": "CRT-AI\n\n# Huawei Ireland Tech Arena 2025 \n\nSpend Less and Do More. An LLM Efficiency Challenge\n\nCynthia’s team Dynamo A and I took 1st place at the Huawei Ireland Tech Arena 2025: “Spend Less and Do More. An LLM Efficiency Challenge.\n\nThey designed an efficient LLM inference pipeline for single round question answering, carefully balancing:\n\n• Accuracy across Algebra, History, Geography and Chinese • End to end latency for real time use • Cost and scalability so that an AI powered educational pl"
+        }
+      ]
+    },
+    {
+      "id": "halite_winner",
+      "query": "Original technical writeup by Thomas Tjioe ttvand first place Halite 2020 Kaggle winning solution planning action scoring opponent conversion online modelling Github.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "ttvand/Halite",
+          "url": "https://github.com/ttvand/Halite",
+          "excerpt": "This repo contains the code for my submission to the 2020 Halite Kaggle simulations competition. In the end, it was confirmed that it is also the winning submission! \nThere is a separate folder for rule based and Deep Learning agents. All source code is\n\n---\n\n"
+        },
+        {
+          "title": "dereview | Kaggle",
+          "url": "http://www.kaggle.com/viewlagoon/writeups",
+          "excerpt": "OK, Got it.\nviewlagoon\n# dereview\n* date\\_range\nJoined 7 years ago · last seen 8 days ago\nAboutCompetitions (6)Code (1)Discussion (14)Writeups (1)\n## Public Writeups (1)\nsearch​\ntuneAll Filters\nTagsexpand\\_more\nProjectSolutionHackathon\nchevron\\_right\nRecently Posted\n* \nSolution Writeup\nRaine Force writeup (2nd place solution)\nNOTE: Despite my team name \"Raine Force\" looks like using reinforcement learning, my agents are 100% rule based.\nHi! I really enjoyed the halite competition. Thank Kaggle a"
+        },
+        {
+          "title": "Halite IV - Resource Management in Space | Lucas Schnack",
+          "url": "https://schnack.dev/blog/kaggle/halite-iv-resource-management/",
+          "excerpt": "especially since both of us basically just got out of school and have no professional or academic background ... have been a very interesting journey for us and we are very happy about how the competition turned out\n\n---\n\n"
+        },
+        {
+          "title": "josgoo/Halite",
+          "url": "https://github.com/josgoo/Halite",
+          "excerpt": "writeup details the implementation of the 29 th place (out of 1139 teams) Halite ... the learnings of the team that wrote it. For those who do not know, [Halite ... .com/c/halite/overview) is a resource management game created by Two Sigma where you\n\n---\n\n"
+        },
+        {
+          "title": "0Zeta/HaliteIV-Bot",
+          "url": "https://github.com/0zeta/haliteiv-bot",
+          "excerpt": "we are extremely satisfied with our results, especially since both of us basically just got out of school and have no professional or academic background.\nThe last months have been a very interesting journey for us and we are very happy about how the\n\n---\n\n"
+        },
+        {
+          "title": "digitalspecialists/halite4",
+          "url": "https://github.com/digitalspecialists/halite4",
+          "excerpt": "This is the solution from team \"KhaVo Dan Gilles Robga Tung\". In a field of 1143 teams, we placed 8th and scored a Gold Medal. You ... our solution description. No ML bot had finished in the top ten of the three forerunner Halite competitions. In Halite"
+        }
+      ]
+    },
+    {
+      "id": "hungry_winner",
+      "query": "Hungry Geese Kaggle 2021 first place HandyRL solution shun tanaka takahiro original writeup neural network search MCTS final strategy.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "bit-soham/HandyRL_Hungrygeese",
+          "url": "https://github.com/bit-soham/HandyRL_Hungrygeese",
+          "excerpt": "AI model.\nYou can use some off-policy variants of update methods (targets of policy and value) from\n...\n## Use Cases\n\n* The 1st place solution in Hungry Geese (Kaggle)\n* The 5th place solution in Google Research Football with Manchester City F.C. (Kaggle)\n\n---\n\n"
+        },
+        {
+          "title": "YuyaYamamoto | Kaggle",
+          "url": "https://www.kaggle.com/nejumi/writeups",
+          "excerpt": "Thank you to my team mate @maxwell110, @niwatori, all participants, Kaggle Admin who realized this exciting competition. I would like to briefly share our 3rd place solution, which gave me my 5th gold medal. Overview Our solution is basically an AlphaZero-like policy/value-dual network + MCTS. We built the agent through several months of iterations of pretraining with behavioral cloning, model training with Deep Reinforcement Learning, MCTS improvement, benchmark evaluation, and episode generati"
+        },
+        {
+          "title": "HandyRLで切り開く並列強化学習 | BLOG - DeNA Engineering",
+          "url": "https://engineering.dena.com/blog/2021/12/distributed-reinforcement-learning-with-handyrl/",
+          "excerpt": "本記事ではデータサイエンス競技のプラットフォームであるKaggle上にて昨年末に5位入賞したGoogle Research Footballコンペティションと、先日の リリース の通り優勝することができたHungry Geeseコンペティションに対してHandyRLの適用について、大会の動向も交えながら説明します。\n\n...\n\n## Hungry Geese への挑戦 \n\nサッカーで優勝ができなかったためkaggleにリベンジするため、引き続いてkaggleで行われた Hungry Geeseコンペティション に再び田中さんとのコンビで参加しました。\n\n今回はただ結果を出すだけでなく同時にHandyRLのアピールを行い、多くの人にサポートを受けて戦いたいという意図から、早い時期からライブラリと同名のHandyRLというチームで参加しました。\n\nHungry Geeseは4人で対戦するヘビゲームで、7 x 11のトーラス格子上で行います。\n\nヘビゲームはヘビ（以下、このゲームに合わせて、「ガチョウ」と呼びます）の頭を上下左右に動かして、食べ物を食べて体を長くすることを競うゲームです。ただ"
+        },
+        {
+          "title": "Kaggleにて開催されたゲームAIの国際コンペティション「Hungry Geese」でDeNAのチームが優勝",
+          "url": "https://dena.ai/news/kaggle-hungry-geese/",
+          "excerpt": "Kaggleにて開催されたゲームAIの国際コンペティション「Hungry Geese」でDeNAのチームが優勝\n\n 2021.08.13 \n\n# Kaggleにて開催されたゲームAIの国際コンペティション「Hungry Geese」でDeNAのチームが優勝 \n\nKaggleにて開催されたゲームAIの国際コンペティション「 Hungry Geese」において、弊社所属の田中一樹とquantum社の大渡勝己(DeNAでも強化学習の研究開発に従事)のチームHandyRLが875チーム(計1,039名)参加中1位を獲得し優勝しました。\n\n本コンペティションでは、「Hungry Geese」というゲームをプレイするAIを開発し他チームのAIと強さを競いました。「Hungry Geese」は、古典的なコンピュータゲームであるヘビゲームを4人プレイヤーに拡張した対戦ゲームです。このゲームは相手のヘビを追い詰めるだけではなく時には協力が必要であることや相手のヘビを対戦中に分析し戦略変更するといった多人数ゲームならではの課題があります。本取り組みを通じて多人数ゲームにおけるAI技術の発展が期待されます。"
+        },
+        {
+          "title": "handyrl/envs/kaggle/hungry_geese.py",
+          "url": "https://github.com/DeNA/HandyRL/blob/master/handyrl/envs/kaggle/hungry_geese.py",
+          "excerpt": ".cat([h[:,:,-self.edge_size[0]:], h, h[:,:,:self.edge_size[0]]], dim=2)\n h = self.conv(h)\n h = self.bn(h) if self.bn is not None else h\n return h\n\nclass GeeseNet(nn.Module):\n def __init__(self):\n super().__init__()\n layers, filters = 12, 32\n\n self.conv0 = TorusConv2d(17, filters, (3, 3), True)\n self.blocks = nn.ModuleList([TorusConv2d(filters, filters, (3, 3), True) for _ in range(layers)])\n self.head_p = nn.Linear(filters, 4, bias=False)\n self.head_v = nn.Linear(filters * 2, 1, bias=False)\n\n de"
+        },
+        {
+          "title": "4th place solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/hungry-geese/writeups/goose-luck-4th-place-solution",
+          "excerpt": "4th place solution | Kaggle\n\n# 4th place solution\n\nHungry Geese\n\nSolution Writeup · 4th place\n\nFirst of all, I would like to thank the hosts for organizing such a fun and wonderful competition. I would also like to thank the HandyRL team for releasing the wonderful library HandyRL. Thanks to them, I was able to enjoy this competition.\n\nThe following is an overview of my team's solution. For more details, please refer to my blog post, which is in Japanese.\n\n## Input for Network\n\n- head position: "
+        }
+      ]
+    },
+    {
+      "id": "rps_winner",
+      "query": "Rock Paper Scissors Kaggle 2020 2021 first place winning solution author writeup meta agents ensemble nonstationary opponent prediction.",
+      "numResults": 8,
+      "candidates": [
+        {
+          "title": "thisisbowen/RPS-Kaggle-1st-Place-Solution",
+          "url": "https://github.com/thisisbowen/RPS-Kaggle-1st-Place-Solution",
+          "excerpt": "#\n\n...\n\n##### Phase III\n\n![](https://bow-public.s3.us-east-2.amazonaws.com/image/RPS/p3.jpg)\nOne day I came cross this [discussion](https://www.kaggle.com/c/rock-paper-scissors/discussion/197947#1085310) and realized oh there was [a RPS contest](https://web.archive.org/web/20200521083624/http://www.rpscontest.com/leaderboard) before! So I looked into it and thanks to @purplepuppy 's [notebook](https://www.kaggle.com/purplepuppy/running-rpscontest-bots) I was able to add contest agents to my MAB."
+        },
+        {
+          "title": "0Zeta/RockPaperScissors",
+          "url": "https://github.com/0Zeta/RockPaperScissors",
+          "excerpt": "# Going Meta [37th place solution]\nThis is a summary of my solution for the 2020-2021 \"Rock, Paper, Scissors\" competition hosted on Kaggle. Participants had to write bots that competed against each other in the well-known RPS game. Each matchup consisted of 1000 rounds, making this an excellent task for machine learning/statistics/AI.\n\n## Introduction\nWhen you first hear of Rock, Paper, Scissors, you may wonder why this is an interesting game for a computer competition. There is simply no way to"
+        },
+        {
+          "title": "Layers of Rock Paper Scissors | Lucas Schnack",
+          "url": "https://schnack.dev/blog/kaggle/rock-paper-scissors-ensemble-meta-strategy/",
+          "excerpt": "Layers of Rock Paper Scissors | Lucas Schnack\n\n# Layers of Rock Paper Scissors\n\nPost-mortem analysis and strategy writeup for the Rock Paper Scissors competition on Kaggle.\n\nLucas Schnack\n\n2021-01-23 · Kaggle, AI\n\nOn this page\n\nThis is a summary of my solution for the 2020-2021 \"Rock, Paper, Scissors\" competition hosted on Kaggle. Participants had to write bots that competed against each other in the well-known RPS game. Each matchup consisted of 1000 rounds, making this an excellent task for ma"
+        },
+        {
+          "title": "2nd Place Solution | Kaggle",
+          "url": "https://www.kaggle.com/competitions/rock-paper-scissors/writeups/georg-streich-2nd-place-solution",
+          "excerpt": "2nd Place Solution | Kaggle\n\n# 2nd Place Solution\n\nRock, Paper, Scissors\n\nSolution Writeup · 2nd place · Feb 23, 2021\n\nThis code ended up being my highest scoring submission, so I thought I'd do a quick write-up as to how it works.\n\nLike many of the other top submissions, it uses an ensemble of public agents, which includes the top 50 agents from rpscontest.com and some strong agents people posted on here, notably, I want to give credit to:\n\n- memory patterns v7 by @yegorbiryukov\n- geometry bot "
+        },
+        {
+          "title": "4th Place Solution - Taaha Khan | Kaggle",
+          "url": "https://www.kaggle.com/competitions/rock-paper-scissors/writeups/taaha-khan-4th-place-solution-taaha-khan",
+          "excerpt": "I used a large ensemble of strong agents and generated a distribution of values to pick the ... the Greek and Roman myth of a beast where if one head was cut off, two more would grow back in its place. This symbolizes a bandit, where if one of the agents\n\n---\n\n"
+        },
+        {
+          "title": "22nd Place Solution - The RPS Gambit | Kaggle",
+          "url": "https://www.kaggle.com/competitions/rock-paper-scissors/writeups/nick-john-22nd-place-solution-the-rps-gambit",
+          "excerpt": "I had 16 different strategies in my ensemble that took the opponent's last actions and returned the move to play next + 16 of the same strategies, except these ... that beats the output from these. So in total, I had 32 agents in my pool of strategies\n\n---\n\n"
+        },
+        {
+          "title": "RockPaperScissors/hydra.py",
+          "url": "https://github.com/taaha-khan/rock-paper-scissors/blob/main/RockPaperScissors/hydra.py",
+          "excerpt": "__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __\n| |\n| Copyright (C) 2021 Taaha Khan @taahakhan |\n| \"Kaggle RPS Hydra Agent\" - V.8.2 |\n| _ _ _ |\n| | | | | _ _ __| | ____ __ _ |\n...\n| |_| | | | | | / _ | | __/ / _` |\n\n---\n\n"
+        },
+        {
+          "title": "21st Place Solution - neibyr | Kaggle",
+          "url": "https://www.kaggle.com/competitions/rock-paper-scissors/writeups/neibyr-21st-place-solution-neibyr",
+          "excerpt": "21st Place Solution - neibyr | Kaggle\n\n# 21st Place Solution - neibyr\n\nRock, Paper, Scissors\n\nSolution Writeup · 21st place · Feb 23, 2021\n\nFirst of all, I would like to express my gratitude to the organizers for this competition, it was an exciting competition, and very fun. Also, I would like to mention the participants of the competition who shared their ideas with the community)\n\nMy solution was based on the use of agents, each of which generates a lot of basic agents with different strategy"
+        }
+      ]
+    },
+    {
+      "id": "flatland",
+      "query": "NeurIPS 2020 Flatland challenge winning solution JBR HSE optimization train scheduling original authors conflict planning heuristics reinforcement learning.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "Scalable Rail Planning and Replanning: Winning the 2020 ...",
+          "url": "https://ojs.aaai.org/index.php/ICAPS/article/view/15994",
+          "excerpt": "graph. This paper describes MAPF-based software for solving train planning and replanning problems on large-scale rail ... determine how to efficiently manage dense traffic on rail networks. The software incorporates many state-of-the-art\n\n---\n\n"
+        },
+        {
+          "title": "Scalable Rail Planning and Replanning: Winning the 2020 Flatland Challenge",
+          "url": "https://doi.org/10.1609/socs.v12i1.18576",
+          "excerpt": "# Scalable Rail Planning and Replanning: Winning the 2020 Flatland Challenge\n\n## Abstract\n\nMulti-Agent Path Finding (MAPF) is the combinatorial problem of finding collision-free paths for multiple agents on a graph. This paper describes MAPF-based software for solving train planning and replanning problems on large-scale rail networks under uncertainty. The software recently won the 2020 Flatland Challenge, a NeurIPS competition trying to determine how to efficiently manage dense traffic on rail"
+        },
+        {
+          "title": "Flatland Competition 2020: MAPF and MARL for Efficient Train Coordination on a Grid World",
+          "url": "https://proceedings.mlr.press/v133/laurent21a.html",
+          "excerpt": "their target stations in as little time as possible. While the best submissions were in the ... category, participants found many promising MARL approaches. Using both centralized and decentralized learning\n\n---\n\n"
+        },
+        {
+          "title": "Scalable Rail Planning and Replanning: Winning the 2020 Flatland Challenge",
+          "url": "https://jiaoyangli.me/files/2021-ICAPS.pdf",
+          "excerpt": "Nevertheless, optimization approaches have consistently dominated the competition. In Round 1, the best RL approach got a score of -0.611, ranked 7th on the leader board and was ... worse than our score. In Round 2, the best RL approach spent 8 hours\n\n---\n\n"
+        },
+        {
+          "title": "Flatland Competition 2020: MAPF and MARL for Efficient Train Coordination on a Grid World",
+          "url": "http://proceedings.mlr.press/v133/laurent21a/laurent21a.pdf",
+          "excerpt": "4.2. PPO with Communication and Departure Schedule \nTeam JBR_HSE: Konstantin Makhnev, Oleg Svidchenko, Vladimir Egorov, Dmitry Ivanov, \nAleksei Shpilman; 1st place RL. \n4.2.1. Method \nOur solution is based on Proximal Policy Optimization (PPO) (Schulman et al., 2017) \nenhanced with between-agent communication. Communication has been shown to help \nagents to solve simple coordination problems (Sukhbaatar et al., 2016; Das et al., 2019), and \nour solution extends this result to the complex Flatlan"
+        },
+        {
+          "title": "jbr-ai-labs/NeurIPS2020-Flatland-Competition-Solution",
+          "url": "https://github.com/jbr-ai-labs/NeurIPS2020-Flatland-Competition-Solution",
+          "excerpt": "# Repository: jbr-ai-labs/NeurIPS2020-Flatland-Competition-Solution\n...\n: 7\n- Open issues: 1\n- Primary language: Python\n- Languages: Python (98.9 ... %)\n- License: MIT License (MIT)\n- Default branch: master\n- Created:"
+        }
+      ]
+    },
+    {
+      "id": "atcoder",
+      "query": "Official AtCoder World Tour Finals 2025 heuristic contest results Psyho human winner approach writeup algorithms simulated annealing search validation 2000 final tests.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "atcoder%2Fawtf2025%2Fapproach.md at master · FakePsyho/cpcontests",
+          "url": "https://github.com/FakePsyho/cpcontests/blob/master/atcoder%2Fawtf2025%2Fapproach.md",
+          "excerpt": "## Exact format of the contest\n\n- individual contest, no communication allowed\n- 10 hour long\n- access to the internet is fine (except for social media)\n- screen sharing is used for detecing collusion \n- we use our own laptops\n- we write and submit programs that are remotely executed on the judge's machine (everyone's submission is executed under the same condition: same machine, time & memory limits)\n- the provisional ranking (one used during the contest) is a fixed set of only 50 tests; final "
+        },
+        {
+          "title": "World Tour Finals 2025 Heuristic - AtCoder",
+          "url": "https://atcoder.jp/contests/awtf2025heuristic",
+          "excerpt": "This is an individual competition. It is prohibited to publish your solution before the end of the contest.\n- The ranking results displayed during the contest are ... used for provisional ranking will not be used for the system tests. The system test\n\n---\n\n"
+        },
+        {
+          "title": "Editorial - Group Commands and Wall Planning",
+          "url": "https://atcoder.jp/contests/awtf2025heuristic/tasks/awtf2025heuristic_a/editorial",
+          "excerpt": "is over\n\nWorld Tour Finals 2025 Heuristic has ended.\n\n Contest Duration: 2025-07-16 09:00:00+0900 - 2025-07-16 19:00:00+0900 (local time) (600 minutes) Back to Home \n\n- 1st place: Humanity has prevailed 😅 by Psyho\n- 2nd place: AWTF2025参加記 by terry_u16\n\n---\n\n"
+        },
+        {
+          "title": "Standings for AtCoder World Tour Finals 2025 Heuristic - Competitive Programming Hall Of Fame",
+          "url": "https://cphof.org/standings/atcoder_wth/2025",
+          "excerpt": "Standings for AtCoder World Tour Finals 2025 Heuristic - Competitive Programming Hall Of Fame \n\n### AtCoder World Tour Finals 2025 Heuristic\n\n| Date: | July 16, 2025 |\n| --- | --- |\n| Venue: | Tokyo, Japan |\n| Duration: | 600 minutes |\n| Number of Finalists: | 12 |\n| Series: | AtCoder World Tour Finals Heuristic |\n| Official Page: | https://atcoder.jp/contests/awtf2025heuristic |\n\n##### Final \n\n| Rank | Country | Name | Score | Penalty | Prize |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Poland"
+        },
+        {
+          "title": "Editorial - World Tour Finals 2025 Heuristic",
+          "url": "https://atcoder.jp/contests/awtf2025heuristic/editorial?lang=en",
+          "excerpt": "Editorial - World Tour Finals 2025 Heuristic\n\nWorld Tour Finals 2025 Heuristic has begun.\n\n#### Contest is over\n\nWorld Tour Finals 2025 Heuristic has ended.\n\n Contest Duration: 2025-07-16 09:00:00+0900 - 2025-07-16 19:00:00+0900 (local time) (600 minutes) Back to Home \n\n### Overall Editorial\n\n- Official詳細順位表 by wata_admin\n- Official詳細順位表(with OpenAI) by wata_admin\n- Official Detailed Standings by wata_admin\n- Official Detailed Standings (with OpenAI) by wata_admin\n\nThere is no editorial yet.\n\n##"
+        },
+        {
+          "title": "Editorial - World Tour Finals 2025 Heuristic",
+          "url": "https://atcoder.jp/contests/awtf2025heuristic/editorial",
+          "excerpt": "Editorial - World Tour Finals 2025 Heuristic\n\nWorld Tour Finals 2025 Heuristic has begun.\n\n#### Contest is over\n\nWorld Tour Finals 2025 Heuristic has ended.\n\n Contest Duration: 2025-07-16 09:00:00+0900 - 2025-07-16 19:00:00+0900 (local time) (600 minutes) Back to Home \n\n### Overall Editorial\n\n- Official詳細順位表 by wata_admin\n- Official詳細順位表(with OpenAI) by wata_admin\n- Official Detailed Standings by wata_admin\n- Official Detailed Standings (with OpenAI) by wata_admin\n\nThere is no editorial yet.\n\n##"
+        }
+      ]
+    },
+    {
+      "id": "icfp",
+      "query": "ICFP 2025 programming contest official results team Unagi winner ShinkaEvolve 320 trials 60 dollars SAT encoding original report.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "ShinkaEvolve in Action: How a Human-AI Partnership Conquered a Coding Challenge",
+          "url": "https://sakana.ai/icfp-2025/",
+          "excerpt": "Action: How\n\n...\n\n# ShinkaEvolve in Action: How a Human-AI Partnership Conquered a Coding Challenge\n\nOctober 16, 2025\n\nThe author of this article, Takuya Akiba, is a research scientist at Sakana AI.\n\n...\n\n## Summary\n\nLong before I joined Sakana AI as a founding Research Scientist, I was captivated by the world of competitive programming, and have been active for years with my friends in Team Unagi. This long-standing passion and teamwork recently culminated in a first place finish at the 2025 IC"
+        },
+        {
+          "title": "ICFP contest 2025",
+          "url": "https://icfpcontest2025.github.io/aedificium.html",
+          "excerpt": "# Scoreboard\n\n The competition is now over! The prizes page contains details of the winners. Score journeys are available for the whole competition and for the individual problems below:\n\n- probatio\n- primus\n- secundus\n- tertius\n- quartus\n\n---\n\n"
+        },
+        {
+          "title": "ICFP Contest Report (ICFP 2025 - ICFP Papers) - ICFP 2025",
+          "url": "https://icfp25.sigplan.org/details/icfp-2025-papers/38/ICFP-Contest-Report",
+          "excerpt": "ICFP Contest Report (ICFP 2025 ... ICFP Papers) ... ICFP 2025\n\n...\n\nSun 12 - Sat 18 October 2025 Singapore\n\n...\n\nTue 14 Oct 2025 16:00 - 16:15 at Orchid Plenary Ballroom - ICFP Business Meeting\n\n...\n\n| ... : ... 8: ... | ICF ... Business ... enary ... |\n\n...\n\n| --- ... --- ... ---\n\n...\n\n|\n\n...\n\n5 ... Awards ... e ... University\n\n---\n\n"
+        },
+        {
+          "title": "ICFP contest 2025",
+          "url": "https://icfpcontest2025.github.io/prizes.html",
+          "excerpt": "ICFP contest 2025\n\n# Prizes\n\nO ur esteemed winners are able to claim the traditional bragging rights and nominate their hacking language of choice. Winners were announced at the ICFP 2025 conference in Singapore. The contest organisers declare that:\n\nFirst prize\n: Rust is the programming tool of choice for discriminating hackers. (Teams: MOYOU and Unagi) \nSecond prize\n: Python is a fine programming tool for many applications. (Team: Heuristic Artis) \nThird prize\n: C++ is also not too shabby. (Te"
+        },
+        {
+          "title": "ICFP contest 2025",
+          "url": "https://icfpcontest2025.github.io/",
+          "excerpt": "## ICFP Programming Contest 2025\n\nT his is the 28th instance of the annual, 72-hour programming contest series sponsored by the ACM SIGPLAN International Conference on Functional Programming. The contest first ran in 1998. Winners were presented in October 2025 at the ICFP/SPLASH mega-conference in Singapore.\n\nThe contest was held from Friday 5th September 2025 at 12:00 UTC to Monday 8th September 2025 at 12:00 UTC. There was a lightning division, ending on Saturday 6th September 2025 at 12:00 U"
+        },
+        {
+          "title": "ICFP Programming Contest 2025におけるAIツールShinkaEvolveとの協働 - iwiwiの日記",
+          "url": "https://iwiwi.hatenablog.com/entry/2025/10/16/093411",
+          "excerpt": "# ICFP Programming Contest 2025におけるAIツールShinkaEvolveとの協働 \n\n我々チームUnagiは ICFP Programming Contest 2025にて優勝することが出来ました。今回、私はこのコンテスト中に勤務先 Sakana AIが開発するAIツール「ShinkaEvolve」を活用することを試みました。この記事では、ShinkaEvolveがコンテスト中に我々にどのように貢献したかを説明します。\n\nShinkaEvolveは我々の解法の中核である問題のSAT式へのエンコーディングを大きく改善し、解法全体を大幅（〜10倍）に高速化し、大規模な問題を最適に近いステップ数で解くことを可能としました。また、そこでShinkaEvolveが与えた知見が、その後に人間が設計した別の解法でもチーム内で活用されました。\n\n...\n\n（この記事は会社のブログリリースの元となった原稿です。会社からの許可に基づき、個人のブログ記事として投稿しています。）\n\n...\n\n我々は最終的にSATソルバーを中核に用いた解法を作成しました。SATソルバーは論理式を"
+        }
+      ]
+    },
+    {
+      "id": "ahc058",
+      "query": "AtCoder Heuristic Contest 058 ALE-Agent first place official standings original technical report diverse greedy simulated annealing large neighborhood search December 2025.",
+      "numResults": 6,
+      "candidates": [
+        {
+          "title": "Sakana AI Agent Wins AtCoder Heuristic Contest (First AI to Place 1st)",
+          "url": "https://sakana.ai/ahc058/",
+          "excerpt": "# Sakana AI Agent Wins AtCoder Heuristic Contest (First AI to Place 1st)\n\nJanuary 05, 2026\n\n First AI Agent to Win a Competitive Optimization Programming Contest (804 Participants, $1,300 Compute). Final Standings: https://atcoder.jp/contests/ahc058/standings \n\nSakana AI’s “ALE-Agent” achieved a historic milestone by securing 1st place in the AtCoder Heuristic Contest 058, outperforming 804 human participants. To contextualize the difficulty of these optimization challenges, an OpenAI agent prev"
+        },
+        {
+          "title": "ALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058） - AtCoder",
+          "url": "https://atcoder.jp/contests/ahc058",
+          "excerpt": "# ALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058）\n...\nコンテスト情報\n\n- writer: itigo\n- このコンテストは AHCレーティング(v2) の対象です。\n- このコンテストは AWTF2026 選考の対象です。\n- 生成AIの使用に関して新たにルールが策定されています。こちらからご確認ください。\n\n---\n\n"
+        },
+        {
+          "title": "AIエージェントが最適化プログラミングコンテストで初優勝",
+          "url": "https://sakana.ai/ahc-2025/",
+          "excerpt": "# AIエージェントが最適化プログラミングコンテストで初優勝\n\nDecember 23, 2025\n\nこの度、2025年12月14日に実施された AtCoder Heuristic\n\n...\n\n## ALE-Agentの成績\n\nALE-Agentはコンテスト開始2時間後から提出を開始し、初回から暫定1位に躍り出ました。\n\n ALE-Agent初回提出時の順位表 \n\nコンテスト中盤では、最終2位のyosupo氏との熱いデッドヒートが繰り広げられ、順位が入れ替わることもありましたが、コンテスト開始後2時間半を過ぎたあたりで1位に返り咲き、そのまま首位をキープしたまま優勝することができました。\n\n コンテスト中のスコア推移\n\n...\n\n## ALE-Agentの回答と人間の想定回答との対比\n\n今回のAHC058において出題者が想定していた解法は、貪欲法やビームサーチといったアルゴリズムを用いて大局的な行動計画を決定し、その後に焼きなまし法を用いることで計画の細かい部分を改良していくというアプローチでした。\n\n一方でALE-Agentの回答は「貪欲法による構築→焼きなまし法による洗練」という基"
+        },
+        {
+          "title": "Tasks - ALGO ARTIS Programming Contest 2025 ...",
+          "url": "https://atcoder.jp/contests/ahc058/tasks",
+          "excerpt": "Tasks - ALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058）\n\nALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058） has begun.\n\n#### Contest is over\n\nALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058） has ended.\n\n Contest Duration: 2025-12-14 15:00:00+0900 - 2025-12-14 19:00:00+0900 (local time) (240 minutes) Back to Home \n\n## Tasks\n\n| | Task Name | Time Limit | Memory Limit |\n| --- | --- | --- | --- |\n| A | Apple Incremental "
+        },
+        {
+          "title": "ALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058） - Standings - CLIST",
+          "url": "https://clist.by/standings/algo-artis-programming-contest-2025-decemberatcoder-heuristic-contest-058-63339894/",
+          "excerpt": "ALGO ARTIS Programming Contest 2025 December（AtCoder Heuristic Contest 058） - Standings - CLIST\n\nWriter\n\n updated 10 months, 1 week ago \n\n| Rank | Handle | Score | Penalty | New Rating | Performance | A |\n| --- | --- | --- | --- | --- | --- | --- |\n| 1 | fishylene | 8.484e+8 | 219:47 | · | · | 8.484e+8 219:47+9 ＊ |\n| 2 | yosupo | 8.477e+8 | 133:53 | 3263 57 | 3535 | 8.477e+8 133:53+4 |\n| 3 | asi1024 | 8.469e+8 | 239:38 | 2996 51 | 3283 | 8.469e+8 239:38+18 |\n| 4 | takumi152 | 8.464e+8 | 204:15 |"
+        },
+        {
+          "title": "Scheduling on AtCoder Heuristic Contest ahc058 (official leaderboard) benchmark leaderboard · SOTA2 Research",
+          "url": "https://www.sota2.com/research/sota/scheduling-on-atcoder-heuristic-contest-ahc058-official-leaderboard",
+          "excerpt": "# Scheduling on AtCoder Heuristic Contest ahc058 (official leaderboard)\n\n849,325,750 Score SIMPLETES\n\nUpdated 5mo ago\n\n## Evaluation Results\n\n| Method | Links | Score |\n| --- | --- | --- |\n| SIMPLETES Model=gpt-oss-20b Model=gpt-oss-20b 2026.04 | | 849,325,750 |\n| TTT-Discover Model=gpt-oss-120b Model=gpt-oss-120b 2026.01 | | 848,414,228 |\n| ALE-Agent Model=Ensemble (Gemini... Model=Ensemble (Gemini-3 Pro Preview high, gpt-5.2-high) 2026.01 | | 848,373,282 |\n| ALE-Agent Model=Mixed Model=Mixed 2"
+        }
+      ]
+    },
+    {
+      "id": "rps_rank",
+      "query": "Where Is My Bag Bowen thisisbowen first place Rock Paper Scissors Kaggle 2021 winning solution writeup official standings.",
+      "numResults": 5,
+      "candidates": [
+        {
+          "title": "thisisbowen/RPS-Kaggle-1st-Place-Solution",
+          "url": "https://github.com/thisisbowen/RPS-Kaggle-1st-Place-Solution/",
+          "excerpt": "# thisisbowen/RPS-Kaggle-1st-Place-Solution\n\n1st place solution of Kaggle's Rock Paper Scissors competition\n\n- Stars: 4\n- Forks: 0\n- Watchers: 4\n- Open issues: 0\n- Default branch: main\n- Created: 2021-09-26T14:27:20Z\n\n...\n\n- Along with the solution, I would like to share how I approached this problem from day 1 and hope my journey can let you know that it might be not that hard to achieve a high rank in a competition.\n\n## TL;DR\nmulti-armed bandit with list of rpscontest agents + 1-step & 2-steps ahead transformed agents + dirichlet distribution"
+        },
+        {
+          "title": "Boooooooooow | Kaggle",
+          "url": "https://www.kaggle.com/booooooow/writeups",
+          "excerpt": "- Solution Writeup\n\n1st Place Solution - Where is my bag's Journey\n\nEDIT: I rephrased the description of agent group C to avoid some misleading thanks to @stassl First of all, it is a fun and interesting competition as well as learning experience for me, I spent lots of time working on this problem and I really enjoyed it! Along with the solution, I would like to share how I approached this problem from day 1 and hope my journey can let you know that it might be not that hard to achieve a high rank in a competition. TL;DR multi-armed bandit wit"
+        },
+        {
+          "title": "Rock, Paper, Scissors | Kaggle",
+          "url": "https://www.kaggle.com/c/rock-paper-scissors",
+          "excerpt": "Rock, Paper, Scissors | Kaggle\n\nIf the issue persists, it's likely a problem on our side.\n...\n?v=c5335149acba54a3:1 ... ://www.kaggle.com/static/assets/app.js?v= ... com/static/assets/app.js?v=c5335149acba54a3:1:2804326 ... c5335149acba54a3:1\n\n---\n\n"
+        },
+        {
+          "title": "Rock, Paper, Scissors",
+          "url": "https://www.kaggle.com/competitions/rock-paper-scissors/discussion/195249",
+          "excerpt": "Rock, Paper, Scissors | Kaggle\n\nIf the issue persists, it's likely a problem on our side.\n...\n?v=af146f867952f677:1 ... 1851538) at https://www.kaggle.com/static/assets/app ... ://www.kaggle.com/static/assets/app.js?v=af146f867952f677:1:2770971)\n\n---\n\n"
+        },
+        {
+          "title": "thisisbowen",
+          "url": "https://github.com/thisisbowen",
+          "excerpt": "## Top Repositories\n\n- thisisbowen/RPS-Kaggle-1st-Place-Solution - 1st place solution of Kaggle's Rock Paper Scissors competition (4 stars)\n- thisisbowen/double-eyelid-sim - Web application demo of double eyelid simulator (2 stars)\n- thisisbowen/ZhihuLive_scrapy - Use scrapy package to scrap Zhihu Live related data (1 stars)\n- thisisbowen/claude-code - An independent Python feature port of Claude Code, entirely rewritting from scratch using oh-my-codex. Educational Purpose only. (0 stars)\n- thisisbowen/dailysync-rev - 佳明运动数据同步与采集工具 (0 stars)\n- "
+        }
+      ]
+    },
+    {
+      "id": "halite2_identity",
+      "query": "Halite II winner 2018 recursive.cc post mortem championship January 2018 author ts﻿mj name official Two Sigma results.",
+      "numResults": 5,
+      "candidates": [
+        {
+          "title": "Halite II post-mortem",
+          "url": "https://recursive.cc/blog/halite-ii-post-mortem.html",
+          "excerpt": "Halite II post-mortem\n\n...\n\n# Halite II post-mortem\n\n## Introduction\n\nIt was some hard work, but after 3 months I won the Halite 2 AI competition with a decisive lead, and I am very happy with that! It's definitely one of the toughest competitions I have participated in, but also a very fun one. Since Halite is a game with such a deep focus on strategy, for this post-mortem I will describe in details the inner workings of my bot, all the strategies it takes as well as the intent behind them. If there are other topics you would like to know more"
+        },
+        {
+          "title": "Halite II concludes, winners announced! - Two Sigma",
+          "url": "https://www.twosigma.com/articles/halite-ii-concludes-winners-announced/",
+          "excerpt": "Halite II concludes, winners announced! - Two\n\n...\n\n# Halite II concludes, winners announced!\n\n < 1 min read Jan 31, 2018 \n\n News by Two Sigma \n\n The second season of Halite, an artificial intelligence programming challenge by Two Sigma, ended on January 29th, 2018. \n\nCongratulations to the winner, going by username reCurs3, who works in Montreal at Ubisoft, which is the creator of video game Assassin’s Creed. Second place went to user FakePsyho, a Polish puzzle champion working at OpenAI, and third to user shummie, an actuary at Allstate in Ch"
+        },
+        {
+          "title": "Halite AI Programming Competition",
+          "url": "https://en.wikipedia.org/wiki/Halite_AI_Programming_Competition",
+          "excerpt": "Halite II was similar to Halite I, but with a space-war theme. [9] It ran from October 2017 until January 2018. [10] [11] The second installment of the competition attracted about 6,000 individual players from more than 100 countries. [8] Among the participants were professors, physicists and NASA engineers ... as well as high school and university students. [9]\n\n...\n\n## Halite II results\n\nHalite II concluded on January 29, 2018. The competition was won by a player using the username \"reCurs3\", who worked at Ubisoft in Montreal; second place we"
+        },
+        {
+          "title": "Halite II: The Battle Is On - Two Sigma",
+          "url": "https://www.twosigma.com/articles/halite-ii-the-battle-is-on/",
+          "excerpt": "Halite II: The Battle Is On - Two Sigma\n\n# Halite II: The Battle Is On\n\n < 1 min read Oct 26, 2017 \n\n News by Two Sigma \n\n Our interplanetary AI programming challenge kicked off its second year with bot submissions from users across ages, countries, and\n\n---\n\n"
+        },
+        {
+          "title": "Halite History · Halite Postmortem",
+          "url": "https://shummie.gitbooks.io/halite-postmortem/content/history.html",
+          "excerpt": "Beginning\n\n...\n\n@djma was the gold standard. Or rather, diamond ... . He ... on top of the leaderboards ... everyone was ... to beat him.\n\n...\n\nThe Finals:\n\nEverything is locked in. Who will go down in the history book as the ultimate Halite competitor? Regardless, I’ve had a TON of fun and am grateful I’ve had the opportunity to talk with such talented people."
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "search_calls": 13,
+    "requested_result_slots": 90,
+    "candidate_entries": 90,
+    "unique_candidate_urls": 85,
+    "selected_primary_sources": 35
+  },
+  "notes": [
+    "Exact queries and requested counts retained. Discovery candidates are not accepted sources or full-text reads.",
+    "Source catalogue records the scope of selected readings; third-party roundups and current-game internal disclosures were not used as strategy evidence.",
+    "Several repeated candidates were deduplicated for source/case synthesis; overlapping sources from the same team are not independent corroboration.",
+    "Halite's old discussion returned a loading error; a guessed new writeup URL was unavailable. Methods there were checked against selected author-code sections and the uncertainty is recorded."
+  ]
+}
