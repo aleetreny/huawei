@@ -121,7 +121,13 @@ En unas 15.000 partidas de bots por la vía oficial, la mecánica central del ju
 
 ## 8. Prueba a nivel de decisión
 
-(en curso)
+Se dan a Haiku preguntas reales de dev y se puntúan sus elecciones con los efectos medidos ([H22](hallazgos.md#h22-en-un-contexto-neutro-haiku-elige-bien-con-o-sin-manual-banco-de-decisiones-150-preguntas), [H23](hallazgos.md#h23-con-contexto-el-borrador-sí-cambia-decisiones-menos-detonantes-con-riesgo-acumulado-banco-2-150-preguntas)).
+
+- **En un contexto neutro**, Haiku elige la mejor respuesta en el 81–83 % de los casos con cualquier manual o sin él. **El manual no cambia el juicio básico.**
+- **Con riesgo acumulado**, el borrador baja los detonantes del 10 % al 5 % y sube los aciertos del 80 % al 88 %.
+- **En el mes previo a la evaluación**, no se vio diferencia frente al campeón. La regla se ha reescrito y se vuelve a medir.
+
+Es la misma conclusión que con los bots: **el margen de un manual está en el contexto y en la mecánica, no en el juicio ético de cada respuesta**, que el modelo ya hace bien.
 
 ## 9. Estado
 
@@ -129,4 +135,51 @@ Ver [progreso.md](progreso.md) para el diario con horas.
 
 ## Relevo
 
-(se rellena al cerrar cada bloque de trabajo)
+**Actualizado: 26 oct 2026, 23:40 UTC.** Rama `alejandro/ingenieria-inversa`, worktree `.claude/worktrees/ingenieria-inversa`.
+
+**1. Qué se ha hecho y por qué**
+- **Arnés de bots** de partida completa por las 5 herramientas (`scripts/ingenieria-inversa/`), rápido y compacto: unas 15 partidas por segundo con 12 servidores, y unos 15 KB por partida. Los bots no gastan cuota, así que se puede estudiar el juego como caja negra a escala.
+- **Lotes:**
+
+  | Lote | Partidas | Para qué |
+  |---|---:|---|
+  | b00 | ~9.000 | aleatorio: catálogo de L1 sin sesgo |
+  | b01 | 2.400 | oráculo v1 con exploración: datos de L3–L6 |
+  | b02 | 17 brazos × 112 | experimento por etapas |
+  | b03 | 192 | protección del mes previo |
+  | b05 | 400 | ajuste de la prioridad a la Skill |
+  | b06 | 400 | bot de principios |
+  | b07 | 540 | detonantes |
+  | b08 | ~240 | bot que aplica el manual |
+
+- **Etiquetado de las 954 respuestas por rasgos generales** (4 agentes Sonnet y otro para la "entrega propia"), para comprobar con títulos reservados si las reglas generales predicen los efectos.
+- **Dos bancos de decisión con Haiku** (150 preguntas cada uno) para ver si el manual cambia las elecciones.
+
+**2. Resultados:** ver la sección 5 y [hallazgos.md](hallazgos.md) (H1–H23).
+- **Datos brutos** en `~/careerlab-data/ingenieria-inversa/<lote>/` (fuera de git y de iCloud) y modelos en `models/m01…m06.json` y `principles-m06.json`.
+- **Catálogo completo por etapas** en `~/careerlab-data/ingenieria-inversa/catalogo-etapas.md`, con copia local ignorada por git en `local-runs/ingenieria-inversa/`.
+- **Etiquetas y bancos** en el scratchpad de la sesión (copiar si se quieren conservar).
+
+**3. Lo que falló o quedó a medias**
+- El modelo numérico exacto del riesgo oculto no sale: la regresión aditiva no generaliza por el recorte en 0. Para la estrategia bastan las medidas relativas.
+- Los bots de rasgos (principios y procedimiento) se quedan en 42–48: una percepción lineal de rasgos no basta para la primera evaluación.
+- **El manual candidato no se ha jugado con IA.**
+- Al parar b00 se usó un `pkill` global de los servidores del juego. Cuando se comprobó no había partidas de otras sesiones en este Mac, pero no hay que repetirlo: cada lote guarda ahora su `pgid.txt` y se para con `kill -TERM -<pgid>`.
+
+**4. Pendiente y siguiente paso**
+1. Medir el banco 3 (regla del mes previo reescrita).
+2. **Decidir con Alejandro si se juegan partidas con Haiku del manual `bb-mechanics-v1`** (gasta cuota compartida) o si se usa en la siguiente versión.
+3. Una versión más corta del manual: ahora tiene ~800 palabras y los manuales cortos se siguen mejor.
+4. Opcional y muy barato (~0,05 USD), si Alejandro lo autoriza: el banco de decisiones con DeepSeek, para ver si juzga las respuestas como Haiku.
+5. Sigue abierto: la regla exacta del despido, el riesgo oculto numérico y los umbrales de L6 → L7.
+
+Comandos para retomar:
+
+```bash
+cd .claude/worktrees/ingenieria-inversa
+PY=../../../.venv/bin/python
+PYTHONPATH=$PWD $PY -W ignore scripts/ingenieria-inversa/run.py --batch <lote> --policy oracle --games 600 --procs 2 --slots 4 --kw '{"model": "~/careerlab-data/ingenieria-inversa/models/m06.json", "review_boost": 5.0, "skill_focus_from": 3, "w_skill_hi": 2.0, "detonators": true}'
+cd scripts/ingenieria-inversa && python3 summary.py <lote> && python3 reviews.py <lotes> out.csv ~/careerlab-data/ingenieria-inversa/models/m06.json
+```
+
+**5. Línea de ESTADO.md:** añadida en la sección 4 ("Ingeniería inversa con bots…").
