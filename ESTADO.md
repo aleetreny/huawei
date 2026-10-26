@@ -73,6 +73,8 @@ La regla de estancamiento sigue activa: el líder ha bajado de 61,3 a 54,6. Ahor
 
 Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nuevas las añade el organizador.
 
+Implementación solicitada por Alejandro: **Codex — `alejandro/laboratorio-adaptativo` — checkpoint parcial por cuota; pendiente de completar, no integrar todavía**. [Relevo](research/careerlab/implementacion-2026-10-26/README.md): guardas, evidencia portable, presupuesto DeepSeek y adaptación crítica de autoresearch. Clave aún sin configurar; sin partidas ni gasto. La ejecución sigue a cargo de la nube. No añade tareas a T1–T13.
+
 Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicacion-repo` — terminada, pendiente de integrar mediante PR**. Explicación de estructura, tareas y resultados con Relevo en [este informe](research/careerlab/explicacion-repo-2026-10-26.md); 230 tests OK, sin partidas ni cambios del laboratorio. No añade una tarea de desarrollo a T1–T13.
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |

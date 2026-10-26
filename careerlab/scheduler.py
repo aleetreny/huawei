@@ -22,6 +22,7 @@ from careerlab.actors.claude_cli import ClaudeWorkerConfig, run_claude_episode
 from careerlab.actors.scripted import make_scripted
 from careerlab.config import Settings
 from careerlab.episode import run_driven_episode
+from careerlab.episode import EpisodeResult, atomic_write_json
 from careerlab.mcp_client import GameClient, ServerSpec
 from careerlab.pool import ServerPool
 from careerlab.store import Registry
@@ -56,6 +57,15 @@ class Scheduler:
         self.settings, self.registry = settings, registry
         self.owner = owner or f"{socket.gethostname()}:{os.getpid()}:{uuid.uuid4().hex[:6]}"
         self.heartbeat = settings.data_dir / "scheduler.heartbeat.json"
+        self.last_batch: list[dict[str,Any]] = []
+
+    def _batch(self,jobs,kind,batch_out=None):
+        self.last_batch=[{k:j[k] for k in ("job_id","actor_id","env_id","purpose")} for j in jobs]
+        payload={"owner":self.owner,"kind":kind,"jobs":self.last_batch,"created_at":time.time()}
+        self.registry.decide("execution_batch_started",self.owner,payload,"explicit batch membership before execution")
+        if batch_out is not None:
+            batch_out.parent.mkdir(parents=True,exist_ok=True)
+            atomic_write_json(batch_out,payload)
 
     def _beat(self, state: dict[str, Any]) -> None:
         beat_dir = self.settings.data_dir / "heartbeats"
@@ -184,8 +194,9 @@ class Scheduler:
             await asyncio.sleep(60)
 
     async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None,
-                         max_five_hour: float = 0.75) -> dict[str, int]:
+                         max_five_hour: float = 0.75, batch_out: Path | None = None) -> dict[str, int]:
         jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli", purpose=purpose)
+        self._batch(jobs,"claude-cli",batch_out)
         counts: dict[str, int] = {}
         sem = asyncio.Semaphore(concurrency)
         actors = {r["actor_id"]: json.loads(r["config"]) for r in self.registry.db.execute("SELECT * FROM actors")}
@@ -207,6 +218,68 @@ class Scheduler:
         beat = asyncio.create_task(self._heartbeat_loop())
         await asyncio.gather(*(one(j) for j in jobs))
         beat.cancel()
+        return counts
+
+    async def run_target(self, concurrency: int = 1, limit: int | None = None, purpose: str | None = None,
+                         phase: str = "pilot", reservation_usd: float = 1.5, batch_out: Path | None = None) -> dict[str,int]:
+        """One paid official episode at a time, with durable admission accounting."""
+        from careerlab.actors.official_runner import TargetConfig, credential_status, run_target_episode
+        from careerlab.budget import BudgetClosed, TargetBudget, receipt_cost
+        if concurrency!=1 or limit is None or limit<1 or not purpose:
+            raise ValueError("paid runs require slots=1, an explicit positive limit and purpose")
+        if self.registry.origin:
+            raise BudgetClosed("the shared key is executed by the canonical cloud origin only")
+        if not credential_status(self.settings)["configured"]:
+            raise BudgetClosed("target credentials are not configured; no paid work was started")
+        ledger=TargetBudget(self.registry)
+        if ledger.status()["paused"]:
+            raise BudgetClosed("reconcile target costs before starting more work")
+        jobs=self.registry.lease(self.owner,limit,actor_kind="jiuwenswarm-target",purpose=purpose)
+        self._batch(jobs,"jiuwenswarm-target",batch_out)
+        counts={}
+        beat=asyncio.create_task(self._heartbeat_loop())
+        try:
+            for job in jobs:
+                cfg_row=self.registry.db.execute("SELECT config FROM actors WHERE actor_id=?",(job["actor_id"],)).fetchone()
+                raw=json.loads(cfg_row[0])
+                cfg=TargetConfig(**{k:raw[k] for k in TargetConfig.__dataclass_fields__ if k in raw})
+                env=json.loads(self.registry.db.execute("SELECT fingerprint FROM environments WHERE env_id=?",(job["env_id"],)).fetchone()[0])
+                check_gate(self.settings,self.registry,"jiuwenswarm-target",env.get("environment","real-dev"),0)
+                if not self.registry.verify_policy(job["policy_id"]):
+                    raise ValueError("registered policy bytes changed")
+                ledger.reserve(job["job_id"],phase,reservation_usd)
+                run_dir=self.settings.runs_dir/job["job_id"]
+                if not self.registry.mark_running(job["job_id"],os.getpid(),str(run_dir),owner=self.owner):
+                    ledger.cancel(job["job_id"],"lease was not claimed; no paid call")
+                    continue
+                bundle=Path(self.registry.db.execute("SELECT bundle_path FROM policies WHERE policy_id=?",(job["policy_id"],)).fetchone()[0])
+                try:
+                    result=await run_target_episode(self.settings,cfg,bundle,job["job_id"],run_dir,slot=0,budget=ledger)
+                except Exception as exc:
+                    # Never put credential-bearing stdout/HTTP messages in the registry.
+                    result=EpisodeResult(job["job_id"],None,"interrupted",interruption=f"target actor error: {type(exc).__name__}")
+                charge=ledger.charge(job["job_id"])
+                if charge["state"]=="reserved":
+                    ledger.cancel(job["job_id"],"official play was not launched")
+                elif charge["state"]=="started":
+                    try:
+                        ledger.settle(job["job_id"],receipt_cost(result.actor_usage))
+                    except ValueError:
+                        ledger.settle(job["job_id"],None,"invalid cost receipt")
+                run_dir.mkdir(parents=True,exist_ok=True)
+                atomic_write_json(run_dir/"result.json",asdict(result))
+                outcome=self.registry.ingest(job["job_id"],run_dir)
+                counts[outcome]=counts.get(outcome,0)+1
+                self._beat({"kind":"target","done":sum(counts.values())})
+                if ledger.status()["paused"]:
+                    break
+        finally:
+            beat.cancel()
+            # Only unstarted leases are returned. An attempted charge is never
+            # freed by recovery, a timeout or a restarted scheduler.
+            with self.registry.tx():
+                self.registry.db.execute("UPDATE jobs SET status='queued',lease_owner=NULL,lease_expires=NULL "
+                                         "WHERE origin=? AND lease_owner=? AND status='leased'",(self.registry.origin,self.owner))
         return counts
 
 

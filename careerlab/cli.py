@@ -119,6 +119,9 @@ def _actor(reg: Registry, spec: str) -> tuple[str, str]:
         cfg = ClaudeWorkerConfig(model=model, effort=effort or None, autocompact=compact or None,
                                  skills_mode=skills_mode, cli_version=cli_version(load_settings()))
         return reg.register_actor("claude-cli", cfg.record()), kind
+    if kind == "jiuwenswarm-target" and name in ("", "competition-key"):
+        from careerlab.actors.official_runner import TargetConfig
+        return reg.register_actor(kind,TargetConfig("competition-key").record()),kind
     raise SystemExit(f"unknown actor kind {kind}")
 
 
@@ -153,10 +156,13 @@ def cmd_run(args: argparse.Namespace) -> int:
     sched = Scheduler(s, s.registry())
     print("recovered:", sched.recover())
     if args.kind == "scripted":
-        print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit, purpose=args.purpose)))
+        print(asyncio.run(sched.run_scripted(slots=args.slots or 8, limit=args.limit, purpose=args.purpose)))
+    elif args.kind == "claude-cli":
+        print(asyncio.run(sched.run_claude(concurrency=args.slots or 2, limit=args.limit, purpose=args.purpose,
+                                           max_five_hour=args.max_five_hour,batch_out=Path(args.batch_out) if args.batch_out else None)))
     else:
-        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose,
-                                           max_five_hour=args.max_five_hour)))
+        print(asyncio.run(sched.run_target(concurrency=args.slots or 1,limit=args.limit,purpose=args.purpose,
+                    phase=args.budget_phase,reservation_usd=args.reserve_usd,batch_out=Path(args.batch_out) if args.batch_out else None)))
     return 0
 
 
@@ -284,11 +290,14 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--why", required=True, help="decision rationale recorded in the registry")
     e.set_defaults(fn=cmd_enqueue)
     run = sub.add_parser("run")
-    run.add_argument("--kind", choices=["scripted", "claude-cli"], default="scripted")
-    run.add_argument("--slots", type=int, default=8)
+    run.add_argument("--kind", choices=["scripted", "claude-cli", "jiuwenswarm-target"], default="scripted")
+    run.add_argument("--slots", type=int)
     run.add_argument("--limit", type=int)
     run.add_argument("--purpose")
     run.add_argument("--max-five-hour", type=float, default=0.75, help="pause new Claude episodes above this five-hour utilisation")
+    run.add_argument("--batch-out",help="write explicit batch membership before any episode starts")
+    run.add_argument("--budget-phase",choices=["pilot","selection","confirmation","reserve"],default="pilot")
+    run.add_argument("--reserve-usd",type=float,default=1.5,help="per-run admission estimate, not a hard provider billing cap")
     run.set_defaults(fn=cmd_run)
     sub.add_parser("recover").set_defaults(fn=cmd_recover)
     sub.add_parser("resume").set_defaults(fn=cmd_resume)
@@ -319,6 +328,8 @@ def main(argv: list[str] | None = None) -> int:
     im = sub.add_parser("import", help="load lab/registry/*.jsonl into this machine's registry (hand-off)")
     im.add_argument("--dir")
     im.set_defaults(fn=cmd_import)
+    from careerlab.adaptive_cli import add_commands
+    add_commands(sub)
     args = parser.parse_args(argv)
     return args.fn(args)
 
