@@ -1,12 +1,12 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 17:56 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 17:57 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
 - Jobs in the registry: done 352, interrupted 28, leased 4, queued 41, running 6.
 - Episodes finished in this container: 92. Batches completed: 2 (last at 2026-10-26 17:50:49 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.43**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.44**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.05**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.110** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
@@ -286,7 +286,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Decision #128 (17:50):** f7-three-skills 55.2 (n = 10), F1 54.6, f2-convert-on-review 53.9. The stall rule still fires.
 - **Block 4 allocated** (seed 20261154): F7 three-skills 6, observed-growth 5, F1 4, value-conversion 3, plus a dormant audit of P0 (2 games).
 - **Next generation**, after the F7 children's screen: reliability-focused, i.e. leaving Level 1 by the first or second review.
-- **Organiser round 3 (18:10 UTC):** merged `leah/workspace` (l1-review-clock v2 and v3) and `matteo/observed-growth-v2` (which includes `matteo-t4-growth`). Imported origins `leah` and `matteo` (0 conflicts). Registered and queued 4 Haiku screens each: l1-review-clock-v2 `6e26797afe52e4fd`, l1-review-clock-v3 `35576a667c2f3d53`, observed-growth-v2 `f2715987f0341ab2`.
+- **Organiser round 3 (17:57 UTC):** merged `leah/workspace` (l1-review-clock v2 and v3) and `matteo/observed-growth-v2` (which includes `matteo-t4-growth`). Imported origins `leah` and `matteo` (0 conflicts). Registered and queued 4 Haiku screens each: l1-review-clock-v2 `6e26797afe52e4fd`, l1-review-clock-v3 `35576a667c2f3d53`, observed-growth-v2 `f2715987f0341ab2`.
 
 ## Relevo (hand-off)
 
