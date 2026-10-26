@@ -148,6 +148,72 @@ El oráculo v2 tiene tres ingredientes:
 - **Partidas terminadas:** nivel 55, dinero 41, salud+dignidad 92, habilidad 97, riesgo 72 y red 85 (puntuaciones normalizadas). **Lo que más falta es dinero y nivel.**
 - **No es una Skill:** usa conocimiento del dataset. Pero marca una referencia: jugando bien los eventos se pasa de ~55 a ~63–68.
 
+## H11. Fórmula de la nota final, comprobada al céntimo (2.639 partidas de b01 y del oráculo v2)
+
+**Q = 0,3·(10·nivel) + 0,2·mín(100, máx(0, dinero)/80·100) + 0,15·mín(100, (salud+dignidad)/20·100) + 0,15·mín(100, habilidad/120·100) + 0,1·máx(0, (10 − riesgo oculto final)·10) + 0,1·mín(100, red/60·100)**
+
+Las 2.639 partidas cuadran sin ninguna discrepancia.
+
+- **Dinero de las partidas terminadas del oráculo:** sueldo 29,1 + bonus 5,6 + eventos 0,4 + 1 inicial − 6,8 de otras pérdidas (explosiones de riesgo de −2 cada una, desenlaces de historias). El sueldo depende sólo del nivel y del tiempo en él, así que **el dinero también se gana ascendiendo antes**.
+- Habilidad (tope en 120) y red (tope en 60) se llenan pronto en una buena partida. Lo que queda abierto es el nivel (cada nivel vale 3 puntos) y el dinero (cada 10 de dinero vale 2,5 puntos).
+
+## H12. El juego es determinista salvo el sorteo de eventos y las explosiones (b00+b01+b02)
+
+- **Cada respuesta tiene un efecto fijo:** el mismo cambio anunciado siempre, en cualquier nivel y partida. Se comprobó en 3.359 combinaciones de respuesta y nivel con 5 casos o más, sin una sola excepción, y en 800 respuestas vistas en varios niveles.
+- **Las historias siguen siempre el mismo camino:** la misma respuesta lleva al mismo paso siguiente (164 de 164 respuestas con continuación; las 58 "ramificadas" son el mismo evento que vuelve a salir más tarde).
+- **El azar está en qué eventos salen y en qué orden, y en cuándo explota el riesgo.** Hay 168 títulos y 403 preguntas. Cerca de 29 títulos sólo aparecen desde L2 o L3: dilemas de carrera como elegir entre gestión o especialización, ascensos que exigen dirigir personas, denunciar cifras falsas o cláusulas de no competencia. En esos dilemas, la respuesta reflexiva y comprometida da Skill, Network y Dignity; perseguir sueldo o cargo sin pensarlo, o no decidir, resta.
+
+## H13. Lo que decide la partida son las respuestas a los eventos, en todas las etapas (b02, provisional con 40 partidas por brazo)
+
+El oráculo v2 juega bien toda la partida salvo un semestre, en el que decide al azar sólo los eventos o sólo el reparto trimestral.
+
+| Semestre al azar | Eventos | Reparto trimestral |
+|---|---:|---:|
+| S1 (meses 1–6) | −41 | 0 |
+| S2 (7–12) | −37 | −4,5 |
+| S3 | −24 | −2 |
+| S4 | −30 | −2 |
+| S5 | −25 | −3 |
+| S6 | −18 | −1 |
+| S7 | −15 | −1,5 |
+| S8 (43–48) | −9 | −3 |
+
+- La pérdida llega sobre todo por crisis de confianza: seis meses de respuestas descuidadas bastan para que explote el riesgo dos veces.
+- **El reparto trimestral apenas importa cuando los eventos se juegan bien.**
+- El crecimiento sale de los eventos: Skill ~2,8 de 3,3 al mes, Network ~2,0 de 2,5 y Output ~0,9 de 1,5.
+
+## H14. En los niveles altos el ascenso depende sólo de la Skill (b02, 9.081 evaluaciones; 26 oct 23:25 UTC)
+
+| De → a | Techo S / N / O | Umbral S / N / O | Cumplen y ascienden | Fallos con sólo la Skill por debajo |
+|---|---|---|---|---:|
+| L4 → L5 | 108 / 36 / 26 | **90** / 30 / 22 | 886 de 886 | 1.759 |
+| L5 → L6 | ≥154 / 54 / 38 | **130** / 45 / 32 | 377 de 378 | 618 |
+| L6 → L7 | ? / 72 / 54 | ? | 0 de 19 (Skill máx. 154) | — |
+
+- **Progresión de umbrales:**
+
+  | Indicador | L1 | L2 | L3 | L4 | L5 |
+  |---|---:|---:|---:|---:|---:|
+  | Skill | 8 | 18 | 35 | 90 | 130 |
+  | Network | 3 | 6 | 18 | 30 | 45 |
+  | Output | 3 | 5 | 14 | 22 | 32 |
+
+  El gran salto es la Skill de L4: casi el triple que en L3.
+- **Ritmo de crecimiento** con buenas respuestas: Skill ~3,3 al mes; Network y Output, de sobra para sus umbrales. Para pasar de L4 a L5 hay que juntar ~50–55 puntos de Skill, unos 15 meses. Por eso el oráculo llega a L5 hacia el mes 36 y a L6 en el 48.
+- **La palanca de la segunda mitad:** cada punto de Skill que se adelanta acerca el siguiente ascenso. Hay que priorizar Skill en los eventos, la rotación o la mentoría como acción principal y el aprendizaje en la energía cuando la salud lo permita, siempre que Network y Output sigan por encima de su umbral.
+
+## H15. La primera evaluación se pierde en el último mes (b02, oráculo v2: 745 de 1.067 ascienden en la 1.ª)
+
+- **En los 343 fallos, Network u Output ya estaban en el umbral y se perdieron después.** 288 de esas pérdidas llegan por una respuesta del **último mes antes de la evaluación**. En L1 el techo de Network y Output coincide con el umbral, así que no hay margen: un −1 en ese mes cuesta el ascenso.
+- **Al perder el punto en ese mes:**
+
+  | Situación | Casos |
+  |---|---:|
+  | Existía una respuesta segura que lo conservaba (el bot eligió mal) | 101 |
+  | Las respuestas que lo conservaban eran arriesgadas (dilema real del juego) | 149 |
+  | Todas las respuestas restaban (mala suerte con el evento) | 113 |
+- La primera evaluación tiene una parte de lotería por los eventos del último mes. Proteger ese mes con cuidado (no ceder Network u Output si hay alternativa segura) debería subir el ascenso del 70 % a ~80 %. Se está midiendo en el lote b03.
+
 ## Traducción permitida a principios de Skill (borrador)
 
 | Hallazgo | Principio general, sin números | Cómo lo comprueba el agente en la partida |
