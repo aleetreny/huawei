@@ -583,6 +583,53 @@ function renderOrigins() {
     el("div", { class: "value", text: gs.length ? fmt1(mean(gs.map((g) => g.score))) : "–" }, t);
     el("div", { class: "note", text: `${gs.length} games · ${done.length} completed · best ${best ? fmt1(best.score) : "–"}` }, t);
   }
+  renderHeadToHead(host, names);
+}
+
+// Same player, different manual: each origin manual against the race leader and the race average for that model.
+function renderHeadToHead(host, names) {
+  const last = D.blocks[D.blocks.length - 1];
+  const leader = last ? [...last.rows].sort((a, b) => b.posterior_mean - a.posterior_mean)[0].policy : null;
+  const rows = [];
+  const cell = (label, gs, mine) => {
+    const done = gs.filter((g) => g.completed);
+    const dim = (k) => (done.length ? mean(done.map((g) => ((g.dims[k] ?? 0) * D.weights[k]) / 100)) : null);
+    rows.push({ label, gs, mine, value: mean(gs.map((g) => g.score)), done: done.length, level: dim("level"), wealth: dim("wealth") });
+  };
+  for (const n of names) {
+    const cells = {};
+    for (const g of D.origins[n]) if (g.model !== "Bot") (cells[`${g.policy}|${g.model}`] ||= []).push(g);
+    for (const [key, gs] of Object.entries(cells)) {
+      const [policy, model] = key.split("|");
+      cell(`${n}: ${policy} · ${model}`, gs, true);
+      const ref = ai.filter((g) => g.model === model && g.policy === leader);
+      if (ref.length && !rows.some((r) => r.label.startsWith("race leader") && r.label.endsWith(model))) cell(`race leader ${leader} · ${model}`, ref, false);
+      const all = ai.filter((g) => g.model === model);
+      if (all.length && !rows.some((r) => r.label === `race, all manuals · ${model}`)) cell(`race, all manuals · ${model}`, all, false);
+    }
+  }
+  if (!rows.length) return;
+  el("h2", { text: "Same player, different manual", style: "margin-top:22px" }, host);
+  el("p", { class: "desc", text: "Each dot is one game (filled = reached month 48, ring = eliminated). Bar = mean score. Blue rows are this machine's manuals; grey rows are the race's games with the same model, for reference. Different machines may run a different Claude CLI version, so this is a rough read, not a race decision." }, host);
+  const wrap = el("div", {}, host);
+  const W = widthOf(wrap), narrow = W < 640, rowH = 34, l = narrow ? 150 : 300, r = narrow ? 70 : 220, H = rows.length * rowH + 26;
+  const svg = svgRoot(wrap, W, H);
+  const x = (v) => l + (v / 100) * (W - l - r);
+  for (const t of [0, 25, 50, 75, 100]) { svgEl("line", { x1: x(t), x2: x(t), y1: 2, y2: H - 20, class: t ? "gridline" : "axisline" }, svg); svgEl("text", { x: x(t), y: H - 6, "text-anchor": "middle", text: t }, svg); }
+  const maxChars = Math.floor((l - 12) / 6.4);
+  rows.forEach((row, i) => {
+    const cy = 4 + i * rowH + rowH / 2;
+    svgEl("text", { x: l - 10, y: cy + 4, "text-anchor": "end", class: row.mine ? "ink" : "ink2", "font-weight": row.mine ? 600 : 400, text: row.label.length > maxChars ? row.label.slice(0, maxChars - 1) + "…" : row.label }, svg);
+    const bar = svgEl("path", { d: barPath(x(0), cy - 7, x(row.value) - x(0), 14), fill: row.mine ? "var(--accent-wash)" : "var(--wash)" }, svg);
+    svgEl("line", { x1: x(row.value), x2: x(row.value), y1: cy - 10, y2: cy + 10, stroke: row.mine ? "var(--accent)" : "var(--ink-2)", "stroke-width": 2 }, svg);
+    for (const g of row.gs) svgEl("circle", { cx: x(g.score), cy, r: 4, fill: g.completed ? (row.mine ? "var(--accent)" : "var(--muted)") : "var(--surface)", stroke: g.completed ? "var(--surface)" : (row.mine ? "var(--accent)" : "var(--muted)"), "stroke-width": 2 }, svg);
+    const stats = `${fmt1(row.value)} · ${row.done}/${row.gs.length} done`;
+    svgEl("text", { x: x(100) + 10, y: cy + 4, class: "ink", "font-weight": 600, text: narrow ? fmt1(row.value) : stats }, svg);
+    if (!narrow) svgEl("text", { x: x(100) + 118, y: cy + 4, text: row.level == null ? "" : `level ${fmt1(row.level)} · wealth ${fmt1(row.wealth)}` }, svg);
+    const hit = svgEl("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, class: "hit" }, svg);
+    hover(hit, () => [{ cls: "v", text: `${fmt1(row.value)} mean score` }, { text: row.label }, { cls: "m", text: `${row.done} of ${row.gs.length} completed` },
+      { cls: "m", text: row.level == null ? "no completed games" : `completed games: level ${fmt1(row.level)}/30, wealth ${fmt1(row.wealth)}/20` }], bar);
+  });
 }
 
 // ---------- table
