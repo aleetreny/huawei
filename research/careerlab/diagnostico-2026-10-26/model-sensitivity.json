@@ -1,0 +1,151 @@
+{
+  "base_commit": "917565c",
+  "caveat": "Same observed data; alternate groupings are sensitivity analyses, not replacement selection rules. They do not identify which model is true.",
+  "guard_reproduction": {
+    "actions": {
+      "L": "STOP",
+      "M": "STOP",
+      "N": "REPEAT",
+      "X": "DORMANT"
+    },
+    "input": "Existing collapse/outlier example from tests/test_stats.py; collect mocked only to avoid storage; robustness uses real computation with seed 0.",
+    "note": "inconclusive: dormancy of X flips: P(mu >= mu_L - 4) is normal 0.002 (< 0.05) but student_t 0.999, bayes_boot 0.411 (>= 0.2)",
+    "registry_written": false,
+    "robust": false
+  },
+  "haiku_policy_count": 22,
+  "results": {
+    "one_common_family": {
+      "dormant": [],
+      "top5": [
+        {
+          "action": "REPEAT",
+          "mean_y": 47.40524779716105,
+          "n": 5,
+          "policy": "f7-three-skills-v1",
+          "sd_y": 4.195562075062624
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 46.926298089619436,
+          "n": 4,
+          "policy": "f3-balance-recombined-v1",
+          "sd_y": 4.342774915417399
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 45.80694089878394,
+          "n": 4,
+          "policy": "f3-lean-v1",
+          "sd_y": 4.342774915417399
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 45.30563683207399,
+          "n": 4,
+          "policy": "f1-steady-balance-v1",
+          "sd_y": 4.342774915417399
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 44.609238945735356,
+          "n": 4,
+          "policy": "f3-distilled-prereview-defuse-v1",
+          "sd_y": 4.342774915417399
+        }
+      ]
+    },
+    "one_family_per_policy": {
+      "dormant": [
+        "m3-sustainable-career-v0-1",
+        "f2-invest-early-v1",
+        "o2-run-hot-v1",
+        "f5-relationship-capital-v1",
+        "f3-opus-distilled-v1",
+        "f4-visible-delivery-v1",
+        "f6-commitment-ledger-v1",
+        "p0-minimal-v1"
+      ],
+      "top5": [
+        {
+          "action": "STOP",
+          "mean_y": 58.489999999999995,
+          "n": 4,
+          "policy": "f3-balance-recombined-v1",
+          "sd_y": 1.9305470727231688
+        },
+        {
+          "action": "STOP",
+          "mean_y": 57.769600000000004,
+          "n": 5,
+          "policy": "f7-three-skills-v1",
+          "sd_y": 3.2914642577430495
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 54.117999999999995,
+          "n": 4,
+          "policy": "f3-lean-v1",
+          "sd_y": 3.2769699418822875
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 52.160000000000004,
+          "n": 4,
+          "policy": "f1-steady-balance-v1",
+          "sd_y": 9.050421132006326
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 49.61333333333334,
+          "n": 3,
+          "policy": "f2-convert-on-review-v1",
+          "sd_y": 10.337044666849634
+        }
+      ]
+    },
+    "registered_families": {
+      "dormant": [
+        "f2-invest-early-v1",
+        "f5-relationship-capital-v1"
+      ],
+      "top5": [
+        {
+          "action": "PROMOTE",
+          "mean_y": 55.20593458775231,
+          "n": 5,
+          "policy": "f7-three-skills-v1",
+          "sd_y": 5.421888126293726
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 50.896616729455516,
+          "n": 4,
+          "policy": "f3-balance-recombined-v1",
+          "sd_y": 4.0108220932486836
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 50.157790423803,
+          "n": 4,
+          "policy": "f3-lean-v1",
+          "sd_y": 4.0108220932486836
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 49.36725303637334,
+          "n": 4,
+          "policy": "f3-distilled-prereview-defuse-v1",
+          "sd_y": 4.0108220932486836
+        },
+        {
+          "action": "REPEAT",
+          "mean_y": 49.278904445823336,
+          "n": 4,
+          "policy": "f1-steady-balance-v1",
+          "sd_y": 7.078342622985362
+        }
+      ]
+    }
+  }
+}

@@ -73,6 +73,8 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 
 Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicacion-repo` — terminada, pendiente de integrar mediante PR**. Explicación de estructura, tareas y resultados con Relevo en [este informe](research/careerlab/explicacion-repo-2026-10-26.md); 230 tests OK, sin partidas ni cambios del laboratorio. No añade una tarea de desarrollo a T1–T13.
 
+Diagnóstico solicitado por Alejandro: **Codex — `alejandro/diagnostico-estrategias` — terminado, pendiente de integrar mediante PR**. [Diagnóstico y Relevo](research/careerlab/diagnostico-2026-10-26/README.md), con cálculos reproducibles, sensibilidad del ranking, fallo de robustez reproducido y experimentos priorizados; 230 tests OK. Sin partidas ni cambios de la carrera; no añade tareas a T1–T13.
+
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 hecha (decisión #114, líder F7 tres skills); tanda 2 (value-conversion) en juego; tanda 3 repartida por el protocolo (24 repeticiones + hijas nuevas) | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
