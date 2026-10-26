@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 22:24 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 22:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: cancelled 27, done 547, interrupted 36, queued 3, running 7.
-- Episodes finished in this container: 265. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.22**, window resets 27 Oct 02:00 UTC; governor cap 0.85. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.16**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.170** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: cancelled 27, done 554, interrupted 36, queued 3.
+- Episodes finished in this container: 272. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.24**, window resets 27 Oct 02:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.16**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.173** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -74,15 +74,15 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
-| f3-feedback-reactive | 100 | 11 | 12 |
+| f3-feedback-reactive | 103 | 11 | 13 |
 | f1-steady-balance | 41 | 7 | 4 |
 | f7-one-vs-many | 34 | 6 | 3 |
 | matteo-feedback-growth | 33 | 6 | 6 |
 | l1-review-clock | 12 | 4 | 2 |
+| fast-bold | 12 | 4 | 0 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
 | f4-visible-delivery | 9 | 4 | 1 |
-| fast-bold | 8 | 3 | 0 |
 | o1-promotion-gap | 7 | 3 | 0 |
 | matteo-value-conversion | 7 | 3 | 0 |
 | m3-teammate | 7 | 3 | 1 |
@@ -348,6 +348,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **20:40 UTC, fastloop hour 1:** champion f3-balance-recombined (crowned 20:03); the status-line effect is not confirmed (5/8 and 3/8); lessons.md updated; 6 branches merged; observed-growth-v6 added to the ladder.
 - **21:38 UTC, fastloop hour 2:** champion targeted-1026-201334 (designer; Output and Network kept in stories until the first promotion), crowned 21:29. Lessons updated. No new collaborator branches.
 - **22:24 UTC, PAUSED by the user** to review the strategy. fastloop STOP was set at 22:22, and the 8 in-flight games and 1 designer finish on their own. Since 16:00: 237 Haiku games (mean Q 46.6, SD 19.3), 15 Opus games and 9 designer runs, which is 16 % of the week. To resume: `rm ~/careerlab-data/huawei/fastloop/STOP ~/careerlab-data/huawei/fastloop/STOP-SCHEDULER`, then start the driver as in `scripts/fastloop/README.md`.
+- **22:40 UTC:** fully stopped. The driver exited, with no games and no designers running. The last design, targeted-1026-221555, is registered but unplayed. Queued jobs stay queued.
 
 ## Relevo (hand-off)
 

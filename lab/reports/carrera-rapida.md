@@ -1,6 +1,6 @@
 # Carrera rápida: estado
 
-Actualizado: 26 Oct 22:24 UTC. Cómo funciona: [lab/fastloop/README.md](../fastloop/README.md).
+Actualizado: 26 Oct 22:41 UTC. Cómo funciona: [lab/fastloop/README.md](../fastloop/README.md).
 
 ## Campeón
 
@@ -13,9 +13,11 @@ Actualizado: 26 Oct 22:24 UTC. Cómo funciona: [lab/fastloop/README.md](../fastl
 | stretch-1026-211144 | variante ambiciosa | 10 | 52,3 | 7 de 10 | 59 % | jugar hasta 12 |
 | bold-1026-211845 | idea valiente | 8 | 51,5 | 6 de 8 | 43 % | jugar hasta 12 |
 | targeted-1026-214849 | variante | 0 | — | 0 de 0 | — | jugar hasta 2 |
+| targeted-1026-221555 | variante | 0 | — | 0 de 0 | — | jugar hasta 2 |
 
 ## Últimas decisiones
 
+- 26 Oct 22:40: **targeted-1026-221555** entra en la carrera.
 - 26 Oct 22:15: **targeted-1026-213147** descartado (4 partidas, media 42,5, 2 terminadas; prob. de ser mejor 9 %).
 - 26 Oct 22:13: **targeted-1026-214849** entra en la carrera.
 - 26 Oct 21:53: **targeted-1026-213147** entra en la carrera.
@@ -30,7 +32,6 @@ Actualizado: 26 Oct 22:24 UTC. Cómo funciona: [lab/fastloop/README.md](../fastl
 - 26 Oct 20:59: **stretch-1026-200334** se queda a las puertas (no supera al campeón) (8 partidas, media 46,7, 4 terminadas; prob. de ser mejor 10 %).
 - 26 Oct 20:41: **targeted-1026-202436** entra en la carrera.
 - 26 Oct 20:40: **observed-growth-v6** entra en la carrera.
-- 26 Oct 20:33: **targeted-1026-201334** entra en la carrera.
 
 ## ¿Atascados?
 
