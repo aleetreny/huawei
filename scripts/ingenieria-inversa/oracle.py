@@ -129,6 +129,9 @@ class Oracle(Base):
         bl = d.get("blow3", 0)
         if bl:
             v -= self.p["blow_cost"] * pressure * bl
+        det = d.get("det_hi") if ctx.get("risk", 0) >= 2 else d.get("det_lo")
+        if det and self.p.get("detonators", False):
+            v -= self.p["blow_cost"] * (1 + 3 * ctx.get("blowups", 0)) * det
         return v
 
     def _hval(self, h: float) -> float:
@@ -148,6 +151,9 @@ class Oracle(Base):
             d["risk"] = e["risk"]
         if "blow3" in e and e.get("blow_n", 0) >= 10:
             d["blow3"] = e["blow3"]
+        for key in ("det_hi", "det_lo"):
+            if key in e:
+                d[key] = e[key]
         return d, e["n"]
 
     def story(self, obs, choices, ctx):

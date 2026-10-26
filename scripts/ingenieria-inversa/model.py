@@ -60,6 +60,7 @@ def build(batches: list[str], min_n: int = 1) -> dict[str, Any]:
     eff: dict[tuple[str, int], dict[str, Any]] = {}
     risk: dict[tuple[str, int], list[float]] = collections.defaultdict(list)
     blow: dict[tuple[str, int], list[int]] = collections.defaultdict(lambda: [0, 0])
+    det: dict[tuple[str, int], dict[str, list[int]]] = collections.defaultdict(lambda: {"hi": [0, 0], "lo": [0, 0]})
     nxt: dict[tuple[str, int], collections.Counter] = collections.defaultdict(collections.Counter)
     ceil: dict[int, dict[str, int]] = collections.defaultdict(lambda: {"skill": 0, "network": 0, "output": 0})
     clamp: dict[tuple[int, str], collections.Counter] = collections.defaultdict(collections.Counter)
@@ -80,6 +81,18 @@ def build(batches: list[str], min_n: int = 1) -> dict[str, Any]:
         story = [(s, e) for s, e in pairs if s[1] == "e"]
         pos = {id(s): i for i, s in enumerate(g["steps"])}
         blow_idx = [i for i, s in enumerate(g["steps"]) if s[5] and "Old landmines" in b.texts.get(s[5], "")]
+        hr_now = None
+        for i, s in enumerate(g["steps"]):
+            t = b.texts.get(s[5], "") if s[5] else ""
+            lvr = risk_level(t)
+            if lvr is not None:
+                hr_now = lvr
+            if s[1] == "e" and i + 1 < len(g["steps"]):
+                nt = b.texts.get(g["steps"][i + 1][5], "") if g["steps"][i + 1][5] else ""
+                boom = "Old landmines" in nt and "HR partner" not in nt
+                cell = det[(s[2], s[3])]["hi" if (hr_now or 0) >= 2 else "lo"]
+                cell[0] += 1
+                cell[1] += int(boom)
         last_month = g["final"]["t"] if g.get("final") else 0
         for s, _ in story:
             i = pos[id(s)]
@@ -150,6 +163,11 @@ def build(batches: list[str], min_n: int = 1) -> dict[str, Any]:
         if (node, k) in rel:
             entry["risk"] = round(rel[(node, k)][0], 3)
             entry["risk_n"] = rel[(node, k)][1]
+        dd = det.get((node, k))
+        if dd:
+            for lvl in ("hi", "lo"):
+                if dd[lvl][0] >= 5:
+                    entry[f"det_{lvl}"] = round(dd[lvl][1] / dd[lvl][0], 3)
         if (node, k) in blow_rel:
             entry["blow3"] = round(blow_rel[(node, k)][0], 3)
             entry["blow_n"] = blow_rel[(node, k)][1]

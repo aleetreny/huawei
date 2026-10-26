@@ -331,6 +331,61 @@ El "bot de principios" decide las respuestas con lo que predicen los rasgos de c
 
 - **El modelo numérico exacto del riesgo oculto sigue abierto.** Una regresión aditiva sobre el riesgo final no generaliza (R² −0,1 con partidas reservadas), porque casi siempre termina en 0 y se recorta.
 
+## H20. Las explosiones tienen detonantes: respuestas que destapan lo acumulado (b00–b06; 26 oct 23:25 UTC)
+
+**Método.** Para cada respuesta con 15 casos o más en cada situación (743 respuestas), se mide la probabilidad de que la explosión llegue **justo después** de elegirla. Se compara el riesgo alto (comentario de RR. HH. con el ceño fruncido o peor) con el bajo (tranquilo o en voz baja).
+
+- **Mediana de todas las respuestas con riesgo alto: 0 %.** Casi ninguna respuesta provoca explosiones por sí misma.
+- **59 respuestas detonan con riesgo alto en el 30 % de los casos o más,** y con riesgo bajo casi nunca:
+
+  | Respuesta (resumida) | Riesgo alto | Riesgo bajo |
+  |---|---:|---:|
+  | Guardar un informe y apostar a que no salte | 91 % | 1 % |
+  | Firmar con otros una carta a RR. HH. y al CEO sobre la cultura del equipo | 90 % | 1 % |
+  | Seguir con el lanzamiento y apostar a que el fallo no salte | 89 % | 1 % |
+  | Pedir a RR. HH. una investigación formal | 89 % | 14 % |
+  | Unirse a las risas para no romper el ambiente | 87 % | 1 % |
+  | Restar importancia a un riesgo en la comunicación oficial | 85 % | 0 % |
+  | Negarse a un traslado alegando el deber | 85 % | 2 % |
+  | Negar saber nada | 89 % | 15 % |
+  | Inventarse una contribución | 57 % | 14 % |
+  | Seguir encadenando excusas | 42 % | 0 % |
+  | Decir "a tiempo" y recuperar en secreto trabajando de más | 43 % | 0 % |
+
+- **Rasgos de los 59 detonantes:** ocultar 22, engañar 19, complacer 18, atajo 9, pasividad 9, cotilleo 7, enfrentarse 5. Además hay 4–5 respuestas **íntegras que atraen escrutinio formal**: quejas firmadas, investigaciones, plantarse ante la dirección.
+- **El mecanismo, completo:**
+  1. Las respuestas poco íntegras acumulan riesgo oculto, que el comentario de RR. HH. mide.
+  2. Con riesgo acumulado, lo que puede salir a la luz (una mentira, una ocultación) o lo que pone a uno bajo escrutinio formal lo hace estallar en el acto.
+  3. Además, con el comentario "enfadado", estalla al empezar el mes en una de cada cuatro ocasiones.
+- **Consecuencia práctica.** Con el riesgo bajo, defender los principios es seguro (incluso pedir una investigación). Con riesgo acumulado, primero hay que desactivarlo (Defuse, pasar desapercibido) y evitar tanto las mentiras como exponerse a una revisión formal.
+
+## H21. Evitar los detonantes vale 4,6 puntos (b07, ~130 partidas por brazo)
+
+El oráculo v2 tiene protección del mes previo a la evaluación, Skill priorizada desde L3 y modelo m06. Se compara con y sin penalizar los detonantes según el riesgo del momento (H20):
+
+| Oráculo | Nota | Termina | Asciende en la 1.ª evaluación | Crisis de confianza | Nivel final |
+|---|---:|---:|---:|---:|---:|
+| Sin detonantes | 64,5 ± 2,5 | 85 % | 78 % | 7 % | 5,29 |
+| **Con detonantes** | **69,1 ± 1,9** | **94 %** | 88 % | **2 %** | 5,61 |
+
+La regla "con riesgo acumulado, ni excusas ni exponerse a una revisión formal" se confirma en partidas completas.
+
+## H22. En un contexto neutro, Haiku elige bien con o sin manual (banco de decisiones, 150 preguntas)
+
+Se dieron a Haiku 150 preguntas reales de dev, con el contexto "mitad de carrera, todo por debajo de lo necesario, salud y dignidad bien, RR. HH. tranquilo". Las elecciones se puntúan con los efectos medidos.
+
+| Elección | Elige la mejor | Elige una arriesgada (explosión +10 puntos o más) | Valor |
+|---|---:|---:|---:|
+| Al azar | 44 % | 31 % | 0,59 |
+| Haiku sin instrucciones | 83 % | 6 % | 4,89 |
+| Haiku con el manual campeón (targeted-1026-201334) | 83 % | 5 % | 4,89 |
+| Haiku con el borrador `bb-mechanics-v1` | 81 % | 5 % | 4,90 |
+| La mejor posible | 100 % | 0 % | 5,84 |
+
+- **En lo básico, el juicio de Haiku ya es bueno, y ningún manual lo cambia.** Coincide con la observación de la nube de que Haiku elige lo mismo con cualquier manual.
+- **Sus fallos tienen un patrón:** prefiere plantarse en público por principios (corregir al cliente en plena reunión, decir con firmeza que un comentario no es aceptable, impugnar una cláusula). El juego premia la forma discreta: reconducir sin montar una escena, aclarar por escrito después, compartir el razonamiento con el equipo.
+- **Consecuencia:** el margen de un manual no está en el juicio ético de cada respuesta, sino en **el contexto**: el mes previo a la evaluación, el riesgo acumulado, cuándo un indicador ya está en su techo, y la mecánica que el modelo no puede adivinar. Se mide en un segundo banco con contexto.
+
 ## Traducción permitida a principios de Skill (borrador)
 
 | Hallazgo | Principio general, sin números | Cómo lo comprueba el agente en la partida |
