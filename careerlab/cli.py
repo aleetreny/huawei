@@ -188,6 +188,16 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_package(args: argparse.Namespace) -> int:
+    from careerlab.package import package
+
+    s = load_settings()
+    rec = package(s, Registry(s.registry_path), args.policy, Path(args.out), Path(args.design),
+                  Path(args.video) if args.video else None, Path(args.readme) if args.readme else None)
+    print(json.dumps(rec, indent=2))
+    return 0 if rec["validator_exit"] == 0 else 3
+
+
 def cmd_export(args: argparse.Namespace) -> int:
     s = load_settings()
     print(Registry(s.registry_path).export_jsonl(s.lab_dir / "registry"))
@@ -233,6 +243,13 @@ def main(argv: list[str] | None = None) -> int:
     rp.add_argument("--purpose")
     rp.add_argument("--markdown", action="store_true")
     rp.set_defaults(fn=cmd_report)
+    pk = sub.add_parser("package")
+    pk.add_argument("--policy", required=True)
+    pk.add_argument("--out", required=True)
+    pk.add_argument("--design", required=True, help="directory with skills_design.md and decision_report.md")
+    pk.add_argument("--video")
+    pk.add_argument("--readme")
+    pk.set_defaults(fn=cmd_package)
     sub.add_parser("export").set_defaults(fn=cmd_export)
     args = parser.parse_args(argv)
     return args.fn(args)

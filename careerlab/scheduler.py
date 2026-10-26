@@ -163,8 +163,15 @@ class Scheduler:
     async def wait_for_quota(self, max_five_hour: float) -> None:
         """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator)."""
         while True:
+            cap_file = self.settings.data_dir / "quota_cap.json"  # live override, editable while schedulers run
+            cap = max_five_hour
+            if cap_file.exists():
+                try:
+                    cap = float(json.loads(cap_file.read_text())["max_five_hour"])
+                except (ValueError, KeyError):
+                    pass
             util, resets_at = latest_quota(self.settings.runs_dir)
-            if util is None or util < max_five_hour or (resets_at and time.time() > resets_at):
+            if util is None or util < cap or (resets_at and time.time() > resets_at):
                 return
             self._beat({"waiting_for_quota": util, "resets_at": resets_at})
             await asyncio.sleep(60)
