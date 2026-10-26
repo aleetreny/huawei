@@ -1,0 +1,742 @@
+[
+  {
+    "run": 0,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 2,
+    "advertised": 2,
+    "actual": 1
+  },
+  {
+    "run": 0,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 0,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 1,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Output",
+    "before": -1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 1,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 1,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 9,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 1,
+    "step": 22,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Output",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 1,
+    "step": 22,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 1,
+    "step": 22,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 5,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 5,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 2,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 4,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Output",
+    "before": -1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 4,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 5,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 6,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 5,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 5,
+    "step": 22,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 9,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 5,
+    "step": 22,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 7,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 7,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 5,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 7,
+    "step": 22,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 7,
+    "step": 22,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 8,
+    "step": 11,
+    "action": "Lay low and reduce risk",
+    "level": "L1",
+    "stat": "Health",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 9,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 9,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 7,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 9,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 10,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 10,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 10,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 11,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 11,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 11,
+    "step": 22,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 8,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 11,
+    "step": 22,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 13,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 13,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 14,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 1,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 14,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 14,
+    "step": 22,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 9,
+    "advertised": 2,
+    "actual": 0
+  },
+  {
+    "run": 14,
+    "step": 22,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 17,
+    "step": 11,
+    "action": "Lay low and reduce risk",
+    "level": "L1",
+    "stat": "Health",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 18,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 18,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 18,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 19,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Output",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 19,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 19,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 6,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 20,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 5,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 20,
+    "step": 11,
+    "action": "Build a mentorship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 22,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Output",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 22,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 22,
+    "step": 22,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Output",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 22,
+    "step": 22,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 23,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 4,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 23,
+    "step": 11,
+    "action": "Apply for rotation",
+    "level": "L1",
+    "stat": "Network",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 24,
+    "step": 11,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Output",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 24,
+    "step": 11,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 10,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 24,
+    "step": 22,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 24,
+    "step": 22,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 10,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 25,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 25,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 26,
+    "step": 11,
+    "action": "Lay low and reduce risk",
+    "level": "L1",
+    "stat": "Health",
+    "before": 7,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 27,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Output",
+    "before": -1,
+    "advertised": 2,
+    "actual": 2
+  },
+  {
+    "run": 27,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Skill",
+    "before": 3,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 27,
+    "step": 11,
+    "action": "Apply for a key project",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 28,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Output",
+    "before": 0,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 28,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Network",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 28,
+    "step": 11,
+    "action": "Report results to your manager",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 8,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 31,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Output",
+    "before": 1,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 31,
+    "step": 11,
+    "action": "Fight for resources",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 33,
+    "step": 11,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Output",
+    "before": 1,
+    "advertised": 1,
+    "actual": -1
+  },
+  {
+    "run": 33,
+    "step": 11,
+    "action": "Showcase results",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 7,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 34,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Network",
+    "before": 3,
+    "advertised": 1,
+    "actual": 0
+  },
+  {
+    "run": 34,
+    "step": 11,
+    "action": "Repair a key relationship",
+    "level": "L1",
+    "stat": "Dignity",
+    "before": 2,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 35,
+    "step": 11,
+    "action": "Lay low and reduce risk",
+    "level": "L1",
+    "stat": "Health",
+    "before": 6,
+    "advertised": 1,
+    "actual": 1
+  },
+  {
+    "run": 35,
+    "step": 22,
+    "action": "Lay low and reduce risk",
+    "level": "L1",
+    "stat": "Health",
+    "before": 4,
+    "advertised": 1,
+    "actual": 1
+  }
+]

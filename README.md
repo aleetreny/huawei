@@ -7,6 +7,7 @@ Research checked on **26 October 2026**. The user has withdrawn and deleted the 
 ## Start here
 
 - **[ESTADO.md](ESTADO.md): estado del proyecto, tareas pendientes y reglas de trabajo del equipo (léelo primero)**
+- **[Ideas nuevas que podemos probar](research/ideas/README.md)** — propuestas falsables, evidencia disponible y siguientes pruebas; incluye exploración aleatoria instrumentada
 - **[CareerLab method decision (26 Oct, after critical audit)](research/careerlab/method-decision.md)** — current working method, measured infrastructure, gates and timeline
 - [CareerLab usage and reproducible install](lab/README.md) · [pre-registered protocol v1](lab/protocol/prereg-v1.md) · [errata of the earlier research](research/careerlab/errata.md)
 - [Current deep research: hierarchical policy search, archives and model fidelity](research/hierarchical-lab/README.md)

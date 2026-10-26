@@ -178,3 +178,10 @@
   - Transfer test queued: f3-status-line-v1 (`688cc25c03bf6629`), f3-balance-recombined's exact rules in the same format.
   - Matteo's observed-growth-v3 in the race: 61, 19, 52, 64 (his own-origin 71.4 does not replicate).
 - 19:41 UTC: race switched to fastloop-v2 by user decision. F1 is champion; challengers are observed-growth-v3, f3-lean, f3-balance-recombined, f1-risk-signal, f1-core, f1-status-line and f3-status-line. Energy-bot check: 4 of 400 bots reached **L6** (Q 66.9–75.6). Each was promoted at each of the first three reviews despite a first-review C, and ended with Skill 100. No LLM game has passed L5.
+- Fastloop, first hour (20:40 UTC):
+  - f3-balance-recombined crowned at 20:03 (10/12 completed, Q 54.6, P(better than F1) 0.74). f3-lean (11/12, 55.5) and observed-growth-v3 (10/12, 55.4) missed with P 0.55 and 0.59.
+  - **The status-line representation effect is not confirmed:** f1-status-line 5/8 (Q 52.7), f3-status-line 3/8 (Q 39.5). The early 4/4 was luck.
+  - Discarded: f1-core 1/4 and f1-risk-signal 1/4.
+  - Merged Matteo's first-review-search: 38.8 MB of raw data, including a dev-event catalogue with choice outcomes. Research only, never for designers or Skills; warning added to ESTADO.md.
+- Fastloop hour 2 (21:38 UTC): first designer-made champion, **targeted-1026-201334**, crowned at 21:29 (10/12 completed, Q 53.9, P(better than f3-balance-recombined) 0.61). It adds to f3-balance-recombined: until the first promotion, keep Output and Network in stories.
+  - Failed: stretch-1026-200334, which replaced Lay low with results actions when risk escalates (4/8, 46.7); targeted-1026-202436, which protected Skill, Network and Output in every story (2/4, 42.8); observed-growth-v6 (5/8, 47.1).

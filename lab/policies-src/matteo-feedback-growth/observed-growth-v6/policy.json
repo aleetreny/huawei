@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v6",
+  "parents": [
+    "observed-growth-v3"
+  ],
+  "idea_origin": "Promotion study (lab/reports/matteo-promotion-study.md): reviews are applied at the start of the review month, before its events and allocation; promotion needs Skill, Network and Output at the current level's ceiling at that moment (bots 55% vs 3.5%; Haiku 9/13 vs 0/11).",
+  "operator": "targeted revision of v3 from the promotion study",
+  "hypothesis": "v3 mistimes its review quarter and lets Network or Output slip one point through story outcomes just before reviews, which is what blocks the first promotion in most failed careers. Correcting the review timing, holding every input at its current ceiling through the review, guarding Network and Output in the run-up, and recovering Health at mid-range will raise the share promoted at the first review and the completion rate over v3.",
+  "change": "From v3: review-timing section; quarter-end note tracks best values at this level and whether the next review precedes the next quarter-end; allocation before a review tops up any input below its best; story guard on Network and Output before a review; explicit ban on confronting or blaming colleagues; Health recovery at or below mid-range; weak-review plan targets inputs below ceiling. Risk cleanup, stalled-Skill rule and wealth section kept.",
+  "predicted_behaviour": "Quarter-end notes say whether the next review precedes the next quarter-end and list best values at this level. At the review, Skill, Network and Output equal their best values at the level more often than in v3. More promotions at the first window and more completions than v3 (5/8, mean Q 51.04 over 8 episodes).",
+  "refutation": "Compare 8 Haiku episodes with the 8 v3 episodes under the same actor and harness. Reject if first-window promotions and completions do not rise, or if trust or Health failures increase. If notes do not show the timing flag or the ceiling check, mark the mechanism unexecuted. Eight episodes still leave wide intervals.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v6, built on main. Ceiling values are described, never stated as numbers. v1-v5 unchanged."
+}
