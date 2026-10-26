@@ -27,8 +27,8 @@ TAGS = ["OWN", "TRANSPARENT", "PROCESS", "QUALITY", "CONFIDENTIAL", "HELP", "COL
 TARGETS = ["skill", "network", "output", "health", "dignity", "wealth", "risk", "blow3"]
 
 
-def features(tags: list[str], integrity: int) -> list[float]:
-    return [1.0] + [1.0 if t in tags else 0.0 for t in TAGS] + [float(integrity)]
+def features(tags: list[str], integrity: int, delivery: int = 0) -> list[float]:
+    return [1.0] + [1.0 if t in tags else 0.0 for t in TAGS] + [float(integrity), float(delivery)]
 
 
 def ridge(X: np.ndarray, y: np.ndarray, lam: float = 1.0) -> np.ndarray:
@@ -44,6 +44,7 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--folds", type=int, default=5)
     ap.add_argument("--batches", default="b00-random-safe,b01-oracle-eps10")
+    ap.add_argument("--focus", default="", help="optional delivery-focus labels (focus.jsonl)")
     args = ap.parse_args()
     model = json.loads(Path(args.model).expanduser().read_text())
     labels = {}
@@ -54,6 +55,13 @@ def main() -> None:
                 continue
             r = json.loads(line)
             labels[(r["node"], int(r["k"]))] = (r.get("tags", []), int(r.get("integrity", 0)))
+    delivery = {}
+    if args.focus and Path(args.focus).expanduser().exists():
+        for line in open(Path(args.focus).expanduser()):
+            line = line.strip()
+            if line:
+                r = json.loads(line)
+                delivery[(r["node"], int(r["k"]))] = int(r.get("delivery", 0))
     b = Batch(*args.batches.split(","))
     rows = []
     for node, opts in model["nodes"].items():
@@ -65,7 +73,9 @@ def main() -> None:
             y = {t: e["mean"].get(t, 0.0) for t in TARGETS[:6]}
             y["risk"] = e.get("risk") if e.get("risk_n", 0) >= 3 else None
             y["blow3"] = e.get("blow3") if e.get("blow_n", 0) >= 10 else None
-            rows.append({"node": node, "k": int(k), "title": title, "x": features(*lab), "y": y, "n": e["n"], "tags": lab[0], "integrity": lab[1]})
+            dlv = delivery.get((node, int(k)), 0)
+            rows.append({"node": node, "k": int(k), "title": title, "x": features(lab[0], lab[1], dlv), "y": y, "n": e["n"],
+                         "tags": lab[0], "integrity": lab[1]})
     titles = sorted({r["title"] for r in rows})
     random.Random(7).shuffle(titles)
     fold_of = {t: i % args.folds for i, t in enumerate(titles)}
@@ -87,7 +97,7 @@ def main() -> None:
         corr = float(np.corrcoef(y, oof)[0, 1])
         beta_all = ridge(X * w[:, None], y * w)
         report[target] = {"n": len(use), "r2_heldout_titles": round(1 - ss_res / ss_tot, 3), "corr": round(corr, 3),
-                          "coef": {name: round(float(c), 3) for name, c in zip(["intercept"] + TAGS + ["integrity"], beta_all)}}
+                          "coef": {name: round(float(c), 3) for name, c in zip(["intercept"] + TAGS + ["integrity", "delivery"], beta_all)}}
         for r, p in zip(use, oof):
             pred[r["node"]][str(r["k"])] = pred[r["node"]].get(str(r["k"]), {}) | {target: round(float(p), 3)}
     # within-question decision test: does the trait model pick the same best answer as the measured effects?
@@ -104,6 +114,9 @@ def main() -> None:
             nxt = model["nodes"].get(node, {}).get(k, {}).get("next")
             if nxt:
                 e["next"] = nxt
+            lab = labels.get((node, int(k)))
+            if lab:
+                e["tags"], e["integrity"] = lab
             out_nodes[node][k] = e
     out = {"source": "out-of-fold trait predictions (titles held out)", "ceil": model.get("ceil", {}), "nodes": out_nodes,
            "report": report}

@@ -13,3 +13,8 @@
 - 23:00 Parado b01 en 2.400 partidas. Lanzado **b02-stages**: 17 brazos × 300 partidas (oráculo v2; al azar sólo los eventos o sólo el reparto trimestral de un semestre).
 - 23:05 Etiquetado de las 954 respuestas por rasgos generales (4 agentes Sonnet, en el scratchpad, sin pasar texto al repo) para probar si los rasgos predicen los efectos con títulos reservados (`semantics.py`).
 - 23:10 Hallazgos H11–H15: fórmula de la nota final exacta; efectos deterministas; eventos exclusivos de niveles altos; los eventos deciden la partida; umbrales de L4 y L5 (la Skill es el cuello de botella); la 1.ª evaluación se pierde en el último mes. Lanzado **b03-review-boost** (protección del mes previo a cada evaluación ×1, ×5, ×20).
+- 23:12 b02 parado con ~112 partidas por brazo; tabla final en H13. b03: proteger el mes previo a la evaluación sube la nota de 61,4 a 66,5 (H17).
+- 23:13 Generalización con las 954 respuestas etiquetadas (H16): el carácter de la respuesta predice riesgo, dignidad, salud, Network y Skill con títulos reservados (R² 0,40–0,58), pero no el Output. Lanzado el etiquetado extra de "entrega propia".
+- 23:14 b05: dar más peso a la Skill desde L3 no cambia la nota del oráculo (65,3–65,8). Lanzado b06 con el "bot de principios", que usa sólo las predicciones por rasgos, con y sin conocer techos y umbrales.
+- 23:15 Borrador de manual `lab/policies-src/bb-mechanics/bb-mechanics-v1` (una Skill, `career-mechanics`): lint sin avisos, sin jugar aún con IA.
+- 23:16 Historias de varios pasos: en 94 de 110 preguntas con continuación, la mejor respuesta inmediata es también la mejor contando la historia entera; en las 16 restantes se pierde poco. El Output explica la mayoría de los fallos en la 1.ª evaluación, también en el bot de principios.
