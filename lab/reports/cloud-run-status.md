@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 16:11 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 16:17 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 269, interrupted 22, leased 23, running 9.
-- Episodes finished in this container: 20. Batches completed: 0.
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.05**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.01**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.101** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: done 275, interrupted 22, leased 18, queued 4, running 8.
+- Episodes finished in this container: 26. Batches completed: 0.
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.07**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.01**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.102** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 1, leased 1, running 2; finished games: Q 24.5/T 24.
 
@@ -49,16 +49,16 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
-| f3-feedback-reactive | 16 | 5 | 4 |
+| f3-feedback-reactive | 18 | 5 | 4 |
 | p0-minimal | 8 | 3 | 1 |
 | m3-teammate | 7 | 3 | 1 |
+| f4-visible-delivery | 7 | 3 | 1 |
+| f2-invest-early | 7 | 3 | 1 |
 | f1-steady-balance | 7 | 3 | 1 |
 | f7-one-vs-many | 6 | 3 | 0 |
-| f4-visible-delivery | 6 | 3 | 1 |
-| f2-invest-early | 6 | 3 | 1 |
+| o2-run-hot | 4 | 3 | 0 |
 | o1-promotion-gap | 4 | 3 | 0 |
-| o2-run-hot | 3 | 2 | 0 |
-| f8-secure-growth | 3 | 2 | 1 |
+| f8-secure-growth | 4 | 3 | 1 |
 | f6-commitment-ledger | 3 | 2 | 0 |
 | f5-relationship-capital | 3 | 2 | 0 |
 
@@ -68,7 +68,7 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: new family seeded from the F3 core (cross-branch hypothesis under the stagnation rule); idea origin: playbook:P10 (less defensive family that keeps its response to warnings), chosen because the stall trigger fires and because of the score-gap finding in findings.md (strategy-session request, 26 Oct ~14:45 UTC).
 - Hypothesis: Completed games already survive; the score they leave on the table is mostly career level and wealth (findings.md, 48 completed games, all actors), and every family so far optimises survival. F3's Clear state spends quiet quarters lifting the weakest statistic, which keeps the agent safe but does not compete for promotion. A policy that keeps F3's risk response (Secure) and weak-review plan (Repair) with higher precedence, and otherwise plays for promotion and pay (Grow: Apply for a key project, High-intensity work plus Prepare report materials while Health is comfortable, story options that raise Output, Skill, Wealth or standing at a bounded cost), will earn more A or S reviews, hence more promotions and salary, and end with higher level and wealth dimensions than F3 and f3-lean without more eliminations.
-- Haiku runs so far: Q 55.8/T 48, Q 68.6/T 48, Q 23.5/T 24.
+- Haiku runs so far: Q 55.8/T 48, Q 68.6/T 48, Q 23.5/T 24, Q 51.9/T 48.
 
 ### f3-opus-distilled-v1 (`c03a1bf3ca04c5e7`, family f3-feedback-reactive)
 
@@ -98,7 +98,7 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: ; operator: new family (outside designer); idea origin: T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure.
 - Hypothesis: Survivors fall short on level and wealth because they hold Health and Dignity near full; treating them as fuel and switching between Full, Cruise and Cool modes on observed state and warnings converts the unused resilience margin into more Output and Skill, earlier promotions and more cash taken from events, without raising the early-elimination rate.
-- Haiku runs so far: Q 24.7/T 24, Q 38.6/T 29, Q 61.9/T 48.
+- Haiku runs so far: Q 24.7/T 24, Q 38.6/T 29, Q 61.9/T 48, Q 19.7/T 24.
 
 ## Teacher distillation
 
@@ -143,7 +143,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 72 | 0 | 0.56 | 45.5 (17.7) | 44.2 | 38.3 | 0.01 | 9.6 | 0.25 | 0.525 | 0.79 |
+| haiku | 78 | 0 | 0.54 | 44.5 (18.0) | 43.3 | 37.7 | 0.01 | 9.5 | 0.25 | 0.524 | 0.77 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 3 | 0 | 0.33 | 33.9 (19.3) | 33.8 | 32 | 0 | 7.1 | 0.22 | 0.238 | 3.01 |
 | opus@low | 5 | 0 | 0.4 | 43.2 (15.3) | 41.6 | 33.2 | 0 | 6.5 | 0.2 | 0.222 | 2.88 |
@@ -155,23 +155,23 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f1-review-risk-v1 | 3 | [51.8, 24.0, 61.0] | [48, 24, 48] | 44.8 |  |
 | haiku | f1-steady-balance-v1 | 4 | [51.0, 66.6, 27.7, 71.8] | [48, 48, 24, 48] | 52.2 |  |
 | haiku | f2-convert-on-review-v1 | 3 | [61.2, 30.0, 63.6] | [48, 24, 48] | 49.6 |  |
-| haiku | f2-invest-early-v1 | 3 | [47.1, 18.3, 18.6] | [47, 18, 24] | 27.4 | ; ;  |
+| haiku | f2-invest-early-v1 | 4 | [47.1, 18.3, 18.6, 15.0] | [47, 18, 24, 19] | 24.8 | ; ; ; Trust crisis — a second major blow-up. T |
 | haiku | f3-balance-recombined-v1 | 4 | [63.0, 59.2, 65.7, 54.6] | [48, 48, 48, 48] | 58.5 |  |
 | haiku | f3-distilled-prereview-defuse-v1 | 3 | [61.8, 32.0, 59.1] | [48, 24, 48] | 49.1 | Dismissed for capability — a second weak |
-| haiku | f3-feedback-reactive-v1 | 3 | [59.7, 66.3, 66.6] | [48, 48, 48] | 61.3 |  |
-| haiku | f3-lean-v1 | 3 | [50.1, 64.3, 46.7] | [48, 48, 48] | 53.0 |  |
+| haiku | f3-feedback-reactive-v1 | 4 | [59.7, 66.3, 66.6, 28.7] | [48, 48, 48, 24] | 53.0 | Dismissed for capability — a second weak |
+| haiku | f3-lean-v1 | 4 | [50.1, 64.3, 46.7, 59.5] | [48, 48, 48, 48] | 54.1 |  |
 | haiku | f3-opus-distilled-v1 | 3 | [27.8, 19.8, 47.4] | [24, 24, 48] | 32.0 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f4-review-first-v1 | 3 | [19.7, 60.3, 62.5] | [24, 48, 48] | 46.3 |  |
-| haiku | f4-visible-delivery-v1 | 3 | [55.9, 59.1, 17.6] | [48, 48, 24] | 43.7 |  |
+| haiku | f4-visible-delivery-v1 | 4 | [55.9, 59.1, 17.6, 18.8] | [48, 48, 24, 17] | 37.8 | ; Broke — months with an empty wallet. Som |
 | haiku | f5-relationship-capital-v1 | 3 | [21.8, 48.5, 23.1] | [24, 39, 24] | 29.9 | ; ;  |
 | haiku | f6-commitment-ledger-v1 | 3 | [30.5, 25.8, 49.7] | [30, 8, 48] | 34.9 | ;  |
 | haiku | f7-single-skill-v1 | 3 | [54.2, 63.9, 20.6] | [48, 48, 24] | 45.3 |  |
 | haiku | f7-three-skills-v1 | 3 | [50.4, 51.5, 67.1] | [48, 48, 48] | 55.1 |  |
-| haiku | f8-secure-growth-v1 | 3 | [68.6, 55.8, 23.5] | [48, 48, 24] | 47.8 | Dismissed for capability — a second weak |
+| haiku | f8-secure-growth-v1 | 4 | [68.6, 55.8, 23.5, 51.9] | [48, 48, 24, 48] | 48.7 | Dismissed for capability — a second weak |
 | haiku | m3-subtracted-v1 | 3 | [16.0, 60.6, 48.9] | [24, 48, 48] | 41.8 |  |
 | haiku | m3-sustainable-career-v0-1 | 4 | [17.2, 70.2, 27.8, 30.9] | [24, 48, 24, 26] | 35.5 | ; ;  |
 | haiku | o1-promotion-gap-v1 | 4 | [64.4, 15.7, 31.0, 64.7] | [48, 24, 20, 48] | 42.7 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
-| haiku | o2-run-hot-v1 | 3 | [24.7, 38.6, 61.9] | [24, 29, 48] | 40.1 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
+| haiku | o2-run-hot-v1 | 4 | [24.7, 38.6, 61.9, 19.7] | [24, 29, 48, 24] | 35.2 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
 | haiku@low | f1-steady-balance-v1 | 2 | [55.2, 62.1] | [48, 48] | 56.9 |  |
@@ -203,7 +203,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | opus | 3 | True | 1.0 |
 | haiku | opus@low | 3 | False | -0.5 |
 | haiku | opus~100k | 3 | True | 1.0 |
-| haiku | sonnet | 10 | False | 0.2 |
+| haiku | sonnet | 10 | False | 0.21 |
 | haiku@low | opus | 3 | True | 1.0 |
 | haiku@low | opus@low | 3 | False | -0.5 |
 | haiku@low | opus~100k | 3 | True | 1.0 |
