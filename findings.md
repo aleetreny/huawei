@@ -172,3 +172,8 @@
 - Block decision #142 (18:11 UTC): the three trace-driven F7 children (trend marking, delivery stories, promotion drive) score 42–45 after 4 Haiku games each. Family pooling pulls their parent f7-three-skills down to 51.5. New leader f1-steady-balance, 54.6 (n = 8). `careerlab digest` now skips imported games that have no local run folder.
 - Block-5 diagnosis (18:29 UTC, `lab/reports/cloud-run-diagnostics/block5-generation.md`): F1's exposure is blow-ups. It took Defuse after only 11 of 22 non-reassuring risk remarks and never after a blow-up. Across 86 Haiku games, Defuse after a risk remark cut blow-ups within three months from 10 % to 2 % (mild) and from 20 % to 8 % (strong). All 37 D grades came with a risk remark in the review month. Three nested F1 children are queued: core (P20), risk-signal, and status-line (P22, stall slot).
 - Decision #150 (19:03 UTC): the top posteriors converge around 50–52 as data accrue. Leader F1 52.2 (n = 12); none has P(best) ≥ 0.2. This is consistent with the T13 'near the ceiling' reading.
+- **Representation effect, preliminary** (decision #157, 19:31 UTC): f1-status-line (P22 stall slot) completed 4/4 (Q 57, 66, 70, 65; posterior 56.1, P(best) 0.45, PROMOTE).
+  - Its two siblings carry the same rules in prose: f1-core completed 1/4 and f1-risk-signal 1/4.
+  - Status-line format: fill `Act | Risk | Weakest` before every choice, then serve the first need, with a fixed note shape.
+  - Transfer test queued: f3-status-line-v1 (`688cc25c03bf6629`), f3-balance-recombined's exact rules in the same format.
+  - Matteo's observed-growth-v3 in the race: 61, 19, 52, 64 (his own-origin 71.4 does not replicate).
