@@ -141,7 +141,8 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
   | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
   | `leah/workspace` | T11 y trabajo propio de Leah (manual l1-review-clock v1–v3, panel de resultados) | juntada con `main` el 26 oct (16:20, 16:55 y 17:57); v1–v3 en la carrera; sus partidas de origen `leah` importadas |
   | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
-  | `matteo/observed-growth-v3` | observed-growth-v3 de Matteo | juntada con `main` el 26 oct, 18:15; en la carrera (4 partidas) |
+  | `matteo/observed-growth-v3` | observed-growth-v3 de Matteo | juntada con `main` el 26 oct, 18:15; en la carrera (4 partidas); su piloto en casa: 4 de 4 terminadas, Q media 71,4 (otra celda; se comprueba en la carrera) |
+  | `alejandro/investigacion-decisiones` | línea de investigación de decisiones (Codex), sólo analiza exports | juntada con `main` el 26 oct, 18:32 (PR #3) |
   | `matteo/observed-growth-v2` | observed-growth-v2 de Matteo | juntada con `main` el 26 oct, 17:57; en la carrera (4 partidas); sus partidas de origen `matteo` importadas |
   | `alejandro/explicacion-repo` | explicación del repositorio (Codex) | juntada con `main` el 26 oct, 16:55 |
 - Al terminar una tarea:

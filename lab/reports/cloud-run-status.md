@@ -1,12 +1,12 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 18:29 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 18:32 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 376, interrupted 28, leased 18, queued 19, running 6.
+- Jobs in the registry: done 380, interrupted 28, leased 18, queued 19, running 6.
 - Episodes finished in this container: 116. Batches completed: 3 (last at 2026-10-26 18:10:59 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.48**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.49**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.06**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.113** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
@@ -315,6 +315,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Decision #142 (18:11 UTC):** the F7 children did not help (42–45). New leader **f1-steady-balance**, 54.6. Batch 4 (38 games) is running. Block-5 generation is in progress: F1 children aimed at reliability, plus the stall slot.
 - **Block-5 generation (18:29 UTC)**, diagnosis in `lab/reports/cloud-run-diagnostics/block5-generation.md`. F1 loses to blow-ups that go unanswered, not to weak reviews: it took Defuse after only 11 of 22 non-reassuring risk remarks, and never after a blow-up. Across the 86 Haiku games, Defuse after a risk remark cut blow-ups from 10 % to 2 % (mild remark) and from 20 % to 8 % (strong remark). All 37 D grades came with a risk remark.
   - New F1 children, nested: f1-core (P20 subtraction), f1-risk-signal (core plus Defuse on any non-reassuring risk feedback), and the stall slot f1-status-line (P22: the same rules as a status line). 4 Haiku screens each.
+- **Organiser round 4 (18:32 UTC):** restored ESTADO.md, which the block-5 commit had emptied for about 5 minutes on main (an edit script opened it for writing before reading). Merged `matteo/observed-growth-v3` (his own pilot: 4/4 completed, mean Q 71.4, a different actor cell, now being checked in the race) and `alejandro/investigacion-decisiones` (decision research that only analyses exports; PR #3). Imported origin `matteo` (0 conflicts).
 
 ## Relevo (hand-off)
 
