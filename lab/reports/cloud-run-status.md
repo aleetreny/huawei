@@ -1,15 +1,15 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 15:48 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 16:11 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 249, interrupted 22, leased 42, running 10.
-- Episodes finished in this container: 0. Batches completed: 0.
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.89**, window resets 26 Oct 16:00 UTC; governor cap 0.97. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.15**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.899** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: done 269, interrupted 22, leased 23, running 9.
+- Episodes finished in this container: 20. Batches completed: 0.
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.05**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.01**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.101** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
-- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs leased 2, running 2; finished games: none yet.
+- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 1, leased 1, running 2; finished games: Q 24.5/T 24.
 
 ## Latest pre-registered block decision (Haiku actor)
 
@@ -49,13 +49,16 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
+| f3-feedback-reactive | 16 | 5 | 4 |
 | p0-minimal | 8 | 3 | 1 |
 | m3-teammate | 7 | 3 | 1 |
-| f3-feedback-reactive | 7 | 3 | 4 |
 | f1-steady-balance | 7 | 3 | 1 |
 | f7-one-vs-many | 6 | 3 | 0 |
 | f4-visible-delivery | 6 | 3 | 1 |
 | f2-invest-early | 6 | 3 | 1 |
+| o1-promotion-gap | 4 | 3 | 0 |
+| o2-run-hot | 3 | 2 | 0 |
+| f8-secure-growth | 3 | 2 | 1 |
 | f6-commitment-ledger | 3 | 2 | 0 |
 | f5-relationship-capital | 3 | 2 | 0 |
 
@@ -65,19 +68,19 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: new family seeded from the F3 core (cross-branch hypothesis under the stagnation rule); idea origin: playbook:P10 (less defensive family that keeps its response to warnings), chosen because the stall trigger fires and because of the score-gap finding in findings.md (strategy-session request, 26 Oct ~14:45 UTC).
 - Hypothesis: Completed games already survive; the score they leave on the table is mostly career level and wealth (findings.md, 48 completed games, all actors), and every family so far optimises survival. F3's Clear state spends quiet quarters lifting the weakest statistic, which keeps the agent safe but does not compete for promotion. A policy that keeps F3's risk response (Secure) and weak-review plan (Repair) with higher precedence, and otherwise plays for promotion and pay (Grow: Apply for a key project, High-intensity work plus Prepare report materials while Health is comfortable, story options that raise Output, Skill, Wealth or standing at a bounded cost), will earn more A or S reviews, hence more promotions and salary, and end with higher level and wealth dimensions than F3 and f3-lean without more eliminations.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 55.8/T 48, Q 68.6/T 48, Q 23.5/T 24.
 
 ### f3-opus-distilled-v1 (`c03a1bf3ca04c5e7`, family f3-feedback-reactive)
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: distil (teacher); idea origin: user request 26 Oct: Opus teacher distillation (lab/reports/teacher-digests/distilled-rules.md).
 - Hypothesis: Opus winners differed from Opus losers less in how they answered warnings (Defuse in the first phase after HR said risks had piled up or worse: 14 of 18 phases vs 11 of 15) than in where routine effort went: Prepare report materials in at least 3 of 4 quarters (8 of 8 winners, 2 of 6 losers); no chasing of the numerically smallest statistic (Network maintenance or Build a mentorship in two-thirds or more of quarters: 0 of 8 vs 3 of 6, exactly the three capability-dismissed games); Apply for a key project kept in both quarters after the first C (7 of 8 vs 1 of 6); Defuse in the last Energy phase before a review that follows a weak one (D 0 of 7 vs 7 of 22); and a blow-up handled as Escalating (both visible trust crises came 1 to 2 months after a blow-up followed by a formal escalation). f3-lean says the opposite on two points (lift the weakest statistic; switch the main action by factor after a C or D). Merging all five rules into f3-lean raises review grades after the opening C and so mean quantitative_score above f3-lean, F3 and f3-distilled-prereview-defuse-v1 in a 4-run Haiku screen, with completion no lower.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 27.8/T 24, Q 19.8/T 24, Q 47.4/T 48.
 
 ### f3-distilled-prereview-defuse-v1 (`f41d6382cab6ec76`, family f3-feedback-reactive)
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: distil (teacher, single-rule attribution); idea origin: user request 26 Oct: Opus teacher distillation (lab/reports/teacher-digests/distilled-rules.md).
 - Hypothesis: Every Opus game opened with a C, and the most common Opus exit (3 of 6 losses, plus the eliminated Sonnet F3 run) is C, C, D, D. The D after a weak review followed risk that rebuilt once the agent stopped defusing: of 29 reviews that followed a C or D, none of the 7 preceded by Defuse legacy risk in the last Energy phase before the review was a D, against 7 of the 22 without it. In the decisive case (a third review after C, C) the split is 4 of 4 defused and no D versus 4 of 4 not defused and D, within every seed group and within P0 and M3. Adding one line to f3-lean that sets Defuse legacy risk and Prepare report materials in the second Energy phase after any C or D, whatever the signal state, removes that route for Haiku: no D after a weak review in a 4-run screen and mean quantitative_score at least f3-lean's and F3's.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 32.0/T 24, Q 61.8/T 48, Q 59.1/T 48.
 
 ### x0-opus-ceiling-v1 (`47cbeec8b03ad2a0`, family ceiling)
 
@@ -89,13 +92,13 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: ; operator: new family (outside designer); idea origin: T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure.
 - Hypothesis: Promotion is a multi-stat gate set by the weakest of Skill, Network and Output relative to level; diagnosing that binding gap from feedback, building it in the round after a review and harvesting visible Output in the round before the next one produces more promotions, hence higher final level and wealth, than balanced allocation, while recovering only on low or falling stats keeps survival intact.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 64.4/T 48, Q 15.7/T 24, Q 31.0/T 20, Q 64.7/T 48.
 
 ### o2-run-hot-v1 (`663c8cd2a1cafe68`, family o2-run-hot)
 
 - Parents: ; operator: new family (outside designer); idea origin: T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure.
 - Hypothesis: Survivors fall short on level and wealth because they hold Health and Dignity near full; treating them as fuel and switching between Full, Cruise and Cool modes on observed state and warnings converts the unused resilience margin into more Output and Skill, earlier promotions and more cash taken from events, without raising the early-elimination rate.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 24.7/T 24, Q 38.6/T 29, Q 61.9/T 48.
 
 ## Teacher distillation
 
@@ -119,8 +122,8 @@ User request relayed by the strategy session at about 14:25 UTC: distil Opus's w
 
 | Distilled child | Haiku runs finished | Q per run | pending |
 |---|---:|---|---:|
-| f3-opus-distilled-v1 | 0 | — | 4 |
-| f3-distilled-prereview-defuse-v1 | 0 | — | 4 |
+| f3-opus-distilled-v1 | 3 | 27.8, 19.8, 47.4 | 1 |
+| f3-distilled-prereview-defuse-v1 | 3 | 32.0, 61.8, 59.1 | 1 |
 
 ## Problem A check: Haiku vs opus~100k on shared policies
 
@@ -140,7 +143,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 53 | 0 | 0.55 | 45.5 (17.8) | 44.1 | 38.5 | 0.02 | 10.1 | 0.26 | 0.52 | 0.79 |
+| haiku | 72 | 0 | 0.56 | 45.5 (17.7) | 44.2 | 38.3 | 0.01 | 9.6 | 0.25 | 0.525 | 0.79 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 3 | 0 | 0.33 | 33.9 (19.3) | 33.8 | 32 | 0 | 7.1 | 0.22 | 0.238 | 3.01 |
 | opus@low | 5 | 0 | 0.4 | 43.2 (15.3) | 41.6 | 33.2 | 0 | 6.5 | 0.2 | 0.222 | 2.88 |
@@ -153,17 +156,22 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f1-steady-balance-v1 | 4 | [51.0, 66.6, 27.7, 71.8] | [48, 48, 24, 48] | 52.2 |  |
 | haiku | f2-convert-on-review-v1 | 3 | [61.2, 30.0, 63.6] | [48, 24, 48] | 49.6 |  |
 | haiku | f2-invest-early-v1 | 3 | [47.1, 18.3, 18.6] | [47, 18, 24] | 27.4 | ; ;  |
-| haiku | f3-balance-recombined-v1 | 2 | [63.0, 59.2] | [48, 48] | 58.9 |  |
+| haiku | f3-balance-recombined-v1 | 4 | [63.0, 59.2, 65.7, 54.6] | [48, 48, 48, 48] | 58.5 |  |
+| haiku | f3-distilled-prereview-defuse-v1 | 3 | [61.8, 32.0, 59.1] | [48, 24, 48] | 49.1 | Dismissed for capability — a second weak |
 | haiku | f3-feedback-reactive-v1 | 3 | [59.7, 66.3, 66.6] | [48, 48, 48] | 61.3 |  |
-| haiku | f3-lean-v1 | 2 | [50.1, 64.3] | [48, 48] | 55.8 |  |
+| haiku | f3-lean-v1 | 3 | [50.1, 64.3, 46.7] | [48, 48, 48] | 53.0 |  |
+| haiku | f3-opus-distilled-v1 | 3 | [27.8, 19.8, 47.4] | [24, 24, 48] | 32.0 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f4-review-first-v1 | 3 | [19.7, 60.3, 62.5] | [24, 48, 48] | 46.3 |  |
 | haiku | f4-visible-delivery-v1 | 3 | [55.9, 59.1, 17.6] | [48, 48, 24] | 43.7 |  |
 | haiku | f5-relationship-capital-v1 | 3 | [21.8, 48.5, 23.1] | [24, 39, 24] | 29.9 | ; ;  |
 | haiku | f6-commitment-ledger-v1 | 3 | [30.5, 25.8, 49.7] | [30, 8, 48] | 34.9 | ;  |
 | haiku | f7-single-skill-v1 | 3 | [54.2, 63.9, 20.6] | [48, 48, 24] | 45.3 |  |
 | haiku | f7-three-skills-v1 | 3 | [50.4, 51.5, 67.1] | [48, 48, 48] | 55.1 |  |
+| haiku | f8-secure-growth-v1 | 3 | [68.6, 55.8, 23.5] | [48, 48, 24] | 47.8 | Dismissed for capability — a second weak |
 | haiku | m3-subtracted-v1 | 3 | [16.0, 60.6, 48.9] | [24, 48, 48] | 41.8 |  |
 | haiku | m3-sustainable-career-v0-1 | 4 | [17.2, 70.2, 27.8, 30.9] | [24, 48, 24, 26] | 35.5 | ; ;  |
+| haiku | o1-promotion-gap-v1 | 4 | [64.4, 15.7, 31.0, 64.7] | [48, 24, 20, 48] | 42.7 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
+| haiku | o2-run-hot-v1 | 3 | [24.7, 38.6, 61.9] | [24, 29, 48] | 40.1 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
 | haiku@low | f1-steady-balance-v1 | 2 | [55.2, 62.1] | [48, 48] | 56.9 |  |
@@ -272,6 +280,7 @@ _Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 U
 See the sections above: latest block decision, actor comparison, Problem A, T13. No cloud episode had finished at the time of this edit.
 
 ### 3. Failed or half done
+- **Authorship (user rule, 26 Oct 15:55 UTC):** every commit is made as Alejandro Treny Ortega <alejandrotreny100@gmail.com>, with no Claude co-author lines. The 14 earlier commits of this branch were rewritten to that identity and force-pushed with lease; the content is identical. `main` still holds 2 commits authored by Claude and 23 `Co-Authored-By` lines from earlier sessions. Rewriting those would need a force-push to `main`, which has not been done.
 - **0.97 pre-reset cap.** First requested by the strategy session at 15:15, and blocked by this session's permission classifier because the request came from a peer. **The user then asked for it directly at 15:45 UTC.** From 15:46 the cap was 0.97, with 10 workers: 6 main lane, 2 extra lane for the o1 and o2 screens, 2 ceiling games. A detached script restored 0.80 at 16:00:05. Recorded as a `quota_cap` decision.
 - 22 interrupted attempts from the Mac stay on record, never scored. Each slot already had a later attempt.
 
@@ -281,7 +290,7 @@ See the sections above: latest block decision, actor comparison, Problem A, T13.
 - Leased or running jobs are released by `careerlab recover`. Interrupted ones get replacement attempts from `driver.py`'s requeue rule, or by hand with `Registry.requeue_interrupted`.
 
 ```text
-Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Read lab/reports/cloud-run-status.md (section Relevo) and lab/CLOUD_RUNBOOK.md first. Setup: uv sync; uv run career-emulator-engine update --source distribution --split dev; npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303 and export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude (the actor records freeze CLI 2.1.303); uv run careerlab import; uv run careerlab recover; uv run careerlab status; write {"max_five_hour": 0.80} to ~/careerlab-data/huawei/quota_cap.json (never touch weekly_pace). Then start the loop with scripts/cloud-run/driver.py and scripts/cloud-run/ceiling.py (see scripts/cloud-run/README.md; the driver runs uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80 on non-pilot jobs, the ceiling lane runs purpose pilot with --slots 2); after each batch apply careerlab.decisions.block_decision for the Haiku actor 08e9167a965ed82c with record=True; generate children only within progressive widening and the stall rule; lint (careerlab lint), register, enqueue 4 Haiku screens; every hour careerlab export, update lab/reports/cloud-run-status.md, commit lab/registry, lab/reports, new lab/policies-src and push to cloud-lab-run. Never push to main, never submit, never use a competition key, never edit ESTADO.md or the prereg.
+Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Read lab/reports/cloud-run-status.md (section Relevo) and lab/CLOUD_RUNBOOK.md first. Setup: uv sync; uv run career-emulator-engine update --source distribution --split dev; npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303 and export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude (the actor records freeze CLI 2.1.303); uv run careerlab import; uv run careerlab recover; uv run careerlab status; write {"max_five_hour": 0.80} to ~/careerlab-data/huawei/quota_cap.json (never touch weekly_pace). Then start the loop with scripts/cloud-run/driver.py and scripts/cloud-run/ceiling.py (see scripts/cloud-run/README.md; the driver runs uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80 on non-pilot jobs, the ceiling lane runs purpose pilot with --slots 2); after each batch apply careerlab.decisions.block_decision for the Haiku actor 08e9167a965ed82c with record=True; generate children only within progressive widening and the stall rule; lint (careerlab lint), register, enqueue 4 Haiku screens; every hour careerlab export, update lab/reports/cloud-run-status.md, commit lab/registry, lab/reports, new lab/policies-src and push to cloud-lab-run. Never push to main without the user's explicit yes, never submit, never use a competition key, never edit the prereg. Commit as the user: git config user.name "Alejandro Treny Ortega" and user.email alejandrotreny100@gmail.com, with no Co-Authored-By or Claude-Session lines (user rule, 26 Oct).
 ```
 
 ### 5. Suggested ESTADO.md updates (for the organiser)
