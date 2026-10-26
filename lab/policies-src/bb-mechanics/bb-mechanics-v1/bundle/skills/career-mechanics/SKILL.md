@@ -27,7 +27,7 @@ description: How promotion, reviews, hidden risk and story answers work in this 
    - Health: rest. Overwork drains it.
 3. Pick the safe answer that builds the input furthest below where your level needs it, without costing Health or Dignity when either is low. Passive or people-pleasing answers cost Dignity and Network: avoid them.
 4. Between honest answers, prefer the tactful one: correct things in writing or after the meeting, steer back without a scene, share your reasoning with the team. A public stand or confrontation costs Network even when you are right.
-5. **In the month before a review month, keeping Skill, Network and Output intact comes first.** Accept a cost in Health, Dignity or comfort to avoid losing a point of any of them: those recover with the next quarterly actions, a lost point costs the promotion. Still never pick an answer that hides, deceives or blames, and do not let Health fall near zero.
+5. **In the month before a review month**, protect Skill, Network and Output: avoid an answer that costs a point of any of them when another honest answer keeps it.
 
 ## Climbing
 - Bring Skill, Network and Output to their ceilings and hold them there into each review.

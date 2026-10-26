@@ -359,17 +359,18 @@ El "bot de principios" decide las respuestas con lo que predicen los rasgos de c
   3. Además, con el comentario "enfadado", estalla al empezar el mes en una de cada cuatro ocasiones.
 - **Consecuencia práctica.** Con el riesgo bajo, defender los principios es seguro (incluso pedir una investigación). Con riesgo acumulado, primero hay que desactivarlo (Defuse, pasar desapercibido) y evitar tanto las mentiras como exponerse a una revisión formal.
 
-## H21. Evitar los detonantes reduce las crisis de confianza (b07, unas 270 partidas por brazo)
+## H21. Evitar los detonantes reduce las crisis de confianza (b07, 400 partidas por brazo)
 
 El oráculo v2 tiene protección del mes previo a la evaluación, Skill priorizada desde L3 y modelo m06. Se compara con y sin penalizar los detonantes según el riesgo del momento (H20):
 
 | Oráculo | Nota | Termina | Asciende en la 1.ª evaluación | Crisis de confianza | Despido | Nivel final |
 |---|---:|---:|---:|---:|---:|---:|
-| Sin detonantes | 66,1 ± 1,6 | 89 % | 80 % | 6 % | 3 % | 5,39 |
-| **Con detonantes** | **68,3 ± 1,4** | **93 %** | 87 % | **2 %** | 1 % | 5,51 |
+| Sin detonantes | 66,6 ± 1,2 | 90 % | 83 % | 5 % | 2 % | 5,45 |
+| **Con detonantes** | **68,6 ± 1,1** | **93 %** | 86 % | **2 %** | 1 % | 5,53 |
 
-- La diferencia es de +2,2 puntos (p ≈ 0,04). Con 130 partidas por brazo parecía +4,6; con más partidas se ha moderado, pero sigue siendo real.
-- Lo más claro es que **las crisis de confianza bajan a un tercio**. La regla "con riesgo acumulado, ni excusas ni exponerse a una revisión formal" se confirma en partidas completas.
+- **+2,0 puntos** (p ≈ 0,02). Con 130 partidas por brazo parecía +4,6; con más partidas se ha moderado.
+- Lo más claro es que **las crisis de confianza bajan a menos de la mitad**. La regla "con riesgo acumulado, ni excusas ni exponerse a una revisión formal" se confirma en partidas completas.
+- **El bot que aplica literalmente el procedimiento del borrador**, con las etiquetas de rasgos como percepción (b08, 200 partidas por brazo), saca 45–46. Falla en la primera evaluación (37–43 %) y en el riesgo (21–22 % de crisis), igual que el bot de principios (H19). Con una percepción de rasgos tan simple, las reglas no bastan: hace falta el juicio de un modelo de lenguaje sobre cada respuesta (H22).
 
 ## H22. En un contexto neutro, Haiku elige bien con o sin manual (banco de decisiones, 150 preguntas)
 
@@ -411,6 +412,18 @@ Se compara Haiku con el manual campeón (B) y con el borrador `bb-mechanics-v1` 
 - **La regla de los detonantes funciona en Haiku:** con riesgo acumulado elige la mitad de detonantes y acierta más.
 - **La regla del mes previo no cambió nada frente al campeón.** En los casos en que se pierde un punto, la alternativa que lo conservaba costaba Salud o Dignidad, y Haiku protege la salud. La regla se ha reescrito para que el orden quede claro: conservar Skill, Network y Output va antes que la Salud o la comodidad, porque estas se recuperan y el punto perdido cuesta el ascenso. Se vuelve a medir (banco 3).
 - Las muestras son pequeñas (40–60 preguntas por contexto): son indicios, no pruebas.
+
+## H24. Reescribir la regla del mes previo no cambia lo que elige Haiku (banco 3, las 50 preguntas de ese contexto)
+
+| Variante | Elige la mejor | Pierde un punto de S/N/O | Elige una arriesgada |
+|---|---:|---:|---:|
+| Manual campeón | 84 % | 18 % | 2 % |
+| Borrador, regla breve | 84 % | 18 % | 2 % |
+| Borrador, regla explícita ("conservar S/N/O antes que la salud") | 78 % | 20 % | 4 % |
+
+- La versión explícita no mejora: 3 preguntas de 50, dentro del ruido. El contexto ya decía que perder un punto costaba el ascenso, y Haiku sigue sin aceptar costes de salud.
+- **Se vuelve a la redacción breve.** Lo que el manual sí cambia es el comportamiento ante el riesgo (H23).
+- **Para la Skill:** el margen está en lo que el modelo no puede adivinar (calendario de la evaluación, techos, dignidad, señales de riesgo y detonantes) más que en insistir en dilemas que ya entiende.
 
 ## Traducción permitida a principios de Skill (borrador)
 
