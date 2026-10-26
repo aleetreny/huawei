@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 14:48 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 15:03 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 249, interrupted 22, leased 28.
+- Jobs in the registry: done 249, interrupted 22, leased 28, queued 4.
 - Episodes finished in this container: 0. Batches completed: 0.
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.84**, window resets 26 Oct 16:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.894** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.896** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 
 ## Latest pre-registered block decision (Haiku actor)
@@ -60,16 +60,31 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 ## Children created in this cloud run
 
-None yet.
+### f8-secure-growth-v1 (`5f8c9648b6abd9b0`, family f8-secure-growth)
+
+- Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: new family seeded from the F3 core (cross-branch hypothesis under the stagnation rule); idea origin: playbook:P10 (less defensive family that keeps its response to warnings), chosen because the stall trigger fires and because of the score-gap finding in findings.md (strategy-session request, 26 Oct ~14:45 UTC).
+- Hypothesis: Completed games already survive; the score they leave on the table is mostly career level and wealth (findings.md, 48 completed games, all actors), and every family so far optimises survival. F3's Clear state spends quiet quarters lifting the weakest statistic, which keeps the agent safe but does not compete for promotion. A policy that keeps F3's risk response (Secure) and weak-review plan (Repair) with higher precedence, and otherwise plays for promotion and pay (Grow: Apply for a key project, High-intensity work plus Prepare report materials while Health is comfortable, story options that raise Output, Skill, Wealth or standing at a bounded cost), will earn more A or S reviews, hence more promotions and salary, and end with higher level and wealth dimensions than F3 and f3-lean without more eliminations.
+- Haiku runs so far: no finished runs yet.
 
 ## Teacher distillation
 
 User request relayed by the strategy session at about 14:25 UTC: distil Opus's winning games into new F3 children, with general rules only.
 
-- Input: the 14 Opus game digests made on the Mac (`lab/reports/teacher-digests/opus/`, merged from `main` 7945fe4): 8 completed, 6 eliminated, under F1, P0 and M3. Opus never played F3.
-- Design: both children are built on f3-lean's 250-word F3 core, so they stay under the 400-word limit and are nested. f3-lean ⊂ attribution child (adds only the strongest rule) ⊂ full distilled child (adds all rules). F3 itself is 483 words, so "F3 + one rule" would break the limit. Parents are recorded as F3, with f3-lean as the text base.
-- Status: analysis and draft bundles in progress (one subagent). Registration waits until the F3 family's Haiku N_f reaches 9, so the cap ⌈(1+N_f)^0.5⌉ allows 2 more children beside f3-lean and f3-balance-recombined. Children enqueued now could not run before batch 2 anyway.
-- Digests of new Opus games played here will go to `lab/reports/teacher-digests/opus-cloud/`. `careerlab digest` skips games without a local run folder and rewrites `index.md`, so writing into `opus/` would drop the 14 Mac games from that index.
+- **Analysis:** [`teacher-digests/distilled-rules.md`](teacher-digests/distilled-rules.md), written by one subagent from the 14 Opus digests (8 completed, 6 eliminated, under F1, P0 and M3; Opus never played F3). W = winners (completed), L = losers (eliminated).
+  - **R1 (strongest):** after a C or D, take Defuse legacy risk + Prepare report materials in the last Energy phase before the next review. The next review was D in 0 of 7 such cases against 7 of 22 without it. At the third review after C C, all 4 games that defused avoided D, and all 4 that did not got D.
+  - **R2:** Prepare report materials every quarter (8/8 W vs 2/6 L).
+  - **R3:** lift a falling statistic or one named in feedback, not the smallest. Heavy Network maintenance or mentorship: 0/8 W vs 3/6 L, exactly the C C D D games.
+  - **R4:** keep Apply for a key project after a weak review (7/8 W vs 1/6 L, weak link to later grades).
+  - **R5:** a blow-up means Escalating at once (thin evidence).
+  - Story style did not separate winners from losers (option 1 in 81 % vs 82 % of story decisions), so it is not a rule.
+  - Main confound: actor and game overlap. opus~100k won 5 of 6, default opus and opus@low 3 of 8. All samples are small.
+- **Children:** both are built on f3-lean's 250-word F3 core, so they stay under 400 words and are nested (f3-lean ⊂ attribution ⊂ full). F3 itself is 483 words, so "F3 + one rule" would break the limit.
+  - `f3-distilled-prereview-defuse-v1`: f3-lean + R1 only, 278 words.
+  - `f3-opus-distilled-v1`: f3-lean + R1–R5, 340 words.
+  - Both are linted clean (0 findings) against 169 story-event titles from the digests. This container has no scripted trajectories, so `collect_titles` returns none here.
+- **Registration** waits until the F3 family's Haiku N_f reaches 9, after round 1 of batch 1. Then the cap ⌈(1+N_f)^0.5⌉ = 4 allows both beside f3-lean and f3-balance-recombined. Children enqueued now could not run before batch 2 anyway.
+- **Flag for the team:** R1's timing is anchored to the published review cadence. See the compliance note at the end of distilled-rules.md: under prereg §10 it may count as diagnostic-only.
+- **Cloud digests:** new Opus games played here go to `lab/reports/teacher-digests/opus-cloud/`. `careerlab digest` skips games without a local run folder and rewrites `index.md`, so writing them into `opus/` would drop the 14 Mac games from that index.
 
 ## Problem A check: Haiku vs opus~100k on shared policies
 
