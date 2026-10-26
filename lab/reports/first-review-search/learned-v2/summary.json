@@ -1,0 +1,234 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-first-review/learned-v2",
+  "runs": 512,
+  "groups": {
+    "all": {
+      "six_month_window": 468,
+      "promotion": 336,
+      "review": 496,
+      "alive_promoted": 328,
+      "eliminated": 44
+    },
+    "arm:learned/adaptive/adaptive": {
+      "six_month_window": 29,
+      "promotion": 23,
+      "review": 31,
+      "alive_promoted": 23,
+      "eliminated": 3
+    },
+    "arm:learned/adaptive/mentor": {
+      "six_month_window": 31,
+      "promotion": 26,
+      "review": 32,
+      "alive_promoted": 26,
+      "eliminated": 1
+    },
+    "arm:learned/adaptive/none": {
+      "six_month_window": 29,
+      "promotion": 18,
+      "review": 31,
+      "alive_promoted": 18,
+      "eliminated": 3
+    },
+    "arm:learned/adaptive/project": {
+      "six_month_window": 31,
+      "promotion": 23,
+      "review": 32,
+      "alive_promoted": 23,
+      "eliminated": 1
+    },
+    "arm:learned/recovery/adaptive": {
+      "six_month_window": 29,
+      "promotion": 25,
+      "review": 31,
+      "alive_promoted": 24,
+      "eliminated": 3
+    },
+    "arm:learned/recovery/mentor": {
+      "six_month_window": 29,
+      "promotion": 24,
+      "review": 31,
+      "alive_promoted": 24,
+      "eliminated": 3
+    },
+    "arm:learned/recovery/none": {
+      "six_month_window": 29,
+      "promotion": 20,
+      "review": 29,
+      "alive_promoted": 20,
+      "eliminated": 3
+    },
+    "arm:learned/recovery/project": {
+      "six_month_window": 29,
+      "promotion": 23,
+      "review": 31,
+      "alive_promoted": 22,
+      "eliminated": 3
+    },
+    "arm:learned/reports/adaptive": {
+      "six_month_window": 27,
+      "promotion": 17,
+      "review": 30,
+      "alive_promoted": 15,
+      "eliminated": 5
+    },
+    "arm:learned/reports/mentor": {
+      "six_month_window": 27,
+      "promotion": 20,
+      "review": 30,
+      "alive_promoted": 18,
+      "eliminated": 5
+    },
+    "arm:learned/reports/none": {
+      "eliminated": 5,
+      "promotion": 19,
+      "review": 31,
+      "alive_promoted": 18,
+      "six_month_window": 27
+    },
+    "arm:learned/reports/project": {
+      "six_month_window": 29,
+      "promotion": 22,
+      "review": 30,
+      "alive_promoted": 22,
+      "eliminated": 3
+    },
+    "arm:learned/risk/adaptive": {
+      "eliminated": 3,
+      "promotion": 16,
+      "review": 32,
+      "alive_promoted": 16,
+      "six_month_window": 29
+    },
+    "arm:learned/risk/mentor": {
+      "six_month_window": 31,
+      "promotion": 19,
+      "review": 32,
+      "alive_promoted": 19,
+      "eliminated": 1
+    },
+    "arm:learned/risk/none": {
+      "six_month_window": 31,
+      "promotion": 21,
+      "review": 31,
+      "alive_promoted": 21,
+      "eliminated": 1
+    },
+    "arm:learned/risk/project": {
+      "six_month_window": 31,
+      "promotion": 20,
+      "review": 32,
+      "alive_promoted": 19,
+      "eliminated": 1
+    },
+    "energy:adaptive": {
+      "six_month_window": 120,
+      "promotion": 90,
+      "review": 126,
+      "alive_promoted": 90,
+      "eliminated": 8
+    },
+    "energy:recovery": {
+      "six_month_window": 116,
+      "promotion": 92,
+      "review": 122,
+      "alive_promoted": 90,
+      "eliminated": 12
+    },
+    "energy:reports": {
+      "six_month_window": 110,
+      "promotion": 78,
+      "review": 121,
+      "alive_promoted": 73,
+      "eliminated": 18
+    },
+    "energy:risk": {
+      "eliminated": 6,
+      "promotion": 76,
+      "review": 127,
+      "alive_promoted": 75,
+      "six_month_window": 122
+    },
+    "main:adaptive": {
+      "six_month_window": 114,
+      "promotion": 81,
+      "review": 124,
+      "alive_promoted": 78,
+      "eliminated": 14
+    },
+    "main:mentor": {
+      "six_month_window": 118,
+      "promotion": 89,
+      "review": 125,
+      "alive_promoted": 87,
+      "eliminated": 10
+    },
+    "main:none": {
+      "six_month_window": 116,
+      "promotion": 78,
+      "review": 122,
+      "alive_promoted": 77,
+      "eliminated": 12
+    },
+    "main:project": {
+      "six_month_window": 120,
+      "promotion": 88,
+      "review": 125,
+      "alive_promoted": 86,
+      "eliminated": 8
+    },
+    "story:learned": {
+      "six_month_window": 468,
+      "promotion": 336,
+      "review": 496,
+      "alive_promoted": 328,
+      "eliminated": 44
+    }
+  },
+  "failures": {
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 38,
+    "Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 4,
+    "Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 2
+  },
+  "question_nodes": 169,
+  "story_nodes": 166,
+  "available_question_answers": 434,
+  "tried_question_answers": 282,
+  "story_available_answers": 416,
+  "story_tried_answers": 269,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 35
+    },
+    {
+      "support_text": false,
+      "promotion": true,
+      "count": 81
+    },
+    {
+      "support_text": true,
+      "promotion": false,
+      "count": 125
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 255
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 7,
+    "output": 5
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}
