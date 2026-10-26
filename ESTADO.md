@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:15 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 15:20 UTC**, chat organizador (rama `main`).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -61,8 +61,8 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha | rama `cloud-lab-run`: `lab/reports/cloud-run-status.md`, cada hora |
-| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | en marcha | `cloud-lab-run`: `lab/reports/teacher-digests/distilled-rules.md` |
-| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | pedida | `cloud-lab-run`: `lab/policies-src/` |
+| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | escrita a las 15:03 (reglas y 2 hijas de F3); se juegan tras la tanda 1 | `cloud-lab-run`: `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
+| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | manual F8 escrito a las 15:03; se juega tras la tanda 1 | `cloud-lab-run`: `lab/policies-src/` (f8-secure-growth-v1) |
 | T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | libre (¿Matteo?) | libre | rama `<persona>/ideas-fuera`: `lab/policies-src/<familia>/<nombre>-v1/` |
 | T5 | Envío preliminar y clave de la API | Alejandro | pendiente | apuntar aquí la fecha en que llegue la clave |
 | T6 | Piloto con DeepSeek: 2 partidas para medir coste y tokens ([target-budget.md](research/careerlab/target-budget.md)) | organizador | espera a T5 | `lab/reports/target-pilot/` |
@@ -73,6 +73,35 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | organizador | sólo si alguien más va a jugar | código en `careerlab/` |
 | T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | organizador | cada día | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | pedida | `cloud-lab-run`: `lab/reports/opus-ceiling/` |
+
+## Relevo del organizador (26 oct, 15:20 UTC)
+
+El primer chat organizador se cierra a las 16:00 UTC, cuando se renueva la cuota. Lo siguiente es lo que necesita saber quien lo sustituya.
+
+**Hecho hoy**
+- El laboratorio funciona.
+- 99 partidas con IA y 150 con bots. El método se ha comprobado en el juego de juguete.
+- La carrera en la nube (sesión "CareerLab continuous race in the cloud", rama `cloud-lab-run`) hizo T2 y T3 a las 15:03 y tiene encargada T13.
+- El freno semanal de cuota está en marcha, y este archivo ya existe.
+
+**Mensajes enviados a la nube** (no contesta; su respuesta se ve en su rama):
+- 14:38: destilar las partidas de Opus (T2).
+- 14:45: freno semanal y familia "sobrevivir y crecer" (T3).
+- 15:06: no editar ESTADO.md.
+- 15:11: techo de Opus (T13).
+- 15:15: tope al 0,97 hasta las 16:00 y después volver al 0,80.
+- 15:20: escribir el relevo completo antes de terminar.
+
+**Lo primero que debe hacer el nuevo organizador**
+1. Leer `lab/reports/cloud-run-status.md` en `cloud-lab-run`. Comprobar que la nube volvió al 0,80 después de las 16:00 y que sigue jugando. Si se ha parado, mirar su relevo y decidir si hace falta una sesión nueva en la nube; nunca dos a la vez.
+2. Juntar `cloud-lab-run` con `main` (T12) y actualizar la sección 2 y la tabla de tareas.
+3. T13: comprobar que el README con los umbrales se escribió antes de las partidas.
+4. Corte 1, mañana 27 oct a las 24:00 UK:
+   - revisar los borradores de T8;
+   - preguntar al equipo por T5 (clave) y T7 (vídeo);
+   - preparar T9 (elegir el manual, empaquetar y validar).
+
+**Hablar con la nube.** Desde la app de escritorio, el organizador puede enviarle mensajes a la sesión "CareerLab continuous race in the cloud". Si se cerrara esa sesión, se abre otra con el prompt de carrera que guarda el relevo de la nube.
 
 ## 5. Decisiones ya tomadas (no hace falta volver a discutirlas)
 
@@ -94,6 +123,21 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
   2. El resultado queda donde dice la tabla.
   3. Actualiza tu línea en la tabla.
   4. Pide en GitHub que se junte con `main` (*Pull Request*).
+
+**Documentar siempre (obligatorio)**
+
+Lo que sólo está en un chat se pierde cuando el chat termina, se queda sin cuota o se resume. Por eso cualquier chat o sesión, incluida la nube, documenta en el repo:
+- **Antes de terminar.** También si se va a quedar sin cuota o sin contexto: en cuanto lo veas venir, documenta primero y sigue después.
+- **Cada hora** si es un trabajo largo, con commit y push.
+
+Qué hay que dejar escrito, en una sección **Relevo** al final del informe de tu tarea (o de `lab/reports/cloud-run-status.md` en la nube):
+1. Qué has hecho y por qué: las decisiones, con su motivo.
+2. Los resultados con números, y dónde están los datos.
+3. Lo que falló o quedó a medias, y cómo lo dejaste.
+4. Qué queda pendiente y cuál es el siguiente paso concreto, con los comandos para retomarlo.
+5. Tu línea de la tabla de tareas actualizada. La nube no edita este archivo: lo hace el organizador a partir de su informe.
+
+Después, commit y push a tu rama. Una tarea no está terminada hasta que su relevo está en GitHub.
 
 **Partidas**
 - **Sólo la nube lanza partidas** (`careerlab run`). Si dos ordenadores juegan a la vez, sus resultados se numeran igual y se pisan al juntarlos. Para jugar desde otro sitio, primero hay que hacer T11.
