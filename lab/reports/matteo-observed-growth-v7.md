@@ -42,3 +42,19 @@ Same actor as v1–v6 (`017798b931bc18f8`, `claude-cli:haiku`, CLI 2.1.310), ori
 3. **Unfinished:** nothing interrupted. The 8 cancelled 2.1.311 jobs remain in the registry as cancelled, never played.
 4. **Next:** organiser to `ladder add` `lab/policies-src/matteo-feedback-growth/observed-growth-v7` in the fast race (T14) with the race actor; if it holds up, it is a candidate for the cut-1 submission. To reproduce the pilot actor: `npm install @anthropic-ai/claude-code@2.1.310` and `CAREERLAB_CLAUDE_EXE=<that>/node_modules/.bin/claude`.
 5. **ESTADO.md:** T4 line updated.
+
+## Ninth episode and what still fails (26 Oct, 22:28–22:36 UTC)
+
+Matteo asked for one more v7 episode (job 00008, same actor). It was **dismissed at month 24 at L1 (Q 27.84)**, grades C, C, D, D. Over 9 episodes v7 stands at **7 completed, mean Q 57.56**.
+
+State just before each review: month 6 at the full L1 ceiling (Skill 9, Network 3, Output 3) but not promoted (the chance part); month 12 Network 2, Output 2; month 18 Network 2, Output 2; month 24 Network 1, Output 2. At months 9, 15 and 21, right after each quarter-end, it was back at 9/3/3: it reaches the ceiling, then loses a point in the story events of the two months before the review. There is no allocation between those events and the review, and the ceiling stops any buffer, so only story choices can hold it.
+
+Across all 9 v7 episodes, of the 377 story choices made in the two months before a review, **98 cost a point of Network or Output**. Grouping the chosen option's wording (coarse keyword classes, analysis only):
+
+| Chosen option type | Lost a point | Gained a point |
+|---|---:|---:|
+| refuse, decline, block, say no | 17 | 1 |
+| follow a process, document, retest | 17 | 10 |
+| collaborate, help, pair, talk privately | 7 | 23 |
+
+The status line was filled correctly ("Review near"), yet the actor kept choosing the rigid principled option, citing integrity: refusing a request outright, blocking a colleague's merge, naming a problem bluntly, declining a swap. The manual asks to guard Network and Output and also never to cut corners or hide defects; Haiku resolves that tension towards rigidity. An honest option that keeps the colleague on side (offer help to fix, raise it privately, refuse the confidential part while offering what is public) usually existed. This motivates `observed-growth-v8`.
