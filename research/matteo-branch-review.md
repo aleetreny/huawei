@@ -1,6 +1,6 @@
 # Revisión de la rama Matteo
 
-Fecha: 26 de octubre de 2026. Rama revisada: `origin/Matteo`, commit `0eb09244468c24373b136face6160ccacc3c0ffb`.
+Fecha: 26 de octubre de 2026. Revisión inicial de `origin/Matteo` en `0eb09244468c24373b136face6160ccacc3c0ffb`; revisión adicional del cambio a `27cd3c1d0cb01f549ef840da1c2f15fde2ff7006`, al final de este documento.
 
 ## Qué contiene
 
@@ -60,3 +60,13 @@ La interfaz ha creado una sesión y he jugado en pantalla hasta el inicio del me
 Estado al dejar la sesión: inicio del mes 7, L1, Health 7, Dignity 10, Skill 9, Network 3, Output 3, Wealth 2, Energy 0. Sesión incompleta y sin puntuación terminal. No se debe mezclar como un resultado terminado en las estadísticas.
 
 La pestaña queda abierta para continuar y los detalles locales de la observación están en `local-runs/matteo-preview/manual-ui-observations.json`. Los ejemplos narrativos no se han convertido en un catálogo de respuestas para una entrega.
+
+## Actualización posterior: candidato de tres Skills, aún sin benchmark
+
+Antes de cerrar la investigación jerárquica, la rama avanzó a `27cd3c1d0cb01f549ef840da1c2f15fde2ff7006`. Revisé su diff de ocho archivos en sólo lectura. No modifica el adaptador ni añade otro lote de resultados.
+
+Añade **Sustainable Career v0.1**, con tres responsabilidades para un mismo agente: revisión de riesgos, decisiones narrativas y planificación trimestral. Incluye documentos de diseño y [plan de evaluación](https://github.com/aleetreny/huawei/blob/27cd3c1d0cb01f549ef840da1c2f15fde2ff7006/docs/skill-evaluation-plan.md). Son candidatos de la rama del compañero; no sustituyen el reinicio de nuestra arquitectura ni constituyen evidencia de superioridad.
+
+El plan declara que las 100 partidas propuestas **no han empezado** y que faltan la clave y la identidad confirmada para el manifest. Los validadores de front-matter sólo comprueban empaquetado; la validación del runner no terminó en su entorno manual por una dependencia ausente. También declara otro ejercicio manual hasta el mes 2, separado de mi sesión hasta el inicio del mes 7. No he reproducido ese ejercicio ni lo he sumado a resultados de políticas.
+
+La propuesta puede servir como una candidata razonada en una comparación futura, con versión congelada y el mismo actor que sus comparadores. Sus propios documentos reconocen que 100 episodios dependen del coste medido en un piloto y del presupuesto restante. No hay todavía una mejora de puntuación demostrada sobre el lote aleatorio.

@@ -6,6 +6,8 @@ Research checked on **26 October 2026**. The user has withdrawn and deleted the 
 
 ## Start here
 
+- [Current deep research: hierarchical policy search, archives and model fidelity](research/hierarchical-lab/README.md)
+- [Annotated bibliography: 55 selected primary sources](research/hierarchical-lab/bibliography.md)
 - [Current exploration from scratch](research/from-zero-lab.md)
 - [Review of Matteo’s simulation branch](research/matteo-branch-review.md)
 - [Experiment registry: actual observations and unrun hypotheses](research/experiment-registry.json)
@@ -19,6 +21,8 @@ Research checked on **26 October 2026**. The user has withdrawn and deleted the 
 - [Search audit](research/search-audit.md)
 
 The research directory is development material, **not a competition submission**. Do not include it wholesale in a final ZIP. The Spanish research summary is for the team; all actual preliminary and final deliverables must be English.
+
+The hierarchical-laboratory package specifies the proposed Opus/Haiku/Sonnet development workflow. It has not launched a model fleet or validated a winning policy. It distinguishes search over policy variants from search over cloned game states, and keeps external development orchestration separate from the required single-agent evaluated runtime.
 
 The official development runner is a separate public repository: [RAI-Internal/techarena-career-sim](https://github.com/RAI-Internal/techarena-career-sim). This workspace has not yet installed that runner or configured a model key. Follow its pinned setup and [the official quickstart](https://techarena-career-sim.readthedocs.io/en/latest/quickstart.html). The current manual preview of Matteo’s interface is separate and runs at [Career Lab](http://127.0.0.1:8765); it is not a JiuwenSwarm benchmark.
 

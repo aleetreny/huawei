@@ -78,6 +78,8 @@ Calling `observe` repeatedly on an unchanged session usually obtains no new tran
 
 POMCP and MCTS are attractive in partially observable games, but require a generative mechanism to sample hypothetical continuations from a belief state. A live irreversible session does not provide that capability. A surrogate model would add prediction error and permission questions. Full online MCTS is consequently a low-priority choice this week. Receding-horizon qualitative planning—plan, take one allowed action, observe and replan—is feasible without claiming numerical simulation accuracy. [POMCP original paper](https://proceedings.neurips.cc/paper/2010/hash/edfbe1afcf9246bb0d40eb4d8027d90f-Abstract.html).
 
+This limitation concerns in-game state branching. It does not prevent an outer MCTS-inspired search over complete policy variants, each evaluated from a fresh episode. The subsequent [hierarchical laboratory research](hierarchical-lab/README.md) develops that distinct approach using MCTS-AHD, AB-MCTS and evolutionary archives.
+
 The [search arithmetic document](budget-and-search.md) quantifies the trajectory explosion and the much smaller quarterly space. More compute helps only if its evaluator is informative and its result can be used under the rules.
 
 ## 6. Why recovering an equation is not the same as winning

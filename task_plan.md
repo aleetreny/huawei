@@ -1,7 +1,20 @@
 # TechArena research plan — 26 October 2026
 
-## Current objective — user reset
-Remove the old two-Skill proposal, review the teammate's simulation branch, attempt ordinary gameplay through official MCP/visible UI, and design an adaptive experimental programme from scratch. Research modern methods and distinguish hypothetical unlimited simulation from the available interface and budget.
+## Active goal — hierarchical orchestrator research
+Deeply research and specify the user's proposed development laboratory: a strong Claude orchestrator generates broad-to-specific policy branches, many cheaper workers play varied policies, evidence determines expansion and dormancy, discarded branches can be revisited, policies may adapt to career context, and all provenance is retained for continuation and expert presentation. Compare authoritative and state-of-the-art methods, study strong practitioners and collect a substantial verified bibliography. Do not select or recreate the withdrawn two-Skill proposal.
+
+## Goal requirements and completion evidence
+1. [complete] Match the proposed policy-tree workflow to mathematical methods and explain assumptions/limitations with primary sources.
+2. [complete] Define branching, progressive specificity, budget allocation, delayed benefits, resurrection and context-dependent policies.
+3. [complete] Analyse strong-orchestrator/cheap-worker model bias, escalation and validation under the designated competition model.
+4. [complete] Verify actual current official constraints and model naming/availability; distinguish permitted deployment from conditional development research.
+5. [complete] Study best practitioners and modern systems; produce an annotated, deduplicated reference catalogue with retrieval provenance.
+6. [complete] Specify durable repository records and an auditable experimental protocol, without launching unapproved mass experiments or spending external credits.
+7. [complete] Define honest novelty, baselines, ablations and evidence for the expert presentation.
+8. [complete] Verify complete coverage and sources, commit/push research, and report the recommended architecture and unresolved limits. Coverage and verification are recorded in research/hierarchical-lab/completion-audit.md; publication is checked against the remote before the final response.
+
+## Previous completed objective — user reset
+Removed the old two-Skill proposal, reviewed Matteo, played the manual MCP interface to the start of month 7, and wrote the initial adaptive laboratory plan. The previous turn made verified progress; it was not a wait or no-progress turn.
 
 ## Current phases
 1. [complete] Remove prior proposal and inspect teammate branch without altering it.
