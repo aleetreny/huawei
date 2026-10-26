@@ -6,7 +6,7 @@ Three candidate Skills are in `solution/skills/`. There is no published maximum 
 
 The proposed 100-run evaluation has not started. The competition key is not yet available, and the manifest needs the team's confirmed registered identity. Do not describe random runs or manual Codex-assisted tests as completed runs of the designated competition agent.
 
-Initial checks: all three Skills passed the Skill Creator front-matter validator. A separate manual Codex-assisted exercise reached month 2 after acknowledging the handbook and making three story decisions. This is a partial exercise, not a completed career or evidence of score improvement. The official runner's validation was not executed successfully in the standalone browser environment because that environment lacks a runner dependency (`ruamel.yaml`); use the official checkout's `make sync` rather than treating the browser environment as equivalent.
+Initial checks: all three Skills passed the Skill Creator front-matter validator. The separate manual Codex-assisted exercise has now completed 48 months and 200 actions, scoring 69.4/100 at L5. Read the [pilot report and limitations](manual-skill-pilot-v01.md). This is one completed manual exercise, not a designated-model benchmark or a causal measurement of Skill improvement. The official runner's validation was not executed successfully in the standalone browser environment because that environment lacks a runner dependency (`ruamel.yaml`); use the official checkout's `make sync` rather than treating the browser environment as equivalent.
 
 ## Two different test modes
 

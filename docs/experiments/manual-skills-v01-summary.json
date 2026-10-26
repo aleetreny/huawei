@@ -1,0 +1,62 @@
+{
+  "mode": "manual Codex-assisted Skill exercise; not official-model or JiuwenSwarm evaluation",
+  "candidate_commit": "27cd3c1",
+  "skill_version": "Sustainable Career v0.1",
+  "completed": true,
+  "survival_months": 48,
+  "actions": 200,
+  "quantitative_score": 69.4,
+  "final_visible_status": {
+    "health": 10,
+    "dignity": 10,
+    "skill": 119,
+    "network": 43,
+    "level": "L5",
+    "duration_in_level": 8,
+    "output": 31,
+    "wealth": 29,
+    "energy": 0
+  },
+  "ending_score_report": "Ending score (48-month completion, survived 48 months)\nQuantitative score: 69.4/100\n- Career level: 5 \u2192 50.0 (weight 30%, contribution 15.0)\n- Total wealth: 29.5 \u2192 36.9 (weight 20%, contribution 7.4)\n- Health & dignity: 20 \u2192 100.0 (weight 15%, contribution 15.0)\n- Professional skill: 119 \u2192 99.2 (weight 15%, contribution 14.9)\n- Risk control: 0 \u2192 100.0 (weight 10%, contribution 10.0)\n- Workplace network: 43 \u2192 71.7 (weight 10%, contribution 7.2)",
+  "review_grades": [
+    "C",
+    "B",
+    "B",
+    "B",
+    "B",
+    "A",
+    "A",
+    "B"
+  ],
+  "promotions": [
+    [
+      "L1",
+      "L2"
+    ],
+    [
+      "L2",
+      "L3"
+    ],
+    [
+      "L3",
+      "L4"
+    ],
+    [
+      "L4",
+      "L5"
+    ]
+  ],
+  "competition_api_calls": 0,
+  "limitations": [
+    "one session",
+    "no matched no-Skill baseline",
+    "different decision-maker from designated model",
+    "skills interpreted manually; no automated discovery test",
+    "not a prediction of official performance"
+  ],
+  "skill_sha256": {
+    "career-quarterly-planning": "edfb819d448b580a2a05fa21971a71285759d51b98661f62501a45bd54b0e1e9",
+    "career-event-decisions": "3c4156665ff4dbdc52dd0dca49e327dd467d17539c8bb90bafc7d3200a02e6f2",
+    "career-risk-review": "b0fda4a341091a089c200f05d1e4e4d1e3f687698b134e82093a3fad5a60561f"
+  }
+}
