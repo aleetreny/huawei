@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "f7-trend-marking-v1",
+  "mode": "agent",
+  "instruction": "Before each decision, apply the risk review; then apply the story-decision or quarterly-planning guidance for the current phase."
+}

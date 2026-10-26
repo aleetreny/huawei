@@ -373,7 +373,7 @@ def test_created_policy_metadata_and_size() -> None:
     dirs = _policy_dirs()
     seeds = [p for p in dirs if json.loads((p / "policy.json").read_text())["change"] == "initial family seed"]
     assert len(seeds) == 10  # children (with parents) are added by the lab over time
-    names = {p.name for p in dirs}
+    names = {p.parent.name for p in POLICIES.glob("*/*/policy.json")}  # cross-family parents may sit in any family
     for policy in dirs:
         meta = json.loads((policy / "policy.json").read_text())
         manifest = json.loads((policy / "bundle" / "manifest.json").read_text())
