@@ -35,19 +35,20 @@ Petición de Alejandro (26 oct, ~19:00 UTC): "vamos muy lento; si un manual no f
 - Calibración (simulada con las partidas reales): uno claramente mejor gana el título el 94 % de las veces en unas 8 partidas. Uno mucho peor queda fuera tras unas 2,3 partidas de media, y uno algo peor se cuela el 13 % de las veces.
 - Copia del registro real (e17b598): el campeón inicial es F1, con 56,1 de media en 12 partidas (10 terminadas). Le siguen f3-balance-recombined (56,5 en 7) y f3-lean (56,7 en 5). F7 baja a 49,3 en 16.
 - Diseñador de punta a punta, con Sonnet en esfuerzo bajo sólo para probar la tubería: tardó 0,6 minutos y su manual pasó el lint, se registró y entró en la escalera. La carpeta de prueba se borró.
-- No se ha jugado ninguna partida desde este Mac. DeepSeek: 0 USD gastados de 50 (consultado en OpenRouter sin llamar al modelo).
+- No se ha jugado ninguna partida de Claude desde este Mac.
+- **DeepSeek, puerta 1 (26 oct, 19:51–20:11 UTC):** F1 por la vía oficial. El programa oficial funciona de punta a punta con nuestro manual. DeepSeek fue despedido en el mes 24 sin salir del nivel 1 (nota 18,8), el mismo fallo que las partidas malas de Haiku. Coste exacto: 0,185 USD (16 millones de tokens de entrada, 374 llamadas, 20 minutos); quedan 49,81 USD. Una partida completa costaría unos 0,4–0,8 USD, así que la clave da para 45–90 partidas después de la reserva.
 
 ## Lo que falló o quedó a medias
 
 - **No hay canal directo con la sesión de la nube** desde este chat: no aparece entre las sesiones a las que se puede escribir. Además, ya bloqueó una petición de otro chat esta tarde. Las instrucciones van en mensajes que Alejandro pega en esa sesión (dos mensajes el 26 oct, ~19:05 y ~19:45 UTC).
 - **PR #7 (`alejandro/laboratorio-adaptativo`, de Codex)** rediseña lo mismo con otra filosofía (más guardas), está a medias y toca los mismos archivos. Recomendación: no juntarla; aprovechar sus ideas útiles (no reutilizar un `score_report` viejo, comprobar credenciales sin mostrarlas) en el código de DeepSeek de esta rama.
 - **Bots en nivel 6:** el informe de los bots de energía dice que algunos llegaron a "nivel 40–60" con Q de hasta 76. Ninguna partida con IA ha pasado del nivel 5, y esos datos no están en el repo. Se ha pedido a la nube que lo compruebe.
-- **Código de DeepSeek** (`careerlab/target.py`): en preparación en esta rama, con un ensayo sin gasto antes de la primera partida real.
+- **Código de DeepSeek** (`careerlab/target.py`): hecho, con 31 pruebas. Pendiente de decidir: el programa oficial se monta en chino cuando no hay nadie delante (como probablemente en la evaluación oficial). Las instrucciones del juego y los manuales van en inglés.
 
 ## Relevo
 
 1. **Hecho:** el sistema de la tabla de arriba, en la rama `alejandro/carrera-rapida` (PR #8), con pruebas y documentación. ESTADO.md: T5 hecha (clave recibida), T6 replanteada (puertas de DeepSeek) y T14 nueva (carrera rápida), más dos decisiones en la sección 5.
 2. **Datos:** calibración en `lab/protocol/fastloop-v2.md`; comprobación sobre una copia del registro e17b598 (en la carpeta temporal del chat, no versionada).
-3. **A medias:** el cambio en la nube depende de que Alejandro pegue el segundo mensaje. DeepSeek, en preparación.
-4. **Siguiente paso:** la nube junta la PR #8 y arranca con `scripts/fastloop/README.md`. Para seguirlo: `lab/reports/carrera-rapida.md` y `~/careerlab-data/huawei/fastloop/driver.log` en la nube. Para la primera partida de DeepSeek, desde el Mac de Alejandro: ver la sección de DeepSeek de `scripts/fastloop/README.md` cuando llegue el commit de `careerlab/target.py`.
+3. **A medias:** nada interrumpido. La nube corre la carrera rápida desde las 19:39. DeepSeek: sólo la puerta 1 jugada.
+4. **Siguiente paso:** la nube corre la carrera rápida (estado en `lab/reports/carrera-rapida.md`; registro del driver en la nube, `~/careerlab-data/huawei/fastloop/driver.log`). DeepSeek, por decisión de Alejandro (26 oct, 20:18 UTC), sólo en las partidas previstas antes de cada corte. **Antes del corte 1 (27 oct, por la tarde UK):** si el campeón de `lab/reports/carrera-rapida.md` ya no es F1, jugar 2 partidas suyas con DeepSeek desde el Mac de Alejandro: `export UV_PROJECT_ENVIRONMENT=$HOME/venvs/huawei-fast CAREERLAB_ORIGIN=deepseek CAREERLAB_RUNNER_DIR=<repo>/local-runs/official-runner`; `uv run python -m careerlab.target register <carpeta del manual>`; `uv run python -m careerlab.target play --policy <nombre> --dry-run` y, si sale bien, `--spend --games 2`; después `uv run careerlab export` (escribe `lab/registry-origins/deepseek/`), commit y push.
 5. **Líneas de ESTADO.md:** T5, T6 y T14 actualizadas en esta rama.

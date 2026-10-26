@@ -48,6 +48,8 @@ It cannot make the game less random. The official tools offer no seed, so two ma
 
 ## DeepSeek (target model, USD 50 key)
 
+**Measured at gate 1 (26 Oct, 20:11 UTC):** one game cost 0.185 USD (dismissed at month 24; 16.0 M input tokens) and took 20 minutes. The budget plan's estimate (0.6–1.2 USD per full game) was too high: a full 48-month game should cost roughly 0.4–0.8 USD because the context grows with the game. At that price the key buys about 45–90 full games after the 15 USD reserve, enough to measure finalists on the real player rather than only on Haiku. Any wider use of DeepSeek than the gates below is a user decision.
+
 Never used for exploration. Gates, run from the Mac that holds the key (`careerlab/target.py`):
 1. **Route and cost check:** one game of the confirmed champion (8+ race games), once, to prove the packaged manual plays end to end in the official runner and to measure the real cost per game.
 2. **Before each cut:** two games of the champion if it changed since the last DeepSeek check, plus two of the previous submission when the choice is close.
