@@ -1,0 +1,2549 @@
+{
+  "actors": [
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 45,
+      "completed_dims_mean": {
+        "level": 46.0,
+        "network": 63.99977777777778,
+        "resilience": 97.55555555555556,
+        "risk_control": 64.88888888888889,
+        "skill": 77.50044444444444,
+        "wealth": 34.33488888888889
+      },
+      "completion_wilson95": [
+        0.39410584110376173,
+        0.5953502468515007
+      ],
+      "config": {
+        "autocompact": null,
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": null,
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "haiku",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 1,
+        "22": 1,
+        "23": 1,
+        "24": 25,
+        "26": 1,
+        "29": 2,
+        "30": 2,
+        "31": 2,
+        "33": 1,
+        "39": 1,
+        "42": 1,
+        "47": 2,
+        "48": 2,
+        "8": 1
+      },
+      "n": 91,
+      "p_complete": 0.4945054945054945,
+      "proxy_y_mean": 42.61854945054945,
+      "proxy_y_sd": 16.79174353217394,
+      "q_completed": 59.81466666666667,
+      "q_eliminated": 28.395652173913042,
+      "q_mean": 43.932527472527475,
+      "q_sd": 18.205228161981175,
+      "rejected_actions": 1,
+      "steps": 13821,
+      "wall_s_completed_median": 726.56
+    },
+    {
+      "actor_id": "486fbe0a67ac052a",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 59.165,
+        "resilience": 100.0,
+        "risk_control": 75.0,
+        "skill": 72.08500000000001,
+        "wealth": 37.065
+      },
+      "completion_wilson95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "config": {
+        "autocompact": null,
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": "low",
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "haiku",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "23": 1,
+        "24": 2,
+        "35": 1
+      },
+      "n": 6,
+      "p_complete": 0.3333333333333333,
+      "proxy_y_mean": 37.99733333333334,
+      "proxy_y_sd": 15.37778692356825,
+      "q_completed": 58.644999999999996,
+      "q_eliminated": 29.4225,
+      "q_mean": 39.163333333333334,
+      "q_sd": 16.176194443275794,
+      "rejected_actions": 0,
+      "steps": 823,
+      "wall_s_completed_median": 569.045
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 10,
+      "completed_dims_mean": {
+        "level": 46.0,
+        "network": 65.5,
+        "resilience": 96.5,
+        "risk_control": 76.0,
+        "skill": 75.999,
+        "wealth": 36.727000000000004
+      },
+      "completion_wilson95": [
+        0.22428594435712798,
+        0.5746514991488447
+      ],
+      "config": {
+        "autocompact": null,
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": null,
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "sonnet",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "18": 2,
+        "21": 1,
+        "24": 8,
+        "30": 1,
+        "32": 1,
+        "35": 1,
+        "39": 1,
+        "45": 1
+      },
+      "n": 26,
+      "p_complete": 0.38461538461538464,
+      "proxy_y_mean": 38.432,
+      "proxy_y_sd": 18.22197987047511,
+      "q_completed": 61.169000000000004,
+      "q_eliminated": 25.771875,
+      "q_mean": 39.386153846153846,
+      "q_sd": 20.00709235784612,
+      "rejected_actions": 1,
+      "steps": 3716,
+      "wall_s_completed_median": 745.515
+    },
+    {
+      "actor_id": "d922927e98f3bc16",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 59.165,
+        "resilience": 100.0,
+        "risk_control": 40.0,
+        "skill": 72.08500000000001,
+        "wealth": 27.685000000000002
+      },
+      "completion_wilson95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "config": {
+        "autocompact": null,
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": null,
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "opus",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "18": 1,
+        "24": 2,
+        "47": 1
+      },
+      "n": 6,
+      "p_complete": 0.3333333333333333,
+      "proxy_y_mean": 36.468,
+      "proxy_y_sd": 15.751210340796039,
+      "q_completed": 54.765,
+      "q_eliminated": 28.494999999999997,
+      "q_mean": 37.251666666666665,
+      "q_sd": 17.019808949182323,
+      "rejected_actions": 0,
+      "steps": 844,
+      "wall_s_completed_median": 672.9649999999999
+    },
+    {
+      "actor_id": "a104028b5c42f972",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 59.165,
+        "resilience": 97.5,
+        "risk_control": 65.0,
+        "skill": 76.67,
+        "wealth": 31.685
+      },
+      "completion_wilson95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "config": {
+        "autocompact": null,
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": "low",
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "opus",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "20": 1,
+        "24": 1,
+        "26": 1,
+        "35": 1
+      },
+      "n": 6,
+      "p_complete": 0.3333333333333333,
+      "proxy_y_mean": 40.635999999999996,
+      "proxy_y_sd": 13.37634712468243,
+      "q_completed": 58.379999999999995,
+      "q_eliminated": 34.5025,
+      "q_mean": 42.461666666666666,
+      "q_sd": 13.768245228302211,
+      "rejected_actions": 0,
+      "steps": 813,
+      "wall_s_completed_median": 577.41
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 7,
+      "completed_dims_mean": {
+        "level": 47.142857142857146,
+        "network": 72.14142857142858,
+        "resilience": 100.0,
+        "risk_control": 84.28571428571429,
+        "skill": 83.09428571428572,
+        "wealth": 35.83857142857143
+      },
+      "completion_wilson95": [
+        0.31951131254954973,
+        0.8067396863412435
+      ],
+      "config": {
+        "autocompact": "100k",
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": null,
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "opus",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "23": 1,
+        "24": 3,
+        "8": 1
+      },
+      "n": 12,
+      "p_complete": 0.5833333333333334,
+      "proxy_y_mean": 47.07666666666667,
+      "proxy_y_sd": 18.41416575916652,
+      "q_completed": 64.41714285714286,
+      "q_eliminated": 27.296,
+      "q_mean": 48.95,
+      "q_sd": 19.91038102918356,
+      "rejected_actions": 0,
+      "steps": 1797,
+      "wall_s_completed_median": 748.42
+    },
+    {
+      "actor_id": "254e47f505b5a6e9",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 60.835,
+        "resilience": 97.5,
+        "risk_control": 50.0,
+        "skill": 75.83500000000001,
+        "wealth": 36.065
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "config": {
+        "autocompact": "100k",
+        "cli_version": "2.1.303 (Claude Code)",
+        "effort": "max",
+        "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env",
+        "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+        "kind": "claude-cli",
+        "max_continues": 3,
+        "model": "opus",
+        "prompts": "official-runner@00b084a8",
+        "skills_mode": "inline",
+        "timeout_s": 7200.0,
+        "tools": [
+          "mcp__career-emulator-engine__new_game",
+          "mcp__career-emulator-engine__observe",
+          "mcp__career-emulator-engine__take_action",
+          "mcp__career-emulator-engine__check_latest_logs",
+          "mcp__career-emulator-engine__show_employee_handbook"
+        ]
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "p_complete": 0.6666666666666666,
+      "proxy_y_mean": 45.688,
+      "proxy_y_sd": 18.585787258009816,
+      "q_completed": 57.8,
+      "q_eliminated": 24.48,
+      "q_mean": 46.693333333333335,
+      "q_sd": 19.694733644640472,
+      "rejected_actions": 0,
+      "steps": 482,
+      "wall_s_completed_median": 2186.89
+    }
+  ],
+  "base_commit": "917565c",
+  "cells": [
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 59.165,
+        "resilience": 85.0,
+        "risk_control": 85.0,
+        "skill": 88.75,
+        "wealth": 45.5
+      },
+      "completion_wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "o1-promotion-gap",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4,
+        "queued": 1
+      },
+      "months_eliminated": {
+        "20": 1,
+        "24": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "o1-promotion-gap-v1",
+      "policy_id": "006571b3bb85b323",
+      "proxy_y_mean": 42.67400000000001,
+      "proxy_y_sd": 22.486508547719605,
+      "q_completed": 64.58000000000001,
+      "q_eliminated": 23.355,
+      "q_mean": 43.9675,
+      "q_sd": 24.602349989381096,
+      "rejected_actions": 0,
+      "steps": 566,
+      "wall_s_completed_median": 419.56
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 80.83500000000001,
+        "resilience": 92.5,
+        "risk_control": 40.0,
+        "skill": 92.5,
+        "wealth": 37.935
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f2-invest-early",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3,
+        "queued": 3
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.6666666666666666,
+      "policy": "f2-convert-on-review-v1",
+      "policy_id": "0b226c3c067d423f",
+      "proxy_y_mean": 49.61333333333334,
+      "proxy_y_sd": 17.904286563092466,
+      "q_completed": 62.42,
+      "q_eliminated": 29.96,
+      "q_mean": 51.6,
+      "q_sd": 18.7779019062301,
+      "rejected_actions": 0,
+      "steps": 490,
+      "wall_s_completed_median": 674.96
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 3,
+      "completed_dims_mean": {
+        "level": 46.666666666666664,
+        "network": 70.55666666666667,
+        "resilience": 100.0,
+        "risk_control": 83.33333333333333,
+        "skill": 78.61,
+        "wealth": 34.70666666666666
+      },
+      "completion_wilson95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.2,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 1,
+        "queued": 4
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.75,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 52.160000000000004,
+      "proxy_y_sd": 18.100842264012652,
+      "q_completed": 63.12333333333333,
+      "q_eliminated": 27.68,
+      "q_mean": 54.262499999999996,
+      "q_sd": 19.78414074454587,
+      "rejected_actions": 0,
+      "steps": 703,
+      "wall_s_completed_median": 683.74
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 78.33,
+        "resilience": 100.0,
+        "risk_control": 90.0,
+        "skill": 91.67,
+        "wealth": 48.12
+      },
+      "completion_wilson95": [
+        0.04558726080970055,
+        0.6993581574175981
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.2,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 2,
+        "26": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.25,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 35.468,
+      "proxy_y_sd": 20.99243343048474,
+      "q_completed": 70.21,
+      "q_eliminated": 25.293333333333333,
+      "q_mean": 36.5225,
+      "q_sd": 23.204219982580753,
+      "rejected_actions": 0,
+      "steps": 495,
+      "wall_s_completed_median": 911.58
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        5.551115123125783e-17,
+        0.5614970317550454
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3
+      },
+      "months_eliminated": {
+        "33": 1,
+        "42": 1,
+        "47": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "p0-review-guard-v1",
+      "policy_id": "3cf417f5daf7ad85",
+      "proxy_y_mean": 42.64266666666667,
+      "proxy_y_sd": 5.095016126896298,
+      "q_completed": null,
+      "q_eliminated": 47.053333333333335,
+      "q_mean": 47.053333333333335,
+      "q_sd": 6.368770158620371,
+      "rejected_actions": 0,
+      "steps": 496,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.43448246478317476
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f2-invest-early",
+      "interrupted_attempt_fraction": 0.16666666666666666,
+      "job_statuses": {
+        "done": 5,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "18": 1,
+        "19": 1,
+        "24": 2,
+        "47": 1
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f2-invest-early-v1",
+      "policy_id": "5d7996b1da3e0d01",
+      "proxy_y_mean": 23.1568,
+      "proxy_y_sd": 11.03954723709265,
+      "q_completed": null,
+      "q_eliminated": 22.695999999999998,
+      "q_mean": 22.695999999999998,
+      "q_sd": 13.799434046365814,
+      "rejected_actions": 0,
+      "steps": 523,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 3,
+      "completed_dims_mean": {
+        "level": 46.666666666666664,
+        "network": 63.89,
+        "resilience": 93.33333333333333,
+        "risk_control": 53.333333333333336,
+        "skill": 81.94666666666667,
+        "wealth": 33.663333333333334
+      },
+      "completion_wilson95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f8-secure-growth",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4,
+        "queued": 3
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.75,
+      "policy": "f8-secure-growth-v1",
+      "policy_id": "5f8c9648b6abd9b0",
+      "proxy_y_mean": 48.696,
+      "proxy_y_sd": 17.560571592823127,
+      "q_completed": 58.75,
+      "q_eliminated": 23.48,
+      "q_mean": 49.9325,
+      "q_sd": 19.022341908047668,
+      "rejected_actions": 0,
+      "steps": 679,
+      "wall_s_completed_median": 705.35
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 58.33,
+        "resilience": 100.0,
+        "risk_control": 50.0,
+        "skill": 86.67,
+        "wealth": 40.12
+      },
+      "completion_wilson95": [
+        0.04558726080970055,
+        0.6993581574175981
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "o2-run-hot",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4
+      },
+      "months_eliminated": {
+        "24": 2,
+        "29": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.25,
+      "policy": "o2-run-hot-v1",
+      "policy_id": "663c8cd2a1cafe68",
+      "proxy_y_mean": 35.242000000000004,
+      "proxy_y_sd": 17.385060099598928,
+      "q_completed": 61.86,
+      "q_eliminated": 27.7,
+      "q_mean": 36.24,
+      "q_sd": 18.86093493617606,
+      "rejected_actions": 0,
+      "steps": 494,
+      "wall_s_completed_median": 461.01
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 63.335,
+        "resilience": 100.0,
+        "risk_control": 65.0,
+        "skill": 81.66499999999999,
+        "wealth": 34.5
+      },
+      "completion_wilson95": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f7-one-vs-many",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 5,
+        "queued": 1
+      },
+      "months_eliminated": {
+        "24": 1,
+        "30": 1,
+        "48": 1
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.4,
+      "policy": "f7-single-skill-v1",
+      "policy_id": "7107952fc3bdf27f",
+      "proxy_y_mean": 43.739200000000004,
+      "proxy_y_sd": 17.479239891940384,
+      "q_completed": 61.985,
+      "q_eliminated": 35.21666666666667,
+      "q_mean": 45.924,
+      "q_sd": 19.11232534256363,
+      "rejected_actions": 0,
+      "steps": 814,
+      "wall_s_completed_median": 1006.48
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.43448246478317476
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f5-relationship-capital",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 5
+      },
+      "months_eliminated": {
+        "24": 3,
+        "29": 1,
+        "39": 1
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f5-relationship-capital-v1",
+      "policy_id": "845f5269f562506b",
+      "proxy_y_mean": 29.433600000000002,
+      "proxy_y_sd": 8.688996996201574,
+      "q_completed": null,
+      "q_eliminated": 30.542,
+      "q_mean": 30.542,
+      "q_sd": 10.861246245251968,
+      "rejected_actions": 0,
+      "steps": 567,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 60.0,
+        "resilience": 100.0,
+        "risk_control": 60.0,
+        "skill": 69.58500000000001,
+        "wealth": 26.689999999999998
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.6666666666666666,
+      "policy": "m3-subtracted-v1",
+      "policy_id": "8f3b218e62aac0ec",
+      "proxy_y_mean": 41.80533333333334,
+      "proxy_y_sd": 21.32300966874361,
+      "q_completed": 54.769999999999996,
+      "q_eliminated": 15.98,
+      "q_mean": 41.84,
+      "q_sd": 23.1468615583193,
+      "rejected_actions": 1,
+      "steps": 484,
+      "wall_s_completed_median": 702.35
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.7934506856227626
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "matteo-value-conversion",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 1,
+        "running": 3
+      },
+      "months_eliminated": {
+        "31": 1
+      },
+      "n": 1,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "value-conversion-v1",
+      "policy_id": "91b30e8096ff6766",
+      "proxy_y_mean": 34.696,
+      "proxy_y_sd": null,
+      "q_completed": null,
+      "q_eliminated": 37.12,
+      "q_mean": 37.12,
+      "q_sd": null,
+      "rejected_actions": 0,
+      "steps": 125,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 4,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 65.41499999999999,
+        "resilience": 100.0,
+        "risk_control": 75.0,
+        "skill": 75.4175,
+        "wealth": 33.7775
+      },
+      "completion_wilson95": [
+        0.5101091635454027,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4,
+        "queued": 3
+      },
+      "months_eliminated": {},
+      "n": 4,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f3-balance-recombined-v1",
+      "policy_id": "954bf3788461f2d8",
+      "proxy_y_mean": 58.49,
+      "proxy_y_sd": 3.861094145446338,
+      "q_completed": 60.6125,
+      "q_eliminated": null,
+      "q_mean": 60.6125,
+      "q_sd": 4.826367681807923,
+      "rejected_actions": 0,
+      "steps": 785,
+      "wall_s_completed_median": 648.225
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 67.5,
+        "resilience": 97.5,
+        "risk_control": 45.0,
+        "skill": 90.83500000000001,
+        "wealth": 34.5
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f4-visible-delivery",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.6666666666666666,
+      "policy": "f4-review-first-v1",
+      "policy_id": "b907b3d9fea2a6f5",
+      "proxy_y_mean": 46.34133333333334,
+      "proxy_y_sd": 22.14953880633485,
+      "q_completed": 61.400000000000006,
+      "q_eliminated": 19.73,
+      "q_mean": 47.510000000000005,
+      "q_sd": 24.08152611443054,
+      "rejected_actions": 0,
+      "steps": 489,
+      "wall_s_completed_median": 614.565
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 57.5,
+        "resilience": 92.5,
+        "risk_control": 45.0,
+        "skill": 64.58,
+        "wealth": 28.19
+      },
+      "completion_wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4
+      },
+      "months_eliminated": {
+        "24": 2
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f3-opus-distilled-v1",
+      "policy_id": "c03a1bf3ca04c5e7",
+      "proxy_y_mean": 38.212,
+      "proxy_y_sd": 16.942065360122616,
+      "q_completed": 52.95,
+      "q_eliminated": 23.83,
+      "q_mean": 38.39,
+      "q_sd": 17.72387655113858,
+      "rejected_actions": 0,
+      "steps": 578,
+      "wall_s_completed_median": 861.79
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 60.835,
+        "resilience": 100.0,
+        "risk_control": 45.0,
+        "skill": 76.67,
+        "wealth": 34.625
+      },
+      "completion_wilson95": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f4-visible-delivery",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 5
+      },
+      "months_eliminated": {
+        "17": 1,
+        "24": 1,
+        "31": 1
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.4,
+      "policy": "f4-visible-delivery-v1",
+      "policy_id": "cbc7402d11222ac7",
+      "proxy_y_mean": 35.1328,
+      "proxy_y_sd": 19.191342714880584,
+      "q_completed": 57.510000000000005,
+      "q_eliminated": 20.27,
+      "q_mean": 35.166,
+      "q_sd": 20.593978003290186,
+      "rejected_actions": 0,
+      "steps": 688,
+      "wall_s_completed_median": 735.425
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 4,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 55.415,
+        "resilience": 97.5,
+        "risk_control": 72.5,
+        "skill": 63.542500000000004,
+        "wealth": 30.997500000000002
+      },
+      "completion_wilson95": [
+        0.5101091635454027,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4,
+        "queued": 1
+      },
+      "months_eliminated": {},
+      "n": 4,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f3-lean-v1",
+      "policy_id": "cc098e54e25efc64",
+      "proxy_y_mean": 54.117999999999995,
+      "proxy_y_sd": 6.553939883764574,
+      "q_completed": 55.147499999999994,
+      "q_eliminated": null,
+      "q_mean": 55.147499999999994,
+      "q_sd": 8.192424854705717,
+      "rejected_actions": 0,
+      "steps": 781,
+      "wall_s_completed_median": 940.625
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 59.165,
+        "resilience": 100.0,
+        "risk_control": 50.0,
+        "skill": 77.08500000000001,
+        "wealth": 27.119999999999997
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3,
+        "queued": 2
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.6666666666666666,
+      "policy": "f1-review-risk-v1",
+      "policy_id": "d3b71fe027da29e7",
+      "proxy_y_mean": 44.808,
+      "proxy_y_sd": 18.23285298575075,
+      "q_completed": 56.4,
+      "q_eliminated": 23.98,
+      "q_mean": 45.593333333333334,
+      "q_sd": 19.269886697470053,
+      "rejected_actions": 0,
+      "steps": 491,
+      "wall_s_completed_median": 952.19
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 3,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 72.22333333333333,
+        "resilience": 98.33333333333333,
+        "risk_control": 66.66666666666667,
+        "skill": 86.66666666666667,
+        "wealth": 37.666666666666664
+      },
+      "completion_wilson95": [
+        0.2307242812760128,
+        0.882379225767352
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.16666666666666666,
+      "job_statuses": {
+        "done": 5,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 2
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.6,
+      "policy": "f3-feedback-reactive-v1",
+      "policy_id": "dd49c06cd04e433e",
+      "proxy_y_mean": 46.976,
+      "proxy_y_sd": 19.869991847003863,
+      "q_completed": 64.17333333333333,
+      "q_eliminated": 25.54,
+      "q_mean": 48.72,
+      "q_sd": 21.45476986592958,
+      "rejected_actions": 0,
+      "steps": 772,
+      "wall_s_completed_median": 936.65
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 65.0,
+        "resilience": 100.0,
+        "risk_control": 75.0,
+        "skill": 70.41499999999999,
+        "wealth": 28.310000000000002
+      },
+      "completion_wilson95": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f6-commitment-ledger",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 5,
+        "queued": 1
+      },
+      "months_eliminated": {
+        "24": 1,
+        "30": 1,
+        "8": 1
+      },
+      "n": 5,
+      "origin": "",
+      "p_complete": 0.4,
+      "policy": "f6-commitment-ledger-v1",
+      "policy_id": "dd82cc1584e7370d",
+      "proxy_y_mean": 38.467200000000005,
+      "proxy_y_sd": 17.788796114408644,
+      "q_completed": 58.725,
+      "q_eliminated": 26.406666666666666,
+      "q_mean": 39.334,
+      "q_sd": 19.01386283741418,
+      "rejected_actions": 0,
+      "steps": 649,
+      "wall_s_completed_median": 758.44
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 5,
+      "completed_dims_mean": {
+        "level": 44.0,
+        "network": 63.666,
+        "resilience": 100.0,
+        "risk_control": 78.0,
+        "skill": 70.168,
+        "wealth": 34.1
+      },
+      "completion_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f7-one-vs-many",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 5,
+        "queued": 5
+      },
+      "months_eliminated": {},
+      "n": 5,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f7-three-skills-v1",
+      "policy_id": "e373478ad46b58f6",
+      "proxy_y_mean": 57.769600000000004,
+      "proxy_y_sd": 7.359937825824347,
+      "q_completed": 59.712,
+      "q_eliminated": null,
+      "q_mean": 59.712,
+      "q_sd": 9.199922282280433,
+      "rejected_actions": 0,
+      "steps": 1010,
+      "wall_s_completed_median": 462.22
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 55.0,
+        "resilience": 95.0,
+        "risk_control": 40.0,
+        "skill": 78.33,
+        "wealth": 34.62
+      },
+      "completion_wilson95": [
+        0.04558726080970055,
+        0.6993581574175981
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.2,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "22": 1,
+        "23": 1,
+        "24": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.25,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 34.146,
+      "proxy_y_sd": 15.370170764612,
+      "q_completed": 57.42,
+      "q_eliminated": 27.353333333333335,
+      "q_mean": 34.870000000000005,
+      "q_sd": 16.291236908227688,
+      "rejected_actions": 0,
+      "steps": 469,
+      "wall_s_completed_median": 550.84
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 60.0,
+        "resilience": 97.5,
+        "risk_control": 65.0,
+        "skill": 79.16499999999999,
+        "wealth": 39.88
+      },
+      "completion_wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 4
+      },
+      "months_eliminated": {
+        "24": 1,
+        "48": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f3-distilled-prereview-defuse-v1",
+      "policy_id": "f41d6382cab6ec76",
+      "proxy_y_mean": 49.440000000000005,
+      "proxy_y_sd": 13.128603683052766,
+      "q_completed": 60.475,
+      "q_eliminated": 44.375,
+      "q_mean": 52.425,
+      "q_sd": 13.755315336261834,
+      "rejected_actions": 0,
+      "steps": 673,
+      "wall_s_completed_median": 779.625
+    },
+    {
+      "actor_id": "254e47f505b5a6e9",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 60.835,
+        "resilience": 97.5,
+        "risk_control": 50.0,
+        "skill": 75.83500000000001,
+        "wealth": 36.065
+      },
+      "completion_wilson95": [
+        0.2076596008020477,
+        0.9385080552796037
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "ceiling",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 3,
+        "queued": 2,
+        "running": 1
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 3,
+      "origin": "",
+      "p_complete": 0.6666666666666666,
+      "policy": "x0-opus-ceiling-v1",
+      "policy_id": "47cbeec8b03ad2a0",
+      "proxy_y_mean": 45.688,
+      "proxy_y_sd": 18.585787258009816,
+      "q_completed": 57.8,
+      "q_eliminated": 24.48,
+      "q_mean": 46.693333333333335,
+      "q_sd": 19.694733644640472,
+      "rejected_actions": 0,
+      "steps": 482,
+      "wall_s_completed_median": 2186.89
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 60.0,
+        "resilience": 95.0,
+        "risk_control": 75.0,
+        "skill": 63.75,
+        "wealth": 31.064999999999998
+      },
+      "completion_wilson95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.42857142857142855,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 3
+      },
+      "months_eliminated": {
+        "32": 1,
+        "45": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 44.25,
+      "proxy_y_sd": 12.393592107752031,
+      "q_completed": 55.52,
+      "q_eliminated": 36.355,
+      "q_mean": 45.9375,
+      "q_sd": 12.129581952125696,
+      "rejected_actions": 0,
+      "steps": 715,
+      "wall_s_completed_median": 867.94
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 86.67,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 100.0,
+        "wealth": 47.38
+      },
+      "completion_wilson95": [
+        0.04558726080970055,
+        0.6993581574175981
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.2,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 2,
+        "39": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.25,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 36.494,
+      "proxy_y_sd": 24.00878628058209,
+      "q_completed": 73.14,
+      "q_eliminated": 26.026666666666667,
+      "q_mean": 37.805,
+      "q_sd": 27.27020902010104,
+      "rejected_actions": 0,
+      "steps": 549,
+      "wall_s_completed_median": 739.55
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f2-invest-early",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 1,
+        "30": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f2-invest-early-v1",
+      "policy_id": "5d7996b1da3e0d01",
+      "proxy_y_mean": 26.26,
+      "proxy_y_sd": 10.572660592301263,
+      "q_completed": null,
+      "q_eliminated": 26.575000000000003,
+      "q_mean": 26.575000000000003,
+      "q_sd": 13.215825740376573,
+      "rejected_actions": 0,
+      "steps": 213,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 73.33500000000001,
+        "resilience": 97.5,
+        "risk_control": 65.0,
+        "skill": 87.92,
+        "wealth": 43.315
+      },
+      "completion_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f7-one-vs-many",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {},
+      "n": 2,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f7-single-skill-v1",
+      "policy_id": "7107952fc3bdf27f",
+      "proxy_y_mean": 62.248000000000005,
+      "proxy_y_sd": 6.890048475881719,
+      "q_completed": 65.31,
+      "q_eliminated": null,
+      "q_mean": 65.31,
+      "q_sd": 8.612560594852154,
+      "rejected_actions": 0,
+      "steps": 397,
+      "wall_s_completed_median": 620.12
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 58.33,
+        "resilience": 100.0,
+        "risk_control": 80.0,
+        "skill": 78.33,
+        "wealth": 43.38
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f5-relationship-capital",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "18": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f5-relationship-capital-v1",
+      "policy_id": "845f5269f562506b",
+      "proxy_y_mean": 41.580000000000005,
+      "proxy_y_sd": 28.041026514733733,
+      "q_completed": 64.26,
+      "q_eliminated": 20.94,
+      "q_mean": 42.6,
+      "q_sd": 30.63186576100124,
+      "rejected_actions": 0,
+      "steps": 273,
+      "wall_s_completed_median": 798.73
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f4-visible-delivery",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 2
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f4-visible-delivery-v1",
+      "policy_id": "cbc7402d11222ac7",
+      "proxy_y_mean": 18.584000000000003,
+      "proxy_y_sd": 2.2627416997969516,
+      "q_completed": null,
+      "q_eliminated": 16.98,
+      "q_mean": 16.98,
+      "q_sd": 2.8284271247461903,
+      "rejected_actions": 0,
+      "steps": 191,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 63.33,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 78.33,
+        "wealth": 31.75
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f3-feedback-reactive-v1",
+      "policy_id": "dd49c06cd04e433e",
+      "proxy_y_mean": 41.464000000000006,
+      "proxy_y_sd": 28.397408332451757,
+      "q_completed": 64.43,
+      "q_eliminated": 20.48,
+      "q_mean": 42.455000000000005,
+      "q_sd": 31.077343033148768,
+      "rejected_actions": 0,
+      "steps": 295,
+      "wall_s_completed_median": 597.64
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 60.0,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 63.33,
+        "wealth": 40.75
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f6-commitment-ledger",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "35": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f6-commitment-ledger-v1",
+      "policy_id": "dd82cc1584e7370d",
+      "proxy_y_mean": 49.728,
+      "proxy_y_sd": 12.433765640384253,
+      "q_completed": 60.65,
+      "q_eliminated": 44.92,
+      "q_mean": 52.785,
+      "q_sd": 11.12278966806439,
+      "rejected_actions": 0,
+      "steps": 347,
+      "wall_s_completed_median": 943.48
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 60.0,
+        "resilience": 90.0,
+        "risk_control": 50.0,
+        "skill": 45.83,
+        "wealth": 25.13
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f7-one-vs-many",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f7-three-skills-v1",
+      "policy_id": "e373478ad46b58f6",
+      "proxy_y_mean": 38.172,
+      "proxy_y_sd": 14.917124655911405,
+      "q_completed": 48.4,
+      "q_eliminated": 28.28,
+      "q_mean": 38.34,
+      "q_sd": 14.226988437473334,
+      "rejected_actions": 1,
+      "steps": 295,
+      "wall_s_completed_median": 583.42
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 60.0,
+        "resilience": 90.0,
+        "risk_control": 50.0,
+        "skill": 90.83,
+        "wealth": 30.12
+      },
+      "completion_wilson95": [
+        0.04558726080970055,
+        0.6993581574175981
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 4,
+        "interrupted": 2
+      },
+      "months_eliminated": {
+        "18": 1,
+        "21": 1,
+        "24": 1
+      },
+      "n": 4,
+      "origin": "",
+      "p_complete": 0.25,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 30.046,
+      "proxy_y_sd": 18.55509518524045,
+      "q_completed": 59.15,
+      "q_eliminated": 19.94333333333333,
+      "q_mean": 29.744999999999997,
+      "q_sd": 20.14122886022598,
+      "rejected_actions": 0,
+      "steps": 441,
+      "wall_s_completed_median": 778.62
+    },
+    {
+      "actor_id": "486fbe0a67ac052a",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 59.165,
+        "resilience": 100.0,
+        "risk_control": 75.0,
+        "skill": 72.08500000000001,
+        "wealth": 37.065
+      },
+      "completion_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {},
+      "n": 2,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 56.916,
+      "proxy_y_sd": 3.8636314524033,
+      "q_completed": 58.644999999999996,
+      "q_eliminated": null,
+      "q_mean": 58.644999999999996,
+      "q_sd": 4.829539315504123,
+      "rejected_actions": 0,
+      "steps": 404,
+      "wall_s_completed_median": 569.045
+    },
+    {
+      "actor_id": "486fbe0a67ac052a",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "23": 1,
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 25.332,
+      "proxy_y_sd": 4.451944294350505,
+      "q_completed": null,
+      "q_eliminated": 25.415,
+      "q_mean": 25.415,
+      "q_sd": 5.56493036793813,
+      "rejected_actions": 0,
+      "steps": 186,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "486fbe0a67ac052a",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 1,
+        "35": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 31.744,
+      "proxy_y_sd": 5.724736500486289,
+      "q_completed": null,
+      "q_eliminated": 33.43,
+      "q_mean": 33.43,
+      "q_sd": 7.155920625607862,
+      "rejected_actions": 0,
+      "steps": 233,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "a104028b5c42f972",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 1,
+        "26": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 33.160000000000004,
+      "proxy_y_sd": 5.656854249492382,
+      "q_completed": null,
+      "q_eliminated": 35.2,
+      "q_mean": 35.2,
+      "q_sd": 7.071067811865478,
+      "rejected_actions": 0,
+      "steps": 198,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "a104028b5c42f972",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 55.0,
+        "resilience": 100.0,
+        "risk_control": 50.0,
+        "skill": 61.67,
+        "wealth": 25.25
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "20": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 39.76,
+      "proxy_y_sd": 16.518014408517747,
+      "q_completed": 51.8,
+      "q_eliminated": 28.85,
+      "q_mean": 40.325,
+      "q_sd": 16.22810062823126,
+      "rejected_actions": 0,
+      "steps": 278,
+      "wall_s_completed_median": 658.41
+    },
+    {
+      "actor_id": "a104028b5c42f972",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 63.33,
+        "resilience": 95.0,
+        "risk_control": 80.0,
+        "skill": 91.67,
+        "wealth": 38.12
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "35": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 48.988,
+      "proxy_y_sd": 18.356492039602774,
+      "q_completed": 64.96,
+      "q_eliminated": 38.76,
+      "q_mean": 51.86,
+      "q_sd": 18.52619766708754,
+      "rejected_actions": 0,
+      "steps": 337,
+      "wall_s_completed_median": 496.41
+    },
+    {
+      "actor_id": "d922927e98f3bc16",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 45.0,
+        "network": 59.165,
+        "resilience": 100.0,
+        "risk_control": 40.0,
+        "skill": 72.08500000000001,
+        "wealth": 27.685000000000002
+      },
+      "completion_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {},
+      "n": 2,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 53.812000000000005,
+      "proxy_y_sd": 1.6008897526063406,
+      "q_completed": 54.765,
+      "q_eliminated": null,
+      "q_mean": 54.765,
+      "q_sd": 2.001112190757928,
+      "rejected_actions": 0,
+      "steps": 396,
+      "wall_s_completed_median": 672.9649999999999
+    },
+    {
+      "actor_id": "d922927e98f3bc16",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "24": 1,
+        "47": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 32.824,
+      "proxy_y_sd": 15.137741971641608,
+      "q_completed": null,
+      "q_eliminated": 34.78,
+      "q_mean": 34.78,
+      "q_sd": 18.92217746455201,
+      "rejected_actions": 0,
+      "steps": 285,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "d922927e98f3bc16",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.3333333333333333,
+      "job_statuses": {
+        "done": 2,
+        "interrupted": 1
+      },
+      "months_eliminated": {
+        "18": 1,
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 22.768,
+      "proxy_y_sd": 2.285369116794921,
+      "q_completed": null,
+      "q_eliminated": 22.21,
+      "q_mean": 22.21,
+      "q_sd": 2.8567113959936514,
+      "rejected_actions": 0,
+      "steps": 163,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 84.16499999999999,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 91.66499999999999,
+        "wealth": 36.44
+      },
+      "completion_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f1-steady-balance",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {},
+      "n": 2,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "f1-steady-balance-v1",
+      "policy_id": "19618e7795be8da1",
+      "proxy_y_mean": 65.56400000000001,
+      "proxy_y_sd": 0.3337544007200564,
+      "q_completed": 69.455,
+      "q_eliminated": null,
+      "q_mean": 69.455,
+      "q_sd": 0.41719300090006545,
+      "rejected_actions": 0,
+      "steps": 399,
+      "wall_s_completed_median": 818.85
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 60.0,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 62.5,
+        "wealth": 36.25
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "m3-teammate",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "m3-sustainable-career-v0-1",
+      "policy_id": "3207e8f585cbe240",
+      "proxy_y_mean": 38.992,
+      "proxy_y_sd": 26.451450470626366,
+      "q_completed": 59.62,
+      "q_eliminated": 19.11,
+      "q_mean": 39.364999999999995,
+      "q_sd": 28.644895705867036,
+      "rejected_actions": 0,
+      "steps": 299,
+      "wall_s_completed_median": 748.42
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 0,
+      "completed_dims_mean": {},
+      "completion_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 1,
+        "8": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.0,
+      "policy": "f3-balance-recombined-v1",
+      "policy_id": "954bf3788461f2d8",
+      "proxy_y_mean": 28.016000000000005,
+      "proxy_y_sd": 3.405426258194412,
+      "q_completed": null,
+      "q_eliminated": 28.770000000000003,
+      "q_mean": 28.770000000000003,
+      "q_sd": 4.256782822743015,
+      "rejected_actions": 0,
+      "steps": 122,
+      "wall_s_completed_median": null
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 40.0,
+        "network": 53.33,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 50.83,
+        "wealth": 28.62
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "23": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f3-lean-v1",
+      "policy_id": "cc098e54e25efc64",
+      "proxy_y_mean": 44.012,
+      "proxy_y_sd": 14.894497238913438,
+      "q_completed": 55.68,
+      "q_eliminated": 35.6,
+      "q_mean": 45.64,
+      "q_sd": 14.198704166225873,
+      "rejected_actions": 0,
+      "steps": 287,
+      "wall_s_completed_median": 726.61
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 73.33,
+        "resilience": 100.0,
+        "risk_control": 100.0,
+        "skill": 90.83,
+        "wealth": 34.0
+      },
+      "completion_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "f3-feedback-reactive",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {
+        "24": 1
+      },
+      "n": 2,
+      "origin": "",
+      "p_complete": 0.5,
+      "policy": "f3-feedback-reactive-v1",
+      "policy_id": "dd49c06cd04e433e",
+      "proxy_y_mean": 44.296,
+      "proxy_y_sd": 28.15982045397307,
+      "q_completed": 67.76,
+      "q_eliminated": 24.23,
+      "q_mean": 45.995000000000005,
+      "q_sd": 30.780358185050417,
+      "rejected_actions": 0,
+      "steps": 292,
+      "wall_s_completed_median": 661.89
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "completed": 2,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 75.0,
+        "resilience": 100.0,
+        "risk_control": 45.0,
+        "skill": 97.08500000000001,
+        "wealth": 39.56
+      },
+      "completion_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "p0-minimal",
+      "interrupted_attempt_fraction": 0.0,
+      "job_statuses": {
+        "done": 2
+      },
+      "months_eliminated": {},
+      "n": 2,
+      "origin": "",
+      "p_complete": 1.0,
+      "policy": "p0-minimal-v1",
+      "policy_id": "ed78f44ccd41adf8",
+      "proxy_y_mean": 61.58,
+      "proxy_y_sd": 2.8001428534987287,
+      "q_completed": 64.475,
+      "q_eliminated": null,
+      "q_mean": 64.475,
+      "q_sd": 3.5001785668734122,
+      "rejected_actions": 0,
+      "steps": 398,
+      "wall_s_completed_median": 894.61
+    },
+    {
+      "actor_id": "614d6e1a4655bc2d",
+      "completed": 1,
+      "completed_dims_mean": {
+        "level": 50.0,
+        "network": 56.67,
+        "resilience": 100.0,
+        "risk_control": 50.0,
+        "skill": 80.0,
+        "wealth": 41.12
+      },
+      "completion_wilson95": [
+        0.20654931437723745,
+        1.0
+      ],
+      "env_id": "9360561c0eba8d45",
+      "family": "l1-review-clock",
+      "interrupted_attempt_fraction": 0.8571428571428571,
+      "job_statuses": {
+        "done": 1,
+        "interrupted": 6,
+        "queued": 3
+      },
+      "months_eliminated": {},
+      "n": 1,
+      "origin": "leah",
+      "p_complete": 1.0,
+      "policy": "l1-review-clock-v1",
+      "policy_id": "f1830961d168beb9",
+      "proxy_y_mean": 58.712,
+      "proxy_y_sd": null,
+      "q_completed": 60.89,
+      "q_eliminated": null,
+      "q_mean": 60.89,
+      "q_sd": null,
+      "rejected_actions": 0,
+      "steps": 204,
+      "wall_s_completed_median": 912.01
+    }
+  ],
+  "counts": {
+    "claude_terminal_excluding_infra": 151,
+    "claude_terminal_including_infra": 152,
+    "excluded_interrupted_unscored": 6,
+    "exported_evaluation_rows": 308,
+    "jobs": 371,
+    "race_origin_proxy": 150,
+    "scripted": 150,
+    "terminal_evaluations": 302
+  },
+  "illustrative_sensitivity": {
+    "caveat": "Algebraic scenario, not an intervention effect; pooled policies differ and prevented failures need not score like observed survivors.",
+    "q_gain_if_completed_mean_up5_at_fixed_completion": 2.4725274725274726,
+    "q_gain_if_completion_up_10pp_at_fixed_conditional_means": 3.1419014492753625,
+    "q_gap_completed_vs_eliminated": 31.419014492753625
+  },
+  "limitations": [
+    "No event seeds or random assignment presumed",
+    "Adaptive development data, not fresh confirmation",
+    "Wilson intervals are descriptive at observed n, not anytime-valid",
+    "Normalized dimensions are not action marginal returns",
+    "List prices and tokens do not measure subscription quota"
+  ],
+  "main_haiku_all_policies": {
+    "completed": 45,
+    "completed_dims_mean": {
+      "level": 46.0,
+      "network": 63.99977777777778,
+      "resilience": 97.55555555555556,
+      "risk_control": 64.88888888888889,
+      "skill": 77.50044444444444,
+      "wealth": 34.33488888888889
+    },
+    "completion_wilson95": [
+      0.39410584110376173,
+      0.5953502468515007
+    ],
+    "months_eliminated": {
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "22": 1,
+      "23": 1,
+      "24": 25,
+      "26": 1,
+      "29": 2,
+      "30": 2,
+      "31": 2,
+      "33": 1,
+      "39": 1,
+      "42": 1,
+      "47": 2,
+      "48": 2,
+      "8": 1
+    },
+    "n": 91,
+    "p_complete": 0.4945054945054945,
+    "proxy_y_mean": 42.61854945054945,
+    "proxy_y_sd": 16.79174353217394,
+    "q_completed": 59.81466666666667,
+    "q_eliminated": 28.395652173913042,
+    "q_mean": 43.932527472527475,
+    "q_sd": 18.205228161981175,
+    "rejected_actions": 1,
+    "steps": 13821,
+    "wall_s_completed_median": 726.56
+  },
+  "origins": {
+    "": 150,
+    "leah": 1
+  },
+  "planning": {
+    "caveat": "Normal approximation and pooled variance for planning only; this is not a stopping rule or a guarantee.",
+    "coefficient_alpha_one_sided_0_10_power_0_80": 9.015725469825009,
+    "n_per_arm_for_delta4_y": 147,
+    "pooled_within_policy_haiku_proxy_y_sd": 16.137830827823517
+  },
+  "race_proxy_all_actors": {
+    "completed": 70,
+    "completed_dims_mean": {
+      "level": 45.857142857142854,
+      "network": 64.52342857142857,
+      "resilience": 97.78571428571429,
+      "risk_control": 67.57142857142857,
+      "skill": 77.46457142857143,
+      "wealth": 34.68871428571428
+    },
+    "completion_wilson95": [
+      0.38866050759928206,
+      0.5463375086919231
+    ],
+    "months_eliminated": {
+      "17": 1,
+      "18": 4,
+      "19": 1,
+      "20": 2,
+      "21": 1,
+      "22": 1,
+      "23": 3,
+      "24": 42,
+      "26": 2,
+      "29": 2,
+      "30": 3,
+      "31": 2,
+      "32": 1,
+      "33": 1,
+      "35": 3,
+      "39": 2,
+      "42": 1,
+      "45": 1,
+      "47": 3,
+      "48": 2,
+      "8": 2
+    },
+    "n": 150,
+    "p_complete": 0.4666666666666667,
+    "proxy_y_mean": 41.80074666666667,
+    "proxy_y_sd": 16.87235368270983,
+    "q_completed": 60.192142857142855,
+    "q_eliminated": 28.114875,
+    "q_mean": 43.084266666666664,
+    "q_sd": 18.290805345770536,
+    "rejected_actions": 2,
+    "steps": 22296,
+    "wall_s_completed_median": 726.585
+  },
+  "recorded_blocks": [
+    {
+      "actor_id": "08e9167a965ed82c",
+      "at": 1793021219.864492,
+      "id": 78,
+      "leader": "f3-feedback-reactive-v1",
+      "leader_mean_y": 61.34,
+      "leader_probability_best": 0.57,
+      "robust": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "at": 1793021950.564918,
+      "id": 83,
+      "leader": "f3-feedback-reactive-v1",
+      "leader_mean_y": 61.34,
+      "leader_probability_best": 0.592,
+      "robust": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "at": 1793023631.7283509,
+      "id": 88,
+      "leader": "f3-feedback-reactive-v1",
+      "leader_mean_y": 60.21,
+      "leader_probability_best": 0.421,
+      "robust": null
+    },
+    {
+      "actor_id": "08e9167a965ed82c",
+      "at": 1793033372.455653,
+      "id": 114,
+      "leader": "f7-three-skills-v1",
+      "leader_mean_y": 55.21,
+      "leader_probability_best": 0.313,
+      "robust": true
+    }
+  ],
+  "scope": "Exported terminal results; descriptive analysis, not a selection or causal estimate. Actor/origin/environment cells stay separate.",
+  "source_sha256": {
+    "actors": "2f212abf724349e8dd5e5cb6c6bf1b2985d03190118d4eb2cac4f831b76c0bda",
+    "decisions": "91785c8689287c942828ecabb2f4867096248c8584c8f0ad9e658f5f10b02a91",
+    "evaluations": "374583214ffb0fd1a721d6f27d940eea266442bf62659bd949ecab753a070259",
+    "jobs": "a6ccbb89622c2fe22720802f6549974771f9fbe98aa8aea8c3151c570210efaa",
+    "policies": "7c29f883a7338314a00528735887351085434b59f13c38adc27e219c08b95340"
+  },
+  "trace_availability": {
+    "caveat": "Missing locally can mean the trace lives only in cloud or another machine; not proof of data loss.",
+    "proxy_total": 151,
+    "recorded_path_exists_on_this_machine": 0
+  },
+  "usage": {
+    "08e9167a965ed82c": {
+      "api_time_share": 0.9858632773339282,
+      "cache_read_share": 0.9922411082806168,
+      "median_list_usd": 1.3044,
+      "median_steps": 197,
+      "median_tokens": 32318643.0,
+      "median_tokens_per_month": 673305.0625,
+      "median_wall_s": 726.56,
+      "n_completed": 45
+    },
+    "254e47f505b5a6e9": {
+      "api_time_share": 0.9952336422956801,
+      "cache_read_share": 0.9372552155260402,
+      "median_list_usd": 7.7424,
+      "median_steps": 194.5,
+      "median_tokens": 7259958.0,
+      "median_tokens_per_month": 151249.125,
+      "median_wall_s": 2186.89,
+      "n_completed": 2
+    },
+    "2f9fbf1e5c4324e7": {
+      "api_time_share": 0.9941045303307289,
+      "cache_read_share": 0.9881903937544555,
+      "median_list_usd": 2.4063499999999998,
+      "median_steps": 200.0,
+      "median_tokens": 13944633.5,
+      "median_tokens_per_month": 290513.1979166666,
+      "median_wall_s": 745.515,
+      "n_completed": 10
+    },
+    "486fbe0a67ac052a": {
+      "api_time_share": 0.9940066251350947,
+      "cache_read_share": 0.9861920599250936,
+      "median_list_usd": 0.7556,
+      "median_steps": 202.0,
+      "median_tokens": 16270312.5,
+      "median_tokens_per_month": 338964.84375,
+      "median_wall_s": 569.045,
+      "n_completed": 2
+    },
+    "a104028b5c42f972": {
+      "api_time_share": 0.9926663895672053,
+      "cache_read_share": 0.9859099244884341,
+      "median_list_usd": 4.6739,
+      "median_steps": 199.0,
+      "median_tokens": 13488927.0,
+      "median_tokens_per_month": 281019.3125,
+      "median_wall_s": 577.41,
+      "n_completed": 2
+    },
+    "d922927e98f3bc16": {
+      "api_time_share": 0.9906599897468666,
+      "cache_read_share": 0.9860295676955759,
+      "median_list_usd": 5.048299999999999,
+      "median_steps": 198.0,
+      "median_tokens": 14620449.5,
+      "median_tokens_per_month": 304592.6979166666,
+      "median_wall_s": 672.9649999999999,
+      "n_completed": 2
+    },
+    "eaaedd84f8f22e6d": {
+      "api_time_share": 0.9937622217748893,
+      "cache_read_share": 0.9650171411787156,
+      "median_list_usd": 3.5596,
+      "median_steps": 199,
+      "median_tokens": 6035704.0,
+      "median_tokens_per_month": 125743.83333333333,
+      "median_wall_s": 748.42,
+      "n_completed": 7
+    }
+  }
+}
