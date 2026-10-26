@@ -71,6 +71,12 @@ Finalists are frozen and evaluated on fresh episodes in the official runner. A c
 
 Stage 1 is the maximum over at most three scored versions, and identical content is not rescored. At each cutoff we therefore submit the distinct valid version with the highest posterior predicted version score, and break ties in favour of the simpler, cheaper policy.
 
+### 2.4b Stall handling with the competition playbook
+
+The teammate library in `research/competition-playbook/` (36 cards from 17 competition cases) is the idea bank for stalls. A stall is detected from evidence, never from impatience. The pre-registered triggers are: stagnation (no leader gain of Δ/2 over three blocks), recurrent execution failures, a cheap–target rank reversal, a suspicious calendar pattern, or coordination cost growing faster than useful episodes. The orchestrator matches the symptom to the diagnostic table in `playbook.md` §1 and writes at least one alternative explanation. It then selects a few cards and turns each into a candidate with a frozen comparator under the protocol.
+
+Every candidate records its **idea origin** separately from the **experiment run**: `idea_origin: playbook:<card>/<case>` in the policy metadata, with registry experiment and job identifiers for what was actually executed. Cards that have not been run stay hypotheses with their trigger. A champion's mechanism is never presented as a validated improvement for this game. The card-by-card decisions from today's source review are in `research/careerlab/playbook-decisions.md`.
+
 ### 2.5 Why not the alternatives
 
 | Alternative | Why not as the backbone |

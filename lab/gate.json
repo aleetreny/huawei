@@ -24,7 +24,17 @@
         },
         "jiuwenswarm-target": {
           "allowed": false,
-          "reason": "Needs the competition key (after preliminary verification) or a user-approved team-funded deepseek-v4-flash budget, and a JiuwenSwarm 0.2.4b3 instance."
+          "routes": {
+            "competition-key": {
+              "allowed_when": "the organiser e-mail delivers the key",
+              "reason": "Official runner + designated model + competition key is the documented development use (api-key.rst: development and evaluation activity, USD 50, competition week). Blocked only because no key exists yet; the key needs a verified preliminary submission."
+            },
+            "team-openrouter": {
+              "allowed_when": "organiser answers message item 3 with yes AND the user approves a USD budget",
+              "reason": "Not addressed by the docs."
+            }
+          },
+          "slots": "careerlab.actors.official_runner: one private runner copy + HOME + database per slot"
         }
       }
     },
