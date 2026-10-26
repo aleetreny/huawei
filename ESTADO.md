@@ -118,7 +118,7 @@ El primer chat organizador se cierra a las 16:00 UTC, cuando se renueva la cuota
 **Ramas**
 - `main` contiene lo común y comprobado. Sólo el organizador escribe directamente en `main`, para actualizar este archivo y juntar ramas terminadas.
 - Cada tarea va en su propia rama:
-  - Si la app de Claude abre el chat en una copia aparte del proyecto (*worktree*), crea la rama sola (`claude/...`, o con tu prefijo si lo has cambiado en Ajustes). Úsala tal cual.
+  - Si la app de Claude abre el chat en una copia aparte del proyecto (*worktree*), crea la rama sola con el prefijo de cada persona: en la app de Alejandro, `alejandro/...` (cambiado el 26 oct). Matteo puede poner `matteo` en **Ajustes → Claude Code → Branch prefix**. Usa esa rama tal cual.
   - Si no, créala con el nombre `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`.
 - **El chat organizador es la excepción:** se abre directamente en la carpeta del proyecto, en `main`, sin copia aparte, porque es quien junta las ramas y edita este archivo.
 - Ramas que existen ahora:
@@ -173,6 +173,7 @@ Después, commit y push a tu rama. Una tarea no está terminada hasta que su rel
 - Tu diseño de tres Skills entró en la carrera como **M3**. Con Haiku está dormido (38 frente a 60 del líder), pero se puede despertar y el laboratorio lo revisa de vez en cuando.
 - La tarea que mejor encaja con tu cuota es **T4**: proponer manuales que no se nos hayan ocurrido, sobre todo de crecimiento (ascensos y dinero) y sin copiar los nuestros.
 - No lances partidas desde tu ordenador hasta que esté hecha T11.
+- En la app de Claude, pon `matteo` como prefijo de ramas (**Ajustes → Claude Code → Branch prefix**). Así tus ramas se llamarán `matteo/...` y se sabrá de quién es cada una.
 
 ## 8. Mapa de documentos
 
