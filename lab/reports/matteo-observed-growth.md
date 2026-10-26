@@ -24,3 +24,26 @@ Before registration, check redundancy with current cloud candidates and resolve 
 Candidate: `lab/policies-src/matteo-feedback-growth/observed-growth-v1`. Hypothesis, predictions and refutation are in policy.json. Original T4 candidate is untouched; label this proposal as synthesis rather than blind outside design. No engine internals, hidden promotion requirements, event-answer catalogues, registry writes or local gameplay were used.
 
 Validation: bundle lint and full policy-tree lint returned no findings; 225 tests passed in 16.74 seconds, with one existing Authlib deprecation warning. Skill length is 461 words including front matter. No candidate gameplay evaluation has occurred. After review and merge, the organiser can lint and register with `uv run careerlab lint lab/policies-src/matteo-feedback-growth/observed-growth-v1` and `uv run careerlab register lab/policies-src/matteo-feedback-growth/observed-growth-v1`; only the cloud should enqueue and play under the frozen allocation rules.
+
+## Cloud evaluation request — 26 October 2026
+
+The user explicitly selected central-cloud evaluation with the same actor as Ale, rather than another manual Codex exercise. **Status: requested, not registered, not queued, not running.** This local chat has no execution connection to the Claude cloud session. PR #1 is the delivery path; it must be reviewed and made available to the cloud organiser.
+
+Requested comparison:
+
+- Frozen `observed-growth-v1` versus the current Haiku incumbent selected at the next block boundary. The latest fetched report still lists F3 as leader; do not assume this remains true when scheduling.
+- Reuse the exact Haiku actor configuration/cell, not merely its model name. The 16:11 UTC report lists `08e9167a965ed82c`, with CLI 2.1.303. Verify the current actor and environment hashes first.
+- Initial screening and additional allocations follow prereg-v1, quota governors and the cloud's existing scheduling rules. No new local quota or sample-size override is requested. Process complete blocks and interrupted replacements as specified; do not score pending jobs as zero.
+- Primary decision uses the frozen protocol outcome; also report raw score, completion, level, wealth, risk, tokens and adherence. No matched event seeds are assumed. Compare with fresh incumbent episodes where the protocol allocates them.
+- Before registration, resolve the two source-policy parents: `f8-secure-growth-v1` and `value-conversion-v1`. The latter is in this PR and can be registered without enqueueing games if it is retained as provenance. Do not silently rewrite parentage after registering a content hash.
+
+Cloud preparation commands after review/merge (do not execute locally):
+
+```sh
+uv run careerlab lint lab/policies-src/matteo-value-conversion/value-conversion-v1
+uv run careerlab lint lab/policies-src/matteo-feedback-growth/observed-growth-v1
+uv run careerlab register lab/policies-src/matteo-value-conversion/value-conversion-v1
+uv run careerlab register lab/policies-src/matteo-feedback-growth/observed-growth-v1
+```
+
+The organiser records returned policy IDs, verifies parent resolution and actor identity, then enqueues through the existing planner. Report the policy ID, block/job IDs, candidate and incumbent outcomes, interruptions, token/quota use and next decision here or in the central cloud report. Until these exist, no gameplay result is claimed.
