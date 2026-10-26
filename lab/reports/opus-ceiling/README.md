@@ -64,4 +64,48 @@ This is a **measurement, never a submission candidate.** The winning games are a
 
 ## Results
 
-(pending)
+**Filled in 26 Oct 2026, about 18:00 UTC, after all 6 games.** The 6 games follow the pre-stated rule: the first 4 mixed a dismissal with completions, so 2 were added. No game was interrupted.
+
+| Game | Outcome | Months | Q | Y | Level | Wealth | Resilience | Skill | Risk control | Network | Half-year grades | Tokens per month (M) | Minutes |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|---:|
+| pilo-…-00000 | dismissed for capability | 24 | 24.48 | 24.58 | 10 | 11.4 | 65 | 7.5 | 80 | 3 | C C D D | 0.13 | 16 |
+| pilo-…-00001 | completed | 48 | 53.58 | 52.86 | 40 | 35.4 | 95 | 61.7 | 50 | 60 | C C C B B B B B | 0.15 | 41 |
+| pilo-…-00002 | completed | 48 | 62.02 | 59.62 | 50 | 36.8 | 100 | 90.0 | 50 | 62 | C B B B B B A A | 0.16 | 32 |
+| pilo-…-00003 | completed | 48 | 69.20 | 65.36 | 50 | 37.2 | 90 | 95.0 | 100 | 90 | C B B B B B A B | 0.15 | 32 |
+| pilo-…-00004 | completed | 48 | 59.08 | 57.26 | 40 | 28.5 | 100 | 69.2 | 100 | 60 | C C C B B B B A | 0.16 | 33 |
+| pilo-…-00005 | completed | 48 | 69.01 | 65.21 | 50 | 42.8 | 95 | 95.8 | 90 | 78 | C C B B B A A B | 0.16 | 33 |
+
+The dimensions are normalised ending scores (0–100). Tokens are all Claude tokens per survived month, and almost all of them are cache reads; they are not the target model's counts.
+
+**Primary metric.**
+- **Mean Y = 54.2**, SD 15.3, SE 6.2, 90 % t interval 41.6 – 66.7.
+- Mean Q = 56.2; over the 5 completed games, 62.6.
+- Completion rate 5/6.
+
+**Interpretation against the pre-stated thresholds** (reference Y_L = 60.21).
+- The point estimate, 54.2, is below Y_L + 5 = 65.2, so the reading is **"near the ceiling: shift effort to reliability (fewer month-24 dismissals) and token efficiency"**.
+- This is an estimate, and the interval also reaches into "some headroom" (65.2–70.2).
+- The point estimate is even below the Haiku leader's own posterior at the time the README was written. The current Haiku leader (f7-three-skills-v1, 55.2 after block decision #114) is also within the interval.
+- Our prediction (mean Y about 61, 3–4 of 4 completed) was slightly too optimistic on the mean and about right on completions.
+
+**Where points are still lost.** We weighted each dimension's shortfall with the per-dimension weights the game printed, as in `findings.md`.
+
+| Completed games | n | Level | Wealth | Network | Skill | Risk control | Resilience | Total missing |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| T13 ceiling (Opus, max effort, all general knowledge) | 5 | **16.2** | **12.8** | 3.0 | 2.6 | 2.2 | 0.6 | 37.4 |
+| Cloud race, other Claude games | 45 | **16.2** | **12.6** | 3.5 | 3.0 | 2.9 | 0.5 | 38.7 |
+| All actors, earlier (findings.md) | 48 | 16.2 | 13.1 | 3.4 | 3.3 | 3.5 | 0.2 | ≈ 40 |
+
+- **The level and wealth plateau does not move** with the strongest model, maximum effort and an explicit growth mode. Completed ceiling games end at level 40–50 and wealth 28–43, exactly like everyone else's.
+- What Opus gains is a little more risk control, network and skill, worth about 1–2 points in total.
+- The one loss followed the common route: four weak reviews (C C D D), then dismissal at month 24.
+
+**Tokens per month:** 0.13–0.16 M, far under the 0.5 M-per-month full-efficiency line. Haiku with the default context uses about 0.5 M per month. Context compaction is what keeps the token count low.
+
+**What this means for the week.**
+1. Strategy search over Skill text in general form is close to what Claude-class players can reach on the dev split. Better instructions do not lift level and wealth for Opus either.
+2. The remaining lever is **reliability**: the month-24 dismissal after four weak reviews, which the block-3 diagnosis ties to leaving Level 1 at the first or second review. Trust crises are the second route.
+3. **Token efficiency** matters for the target model; see T6 when the key arrives.
+4. The score is still Claude-proxy only. How DeepSeek executes the same text is unknown until T6.
+
+**Digests:** `lab/reports/teacher-digests/opus-ceiling/` (6 games) is new T2 teacher material. Its winners are mostly C → B by the second or third review, then A in the second half of the run.
