@@ -1,14 +1,15 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 15:03 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 15:18 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 249, interrupted 22, leased 28, queued 4.
+- Jobs in the registry: done 249, interrupted 22, leased 40.
 - Episodes finished in this container: 0. Batches completed: 0.
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.84**, window resets 26 Oct 16:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.896** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.897** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
+- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): policy not registered yet; predictions pre-stated in the README.
 
 ## Latest pre-registered block decision (Haiku actor)
 
@@ -50,7 +51,7 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 |---|---:|---:|---:|
 | p0-minimal | 8 | 3 | 1 |
 | m3-teammate | 7 | 3 | 1 |
-| f3-feedback-reactive | 7 | 3 | 2 |
+| f3-feedback-reactive | 7 | 3 | 4 |
 | f1-steady-balance | 7 | 3 | 1 |
 | f7-one-vs-many | 6 | 3 | 0 |
 | f4-visible-delivery | 6 | 3 | 1 |
@@ -64,6 +65,18 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: new family seeded from the F3 core (cross-branch hypothesis under the stagnation rule); idea origin: playbook:P10 (less defensive family that keeps its response to warnings), chosen because the stall trigger fires and because of the score-gap finding in findings.md (strategy-session request, 26 Oct ~14:45 UTC).
 - Hypothesis: Completed games already survive; the score they leave on the table is mostly career level and wealth (findings.md, 48 completed games, all actors), and every family so far optimises survival. F3's Clear state spends quiet quarters lifting the weakest statistic, which keeps the agent safe but does not compete for promotion. A policy that keeps F3's risk response (Secure) and weak-review plan (Repair) with higher precedence, and otherwise plays for promotion and pay (Grow: Apply for a key project, High-intensity work plus Prepare report materials while Health is comfortable, story options that raise Output, Skill, Wealth or standing at a bounded cost), will earn more A or S reviews, hence more promotions and salary, and end with higher level and wealth dimensions than F3 and f3-lean without more eliminations.
+- Haiku runs so far: no finished runs yet.
+
+### f3-opus-distilled-v1 (`c03a1bf3ca04c5e7`, family f3-feedback-reactive)
+
+- Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: distil (teacher); idea origin: user request 26 Oct: Opus teacher distillation (lab/reports/teacher-digests/distilled-rules.md).
+- Hypothesis: Opus winners differed from Opus losers less in how they answered warnings (Defuse in the first phase after HR said risks had piled up or worse: 14 of 18 phases vs 11 of 15) than in where routine effort went: Prepare report materials in at least 3 of 4 quarters (8 of 8 winners, 2 of 6 losers); no chasing of the numerically smallest statistic (Network maintenance or Build a mentorship in two-thirds or more of quarters: 0 of 8 vs 3 of 6, exactly the three capability-dismissed games); Apply for a key project kept in both quarters after the first C (7 of 8 vs 1 of 6); Defuse in the last Energy phase before a review that follows a weak one (D 0 of 7 vs 7 of 22); and a blow-up handled as Escalating (both visible trust crises came 1 to 2 months after a blow-up followed by a formal escalation). f3-lean says the opposite on two points (lift the weakest statistic; switch the main action by factor after a C or D). Merging all five rules into f3-lean raises review grades after the opening C and so mean quantitative_score above f3-lean, F3 and f3-distilled-prereview-defuse-v1 in a 4-run Haiku screen, with completion no lower.
+- Haiku runs so far: no finished runs yet.
+
+### f3-distilled-prereview-defuse-v1 (`f41d6382cab6ec76`, family f3-feedback-reactive)
+
+- Parents: f3-feedback-reactive-v1, f3-lean-v1; operator: distil (teacher, single-rule attribution); idea origin: user request 26 Oct: Opus teacher distillation (lab/reports/teacher-digests/distilled-rules.md).
+- Hypothesis: Every Opus game opened with a C, and the most common Opus exit (3 of 6 losses, plus the eliminated Sonnet F3 run) is C, C, D, D. The D after a weak review followed risk that rebuilt once the agent stopped defusing: of 29 reviews that followed a C or D, none of the 7 preceded by Defuse legacy risk in the last Energy phase before the review was a D, against 7 of the 22 without it. In the decisive case (a third review after C, C) the split is 4 of 4 defused and no D versus 4 of 4 not defused and D, within every seed group and within P0 and M3. Adding one line to f3-lean that sets Defuse legacy risk and Prepare report materials in the second Energy phase after any C or D, whatever the signal state, removes that route for Haiku: no D after a weak review in a 4-run screen and mean quantitative_score at least f3-lean's and F3's.
 - Haiku runs so far: no finished runs yet.
 
 ## Teacher distillation
@@ -85,6 +98,11 @@ User request relayed by the strategy session at about 14:25 UTC: distil Opus's w
 - **Registration** waits until the F3 family's Haiku N_f reaches 9, after round 1 of batch 1. Then the cap ⌈(1+N_f)^0.5⌉ = 4 allows both beside f3-lean and f3-balance-recombined. Children enqueued now could not run before batch 2 anyway.
 - **Flag for the team:** R1's timing is anchored to the published review cadence. See the compliance note at the end of distilled-rules.md: under prereg §10 it may count as diagnostic-only.
 - **Cloud digests:** new Opus games played here go to `lab/reports/teacher-digests/opus-cloud/`. `careerlab digest` skips games without a local run folder and rewrites `index.md`, so writing them into `opus/` would drop the 14 Mac games from that index.
+
+| Distilled child | Haiku runs finished | Q per run | pending |
+|---|---:|---|---:|
+| f3-opus-distilled-v1 | 0 | — | 4 |
+| f3-distilled-prereview-defuse-v1 | 0 | — | 4 |
 
 ## Problem A check: Haiku vs opus~100k on shared policies
 
@@ -183,3 +201,70 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **New candidates, all screened on Haiku with n = 4 and priority 20:**
   1. Two F3 children from the Opus teacher distillation: the full distilled bundle and an attribution child with only the strongest rule. The F3 cap ⌈(1+N_f)^0.5⌉ allows these two once N_f ≥ 9 terminal Haiku episodes.
   2. A new family, **secure-then-grow**, requested by the strategy session after the score-gap finding. Completed games miss about 40 points, mostly level and wealth. The family keeps F3's survival and review-recovery rules and adds a growth mode that seeks promotion and wealth when reviews are solid and no risk warning is active. It is the stall response for this block: playbook P10, "less defensive family with response to warnings".
+
+## Relevo (hand-off)
+
+_Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 UTC._
+
+### 1. What this session did, and why
+
+**Setup (14:12–14:20 UTC)**
+- Branch `cloud-lab-run` from `main` ad8c8f9. Ran `uv sync` and the dev dataset update, then `careerlab import`: 249 evaluations, 22 policies, 7 actors, 88 decisions.
+- `careerlab recover` found nothing to release. Wrote `quota_cap.json` with `{"max_five_hour": 0.80}`.
+- **Claude CLI pinned to 2.1.303** (`npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303`, then `CAREERLAB_CLAUDE_EXE`).
+  - Prereg §1 freezes the CLI version in every actor record. The container ships 2.1.310, which would have created new actor cells and cut the new runs off from the 99 Mac episodes.
+  - Checked: `claude-cli:haiku` → `08e9167a965ed82c`, `claude-cli:opus~100k` → `eaaedd84f8f22e6d`, both the existing ids.
+- **Quota seed:** the governor reads quota only from local worker streams, and there were none. A one-line probe stream in `runs/_quota-probe/` makes it hold correctly (five-hour 0.84 at 14:15, reset 16:00).
+- **Two reporting fixes, no decision-rule change** (commit f1b1b5d):
+  - `decisions.block_decision` recorded `robust: null` because it read attributes that `Robustness` does not have.
+  - `analysis.load_cells` dropped every episode whose `result.json` is not on this machine; it now falls back to the evaluation row.
+
+**Merges from `main`:** 7945fe4 (digests), 3db7af9 (seven-day pacing), d66911f (ESTADO.md, `careerlab lint`). Registry exports: kept this side, as asked.
+
+**Scheduler**
+- `scratchpad/driver.py`, detached: run the queue, then replacement attempts for interrupted slots, then the recorded Haiku block decision, then a marker file.
+- It was restarted three times before any episode started, to load new code (14:47, pacing; 15:13, ceiling lane; 15:16, priorities). Each time `careerlab recover` released the leases; no episode ran twice.
+- T13 ceiling lane: `scratchpad/ceiling.py`, `--purpose pilot --slots 2`. Ceiling jobs get priority −100, and the main lane uses `--limit` = queued non-pilot jobs, so it never leases them.
+
+**Policies created**
+
+| Policy | Id | Family | Parents | Hypothesis in one line |
+|---|---|---|---|---|
+| f8-secure-growth-v1 | 5f8c9648b6abd9b0 | f8-secure-growth (new) | F3, f3-lean (text) | Keep F3's risk and weak-review responses; when no signal is active, push for promotion and pay. That should lift level and wealth without more exits. T3, and the stall slot (playbook P10). |
+| f3-opus-distilled-v1 | c03a1bf3ca04c5e7 | f3-feedback-reactive | F3, f3-lean | f3-lean + distilled R1–R5 from 14 Opus games (T2). |
+| f3-distilled-prereview-defuse-v1 | f41d6382cab6ec76 | f3-feedback-reactive | F3, f3-lean | f3-lean + R1 only (attribution child, T2). |
+| x0-opus-ceiling-v1 | (pending) | ceiling | F3 | T13 measurement arm, clean room. |
+
+**Decisions recorded by this session**
+- `enqueue`: Problem A, 2 × opus~100k each for F3, f3-balance-recombined and f3-lean.
+- `enqueue`: 4 Haiku screens each for f8 and the two distilled children.
+- `reprioritise`: 4 Mac-queued calibrate replacements (default opus, opus@low) to −10, because of the weekly pace.
+- `reprioritise`: the 6 Problem-A opus~100k jobs to −5, behind the Haiku replicates.
+- `recover`: several entries.
+- Block decisions appear after each batch.
+
+**Progressive widening.** Prereg §6 counts N_f as terminal episodes in the family subtree, all actors. For F3 that is 9 (F3 5, f3-balance-recombined 2, f3-lean 2), so the cap is 4: 2 children existed and both distilled children fit. The report table counts Haiku-only N_f, which is stricter.
+
+### 2. Results so far
+See the sections above: latest block decision, actor comparison, Problem A, T13. No cloud episode had finished at the time of this edit.
+
+### 3. Failed or half done
+- **Not applied: 0.97 pre-reset cap.** A strategy-session request at 15:15 asked to raise `max_five_hour` to 0.97 and run 8 Haiku slots until 16:00. This session's permission classifier blocked it, because raising the cap on the window shared by the whole account can lock out the user's other sessions. The cap stays at 0.80 and the queue starts at the reset. **The user has to decide this directly. The cloud session cannot message other sessions.**
+- 22 interrupted attempts from the Mac stay on record, never scored. Each slot already had a later attempt.
+
+### 4. Next step and how to resume
+- If this session is gone, start a new cloud session on branch `cloud-lab-run` with the prompt below.
+- Leased or running jobs are released by `careerlab recover`. Interrupted ones get replacement attempts from `driver.py`'s requeue rule, or by hand with `Registry.requeue_interrupted`.
+
+```text
+Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Read lab/reports/cloud-run-status.md (section Relevo) and lab/CLOUD_RUNBOOK.md first. Setup: uv sync; uv run career-emulator-engine update --source distribution --split dev; npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303 and export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude (the actor records freeze CLI 2.1.303); uv run careerlab import; uv run careerlab recover; uv run careerlab status; write {"max_five_hour": 0.80} to ~/careerlab-data/huawei/quota_cap.json (never touch weekly_pace). Then loop: uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80 (T13 ceiling jobs, purpose pilot, run separately with --purpose pilot --slots 2); after each batch apply careerlab.decisions.block_decision for the Haiku actor 08e9167a965ed82c with record=True; generate children only within progressive widening and the stall rule; lint (careerlab lint), register, enqueue 4 Haiku screens; every hour careerlab export, update lab/reports/cloud-run-status.md, commit lab/registry, lab/reports, new lab/policies-src and push to cloud-lab-run. Never push to main, never submit, never use a competition key, never edit ESTADO.md or the prereg.
+```
+
+### 5. Suggested ESTADO.md updates (for the organiser)
+- **T1:** running in the cloud; batch 1 starts at the 16:00 UTC reset.
+- **T2:** distilled-rules.md done; two F3 children registered and queued.
+- **T3:** f8-secure-growth-v1 registered and queued.
+- **T13:** README with pre-stated thresholds committed; ceiling policy being written (clean room).
+- **T8:** pending (end of the run).
+- **Decision for the team:** the 0.97 pre-reset cap was blocked here and needs the user's own approval in the cloud session.
+- **Decision for the team:** whether R1's cadence-relative timing counts as a calendar trigger under prereg §10 (note at the end of distilled-rules.md).
