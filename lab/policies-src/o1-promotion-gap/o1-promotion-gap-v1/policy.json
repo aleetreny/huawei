@@ -1,0 +1,13 @@
+{
+  "family": "o1-promotion-gap",
+  "name": "o1-promotion-gap-v1",
+  "parents": [],
+  "idea_origin": "T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure",
+  "operator": "new family (outside designer)",
+  "hypothesis": "Promotion is a multi-stat gate set by the weakest of Skill, Network and Output relative to level; diagnosing that binding gap from feedback, building it in the round after a review and harvesting visible Output in the round before the next one produces more promotions, hence higher final level and wealth, than balanced allocation, while recovering only on low or falling stats keeps survival intact.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Notes name one gap (Skill, Network or Output) and change it only after a review, feedback or a missed promotion; Energy rounds alternate between build allocations (Skill learning, Network maintenance or High-intensity work aimed at the gap) and harvest allocations (Prepare report materials plus Report results to your manager or Showcase results) before reviews; Apply for a key project is the default main action; recovery actions and Lay low appear only after low stats or warnings; all Energy is spent every quarter.",
+  "refutation": "Refuted if, in a 4-run Haiku screen against the team's current reference policy in the same screen, mean final level is not higher, or more runs end early than the reference, or fewer than half of the notes name a gap (the skill is not being followed, so the test is uninformative).",
+  "skill_count": 1,
+  "notes": "Central idea: promotion is a gate held shut by the stat lagging furthest behind level, so diagnose that gap and close it on a build-then-harvest cycle between reviews. Sources actually used: the official handbook read through show_employee_handbook and the score structure in the T4 brief; the public readthedocs rules pages were unreachable (egress policy denied the host), so none of their content was used."
+}

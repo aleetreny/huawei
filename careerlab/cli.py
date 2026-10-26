@@ -9,6 +9,7 @@
     uv run careerlab recover                     # reconcile jobs with real processes
     uv run careerlab status
     uv run careerlab export                      # registry -> lab/registry/*.jsonl for Git
+    uv run careerlab origin set leah             # this machine plays as origin 'leah' (T11)
 """
 
 from __future__ import annotations
@@ -41,6 +42,7 @@ def _env_fingerprint(environment: str) -> dict:
 def cmd_doctor(args: argparse.Namespace) -> int:
     s = load_settings()
     info = {
+        "origin": s.origin or "(canonical race)", "registry_export_dir": str(s.registry_export_dir),
         "data_dir": str(s.data_dir), "lab_dir": str(s.lab_dir), "runner_dir": str(s.runner_dir),
         "mcp_executable": s.mcp_executable, "claude_executable": s.claude_executable,
         "versions": {p: version(p) for p in ("career-emulator-engine", "career-emulator-techarena", "fastmcp", "mcp")},
@@ -73,7 +75,7 @@ def cmd_bench(args: argparse.Namespace) -> int:
 
 def cmd_register(args: argparse.Namespace) -> int:
     s = load_settings()
-    reg = Registry(s.registry_path)
+    reg = s.registry()
     src = Path(args.path).resolve()
     meta = json.loads((src / "policy.json").read_text())
     errors = []
@@ -134,7 +136,7 @@ def cmd_enqueue(args: argparse.Namespace) -> int:
     from careerlab.scheduler import check_gate
 
     s = load_settings()
-    reg = Registry(s.registry_path)
+    reg = s.registry()
     actor_id, kind = _actor(reg, args.actor)
     env_id = reg.register_environment(_env_fingerprint(args.environment))
     check_gate(s, reg, kind, args.environment, args.n)
@@ -148,7 +150,7 @@ def cmd_run(args: argparse.Namespace) -> int:
     from careerlab.scheduler import Scheduler
 
     s = load_settings()
-    sched = Scheduler(s, Registry(s.registry_path))
+    sched = Scheduler(s, s.registry())
     print("recovered:", sched.recover())
     if args.kind == "scripted":
         print(asyncio.run(sched.run_scripted(slots=args.slots, limit=args.limit, purpose=args.purpose)))
@@ -162,7 +164,7 @@ def cmd_recover(args: argparse.Namespace) -> int:
     from careerlab.scheduler import Scheduler
 
     s = load_settings()
-    print(Scheduler(s, Registry(s.registry_path)).recover())
+    print(Scheduler(s, s.registry()).recover())
     return 0
 
 
@@ -170,7 +172,7 @@ def cmd_resume(args: argparse.Namespace) -> int:
     from careerlab.scheduler import Scheduler
 
     s = load_settings()
-    sched = Scheduler(s, Registry(s.registry_path))
+    sched = Scheduler(s, s.registry())
     print("recovered:", sched.recover())
     print("resumed:", asyncio.run(sched.resume_scripted()))
     return 0
@@ -178,7 +180,7 @@ def cmd_resume(args: argparse.Namespace) -> int:
 
 def cmd_status(args: argparse.Namespace) -> int:
     s = load_settings()
-    reg = Registry(s.registry_path)
+    reg = s.registry()
     rows = reg.db.execute(
         "SELECT p.name, a.kind, json_extract(a.config,'$.name') AS actor, e.purpose, COUNT(*) AS n, "
         "SUM(e.outcome='completed') AS completed, SUM(e.outcome='interrupted') AS interrupted, "
@@ -193,7 +195,7 @@ def cmd_report(args: argparse.Namespace) -> int:
     from careerlab.report import cell_report, markdown
 
     s = load_settings()
-    rep = cell_report(Registry(s.registry_path), purpose=args.purpose)
+    rep = cell_report(s.registry(), purpose=args.purpose, all_origins=args.all_origins)
     print(markdown(rep) if args.markdown else json.dumps(rep, indent=2))
     return 0
 
@@ -202,7 +204,7 @@ def cmd_package(args: argparse.Namespace) -> int:
     from careerlab.package import package
 
     s = load_settings()
-    rec = package(s, Registry(s.registry_path), args.policy, Path(args.out), Path(args.design),
+    rec = package(s, s.registry(), args.policy, Path(args.out), Path(args.design),
                   Path(args.video) if args.video else None, Path(args.readme) if args.readme else None)
     print(json.dumps(rec, indent=2))
     return 0 if rec["validator_exit"] == 0 else 3
@@ -212,7 +214,7 @@ def cmd_import(args: argparse.Namespace) -> int:
     from careerlab.store import import_jsonl
 
     s = load_settings()
-    print(import_jsonl(Registry(s.registry_path), Path(args.dir or s.lab_dir / "registry"), s.data_dir, s.lab_dir))
+    print(import_jsonl(s.registry(), Path(args.dir or s.lab_dir / "registry"), s.data_dir, s.lab_dir))
     return 0
 
 
@@ -220,14 +222,36 @@ def cmd_digest(args: argparse.Namespace) -> int:
     from careerlab.digest import digest
 
     s = load_settings()
-    rows = digest(Registry(s.registry_path), args.model, Path(args.out))
+    rows = digest(s.registry(), args.model, Path(args.out))
     print(json.dumps([{k: r[k] for k in ("job_id", "policy", "actor", "outcome", "Q", "grades")} for r in rows], indent=2))
     return 0
 
 
 def cmd_export(args: argparse.Namespace) -> int:
+    from careerlab.store import ExportWouldDropRows
+
     s = load_settings()
-    print(Registry(s.registry_path).export_jsonl(s.lab_dir / "registry"))
+    try:
+        print(s.registry_export_dir, s.registry().export_jsonl(s.registry_export_dir, force=args.force))
+    except ExportWouldDropRows as exc:
+        print(f"refused: {exc}", file=sys.stderr)
+        return 4
+    return 0
+
+
+def cmd_origin(args: argparse.Namespace) -> int:
+    from careerlab.config import ORIGIN_FILE, check_origin
+
+    if args.action == "set":
+        if not args.name:
+            print("usage: careerlab origin set <name>", file=sys.stderr)
+            return 2
+        ORIGIN_FILE.write_text(check_origin(args.name) + "\n")
+    elif args.action == "clear":
+        ORIGIN_FILE.unlink(missing_ok=True)
+    s = load_settings()
+    print(json.dumps({"origin": s.origin or "(canonical race)", "data_dir": str(s.data_dir),
+                      "registry_export_dir": str(s.registry_export_dir)}, indent=2))
     return 0
 
 
@@ -272,6 +296,7 @@ def main(argv: list[str] | None = None) -> int:
     rp = sub.add_parser("report")
     rp.add_argument("--purpose")
     rp.add_argument("--markdown", action="store_true")
+    rp.add_argument("--all-origins", action="store_true", help="include runs imported from other machines")
     rp.set_defaults(fn=cmd_report)
     pk = sub.add_parser("package")
     pk.add_argument("--policy", required=True)
@@ -284,7 +309,13 @@ def main(argv: list[str] | None = None) -> int:
     dg.add_argument("--model", required=True)
     dg.add_argument("--out", required=True)
     dg.set_defaults(fn=cmd_digest)
-    sub.add_parser("export").set_defaults(fn=cmd_export)
+    ex = sub.add_parser("export", help="registry -> lab/registry/ (race) or lab/registry-origins/<origin>/")
+    ex.add_argument("--force", action="store_true", help="overwrite even if the folder has rows this registry lacks")
+    ex.set_defaults(fn=cmd_export)
+    og = sub.add_parser("origin", help="show, set or clear this machine's origin (T11)")
+    og.add_argument("action", nargs="?", choices=["show", "set", "clear"], default="show")
+    og.add_argument("name", nargs="?")
+    og.set_defaults(fn=cmd_origin)
     im = sub.add_parser("import", help="load lab/registry/*.jsonl into this machine's registry (hand-off)")
     im.add_argument("--dir")
     im.set_defaults(fn=cmd_import)

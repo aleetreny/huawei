@@ -121,3 +121,36 @@
   - Install pitfall: in this iCloud folder the venv's `.pth` files carry the macOS `hidden` flag, which Python 3.13 skips, so `careerlab` stopped importing. Fix: `chflags nohidden .venv/lib/python3.13/site-packages/*.pth`. The flag comes back, so pytest now also sets `pythonpath = ["."]`. A venv outside iCloud (`UV_PROJECT_ENVIRONMENT`) avoids it for good.
   - Quota (14:42 UTC, app usage card): five-hour 86 %, weekly 15 %, and both reset 26 Oct 16:00 UTC. The new weekly window covers the rest of the competition. Today about 86 % of one five-hour window cost about 15 % of the week, so running at the five-hour cap in every window would empty the week in about two days. The governor now also paces the seven-day window: a straight line from 10 % at the window start to 90 % at 1 Nov 24:00 UK, about 12.6 % a day, keeping 10 % for the team's own chats.
   - Where completed games lose points (48 completed games, all actors): level 16.2 and wealth 13.1 of about 40 missing points; risk control 3.5, network 3.4, skill 3.3, resilience 0.2. Every family so far optimises survival, and none pushes promotion and wealth once survival is safe. This is the clearest coverage gap.
+
+## Cloud race and organiser (26 Oct, 14:12–16:20 UTC, branch `cloud-lab-run`)
+- The registry's actor records freeze Claude CLI 2.1.303, but the cloud container ships 2.1.310. Under prereg §1 a new CLI version would be a new actor cell, so the cloud pins 2.1.303 (`npm install --prefix ~/claude-2.1.303 …`, `CAREERLAB_CLAUDE_EXE`). With the pin, `claude-cli:haiku` and `claude-cli:opus~100k` resolve to the existing ids `08e9167a965ed82c` and `eaaedd84f8f22e6d`.
+- The quota governor reads quota only from local worker streams. A fresh container has none and would launch above the cap, so a one-line probe stream in `runs/_quota-probe/` seeds it.
+- Haiku games take 6–14 minutes in the cloud container.
+- Reporting fixes:
+  - `block_decision` had recorded `robust: null`;
+  - `analysis.load_cells` dropped episodes without a local `result.json`, and now falls back to the evaluation row.
+- New candidates on Haiku, provisional (3–4 games each, before the batch-1 decision), mean Q:
+
+  | Policy | Mean Q | Completed |
+  |---|---:|---:|
+  | f3-balance-recombined | 60.6 | 4/4 |
+  | F3 | 55.3 | 3/4 |
+  | f3-lean | 55.1 | 4/4 |
+  | f3-distilled-prereview-defuse (f3-lean + R1) | 51.0 | 2/3 |
+  | f8-secure-growth | 49.3 | 2/3 |
+  | o1-promotion-gap | 44.0 | 2/4 |
+  | o2-run-hot | 36.2 | 1/4 |
+  | f3-opus-distilled (f3-lean + R1–R5) | 31.7 | 1/3 |
+
+  Most losses are still the month-24 dismissal. The full distilled child replaces F3's weak-review factor plan with "keep Apply for a key project" (R4), and is dismissed at month 24 in 2 of 3 games.
+- T10 energy bots (400 scripted games, own data directory, no Claude quota; `lab/reports/energy-bots/`):
+  - Health is the first constraint when story choices ignore it. Every Energy mix without a Health point per quarter blacked out.
+  - Recovering only once Health is low is too late.
+  - Defuse + Health recovery was the best mix.
+  - No mix avoids the C at the first review.
+  - Surviving bots end at the same level and wealth as the LLM players.
+- T13 Opus ceiling (`opus@max~100k`, clean-room policy `x0-opus-ceiling-v1`, thresholds pre-stated in `lab/reports/opus-ceiling/README.md`): the first game was dismissed at month 24, with Q 24.5.
+- Organiser actions:
+  - merged `leah/workspace` (T11: origins; the registry migrated in place while the race ran) and `matteo-t4-growth` (T4 value-conversion, registered as `91b30e8096ff6766`). 230 tests pass.
+  - At the user's request, commits are authored as Alejandro Treny Ortega, with no Claude co-author lines. The 14 earlier `cloud-lab-run` commits were rewritten and force-pushed (that branch only).
+

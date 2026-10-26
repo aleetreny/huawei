@@ -138,7 +138,7 @@ class Scheduler:
                  if (Path(r["bundle_path"]) / "scripted.json").exists()}
         rows = self.registry.db.execute(
             "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='interrupted' AND a.kind='scripted' "
-            "AND j.job_id NOT IN (SELECT job_id FROM evaluations)").fetchall()
+            "AND j.origin=? AND j.job_id NOT IN (SELECT job_id FROM evaluations)", (self.registry.origin,)).fetchall()
         for job in rows:
             if job["policy_id"] not in rules:
                 continue
