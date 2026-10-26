@@ -1,6 +1,6 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 15:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 15:43 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
@@ -290,7 +290,7 @@ Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Rea
 - **T3:** f8-secure-growth-v1 registered and queued.
 - **T13:** README with pre-stated thresholds committed (a494d44) before registration. x0-opus-ceiling-v1 (47cbeec8b03ad2a0) registered; 4 games queued in their own 2-slot lane.
 - **T4:** o1-promotion-gap and o2-run-hot registered and queued (4 Haiku each). o3-sponsor-lens held because it overlaps F4 and F5. o1's timing is cadence-relative, like R1, so the same compliance question applies.
-- **T10:** energy bots running in their own data directory (10 arms × 40 episodes); report in `lab/reports/energy-bots/`.
+- **T10:** done (`lab/reports/energy-bots/README.md`), 400 bot episodes, no quota. Health is the first constraint when stories ignore it: every mix without a Health point per quarter blacked out. Recovering only once Health is low is too late. Defuse + Health was the best mix. No mix fixes the first review. Surviving bots end at the same level and wealth as the LLM players.
 - **T8:** not before 27 Oct; drafts start about 05:00 UTC.
 - **Decision for the team:** the 0.97 pre-reset cap was blocked here and needs the user's own approval in the cloud session.
 - **Decision for the team:** whether R1's cadence-relative timing counts as a calendar trigger under prereg §10 (note at the end of distilled-rules.md).
