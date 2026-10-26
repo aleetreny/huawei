@@ -37,7 +37,7 @@ uv run careerlab status
 uv run careerlab export                                           # registry -> lab/registry/*.jsonl
 ```
 
-`enqueue` refuses work that `gate.json` does not authorise. Real-game Claude workers stay closed until the organisers answer the message in `research/organiser-questions.md` §0.
+`enqueue` refuses work that `gate.json` does not authorise. Real-game Claude workers were opened by the user's decision of 26 Oct (see `gate.json` and `ESTADO.md`). `uv run careerlab lint <policy dir>` checks a proposed policy without registering it.
 
 ## Layout
 
@@ -50,4 +50,4 @@ lab/registry/         JSONL exports committed to Git (no trajectories, no game t
 lab/reports/          generated reports
 ```
 
-Trajectories contain development-dataset text returned by the game; they stay under `CAREERLAB_DATA` and are referenced by path and SHA-256, never committed.
+Trajectories contain development-dataset text returned by the game; they stay under `CAREERLAB_DATA` and are referenced by path and SHA-256, never committed. One exception: `careerlab digest` summaries under `lab/reports/teacher-digests/` (26 Oct) carry shortened game text so the cloud race can study Opus games. They are development material for this private repository only, and no phrase from them may go into a Skill.
