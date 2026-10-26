@@ -209,6 +209,47 @@ class Scheduler:
         beat.cancel()
         return counts
 
+    async def run_claude_continuous(self, concurrency: int, stop_file: Path, max_five_hour: float = 0.80,
+                                    purpose: str | None = None, poll_s: float = 20.0) -> dict[str, int]:
+        """Fast race: lease one job whenever a slot frees, so a job queued a minute ago with a higher priority
+        runs next. Stops leasing when `stop_file` exists and lets the games in flight finish."""
+        counts: dict[str, int] = {}
+
+        async def one(job: Any) -> None:
+            row = self.registry.db.execute("SELECT config FROM actors WHERE actor_id=?", (job["actor_id"],)).fetchone()
+            raw = json.loads(row["config"])
+            cfg = ClaudeWorkerConfig(**{k: raw[k] for k in ClaudeWorkerConfig.__dataclass_fields__ if k in raw})
+            bundle = self.registry.db.execute("SELECT bundle_path FROM policies WHERE policy_id=?", (job["policy_id"],)).fetchone()[0]
+            run_dir = self.settings.runs_dir / job["job_id"]
+            if not self.registry.mark_running(job["job_id"], os.getpid(), str(run_dir), owner=self.owner):
+                return
+            await run_claude_episode(self.settings, cfg, Path(bundle), job["job_id"], run_dir)
+            outcome = self.registry.ingest(job["job_id"], run_dir)
+            counts[outcome] = counts.get(outcome, 0) + 1
+            self._beat({"running": "claude-continuous", "done": sum(counts.values())})
+
+        beat = asyncio.create_task(self._heartbeat_loop())
+        running: set[asyncio.Task[None]] = set()
+        while not stop_file.exists():
+            while len(running) < concurrency and not stop_file.exists():
+                await self.wait_for_quota(max_five_hour)
+                jobs = self.registry.lease(self.owner, 1, actor_kind="claude-cli", purpose=purpose)
+                if not jobs:
+                    break
+                running.add(asyncio.create_task(one(jobs[0])))
+            if running:
+                done, running = await asyncio.wait(running, timeout=poll_s, return_when=asyncio.FIRST_COMPLETED)
+                for task in done:
+                    if task.exception() is not None:  # the job stays running until `recover` marks it interrupted
+                        counts["error"] = counts.get("error", 0) + 1
+                        self._beat({"error": repr(task.exception())})
+            else:
+                await asyncio.sleep(poll_s)
+        if running:
+            await asyncio.gather(*running)
+        beat.cancel()
+        return counts
+
 
 COMPETITION_END = 1793577600.0  # 2 Nov 2026 00:00 UTC, i.e. the last cutoff (1 Nov 24:00 UK)
 
@@ -223,6 +264,14 @@ def weekly_allowance(now: float, resets_at: float, pace: dict[str, float] | None
     quota_cap.json "weekly_pace") overrides start, end, initial or final.
     """
     pace = pace or {}
+    if pace.get("knots"):  # [[unix time, share], ...]: piecewise line, flat before the first and after the last knot
+        knots = sorted((float(t), float(v)) for t, v in pace["knots"])
+        if now <= knots[0][0]:
+            return knots[0][1]
+        for (t0, v0), (t1, v1) in zip(knots, knots[1:]):
+            if now <= t1:
+                return v0 + (v1 - v0) * (now - t0) / max(t1 - t0, 1.0)
+        return knots[-1][1]
     start = pace.get("start", resets_at - 7 * 86400)
     end = pace.get("end", min(resets_at, COMPETITION_END))
     initial, final = pace.get("initial", 0.10), pace.get("final", 0.90)
