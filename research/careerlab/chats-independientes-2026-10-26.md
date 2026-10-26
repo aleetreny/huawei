@@ -34,13 +34,13 @@ Decisión de Alejandro (26 oct, ~22:45 UTC): se para la carrera automática de l
 
 | Chat | Misión | Entregable | Fecha |
 |---|---|---|---|
-| **A. Entregas** (T15) | Versión 1: el mejor manual general reescrito para la rúbrica de calidad, sin cambiar sus reglas; comprobar que no empeora; documentos de diseño; paquete validado | `lab/submissions/r1/`, informe y PR | **27 oct, antes de las 20:00 UK** |
-| **B. Decisiones en eventos** (T16) | Comprobar si un procedimiento explícito para decidir en los eventos cambia lo que elige el jugador y, si lo cambia, si sube la nota | manual, informe y PR | 29 oct (candidato a la versión 2) |
+| **A. Entregas** (T15) | Versión 1: v7 si el chat B la confirma; si no, el mejor manual general. Reescrito para la rúbrica de calidad sin cambiar sus reglas; comprobar que no empeora; documentos de diseño; paquete validado | `lab/submissions/r1/`, informe y PR | **27 oct, antes de las 20:00 UK** |
+| **B. Réplica del mecanismo del ascenso** (T16) | Comprobar con suficientes partidas el manual observed-growth-v7 de Matteo (PR #13), basado en su estudio del ascenso (PR #10): hay que tener las habilidades en el máximo del nivel en el momento de la evaluación y proteger red y resultados en los eventos de antes. Haiku, 25 partidas de v7 y 25 de un manual de referencia, en las mismas condiciones | informe y PR | **27 oct a las 14:00 UK** (a tiempo para la versión 1) |
 | **C. Simulaciones brutas del juego** (T17) | El chat que ya tiene abierto Alejandro | lo que él decida | — |
 | **Personas** (T7) | Vídeo en inglés, de 10 minutos como máximo, con las 5 preguntas oficiales | `presentation.mp4` | **27 oct** |
 | **Decisión de cada corte** | Un chat corto nuevo antes de cada corte: elegir qué versión se sube con los informes de A, B y C, y juntar las PR terminadas | versión elegida y `ESTADO.md` al día | 27, 30 oct y 1 nov |
 
-Más adelante, si queda cuota: un chat para "un primer año al estilo de los bots que llegaron al nivel 6" (proyecto clave cada trimestre, un punto de salud cada trimestre y limpiar el riesgo con los avisos). También lo puede coger Matteo o Leah.
+La línea de Matteo (mecánica del ascenso, sus PR #10–#13) es la más prometedora: ataca el primer año, que decide dos tercios de la nota. Más adelante, si queda cuota: un chat para "un primer año al estilo de los bots que llegaron al nivel 6" (proyecto clave cada trimestre, un punto de salud cada trimestre y limpiar el riesgo con los avisos). También lo puede coger Matteo o Leah.
 
 ## Prompts para pegar
 
@@ -48,7 +48,37 @@ Más adelante, si queda cuota: un chat para "un primer año al estilo de los bot
 
 ```text
 Lee ESTADO.md, research/careerlab/estrategia-primeros-principios-2026-10-26.md y research/careerlab/chats-independientes-2026-10-26.md. Tu tarea es T15: la versión 1 para el corte del 27 oct a las 24:00 UK. Rama alejandro/entrega-v1; origen de registro "entregas" (uv run careerlab origin set entregas).
-1. Elige el manual base entre f3-lean-v1, observed-growth-v3, f3-balance-recombined-v1 y targeted-1026-201334. Rinden igual dentro del ruido, así que elige el que mejor cumpla la rúbrica oficial de calidad de los SKILL.md (local-runs/official-runner/docs/competition-rules.rst, "Document design quality") y el más general.
+1. Elige el manual base: observed-growth-v7 de Matteo si el informe del chat B (T16, antes de las 14:00 UK) dice que es mejor. Si no, el que mejor cumpla la rúbrica oficial de calidad de los SKILL.md (local-runs/official-runner/docs/competition-rules.rst, "Document design quality") entre f3-lean-v1, observed-growth-v3, f3-balance-recombined-v1 y targeted-1026-201334, que rinden igual dentro del ruido.
+2. Reescríbelo para esa rúbrica sin cambiar sus reglas: descripción con qué hace y cuándo usarlo; pasos con prioridades y criterios, también cerca de los límites; ventanas de ascenso y los 48 meses; todos los modos de fallo publicados; que valga si cambian los eventos. Nada de eventos con nombre, meses concretos ni umbrales no publicados. Pasa uv run careerlab lint.
+3. Comprueba que no empeora: 10 partidas de Haiku del original y 10 de la reescrita, con --slots 4 y --max-five-hour 0.80. Si la reescrita termina claramente menos partidas, vuelve al texto original.
+4. Escribe design/skills_design.md y design/decision_report.md en inglés, concretos y coherentes con los Skills que se suben. Empaqueta con careerlab package y valida con el programa oficial. Para validar desde una copia aparte, CAREERLAB_RUNNER_DIR tiene que apuntar a local-runs/official-runner y no hay que exportar UV_PROJECT_ENVIRONMENT. El paquete final espera al presentation.mp4 que graba el equipo.
+5. Deja todo en lab/submissions/r1/, escribe un informe con Relevo, actualiza tu línea T15 de ESTADO.md y abre una PR.
+```
+
+**B. Réplica del mecanismo del ascenso**
+
+```text
+Lee ESTADO.md, research/careerlab/estrategia-primeros-principios-2026-10-26.md, research/careerlab/chats-independientes-2026-10-26.md, lab/reports/matteo-promotion-study.md y la PR #13 de Matteo (observed-growth-v7). Tu tarea es T16: comprobar con suficientes partidas si observed-growth-v7 mejora de verdad. Rama alejandro/replica-v7; origen de registro "replica" (uv run careerlab origin set replica).
+1. Trae la carpeta del manual v7 desde la rama de la PR #13 (matteo/observed-growth-v7) y pásale uv run careerlab lint. El manual de referencia es f3-lean-v1 (5 de 5 terminadas, media 55,5 en 12 partidas de la carrera).
+2. Juega 25 partidas de Haiku de cada uno, intercaladas y en las mismas condiciones (--slots 4, --max-five-hour 0.65).
+3. Compara partidas terminadas, nota media con su error estándar, ascensos en el primer año y modo de fallo. A mitad de camino (unas 12 por manual), mira si v7 asciende antes del mes 12 más a menudo; esa señal llega antes que la nota.
+4. Antes del 27 oct a las 14:00 UK, escribe un informe con Relevo y una recomendación clara para el chat de entregas (¿v7 es mejor, igual o peor?), actualiza tu línea T16 de ESTADO.md y abre una PR.
+Ojo con el cumplimiento: v7 usa que las evaluaciones se aplican al principio de su mes, cosa que no dice el manual del juego publicado. Que el texto del Skill no contradiga las reglas publicadas (la rúbrica penaliza contradecir el juego); redáctalo como "ten las habilidades en su máximo antes de cualquier mes de evaluación".
+```
+
+La idea del procedimiento explícito para los eventos queda para después: v7 ya la incluye en parte (proteger red y resultados antes de una evaluación).
+
+**Decisión de cada corte** | Un chat corto nuevo antes de cada corte: elegir qué versión se sube con los informes de A, B y C, y juntar las PR terminadas | versión elegida y `ESTADO.md` al día | 27, 30 oct y 1 nov |
+
+La línea de Matteo (mecánica del ascenso, sus PR #10–#13) es la más prometedora: ataca el primer año, que decide dos tercios de la nota. Más adelante, si queda cuota: un chat para "un primer año al estilo de los bots que llegaron al nivel 6" (proyecto clave cada trimestre, un punto de salud cada trimestre y limpiar el riesgo con los avisos). También lo puede coger Matteo o Leah.
+
+## Prompts para pegar
+
+**A. Entregas**
+
+```text
+Lee ESTADO.md, research/careerlab/estrategia-primeros-principios-2026-10-26.md y research/careerlab/chats-independientes-2026-10-26.md. Tu tarea es T15: la versión 1 para el corte del 27 oct a las 24:00 UK. Rama alejandro/entrega-v1; origen de registro "entregas" (uv run careerlab origin set entregas).
+1. Elige el manual base: observed-growth-v7 de Matteo si el informe del chat B (T16, antes de las 14:00 UK) dice que es mejor. Si no, el que mejor cumpla la rúbrica oficial de calidad de los SKILL.md (local-runs/official-runner/docs/competition-rules.rst, "Document design quality") entre f3-lean-v1, observed-growth-v3, f3-balance-recombined-v1 y targeted-1026-201334, que rinden igual dentro del ruido.
 2. Reescríbelo para esa rúbrica sin cambiar sus reglas: descripción con qué hace y cuándo usarlo; pasos con prioridades y criterios, también cerca de los límites; ventanas de ascenso y los 48 meses; todos los modos de fallo publicados; que valga si cambian los eventos. Nada de eventos con nombre, meses concretos ni umbrales no publicados. Pasa uv run careerlab lint.
 3. Comprueba que no empeora: 10 partidas de Haiku del original y 10 de la reescrita, con --slots 4 y --max-five-hour 0.80. Si la reescrita termina claramente menos partidas, vuelve al texto original.
 4. Escribe design/skills_design.md y design/decision_report.md en inglés, concretos y coherentes con los Skills que se suben. Empaqueta con careerlab package y valida con el programa oficial. Para validar desde una copia aparte, CAREERLAB_RUNNER_DIR tiene que apuntar a local-runs/official-runner y no hay que exportar UV_PROJECT_ENVIRONMENT. El paquete final espera al presentation.mp4 que graba el equipo.
