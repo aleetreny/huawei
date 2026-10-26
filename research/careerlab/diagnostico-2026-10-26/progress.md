@@ -10,3 +10,4 @@
 - Cerrado el informe desde primeros principios: objetivo real, supervivencia/crecimiento, transferencia, inferencia incorrecta de techo, causalidad, sensibilidad de familias, protecciones y costes; experimentos priorizados y límites explícitos.
 - Main avanzó a 3c1c993 durante el análisis: leído el diagnóstico del bloque 3 y sus tres nuevas hijas F7. Se reconoce el progreso y se priorizan sus contrastes para no duplicar trabajo.
 - Verificación: scripts offline ejecutados, recuentos y hashes comprobados, enlaces locales correctos. `uv run pytest -q`: 230 passed, 1 warning (Authlib) in 32.69s. Línea informativa propia finalizada; no se cambian las del equipo ni el plan global.
+- Publicado el diagnóstico en la rama propia y abierta [PR #4](https://github.com/aleetreny/huawei/pull/4), adjuntada a este chat. Se solicita revisión/integración a la organizadora mediante la PR, sin enviar mensajes a otras sesiones.
