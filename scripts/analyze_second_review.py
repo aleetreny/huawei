@@ -151,7 +151,7 @@ def analyze(source_root, output):
     for filename,header,rows in (("observed-edges.csv",["from","choice","to","count"],edges),
         ("same-title-chains.csv",["from","choice","to","from_month","to_month","count"],chains)):
         with (output/filename).open("w") as stream:
-            w=csv.writer(stream);w.writerow(header);w.writerows((*k,v) for k,v in sorted(rows.items()))
+            w=csv.writer(stream,lineterminator="\n");w.writerow(header);w.writerows((*k,v) for k,v in sorted(rows.items()))
     lines=["# Encountered month 7–12 questions", "", "Research catalogue; temporal branches and mixed-context effects are not causal treatment estimates.",""]
     for q in ordered:
         lines += [f"## {q['event'].get('title','?')} — {q['id']}","",q["event"].get("description",""),"",
