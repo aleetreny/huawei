@@ -1,0 +1,5 @@
+{
+  "python": "3.13.15 (main, Aug 25 2026, 13:50:12) [Clang 22.1.3 ]",
+  "numpy": "2.5.4",
+  "note": "Recorded after the run in the same environment; source snapshots verified against manifest code hashes."
+}
