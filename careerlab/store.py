@@ -259,6 +259,39 @@ class Registry:
         return counts
 
 
+def import_jsonl(registry: "Registry", in_dir: Path, data_root: Path, lab_root: Path) -> dict[str, int]:
+    """Load a JSONL export into an empty or older registry (cloud hand-off); existing rows are kept.
+
+    Portable paths are re-rooted on this machine. Trajectory files stay on the
+    machine that produced them; their SHA-256 in the evaluation rows keeps them
+    verifiable when they are copied later.
+    """
+    counts: dict[str, int] = {}
+    for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
+        path = in_dir / f"{table}.jsonl"
+        if not path.exists():
+            continue
+        cols = [r[1] for r in registry.db.execute(f"PRAGMA table_info({table})").fetchall()]
+        n = 0
+        with registry.tx():
+            for line in path.read_text().splitlines():
+                row = json.loads(line)
+                for key in ("trajectory_path", "run_dir", "db_root", "bundle_path"):
+                    value = row.get(key)
+                    if value and value.startswith("careerlab-data/"):
+                        row[key] = str(data_root / value.split("/", 2)[2]) if value.count("/") >= 2 else value
+                    elif value and value.startswith("lab/"):
+                        row[key] = str(lab_root / value[len("lab/"):])
+                if table == "jobs" and row.get("status") in ("leased", "running"):
+                    row.update(status="queued", lease_owner=None, lease_expires=None, pid=None)  # leases never travel
+                keys = [k for k in cols if k in row]
+                registry.db.execute(f"INSERT OR IGNORE INTO {table} ({','.join(keys)}) VALUES ({','.join('?' * len(keys))})",
+                                    [row[k] for k in keys])
+                n += 1
+        counts[table] = n
+    return counts
+
+
 def _portable(path: str) -> str:
     """Store paths relative to the data or repository root so exports move between machines."""
     for marker in ("/careerlab-data/", "/lab/"):

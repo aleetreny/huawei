@@ -110,3 +110,10 @@
   Converting to visible delivery after the first weak review rescued the invest-early idea. Bolting extra rules onto an already good policy (F1) hurt it, which matches playbook P20. The other review guards did not help. F3 remains the leader at 61.3.
 
   Next generation, within the progressive-widening limit (2 children for the F3 family): an F3 subtraction (P20) and an F3 × F1 recombination (P14).
+- **State at hand-off (14:15 UTC):** 99 Claude episodes on real dev, plus 150 scripted and the infrastructure tests.
+  - Final Haiku block decision (robust): the F3 family leads. F3 60.2 (3 runs), f3-balance-recombined 58.9 (2), f3-lean 57.5 (2), then F7 three-skills 50.0, F1 49.3 (4) and the F7 single Skill 48.8.
+  - **P0 and M3 are DORMANT.** Every other cell still repeats.
+  - By actor (all policies): opus~100k completion 0.83, mean Q 57.8 (6 eps); Haiku 0.55 / 45.5 (53); opus@low 0.40 / 43.2 (5); Sonnet 0.38 / 39.4 (26); haiku@low 0.33 / 39.2 (6); opus 0.33 / 33.9 (3).
+  - Compact context helps the strongest model; Sonnet is consistently weak in this game.
+  - Synthetic method comparison (R = 100, `lab/reports/synthetic-method-comparison/`): racing and the full method beat best-of-N and refine-the-leader. The full method cuts false rejections 39 % → 10 % and gives unbiased confirmation. Truncated screening is the only clearly harmful ablation.
+  - Cloud execution verified, and `lab/CLOUD_RUNBOOK.md` carries the lab on unattended.

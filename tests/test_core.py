@@ -210,3 +210,23 @@ def test_owner_alive_uses_local_pid(tmp_path):
     sched = Scheduler(Settings(data_dir=tmp_path), Registry(tmp_path / "r.sqlite3"))
     assert sched.owner_alive(f"{socket.gethostname()}:{os.getpid()}:abc")
     assert not sched.owner_alive(f"{socket.gethostname()}:999999:abc")
+
+
+def test_export_import_round_trip(tmp_path):
+    from careerlab.store import import_jsonl
+
+    reg, pid, aid, eid = _registry(tmp_path)
+    jobs = reg.enqueue(pid, aid, eid, "screen", 2)
+    reg.lease("A", 2)
+    run(FakeClient(), tmp_path, jobs[0])
+    reg.ingest(jobs[0], tmp_path / jobs[0])
+    reg.decide("block_decision", aid, {"x": 1}, "test")
+    reg.export_jsonl(tmp_path / "export")
+    other = Registry(tmp_path / "other.sqlite3")
+    counts = import_jsonl(other, tmp_path / "export", tmp_path / "data", tmp_path / "lab")
+    assert counts["evaluations"] == 1 and counts["jobs"] == 2
+    statuses = dict(other.db.execute("SELECT job_id, status FROM jobs").fetchall())
+    assert statuses[jobs[0]] == "done" and statuses[jobs[1]] == "queued"  # a lease from another machine is released
+    assert other.cell_scores(pid, aid) == [42.0]
+    import_jsonl(other, tmp_path / "export", tmp_path / "data", tmp_path / "lab")  # idempotent
+    assert other.db.execute("SELECT COUNT(*) FROM evaluations").fetchone()[0] == 1

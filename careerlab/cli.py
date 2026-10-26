@@ -198,6 +198,14 @@ def cmd_package(args: argparse.Namespace) -> int:
     return 0 if rec["validator_exit"] == 0 else 3
 
 
+def cmd_import(args: argparse.Namespace) -> int:
+    from careerlab.store import import_jsonl
+
+    s = load_settings()
+    print(import_jsonl(Registry(s.registry_path), Path(args.dir or s.lab_dir / "registry"), s.data_dir, s.lab_dir))
+    return 0
+
+
 def cmd_export(args: argparse.Namespace) -> int:
     s = load_settings()
     print(Registry(s.registry_path).export_jsonl(s.lab_dir / "registry"))
@@ -251,6 +259,9 @@ def main(argv: list[str] | None = None) -> int:
     pk.add_argument("--readme")
     pk.set_defaults(fn=cmd_package)
     sub.add_parser("export").set_defaults(fn=cmd_export)
+    im = sub.add_parser("import", help="load lab/registry/*.jsonl into this machine's registry (hand-off)")
+    im.add_argument("--dir")
+    im.set_defaults(fn=cmd_import)
     args = parser.parse_args(argv)
     return args.fn(args)
 

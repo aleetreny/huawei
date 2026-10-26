@@ -8,11 +8,11 @@ A tested, resumable laboratory that generates, evaluates and archives Career Sur
 
 ## Next Step
 
-Integrate build-workflow components (synthetic, stats, policies, search); run synthetic method comparison and harness smoke test.
+Hand off to the cloud session (runbook), then: target cost/fidelity pilot as soon as the key arrives; R1 package (video + design docs) for 27 Oct 24:00 UK.
 
 ## Current Phase
 
-Phase 4
+Phase 5
 
 ## Phases
 
@@ -41,16 +41,18 @@ Phase 4
 ### Phase 4: Planner, store, statistics and actors
 
 - [x] Immutable policy store (hash, parents, hypothesis, change), registry, job leases, resume
-- [ ] Scripted actors [x], Claude CLI worker actor [x], synthetic testbed (build workflow wf_dfeb9d9a-a0f)
-- [ ] Statistics module implementing the pre-registered rules (build workflow)
-- **Status:** in_progress
+- [x] Scripted actors, Claude CLI worker actor, synthetic testbed (build workflow wf_dfeb9d9a-a0f)
+- [x] Statistics module implementing the pre-registered rules; block decisions (`careerlab/decisions.py`)
+- [x] Search engine with baselines and ablations on the synthetic testbed (final review/fix may still update the report)
+- **Status:** complete
 
 ### Phase 5: Pilot, fixes and scale-up by evidence
 
-- [ ] Dev-scale pilot on the real game within the authorisation gate
-- [ ] Synthetic-testbed validation of method vs baselines and ablations
-- [ ] Fix problems found; record what failed
-- **Status:** pending
+- [x] Real-game pilots: 150 scripted (kill/resume) and ~100 Claude-proxy episodes (user decision 26 Oct)
+- [x] Synthetic-testbed validation of method vs baselines and ablations (R=100)
+- [x] Fix problems found; record what failed (retention limit, duplicate-lease incident, quota governor, operator-stop classification)
+- [ ] Continue racing in the cloud (`lab/CLOUD_RUNBOOK.md`); target pilot when the key arrives
+- **Status:** in_progress
 
 ### Phase 6: Commit and report
 
