@@ -20,8 +20,8 @@ from careerlab.store import Registry
 def collect(reg: Registry, actor_id: str, env_id: str | None = None) -> dict[str, dict[str, Any]]:
     """policy_id -> {name, family, launches: [(replicate, Y or None)]} for one actor (all purposes)."""
     query = ("SELECT j.policy_id, j.replicate, j.attempt, j.status, j.purpose, p.name, p.family, e.score, e.survival_months, e.completed, e.outcome "
-             "FROM jobs j JOIN policies p USING(policy_id) LEFT JOIN evaluations e USING(job_id) WHERE j.actor_id=?")
-    args: list[Any] = [actor_id]
+             "FROM jobs j JOIN policies p USING(policy_id) LEFT JOIN evaluations e USING(job_id) WHERE j.actor_id=? AND j.origin=?")
+    args: list[Any] = [actor_id, reg.origin]  # prereg-v1 launch order is per origin; other machines' runs never enter
     if env_id:
         query += " AND j.env_id=?"
         args.append(env_id)

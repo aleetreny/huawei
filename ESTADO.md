@@ -70,7 +70,7 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 | T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
 | T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
 | T10 | Bots sin IA para estudiar el reparto de energía (opcional, no gasta cuota) | nube, en segundo plano | opcional | `lab/reports/energy-bots/` |
-| T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | organizador | sólo si alguien más va a jugar | código en `careerlab/` |
+| T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha en la rama `leah/workspace` (26 oct); falta revisarla y juntarla con `main` | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | nube (organizadora) | cada día | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | pedida | `cloud-lab-run`: `lab/reports/opus-ceiling/` |
 
