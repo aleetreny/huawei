@@ -132,6 +132,22 @@
    "rung": 3,
    "status": "runner_up"
   },
+  "98f660fe2b16056d": {
+   "base": "fbc813c480b56ff3",
+   "completed": 0,
+   "decided": null,
+   "entered": 1793054444.7899687,
+   "first": 2,
+   "games": 0,
+   "kind": "targeted",
+   "mean": null,
+   "name": "targeted-1026-221555",
+   "note": "R comments after its blow-up, yet took Lay low four quarters running at Health 10. Its two L2 reviews in that stretch came out C and D with Output below its best for L2, and it spent 30 months at L2, promoted only after it switched to Report results and key projects. ladd-00006, dismissed without ever leaving L1, still called its risk Escalating after three calm months. It turned down weekend work",
+   "p_better": null,
+   "policy_id": "98f660fe2b16056d",
+   "rung": 0,
+   "status": "active"
+  },
   "b4a1de970f08ff52": {
    "base": "fbc813c480b56ff3",
    "completed": 7,
@@ -619,6 +635,17 @@
    "p_better": 0.094,
    "policy_id": "ccc7cd4c1c0f5d5b",
    "why": "P(better than targeted-1026-201334) = 0.09 after 4 games, mean 42.5, 2/4 completed < 0.15"
+  },
+  {
+   "at": 1793054444.7899687,
+   "completed": 0,
+   "event": "enter",
+   "games": 0,
+   "mean": null,
+   "name": "targeted-1026-221555",
+   "p_better": null,
+   "policy_id": "98f660fe2b16056d",
+   "why": "targeted challenger, first 2 games; R comments after its blow-up, yet took Lay low four quarters running at Health 10. Its two L2 reviews in that stretch came out C and D with Output below its best for L2, and it spent 30 months at L2, promoted only after it switched to Report results and key projects. ladd-00006, dismissed without ever leaving L1, still called its risk Escalating after three calm months. It turned down weekend work"
   }
  ],
  "finished_since_crown": 2,
