@@ -1,0 +1,53 @@
+{
+  "purpose": "Authorisation gate checked by careerlab.scheduler before any job is queued. Edited only by the orchestrator after a written organiser reply or an explicit user decision; every edit is a new registry decision.",
+  "updated": "2026-10-26",
+  "clarification_status": "No written organiser clarification exists in the official docs or the participation repository (no issues, no discussions) as of 2026-10-26. Discord not readable from this session; query drafted in research/organiser-questions.md section 0, not sent.",
+  "environments": {
+    "real-dev": {
+      "description": "Official career-emulator-engine-mcp 1.0.6 + career-emulator-techarena 1.0.8 (dev split), stdio transport only, official runner engine env.",
+      "transport": "stdio",
+      "actors": {
+        "scripted": {
+          "allowed": true,
+          "max_episodes": 1500,
+          "reason": "Docs allow development MCP clients over stdio and inspection of own run outputs. Cap keeps use at ordinary development scale until organisers answer; includes infrastructure tests already run.",
+          "prior_sessions": 752,
+          "prior_sessions_note": "Infrastructure probes, isolation, capacity and throughput tests run on 26 Oct before the registry existed: 574 complete episodes plus about 166 diagnostic sessions. Plus 12 partial pilot sessions from a kill test made before a registry schema change (kept in careerlab-data/orphaned)."
+        },
+        "claude-cli": {
+          "allowed": false,
+          "reason": "External LLM actors playing dev games are not addressed by the rules (silence is not permission). Pending organiser answer to research/organiser-questions.md section 0."
+        },
+        "native-subagent": {
+          "allowed": false,
+          "reason": "Same as claude-cli."
+        },
+        "jiuwenswarm-target": {
+          "allowed": false,
+          "reason": "Needs the competition key (after preliminary verification) or a user-approved team-funded deepseek-v4-flash budget, and a JiuwenSwarm 0.2.4b3 instance."
+        }
+      }
+    },
+    "synthetic": {
+      "description": "CareerLab SynthCareer testbed: invented mechanics with known ground truth, no game content. Used for method validation and harness tests.",
+      "transport": "stdio",
+      "actors": {
+        "scripted": {
+          "allowed": true,
+          "max_episodes": null,
+          "reason": "Own synthetic environment."
+        },
+        "claude-cli": {
+          "allowed": true,
+          "max_episodes": 12,
+          "reason": "Harness smoke tests only; CLI account reports Pro with 79% weekly use (see findings.md). Raise after the user re-authenticates the CLI with the Max account."
+        },
+        "native-subagent": {
+          "allowed": true,
+          "max_episodes": 12,
+          "reason": "Harness tests on the Max quota."
+        }
+      }
+    }
+  }
+}

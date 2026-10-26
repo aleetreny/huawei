@@ -1,0 +1,9 @@
+{
+ "family": "baseline-random",
+ "name": "scripted-uniform-affordable",
+ "parents": [],
+ "hypothesis": "Uniform choice, but never an unaffordable energy action; isolates the cost of invalid quarterly actions.",
+ "change": "initial scripted probe",
+ "refutation": "No difference from uniform beyond fewer rejected actions would mean invalid actions are harmless.",
+ "kind": "scripted"
+}

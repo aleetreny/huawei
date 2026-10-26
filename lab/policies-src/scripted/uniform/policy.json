@@ -1,0 +1,9 @@
+{
+ "family": "baseline-random",
+ "name": "scripted-uniform",
+ "parents": [],
+ "hypothesis": "Uniform choice among listed options (teammate random-driver design) gives the floor reference with complete per-episode records.",
+ "change": "initial scripted probe",
+ "refutation": "Any reasoned policy should beat it; if not, the harness or the measure is broken.",
+ "kind": "scripted"
+}

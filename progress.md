@@ -35,3 +35,13 @@
 - Clarified older MCTS wording: game-state search needs a generative branch mechanism, while external search over policy variants can evaluate fresh episodes. Updated the unsent organiser question to describe the exact proposed external-worker architecture.
 - Remote final check found a new Matteo commit 27cd3c1. Reviewed its eight-file diff read-only and updated the audit: three-Skill candidate, packaging/manual checks, 100 official runs not started. No new performance evidence; teammate branch remains separate.
 - Final research coverage audit is complete. No external model calls, new game batches, organiser messages or submission were made for this specification. Publishing the verified package to main and checking its remote commit before delivery.
+
+## CareerLab build — 26 October 2026 (orchestrator: Opus 5.5 desktop session on `main`)
+- 11:05 Read prior research, Matteo review, from-zero lab, organiser questions; downloaded the ten official doc sources (scratchpad). Branch `main` is the user's; `origin/Matteo` still at 27cd3c1, untouched.
+- 11:13 Installed planning-with-files 3.25.2 from OthmanAdi/planning-with-files (plugin, user scope, sha dcdfb27). Archived the old root plan (`research/archive/`), new native-format `task_plan.md` validated.
+- 11:15 Launched critical-audit workflow (8 auditors + 8 adversarial verifiers, Opus): finished 11:45, 3.43 M subagent tokens, 676 tool calls; 43 serious findings upheld, 11 refuted (`research/careerlab/audit-2026-10-26.json`, `errata.md`).
+- 11:16–11:40 Built `careerlab`: uv project pinned to the official runner lock, stdio MCP client with observe-before-retry, episode runner, scripted actors, diagnostics. Isolation, retention-limit and throughput facts recorded in findings.md.
+- 11:30 Account check: desktop = Max (7 % / 2 %); `claude` CLI = Pro, seven-day 79 % (reset 30 Oct 07:00 UTC). Worker isolation flags verified with a dummy MCP server (no game).
+- 11:50 Launched build workflow (synthetic testbed, statistics, policy families + compliance linter, then search engine; each with adversarial review and fix).
+- 12:00 Registry, scheduler, CLI, gate; core tests 9/9 pass. Pilot P1: 150 scripted real-dev episodes with a kill -9 / recover / resume test (10 resumed in-session, 2 replaced, 0 interruptions scored).
+- 12:15 Pre-registration v1 frozen (hashes in registry decision `protocol_frozen`). Short organiser message drafted (§0, not sent). Method decision document written. Official runner installed at 00b084a8 with JiuwenSwarm 0.2.4b3.

@@ -1,0 +1,9 @@
+{
+ "family": "scripted-quarterly",
+ "name": "scripted-quarterly-risk",
+ "parents": [],
+ "hypothesis": "Story choices uniform; defuses hidden risk after the run itself reports risk feedback.",
+ "change": "initial scripted probe",
+ "refutation": "No reduction of trust-crisis exits vs quarterly-wellbeing would mean the reaction comes too late or matters little.",
+ "kind": "scripted"
+}

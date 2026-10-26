@@ -1,0 +1,9 @@
+{
+ "family": "scripted-quarterly",
+ "name": "scripted-quarterly-growth",
+ "parents": [],
+ "hypothesis": "Story choices uniform; quarterly allocation favours Skill/Output/Network and recovers only when low.",
+ "change": "initial scripted probe",
+ "refutation": "If it outlives quarterly-wellbeing, early exits are not driven by quarterly wellbeing.",
+ "kind": "scripted"
+}

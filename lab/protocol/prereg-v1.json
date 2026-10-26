@@ -1,0 +1,15 @@
+{
+  "protocol_id": "careerlab-prereg-v1",
+  "frozen": "2026-10-26",
+  "outcome": {"primary": "Y = 0.8*Q + 0.1*E", "range": [0, 90], "E_cap_early_exit": 50, "E_full_band_tokens_per_month": 500000, "E_zero_tokens_per_month": 3000000, "E_hat_non_target_early": 50, "E_hat_non_target_completed_default": 100},
+  "inclusion": {"prefix_complete": true, "decisions_at_block_boundaries": true, "interruption_alarm_rate": 0.10, "interruption_alarm_ratio": 2.0, "timeout_multiple_of_median_completed": 3},
+  "model": {"pooling": "normal-normal within family per actor and epoch", "tau2_floor": 9, "robustness": "bayesian_bootstrap", "flip_means": "inconclusive"},
+  "precision": {"delta_Y": 4, "finalist_posterior_sd_max": 3, "planning_n": "9*sigma_U^2/delta^2", "sigma_U": "80% chi-square upper bound of pooled SD"},
+  "actions": {"allocation": "top_two_thompson", "beta": 0.5, "generation_share_min": 0.20, "widening_exponent": 0.5, "dormant_min_n": 4, "dormant_prob_within_delta_max": 0.05, "audit_q_per_block": 0.2, "audit_episodes": 2, "reactivate_prob_within_delta_min": 0.2, "promote_p_best_min": 0.2, "stagnation_blocks": 3, "stagnation_gain": 2},
+  "claims": {"confirmation_looks": 1, "test": "one-sided Welch lower 95% bound", "bonferroni_max_claims": 2},
+  "actors": {"target": "designated model in JiuwenSwarm 0.2.4b3 via official runner", "cheap_screen_fail_rule": "3 of first 4 episodes with the same execution failure", "pruning_authority": {"k_min": 8, "span_min_Y": 16, "p_rho_gt_0_5_min": 0.8, "audited_false_rejections_max": 0}},
+  "late_benefit": {"partial_proxy_allowed_if": {"policies_min": 10, "lofo_kendall_tau_min": 0.7, "audited_false_rejections_max": 0}},
+  "specialisation": {"accept_if": "P(mu_switch > max(mu_never, mu_always) + delta) >= 0.8", "mrt_p": 0.5, "decision_points": "quarter starts", "placebo_switch_month": [5, 12], "calendar_arms": "diagnostic only, never shipped"},
+  "submission": {"rule": "max posterior predicted version score among distinct valid versions", "tie_band": 2, "variance_seeking": "requires written justification"},
+  "budget_target": {"pilot_and_audit": 0.15, "selection": 0.55, "confirmation_and_reserve": 0.30, "few_episodes_threshold": 20}
+}

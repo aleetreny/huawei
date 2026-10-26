@@ -1,0 +1,9 @@
+{
+ "family": "scripted-quarterly",
+ "name": "scripted-quarterly-wellbeing",
+ "parents": [],
+ "hypothesis": "Story choices uniform; quarterly allocation restores the weaker of Health/Dignity first using published action effects.",
+ "change": "initial scripted probe",
+ "refutation": "No survival gain over uniform-affordable would mean quarterly allocation alone does not drive early exits.",
+ "kind": "scripted"
+}
