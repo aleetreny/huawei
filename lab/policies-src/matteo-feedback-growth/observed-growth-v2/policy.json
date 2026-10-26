@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v2",
+  "parents": [
+    "observed-growth-v1"
+  ],
+  "idea_origin": "Matteo: Skill appears causally linked to level and therefore wealth; strategy should be phased around the review cycle. Evidence: 5 Haiku episodes of observed-growth-v1 (origin matteo) and Matteo's manual pilots on branch Matteo.",
+  "operator": "targeted revision of v1 from trajectory analysis",
+  "hypothesis": "v1 loses at the first year because the actor spends Energy on invisible risk cleanup and on recovery with a full Health reserve, never uses Skill learning, and picks withdrawing story options, so visible stats freeze and every review is weak. Making story choices growth-oriented, alternating build quarters (capability) with review quarters (visible results) according to the handbook's published review cycle, restricting Defuse and Health recovery to concrete need, and forcing a quarter-end before/after stat comparison will raise the share of careers that pass the month-24 review while keeping v1's strong completed-career scores.",
+  "change": "Single Skill rewritten around growth: explicit rationale from the published promotion and pay rules; story-event preference for ownership and delivery; quarter-end note with previous and current Skill/Network/Output and whether a review follows; build-quarter versus review-quarter allocations; Skill learning introduced; Defuse and Health recovery restricted to concrete need; mandatory mix change when stats did not rise; survival plan after a weak review. No calendar months, hidden thresholds or event mappings.",
+  "predicted_behaviour": "Quarter-end notes record previous and current stats and the review flag. Skill learning appears in build quarters. Defuse appears only after a named defect, incident or direct conduct warning. Health recovery is rare when Health is high. Story notes cite ownership or delivery. Fewer careers end with Skill, Network and Output unchanged from the first review to dismissal.",
+  "refutation": "Compare with v1 under the same actor and harness. Reject if completion does not improve or mean Q falls, or if Health or trust failures replace month-24 dismissals. If the notes do not show the quarter-end comparison or the build/review phasing, mark the mechanism unexecuted rather than refuted. A handful of episodes cannot isolate which change helped; ablate story-choice guidance and Energy discipline separately before attributing an effect.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v2, built on matteo-t4-growth. Evidence in lab/reports/matteo-observed-growth-haiku-4.md and lab/reports/matteo-observed-growth-v2.md. Promotion and pay facts come only from the public handbook returned by the official tool. v1 is unchanged."
+}
