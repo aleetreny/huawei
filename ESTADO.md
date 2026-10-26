@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 20:40 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 21:38 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -27,6 +27,15 @@ Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con 
 - Diseñadores automáticos con Opus.
 - La tanda en curso se cortó: sus 6 partidas quedaron interrumpidas, sin nota, y la cola anterior se canceló.
 - Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md). Lecciones para los diseñadores: [lab/fastloop/lessons.md](lab/fastloop/lessons.md).
+
+**Segunda hora de la carrera rápida (21:38 UTC):**
+- **Campeón nuevo desde las 21:29: `targeted-1026-201334`**, escrito por un diseñador automático. Es f3 recombinada más una regla: hasta el primer ascenso, no ceder Output ni Network en las historias. Lleva 10 de 12 terminadas, nota media 53,9 y P(mejor que f3 recombinada) 0,61.
+- No funcionaron:
+  - cambiar "pasar desapercibido" por acciones de resultados cuando el riesgo escala (4 de 8);
+  - proteger Skill, Network y Output en todas las historias (2 de 4), más amplio que la regla del campeón;
+  - observed-growth-v6 (5 de 8).
+- En juego: una variante (3 de 4, 52,9) y las primeras ideas "ambiciosa" y "valiente".
+- Cuota: la ventana de 5 horas se renovó a las 21:00 y va por el 9 %. La semana va por el 14 %, con un 16 % permitido a esta hora.
 
 **Primera hora de la carrera rápida (20:40 UTC):**
 - **Campeón nuevo desde las 20:03: f3 recombinada**, con 10 de 12 terminadas, nota media 54,6 y P(mejor que F1) 0,74.
@@ -112,7 +121,7 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | **hecha** (26 oct, 17:55): Y media 54,2, 5 de 6 terminadas → "cerca del techo"; el esfuerzo pasa a fiabilidad y tokens | `lab/reports/opus-ceiling/README.md`; resúmenes en `lab/reports/teacher-digests/opus-ceiling/` |
-| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | en marcha desde las 19:39 UTC; campeón **f3 recombinada** desde las 20:03; diseñadores automáticos funcionando (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
+| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | en marcha desde las 19:39 UTC; campeón **targeted-1026-201334** (de un diseñador) desde las 21:29; antes, f3 recombinada (20:03) (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
 
 ## Relevo del organizador (26 oct, 16:20 UTC)
 
