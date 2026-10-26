@@ -1,0 +1,31 @@
+{
+  "output": "/Users/matteozabban/careerlab-data/matteo-first-review/frontier",
+  "runs": 256,
+  "workers": 4,
+  "seed": 300026,
+  "story": "frontier",
+  "energy": "recovery",
+  "main": "project",
+  "training": null,
+  "catalogue": "lab/reports/first-review-search/questions.json",
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "arms": [
+    [
+      "frontier",
+      "recovery",
+      "project"
+    ]
+  ],
+  "no_simulator_seed_or_clone": true
+}
