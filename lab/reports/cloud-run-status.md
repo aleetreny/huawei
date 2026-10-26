@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:33 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 19:37 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 424, interrupted 28, leased 12, queued 25, running 6.
-- Episodes finished in this container: 156. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Jobs in the registry: done 425, interrupted 28, leased 11, queued 25, running 6.
+- Episodes finished in this container: 157. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.59**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.08**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.119** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Seven-day quota: utilisation **0.09**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.119** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -81,7 +81,7 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
-| f4-visible-delivery | 8 | 3 | 1 |
+| f4-visible-delivery | 9 | 4 | 1 |
 | o1-promotion-gap | 7 | 3 | 0 |
 | matteo-value-conversion | 7 | 3 | 0 |
 | m3-teammate | 7 | 3 | 1 |
@@ -216,7 +216,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 191 | 0 | 0.54 | 44.9 (19.0) | 43.6 | 37.6 | 0.01 | 9.0 | 0.24 | 0.512 | 0.75 |
+| haiku | 192 | 0 | 0.54 | 44.8 (19.0) | 43.5 | 37.5 | 0.01 | 8.9 | 0.24 | 0.512 | 0.75 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -237,7 +237,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f3-feedback-reactive-v1 | 6 | [59.7, 66.3, 66.6, 28.7, 22.4, 68.1] | [48, 48, 48, 24, 24, 48] | 49.9 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f3-lean-v1 | 5 | [50.1, 64.3, 46.7, 59.5, 62.8] | [48, 48, 48, 48, 48] | 55.3 |  |
 | haiku | f3-opus-distilled-v1 | 4 | [27.8, 19.8, 47.4, 58.5] | [24, 24, 48, 48] | 38.2 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
-| haiku | f4-review-first-v1 | 3 | [19.7, 60.3, 62.5] | [24, 48, 48] | 46.3 |  |
+| haiku | f4-review-first-v1 | 4 | [19.7, 60.3, 62.5, 28.8] | [24, 48, 48, 24] | 41.8 | ; Trust crisis — a second major blow-up. T |
 | haiku | f4-visible-delivery-v1 | 5 | [55.9, 59.1, 17.6, 18.8, 24.4] | [48, 48, 24, 17, 31] | 35.1 | ; Broke — months with an empty wallet. Som; Trust crisis — a second major blow-up. T |
 | haiku | f5-relationship-capital-v1 | 5 | [21.8, 48.5, 23.1, 32.5, 26.9] | [24, 39, 24, 29, 24] | 29.4 | ; ; ; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
 | haiku | f6-commitment-ledger-v1 | 6 | [30.5, 25.8, 49.7, 23.0, 67.8, 48.4] | [30, 8, 48, 24, 48, 48] | 40.2 | ; ; Dismissed for capability — a second weak |
@@ -339,6 +339,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Decision #150 (19:03 UTC):** F1 52.2 (n = 12), f3-balance-recombined 51.2, f3-lean 51.1, f1-review-risk 50.4, F3 50.1. With more data the top posteriors bunch around 50–52, and none has P(best) ≥ 0.2. **Block 6 allocated:** 18 slots (seed 20261176); its stall slot is 1 more game of f7-promotion-drive. Batch 5 (F1 children and observed-growth-v3) is running.
 - **Organiser round 5 (19:06 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
 - **Decision #157 (19:31 UTC):** new leader **f1-status-line** at 56.1 (4/4 completed), while its prose siblings with the same rules each completed 1/4. Block 7 allocated (seed 20261182). Transfer test f3-status-line-v1 (`688cc25c03bf6629`) queued.
+- **Organiser round 6 (19:37 UTC):** merged `matteo/observed-growth-v5` (his v3 falls to Q 51.0 over 8 games; the export conflict was resolved with his newest export, a superset) and `alejandro/carrera-rapida` (PR #8: fastloop-v2 code, 264 tests). The switch of the race to fastloop-v2 waits for the user's go-ahead in this session.
 
 ## Relevo (hand-off)
 
