@@ -10,6 +10,8 @@ Hello, we are team Gradient Depression. We want to improve general decision proc
 2. May a deterministic non-LLM development driver select ordinary game actions through those five tools to compare general strategies, or must every such development game also be controlled by the required JiuwenSwarm single-agent setup?
 3. Is there an officially supported way to choose/reuse a seed or replay an action sequence for comparative testing? We will not clone or edit a database or call engine internals.
 
+For A1–A2, our precise proposed architecture is an **external development laboratory**: a personally funded Claude orchestrator proposes generic policy revisions between games; several Haiku or Sonnet workers each play a separate complete episode through the five official tools. There is one actor per episode and no leader/teammate cooperation inside it. Results remain tagged by actor, and any official/evaluation-representative run uses the required single-agent platform and designated model. Is this development workflow allowed at all, and if so, under what model, concurrency, rate and retention limits? We understand that the submitted policy cannot depend on the external orchestrator, event-answer tables or hidden formulas. We have specified this architecture but have not launched it.
+
 ## B. Clarify learning scope, not a loophole
 
 4. We understand that hidden thresholds/formulas and named-event answers may not be embedded in submissions, regardless of how obtained. Is quantitative research on our own MCP-returned transitions permitted solely for development analysis? If so, what restrictions apply to retaining results, using fitted predictive models or allowing such models to influence a final policy? We will not use this method until clarified.

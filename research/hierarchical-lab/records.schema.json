@@ -1,0 +1,552 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:huawei:research:hierarchical-lab:records:1",
+  "title": "Proposed research records; not a deployed game controller",
+  "description": "One record per immutable artifact, evaluation, job or decision. Official runtime outputs are never rewritten. This schema is a research specification.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/family"
+    },
+    {
+      "$ref": "#/$defs/policy"
+    },
+    {
+      "$ref": "#/$defs/evaluation"
+    },
+    {
+      "$ref": "#/$defs/job"
+    },
+    {
+      "$ref": "#/$defs/decision"
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{1,100}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "baseTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "id",
+        "description",
+        "status",
+        "created_at"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "family"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "active",
+            "dormant",
+            "retired"
+          ]
+        },
+        "created_at": {
+          "$ref": "#/$defs/baseTime"
+        },
+        "parent_family_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "behavior_descriptors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "retirement_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "id",
+        "family_id",
+        "parent_policy_ids",
+        "artifact_path",
+        "artifact_sha256",
+        "hypothesis",
+        "mutation_type",
+        "generation_model_id",
+        "created_at"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "policy"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "family_id": {
+          "$ref": "#/$defs/id"
+        },
+        "parent_policy_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "artifact_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "hypothesis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mutation_type": {
+          "enum": [
+            "initial",
+            "atomic_revision",
+            "context_specialisation",
+            "recombination",
+            "repair"
+          ]
+        },
+        "generation_model_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "$ref": "#/$defs/baseTime"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "context_gate_description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "within_episode_memory_protocol": {
+          "type": "string"
+        },
+        "estimated_complexity": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "id",
+        "policy_id",
+        "artifact_sha256",
+        "actor_model_id",
+        "epoch_id",
+        "execution_class",
+        "status",
+        "terminal_score",
+        "survival_months",
+        "full_horizon_completion",
+        "evidence_ref",
+        "cost"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "evaluation"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "policy_id": {
+          "$ref": "#/$defs/id"
+        },
+        "artifact_sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "actor_model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epoch_id": {
+          "$ref": "#/$defs/id"
+        },
+        "execution_class": {
+          "enum": [
+            "development_non_target",
+            "target_platform_representative",
+            "synthetic_fixture"
+          ]
+        },
+        "status": {
+          "enum": [
+            "not_started",
+            "terminal",
+            "censored",
+            "infrastructure_failure"
+          ]
+        },
+        "terminal_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "survival_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 48
+        },
+        "full_horizon_completion": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "termination_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "started_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/baseTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ended_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/baseTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operator_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "usage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "input_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "output_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "cached_input_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "tool_calls": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "tool_errors": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "cost": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "usd",
+            "measurement"
+          ],
+          "properties": {
+            "usd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "measurement": {
+              "enum": [
+                "billed",
+                "estimated",
+                "unknown",
+                "synthetic"
+              ]
+            },
+            "pricing_checked_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "terminal"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "terminal_score": {
+                "type": "number"
+              },
+              "survival_months": {
+                "type": "integer"
+              },
+              "full_horizon_completion": {
+                "type": "boolean"
+              },
+              "evidence_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "terminal_score": {
+                "type": "null"
+              },
+              "full_horizon_completion": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "id",
+        "policy_id",
+        "actor_model_id",
+        "epoch_id",
+        "status",
+        "owner",
+        "lease_expires_at",
+        "created_at"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "job"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "policy_id": {
+          "$ref": "#/$defs/id"
+        },
+        "actor_model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epoch_id": {
+          "$ref": "#/$defs/id"
+        },
+        "status": {
+          "enum": [
+            "queued",
+            "leased",
+            "running",
+            "completed",
+            "failed",
+            "expired",
+            "censored"
+          ]
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lease_expires_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/baseTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "$ref": "#/$defs/baseTime"
+        },
+        "live_handle_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evaluation_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "budget_reservation_usd": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "id",
+        "action",
+        "created_at",
+        "rationale",
+        "evidence_refs",
+        "affected_ids"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "decision"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "action": {
+          "enum": [
+            "generate",
+            "refine",
+            "replicate",
+            "specialise",
+            "recombine",
+            "hibernate",
+            "revive",
+            "target_audit",
+            "confirm",
+            "reject_invalid",
+            "resolve_job"
+          ]
+        },
+        "created_at": {
+          "$ref": "#/$defs/baseTime"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "affected_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "selection_is_heuristic": {
+          "type": "boolean"
+        },
+        "known_limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

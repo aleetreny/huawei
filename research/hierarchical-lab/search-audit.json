@@ -1,0 +1,1100 @@
+{
+  "date": "2026-10-26",
+  "cutoff": "2026-10-26",
+  "provider": "Exa",
+  "searches": [
+    {
+      "id": "tree",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Stochastic Simultaneous Optimistic Optimization",
+          "url": "https://proceedings.mlr.press/v28/valko13.html",
+          "excerpt": "\n# Stochastic Simultaneous Optimistic Optimization\n\nMichal Valko, Alexandra Carpentier, Rémi Munos\n\n#### Abstract\n\n We study the problem of global maximization of a function f given a finite number of evaluations perturbed by noise. We consider a very weak assumption on the function, namely that it is locally smooth (in some precise sense) with respect to some semi-metric, around one of its global maxima. Compared to previous works on bandits in general spaces (Kleinberg et al., 2008; Bubeck et al., 2011a) our algorithm does not require the knowledge of this semi-metric. Our algorithm, StoSOO, follows an optimistic strategy to iteratively construct upper confidence bounds over the"
+        },
+        {
+          "title": "From Bandits to Monte-Carlo Tree Search: The Optimistic Principle Applied to Optimization and Planning",
+          "url": "https://chercheurs.lille.inria.fr/~munos/papers/files/AAAI2013.pdf",
+          "excerpt": "\n#### From Bandits to Monte-Carlo Tree Search: The Optimistic Principle Applied to Optimization and Planning\n\nR´emi Munos 1\n\n1 INRIA Lille – Nord Europe, remi.munos@inria.fr\n\nAbstract This work covers several aspects of the optimism in the face of un certainty principle applied to large scale optimization problems under finite numerical budget. The initial motivation for the research reported here originated from the empirical success of the so-called Monte-Carlo Tree Search method popularized in Computer Go and further extended to many other games as well as optimization and planning problems. Our objective is to contribute to the development of theoretical foun dations of the fi"
+        },
+        {
+          "title": "Optimistic tree search strategies for black-box ...",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/d6099a36f6c1720438de00c366aa1737-Paper-Conference.pdf",
+          "excerpt": "\ntechniques from both theoretical and practical perspectives. In this paper, we propose to introduce and analyze novel combinatorial black-box solvers that are based on ... techniques. A first contribution is the analysis of an algorithm called Optimistic\n\n---\n\n"
+        },
+        {
+          "title": "Optimistic Optimization of a Deterministic Function without the Knowledge of its Smoothness",
+          "url": "https://proceedings.neurips.cc/paper/2011/file/7e889fb76e0e07c11733550f2a6c7a5a-Paper.pdf",
+          "excerpt": "\nmetric space, given a finite budget of n evaluations. The function f is ... describe two algorithms based on optimistic exploration that use a hierar chical partitioning of the space at all scales. A first contribution is an algorithm, DOO, that requires\n\n---\n\n"
+        },
+        {
+          "title": "Black-box optimization of noisy functions with unknown ...",
+          "url": "https://papers.nips.cc/paper/2015/file/ab817c9349cf9c4f6877e1894a1faa00-Paper.pdf",
+          "excerpt": "\n## Black-box optimization of noisy functions with unknown smoothness\n\nJean-Bastien Grill Michal Valko SequeL team, INRIA Lille - Nord Europe, France jean-bastien.grill@inria.fr michal.valko@inria.fr\n\nRemi Munos ´ Google DeepMind, UK∗ munos@google.com\n\n#### Abstract\n\nWe study the problem of black-box optimization of a function f of any dimen sion, given function evaluations perturbed by noise. The function is assumed to be locally smooth around one of its global optima, but this smoothness is un known. Our contribution is an adaptive optimization algorithm, POO or parallel optimistic optimization, that is able to deal with this setting. POO performs almost as well as the best know"
+        },
+        {
+          "title": "bubeck11a.dvi",
+          "url": "https://chercheurs.lille.inria.fr/~munos/papers/files/hoo2011.pdf",
+          "excerpt": "\n##### Abstract\n\nWe consider a generalization of stochastic bandits where the set of arms, X, is allowed to be a generic measurable space and the mean-payoff function is “locally Lipschitz” with respect to a dissimilarity function that is known to the decision maker. Under this condition we construct an arm selection policy, called HOO (hierarchical optimistic optimization), with improved regret bounds compared to previous results for a large class of problems. In particular, our results imply that if X is the unit hypercube in a Euclidean space and the mean-payoff function has a finite number of global maxima around which the behavior of the function is locally continuous with a "
+        },
+        {
+          "title": "Hierarchical Bandits for \"Black Box\" Optimization",
+          "url": "https://xuedong.github.io/static/documents/bandits.pdf",
+          "excerpt": "\nmeans the set of arms X is allowed to be a generic measurable space. One of the solutions to this\n...\nHOO) algorithm Bubeck et al. 2011. The main \nidea of HOO is to exploit as much knowledge of f as possible around its maxima, while it does not\n\n---\n\n"
+        },
+        {
+          "title": "bubeck11a.dvi",
+          "url": "https://www.jmlr.org/papers/volume12/bubeck11a/bubeck11a.pdf",
+          "excerpt": "\nX66tFXLag5GY5SHEpreXtPcNLoFGtZ3jGWobZTPB84b9 ... PRd8Kt6gZNRIVOghkzoAXwXMS ... +tHXpkJB2HncGsFi6YgwcR4kPxDCcs9ELAYaJgm3Y/ ... +5lFfwLplB83u9r6/+ ... +\n\n---\n\n"
+        },
+        {
+          "title": "Procrastinated Tree Search: Black-Box Optimization with Delayed, Noisy, and Multi-Fidelity Feedback",
+          "url": "https://doi.org/10.1609/aaai.v36i9.21280",
+          "excerpt": "\n# Procrastinated Tree Search: Black-Box Optimization with Delayed, Noisy, and Multi-Fidelity Feedback\n\n## Abstract\n\nIn black-box optimization problems, we aim to maximize an unknown objective function, where the function is only accessible through feedbacks of an evaluation or simulation oracle. In real-life, the feedbacks of such oracles are often noisy and available after some unknown delay that may depend on the computation time of the oracle. Additionally, if the exact evaluations are expensive but coarse approximations are available at a lower cost, the feedbacks can have multi-fidelity. In order to address this problem, we propose a generic extension of hierarchical optimis"
+        },
+        {
+          "title": "Stochastic Simultaneous Optimistic Optimization",
+          "url": "https://misovalko.github.io/publications/valko2014mist.talk.pdf",
+          "excerpt": "\n##### StoSOO operates on a given hierarchical partitioning\n\nI For any h, X is partitioned in Kh cells (Xh,i)0≤i≤Kh −1. I K-ary tree T∞ where depth h = 0 is the whole X . h=0\n\nh=2 h=1\n\nI StoSOO adaptively creates finer and finer partitions of X . I xh,i ∈ Xh,i is a"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "archive",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Go-Explore: a New Approach for Hard-Exploration Problems",
+          "url": "https://arxiv.org/html/1901.10995v4",
+          "excerpt": "\n# Go-Explore: a New Approach for Hard-Exploration Problems \n\n Adrien Ecoffet Joost Huizinga Joel Lehman Kenneth O. Stanley* Jeff Clune* Affiliation: Uber AI Labs Affiliation: San Francisco, CA 94103 Email: adrienecoffet,joost.hui,jclune@gmail.com Affiliation: *Co-senior authors \n\n###### Abstract\n\nA grand challenge in reinforcement learning is intelligent exploration, especially when rewards are sparse or deceptive. Two Atari games serve as benchmarks for such hard-exploration domains: Montezuma’s Revenge and Pitfall. On both games, current RL algorithms perform poorly, even those with intrinsic motivation, which is the dominant method to encourage exploration and improve performa"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/1901.10995",
+          "excerpt": "\nDerailment can occur when an agent has discovered a promising state and it would be beneficial\nto return to that state and explore from it. Typical RL algorithms attempt to enact such desirable\n...\nin to encourage a slightly different behavior (e.g.\n\n---\n\n"
+        },
+        {
+          "title": "First return, then explore",
+          "url": "https://arxiv.org/html/2004.12919v6",
+          "excerpt": "\nThe promise of reinforcement learning is to solve complex sequential decision problems autonomously by specifying a high-level reward function only. However, reinforcement learning algorithms struggle when, as is often the case, simple and intuitive rewards provide sparse [121] and deceptive [122] feedback. Avoiding these pitfalls requires thoroughly exploring the environment, but despite substantial investments by the community, creating algorithms that can do so remains one of the central challenges of the field. We hypothesise that the main impediment to effective exploration originates from algorithms forgetting how to reach previously visited states (“detachment”) and from f"
+        },
+        {
+          "title": "POET | Proceedings of the Genetic and Evolutionary Computation Conference",
+          "url": "https://dl.acm.org/doi/10.1145/3321707.3321799",
+          "excerpt": "\n## Abstract\n\nHow can progress in machine learning and reinforcement learning be automated to generate its own never-ending curriculum of challenges without human intervention? The recent emergence of quality diversity (QD) algorithms offers a glimpse of the potential for such continual open-ended invention. For example, novelty search showcases the benefits of explicit novelty pressure, MAP-Elites and Innovation Engines highlight the advantage of explicit elitism within niches in an otherwise divergent process, and minimal criterion coevolution (MCC) reveals that problems and solutions can coevolve divergently. The Paired Open-Ended Trailblazer (POET) algorithm introduced in this"
+        },
+        {
+          "title": "[1901.01753] Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions",
+          "url": "https://arxiv.org/abs/1901.01753",
+          "excerpt": "\nthe solutions to problems at various stages would become stepping stones towards solving even ... process. The Paired Open-Ended Trailblazer (POET) algorithm introduced in this paper does just that: it pairs the generation of environmental challenges and\n\n---\n\n"
+        },
+        {
+          "title": "Quality-diversity in dissimilarity spaces",
+          "url": "https://export.arxiv.org/pdf/2211.12337v2.pdf",
+          "excerpt": "\npreviously visited states, Go-Explore avoids two pitfalls common\nto most sparse reinforcement learning algorithms such as [47]. It\ndoes not prematurely avoid promising regions, nor does it avoid\nunderexplored regions that\n\n---\n\n"
+        },
+        {
+          "title": "Overcoming Deceptive Rewards with Quality-Diversity",
+          "url": "https://ins.uni-bonn.de/media/public/publication-media/GECCO23_FINAL.pdf?pk=1670",
+          "excerpt": "\nQuality-Diversity offers powerful ideas to create diverse, high performing populations. Here\n...\nIn deceptive reward settings, the reward landscape is rugged with local optima that have a large area of attraction that can trap an optimization algorithm\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "http://arxiv.org/pdf/2003.01825v1",
+          "excerpt": "\nneural networks. We design and\nevaluate a new hybrid algorithm called MAP-Elites with\n...\ndamage recovery in a difficult high\u0002dimensional control task where traditional ME fails. Additionally,\nwe show that ME-ES performs efficient exploration, on par with\n\n---\n\n"
+        },
+        {
+          "title": "First return, then explore",
+          "url": "https://arxiv.org/html/2004.12919v5",
+          "excerpt": "\n###### Abstract\n\nThe promise of reinforcement learning is to solve complex sequential decision problems autonomously by specifying a high-level reward function only. However, reinforcement learning algorithms struggle when, as is often the case, simple and intuitive rewards provide sparse [211] and deceptive [212] feedback. Avoiding these pitfalls requires thoroughly exploring the environment, but creating algorithms that can do so remains one of the central challenges of the field. We hypothesise that the main impediment to effective exploration originates from algorithms forgetting how to reach previously visited states (“detachment”) and from failing to first return to a state"
+        },
+        {
+          "title": "Enhanced POET: Open-Ended Reinforcement Learning through Unbounded Invention of Learning Challenges and their Solutions",
+          "url": "https://arxiv.org/pdf/2003.08536v2.pdf",
+          "excerpt": "\n1) a domain-general measure of how meaningfully novel new challenges are,\n...\n; Pugh et al., 2016), in which the aim is to collect a ... that simultaneously optimizing solutions to many dif ferent problems and allowing goal-switching between tasks"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "population",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Provably Efficient Online Hyperparameter Optimization with ...",
+          "url": "https://proceedings.neurips.cc/paper/2020/file/c7af0926b294e47e52e46cfebe173f20-Paper.pdf",
+          "excerpt": "\n#### Provably Efficient Online Hyperparameter Optimization with Population-Based Bandits\n\nJack Parker-Holder University of Oxford jackph@robots.ox.ac.uk\n\nVu Nguyen University of Oxford vu@robots.ox.ac.uk\n\nStephen J. Roberts University of Oxford sjrob@robots.ox.ac.uk\n\nAbstract\n\nMany of the recent triumphs in machine learning are dependent on well-tuned hyperparameters. This is particularly prominent in reinforcement learning (RL) where a small change in the configuration can lead to failure. Despite the importance of tuning hyperparameters, it remains expensive and is often done in a naive and laborious way. A recent solution to this problem is Population Based Training (PBT) whic"
+        },
+        {
+          "title": "Provably Efficient Online Hyperparameter Optimization with Population-Based Bandits",
+          "url": "https://arxiv.org/html/2002.02518v4",
+          "excerpt": "\n# Provably Efficient Online Hyperparameter Optimization with Population-Based Bandits\n\n Jack Parker-Holder Affiliation: University of Oxford Email: jackph@robots.ox.ac.uk Vu Nguyen Affiliation: University of Oxford Email: vu@robots.ox.ac.uk Stephen J. Roberts Affiliation: University of Oxford Email: sjrob@robots.ox.ac.uk \n\n###### Abstract\n\nMany of the recent triumphs in machine learning are dependent on well-tuned hyperparameters. This is particularly prominent in reinforcement learning (RL) where a small change in the configuration can lead to failure. Despite the importance of tuning hyperparameters, it remains expensive and is often done in a naive and laborious way. A recent "
+        },
+        {
+          "title": "Population Based Training of Neural Networks",
+          "url": "https://arxiv.org/html/1711.09846v2",
+          "excerpt": "\nIn this work, we present a simple method, Population Based Training (PBT) which bridges and extends parallel search methods and sequential optimisation methods. Advantageously, our proposal has a wall-clock run time that is no greater than that of a single optimisation process, does not require sequential runs, and is also able to use fewer computational resources than naive search methods such as random or grid search. Our approach leverages information sharing across a population of concurrently running optimisation processes, and allows for online propagation/transfer of parameters and hyperparameters between members of the population based on their performance. Furthermore, u"
+        },
+        {
+          "title": "Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization",
+          "url": "https://www.jmlr.org/papers/volume18/16-558/16-558.pdf",
+          "excerpt": "\n+KvVgaqbRaiUmcs/ ... dl7v7yky3QxDLKS4dmcUVpdvaWWATuPuLPj ... + ... I7iqBXfxtwmWK7TR6Pu7r2J0WLwuDhhwfW4zeVh ... /F2hE+AWj4t0s07+ ... /\n\n---\n\n"
+        },
+        {
+          "title": "To Be Greedy, or Not to Be — That Is the Question for Population Based Training Variants",
+          "url": "https://ir.cwi.nl/pub/35208/35208.pdf",
+          "excerpt": "\nIn this work, we empirically evaluate five single-objective PBT variants on a set of ... BO) variants of PBT tend to behave greedier than the non-BO ones, which is beneficial when aggressively pursuing\n\n---\n\n"
+        },
+        {
+          "title": "Model-based Asynchronous Hyperparameter and Neural Architecture Search",
+          "url": "https://arxiv.org/pdf/2003.10865v2.pdf",
+          "excerpt": "\nbrackets are (ordered) subsets Bs = { rminη k+s \n| k = 0, . . . , K − s} ⊆ R , where s = 0, . . . , K. \nIn the sequel, the term “rung” will be overloaded to both mean the resource level at which stop/go \ndecisions are made, and the list of configs (with metric values) which reached this level. \nWe distinguish between synchronous and asynchronous scheduling. The former is detailed in [20, 8]. \nIn a nutshell, each rung of each bracket has an a priori fixed size (i.e., number of slots for configs \nevaluated until the rung level), the size ratio between successive rungs being η− 1. Hyperparameter \nconfigurations promoted to a rung are evaluated until the corresponding resource level,"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/1810.05934v3",
+          "excerpt": "\nMassively Parallel Hyperparameter Tuning\nLiam Li∗1, Kevin Jamieson2, Afshin Rostamizadeh3, Ekaterina Gonina3,\nMoritz Hardt4, Benjamin Recht4, and Ameet Talwalkar1\n1CMU, 2University of Washington, 3Google, 4UC Berkeley\nAbstract\nModern learning models are characterized by large hyperparameter spaces. In\norder to adequately explore these large spaces, we must evaluate a large number of\nconfigurations, typically orders of magnitude more configurations than available\nparallel workers. Given the growing costs of model training, we would ideally like\nto perform this search in roughly the same wall-clock time needed to train a single\nmodel. In this work, we tackle this challenge by intro"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/2109.13800",
+          "excerpt": "\nmethod. In PBT, a population of workers concurrently train their respective neural networks. The\n...\nHowever, PBT’s decisions favour immediate improvements in performance and can sometimes lead\n...\nlarge fraction of training before reducing it. However,\n\n---\n\n"
+        },
+        {
+          "title": "ACCELERATING NEURAL ARCHITECTURE SEARCH US ING PERFORMANCE PREDICTION",
+          "url": "https://arxiv.org/pdf/1705.10823v2.pdf",
+          "excerpt": "\n. Using these prediction models, we also propose an early stopping method for hyperparameter optimization and meta-modeling, which obtains a speedup of a factor up to ... in both hyperparameter optimization and meta-modeling. Finally, we empirically show\n\n---\n\n"
+        },
+        {
+          "title": "Hyperparameter Optimization: Foundations, Algorithms, Best Practices and Open Challenges",
+          "url": "https://arxiv.org/pdf/2107.05847v3.pdf",
+          "excerpt": "\nOptimization The idea behind Hyperband – trying to discard HPCs that do not perform well early on – is somewhat orthogonal to the idea behind BO, ... . intelli gently proposing HPCs that are likely to improve performance or to otherwise gain information"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "fidelity",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Multi-fidelity Bayesian Optimization with Multiple Information Sources of Input-dependent Fidelity",
+          "url": "https://proceedings.mlr.press/v244/fan24a.html",
+          "excerpt": "\n#### Abstract\n\n By querying approximate surrogate models of different fidelity as available information sources, Multi-Fidelity Bayesian Optimization (MFBO) aims at optimizing unknown functions that are costly if not infeasible to evaluate. Existing MFBO methods often assume that approximate surrogates have consistently high/low fidelity across the input domain. However, approximate evaluations from the same surrogate can have different fidelity at different input regions due to data availability and model constraints, especially when considering machine learning surrogates. In this work, we investigate MFBO when multi-fidelity approximations have input-dependent fidelity. By exp"
+        },
+        {
+          "title": "On the Effects of Heterogeneous Errors on Multi-fidelity Bayesian Optimization",
+          "url": "https://doi.org/10.48550/arxiv.2309.02771",
+          "excerpt": "\n## Abstract\n\nBayesian optimization (BO) is a sequential optimization strategy that is increasingly employed in a wide range of areas including materials design. In real world applications, acquiring high-fidelity (HF) data through physical experiments or HF simulations is the major cost component of BO. To alleviate this bottle neck, multi-fidelity (MF) methods are used to forgo the sole reliance on the expensive HF data and reduce the sampling costs by querying inexpensive low-fidelity (LF) sources whose data are correlated with HF samples. However, existing multi-fidelity BO (MFBO) methods operate under the following two assump tions that rarely hold in practical applications: "
+        },
+        {
+          "title": "Multi-Information Source Optimization",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/df1f1d20ee86704251795841e6a9405a-Paper.pdf",
+          "excerpt": "\nBayesian methods for multi-information source optimization (MISO), in which we seek to optimize an expensive-to-evaluate black-box objective function while also accessing cheaper but biased and noisy approximations (“information sources”). We present a\n\n---\n\n"
+        },
+        {
+          "title": "The Fidelity Gate: A Rank-Correlation Test That Keeps Drill-Down Search From Collapsing Silently",
+          "url": "https://drill-down.marketmaker.cc/",
+          "excerpt": "\n— screens many configurations cheaply at low fidelity and promotes only the survivors to the expensive full evaluation. It is a genuine speedup, and it collapses silently when the cheap proxy does not rank configurations the way the full evaluation does:\n\n---\n\n"
+        },
+        {
+          "title": "Multi-Fidelity Bayesian Optimization with Unreliable Information Sources",
+          "url": "https://doi.org/10.48550/arxiv.2210.13937",
+          "excerpt": "\n## Abstract\n\nBayesian optimization (BO) is a powerful frame work for optimizing black-box, expensive-to evaluate functions. Over the past decade, many al gorithms have been proposed to integrate cheaper, lower-fidelity approximations of the objective function into the optimization process, with the goal of converging towards the global optimum at a reduced cost. This task is generally referred to as multi-fidelity Bayesian optimization (MFBO). However, MFBO algorithms can lead to higher optimization costs than their vanilla BO counter parts, especially when the low-fidelity sources are poor approximations of the objective func tion, therefore defeating their purpose. To address t"
+        },
+        {
+          "title": "[2211.02732] Multi-Fidelity Cost-Aware Bayesian Optimization",
+          "url": "https://arxiv.org/abs/2211.02732",
+          "excerpt": "\n# "
+        },
+        {
+          "title": "Multi-Information Source Optimization",
+          "url": "https://doi.org/10.48550/arxiv.1603.00389",
+          "excerpt": "\n## Abstract\n\nWe consider Bayesian optimization of an expensive-to-evaluate black-box objective function, where we also have access to cheaper approximations of the objective. In general, such approximations arise in applications such as reinforcement learning, engineering, and the natural sciences, and are subject to an inherent, unknown bias. This model discrepancy is caused by an inadequate internal model that deviates from reality and can vary over the domain, making the utilization of these approximations a non-trivial task. We present a novel algorithm that provides a rigorous mathematical treatment of the uncertainties arising from model discrepancies and noisy observations"
+        },
+        {
+          "title": "Information-Based Multi-Fidelity Bayesian Optimization",
+          "url": "https://www.comp.nus.edu.sg/~lowkh/assets/pubs/nips2017ws.pdf",
+          "excerpt": "\nBO) called multi-fidelity PES (MF-PES). In contrast to existing multi-fidelity BO algorithms, our proposed MF-PES algorithm can naturally trade off between exploitation vs. exploration over ... with varying fidelities without needing to manually tune any\n\n---\n\n"
+        },
+        {
+          "title": "Mitigating the Effects of Source-Dependent Bias and Noise on Multi-Source Bayesian Optimization: Application to Materials Design | NSF Public Access Repository",
+          "url": "https://par.nsf.gov/biblio/10520586-mitigating-effects-source-dependent-bias-noise-multi-source-bayesian-optimization-application-materials-design",
+          "excerpt": "\nAbstract Bayesian optimization (BO) is a sequential optimization strategy that is increasingly employed in a wide range of areas including materials design. In real world applications, acquiring high-fidelity (HF) data through physical experiments or HF simulations is the major cost component of BO. To alleviate this bottleneck, multi-fidelity (MF) methods are increasingly used to forgo the sole reliance on the expensive HF data and reduce the sampling costs by querying inexpensive low-fidelity (LF) sources whose data are correlated with HF samples. Existing multi-fidelity BO (MFBO) methods operate under the following two assumptions: (1) Leveraging global (rather than local) cor"
+        },
+        {
+          "title": "Best Practices for Multi-Fidelity Bayesian Optimization in Materials and Molecular Research",
+          "url": "https://doi.org/10.48550/arxiv.2410.00544",
+          "excerpt": "\nShedding light into MFBO failure modes We test the performance of MFBO methods over their SFBO counterparts on two different synthetic functions, Branin and Park (with 2 and 4 dimensions respectively), on two different scenarios (favorable and unfavorable). Synthetic functions are commonly employed as black-box problems to test the performance of BO algorithms (see Synthetic functions). In the case of MFBO, the output of the functions can be biased using a parameter α to provide lower accuracy information sources. This parameter is related to the informativeness of the LF source (in our case, we quantify the informativeness of the LF by computing the R 2 with respect to the HF, s"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "switch",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Improved Switching among Temporally Abstract Actions",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/1998/file/9597353e41e6957b5e7aa79214fcb256-Paper.pdf",
+          "excerpt": "\n##### Abstract\n\nIn robotics and other control applications it is commonplace to have a pre existing set of controllers for solving subtasks, perhaps hand-crafted or previously learned or planned, and still face a difficult problem of how to choose and switch among the controllers to solve an overall task as well as possible. In this paper we present a framework based on Markov decision processes and semi-Markov decision processes for phrasing this problem, a basic theorem regarding the improvement in performance that can be ob tained by switching flexibly between given controllers, and example appli cations of the theorem. In particular, we show how an agent can plan with these h"
+        },
+        {
+          "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+          "url": "https://people.cs.umass.edu/%7Ebarto/courses/cs687/Sutton-Precup-Singh-AIJ99.pdf",
+          "excerpt": "\nAbstract Learning, planning, and representing knowledge at multiple levels of temporal abstraction are key, longstanding challenges for AI. In this paper we consider how these challenges can be addressed within the mathematical framework of reinforcement learning and Markov decision processes (MDPs). We extend the usual notion of action in this framework to include options—closed-loop policies for taking action over a period of time. Examples of options include picking up an object, going to lunch, and traveling to a distant city, as well as primitive actions such as muscle twitches and joint torques. Overall, we show that options enable temporally abstract knowledge and action t"
+        },
+        {
+          "title": "Hierarchical Optimal Control of MDPs",
+          "url": "https://mcgovern-fagg.org/amy_html/pubs/options-yale98.pdf",
+          "excerpt": "\nAbstract Fundamental to reinforcement learning, as well as to the theory of systems and control, is the problem of represent ing knowledge about the environment and about possible courses of action hierarchically, at a multiplicity of interre lated temporal scales. For example, a human traveler must decide which cities to go to, whether to fly, drive, or walk, and the individual muscle contractions involved in each step. In this paper we survey a new approach to reinforce ment learning in which each of these decisions is treated uniformly. Each low-level action and high-level course of action is represented as an option, a (sub)controller and a termination condition. The theory o"
+        },
+        {
+          "title": "Tree Based Hierarchical Reinforcement Learning",
+          "url": "http://ra.adm.cs.cmu.edu/anon/2002/CMU-CS-02-169.pdf",
+          "excerpt": "\nwe do not have termination criteria. We provide an approach for processing previously solved problems to extract ... policies. We also contribute a method for using supplied or extracted policies to guide\n\n---\n\n"
+        },
+        {
+          "title": "Recent Advances in Hierarchical Reinforcement Learning",
+          "url": "http://incompleteideas.net/rlai.cs.ualberta.ca/papers/barto03recent.pdf",
+          "excerpt": "\nof RL, and then we review three approaches to hierarchical RL: the options formalism of Sutton, Precup,\n...\nwith respect to hierarchical architectures, one must include semi-Markov options whose policies can set action\n\n---\n\n"
+        },
+        {
+          "title": "Enhancing Hierarchical Reinforcement Learning through Change Point Detection in Time Series",
+          "url": "https://arxiv.org/html/2510.24988",
+          "excerpt": "\n###### Abstract.\n\nHierarchical Reinforcement Learning (HRL) enhances the scalability of decision-making in long-horizon tasks by introducing temporal abstraction through options—policies that span multiple timesteps. Despite its theoretical appeal, the practical implementation of HRL suffers from the challenge of autonomously discovering semantically meaningful subgoals and learning optimal option termination boundaries. This paper introduces a novel architecture that integrates a self-supervised, Transformer-based Change Point Detection (CPD) module into the Option-Critic framework, enabling adaptive segmentation of state trajectories and the discovery of options. The CPD module"
+        },
+        {
+          "title": "Probabilistic inference for determining options in reinforcement learning | Machine Learning | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s10994-016-5580-x",
+          "excerpt": "\n## Abstract\n\nTasks that require many sequential decisions or complex solutions are hard to solve using conventional reinforcement learning algorithms. Based on the semi Markov decision process setting (SMDP) and the option framework, we propose a model which aims to alleviate these concerns. Instead of learning a single monolithic policy, the agent learns a set of simpler sub-policies as well as the initiation and termination probabilities for each of those sub-policies. While existing option learning algorithms frequently require manual specification of components such as the sub-policies, we present an algorithm which infers all relevant components of the option framework from "
+        },
+        {
+          "title": "Optimization Methods for Interpretable Differentiable Decision ...",
+          "url": "https://proceedings.mlr.press/v108/silva20a.html",
+          "excerpt": "\n#### Abstract\n\n Decision trees are ubiquitous in machine learning for their ease of use and interpretability. Yet, these models are not typically employed in reinforcement learning as they cannot be updated online via stochastic gradient descent. We overcome this limitation by allowing for a gradient update over the entire tree that improves sample complexity affords interpretable policy extraction. First, we include theoretical motivation on the need for policy-gradient learning by examining the properties of gradient descent over differentiable decision trees. Second, we demonstrate that our approach equals or outperforms a neural network on all domains and can learn discrete d"
+        },
+        {
+          "title": "A Provably Efficient Option-Based Algorithm for both High-Level and Low-Level Learning",
+          "url": "https://arxiv.org/pdf/2406.15124v2.pdf",
+          "excerpt": "\n##### Abstract\n\nHierarchical Reinforcement Learning (HRL) approaches have shown successful re sults in solving a large variety of complex, structured, long-horizon problems. Nev ertheless, a full theoretical understanding of this empirical evidence is currently missing. In the context of the option framework, prior research has devised efficient algorithms for scenarios where options are fixed, and the high-level policy selecting among options only has to be learned. However, the fully realistic scenario in which both the high-level and the low-level policies are learned is surprisingly disregarded from a theoretical perspective. This work makes a step towards the understand ing "
+        },
+        {
+          "title": "[1810.11583] Learning Abstract Options",
+          "url": "https://ar5iv.labs.arxiv.org/html/1810.11583",
+          "excerpt": "\n###### Abstract\n\nBuilding systems that autonomously create temporal abstractions from data is a key challenge in scaling learning and planning in reinforcement learning. One popular approach for addressing this challenge is the options framework [41]. However, only recently in [1] was a policy gradient theorem derived for online learning of general purpose options in an end to end fashion. In this work, we extend previous work on this topic that only focuses on learning a two-level hierarchy including options and primitive actions to enable learning simultaneously at multiple resolutions in time. We achieve this by considering an arbitrarily deep hierarchy of options where high l"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "systems",
+      "requested": 15,
+      "candidates": [
+        {
+          "title": "[2509.19349] ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution",
+          "url": "https://arxiv.org/abs/2509.19349",
+          "excerpt": "\n[2509.19349] ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution\n\n [Submitted on 17 Sep 2025]\n\n# "
+        },
+        {
+          "title": "[2506.13131] AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+          "url": "https://ar5iv.labs.arxiv.org/html/2506.13131",
+          "excerpt": "\n[2506.13131] AlphaEvolve: A coding agent for scientific and algorithmic discovery\n\n# AlphaEvolve: A coding agent for scientific and algorithmic discovery See Acknowledgments and Author information section. ∗ Equal contributions.\n\n Alexander Novikov Ngân Vũ Marvin Eisenberger Emilien Dupont Po-Sen Huang Adam Zsolt Wagner Sergey Shirobokov Borislav Kozlovskii Francisco J. R. Ruiz Abbas Mehrabian M. Pawan Kumar Abigail See Swarat Chaudhuri George Holland Alex Davies Sebastian Nowozin Pushmeet Kohli Matej Balog Affiliation: Google DeepMind \n\n###### Abstract\n\nIn this white paper, we present AlphaEvolve, an evolutionary coding agent that substantially enhances capabilities of state-of-"
+        },
+        {
+          "title": "Darwin Gödel Machine: Open-Ended Evolution of Self- ...",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/aa5f5e6eb6f613ec412f1d948dfa21a5-Abstract-Conference.html",
+          "excerpt": "\nDarwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents\n\n# Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents\n\nJenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune\n\n## Abstract\n\nMost of today's AI systems are constrained by human-designed, fixed architectures and cannot autonomously and continuously improve themselves. The scientific method, on the other hand, is a cumulative and open-ended system, where each innovation builds upon previous artifacts, enabling future discoveries. There is growing hope that the current manual process of advancing AI could itself be automated. If done safely, such automation would accelerate AI development and al"
+        },
+        {
+          "title": "LLM-Driven Evolutionary Program Search",
+          "url": "https://doi.org/10.54254/2755-2721/2026.34758",
+          "excerpt": "\n# LLM-Driven Evolutionary Program Search: From FunSearch to Automated Scientific Discovery\n\nApplied and Computational Engineering. Published: 2026-06-23. 0 citations.\n\n## Abstract\n\nLarge language models (LLMs) suffer from logical illusions, while evolutionary algorithms (EAs) face search blindness in program generation. The LLM + EA paradigm addresses these issues.This paper systematically discusses its core technologies: program search space representation, memory-based semantic mutation, hierarchical evaluation feedback, and island population management. Using the car movement problem as a case study, it shows how historical code injection, multi‑objective evolution, and distri"
+        },
+        {
+          "title": "[2505.22954v3] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+          "url": "https://arxiv.org/abs/2505.22954v3",
+          "excerpt": "\n# Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents\n\nJenny Zhang Affiliation: University of British Columbia Affiliation: Vector Institute Shengran Hu Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Sakana AI Cong Lu Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Sakana AI Robert Lange Affiliation: Sakana AI Jeff Clune Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Canada CIFAR AI Chair{jennyzzt,srhu,conglu}@cs.ubc.ca, robert@sakana.ai, jeff.clune@ubc.ca\n\n###### Abstract\n\nMost of today’s AI systems are constrained by human-designed, fixed archit"
+        },
+        {
+          "title": "Evolutionary Ensemble of Agents",
+          "url": "https://arxiv.org/html/2605.09018v3",
+          "excerpt": "\nintroduce Evolutionary Ensemble (EvE), a decentralized framework that organizes existing, highly capable coding agents into a live, co ... focuses entirely on evolving the cumulative guidance and skills that dictate agent behaviors. By maintaining two\n\n---\n\n"
+        },
+        {
+          "title": "AlgoEvo: Self-Evolving Agentic Search for Automated Algorithm Discovery",
+          "url": "https://arxiv.org/html/2609.15820v1",
+          "excerpt": "\n, a unified agentic framework that transforms automated algorithm discovery into an interactive, knowledge ... , diagnoses, and edits code based on runtime ... single workflow to seamlessly handle single-objective, multi-objective, and multi-\n\n---\n\n"
+        },
+        {
+          "title": "[2510.14150] CodeEvolve: an open source evolutionary coding agent for algorithmic discovery and optimization",
+          "url": "https://arxiv.org/abs/2510.14150",
+          "excerpt": "\n[2510.14150] CodeEvolve: an open source evolutionary coding agent for algorithmic discovery and optimization\n\n# "
+        },
+        {
+          "title": "Function Space Search and Its Evolution: A Survey on Large Language Models in Algorithm Discovery",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3821725.3821807",
+          "excerpt": "\nAbstract This paper reviews how large language models (LLMs) are ad vancing algorithm discovery, overcoming ... proposed framework against traditional evolutionary algorithms, pure LLM generation, deep reinforcement learning, and symbolic reasoning tools\n\n---\n\n"
+        },
+        {
+          "title": "Darwin Gödel Machine: Open-Ended Evolution of Self- ...",
+          "url": "https://arxiv.org/html/2505.22954v3",
+          "excerpt": "\nDarwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents\n\n# Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents\n\n Jenny Zhang Affiliation: University of British Columbia Affiliation: Vector Institute Shengran Hu Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Sakana AI Cong Lu Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Sakana AI Robert Lange Affiliation: Sakana AI Jeff Clune Affiliation: University of British Columbia Affiliation: Vector Institute Affiliation: Canada CIFAR AI Chair{jennyzzt,srhu,conglu}@cs.ubc.ca, robert@sakana.ai, jeff.clune@ubc.ca \n\n###### Abstract\n\nMos"
+        },
+        {
+          "title": "SHINKAEVOLVE:",
+          "url": "https://www.egr.msu.edu/~goodman/HumiesEntries2026/Lange/Paper1.pdf",
+          "excerpt": "\n#### SHINKAEVOLVE: TOWARDS OPEN-ENDED AND SAMPLE-EFFICIENT PROGRAM EVOLUTION\n\nRobert Tjarko Lange∗ Sakana AI robert@sakana.ai\n\nYuki Imajuku \nSakana AI \nimajuku@sakana.ai \n\nEdoardo Cetin Sakana AI edo@sakana.ai\n\nABSTRACT We introduce SHINKAEVOLVE: a new framework leveraging large language mod els (LLMs) to advance scientific discovery with state-of-the-art performance and efficiency. The field of LLM-driven scientific discovery has seen significant progress, but has yet to overcome a critical limitation: sample inefficiency, requir ing thousands of samples to identify effective solutions. SHINKAEVOLVE takes a concrete step towards addressing this critical limitation by introducing"
+        },
+        {
+          "title": "Discovering Multiagent Learning Algorithms with Large Language Models",
+          "url": "https://arxiv.org/html/2602.16928v2",
+          "excerpt": "\n. In this work, we propose the use of AlphaEvolve, an evolutionary coding agent powered by large language models, to automatically discover new multiagent learning algorithms ... of this framework by evolving novel variants for two distinct paradigms of\n\n---\n\n"
+        },
+        {
+          "title": "Co-Evolution of Large Language Models and Configuration Strategies to Enhance Surrogate-Assisted Evolutionary Algorithm | Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+          "url": "http://dl.acm.org/doi/10.1145/3711896.3736882",
+          "excerpt": "\nSurrogate-assisted evolutionary algorithms (SAEAs) are well-suited for optimizing computationally expensive black-box problems in diverse real- ... of SAEAs. To address these challenges, we propose CoE-SAEA, a novel paradigm that co-evolves large language\n\n---\n\n"
+        },
+        {
+          "title": "AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2507.02554",
+          "excerpt": "\nWe formalize AI research agents as search policies that navigate a space of candidate solutions, iteratively modifying them using operators ... , MCTS, Evolutionary), we show that their interplay is critical for achieving\n\n---\n\n"
+        },
+        {
+          "title": "Literature - Evolutionary AI Survey",
+          "url": "https://evo.si5.pl/literature.html",
+          "excerpt": "\n### P02: General-Purpose Evolutionary Frameworks\n\n| System | Paper | Repository | Creator | Date |\n| --- | --- | --- | --- | --- |\n| LLM4AD | arXiv:2412.17287 | Optima-CityU/LLM4AD | City University of Hong Kong | 2024-12 |\n| AlphaEvolve | arXiv:2506.13131 | google-deepmind/alphaevolve_results | Google DeepMind | 2025-05 |\n| OpenEvolve | -- | algorithmicsuperintelligence/openevolve | Algorithmic SuperIntelligence Labs | 2025-05 |\n| GEPA: Optimize Anything | arXiv:2507.19457 | gepa-ai/gepa | UC Berkeley / Stanford | 2025-07 |\n| ShinkaEvolve | arXiv:2509.19349 | SakanaAI/ShinkaEvolve | Sakana AI | 2025-09 |\n| SkyDiscover & AdaEvolve | arXiv:2602.20133 | skydiscover-ai/skydiscover |"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "mcts",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design",
+          "url": "https://proceedings.mlr.press/v267/zheng25o.html",
+          "excerpt": "\n# Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design\n\nZhi Zheng, Zhuoliang Xie, Zhenkun Wang, Bryan Hooi\n\n#### Abstract\n\n Handcrafting heuristics for solving complex optimization tasks (e.g., route planning and task allocation) is a common practice but requires extensive domain knowledge. Recently, Large Language Model (LLM)-based automatic heuristic design (AHD) methods have shown promise in generating high-quality heuristics without manual interventions. Existing LLM-based AHD methods employ a population to maintain a fixed number of top-performing LLM-generated heuristics and introduce evolutionary computation (EC) to iteratively enha"
+        },
+        {
+          "title": "Monte Carlo Tree Search for Comprehensive Exploration inLLM-Based Automatic Heuristic Design",
+          "url": "https://arxiv.org/html/2501.08603v3",
+          "excerpt": "\n# Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design\n\n Zhi Zheng Affiliation: School of Computing, National University of Singapore, Singapore Zhuoliang Xie Affiliation: School of System Design and Intelligent Manufacturing, Southern University of Science and Technology, Shenzhen, China Zhenkun Wang Affiliation: School of System Design and Intelligent Manufacturing, Southern University of Science and Technology, Shenzhen, China Bryan Hooi Affiliation: School of Computing, National University of Singapore, Singapore Correspondence to: bhooi@comp.nus.edu.sg \n\n###### Abstract\n\nHandcrafting heuristics for solving complex optimization tasks ("
+        },
+        {
+          "title": "Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design",
+          "url": "https://doi.org/10.48550/arxiv.2501.08603",
+          "excerpt": "\n# Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design\n\nZhi Zheng 1 Zhuoliang Xie 2 Zhenkun Wang 2 Bryan Hooi 1\n\n## Abstract\n\nHandcrafting heuristics for solving complex op timization tasks (e.g., route planning and task al location) is a common practice but requires ex tensive domain knowledge. Recently, Large Lan guage Model (LLM)-based automatic heuristic design (AHD) methods have shown promise in generating high-quality heuristics without manual interventions. Existing LLM-based AHD meth ods employ a population to maintain a fixed num ber of top-performing LLM-generated heuristics and introduce evolutionary computation (EC) to it erati"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/2501.08603",
+          "excerpt": "\n. The pro\u0002posed MCTS-AHD method organizes all LLM\n...\n(He\net al., 2011), job scheduling (Rajendran, 1993),\n...\npopulation in exsiting LLM-based AHD methods will discard emporarily underperforming codes. MCTS allows\n\n---\n\n"
+        },
+        {
+          "title": "ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution",
+          "url": "https://arxiv.org/pdf/2402.01145.pdf",
+          "excerpt": "\nReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution\n\n# ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution Thanks: Work made with contributions from the AI4CO open research community.\n\n Haoran Ye Affiliation: National Key Laboratory of General Artificial IntelligenceSchool of Intelligence Science and Technology, Peking University Jiarui Wang Affiliation: Southeast University Zhiguang Cao Affiliation: Singapore Management University Federico Berto Affiliation: KAIST Chuanbo Hua Affiliation: KAIST Haeyeon Kim Affiliation: KAIST Jinkyoo Park Affiliation: KAIST Guojie Song † † thanks: Correspondence to: Guojie Song <gjsong@pku.edu.cn>. Em"
+        },
+        {
+          "title": "ICML Poster Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design",
+          "url": "https://icml.cc/virtual/2025/poster/45984",
+          "excerpt": "\nbut requires extensive domain knowledge. Recently, Large Language Model (LLM)-based automatic heuristic design ... and are prone to converge into local optima. To more comprehensively explore the space of heuristics, this paper proposes to use Monte\n\n---\n\n"
+        },
+        {
+          "title": "Monte Carlo tree search for comprehensive exploration in ...",
+          "url": "https://dl.acm.org/doi/10.5555/3780338.3783492",
+          "excerpt": "\nMonte Carlo tree search for comprehensive exploration in LLM-based automatic heuristic design | Proceedings of the 42nd International Conference on Machine Learning skip to main content\n\nContents\n\n## Abstract\n\nHandcrafting heuristics for solving complex optimization tasks (e.g., route planning and task allocation) is a common practice but requires extensive domain knowledge. Recently, Large Language Model (LLM)-based automatic heuristic design (AHD) methods have shown promise in generating high-quality heuristics without manual interventions. Existing LLM-based AHD methods employ a population to maintain a fixed number of top-performing LLM-generated heuristics and introduce evol"
+        },
+        {
+          "title": "Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design",
+          "url": "https://arxiv.org/pdf/2501.08603v3.pdf",
+          "excerpt": "\nthis paper proposes MCTS AHD, the first tree search method for LLM-based AHD, which employs a tree structure over all the heuristic func tions generated so far and uses the Monte Carlo Tree Search ... ) to guide the evolution of further heuristics. Its\n\n---\n\n"
+        },
+        {
+          "title": "Planning of Heuristics: Strategic Planning on Large Language Models with Monte Carlo Tree Search for Automating Heuristic Optimization",
+          "url": "https://arxiv.org/html/2502.11422v3",
+          "excerpt": "\na well-known planning algorithm. PoH iteratively refines generated heuristics by evaluating their performance and providing\n...\n) (Ye et al., 2024) enhances the efficiency of heuristic evolution by combining evolutionary search with the self-\n\n---\n\n"
+        },
+        {
+          "title": "A Memetic and Reflective Evolution Framework for Automatic Heuristic Design Using Large Language Models",
+          "url": "https://www.mdpi.com/2076-3417/15/15/8735",
+          "excerpt": "\nTo address these gaps, we propose a unified framework, Evolution of Heuristics with ... (EoH-MR), that seamlessly integrates LLM-guided operator generation, adaptive local refinement via the Covariance Matrix Adaptation Evolution Strategy (CMA-ES), an"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "modern",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization",
+          "url": "https://arxiv.org/html/2602.20133",
+          "excerpt": "\nAdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization\n\n# AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization\n\n Mert Cemri † † thanks: Equal contribution. Correspondence: cemri@berkeley.edu, shubham3@berkeley.edu Affiliation: University of California, Berkeley Shubham Agrawal 1 1 footnotemark: 1 Affiliation: University of California, Berkeley Akshat Gupta Affiliation: University of California, Berkeley Shu Liu Affiliation: University of California, Berkeley Audrey Cheng Affiliation: University of California, Berkeley Qiuyang Mang Affiliation: University of California, Berkeley Ashwin Naren Affiliation: University of California, Berkeley Lutfi Eren Erdogan Affiliation: Univ"
+        },
+        {
+          "title": "SkyDiscover: A Flexible, Adaptive Framework for AI-Driven Scientific and Algorithmic Discovery | Proceedings of the ACM Conference on AI and Agentic Systems",
+          "url": "https://dl.acm.org/doi/10.1145/3786335.3813221",
+          "excerpt": "\nSkyDiscover: A Flexible, Adaptive Framework for AI-Driven Scientific and Algorithmic Discovery | Proceedings of the ACM Conference on AI and Agentic Systems\n\n# SkyDiscover: A Flexible, Adaptive Framework for AI-Driven Scientific and Algorithmic Discovery\n\nAuthors: \n\nShu Liu\n\nhttps://orcid.org/0009-0009-0825-6178\n\nMert Cemri\n\nShubham Agarwal\n\nAlexander Krentsel\n\nAshwin Naren\n\nAkshat Gupta\n\nMonishwaran Maheswaran\n\nUniversity of California - Berkeley, Berkeley, USA istoica@cs.berkeley.edu\n\nAuthors Info & Claims\n\nPublished: 26 May 2026 Publication History\n\n## Abstract\n\nLLM-driven evolutionary search is emerging as a powerful approach for discovering algorithms and designs, but existi"
+        },
+        {
+          "title": "AdaEvolve: Adaptive LLM-Driven Zeroth-Order Optimization",
+          "url": "https://skydiscover-ai.github.io/blog-adaevolve.html",
+          "excerpt": "\nAdaEvolve: Adaptive LLM-Driven Zeroth-Order Optimization\n\n# AdaEvolve: Adaptive LLM-Driven Zeroth-Order Optimization\n\nPosted: Mar 12th, 2026\n\n Mert Cemri 1 * Shubham Agarwal 1 * Akshat Gupta 1 Shu Liu 1 Audrey Cheng 1 Ashwin Naren 1 Qiuyang Mang 1 Lutfi Eren Erdogan 1 Koushik Sen 1 Matei Zaharia 1 Alexandros G. Dimakis 1,2 Ion Stoica 1 \n\nLLM-driven evolutionary search is the dominant paradigm for automated algorithm discovery, but existing systems such as AlphaEvolve, OpenEvolve, GEPA, and ShinkaEvolve rely on static search policies (fixed exploration rates, uniform resource allocation, and rigid prompts), creating a fundamental mismatch between sophisticated LLM mutation operato"
+        },
+        {
+          "title": "Papers — SkyDiscover | UC Berkeley Sky Lab",
+          "url": "https://skydiscover-ai.github.io/papers.html",
+          "excerpt": "\n## AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization\n\nMert Cemri*, Shubham Agrawal*, Akshat Gupta, Shu Liu, Audrey Cheng, Qiuyang Mang, Ashwin Naren, Lutfi Eren Erdogan, Koushik Sen, Matei Zaharia, Alex Dimakis, Ion Stoica\n\nAbstract\n\n The paradigm of automated program generation is shifting from one-shot generation to inference-time search, where Large Language Models (LLMs) function as semantic mutation operators within evolutionary loops. While effective, these systems are currently governed by static schedules that fail to account for the non-stationary dynamics of the search process. This rigidity results in substantial computational waste, as resources are indiscrimin"
+        },
+        {
+          "title": "N/A",
+          "url": "https://skydiscover-ai-skydiscover.mintlify.app/config/search",
+          "excerpt": "\n### AdaEvolve (Adaptive Multi-Island)\n\nAdaptive evolutionary algorithm with multiple islands that adjust search intensity based on improvement history.\n...\npopulation_size: 20\n    num_islands: 2\n...\n_min: 0.15\n    intensity_max: 0.5\n\n---\n\n"
+        },
+        {
+          "title": "AdaEvolve - SkyDiscover",
+          "url": "https://skydiscover-ai-skydiscover.mintlify.app/algorithms/adaevolve",
+          "excerpt": "\nis an adaptive evolutionary search algorithm that dynamically adjusts its optimization behavior based on observed progress. It uses a multi-island architecture where each island evolves independently, with migration between islands and adaptive\n\n---\n\n"
+        },
+        {
+          "title": "skydiscover-ai/skydiscover",
+          "url": "https://github.com/skydiscover-ai/skydiscover",
+          "excerpt": "\nSkyDiscover-Optimize evolves programs against your scoring function. Its two search algorithms, AdaEvolve and EvoX, achieve the strongest open-source results across ~200 benchmarks, and are used across industry including Google and Uber.\n\n---\n\n"
+        },
+        {
+          "title": "AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization",
+          "url": "https://arxiv.org/html/2602.20133v1",
+          "excerpt": "\nAdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization\n\n# AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization\n\n Mert Cemri † † thanks: Equal contribution. Correspondence: cemri@berkeley.edu, shubham3@berkeley.edu Affiliation: University of California, Berkeley Shubham Agrawal 1 1 footnotemark: 1 Affiliation: University of California, Berkeley Akshat Gupta Affiliation: University of California, Berkeley Shu Liu Affiliation: University of California, Berkeley Audrey Cheng Affiliation: University of California, Berkeley Qiuyang Mang Affiliation: University of California, Berkeley Ashwin Naren Affiliation: University of California, Berkeley Lutfi Eren Erdogan Affiliation: Univ"
+        },
+        {
+          "title": "SkyDiscover: A Flexible Framework for AI-Driven Scientific and Algorithmic Discovery",
+          "url": "https://skydiscover-ai.github.io/blog.html",
+          "excerpt": "\n’s modular components make it easy to implement and compare\n...\n- AdaEvolve, which dynamically adjusts its optimization behavior based on observed progress.\n...\n, which dynamically evolves the optimization (evolution) strategy itself using LLMs on\n\n---\n\n"
+        },
+        {
+          "title": "SkyDiscover - Sky Computing Lab - UC Berkeley",
+          "url": "https://sky.cs.berkeley.edu/project/skydiscover/",
+          "excerpt": "\nWe introduce SkyDiscover, a flexible and modular framework for AI-driven scientific and algorithmic discovery. We use it to build two adaptive evolutionary algorithms about 2.5K LoC and set SOTA results 200+ tasks:"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "bestpractice",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "ShinkaEvolve in Action: How a Human-AI Partnership Conquered a Coding Challenge",
+          "url": "https://sakana.ai/icfp-2025/",
+          "excerpt": "\nfrom ShinkaEvolve yielded substantial performance gains:\n\n- Mid-scale problem (18 rooms): Execution time improved from 2.86s to 0.44s (a ~6.5x speedup).\n- Large-scale problem (24 rooms): Execution time dropped from 127s to 13s (a ~10x speedup).\n\n---\n\n"
+        },
+        {
+          "title": "SakanaAI/ShinkaEvolve",
+          "url": "https://github.com/SakanaAI/ShinkaEvolve",
+          "excerpt": "\n**Oct 2025 Update** ShinkaEvolve supported Team Unagi in winning the ICFP 2025 Programming Contest.\n...\nThe framework supports **parallel evaluation of candidates** locally or on a Slurm cluster. It maintains an archive of successful solutions, enabling\n\n---\n\n"
+        },
+        {
+          "title": "Core Concepts - ShinkaEvolve",
+          "url": "https://sakanaai.github.io/ShinkaEvolve/core_concepts/",
+          "excerpt": "\ndatabase stores both the current population and derived state used to guide future sampling:\n\n- Global archive of high-value programs\n- Island-local populations to preserve diversity\n- Migration settings for cross-island transfer\n- Parent and inspiration\n\n---\n\n"
+        },
+        {
+          "title": "Sakana AI Agent Wins AtCoder Heuristic Contest (First AI to Place 1st)",
+          "url": "https://sakana.ai/ahc058/",
+          "excerpt": "\nAtCoder Heuristic Contest 058, outperforming 804 human participants. ... The result demonstrates that by utilizing inference-time scaling with multiple frontier models, AI agents can now match or exceed\n\n---\n\n"
+        },
+        {
+          "title": "SHINKAEVOLVE:",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/7886b9bafe76c52fd568db10ff9772df-Paper-Conference.pdf",
+          "excerpt": "\ntop-performing solutions and random archive samples, providing the LLM with diverse exemplars for creative recombination\n...\napproach with independent subpopulations seeded from the same initial program. The islands evolve in parallel\n\n---\n\n"
+        },
+        {
+          "title": "ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution",
+          "url": "https://arxiv.org/html/2509.19349",
+          "excerpt": "\n-performing solutions and random archive samples, providing the LLM with diverse exemplars for creative recombination. ... approach with independent subpopulations seeded from the same initial program. The islands evolve in parallel to enhance diversity\n\n---\n\n"
+        },
+        {
+          "title": "ShinkaEvolve: Evolving New Algorithms with LLMs, Orders ...",
+          "url": "https://sakana.ai/shinka-evolve/",
+          "excerpt": "\n, uninteresting variations of existing programs. We compute program text embedding similarities and leverage an LLM-\n...\nLLM from an ensemble for the task at hand, adapting as the evolution progresses. Thereby, ShinkaEvolve can dynamically select the\n\n---\n\n"
+        },
+        {
+          "title": "ICFP Programming Contest 2025におけるAIツールShinkaEvolveとの協働 - iwiwiの日記",
+          "url": "https://iwiwi.hatenablog.com/entry/2025/10/16/093411",
+          "excerpt": "\n我々チームUnagiは ICFP Programming Contest 2025にて優勝することが出来ました。今回、私はこのコンテスト中に勤務先 Sakana AIが開発するAIツール「ShinkaEvolve」を活用することを試みました。この記事では、ShinkaEvolveがコンテスト中に我々にどのように貢献したかを説明します。\n...\n、解法全体を大幅（〜\n...\n具体的には部屋数18）での速度を測定しながら高速化を行わせました。人間が書いたものが2.\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/2509.19349",
+          "excerpt": "\n2025-9-25\nShinkaEvolve: Towards Open-Ended And\nSample-Efficient Program Evolution\nRobert Tjarko Lange, Yuki Imajuku and Edoardo Cetin\nSakana AI\nWe introduce ShinkaEvolve1: a new open-source framework leveraging large language models (LLMs)\nto advance scientific discovery with state-of-the-art performance and unprecedented efficiency. Recent\nadvances in scaling inference time compute of LLMs have enabled significant progress in generalized\nscientific discovery. These approaches rely on evolutionary agentic harnesses that leverage LLMs as\nmutation operators to generate candidate solutions. However, current code evolution methods suffer\nfrom critical limitations: they are sample ine"
+        },
+        {
+          "title": "Ch 22. ShinkaEvolve at ICFP 2025 - Evolutionary AI Survey",
+          "url": "https://evo.si5.pl/chapters/shinkaevolve-icfp-2025.html",
+          "excerpt": "\nclaims are made, they are attributed to the blog post; ... description, this is noted explicitly. Exact placement in the ICFP 2025 contest, total API costs, and precise generation counts were not disclosed with full specificity in the source material"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "bestarm",
+      "requested": 10,
+      "candidates": [
+        {
+          "title": "Best Arm Identification in Generalized Linear Bandits via Hybrid Feedback",
+          "url": "https://arxiv.org/html/2605.05745v1",
+          "excerpt": "\n###### Abstract\n\nWe study fixed-confidence best arm identification in generalized linear bandits under a hybrid feedback model: at each round, the learner may query either (i) absolute reward feedback from a single arm or (ii) relative (dueling) feedback from an arm pair, both governed by generalized linear models. We introduce a likelihood-ratio–based confidence sequence that unifies heterogeneous generalized linear observations and yields an explicit ellipsoidal confidence set under a self-concordance assumption. Building on this confidence set, we propose a hybrid Track-and-Stop algorithm that adaptively allocates queries by tracking a minimax-optimal design over a joint actio"
+        },
+        {
+          "title": "Box Thirding: Anytime Best Arm Identification under Insufficient Sampling Preprint. Under review.",
+          "url": "https://arxiv.org/html/2602.18186v1",
+          "excerpt": "\n# Box Thirding: Anytime Best Arm Identification under Insufficient Sampling Preprint. Under review.\n\nSeohwa Hwang Junyong Park Department of Statistics, Seoul National University, Seoul, Republic of Korea junyongpark@snu.ac.kr\n\n###### Abstract\n\nWe introduce Box Thirding (B3), a flexible and efficient algorithm for Best Arm Identification (BAI) under fixed budget constraints. It is designed for both anytime BAI and scenarios with large $N$ , where the number of arms is too large for exhaustive evaluation within a limited budget $T$ . The algorithm employs an iterative ternary comparison: in each iteration, three arms are compared—the best-performing arm is explored further, the me"
+        },
+        {
+          "title": "Simulation-Based Inference for Adaptive Experiments",
+          "url": "https://arxiv.org/html/2506.02881v1",
+          "excerpt": "\n# Simulation-Based Inference for Adaptive Experiments\n\n Brian M Cho Cornell Tech bmc233@cornell.edu &Aurélien Bibaut Netflix abibaut@netflix.com Nathan Kallus Netflix & Cornell University kallus@cornell.edu \n\n###### Abstract\n\nMulti-arm bandit experimental designs are increasingly being adopted over standard randomized trials due to their potential to improve outcomes for study participants, enable faster identification of the best-performing options, and/or enhance the precision of estimating key parameters. Current approaches for inference after adaptive sampling either rely on asymptotic normality under restricted experiment designs or underpowered martingale concentration ineq"
+        },
+        {
+          "title": "Minimax and Bayes Optimal Best-Arm Identification",
+          "url": "https://arxiv.org/pdf/2506.24007v3.pdf",
+          "excerpt": "\n# Minimax and Bayes Optimal Best-Arm Identification\n\n Masahiro Kato † † thanks: Email: mkato-csecon@g.ecc.u-tokyo.ac.jp Affiliation: The University of Tokyo \n\nAugust 24, 2026\n\n###### Abstract\n\nThis study investigates minimax and Bayes optimal strategies in fixed-budget best-arm identification. We consider an adaptive procedure consisting of a sampling phase followed by a recommendation phase, and we design an adaptive experiment within this framework to efficiently identify the best arm, defined as the one with the highest expected outcome. In our proposed strategy, the sampling phase consists of two stages. The first stage is a pilot phase, in which we allocate each arm uniforml"
+        },
+        {
+          "title": "Multi-thresholding Good Arm Identification with Bandit Feedback",
+          "url": "https://proceedings.mlr.press/v304/jiang26a.html",
+          "excerpt": "\nMulti-thresholding Good Arm Identification with Bandit Feedback\n\n# Multi-thresholding Good Arm Identification with Bandit Feedback\n\nXuanke Jiang, Sherief Hashima, Kohei Hatano, Eiji Takimoto\n\n#### Abstract\n\n We consider a good arm identification problem in a stochastic bandit setting with multi-objectives, where each arm $i\\\\in[K]$ is associated with a distribution $\\\\mathcal\\{D_\\{i\\}\\}$ defined over $\\\\mathbb\\{R\\}^M$. For each round $t$, the player/algorithm pulls one arm $i_t$ and receives a $M$ dimensional vector feedback sampled according to $\\\\mathcal\\{D_\\{i_t\\}\\}$. The target is twofold, one is finding one arm whose means are larger than the predefined thresholds $\\\\xi_1,\\\\"
+        },
+        {
+          "title": "Optimal Best-Arm Identification under Fixed Confidence with Multiple Optima",
+          "url": "https://doi.org/10.48550/arxiv.2505.15643",
+          "excerpt": "\n# Optimal Best-Arm Identification under Fixed Confidence with Multiple Optima\n\narXiv (Cornell University). Published: 2025-05-21. Preprint. 0 citations.\n\n## Authors\n\n- Lan V. Truong (University of Essex): h-index 5; 129 citations; corresponding author\n\n## Topics\n\n- Advanced Bandit Algorithms Research\n- Reinforcement Learning in Robotics\n- Optimization and Search Problems\n\n---\n\n# Optimal Best-Arm Identification under Fixed Confidence with Multiple Optima\n\n## Abstract\n\nWe study the problem of best-arm identification in stochastic multi-armed bandits under the fixed-confidence setting, with a particular focus on instances that admit multiple optimal arms. While the Track-and-Stop al"
+        },
+        {
+          "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+          "url": "https://doi.org/10.48550/arxiv.2403.09123",
+          "excerpt": "\n---\n\n# OPTIMAL TOP-TWO METHOD FOR BEST ARM IDENTIFICATION AND FLUID ANALYSIS *\n\n## Abstract\n\nTop-2 methods have become popular in solving the best arm identification (BAI) problem. The best arm, or the arm with the largest mean amongst finitely many, is identified through an algorithm that at any sequential step independently pulls the empirical best arm, with a fixed probability β, and pulls the best challenger arm otherwise. The probability of incorrect selection is guaranteed to lie below a specified δ > 0. Information theoretic lower bounds on sample complexity are well known for BAI problem and are matched asymptotically as δ → 0 by computationally demanding plug-in methods."
+        },
+        {
+          "title": "Reward Maximization for Pure Exploration: Minimax Optimal Good Arm Identification for Nonparametric Multi-Armed Bandits",
+          "url": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/cho25a/cho25a.pdf",
+          "excerpt": "\n### Reward Maximization for Pure Exploration: Minimax Optimal Good Arm Identification for Nonparametric Multi-Armed Bandits\n\nBrian Cho Dominik Meier Kyra Gan Nathan Kallus Cornell Tech Cornell Tech Cornell Tech Cornell Tech, Netflix\n\nAbstract\n\nIn multi-armed bandits, reward maximization and pure exploration are often at odds with each other. The former focuses on exploiting arms with the highest means, while the latter may require constant exploration across all arms. In this work, we focus on good arm identification (GAI), a pure exploration objec tive that aims to label arms with means above a threshold as quickly as possible. We show that GAI can be efficiently solved by combi"
+        },
+        {
+          "title": "Multi-thresholding Good Arm Identification with Bandit Feedback",
+          "url": "https://arxiv.org/html/2503.10386",
+          "excerpt": "\nepsilon$-good arm whose expected reward vector is larger than $𝝃−ϵ ... xi}$ is a predefined threshold vector, and the vector comparison is component-wise ... We propose the Multi-Thresholding UCB (MultiTUCB) algorithm with a\n\n---\n\n"
+        },
+        {
+          "title": "Fixed-Confidence Best Arm Identification with Decreasing Variance",
+          "url": "https://arxiv.org/html/2502.07199",
+          "excerpt": "\n###### Abstract\n\nWe focus on the problem of best-arm identification in a stochastic multi-arm bandit with temporally decreasing variances for the arms’ rewards. We model arm rewards as Gaussian random variables with fixed means and variances that decrease with time. The cost incurred by the learner is modeled as a weighted sum of the time needed by the learner to identify the best arm, and the number of samples of arms collected by the learner before termination. Under this cost function, there is an incentive for the learner to not sample arms in all rounds, especially in the initial rounds. On the other hand, not sampling increases the termination time of the learner, which als"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "survival",
+      "requested": 8,
+      "candidates": [
+        {
+          "title": "SVL: Goal-Conditioned Reinforcement Learning as Survival Learning",
+          "url": "https://arxiv.org/html/2604.17551v2",
+          "excerpt": "\nIn this work, we introduce a complementary probabilistic perspective that interprets GCRL through the lens of time‑to‑event modeling, also known as survival analysis (Lee and Wang, 2003; Wang et al., 2019). This statistical framework studies the distributions of variables representing the time until a specific event occurs. Our key observation is that in sparse, terminate‑on‑success settings, the expected discounted return is fully determined by the distribution of the goal-hitting time under the policy. Maximizing the return thus corresponds to optimizing a discounted functional of the hitting-time distribution. The discount factor $\\gamma$ induces an implicit risk sensitivity o"
+        },
+        {
+          "title": "Off-Policy Reinforcement Learning with Delayed Rewards",
+          "url": "https://proceedings.mlr.press/v162/han22e/han22e.pdf",
+          "excerpt": "\n##### Abstract\n\nWe study deep reinforcement learning (RL) algo rithms with delayed rewards. In many real-world tasks, instant rewards are often not readily ac cessible or even defined immediately after the agent performs actions. In this work, we first formally define the environment with delayed re wards and discuss the challenges raised due to the non-Markovian nature of such environments. Then, we introduce a general off-policy RL frame work with a new Q -function formulation that can handle the delayed rewards with theoretical con vergence guarantees. For practical tasks with high dimensional state spaces, we further introduce the HC-decomposition rule of the Q -function in o"
+        },
+        {
+          "title": "Modeling Survival in model-based Reinforcement Learning",
+          "url": "https://doi.org/10.1109/transai49837.2020.00009",
+          "excerpt": "\n## Abstract\n\nAlthough recent model-free reinforcement learning algorithms have been shown to be capable of mastering complicated decision-making tasks, the sample complexity of these methods has remained a hurdle to utilizing them in many real-world applications. In this regard, model-based reinforcement learning proposes some remedies. Yet, inherently, model-based methods are more computationally expensive and susceptible to sub-optimality. One reason is that model-generated data are always less accurate than real data, and this often leads to inaccurate transition and reward function models. With the aim to mitigate this problem, this work presents the notion of survival by dis"
+        },
+        {
+          "title": "Survival Analysis Meets Reinforcement Learning",
+          "url": "https://research.atspotify.com/2022/11/survival-analysis-meets-reinforcement-learning",
+          "excerpt": "\nA crucial insight is the following. If we assume that the sequence of states x 0, x 1, … form a Markov chain, then we can rewrite the the survival probability as\n\nfor any k ≥ 1. Intuitively, this identity states that the survival probability at a given state should be similar (on average) to the survival probability at the next state, accounting for the delay. This looks very similar to the Bellman equation above. Indeed, in both cases, we take advantage of a notion of temporal consistency to write a quantity of interest (the value function or the survival probability) recursively, in terms of an immediate observation and a prediction at the next state.\n\nBuilding on this insight,"
+        },
+        {
+          "title": "Survival Instinct in Offline Reinforcement Learning",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/c3e969ea20542a6a11e6caeac736a0b9-Paper-Conference.pdf",
+          "excerpt": "\n#### Abstract\n\nWe present a novel observation about the behavior of offline reinforcement learning (RL) algorithms: on many benchmark datasets, offline RL can produce well performing and safe policies even when trained with “wrong” reward labels, such as those that are zero everywhere or are negatives of the true rewards. This phe nomenon cannot be easily explained by offline RL’s return maximization objective. Moreover, it gives offline RL a degree of robustness that is uncharacteristic of its online RL counterparts, which are known to be sensitive to reward design. We demonstrate that this surprising robustness property is attributable to an interplay between the notion of pess"
+        },
+        {
+          "title": "Control in Stochastic Environment with Delays: A Model-based Reinforcement Learning Approach",
+          "url": "https://arxiv.org/html/2402.00313",
+          "excerpt": "\n###### Abstract\n\nIn this paper we are introducing a new reinforcement learning method for control problems in environments with delayed feedback. Specifically, our method employs stochastic planning, versus previous methods that used deterministic planning. This allows us to embed risk preference in the policy optimization problem. We show that this formulation can recover the optimal policy for problems with deterministic transitions. We contrast our policy with two prior methods from literature. We apply the methodology to simple tasks to understand its features. Then, we compare the performance of the methods in controlling multiple Atari games.\n\n...\n\nThe average rewards from "
+        },
+        {
+          "title": "Training and Evaluating Ethical Reinforcement Learning Agents on Per-Episode Distributions",
+          "url": "https://bittide.aicompass.dev/article/ab6443aa-4117-48c3-8918-75538709fac2",
+          "excerpt": "\narXiv:2608.14642v1 Announce Type: new Abstract: Reinforcement Learning (RL) agents trained on a single reward signal exploit the gap between the designed reward and the intended behavior. This is particularly a problem when we are trying to imbue ethical behavior into RL agents. An agent can look ethical on average while concentrating its violations in a few bad episodes, and a creature in the environment harmed in one episode is not restored by good conduct in another. We compare four ways of training ethical behavior in Craftax, an open-ended survival benchmark. The four are: scalar penalties with termination, a linear multi-objective weight sweep, an adaptive Lagrangian constr"
+        },
+        {
+          "title": "Survival Augmented Patient Preference Incorporated Reinforcement Learning to Evaluate Tailoring Variables for Personalized Healthcare",
+          "url": "https://www.mdpi.com/2571-905X/4/4/46",
+          "excerpt": "\nIn this paper, we consider personalized treatment decision strategies in the management of chronic diseases, such as chronic kidney disease, which typically consists of sequential and adaptive treatment decision making. We investigate a two-stage treatment setting with a survival outcome that could be right censored. This can be formulated through a dynamic treatment regime (DTR) framework, where the goal is to tailor treatment to each individual based on their own medical history in order to maximize a desirable health outcome. We develop a new method, Survival Augmented Patient Preference incorporated reinforcement Q-Learning (SAPP-Q-Learning) to decide between quality of life "
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "orchestrator",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "How we built our multi-agent research system \\ Anthropic",
+          "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+          "excerpt": "\n. This finding validates our architecture that distributes work across agents with separate context windows to add more capacity for ... Claude Sonnet 4 is a larger performance gain than doubling the token budget on Claude Sonnet\n\n---\n\n"
+        },
+        {
+          "title": "Effective context engineering for AI agents \\ Anthropic",
+          "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "excerpt": "\n#### Sub-agent architectures\n\nSub-agent architectures provide another way around context limitations. Rather than one agent attempting to maintain state across an entire project, specialized sub-agents can handle focused tasks with clean context windows. The main agent coordinates with a high-level plan while subagents perform deep technical work or use tools to find relevant information. Each subagent might explore extensively, using tens of thousands of tokens or more, but returns only a condensed, distilled summary of its work (often 1,000-2,000 tokens).\n\nThis approach achieves a clear separation of concerns—the detailed search context remains isolated within sub-agents, while"
+        },
+        {
+          "title": "How we built our multi-agent research system",
+          "url": "https://www.anthropic.com/research/multi-agent-research-system",
+          "excerpt": "\nOur internal evaluations show that multi-agent research systems excel especially for breadth-first queries that involve pursuing multiple independent directions simultaneously. We found that a multi-agent system with Claude Opus 4 as the lead agent and Claude Sonnet 4 subagents outperformed single-agent Claude Opus 4 by 90.2% on our internal research eval. For example, when asked to identify all the board members of the companies in the Information Technology S&P 500, the multi-agent system found the correct answers by decomposing this into tasks for subagents, while the single agent system failed to find the answer with slow, sequential searches.\n\nMulti-agent systems work mainly"
+        },
+        {
+          "title": "Anthropic: How we built our multi-agent research system",
+          "url": "https://simonwillison.net/2025/Jun/14/multi-agent-research-system/",
+          "excerpt": "\nThe key benefit is all about managing that 200,000 token context limit. Each sub-task has its own separate context, allowing much larger volumes of content to be processed as part of the research task.\n...\n90% for complex queries, allowing Research to do\n\n---\n\n"
+        },
+        {
+          "title": "Learnings from Building Multi-Agent Systems – til",
+          "url": "https://lawwu.github.io/til/posts/2025-06-17-anthropic-multi-agent-systems/index.html",
+          "excerpt": "\nWe even created a tool-testing agent—when given a flawed MCP tool, ... This process for improving tool ergonomics resulted in a 40% decrease in task completion time for future agents using the new description"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "confidence",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+          "url": "https://doi.org/10.1214/20-aos1991",
+          "excerpt": "\n# Time-uniform, nonparametric, nonasymptotic confidence sequences\n\nThe Annals of Statistics. Published: 2021-04-01. 147 citations.\n\n## Authors\n\n- Steven R. Howard (University of California, Berkeley)\n- Aaditya Ramdas (Carnegie Mellon University)\n- Jon McAuliffe (University of California, Berkeley)\n- Jasjeet Sekhon (Yale University)\n\n...\n\n# TIME-UNIFORM, NONPARAMETRIC, NONASYMPTOTIC CONFIDENCE SEQUENCES\n\n## Abstract\n\nA confidence sequence is a sequence of confidence intervals that is uniformly valid over an unbounded time horizon. Ou"
+        },
+        {
+          "title": "[1810.08240] Time-uniform, nonparametric, nonasymptotic confidence sequences",
+          "url": "https://arxiv.org/abs/1810.08240",
+          "excerpt": "\n[1810.08240] Time-uniform, nonparametric, nonasymptotic confidence sequences\n\n [Submitted on 18 Oct 2018 (v1), last revised 6 Aug 2022 (this version, v9)]\n\n# "
+        },
+        {
+          "title": "{ stevehoward,jonmcauliffe,sekhon}",
+          "url": "https://arxiv.org/pdf/1810.08240.pdf",
+          "excerpt": "\nAbstract A confidence sequence is a sequence of confidence intervals that is uniformly valid over an unbounded ... illustrate the generality of our proof techniques by deriving an empirical-Bernstein bound growing at a\n\n---\n\n"
+        },
+        {
+          "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+          "url": "https://par.nsf.gov/servlets/purl/10251927",
+          "excerpt": "\nThe Annals of Statistics 2021, Vol. 49, No. 2, 1055–1080 https://doi.org/10.1214/20-AOS1991 © Institute of Mathematical Statistics, 2021\n\nTIME-UNIFORM, NONPARAMETRIC, NONASYMPTOTIC CONFIDENCE SEQUENCES\n\nBY STEVEN R. HOWARD1,*, AADITYA RAMDAS2, JON MCAULIFFE1,† AND JASJEET SEKHON3 1Department of Statistics, University of California, Berkeley, *stevehoward@berkeley.edu; †jonmcauliffe@berkeley.edu 2Departments of Statistics and Machine Learning, Carnegie Mellon University, aramdas@stat.cmu.edu 3Department of Statistics and Data Science"
+        },
+        {
+          "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+          "url": "https://arxiv.org/html/1810.08240v9",
+          "excerpt": "\nTime-uniform, nonparametric, nonasymptotic confidence sequences\n\n# Time-uniform, nonparametric, nonasymptotic confidence sequences\n\n Steven R. Howard Aaditya Ramdas Jon McAuliffe Jasjeet Sekhon Departments of Statistics Political Science UC Berkeley Departments of Statistics Data Science Machine Learning Carnegie Mellon The Voleon Group{stevehoward,jonmcauliffe,sekhon}@berkeley.edu, aramdas@stat.cmu.edu \n\n###### Abstract\n\nA confidence sequence is a sequence of confidence intervals that is uniformly valid over an unbounded time horiz"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "stages",
+      "requested": 8,
+      "candidates": [
+        {
+          "title": "[2203.08057] Poetree: Interpretable Policy Learning with Adaptive Decision Trees",
+          "url": "https://ar5iv.labs.arxiv.org/html/2203.08057",
+          "excerpt": "\n###### Abstract\n\nBuilding models of human decision-making from observed behaviour is critical to better understand, diagnose and support real-world policies such as clinical care. As established policy learning approaches remain focused on imitation performance, they fall short of explaining the demonstrated decision-making process. Policy Extraction through decision Trees (Poetree) is a novel framework for interpretable policy learning, compatible with fully-offline and partially-observable clinical decision environments – and buil"
+        },
+        {
+          "title": "Deconfounding Actor-Critic Network with Policy Adaptation for Dynamic",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9466407/",
+          "excerpt": "\n## Abstract\n\nDespite intense efforts in basic and clinical research, an individualized ventilation strategy for critically ill patients remains a major challenge. Recently, dynamic treatment regime (DTR) with reinforcement learning (RL) on electronic health records (EHR) has attracted interest from both the healthcare industry and machine learning research community. However, most learned DTR policies might be biased due to the existence of confounders. Although some treatment actions non-survivors received may be helpful, if confou"
+        },
+        {
+          "title": "Learning Optimal Dynamic Treatment Regimes Using Causal Tree Methods in Medicine",
+          "url": "https://proceedings.mlr.press/v182/blumlein22a/blumlein22a.pdf",
+          "excerpt": "\ndepending on their time of measurement in relation to the treatment \ndecision. Hence, conditioning on covariates measured after the treatment in a time step \ninduces a post-treatment bias by “explaining-away” the treatment effect (Chakraborty and\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/2205.09852",
+          "excerpt": "\npolicies for patients. To allevi\u0002ate confounding issues, we incorporate a patient resampling module\n...\ncause policy bias. The mortality rates of different-source\ndatasets vary widely and the bias could further limit the\n\n---\n\n"
+        },
+        {
+          "title": "A Unified Framework of Policy Learning for Contextual",
+          "url": "https://arxiv.org/pdf/2303.11187v1.pdf",
+          "excerpt": "\n, Northwestern University\n\nAbstract We study the offline contextual bandit problem, where we aim to acquire an optimal policy using observational data. However, this data usually contains two deficiencies: (i) some variables that confound actions are not observed, and (ii) missing observations exist in the collected data. Unobserved confounders lead to a confounding bias and missing observations cause bias and inefficiency problems. To overcome these challenges and learn the optimal policy from the observed dataset, we present a new"
+        },
+        {
+          "title": "Optimal policy trees",
+          "url": "https://doi.org/10.1007/s10994-022-06128-5",
+          "excerpt": "\nfor treatment assignment bias in the observed data. Treatments in observational data are often not assigned at random, and this bias can influence the outcome estimation process, leading to poor estimates if not accounted for. For instance, consider a\n\n---\n\n"
+        },
+        {
+          "title": "policytree: Policy learning via doubly robust empirical welfare maximization over trees",
+          "url": "https://doi.org/10.21105/joss.02232",
+          "excerpt": "\n## Abstract\n\nThe problem of learning treatment assignment policies from randomized or observational data arises in many fields. For example, in personalized medicine, we seek to map patient observables (like age, gender, heart pressure, etc.) to a treatment choice using a data-driven rule. There has recently been a considerable amount of work on statistical methodology for policy learning, including 20 rewardL, actionL ← {max, argmax} d∈ 1,..,Dcum_rewards(d)(p)(n);\n\nThe package policytree for R (R Core Team, 2020) implements the mul"
+        },
+        {
+          "title": "Confounding-Robust Policy Improvement",
+          "url": "https://arxiv.org/pdf/1805.08593",
+          "excerpt": "\n## Abstract\n\nWe study the problem of learning personalized decision policies from observational data while accounting for possible unobserved confounding. Previous approaches, which assume unconfoundedness, i.e., that no unobserved confounders affect both the treatment assignment as well as outcome, can lead to policies that introduce harm rather than benefit when some unobserved confounding is present, as is generally the case with observational data. Instead, since policy value and regret may not be point-identifiable, we study a "
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "bast",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "[cs/0703062] Bandit Algorithms for Tree Search",
+          "url": "https://arxiv.org/abs/cs/0703062",
+          "excerpt": "\n[cs/0703062] Bandit Algorithms for Tree Search\n\n [Submitted on 13 Mar 2007]\n\n# "
+        },
+        {
+          "title": "Bandit Algorithms for Tree Search",
+          "url": "https://arxiv.org/pdf/cs/0703062",
+          "excerpt": "\nµ2 −\nR¯\n2,n2\nn2\n\u0001\n= ∆i −\nR¯\n1,n1\nn1\n+\nR¯\n2,n2\nn2\n,\nwhere ∆i\ndef = µ1 − µ2. Thus, if action 2 is chosen, we have:\nn2(∆i −\nR¯\n1,n1\nn1\n+\nR¯\n2,n2\nn2\n− cn1 + c\nd\nn1\n) ≤ n1cn1 + nicni + n2c\nd\nn2\n.\nFrom the definition of c\nd\nn1\nand the assumption (5) on R¯\n1,n1\n, we have −R¯\n1,n1 /n1−cn1 +c\nd\nn1 ≥\n0, thus\nn2 ≤\n\u0002\nn1cn1 + nicni + n2(kd + 1)cn2 + k\n′\nd\n\u0003\n/∆i\n≤\n\u0002\n(1 + √\n2 + kd)nicni + k\n′\nd\n\u0003\n/∆i.\nThus if n2 > [(1 + √\n2 + kd)nicni + k\n′\nd\n]/∆i, the arm 2 will never be chosen any more. We\ndeduce that for all n ≥ 0, n2 ≤ [(1 + √\n2 + kd)nicni + k"
+        },
+        {
+          "title": "[cs/0703062] 1 Introduction",
+          "url": "https://ar5iv.labs.arxiv.org/html/cs/0703062",
+          "excerpt": "\nAbstract: Bandit based methods for tree search have recently gained popularity when applied to huge trees, e.g. in the game of go [GWMT06]. The UCT algorithm [KS06], a tree search method based on Upper Confidence Bounds (UCB) [ACBF02], is believed to adapt locally to the effective smoothness of the tree. However, we show that UCT is too “optimistic” in some cases, leading to a regret $\\Omega(\\exp(\\exp(D)))$ where $D$ is the depth of the tree. We propose alternative bandit algorithms for tree search. First, a modification of UCT usin"
+        },
+        {
+          "title": "Bandit Algorithms for Tree Search",
+          "url": "https://inria.hal.science/inria-00136198/document/",
+          "excerpt": "\n��Ʊ���Wth��\u0006إ~?�\u001a\u0005��\u001b�\u0017��\u0003��_�\u0016�\u0012�H��431��\u000f�I=fvf\u001d��|;��U����R�~Sv��x��\u001a��z� ... w�>\u000eϡ]x�vm�n��=�~I�u��`}��ĳ�~�t�YH����3��/cO� ... ��aI�\u0007 �S�Mw�$U]��}�}�񴏰 ... bO׏}h�z��v9� �\u001eH C��͡�$ ... k��е�:��ïW�i�K@�*4Mlw� ... [�ٹ� X�\b*\u0018���:ivRH�Ab�\n\n---\n\n"
+        },
+        {
+          "title": "Bandit Algorithms for Tree Search",
+          "url": "https://doi.org/10.48550/arxiv.cs/0703062",
+          "excerpt": "\nwhich applies when the full tree is too big (possibly infinite) ... and show that with high probability, essentially only the optimal branches is indefinitely developed. We illustrate these methods on a global optimization problem of a Lipschitz function"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "fidelity_llm",
+      "requested": 8,
+      "candidates": [
+        {
+          "title": "Optimization before Evaluation: Evaluation with Unoptimized Prompts Can be Misleading",
+          "url": "https://aclanthology.org/2025.acl-industry.44.pdf",
+          "excerpt": "\n### Abstract\n\nCurrent Large Language Model (LLM) evalua tion frameworks utilize the same static prompt template across all models under evaluation. This differs from the common industry practice of using prompt optimization (PO) techniques to optimize the prompt for each model to max imize application performance. In this paper, we investigate the effect of PO towards LLM evaluations. Our results on public academic and internal industry benchmarks show that PO greatly affects the final ranking of models. This highlights the importan"
+        },
+        {
+          "title": "PromptBridge: Cross-Model Prompt Transfer for Large Language Models",
+          "url": "https://doi.org/10.48550/arxiv.2512.01420",
+          "excerpt": "\nLarge language models (LLMs) underpin applications in code generation, mathematical reasoning, and agent-based workflows. In practice, systems access LLMs via commercial APIs or open-source deployments, and the model landscape (e.g., GPT, Claude, Llama) evolves rapidly. This rapid evolution forces frequent model switches driven by capability, cost, deployment constraints, and privacy. Yet prompts are highly model-sensitive: reusing a prompt engineered for one model on another often yields substantially worse performance than a promp"
+        },
+        {
+          "title": "S2LPP: Small-to-Large Prompt Prediction across LLMs",
+          "url": "https://arxiv.org/html/2505.20097",
+          "excerpt": "\nThese findings demonstrate a consistent preference for prompt template selection across LLMs of varying sizes within the same model family. Notably, the prompts that perform optimally in smaller models demonstrate effectiveness even when applied to larger models. Furthermore, the observed high ratio of overlaps across different LLM families indicate that it is possible to utilize smaller models from different families to approximate the prompt preference of larger models, and prompt the larger models with approximated optimal prompt"
+        },
+        {
+          "title": "PMPO: Probabilistic Metric Prompt Optimization for Small and Large Language Models",
+          "url": "https://aclanthology.org/2025.findings-emnlp.795.pdf",
+          "excerpt": "\n#### Abstract\n\nPrompt optimization is a practical and widely applicable alternative to fine tuning for im proving large language model performance. Yet many existing methods evaluate candidate prompts by sampling full outputs, often cou pled with self critique or human annotated pref erences, which limits scalability, especially for smaller models or models that are not instruc tion tuned. We present PMPO (Probabilistic Metric Prompt Optimization), a unified frame work that uses token level cross entropy as a direct, lightweight eva"
+        },
+        {
+          "title": "Concept Distillation from Strong to Weak Models via Hypotheses-to-Theories Prompting",
+          "url": "https://aclanthology.org/2025.naacl-industry.52.pdf",
+          "excerpt": "\n### Abstract\n\nHand-crafting high quality prompts to opti mize the performance of language models is a complicated and labor-intensive process. Fur thermore, when migrating to newer, smaller, or weaker models (possibly due to latency or cost gains), prompts need to be updated to re-optimize the task performance. We pro pose Concept Distillation (CD), an automatic prompt optimization technique for enhancing weaker models on complex tasks. CD involves: (1) collecting mistakes made by weak mod els with a base prompt (initialization), (2"
+        },
+        {
+          "title": "Flaw or Artifact? Rethinking Prompt Sensitivity in Evaluating LLMs",
+          "url": "https://arxiv.org/html/2509.01790",
+          "excerpt": "\n###### Abstract\n\nPrompt sensitivity, referring to the phenomenon where paraphrasing (i.e., repeating something written or spoken using different words) leads to significant changes in large language model (LLM) performance, has been widely accepted as a core limitation of LLMs. In this work, we revisit this issue and ask: Is the widely reported high prompt sensitivity truly an inherent weakness of LLMs, or is it largely an artifact of evaluation processes? To answer this question, we systematically evaluate 7 LLMs (e.g., GPT and Gem"
+        },
+        {
+          "title": "Rethinking Prompt Optimizers: From Prompt Merits to Optimization",
+          "url": "https://arxiv.org/html/2505.09930v4",
+          "excerpt": "\nraise concerns about the transferability of such prompt optimization capabilities to smaller models. Wang et al. ( ... expert-level prompts often fail to transfer to smaller models such as GPT-2 or LLaMA2-7b, resulting in substantial performance\n\n---\n\n"
+        },
+        {
+          "title": "MAPO: Boosting Large Language Model Performance with Model-Adaptive Prompt Optimization",
+          "url": "https://arxiv.org/html/2407.04118",
+          "excerpt": "\nquestion. In this work, we first quantitatively demonstrate that different prompts should be adapted to different LLMs to ... . Then we novelly propose a model-adaptive prompt optimizer (MAPO) method that optimizes the original prompts for each specific"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "funsearch",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "Mathematical discoveries from program search with large language models | Nature",
+          "url": "https://www.nature.com/articles/s41586-023-06924-6",
+          "excerpt": "\nMathematical discoveries from program search with large language models | Nature\n\n- Article\n- Open access\n- Published: 14 December 2023\n\n# Mathematical discoveries from program search with large language models\n\n- Bernardino Romera-Paredes ORCID: orcid.org/0000-0003-3604-3590 1 na1, \n- Mohammadamin Barekatain ORCID: orcid.org/0000-0002-8470-8203 1 na1, \n- Alexander Novikov 1 na1, \n- Matej Balog ORCID: orcid.org/0000-0002-5552-9855 1 na1, \n- M. Pawan Kumar 1 na1, \n- Emilien Dupont 1 na1, \n- Francisco J. R. Ruiz ORCID: orcid.org/0000-"
+        },
+        {
+          "title": "Mathematical discoveries from program search with large language models",
+          "url": "https://doi.org/10.1038/s41586-023-06924-6",
+          "excerpt": "\n; 60,328 citations\n- Mohammadamin Barekatain (Google ... )): h-index 12; 2,637 citations\n- Alexander Novikov (Google DeepMind (United ... ; 2,285 citations\n- Matej Balog (Google\n...\n-index 25; 3,842 citations\n- Emilien Dupont (Google\n\n---\n\n"
+        },
+        {
+          "title": "Mathematical discoveries from program search with large language models",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10794145/",
+          "excerpt": "\n# Mathematical discoveries from program search with large language models\n\nBernardino Romera-Paredes\n...\n1, #, Matej Balog\n\n 1, #, M Pawan Kumar\n\n 1, #, Emilien Dupont\n\n 1, #, Francisco J R Ruiz\n\n 1, #, Jordan S Ellenberg\n\n 2, Pengming Wang\n\n 1, Omar\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "http://nature.com/articles/s41586-023-06924-6.pdf",
+          "excerpt": "\n468 | Nature | Vol 625 | 18 January 2024\nArticle\nMathematical discoveries from program \nsearch with large language models\nBernardino Romera-Paredes1,4 ✉, Mohammadamin Barekatain1,4, Alexander Novikov1,4, \nMatej Balog1,4, M. Pawan Kumar1,4, Emilien Dupont1,4, Francisco J. R. Ruiz1,4, \nJordan S. Ellenberg2\n, Pengming Wang1, Omar Fawzi3, Pushmeet Kohli1 ✉ & Alhussein Fawzi1,4 ✉\nLarge language models (LLMs) have demonstrated tremendous capabilities in solving \ncomplex tasks, from quantitative reasoning to understanding natural language."
+        },
+        {
+          "title": "Mathematical discoveries from program search with large language models - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38096900/",
+          "excerpt": "\nRomera-Paredes # 1, Mohammadamin Barekatain # 2, Alexander Novikov # 2, Matej Balog # 2, M Pawan Kumar # 2, Emilien ... 2, Francisco J R Ruiz # 2, Jordan S Ellenberg 3, Pengming Wang 2, Omar Fawzi\n...\nBernardino Romera-Paredes et al. Nature. 2024 Jan."
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "options_policy",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "PII: S0004-3702(99)00052-1",
+          "url": "https://all.cs.umass.edu/pubs/1999/sutton_ps_AI99.pdf",
+          "excerpt": "\nArtificial Intelligence 112 (1999) 181–211\n\n### Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning\n\nRichard S. Sutton a,∗, Doina Precup b, Satinder Singh a\n\na AT&T Labs.-Research, 180 Park Avenue, Florham Park, NJ 07932, USA b Computer Science Department, University of Massachusetts, Amherst, MA 01003, USA Received 1 December 1998\n\nAbstract Learning, planning, and representing knowledge at multiple levels of temporal abstraction are key, longstanding challenges for AI. In this paper we conside"
+        },
+        {
+          "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+          "url": "https://doi.org/10.1016/s0004-3702(99)00052-1",
+          "excerpt": "\n# Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning\n\nArtificial Intelligence. Published: 1999-08-01. 3,112 citations.\n...\n; 69,134 citations; corresponding author\n- Doina Precup\n\n---\n\n"
+        },
+        {
+          "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0004370299000521",
+          "excerpt": "\nBetween MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning - ScienceDirect\n\n## Artificial Intelligence\n\nDate: August 1999\n\n### Published by\n\n# Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning\n\nAuthor links open overlay panel Richard S. Sutton a, Doina Precup b, Satinder Singh a \n\n## Abstract\n\nLearning, planning, and representing knowledge at multiple levels of temporal abstraction are key, longstanding challenges for AI. In this paper we consider how these cha"
+        },
+        {
+          "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+          "url": "https://people.cs.umass.edu/%7Ebarto/courses/cs687/Sutton-Precup-Singh-AIJ99.pdf",
+          "excerpt": "\nArtificial Intelligence 112 (1999) 181–211\n\n### Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning Richard S. Sutton a,∗, Doina Precup b, Satinder Singh a\n\na AT&T Labs.-Research, 180 Park Avenue, Florham Park, NJ 07932, USA b Computer Science Department, University of Massachusetts, Amherst, MA 01003, USA Received 1 December 1998\n\nAbstract Learning, planning, and representing knowledge at multiple levels of temporal abstraction are key, longstanding challenges for AI. In this paper we consider"
+        },
+        {
+          "title": "PII: S0004-3702(99)00052-1",
+          "url": "http://incompleteideas.net/609%20dropbox/other%20readings%20and%20resources/Options.pdf",
+          "excerpt": "\nArtificial Intelligence 112 (1999) 181–211\n\n### Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning\n\nRichard S. Sutton a,∗, Doina Precup b, Satinder Singh a\n\na AT&T Labs.-Research, 180 Park Avenue, Florham Park, NJ 07932, USA b Computer Science Department, University of Massachusetts, Amherst, MA 01003, USA Received 1 December 1998\n\nAbstract Learning, planning, and representing knowledge at multiple levels of temporal abstraction are key, longstanding challenges for AI. In this paper we conside"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "bohb",
+      "requested": 5,
+      "candidates": [
+        {
+          "title": "BOHB: Robust and Efficient Hyperparameter Optimization at Scale",
+          "url": "https://proceedings.mlr.press/v80/falkner18a.html",
+          "excerpt": "\nBOHB: Robust and Efficient Hyperparameter Optimization at Scale\n\n# BOHB: Robust and Efficient Hyperparameter Optimization at Scale\n\nStefan Falkner, Aaron Klein, Frank Hutter\n\n#### Abstract\n\n Modern deep learning methods are very sensitive to many hyperparameters, and, due to the long training times of state-of-the-art models, vanilla Bayesian hyperparameter optimization is typically computationally infeasible. On the other hand, bandit-based configuration evaluation approaches based on random search lack guidance and do not converge"
+        },
+        {
+          "title": "BOHB: Robust and Efficient Hyperparameter Optimization at Scale",
+          "url": "https://proceedings.mlr.press/v80/falkner18a",
+          "excerpt": "\nBOHB: Robust and Efficient Hyperparameter Optimization at Scale\n\n# BOHB: Robust and Efficient Hyperparameter Optimization at Scale\n\nStefan Falkner, Aaron Klein, Frank Hutter\n\n#### Abstract\n\n Modern deep learning methods are very sensitive to many hyperparameters, and, due to the long training times of state-of-the-art models, vanilla Bayesian hyperparameter optimization is typically computationally infeasible. On the other hand, bandit-based configuration evaluation approaches based on random search lack guidance and do not converge"
+        },
+        {
+          "title": "BOHB: Robust and Efficient Hyperparameter Optimization at Scale",
+          "url": "http://proceedings.mlr.press/v80/falkner18a/falkner18a.pdf",
+          "excerpt": "\nFreiburg, Freiburg, Germany. Correspondence to: Stefan Falkner <sfalkner@informatik.uni ... 35 th International Conference on Machine Learning, Stockholm, Sweden, PMLR 80, 2018. Copyright 2018 by the author(s).\n\n---\n\n"
+        },
+        {
+          "title": "Computer Science > Machine Learning",
+          "url": "https://arxiv.org/abs/1807.01774",
+          "excerpt": "\nAffiliation: Department of Computer Science, University of Freiburg, Freiburg, Germany Correspondence to: ... Affiliation: Department of Computer Science, University of Freiburg, Freiburg, Germany Frank\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/1807.01774",
+          "excerpt": "\nBOHB: Robust and Efficient Hyperparameter Optimization at Scale\nStefan Falkner 1 Aaron Klein 1 Frank Hutter 1\nAbstract\nModern deep learning methods are very sensitive\nto many hyperparameters, and, due to the long\ntraining times of state-of-the-art models, vanilla\nBayesian hyperparameter optimization is typi\u0002cally computationally infeasible. On the other\nhand, bandit-based configuration evaluation ap\u0002proaches based on random search lack guidance\nand do not converge to the best configurations as\nquickly. Here, we propose to combine th"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "evo_agent",
+      "requested": 8,
+      "candidates": [
+        {
+          "title": "EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/aa5b64942bfef625403b355214b871e0-Abstract-Conference.html",
+          "excerpt": "\nconsistently increases performance, outperforming not only reflection and memory-only baselines but also more complex online fine ... tuning methods. Notably, our method is the only one capable of winning two\n\n---\n\n"
+        },
+        {
+          "title": "EVOTEST:",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/aa5b64942bfef625403b355214b871e0-Paper-Conference.pdf",
+          "excerpt": "\nYufei He 1∗, Juncheng Liu 2, Yue Liu 1,Yibo Li 1, Tri Cao 1, Zhiyuan Hu 1†, Xinxing Xu\n...\nwithout any fine-tuning or gradients—by evolving the entire agentic ... This configuration rewrites the prompt, up dates memory by logging effective state–action\n\n---\n\n"
+        },
+        {
+          "title": "Evolutionary Test-Time Learning for Self-Improving Agentic ...",
+          "url": "https://arxiv.org/abs/2510.13220",
+          "excerpt": "\n[2510.13220] EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n [Submitted on 15 Oct 2025]\n\n# "
+        },
+        {
+          "title": "yf-he/EvoTest",
+          "url": "https://github.com/yf-he/EvoTest",
+          "excerpt": "\n## EVOTEST: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\nEVOTEST is an evolutionary test-time learning framework that improves an agent across episodes without gradients or fine-tuning. It evolves the entire agentic system between attempts by rewriting prompts, updating cross-episode memory, tuning hyperparameters, and refining tool-use routines.\n\nThis repository also provides J-TTL (Jericho Test-Time Learning), a benchmark setting where an agent plays the same text adventure game for multiple consecutive epis"
+        },
+        {
+          "title": "EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems",
+          "url": "https://arxiv.org/html/2510.13220v2",
+          "excerpt": "\nEvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n# EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n Yufei He † † thanks: The work was done when the author was an intern at Microsoft Research Asia - Singapore Affiliation: National University of Singapore Email: yufei.he@u.nus.com Juncheng Liu Affiliation: Microsoft Research Email: yliu@u.nus.com Yue Liu Affiliation: National University of Singapore Email: liyibo@u.nus.com Yibo Li Affiliation: National University of Singapore Em"
+        },
+        {
+          "title": "ICLR Poster EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems",
+          "url": "https://iclr.cc/virtual/2026/poster/10010217",
+          "excerpt": "\nICLR Poster EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n Poster Sat, Apr 25, 2026 • 3:15 PM – 5:45 PM -03 \n\n# EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n Yufei He ⋅ Juncheng Liu ⋅ Yue Liu ⋅ Yibo Li ⋅ Tri Cao ⋅ Zhiyuan Hu ⋅ Xinxing Xu ⋅ Bryan Hooi \n\n### Abstract \n\nA fundamental limitation of current AI agents is their inability to learn complex skills on the fly at test time, often behaving like “clever but clueless interns” in novel environments. This severely limits"
+        },
+        {
+          "title": "EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems",
+          "url": "https://doi.org/10.48550/arxiv.2510.13220",
+          "excerpt": "\nconsistently increases performance, outperforming not only reflection and memory-only base lines but also more ... online fine-tuning methods. Notably, our method is the only one capable of winning two games (\n\n---\n\n"
+        },
+        {
+          "title": "EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems",
+          "url": "https://arxiv.org/html/2510.13220",
+          "excerpt": "\nEvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n# EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems\n\n Yufei He † † thanks: The work was done when the author was an intern at Microsoft Research Asia - Singapore Affiliation: National University of Singapore Email: yufei.he@u.nus.com Juncheng Liu Affiliation: Microsoft Research Email: yliu@u.nus.com Yue Liu Affiliation: National University of Singapore Email: liyibo@u.nus.com Yibo Li Affiliation: National University of Singapore Em"
+        }
+      ],
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained."
+    },
+    {
+      "id": "adaptive_branching",
+      "requested": 5,
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained.",
+      "candidates": [
+        {
+          "title": "Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/32dff2e27b0da1fb5f4209216a948544-Paper-Conference.pdf",
+          "excerpt": "### Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search\n\nYuichi Inoue∗, Kou Misaki∗, Yuki Imajuku, So Kuroki, Taishi Nakamura, Takuya Akiba Sakana AI, Japan {y.inoue, takiba}@sakana.ai\n\n---\n\n"
+        },
+        {
+          "title": "[2503.04412] Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search",
+          "url": "https://arxiv.org/abs/2503.04412",
+          "excerpt": "# "
+        },
+        {
+          "title": "Wider or Deeper?  Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/32dff2e27b0da1fb5f4209216a948544-Abstract-Conference.html",
+          "excerpt": "Wider or Deeper? Scaling LLM Inference-Time Compute\n...\nYuichi Inoue, Kou Misaki, Yuki Imajuku, So Kuroki, Taishi Nakamura, Takuya Akiba\n...\nWe evaluate our method on complex coding and engineering tasks using frontier models. Empirical results show that\n\n---\n\n"
+        },
+        {
+          "title": "Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search",
+          "url": "https://arxiv.org/html/2503.04412",
+          "excerpt": "# Wider or Deeper? Scaling LLM Inference-Time Compute with Adaptive Branching Tree Search\n...\noutperforms both repeated sampling and standard MCTS, underscoring the importance of combining the ... scaling. Code is available at: https://github.com/\n\n---\n\n"
+        },
+        {
+          "title": "N/A",
+          "url": "https://arxiv.org/pdf/2503.04412",
+          "excerpt": "Wider or Deeper? Scaling LLM Inference-Time\nCompute with Adaptive Branching Tree Search\nYuichi Inoue∗, Kou Misaki∗, Yuki Imajuku, So Kuroki, Taishi Nakamura, Takuya Akiba\nSakana AI, Japan\n{y.inoue, takiba}@sakana.ai\nAbstract\nRecent advances demonstrate that increasing inference-time computation can signif\u0002icantly boost the reasoning capabilities of large language models (LLMs). Although\nrepeated sampling (i.e., generating multiple candidate outputs) is a highly effec\u0002tive strategy, it does not leverage external feedback signals for refinement, which\nare often available in real tasks like coding. In this work, we propose Adaptive\nBranching Mon"
+        }
+      ]
+    },
+    {
+      "id": "aide_exact",
+      "requested": 5,
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained.",
+      "candidates": [
+        {
+          "title": "Computer Science > Artificial Intelligence",
+          "url": "https://arxiv.org/abs/2502.13138",
+          "excerpt": "[2502.13138] AIDE: AI-Driven Exploration in the Space of Code\n\n--\n\n# Computer Science Artificial Intelligence\n\narXiv:2502.13138 (cs)\n\n[Submitted on 18 Feb 2025]\n\n# Title:AIDE: AI-Driven Exploration in the Space of Code\n\nAuthors: Zhengyao Jiang, Dominik Schmidt, Dhruv Srikanth, Dixing Xu, Ian Kaplan, Deniss Jacenko, Yuxiang Wu\n\nView PDF HTML (experimental)\n\n> Abstract:Machine learning, the foundation of modern artificial intelligence, has driven innovations that have fundamentally transformed the world. Yet, behind advancements lies a complex and often tedious process requiring labor and compute intensive iteration and experimentation. Enginee"
+        },
+        {
+          "title": "[2408.08435] Automated Design of Agentic Systems",
+          "url": "https://arxiv.org/abs/2408.08435",
+          "excerpt": "[2408.08435] Automated Design of Agentic Systems\n\n# "
+        },
+        {
+          "title": "AIDE: AI-Driven Exploration in the Space of Code",
+          "url": "https://arxiv.org/html/2502.13138",
+          "excerpt": "AIDE: AI-Driven Exploration in the Space of Code\n\n# AIDE: AI-Driven Exploration in the Space of Code\n\n Zhengyao Jiang 1 1 1 Equal contribution. 3 3 3 Corresponding to zhengyao@weco.ai and yuxiang@weco.ai. Affiliation: Weco AI Dominik Schmidt 1 1 1 Equal contribution. 2 2 2 Work done while at Weco AI. Affiliation: Runway ML Dhruv Srikanth Affiliation: Weco AI Dixing Xu Affiliation: Weco AI Ian Kaplan Affiliation: Weco AI Deniss Jacenko Affiliation: Weco AI Yuxiang Wu 1 1 1 Equal contribution. 3 3 3 Corresponding to zhengyao@weco.ai and yuxiang@weco.ai. Affiliation: Weco AI \n\n###### Abstract\n\nMachine learning, the foundation of modern artificia"
+        },
+        {
+          "title": "AIDE: AI-Driven Exploration in the Space of Code",
+          "url": "https://doi.org/10.48550/arxiv.2502.13138",
+          "excerpt": "# AIDE: AI-Driven Exploration in the Space of Code\n\narXiv (Cornell University). Published: 2025-02-18. Preprint. 4 citations.\n\n## Abstract\n\nMachine learning, the foundation of modern artificial intelligence, has driven innovations that have fundamentally transformed the world. Yet, behind advancements lies a complex and often tedious process requiring labor and compute intensive iteration and experimentation. Engineers and scientists developing machine learning models spend much of their time on trial-and-error tasks instead of conceptualizing innovative solutions or research hypotheses. To address this challenge, we introduce AI-Driven Explo"
+        },
+        {
+          "title": "Automated Design of Agentic Systems",
+          "url": "https://doi.org/10.48550/arxiv.2408.08435",
+          "excerpt": "# Automated Design of Agentic Systems\n\narXiv (Cornell University). Published: 2024-08-15. Preprint. 10 citations.\n\n## Authors\n\n- Shengran Hu (University of British Columbia): h-index 6; 199 citations\n- Cong Lu (University of British Columbia): h-index 8; 297 citations\n- Jeff Clune: h-index 49; 22,231 citations\n\n## Topics\n\n- AI-based Problem Solving and Planning\n- Evolutionary Algorithms and Applications\n- Artificial Intelligence Applications\n\n---\n\n# { srhu,conglu}\n\n## Abstract\n\nResearchers are investing substantial effort in developing powerful general purpose agents, wherein Foundation Models are used as modules within agen tic systems (e.g."
+        }
+      ]
+    },
+    {
+      "id": "latest_gap",
+      "requested": 8,
+      "query_text_status": "Exact query text not retained in the export; topic ID and returned candidates retained.",
+      "candidates": [
+        {
+          "title": "Adaptive Uncertainty-Aware Tree Search for Robust Reasoning",
+          "url": "https://arxiv.org/html/2602.06493",
+          "excerpt": "Adaptive Uncertainty-Aware Tree Search for Robust Reasoning\n\n# Adaptive Uncertainty-Aware Tree Search for Robust Reasoning\n\nZeen Song Zihao Ma Wenwen Qiang Changwen Zheng Gang Hua\n\n###### Abstract\n\nInference-time reasoning scaling has significantly advanced the capabilities of Large Language Models (LLMs) in complex problem-solving. A prevalent approach involves external search guided by Process Reward Models (PRMs). However, a fundamental limitation of this framework is the epistemic uncertainty of PRMs when evaluating reasoning paths that deviate from their training distribution. In this work, we conduct a systematic analysis of this challe"
+        },
+        {
+          "title": "SPARK: Strategic Policy-Aware Exploration via Dynamic Branching for Long-Horizon Agentic Learning - ACL Anthology",
+          "url": "https://aclanthology.org/2026.acl-long.1100/",
+          "excerpt": "## SPARK: Strategic Policy-Aware Exploration via Dynamic Branching for Long-Horizon Agentic Learning\n\nJinyang Wu, Shuo Yang, Yuhao Shen, Shuai Zhang, Zhengqi Wen, Jianhua Tao\n\n##### Abstract\n\nReinforcement learning has empowered large language models to act as intelligent agents, yet training them for long-horizon tasks remains challenging due to the scarcity of high-quality trajectories, especially under limited resources. Existing methods typically scale up rollout sizes and indiscriminately allocate computational resources among intermediate steps. Such attempts inherently waste substantial computation budget on trivial steps while failing"
+        },
+        {
+          "title": "Agent Alpha: Tree Search Unifying Generation, Exploration and Evaluation for Computer-Use Agents",
+          "url": "https://arxiv.org/html/2602.02995",
+          "excerpt": "In this paper, we introduce Agent Alpha, a unified framework that synergizes generation, exploration ... interaction loop, Agent Alpha enables deliberate planning, facilitating early pruning of suboptimal branches\n\n---\n\n"
+        },
+        {
+          "title": "Empirical-MCTS: Continuous Agent Evolution via Dual- ...",
+          "url": "https://arxiv.org/html/2602.04248v1",
+          "excerpt": "Empirical-MCTS: Continuous Agent Evolution via Dual-Experience Monte Carlo Tree Search\n\n# Empirical-MCTS: Continuous Agent Evolution via Dual-Experience Monte Carlo Tree Search\n\n Hao Lu Affiliation: JianChengXingYun Technology Co., Ltd., Shenzhen, China Correspondence to: luhao@jianchengxingyun.com Haoyuan Huang Affiliation: JianChengXingYun Technology Co., Ltd., Shenzhen, China Yulin Zhou Affiliation: JianChengXingYun Technology Co., Ltd., Shenzhen, China Chen Li Affiliation: JianChengXingYun Technology Co., Ltd., Shenzhen, China Correspondence to: lichen@jianchengxingyun.com Ningxin Zhu Affiliation: JianChengXingYun Technology Co., Ltd., Sh"
+        },
+        {
+          "title": "TreeSeeker: Tree-Structured Trial, Error, and Return in Deep Search",
+          "url": "https://arxiv.org/pdf/2606.11662v1.pdf",
+          "excerpt": "## TreeSeeker: Tree-Structured Trial, Error, and Return in Deep Search\n\n### Zhuofan Shi 1,*,†, Mingzhe Ma 1,2,*,†, Lu Wang 1, Fangkai Yang 1, Pu Zhao 1, Yiming Guan 1,†, Youling Huang 1,†, Wei Zhang 2, Qingwei Lin 1, Dongmei Zhang 1, Saravan Rajmohan 1\n\n1Microsoft 2East China Normal University wlu@microsoft.com zhangwei.thu2011@gmail.com\n\n### Abstract\n\nDeep search requires agents to answer com plex questions through multi-step web search, browsing, evidence comparison, and synthesis. A central challenge is deciding how to search when several directions look plausible but only some will later lead to reliable evidence. If an agent greedily fol"
+        },
+        {
+          "title": "SIGHT: Reinforcement Learning with Self-Evidence and Information-Gain Diverse Branching for Search Agent | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2602.11551",
+          "excerpt": "To address these challenges, we propose SIGHT, a framework that enhances search-based reasoning through Self-Evidence Support (SES) and Information-Gain Driven Diverse Branching ... Dynamic Prompting Interventions - including de-duplication, reflection,\n\n---\n\n"
+        },
+        {
+          "title": "TreeFlex:Agents Navigating Their Own Search Trees",
+          "url": "https://arxiv.org/html/2610.20334",
+          "excerpt": "TreeFlex:Agents Navigating Their Own Search Trees\n\n# TreeFlex: Agents Navigating Their Own Search Trees\n\n Dongzhuo Li Affiliation: Meta AI Fangzhou Cheng Affiliation: Meta AI Weiwei Li Affiliation: Meta AI Kevin Han Affiliation: Meta AI Haixu Ma Affiliation: Meta AI Zhongchang Sun Affiliation: Meta AI Ruiyi Li Affiliation: Meta AI Serena Li Affiliation: Meta AI Xiangjun Fan Affiliation: Meta AI Lizhu Zhang Affiliation: Meta AI Yuandong Tian Affiliation: Meta AI Work done while at Meta \n\n###### Abstract\n\nA ReAct-style agent accumulates observations, intermediate results, and failed attempts in a single context. As this context grows, stale and"
+        },
+        {
+          "title": "Process Reward Informed Tree Rollout for Effective Multi-Turn RL",
+          "url": "https://arxiv.org/html/2607.15610v1",
+          "excerpt": "# Process Reward Informed Tree Rollout for Effective Multi-Turn RL\n\n Xintong Li † † thanks: Work done during internship at Amazon. Affiliation: UC San Diego Email: xil240@ucsd.edu Sha Li Affiliation: Amazon Email: jshang@ucsd.edu Yuwei Zhang Affiliation: UC San Diego Email: slliz@amazon.com Changlong Yu Affiliation: Amazon Rongmei Lin Affiliation: Amazon Hongye Jin Affiliation: Amazon Shuyi Guan Affiliation: MIT Alumni Xin Liu Affiliation: Amazon Linwei Li Affiliation: Amazon Qingyu Yin Affiliation: Amazon Jingbo Shang Affiliation: UC San Diego \n\n###### Abstract\n\nReinforcement learning (RL) has become a key approach for training LLM agents, y"
+        }
+      ]
+    }
+  ],
+  "coverage_note": "Discovery log for this hierarchical-laboratory goal only, separate from earlier research. Requested result slots and retrieved entries are not counts of full-text reviewed sources. Exact search strings were not retained; arXiv metadata requests are retained in references.json.",
+  "counts": {
+    "search_calls": 23,
+    "requested_result_slots": 185,
+    "candidate_entries": 185,
+    "unique_candidate_urls": 184
+  }
+}

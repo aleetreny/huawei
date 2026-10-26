@@ -1,0 +1,121 @@
+{
+  "status": "research_specification_not_executed",
+  "cutoff_date": "2026-10-26",
+  "launch_enabled": false,
+  "scope": "External laboratory over independent complete episodes; final evaluated agent must remain the official single-agent configuration.",
+  "gates": {
+    "written_organiser_scope_clarification": "unconfirmed",
+    "external_spending_limit_usd": null,
+    "model_account_access": "not_tested",
+    "supported_session_isolation": "not_tested_at_concurrency",
+    "target_platform_and_model_pin": "unresolved_from_organiser_details"
+  },
+  "roles": {
+    "orchestrator": {
+      "proposed_api_model_id": "claude-opus-5-5",
+      "purpose": "Generate/refine research hypotheses and explain evidence; not an extra player in the evaluated episode."
+    },
+    "cheap_actor": {
+      "proposed_api_model_id": "claude-haiku-5-5",
+      "authority": "Development evidence only until fidelity is measured; never pooled as target IID samples."
+    },
+    "alternate_actor": {
+      "proposed_api_model_id": "claude-sonnet-5-5",
+      "authority": "Separate actor condition, not an unrecorded mid-episode substitution."
+    },
+    "target_actor": {
+      "resolved_api_model_id": null,
+      "documentation_designation": "deepseek-v4-flash",
+      "jiuwenswarm_version": "0.2.4b3",
+      "mode": "agent",
+      "model_source": "Exact organiser instructions; no participant routing preferences."
+    }
+  },
+  "policy_search": {
+    "representation": "Immutable policy artifacts plus lineage DAG and family archive",
+    "initial_family_examples": [
+      "reactive_balance",
+      "sustainable_growth",
+      "capability_development",
+      "coordination",
+      "commitment_management",
+      "quarterly_planning"
+    ],
+    "selected_final_skill_count": null,
+    "candidate_actions": [
+      "generate",
+      "refine",
+      "replicate",
+      "specialise",
+      "recombine",
+      "revive",
+      "target_audit",
+      "confirm"
+    ],
+    "keep_policy_quality_separate_from_family_potential": true,
+    "hard_prune_unseen_descendants_from_parent_score": false,
+    "progressive_widening": {
+      "status": "proposed_heuristic",
+      "alpha_example": 0.5,
+      "minimum_children_example": 2
+    },
+    "archive": {
+      "default_action_for_valid_weak_policies": "dormancy_with_preserved_evidence",
+      "revival_quota_sensitivity_examples": [
+        0,
+        0.05,
+        0.1
+      ],
+      "reason_required": true
+    }
+  },
+  "evaluation": {
+    "unit": "Episode to genuine termination; administrative interruption is censored, not a score.",
+    "primary_outcome": "mean terminal quantitative_score under target actor and fixed epoch",
+    "never_pool_different_actors_as_iid": true,
+    "no_simulator_seed_or_clone_assumed": true,
+    "cheap_source_calibration_required": true,
+    "sample_cheap_rejections_on_target": true,
+    "frozen_confirmation_data_reserved": true,
+    "no_fixed_answer_tables_or_hidden_formula_claims": true,
+    "in_flight_jobs_are_not_observations": true
+  },
+  "persistence": {
+    "schema": "records.schema.json",
+    "single_integrator_for_shared_registry": true,
+    "workers_write_only_own_output_area": true,
+    "raw_evidence_default": "Ignored local-runs plus approved portable exports when needed",
+    "secrets_in_git": false,
+    "git_branch_per_episode": false,
+    "resume_requires_live_handle_check": true
+  },
+  "model_prices_as_checked": {
+    "date": "2026-10-26",
+    "currency": "USD",
+    "basis": "Published individual model pages, base prices only; recheck before execution.",
+    "claude-opus-5-5": {
+      "input_per_million": 4,
+      "output_per_million": 20
+    },
+    "claude-sonnet-5-5": {
+      "input_per_million": 2,
+      "output_per_million": 10
+    },
+    "claude-haiku-5-5": {
+      "per_request_input_up_to_100000": {
+        "input_per_million": 0.1,
+        "output_per_million": 0.5
+      },
+      "per_request_input_over_100000": {
+        "input_per_million": 0.5,
+        "output_per_million": 2.5
+      }
+    }
+  },
+  "performance_evidence": {
+    "new_game_batches_run_for_this_spec": 0,
+    "external_model_calls_for_this_spec": 0,
+    "claimed_game_improvement": null,
+    "note": "Previous Matteo aggregates and the manual session are separate exploratory evidence, not validation of this design."
+  }
+}

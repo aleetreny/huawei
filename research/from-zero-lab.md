@@ -4,6 +4,8 @@
 
 Mi recomendación es un **laboratorio adaptativo de políticas**: después de cada lote decidimos si conviene investigar un fallo, comparar dos estrategias casi empatadas o probar una familia nueva. No existe un método universalmente óptimo para un juego parcialmente observado cuya distribución de evaluación desconocemos. Sí podemos hacer mucho mejor que repetir partidas aleatorias indefinidamente.
 
+La ampliación posterior está en [laboratorio jerárquico de políticas](hierarchical-lab/README.md). Precisa una distinción importante: MCTS **dentro de una partida** necesita generar continuaciones desde estados; MCTS **sobre versiones de políticas** puede evaluar cada candidata en partidas nuevas y no exige clonar estados. El segundo es el objeto de la nueva investigación.
+
 ## 1. Qué sabemos ahora
 
 La [rama de Matteo](matteo-branch-review.md) declara 73.858 partidas aleatorias, supervivencia media de 5,91 meses y ninguna llegada a 48. No es un benchmark de razonamiento ni de Skills. Sus agregados no permiten recuperar qué acciones eran buenas.

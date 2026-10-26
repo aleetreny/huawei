@@ -1,0 +1,76 @@
+{
+  "status": "stipulated_synthetic_counterexamples_not_game_results",
+  "purpose": "Logical illustrations of selection mistakes; not a benchmark or fitted model of the simulator.",
+  "cases": [
+    {
+      "id": "parent_is_not_descendant_bound",
+      "policies": {
+        "a_parent": 70,
+        "a_best_child": 72,
+        "b_parent": 40,
+        "b_best_child": 88
+      },
+      "naive_action": "Delete family B because its parent scores 40.",
+      "missed_best_score": 88,
+      "lesson": "A parent's performance is not a bound on unseen descendants."
+    },
+    {
+      "id": "early_proxy_reversal",
+      "a": {
+        "month8_proxy": 70,
+        "terminal_score": 60
+      },
+      "b": {
+        "month8_proxy": 30,
+        "terminal_score": 85
+      },
+      "lesson": "Ranking by a short-horizon proxy can delete a late-benefit policy; the proxy is invented, not an official intermediate score."
+    },
+    {
+      "id": "actor_ranking_reversal",
+      "policy_a": {
+        "haiku_mean": 80,
+        "target_mean": 55
+      },
+      "policy_b": {
+        "haiku_mean": 40,
+        "target_mean": 85
+      },
+      "lesson": "More cheap replications cannot remove systematic model-dependent ranking reversal."
+    },
+    {
+      "id": "survivor_selection",
+      "policy_a": {
+        "p_reach8": 0.2,
+        "mean_if_reach8": 90,
+        "mean_if_early_exit": 10,
+        "overall_mean": 26
+      },
+      "policy_b": {
+        "p_reach8": 0.9,
+        "mean_if_reach8": 70,
+        "mean_if_early_exit": 20,
+        "overall_mean": 65
+      },
+      "lesson": "Choosing by mean among survivors favours A; full-episode mean favours B."
+    },
+    {
+      "id": "noisy_max",
+      "stable_observations": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "variable_observations": [
+        0,
+        100,
+        0,
+        100
+      ],
+      "stable_sample_mean": 50,
+      "variable_sample_mean": 50,
+      "lesson": "The highest observed score prefers variability although these sample means are equal."
+    }
+  ]
+}
