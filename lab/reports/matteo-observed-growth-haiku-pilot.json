@@ -1,0 +1,260 @@
+{
+  "candidate": "observed-growth-v1",
+  "source_commit": "bbc7b63",
+  "bundle_hash": "f03981dac92f8b6c56cc1b62e7fbe4e6d3e374e8dd9525af26ae8d90e6794c42",
+  "source_bundle_still_matches": true,
+  "job_id": "matteo-2a03504989d143e68371c1fea0e27dbe",
+  "outcome": "completed",
+  "score": 64.78,
+  "months": 48,
+  "steps": 201,
+  "wall_seconds": 475.9,
+  "actor_id": "08e9167a965ed82c",
+  "actor_config": {
+    "kind": "claude-cli",
+    "model": "haiku",
+    "effort": null,
+    "skills_mode": "inline",
+    "autocompact": null,
+    "max_continues": 3,
+    "timeout_s": 7200.0,
+    "cli_version": "2.1.303 (Claude Code)",
+    "prompts": "official-runner@00b084a8",
+    "tools": [
+      "mcp__career-emulator-engine__new_game",
+      "mcp__career-emulator-engine__observe",
+      "mcp__career-emulator-engine__take_action",
+      "mcp__career-emulator-engine__check_latest_logs",
+      "mcp__career-emulator-engine__show_employee_handbook"
+    ],
+    "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+    "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"
+  },
+  "resolved_models": [
+    "claude-haiku-5-5"
+  ],
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "final_status": {
+    "health": 9,
+    "dignity": 10,
+    "skill": 110,
+    "network": 33,
+    "level": "L5",
+    "duration_in_level": 2,
+    "output": 29,
+    "wealth": 29,
+    "energy": 0
+  },
+  "min_observed_health": 3,
+  "promotions_including_initial": [
+    {
+      "month": 1,
+      "level": "L1"
+    },
+    {
+      "month": 6,
+      "level": "L2"
+    },
+    {
+      "month": 12,
+      "level": "L3"
+    },
+    {
+      "month": 24,
+      "level": "L4"
+    },
+    {
+      "month": 48,
+      "level": "L5"
+    }
+  ],
+  "reviews": [
+    {
+      "month": 6,
+      "grade": "C"
+    },
+    {
+      "month": 12,
+      "grade": "B"
+    },
+    {
+      "month": 18,
+      "grade": "B"
+    },
+    {
+      "month": 24,
+      "grade": "B"
+    },
+    {
+      "month": 30,
+      "grade": "B"
+    },
+    {
+      "month": 36,
+      "grade": "A"
+    },
+    {
+      "month": 42,
+      "grade": "A"
+    },
+    {
+      "month": 48,
+      "grade": "A"
+    }
+  ],
+  "quarterly_action_counts": {
+    "Health recovery": 7,
+    "Prepare report materials": 17,
+    "Network maintenance": 7,
+    "Apply for a key project": 14,
+    "Build a mentorship": 1,
+    "Defuse legacy risk": 7,
+    "Report results to your manager": 1,
+    "Mental recovery": 1,
+    "High-intensity work": 1
+  },
+  "ending_score": {
+    "competition_partial_score": 45.34,
+    "completed": true,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 50.0,
+        "raw_value": 5.0,
+        "weight": 0.3,
+        "weighted_score": 15.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 36.38,
+        "raw_value": 29.1,
+        "weight": 0.2,
+        "weighted_score": 7.28
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 95.0,
+        "raw_value": 19.0,
+        "weight": 0.15,
+        "weighted_score": 14.25
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 91.67,
+        "raw_value": 110.0,
+        "weight": 0.15,
+        "weighted_score": 13.75
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 90.0,
+        "raw_value": 1.0,
+        "weight": 0.1,
+        "weighted_score": 9.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 55.0,
+        "raw_value": 33.0,
+        "weight": 0.1,
+        "weighted_score": 5.5
+      }
+    ],
+    "outcome": "completed",
+    "quantitative_score": 64.78,
+    "survival_months": 48
+  },
+  "usage": {
+    "tokens": {
+      "input_tokens": 408.0,
+      "output_tokens": 62201.0,
+      "cache_read_input_tokens": 21372696.0,
+      "cache_creation_input_tokens": 205079.0
+    },
+    "cost_usd_list_price": 1.094,
+    "turns": 406,
+    "api_ms": 471542.0,
+    "models": {
+      "claude-haiku-5-5": {
+        "inputTokens": 408,
+        "outputTokens": 62201,
+        "cacheReadInputTokens": 21372696,
+        "cacheCreationInputTokens": 205079,
+        "webSearchRequests": 0,
+        "costUSD": 1.0939569399999998,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 8505,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "extra_sessions": 0,
+    "non_game_tool_attempts": 0,
+    "rate_limit_first": {
+      "status": "allowed",
+      "resetsAt": 1793049600,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false,
+      "unifiedWindows": {
+        "five_hour": {
+          "utilization": 0,
+          "resetsAt": 1793049600
+        },
+        "seven_day": {
+          "utilization": 0,
+          "resetsAt": 1793588400
+        }
+      }
+    },
+    "rate_limit_last": {
+      "status": "allowed",
+      "resetsAt": 1793049600,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false,
+      "unifiedWindows": {
+        "five_hour": {
+          "utilization": 0.09,
+          "resetsAt": 1793049600
+        },
+        "seven_day": {
+          "utilization": 0.01,
+          "resetsAt": 1793588400
+        }
+      }
+    },
+    "errors": []
+  },
+  "rejected_actions": 0,
+  "stream_sha256": "d787203e3818a49f12375c8b61ffec69240140b16043187832b7d787b61b0a85",
+  "operational_interruptions_before_this_run": 1,
+  "interruption_reason": "New isolated environment lacked distribution dataset; official update command resolved it. No session or score existed for that attempt.",
+  "limitations": [
+    "One exploratory pilot, not a completed comparison block.",
+    "Same recorded actor hash as cloud does not prove identical backend behaviour; resolved model recorded separately.",
+    "Rate-limit deltas are account-wide and can include unrelated activity.",
+    "No cloud registry imported, written, or exported; this does not implement general multi-machine registry reconciliation."
+  ]
+}

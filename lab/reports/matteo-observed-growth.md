@@ -47,3 +47,7 @@ uv run careerlab register lab/policies-src/matteo-feedback-growth/observed-growt
 ```
 
 The organiser records returned policy IDs, verifies parent resolution and actor identity, then enqueues through the existing planner. Report the policy ID, block/job IDs, candidate and incumbent outcomes, interruptions, token/quota use and next decision here or in the central cloud report. Until these exist, no gameplay result is claimed.
+
+## Later local pilot
+
+After explicitly authorising use of their own Claude subscription, Matteo ran one isolated Haiku episode: 64.78/100, 48 months completed, L5 at month 48. See [full pilot report](matteo-observed-growth-haiku-pilot.md). This is not the requested central comparison block; no cloud jobs or registry entries were created.
