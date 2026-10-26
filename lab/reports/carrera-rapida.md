@@ -1,33 +1,36 @@
 # Carrera rápida: estado
 
-Actualizado: 26 Oct 19:41 UTC. Cómo funciona: [lab/fastloop/README.md](../fastloop/README.md).
+Actualizado: 26 Oct 22:24 UTC. Cómo funciona: [lab/fastloop/README.md](../fastloop/README.md).
 
 ## Campeón
 
-**f1-steady-balance-v1**: nota media 56,1 en 12 partidas, terminó 10 de 12. Campeón desde el 26 Oct 19:39 UTC.
+**targeted-1026-201334**: nota media 51,6 en 13 partidas, terminó 10 de 13. Campeón desde el 26 Oct 21:29 UTC.
 
 ## Aspirantes en juego
 
 | Manual | Tipo | Partidas | Nota media | Terminadas | Prob. de ser mejor | Siguiente paso |
 |---|---|---:|---:|---:|---:|---|
-| observed-growth-v3 | del equipo | 4 | 49,0 | 3 de 4 | 20 % | jugar hasta 8 |
-| f3-lean-v1 | del equipo | 5 | 56,7 | 5 de 5 | 34 % | jugar hasta 8 |
-| f3-balance-recombined-v1 | del equipo | 7 | 56,5 | 6 de 7 | 42 % | jugar hasta 8 |
-| f1-status-line-v1 | del equipo | 4 | 64,6 | 4 de 4 | 73 % | jugar hasta 8 |
-| f3-status-line-v1 | variante | 0 | — | 0 de 0 | — | jugar hasta 2 |
+| stretch-1026-211144 | variante ambiciosa | 10 | 52,3 | 7 de 10 | 59 % | jugar hasta 12 |
+| bold-1026-211845 | idea valiente | 8 | 51,5 | 6 de 8 | 43 % | jugar hasta 12 |
+| targeted-1026-214849 | variante | 0 | — | 0 de 0 | — | jugar hasta 2 |
 
 ## Últimas decisiones
 
-- 26 Oct 19:39: **f1-core-v1** descartado (4 partidas, media 35,5, 1 terminadas; prob. de ser mejor 3 %).
-- 26 Oct 19:39: **f1-risk-signal-v1** descartado (4 partidas, media 29,1, 1 terminadas; prob. de ser mejor 2 %).
-- 26 Oct 19:39: **f3-status-line-v1** entra en la carrera.
-- 26 Oct 19:39: **f1-status-line-v1** entra en la carrera.
-- 26 Oct 19:39: **f1-core-v1** entra en la carrera.
-- 26 Oct 19:39: **f1-risk-signal-v1** entra en la carrera.
-- 26 Oct 19:39: **f3-balance-recombined-v1** entra en la carrera.
-- 26 Oct 19:39: **f3-lean-v1** entra en la carrera.
-- 26 Oct 19:39: **observed-growth-v3** entra en la carrera.
-- 26 Oct 19:39: **f1-steady-balance-v1** pasa a campeón (12 partidas, media 56,1, 10 terminadas).
+- 26 Oct 22:15: **targeted-1026-213147** descartado (4 partidas, media 42,5, 2 terminadas; prob. de ser mejor 9 %).
+- 26 Oct 22:13: **targeted-1026-214849** entra en la carrera.
+- 26 Oct 21:53: **targeted-1026-213147** entra en la carrera.
+- 26 Oct 21:48: **targeted-1026-203339** se queda a las puertas (no supera al campeón) (8 partidas, media 47,1, 4 terminadas; prob. de ser mejor 16 %).
+- 26 Oct 21:36: **bold-1026-211845** entra en la carrera.
+- 26 Oct 21:31: **stretch-1026-211144** entra en la carrera.
+- 26 Oct 21:29: **targeted-1026-201334** pasa a campeón (12 partidas, media 53,9, 10 terminadas; prob. de ser mejor 61 %).
+- 26 Oct 21:18: **f3-balance-recombined-v1** atasco: toca ronda de ideas valientes (14 partidas, media 55,3, 12 terminadas).
+- 26 Oct 21:18: **observed-growth-v6** se queda a las puertas (no supera al campeón) (8 partidas, media 47,1, 5 terminadas; prob. de ser mejor 28 %).
+- 26 Oct 21:11: **targeted-1026-202436** descartado (4 partidas, media 42,8, 2 terminadas; prob. de ser mejor 10 %).
+- 26 Oct 21:02: **targeted-1026-203339** entra en la carrera.
+- 26 Oct 20:59: **stretch-1026-200334** se queda a las puertas (no supera al campeón) (8 partidas, media 46,7, 4 terminadas; prob. de ser mejor 10 %).
+- 26 Oct 20:41: **targeted-1026-202436** entra en la carrera.
+- 26 Oct 20:40: **observed-growth-v6** entra en la carrera.
+- 26 Oct 20:33: **targeted-1026-201334** entra en la carrera.
 
 ## ¿Atascados?
 

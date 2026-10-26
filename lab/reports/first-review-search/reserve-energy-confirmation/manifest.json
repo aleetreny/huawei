@@ -1,0 +1,70 @@
+{
+  "output": "/Users/matteozabban/careerlab-data/matteo-first-review/reserve-energy-confirmation",
+  "runs": 36,
+  "workers": 4,
+  "seed": 290026,
+  "story": "coverage",
+  "energy": "skip",
+  "main": "project,report,mentor,none,resources,rotation,showcase,repair,low",
+  "training": null,
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "arms": [
+    [
+      "coverage",
+      "skip",
+      "project"
+    ],
+    [
+      "coverage",
+      "skip",
+      "report"
+    ],
+    [
+      "coverage",
+      "skip",
+      "mentor"
+    ],
+    [
+      "coverage",
+      "skip",
+      "none"
+    ],
+    [
+      "coverage",
+      "skip",
+      "resources"
+    ],
+    [
+      "coverage",
+      "skip",
+      "rotation"
+    ],
+    [
+      "coverage",
+      "skip",
+      "showcase"
+    ],
+    [
+      "coverage",
+      "skip",
+      "repair"
+    ],
+    [
+      "coverage",
+      "skip",
+      "low"
+    ]
+  ],
+  "no_simulator_seed_or_clone": true
+}
