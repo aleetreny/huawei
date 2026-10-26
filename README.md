@@ -7,6 +7,7 @@ For contributors and coding agents joining the project:
 1. Read the [exploratory findings and limitations](docs/exploratory-findings.md). This is the handoff from the four-hour, 73,858-session random baseline.
 2. Read the [strategy experiment plan](docs/experiment-plan.md) before designing or evaluating Skills.
 3. Use [Career Lab](tools/local-game/README.md) to explore the official simulator manually in a local browser, without a model API key.
+4. Review [Sustainable Career v0.1](solution/README.md), the initial three-Skill candidate, and its [evaluation plan](docs/skill-evaluation-plan.md). Official-model runs are pending the competition key and confirmed manifest identity.
 
 The baseline identifies common failure patterns under random choices. It does not establish winning decisions, official hidden rules, or the performance of an AI agent. The next useful step is a controlled comparison of reasoned strategies using the competition-required platform and model.
 
