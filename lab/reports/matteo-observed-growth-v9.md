@@ -42,3 +42,14 @@ State just before each review (Skill/Network/Output), grade, promotion:
 3. **Unfinished:** the 8 episodes were deliberately not finished.
 4. **Next:** if the team wants a score, put v9 in the fast race (T14) alongside v7, or play full careers. Possible next fix: the remaining loss pattern is a two-point drop of Network and Output in the months before a review in a minority of careers.
 5. **ESTADO.md:** T4 line updated.
+
+## At the ceiling but not promoted: is there a pattern? (26 Oct, 23:00 UTC)
+
+Matteo asked whether careers at the L1 ceiling that were still not promoted share something, such as a person or an event. Data: 110 bot episodes from the promotion study at the full L1 ceiling at the first review (61 promoted), and 29 Haiku reviews at the L1 ceiling across v1–v9 (16 promoted).
+
+- **People and events: no pattern beyond chance.** Comparing promotion rates with and without each event title seen in the first semester (titles seen at least 10 times), the largest gap was 0.31; in 71 % of datasets with the promotion labels shuffled, a gap at least that large appeared. Named people in event texts behave the same way. No individual event or colleague explains the misses.
+- **HR tone and risk remarks**: no difference (risk remarks 0.9 vs 1.0 per episode, "doing all right" 1.5 vs 1.5).
+- **Dignity matters for the bots**: promoted 62 % at Dignity 10, 57 % at 9, 53 % at 7–8, 29 % at 6 or below. Haiku keeps Dignity at 10 in almost every case, so this does not explain its misses.
+- **Haiku at the ceiling**: 16/29 promoted (55 %, the same rate as the bots), with no difference in Dignity (all 10 among the misses) or Health.
+
+So at the ceiling the promotion is close to a coin with about 55 % per review window. That makes holding the ceiling at every window the lever: three windows at the ceiling give roughly a 9 in 10 chance of leaving L1, one window about 1 in 2.
