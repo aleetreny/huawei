@@ -1,0 +1,13 @@
+{
+  "family": "o2-run-hot",
+  "name": "o2-run-hot-v1",
+  "parents": [],
+  "idea_origin": "T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure",
+  "operator": "new family (outside designer)",
+  "hypothesis": "Survivors fall short on level and wealth because they hold Health and Dignity near full; treating them as fuel and switching between Full, Cruise and Cool modes on observed state and warnings converts the unused resilience margin into more Output and Skill, earlier promotions and more cash taken from events, without raising the early-elimination rate.",
+  "change": "initial family seed",
+  "predicted_behaviour": "Every quarterly note states a mode (Full, Cruise or Cool); most quarters are Full, using one two-Energy growth action (High-intensity work or Skill learning) plus Prepare report materials or Network maintenance, with Apply for a key project or Fight for resources as main action; Cool appears only after a low stat or a warning and lasts one round before returning; story choices in Full lean to the ambitious or paid option; Health and Dignity trend lower than in balanced play but stay off the floor.",
+  "refutation": "Refuted if, in a 4-run Haiku screen against the team's current reference policy in the same screen, any run ends by Blackout or Breakdown, or more runs end early than the reference, or mean final level and final Wealth are both not higher; also refuted as a mechanism if notes rarely show Full mode (the agent stays defensive regardless).",
+  "skill_count": 1,
+  "notes": "Central idea: Health and Dignity are fuel to burn for compounding growth, with a three-mode throttle that cools down only on low stats, falling trends or warnings. Sources actually used: the official handbook read through show_employee_handbook and the score structure in the T4 brief; the public readthedocs rules pages were unreachable (egress policy denied the host), so none of their content was used."
+}

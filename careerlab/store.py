@@ -4,6 +4,11 @@ One integrator process writes the SQLite registry (WAL mode). Workers only write
 inside their own run directory; the integrator validates ``result.json`` and
 ingests it. Policies are immutable bundles addressed by the SHA-256 of their
 exact bytes. JSONL exports in ``lab/registry/`` are what we commit to Git.
+
+Each registry belongs to one origin ('' for the canonical race, or a machine
+name). Jobs and decisions carry their origin; a registry only leases, recovers
+and decides on its own origin's jobs, and other origins get disjoint job ids
+and replicate numbers, so exports from several machines merge without clashes.
 """
 
 from __future__ import annotations
@@ -44,6 +49,19 @@ CREATE INDEX IF NOT EXISTS evals_cell ON evaluations(policy_id, actor_id, env_id
 """
 
 TERMINAL_OUTCOMES = ("completed", "eliminated")
+EXPORT_KEYS = {"policies": "policy_id", "actors": "actor_id", "environments": "env_id", "jobs": "job_id",
+               "evaluations": "job_id", "decisions": "decision_id"}
+
+
+class ExportWouldDropRows(RuntimeError):
+    """The export folder holds rows this registry does not have; writing would delete them."""
+
+
+def origin_replicate_base(origin: str) -> int:
+    """First replicate number of an origin: 0 for the race, a stable disjoint block for every other machine."""
+    if not origin:
+        return 0
+    return 1_000_000 * (1 + int(hashlib.sha256(origin.encode()).hexdigest(), 16) % 9000)
 
 
 def canonical_hash(obj: Any) -> str:
@@ -68,14 +86,20 @@ def file_sha256(path: Path) -> str:
 
 
 class Registry:
-    def __init__(self, path: Path):
+    def __init__(self, path: Path, origin: str = ""):
+        from careerlab.config import check_origin
+
         path.parent.mkdir(parents=True, exist_ok=True)
         self.path = path
+        self.origin = check_origin(origin)
         self.db = sqlite3.connect(path, timeout=30, isolation_level=None)
         self.db.row_factory = sqlite3.Row
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute("PRAGMA foreign_keys=ON")
         self.db.executescript(SCHEMA)
+        for table in ("jobs", "decisions"):  # added for T11; existing rows are the race's
+            if "origin" not in {r[1] for r in self.db.execute(f"PRAGMA table_info({table})")}:
+                self.db.execute(f"ALTER TABLE {table} ADD COLUMN origin TEXT NOT NULL DEFAULT ''")
 
     @contextmanager
     def tx(self) -> Iterator[sqlite3.Connection]:
@@ -132,21 +156,23 @@ class Registry:
             if not self.db.execute(f"SELECT 1 FROM {table} WHERE {key}=?", (value,)).fetchone():
                 raise ValueError(f"unknown {key} {value!r}")
         with self.tx():
-            top = self.db.execute("SELECT COALESCE(MAX(replicate),-1) FROM jobs WHERE policy_id=? AND actor_id=? AND env_id=? AND purpose=?",
-                                  (policy_id, actor_id, env_id, purpose)).fetchone()[0]
+            base = origin_replicate_base(self.origin)
+            top = self.db.execute("SELECT COALESCE(MAX(replicate),?) FROM jobs WHERE policy_id=? AND actor_id=? AND env_id=? AND purpose=? AND origin=?",
+                                  (base - 1, policy_id, actor_id, env_id, purpose, self.origin)).fetchone()[0]
+            prefix = f"{self.origin}-" if self.origin else ""
             for r in range(top + 1, top + 1 + replicates):
-                job_id = f"{purpose[:4]}-{policy_id[:8]}-{actor_id[:6]}-{r:05d}-a1"
+                job_id = f"{prefix}{purpose[:4]}-{policy_id[:8]}-{actor_id[:6]}-{r - base:05d}-a1"
                 now = time.time()
-                self.db.execute("INSERT INTO jobs (job_id,policy_id,actor_id,env_id,purpose,replicate,attempt,status,priority,created_at,updated_at) VALUES (?,?,?,?,?,?,1,'queued',?,?,?)",
-                                (job_id, policy_id, actor_id, env_id, purpose, r, priority, now, now))
+                self.db.execute("INSERT INTO jobs (job_id,policy_id,actor_id,env_id,purpose,replicate,attempt,status,priority,created_at,updated_at,origin) VALUES (?,?,?,?,?,?,1,'queued',?,?,?,?)",
+                                (job_id, policy_id, actor_id, env_id, purpose, r, priority, now, now, self.origin))
                 created.append(job_id)
         return created
 
     def lease(self, owner: str, limit: int, lease_s: float = 3600.0, actor_kind: str | None = None,
               purpose: str | None = None) -> list[sqlite3.Row]:
         with self.tx():
-            query = "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='queued'"
-            args: list[Any] = []
+            query = "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='queued' AND j.origin=?"
+            args: list[Any] = [self.origin]  # never run another machine's queue
             if actor_kind:
                 query += " AND a.kind=?"
                 args.append(actor_kind)
@@ -202,14 +228,14 @@ class Registry:
         new_id = job_id.rsplit("-a", 1)[0] + f"-a{job['attempt'] + 1}"
         now = time.time()
         with self.tx():
-            self.db.execute("INSERT OR IGNORE INTO jobs (job_id,policy_id,actor_id,env_id,purpose,replicate,attempt,status,priority,note,created_at,updated_at) VALUES (?,?,?,?,?,?,?,'queued',?,?,?,?)",
-                            (new_id, job["policy_id"], job["actor_id"], job["env_id"], job["purpose"], job["replicate"], job["attempt"] + 1, job["priority"], note, now, now))
+            self.db.execute("INSERT OR IGNORE INTO jobs (job_id,policy_id,actor_id,env_id,purpose,replicate,attempt,status,priority,note,created_at,updated_at,origin) VALUES (?,?,?,?,?,?,?,'queued',?,?,?,?,?)",
+                            (new_id, job["policy_id"], job["actor_id"], job["env_id"], job["purpose"], job["replicate"], job["attempt"] + 1, job["priority"], note, now, now, job["origin"]))
         return new_id
 
     def recover(self, owner_alive: callable) -> dict[str, int]:  # type: ignore[valid-type]
         """Reconcile leased/running jobs with real processes after a restart."""
         counts = {"ingested": 0, "interrupted": 0, "still_running": 0, "released": 0}
-        for job in self.db.execute("SELECT * FROM jobs WHERE status IN ('leased','running')").fetchall():
+        for job in self.db.execute("SELECT * FROM jobs WHERE status IN ('leased','running') AND origin=?", (self.origin,)).fetchall():
             if owner_alive(job["lease_owner"]):
                 counts["still_running"] += 1  # a live scheduler owns it, leased or running: never touch
                 continue
@@ -228,8 +254,8 @@ class Registry:
 
     # -- decisions and exports ---------------------------------------------
     def decide(self, kind: str, subject: str | None, payload: dict[str, Any], rationale: str, in_tx: bool = False) -> None:
-        self.db.execute("INSERT INTO decisions (at,kind,subject,payload,rationale) VALUES (?,?,?,?,?)",
-                        (time.time(), kind, subject, json.dumps(payload, sort_keys=True), rationale))
+        self.db.execute("INSERT INTO decisions (at,kind,subject,payload,rationale,origin) VALUES (?,?,?,?,?,?)",
+                        (time.time(), kind, subject, json.dumps(payload, sort_keys=True), rationale, self.origin))
 
     def cell_scores(self, policy_id: str, actor_id: str, env_id: str | None = None, purpose: str | None = None) -> list[float]:
         query = "SELECT score FROM evaluations WHERE policy_id=? AND actor_id=? AND outcome IN ('completed','eliminated')"
@@ -242,11 +268,38 @@ class Registry:
             args.append(purpose)
         return [r[0] for r in self.db.execute(query, args).fetchall()]
 
-    def export_jsonl(self, out_dir: Path) -> dict[str, int]:
+    def export_jsonl(self, out_dir: Path, force: bool = False) -> dict[str, int]:
+        """Write the registry as JSONL. Another origin exports only its own jobs, evaluations and decisions.
+
+        Refuses (``ExportWouldDropRows``) when the folder already holds rows this
+        registry lacks, e.g. a stale machine exporting over the race's results,
+        unless ``force``. Run ``careerlab import`` first to pick those rows up.
+        """
+        own = {
+            "jobs": "SELECT * FROM jobs WHERE origin=? ORDER BY rowid",
+            "evaluations": "SELECT e.* FROM evaluations e JOIN jobs j USING(job_id) WHERE j.origin=? ORDER BY e.rowid",
+            "decisions": "SELECT * FROM decisions WHERE origin=? ORDER BY rowid",
+        }
+        tables = {}
+        for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
+            if self.origin and table in own:
+                tables[table] = [dict(r) for r in self.db.execute(own[table], (self.origin,)).fetchall()]
+            else:
+                tables[table] = [dict(r) for r in self.db.execute(f"SELECT * FROM {table} ORDER BY rowid").fetchall()]
+        if not force:
+            missing = {}
+            for table, rows in tables.items():
+                path, key = out_dir / f"{table}.jsonl", EXPORT_KEYS[table]
+                if path.exists():
+                    old = {json.loads(line)[key] for line in path.read_text().splitlines() if line.strip()}
+                    lost = old - {r[key] for r in rows}
+                    if lost:
+                        missing[table] = len(lost)
+            if missing:
+                raise ExportWouldDropRows(f"{out_dir} has rows this registry lacks {missing}; run `careerlab import --dir {out_dir}` first")
         out_dir.mkdir(parents=True, exist_ok=True)
         counts = {}
-        for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
-            rows = [dict(r) for r in self.db.execute(f"SELECT * FROM {table} ORDER BY rowid").fetchall()]
+        for table, rows in tables.items():
             for row in rows:
                 for key in ("trajectory_path", "run_dir", "bundle_path", "db_root"):
                     if row.get(key):
@@ -262,11 +315,17 @@ class Registry:
 def import_jsonl(registry: "Registry", in_dir: Path, data_root: Path, lab_root: Path) -> dict[str, int]:
     """Load a JSONL export into an empty or older registry (cloud hand-off); existing rows are kept.
 
+    Rows from another origin keep their origin, so they are never leased,
+    recovered or counted in this registry's decisions; their decisions get new
+    ids here. ``conflicts`` counts rows refused because a different row already
+    holds their key or replicate slot (it should stay 0).
+
     Portable paths are re-rooted on this machine. Trajectory files stay on the
     machine that produced them; their SHA-256 in the evaluation rows keeps them
     verifiable when they are copied later.
     """
     counts: dict[str, int] = {}
+    conflicts = 0
     for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
         path = in_dir / f"{table}.jsonl"
         if not path.exists():
@@ -284,11 +343,22 @@ def import_jsonl(registry: "Registry", in_dir: Path, data_root: Path, lab_root: 
                         row[key] = str(lab_root / value[len("lab/"):])
                 if table == "jobs" and row.get("status") in ("leased", "running"):
                     row.update(status="queued", lease_owner=None, lease_expires=None, pid=None)  # leases never travel
+                if table in ("jobs", "decisions"):
+                    row.setdefault("origin", "")
+                if table == "decisions" and row["origin"] != registry.origin:
+                    if registry.db.execute("SELECT 1 FROM decisions WHERE origin=? AND at=? AND kind=? AND subject IS ?",
+                                           (row["origin"], row["at"], row["kind"], row.get("subject"))).fetchone():
+                        continue
+                    row.pop("decision_id", None)
                 keys = [k for k in cols if k in row]
-                registry.db.execute(f"INSERT OR IGNORE INTO {table} ({','.join(keys)}) VALUES ({','.join('?' * len(keys))})",
-                                    [row[k] for k in keys])
+                cur = registry.db.execute(f"INSERT OR IGNORE INTO {table} ({','.join(keys)}) VALUES ({','.join('?' * len(keys))})",
+                                          [row[k] for k in keys])
+                if cur.rowcount == 0 and table in ("jobs", "evaluations"):
+                    same = registry.db.execute(f"SELECT 1 FROM {table} WHERE job_id=? AND policy_id=?", (row["job_id"], row["policy_id"])).fetchone()
+                    conflicts += 0 if same else 1
                 n += 1
         counts[table] = n
+    counts["conflicts"] = conflicts
     return counts
 
 
