@@ -371,12 +371,17 @@ def _policy_dirs() -> list[Path]:
 
 def test_created_policy_metadata_and_size() -> None:
     dirs = _policy_dirs()
-    assert len(dirs) == 10
+    seeds = [p for p in dirs if json.loads((p / "policy.json").read_text())["change"] == "initial family seed"]
+    assert len(seeds) == 10  # children (with parents) are added by the lab over time
+    names = {p.name for p in dirs}
     for policy in dirs:
         meta = json.loads((policy / "policy.json").read_text())
         manifest = json.loads((policy / "bundle" / "manifest.json").read_text())
         assert manifest == {"team": "Gradient Depression", "name": policy.name, "mode": "agent", "instruction": manifest["instruction"]}
-        assert meta["change"] == "initial family seed" and meta["parents"] == []
+        if policy in seeds:
+            assert meta["parents"] == []
+        else:
+            assert meta["parents"] and set(meta["parents"]) <= names and meta.get("hypothesis") and meta.get("refutation")
         words = sum(len(p.read_text().split()) for p in (policy / "bundle" / "skills").glob("*/SKILL.md"))
         if policy.parent.name != "m3-teammate":
             assert words <= 650, f"{policy.name}: {words} words of Skill text costs tokens every turn"

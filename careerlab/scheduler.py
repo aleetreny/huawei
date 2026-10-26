@@ -160,7 +160,17 @@ class Scheduler:
         self.registry.decide("resume", None, counts, "observe-first continuation of interrupted scripted episodes")
         return counts
 
-    async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None) -> dict[str, int]:
+    async def wait_for_quota(self, max_five_hour: float) -> None:
+        """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator)."""
+        while True:
+            util, resets_at = latest_quota(self.settings.runs_dir)
+            if util is None or util < max_five_hour or (resets_at and time.time() > resets_at):
+                return
+            self._beat({"waiting_for_quota": util, "resets_at": resets_at})
+            await asyncio.sleep(60)
+
+    async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None,
+                         max_five_hour: float = 0.75) -> dict[str, int]:
         jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli", purpose=purpose)
         counts: dict[str, int] = {}
         sem = asyncio.Semaphore(concurrency)
@@ -169,6 +179,7 @@ class Scheduler:
 
         async def one(job: Any) -> None:
             async with sem:
+                await self.wait_for_quota(max_five_hour)
                 raw = actors[job["actor_id"]]
                 cfg = ClaudeWorkerConfig(**{k: raw[k] for k in ClaudeWorkerConfig.__dataclass_fields__ if k in raw})
                 run_dir = self.settings.runs_dir / job["job_id"]
@@ -183,6 +194,21 @@ class Scheduler:
         await asyncio.gather(*(one(j) for j in jobs))
         beat.cancel()
         return counts
+
+
+def latest_quota(runs_dir: Path, newest: int = 40) -> tuple[float | None, float | None]:
+    """Latest five-hour utilisation and reset time seen by any worker (from its rate-limit events)."""
+    streams = sorted(runs_dir.glob("*/stream-*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True)[:newest]
+    best: tuple[float, float, float] | None = None
+    for path in streams:
+        mtime = path.stat().st_mtime
+        for line in path.open(encoding="utf-8", errors="replace"):
+            if '"rate_limit_event"' not in line:
+                continue
+            window = json.loads(line).get("rate_limit_info", {}).get("unifiedWindows", {}).get("five_hour", {})
+            if window.get("utilization") is not None and (best is None or mtime >= best[0]):
+                best = (mtime, float(window["utilization"]), float(window.get("resetsAt") or 0))
+    return (best[1], best[2]) if best else (None, None)
 
 
 def _seed(job_id: str) -> int:
