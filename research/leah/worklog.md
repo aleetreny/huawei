@@ -2,6 +2,21 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 26 Oct 2026, 16:50 UTC: first game of l1-review-clock-v1
+
+- **Result.** 60.9, all 48 months completed, finished at L5 (promotions at months 6, 12, 30 and 48).
+  - The race leader F3 averages 64.2 over 3 Haiku games; all completed race Haiku games average 59.5.
+  - Level points matched F3 and wealth was higher. Points were lost on risk control (5.0 vs 6.7) and network (5.7 vs 7.2).
+- **Manual followed.** No High-intensity work; a key project in 13 of 15 quarters; Health never below 7 at quarter end.
+- **One game only, at Leah's request.**
+  - The second game started in parallel was stopped and recorded as interrupted, so it is never scored.
+  - The other 3 stay queued and held.
+- **Earlier.** The CLI sign-in had expired, so the first 5 attempts never started (now recorded as interrupted). Leah signed in again with `claude auth login`.
+- **Where.**
+  - Write-up: [l1-review-clock-first-read.md](l1-review-clock-first-read.md).
+  - Panel: *Other machines*, "Same player, different manual".
+  - Export: `lab/registry-origins/leah/`.
+
 ## 26 Oct 2026, 16:30 UTC: Leah's manual, l1-review-clock-v1 (first read blocked)
 
 - **What.** A new single-Skill manual, `lab/policies-src/l1-review-clock/l1-review-clock-v1/` (lint: no findings). It plans each quarter around the published review and promotion cadence:
@@ -59,7 +74,7 @@ Everything done on branch `leah/workspace`, newest first. Each entry links to th
 ## Open threads
 
 - **PR from `leah/workspace` to `main`** for T11 and the panel. Leah asked to hold it for now.
-- **Play the 5 Haiku games of l1-review-clock-v1** once the CLI is signed in again, then compare with F3 in the panel.
+- **More games of l1-review-clock-v1** (3 queued and held), then a v2 aimed at risk control and stalled Output; see the first-read write-up.
 - **Register Matteo's v0.2 Skills** as a race policy and test them under origin `leah`.
 - **A rule-safe scripted strategy bot**, to probe the level and wealth gap without Claude quota.
 - **After T11 merges,** the organiser updates ESTADO §6 *Partidas* and adds an origin filter to `scripts/cloud-run/driver.py`, as the T11 report explains.
