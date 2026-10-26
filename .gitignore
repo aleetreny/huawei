@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 .career_sim_runner/
 local-runs/
+.claude/worktrees/

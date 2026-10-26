@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:20 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 15:30 UTC**, chat organizador (rama `main`).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -117,7 +117,18 @@ El primer chat organizador se cierra a las 16:00 UTC, cuando se renueva la cuota
 
 **Ramas**
 - `main` contiene lo común y comprobado. Sólo el organizador escribe directamente en `main`, para actualizar este archivo y juntar ramas terminadas.
-- Cada tarea va en su propia rama, llamada `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`. La nube usa `cloud-lab-run`. La rama antigua `Matteo` se queda como está.
+- Cada tarea va en su propia rama:
+  - Si la app de Claude abre el chat en una copia aparte del proyecto (*worktree*), crea la rama sola (`claude/...`, o con tu prefijo si lo has cambiado en Ajustes). Úsala tal cual.
+  - Si no, créala con el nombre `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`.
+- **El chat organizador es la excepción:** se abre directamente en la carpeta del proyecto, en `main`, sin copia aparte, porque es quien junta las ramas y edita este archivo.
+- Ramas que existen ahora:
+
+  | Rama | Para qué | Estado |
+  |---|---|---|
+  | `main` | lo común y comprobado | — |
+  | `cloud-lab-run` | la carrera de la nube | activa; el organizador la junta con `main` cada día |
+  | `Matteo` | trabajo antiguo de Matteo (su diseño ya está en la carrera como M3) | se deja como está |
+  | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
 - Al terminar una tarea:
   1. Las pruebas tienen que pasar (`uv run pytest -q`).
   2. El resultado queda donde dice la tabla.
