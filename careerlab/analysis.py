@@ -35,8 +35,8 @@ def load_cells(reg: Registry, purposes: tuple[str, ...] = ("calibrate", "screen"
         "e.score AS e_score, e.survival_months AS e_months, e.steps AS e_steps, e.rejected_actions AS e_rejected, "
         "e.tokens AS e_usage, e.wall_s AS e_wall, e.interruption AS e_interruption FROM jobs j "
         "JOIN policies p USING(policy_id) JOIN actors a USING(actor_id) LEFT JOIN evaluations e USING(job_id) "
-        "WHERE a.kind=? AND j.purpose IN (%s)" % ",".join("?" * len(purposes)),
-        (kind, *purposes)).fetchall()
+        "WHERE a.kind=? AND j.origin=? AND j.purpose IN (%s)" % ",".join("?" * len(purposes)),
+        (kind, reg.origin, *purposes)).fetchall()  # one origin, as in decisions and report
     out = []
     for r in rows:
         if r["run_dir"] and (Path(r["run_dir"]) / "result.json").exists():
