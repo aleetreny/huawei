@@ -1,11 +1,11 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 17:54 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 17:56 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 340, interrupted 28, leased 6, queued 29, running 6.
-- Episodes finished in this container: 90. Batches completed: 2 (last at 2026-10-26 17:50:49 UTC).
+- Jobs in the registry: done 352, interrupted 28, leased 4, queued 41, running 6.
+- Episodes finished in this container: 92. Batches completed: 2 (last at 2026-10-26 17:50:49 UTC).
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.43**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.05**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.110** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
@@ -62,7 +62,7 @@ Gain over the last three decisions: -6.18 → stall trigger **fires**.
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
 | f3-feedback-reactive | 25 | 6 | 4 |
-| f7-one-vs-many | 16 | 5 | 3 |
+| f7-one-vs-many | 18 | 5 | 3 |
 | f1-steady-balance | 13 | 4 | 1 |
 | f2-invest-early | 11 | 4 | 1 |
 | p0-minimal | 8 | 3 | 1 |
@@ -74,8 +74,8 @@ Gain over the last three decisions: -6.18 → stall trigger **fires**.
 | f5-relationship-capital | 5 | 3 | 0 |
 | o2-run-hot | 4 | 3 | 0 |
 | matteo-value-conversion | 4 | 3 | 0 |
-| matteo-feedback-growth | 4 | 3 | 1 |
-| l1-review-clock | 4 | 3 | 0 |
+| matteo-feedback-growth | 4 | 3 | 2 |
+| l1-review-clock | 4 | 3 | 2 |
 
 ## Children created in this cloud run
 
@@ -119,7 +119,7 @@ Gain over the last three decisions: -6.18 → stall trigger **fires**.
 
 - Parents: f7-three-skills-v1; operator: refine; idea origin: trace diagnosis of the 38 cloud Haiku digests (lab/reports/cloud-run-diagnostics/block3-generation.md, tables 2-4) and distilled Opus rule R3 'judge statistics by trend, not size' (lab/reports/teacher-digests/distilled-rules.md).
 - Hypothesis: Reviews reward Output and Network being at their recent high when the review lands: across 127 reviews at Level 1-2, a B or a promotion followed 33 of 62 reviews with both at their high, 9 of 24 with Output only, 6 of 28 with Network only and 1 of 13 with neither; every one of the 14 first-review promotions had Output at its high (12 of 24 non-promoted games did not). The leader marks dimensions at risk by size and after any C or D, and every first review is a C, so the marks stop carrying information: in e373478a-04 Network was marked at risk in 62 of 88 story decisions below Level 3, 37 of them with Network at its high, and its two C reviews at Level 2 came with Network (review 2) and Output (review 3) below their high. Marking Skill, Network and Output at risk only when below their recent high makes the leader's own story rule 1 shield a stat that fell, its Energy rule restore it, and its main action default to a key project, so more reviews find Output and Network at their high.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 18.6/T 24.
 
 ### f7-delivery-stories-v1 (`1d62c4e5121233e6`, family f7-one-vs-many)
 
@@ -131,7 +131,7 @@ Gain over the last three decisions: -6.18 → stall trigger **fires**.
 
 - Parents: f7-three-skills-v1, f8-secure-growth-v1; operator: recombine (cross-family, stagnation slot); idea origin: playbook:P12 (stagnation rule, decision #114).
 - Hypothesis: The weak-review streak is a promotion bottleneck, not a balance problem: no review after the first gave a B at Level 1 (0 of 47), every game still at Level 1 after its third review ended by month 24 (12 of 12), and the first promotion's timing sets the score (promoted at review 1: mean Q 57.3, 12 of 14 completed; at review 2: 47.0, 7 of 11; not by review 2: 22.0, 0 of 13). Balanced play spends quarters on statistics that have stopped rising, and the leader's notes mark most dimensions at risk on most turns. A temporary single priority (P12) - while the latest review did not promote you, take the story option that best shows delivered results or raises standing with decision makers at a bounded cost, with Apply for a key project as main action, and only Health, Dignity, Wealth and risk warnings as exceptions - brings the first promotion earlier than the leader's balanced rules. f8-secure-growth, whose Grow mode played this way before its first review, was promoted at review 1 in 3 of 4 Haiku games against 14 of 38 overall.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 19.5/T 24.
 
 ## Teacher distillation
 
@@ -179,7 +179,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 127 | 0 | 0.57 | 46.1 (18.4) | 44.7 | 38.1 | 0.01 | 9.3 | 0.24 | 0.525 | 0.78 |
+| haiku | 129 | 0 | 0.56 | 45.7 (18.6) | 44.3 | 37.9 | 0.01 | 9.2 | 0.24 | 0.522 | 0.77 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -201,8 +201,10 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f4-visible-delivery-v1 | 5 | [55.9, 59.1, 17.6, 18.8, 24.4] | [48, 48, 24, 17, 31] | 35.1 | ; Broke — months with an empty wallet. Som; Trust crisis — a second major blow-up. T |
 | haiku | f5-relationship-capital-v1 | 5 | [21.8, 48.5, 23.1, 32.5, 26.9] | [24, 39, 24, 29, 24] | 29.4 | ; ; ; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
 | haiku | f6-commitment-ledger-v1 | 6 | [30.5, 25.8, 49.7, 23.0, 67.8, 48.4] | [30, 8, 48, 24, 48, 48] | 40.2 | ; ; Dismissed for capability — a second weak |
+| haiku | f7-promotion-drive-v1 | 1 | [19.5] | [24] | 20.6 | Dismissed for capability — a second weak |
 | haiku | f7-single-skill-v1 | 6 | [54.2, 63.9, 20.6, 60.1, 30.9, 23.1] | [48, 48, 24, 48, 30, 24] | 41.2 | ; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | f7-three-skills-v1 | 10 | [50.4, 51.5, 67.1, 71.0, 58.5, 70.4, 69.2, 20.1, 68.6, 61.9] | [48, 48, 48, 48, 48, 48, 48, 6, 48, 48] | 56.6 | Blackout — your health hits zero. The sc |
+| haiku | f7-trend-marking-v1 | 1 | [18.6] | [24] | 19.9 | Dismissed for capability — a second weak |
 | haiku | f8-secure-growth-v1 | 7 | [68.6, 55.8, 23.5, 51.9, 15.7, 55.9, 34.9] | [48, 48, 24, 48, 24, 48, 33] | 42.9 | Dismissed for capability — a second weak; Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | l1-review-clock-v1 | 4 | [72.9, 29.2, 28.5, 20.3] | [48, 23, 9, 24] | 36.4 | Trust crisis — a second major blow-up. T; Blackout — your health hits zero. The sc; Dismissed for capability — a second weak |
 | haiku | m3-subtracted-v1 | 3 | [16.0, 60.6, 48.9] | [24, 48, 48] | 41.8 |  |
@@ -284,6 +286,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Decision #128 (17:50):** f7-three-skills 55.2 (n = 10), F1 54.6, f2-convert-on-review 53.9. The stall rule still fires.
 - **Block 4 allocated** (seed 20261154): F7 three-skills 6, observed-growth 5, F1 4, value-conversion 3, plus a dormant audit of P0 (2 games).
 - **Next generation**, after the F7 children's screen: reliability-focused, i.e. leaving Level 1 by the first or second review.
+- **Organiser round 3 (18:10 UTC):** merged `leah/workspace` (l1-review-clock v2 and v3) and `matteo/observed-growth-v2` (which includes `matteo-t4-growth`). Imported origins `leah` and `matteo` (0 conflicts). Registered and queued 4 Haiku screens each: l1-review-clock-v2 `6e26797afe52e4fd`, l1-review-clock-v3 `35576a667c2f3d53`, observed-growth-v2 `f2715987f0341ab2`.
 
 ## Relevo (hand-off)
 
