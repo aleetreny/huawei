@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 15:25 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 15:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 249, interrupted 22, leased 44.
+- Jobs in the registry: done 249, interrupted 22, leased 44, queued 8.
 - Episodes finished in this container: 0. Batches completed: 0.
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.84**, window resets 26 Oct 16:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.897** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.899** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs leased 4; finished games: none yet.
 
@@ -83,6 +83,18 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 
 - Parents: f3-feedback-reactive-v1; operator: synthesis of general knowledge (measurement arm, not a submission candidate); idea origin: T13 user request 26 Oct: Opus ceiling measurement with all general knowledge.
 - Hypothesis: The current leader (F3 feedback-reactive, posterior Y about 60 with Haiku) is limited by two things: the player's reasoning and the policy's coverage (every family so far optimises survival only, and completed careers lose most of their missing ground on career level and wealth). Giving the strongest reasoner (Claude Opus at maximum effort) all our general knowledge in one Skill, namely F3's signal states and responses, f3-balance-recombined's strict precedence, an F8-style growth mode, the decision-relevant published handbook rules and the general form of distilled rules R1-R5, measures how far above the leader the game's ceiling lies when only legally usable, general knowledge is supplied. Expected: completion close to Opus's best observed rate and a mean quantitative_score clearly above F3's, with most of the gain on level and wealth.
+- Haiku runs so far: no finished runs yet.
+
+### o1-promotion-gap-v1 (`006571b3bb85b323`, family o1-promotion-gap)
+
+- Parents: ; operator: new family (outside designer); idea origin: T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure.
+- Hypothesis: Promotion is a multi-stat gate set by the weakest of Skill, Network and Output relative to level; diagnosing that binding gap from feedback, building it in the round after a review and harvesting visible Output in the round before the next one produces more promotions, hence higher final level and wealth, than balanced allocation, while recovering only on low or falling stats keeps survival intact.
+- Haiku runs so far: no finished runs yet.
+
+### o2-run-hot-v1 (`663c8cd2a1cafe68`, family o2-run-hot)
+
+- Parents: ; operator: new family (outside designer); idea origin: T4 outside ideas: agent without access to the team's Skills; sources: handbook, public rules, score structure.
+- Hypothesis: Survivors fall short on level and wealth because they hold Health and Dignity near full; treating them as fuel and switching between Full, Cruise and Cool modes on observed state and warnings converts the unused resilience margin into more Output and Skill, earlier promotions and more cash taken from events, without raising the early-elimination rate.
 - Haiku runs so far: no finished runs yet.
 
 ## Teacher distillation
@@ -240,12 +252,17 @@ _Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 U
 | f3-opus-distilled-v1 | c03a1bf3ca04c5e7 | f3-feedback-reactive | F3, f3-lean | f3-lean + distilled R1–R5 from 14 Opus games (T2). |
 | f3-distilled-prereview-defuse-v1 | f41d6382cab6ec76 | f3-feedback-reactive | F3, f3-lean | f3-lean + R1 only (attribution child, T2). |
 | x0-opus-ceiling-v1 | 47cbeec8b03ad2a0 | ceiling | F3 | T13 measurement arm, written in a clean room (no digests) by a subagent, 599 words. Combines F3, the Protect > Risk > Review > Grow precedence, the handbook rules and R1–R3. 4 games on opus@max~100k, pilot lane. |
+| o1-promotion-gap-v1 | 006571b3bb85b323 | o1-promotion-gap (new, T4) | none | Promotion is held shut by the stat lagging furthest behind the level. Name that one gap, build it after a review and make output visible before the next one. Outside designer, no access to our Skills. |
+| o2-run-hot-v1 | 663c8cd2a1cafe68 | o2-run-hot (new, T4) | none | Health and Dignity are fuel: run Full growth quarters and throttle to Cruise or Cool only on falling stats or warnings. Outside designer. |
+| o3-sponsor-lens-v1 | not registered (held) | o3-sponsor-lens (T4) | none | Held: it largely combines F4 and F5, both of which trail; only its role-based reading of events is new. Recorded as a `hold` decision. |
 
 **Decisions recorded by this session**
 - `enqueue`: Problem A, 2 × opus~100k each for F3, f3-balance-recombined and f3-lean.
 - `enqueue`: 4 Haiku screens each for f8 and the two distilled children.
 - `reprioritise`: 4 Mac-queued calibrate replacements (default opus, opus@low) to −10, because of the weekly pace.
 - `reprioritise`: the 6 Problem-A opus~100k jobs to −5, behind the Haiku replicates.
+- `enqueue`: 4 Haiku screens each for o1 and o2 (T4).
+- `hold`: o3-sponsor-lens (overlaps F4 and F5).
 - `recover`: several entries.
 - Block decisions appear after each batch.
 
@@ -272,6 +289,8 @@ Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Rea
 - **T2:** distilled-rules.md done; two F3 children registered and queued.
 - **T3:** f8-secure-growth-v1 registered and queued.
 - **T13:** README with pre-stated thresholds committed (a494d44) before registration. x0-opus-ceiling-v1 (47cbeec8b03ad2a0) registered; 4 games queued in their own 2-slot lane.
-- **T8:** pending (end of the run).
+- **T4:** o1-promotion-gap and o2-run-hot registered and queued (4 Haiku each). o3-sponsor-lens held because it overlaps F4 and F5. o1's timing is cadence-relative, like R1, so the same compliance question applies.
+- **T10:** energy bots running in their own data directory (10 arms × 40 episodes); report in `lab/reports/energy-bots/`.
+- **T8:** not before 27 Oct; drafts start about 05:00 UTC.
 - **Decision for the team:** the 0.97 pre-reset cap was blocked here and needs the user's own approval in the cloud session.
 - **Decision for the team:** whether R1's cadence-relative timing counts as a calendar trigger under prereg §10 (note at the end of distilled-rules.md).
