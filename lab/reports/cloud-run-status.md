@@ -1,12 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 14:22 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 14:48 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
 - Jobs in the registry: done 249, interrupted 22, leased 28.
 - Episodes finished in this container: 0. Batches completed: 0.
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.84**, window resets 26 Oct 16:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.14**, window resets 26 Oct 16:00 UTC; weekly allowance now **0.894** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 
 ## Latest pre-registered block decision (Haiku actor)
@@ -60,6 +61,15 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 ## Children created in this cloud run
 
 None yet.
+
+## Teacher distillation
+
+User request relayed by the strategy session at about 14:25 UTC: distil Opus's winning games into new F3 children, with general rules only.
+
+- Input: the 14 Opus game digests made on the Mac (`lab/reports/teacher-digests/opus/`, merged from `main` 7945fe4): 8 completed, 6 eliminated, under F1, P0 and M3. Opus never played F3.
+- Design: both children are built on f3-lean's 250-word F3 core, so they stay under the 400-word limit and are nested. f3-lean ⊂ attribution child (adds only the strongest rule) ⊂ full distilled child (adds all rules). F3 itself is 483 words, so "F3 + one rule" would break the limit. Parents are recorded as F3, with f3-lean as the text base.
+- Status: analysis and draft bundles in progress (one subagent). Registration waits until the F3 family's Haiku N_f reaches 9, so the cap ⌈(1+N_f)^0.5⌉ allows 2 more children beside f3-lean and f3-balance-recombined. Children enqueued now could not run before batch 2 anyway.
+- Digests of new Opus games played here will go to `lab/reports/teacher-digests/opus-cloud/`. `careerlab digest` skips games without a local run folder and rewrites `index.md`, so writing into `opus/` would drop the 14 Mac games from that index.
 
 ## Problem A check: Haiku vs opus~100k on shared policies
 
@@ -148,6 +158,13 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 ## What is next
 
-- Batch 1 (28 jobs: 18 Haiku screens with the F3 children first, 6 opus~100k Problem-A runs, 4 Opus calibrate runs queued on the Mac) is leased and held by the quota governor until the 16:00 UTC reset (five-hour window at 0.84 at 14:15 UTC, cap 0.80).
-- After batch 1: record the Haiku block decision; the stall trigger is expected to fire (leader 61.34 → 60.21 over the first three decisions), so the next F3 children will include one playbook-sourced hypothesis (candidate cards P10/P08: the F3 runs complete but stay at level ≤ 50 and wealth ≤ 48).
-- Progressive widening allows the F3 family 3 children at N_f = 7 (2 exist), 4 once the queued F3 runs finish.
+- **Batch 1** has 28 jobs, held by the quota governor until the 16:00 UTC reset:
+  - 18 Haiku screens, F3 children first;
+  - 6 opus~100k Problem-A runs;
+  - 4 calibrate replacements queued on the Mac, at priority −10.
+- **14:47 UTC: merged `main` 3db7af9 and restarted the scheduler before the reset.** The merge adds seven-day pacing to `wait_for_quota`. The 28 leased jobs were released and re-leased; none had started. The 4 calibrate replacements on default opus and opus@low now run last (recorded as a `reprioritise` decision). They were not cancelled: both actors are weak and no decision depends on them.
+- **Weekly pacing caps the lab.** After the reset, the account may use about 0.126 of the week per day, starting from a 0.10 allowance. Before the pacing change, one five-hour window at the cap cost about 15 % of the week. Expect roughly one five-hour window of episodes before the weekly line binds, then a trickle overnight. Orchestration counts against the same budget.
+- **After batch 1:** record the Haiku block decision. The stall trigger is expected to fire (leader 61.34 → 60.21 over the first three decisions).
+- **New candidates, all screened on Haiku with n = 4 and priority 20:**
+  1. Two F3 children from the Opus teacher distillation: the full distilled bundle and an attribution child with only the strongest rule. The F3 cap ⌈(1+N_f)^0.5⌉ allows these two once N_f ≥ 9 terminal Haiku episodes.
+  2. A new family, **secure-then-grow**, requested by the strategy session after the score-gap finding. Completed games miss about 40 points, mostly level and wealth. The family keeps F3's survival and review-recovery rules and adds a growth mode that seeks promotion and wealth when reviews are solid and no risk warning is active. It is the stall response for this block: playbook P10, "less defensive family with response to warnings".
