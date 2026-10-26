@@ -59,8 +59,8 @@ def block_decision(reg: Registry, actor_id: str, env_id: str | None = None, reco
         rows.append({"policy": cells[pid]["name"], "policy_id": pid, "n_prefix": len(cells[pid]["prefix"]),
                      "pending": sum(v is None for _, v in cells[pid]["launches"]), "posterior_mean": round(p.mean, 2),
                      "posterior_sd": round(p.sd, 2), "p_best": round(pbest[pid], 3), "action": d.action, "reason": d.reason})
-    out = {"actor_id": actor_id, "env_id": env_id, "robust": getattr(robust, "robust", None),
-           "robustness_note": getattr(robust, "reason", str(robust)), "rows": rows}
+    out = {"actor_id": actor_id, "env_id": env_id, "robust": robust.status == "robust",
+           "robustness_note": robust.explanation, "rows": rows}
     if record:
         reg.decide("block_decision", actor_id, out, "prereg-v1 sections 3-6 applied to prefix-complete runs of this actor")
     return out
