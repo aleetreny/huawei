@@ -1,13 +1,13 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 20:40 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: cancelled 27, done 425, interrupted 34, queued 15, running 8.
-- Episodes finished in this container: 157. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.60**, window resets 26 Oct 21:00 UTC; governor cap 0.85. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.09**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.140** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: cancelled 27, done 479, interrupted 36, queued 5, running 4.
+- Episodes finished in this container: 197. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.76**, window resets 26 Oct 21:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.11**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.151** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
@@ -74,10 +74,10 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
+| f3-feedback-reactive | 48 | 7 | 7 |
+| f1-steady-balance | 41 | 7 | 4 |
 | f7-one-vs-many | 34 | 6 | 3 |
-| f1-steady-balance | 31 | 6 | 4 |
-| f3-feedback-reactive | 26 | 6 | 5 |
-| matteo-feedback-growth | 17 | 5 | 4 |
+| matteo-feedback-growth | 25 | 6 | 6 |
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
@@ -162,13 +162,13 @@ Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 - Parents: f1-steady-balance-v1, f3-lean-v1; operator: recombine (cross-branch, stagnation slot): same rules, new intermediate representation; idea origin: playbook:P22 (stagnation rule, decision #142).
 - Hypothesis: F1's losses come from execution, not from missing strategy. The rules exist, but the actor skips or reorders them: Defuse after 50% of risk signals, Lay low at full Health against the Lay-low guard, Watch and Fine labels never written. A status line filled every turn makes rule execution consistent for a small model. Its slots are the Act dimensions, Risk calm or raised (F3's named signal state, borrowed as a label only) and the Weakest. A strict need order (Act, then raised Risk, then Weakest), each need mapped to its Energy, story and main-action response, does the rest. The policy should lift completion and mean quantitative_score over F1 and match or beat f1-risk-signal-v1, which has the same rules in prose.
-- Haiku runs so far: Q 56.7/T 48, Q 66.3/T 48, Q 70.4/T 48, Q 64.9/T 48.
+- Haiku runs so far: Q 51.0/T 48, Q 58.0/T 48, Q 21.4/T 24, Q 32.5/T 24, Q 56.7/T 48, Q 66.3/T 48, Q 70.4/T 48, Q 64.9/T 48.
 
 ### f3-status-line-v1 (`688cc25c03bf6629`, family f3-feedback-reactive)
 
 - Parents: f3-balance-recombined-v1, f1-status-line-v1; operator: re-represent (same rules, status-line format); idea origin: playbook:P22 transfer test (decision #157: f1-status-line, the P22 stall slot, completed 4/4 while its prose siblings with the same rules completed 1/4 each).
 - Hypothesis: f1-status-line's lead over its prose siblings f1-core and f1-risk-signal (same rules; 4/4 completed vs 1/4 each on Haiku) comes from the representation: a fixed status line filled before every choice makes a small model apply the rule order consistently. If the representation is the lever, it transfers: f3-balance-recombined's exact rules (Protect > Risk > Review > Balance), written as a status line, complete more often and score higher than the prose original.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 29.2/T 24, Q 66.9/T 48, Q 22.6/T 24, Q 60.1/T 48, Q 20.9/T 24, Q 29.3/T 24, Q 21.4/T 24, Q 65.9/T 48.
 
 ## Teacher distillation
 
@@ -216,7 +216,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 192 | 0 | 0.54 | 44.8 (19.0) | 43.5 | 37.5 | 0.01 | 8.9 | 0.24 | 0.512 | 0.75 |
+| haiku | 198 | 0 | 0.53 | 44.5 (19.2) | 43.3 | 37.3 | 0.01 | 8.9 | 0.24 | 0.511 | 0.74 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -229,7 +229,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f1-review-risk-v1 | 7 | [51.8, 24.0, 61.0, 54.8, 65.0, 20.2, 61.2] | [48, 24, 48, 48, 48, 24, 48] | 47.2 | ; Dismissed for capability — a second weak |
 | haiku | f1-risk-signal-v1 | 4 | [22.3, 59.4, 18.0, 16.7] | [21, 48, 24, 24] | 29.5 | Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f1-status-line-v1 | 4 | [56.7, 66.3, 70.4, 64.9] | [48, 48, 48, 48] | 61.7 |  |
-| haiku | f1-steady-balance-v1 | 12 | [51.0, 66.6, 27.7, 71.8, 68.1, 63.1, 66.1, 57.1, 62.3, 60.9, 24.8, 54.0] | [48, 48, 24, 48, 48, 48, 48, 48, 48, 48, 24, 48] | 54.1 | ; Dismissed for capability — a second weak |
+| haiku | f1-steady-balance-v1 | 18 | [51.0, 66.6, 27.7, 71.8, 68.1, 63.1, 66.1, 57.1, 62.3, 60.9, 24.8, 54.0, 24.0, 15.5, 20.5, 69.8, 65.7, 19.0] | [48, 48, 24, 48, 48, 48, 48, 48, 48, 48, 24, 48, 24, 24, 24, 48, 48, 24] | 47.8 | ; Dismissed for capability — a second weak; Dismissed for capability — a second weak; Dismissed for capability — a second weak; Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f2-convert-on-review-v1 | 7 | [61.2, 30.0, 63.6, 58.9, 65.2, 62.6, 18.4] | [48, 24, 48, 48, 48, 48, 24] | 49.7 | ; Dismissed for capability — a second weak |
 | haiku | f2-invest-early-v1 | 5 | [47.1, 18.3, 18.6, 15.0, 14.4] | [47, 18, 24, 19, 24] | 23.2 | ; ; ; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | f3-balance-recombined-v1 | 7 | [63.0, 59.2, 65.7, 54.6, 30.8, 55.6, 66.6] | [48, 48, 48, 48, 24, 48, 48] | 54.5 | Dismissed for capability — a second weak |
@@ -291,8 +291,8 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | haiku@low | 3 | True | 1.0 |
 | haiku | opus | 3 | True | 0.5 |
 | haiku | opus@low | 3 | False | -0.5 |
-| haiku | opus~100k | 6 | False | -0.14 |
-| haiku | sonnet | 10 | False | 0.55 |
+| haiku | opus~100k | 6 | False | -0.26 |
+| haiku | sonnet | 10 | False | 0.49 |
 | haiku@low | opus | 3 | True | 0.5 |
 | haiku@low | opus@low | 3 | False | -0.5 |
 | haiku@low | opus~100k | 3 | True | 1.0 |
@@ -344,6 +344,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
   - Champion F1 with 7 challengers: observed-growth-v3, f3-lean, f3-balance-recombined, f1-risk-signal, f1-core, f1-status-line and f3-status-line.
   - 8 slots, cap 0.85, front-loaded weekly knots. Live page: `lab/reports/carrera-rapida.md`.
   - Energy bots verified: 4 of 400 reached L6 (lessons.md, Frontier).
+- **20:40 UTC, fastloop hour 1:** champion f3-balance-recombined (crowned 20:03); the status-line effect is not confirmed (5/8 and 3/8); lessons.md updated; 6 branches merged; observed-growth-v6 added to the ladder.
 
 ## Relevo (hand-off)
 

@@ -148,6 +148,22 @@
    "rung": 0,
    "status": "active"
   },
+  "fbf47dab7a60f99f": {
+   "base": "954bf3788461f2d8",
+   "completed": 0,
+   "decided": null,
+   "entered": 1793047230.9657013,
+   "first": 2,
+   "games": 0,
+   "kind": "external",
+   "mean": null,
+   "name": "observed-growth-v6",
+   "note": "Matteo (branch matteo/observed-growth-v6, merged 26 Oct ~20:45): 6 scored games in his cell, 4/6 completed, mean Q 45.7 (2 more interrupted by an account limit)",
+   "p_better": null,
+   "policy_id": "fbf47dab7a60f99f",
+   "rung": 0,
+   "status": "active"
+  },
   "fe970f0dc37fa905": {
    "base": "19618e7795be8da1",
    "completed": 10,
@@ -353,11 +369,22 @@
    "p_better": null,
    "policy_id": "fbc813c480b56ff3",
    "why": "targeted challenger, first 2 games; L1 in the six digests, all 4 promotions came with Output and Network both at their entry-level ceiling, and all 6 misses had one of them below it. Each loss came from a story choice made after the last quarterly phase, when no Energy is left to repair it before the review. Three of those six misses involved putting work off for rest while Health was 5\u20137, or learning on the job after Skill had stop"
+  },
+  {
+   "at": 1793047230.9657013,
+   "completed": 0,
+   "event": "enter",
+   "games": 0,
+   "mean": null,
+   "name": "observed-growth-v6",
+   "p_better": null,
+   "policy_id": "fbf47dab7a60f99f",
+   "why": "external challenger, first 2 games; Matteo (branch matteo/observed-growth-v6, merged 26 Oct ~20:45): 6 scored games in his cell, 4/6 completed, mean Q 45.7 (2 more interrupted by an account limit)"
   }
  ],
  "finished_since_crown": 3,
  "games_at_crown": 49,
  "stuck_at": null,
- "updated": 1793047119.167536,
+ "updated": 1793047239.3948445,
  "version": 1
 }

@@ -51,7 +51,7 @@ Seven race manuals completed at least two-thirds of 5 or more g: F1, F3, f3-lean
 ## 2. Promising, not yet proven
 
 - **R1:** after a C or D, Defuse plus Prepare report materials in the last Energy phase before the next review. Opus got a D in 0/7 such cases against 7/22 without it [DR]. Its child went 2/4 (Q 52.4), not above f3-lean (small n) [REG]. R1 is tied to the review cadence (see §5).
-- f1-risk-signal, f1-core and f1-status-line are still being screened [CRS].
+- **Compact F3 rules with a weak-review plan are the strongest base so far.** f3-balance-recombined became champion at 20:03: 10/12 completed, Q 54.6, P(better than F1) 0.74. f3-lean (11/12, Q 55.5) and observed-growth-v3 (10/12, Q 55.4) came close, with P(better) 0.55 and 0.59, under the 0.60 bar [LAD].
 - Prepare report materials most quarters: Opus winners 8/8 against losers 2/6, but no split in Haiku games (65 % against 68 % of quarters) [DR; B3].
 - Lift a statistic that is falling or named in feedback, not the smallest one [DR]. Its child f7-trend-marking went 1/4 (Q 35.8) [REG].
 - v3's build and review quarters: v4 replaced them with a bottleneck rule, and 3/4 g never left L1 (small n) [MG4].
@@ -78,6 +78,9 @@ Race Haiku [REG] unless marked.
 | observed-growth-v2: Defuse and Health only on need | Matteo cell 2/4 (2 trust crises); race 1/4, Q 30.6 (2 blackouts) [MG2] | broke G1 and G2 |
 | v4: three changes at once | 1/4, Q 32.8; 3 stuck at L1 [MG4] | — |
 | v5: pay preference plus strong grades | 1/4, Q 30.3 [MG5] | — |
+| f1-core: F1 without its unused text | 1/4, Q 35.5, discarded [LAD] | — |
+| f1-risk-signal: Defuse after any non-reassuring risk remark | 1/4, Q 29.1, discarded [LAD] | — (the trace link between Defuse and fewer blow-ups did not turn into survival) |
+| Status-line format: fill `Act / Risk / Weakest` before each choice (f1-status-line, f3-status-line) | 5/8, Q 52.7, P 0.20 / 3/8, Q 39.5, P 0.06 [LAD] | the first 4/4 was luck; the format does not help a second family |
 | Energy mix alone (400 bots) | no mix avoided the first C [EB] | — |
 
 ## DeepSeek (the official player)
@@ -131,3 +134,4 @@ Race Haiku [REG] unless marked.
 - **CMP:** `careerlab/compliance.py`.
 - **REG:** my tally of `lab/registry/evaluations.jsonl` (e17b598) and `lab/registry-origins/matteo/` (3d1bea6). The trust-crisis proxy is an elimination with the risk-control dimension at 0; it matches every exit that has a reported cause.
 - **EB-RAW:** raw energy-bot runs in the cloud container (`~/careerlab-data/energy-bots/runs/*/result.json` and `trajectory.jsonl`, not in Git), checked by the cloud organiser on 26 Oct 2026 at 19:41 UTC.
+- **LAD:** the fastloop ladder (`lab/fastloop/history.md`, `lab/reports/carrera-rapida.md`), as of 26 Oct 2026, 20:40 UTC.
