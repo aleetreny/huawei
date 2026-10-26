@@ -32,22 +32,22 @@
    "selection_gap_target_evaluated": 2.666587199999981
   },
   "full": {
-   "selected": 55.90948053333334,
-   "best_proposed": 57.142906666666676,
-   "best_target_evaluated": 57.09196106666668,
-   "n_proposed": 43.13333333333333,
-   "exploration_gap": 10.353183733333395,
-   "selection_gap": 1.2334261333333387,
-   "selection_gap_target_evaluated": 1.1824805333333401
+   "selected": 55.880290666666674,
+   "best_proposed": 57.265497066666676,
+   "best_target_evaluated": 57.21455146666668,
+   "n_proposed": 44.733333333333334,
+   "exploration_gap": 10.230593333333395,
+   "selection_gap": 1.3852064000000013,
+   "selection_gap_target_evaluated": 1.3342608000000027
   },
   "no_diversity": {
-   "selected": 54.22466026666666,
-   "best_proposed": 55.18879626666668,
-   "best_target_evaluated": 55.18879626666668,
-   "n_proposed": 32.0,
-   "exploration_gap": 12.307294133333393,
-   "selection_gap": 0.9641360000000176,
-   "selection_gap_target_evaluated": 0.9641360000000176
+   "selected": 54.80527466666668,
+   "best_proposed": 56.33414613333335,
+   "best_target_evaluated": 56.33414613333335,
+   "n_proposed": 45.766666666666666,
+   "exploration_gap": 11.161944266666723,
+   "selection_gap": 1.528871466666665,
+   "selection_gap_target_evaluated": 1.528871466666665
   },
   "no_reopen": {
    "selected": 56.00647893333335,
@@ -59,13 +59,13 @@
    "selection_gap_target_evaluated": 0.9166592000000051
   },
   "no_calibration": {
-   "selected": 57.184549866666664,
-   "best_proposed": 58.42956000000001,
-   "best_target_evaluated": 58.35246453333334,
-   "n_proposed": 51.56666666666667,
-   "exploration_gap": 9.066530400000062,
-   "selection_gap": 1.245010133333345,
-   "selection_gap_target_evaluated": 1.1679146666666753
+   "selected": 57.30063626666667,
+   "best_proposed": 58.46919253333333,
+   "best_target_evaluated": 58.321504,
+   "n_proposed": 55.333333333333336,
+   "exploration_gap": 9.026897866666744,
+   "selection_gap": 1.1685562666666556,
+   "selection_gap_target_evaluated": 1.0208677333333256
   },
   "partial_screening": {
    "selected": 53.860629333333335,
@@ -77,22 +77,22 @@
    "selection_gap_target_evaluated": 1.0739765333333438
   },
   "no_specialization": {
-   "selected": 55.58119253333335,
-   "best_proposed": 57.557502933333346,
-   "best_target_evaluated": 57.47811040000001,
-   "n_proposed": 43.1,
-   "exploration_gap": 9.938587466666725,
-   "selection_gap": 1.9763103999999956,
-   "selection_gap_target_evaluated": 1.8969178666666622
+   "selected": 55.707368533333344,
+   "best_proposed": 57.53617066666666,
+   "best_target_evaluated": 57.53617066666666,
+   "n_proposed": 44.63333333333333,
+   "exploration_gap": 9.959919733333408,
+   "selection_gap": 1.828802133333319,
+   "selection_gap_target_evaluated": 1.828802133333319
   },
   "target_only": {
-   "selected": 56.74252213333333,
-   "best_proposed": 57.95635733333333,
-   "best_target_evaluated": 57.95635733333333,
-   "n_proposed": 40.86666666666667,
-   "exploration_gap": 9.539733066666741,
-   "selection_gap": 1.2138351999999983,
-   "selection_gap_target_evaluated": 1.2138351999999983
+   "selected": 56.889412266666675,
+   "best_proposed": 58.34245226666666,
+   "best_target_evaluated": 58.34245226666666,
+   "n_proposed": 41.833333333333336,
+   "exploration_gap": 9.15363813333341,
+   "selection_gap": 1.4530399999999872,
+   "selection_gap_target_evaluated": 1.4530399999999872
   }
  },
  "rows": [
@@ -822,23 +822,23 @@
    "selected": 63.47899199999998,
    "best_proposed": 63.970032,
    "best_target_evaluated": 63.970032,
-   "n_proposed": 46
+   "n_proposed": 48
   },
   {
    "method": "full",
    "r": 1,
-   "selected": 60.558127999999996,
-   "best_proposed": 60.85788800000009,
-   "best_target_evaluated": 60.85788800000009,
-   "n_proposed": 39
+   "selected": 61.49035200000005,
+   "best_proposed": 61.49035200000005,
+   "best_target_evaluated": 61.49035200000005,
+   "n_proposed": 41
   },
   {
    "method": "full",
    "r": 2,
-   "selected": 53.834672000000005,
-   "best_proposed": 55.85951999999994,
-   "best_target_evaluated": 55.85951999999994,
-   "n_proposed": 36
+   "selected": 58.90476800000003,
+   "best_proposed": 58.90476800000003,
+   "best_target_evaluated": 58.90476800000003,
+   "n_proposed": 42
   },
   {
    "method": "full",
@@ -854,7 +854,7 @@
    "selected": 47.07947199999995,
    "best_proposed": 52.88875199999996,
    "best_target_evaluated": 52.88875199999996,
-   "n_proposed": 40
+   "n_proposed": 41
   },
   {
    "method": "full",
@@ -870,15 +870,15 @@
    "selected": 59.05020800000002,
    "best_proposed": 59.05020800000002,
    "best_target_evaluated": 59.05020800000002,
-   "n_proposed": 40
+   "n_proposed": 42
   },
   {
    "method": "full",
    "r": 7,
-   "selected": 55.73192000000002,
+   "selected": 52.65425600000001,
    "best_proposed": 55.73192000000002,
    "best_target_evaluated": 55.73192000000002,
-   "n_proposed": 50
+   "n_proposed": 51
   },
   {
    "method": "full",
@@ -886,7 +886,7 @@
    "selected": 53.23267200000001,
    "best_proposed": 56.567840000000025,
    "best_target_evaluated": 56.567840000000025,
-   "n_proposed": 44
+   "n_proposed": 57
   },
   {
    "method": "full",
@@ -942,7 +942,7 @@
    "selected": 58.357615999999965,
    "best_proposed": 59.678816,
    "best_target_evaluated": 59.678816,
-   "n_proposed": 40
+   "n_proposed": 42
   },
   {
    "method": "full",
@@ -955,7 +955,7 @@
   {
    "method": "full",
    "r": 17,
-   "selected": 59.54649600000001,
+   "selected": 57.51772800000002,
    "best_proposed": 59.54649600000001,
    "best_target_evaluated": 59.54649600000001,
    "n_proposed": 46
@@ -990,15 +990,15 @@
    "selected": 64.585856,
    "best_proposed": 64.585856,
    "best_target_evaluated": 64.585856,
-   "n_proposed": 44
+   "n_proposed": 45
   },
   {
    "method": "full",
    "r": 22,
-   "selected": 54.084143999999995,
+   "selected": 52.31256000000001,
    "best_proposed": 55.80006399999999,
    "best_target_evaluated": 55.80006399999999,
-   "n_proposed": 50
+   "n_proposed": 53
   },
   {
    "method": "full",
@@ -1006,7 +1006,7 @@
    "selected": 57.44691200000004,
    "best_proposed": 57.44691200000004,
    "best_target_evaluated": 57.44691200000004,
-   "n_proposed": 40
+   "n_proposed": 41
   },
   {
    "method": "full",
@@ -1030,7 +1030,7 @@
    "selected": 55.64935999999998,
    "best_proposed": 58.606384000000006,
    "best_target_evaluated": 58.606384000000006,
-   "n_proposed": 45
+   "n_proposed": 54
   },
   {
    "method": "full",
@@ -1054,167 +1054,167 @@
    "selected": 58.76782399999998,
    "best_proposed": 58.81803200000003,
    "best_target_evaluated": 58.81803200000003,
-   "n_proposed": 41
+   "n_proposed": 46
   },
   {
    "method": "no_diversity",
    "r": 0,
-   "selected": 51.74043200000003,
-   "best_proposed": 51.74043200000003,
-   "best_target_evaluated": 51.74043200000003,
-   "n_proposed": 32
+   "selected": 63.47899199999998,
+   "best_proposed": 63.72217599999998,
+   "best_target_evaluated": 63.72217599999998,
+   "n_proposed": 44
   },
   {
    "method": "no_diversity",
    "r": 1,
-   "selected": 53.563439999999964,
-   "best_proposed": 53.563439999999964,
-   "best_target_evaluated": 53.563439999999964,
-   "n_proposed": 32
+   "selected": 57.32736000000002,
+   "best_proposed": 57.32736000000002,
+   "best_target_evaluated": 57.32736000000002,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 2,
-   "selected": 58.86702399999993,
-   "best_proposed": 59.03619199999996,
-   "best_target_evaluated": 59.03619199999996,
-   "n_proposed": 32
+   "selected": 58.800559999999955,
+   "best_proposed": 59.36726399999997,
+   "best_target_evaluated": 59.36726399999997,
+   "n_proposed": 53
   },
   {
    "method": "no_diversity",
    "r": 3,
-   "selected": 43.694815999999975,
-   "best_proposed": 49.77497599999998,
-   "best_target_evaluated": 49.77497599999998,
-   "n_proposed": 32
+   "selected": 55.45763199999998,
+   "best_proposed": 56.26307199999997,
+   "best_target_evaluated": 56.26307199999997,
+   "n_proposed": 45
   },
   {
    "method": "no_diversity",
    "r": 4,
-   "selected": 54.526656,
-   "best_proposed": 54.526656,
-   "best_target_evaluated": 54.526656,
-   "n_proposed": 32
+   "selected": 54.991296000000006,
+   "best_proposed": 56.54083200000006,
+   "best_target_evaluated": 56.54083200000006,
+   "n_proposed": 44
   },
   {
    "method": "no_diversity",
    "r": 5,
-   "selected": 52.852048000000025,
-   "best_proposed": 52.852048000000025,
-   "best_target_evaluated": 52.852048000000025,
-   "n_proposed": 32
+   "selected": 43.283904000000014,
+   "best_proposed": 54.661759999999994,
+   "best_target_evaluated": 54.661759999999994,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
    "r": 6,
-   "selected": 54.117520000000006,
-   "best_proposed": 54.117520000000006,
-   "best_target_evaluated": 54.117520000000006,
-   "n_proposed": 32
+   "selected": 54.18112000000001,
+   "best_proposed": 55.81118400000002,
+   "best_target_evaluated": 55.81118400000002,
+   "n_proposed": 44
   },
   {
    "method": "no_diversity",
    "r": 7,
-   "selected": 57.570415999999966,
-   "best_proposed": 57.570415999999966,
-   "best_target_evaluated": 57.570415999999966,
-   "n_proposed": 32
+   "selected": 54.80217600000006,
+   "best_proposed": 54.80217600000006,
+   "best_target_evaluated": 54.80217600000006,
+   "n_proposed": 46
   },
   {
    "method": "no_diversity",
    "r": 8,
-   "selected": 49.12772799999998,
-   "best_proposed": 49.12772799999998,
-   "best_target_evaluated": 49.12772799999998,
-   "n_proposed": 32
+   "selected": 50.10793600000001,
+   "best_proposed": 50.10793600000001,
+   "best_target_evaluated": 50.10793600000001,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 9,
-   "selected": 41.30870400000001,
-   "best_proposed": 45.88233599999993,
-   "best_target_evaluated": 45.88233599999993,
-   "n_proposed": 32
+   "selected": 58.279104000000075,
+   "best_proposed": 58.279104000000075,
+   "best_target_evaluated": 58.279104000000075,
+   "n_proposed": 47
   },
   {
    "method": "no_diversity",
    "r": 10,
-   "selected": 59.592592,
-   "best_proposed": 59.812592000000045,
-   "best_target_evaluated": 59.812592000000045,
-   "n_proposed": 32
+   "selected": 58.22371200000006,
+   "best_proposed": 58.24278400000007,
+   "best_target_evaluated": 58.24278400000007,
+   "n_proposed": 69
   },
   {
    "method": "no_diversity",
    "r": 11,
-   "selected": 48.374176000000006,
-   "best_proposed": 48.374176000000006,
-   "best_target_evaluated": 48.374176000000006,
-   "n_proposed": 32
+   "selected": 52.84555199999999,
+   "best_proposed": 53.90667199999997,
+   "best_target_evaluated": 53.90667199999997,
+   "n_proposed": 53
   },
   {
    "method": "no_diversity",
    "r": 12,
-   "selected": 54.833648,
-   "best_proposed": 55.75648000000007,
-   "best_target_evaluated": 55.75648000000007,
-   "n_proposed": 32
+   "selected": 56.170144000000036,
+   "best_proposed": 56.170144000000036,
+   "best_target_evaluated": 56.170144000000036,
+   "n_proposed": 46
   },
   {
    "method": "no_diversity",
    "r": 13,
-   "selected": 55.07139200000003,
-   "best_proposed": 55.07139200000003,
-   "best_target_evaluated": 55.07139200000003,
-   "n_proposed": 32
+   "selected": 57.44287999999998,
+   "best_proposed": 57.44287999999998,
+   "best_target_evaluated": 57.44287999999998,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 14,
-   "selected": 52.46865600000002,
-   "best_proposed": 54.17358399999995,
-   "best_target_evaluated": 54.17358399999995,
-   "n_proposed": 32
+   "selected": 54.173552000000015,
+   "best_proposed": 54.173552000000015,
+   "best_target_evaluated": 54.173552000000015,
+   "n_proposed": 49
   },
   {
    "method": "no_diversity",
    "r": 15,
-   "selected": 51.81320000000001,
-   "best_proposed": 52.329232,
-   "best_target_evaluated": 52.329232,
-   "n_proposed": 32
+   "selected": 59.678816,
+   "best_proposed": 59.678816,
+   "best_target_evaluated": 59.678816,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
    "r": 16,
-   "selected": 59.96332799999994,
-   "best_proposed": 62.820656000000064,
-   "best_target_evaluated": 62.820656000000064,
-   "n_proposed": 32
+   "selected": 60.35601599999998,
+   "best_proposed": 60.46024000000001,
+   "best_target_evaluated": 60.46024000000001,
+   "n_proposed": 56
   },
   {
    "method": "no_diversity",
    "r": 17,
-   "selected": 55.83238400000002,
-   "best_proposed": 56.210624000000024,
-   "best_target_evaluated": 56.210624000000024,
-   "n_proposed": 32
+   "selected": 46.79312000000005,
+   "best_proposed": 46.79312000000005,
+   "best_target_evaluated": 46.79312000000005,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 18,
-   "selected": 57.32326400000007,
-   "best_proposed": 57.32326400000007,
-   "best_target_evaluated": 57.32326400000007,
-   "n_proposed": 32
+   "selected": 56.78384000000003,
+   "best_proposed": 56.89553600000002,
+   "best_target_evaluated": 56.89553600000002,
+   "n_proposed": 49
   },
   {
    "method": "no_diversity",
    "r": 19,
-   "selected": 58.016464,
-   "best_proposed": 58.943104000000005,
-   "best_target_evaluated": 58.943104000000005,
-   "n_proposed": 32
+   "selected": 58.11612800000002,
+   "best_proposed": 60.00940800000008,
+   "best_target_evaluated": 60.00940800000008,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
@@ -1222,79 +1222,79 @@
    "selected": 53.580208000000006,
    "best_proposed": 54.43460800000002,
    "best_target_evaluated": 54.43460800000002,
-   "n_proposed": 32
+   "n_proposed": 46
   },
   {
    "method": "no_diversity",
    "r": 21,
-   "selected": 58.555999999999955,
+   "selected": 57.92798399999996,
    "best_proposed": 58.555999999999955,
    "best_target_evaluated": 58.555999999999955,
-   "n_proposed": 32
+   "n_proposed": 45
   },
   {
    "method": "no_diversity",
    "r": 22,
-   "selected": 58.795936000000054,
-   "best_proposed": 58.795936000000054,
-   "best_target_evaluated": 58.795936000000054,
-   "n_proposed": 32
+   "selected": 54.74059199999998,
+   "best_proposed": 54.74059199999998,
+   "best_target_evaluated": 54.74059199999998,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
    "r": 23,
-   "selected": 57.44691200000004,
-   "best_proposed": 57.44691200000004,
-   "best_target_evaluated": 57.44691200000004,
-   "n_proposed": 32
+   "selected": 53.44300800000001,
+   "best_proposed": 58.295104000000016,
+   "best_target_evaluated": 58.295104000000016,
+   "n_proposed": 44
   },
   {
    "method": "no_diversity",
    "r": 24,
-   "selected": 48.83652800000005,
-   "best_proposed": 50.90534400000002,
-   "best_target_evaluated": 50.90534400000002,
-   "n_proposed": 32
+   "selected": 54.021296000000056,
+   "best_proposed": 54.021296000000056,
+   "best_target_evaluated": 54.021296000000056,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 25,
-   "selected": 52.711728000000036,
-   "best_proposed": 52.711728000000036,
-   "best_target_evaluated": 52.711728000000036,
-   "n_proposed": 32
+   "selected": 50.54955199999994,
+   "best_proposed": 58.426319999999954,
+   "best_target_evaluated": 58.426319999999954,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
    "r": 26,
-   "selected": 56.38575999999998,
-   "best_proposed": 56.38575999999998,
-   "best_target_evaluated": 56.38575999999998,
-   "n_proposed": 32
+   "selected": 48.81407999999997,
+   "best_proposed": 50.275776000000015,
+   "best_target_evaluated": 50.275776000000015,
+   "n_proposed": 53
   },
   {
    "method": "no_diversity",
    "r": 27,
-   "selected": 47.71419200000001,
-   "best_proposed": 54.31292799999997,
-   "best_target_evaluated": 54.31292799999997,
-   "n_proposed": 32
+   "selected": 51.66056,
+   "best_proposed": 57.46096000000002,
+   "best_target_evaluated": 57.46096000000002,
+   "n_proposed": 42
   },
   {
    "method": "no_diversity",
    "r": 28,
-   "selected": 59.67974400000007,
-   "best_proposed": 60.24196800000006,
-   "best_target_evaluated": 60.24196800000006,
-   "n_proposed": 32
+   "selected": 59.290576000000065,
+   "best_proposed": 60.244592,
+   "best_target_evaluated": 60.244592,
+   "n_proposed": 41
   },
   {
    "method": "no_diversity",
    "r": 29,
-   "selected": 62.374912000000066,
-   "best_proposed": 62.865856000000036,
-   "best_target_evaluated": 62.865856000000036,
-   "n_proposed": 32
+   "selected": 48.83654400000002,
+   "best_proposed": 52.91311999999997,
+   "best_target_evaluated": 52.91311999999997,
+   "n_proposed": 42
   },
   {
    "method": "no_reopen",
@@ -1542,7 +1542,7 @@
    "selected": 63.970032,
    "best_proposed": 63.970032,
    "best_target_evaluated": 63.970032,
-   "n_proposed": 45
+   "n_proposed": 44
   },
   {
    "method": "no_calibration",
@@ -1550,7 +1550,7 @@
    "selected": 59.610432,
    "best_proposed": 60.591136000000034,
    "best_target_evaluated": 60.591136000000034,
-   "n_proposed": 45
+   "n_proposed": 46
   },
   {
    "method": "no_calibration",
@@ -1571,34 +1571,34 @@
   {
    "method": "no_calibration",
    "r": 4,
-   "selected": 57.96480000000001,
+   "selected": 55.34291200000001,
    "best_proposed": 57.96480000000001,
    "best_target_evaluated": 57.96480000000001,
-   "n_proposed": 49
+   "n_proposed": 56
   },
   {
    "method": "no_calibration",
    "r": 5,
    "selected": 56.95848,
-   "best_proposed": 59.797392000000045,
-   "best_target_evaluated": 59.797392000000045,
-   "n_proposed": 51
+   "best_proposed": 58.061504,
+   "best_target_evaluated": 58.061504,
+   "n_proposed": 60
   },
   {
    "method": "no_calibration",
    "r": 6,
-   "selected": 57.48790400000003,
-   "best_proposed": 59.71041599999995,
-   "best_target_evaluated": 59.71041599999995,
-   "n_proposed": 47
+   "selected": 59.05020800000002,
+   "best_proposed": 59.29484800000005,
+   "best_target_evaluated": 59.29484800000005,
+   "n_proposed": 51
   },
   {
    "method": "no_calibration",
    "r": 7,
-   "selected": 57.09875200000004,
-   "best_proposed": 57.09875200000004,
-   "best_target_evaluated": 57.09875200000004,
-   "n_proposed": 47
+   "selected": 55.60664000000008,
+   "best_proposed": 55.60664000000008,
+   "best_target_evaluated": 55.60664000000008,
+   "n_proposed": 61
   },
   {
    "method": "no_calibration",
@@ -1606,23 +1606,23 @@
    "selected": 57.87729600000003,
    "best_proposed": 57.87729600000003,
    "best_target_evaluated": 57.87729600000003,
-   "n_proposed": 70
+   "n_proposed": 76
   },
   {
    "method": "no_calibration",
    "r": 9,
-   "selected": 53.64539199999998,
+   "selected": 53.161248,
    "best_proposed": 55.70651199999998,
-   "best_target_evaluated": 54.54859200000003,
-   "n_proposed": 49
+   "best_target_evaluated": 53.161248,
+   "n_proposed": 74
   },
   {
    "method": "no_calibration",
    "r": 10,
-   "selected": 56.46888000000006,
+   "selected": 58.04171200000002,
    "best_proposed": 58.04171200000002,
    "best_target_evaluated": 58.04171200000002,
-   "n_proposed": 58
+   "n_proposed": 60
   },
   {
    "method": "no_calibration",
@@ -1630,15 +1630,15 @@
    "selected": 56.57327999999994,
    "best_proposed": 56.57327999999994,
    "best_target_evaluated": 56.57327999999994,
-   "n_proposed": 60
+   "n_proposed": 64
   },
   {
    "method": "no_calibration",
    "r": 12,
    "selected": 58.26326400000002,
-   "best_proposed": 60.844880000000025,
-   "best_target_evaluated": 60.844880000000025,
-   "n_proposed": 43
+   "best_proposed": 60.88339199999995,
+   "best_target_evaluated": 60.88339199999995,
+   "n_proposed": 44
   },
   {
    "method": "no_calibration",
@@ -1646,30 +1646,30 @@
    "selected": 56.85528000000005,
    "best_proposed": 57.62808000000001,
    "best_target_evaluated": 57.62808000000001,
-   "n_proposed": 59
+   "n_proposed": 69
   },
   {
    "method": "no_calibration",
    "r": 14,
-   "selected": 58.13828800000001,
-   "best_proposed": 58.13828800000001,
-   "best_target_evaluated": 58.13828800000001,
-   "n_proposed": 42
+   "selected": 59.88121600000006,
+   "best_proposed": 59.88121600000006,
+   "best_target_evaluated": 59.88121600000006,
+   "n_proposed": 45
   },
   {
    "method": "no_calibration",
    "r": 15,
-   "selected": 61.96787200000003,
+   "selected": 60.887631999999996,
    "best_proposed": 61.96787200000003,
    "best_target_evaluated": 61.96787200000003,
-   "n_proposed": 59
+   "n_proposed": 58
   },
   {
    "method": "no_calibration",
    "r": 16,
-   "selected": 54.654192000000045,
-   "best_proposed": 54.654192000000045,
-   "best_target_evaluated": 54.654192000000045,
+   "selected": 52.81153600000007,
+   "best_proposed": 58.536960000000064,
+   "best_target_evaluated": 58.536960000000064,
    "n_proposed": 47
   },
   {
@@ -1678,7 +1678,7 @@
    "selected": 58.481919999999974,
    "best_proposed": 62.283647999999985,
    "best_target_evaluated": 61.128704,
-   "n_proposed": 74
+   "n_proposed": 86
   },
   {
    "method": "no_calibration",
@@ -1694,15 +1694,15 @@
    "selected": 60.54625600000003,
    "best_proposed": 60.54625600000003,
    "best_target_evaluated": 60.54625600000003,
-   "n_proposed": 45
+   "n_proposed": 44
   },
   {
    "method": "no_calibration",
    "r": 20,
    "selected": 54.106224,
-   "best_proposed": 54.65382400000003,
-   "best_target_evaluated": 54.65382400000003,
-   "n_proposed": 44
+   "best_proposed": 54.106224,
+   "best_target_evaluated": 54.106224,
+   "n_proposed": 45
   },
   {
    "method": "no_calibration",
@@ -1723,18 +1723,18 @@
   {
    "method": "no_calibration",
    "r": 23,
-   "selected": 58.036015999999975,
+   "selected": 60.213360000000016,
    "best_proposed": 60.30283200000001,
    "best_target_evaluated": 60.30283200000001,
-   "n_proposed": 43
+   "n_proposed": 46
   },
   {
    "method": "no_calibration",
    "r": 24,
    "selected": 59.373056000000005,
-   "best_proposed": 62.558848000000026,
-   "best_target_evaluated": 62.558848000000026,
-   "n_proposed": 50
+   "best_proposed": 59.52411200000002,
+   "best_target_evaluated": 59.52411200000002,
+   "n_proposed": 57
   },
   {
    "method": "no_calibration",
@@ -1742,15 +1742,15 @@
    "selected": 52.56161599999999,
    "best_proposed": 58.57747199999997,
    "best_target_evaluated": 58.57747199999997,
-   "n_proposed": 47
+   "n_proposed": 49
   },
   {
    "method": "no_calibration",
    "r": 26,
-   "selected": 55.64935999999998,
-   "best_proposed": 57.14664000000001,
-   "best_target_evaluated": 57.14664000000001,
-   "n_proposed": 88
+   "selected": 59.59758399999994,
+   "best_proposed": 60.328032,
+   "best_target_evaluated": 59.59758399999994,
+   "n_proposed": 94
   },
   {
    "method": "no_calibration",
@@ -1758,7 +1758,7 @@
    "selected": 54.61001599999999,
    "best_proposed": 55.056575999999986,
    "best_target_evaluated": 55.056575999999986,
-   "n_proposed": 43
+   "n_proposed": 46
   },
   {
    "method": "no_calibration",
@@ -1772,9 +1772,9 @@
    "method": "no_calibration",
    "r": 29,
    "selected": 58.825984,
-   "best_proposed": 60.181087999999995,
-   "best_target_evaluated": 60.181087999999995,
-   "n_proposed": 55
+   "best_proposed": 59.75036800000002,
+   "best_target_evaluated": 59.75036800000002,
+   "n_proposed": 51
   },
   {
    "method": "partial_screening",
@@ -2020,25 +2020,25 @@
    "method": "no_specialization",
    "r": 0,
    "selected": 63.970032,
-   "best_proposed": 63.970032,
-   "best_target_evaluated": 63.970032,
-   "n_proposed": 45
+   "best_proposed": 65.19844799999998,
+   "best_target_evaluated": 65.19844799999998,
+   "n_proposed": 43
   },
   {
    "method": "no_specialization",
    "r": 1,
-   "selected": 55.65673600000005,
+   "selected": 56.492896,
    "best_proposed": 57.32736000000002,
    "best_target_evaluated": 57.32736000000002,
-   "n_proposed": 40
+   "n_proposed": 45
   },
   {
    "method": "no_specialization",
    "r": 2,
-   "selected": 56.43649599999993,
-   "best_proposed": 56.43649599999993,
-   "best_target_evaluated": 56.43649599999993,
-   "n_proposed": 42
+   "selected": 56.496847999999936,
+   "best_proposed": 56.496847999999936,
+   "best_target_evaluated": 56.496847999999936,
+   "n_proposed": 43
   },
   {
    "method": "no_specialization",
@@ -2054,7 +2054,7 @@
    "selected": 51.41668800000002,
    "best_proposed": 58.79190400000005,
    "best_target_evaluated": 58.79190400000005,
-   "n_proposed": 41
+   "n_proposed": 42
   },
   {
    "method": "no_specialization",
@@ -2070,7 +2070,7 @@
    "selected": 55.40012799999999,
    "best_proposed": 56.256415999999966,
    "best_target_evaluated": 56.256415999999966,
-   "n_proposed": 42
+   "n_proposed": 49
   },
   {
    "method": "no_specialization",
@@ -2083,10 +2083,10 @@
   {
    "method": "no_specialization",
    "r": 8,
-   "selected": 57.95867200000003,
+   "selected": 56.137295999999985,
    "best_proposed": 57.95867200000003,
    "best_target_evaluated": 57.95867200000003,
-   "n_proposed": 50
+   "n_proposed": 60
   },
   {
    "method": "no_specialization",
@@ -2123,10 +2123,10 @@
   {
    "method": "no_specialization",
    "r": 13,
-   "selected": 59.38241600000002,
-   "best_proposed": 60.14449600000001,
-   "best_target_evaluated": 60.14449600000001,
-   "n_proposed": 38
+   "selected": 62.30713600000001,
+   "best_proposed": 62.30713600000001,
+   "best_target_evaluated": 62.30713600000001,
+   "n_proposed": 41
   },
   {
    "method": "no_specialization",
@@ -2134,15 +2134,15 @@
    "selected": 52.457359999999994,
    "best_proposed": 52.457359999999994,
    "best_target_evaluated": 52.457359999999994,
-   "n_proposed": 41
+   "n_proposed": 42
   },
   {
    "method": "no_specialization",
    "r": 15,
-   "selected": 58.357615999999965,
+   "selected": 57.931280000000044,
    "best_proposed": 59.678816,
    "best_target_evaluated": 59.678816,
-   "n_proposed": 39
+   "n_proposed": 43
   },
   {
    "method": "no_specialization",
@@ -2155,10 +2155,10 @@
   {
    "method": "no_specialization",
    "r": 17,
-   "selected": 63.662800000000026,
-   "best_proposed": 63.662800000000026,
-   "best_target_evaluated": 63.662800000000026,
-   "n_proposed": 39
+   "selected": 65.08471999999996,
+   "best_proposed": 65.08471999999996,
+   "best_target_evaluated": 65.08471999999996,
+   "n_proposed": 42
   },
   {
    "method": "no_specialization",
@@ -2174,7 +2174,7 @@
    "selected": 55.96676800000004,
    "best_proposed": 58.582144000000035,
    "best_target_evaluated": 58.582144000000035,
-   "n_proposed": 42
+   "n_proposed": 43
   },
   {
    "method": "no_specialization",
@@ -2211,26 +2211,26 @@
   {
    "method": "no_specialization",
    "r": 24,
-   "selected": 51.68393600000007,
-   "best_proposed": 57.68272000000007,
-   "best_target_evaluated": 55.300943999999994,
-   "n_proposed": 43
+   "selected": 52.69718400000005,
+   "best_proposed": 52.69718400000005,
+   "best_target_evaluated": 52.69718400000005,
+   "n_proposed": 53
   },
   {
    "method": "no_specialization",
    "r": 25,
-   "selected": 51.27025600000006,
-   "best_proposed": 56.71153600000001,
-   "best_target_evaluated": 56.71153600000001,
+   "selected": 51.046848,
+   "best_proposed": 56.04780800000003,
+   "best_target_evaluated": 56.04780800000003,
    "n_proposed": 42
   },
   {
    "method": "no_specialization",
    "r": 26,
    "selected": 55.68775999999999,
-   "best_proposed": 57.23003200000009,
-   "best_target_evaluated": 57.23003200000009,
-   "n_proposed": 42
+   "best_proposed": 57.365999999999985,
+   "best_target_evaluated": 57.365999999999985,
+   "n_proposed": 43
   },
   {
    "method": "no_specialization",
@@ -2254,7 +2254,7 @@
    "selected": 59.62208000000002,
    "best_proposed": 59.62208000000002,
    "best_target_evaluated": 59.62208000000002,
-   "n_proposed": 45
+   "n_proposed": 46
   },
   {
    "method": "target_only",
@@ -2262,15 +2262,15 @@
    "selected": 63.47899199999998,
    "best_proposed": 65.19844799999998,
    "best_target_evaluated": 65.19844799999998,
-   "n_proposed": 40
+   "n_proposed": 42
   },
   {
    "method": "target_only",
    "r": 1,
-   "selected": 60.558127999999996,
-   "best_proposed": 60.591136000000034,
-   "best_target_evaluated": 60.591136000000034,
-   "n_proposed": 40
+   "selected": 60.19668800000003,
+   "best_proposed": 60.96908800000001,
+   "best_target_evaluated": 60.96908800000001,
+   "n_proposed": 43
   },
   {
    "method": "target_only",
@@ -2278,7 +2278,7 @@
    "selected": 57.19550400000004,
    "best_proposed": 57.19550400000004,
    "best_target_evaluated": 57.19550400000004,
-   "n_proposed": 40
+   "n_proposed": 41
   },
   {
    "method": "target_only",
@@ -2286,7 +2286,7 @@
    "selected": 57.95963200000001,
    "best_proposed": 57.95963200000001,
    "best_target_evaluated": 57.95963200000001,
-   "n_proposed": 40
+   "n_proposed": 41
   },
   {
    "method": "target_only",
@@ -2307,10 +2307,10 @@
   {
    "method": "target_only",
    "r": 6,
-   "selected": 59.21822400000003,
-   "best_proposed": 60.827472000000014,
-   "best_target_evaluated": 60.827472000000014,
-   "n_proposed": 39
+   "selected": 54.28795199999996,
+   "best_proposed": 59.21822400000003,
+   "best_target_evaluated": 59.21822400000003,
+   "n_proposed": 41
   },
   {
    "method": "target_only",
@@ -2318,23 +2318,23 @@
    "selected": 57.924944,
    "best_proposed": 60.22654399999997,
    "best_target_evaluated": 60.22654399999997,
-   "n_proposed": 39
+   "n_proposed": 41
   },
   {
    "method": "target_only",
    "r": 8,
-   "selected": 59.050591999999995,
+   "selected": 56.50416000000004,
    "best_proposed": 59.050591999999995,
    "best_target_evaluated": 59.050591999999995,
-   "n_proposed": 40
+   "n_proposed": 42
   },
   {
    "method": "target_only",
    "r": 9,
-   "selected": 57.32563199999994,
-   "best_proposed": 57.32563199999994,
-   "best_target_evaluated": 57.32563199999994,
-   "n_proposed": 39
+   "selected": 56.52928000000001,
+   "best_proposed": 56.859616000000024,
+   "best_target_evaluated": 56.859616000000024,
+   "n_proposed": 42
   },
   {
    "method": "target_only",
@@ -2348,41 +2348,41 @@
    "method": "target_only",
    "r": 11,
    "selected": 57.038927999999956,
-   "best_proposed": 58.170367999999996,
-   "best_target_evaluated": 58.170367999999996,
-   "n_proposed": 40
+   "best_proposed": 60.13966400000008,
+   "best_target_evaluated": 60.13966400000008,
+   "n_proposed": 41
   },
   {
    "method": "target_only",
    "r": 12,
-   "selected": 52.73195199999997,
-   "best_proposed": 53.956703999999995,
-   "best_target_evaluated": 53.956703999999995,
-   "n_proposed": 41
+   "selected": 55.407551999999995,
+   "best_proposed": 56.874335999999964,
+   "best_target_evaluated": 56.874335999999964,
+   "n_proposed": 43
   },
   {
    "method": "target_only",
    "r": 13,
    "selected": 57.748992,
-   "best_proposed": 57.946191999999996,
-   "best_target_evaluated": 57.946191999999996,
+   "best_proposed": 58.696704000000004,
+   "best_target_evaluated": 58.696704000000004,
    "n_proposed": 41
   },
   {
    "method": "target_only",
    "r": 14,
-   "selected": 50.73040000000003,
-   "best_proposed": 52.009792000000026,
-   "best_target_evaluated": 52.009792000000026,
-   "n_proposed": 40
+   "selected": 58.97171199999999,
+   "best_proposed": 58.97171199999999,
+   "best_target_evaluated": 58.97171199999999,
+   "n_proposed": 42
   },
   {
    "method": "target_only",
    "r": 15,
-   "selected": 58.357615999999965,
-   "best_proposed": 59.80110399999998,
-   "best_target_evaluated": 59.80110399999998,
-   "n_proposed": 37
+   "selected": 60.48190400000003,
+   "best_proposed": 60.48190400000003,
+   "best_target_evaluated": 60.48190400000003,
+   "n_proposed": 42
   },
   {
    "method": "target_only",
@@ -2494,7 +2494,7 @@
    "selected": 59.29753600000001,
    "best_proposed": 59.50425600000001,
    "best_target_evaluated": 59.50425600000001,
-   "n_proposed": 39
+   "n_proposed": 42
   }
  ]
 }
