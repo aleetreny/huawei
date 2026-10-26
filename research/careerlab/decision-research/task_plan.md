@@ -11,7 +11,7 @@ No se edita el plan global del organizador ni el protocolo v1. No se lanzan part
 - [x] Escribir protocolo complementario: descubrimiento, experimento y confirmación.
 - [x] Entregar auditoría reproducible y primeras hipótesis, con límites explícitos.
 - [x] Validar, documentar Relevo y actualizar línea propia en ESTADO (243 tests OK).
-- [ ] Commit, push y PR.
+- [x] Commit `5d3cb1d`, push y [PR #3](https://github.com/aleetreny/huawei/pull/3) abierta a main.
 
 ## Decisiones
 
