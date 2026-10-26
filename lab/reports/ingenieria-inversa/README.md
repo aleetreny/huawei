@@ -165,7 +165,7 @@ Ver [progreso.md](progreso.md) para el diario con horas.
 **2. Resultados:** ver la sección 5 y [hallazgos.md](hallazgos.md) (H1–H23).
 - **Datos brutos** en `~/careerlab-data/ingenieria-inversa/<lote>/` (fuera de git y de iCloud) y modelos en `models/m01…m06.json` y `principles-m06.json`.
 - **Catálogo completo por etapas** en `~/careerlab-data/ingenieria-inversa/catalogo-etapas.md`, con copia local ignorada por git en `local-runs/ingenieria-inversa/`.
-- **Etiquetas y bancos** en el scratchpad de la sesión (copiar si se quieren conservar).
+- **Etiquetas de rasgos y de entrega, y los tres bancos de decisión** en `~/careerlab-data/ingenieria-inversa/labels/` y `bench/`. Las claves de los bancos están en `bench-key.json` y `bench2-key.json`, fuera de las carpetas que leen los agentes.
 
 **3. Lo que falló o quedó a medias**
 - El modelo numérico exacto del riesgo oculto no sale: la regresión aditiva no generaliza por el recorte en 0. Para la estrategia bastan las medidas relativas.
