@@ -136,8 +136,9 @@ Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicaci
   | `cloud-lab-run` | la carrera de la nube | activa; el organizador la junta con `main` cada día |
   | `Matteo` | trabajo antiguo de Matteo (su diseño ya está en la carrera como M3) | se deja como está |
   | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
-  | `leah/workspace` | T11 y trabajo propio de Leah (manual l1-review-clock, panel de resultados) | juntada con `main` el 26 oct (16:20 y 16:55); su manual está en la carrera y su partida de origen `leah` importada |
+  | `leah/workspace` | T11 y trabajo propio de Leah (manual l1-review-clock v1–v3, panel de resultados) | juntada con `main` el 26 oct (16:20, 16:55 y 18:10); v1–v3 en la carrera; sus partidas de origen `leah` importadas |
   | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
+  | `matteo/observed-growth-v2` | observed-growth-v2 de Matteo | juntada con `main` el 26 oct, 18:10; en la carrera (4 partidas); sus partidas de origen `matteo` importadas |
   | `alejandro/explicacion-repo` | explicación del repositorio (Codex) | juntada con `main` el 26 oct, 16:55 |
 - Al terminar una tarea:
   1. Las pruebas tienen que pasar (`uv run pytest -q`).
