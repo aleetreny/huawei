@@ -359,16 +359,17 @@ El "bot de principios" decide las respuestas con lo que predicen los rasgos de c
   3. Además, con el comentario "enfadado", estalla al empezar el mes en una de cada cuatro ocasiones.
 - **Consecuencia práctica.** Con el riesgo bajo, defender los principios es seguro (incluso pedir una investigación). Con riesgo acumulado, primero hay que desactivarlo (Defuse, pasar desapercibido) y evitar tanto las mentiras como exponerse a una revisión formal.
 
-## H21. Evitar los detonantes vale 4,6 puntos (b07, ~130 partidas por brazo)
+## H21. Evitar los detonantes reduce las crisis de confianza (b07, unas 270 partidas por brazo)
 
 El oráculo v2 tiene protección del mes previo a la evaluación, Skill priorizada desde L3 y modelo m06. Se compara con y sin penalizar los detonantes según el riesgo del momento (H20):
 
-| Oráculo | Nota | Termina | Asciende en la 1.ª evaluación | Crisis de confianza | Nivel final |
-|---|---:|---:|---:|---:|---:|
-| Sin detonantes | 64,5 ± 2,5 | 85 % | 78 % | 7 % | 5,29 |
-| **Con detonantes** | **69,1 ± 1,9** | **94 %** | 88 % | **2 %** | 5,61 |
+| Oráculo | Nota | Termina | Asciende en la 1.ª evaluación | Crisis de confianza | Despido | Nivel final |
+|---|---:|---:|---:|---:|---:|---:|
+| Sin detonantes | 66,1 ± 1,6 | 89 % | 80 % | 6 % | 3 % | 5,39 |
+| **Con detonantes** | **68,3 ± 1,4** | **93 %** | 87 % | **2 %** | 1 % | 5,51 |
 
-La regla "con riesgo acumulado, ni excusas ni exponerse a una revisión formal" se confirma en partidas completas.
+- La diferencia es de +2,2 puntos (p ≈ 0,04). Con 130 partidas por brazo parecía +4,6; con más partidas se ha moderado, pero sigue siendo real.
+- Lo más claro es que **las crisis de confianza bajan a un tercio**. La regla "con riesgo acumulado, ni excusas ni exponerse a una revisión formal" se confirma en partidas completas.
 
 ## H22. En un contexto neutro, Haiku elige bien con o sin manual (banco de decisiones, 150 preguntas)
 
@@ -385,6 +386,31 @@ Se dieron a Haiku 150 preguntas reales de dev, con el contexto "mitad de carrera
 - **En lo básico, el juicio de Haiku ya es bueno, y ningún manual lo cambia.** Coincide con la observación de la nube de que Haiku elige lo mismo con cualquier manual.
 - **Sus fallos tienen un patrón:** prefiere plantarse en público por principios (corregir al cliente en plena reunión, decir con firmeza que un comentario no es aceptable, impugnar una cláusula). El juego premia la forma discreta: reconducir sin montar una escena, aclarar por escrito después, compartir el razonamiento con el equipo.
 - **Consecuencia:** el margen de un manual no está en el juicio ético de cada respuesta, sino en **el contexto**: el mes previo a la evaluación, el riesgo acumulado, cuándo un indicador ya está en su techo, y la mecánica que el modelo no puede adivinar. Se mide en un segundo banco con contexto.
+
+## H23. Con contexto, el borrador sí cambia decisiones: menos detonantes con riesgo acumulado (banco 2, 150 preguntas)
+
+Cada pregunta llega con un contexto:
+- neutro;
+- mes previo a la evaluación, con Skill, Network y Output justo en el umbral (perder un punto cuesta el ascenso);
+- riesgo acumulado, con el comentario de RR. HH. preocupado.
+
+Se compara Haiku con el manual campeón (B) y con el borrador `bb-mechanics-v1` (C).
+
+| Contexto | Variante | Elige la mejor | Pierde un punto de S/N/O | Elige un detonante | Elige una arriesgada |
+|---|---|---:|---:|---:|---:|
+| Neutro (60) | azar | 45 % | 45 % | 0 % | 27 % |
+| | B | 77 % | 38 % | 0 % | 5 % |
+| | C | **82 %** | 37 % | 0 % | **3 %** |
+| Mes previo a la evaluación (50) | azar | 42 % | 50 % | 13 % | 32 % |
+| | B | 84 % | 18 % | 0 % | 2 % |
+| | C | 84 % | 18 % | 0 % | 2 % |
+| Riesgo acumulado (40) | azar | 43 % | 43 % | 43 % | 40 % |
+| | B | 80 % | 42 % | **10 %** | 2 % |
+| | C | **88 %** | 40 % | **5 %** | **0 %** |
+
+- **La regla de los detonantes funciona en Haiku:** con riesgo acumulado elige la mitad de detonantes y acierta más.
+- **La regla del mes previo no cambió nada frente al campeón.** En los casos en que se pierde un punto, la alternativa que lo conservaba costaba Salud o Dignidad, y Haiku protege la salud. La regla se ha reescrito para que el orden quede claro: conservar Skill, Network y Output va antes que la Salud o la comodidad, porque estas se recuperan y el punto perdido cuesta el ascenso. Se vuelve a medir (banco 3).
+- Las muestras son pequeñas (40–60 preguntas por contexto): son indicios, no pruebas.
 
 ## Traducción permitida a principios de Skill (borrador)
 
