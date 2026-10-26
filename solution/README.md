@@ -16,4 +16,4 @@ The Skills and design documents can be reviewed and manually exercised before th
 
 Manual tests with Codex interpreting these Skills are useful for finding unclear instructions. They are not official-model benchmarks and do not consume competition model API credits; they do use the current Codex session. Genuine end-to-end Skill testing requires JiuwenSwarm 0.2.4b3 in `agent` mode and the designated competition model. Do not compare Codex-assisted results as though only the Skills changed from a random or official-model baseline.
 
-See [the design](design/skills_design.md), [the decision report](design/decision_report.md) and [the evaluation plan](../docs/skill-evaluation-plan.md).
+See [the design](design/skills_design.md), [the decision report](design/decision_report.md), [the first complete manual pilot](../docs/manual-skill-pilot-v01.md) and [the evaluation plan](../docs/skill-evaluation-plan.md). The pilot completed 48 months with 69.4/100 at L5; it is one Codex-assisted exercise, not proof of the candidate's expected official-model performance.
