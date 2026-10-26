@@ -251,3 +251,26 @@ def test_digest_pairs_actions_with_the_observation_before_them(tmp_path):
     assert lines[0].startswith("  > [Half-year talk]")
     assert lines[1].startswith("- M6 [7/?/?/?/L2/?/?/?] A choice → [1] Be honest (declined: [2] Bluff)")
     assert "notes: keep trust" in lines[1] and "REJECTED: too costly" in lines[1]
+
+
+def test_weekly_pace_spreads_the_seven_day_window_to_the_last_cutoff():
+    from careerlab.scheduler import COMPETITION_END, weekly_allowance
+
+    resets = COMPETITION_END + 16 * 3600  # the window that opened 26 Oct 16:00 UTC
+    start = resets - 7 * 86400
+    assert weekly_allowance(start, resets) == pytest.approx(0.10)
+    assert weekly_allowance(COMPETITION_END, resets) == pytest.approx(0.90)
+    assert weekly_allowance(resets, resets) == pytest.approx(0.90)
+    assert 0.10 < weekly_allowance((start + COMPETITION_END) / 2, resets) < 0.90
+    assert weekly_allowance(start, resets, {"initial": 1.0, "final": 1.0}) == 1.0
+
+
+def test_latest_quota_reads_either_window(tmp_path):
+    from careerlab.scheduler import latest_quota
+
+    run = tmp_path / "job-1"
+    run.mkdir()
+    windows = {"five_hour": {"utilization": 0.4, "resetsAt": 10}, "seven_day": {"utilization": 0.2, "resetsAt": 20}}
+    (run / "stream-0.jsonl").write_text(json.dumps({"type": "rate_limit_event", "rate_limit_info": {"unifiedWindows": windows}}) + "\n")
+    assert latest_quota(tmp_path) == (0.4, 10.0)
+    assert latest_quota(tmp_path, window="seven_day") == (0.2, 20.0)
