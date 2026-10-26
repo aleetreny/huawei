@@ -8,3 +8,4 @@ __pycache__/
 .career_sim_runner/
 local-runs/
 .claude/worktrees/
+.careerlab-origin
