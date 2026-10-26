@@ -206,6 +206,15 @@ def cmd_import(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_digest(args: argparse.Namespace) -> int:
+    from careerlab.digest import digest
+
+    s = load_settings()
+    rows = digest(Registry(s.registry_path), args.model, Path(args.out))
+    print(json.dumps([{k: r[k] for k in ("job_id", "policy", "actor", "outcome", "Q", "grades")} for r in rows], indent=2))
+    return 0
+
+
 def cmd_export(args: argparse.Namespace) -> int:
     s = load_settings()
     print(Registry(s.registry_path).export_jsonl(s.lab_dir / "registry"))
@@ -258,6 +267,10 @@ def main(argv: list[str] | None = None) -> int:
     pk.add_argument("--video")
     pk.add_argument("--readme")
     pk.set_defaults(fn=cmd_package)
+    dg = sub.add_parser("digest", help="compact digests of one worker model's finished games, for trace-driven children")
+    dg.add_argument("--model", required=True)
+    dg.add_argument("--out", required=True)
+    dg.set_defaults(fn=cmd_digest)
     sub.add_parser("export").set_defaults(fn=cmd_export)
     im = sub.add_parser("import", help="load lab/registry/*.jsonl into this machine's registry (hand-off)")
     im.add_argument("--dir")
