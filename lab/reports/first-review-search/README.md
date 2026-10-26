@@ -44,6 +44,8 @@ There were **370 positive predictions, all promoted**, and 752 negative predicti
 
 This is an empirical separator, **not a recovered promotion formula, an exact causal threshold, or an ex ante guarantee**. It uses observations after settlement. Hidden state may jointly affect those observations and the decision; the clean subset excludes difficult transitions. Do not put these unpublished numbers into submission Skills. The audit is in [numeric-hypothesis-audit.json](numeric-hypothesis-audit.json).
 
+**Later-data correction:** the [scenario-pattern analysis](../scenario-patterns/README.md) expands the clean sample to 1,595 transitions and finds one counterexample to the previous exact separator: `known-closure-1/295` promoted with post-transition Dignity 1. The original 1,122-transition audit remains a frozen-sample result; its separator is no longer exact on the larger sample. Other automatic effects can change dignity in the same response. Use the observed pattern as descriptive evidence, not a hard promotion gate.
+
 ### 4. Review, promotion, risk settlement and death can share one action response
 
 Across the archived batches, **426 episodes promoted; 42 of these died before the end of the window**. In 53 promoted episodes, the review transition also reported an old-risk explosion. Some promoted careers immediately displayed Output 0 after the explosion. That is not proof that zero output satisfies promotion: the notice and subsequent penalties are bundled into one public response.
