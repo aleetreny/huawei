@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 18:12 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 19:04 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -19,21 +19,20 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
-**Clasificación actual** (Claude Haiku jugando; decisión de bloque del 26 oct a las 18:11 UTC, registro #142):
+**Clasificación actual** (Claude Haiku jugando; decisión de bloque del 26 oct a las 19:03 UTC, registro #150):
 
 | Manual | Nota estimada (partidas) | Estado |
 |---|---:|---|
-| F1 equilibrio | 54,6 (8) | líder, sin separarse de los siguientes |
-| f2 convertir tras evaluación | 53,9 (6) | sigue en juego |
-| f1 revisión de riesgo | 53,1 (5) | sigue en juego |
-| F7 tres skills | 51,5 (10) | sigue en juego (bajó porque sus hijas nuevas puntúan poco y la familia se estima junta) |
-| value-conversion (Matteo) | 51,2 (4) | sigue en juego |
-| f3 recombinada · f3 ligera · F3 | 50,8 · 50,7 · 49,1 | siguen en juego |
-| hijas nuevas de F7 (tendencia, entregas, empuje de ascenso) | 42–45 (4 cada una) | no mejoran a su madre |
-| l1-review-clock v1 (Leah) | 36,4 (4) | sigue en juego; v2 y v3 en cola |
-| F5 relaciones, F2 invertir pronto | 29,4 y 24,1 | dormidos (se pueden despertar) |
+| F1 equilibrio | 52,2 (12) | líder, sin separarse de los siguientes |
+| f3 recombinada · f3 ligera | 51,2 (7) · 51,1 (5) | siguen en juego |
+| f1 revisión de riesgo · F3 | 50,4 (7) · 50,1 (6) | siguen en juego |
+| hija destilada "defuse antes de la evaluación" | 50,0 (4) | sigue en juego |
+| f2 convertir tras evaluación | 48,4 (7) | sigue en juego |
+| F7 tres skills | 45,1 (16) | bajó con más partidas |
+| hijas de F7, l1-review-clock v1–v3, F8, value-conversion | 42–44 | siguen en juego, por debajo |
+| F5 relaciones, F2 invertir pronto | dormidos | se pueden despertar |
 
-La regla de estancamiento sigue activa: el líder ha bajado de 61,3 a 54,6. Ahora se generan hijas del líder (F1) centradas en la **fiabilidad** (evitar el despido del mes 24), siguiendo la conclusión de T13.
+Con más partidas, las notas de los mejores se juntan alrededor de 50–52 y ninguno se separa: ningún manual llega a P(mejor) ≥ 0,2. Encaja con el techo de Opus (T13): queda poco margen en la estrategia. Ahora se juegan las hijas de F1 centradas en la fiabilidad y el observed-growth-v3 de Matteo, que en su ordenador sacó 71,4.
 
 **Techo de Opus (T13), terminado:** 6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nota media Y = 54,2 (Q 56,2): 5 de 6 terminadas, una despedida en el mes 24. Según los umbrales escritos antes de jugar, estamos **"cerca del techo"**. Hay que dedicar el esfuerzo a la **fiabilidad** (evitar el despido del mes 24) y al **ahorro de tokens**, no a buscar más estrategia. Ni Opus mueve el nivel ni el dinero: pierde 16,2 puntos en nivel y 12,8 en dinero, igual que todos los demás. Hay incertidumbre: el intervalo va de 41,6 a 66,7 ([informe](lab/reports/opus-ceiling/README.md)).
 
@@ -79,7 +78,7 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
-| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: decisión #142 (líder F1 equilibrio, 54,6); tanda 4 en juego (38 partidas); hijas de F1 centradas en fiabilidad (núcleo, señal de riesgo, línea de estado) registradas y en cola | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
+| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: decisión #150 (líder F1, 52,2; nadie se separa); tanda 5 en juego (hijas de F1 y observed-growth-v3); bloque 6 repartido (18 repeticiones) | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
 | T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | hecha: reglas en `distilled-rules.md`; 2 hijas registradas y jugando (resultados provisionales en la sección 2) | `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
 | T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | hecha: F8 (`f8-secure-growth-v1`) registrada y jugando | `lab/policies-src/f8-secure-growth/` |
 | T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo | nube: o1 hueco de ascenso y o2 a tope jugando; o3 "padrinos" en espera (se parece a F4 + F5). Matteo: `value-conversion-v1` juntada con `main` y en cola (4 partidas); `observed-growth-v1` (síntesis tras leer F3/F8, no ciega) lista para registrar, lint OK; piloto local aislado con Haiku: 64,78, L5, 48 meses; 4 partidas Haiku más (origen `matteo`, fuera de las decisiones): Q media 40,85, 1 de 4 terminada (70,94, L5 en el mes 42), 3 despedidas en el mes 24; `observed-growth-v2` (rama `matteo/observed-growth-v2`, 4 partidas Haiku, mismo actor): Q media 43,18, 2 de 4 terminadas, 0 despidos y 2 crisis de confianza (casi no usa Defuse); `observed-growth-v3` (rama `matteo/observed-growth-v3`, limpieza de riesgo restaurada, 4 partidas Haiku, mismo actor): Q media 71,43, 4 de 4 terminadas en L5, 0 despidos y 0 crisis; pendiente: registrarla y evaluarla en la nube con el actor de la carrera | `lab/policies-src/o*-*/`, `lab/policies-src/matteo-value-conversion/`, `lab/policies-src/matteo-feedback-growth/`, informes `lab/reports/matteo-t4-value-conversion.md`, `lab/reports/matteo-observed-growth.md`, `lab/reports/matteo-observed-growth-haiku-4.md`, `lab/reports/matteo-observed-growth-v2.md` y `lab/reports/matteo-observed-growth-v3.md`; datos en `lab/registry-origins/matteo/` |
@@ -143,6 +142,8 @@ Línea de investigación solicitada por Alejandro: **Codex — `alejandro/invest
   | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
   | `matteo/observed-growth-v3` | observed-growth-v3 de Matteo | juntada con `main` el 26 oct, 18:15; en la carrera (4 partidas); su piloto en casa: 4 de 4 terminadas, Q media 71,4 (otra celda; se comprueba en la carrera) |
   | `alejandro/investigacion-decisiones` | línea de investigación de decisiones (Codex), sólo analiza exports | juntada con `main` el 26 oct, 18:32 (PR #3) |
+  | `matteo/observed-growth-v4` y `-v5` | iteraciones de Matteo | juntadas con `main` el 26 oct, 19:06 como fuente. v4 no se juega (su propio piloto la dejó por debajo de v3); v5 en espera del resultado de v3 en la carrera |
+  | `alejandro/laboratorio-adaptativo` | laboratorio adaptativo y presupuesto (Alejandro) | **sin juntar**: está marcada WIP y cambia módulos del núcleo (`decisions.py`, `cli.py`); se junta cuando esté terminada |
   | `matteo/observed-growth-v2` | observed-growth-v2 de Matteo | juntada con `main` el 26 oct, 17:57; en la carrera (4 partidas); sus partidas de origen `matteo` importadas |
   | `alejandro/explicacion-repo` | explicación del repositorio (Codex) | juntada con `main` el 26 oct, 16:55 |
 - Al terminar una tarea:
