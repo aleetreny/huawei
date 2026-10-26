@@ -8,7 +8,7 @@ A tested, resumable laboratory that generates, evaluates and archives Career Sur
 
 ## Next Step
 
-Team-facing state, pending tasks (T1–T12) and working rules now live in `ESTADO.md` (Spanish). This plan keeps the orchestrator's technical detail. Next: the organiser role merges `cloud-lab-run` daily; target pilot when the key arrives; R1 package for 27 Oct 24:00 UK.
+Team-facing state, pending tasks (T1–T13) and working rules live in `ESTADO.md` (Spanish). This plan keeps the orchestrator's technical detail. Since 26 Oct 16:00 UTC the cloud race session is also the organiser: it merges `cloud-lab-run` and finished branches into `main` after each batch (tests first, never a forced push). Next: the batch-1 block decision and stall rule (about 17:00 UTC), the T13 ceiling against its pre-stated thresholds, then the R1 documents and package from early 27 Oct UK (cutoff 27 Oct 24:00 UK); target pilot when the key arrives.
 
 ## Current Phase
 

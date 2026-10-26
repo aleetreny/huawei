@@ -10,13 +10,16 @@ from careerlab import stats
 from careerlab.store import Registry
 
 
-def cell_report(reg: Registry, purpose: str | None = None) -> dict[str, Any]:
+def cell_report(reg: Registry, purpose: str | None = None, all_origins: bool = False) -> dict[str, Any]:
     """Y per episode, pooled posteriors per actor/epoch, anytime-valid intervals, survival and alarms."""
     query = ("SELECT e.*, p.name, p.family, a.kind AS actor_kind, json_extract(a.config,'$.name') AS actor_name "
-             "FROM evaluations e JOIN policies p USING(policy_id) JOIN actors a USING(actor_id)")
+             "FROM evaluations e JOIN policies p USING(policy_id) JOIN actors a USING(actor_id) JOIN jobs j USING(job_id) WHERE 1=1")
     args: list[Any] = []
+    if not all_origins:
+        query += " AND j.origin=?"
+        args.append(reg.origin)
     if purpose:
-        query += " WHERE e.purpose=?"
+        query += " AND e.purpose=?"
         args.append(purpose)
     rows = reg.db.execute(query + " ORDER BY e.launch_index", args).fetchall()
     groups: dict[tuple[str, str], dict[str, list[Any]]] = defaultdict(lambda: defaultdict(list))
