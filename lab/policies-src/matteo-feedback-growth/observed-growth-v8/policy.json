@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v8",
+  "parents": [
+    "observed-growth-v7"
+  ],
+  "idea_origin": "v7 analysis (lab/reports/matteo-observed-growth-v7.md): in the two months before a review, 98 of 377 story choices cost a point of Network or Output; options that refuse, decline or block lost 17 times and gained once, collaborative ones lost 7 and gained 23. The actor filled 'Review near' correctly but resolved the guard-versus-integrity tension towards rigid options.",
+  "operator": "targeted revision of v7 (story choices only)",
+  "hypothesis": "Telling the actor that integrity never requires bluntness, and that among honest options it should pick the collaborative one, plus an immediate repair rule and a ban on slowing its own delivery before reviews, will cut pre-review losses of Network and Output and raise the share at the ceiling when reviews apply, without adding trust crises.",
+  "change": "Story-choice section of v7 only: new 'Honest and collaborative' rule (help fix, raise privately, pair, refuse only the improper part; flat refusal only if no collaborative option is honest); Review-near adds avoiding extra process or handing work back; 'Repair at once' after a pre-review loss; never trade Health or Dignity heavily for appearances. Status line, allocation and everything else unchanged.",
+  "predicted_behaviour": "Fewer pre-review story choices that refuse, block or decline; fewer Network or Output losses in the two months before a review than v7 (98/377); more careers at the ceiling when reviews apply; completion at least v7's (7/9) with no extra trust crises.",
+  "refutation": "Compare 8 Haiku episodes with v7 (9) under the same actor and harness. Reject if pre-review loss rate does not fall, if completion falls, or if trust crises rise. If notes still cite integrity for flat refusals when a collaborative honest option exists, the rule was not executed.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v8, built on matteo/observed-growth-v7. General wording only; no event titles or answers."
+}
