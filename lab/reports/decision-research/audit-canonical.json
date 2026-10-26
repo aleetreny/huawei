@@ -1,0 +1,1838 @@
+{
+  "actor_environment_summaries": [
+    {
+      "actor_id": "08e9167a965ed82c",
+      "autocompact": null,
+      "completed": 53,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 44.451,
+      "model": "haiku",
+      "n": 105,
+      "policies": 25
+    },
+    {
+      "actor_id": "254e47f505b5a6e9",
+      "autocompact": "100k",
+      "completed": 3,
+      "effort": "max",
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 52.32,
+      "model": "opus",
+      "n": 4,
+      "policies": 1
+    },
+    {
+      "actor_id": "2f9fbf1e5c4324e7",
+      "autocompact": null,
+      "completed": 10,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 39.386,
+      "model": "sonnet",
+      "n": 26,
+      "policies": 10
+    },
+    {
+      "actor_id": "486fbe0a67ac052a",
+      "autocompact": null,
+      "completed": 2,
+      "effort": "low",
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 39.163,
+      "model": "haiku",
+      "n": 6,
+      "policies": 3
+    },
+    {
+      "actor_id": "55d2ac9e65065279",
+      "autocompact": null,
+      "completed": 0,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "scripted",
+      "mean_Q_descriptive": 12.21,
+      "model": null,
+      "n": 150,
+      "policies": 5
+    },
+    {
+      "actor_id": "614d6e1a4655bc2d",
+      "autocompact": null,
+      "completed": 1,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 60.89,
+      "model": "haiku",
+      "n": 1,
+      "policies": 1
+    },
+    {
+      "actor_id": "a104028b5c42f972",
+      "autocompact": null,
+      "completed": 2,
+      "effort": "low",
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 42.462,
+      "model": "opus",
+      "n": 6,
+      "policies": 3
+    },
+    {
+      "actor_id": "d922927e98f3bc16",
+      "autocompact": null,
+      "completed": 2,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 37.252,
+      "model": "opus",
+      "n": 6,
+      "policies": 3
+    },
+    {
+      "actor_id": "eaaedd84f8f22e6d",
+      "autocompact": "100k",
+      "completed": 7,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 48.95,
+      "model": "opus",
+      "n": 12,
+      "policies": 6
+    }
+  ],
+  "evaluations": 322,
+  "input_hashes": {
+    "actors": "2f212abf724349e8dd5e5cb6c6bf1b2985d03190118d4eb2cac4f831b76c0bda",
+    "environments": "af475967da858f3af401e166f831b8266424076b7278db826f52707e86d71f70",
+    "evaluations": "cc1c6e146a7726279c624980eb2062ebf24c91efb488c2a14bc7c674b1135fc8",
+    "jobs": "e2da416dce38d804b741ca61bdfa5780fd66587dcb7eec6f9ac1124b8ba2e820",
+    "policies": "c536d9b3fda778c4c62aec9774f5fe67d597acc7173d91b313753c906630bf4c"
+  },
+  "jobs_without_evaluation_by_status": {
+    "interrupted": 22,
+    "leased": 16,
+    "queued": 15,
+    "running": 8
+  },
+  "limitations": [
+    "Terminal rows are retrospective discovery only, not prefix-complete selection or confirmation.",
+    "Trace availability is machine-specific; never restrict causal comparisons to available traces.",
+    "A registered hash authenticates the primary file only; continuation hashes are an audit snapshot.",
+    "Observation counts do not establish complete state/action alignment, compliance, or randomisation.",
+    "No historical assignment probabilities are inferred; cells with unknown epochs cannot support causal pooling."
+  ],
+  "missing_job_metadata": {
+    "analysis_role": 383,
+    "assignment_probability": 383,
+    "block_id": 383,
+    "epoch": 383
+  },
+  "outcomes": {
+    "completed": 80,
+    "eliminated": 236,
+    "interrupted": 6
+  },
+  "scope": "Historical discovery audit; no causal estimates or selection decisions",
+  "terminal": 316,
+  "trace_status_counts_non_scripted_terminal": {
+    "missing": 67,
+    "primary_hash_verified": 99
+  },
+  "traces": {
+    "cali-19618e77-08e916-00000-a1": {
+      "action_attempts": 204,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "9830dbd6f11e00dc43d9aa296f3a1616aa410c5e4728d13339a62923c2281adc"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 205,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-08e916-00001-a1": {
+      "action_attempts": 203,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "cb51019d70784eef2beba7e747efa11bab324241a546bd7b6cc230b672f0cc43"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 204,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-2f9fbf-00000-a1": {
+      "action_attempts": 130,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "2a3db67d6e116a9f5d8108f4ca18abaa62ba3b25fb0f202d957d41250ad9de9e"
+        }
+      ],
+      "max_month": 32,
+      "min_month": 1,
+      "observations": 108,
+      "observed_months": 32,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-2f9fbf-00001-a2": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4bdc64de376815c09f0369c662025b44e0081aa9f93c4e21f54732b53fc195f9"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 166,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-486fbe-00000-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4846a317b499c11899503dea6c88c68b554a23d2a2cdf6e230e4137bd852e86f"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-486fbe-00001-a1": {
+      "action_attempts": 203,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "02e75757739b672d6579fb1e0199b8c885586c72588f278c76c3e640c5886d15"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 180,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-a10402-00000-a1": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "288a711588169c02af4b5944f37322ba00b1b398b00d38217bc1a881890ef207"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-a10402-00001-a1": {
+      "action_attempts": 104,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "b11d9f8d10f3381489401b2d9d95362818a3e96de1265a2de1e219abbde5489a"
+        }
+      ],
+      "max_month": 26,
+      "min_month": 1,
+      "observations": 94,
+      "observed_months": 26,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-d92292-00000-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "b8f71fae647a7d35732530a576684d7b616827932022a7b4383809ac2ec30d84"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-d92292-00001-a2": {
+      "status": "missing"
+    },
+    "cali-19618e77-eaaedd-00000-a1": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "fa0f84175a31530f8c94eaf72f36215a8170eb99dfc1be1bf1534558618fa040"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-19618e77-eaaedd-00001-a1": {
+      "action_attempts": 199,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "a949ca23bb3815612bed434c8c80fdb08bc937f0378f120bbdb3445b24928703"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-08e916-00000-a1": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c83d8c6a0dee06a87c53ee10b19f1f6eb35342cbbae5b35b9bb2efec60427b79"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 97,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-08e916-00001-a1": {
+      "action_attempts": 199,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "40e6bbc68af507ef57b4743e6af1905c5430233efe7c8f9d05e1223da168a725"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-2f9fbf-00000-a1": {
+      "action_attempts": 157,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "cb35335eef6c6388b0714c1cda9dde90188ddb0b469c6c3d34579d8baffae73b"
+        }
+      ],
+      "max_month": 39,
+      "min_month": 1,
+      "observations": 135,
+      "observed_months": 39,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-2f9fbf-00001-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "74439d0a24efc80874063125185842740d5667b558ac66f05a2ec2ad9b6b3807"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 83,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-486fbe-00000-a1": {
+      "action_attempts": 90,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "53e91e398d71fe7230518aab7c55a675e61bf275f9d862e8cf29594668b9f357"
+        }
+      ],
+      "max_month": 23,
+      "min_month": 1,
+      "observations": 91,
+      "observed_months": 23,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-486fbe-00001-a1": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4fdf32848690dac99cd401d1ed35e8a05bae554fbd22aa36d017ae9f6e961929"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 97,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-a10402-00000-a1": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "a12e6ffed7c4d99904ab92c7e1962a39f601a83954448e0b95f1b14950efb391"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 173,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-a10402-00001-a1": {
+      "action_attempts": 78,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4edc4e0141927be58922948fb31085ee4a0e3879365f6e8e216195e626303781"
+        }
+      ],
+      "max_month": 20,
+      "min_month": 1,
+      "observations": 71,
+      "observed_months": 20,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-d92292-00000-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "d2e422fbf6bed548114cd4ee173991651f43a5d02ab2e062ffc0b422f427d728"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-d92292-00001-a2": {
+      "status": "missing"
+    },
+    "cali-3207e8f5-eaaedd-00000-a1": {
+      "action_attempts": 97,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "68c20c000cb972fb300d9380a66cfce190c3b252427ec1b866b019e130c6384e"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-3207e8f5-eaaedd-00001-a1": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3654f8fe4a3d989c32dda9f32dacfaf2b13e9119de0671328c8b670e4bb6588b"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 181,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-954bf378-eaaedd-00000-a1": {
+      "status": "missing"
+    },
+    "cali-954bf378-eaaedd-00001-a1": {
+      "status": "missing"
+    },
+    "cali-cc098e54-eaaedd-00000-a1": {
+      "status": "missing"
+    },
+    "cali-cc098e54-eaaedd-00001-a1": {
+      "status": "missing"
+    },
+    "cali-dd49c06c-eaaedd-00000-a1": {
+      "status": "missing"
+    },
+    "cali-dd49c06c-eaaedd-00001-a1": {
+      "status": "missing"
+    },
+    "cali-ed78f44c-08e916-00000-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "89f67106436c32cc2c753624d43ac1abd13853dcfb1979e2eb1be06339031aa9"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 196,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-08e916-00001-a1": {
+      "action_attempts": 88,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "75ac824a97f16038aff02d74c94acfb24dbec174ad7609160309f18a04099856"
+        }
+      ],
+      "max_month": 22,
+      "min_month": 1,
+      "observations": 89,
+      "observed_months": 22,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-2f9fbf-00000-a1": {
+      "action_attempts": 93,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "f8a79d7687db01fb648b4d2f3eeed2b0c50d8aef70d3ee9eee6e27b838e57051"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 81,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-2f9fbf-00001-a2": {
+      "action_attempts": 83,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "7f0d27752fd1a533759f4655bf6aef24aeebb83b12a703bd74d6838b3facba29"
+        }
+      ],
+      "max_month": 21,
+      "min_month": 1,
+      "observations": 74,
+      "observed_months": 21,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-486fbe-00000-a1": {
+      "action_attempts": 93,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "f13a717fd3e92313212a4f83e3c389a5477181410a522b12791aaaad54c8b7b5"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-486fbe-00001-a1": {
+      "action_attempts": 140,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "353c10fad2e08a4ce9f480cc3744c7661b2654071c998f7472a916383440ae70"
+        }
+      ],
+      "max_month": 35,
+      "min_month": 1,
+      "observations": 127,
+      "observed_months": 35,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-a10402-00000-a1": {
+      "action_attempts": 198,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "1c1fd40c999ca85c7650da6f0b1760ba2db90059ff053f807f4814a4eb44e2c4"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 165,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-a10402-00001-a2": {
+      "status": "missing"
+    },
+    "cali-ed78f44c-d92292-00000-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c5dcc0e188232d6958af60567f02e3976c1c56234ad86ded0b34ed28ab1c14e5"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 83,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-d92292-00001-a2": {
+      "status": "missing"
+    },
+    "cali-ed78f44c-eaaedd-00000-a1": {
+      "action_attempts": 203,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "26cb6c75a68d05d60ea63be43454b72045b2774e7b60ea4f79ceb81a09fdd533"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 177,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "cali-ed78f44c-eaaedd-00001-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "36f1a6b3233594adc46e675eb33f26c4c1f859355ff28d3301a6c1368317650d"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 172,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "infr-ed78f44c-08e916-00000-a1": {
+      "action_attempts": 197,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "0b44bdfa31159436c71f20be3ab007d4bd03705eca5d7ae74b83ddef8e83c9fb"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "leah-scre-f1830961-614d6e-00000-a2": {
+      "status": "missing"
+    },
+    "pilo-47cbeec8-254e47-00000-a1": {
+      "status": "missing"
+    },
+    "pilo-47cbeec8-254e47-00001-a1": {
+      "status": "missing"
+    },
+    "pilo-47cbeec8-254e47-00002-a1": {
+      "status": "missing"
+    },
+    "pilo-47cbeec8-254e47-00003-a1": {
+      "status": "missing"
+    },
+    "scre-006571b3-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-006571b3-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-006571b3-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-006571b3-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-006571b3-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-0b226c3c-08e916-00000-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "9fb30408761ba254d9d6ee40e621fd4be1ad8d4b07d6925ba79e166c9eeed1d1"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-0b226c3c-08e916-00001-a1": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "b9aa683b914b0f12949138c666b9e660a608475160efe1674b1506b1062eacad"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 87,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-0b226c3c-08e916-00002-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "f890c6fc5033d8cd91925096f698c20f0c2db5447833558344c0bc5b7a10069e"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 177,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-0b226c3c-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-19618e77-08e916-00000-a2": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "1c13997511e39cabb593b14abad9c390924c1e4b1de7428d9aaa6bd6818cf899"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-19618e77-08e916-00001-a1": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "e0fba4bde4077c5e2bb00e590cbd25c6eec02c10b47760a8cfee1fefcb5cd142"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-19618e77-2f9fbf-00000-a2": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "e2848ced16359b89c09760e27f8578edb55661f2811c70d2fb850f23440ea48f"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 165,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-19618e77-2f9fbf-00001-a2": {
+      "action_attempts": 184,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "2464e3f45ff5b7ad928e296f00432461497a39e67c819b0f97e383e879e23bc5"
+        }
+      ],
+      "max_month": 45,
+      "min_month": 1,
+      "observations": 156,
+      "observed_months": 45,
+      "status": "primary_hash_verified"
+    },
+    "scre-3207e8f5-08e916-00000-a2": {
+      "action_attempts": 105,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3e27bafb794999b4f9e2c0dc434f2a9f248ab0d87587aa0377ea7706e2e45be8"
+        }
+      ],
+      "max_month": 26,
+      "min_month": 1,
+      "observations": 97,
+      "observed_months": 26,
+      "status": "primary_hash_verified"
+    },
+    "scre-3207e8f5-08e916-00001-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "320c6a8b2664130b32f0e633be3e11ab3644f709e3d4c99a6b5cfa517abf2170"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 96,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-3207e8f5-2f9fbf-00000-a2": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "a8e7e5b8134813f2ece2334dcdd08ab5bba5763b556a314719bd765b64f9feb6"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-3207e8f5-2f9fbf-00001-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "8f256b059c223337ac2d282ddb37ed679fb8cd413ed03afe3a69be03d78a8bb3"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-3cf417f5-08e916-00000-a1": {
+      "action_attempts": 133,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "1578249147b8b28041f590ff728ddd8853e540af11cfd837482a8ecdcd360695"
+        }
+      ],
+      "max_month": 33,
+      "min_month": 1,
+      "observations": 120,
+      "observed_months": 33,
+      "status": "primary_hash_verified"
+    },
+    "scre-3cf417f5-08e916-00001-a1": {
+      "action_attempts": 173,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "ce2be6e584c21156db260e3ccf021efff55d560017c457d3b27f31986d86d73b"
+        }
+      ],
+      "max_month": 42,
+      "min_month": 1,
+      "observations": 174,
+      "observed_months": 42,
+      "status": "primary_hash_verified"
+    },
+    "scre-3cf417f5-08e916-00002-a1": {
+      "action_attempts": 190,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "8327fb197c4598026a138e0e1d281adaa894c40bd7365831fc61f4c57fd2dc18"
+        }
+      ],
+      "max_month": 47,
+      "min_month": 1,
+      "observations": 191,
+      "observed_months": 47,
+      "status": "primary_hash_verified"
+    },
+    "scre-5d7996b1-08e916-00000-a2": {
+      "action_attempts": 93,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "36954f7f7939678847bb8d5429c5cb0c282f7ed1fc99615dc41cca4d34a19184"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-5d7996b1-08e916-00001-a1": {
+      "action_attempts": 187,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "7aa64e03e9cc0eb0aa13b420bd83d1e647c7a9ea2c557245b1db5fb8066f6789"
+        }
+      ],
+      "max_month": 47,
+      "min_month": 1,
+      "observations": 170,
+      "observed_months": 47,
+      "status": "primary_hash_verified"
+    },
+    "scre-5d7996b1-08e916-00002-a1": {
+      "action_attempts": 69,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "69e20ebd53a78f0428b77af6438d73c705c1a79556efe118b2f916fe6045d784"
+        }
+      ],
+      "max_month": 18,
+      "min_month": 1,
+      "observations": 64,
+      "observed_months": 18,
+      "status": "primary_hash_verified"
+    },
+    "scre-5d7996b1-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-5d7996b1-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-5d7996b1-2f9fbf-00000-a2": {
+      "action_attempts": 92,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "d859118e82caf1fa7adcd5cdaa8080458b90271de42d21f118a8bd74bdb41718"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 82,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-5d7996b1-2f9fbf-00001-a1": {
+      "action_attempts": 121,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "f785fe667153b1f978652d05564e75ec39a99c457ed8893b0d954687c06a008d"
+        }
+      ],
+      "max_month": 30,
+      "min_month": 1,
+      "observations": 103,
+      "observed_months": 30,
+      "status": "primary_hash_verified"
+    },
+    "scre-5f8c9648-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-5f8c9648-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-5f8c9648-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-5f8c9648-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-663c8cd2-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-663c8cd2-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-663c8cd2-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-663c8cd2-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-7107952f-08e916-00000-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "0ad792af9d3ad89adfe319b191fac2dcfcf3c50b264ac175debbea4f3d288630"
+        }
+      ],
+      "max_month": 48,
+      "min_month": 1,
+      "observations": 196,
+      "observed_months": 48,
+      "status": "primary_hash_verified"
+    },
+    "scre-7107952f-08e916-00001-a1": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "a33b21a3d5e91a6d545859447c2f6cd598d5f5a4c3499c52425b2b5a027bb486"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-7107952f-08e916-00002-a1": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4c988c349c862b33559636b8d47b6bb8d14c2736bca3ad3ec156c74609b5e092"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-7107952f-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-7107952f-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-7107952f-2f9fbf-00000-a2": {
+      "action_attempts": 198,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "b3de24ebdfc33bf7b3e2f7ed70b8a5df7ec8ef81086b23b1715c549c6979339e"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 171,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-7107952f-2f9fbf-00001-a1": {
+      "action_attempts": 199,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "5d95be07a3fa9fcabce60c105791c5756fe47a7aff718ffd582724da85516347"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 164,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-845f5269-08e916-00000-a1": {
+      "action_attempts": 98,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3b3e4ca8735d8ddcb20acc97c8466be6255ae7808a901c92023dfaa2b52ce9a7"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-845f5269-08e916-00001-a1": {
+      "action_attempts": 158,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "39d684dec2bd9fc6268f3afe90e801348c3cb5a67dac0b448324e1ad20ca0f81"
+        }
+      ],
+      "max_month": 39,
+      "min_month": 1,
+      "observations": 141,
+      "observed_months": 39,
+      "status": "primary_hash_verified"
+    },
+    "scre-845f5269-08e916-00002-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3259afe6996eb0336373817aa7a8fd2e03bf2e4131f8b4f6fdc6c5bb4df0aa8e"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 87,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-845f5269-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-845f5269-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-845f5269-2f9fbf-00000-a1": {
+      "action_attempts": 71,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "39eb5830f6fdbccc25e3c699a6281e8f6c3e71d4ce441b0404832b8acad67336"
+        }
+      ],
+      "max_month": 18,
+      "min_month": 1,
+      "observations": 59,
+      "observed_months": 18,
+      "status": "primary_hash_verified"
+    },
+    "scre-845f5269-2f9fbf-00001-a1": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3a0033e09fd6153c0328abaae885197d3a314be4ceaa02edbc4bc8de8d0b66bc"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-8f3b218e-08e916-00000-a1": {
+      "action_attempts": 93,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "83b01b8aa88ecc06c63873504876571836a573f60c0f0f0d583018386a454d74"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-8f3b218e-08e916-00001-a1": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "ee759f59598eb6bec5580afe51e0b794052607b9107e64d888f557f0c07933ee"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 197,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-8f3b218e-08e916-00002-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c20ad3c972cb8fce81c3be52f2e218105e760e9c882451c2c0d00facd641253f"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-91b30e80-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-91b30e80-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-91b30e80-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-91b30e80-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-954bf378-08e916-00000-a1": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "1fd7b67cf2905392da82eb93289ac38bbe84c1aa7000459a17ab1aac051fb2be"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-954bf378-08e916-00001-a1": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "cef8500c23c8a03fa1ebf6e736caba1f47991c178e9750ceb73af9e0a42f4f1b"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-954bf378-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-954bf378-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-b907b3d9-08e916-00000-a1": {
+      "action_attempts": 93,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "4390e8188f920d7690152fd702c91eec4755fd7e42eb12ea2b0054cccbbb8f88"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 94,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-b907b3d9-08e916-00001-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "435360a84aa96d9262d0bf279aa521f1dbb93a7a5e12e713777054c67214adc6"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-b907b3d9-08e916-00002-a1": {
+      "action_attempts": 195,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "02a96d20ed7f512412942e4aeae10fed52fa5938be0e0c70df980f9c0173bffb"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-c03a1bf3-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-c03a1bf3-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-c03a1bf3-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-c03a1bf3-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-cbc7402d-08e916-00000-a1": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "0351cfcc94661ec4f5d7d0bf6d4b7eb96ed209ca4c37bc4748d508a012867352"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 203,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-cbc7402d-08e916-00001-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "0d06c1feaad67d23936c6f4048b77fa7159f17f5cb04b9d180e805dee24f8b6d"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-cbc7402d-08e916-00002-a1": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "fd7d76d84d5d291a6ba7f29906f6ccf0255dbbfb605be0af8127622c86ba962e"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-cbc7402d-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-cbc7402d-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-cbc7402d-2f9fbf-00000-a1": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "67bc2de4e2cd2f582240bb189889f1afbb5b8568d090bfdd0a5b9d0a44853e62"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-cbc7402d-2f9fbf-00001-a1": {
+      "action_attempts": 95,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c607049ba3f4f68f71b48f11f0127a028112bdd2f5c615e4b71a08b882424fe5"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 84,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-cc098e54-08e916-00000-a1": {
+      "action_attempts": 194,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "bd2c12259d17fd83c1c240a30d8183f6d7e598e41a06e828027fe8e156fe92ce"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-cc098e54-08e916-00001-a1": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "59e98af4c1647339c473ce938443d8d61d417dcdbe35580546fc0f0fba0f9332"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 179,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-cc098e54-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-cc098e54-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-d3b71fe0-08e916-00000-a1": {
+      "action_attempts": 197,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "f03b7cfd0d0e86e1f2ffdec98e1651482cb5f01a6cdae9c13525f4ff03c0cf1f"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 177,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-d3b71fe0-08e916-00001-a1": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "0e500766a0c16ee1e7aa9f87ba1a3529e57a1836fc94ab7e06851af426afa815"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 85,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-d3b71fe0-08e916-00002-a1": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "3b5e13a1330f6d4f46bc33c3c15c70855f8f69eb4aa816dbf0b583ddc96cdb3c"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd49c06c-08e916-00000-a2": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "00eea382c1ed74542ea8c24a03fdae3ea49c31202c4dadcab359ce9a7368ca70"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 180,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd49c06c-08e916-00001-a1": {
+      "action_attempts": 198,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "08118fdca1c214ba188f3b5b8552480108b6b8aba3aa1867a49410a8c89a509e"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 177,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd49c06c-08e916-00002-a1": {
+      "action_attempts": 194,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "d137dc81bdf5ce71fba3e9d3d9a3c1c772bfd1f257ab5ef6a380147a88366f2e"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd49c06c-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-dd49c06c-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-dd49c06c-2f9fbf-00000-a2": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "6fb667c7ad7e9dea45a215a5b3252afaf18f55972de3bec7820fd8e4fdb19881"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 83,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd49c06c-2f9fbf-00001-a1": {
+      "action_attempts": 201,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c413f291c4e71e33d7ec7d35e5f4245e5c9d7ef69da745d51529880f9bd08c73"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 169,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd82cc15-08e916-00000-a1": {
+      "action_attempts": 119,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "6e3a725362db76a44c148dece98cf8c5239c1088346dc2c43a7e1775eaf0acda"
+        }
+      ],
+      "max_month": 30,
+      "min_month": 1,
+      "observations": 120,
+      "observed_months": 30,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd82cc15-08e916-00001-a1": {
+      "action_attempts": 29,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "47f5e7e7f63d1fb50774cf478472ba6b0186f18f787d70b56fd978833cae16ca"
+        }
+      ],
+      "max_month": 8,
+      "min_month": 1,
+      "observations": 27,
+      "observed_months": 8,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd82cc15-08e916-00002-a1": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "e46a834acaec27ba57a7d1aa35f94ca2e4ab752676dca8905e717cb15917c41e"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 177,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd82cc15-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-dd82cc15-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-dd82cc15-2f9fbf-00000-a2": {
+      "action_attempts": 145,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "40876087c145f0a0653ba944bfad821f925d4567aeb235aa7976645a77ac98df"
+        }
+      ],
+      "max_month": 35,
+      "min_month": 1,
+      "observations": 120,
+      "observed_months": 35,
+      "status": "primary_hash_verified"
+    },
+    "scre-dd82cc15-2f9fbf-00001-a1": {
+      "action_attempts": 202,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "499bf1f4854a9f96f433a41cae44948ca1cb8d6adabeadc7d26aec6621ed5f1c"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 165,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-e373478a-08e916-00000-a1": {
+      "action_attempts": 199,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "bf14065824c5641ecd7285d6168c33949ea1aef9a5e3dbbe291c187bae332cf8"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 200,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-e373478a-08e916-00001-a1": {
+      "action_attempts": 203,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "2961955b15ab9f304129101e48fa6d413eca79e9001959f29fe724b3fb75a159"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 204,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-e373478a-08e916-00002-a1": {
+      "action_attempts": 200,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "76c8b5c9761e796a2a5a57c1164fae6b95eb12a3629c5f8f42252bfb833382c5"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 178,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-e373478a-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-e373478a-08e916-00004-a1": {
+      "status": "missing"
+    },
+    "scre-e373478a-2f9fbf-00000-a2": {
+      "action_attempts": 96,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "180f9d479c23c457ad377af5c55529b6db834130a84af04005566be9516b302b"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 86,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-e373478a-2f9fbf-00001-a1": {
+      "action_attempts": 199,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "04b99a3229b709cc1c7513f9f4fa873adcb3833f7777f003e16b6c13d88476a7"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 172,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-ed78f44c-08e916-00000-a2": {
+      "action_attempts": 94,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "9b1937025363a956328e792525c6881874f8d049a232efb26594e2b709e18bd1"
+        }
+      ],
+      "max_month": 24,
+      "min_month": 1,
+      "observations": 95,
+      "observed_months": 24,
+      "status": "primary_hash_verified"
+    },
+    "scre-ed78f44c-08e916-00001-a1": {
+      "action_attempts": 92,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "5fe945159246bb4430d9127a27f5414d5cba3eb32312a412160efe8475c4a4f5"
+        }
+      ],
+      "max_month": 23,
+      "min_month": 1,
+      "observations": 93,
+      "observed_months": 23,
+      "status": "primary_hash_verified"
+    },
+    "scre-ed78f44c-2f9fbf-00000-a1": {
+      "action_attempts": 69,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "c3c6581f4a37dcc48703d236396b0d9cc1b1d07af8c2543c081b41c9a76ff48a"
+        }
+      ],
+      "max_month": 18,
+      "min_month": 1,
+      "observations": 61,
+      "observed_months": 18,
+      "status": "primary_hash_verified"
+    },
+    "scre-ed78f44c-2f9fbf-00001-a2": {
+      "action_attempts": 196,
+      "files": [
+        {
+          "name": "stream-0.jsonl",
+          "registry_hash_covers_file": true,
+          "sha256": "47bad4ecfb4439e9446793957888f433be0e950c2f53653333316ede7f964f4f"
+        }
+      ],
+      "max_month": 49,
+      "min_month": 1,
+      "observations": 165,
+      "observed_months": 49,
+      "status": "primary_hash_verified"
+    },
+    "scre-f03981da-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-f03981da-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-f03981da-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-f03981da-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-f1830961-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-f1830961-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-f1830961-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-f1830961-08e916-00003-a1": {
+      "status": "missing"
+    },
+    "scre-f41d6382-08e916-00000-a1": {
+      "status": "missing"
+    },
+    "scre-f41d6382-08e916-00001-a1": {
+      "status": "missing"
+    },
+    "scre-f41d6382-08e916-00002-a1": {
+      "status": "missing"
+    },
+    "scre-f41d6382-08e916-00003-a1": {
+      "status": "missing"
+    }
+  }
+}
