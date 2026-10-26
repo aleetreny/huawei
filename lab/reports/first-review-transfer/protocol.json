@@ -1,0 +1,87 @@
+{
+  "frozen_at": "2026-10-26T20:33:05.973889+00:00",
+  "origin": "matteotransfer",
+  "horizon_months": 6,
+  "purpose": "exploratory mechanism transfer; not prereg-v1 race selection or full-career scoring",
+  "n_per_arm": 4,
+  "pair_schedule": [
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "baseline",
+      "candidate"
+    ],
+    [
+      "baseline",
+      "candidate"
+    ]
+  ],
+  "schedule_seed": 310026,
+  "pairing": "time-blocked independent sessions, not matched simulator seeds",
+  "primary": "promoted at first review AND alive at first observation of month 7",
+  "secondary": [
+    "promotion",
+    "alive_through_month_6",
+    "adherence",
+    "tokens",
+    "technical_interruptions"
+  ],
+  "actor": {
+    "kind": "claude-cli",
+    "model": "haiku",
+    "effort": null,
+    "skills_mode": "inline",
+    "autocompact": null,
+    "max_continues": 1,
+    "timeout_s": 600,
+    "cli_version": "2.1.303 (Claude Code)",
+    "prompts": "official-runner@00b084a8",
+    "tools": [
+      "mcp__career-emulator-engine__new_game",
+      "mcp__career-emulator-engine__observe",
+      "mcp__career-emulator-engine__take_action",
+      "mcp__career-emulator-engine__check_latest_logs",
+      "mcp__career-emulator-engine__show_employee_handbook"
+    ],
+    "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+    "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"
+  },
+  "harness": "first_review_transfer.py; official tools via journaled horizon bridge",
+  "script_sha256": "778a95feeff01f455e5cb887e4408671c08d92ce06671ae598c5b1ea008c56bf",
+  "policy_hashes": {
+    "baseline": "f03981dac92f8b6c56cc1b62e7fbe4e6d3e374e8dd9525af26ae8d90e6794c42",
+    "candidate": "599f7b405eb47ce10e5e8ed5246a00cadb91f2d90c2b353855871855aa7fe65a"
+  },
+  "system_hashes": {
+    "baseline": "3bdd85da8b8f21701e88f5166e44e39d4089df11dd0989213b38b6a3272db663",
+    "candidate": "da5cb5363a32b09b393bb78a3f3732af4b4c58c88c7dff358cac3e7be457aeb1"
+  },
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "budget": {
+    "five_hour_cap": 0.8,
+    "seven_day_cap": 0.75,
+    "max_episodes": 8,
+    "billing": "personal Claude subscription; no API key; paid overage must be off"
+  },
+  "inclusion": "resolve all four balanced pairs; keep interruptions, resume same session once, do not count interrupted runs as zero",
+  "claims": "descriptive only; no superiority or universal-promotion claim with four episodes per arm",
+  "next_stage": "If composite improves without lower survival, propose separate frozen ablations; no unbounded extension of this block.",
+  "prelaunch_revision": "Improve quota rejection reporting after a 429 preflight. No gameplay episodes had started; policies, schedule and outcomes unchanged."
+}
