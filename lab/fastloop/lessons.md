@@ -85,7 +85,12 @@ Race Haiku [REG] unless marked.
 - The 131 completed LLM g still miss about 38.6 points: level 16.1, wealth 12.7, network 3.4, risk control 3.1, skill 2.9, resilience 0.4. In the 44 completed g with Q ≥ 65, the gaps are level 15.0, wealth 11.5 and everything else 4.8 [REG].
 - **No registry game went past L5.** 89 of 268 LLM g reached it, and the 150 scripted floor games peaked at L3. L5 earns half the level dimension [REG].
 - Opus at maximum effort with a growth mode lost the same points (level 16.2, wealth 12.8) [OC].
-- The energy-bot README reports bots at "level 40–60" with Q up to 76. That would mean L6, above every LLM game, with a fixed key-project main action. The raw data are not in the repo, so it is **unverified** [EB]; the organiser is asked to check it. If true, the level frontier is reachable and the question is what those careers did differently.
+- **Verified, L6 is reachable** [EB-RAW]: 4 of the 400 energy bots reached L6 (raw level 6.0, last status L6). All four completed, with Q 66.9, 68.6, 75.4 and 75.6. Arms: recovery + report ×2, defuse + health ×1, adaptive ×1.
+  - All four were promoted at each of the first three half-year reviews: L2 at the first, L3 at the second, L4 at the third. Then L5 came at months 30–36 and L6 at month 48.
+  - The first promotion came although the first grade was C in all four (grades C B B B B A B B, C C B B A A B B, C C B B A B B A, C B B C A A B A). Promotion follows the visible inputs (the handbook names Skill, Network, Output and level), not the grade.
+  - All four ended with Skill 100 and Network 87–92.
+  - Their play had no judgement at all: the main action was always Apply for a key project, there was a Health point every quarter, and stories took the first listed option. That story rule is a lab device and must never be a Skill rule.
+  - The level frontier is not a game cap. What separates these careers is three promotions in a row in the first year and a half, with Skill pushed to the top.
 - The best wealth score is 52.8 [REG]. Published salary is 0.3 a month at L1, 1.0 at L5 and 9.1 at L10 [DIAG], so the wealth gap is mostly a level gap.
 - Late promotions are slow. v3's last promotion took about 18 months, with Output flat [V4P]. Leah's v1 reached L4 at month 30 and L5 at month 48 [LEAH1].
 - Pushing harder (f8, o2, F4, promotion drive, v4, v5) cost survival without raising level or wealth (§3).
@@ -119,3 +124,4 @@ Race Haiku [REG] unless marked.
 - **FIND:** `findings.md`.
 - **CMP:** `careerlab/compliance.py`.
 - **REG:** my tally of `lab/registry/evaluations.jsonl` (e17b598) and `lab/registry-origins/matteo/` (3d1bea6). The trust-crisis proxy is an elimination with the risk-control dimension at 0; it matches every exit that has a reported cause.
+- **EB-RAW:** raw energy-bot runs in the cloud container (`~/careerlab-data/energy-bots/runs/*/result.json` and `trajectory.jsonl`, not in Git), checked by the cloud organiser on 26 Oct 2026 at 19:41 UTC.

@@ -1,0 +1,13 @@
+{
+  "family": "f3-feedback-reactive",
+  "name": "f3-status-line-v1",
+  "parents": ["f3-balance-recombined-v1", "f1-status-line-v1"],
+  "idea_origin": "playbook:P22 transfer test (decision #157: f1-status-line, the P22 stall slot, completed 4/4 while its prose siblings with the same rules completed 1/4 each)",
+  "operator": "re-represent (same rules, status-line format)",
+  "hypothesis": "f1-status-line's lead over its prose siblings f1-core and f1-risk-signal (same rules; 4/4 completed vs 1/4 each on Haiku) comes from the representation: a fixed status line filled before every choice makes a small model apply the rule order consistently. If the representation is the lever, it transfers: f3-balance-recombined's exact rules (Protect > Risk > Review > Balance), written as a status line, complete more often and score higher than the prose original.",
+  "change": "f3-balance-recombined-v1's rules rewritten in f1-status-line's format: a status line `Protect | Risk | Review | Weakest`, a need order, a fixed note shape '<status line> → need → why this option', and one block per need. Every decision rule is kept. Removed: the intro sentence (rationale only), the check_latest_logs line (never executed in F3-family runs, see f3-lean), and the 'near the end' clause (run-phase trigger, removed for compliance as in f1-core and f1-status-line). Description shortened.",
+  "predicted_behaviour": "Every note starts with the four-field status line. Defuse legacy risk follows a raised risk field in the next Energy phase. After a C or D the Review field names a factor and the main action follows it until the next review. Completion at least that of f3-balance-recombined (4/4 so far on Haiku), and fewer month-24 dismissals than F3 and f3-lean.",
+  "refutation": "Refuted as a representation effect if, on 4 or more Haiku games, the completion rate and mean Y are not above f3-balance-recombined-v1's (posterior 51.2). Then f1-status-line's lead came from its rules or from noise, not from the format. Manipulation fails if notes do not carry the status line; then the text is not executed as written.",
+  "skill_count": 1,
+  "notes": "Written by the cloud organiser on 26 Oct after decision #157, as the cleanest test of the P22 finding. Skill name kept as balanced-feedback so parent and child differ only in representation. No numbers beyond the published 0–10 range, no calendar triggers, no event names; 'a whole quarter' and 'until the next review' use only the published cadence relative to a signal."
+}
