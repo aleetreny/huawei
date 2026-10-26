@@ -1,12 +1,12 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 16:55 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 16:57 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 302, interrupted 28, queued 37, running 4.
-- Episodes finished in this container: 52. Batches completed: 1 (last at 2026-10-26 16:49:32 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.25**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Jobs in the registry: done 303, interrupted 28, queued 37, running 3.
+- Episodes finished in this container: 53. Batches completed: 1 (last at 2026-10-26 16:49:32 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.26**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.03**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.105** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 3, queued 2, running 1; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48.
@@ -69,7 +69,7 @@ Gain over the last three decisions: -6.13 → stall trigger **fires**.
 | o2-run-hot | 4 | 3 | 0 |
 | o1-promotion-gap | 4 | 3 | 0 |
 | f8-secure-growth | 4 | 3 | 1 |
-| matteo-value-conversion | 1 | 2 | 0 |
+| matteo-value-conversion | 2 | 2 | 0 |
 
 ## Children created in this cloud run
 
@@ -155,7 +155,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 99 | 6 | 0.53 | 44.2 (18.1) | 43.0 | 37.6 | 0.01 | 8.9 | 0.25 | 0.522 | 0.71 |
+| haiku | 93 | 0 | 0.52 | 44.1 (18.0) | 42.8 | 37.5 | 0.01 | 9.4 | 0.25 | 0.518 | 0.75 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -180,14 +180,13 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f7-single-skill-v1 | 5 | [54.2, 63.9, 20.6, 60.1, 30.9] | [48, 48, 24, 48, 30] | 44.7 | ; Trust crisis — a second major blow-up. T |
 | haiku | f7-three-skills-v1 | 5 | [50.4, 51.5, 67.1, 71.0, 58.5] | [48, 48, 48, 48, 48] | 57.8 |  |
 | haiku | f8-secure-growth-v1 | 4 | [68.6, 55.8, 23.5, 51.9] | [48, 48, 24, 48] | 48.7 | Dismissed for capability — a second weak |
-| haiku | l1-review-clock-v1 | 1 | [60.9] | [48] | 58.7 |  |
 | haiku | m3-subtracted-v1 | 3 | [16.0, 60.6, 48.9] | [24, 48, 48] | 41.8 |  |
 | haiku | m3-sustainable-career-v0-1 | 4 | [17.2, 70.2, 27.8, 30.9] | [24, 48, 24, 26] | 35.5 | ; ;  |
 | haiku | o1-promotion-gap-v1 | 4 | [64.4, 15.7, 31.0, 64.7] | [48, 24, 20, 48] | 42.7 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | o2-run-hot-v1 | 4 | [24.7, 38.6, 61.9, 19.7] | [24, 29, 48, 24] | 35.2 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
-| haiku | value-conversion-v1 | 1 | [37.1] | [31] | 34.7 | Trust crisis — a second major blow-up. T |
+| haiku | value-conversion-v1 | 2 | [37.1, 46.2] | [31, 40] | 38.3 | Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
 | haiku@low | f1-steady-balance-v1 | 2 | [55.2, 62.1] | [48, 48] | 56.9 |  |
 | haiku@low | m3-sustainable-career-v0-1 | 2 | [29.4, 21.5] | [23, 24] | 25.3 | ;  |
 | haiku@low | p0-minimal-v1 | 2 | [28.4, 38.5] | [24, 35] | 31.7 | ;  |
