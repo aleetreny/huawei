@@ -8,8 +8,8 @@ Its record: <<summary>>.
 ## Read before writing
 
 1. Digests of the champion's latest race games, worst first: <<digest_dir>> (start with index.md). Each line is one decision: the visible state before it, the option taken and the ones declined, the player's note, and the game's feedback.
-2. `lab/fastloop/lessons.md`: what is proven (keep it), what failed (do not repeat it).
-3. `lab/fastloop/history.md`: every manual already tried in this race and its result. Do not repeat a failed idea unless you change what made it fail.
+2. `<<lessons>>`: what is proven (keep it), what failed (do not repeat it).
+3. `<<history>>`: every manual already tried in this race and its result. Do not repeat a failed idea unless you change what made it fail.
 
 ## Task
 
