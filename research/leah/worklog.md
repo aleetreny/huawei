@@ -2,6 +2,19 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 26 Oct 2026, 17:05 UTC: v1 ×3, v2 and v3 (5 Haiku games)
+
+- **Results.**
+  - v1 scored 60.9, 51.3 and 44.0 (mean 52.1; 2 of 3 completed, one trust crisis at month 33).
+  - v2 scored 20.5 and v3 scored 21.8; both were dismissed at month 24 still at L1.
+  - The race leader F3 averages 64.2.
+- **Learned.**
+  - Skill stalls at L1, and story events only pay Skill after the first promotion.
+  - The first promotion (Output and Network at L1) decides the game.
+  - Early Defuse starves growth, but too little Defuse later causes a trust crisis.
+- **Speed.** Games ran 3 at a time, about 15 minutes each. One game uses about 15% of the 5-hour window on Leah's Pro account.
+- **Write-up.** [l1-review-clock-v1-v3.md](l1-review-clock-v1-v3.md), with the v4 plan.
+
 ## 26 Oct 2026, 16:50 UTC: first game of l1-review-clock-v1
 
 - **Result.** 60.9, all 48 months completed, finished at L5 (promotions at months 6, 12, 30 and 48).
@@ -74,7 +87,7 @@ Everything done on branch `leah/workspace`, newest first. Each entry links to th
 ## Open threads
 
 - **PR from `leah/workspace` to `main`** for T11 and the panel. Leah asked to hold it for now.
-- **More games of l1-review-clock-v1** (3 queued and held), then a v2 aimed at risk control and stalled Output; see the first-read write-up.
+- **v4 after the quota reset**: target the first promotion through Output and Network at L1, keep v1's story judgement, add Defuse after the first promotion. See [l1-review-clock-v1-v3.md](l1-review-clock-v1-v3.md).
 - **Register Matteo's v0.2 Skills** as a race policy and test them under origin `leah`.
 - **A rule-safe scripted strategy bot**, to probe the level and wealth gap without Claude quota.
 - **After T11 merges,** the organiser updates ESTADO §6 *Partidas* and adds an origin filter to `scripts/cloud-run/driver.py`, as the T11 report explains.
