@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-10-26",
+  "purpose": "Development research only. No final Skill architecture selected.",
+  "external_evidence": [
+    {
+      "id": "matteo-random-2026-10-26",
+      "status": "reported_not_reproduced",
+      "source_commit": "0eb09244468c24373b136face6160ccacc3c0ffb",
+      "source_file": "docs/experiments/random-baseline-summary.json",
+      "episodes": 73858,
+      "full_horizon_completions": 0,
+      "mean_survival_months": 5.905575563919954,
+      "mean_quantitative_score": 11.784165560941952,
+      "limitation": "Aggregate-only random play, not a reasoned-agent benchmark."
+    }
+  ],
+  "observations": [
+    {
+      "id": "manual-ui-01",
+      "status": "in_progress_paused",
+      "execution": "manual_browser_to_official_mcp",
+      "engine_version": "1.0.6",
+      "dataset_package_version": "1.0.8",
+      "competition_api_credit_used": 0,
+      "current_month": 7,
+      "completed_quarters": 2,
+      "current_level": "L1",
+      "first_review_grade": "C",
+      "terminal_score": null,
+      "count_in_completed_episode_comparison": false,
+      "local_evidence": "local-runs/matteo-preview/manual-ui-observations.json",
+      "questions_raised": [
+        "How should delayed commitments and warnings be tracked?",
+        "When do described action deltas differ from visible marginal changes?",
+        "How does preserving wellbeing interact with career progress?",
+        "At what observed point does review feedback arrive relative to quarterly actions?"
+      ]
+    }
+  ],
+  "planned_experiments": [
+    {
+      "id": "E01",
+      "status": "designed_not_run",
+      "question": "Do explicit health-trend and risk-feedback procedures improve a fresh general-reasoning reference, separately or together?",
+      "design": "2x2 factorial or a two-candidate pilot if budget is insufficient",
+      "candidates": ["P00", "P10", "P01", "P11"],
+      "primary_metric": "mean_terminal_quantitative_score",
+      "secondary_metrics": ["full_horizon_completion_rate", "survival_months", "failure_reason", "cost", "tool_errors"],
+      "execution_requirement": "Official pinned JiuwenSwarm single-agent environment and designated model for representative agent evaluation.",
+      "allocation_rule": "Start with a small terminal-episode pilot; add repetitions to credible contenders and uncertainty that can change selection.",
+      "results": []
+    },
+    {
+      "id": "E02",
+      "status": "designed_not_run",
+      "question": "Does joint quarterly planning improve outcomes over choosing each quarterly action in isolation?",
+      "prerequisite": "A runnable fresh reference and informative E01 results or a concrete observed planning failure.",
+      "primary_metric": "mean_terminal_quantitative_score",
+      "results": []
+    },
+    {
+      "id": "E03",
+      "status": "designed_not_run",
+      "question": "Once early survival improves, which general growth procedure improves sustained review outcomes and final career results?",
+      "prerequisite": "Sufficient late-game exposure; do not infer from early random failures alone.",
+      "primary_metric": "mean_terminal_quantitative_score",
+      "results": []
+    }
+  ]
+}
