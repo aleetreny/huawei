@@ -31,14 +31,22 @@ def _actor_label(cfg: dict[str, Any]) -> str:
 
 def load_cells(reg: Registry, purposes: tuple[str, ...] = ("calibrate", "screen", "infra"), kind: str = "claude-cli") -> list[dict[str, Any]]:
     rows = reg.db.execute(
-        "SELECT j.job_id, j.status, j.run_dir, j.purpose, p.name AS policy, p.family, a.config FROM jobs j "
-        "JOIN policies p USING(policy_id) JOIN actors a USING(actor_id) WHERE a.kind=? AND j.purpose IN (%s)" % ",".join("?" * len(purposes)),
+        "SELECT j.job_id, j.status, j.run_dir, j.purpose, p.name AS policy, p.family, a.config, e.outcome AS e_outcome, "
+        "e.score AS e_score, e.survival_months AS e_months, e.steps AS e_steps, e.rejected_actions AS e_rejected, "
+        "e.tokens AS e_usage, e.wall_s AS e_wall, e.interruption AS e_interruption FROM jobs j "
+        "JOIN policies p USING(policy_id) JOIN actors a USING(actor_id) LEFT JOIN evaluations e USING(job_id) "
+        "WHERE a.kind=? AND j.purpose IN (%s)" % ",".join("?" * len(purposes)),
         (kind, *purposes)).fetchall()
     out = []
     for r in rows:
-        if not r["run_dir"] or not (Path(r["run_dir"]) / "result.json").exists():
+        if r["run_dir"] and (Path(r["run_dir"]) / "result.json").exists():
+            res = json.loads((Path(r["run_dir"]) / "result.json").read_text())
+        elif r["e_outcome"]:  # imported from another machine: its run directory stayed there, the evaluation row did not
+            res = {"outcome": r["e_outcome"], "quantitative_score": r["e_score"], "survival_months": r["e_months"],
+                   "interruption": r["e_interruption"], "steps": r["e_steps"], "rejected_actions": r["e_rejected"] or 0,
+                   "wall_seconds": r["e_wall"], "actor_usage": json.loads(r["e_usage"] or "{}")}
+        else:
             continue
-        res = json.loads((Path(r["run_dir"]) / "result.json").read_text())
         usage = res.get("actor_usage") or {}
         tok = usage.get("tokens") or {}
         out.append({
