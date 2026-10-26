@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v3",
+  "parents": [
+    "observed-growth-v2"
+  ],
+  "idea_origin": "Matteo: keep v2's growth and review-cycle phasing, fix its failures. Evidence: 4 v1 and 4 v2 Haiku episodes under origin matteo (lab/reports/matteo-observed-growth-v2.md).",
+  "operator": "targeted revision of v2 from paired v1/v2 pilots",
+  "hypothesis": "v2 removed capability dismissals but caused trust crises because it almost never used Defuse legacy risk (0-1 per episode versus 4-8 in v1), and it wasted Energy on Skill learning while Skill had stalled at the current level. Restoring cleanup on any risk signal, keeping a Health reserve, banning risk-feeding story options, and moving Energy to Output and Network when Skill stalls will keep v2's promotions while removing trust crises.",
+  "change": "From v2: ordered quarter-end allocation (risk cleanup on any risk signal, Health reserve in the lower half of the range, then growth); stalled-Skill rule; explicit ban on corner-cutting, overpromising, hiding problems and undue credit in story choices; Health added to the quarter-end note. Review-cycle phasing, growth story choices, before/after comparison and weak-review plan are kept.",
+  "predicted_behaviour": "Defuse appears in most quarters that follow an HR, manager or doctor risk remark. Health recovery appears when Health is in the lower half. Skill learning stops after a quarter with flat Skill and resumes after promotion. No trust crisis; promotions out of the starting level at least as early as v2.",
+  "refutation": "Compare with v1 and v2 under the same actor and harness. Reject if trust crises remain, if capability dismissals return, or if mean Q does not exceed both. If the notes do not show the ordered allocation or the stalled-Skill rule, mark the mechanism unexecuted. Four episodes cannot isolate which change helped.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v3, built on matteo/observed-growth-v2. Level-dependent stat stalls are an observation from 8 episodes and are described without numbers. v1 and v2 unchanged."
+}
