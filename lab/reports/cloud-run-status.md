@@ -1,49 +1,51 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 17:57 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 18:12 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 352, interrupted 28, leased 4, queued 41, running 6.
-- Episodes finished in this container: 92. Batches completed: 2 (last at 2026-10-26 17:50:49 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.44**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.05**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.110** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: done 364, interrupted 28, leased 30, queued 3, running 6.
+- Episodes finished in this container: 104. Batches completed: 3 (last at 2026-10-26 18:10:59 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.46**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.06**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.112** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
 ## Latest pre-registered block decision (Haiku actor)
 
-Registry decision #128, recorded 26 Oct 17:50 UTC (`careerlab.decisions.block_decision`, record=True).
+Registry decision #142, recorded 26 Oct 18:10 UTC (`careerlab.decisions.block_decision`, record=True).
 
-Actor `08e9167a965ed82c` — robustness across noise models: True (robust: fits differ only inside the hysteresis band: 3207e8f585cbe240 dormant only in some fits, others inside the band (normal 0.081, bayes_boot 0.072) | 663c8cd2a1cafe68 dormant only in some fits, others inside the band (normal 0.053) | 7107952fc3bdf27f dormant only in some fits, others inside the band (normal 0.129, bayes_boot 0.148) | cbc7402d11222ac7 dormant only in some fits, others inside the band (normal 0.080, bayes_boot 0.060) | dd82cc1584e7370d dormant only in some fits, others inside the band (normal 0.089, bayes_boot 0.073) | f1830961d168beb9 dormant only in some fits, others inside the band (normal 0.104, bayes_boot 0.100) | leader near-tie, not separated by any fit: normal=e373478ad46b58f6, student_t=0b226c3c067d423f, bayes_boot=e373478ad46b58f6; normal: P(e373478ad46b58f6 > 0b226c3c067d423f) = 0.572, student_t: P(0b226c3c067d423f > e373478ad46b58f6) = 0.537, bayes_boot: P(e373478ad46b58f6 > 0b226c3c067d423f) = 0.597)
+Actor `08e9167a965ed82c` — robustness across noise models: True (robust: fits differ only inside the hysteresis band: 188c7c484fa3519b dormant only in some fits, others inside the band (normal 0.107, bayes_boot 0.097) | 3207e8f585cbe240 dormant only in some fits, others inside the band (normal 0.084, bayes_boot 0.086) | 663c8cd2a1cafe68 dormant only in some fits, others inside the band (normal 0.055, bayes_boot 0.054) | 7107952fc3bdf27f dormant only in some fits, others inside the band (normal 0.132, bayes_boot 0.130) | cbc7402d11222ac7 dormant only in some fits, others inside the band (normal 0.083, bayes_boot 0.066) | dd82cc1584e7370d dormant only in some fits, others inside the band (normal 0.093, bayes_boot 0.084) | f1830961d168beb9 dormant only in some fits, others inside the band (normal 0.109, bayes_boot 0.105) | leader near-tie, not separated by any fit: normal=19618e7795be8da1, student_t=0b226c3c067d423f, bayes_boot=19618e7795be8da1; normal: P(19618e7795be8da1 > 0b226c3c067d423f) = 0.541, student_t: P(0b226c3c067d423f > 19618e7795be8da1) = 0.542, bayes_boot: P(19618e7795be8da1 > 0b226c3c067d423f) = 0.554)
 
 | Policy | runs in prefix | pending | posterior Y (sd) | P(best) | action | reason |
 |---|---:|---:|---|---:|---|---|
-| f7-three-skills-v1 | 10 | 0 | 55.16 (4.63) | 0.208 | **PROMOTE** | PROMOTE: top-2 posterior mean 55.2 with P(best) = 0.208 >= 0.2 |
-| f1-steady-balance-v1 | 8 | 0 | 54.59 (4.08) | 0.15 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.150, P(mu >= mu_L - 4) = 0.711, n=8) |
-| f2-convert-on-review-v1 | 6 | 0 | 53.94 (4.84) | 0.149 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.149, P(mu >= mu_L - 4) = 0.661, n=6) |
-| f1-review-risk-v1 | 5 | 0 | 53.13 (4.45) | 0.099 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.099, P(mu >= mu_L - 4) = 0.621, n=5) |
-| value-conversion-v1 | 4 | 0 | 51.16 (7.6) | 0.142 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.142, P(mu >= mu_L - 4) = 0.500, n=4) |
-| f3-balance-recombined-v1 | 7 | 0 | 50.76 (3.52) | 0.018 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.018, P(mu >= mu_L - 4) = 0.473, n=7) |
-| f3-lean-v1 | 5 | 0 | 50.65 (3.71) | 0.02 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.020, P(mu >= mu_L - 4) = 0.466, n=5) |
-| f3-distilled-prereview-defuse-v1 | 4 | 0 | 49.55 (3.81) | 0.012 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.012, P(mu >= mu_L - 4) = 0.394, n=4) |
-| f3-feedback-reactive-v1 | 5 | 0 | 49.09 (3.71) | 0.008 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.008, P(mu >= mu_L - 4) = 0.363, n=5) |
-| observed-growth-v1 | 4 | 0 | 49.08 (8.75) | 0.119 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.119, P(mu >= mu_L - 4) = 0.417, n=4) |
-| f3-opus-distilled-v1 | 4 | 0 | 47.81 (3.81) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.288, n=4) |
-| f8-secure-growth-v1 | 7 | 0 | 42.86 (6.79) | 0.009 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.009, P(mu >= mu_L - 4) = 0.156, n=7) |
-| f7-single-skill-v1 | 6 | 0 | 42.77 (5.78) | 0.003 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.003, P(mu >= mu_L - 4) = 0.129, n=6) |
-| p0-review-guard-v1 | 3 | 0 | 40.18 (5.27) | 0.0 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| f6-commitment-ledger-v1 | 6 | 0 | 40.18 (6.72) | 0.003 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.003, P(mu >= mu_L - 4) = 0.089, n=6) |
-| f4-review-first-v1 | 3 | 0 | 39.87 (7.59) | 0.006 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| p0-minimal-v1 | 5 | 0 | 39.42 (4.89) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.041 < 0.05 (mean 39.4 vs leader e373478ad46b58f6 55.2) |
-| f4-visible-delivery-v1 | 5 | 0 | 39.02 (7.31) | 0.003 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.003, P(mu >= mu_L - 4) = 0.080, n=5) |
-| o1-promotion-gap-v1 | 5 | 0 | 38.82 (9.52) | 0.015 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.015, P(mu >= mu_L - 4) = 0.122, n=5) |
-| m3-subtracted-v1 | 3 | 0 | 38.42 (8.32) | 0.006 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| m3-sustainable-career-v0-1 | 4 | 0 | 38.01 (8.18) | 0.005 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.005, P(mu >= mu_L - 4) = 0.081, n=4) |
-| l1-review-clock-v1 | 4 | 0 | 36.42 (10.75) | 0.016 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.016, P(mu >= mu_L - 4) = 0.104, n=4) |
-| o2-run-hot-v1 | 4 | 0 | 35.24 (8.69) | 0.003 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.003, P(mu >= mu_L - 4) = 0.053, n=4) |
-| f5-relationship-capital-v1 | 5 | 0 | 29.43 (3.89) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.000 < 0.05 (mean 29.4 vs leader e373478ad46b58f6 55.2) |
-| f2-invest-early-v1 | 5 | 0 | 24.07 (5.29) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.000 < 0.05 (mean 24.1 vs leader e373478ad46b58f6 55.2) |
+| f1-steady-balance-v1 | 8 | 4 | 54.59 (4.08) | 0.179 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.179, P(mu >= mu_L - 4) = 1.000, n=8) |
+| f2-convert-on-review-v1 | 6 | 1 | 53.94 (4.84) | 0.173 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.173, P(mu >= mu_L - 4) = 0.702, n=6) |
+| f1-review-risk-v1 | 5 | 2 | 53.13 (4.45) | 0.118 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.118, P(mu >= mu_L - 4) = 0.663, n=5) |
+| f7-three-skills-v1 | 10 | 6 | 51.49 (4.32) | 0.059 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.059, P(mu >= mu_L - 4) = 0.560, n=10) |
+| value-conversion-v1 | 4 | 3 | 51.16 (7.6) | 0.158 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.158, P(mu >= mu_L - 4) = 0.526, n=4) |
+| f3-balance-recombined-v1 | 7 | 0 | 50.76 (3.52) | 0.024 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.024, P(mu >= mu_L - 4) = 0.513, n=7) |
+| f3-lean-v1 | 5 | 0 | 50.65 (3.71) | 0.026 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.026, P(mu >= mu_L - 4) = 0.504, n=5) |
+| f3-distilled-prereview-defuse-v1 | 4 | 0 | 49.55 (3.81) | 0.016 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.016, P(mu >= mu_L - 4) = 0.426, n=4) |
+| f3-feedback-reactive-v1 | 5 | 1 | 49.09 (3.71) | 0.011 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.011, P(mu >= mu_L - 4) = 0.392, n=5) |
+| observed-growth-v1 | 4 | 5 | 49.08 (8.75) | 0.131 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.131, P(mu >= mu_L - 4) = 0.438, n=4) |
+| f3-opus-distilled-v1 | 4 | 0 | 47.81 (3.81) | 0.006 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.006, P(mu >= mu_L - 4) = 0.309, n=4) |
+| f7-delivery-stories-v1 | 4 | 0 | 45.25 (5.49) | 0.009 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.009, P(mu >= mu_L - 4) = 0.217, n=4) |
+| f7-promotion-drive-v1 | 4 | 0 | 45.24 (5.49) | 0.009 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.009, P(mu >= mu_L - 4) = 0.217, n=4) |
+| f7-single-skill-v1 | 6 | 0 | 43.37 (5.01) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.132, n=6) |
+| f8-secure-growth-v1 | 7 | 0 | 42.86 (6.79) | 0.011 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.011, P(mu >= mu_L - 4) = 0.165, n=7) |
+| p0-review-guard-v1 | 3 | 0 | 42.64 (2.94) | 0.0 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| f7-trend-marking-v1 | 4 | 0 | 42.1 (5.49) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.107, n=4) |
+| f6-commitment-ledger-v1 | 6 | 0 | 40.18 (6.72) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.093, n=6) |
+| f4-review-first-v1 | 3 | 0 | 39.87 (7.59) | 0.007 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| f4-visible-delivery-v1 | 5 | 0 | 39.02 (7.31) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.083, n=5) |
+| o1-promotion-gap-v1 | 5 | 2 | 38.82 (9.52) | 0.017 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.017, P(mu >= mu_L - 4) = 0.128, n=5) |
+| m3-subtracted-v1 | 3 | 0 | 38.42 (8.32) | 0.008 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| m3-sustainable-career-v0-1 | 4 | 0 | 38.01 (8.18) | 0.006 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.006, P(mu >= mu_L - 4) = 0.084, n=4) |
+| l1-review-clock-v1 | 4 | 0 | 36.42 (10.75) | 0.018 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.018, P(mu >= mu_L - 4) = 0.109, n=4) |
+| o2-run-hot-v1 | 4 | 0 | 35.24 (8.69) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.055, n=4) |
+| f5-relationship-capital-v1 | 5 | 0 | 29.43 (3.89) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.000 < 0.05 (mean 29.4 vs leader 19618e7795be8da1 54.6) |
+| f2-invest-early-v1 | 5 | 0 | 24.07 (5.29) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.000 < 0.05 (mean 24.1 vs leader 19618e7795be8da1 54.6) |
 
 Leader history (stall trigger: leader posterior mean not improved by 2 Y-points over 3 decisions):
 
@@ -54,27 +56,28 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 | #88 | 26 Oct 14:07 UTC | f3-feedback-reactive-v1 | 60.21 |
 | #114 | 26 Oct 16:49 UTC | f7-three-skills-v1 | 55.21 |
 | #128 | 26 Oct 17:50 UTC | f7-three-skills-v1 | 55.16 |
+| #142 | 26 Oct 18:10 UTC | f1-steady-balance-v1 | 54.59 |
 
-Gain over the last three decisions: -6.18 → stall trigger **fires**.
+Gain over the last three decisions: -5.62 → stall trigger **fires**.
 
 ## Progressive widening (Haiku cell)
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
+| f7-one-vs-many | 28 | 6 | 3 |
 | f3-feedback-reactive | 25 | 6 | 4 |
-| f7-one-vs-many | 18 | 5 | 3 |
 | f1-steady-balance | 13 | 4 | 1 |
 | f2-invest-early | 11 | 4 | 1 |
 | p0-minimal | 8 | 3 | 1 |
 | f4-visible-delivery | 8 | 3 | 1 |
 | m3-teammate | 7 | 3 | 1 |
 | f8-secure-growth | 7 | 3 | 1 |
+| matteo-feedback-growth | 6 | 3 | 2 |
 | f6-commitment-ledger | 6 | 3 | 0 |
 | o1-promotion-gap | 5 | 3 | 0 |
 | f5-relationship-capital | 5 | 3 | 0 |
 | o2-run-hot | 4 | 3 | 0 |
 | matteo-value-conversion | 4 | 3 | 0 |
-| matteo-feedback-growth | 4 | 3 | 2 |
 | l1-review-clock | 4 | 3 | 2 |
 
 ## Children created in this cloud run
@@ -119,19 +122,19 @@ Gain over the last three decisions: -6.18 → stall trigger **fires**.
 
 - Parents: f7-three-skills-v1; operator: refine; idea origin: trace diagnosis of the 38 cloud Haiku digests (lab/reports/cloud-run-diagnostics/block3-generation.md, tables 2-4) and distilled Opus rule R3 'judge statistics by trend, not size' (lab/reports/teacher-digests/distilled-rules.md).
 - Hypothesis: Reviews reward Output and Network being at their recent high when the review lands: across 127 reviews at Level 1-2, a B or a promotion followed 33 of 62 reviews with both at their high, 9 of 24 with Output only, 6 of 28 with Network only and 1 of 13 with neither; every one of the 14 first-review promotions had Output at its high (12 of 24 non-promoted games did not). The leader marks dimensions at risk by size and after any C or D, and every first review is a C, so the marks stop carrying information: in e373478a-04 Network was marked at risk in 62 of 88 story decisions below Level 3, 37 of them with Network at its high, and its two C reviews at Level 2 came with Network (review 2) and Output (review 3) below their high. Marking Skill, Network and Output at risk only when below their recent high makes the leader's own story rule 1 shield a stat that fell, its Energy rule restore it, and its main action default to a key project, so more reviews find Output and Network at their high.
-- Haiku runs so far: Q 18.6/T 24.
+- Haiku runs so far: Q 18.6/T 24, Q 51.6/T 48, Q 19.0/T 24, Q 54.0/T 45.
 
 ### f7-delivery-stories-v1 (`1d62c4e5121233e6`, family f7-one-vs-many)
 
 - Parents: f7-three-skills-v1; operator: refine; idea origin: trace diagnosis of the 38 cloud Haiku digests (lab/reports/cloud-run-diagnostics/block3-generation.md, table 4: stats lost between the last quarterly phase and the review).
 - Hypothesis: Output or Network lost in the story events between the last quarterly phase and a review cannot be restored by Energy before that review, and the loss costs the grade: at Level 1-2 a B or promotion followed 14 of 60 reviews with such a loss against 34 of 66 without (leader digests: 3 of 6 reviews had one, including both C reviews at Level 2 in e373478a-04). The losing story options share a visible pattern (delays, side duties, other people's processes, pauses), the gaining ones another (finishing, fixing or showing your own work), and Haiku's default choice in an event is the same across policies, so a rule that switches its preference while Output or Network is below its recent high will cut these losses and raise the share of good reviews without adding hidden risk.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 42.1/T 48, Q 63.2/T 48, Q 18.1/T 24, Q 62.7/T 48.
 
 ### f7-promotion-drive-v1 (`7ded9840c5c439d9`, family f7-one-vs-many)
 
 - Parents: f7-three-skills-v1, f8-secure-growth-v1; operator: recombine (cross-family, stagnation slot); idea origin: playbook:P12 (stagnation rule, decision #114).
 - Hypothesis: The weak-review streak is a promotion bottleneck, not a balance problem: no review after the first gave a B at Level 1 (0 of 47), every game still at Level 1 after its third review ended by month 24 (12 of 12), and the first promotion's timing sets the score (promoted at review 1: mean Q 57.3, 12 of 14 completed; at review 2: 47.0, 7 of 11; not by review 2: 22.0, 0 of 13). Balanced play spends quarters on statistics that have stopped rising, and the leader's notes mark most dimensions at risk on most turns. A temporary single priority (P12) - while the latest review did not promote you, take the story option that best shows delivered results or raises standing with decision makers at a bounded cost, with Apply for a key project as main action, and only Health, Dignity, Wealth and risk warnings as exceptions - brings the first promotion earlier than the leader's balanced rules. f8-secure-growth, whose Grow mode played this way before its first review, was promoted at review 1 in 3 of 4 Haiku games against 14 of 38 overall.
-- Haiku runs so far: Q 19.5/T 24.
+- Haiku runs so far: Q 19.5/T 24, Q 70.3/T 48, Q 53.8/T 47, Q 48.7/T 48.
 
 ## Teacher distillation
 
@@ -165,13 +168,13 @@ opus~100k decision computed with the same rule but **not recorded** (only the Ha
 | Policy | Haiku posterior Y (n) | opus~100k posterior Y (n) | opus~100k pending |
 |---|---|---|---:|
 | f1-steady-balance-v1 | 54.59 (8) | 65.56 (2) | 0 |
-| p0-minimal-v1 | 39.42 (5) | 61.58 (2) | 0 |
+| p0-minimal-v1 | — | 61.58 (2) | 0 |
 | f3-feedback-reactive-v1 | 49.09 (5) | 39.05 (2) | 0 |
 | f3-lean-v1 | 50.65 (5) | 39.04 (2) | 0 |
 | m3-sustainable-career-v0-1 | 38.01 (4) | 38.99 (2) | 0 |
 | f3-balance-recombined-v1 | 50.76 (7) | 38.24 (2) | 0 |
 
-Shared policies with opus~100k data: 6. Spearman of posterior means 0.20; top policy Haiku `f1-steady-balance-v1`, opus~100k `f1-steady-balance-v1` (agree). Descriptive only: with this few shared policies and 2–4 runs per cell, agreement cannot certify transfer (pruning authority needs ≥ 8 shared policies spanning ≥ 16 Y-points).
+Shared policies with opus~100k data: 5. Spearman of posterior means 0.30; top policy Haiku `f1-steady-balance-v1`, opus~100k `f1-steady-balance-v1` (agree). Descriptive only: with this few shared policies and 2–4 runs per cell, agreement cannot certify transfer (pruning authority needs ≥ 8 shared policies spanning ≥ 16 Y-points).
 
 ## Actor comparison (all Claude-proxy episodes, `careerlab.analysis`)
 
@@ -179,7 +182,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 129 | 0 | 0.56 | 45.7 (18.6) | 44.3 | 37.9 | 0.01 | 9.2 | 0.24 | 0.522 | 0.77 |
+| haiku | 141 | 0 | 0.55 | 45.5 (18.5) | 44.2 | 37.8 | 0.01 | 9.1 | 0.24 | 0.521 | 0.77 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -201,10 +204,11 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f4-visible-delivery-v1 | 5 | [55.9, 59.1, 17.6, 18.8, 24.4] | [48, 48, 24, 17, 31] | 35.1 | ; Broke — months with an empty wallet. Som; Trust crisis — a second major blow-up. T |
 | haiku | f5-relationship-capital-v1 | 5 | [21.8, 48.5, 23.1, 32.5, 26.9] | [24, 39, 24, 29, 24] | 29.4 | ; ; ; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
 | haiku | f6-commitment-ledger-v1 | 6 | [30.5, 25.8, 49.7, 23.0, 67.8, 48.4] | [30, 8, 48, 24, 48, 48] | 40.2 | ; ; Dismissed for capability — a second weak |
-| haiku | f7-promotion-drive-v1 | 1 | [19.5] | [24] | 20.6 | Dismissed for capability — a second weak |
+| haiku | f7-delivery-stories-v1 | 4 | [63.2, 42.1, 62.7, 18.1] | [48, 48, 48, 24] | 46.0 | Dismissed for capability — a second weak |
+| haiku | f7-promotion-drive-v1 | 4 | [19.5, 70.3, 53.8, 48.7] | [24, 48, 47, 48] | 46.0 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | f7-single-skill-v1 | 6 | [54.2, 63.9, 20.6, 60.1, 30.9, 23.1] | [48, 48, 24, 48, 30, 24] | 41.2 | ; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | f7-three-skills-v1 | 10 | [50.4, 51.5, 67.1, 71.0, 58.5, 70.4, 69.2, 20.1, 68.6, 61.9] | [48, 48, 48, 48, 48, 48, 48, 6, 48, 48] | 56.6 | Blackout — your health hits zero. The sc |
-| haiku | f7-trend-marking-v1 | 1 | [18.6] | [24] | 19.9 | Dismissed for capability — a second weak |
+| haiku | f7-trend-marking-v1 | 4 | [18.6, 51.6, 19.0, 54.0] | [24, 48, 24, 45] | 34.9 | Dismissed for capability — a second weak; Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | f8-secure-growth-v1 | 7 | [68.6, 55.8, 23.5, 51.9, 15.7, 55.9, 34.9] | [48, 48, 24, 48, 24, 48, 33] | 42.9 | Dismissed for capability — a second weak; Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | l1-review-clock-v1 | 4 | [72.9, 29.2, 28.5, 20.3] | [48, 23, 9, 24] | 36.4 | Trust crisis — a second major blow-up. T; Blackout — your health hits zero. The sc; Dismissed for capability — a second weak |
 | haiku | m3-subtracted-v1 | 3 | [16.0, 60.6, 48.9] | [24, 48, 48] | 41.8 |  |
@@ -212,6 +216,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | o1-promotion-gap-v1 | 5 | [64.4, 15.7, 31.0, 64.7, 23.0] | [48, 24, 20, 48, 8] | 38.8 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Broke — months with an empty wallet. Som |
 | haiku | o2-run-hot-v1 | 4 | [24.7, 38.6, 61.9, 19.7] | [24, 29, 48, 24] | 35.2 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | observed-growth-v1 | 4 | [52.4, 55.0, 24.4, 69.9] | [48, 48, 24, 48] | 49.1 | Dismissed for capability — a second weak |
+| haiku | observed-growth-v2 | 2 | [21.2, 23.0] | [9, 9] | 22.7 | Blackout — your health hits zero. The sc; Blackout — your health hits zero. The sc |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
 | haiku | value-conversion-v1 | 4 | [65.1, 37.1, 46.2, 69.9] | [48, 31, 40, 48] | 51.2 | Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
@@ -287,6 +292,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Block 4 allocated** (seed 20261154): F7 three-skills 6, observed-growth 5, F1 4, value-conversion 3, plus a dormant audit of P0 (2 games).
 - **Next generation**, after the F7 children's screen: reliability-focused, i.e. leaving Level 1 by the first or second review.
 - **Organiser round 3 (17:57 UTC):** merged `leah/workspace` (l1-review-clock v2 and v3) and `matteo/observed-growth-v2` (which includes `matteo-t4-growth`). Imported origins `leah` and `matteo` (0 conflicts). Registered and queued 4 Haiku screens each: l1-review-clock-v2 `6e26797afe52e4fd`, l1-review-clock-v3 `35576a667c2f3d53`, observed-growth-v2 `f2715987f0341ab2`.
+- **Decision #142 (18:11 UTC):** the F7 children did not help (42–45). New leader **f1-steady-balance**, 54.6. Batch 4 (38 games) is running. Block-5 generation is in progress: F1 children aimed at reliability, plus the stall slot.
 
 ## Relevo (hand-off)
 

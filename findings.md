@@ -169,3 +169,4 @@
   - opus~100k completes 2 of 6 games with F3-family Skills (posterior about 38–39), against 4 of 4 with F1 and P0 (61.6–65.6). Haiku rates the F3 family mid-table.
   - The Haiku ranking does not transfer to a stronger model, which adds weight to the target pilot (T6).
 
+- Block decision #142 (18:11 UTC): the three trace-driven F7 children (trend marking, delivery stories, promotion drive) score 42–45 after 4 Haiku games each. Family pooling pulls their parent f7-three-skills down to 51.5. New leader f1-steady-balance, 54.6 (n = 8). `careerlab digest` now skips imported games that have no local run folder.

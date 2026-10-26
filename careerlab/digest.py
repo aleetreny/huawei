@@ -104,8 +104,8 @@ def digest(reg: Registry, model: str, out_dir: Path) -> list[dict[str, Any]]:
     out_dir.mkdir(parents=True, exist_ok=True)
     index = []
     for r in rows:
-        run_dir = Path(r["run_dir"])
-        if not run_dir.exists():
+        run_dir = Path(r["run_dir"]) if r["run_dir"] else None
+        if run_dir is None or not run_dir.exists():  # imported games (other machines or origins) have no local run folder
             continue
         cfg = json.loads(r["config"])
         actor = cfg["model"] + (f"~{cfg['autocompact']}" if cfg.get("autocompact") else "")
