@@ -119,8 +119,8 @@ Ingeniería inversa con bots solicitada por Alejandro: **Claude — `alejandro/i
 - Las respuestas a eventos deciden la partida; el reparto trimestral apenas.
 - El carácter de una respuesta predice sus efectos en historias no vistas (R² 0,4–0,6).
 - Con riesgo acumulado, mentir o exponerse a una revisión formal lo hace estallar.
-- Oráculo con el catálogo de dev (no es una Skill): 68 de nota y 93 % terminadas.
-- Manual candidato `lab/policies-src/bb-mechanics/bb-mechanics-v1`: lint sin avisos, **sin jugar aún con IA**. No reasigna T1–T14.
+- Oráculo con el catálogo de dev (no es una Skill): 67,9 de nota media en 1.200 partidas (mediana 71), 92 % terminadas y 71 % en L6.
+- Dos manuales candidatos, `bb-mechanics-v1` y `bb-mechanics-lean-v1` (en `lab/policies-src/bb-mechanics/`): lint sin avisos, **sin jugar aún con IA**. PR [#16](https://github.com/aleetreny/huawei/pull/16). No reasigna T1–T14.
 
 Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-probar` — preparada para PR nueva**. [Índice](research/ideas/README.md) y [exploración aleatoria instrumentada](research/ideas/exploracion-aleatoria.md): revisión de la corrida de Matteo (73.858 partidas, resumen agregado sin decisiones individuales publicadas), diseño de logs por decisión y límites de inferencia/conformidad. No se han lanzado partidas ni contactado organizadores. Relevo y siguiente paso de auditoría en la sección; no reasigna T1–T13.
 

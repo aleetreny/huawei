@@ -9,12 +9,12 @@ description: How promotion, reviews and hidden risk work in this career game, an
 - Story answers carry most of the growth and most of the danger. Quarterly actions only adjust.
 - A half-year review judges Skill, Network and Output as they stand when the review month begins, before that month's events and allocation. All three must be high enough for your level, and Dignity must not be low.
 - Each level caps every input; gains beyond the cap are lost. An input that stops rising after a gain is at its cap.
-- Grades stay weak until you climb, and repeated weak reviews end the run: an early first promotion matters more than anything else.
+- Grades stay weak until you climb, and repeated weak reviews end the run: an early first promotion matters more than anything else. If a review warns that the next one has to be better, that next review is decisive: put everything into being promoted at it.
 - Hidden risk is built by answers. The HR partner's monthly remark measures it: calm is fine, any concern means it is building. An explosion costs Dignity, Wealth and results; a second ends the run.
 
 ## Story answers
 1. Reject answers that conceal, deny, misrepresent, gossip, leak, cut corners, bet that a known problem will not surface, or publicly blame someone.
-2. Among the rest, pick the one that builds the input you most need: Skill through learning and doing the work properly; Network through helping and collaborating; Output by keeping your time on your own deliverables (side work and rework take it away). Avoid passive or people-pleasing answers.
+2. Among the rest, pick the one that builds the input you most need: Skill through learning and doing the work properly; Network through helping and collaborating; Output by keeping your time on your own deliverables (side work and rework take it away). Avoid passive or people-pleasing answers, and answers that cost money while Wealth is low: early pay is small and an empty wallet ends the run.
 3. Prefer the tactful way: correct things in writing or after the meeting, steer back without a scene.
 4. In the month before a review month, avoid any answer that costs a point of Skill, Network or Output when another honest answer keeps it.
 5. While the HR remark shows concern, also avoid steps that put you under formal scrutiny (a signed complaint, a formal investigation): built-up risk goes off when exposed.
