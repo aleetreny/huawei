@@ -1,10 +1,10 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:04 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 19:05 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 404, interrupted 28, leased 10, queued 21, running 6.
+- Jobs in the registry: done 408, interrupted 28, leased 10, queued 21, running 6.
 - Episodes finished in this container: 140. Batches completed: 4 (last at 2026-10-26 19:03:01 UTC).
 - Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.53**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
 - Seven-day quota: utilisation **0.07**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.116** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
@@ -72,7 +72,7 @@ Gain over the last three decisions: -3.02 → stall trigger **fires**.
 | f7-one-vs-many | 34 | 6 | 3 |
 | f3-feedback-reactive | 26 | 6 | 4 |
 | f1-steady-balance | 19 | 5 | 4 |
-| matteo-feedback-growth | 13 | 4 | 3 |
+| matteo-feedback-growth | 13 | 4 | 4 |
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
@@ -322,6 +322,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
   - New F1 children, nested: f1-core (P20 subtraction), f1-risk-signal (core plus Defuse on any non-reassuring risk feedback), and the stall slot f1-status-line (P22: the same rules as a status line). 4 Haiku screens each.
 - **Organiser round 4 (18:32 UTC):** restored ESTADO.md, which the block-5 commit had emptied for about 5 minutes on main (an edit script opened it for writing before reading). Merged `matteo/observed-growth-v3` (his own pilot: 4/4 completed, mean Q 71.4, a different actor cell, now being checked in the race) and `alejandro/investigacion-decisiones` (decision research that only analyses exports; PR #3). Imported origin `matteo` (0 conflicts).
 - **Decision #150 (19:03 UTC):** F1 52.2 (n = 12), f3-balance-recombined 51.2, f3-lean 51.1, f1-review-risk 50.4, F3 50.1. With more data the top posteriors bunch around 50–52, and none has P(best) ≥ 0.2. **Block 6 allocated:** 18 slots (seed 20261176); its stall slot is 1 more game of f7-promotion-drive. Batch 5 (F1 children and observed-growth-v3) is running.
+- **Organiser round 5 (19:10 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
 
 ## Relevo (hand-off)
 
