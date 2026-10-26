@@ -1,0 +1,295 @@
+[
+  {
+    "run": 1,
+    "arm": [
+      "targeted-closure",
+      "low-dignity",
+      "project"
+    ],
+    "before_time": {
+      "current_month": 5,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "after_time": {
+      "current_month": 6,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "before": {
+      "health": 10,
+      "dignity": 5,
+      "skill": 5,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 5,
+      "output": -1,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 8,
+      "dignity": 1,
+      "skill": 4,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": -1,
+      "wealth": 0,
+      "energy": 0
+    },
+    "choice": {
+      "choice": 3,
+      "action": "Drop the idea because it looks too hard"
+    },
+    "review_events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nThe room feels tense. “Your name came up too often this half: slips, friction, questions about your attitude. This is your last chance to adjust. Show real change or I can’t protect you in the review.”\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.\n\nA senior colleague takes you aside: “You’ve dropped a few balls lately. That’s normal for a newcomer. I’ll have a word with people about your KPI targets.”\n\nFor months nobody asks you to lunch; in group chats you are the only “Got it” echo. Work that needs other people keeps stalling.",
+    "promoted": false,
+    "support_text": false,
+    "outcome": "eliminated",
+    "final": {
+      "time": {
+        "current_month": 6,
+        "current_quarter": 2,
+        "current_year": 1
+      },
+      "status": {
+        "health": 7,
+        "dignity": 0,
+        "skill": 6,
+        "network": 0,
+        "level": "L1",
+        "duration_in_level": 6,
+        "output": 0,
+        "wealth": -2,
+        "energy": 3
+      },
+      "simulation_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "session_id": "14bcbd26f28e48df9bf0ed8ed44324d8",
+      "error": "GAME OVER: Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.",
+      "available_choice_count": 0
+    }
+  },
+  {
+    "run": 2,
+    "arm": [
+      "targeted-closure",
+      "safe",
+      "project"
+    ],
+    "before_time": {
+      "current_month": 5,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "after_time": {
+      "current_month": 6,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "before": {
+      "health": 8,
+      "dignity": 10,
+      "skill": 9,
+      "network": 3,
+      "level": "L1",
+      "duration_in_level": 5,
+      "output": 3,
+      "wealth": -2,
+      "energy": 0
+    },
+    "after": {
+      "health": 8,
+      "dignity": 9,
+      "skill": 9,
+      "network": 3,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 0,
+      "energy": 0
+    },
+    "choice": {
+      "choice": 2,
+      "action": "Smile and say, ‘Thanks, but not tonight’"
+    },
+    "review_events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nYour manager goes through the half-year checklist: “Acceptable overall. Boxes ticked, no standout wins, no disasters. Keep going. Flag blockers early and don’t suffer in silence.” The tone is neutral.\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.\n\nA senior colleague takes you aside: “You’ve dropped a few balls lately. That’s normal for a newcomer. I’ll have a word with people about your KPI targets.”\n\nPromotion notice: you passed the half-year review and moved from L1 to L2 (Engineer).\n\nPayday just means paying off debts. The bills turn up as reliably as you do. You start wondering whether lunch is really necessary…",
+    "promoted": true,
+    "support_text": false,
+    "outcome": "six_month_window",
+    "final": {
+      "time": {
+        "current_month": 7,
+        "current_quarter": 3,
+        "current_year": 1
+      },
+      "status": {
+        "health": 8,
+        "dignity": 9,
+        "skill": 11,
+        "network": 6,
+        "level": "L2",
+        "duration_in_level": 2,
+        "output": 5,
+        "wealth": 2,
+        "energy": 0
+      },
+      "simulation_flags": {
+        "alive": true,
+        "failed": false,
+        "failure_reason": null
+      },
+      "session_id": "fe3d3dab02264c6e893fe2aa383fbe6c",
+      "available_choice_count": 3
+    }
+  },
+  {
+    "run": 3,
+    "arm": [
+      "targeted-closure",
+      "growth",
+      "project"
+    ],
+    "before_time": {
+      "current_month": 5,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "after_time": {
+      "current_month": 6,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "before": {
+      "health": 7,
+      "dignity": 6,
+      "skill": 9,
+      "network": 3,
+      "level": "L1",
+      "duration_in_level": 5,
+      "output": 3,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 6,
+      "dignity": 4,
+      "skill": 9,
+      "network": 3,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 0,
+      "energy": 0
+    },
+    "choice": {
+      "choice": 3,
+      "action": "Suggest to your manager privately that important items go by email"
+    },
+    "review_events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nHR marks the note for follow-up. You get a list of issues: collaboration, warning signs on risk, and output measured against your level. “This isn’t a formality. It counts in this half-year’s review, for both performance and promotion. Be clear on that.”\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, frowning, the risks have piled up. Deal with them yourself.\n\nAt lunch a diligent peer whispers: “Rough quarter. I gave the boss the context.”\n\nPromotion notice: you passed the half-year review and moved from L1 to L2 (Engineer).\n\nPayday just means paying off debts. The bills turn up as reliably as you do. You start wondering whether lunch is really necessary…",
+    "promoted": true,
+    "support_text": true,
+    "outcome": "six_month_window",
+    "final": {
+      "time": {
+        "current_month": 7,
+        "current_quarter": 3,
+        "current_year": 1
+      },
+      "status": {
+        "health": 10,
+        "dignity": 7,
+        "skill": 13,
+        "network": 6,
+        "level": "L2",
+        "duration_in_level": 2,
+        "output": 6,
+        "wealth": 1,
+        "energy": 0
+      },
+      "simulation_flags": {
+        "alive": true,
+        "failed": false,
+        "failure_reason": null
+      },
+      "session_id": "40b5c6f1fa90408db2409f59ab615d71",
+      "available_choice_count": 3
+    }
+  },
+  {
+    "run": 4,
+    "arm": [
+      "targeted-closure",
+      "growth",
+      "project"
+    ],
+    "before_time": {
+      "current_month": 5,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "after_time": {
+      "current_month": 6,
+      "current_quarter": 2,
+      "current_year": 1
+    },
+    "before": {
+      "health": 9,
+      "dignity": 10,
+      "skill": 9,
+      "network": 3,
+      "level": "L1",
+      "duration_in_level": 5,
+      "output": 3,
+      "wealth": 2,
+      "energy": 0
+    },
+    "after": {
+      "health": 8,
+      "dignity": 10,
+      "skill": 9,
+      "network": 3,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 2,
+      "energy": 0
+    },
+    "choice": {
+      "choice": 1,
+      "action": "Switch to lunching with colleagues at least three days a week"
+    },
+    "review_events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nThe feedback covers schedule, collaboration and your sense of risk. The summary: “This isn’t a reprimand. But don’t look like someone who works hard and never wins. Same bar in six months.”\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, frowning, the risks have piled up. Deal with them yourself.\n\nYour mentor texts: “The client was ready to escalate that bug — I talked them down.”\n\nPromotion notice: you passed the half-year review and moved from L1 to L2 (Engineer).",
+    "promoted": true,
+    "support_text": true,
+    "outcome": "six_month_window",
+    "final": {
+      "time": {
+        "current_month": 7,
+        "current_quarter": 3,
+        "current_year": 1
+      },
+      "status": {
+        "health": 10,
+        "dignity": 10,
+        "skill": 12,
+        "network": 5,
+        "level": "L2",
+        "duration_in_level": 2,
+        "output": 6,
+        "wealth": 3,
+        "energy": 0
+      },
+      "simulation_flags": {
+        "alive": true,
+        "failed": false,
+        "failure_reason": null
+      },
+      "session_id": "bc2f2af18c414b9c85c6a60678a5937b",
+      "available_choice_count": 2
+    }
+  }
+]
