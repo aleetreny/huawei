@@ -16,6 +16,8 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import math
+import re
 import shutil
 import subprocess
 import time
@@ -27,6 +29,37 @@ from careerlab.config import Settings
 from careerlab.episode import EpisodeResult, atomic_write_json
 
 RUNNER_COMMIT = "00b084a8"
+
+
+def credentials_path(settings: Settings) -> Path:
+    return Path(os.environ.get("CAREERLAB_TARGET_ENV") or settings.data_dir/"secrets"/"competition.env").expanduser().resolve()
+
+
+def credential_status(settings: Settings) -> dict[str,Any]:
+    """Never return secret values, contents, or parser exceptions containing them."""
+    path=credentials_path(settings)
+    values={}
+    if path.is_file():
+        for line in path.read_text().splitlines():
+            match=re.match(r"^\s*(API_BASE|API_KEY|MODEL_NAME)\s*=\s*(.*?)\s*$",line)
+            if match:
+                values[match[1]]=match[2].strip().strip("\"'")
+    present={k:bool(values.get(k)) for k in ("API_BASE","API_KEY","MODEL_NAME")}
+    return {"configured":all(present.values()),"fields_present":present,"env_file":str(path),
+            "runner_present":(settings.runner_dir/".git").exists()}
+
+
+def development_bundle(bundle: Path, run_dir: Path) -> Path:
+    """Ephemeral local-play wrapper, never the team's final design documents."""
+    out=run_dir/"development-submission"
+    shutil.copytree(bundle,out,dirs_exist_ok=True)
+    (out/"design").mkdir(exist_ok=True)
+    for name in ("README.md","design/skills_design.md","design/decision_report.md"):
+        if not (out/name).exists():
+            (out/name).write_text("# Development evaluation fixture\n\nThis directory is an isolated local-play wrapper, not a final submission. "
+                                 "The registered manifest and Skills are copied unchanged. Results are recorded separately; "
+                                 "no superiority or final document-quality claim is made.\n")
+    return out
 
 
 @dataclass(frozen=True)
@@ -53,10 +86,11 @@ def prepare_slot(settings: Settings, slot: int) -> Path:
         subprocess.run(["git", "clone", "--quiet", str(settings.runner_dir), str(repo)], check=True)
         subprocess.run(["git", "-C", str(repo), "checkout", "--quiet", RUNNER_COMMIT], check=True)
         subprocess.run(["uv", "sync", "--frozen", "--quiet"], cwd=repo, check=True, env=_env(home))
-    env_src = os.environ.get("CAREERLAB_TARGET_ENV", "")
-    if env_src and Path(env_src).is_file():
-        shutil.copyfile(env_src, repo / ".env")
-        os.chmod(repo / ".env", 0o600)
+    env_src = credentials_path(settings)
+    if not credential_status(settings)["configured"]:
+        raise ValueError("target credentials are incomplete; configure them outside the repository")
+    shutil.copyfile(env_src, repo / ".env")
+    os.chmod(repo / ".env", 0o600)
     subprocess.run(["uv", "run", "python", "-m", "career_sim_runner", "setup"], cwd=repo, check=True,
                    env=_env(home), capture_output=True)
     return root
@@ -80,10 +114,18 @@ def _ws_url(repo: Path, home: Path) -> str | None:
 
 
 async def run_target_episode(settings: Settings, cfg: TargetConfig, solution_dir: Path, job_id: str,
-                             run_dir: Path, slot: int) -> EpisodeResult:
+                             run_dir: Path, slot: int, budget=None) -> EpisodeResult:
     """Start the slot's JiuwenSwarm instance, play one game with the official runner, collect its report."""
     run_dir.mkdir(parents=True, exist_ok=True)
-    root = prepare_slot(settings, slot)
+    solution_dir=development_bundle(solution_dir,run_dir)
+    from careerlab.budget import BudgetClosed
+    if budget is None:
+        raise BudgetClosed("target execution requires a fresh paid-budget reservation")
+    if cfg.route!="competition-key" or cfg.model_name!="deepseek-v4-flash" or cfg.runner_commit!=RUNNER_COMMIT:
+        raise ValueError("only the pinned official competition-key actor is enabled")
+    if not math.isfinite(cfg.timeout_s) or cfg.timeout_s<=0:
+        raise ValueError("target timeout must be positive and finite")
+    root = await asyncio.to_thread(prepare_slot,settings,slot)
     repo, home = root / "runner", root / "home"
     if not (repo / ".env").exists():
         result = EpisodeResult(job_id, None, "interrupted", interruption="no target credentials configured")
@@ -91,9 +133,12 @@ async def run_target_episode(settings: Settings, cfg: TargetConfig, solution_dir
         return result
     atomic_write_json(run_dir / "actor.json", cfg.record())
     started = time.perf_counter()
+    report_root=repo/".career_sim_runner"/"career_emu"/"outputs"
+    previous={str(p):p.stat().st_mtime_ns for p in report_root.rglob("score_report.json")}
     instance = await asyncio.create_subprocess_exec("uv", "run", "jiuwenswarm-start", "--name", "career_emu", "all",
                                                     cwd=str(repo), env=_env(home), stdout=(run_dir / "jiuwen.log").open("w"),
                                                     stderr=subprocess.STDOUT)
+    play = None
     try:
         url = None
         for _ in range(120):
@@ -104,15 +149,24 @@ async def run_target_episode(settings: Settings, cfg: TargetConfig, solution_dir
         if not url:
             result = EpisodeResult(job_id, None, "interrupted", interruption="JiuwenSwarm instance did not come up")
         else:
+            budget.start(job_id)  # committed before the first paid play request
             play = await asyncio.create_subprocess_exec(
                 "uv", "run", "python", "-m", "career_sim_runner", "play", "--submission", str(solution_dir),
                 "--ws-url", url, "--timeout-s", str(cfg.timeout_s), cwd=str(repo), env=_env(home),
                 stdout=(run_dir / "play.log").open("w"), stderr=subprocess.STDOUT)
-            await play.wait()
-            reports = sorted((repo / ".career_sim_runner" / "career_emu" / "outputs").rglob("score_report.json"), key=os.path.getmtime)
+            try:
+                await asyncio.wait_for(play.wait(),cfg.timeout_s)
+            except asyncio.TimeoutError:
+                play.kill()
+                await play.wait()
+            reports = sorted((p for p in report_root.rglob("score_report.json") if previous.get(str(p))!=p.stat().st_mtime_ns), key=os.path.getmtime)
             result = _from_report(job_id, reports[-1], run_dir) if reports else EpisodeResult(job_id, None, "interrupted", interruption="no score report")
     finally:
-        instance.terminate()
+        if play is not None and play.returncode is None:
+            play.kill()
+            await play.wait()
+        if instance.returncode is None:
+            instance.terminate()
         try:
             await asyncio.wait_for(instance.wait(), 30)
         except asyncio.TimeoutError:
@@ -131,8 +185,23 @@ def _from_report(job_id: str, report_path: Path, run_dir: Path) -> EpisodeResult
         return EpisodeResult(job_id, report.get("session_id"), "interrupted",
                              interruption=f"runner ended without ending_score: {report.get('termination_reason')}",
                              actor_usage={"tokens": usage})
+    q,t=score.get("quantitative_score"),score.get("survival_months")
+    if (not isinstance(q,(int,float)) or isinstance(q,bool) or not math.isfinite(q) or not 0<=q<=100
+            or not isinstance(t,int) or isinstance(t,bool) or not 0<t<=48):
+        return EpisodeResult(job_id,report.get("session_id"),"interrupted",interruption="invalid official score report",actor_usage={"tokens":usage})
+    events=report.get("events_log")
+    if events:
+        source=Path(events).resolve()
+        # Only the runner's own output directory, never arbitrary paths such as .env.
+        if source.is_file() and source.is_relative_to(report_path.parent.resolve()):
+            shutil.copyfile(source,run_dir/"target-transcript.jsonl")
+            events=str(run_dir/"target-transcript.jsonl")
+        else:
+            events=None
+    cost={k:usage[k] for k in ("billed_cost_usd","cost_usd","total_cost_usd") if k in usage}
     return EpisodeResult(job_id, report.get("session_id"), "completed" if score.get("completed") else "eliminated",
                          survival_months=score.get("survival_months"), quantitative_score=score.get("quantitative_score"),
-                         ending_score=score, actor_usage={"tokens": usage, "total_tokens": usage.get("total_tokens"),
+                         ending_score=score, failure_reason=report.get("failure_reason") or score.get("failure_reason"),
+                         actor_usage={"tokens": usage, "total_tokens": usage.get("total_tokens"),**cost,
                                                           "termination_reason": report.get("termination_reason")},
-                         trajectory_path=report.get("events_log"))
+                         trajectory_path=events)

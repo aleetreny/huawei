@@ -46,11 +46,16 @@ CREATE TABLE IF NOT EXISTS decisions (
   payload TEXT NOT NULL, rationale TEXT NOT NULL);
 CREATE INDEX IF NOT EXISTS jobs_status ON jobs(status);
 CREATE INDEX IF NOT EXISTS evals_cell ON evaluations(policy_id, actor_id, env_id, purpose);
+CREATE TABLE IF NOT EXISTS target_budget_accounts (account TEXT PRIMARY KEY,config TEXT NOT NULL,created_at REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS target_budget_events (
+ event_id TEXT PRIMARY KEY,account TEXT NOT NULL REFERENCES target_budget_accounts(account),job_id TEXT NOT NULL,
+ kind TEXT NOT NULL,payload TEXT NOT NULL,at REAL NOT NULL);
 """
 
 TERMINAL_OUTCOMES = ("completed", "eliminated")
 EXPORT_KEYS = {"policies": "policy_id", "actors": "actor_id", "environments": "env_id", "jobs": "job_id",
-               "evaluations": "job_id", "decisions": "decision_id"}
+               "evaluations": "job_id", "decisions": "decision_id",
+               "target_budget_accounts":"account","target_budget_events":"event_id"}
 
 
 class ExportWouldDropRows(RuntimeError):
@@ -97,6 +102,8 @@ class Registry:
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute("PRAGMA foreign_keys=ON")
         self.db.executescript(SCHEMA)
+        if "evidence" not in {r[1] for r in self.db.execute("PRAGMA table_info(evaluations)")}:
+            self.db.execute("ALTER TABLE evaluations ADD COLUMN evidence TEXT")
         for table in ("jobs", "decisions"):  # added for T11; existing rows are the race's
             if "origin" not in {r[1] for r in self.db.execute(f"PRAGMA table_info({table})")}:
                 self.db.execute(f"ALTER TABLE {table} ADD COLUMN origin TEXT NOT NULL DEFAULT ''")
@@ -161,7 +168,7 @@ class Registry:
                                   (base - 1, policy_id, actor_id, env_id, purpose, self.origin)).fetchone()[0]
             prefix = f"{self.origin}-" if self.origin else ""
             for r in range(top + 1, top + 1 + replicates):
-                job_id = f"{prefix}{purpose[:4]}-{policy_id[:8]}-{actor_id[:6]}-{r - base:05d}-a1"
+                job_id = f"{prefix}{purpose[:4]}-{policy_id[:8]}-{actor_id[:6]}-{env_id}-{r - base:05d}-a1"
                 now = time.time()
                 self.db.execute("INSERT INTO jobs (job_id,policy_id,actor_id,env_id,purpose,replicate,attempt,status,priority,created_at,updated_at,origin) VALUES (?,?,?,?,?,?,1,'queued',?,?,?,?)",
                                 (job_id, policy_id, actor_id, env_id, purpose, r, priority, now, now, self.origin))
@@ -210,14 +217,20 @@ class Registry:
             outcome, result["interruption"] = "interrupted", "terminal state without ending_score"
         traj = Path(result["trajectory_path"]) if result.get("trajectory_path") else None
         dims = {d["name"]: d.get("normalized_score") for d in (result.get("ending_score") or {}).get("dimensions", [])}
+        from careerlab.evidence import build_evidence
+        from careerlab.episode import atomic_write_json
+        evidence = build_evidence(result,run_dir)
+        atomic_write_json(run_dir/"evidence.json",evidence)
         with self.tx():
             self.db.execute(
-                "INSERT OR REPLACE INTO evaluations VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                "INSERT OR REPLACE INTO evaluations (job_id,policy_id,actor_id,env_id,purpose,outcome,survival_months,completed,score,"
+                "dims,steps,rejected_actions,tokens,wall_s,trajectory_path,trajectory_sha256,interruption,ingested_at,resumed,launch_index,evidence) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (job_id, job["policy_id"], job["actor_id"], job["env_id"], job["purpose"], outcome,
                  result.get("survival_months"), int(bool((result.get("ending_score") or {}).get("completed"))), score,
                  json.dumps(dims), result.get("steps"), result.get("rejected_actions"), json.dumps(result.get("actor_usage") or {}),
                  result.get("wall_seconds"), str(traj) if traj else None, file_sha256(traj) if traj and traj.exists() else None,
-                 result.get("interruption"), time.time(), int(bool(result.get("resumed"))), job["replicate"]))
+                 result.get("interruption"), time.time(), int(bool(result.get("resumed"))), job["replicate"],json.dumps(evidence)))
             self.db.execute("UPDATE jobs SET status=?, session_id=COALESCE(session_id, ?), updated_at=? WHERE job_id=?",
                             ("done" if outcome in TERMINAL_OUTCOMES else "interrupted", result.get("session_id"), time.time(), job_id))
         return outcome
@@ -286,6 +299,11 @@ class Registry:
                 tables[table] = [dict(r) for r in self.db.execute(own[table], (self.origin,)).fetchall()]
             else:
                 tables[table] = [dict(r) for r in self.db.execute(f"SELECT * FROM {table} ORDER BY rowid").fetchall()]
+        if not self.origin:
+            for table in ("target_budget_accounts","target_budget_events"):
+                rows = [dict(r) for r in self.db.execute(f"SELECT * FROM {table} ORDER BY rowid")]
+                if rows:
+                    tables[table] = rows
         if not force:
             missing = {}
             for table, rows in tables.items():
@@ -326,10 +344,12 @@ def import_jsonl(registry: "Registry", in_dir: Path, data_root: Path, lab_root: 
     """
     counts: dict[str, int] = {}
     conflicts = 0
-    for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions"):
+    for table in ("policies", "actors", "environments", "jobs", "evaluations", "decisions","target_budget_accounts","target_budget_events"):
         path = in_dir / f"{table}.jsonl"
         if not path.exists():
             continue
+        if table.startswith("target_budget_") and registry.origin:
+            raise ValueError("shared paid ledger may only be imported by the canonical cloud origin")
         cols = [r[1] for r in registry.db.execute(f"PRAGMA table_info({table})").fetchall()]
         n = 0
         with registry.tx():
