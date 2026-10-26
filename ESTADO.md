@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:33 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 16:20 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -17,7 +17,7 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 **El laboratorio funciona.** Juega partidas por la vía oficial, muchas a la vez, se recupera de fallos y guarda todo. Las instrucciones están en [lab/README.md](lab/README.md).
 
-Llevamos 99 partidas con IA (modelos de Claude haciendo de DeepSeek) y 150 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
+Llevamos 124 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
 **Clasificación actual** (Claude Haiku jugando; decisión del 26 oct a las 14:07):
 
@@ -38,12 +38,19 @@ Llevamos 99 partidas con IA (modelos de Claude haciendo de DeepSeek) y 150 con b
   - Opus con memoria corta termina 5 de 6. Opus jugando casi sin manual saca entre 62 y 67, así que sirve de "maestro".
 - Los bots que eligen al azar mueren hacia el mes 6. De las 73.858 partidas de Matteo, ninguna llegó al final.
 
+**Novedades de la tarde (26 oct, nube; provisional, con 3–4 partidas por manual, antes de la decisión de la tanda 1):**
+- Media de la nota (Q) con Haiku: f3 recombinada 60,6 (4 de 4 terminadas), F3 55,3, f3 ligera 55,1, hija destilada "defuse antes de la evaluación" 51,0, F8 crecer 49,3, o1 hueco de ascenso 44,0, o2 a tope 36,2, hija destilada completa 31,7.
+- La mayoría de las derrotas siguen siendo el despido en el mes 24. La hija destilada completa, que quita el plan de recuperación tras una evaluación mala, cae ahí 2 de 3 veces.
+- El techo de Opus (T13) empezó mal: su primera partida también cayó despedida en el mes 24 (nota 24,5). Quedan 3; se interpretará con los umbrales escritos de antemano.
+- Bots de energía (T10, 400 partidas, sin cuota): la salud es el primer límite. Sin un punto de recuperación cada trimestre, todos los bots se agotan. Recuperar sólo cuando la salud ya está baja llega tarde. La mejor mezcla es "desactivar riesgo + salud". Ninguna mezcla de energía evita la C de la primera evaluación.
+
 **Lo que aún no sabemos:**
 - Cómo juega DeepSeek con nuestros manuales. Hace falta la clave de la API (tarea T5).
 - Cuál es el techo del juego, es decir, si queda mucho margen o ya estamos cerca (tarea T13).
 
 **Cuota de Claude (cuenta Max):**
-- Se renueva hoy, 26 oct, a las 16:00 hora UK, y esa semana tiene que durar hasta el 1 nov.
+- Se renovó el 26 oct a las 16:00 UTC. A las 16:16 la ventana de 5 horas iba por el 7 % y la semana por el 1 %.
+- Antes del reinicio, a petición de Alejandro, se gastó lo que quedaba de la ventana anterior (tope 0,97 hasta las 16:00, con 10 partidas a la vez).
 - El laboratorio se frena solo: gasta como máximo un 12–13 % de la semana al día y deja un 10 % para los chats del equipo.
 
 ## 3. Fechas (hora UK)
@@ -60,49 +67,37 @@ Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nueva
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
-| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha | rama `cloud-lab-run`: `lab/reports/cloud-run-status.md`, cada hora |
-| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | escrita a las 15:03 (reglas y 2 hijas de F3); se juegan tras la tanda 1 | `cloud-lab-run`: `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
-| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | manual F8 escrito a las 15:03; se juega tras la tanda 1 | `cloud-lab-run`: `lab/policies-src/` (f8-secure-growth-v1) |
-| T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo si quiere | nube: en cola; Matteo: value-conversion-v1 lista para revisión; lint sin hallazgos, 225 tests OK | Matteo: `matteo-t4-growth`, informe `lab/reports/matteo-t4-value-conversion.md`; nube: rama `<persona>/ideas-fuera` |
+| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 (44 partidas) en juego desde las 16:00; decisión al acabarla | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
+| T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | hecha: reglas en `distilled-rules.md`; 2 hijas registradas y jugando (resultados provisionales en la sección 2) | `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
+| T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | hecha: F8 (`f8-secure-growth-v1`) registrada y jugando | `lab/policies-src/f8-secure-growth/` |
+| T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo | nube: o1 hueco de ascenso y o2 a tope jugando; o3 "padrinos" en espera (se parece a F4 + F5). Matteo: `value-conversion-v1` juntada con `main` y en cola (4 partidas) | `lab/policies-src/o*-*/`, `lab/policies-src/matteo-value-conversion/`, informe `lab/reports/matteo-t4-value-conversion.md` |
 | T5 | Envío preliminar y clave de la API | Alejandro | pendiente | apuntar aquí la fecha en que llegue la clave |
 | T6 | Piloto con DeepSeek: 2 partidas para medir coste y tokens ([target-budget.md](research/careerlab/target-budget.md)) | organizador | espera a T5 | `lab/reports/target-pilot/` |
 | T7 | Vídeo `presentation.mp4` para el corte 1, en inglés, máximo 10 minutos y respondiendo a las 5 preguntas oficiales | equipo (personas) | pendiente | guion base en [jury-story.md](research/careerlab/jury-story.md) |
 | T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
 | T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
-| T10 | Bots sin IA para estudiar el reparto de energía (opcional, no gasta cuota) | nube, en segundo plano | opcional | `lab/reports/energy-bots/` |
-| T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha en la rama `leah/workspace` (26 oct); falta revisarla y juntarla con `main` | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
-| T12 | Juntar `cloud-lab-run` con `main` después de cada tanda | nube (organizadora) | cada día | `main` |
-| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | pedida | `cloud-lab-run`: `lab/reports/opus-ceiling/` |
+| T10 | Bots sin IA para estudiar el reparto de energía (no gasta cuota) | nube | hecha (400 partidas; lecciones en la sección 2) | `lab/reports/energy-bots/README.md` |
+| T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
+| T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
+| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | en marcha: umbrales escritos antes de jugar; 1 de 4 partidas hecha (despedido en el mes 24, nota 24,5) | `lab/reports/opus-ceiling/README.md` |
 
-## Relevo del organizador (26 oct, 15:33 UTC)
+## Relevo del organizador (26 oct, 16:20 UTC)
 
-**Desde el 26 oct a las 16:00 UTC, la organizadora es la sesión de la nube "CareerLab continuous race in the cloud"** (rama `cloud-lab-run`). Juega las partidas y, además, hace de organizadora:
-- junta sus resultados con `main` (T12);
-- mantiene este archivo al día;
-- más adelante, prepara la entrega (T8 y T9 a partir del 27 oct).
+**La organizadora es la sesión de la nube "CareerLab continuous race in the cloud"** (rama `cloud-lab-run`). Juega las partidas, junta las ramas terminadas con `main` y mantiene este archivo. Para hablar con ella, abre esa sesión en claude.ai/code o en la app. Si se parase, su relevo completo (al final de `lab/reports/cloud-run-status.md`) trae un prompt para abrir otra sesión de nube que haga lo mismo. Nunca debe haber dos a la vez.
 
-Todo se hace en la nube, así que el Mac puede estar apagado. **Para hablar con ella**, abre esa sesión en claude.ai/code o en la app y escríbele directamente. No hace falta otro chat. Si se parase, su relevo (al final de `lab/reports/cloud-run-status.md`) trae un prompt listo para abrir otra sesión de nube que haga lo mismo. Nunca debe haber dos a la vez.
+**Cómo nos coordinamos sin pisarnos**
+- Cada persona o agente trabaja en su rama (`<persona>/<tarea>`) y sólo cambia **su línea** de la tabla de la sección 4. Al terminar, deja su relevo, hace push y pide que se junte (Pull Request o aviso aquí).
+- La organizadora junta las ramas terminadas en `main` cada hora o tras cada tanda: primero trae `main`, pasa los tests y nunca fuerza el push a `main`. Si hay un conflicto en una línea ajena, se queda la versión de su dueño.
+- Sólo la nube escribe `lab/registry/*.jsonl`. Otros ordenadores que jueguen exportan a `lab/registry-origins/<origen>/` (T11) y la organizadora lo importa.
+- Las secciones 2, 4 (líneas de la nube) y este relevo los escribe la organizadora.
+- Los commits van a nombre de una persona y **sin líneas `Co-Authored-By` de Claude** (decisión de Alejandro, sección 5).
 
-**Hecho hoy por el primer chat organizador (local)**
-- El laboratorio funciona.
-- 99 partidas con IA y 150 con bots. El método se ha comprobado en el juego de juguete.
-- El freno semanal de cuota está en marcha, y este archivo existe con sus reglas.
+**Hecho esta tarde (nube)**
+- Carrera en marcha. Candidatos nuevos en juego: 2 hijas destiladas de F3 (T2), F8 (T3), o1 y o2 (T4) y value-conversion de Matteo (T4).
+- Bots de energía terminados (T10). Techo de Opus en marcha (T13).
+- Juntadas con `main`: `cloud-lab-run`, `leah/workspace` (T11) y `matteo-t4-growth` (T4).
 
-**Mensajes que ese chat envió a la nube**
-- 14:38: destilar las partidas de Opus (T2).
-- 14:45: freno semanal y familia "sobrevivir y crecer" (T3).
-- 15:06: no editar ESTADO.md (ya no vale: ahora es la organizadora).
-- 15:11: techo de Opus (T13).
-- 15:15: tope al 0,97 hasta las 16:00 y después volver al 0,80.
-- 15:20: escribir el relevo completo antes de terminar.
-- 15:33: pasar a ser también la organizadora, sin documentos de entrega hasta el 27 oct.
-
-**Prioridades de la nube hasta el 27 oct:** sólo pruebas.
-- La carrera (T1), con las hijas de T2 y la familia de T3 dentro.
-- El techo de Opus (T13).
-- Ideas de fuera (T4), escritas por un agente que no ve nuestros manuales.
-- Bots sin IA (T10), que no gastan cuota.
-- Todo dentro del freno semanal y documentando cada hora.
+**Siguiente:** decisión de la tanda 1 hacia las 17:00 UTC y regla de estancamiento. El techo de Opus se mide contra sus umbrales. Los documentos de entrega (T8 y T9) empiezan el 27 oct a primera hora (UK).
 
 ## 5. Decisiones ya tomadas (no hace falta volver a discutirlas)
 
@@ -110,7 +105,9 @@ Todo se hace en la nube, así que el Mac puede estar apagado. **Para hablar con 
 - **26 oct, Alejandro:** no preguntamos en Discord; si las reglas no lo prohíben, lo hacemos. Riesgo conocido: la norma oficial dice *"the absence of an express prohibition is not permission"*. Si cambiamos de idea, hay un borrador del mensaje en [organiser-questions.md](research/organiser-questions.md) §0.
 - **Dinero:** sólo los 50 USD de la clave. Cualquier otro gasto en APIs necesita un presupuesto confirmado por Alejandro.
 - **Método:** las reglas estadísticas se fijaron antes de ver resultados ([prereg-v1.md](lab/protocol/prereg-v1.md)). No se editan; si hay que cambiarlas, se crea una versión nueva.
-- **Quién juega:** de momento sólo la nube juega partidas (ver la regla de partidas en la sección 6).
+- **Quién juega:** la carrera la juega la nube. Desde T11, otro ordenador puede jugar con su propio origen (ver *Partidas* en la sección 6).
+- **26 oct, Alejandro:** Claude no debe aparecer como contribuidor en GitHub. Los commits van a nombre de una persona y sin líneas `Co-Authored-By` de Claude. La nube hace los suyos a nombre de Alejandro.
+- **26 oct, Alejandro:** la nube hace push a `main` como organizadora (tras pasar los tests).
 
 ## 6. Reglas de trabajo
 
@@ -130,6 +127,8 @@ Todo se hace en la nube, así que el Mac puede estar apagado. **Para hablar con 
   | `cloud-lab-run` | la carrera de la nube | activa; el organizador la junta con `main` cada día |
   | `Matteo` | trabajo antiguo de Matteo (su diseño ya está en la carrera como M3) | se deja como está |
   | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
+  | `leah/workspace` | T11 de Leah | juntada con `main` el 26 oct, 16:20 |
+  | `matteo-t4-growth` | T4 de Matteo (value-conversion) | juntada con `main` el 26 oct, 16:20; en la carrera |
 - Al terminar una tarea:
   1. Las pruebas tienen que pasar (`uv run pytest -q`).
   2. El resultado queda donde dice la tabla.
@@ -152,7 +151,7 @@ Qué hay que dejar escrito, en una sección **Relevo** al final del informe de t
 Después, commit y push a tu rama. Una tarea no está terminada hasta que su relevo está en GitHub.
 
 **Partidas**
-- **Sólo la nube lanza partidas** (`careerlab run`). Si dos ordenadores juegan a la vez, sus resultados se numeran igual y se pisan al juntarlos. Para jugar desde otro sitio, primero hay que hacer T11.
+- **La carrera la juega la nube.** Desde T11 (Leah), otro ordenador puede jugar sin pisarla. Primero `uv run careerlab origin set <nombre>`, y después se exporta a `lab/registry-origins/<nombre>/`; la organizadora lo importa con `careerlab import --dir lab/registry-origins/<nombre>`. Las partidas con Claude en la cuenta Max comparten el freno semanal, así que avisa antes en tu línea de la tabla. Los bots sin IA no gastan cuota.
 - Para proponer un manual nuevo:
   1. Copia la carpeta [f3-lean-v1](lab/policies-src/f3-feedback-reactive/f3-lean-v1/) como plantilla dentro de `lab/policies-src/<familia>/<nombre>-v1/`.
   2. Rellena `policy.json`: la idea (`hypothesis`), qué esperas ver (`predicted_behaviour`) y qué demostraría que es mala (`refutation`).
@@ -178,7 +177,7 @@ Si algún día se vuelve a separar en un chat local, ese chat se abre en la carp
 
 - Tu diseño de tres Skills entró en la carrera como **M3**. Con Haiku está dormido (38 frente a 60 del líder), pero se puede despertar y el laboratorio lo revisa de vez en cuando.
 - La tarea que mejor encaja con tu cuota es **T4**: proponer manuales que no se nos hayan ocurrido, sobre todo de crecimiento (ascensos y dinero) y sin copiar los nuestros.
-- No lances partidas desde tu ordenador hasta que esté hecha T11.
+- T11 ya está hecha: si quieres jugar desde tu ordenador, pon tu origen (`careerlab origin set matteo`) y exporta a `lab/registry-origins/matteo/`. Tu `value-conversion-v1` ya está en la carrera, con 4 partidas de Haiku en cola.
 - En la app de Claude, pon `matteo` como prefijo de ramas (**Ajustes → Claude Code → Branch prefix**). Así tus ramas se llamarán `matteo/...` y se sabrá de quién es cada una.
 
 ## 8. Mapa de documentos

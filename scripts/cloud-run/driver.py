@@ -41,7 +41,7 @@ def log(msg: str) -> None:
 
 def queued(reg: Registry, pilot: bool = False) -> int:
     """Queued claude-cli jobs of the main lane (pilot=False) or the T13 ceiling lane (pilot=True, purpose 'pilot')."""
-    return reg.db.execute("SELECT COUNT(*) FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='queued' AND a.kind='claude-cli' "
+    return reg.db.execute("SELECT COUNT(*) FROM jobs j JOIN actors a USING(actor_id) WHERE j.status='queued' AND a.kind='claude-cli' AND j.origin='' "
                           "AND (j.purpose='pilot') = ?", (int(pilot),)).fetchone()[0]
 
 
@@ -49,7 +49,7 @@ def requeue_interrupted(reg: Registry, pilot: bool = False) -> list[str]:
     """Replacement attempt for each claude-cli slot of one lane whose latest attempt is interrupted (keeps its priority)."""
     out = []
     rows = reg.db.execute(
-        "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE a.kind='claude-cli' AND j.status='interrupted' "
+        "SELECT j.* FROM jobs j JOIN actors a USING(actor_id) WHERE a.kind='claude-cli' AND j.status='interrupted' AND j.origin='' "
         f"AND (j.purpose='pilot') = {int(pilot)} "
         "AND j.attempt = (SELECT MAX(k.attempt) FROM jobs k WHERE k.policy_id=j.policy_id AND k.actor_id=j.actor_id "
         "AND k.env_id=j.env_id AND k.purpose=j.purpose AND k.replicate=j.replicate)").fetchall()
