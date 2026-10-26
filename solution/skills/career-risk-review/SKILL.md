@@ -20,6 +20,10 @@ When current evidence indicates a serious threat, prefer an available response t
 
 When the situation is sustainable, return to growth: professional capability, credible results, relationships, promotion readiness and financial resilience over the remaining career. Avoid indefinite defensive play once the reason for recovery has been addressed.
 
+Full health and dignity are not required before pursuing growth. Distinguish a useful reserve from surplus recovery: consider the current trend, concrete narrative warnings, known action costs and the next corrective opportunity. Accept a bounded health or dignity cost for a worthwhile capability or career investment when there is no credible immediate threat. Do not spend a quarter merely topping up already adequate wellbeing.
+
+At a review or a missed promotion opportunity, reassess the likely limiting dimension using the actual feedback and recent results. Do not assume that a long stay at one level proves a special hidden promotion barrier. Prioritize investments that address the current weakness and still show useful gains, rather than repeating an action whose nominal effect has not appeared in observations. Change priorities without inventing a cap or threshold.
+
 For uncertain trade-offs, preserve future options and assess the plausibility and severity of downside. Avoid treating a good immediate outcome as evidence that an unresolved commitment or organizational problem is safe.
 
 At a performance review, use the actual feedback to identify weaknesses in results, capability or relationships. Adjust future choices accordingly; do not invent promotion distances or reverse-engineer the review formula.

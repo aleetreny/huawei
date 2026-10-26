@@ -32,6 +32,21 @@ async def home(request):
     return FileResponse(ROOT / 'index.html')
 
 
+async def live_page(request):
+    return FileResponse(ROOT / 'live.html')
+
+
+async def live(request):
+    path = BASE / '.career-lab' / 'live.json'
+    try:
+        data = json.loads(path.read_text())
+    except FileNotFoundError:
+        data = {'status': 'waiting', 'message': 'Waiting for a manual agent session.'}
+    except (ValueError, OSError):
+        return JSONResponse({'error': 'Live snapshot temporarily unavailable'}, status_code=503)
+    return JSONResponse(data, headers={'Cache-Control': 'no-store'})
+
+
 async def api(request: Request):
     origin = request.headers.get('origin')
     if origin and origin != f"http://{request.headers.get('host')}":
@@ -69,7 +84,7 @@ async def api(request: Request):
         return JSONResponse({'error': str(exc)}, status_code=400)
 
 
-app = Starlette(routes=[Route('/', home), Route('/api/{operation}', api, methods=['POST'])], lifespan=lifespan)
+app = Starlette(routes=[Route('/', home), Route('/live', live_page), Route('/api/live', live), Route('/api/{operation}', api, methods=['POST'])], lifespan=lifespan)
 
 if __name__ == '__main__':
     os.chdir(BASE)

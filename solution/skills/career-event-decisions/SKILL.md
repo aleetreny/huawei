@@ -19,6 +19,7 @@ Choose the best available option for this situation rather than recognizing a pr
 - Prefer credible commitments and honest communication over concealing problems, exaggerating progress or accepting work without a feasible plan.
 - Consider respectful boundaries, direct communication, appropriate escalation and repair of relationships where these options address the actual problem. Do not assume any one communication style wins every situation.
 - Balance learning against delivery and workload. Neither always taking the difficult technical route nor always choosing immediate convenience is a universal strategy.
+- When wellbeing is stable and the work has a feasible scope, actively seek learning, ownership and broader impact rather than reject an opportunity solely because it consumes some health or requires effort. Prefer investments that can improve later capability and credible results; distinguish a stretch assignment from an unbounded commitment.
 - Consider whether an apparent financial or career benefit creates dependence, misconduct, stress or delayed obligations.
 - For a follow-up, account for commitments already made in this run. New feedback can justify changing course; do not continue a damaging choice solely to appear consistent.
 - If all offered options have drawbacks, choose the most manageable downside in the current state. Do not invent an unlisted action.
