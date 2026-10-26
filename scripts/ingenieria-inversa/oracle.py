@@ -323,3 +323,60 @@ class Integrity(Principles):
             d, n = self.option_fx(node, c["choice"])
             return (e.get("integrity", 0), self.gain(st, d, month, ctx) if n else 0.0)
         return max(choices, key=key)["choice"], "g"
+
+
+RISKY = {"CONCEAL", "DECEIVE", "GOSSIP", "SHORTCUT", "CONFRONT"}
+BUILDS = {"skill": {"LEARN", "QUALITY", "OWN"}, "network": {"HELP", "COLLABORATE"},
+          "dignity": {"TRANSPARENT", "PROCESS", "CONFIDENTIAL", "BOUNDARY", "ESCALATE"}, "health": {"SELF_CARE"}}
+
+
+class Procedure(Principles):
+    """The draft Skill's story procedure applied literally, with trait labels as perception:
+    reject risk-building answer types; read what each remaining answer builds; pick the one that
+    builds the most-needed input; in the month before a review month never give away an input."""
+
+    name = "procedure"
+
+    def story(self, obs, choices, ctx):
+        st = obs["current_state"]["status"]
+        month = obs["current_state"]["time"]["current_month"]
+        if self.explore_now(month):
+            return self.rng.choice(choices)["choice"], "x"
+        lv = int(str(st["level"])[1:])
+        node = self._node_id(obs)
+        opts = self.nodes.get(node, {})
+        need = {}
+        for stat in GROWTH:
+            cap = self.cap(lv, stat)
+            need[stat] = 0.2 if st[stat] >= cap else 1.0
+        if lv == 1:
+            need["output"] *= 1.5
+        need["dignity"] = 2.0 if st["dignity"] <= 4 else 0.4
+        need["health"] = 2.0 if st["health"] <= 4 else 0.3
+        pre_review = month % 6 == 5
+
+        def perceived(c):
+            e = opts.get(str(c["choice"]), {})
+            tags = set(e.get("tags", []))
+            gains = {k: (1.0 if tags & v else 0.0) for k, v in BUILDS.items()}
+            gains["output"] = float(e.get("delivery", 0) > 0)
+            losses = {"output": float(e.get("delivery", 0) < 0),
+                      "network": float(bool(tags & {"CONFRONT", "PASSIVE"})),
+                      "health": float("OVERWORK" in tags),
+                      "dignity": float(bool(tags & {"APPEASE", "DECEIVE", "GOSSIP"}))}
+            return tags, e.get("integrity", 0), gains, losses
+
+        scored = []
+        for c in choices:
+            tags, integ, gains, losses = perceived(c)
+            risky = bool(tags & RISKY)
+            score = sum(need[k] * gains.get(k, 0) for k in need) - sum(need[k] * losses.get(k, 0) for k in losses)
+            if pre_review:
+                score -= 5 * sum(losses.get(k, 0) for k in GROWTH)
+            if tags & {"PASSIVE", "APPEASE"}:
+                score -= 0.5
+            scored.append((risky, -score, -integ, c["choice"]))
+        safe = [x for x in scored if not x[0]]
+        pool = safe or sorted(scored, key=lambda x: x[2])[:1]
+        best = min(pool, key=lambda x: (x[1], x[2]))
+        return best[3], "g"

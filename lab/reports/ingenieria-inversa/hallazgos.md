@@ -275,6 +275,62 @@ El oráculo v2 juega bien toda la partida salvo un semestre, en el que decide al
 
 "Protección" quiere decir que, en el mes anterior a cada evaluación, perder un punto de un indicador por debajo de su umbral pesa mucho más. Basta con no regalar esos puntos cuando hay alternativa. La ganancia viene de ascender a tiempo, y ascender a tiempo arrastra todo lo demás.
 
+## H18. La Dignidad también decide el ascenso, y el riesgo oculto resta un poco (37.282 evaluaciones de b00–b05; 26 oct 23:18 UTC)
+
+Entre las evaluaciones que cumplen los tres umbrales de Skill, Network y Output de su nivel:
+
+| Dignidad justo antes de la evaluación | Ascienden |
+|---|---:|
+| 0–3 | **0 de 40** |
+| 4 | 31 de 38 |
+| 5 | 37 de 39 |
+| 6 o más | 17.044 de 17.470 (97,6 %) |
+
+| Comentario de RR. HH. en el mes de la evaluación | Ascienden |
+|---|---:|
+| Tranquilo | 9.975 de 9.976 |
+| En voz baja | 98,3 % |
+| Ceño fruncido | 95,5 % |
+| Inquieto | 93,9 % |
+| Enfadado | 89,9 % (89 % si además explota) |
+
+- La salud no cuenta: con salud 0–1 ascienden 50 de 51.
+- **El ascenso es casi determinista:** cumplir los tres umbrales, tener la Dignidad sana y el riesgo bajo asciende prácticamente siempre. Lo que parecía azar es sobre todo riesgo oculto.
+- **No se ha visto ninguna nota S** en 37.282 evaluaciones (B 16.390, C 14.448, A 5.663, D 781).
+- **La charla semestral tiene tres tonos,** con tres variantes de texto cada uno:
+
+  | Tono | Nota que lo acompaña |
+  |---|---|
+  | Elogio ("keep this pace", "colleagues sizing you up") | siempre A |
+  | Neutro ("flag blockers early", "same bar in six months") | B o C |
+  | Aviso ("show real change or I can't protect you") | C o D |
+
+  Comenta la nota recién puesta; no la anticipa.
+
+## H19. Cuánto se consigue sólo con reglas generales (b06, 200 partidas por brazo; b05 como referencia)
+
+El "bot de principios" decide las respuestas con lo que predicen los rasgos de cada respuesta. Usa predicciones fuera de muestra: el modelo nunca vio esa historia. El resto lo juega igual que el oráculo.
+
+| Bot | Nota | Terminan | Asciende en la 1.ª evaluación | Fallos principales |
+|---|---:|---:|---:|---|
+| Principios, sin conocer techos ni umbrales (los detecta en la partida) | 41,9 ± 2,8 | 41 % | 38 % | despido 53, crisis de confianza 39, agotamiento 21 |
+| Principios, conociendo techos y umbrales | 48,4 ± 2,9 | 56 % | 44 % | despido 45, crisis 21, agotamiento 17 |
+| Oráculo con efectos reales (1.003 partidas) | 64,1 ± 0,9 | 80 % | 86 % | crisis 158, ruina 27, despido 13 |
+
+- **Saber cómo funciona el ascenso vale unos 6,5 puntos** a igualdad de todo lo demás.
+- **El bot pierde sobre todo en la primera evaluación,** porque el modelo de rasgos no prevé el Output (R² 0,02). Acaba despedido en L1 en una de cada cuatro partidas.
+- Un modelo de lenguaje lee las respuestas mejor que una regresión lineal de 21 rasgos, así que esto es un suelo, no un techo. Pero indica dónde debe insistir la Skill: **el Output en la entrada** y **no ceder puntos antes de la evaluación**.
+- **Otros detalles medidos:**
+
+  | Detalle | Efecto |
+  |---|---|
+  | Defuse (frente a la media de las acciones trimestrales) | −0,44 grados en el comentario de RR. HH. del mes siguiente |
+  | Pasar desapercibido | −0,32 grados |
+  | Sobreesfuerzo (High-intensity work) | **+0,67 grados** |
+  | Aviso de "subiste demasiado rápido" | Network −2,7 y Dignidad −0,9 más que un ascenso normal; no compensa frenar |
+
+- **El modelo numérico exacto del riesgo oculto sigue abierto.** Una regresión aditiva sobre el riesgo final no generaliza (R² −0,1 con partidas reservadas), porque casi siempre termina en 0 y se recorta.
+
 ## Traducción permitida a principios de Skill (borrador)
 
 | Hallazgo | Principio general, sin números | Cómo lo comprueba el agente en la partida |
