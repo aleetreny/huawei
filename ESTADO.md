@@ -134,6 +134,8 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 | T15 | **Chat A, entregas:** versión 1 para el corte del 27 oct (v7 si T16 la confirma, o el mejor manual general, reescrito para la rúbrica, comprobación de que no empeora, documentos de diseño, paquete validado); después, las versiones 2 y 3 | chat A (prompt en el documento de chats independientes) | por abrir | `lab/submissions/r1/` |
 | T16 | **Chat B, réplica del mecanismo del ascenso:** 25 partidas de Haiku de observed-growth-v7 de Matteo (PR #13; piloto de 8 partidas: 7 terminadas, media 61,3; las 8 ascendieron en el primer año) frente a 25 de f3-lean-v1 | chat B (prompt en el documento de chats independientes) | por abrir; informe para el 27 oct a las 14:00 UK | informe en su rama |
 | T17 | **Chat C, simulaciones brutas del juego** | chat local de Alejandro | en marcha (26 oct, 22:20) | lo que decida su chat |
+| T18 | **Laboratorio por secciones:** probar a mano, de uno en uno, planes muy distintos para cada parte del juego (cierre, apertura, salvavidas, escalada, crecimiento) y juntar los ganadores | chat nuevo (prompt en el plan maestro) | por abrir; empieza por el cierre (S5) | [plan maestro](research/careerlab/plan-maestro-secciones-2026-10-26.md); informes en `lab/reports/secciones/` |
+| T19 | **Comodines** (opcional): cuatro planes globales muy distintos (minimalista, fortaleza, lector de señales, procedimiento único) frente a f3-lean-v1 | chat nuevo (prompt en el plan maestro) | opcional | `lab/reports/comodines/` |
 
 ## Coordinación (desde el 26 oct, 22:50 UTC)
 
