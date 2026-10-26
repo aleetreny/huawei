@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 16:20 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 16:55 UTC**, sesión de la nube (organizadora).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -17,18 +17,23 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 **El laboratorio funciona.** Juega partidas por la vía oficial, muchas a la vez, se recupera de fallos y guarda todo. Las instrucciones están en [lab/README.md](lab/README.md).
 
-Llevamos 124 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
+Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
-**Clasificación actual** (Claude Haiku jugando; decisión del 26 oct a las 14:07):
+**Clasificación actual** (Claude Haiku jugando; decisión de bloque del 26 oct a las 16:49 UTC, registro #114):
 
 | Manual | Nota estimada | Estado |
 |---|---:|---|
-| F3 reacciona al feedback | 60,2 | líder |
-| f3 recombinada (F3 + F1) | 58,9 | sigue en juego |
-| f3 ligera | 57,5 | sigue en juego |
-| F7 tres skills | 50,0 | sigue en juego |
+| F7 tres skills | 55,2 | líder ("promover"), pero no se separa claramente de la siguiente |
+| f3 recombinada (F3 + F1) | 50,9 | sigue en juego |
+| f3 ligera | 50,2 | sigue en juego |
+| hija destilada "defuse antes de la evaluación" | 49,4 | sigue en juego |
 | F1 equilibrio | 49,3 | sigue en juego |
-| P0 mínimo, M3 (diseño de Matteo) | 39,4 y 38,0 | dormidos (se pueden despertar) |
+| F3 reacciona al feedback | 48,9 | sigue en juego (bajó desde 60,2) |
+| F8 crecer | 48,7 | sigue en juego |
+| o1 hueco de ascenso · o2 a tope | 42,7 · 35,2 | siguen en juego |
+| F5 relaciones, F2 invertir pronto | 29,4 y 24,6 | dormidos (se pueden despertar) |
+
+Las notas bajaron porque hay más partidas: el líder ha pasado de 60,2 a 55,2 en tres decisiones. Por eso salta la regla de estancamiento, y esta tanda lleva una idea contraria sacada del manual de jugadas.
 
 **Lo que hemos aprendido:**
 - Hay dos formas de perder: dos evaluaciones malas seguidas (despido en el mes 24) o una crisis de confianza tras acumular riesgo. Todas las partidas empiezan con una C.
@@ -40,6 +45,7 @@ Llevamos 124 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con 
 
 **Novedades de la tarde (26 oct, nube; provisional, con 3–4 partidas por manual, antes de la decisión de la tanda 1):**
 - Media de la nota (Q) con Haiku: f3 recombinada 60,6 (4 de 4 terminadas), F3 55,3, f3 ligera 55,1, hija destilada "defuse antes de la evaluación" 51,0, F8 crecer 49,3, o1 hueco de ascenso 44,0, o2 a tope 36,2, hija destilada completa 31,7.
+- **Cómo se pierde en el mes 24:** los 14 despidos vinieron tras cuatro evaluaciones malas seguidas (C C D D, C C C C o C C D C). Toda partida con al menos una B en sus cuatro primeras evaluaciones pasó del mes 24. La palanca es cortar la racha de C pronto.
 - La mayoría de las derrotas siguen siendo el despido en el mes 24. La hija destilada completa, que quita el plan de recuperación tras una evaluación mala, cae ahí 2 de 3 veces.
 - El techo de Opus (T13) empezó mal: su primera partida también cayó despedida en el mes 24 (nota 24,5). Quedan 3; se interpretará con los umbrales escritos de antemano.
 - Bots de energía (T10, 400 partidas, sin cuota): la salud es el primer límite. Sin un punto de recuperación cada trimestre, todos los bots se agotan. Recuperar sólo cuando la salud ya está baja llega tarde. La mejor mezcla es "desactivar riesgo + salud". Ninguna mezcla de energía evita la C de la primera evaluación.
@@ -69,7 +75,7 @@ Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicaci
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
-| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 (44 partidas) en juego desde las 16:00; decisión al acabarla | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
+| T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | en marcha: tanda 1 hecha (decisión #114, líder F7 tres skills); tanda 2 (value-conversion) en juego; tanda 3 repartida por el protocolo (24 repeticiones + hijas nuevas) | rama `cloud-lab-run`, informe `lab/reports/cloud-run-status.md` cada hora; se junta con `main` |
 | T2 | Destilar las partidas ganadoras de Opus en hijas de F3, sólo reglas generales | nube | hecha: reglas en `distilled-rules.md`; 2 hijas registradas y jugando (resultados provisionales en la sección 2) | `lab/reports/teacher-digests/distilled-rules.md`, `lab/policies-src/f3-feedback-reactive/` |
 | T3 | Familia nueva "sobrevivir y crecer" (buscar ascensos y dinero cuando todo va bien) | nube | hecha: F8 (`f8-secure-growth-v1`) registrada y jugando | `lab/policies-src/f8-secure-growth/` |
 | T4 | Ideas de fuera: manuales nuevos escritos sin mirar los nuestros, con otro modelo u otra cuota | nube (agente que no ve nuestros manuales) y Matteo | nube: o1 hueco de ascenso y o2 a tope jugando; o3 "padrinos" en espera (se parece a F4 + F5). Matteo: `value-conversion-v1` juntada con `main` y en cola (4 partidas); `observed-growth-v1` (síntesis tras leer F3/F8, no ciega) lista para registrar, lint OK; piloto local aislado con Haiku: 64,78, L5, 48 meses | `lab/policies-src/o*-*/`, `lab/policies-src/matteo-value-conversion/`, `lab/policies-src/matteo-feedback-growth/`, informes `lab/reports/matteo-t4-value-conversion.md` y `lab/reports/matteo-observed-growth.md` |
@@ -81,7 +87,7 @@ Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicaci
 | T10 | Bots sin IA para estudiar el reparto de energía (no gasta cuota) | nube | hecha (400 partidas; lecciones en la sección 2) | `lab/reports/energy-bots/README.md` |
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
 | T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
-| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | en marcha: umbrales escritos antes de jugar; 1 de 4 partidas hecha (despedido en el mes 24, nota 24,5) | `lab/reports/opus-ceiling/README.md` |
+| T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | en marcha: 3 de 6 partidas hechas (24,5 despedido en el mes 24; 53,6 y 62,0 terminadas). Al mezclar victorias y derrotas, la regla escrita antes añade 2 partidas | `lab/reports/opus-ceiling/README.md` |
 
 ## Relevo del organizador (26 oct, 16:20 UTC)
 
@@ -129,8 +135,9 @@ Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicaci
   | `cloud-lab-run` | la carrera de la nube | activa; el organizador la junta con `main` cada día |
   | `Matteo` | trabajo antiguo de Matteo (su diseño ya está en la carrera como M3) | se deja como está |
   | `cloud-portability-test` | prueba de la nube, terminada | juntada con `main` el 26 oct; se puede borrar |
-  | `leah/workspace` | T11 de Leah | juntada con `main` el 26 oct, 16:20 |
-  | `matteo-t4-growth` | T4 de Matteo (value-conversion) | juntada con `main` el 26 oct, 16:20; en la carrera |
+  | `leah/workspace` | T11 y trabajo propio de Leah (manual l1-review-clock, panel de resultados) | juntada con `main` el 26 oct (16:20 y 16:55); su manual está en la carrera y su partida de origen `leah` importada |
+  | `matteo-t4-growth` | T4 de Matteo (value-conversion, observed-growth) | juntada con `main` el 26 oct (16:20 y 16:55); los dos manuales están en la carrera |
+  | `alejandro/explicacion-repo` | explicación del repositorio (Codex) | juntada con `main` el 26 oct, 16:55 |
 - Al terminar una tarea:
   1. Las pruebas tienen que pasar (`uv run pytest -q`).
   2. El resultado queda donde dice la tabla.
