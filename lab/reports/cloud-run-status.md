@@ -1,55 +1,59 @@
 # CareerLab cloud run — status
 
-Generated 26 Oct 19:06 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
+Generated 26 Oct 19:41 UTC in the Claude Code cloud container, branch `cloud-lab-run`. All scores are Claude-proxy results on the dev split (`real-dev`), not official scores and not the target actor (deepseek-v4-flash in JiuwenSwarm). Under prereg-v1 section 8 they cannot prune or select by themselves.
 
 ## At a glance
 
-- Jobs in the registry: done 409, interrupted 28, leased 9, queued 21, running 6.
-- Episodes finished in this container: 141. Batches completed: 4 (last at 2026-10-26 19:03:01 UTC).
-- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.53**, window resets 26 Oct 21:00 UTC; governor cap 0.8. The window is shared with every session on the account.
-- Seven-day quota: utilisation **0.07**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.116** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
+- Jobs in the registry: cancelled 27, done 425, interrupted 34, queued 15, running 8.
+- Episodes finished in this container: 157. Batches completed: 5 (last at 2026-10-26 19:31:17 UTC).
+- Five-hour quota (`careerlab.scheduler.latest_quota`): utilisation **0.60**, window resets 26 Oct 21:00 UTC; governor cap 0.85. The window is shared with every session on the account.
+- Seven-day quota: utilisation **0.09**, window resets 02 Nov 16:00 UTC; weekly allowance now **0.140** (`weekly_allowance`: straight line from 0.10 at the window start to 0.90 at 2 Nov 00:00 UTC, about 0.126 a day). New episodes wait while either window is over its limit.
 - Claude CLI pinned to 2.1.303 (the version frozen in the registry's actor records; the container ships 2.1.310), so new runs land in the existing Haiku (`08e9167a965ed82c`) and opus~100k (`eaaedd84f8f22e6d`) cells.
 - **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): jobs done 6; finished games: Q 24.5/T 24, Q 53.6/T 48, Q 62.0/T 48, Q 69.2/T 48, Q 59.1/T 48, Q 69.0/T 48.
 
 ## Latest pre-registered block decision (Haiku actor)
 
-Registry decision #150, recorded 26 Oct 19:03 UTC (`careerlab.decisions.block_decision`, record=True).
+Registry decision #156, recorded 26 Oct 19:31 UTC (`careerlab.decisions.block_decision`, record=True).
 
-Actor `08e9167a965ed82c` — robustness across noise models: True (robust: fits differ only inside the hysteresis band: 663c8cd2a1cafe68 dormant only in some fits, others inside the band (normal 0.086, bayes_boot 0.053) | ed78f44ccd41adf8 dormant only in some fits, others inside the band (normal 0.104) | f03981dac92f8b6c dormant only in some fits, others inside the band (normal 0.085) | f2715987f0341ab2 dormant only in some fits, others inside the band (normal 0.073) | leader near-tie, not separated by any fit: normal=19618e7795be8da1, student_t=19618e7795be8da1, bayes_boot=cc098e54e25efc64; normal: P(19618e7795be8da1 > cc098e54e25efc64) = 0.581, student_t: P(19618e7795be8da1 > cc098e54e25efc64) = 0.705, bayes_boot: P(cc098e54e25efc64 > 19618e7795be8da1) = 0.619)
+Actor `08e9167a965ed82c` — robustness across noise models: True (robust: fits differ only inside the hysteresis band: 188c7c484fa3519b dormant only in some fits, others inside the band (normal 0.120, student_t 0.085) | 1d62c4e5121233e6 dormant only in some fits, others inside the band (normal 0.146, student_t 0.104) | 3207e8f585cbe240 dormant only in some fits, others inside the band (normal 0.087) | 35576a667c2f3d53 dormant only in some fits, others inside the band (normal 0.169, student_t 0.080) | 5f8c9648b6abd9b0 dormant only in some fits, others inside the band (normal 0.161, student_t 0.132) | 663c8cd2a1cafe68 dormant only in some fits, others inside the band (normal 0.059) | 6e26797afe52e4fd dormant only in some fits, others inside the band (normal 0.155, student_t 0.072) | 7107952fc3bdf27f dormant only in some fits, others inside the band (normal 0.127, student_t 0.087) | 7ded9840c5c439d9 dormant only in some fits, others inside the band (normal 0.146, student_t 0.102) | 91b30e8096ff6766 dormant only in some fits, others inside the band (normal 0.141, student_t 0.064) | cbc7402d11222ac7 dormant only in some fits, others inside the band (normal 0.089, student_t 0.065) | dbeb30d58b324510 dormant only in some fits, others inside the band (normal 0.067) | dd82cc1584e7370d dormant only in some fits, others inside the band (normal 0.099, student_t 0.055) | e373478ad46b58f6 dormant only in some fits, others inside the band (normal 0.168, student_t 0.123) | ed78f44ccd41adf8 dormant only in some fits, others inside the band (normal 0.073) | f03981dac92f8b6c dormant only in some fits, others inside the band (normal 0.083) | f1830961d168beb9 dormant only in some fits, others inside the band (normal 0.137, student_t 0.059) | f2715987f0341ab2 dormant only in some fits, others inside the band (normal 0.073) | fe970f0dc37fa905 dormant only in some fits, others inside the band (normal 0.099, student_t 0.061))
 
 | Policy | runs in prefix | pending | posterior Y (sd) | P(best) | action | reason |
 |---|---:|---:|---|---:|---|---|
-| f1-steady-balance-v1 | 12 | 0 | 52.19 (3.73) | 0.174 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.174, P(mu >= mu_L - 4) = 1.000, n=12) |
-| f3-balance-recombined-v1 | 7 | 0 | 51.19 (3.51) | 0.103 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.103, P(mu >= mu_L - 4) = 0.722, n=7) |
-| f3-lean-v1 | 5 | 0 | 51.11 (3.7) | 0.109 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.109, P(mu >= mu_L - 4) = 0.711, n=5) |
-| f1-review-risk-v1 | 7 | 0 | 50.42 (4.17) | 0.1 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.100, P(mu >= mu_L - 4) = 0.655, n=7) |
-| f3-feedback-reactive-v1 | 6 | 0 | 50.1 (3.6) | 0.064 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.064, P(mu >= mu_L - 4) = 0.644, n=6) |
-| f3-distilled-prereview-defuse-v1 | 4 | 0 | 50.04 (3.8) | 0.07 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.070, P(mu >= mu_L - 4) = 0.637, n=4) |
-| f2-convert-on-review-v1 | 7 | 0 | 48.44 (5.65) | 0.092 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.092, P(mu >= mu_L - 4) = 0.515, n=7) |
-| f3-opus-distilled-v1 | 4 | 0 | 48.32 (3.8) | 0.029 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.029, P(mu >= mu_L - 4) = 0.510, n=4) |
-| f7-three-skills-v1 | 16 | 0 | 45.07 (3.57) | 0.003 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.003, P(mu >= mu_L - 4) = 0.273, n=16) |
-| o1-promotion-gap-v1 | 7 | 0 | 44.63 (7.59) | 0.065 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.065, P(mu >= mu_L - 4) = 0.337, n=7) |
-| f7-delivery-stories-v1 | 4 | 0 | 43.98 (4.32) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.231, n=4) |
-| f7-promotion-drive-v1 | 4 | 0 | 43.98 (4.32) | 0.004 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.004, P(mu >= mu_L - 4) = 0.230, n=4) |
-| l1-review-clock-v3 | 4 | 0 | 43.74 (5.93) | 0.021 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.021, P(mu >= mu_L - 4) = 0.263, n=4) |
-| f7-single-skill-v1 | 6 | 0 | 43.43 (4.17) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.198, n=6) |
-| l1-review-clock-v2 | 4 | 0 | 43.24 (5.93) | 0.017 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.017, P(mu >= mu_L - 4) = 0.240, n=4) |
-| f7-trend-marking-v1 | 4 | 0 | 43.06 (4.32) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.185, n=4) |
-| f8-secure-growth-v1 | 7 | 0 | 42.86 (6.79) | 0.027 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.027, P(mu >= mu_L - 4) = 0.246, n=7) |
-| value-conversion-v1 | 7 | 0 | 42.6 (6.11) | 0.015 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.015, P(mu >= mu_L - 4) = 0.218, n=7) |
-| l1-review-clock-v1 | 4 | 0 | 42.56 (5.93) | 0.013 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.013, P(mu >= mu_L - 4) = 0.211, n=4) |
-| p0-review-guard-v1 | 3 | 0 | 40.7 (5.64) | 0.004 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| p0-minimal-v1 | 7 | 0 | 40.26 (5.06) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.104, n=7) |
-| f6-commitment-ledger-v1 | 6 | 0 | 40.18 (6.72) | 0.01 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.010, P(mu >= mu_L - 4) = 0.149, n=6) |
-| f4-review-first-v1 | 3 | 0 | 39.87 (7.59) | 0.017 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| f4-visible-delivery-v1 | 5 | 0 | 39.02 (7.31) | 0.01 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.010, P(mu >= mu_L - 4) = 0.132, n=5) |
-| observed-growth-v1 | 9 | 0 | 38.75 (5.79) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.085, n=9) |
-| m3-subtracted-v1 | 3 | 0 | 38.42 (8.32) | 0.017 | **REPEAT** | REPEAT: n=3 < n0=4 |
-| m3-sustainable-career-v0-1 | 4 | 0 | 38.01 (8.18) | 0.014 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.014, P(mu >= mu_L - 4) = 0.129, n=4) |
-| observed-growth-v2 | 4 | 0 | 37.57 (6.3) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.073, n=4) |
-| o2-run-hot-v1 | 4 | 0 | 35.24 (8.69) | 0.008 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.008, P(mu >= mu_L - 4) = 0.086, n=4) |
-| f5-relationship-capital-v1 | 5 | 0 | 29.43 (3.89) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.000 < 0.05 (mean 29.4 vs leader 19618e7795be8da1 52.2) |
-| f2-invest-early-v1 | 5 | 0 | 24.92 (6.62) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.001 < 0.05 (mean 24.9 vs leader 19618e7795be8da1 52.2) |
+| f1-status-line-v1 | 4 | 0 | 56.06 (6.33) | 0.447 | **PROMOTE** | PROMOTE: top-2 posterior mean 56.1 with P(best) = 0.447 >= 0.2 |
+| f1-steady-balance-v1 | 12 | 1 | 52.8 (4.08) | 0.135 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.135, P(mu >= mu_L - 4) = 0.539, n=12) |
+| f3-balance-recombined-v1 | 7 | 2 | 51.19 (3.51) | 0.052 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.052, P(mu >= mu_L - 4) = 0.452, n=7) |
+| f3-lean-v1 | 5 | 0 | 51.11 (3.7) | 0.056 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.056, P(mu >= mu_L - 4) = 0.448, n=5) |
+| f3-feedback-reactive-v1 | 6 | 2 | 50.1 (3.6) | 0.031 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.031, P(mu >= mu_L - 4) = 0.394, n=6) |
+| f3-distilled-prereview-defuse-v1 | 4 | 0 | 50.04 (3.8) | 0.035 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.035, P(mu >= mu_L - 4) = 0.392, n=4) |
+| f2-convert-on-review-v1 | 7 | 3 | 48.44 (5.65) | 0.054 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.054, P(mu >= mu_L - 4) = 0.335, n=7) |
+| f3-opus-distilled-v1 | 4 | 2 | 48.32 (3.8) | 0.014 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.014, P(mu >= mu_L - 4) = 0.306, n=4) |
+| f1-review-risk-v1 | 7 | 3 | 46.9 (5.12) | 0.022 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.022, P(mu >= mu_L - 4) = 0.263, n=7) |
+| f7-three-skills-v1 | 16 | 0 | 45.07 (3.57) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.168, n=16) |
+| o1-promotion-gap-v1 | 7 | 2 | 44.63 (7.59) | 0.041 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.041, P(mu >= mu_L - 4) = 0.226, n=7) |
+| f7-delivery-stories-v1 | 4 | 0 | 43.98 (4.32) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.146, n=4) |
+| f7-promotion-drive-v1 | 4 | 1 | 43.98 (4.32) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.146, n=4) |
+| l1-review-clock-v3 | 4 | 0 | 43.74 (5.93) | 0.011 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.011, P(mu >= mu_L - 4) = 0.169, n=4) |
+| f7-single-skill-v1 | 6 | 0 | 43.43 (4.17) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.127, n=6) |
+| l1-review-clock-v2 | 4 | 0 | 43.24 (5.93) | 0.009 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.009, P(mu >= mu_L - 4) = 0.155, n=4) |
+| f7-trend-marking-v1 | 4 | 0 | 43.06 (4.32) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.120, n=4) |
+| f8-secure-growth-v1 | 7 | 0 | 42.86 (6.79) | 0.015 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.015, P(mu >= mu_L - 4) = 0.161, n=7) |
+| value-conversion-v1 | 7 | 0 | 42.6 (6.11) | 0.008 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.008, P(mu >= mu_L - 4) = 0.141, n=7) |
+| l1-review-clock-v1 | 4 | 0 | 42.56 (5.93) | 0.007 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.007, P(mu >= mu_L - 4) = 0.137, n=4) |
+| observed-growth-v3 | 4 | 0 | 41.18 (5.59) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.099, n=4) |
+| observed-growth-v1 | 9 | 0 | 40.78 (5.14) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.083, n=9) |
+| p0-review-guard-v1 | 3 | 0 | 40.7 (5.64) | 0.002 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| p0-minimal-v1 | 7 | 0 | 40.26 (5.06) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.073, n=7) |
+| f6-commitment-ledger-v1 | 6 | 0 | 40.18 (6.72) | 0.005 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.005, P(mu >= mu_L - 4) = 0.099, n=6) |
+| f4-review-first-v1 | 3 | 1 | 39.87 (7.59) | 0.01 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| observed-growth-v2 | 4 | 0 | 39.77 (5.59) | 0.001 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.001, P(mu >= mu_L - 4) = 0.073, n=4) |
+| f4-visible-delivery-v1 | 5 | 0 | 39.02 (7.31) | 0.006 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.006, P(mu >= mu_L - 4) = 0.089, n=5) |
+| f1-core-v1 | 4 | 0 | 38.68 (6.33) | 0.002 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.002, P(mu >= mu_L - 4) = 0.067, n=4) |
+| m3-subtracted-v1 | 3 | 0 | 38.42 (8.32) | 0.01 | **REPEAT** | REPEAT: n=3 < n0=4 |
+| m3-sustainable-career-v0-1 | 4 | 0 | 38.01 (8.18) | 0.008 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.008, P(mu >= mu_L - 4) = 0.087, n=4) |
+| f1-risk-signal-v1 | 4 | 0 | 35.4 (6.33) | 0.0 | **DORMANT** | DORMANT: n=4 >= n0=4 and P(mu >= mu_L - 4) = 0.031 < 0.05 (mean 35.4 vs leader 30794daa53021d77 56.1) |
+| o2-run-hot-v1 | 4 | 1 | 35.24 (8.69) | 0.005 | **REPEAT** | REPEAT: not separable yet (P(best) = 0.005, P(mu >= mu_L - 4) = 0.059, n=4) |
+| f5-relationship-capital-v1 | 5 | 0 | 29.43 (3.89) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.001 < 0.05 (mean 29.4 vs leader 30794daa53021d77 56.1) |
+| f2-invest-early-v1 | 5 | 0 | 24.92 (6.62) | 0.0 | **DORMANT** | DORMANT: n=5 >= n0=4 and P(mu >= mu_L - 4) = 0.002 < 0.05 (mean 24.9 vs leader 30794daa53021d77 56.1) |
 
 Leader history (stall trigger: leader posterior mean not improved by 2 Y-points over 3 decisions):
 
@@ -62,21 +66,22 @@ Leader history (stall trigger: leader posterior mean not improved by 2 Y-points 
 | #128 | 26 Oct 17:50 UTC | f7-three-skills-v1 | 55.16 |
 | #142 | 26 Oct 18:10 UTC | f1-steady-balance-v1 | 54.59 |
 | #150 | 26 Oct 19:03 UTC | f1-steady-balance-v1 | 52.19 |
+| #156 | 26 Oct 19:31 UTC | f1-status-line-v1 | 56.06 |
 
-Gain over the last three decisions: -3.02 → stall trigger **fires**.
+Gain over the last three decisions: +0.90 → stall trigger **fires**.
 
 ## Progressive widening (Haiku cell)
 
 | Family | terminal Haiku episodes N_f | cap ⌈(1+N_f)^0.5⌉ | children so far |
 |---|---:|---:|---:|
 | f7-one-vs-many | 34 | 6 | 3 |
-| f3-feedback-reactive | 26 | 6 | 4 |
-| f1-steady-balance | 19 | 5 | 4 |
-| matteo-feedback-growth | 14 | 4 | 4 |
+| f1-steady-balance | 31 | 6 | 4 |
+| f3-feedback-reactive | 26 | 6 | 5 |
+| matteo-feedback-growth | 17 | 5 | 4 |
 | l1-review-clock | 12 | 4 | 2 |
 | f2-invest-early | 12 | 4 | 1 |
 | p0-minimal | 10 | 4 | 1 |
-| f4-visible-delivery | 8 | 3 | 1 |
+| f4-visible-delivery | 9 | 4 | 1 |
 | o1-promotion-gap | 7 | 3 | 0 |
 | matteo-value-conversion | 7 | 3 | 0 |
 | m3-teammate | 7 | 3 | 1 |
@@ -145,18 +150,24 @@ Gain over the last three decisions: -3.02 → stall trigger **fires**.
 
 - Parents: f1-steady-balance-v1; operator: refine (subtraction); idea origin: playbook:P20 + diagnostic:F1 trace audit (lab/reports/cloud-run-diagnostics/block5-generation.md).
 - Hypothesis: F1's lead on Haiku comes from a small core that the actor actually executes: the Act test, repair the weakest, the story filter, Act-first Energy and a main action aimed at the weakest gap. The rest is either unused or works against that core. In 809 decisions of the 4 F1 digests, notes use the Watch and Fine labels 1% and 0% of the time, cite the Output-after-a-C-or-D rule 1% and 'spread' 0%, and Skill learning or High-intensity work appears in 0 of 64 Energy phases. The late-run caution is cited in 11% of notes from mid-run on and produced all 5 of F1's Lay-low main actions, every one at full Health, against F1's own rule 'Lay low only when Health is Act'; the weakest F1 game (Q 57.1, four Cs) took 4 of them. Keeping only the executed core (486 to 284 words) keeps F1's completion and score on Haiku, removes the contradiction a weaker reader resolves towards caution, and costs fewer tokens on every turn.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 23.7/T 24, Q 62.5/T 48, Q 24.9/T 30, Q 30.8/T 24.
 
 ### f1-risk-signal-v1 (`c9f41c4f60e41cc2`, family f1-steady-balance)
 
 - Parents: f1-steady-balance-v1; operator: refine (single fix on the subtracted core); idea origin: diagnostic:unanswered risk signals in F1 traces (lab/reports/cloud-run-diagnostics/block5-generation.md) + playbook:P20 base (f1-core-v1 text).
 - Hypothesis: F1 answers risk feedback by its strength, not its presence. In its 4 Haiku digests it took Defuse legacy risk after 11 of 22 risk-mentioning remarks (5 of 9 at 'piled up' or worse) and in none of the 6 Energy phases after its 3 blow-ups. 3 of the 4 games had a blow-up, one short of a trust crisis, which is how both of F1's Opus losses ended. Across the 86 Haiku digests, taking Defuse in the phase after a mild risk remark cut the rate of blow-ups within three months from 10% (9/93) to 2% (2/110); after a stronger remark it cut it from 20% (10/51) to 8% (13/154). After a calm remark it changed nothing (4% against 4%). The remark was calm again by the month's end in 86% of phases with Defuse against 34% without. Every D grade (37 of 37) came with a risk-mentioning remark in the review month. The new rule treats any non-reassuring risk feedback, or a blow-up since the last phase, as a signal that puts Defuse legacy risk right after Act recovery. It should cut blow-ups, risk-loaded reviews and D grades, and through them trust-crisis and dismissal exits, at a small cost in Prepare report materials.
-- Haiku runs so far: no finished runs yet.
+- Haiku runs so far: Q 22.3/T 21, Q 59.4/T 48, Q 18.0/T 24, Q 16.7/T 24.
 
 ### f1-status-line-v1 (`30794daa53021d77`, family f1-steady-balance)
 
 - Parents: f1-steady-balance-v1, f3-lean-v1; operator: recombine (cross-branch, stagnation slot): same rules, new intermediate representation; idea origin: playbook:P22 (stagnation rule, decision #142).
 - Hypothesis: F1's losses come from execution, not from missing strategy. The rules exist, but the actor skips or reorders them: Defuse after 50% of risk signals, Lay low at full Health against the Lay-low guard, Watch and Fine labels never written. A status line filled every turn makes rule execution consistent for a small model. Its slots are the Act dimensions, Risk calm or raised (F3's named signal state, borrowed as a label only) and the Weakest. A strict need order (Act, then raised Risk, then Weakest), each need mapped to its Energy, story and main-action response, does the rest. The policy should lift completion and mean quantitative_score over F1 and match or beat f1-risk-signal-v1, which has the same rules in prose.
+- Haiku runs so far: Q 56.7/T 48, Q 66.3/T 48, Q 70.4/T 48, Q 64.9/T 48.
+
+### f3-status-line-v1 (`688cc25c03bf6629`, family f3-feedback-reactive)
+
+- Parents: f3-balance-recombined-v1, f1-status-line-v1; operator: re-represent (same rules, status-line format); idea origin: playbook:P22 transfer test (decision #157: f1-status-line, the P22 stall slot, completed 4/4 while its prose siblings with the same rules completed 1/4 each).
+- Hypothesis: f1-status-line's lead over its prose siblings f1-core and f1-risk-signal (same rules; 4/4 completed vs 1/4 each on Haiku) comes from the representation: a fixed status line filled before every choice makes a small model apply the rule order consistently. If the representation is the lever, it transfers: f3-balance-recombined's exact rules (Protect > Risk > Review > Balance), written as a status line, complete more often and score higher than the prose original.
 - Haiku runs so far: no finished runs yet.
 
 ## Teacher distillation
@@ -181,7 +192,7 @@ User request relayed by the strategy session at about 14:25 UTC: distil Opus's w
 
 | Distilled child | Haiku runs finished | Q per run | pending |
 |---|---:|---|---:|
-| f3-opus-distilled-v1 | 4 | 27.8, 19.8, 47.4, 58.5 | 2 |
+| f3-opus-distilled-v1 | 4 | 27.8, 19.8, 47.4, 58.5 | 0 |
 | f3-distilled-prereview-defuse-v1 | 4 | 32.0, 61.8, 59.1, 56.7 | 0 |
 
 ## Problem A check: Haiku vs opus~100k on shared policies
@@ -190,7 +201,7 @@ opus~100k decision computed with the same rule but **not recorded** (only the Ha
 
 | Policy | Haiku posterior Y (n) | opus~100k posterior Y (n) | opus~100k pending |
 |---|---|---|---:|
-| f1-steady-balance-v1 | 52.19 (12) | 65.56 (2) | 0 |
+| f1-steady-balance-v1 | 52.8 (12) | 65.56 (2) | 0 |
 | p0-minimal-v1 | 40.26 (7) | 61.58 (2) | 0 |
 | f3-feedback-reactive-v1 | 50.1 (6) | 39.05 (2) | 0 |
 | f3-lean-v1 | 51.11 (5) | 39.04 (2) | 0 |
@@ -205,7 +216,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | eps | interrupted | completion | mean Q (sd) | mean Y | mean months | rejected/ep | min/ep | min/month | cache-read M/month | list-USD/ep |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| haiku | 176 | 0 | 0.53 | 44.8 (18.9) | 43.5 | 37.5 | 0.01 | 8.9 | 0.24 | 0.512 | 0.75 |
+| haiku | 192 | 0 | 0.54 | 44.8 (19.0) | 43.5 | 37.5 | 0.01 | 8.9 | 0.24 | 0.512 | 0.75 |
 | haiku@low | 6 | 0 | 0.33 | 39.2 (16.2) | 38.0 | 33.7 | 0 | 7.0 | 0.21 | 0.302 | 0.36 |
 | opus | 6 | 0 | 0.33 | 37.3 (17.0) | 36.5 | 34.8 | 0 | 8.1 | 0.23 | 0.257 | 3.4 |
 | opus@low | 6 | 0 | 0.33 | 42.5 (13.8) | 40.6 | 33.5 | 0 | 6.4 | 0.19 | 0.215 | 2.85 |
@@ -214,7 +225,10 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 
 | Actor | Policy | n | Q per episode | months | mean Y | early-exit causes |
 |---|---|---:|---|---|---:|---|
+| haiku | f1-core-v1 | 4 | [62.5, 23.7, 24.9, 30.8] | [48, 24, 30, 24] | 34.6 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | f1-review-risk-v1 | 7 | [51.8, 24.0, 61.0, 54.8, 65.0, 20.2, 61.2] | [48, 24, 48, 48, 48, 24, 48] | 47.2 | ; Dismissed for capability — a second weak |
+| haiku | f1-risk-signal-v1 | 4 | [22.3, 59.4, 18.0, 16.7] | [21, 48, 24, 24] | 29.5 | Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak; Dismissed for capability — a second weak |
+| haiku | f1-status-line-v1 | 4 | [56.7, 66.3, 70.4, 64.9] | [48, 48, 48, 48] | 61.7 |  |
 | haiku | f1-steady-balance-v1 | 12 | [51.0, 66.6, 27.7, 71.8, 68.1, 63.1, 66.1, 57.1, 62.3, 60.9, 24.8, 54.0] | [48, 48, 24, 48, 48, 48, 48, 48, 48, 48, 24, 48] | 54.1 | ; Dismissed for capability — a second weak |
 | haiku | f2-convert-on-review-v1 | 7 | [61.2, 30.0, 63.6, 58.9, 65.2, 62.6, 18.4] | [48, 24, 48, 48, 48, 48, 24] | 49.7 | ; Dismissed for capability — a second weak |
 | haiku | f2-invest-early-v1 | 5 | [47.1, 18.3, 18.6, 15.0, 14.4] | [47, 18, 24, 19, 24] | 23.2 | ; ; ; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
@@ -223,7 +237,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | f3-feedback-reactive-v1 | 6 | [59.7, 66.3, 66.6, 28.7, 22.4, 68.1] | [48, 48, 48, 24, 24, 48] | 49.9 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
 | haiku | f3-lean-v1 | 5 | [50.1, 64.3, 46.7, 59.5, 62.8] | [48, 48, 48, 48, 48] | 55.3 |  |
 | haiku | f3-opus-distilled-v1 | 4 | [27.8, 19.8, 47.4, 58.5] | [24, 24, 48, 48] | 38.2 | Dismissed for capability — a second weak; Dismissed for capability — a second weak |
-| haiku | f4-review-first-v1 | 3 | [19.7, 60.3, 62.5] | [24, 48, 48] | 46.3 |  |
+| haiku | f4-review-first-v1 | 4 | [19.7, 60.3, 62.5, 28.8] | [24, 48, 48, 24] | 41.8 | ; Trust crisis — a second major blow-up. T |
 | haiku | f4-visible-delivery-v1 | 5 | [55.9, 59.1, 17.6, 18.8, 24.4] | [48, 48, 24, 17, 31] | 35.1 | ; Broke — months with an empty wallet. Som; Trust crisis — a second major blow-up. T |
 | haiku | f5-relationship-capital-v1 | 5 | [21.8, 48.5, 23.1, 32.5, 26.9] | [24, 39, 24, 29, 24] | 29.4 | ; ; ; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T |
 | haiku | f6-commitment-ledger-v1 | 6 | [30.5, 25.8, 49.7, 23.0, 67.8, 48.4] | [30, 8, 48, 24, 48, 48] | 40.2 | ; ; Dismissed for capability — a second weak |
@@ -242,7 +256,7 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 | haiku | o2-run-hot-v1 | 4 | [24.7, 38.6, 61.9, 19.7] | [24, 29, 48, 24] | 35.2 | Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
 | haiku | observed-growth-v1 | 9 | [52.4, 55.0, 24.4, 69.9, 18.8, 58.7, 20.1, 15.3, 68.2] | [48, 48, 24, 48, 24, 48, 24, 19, 48] | 41.8 | Dismissed for capability — a second weak; Dismissed for capability — a second weak; Dismissed for capability — a second weak; Trust crisis — a second major blow-up. T |
 | haiku | observed-growth-v2 | 4 | [21.2, 23.0, 15.2, 62.8] | [9, 9, 24, 48] | 30.7 | Blackout — your health hits zero. The sc; Blackout — your health hits zero. The sc; Dismissed for capability — a second weak |
-| haiku | observed-growth-v3 | 1 | [18.6] | [20] | 19.9 | Blackout — your health hits zero. The sc |
+| haiku | observed-growth-v3 | 4 | [61.2, 18.6, 51.9, 64.3] | [48, 20, 48, 48] | 48.0 | Blackout — your health hits zero. The sc |
 | haiku | p0-minimal-v1 | 5 | [53.9, 57.4, 31.6, 32.0, 18.5] | [48, 48, 22, 23, 24] | 37.9 | ; ;  |
 | haiku | p0-review-guard-v1 | 3 | [41.9, 54.2, 45.1] | [33, 42, 47] | 42.6 | ; ;  |
 | haiku | value-conversion-v1 | 7 | [65.1, 37.1, 46.2, 69.9, 28.1, 46.7, 23.5] | [48, 31, 40, 48, 22, 45, 24] | 42.6 | Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Trust crisis — a second major blow-up. T; Dismissed for capability — a second weak |
@@ -324,6 +338,12 @@ Imported episodes from the Mac have no local `result.json`; their rows come from
 - **Organiser round 4 (18:32 UTC):** restored ESTADO.md, which the block-5 commit had emptied for about 5 minutes on main (an edit script opened it for writing before reading). Merged `matteo/observed-growth-v3` (his own pilot: 4/4 completed, mean Q 71.4, a different actor cell, now being checked in the race) and `alejandro/investigacion-decisiones` (decision research that only analyses exports; PR #3). Imported origin `matteo` (0 conflicts).
 - **Decision #150 (19:03 UTC):** F1 52.2 (n = 12), f3-balance-recombined 51.2, f3-lean 51.1, f1-review-risk 50.4, F3 50.1. With more data the top posteriors bunch around 50–52, and none has P(best) ≥ 0.2. **Block 6 allocated:** 18 slots (seed 20261176); its stall slot is 1 more game of f7-promotion-drive. Batch 5 (F1 children and observed-growth-v3) is running.
 - **Organiser round 5 (19:06 UTC):** merged Matteo's v4 and v5 as source and imported origin matteo (0 conflicts). v4 is not screened: his own pilot found it worse than v3. v5 is on hold until v3's race result. Both recorded as a `hold` decision. `alejandro/laboratorio-adaptativo` is not merged: it is WIP and changes core modules.
+- **Decision #157 (19:31 UTC):** new leader **f1-status-line** at 56.1 (4/4 completed), while its prose siblings with the same rules each completed 1/4. Block 7 allocated (seed 20261182). Transfer test f3-status-line-v1 (`688cc25c03bf6629`) queued.
+- **Organiser round 6 (19:37 UTC):** merged `matteo/observed-growth-v5` (his v3 falls to Q 51.0 over 8 games; the export conflict was resolved with his newest export, a superset) and `alejandro/carrera-rapida` (PR #8: fastloop-v2 code, 264 tests). The switch of the race to fastloop-v2 waits for the user's go-ahead in this session.
+- **19:41 UTC, switch to fastloop-v2 (user decision):**
+  - Champion F1 with 7 challengers: observed-growth-v3, f3-lean, f3-balance-recombined, f1-risk-signal, f1-core, f1-status-line and f3-status-line.
+  - 8 slots, cap 0.85, front-loaded weekly knots. Live page: `lab/reports/carrera-rapida.md`.
+  - Energy bots verified: 4 of 400 reached L6 (lessons.md, Frontier).
 
 ## Relevo (hand-off)
 
@@ -391,6 +411,7 @@ _Kept current during the run and rewritten at the end. Last edit: 26 Oct 15:30 U
 See the sections above: latest block decision, actor comparison, Problem A, T13. T13 is complete: mean Y 54.2, near the ceiling. Problem A is complete: the rankings disagree on the F3 family. Block decisions #114 and #128. For the numbers, see the sections above and `findings.md`.
 
 ### 3. Failed or half done
+- **Protocol switch (19:39 UTC, user decision):** the prereg-v1 race stopped after decision #157. Batch 6 was cut: 6 in-flight games interrupted and never scored, and 11 leased plus the queued block-7 jobs cancelled by `ladder init --cancel-others`. The fastloop-v2 driver runs with 8 slots. The old scripts in `scripts/cloud-run/` are no longer used.
 - **Authorship (user rule, 26 Oct 15:55 UTC):** every commit is made as Alejandro Treny Ortega <alejandrotreny100@gmail.com>, with no Claude co-author lines. The 14 earlier commits of this branch were rewritten to that identity and force-pushed with lease; the content is identical. `main` still holds 2 commits authored by Claude and 23 `Co-Authored-By` lines from earlier sessions. Rewriting those would need a force-push to `main`, which has not been done.
 - **0.97 pre-reset cap.** First requested by the strategy session at 15:15, and blocked by this session's permission classifier because the request came from a peer. **The user then asked for it directly at 15:45 UTC.** From 15:46 the cap was 0.97, with 10 workers: 6 main lane, 2 extra lane for the o1 and o2 screens, 2 ceiling games. A detached script restored 0.80 at 16:00:05. Recorded as a `quota_cap` decision.
 - 22 interrupted attempts from the Mac stay on record, never scored. Each slot already had a later attempt.
@@ -401,7 +422,17 @@ See the sections above: latest block decision, actor comparison, Problem A, T13.
 - Leased or running jobs are released by `careerlab recover`. Interrupted ones get replacement attempts from `driver.py`'s requeue rule, or by hand with `Registry.requeue_interrupted`.
 
 ```text
-Continue the CareerLab race on branch cloud-lab-run (repo aleetreny/huawei). Read lab/reports/cloud-run-status.md (section Relevo) and lab/CLOUD_RUNBOOK.md first. Setup: uv sync; uv run career-emulator-engine update --source distribution --split dev; npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303 and export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude (the actor records freeze CLI 2.1.303); uv run careerlab import; uv run careerlab recover; uv run careerlab status; write {"max_five_hour": 0.80} to ~/careerlab-data/huawei/quota_cap.json (never touch weekly_pace). Then start the loop with scripts/cloud-run/driver.py and scripts/cloud-run/ceiling.py (see scripts/cloud-run/README.md; the driver runs uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80 on non-pilot jobs, the ceiling lane runs purpose pilot with --slots 2); after each batch apply careerlab.decisions.block_decision for the Haiku actor 08e9167a965ed82c with record=True; generate children only within progressive widening and the stall rule; lint (careerlab lint), register, enqueue 4 Haiku screens; every hour careerlab export, update lab/reports/cloud-run-status.md, commit lab/registry, lab/reports, new lab/policies-src and push to cloud-lab-run. You are also the ORGANISER: every hour and after each batch, git fetch origin --prune; review finished collaborator branches (<persona>/<tarea>), merge them and origin/main into cloud-lab-run (keep their owners' lines in ESTADO.md; keep this side for lab/registry/*.jsonl), run uv run pytest -q, push cloud-lab-run, then push cloud-lab-run:main as a fast-forward (never force main); keep ESTADO.md (Spanish: section 2 results, the task table lines of the cloud and of merged branches, Relevo del organizador), findings.md, progress.md and task_plan.md in step. Push to main is authorised by the user (26 Oct 16:15 UTC); never submit, never use a competition key, never edit the prereg. Commit as the user: git config user.name "Alejandro Treny Ortega" and user.email alejandrotreny100@gmail.com, with no Co-Authored-By or Claude-Session lines (user rule, 26 Oct).
+Continue CareerLab on branch cloud-lab-run (repo aleetreny/huawei) as the cloud race AND the organiser. Read ESTADO.md, scripts/fastloop/README.md and the Relevo at the end of lab/reports/cloud-run-status.md first.
+Setup:
+  uv sync
+  uv run career-emulator-engine update --source distribution --split dev
+  npm install --prefix ~/claude-2.1.303 @anthropic-ai/claude-code@2.1.303
+  export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude   # the actor records freeze CLI 2.1.303
+  uv run careerlab import; uv run careerlab import --dir lab/registry-origins/<each origin>; uv run careerlab recover
+The race is the fastloop-v2 ladder (since 26 Oct 19:39 UTC). Its state lives in lab/fastloop/state.json and the registry; restart it with:
+  setsid nohup uv run python scripts/fastloop/driver.py >> ~/careerlab-data/huawei/fastloop/driver.out 2>&1 < /dev/null &
+Stop it with touch ~/careerlab-data/huawei/fastloop/STOP. Its driver writes quota_cap.json (cap 0.85, front-loaded weekly knots).
+Organiser routine (hourly): git fetch origin --prune; merge finished collaborator branches (keep each owner's ESTADO line; origin exports: take the newest superset); `careerlab ladder add` every merged team manual; import their lab/registry-origins/<origin>; careerlab export; careerlab ladder status --write; update ESTADO.md (Spanish), findings.md, progress.md; uv run pytest -q; check ESTADO.md is complete; push cloud-lab-run, then cloud-lab-run:main as a fast-forward (never force main). After each new champion and at least every 3 hours, add lessons with numbers to lab/fastloop/lessons.md. Commit in the user's name (Alejandro Treny Ortega <alejandrotreny100@gmail.com>) with no Claude co-author lines. Never submit, never use a competition key (DeepSeek games are played by Alejandro on his Mac with origin "deepseek"), never edit the frozen protocols. T8/T9 (R1 design docs and package for the champion) start early 27 Oct UK, cutoff 27 Oct 24:00 UK.
 ```
 
 ### 5. ESTADO.md
