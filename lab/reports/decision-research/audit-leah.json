@@ -1,0 +1,54 @@
+{
+  "actor_environment_summaries": [
+    {
+      "actor_id": "614d6e1a4655bc2d",
+      "autocompact": null,
+      "completed": 1,
+      "effort": null,
+      "env_id": "9360561c0eba8d45",
+      "kind": "claude-cli",
+      "mean_Q_descriptive": 60.89,
+      "model": "haiku",
+      "n": 1,
+      "policies": 1
+    }
+  ],
+  "evaluations": 7,
+  "input_hashes": {
+    "actors": "f982331bae2816b476d0c93bdd5f105dbf4e1db2631e52f74e22850238685f9c",
+    "environments": "af475967da858f3af401e166f831b8266424076b7278db826f52707e86d71f70",
+    "evaluations": "91b28633a3687e6ede2fd6d23dd6978661da1cf0a64f75e75e98f088edcf7283",
+    "jobs": "cf5ae3bc65848afb55f028e3a844e63f87dc046d2369d805a74c400233d3ffda",
+    "policies": "c8422839c868e9d2a5250fb09bb25967d4061e21c562465bce92474c6790649d"
+  },
+  "jobs_without_evaluation_by_status": {
+    "queued": 3
+  },
+  "limitations": [
+    "Terminal rows are retrospective discovery only, not prefix-complete selection or confirmation.",
+    "Trace availability is machine-specific; never restrict causal comparisons to available traces.",
+    "A registered hash authenticates the primary file only; continuation hashes are an audit snapshot.",
+    "Observation counts do not establish complete state/action alignment, compliance, or randomisation.",
+    "No historical assignment probabilities are inferred; cells with unknown epochs cannot support causal pooling."
+  ],
+  "missing_job_metadata": {
+    "analysis_role": 10,
+    "assignment_probability": 10,
+    "block_id": 10,
+    "epoch": 10
+  },
+  "outcomes": {
+    "completed": 1,
+    "interrupted": 6
+  },
+  "scope": "Historical discovery audit; no causal estimates or selection decisions",
+  "terminal": 1,
+  "trace_status_counts_non_scripted_terminal": {
+    "not_checked": 1
+  },
+  "traces": {
+    "leah-scre-f1830961-614d6e-00000-a2": {
+      "status": "not_checked"
+    }
+  }
+}

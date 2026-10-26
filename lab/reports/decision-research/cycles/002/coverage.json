@@ -1,0 +1,50 @@
+{
+  "by_actor": {
+    "017798b931bc18f8": {
+      "eligible": 8
+    },
+    "08e9167a965ed82c": {
+      "eligible": 129,
+      "extracted": 53,
+      "quality_for_prediction": 53
+    },
+    "254e47f505b5a6e9": {
+      "eligible": 6
+    },
+    "2f9fbf1e5c4324e7": {
+      "eligible": 26,
+      "extracted": 26,
+      "quality_for_prediction": 25
+    },
+    "486fbe0a67ac052a": {
+      "eligible": 6,
+      "extracted": 6,
+      "quality_for_prediction": 6
+    },
+    "614d6e1a4655bc2d": {
+      "eligible": 5
+    },
+    "a104028b5c42f972": {
+      "eligible": 6,
+      "extracted": 5,
+      "quality_for_prediction": 5
+    },
+    "d922927e98f3bc16": {
+      "eligible": 6,
+      "extracted": 3,
+      "quality_for_prediction": 3
+    },
+    "eaaedd84f8f22e6d": {
+      "eligible": 12,
+      "extracted": 6,
+      "quality_for_prediction": 6
+    }
+  },
+  "eligible_terminal_claude": 204,
+  "excluded_by_purpose": {},
+  "extracted": 99,
+  "trace_status": {
+    "missing": 105,
+    "primary_hash_verified": 99
+  }
+}
