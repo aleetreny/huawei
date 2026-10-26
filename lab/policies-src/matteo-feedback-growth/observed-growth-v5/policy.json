@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v5",
+  "parents": [
+    "observed-growth-v3"
+  ],
+  "idea_origin": "After v4 (three changes at once) lost to v3, test a single change on top of v3: the wealth part of v4. Evidence: lab/reports/matteo-observed-growth-v3.md and lab/reports/matteo-observed-growth-v4.md.",
+  "operator": "single-change ablation of v3",
+  "hypothesis": "v3 finishes at L5 with wealth 41-52. Preferring story options that secure concrete pay, bonuses, raises or recognised roles, and aiming for strong review grades rather than a pass, raises wealth without changing survival, because the allocation logic, risk cleanup and Health reserve of v3 are untouched.",
+  "change": "Two sentences added to v3: a story-choice preference for concrete pay or recognised roles on fair terms, and a Reviews section asking for strong grades. Nothing else changed.",
+  "predicted_behaviour": "Story notes cite pay, bonus or role terms when such options appear. Completion and promotions as in v3; wealth dimension higher than v3's 41-52.",
+  "refutation": "Compare with v3 under the same actor and harness, including fresh v3 replicates run in the same batch. Reject if completion falls below v3 or any trust crisis or Health failure appears that v3 replicates do not show. A wealth gain of a few points is within noise for four episodes.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v5, built on matteo/observed-growth-v3. Run alongside 4 fresh v3 replicates as a same-batch control."
+}
