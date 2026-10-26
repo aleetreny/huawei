@@ -43,4 +43,4 @@ The bounded execution and reporting commands, from the repository root, are:
 .venv/bin/python -m pytest -q
 ```
 
-Do not rerun `prepare` on the frozen root or change candidate text in place. The run command verifies frozen script, policy hashes and CLI version, checks live quota, and leaves a `status.json` for pending or completed work. The reporter never treats pending or interrupted slots as zero. After completion, update this report and Matteo's T4 line, commit and push the same branch, and update PR #11. No results are claimed until public final observations and the complete balanced block exist.
+Do not rerun `prepare` on the frozen root or change candidate text in place. The run command verifies frozen script, policy hashes and CLI version, checks live quota, and leaves a `status.json` for pending or completed work. The reporter never treats pending or interrupted slots as zero. After completion, update this report and Matteo's T4 line, commit and push the same branch, and update PR #12 (the earlier exploration PR #11 is merged). No results are claimed until public final observations and the complete balanced block exist.
