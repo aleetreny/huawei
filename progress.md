@@ -59,3 +59,4 @@
 - 17:25 (UTC) Cloud organiser: batch-1 block decision #114 (leader f7-three-skills), stall rule fired; block 3 allocated by top-two Thompson; merged alejandro/explicacion-repo, matteo-t4-growth and leah/workspace; registered observed-growth, l1-review-clock and three F7 children (incl. stall slot P12).
 - 17:53 (UTC) Cloud organiser: T13 complete (mean Y 54.2, near the ceiling); Problem A answered (rankings disagree on the F3 family); block decision #128; block 4 allocated with a P0 audit; ceiling and cloud Opus digests added.
 - 18:12 (UTC) Cloud organiser: decision #142 (leader F1); block-5 generation started (F1 children for reliability and a stall slot); digest fix for imported origins.
+- 19:04 (UTC) Cloud organiser: decision #150; block 6 allocated (18); ESTADO restored earlier at 18:35 after an edit script emptied it.
