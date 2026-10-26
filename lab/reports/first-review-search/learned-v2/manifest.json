@@ -1,0 +1,105 @@
+{
+  "output": "/Users/matteozabban/careerlab-data/matteo-first-review/learned-v2",
+  "runs": 512,
+  "workers": 4,
+  "seed": 270026,
+  "story": "learned",
+  "energy": "adaptive,reports,recovery,risk",
+  "main": "adaptive,project,mentor,none",
+  "training": "/Users/matteozabban/careerlab-data/matteo-first-review/factorial-v2",
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "arms": [
+    [
+      "learned",
+      "adaptive",
+      "adaptive"
+    ],
+    [
+      "learned",
+      "adaptive",
+      "project"
+    ],
+    [
+      "learned",
+      "adaptive",
+      "mentor"
+    ],
+    [
+      "learned",
+      "adaptive",
+      "none"
+    ],
+    [
+      "learned",
+      "reports",
+      "adaptive"
+    ],
+    [
+      "learned",
+      "reports",
+      "project"
+    ],
+    [
+      "learned",
+      "reports",
+      "mentor"
+    ],
+    [
+      "learned",
+      "reports",
+      "none"
+    ],
+    [
+      "learned",
+      "recovery",
+      "adaptive"
+    ],
+    [
+      "learned",
+      "recovery",
+      "project"
+    ],
+    [
+      "learned",
+      "recovery",
+      "mentor"
+    ],
+    [
+      "learned",
+      "recovery",
+      "none"
+    ],
+    [
+      "learned",
+      "risk",
+      "adaptive"
+    ],
+    [
+      "learned",
+      "risk",
+      "project"
+    ],
+    [
+      "learned",
+      "risk",
+      "mentor"
+    ],
+    [
+      "learned",
+      "risk",
+      "none"
+    ]
+  ],
+  "no_simulator_seed_or_clone": true
+}

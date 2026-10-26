@@ -1,0 +1,6 @@
+# Keep generated evidence available while making the research/code diff readable.
+*.json linguist-generated=true
+**/*.json linguist-generated=true
+**/*.csv linguist-generated=true
+catalogue.md linguist-generated=true
+**/runner-source.py linguist-generated=true

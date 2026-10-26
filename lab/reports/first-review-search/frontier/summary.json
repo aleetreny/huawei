@@ -1,0 +1,88 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-first-review/frontier",
+  "runs": 256,
+  "groups": {
+    "all": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    },
+    "arm:frontier/recovery/project": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    },
+    "energy:recovery": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    },
+    "main:project": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    },
+    "story:frontier": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    }
+  },
+  "failures": {
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 83,
+    "Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 38,
+    "You resign. Work that needs other people cannot get done, and staying would only get worse.": 4,
+    "Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 6
+  },
+  "question_nodes": 203,
+  "story_nodes": 200,
+  "available_question_answers": 501,
+  "tried_question_answers": 458,
+  "story_available_answers": 483,
+  "story_tried_answers": 455,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 33
+    },
+    {
+      "support_text": false,
+      "promotion": true,
+      "count": 6
+    },
+    {
+      "support_text": true,
+      "promotion": false,
+      "count": 155
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 10
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 6,
+    "output": 5
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "batches": {
+    "factorial-v2": {
+      "six_month_window": 260,
+      "promotion": 64,
+      "review": 476,
+      "alive_promoted": 40,
+      "eliminated": 604
+    },
+    "frontier": {
+      "eliminated": 131,
+      "promotion": 16,
+      "review": 204,
+      "alive_promoted": 11,
+      "six_month_window": 125
+    },
+    "learned-v2": {
+      "six_month_window": 468,
+      "promotion": 336,
+      "review": 496,
+      "alive_promoted": 328,
+      "eliminated": 44
+    },
+    "public-action-coverage": {
+      "eliminated": 209,
+      "promotion": 8,
+      "review": 178,
+      "alive_promoted": 5,
+      "six_month_window": 84,
+      "interrupted": 31
+    },
+    "reserve-energy-confirmation": {
+      "eliminated": 26,
+      "promotion": 2,
+      "review": 25,
+      "alive_promoted": 0,
+      "six_month_window": 10
+    }
+  },
+  "runs": 1992,
+  "nodes": 215,
+  "story_nodes": 212,
+  "available_answers": 526,
+  "tried_answers": 521,
+  "story_available_answers": 508,
+  "story_tried_answers": 503,
+  "untried": [
+    {
+      "question": "62590001dc1d070e49df",
+      "title": "Mentoring a graduate who breaks things",
+      "choices": [
+        2
+      ]
+    },
+    {
+      "question": "eac3fd1ff4c1ed32ce84",
+      "title": "Palpitations after weeks of overtime: whether to stop",
+      "choices": [
+        2
+      ]
+    },
+    {
+      "question": "70cdb731398967478a3c",
+      "title": "The company tries to keep you after you look elsewhere",
+      "choices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question": "ae9ad6afa12adc953619",
+      "title": "You overhear a redundancy list that includes a friend",
+      "choices": [
+        2
+      ]
+    }
+  ]
+}
