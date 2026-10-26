@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 15:30 UTC**, chat organizador (rama `main`).
+Última actualización: **26 oct 2026, 15:15 UTC**, chat organizador (rama `main`).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
