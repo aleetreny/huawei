@@ -148,14 +148,17 @@ def run_sim(args):
     manifest = dict(mode='replica', seed=args.seed, games_per_arm=args.games, variants=args.variants,
                     catalog_sha256=hashlib.sha256(CATALOG.read_bytes()).hexdigest(), params=base_params(),
                     script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-                    replica_sha256=hashlib.sha256(Path(R.__file__).read_bytes()).hexdigest())
+                    replica_sha256=hashlib.sha256(Path(R.__file__).read_bytes()).hexdigest(),
+                    settle_completion=False)
     (out/'manifest.json').write_text(json.dumps(manifest, indent=2))
     results = {}
     with (out/'games.jsonl').open('w') as f:
         for name in args.variants:
             rows=[]
             for i in range(args.games):
-                st, trace = R.play(cat, Intervention(name), random.Random(args.seed+i))
+                # Preserve the pre-discovery scoring convention of these experiments.
+                # The official test includes the real final settlement automatically.
+                st, trace = R.play(cat, Intervention(name), random.Random(args.seed+i), settle_completion=False)
                 row=dict(variant=name, seed=args.seed+i, q=R.Replica.score(st), level=st.level,
                          skill=st.skill, wealth=st.wealth, health=st.health, dignity=st.dignity,
                          risk=st.risk, blowups=st.blowups, failure=st.failure,

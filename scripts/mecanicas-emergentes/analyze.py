@@ -40,6 +40,7 @@ def simulation_summary():
     result={}
     for folder in sorted((ROOT/'lab/reports/mecanicas-emergentes').glob('*/games.jsonl')):
         rows=[json.loads(x) for x in folder.read_text().splitlines()]
+        if not rows or 'variant' not in rows[0]:continue
         groups=collections.defaultdict(dict)
         for row in rows:groups[row['variant']][row['seed']]=row
         if 'base' not in groups:continue
@@ -73,7 +74,6 @@ def official_summary(source, target):
                     ref,refa=finish_quarter(rep,start,'base')
                     opt,opta=finish_quarter(rep,start,'terminal_q')
                     chosen=ref if name=='base' else opt
-                    before_settlement = copy.deepcopy(chosen)
                     settled = copy.deepcopy(chosen)
                     rep.month_change(settled)
                     official = g['final']['s']
@@ -114,6 +114,21 @@ def official_summary(source, target):
     if all(reaching.values()):
         result['adjusted_effect']=independent([r['gain48'] for r in reaching['terminal_q']], [r['gain48'] for r in reaching['base']])
         result['raw_effect']=independent([r['q'] for r in groups['terminal_q']], [r['q'] for r in groups['base']])
+    contributions=collections.defaultdict(list)
+    counts=collections.Counter()
+    for item in evidence:
+        b,o=item['baseline_model_final'],item['optimal_model_final']
+        contributions['resilience'].append(.75*(o['health']+o['dignity']-b['health']-b['dignity']))
+        contributions['network'].append((min(60,o['network'])-min(60,b['network']))/6)
+        contributions['skill'].append((min(120,o['skill'])-min(120,b['skill']))/8)
+        contributions['risk'].append(max(0,10-o['risk']-5*o['blowups'])-max(0,10-b['risk']-5*b['blowups']))
+        counts['baseline_unused_energy']+=b['energy']>0
+        counts['optimal_unused_energy']+=o['energy']>0
+        counts['better_health_dignity']+=o['health']+o['dignity']>b['health']+b['dignity']
+        counts['better_network']+=o['network']>b['network']
+        counts['more_remaining_risk']+=o['risk']>b['risk']
+    (target/'mechanism.json').write_text(json.dumps({'counts':dict(counts),
+        'mean_model_score_contributions':{k:statistics.mean(v) for k,v in contributions.items()}},indent=2))
     hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(source.iterdir()) if p.is_file()}
     (target/'raw-hashes.json').write_text(json.dumps({'source':str(source),'sha256':hashes},indent=2))
     (target/'manifest.json').write_bytes((source/'manifest.json').read_bytes())

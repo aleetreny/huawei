@@ -1,12 +1,12 @@
 # Mecánicas emergentes — 27 octubre 2026
 
 Objetivo solicitado: descubrir y comprobar al menos un patrón útil nuevo, partiendo de los últimos experimentos.
-Rama propia `alejandro/mecanicas-emergentes`, base `4cec65d` (incluye réplica, M1–M17 y T20). No editar el plan global.
+Rama propia `alejandro/mecanicas-emergentes`. Base inicial de exploración `4cec65d`; base final de publicación `main-1nddsg@da81e4a` (M1–M23), excluyendo la integración ajena de T20. No editar el plan global.
 
 ## Fases
 1. [x] Leer ESTADO, H1–H25, M1–M17, T18/T20 y código de la réplica.
-2. [ ] Formular y probar intervenciones aisladas en la réplica.
-3. [ ] Confirmar la mejor hipótesis en semillas nuevas y, si procede, bots por las cinco herramientas oficiales.
+2. [x] Formular y probar intervenciones aisladas en la réplica.
+3. [x] Confirmar la mejor hipótesis en semillas nuevas y, si procede, bots por las cinco herramientas oficiales.
 4. [ ] Informe con incertidumbre, artefactos reproducibles y principios generales; tests; commit, push y PR.
 
 ## Hipótesis escritas antes de simular
