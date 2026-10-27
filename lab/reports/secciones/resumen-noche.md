@@ -21,7 +21,7 @@ Rama `alejandro/lab-secciones`, origen de registro `secciones`, actor Haiku de s
 ## Revisión de las 2 horas (02:10 UTC)
 
 **Qué he aprendido de la mecánica.**
-- El ascenso de la 1.ª evaluación es un interruptor: 109 de 109 partidas que empezaron el mes 6 en el umbral ascendieron, y ninguna por debajo. Toda la varianza del P1 está en llegar al mes 6 sin perder un punto.
+- El ascenso de la 1.ª evaluación es un interruptor: 143 de 143 partidas que empezaron el mes 6 en el umbral ascendieron, y ninguna por debajo. Toda la varianza del P1 está en llegar al mes 6 sin perder un punto.
 - Los puntos se pierden en el mes 5 (y algo en el 4) por respuestas de principios firmes o públicas que suben Dignidad (ya en 10) y cuestan Network, o que quitan tiempo a la entrega propia (Output). Siempre había otra respuesta que conservaba el punto.
 - Haiku no sabe cuándo llega la evaluación ni reconoce el techo; si se le enseña a contar con el calendario publicado, lo hace y pierde la mitad de puntos en el mes 5. Las reglas generales sobre "ser discreto" (cap-trade) no cambian su elección.
 - `check_latest_logs` enseña el efecto exacto de cada respuesta, pero Haiku apenas lo usa aunque se le pida.
