@@ -287,14 +287,11 @@ class Replica:
         return {"grade": g, "tone": tone, "promoted": promoted}
 
     def _warn(self, st: State, g: str) -> bool:
+        """M24: the talk warns exactly when 4*Dignity + Health < 22 + 8*risk + 16*blow-ups (C grades;
+        100 % of 10,216 reviews). D grades always warn."""
         if g == "D":
             return True
-        m = self.cat.tone.get(str(min(st.level, 5)))
-        if not m:
-            return False
-        x = grade_features(st, False)
-        z = sum(a * b for a, b in zip(m["coef"], x)) + m["intercept"]
-        return z > 0
+        return 4 * st.dignity + st.health < 22 + 8 * st.risk + 16 * st.blowups
 
     # ---- ending (H11)
     @staticmethod

@@ -494,6 +494,67 @@ Diferencia de nota al quitar cada regla (negativo = la regla ayuda):
 - **R6 (dinero)** aporta poco pero nunca resta.
 - **R4 ("todo a Skill"), tal como está escrita, no ayuda** (+0,6). El planificador sí gana guardando Skill desde L4, pero lo hace con los umbrales en la mano. Una regla sin números que lo capture está por encontrar.
 
+## Fase 4 (27 oct, 11:00– UTC): modo de competición, notas y patrones nuevos
+
+### M24. La charla de aviso tiene una regla exacta: la "reputación"
+
+Con nota C, **la charla es de aviso si y sólo si**
+
+> **4 × Dignity + Health < 22 + 8 × riesgo oculto + 16 × explosiones**
+
+- Acierta el **100 %** de 10.216 evaluaciones con C.
+- La D siempre trae aviso.
+- Esa misma "reputación" (4·Dignity + Health − 8·riesgo − 16·explosiones) mejora la predicción de la nota A frente a B en L4 y L5: un árbol de gradiente pasa del 88,7 % al 97,5 %. La nota mezcla el rendimiento (Skill, Network y Output frente al nivel y el tiempo en él) con la reputación.
+- **Lectura práctica:** en las dos primeras evaluaciones (L1) el aviso cuesta riesgo +1, Health −1 y Dignity −2. Se evita llegando a la evaluación con la Dignity alta y el riesgo bajo. **Cada punto de riesgo pesa como 2 de Dignity, y cada explosión como 4.**
+
+### M25. El modo de competición local no cambia nada
+
+Lotes con el servidor en `--competition`:
+- `k01-comp-planner`: 85 partidas válidas de la política óptima.
+- `k02-comp-random`: 100 partidas al azar.
+
+Resultados:
+- Mismos 168 títulos.
+- **El simulador acierta igual que en modo normal:** 99,1 % de los pasos, 99,7 % de los ascensos y un error de 0,36 puntos en la nota.
+- Misma nota: la política saca 71,4 (antes 72,4 ± 0,5; dentro del ruido con 85 partidas) y el azar 12,1 (antes 11,8).
+
+Lo que cambie la evaluación oficial (otro conjunto de eventos u otros parámetros) no se ve en local.
+
+### M26. El campo `notes` no tiene efecto mecánico
+
+- Misma política con notas vacías (35 partidas) y con notas de 1.000 caracteres (36): el simulador, que no sabe nada de las notas, acierta el 99,2 % y el 99,5 % de los pasos. Nota media 74,4 y 74,9.
+- El registro guarda la nota entera, y `check_latest_logs` la devuelve: sirve de **memoria del agente** tras comprimir el contexto.
+- Las normas prohíben "manipular… agent notes", así que **no es una palanca de juego**. Sí lo es para ahorrar tokens: notas cortas y estructuradas.
+
+### M27. Lo que no existe (comprobado con todos los lotes)
+
+| Hipótesis | Resultado |
+|---|---|
+| Una historia cambia otra (variantes de la primera pregunta según el pasado) | **No**: ningún título tiene más de una pregunta inicial |
+| El efecto de una respuesta depende del estado | **No**: las 939 respuestas tienen siempre la misma línea de efecto |
+| Riesgo retardado (consecuencias que afloran meses después) | **No**: el riesgo del mes encaja en el **98,9 %** de los meses; el resto va en ambos sentidos (−1: 731, +1: 449) y ninguna respuesta aparece de más antes de esos desajustes con retrasos de 1 a 6 meses |
+| Eventos que dependen del nivel o del estado | **No** (M18) |
+| Ascensos fuera de las evaluaciones | **No** (M19) |
+
+### M28. ¿Se puede predecir el efecto por el texto? (aprendizaje automático, títulos reservados)
+
+TF-IDF de 1–2 palabras con regresión, validado reservando títulos enteros (928 respuestas):
+
+| Efecto | R² con títulos no vistos |
+|---|---:|
+| Dignity | 0,23 |
+| Skill | 0,11 |
+| Health | 0,11 |
+| Network | 0,07 |
+| Output | 0,04 |
+| Riesgo | 0,13 |
+
+- "Arriesgada o no": 66 % de acierto, frente al 59 % de partida.
+- Las palabras sueltas sirven poco; las etiquetas semánticas de un modelo de lenguaje llegaban a R² 0,4–0,6 (H16). **Juzgar las respuestas exige comprensión del lenguaje**, y la Skill debe apoyarse en el juicio del modelo y en el contexto (riesgo, techo, evaluación), no en vocabulario.
+- Aun así el vocabulario confirma el patrón:
+  - **suben el riesgo:** *deny, quietly, bet, coasting, force, hotfix, later, keep*;
+  - **lo bajan:** *admit, compliance, security, investigation, report, apologise, checklist, own, fully, proper*.
+
 ## Relevo (27 oct, 10:50 UTC)
 
 **1. Qué se ha hecho.** La Fase 3 completa (tabla final arriba):
