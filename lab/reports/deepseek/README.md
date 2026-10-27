@@ -4,7 +4,11 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 **Pregunta.** ¿Sabe `deepseek-v4-flash` ver qué indicador sube o baja cada respuesta y cuáles son arriesgadas? ¿Qué categorías reconoce y qué reglas obedece? Con eso, ¿cuál es la forma más masticada de darle las reglas?
 
-## Conclusiones (27 oct, 18:40 UTC)
+## Conclusiones (27 oct, 20:05 UTC)
+
+**Lo más importante: primeras partidas completas de DeepSeek.** `t13-read-v4` saca **71,67** y `t13-read-v5` 66,71 (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas. **Manual recomendado para el corte 1: [`t13-read-v4`](../../policies-src/deepseek/t13-read-v4/)** (commit `09d5735`). Detalles en [mejora-nota.md](mejora-nota.md).
+
+Lo aprendido antes, con el banco y el simulador:
 
 1. **DeepSeek ve bien el riesgo y mal Skill y Output.** Sin ayuda detecta el 83 % de las respuestas que suben el riesgo oculto y el 90 % de las peligrosas, pero sólo el 45 % de las que suben Skill y el 49 % de las que suben Output. Lee los tipos de respuesta mejor que Haiku ([percepcion.md](percepcion.md)).
 2. **La mejor categorización es leer cada opción como seis signos más el riesgo**, con definiciones que digan cómo suele moverse cada indicador (prompt v3). Un bot que elige sólo con esa lectura de DeepSeek saca **56,0** en el simulador, frente a 46,7 con los 10 tipos de Haiku (lo que había que superar) y 67,7 el oráculo. Con las mismas definiciones, los 10 tipos solos se quedan en 48,5. Se confirma con los títulos reservados en percepción y en el simulador, aunque no en la pérdida por decisión del banco ([categorizacion.md](categorizacion.md)).
