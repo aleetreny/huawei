@@ -34,7 +34,8 @@ UNKNOWN = 1e9
 # Policy knobs (our own prudence settings, not game rules).
 P = {"h_recover": 6, "h_floor": 2, "h_w": 0.5, "risk_base": 4.0, "risk_hr": 3.0, "risk_veto_hr": 1,
      "risk_veto": 20.0, "defuse_hr": 1, "laylow_hr": 1, "h_minus": 2.0,
-     "guard": (5,), "guard_w": 6.0, "push_w": 0.0}
+     "guard": (5,), "guard_w": 6.0, "push_w": 0.0, "surprise_w": 0.0, "surprise_decay": 0.5,
+     "story_detect": 0, "rminus_w": 1.0}
 
 # Quarterly menus, as published in the employee handbook (signs) and the in-game menu text ("solid",
 # "strongly" = 2). Energy cost per action is published. Menu order is the order the game lists them.
@@ -118,11 +119,24 @@ def learn(mem: Memory, st: dict) -> None:
     """Compare these stats with the last call: a published gain (quarterly action) that did not register
     means the stat has stalled at this level. Also refresh the risk estimate from the HR tone."""
     prev = mem.d.get("prev")
+    if prev and prev.get("level") == st["level"] and prev.get("read") and P["story_detect"]:
+        for k, x in prev["read"].items():  # a story gain you expected that did not move the stat
+            if k in GROWTH and x > 0 and st.get(k) is not None and prev.get(k) is not None and st[k] <= prev[k]:
+                key = f"{st['level']}:{k}"
+                hits = mem.d.setdefault("stall_hits", {})
+                hits[key] = hits.get(key, 0) + 1 if hits.get(key + "@") == st[k] else 1
+                hits[key + "@"] = st[k]
+                if hits[key] >= P["story_detect"]:
+                    mem.d["caps"][key] = st[k]
     if prev and prev.get("level") == st["level"] and prev.get("expect"):
         for k, x in prev["expect"].items():
             if k in GROWTH and x > 0 and st.get(k) is not None and prev.get(k) is not None and st[k] < prev[k] + x:
                 mem.d["caps"][f"{st['level']}:{k}"] = st[k]
     if st["hr"] is not None and st["month"] != mem.d.get("hr_month"):
+        if mem.d.get("hr_month") is not None:  # HR worry rose more than the flagged picks explain
+            expected = max(0, min(4, mem.d.get("hr", 0) + mem.d.get("risk_since", 0)))
+            sur = mem.d.get("surprise", 0.0) * P["surprise_decay"] + max(0, min(4, st["hr"]) - expected)
+            mem.d["surprise"] = sur
         mem.d["hr"], mem.d["hr_month"], mem.d["risk_since"] = max(0, min(4, st["hr"])), st["month"], 0
     elif st["hr"] is not None and st["hr"] > mem.d.get("hr", 0):
         mem.d["hr"] = min(4, st["hr"])
@@ -168,7 +182,9 @@ def value(st: dict, mem: Memory, fx: dict, risk: int) -> float:
         wl *= (lv + 1) // 2
     v += 0.5 * wl
     hr = risk_level(mem)
-    v -= risk * (P["risk_base"] + P["risk_hr"] * hr)
+    if risk >= 0:  # after unexplained HR worry, options that do not clear risk are less trusted
+        v -= P["surprise_w"] * min(2.0, mem.d.get("surprise", 0.0))
+    v -= risk * (P["risk_base"] + P["risk_hr"] * hr) * (P["rminus_w"] if risk < 0 else 1.0)
     if risk > 0 and hr >= P["risk_veto_hr"]:
         v -= P["risk_veto"]
     if endgame:
@@ -233,7 +249,8 @@ def step(st: dict, options: dict[int, tuple[dict, int]], mem: Memory) -> tuple[i
         k = decide_story(st, mem, options)
         name, fx, risk = "", {}, options.get(k, ({}, 0))[1]
     mem.d["risk_since"] = mem.d.get("risk_since", 0) + risk
-    mem.d["prev"] = {**{s: st[s] for s in STATS}, "level": st["level"], "month": st["month"], "expect": fx}
+    mem.d["prev"] = {**{s: st[s] for s in STATS}, "level": st["level"], "month": st["month"], "expect": fx,
+                     "read": options.get(k, ({}, 0))[0] if not name else {}}
     return k, name
 
 
