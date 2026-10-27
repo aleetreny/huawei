@@ -1,0 +1,10 @@
+{
+  "name": "openjiuwen",
+  "version": "0.1.16.post2",
+  "wheel": {
+    "url": "https://files.pythonhosted.org/packages/16/0f/445d8ce111f0a451f6781cbd312d8358887390669a4145882d3f3761823c/openjiuwen-0.1.16.post2-py3-none-any.whl",
+    "hash": "sha256:8d7a33396cab97285847c950c395535d531daa9eecbabbc165d0bb5655301176",
+    "size": 5318603,
+    "upload-time": "2026-08-04T11:33:33.087Z"
+  }
+}

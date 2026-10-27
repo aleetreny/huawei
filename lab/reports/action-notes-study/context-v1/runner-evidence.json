@@ -1,0 +1,34 @@
+{
+  "runner_commit": "00b084a88732d81e595db88b26dde90d44e72d87",
+  "source": "official participant client, not simulator engine",
+  "files": [
+    {
+      "path": "career_sim_runner/install.py",
+      "sha256": "6eacc540fa91a33c4ed3b1030508f69c92cb280cd498472ee3a1f056e36e2e19",
+      "start_line": 48,
+      "end_line": 64,
+      "excerpt": "    resolved_skills_dir = skills_dir or jiuwenswarm_skills_dir()\n\n    # Clean up\n    todo_dir = resolved_skills_dir.with_name(\"todo\")\n    hist_dir = resolved_skills_dir.with_name(\".agent_history\")\n    session_dir = resolved_skills_dir.parent.with_name(\"sessions\")\n    team_dir = session_dir.parent.with_name(\".agent_teams\")\n    mem_dir = resolved_skills_dir.with_name(\"memory\")\n    for file in chain(\n        todo_dir.glob(\"*\"), hist_dir.glob(\"*\"), session_dir.glob(\"*\"), team_dir.glob(\"*\"), mem_dir.glob(\"*.md\")\n    ):\n        if file.is_file():\n            os.remove(file)\n        elif file.is_dir():\n            shutil.rmtree(file)\n    (mem_dir / \"MEMORY.md\").write_text(MEMORY_MD_CONTENT)\n"
+    },
+    {
+      "path": "career_sim_runner/headless_play.py",
+      "sha256": "829b1382b1c1bc2127d1a9d4fdbb810d502aecdd7826d458a5cb22ff3c10b72e",
+      "start_line": 98,
+      "end_line": 119,
+      "excerpt": "    drive_session_id = resolve_drive_session_id(continue_run=continue_run)\n    store_last_drive_session_id(drive_session_id)\n\n    if submission_dir is not None:\n        submission_report = validate_submission(submission_dir, require_presentation=False)\n        if not submission_report.ok:\n            details = \"; \".join(check.detail for check in submission_report.checks if not check.ok)\n            raise RuntimeError(details)\n        install_record = install_submission(\n            submission_dir=submission_dir,\n            skills_dir=jiuwenswarm_skills_dir(),\n            require_presentation=False,\n        )\n        assert await reload_agent_config(resolved_ws_url), \"Failed to reload JiuwenSwarm agent config!\"\n    else:\n        loaded_install = load_active_install()\n        if loaded_install is None:\n            msg = \"No active install found. Pass --submission or run install first.\"\n            raise RuntimeError(msg)\n        install_record = loaded_install\n\n    environment_report = await validate_environment(ws_url=resolved_ws_url, db_path=resolved_db_path)"
+    },
+    {
+      "path": "career_sim_runner/constants.py",
+      "sha256": "f95f761e34f5b53f218797112f63e94c7a049d6ca9d7ab6513f644a135ae9427",
+      "start_line": 27,
+      "end_line": 33,
+      "excerpt": "\nCAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT: int = 1\nCAREER_EMULATOR_MONTHLY_EVENT_LIMIT: int = 3\nCAREER_EMULATOR_MAX_NOTE_LENGTH: int = 1000\nSUBMISSION_MODE_SKILL_BUNDLE: str = \"skill_bundle\"\n# This competition permits JiuwenSwarm single-agent mode only.\nSUPPORTED_RUN_MODES: frozenset[str] = frozenset({\"agent\"})"
+    },
+    {
+      "path": "career_sim_runner/setup.py",
+      "sha256": "9df86874637ae66d9c5583a1b59fcdca13e509a6d999e0a462ffa86831176a34",
+      "start_line": 64,
+      "end_line": 82,
+      "excerpt": "            \"command\": EMULATOR_MCP_COMMAND,\n            \"args\": [\"--update\", \"skip\"],\n            \"cwd\": cwd,\n            \"env\": {\n                \"CAREER_EMULATOR_DB\": str(default_db_path()),\n                \"CAREER_EMULATOR_LOG_DIR\": str(default_emulator_log_dir()),\n                \"CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT\": str(CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT),\n                \"CAREER_EMULATOR_MONTHLY_EVENT_LIMIT\": str(CAREER_EMULATOR_MONTHLY_EVENT_LIMIT),\n                \"CAREER_EMULATOR_MAX_NOTE_LENGTH\": str(CAREER_EMULATOR_MAX_NOTE_LENGTH),\n            },\n        }\n    ]\n    with config_path.open(\"w\", encoding=\"utf-8\") as handle:\n        yaml.dump(data, handle)\n    ensure_instance_env_overlay()\n    return config_path\n\n\n# Only competition LLM credentials are copied from the repo ``.env``."
+    }
+  ]
+}

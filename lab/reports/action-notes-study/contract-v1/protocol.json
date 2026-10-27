@@ -1,0 +1,60 @@
+{
+  "name": "notes-contract-v1",
+  "at": "2026-10-27T16:55:44.787453+00:00",
+  "script_sha256": "a07100230d08b00bb2e7b210db2f4ef342459d9a71b7f89fe6626325fa801ed8",
+  "cases": [
+    [
+      "omitted",
+      null
+    ],
+    [
+      "null",
+      null
+    ],
+    [
+      "number",
+      123
+    ],
+    [
+      "boolean",
+      true
+    ],
+    [
+      "array",
+      [
+        "fact"
+      ]
+    ],
+    [
+      "object",
+      {
+        "fact": "test"
+      }
+    ],
+    [
+      "spaces",
+      "  "
+    ],
+    [
+      "whitespace_edges",
+      "  CONTRACT_EDGE  \n"
+    ],
+    [
+      "newline",
+      "\n"
+    ],
+    [
+      "normal",
+      "CONTRACT_NORMAL"
+    ],
+    [
+      "empty",
+      ""
+    ]
+  ],
+  "sessions": 2,
+  "competition_mode": false,
+  "stop": "Boundary probes only; sessions intentionally not completed, never included in promotion outcomes",
+  "method": "Same persistent server/client, two public sessions, invalid choice plus note types, observe after each call",
+  "limits": "Development multi-session test; does not claim competition permits multiple games"
+}

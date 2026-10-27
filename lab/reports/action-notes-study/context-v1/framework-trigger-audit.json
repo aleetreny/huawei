@@ -1,0 +1,365 @@
+{
+  "passed": 37,
+  "cases": [
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 799,
+      "span": true,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 799,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 799,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 800,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 800,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 800,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 801,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 801,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 1000,
+      "used": 801,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25599,
+      "span": true,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25599,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25599,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25600,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25600,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25600,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25601,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25601,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 32000,
+      "used": 25601,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104856,
+      "span": true,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104856,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104856,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104857,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104857,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104857,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104858,
+      "span": true,
+      "executor": true,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104858,
+      "span": false,
+      "executor": true,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "compression_gate",
+      "window": 131072,
+      "used": 104858,
+      "span": true,
+      "executor": false,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": null,
+      "now": 600,
+      "occupancy": 800,
+      "ttl_seconds": 300,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": 0,
+      "now": 299,
+      "occupancy": 800,
+      "ttl_seconds": 300,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": 0,
+      "now": 300,
+      "occupancy": 499,
+      "ttl_seconds": 300,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": 0,
+      "now": 300,
+      "occupancy": 500,
+      "ttl_seconds": 300,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": 0,
+      "now": 301,
+      "occupancy": 800,
+      "ttl_seconds": 300,
+      "triggered": true,
+      "expected": true
+    },
+    {
+      "kind": "idle_offload_gate",
+      "previous_access": 0,
+      "now": 600,
+      "occupancy": 800,
+      "ttl_seconds": 0,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "successive_accesses",
+      "now": 200,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "successive_accesses",
+      "now": 400,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "successive_accesses",
+      "now": 600,
+      "triggered": false,
+      "expected": false
+    },
+    {
+      "kind": "successive_accesses",
+      "now": 900,
+      "triggered": true,
+      "expected": true
+    }
+  ],
+  "framework_files": [
+    {
+      "wheel_path": "openjiuwen/core/context_engine/processor/forked/compressor/base.py",
+      "sha256": "7f89a02158fde565eeae3996692698fd828ecd32c205c8554cf0ae1bfb79a93b"
+    },
+    {
+      "wheel_path": "openjiuwen/core/context_engine/processor/forked/offloader/message_offloader.py",
+      "sha256": "f7f5ce8995c7bdd87144cbdf126c4cf446ea6171224b4b33077d06c6bc8659f3"
+    },
+    {
+      "wheel_path": "openjiuwen/harness/rails/context_engineer/context_processor_rail.py",
+      "sha256": "d38f4e82fed6cc3dc22b79c08dbe9cf5bb0395da63d35699768a4d191206392f"
+    },
+    {
+      "wheel_path": "openjiuwen/harness/rails/context_engineer/context_assemble_rail.py",
+      "sha256": "e13d901d3b1daed38f1caa4f9753ad213385c848f9aba2201bd207972c2528f4"
+    },
+    {
+      "wheel_path": "openjiuwen/core/context_engine/processor/forked/compressor/current_round_compressor.py",
+      "sha256": "9a53e4739578c791dae8482583c1833244b1fcbe2817794b6064f76df9e18ba2"
+    },
+    {
+      "wheel_path": "openjiuwen/core/context_engine/processor/forked/compressor/round_level_compressor.py",
+      "sha256": "7b2c3383dea8037493e24ac4ca03d792bd3237f69e6f18be8405fdcedfada8df"
+    },
+    {
+      "wheel_path": "jiuwenswarm/resources/config.yaml",
+      "sha256": "9443d44d39cd16ffd322942c59c16b79b7f63f9344b74215027518653fbb2d11"
+    }
+  ],
+  "wheel_hashes": {
+    "jiuwenswarm-0.2.4b3.whl": "85d1ad464916409bbc2c4b44f828c5860b533c4c6024bbc23b703920c54a01f3",
+    "openjiuwen.whl": "8d7a33396cab97285847c950c395535d531daa9eecbabbc165d0bb5655301176"
+  },
+  "limits": [
+    "Actual pinned framework methods with synthetic contexts, not an integrated Jiuwen run",
+    "Defaults do not establish organiser deployment overrides or effective model window",
+    "No model call, summary generation, weight update, real cache-hit or billed-cost measurement"
+  ]
+}
