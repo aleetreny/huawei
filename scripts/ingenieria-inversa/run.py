@@ -93,7 +93,7 @@ def main() -> None:
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True, cwd=HERE).stdout.strip()
     manifest = {"args": vars(args), "kwargs": kwargs, "started": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "commit": commit, "engine": version("career-emulator-engine"), "dataset": version("career-emulator-techarena"),
-                "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)", "competition_mode": False,
+                "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)", "competition_mode": os.environ.get("BB_COMPETITION") == "1",
                 "interface": "five official MCP tools only; no seeds, cloning or internal reads"}
     (out / f"manifest-{args.offset}.json").write_text(json.dumps(manifest, indent=2))
     procs = [mp.Process(target=proc_main, args=(k, args, per, kwargs)) for k in range(args.procs)]
