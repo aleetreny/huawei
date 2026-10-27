@@ -405,6 +405,11 @@ def _claim_job(reg: Registry, policy_id: str, actor_id: str, env_id: str, purpos
         "SELECT j.job_id, j.status, j.policy_id, j.actor_id, j.env_id, j.purpose FROM jobs j JOIN actors a USING(actor_id) "
         "WHERE a.kind=? AND j.origin=? AND j.status IN ('queued','leased','running')", (ACTOR_KIND, reg.origin)).fetchall()
     busy = [r["job_id"] for r in rows if r["status"] != "queued"]
+    parallel = os.environ.get("CAREERLAB_TARGET_PARALLEL") == "1"
+    if parallel:  # games in other slots may be running; their costs mix in the key's usage (use runner_cost)
+        rows = [r for r in rows if r["status"] == "queued" and
+                (r["policy_id"], r["actor_id"], r["env_id"], r["purpose"]) == (policy_id, actor_id, env_id, purpose)]
+        busy = []
     if busy:
         raise RuntimeError(f"target job(s) {busy} still leased or running; if no game is playing, run "
                            f"`CAREERLAB_ORIGIN={reg.origin} uv run careerlab recover` first")
