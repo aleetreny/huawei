@@ -540,6 +540,104 @@ def build10(out: Path) -> None:
     (root / "review-month.md").write_text(T10_REVIEW)
 
 
+# ----------------------------------------------------------------------------- round 11: rubric rewrite of t10 (phase 3)
+# Same behaviour as t10 (quarterly priority list + review countdown switch), written for the official rubric:
+# when to use it, executable steps with decision criteria and what to do near a limit, a 48-month view, no
+# number presented as a hidden game threshold (our own safety margins are labelled as such).
+T11 = """---
+name: career-rules
+description: "Use on every Career Survival turn. Sets the quarterly Energy and main action in priority order (end of career, Health and Dignity, HR risk remarks, senior levels, growth) and the review countdown to write before every story choice."
+---
+
+# Career rules
+
+## What this Skill decides
+- **Quarterly phases** (Energy actions, then one main action): fully, with the priority list below.
+- **Story events:** you judge each story yourself. This Skill only adds a review countdown and, in the last month before a review, a check from `reference/review-month.md`.
+
+## The 48 months at a glance
+Reviews come every six months; promotion needs Skill, Network and Output high enough for your level, so growth matters most before each review. Hidden risk builds quietly and the monthly HR remark is its only gauge; a second blow-up ends the run. From L4 the bar rises fastest for Skill. In the final month, the ending evaluation counts level, wealth, health and dignity, skill, risk control and network.
+
+## Turn loop
+1. `observe`. Read `events` first: the monthly HR remark, the review talk, warnings. If you resumed after a break, call `check_latest_logs` for the last few decisions.
+2. Quarterly phase: walk the list below; the first matching line decides. Story event: write the countdown, then choose.
+3. `take_action` with the exact `choice` and a short note naming the line used. If `success` is false, pick another option you can afford.
+
+## Quarterly phases: first matching line wins
+You have 3 Energy per quarter; Skill learning, High-intensity work and Defuse legacy risk cost 2, the others 1. Unused Energy is lost.
+1. **Final month of the career (month 48):** main action Lay low and reduce risk. Energy: Defuse legacy risk if the HR remark is not the friendly one, then Health recovery and Mental recovery until both are full, then Network maintenance. Never Skill learning or High-intensity work: their gains come too late and their Health cost counts.
+2. **Health or Dignity low.** Our safety margin, not a published limit: Health 4 or less, Dignity 3 or less, or either falling for several months. Health recovery (or Mental recovery) first; no Skill learning or High-intensity work until it recovers. Health at zero ends the run at once.
+3. **HR remark shows high risk.** Read the latest monthly HR remark and place it in one of three bands:
+   - friendly ("you are doing all right"): no risk action;
+   - quiet ("some risk, nothing serious yet"): first Energy action Defuse legacy risk, main action from the lines below;
+   - anything else (frowning, uneasy, "you are on your own", angry, buried problems): first Energy action Defuse legacy risk and main action Lay low and reduce risk, every quarter until the remark is back to friendly or quiet.
+4. **L4 or above:** Skill learning (2 Energy) plus one point on the weakest of Health, Dignity or Network; main action Apply for rotation.
+5. **Otherwise (L1 to L3):** spend Energy on whichever of Skill, Network and Output is furthest from what the next review needs: Prepare report materials for Output, Network maintenance for Network, Skill learning for Skill while Health is comfortable. Main action Apply for a key project, which lifts all three. If Network is near zero or Wealth is near zero for months, fix that first (Network maintenance or Repair a key relationship; avoid spending), since both are published failure paths.
+
+## Story events: review countdown
+Before every story choice, start the note with `Review in N`: the months left until the next review month, N = 6 - (current_month mod 6), and N = 6 when current_month is a multiple of 6.
+- **N = 1** (the last month before a review): open `reference/review-month.md` with `skill_tool` (relative_file_path) and apply it to this choice.
+- **Any other N:** no extra rule. Choose the option you judge best for a long, healthy career, weighing what it likely does to Health, Dignity, Skill, Network, Output, Wealth and hidden risk.
+"""
+T11_REVIEW = """# Month before a review month
+
+Use only when your countdown says `Review in 1`.
+
+The review talk can arrive as the review month opens, before its stories, so this month's choices are the last ones that count for it. Do not pick an option that may lower Skill, Network or Output, even if another option looks more principled or adds Dignity: Dignity can be rebuilt later, a lost point can cost the promotion.
+
+Mark each option before choosing:
+- goes against a person (blaming, correcting in public, refusing, reporting someone): may cost Network;
+- gives up time from your own delivery (extra unplanned work, investigations, rework, the slow thorough path, fixing someone else's problem): may cost Output.
+
+Never save a point by hiding a problem, gambling that it will not surface or cutting a corner: that buries risk. Pick an option with neither mark. If every option has one, pick the one whose loss falls on a stat that is not holding your promotion back. Outside this month these marks are not a reason to avoid an option.
+"""
+
+
+def build11(out: Path) -> None:
+    bundle(out, "t11-final", {"career-rules": T11},
+           hypothesis="t10 rewritten for the document rubric (same decisions): scope, 48-month view, Energy arithmetic, three HR bands, labelled safety margins, failure paths.")
+    root = out / "t11-final" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T11_REVIEW)
+
+
+# ----------------------------------------------------------------------------- round 12: rubric round 2 (phase 3)
+T12 = T11.replace(
+    "From L4 the bar rises fastest for Skill.",
+    "In our runs the bar rose fastest for Skill from L4; check it against your own review talks.")
+T12 = T12.replace(
+    """4. **L4 or above:** Skill learning (2 Energy) plus one point on the weakest of Health, Dignity or Network; main action Apply for rotation.""",
+    """4. **After a weak review (C or D) or a talk that names a gap:** until the next review, spend Energy and the main action on the stat the talk names, or on the weakest of Skill, Network and Output (Prepare report materials, Network maintenance, Skill learning; main action Apply for a key project). A second weak review in a row is the dismissal path.
+5. **L4 or above:** Skill learning (2 Energy) plus one point on the weakest of Health, Dignity or Network; main action Apply for rotation. If reviews stay strong while Output stalls, swap one quarter to Prepare report materials and Showcase results.""")
+T12 = T12.replace("5. **Otherwise (L1 to L3):**", "6. **Otherwise (L1 to L3):**")
+T12 = T12.replace(
+    """- **N = 1** (the last month before a review): open `reference/review-month.md` with `skill_tool` (relative_file_path) and apply it to this choice.""",
+    """- **N = 1** (the last month before a review): open `reference/review-month.md` with `skill_tool` (relative_file_path) and apply it to this choice. It is a short check that keeps the month's last choices from costing the promotion.""")
+assert T12.count("6. **Otherwise") == 1
+
+
+def build12(out: Path) -> None:
+    bundle(out, "t12-final", {"career-rules": T12},
+           hypothesis="t11 plus a weak-review line in the quarterly list, an L4 Output fallback and hedged wording (rubric round 2).")
+    root = out / "t12-final" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T11_REVIEW)
+
+
+T13 = T12.replace("In our runs the bar rose fastest for Skill from L4; check it against your own review talks.",
+                  "The handbook says higher levels set a higher bar; at senior levels watch which stat the review talks say is lagging, usually Skill.")
+T13 = T13.replace("the monthly HR remark is its only gauge", "the monthly HR remark is the visible sign of it")
+assert T13 != T12
+
+
+def build13(out: Path) -> None:
+    bundle(out, "t13-final", {"career-rules": T13},
+           hypothesis="t12 with the senior-level line and the HR gauge worded from the handbook and in-run feedback.")
+    root = out / "t13-final" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T11_REVIEW)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -554,3 +652,6 @@ if __name__ == "__main__":
     build8(o)
     build9(o)
     build10(o)
+    build11(o)
+    build12(o)
+    build13(o)
