@@ -25,11 +25,15 @@ class ReplicaBot(Base):
         return {"cat": replica.Catalog(json.loads(Path(catalog).read_text()))}
 
     def __init__(self, seed: int, shared: dict[str, Any] | None = None, catalog: str | None = None,
-                 risk_cap: int = 3, **params: Any):
-        super().__init__(seed, risk_cap=risk_cap, **params)
+                 risk_cap: int = 3, policy: str = "greedy", params: dict | None = None, **kw: Any):
+        super().__init__(seed, risk_cap=risk_cap, policy=policy, params=params or {}, **kw)
         self.cat = shared["cat"]
         self.rep = replica.Replica(self.cat, random.Random(seed))
-        self.pol = replica.Greedy(risk_cap=risk_cap)
+        if policy == "planner":
+            import planner
+            self.pol = planner.Planner(**(params or {}))
+        else:
+            self.pol = replica.Greedy(risk_cap=risk_cap)
 
     def new_game(self, game_id: str) -> dict[str, Any]:
         return {"spent": {}, "game": game_id, "R": 0, "nb": 0, "last_key": None}
