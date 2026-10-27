@@ -638,6 +638,36 @@ def build13(out: Path) -> None:
     (root / "review-month.md").write_text(T11_REVIEW)
 
 
+# ----------------------------------------------------------------------------- round 14: better perception in the review month
+# Games: the dismissals come from losing a Network or Output point in the months before a review although the
+# rule was applied: Haiku did not see that "a fair but low rating for a friend" or "a light-touch answer to
+# someone asking for help" costs Network. Round 14 widens the cues and adds an in-run calibration step: the
+# official log shows the exact effect of the agent's own earlier choices.
+T14_REVIEW = """# Month before a review month
+
+Use only when your countdown says `Review in 1`.
+
+The review talk can arrive as the review month opens, before its stories, so this month's choices are the last ones that count for it. Do not pick an option that may lower Skill, Network or Output, even if another option looks more principled or adds Dignity: Dignity can be rebuilt later, a lost point can cost the promotion.
+
+1. **Calibrate once this month:** call `check_latest_logs` with a count of about 20. Each of your earlier choices shows its exact effect. Note which kinds of choices cost Network or Output in this run.
+2. **Mark each option:**
+   - **may cost Network:** going against a person (blaming, correcting in public, refusing, reporting someone), judging or rating someone harshly, giving a cool or minimal answer to someone who asked for help, keeping to yourself when people expect you to join;
+   - **may cost Output:** giving up time from your own delivery (extra unplanned work, investigations, rework, the slow thorough path, fixing someone else's problem).
+   Options that help, credit or include people while your own work keeps moving usually add Network.
+3. **Choose:** never save a point by hiding a problem, gambling that it will not surface or cutting a corner: that buries risk. Pick an option with neither mark. If every option has one, pick the one whose loss falls on a stat that is not holding your promotion back.
+
+Outside this month these marks are not a reason to avoid an option.
+"""
+
+
+def build14(out: Path) -> None:
+    bundle(out, "t14-final", {"career-rules": T13},
+           hypothesis="t13 with a review-month reference that calibrates on the run's own log and widens the Network cues.")
+    root = out / "t14-final" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T14_REVIEW)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -655,3 +685,4 @@ if __name__ == "__main__":
     build11(o)
     build12(o)
     build13(o)
+    build14(o)
