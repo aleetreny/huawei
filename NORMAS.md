@@ -9,7 +9,7 @@ Para personas y agentes. Si sólo lees dos archivos, que sean [ESTADO.md](ESTADO
 3. **Como mucho 3 líneas activas a la vez.** Están en la tabla de [ESTADO.md](ESTADO.md). Para abrir una cuarta, se cierra antes otra.
 4. **Cerrar es parte del trabajo.** Cuando una línea termina, o al final de cada día:
    - se junta con `main`;
-   - sus hallazgos pasan a [HALLAZGOS.md](HALLAZGOS.md) con su nivel (A, B, C o X) y su fuente;
+   - sus hallazgos pasan a [HALLAZGOS.md](HALLAZGOS.md) con su nivel (A, B, C o X), su fuente y con qué se midió (`Juego`, `Bot`, `Haiku`, `DeepSeek`…);
    - se borra la rama.
    Una rama que lleva un día sin cambios y no está en la tabla de ESTADO se junta o se borra.
 5. **Lo viejo va a `docs/historico/` o a `lab/reports/historico/`**, no se borra. Si un código lee una carpeta, la carpeta se queda donde está y se marca como histórica en [lab/reports/README.md](lab/reports/README.md).
