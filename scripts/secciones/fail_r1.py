@@ -50,6 +50,9 @@ def main() -> None:
             if (snap.get(k) or 0) < f:
                 reached = any((s.get(k) or 0) >= f for s in states)
                 c[f"short_{k}_{'lost' if reached else 'never'}"] += 1
+                if reached:
+                    last_ok = max(s["month"] for s in states if (s.get(k) or 0) >= f)
+                    c[f"  lost_after_month_{last_ok}"] += 1
     for pol, c in sorted(by.items()):
         print(pol, json.dumps(dict(sorted(c.items()))))
 

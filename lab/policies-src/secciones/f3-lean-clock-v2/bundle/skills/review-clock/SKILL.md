@@ -16,7 +16,7 @@ At each level Network and Output stop rising after only a few points, Skill afte
 ## Story choices
 - Stay honest, but keep people with you: raise a concern privately or in writing, help the person fix it, give credit. Confronting someone in public, refusing flatly or filing a formal complaint usually costs Network.
 - Keep your own deliverables first: answers that pull you away from your own work cost Output.
-- With a review one month away, never pick an answer that may cost a point of Network or Output if another honest answer avoids it, even when that other answer costs some Health, Dignity or comfort. Those recover; the lost point costs the promotion.
+- With a review one month away, never pick an answer that may cost a point of Network or Output if another honest answer avoids it, even when that other answer costs some Dignity or comfort, or a little Health while Health is still in the upper half. Those recover; the lost point costs the promotion. Health near the bottom always comes first: an exhausted career ends at once.
 - If a point was lost earlier in the half-year, win it back first: Network by helping and collaborating, Output by delivering your own work.
 
 ## Quarter-end in the middle of a half-year
