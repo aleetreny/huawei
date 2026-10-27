@@ -164,11 +164,38 @@ class LexBot(GroupBot):
     """
 
     def __init__(self, per: Perception, seed: int = 0, risk_mode: str = "strict", risk_first: str = "",
-                 after_blowup: bool = False) -> None:
+                 after_blowup: bool = False, defuse_at: int = 2, laylow_at: int = 2, review_first: str = "") -> None:
         super().__init__(per, seed)
+        self.review_first = review_first
+        self.window = 1
+        self.protect_window = 1
+        self.know_caps = True        # False: the bot sees no ceiling, only what it detects in play
+        self.detect = False          # story stall check: a perceived gain that did not move the stat
+        self.protect_stalled = False # never lower a stalled stat before the review
+        self.protect_l1 = False      # at the entry level, never lower a growth stat (any month)
+        self.stalled, self.last, self.lv = set(), None, None
         self.risk_mode, self.risk_first, self.after_blowup = risk_mode, risk_first, after_blowup
+        self.defuse_at, self.laylow_at = defuse_at, laylow_at  # HR level (0-4) from which the quarter cleans risk
+
+    def energy(self, rep, st):
+        if not (st.health <= 4 and st.energy >= 1) and min(st.risk, 4) >= self.defuse_at and st.energy >= 3 \
+                and st.month < 46:
+            return "Defuse legacy risk"  # once per quarter, as the first action
+        return super().energy(rep, st)
+
+    def main(self, rep, st):
+        if min(st.risk, 4) >= self.laylow_at and st.month < 46:
+            return "Lay low and reduce risk"
+        return super().main(rep, st)
 
     def story(self, rep, st, node):
+        if self.lv != st.level:
+            self.stalled, self.lv = set(), st.level
+        if self.detect and self.last is not None:
+            before, signs = self.last
+            for k in R.GROWTH:
+                if signs.get(k, 0) > 0 and getattr(st, k) <= before[k]:
+                    self.stalled.add(k)
         opts = []
         for kk in rep.cat.nodes[node]["choices"]:
             fx, sign = self.per.see(node, int(kk))
@@ -178,6 +205,10 @@ class LexBot(GroupBot):
         def keep(pool, bad):
             rest = [o for o in pool if not bad(o)]
             return rest or pool
+        prep = 6 - st.month % 6 <= self.window if st.month % 6 else False  # months to the review month
+        protect = lambda o: any(o[1].get(k, 0) < 0 for k in R.GROWTH)
+        if prep and self.review_first and (self.review_first == "always" or min(st.risk, 4) < 2):
+            opts = keep(opts, protect)  # promotion first in the preparation month
         if self.risk_mode == "survive":  # never take an option that ends the run at once
             opts = keep(opts, lambda o: st.health + o[1].get("health", 0) * 1 <= 0)
         alert = not calm or (self.after_blowup and st.blowups > 0)
@@ -186,10 +217,15 @@ class LexBot(GroupBot):
         if self.risk_mode in ("strict", "survive") or not calm:
             opts = keep(opts, lambda o: o[2] > 0)
         opts = keep(opts, lambda o: (st.health <= 3 and o[1].get("health", 0) < 0) or (st.dignity <= 4 and o[1].get("dignity", 0) < 0))
-        if st.month % 6 == 5:
+        if (st.month % 6 and 6 - st.month % 6 <= self.protect_window) or (self.protect_l1 and st.level == 1):
             opts = keep(opts, lambda o: any(o[1].get(k, 0) < 0 for k in R.GROWTH))
+        if self.protect_stalled and self.stalled and st.month % 6 and 6 - st.month % 6 <= 2:
+            opts = keep(opts, lambda o: any(o[1].get(k, 0) < 0 for k in self.stalled))
         lv = st.level
-        room = {k: (R.cap(lv, k) - getattr(st, k)) / max(1.0, R.cap(lv, k)) for k in R.GROWTH}
+        if self.know_caps:
+            room = {k: (R.cap(lv, k) - getattr(st, k)) / max(1.0, R.cap(lv, k)) for k in R.GROWTH}
+        else:
+            room = {k: (0.0 if k in self.stalled else 0.5) for k in R.GROWTH}
         far = max(room, key=room.get)
         endgame = st.month >= 46
 
@@ -201,7 +237,9 @@ class LexBot(GroupBot):
                 main = sum((2 if k == far else 1) * (room[k] > 0) for k in R.GROWTH if sg.get(k, 0) > 0)
                 main -= sum(1 for k in R.GROWTH if sg.get(k, 0) < 0)
             return (main, -o[2], sg.get("health", 0) + sg.get("dignity", 0), sg.get("wealth", 0) >= 0, self.rng.random())
-        return max(opts, key=score)[0]
+        pick = max(opts, key=score)
+        self.last = ({k: getattr(st, k) for k in R.GROWTH}, pick[1])
+        return pick[0]
 
 
 _PER: dict[str, Perception | None] = {}
@@ -217,7 +255,18 @@ def _bot(name: str, i: int) -> GroupBot:
     if "/lex-" in name:
         spec = name.split("/lex-", 1)[1].split("+")
         rf = next((x[3:] for x in spec if x.startswith("rf-")), "")
-        return LexBot(per, seed=i, risk_mode=spec[0], risk_first=rf, after_blowup="blow" in spec)
+        dq = next((int(x[2:]) for x in spec if x.startswith("dq")), 2)
+        ll = next((int(x[2:]) for x in spec if x.startswith("ll")), 2)
+        rv = "always" if "rv" in spec else ("calm" if any(x.startswith("rvc") for x in spec) else "")
+        bot = LexBot(per, seed=i, risk_mode=spec[0], risk_first=rf, after_blowup="blow" in spec,
+                     defuse_at=dq, laylow_at=ll, review_first=rv)
+        bot.window = next((int(x[3:]) for x in spec if x.startswith("rvc") and x[3:]), 1)
+        bot.protect_window = next((int(x[2:]) for x in spec if x.startswith("pw")), 1)
+        bot.know_caps = "blind" not in spec
+        bot.detect = "detect" in spec
+        bot.protect_stalled = "ps" in spec
+        bot.protect_l1 = "pl1" in spec
+        return bot
     return GroupBot(per, seed=i)
 
 
