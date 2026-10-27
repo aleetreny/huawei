@@ -49,7 +49,21 @@ Todos pasan `careerlab lint` sin errores.
 
 ## 4. Partidas oficiales
 
-En juego. Se actualiza al terminar.
+### t13-read-v2 (3 partidas en paralelo, 27 oct desde las ~18:00 UTC)
+
+Lo visto mientras juegan:
+- **Ascensos:** dos partidas ascienden a L2 en el mes 6 y la tercera en el mes 12. Una llega a L3 en el mes 18 y otra en el 24. Ninguna se pierde en L1, frente a 2 de 3 eliminadas así con los manuales anteriores.
+- **Riesgo:** el comentario de RR. HH. está tranquilo casi todo el tiempo; una sola explosión en tres partidas hasta el mes 24.
+- **La línea de estado se rellena siempre, pero "Stalled" nunca** (0 de 160 notas), aunque Skill, Network y Output estén justo en lo máximo del nivel. DeepSeek no compara una nota con la anterior. Sin esa detección, la regla "Network y Output estancados → Skill" nunca se activa.
+- **Ascensos perdidos y por qué:**
+  - Mes 6: con Review in 2 eligió prepararse a fondo para una revisión de otro equipo (Output −2) para ganar Network, que ya estaba en su máximo.
+  - Mes 12: con Review in 1 eligió "asumirlo e impulsar una norma de equipo" (Output −1) y llegó con Output un punto por debajo.
+  - Mes 9: en el trimestre previo gastó 2 de energía en limpiar riesgo con RR. HH. tranquilo, en vez de llenar Output (en L2 el máximo deja un punto de margen).
+- **Incidente:** la primera partida (hueco 0) se lanzó en modo normal con tope de 1,2 USD. El vigilante mide el gasto de toda la clave y, con las otras dos partidas en paralelo, la cortó en el mes 26, en L3, sin explosiones. Lección: en paralelo, tope alto y coste por partida desde el informe del programa.
+
+### Siguiente lote
+
+Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge lo aprendido de v2: llenar los tres indicadores en el trimestre previo, quedarse en la propia entrega con la evaluación cerca, Skill primero desde L4, sin "Stalled".
 
 ## 5. Infraestructura nueva
 
