@@ -119,10 +119,24 @@ class Perception:
         return fx, sign
 
 
+class Mixed:
+    """Several readings of the same options (repeats): each encounter uses one of them at random, as an
+    agent that reads the option again every time it meets it."""
+
+    def __init__(self, pers: list[Perception]) -> None:
+        self.pers = pers
+        self.rng = random.Random(0)
+
+    def see(self, node: str, k: int) -> tuple[dict[str, float], int]:
+        return self.rng.choice(self.pers).see(node, k)
+
+
 class GroupBot(rules.RuleBot):
-    def __init__(self, per: Perception | None, seed: int = 0) -> None:
+    def __init__(self, per: Perception | Mixed | None, seed: int = 0) -> None:
         super().__init__()
         self.per, self.rng = per, random.Random(seed)
+        if isinstance(per, Mixed):
+            per.rng = random.Random(10_000 + seed)
 
     def story(self, rep, st, node):
         if self.per is None:
@@ -137,6 +151,53 @@ class GroupBot(rules.RuleBot):
         return best
 
 
+class LexBot(GroupBot):
+    """The written group rule: discard, then prefer, using only the perceived signs and the visible context.
+
+    1. Risk: discard options marked risky ("strict": always; "calm": only when the HR comment is not calm).
+    2. Safety: discard options that lower Health when Health is low, or Dignity when Dignity is low.
+    3. Review month: discard options that lower Skill, Network or Output.
+    (A step that would discard every option is skipped.)
+    4. Prefer the option that raises the most growth stats still below their ceiling, counting the one
+       furthest below twice and each growth stat it lowers as minus one; at the end of the career, Health,
+       Dignity and lower risk instead. Ties: lowers risk, then more Health + Dignity, then no money lost.
+    """
+
+    def __init__(self, per: Perception, seed: int = 0, risk_mode: str = "strict") -> None:
+        super().__init__(per, seed)
+        self.risk_mode = risk_mode
+
+    def story(self, rep, st, node):
+        opts = []
+        for kk in rep.cat.nodes[node]["choices"]:
+            fx, sign = self.per.see(node, int(kk))
+            opts.append((int(kk), {k: (v > 0) - (v < 0) for k, v in fx.items()}, sign))
+        calm = min(st.risk, 4) == 0
+
+        def keep(pool, bad):
+            rest = [o for o in pool if not bad(o)]
+            return rest or pool
+        if self.risk_mode == "strict" or not calm:
+            opts = keep(opts, lambda o: o[2] > 0)
+        opts = keep(opts, lambda o: (st.health <= 3 and o[1].get("health", 0) < 0) or (st.dignity <= 4 and o[1].get("dignity", 0) < 0))
+        if st.month % 6 == 5:
+            opts = keep(opts, lambda o: any(o[1].get(k, 0) < 0 for k in R.GROWTH))
+        lv = st.level
+        room = {k: (R.cap(lv, k) - getattr(st, k)) / max(1.0, R.cap(lv, k)) for k in R.GROWTH}
+        far = max(room, key=room.get)
+        endgame = st.month >= 46
+
+        def score(o):
+            sg = o[1]
+            if endgame:
+                main = sg.get("health", 0) + sg.get("dignity", 0) - 2 * o[2]
+            else:
+                main = sum((2 if k == far else 1) * (room[k] > 0) for k in R.GROWTH if sg.get(k, 0) > 0)
+                main -= sum(1 for k in R.GROWTH if sg.get(k, 0) < 0)
+            return (main, -o[2], sg.get("health", 0) + sg.get("dignity", 0), sg.get("wealth", 0) >= 0, self.rng.random())
+        return max(opts, key=score)[0]
+
+
 _PER: dict[str, Perception | None] = {}
 
 
@@ -144,9 +205,17 @@ def _init(arms: dict[str, Perception | None]) -> None:
     _PER.update(arms)
 
 
+def _bot(name: str, i: int) -> GroupBot:
+    per = _PER[name]
+    for mode in ("strict", "calm"):
+        if name.endswith(f"/lex-{mode}"):
+            return LexBot(per, seed=i, risk_mode=mode)
+    return GroupBot(per, seed=i)
+
+
 def _play(args: tuple[str, int, int]) -> tuple[float, int, str]:
     name, i, seed0 = args
-    st, _ = R.play(CAT, GroupBot(_PER[name], seed=i), random.Random(seed0 + i))
+    st, _ = R.play(CAT, _bot(name, i), random.Random(seed0 + i))
     return R.Replica.score(st), st.level, st.failure or "completed"
 
 
@@ -200,8 +269,8 @@ def bank(arms: dict[str, Perception | None]) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--labels", action="append", default=[], help="name=path; repeatable")
-    ap.add_argument("--arms", default="group:group", help="fx:risk pairs, comma-separated")
+    ap.add_argument("--labels", action="append", default=[], help="name=path[+path...] (repeats: one at random per encounter); repeatable")
+    ap.add_argument("--arms", default="group:group", help="fx:risk[:lex-mode] specs, comma-separated; lex-mode strict|calm")
     ap.add_argument("--games", type=int, default=1000)
     ap.add_argument("--seed", type=int, default=4242)
     ap.add_argument("--workers", type=int, default=8)
@@ -212,11 +281,12 @@ def main() -> None:
     if a.oracle:
         arms["oracle (exact)"] = None
     for spec in a.labels:
-        name, path = spec.split("=", 1)
-        labels = json.load(open(path))
+        name, paths = spec.split("=", 1)
+        sets = [json.load(open(p)) for p in paths.split("+")]
         for pair in a.arms.split(","):
-            fx, risk = pair.split(":")
-            arms[f"{name} {fx}/{risk}"] = Perception(labels, fx, risk)
+            fx, risk, *lex = pair.split(":")
+            pers = [Perception(lab, fx, risk) for lab in sets]
+            arms[f"{name} {fx}/{risk}" + (f"/lex-{lex[0]}" if lex else "")] = pers[0] if len(pers) == 1 else Mixed(pers)
     if a.bank:
         bank(arms)
     else:
