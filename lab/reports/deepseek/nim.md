@@ -2,6 +2,8 @@
 
 **Conclusión: NIM no sirve.** La clave funciona, pero NIM retiró `deepseek-ai/deepseek-v4-flash` el 7 de agosto de 2026 (HTTP 410 *Gone*, `smoke` del 27 oct). Sólo ofrece `deepseek-v4.1-flash`, que es otro modelo. Sin vía gratis idéntica al reto, la versión del reto sólo se consigue por OpenRouter. La comparación queda preparada por si vuelve a estar disponible.
 
+**V4.1 Flash en NIM (27 oct, 19:55–20:25 UTC): responde, pero no se puede usar.** Funcionan el razonamiento y las herramientas, pero falló 5 veces con HTTP 504 y luego tardó 228 s en contestar «ready» y 283 s en una llamada a una herramienta. Una partida necesita cientos de llamadas con mucho contexto, y la comparación completa unas 1.600. A ese ritmo serían días. No se ha lanzado la comparación.
+
 ## Por qué
 
 - La clave del reto llama a OpenRouter con `deepseek/deepseek-v4-flash` (versión 0423), sin fijar proveedor. De nuestras 10.517 llamadas, el 96 % las sirvió Baidu en fp8 y el resto GMICloud, DeepInfra y otros.
