@@ -46,8 +46,12 @@ BATCHES = Path(__file__).resolve().parents[2] / "lab" / "reports" / "secciones" 
 
 
 def batch_jobs(name: str) -> set[str]:
-    data = json.loads((BATCHES / f"{name}.json").read_text())
-    return {j for jobs in data["arms"].values() for j in jobs}
+    """Job ids of one batch, or of several joined by commas."""
+    out: set[str] = set()
+    for part in name.split(","):
+        data = json.loads((BATCHES / f"{part}.json").read_text())
+        out |= {j for jobs in data["arms"].values() for j in jobs}
+    return out
 
 
 def rows(purpose: str | None, actor_filter: str | None, batch: str | None = None) -> list[dict]:
