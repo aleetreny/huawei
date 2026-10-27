@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "games": 400,
+    "seed": 202620270,
+    "design": "Fixed two arms; same story choices and utility; jointly enumerate quarter instead of greedy. Known menu deltas, learned ceilings, lagged HR. Conditional on frozen labels.",
+    "script_sha256": "ac8aa2fa5b33c6e9c4f78d2adbbd6014e8dc09d693f7f90978d7ab9fd49349b9",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ]
+  },
+  "arms": {
+    "greedy": {
+      "summary": {
+        "n": 400,
+        "mean": 55.460325000000005,
+        "se": 0.946506982425586,
+        "completion": 0.7275,
+        "promoted_by_first": 0.5275,
+        "promoted_by_second": 0.785,
+        "failures": {
+          "completed": 291,
+          "dismissed": 83,
+          "trust": 20,
+          "health": 6
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 400
+    },
+    "joint": {
+      "summary": {
+        "n": 400,
+        "mean": 52.764675,
+        "se": 0.9895724861014782,
+        "completion": 0.6475,
+        "promoted_by_first": 0.525,
+        "promoted_by_second": 0.76,
+        "failures": {
+          "completed": 259,
+          "dismissed": 80,
+          "trust": 20,
+          "health": 41
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_greedy": {
+        "mean": -2.69565,
+        "se": 0.6066381405150594,
+        "ci95": [
+          -3.8846607554095165,
+          -1.5066392445904837
+        ]
+      },
+      "rows_count": 400
+    }
+  },
+  "raw_archive": {
+    "file": "quarter-screen.json.gz",
+    "uncompressed_sha256": "43f0dc81c8a80432b2343ab397cf5c9a770ba3f9ae7f12fb8e740106fff09773",
+    "archive_sha256": "70d2631247bd8e6747475354cb5e869b710815794fb8abcba30f91974e3fc269",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}

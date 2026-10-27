@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "games": 800,
+    "seed": 831000,
+    "arms": "ideal_context,observed,true_risk,true_growth,true_all,loss_only,scheduled,blind_feedback,blind_scheduled,online",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764"
+  },
+  "arms": {
+    "ideal_context": {
+      "summary": {
+        "n": 800,
+        "mean": 57.8577125,
+        "se": 0.691937103443537,
+        "completion": 0.74625,
+        "promoted_by_first": 0.5725,
+        "promoted_by_second": 0.7975,
+        "failures": {
+          "completed": 597,
+          "trust": 35,
+          "dismissed": 152,
+          "health": 16
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 10.338899999999999,
+        "se": 0.8080023974394103,
+        "ci95": [
+          8.755215301018755,
+          11.922584698981243
+        ]
+      },
+      "rows_count": 800
+    },
+    "observed": {
+      "summary": {
+        "n": 800,
+        "mean": 47.5188125,
+        "se": 0.733462077311856,
+        "completion": 0.5275,
+        "promoted_by_first": 0.48875,
+        "promoted_by_second": 0.7125,
+        "failures": {
+          "completed": 422,
+          "trust": 138,
+          "dismissed": 200,
+          "health": 40
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 0.0,
+        "se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "rows_count": 800
+    },
+    "true_risk": {
+      "summary": {
+        "n": 800,
+        "mean": 52.462562500000004,
+        "se": 0.7281413346767392,
+        "completion": 0.6425,
+        "promoted_by_first": 0.55875,
+        "promoted_by_second": 0.76375,
+        "failures": {
+          "completed": 514,
+          "dismissed": 151,
+          "trust": 65,
+          "health": 61,
+          "broke": 9
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 4.94375,
+        "se": 0.78444542298137,
+        "ci95": [
+          3.4062369709565146,
+          6.481263029043484
+        ]
+      },
+      "rows_count": 800
+    },
+    "true_growth": {
+      "summary": {
+        "n": 800,
+        "mean": 50.30595,
+        "se": 0.7129687234533176,
+        "completion": 0.53125,
+        "promoted_by_first": 0.59625,
+        "promoted_by_second": 0.8325,
+        "failures": {
+          "completed": 425,
+          "dismissed": 96,
+          "trust": 234,
+          "health": 45
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 2.7871375,
+        "se": 0.8883378906623032,
+        "ci95": [
+          1.045995234301886,
+          4.528279765698114
+        ]
+      },
+      "rows_count": 800
+    },
+    "true_all": {
+      "summary": {
+        "n": 800,
+        "mean": 52.8316125,
+        "se": 0.6885851227300159,
+        "completion": 0.57375,
+        "promoted_by_first": 0.6525,
+        "promoted_by_second": 0.87875,
+        "failures": {
+          "trust": 232,
+          "completed": 459,
+          "dismissed": 74,
+          "health": 17,
+          "broke": 18
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 5.312799999999999,
+        "se": 0.936292307084375,
+        "ci95": [
+          3.4776670781146244,
+          7.147932921885374
+        ]
+      },
+      "rows_count": 800
+    },
+    "loss_only": {
+      "summary": {
+        "n": 800,
+        "mean": 49.381750000000004,
+        "se": 0.7051122101893234,
+        "completion": 0.59,
+        "promoted_by_first": 0.50625,
+        "promoted_by_second": 0.74,
+        "failures": {
+          "completed": 472,
+          "dismissed": 185,
+          "trust": 115,
+          "health": 28
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 1.8629375,
+        "se": 0.7837909141579231,
+        "ci95": [
+          0.32670730825047056,
+          3.399167691749529
+        ]
+      },
+      "rows_count": 800
+    },
+    "scheduled": {
+      "summary": {
+        "n": 800,
+        "mean": 42.171412499999995,
+        "se": 0.6502202338268951,
+        "completion": 0.50375,
+        "promoted_by_first": 0.44875,
+        "promoted_by_second": 0.69375,
+        "failures": {
+          "completed": 403,
+          "trust": 162,
+          "dismissed": 196,
+          "health": 39
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": -5.3474,
+        "se": 0.7160264497268138,
+        "ci95": [
+          -6.7508118414645555,
+          -3.9439881585354453
+        ]
+      },
+      "rows_count": 800
+    },
+    "blind_feedback": {
+      "summary": {
+        "n": 800,
+        "mean": 25.0453625,
+        "se": 0.4618796781978586,
+        "completion": 0.04625,
+        "promoted_by_first": 0.4625,
+        "promoted_by_second": 0.6525,
+        "failures": {
+          "trust": 627,
+          "health": 76,
+          "dismissed": 59,
+          "completed": 37,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": -22.47345,
+        "se": 0.7674556483681256,
+        "ci95": [
+          -23.977663070801526,
+          -20.969236929198473
+        ]
+      },
+      "rows_count": 800
+    },
+    "blind_scheduled": {
+      "summary": {
+        "n": 800,
+        "mean": 25.296712499999998,
+        "se": 0.44970494890874946,
+        "completion": 0.075,
+        "promoted_by_first": 0.43,
+        "promoted_by_second": 0.63125,
+        "failures": {
+          "health": 80,
+          "trust": 563,
+          "dismissed": 96,
+          "completed": 60,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": -22.2221,
+        "se": 0.7633861408143878,
+        "ci95": [
+          -23.7183368359962,
+          -20.7258631640038
+        ]
+      },
+      "rows_count": 800
+    },
+    "online": {
+      "summary": {
+        "n": 800,
+        "mean": 48.0845875,
+        "se": 0.7321324626328597,
+        "completion": 0.5375,
+        "promoted_by_first": 0.5025,
+        "promoted_by_second": 0.73375,
+        "failures": {
+          "completed": 430,
+          "trust": 152,
+          "dismissed": 173,
+          "health": 45
+        },
+        "mean_feedback_updates": 140.62125
+      },
+      "delta_observed": {
+        "mean": 0.5657749999999999,
+        "se": 0.48045381413942395,
+        "ci95": [
+          -0.37591447571327097,
+          1.5074644757132707
+        ]
+      },
+      "rows_count": 800
+    }
+  },
+  "raw_archive": {
+    "file": "screen.json.gz",
+    "uncompressed_sha256": "801f7b68fac6c862a4a1dcf6b1faf6f755c654aa2ec927fc1b32290298c9d90e",
+    "archive_sha256": "e5ed688e76c26e0b7016dfc30d3688472e9aac2e713ac9566780905d3a760d34",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}

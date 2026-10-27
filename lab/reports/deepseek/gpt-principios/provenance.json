@@ -1,0 +1,19 @@
+{
+  "base_commit": "53025e191d365e8ce3e52ef8ffdb819826421831",
+  "scripts": {
+    "scripts/deepseek/gpt_principios.py": "0e7d512beeec75f9948011ab60ac38a7b9ea22c6e7fa486e657255e0837f3842",
+    "scripts/deepseek/gpt_incertidumbre.py": "7e9f255278700ac41d61c80fb699848ac185650f0a8d81242193fe02bbd901a1",
+    "scripts/deepseek/gpt_trimestre.py": "ac8aa2fa5b33c6e9c4f78d2adbbd6014e8dc09d693f7f90978d7ab9fd49349b9",
+    "scripts/deepseek/gpt_objetivo.py": "c832b027c26c02b9a9bae7c7df29ee2ec7224ae9159357e9b2ab4c0431cf294f",
+    "scripts/deepseek/gpt_representacion.py": "ddb6fa66cfc249054e16b650d191bb61d1248d66329eb08e32cf19eaa22abd0b",
+    "scripts/deepseek/gpt_riesgo.py": "6e4acb286b27e1b419a2215b7a7de48ffe811870ac7a0dc539e3d4862dbf8fb4",
+    "scripts/deepseek/gpt_margen.py": "04f5eb306600d70387d5f0e729df5f8a2d4fe172bc7b9aa718f53f5806221a4b",
+    "scripts/deepseek/gpt_margen_observado.py": "0b714a48ed0ad3773e8c7a6cb955dadd9e0525a9478729f26b275d750be737a0"
+  },
+  "notes": [
+    "No network or model client imported by new research scripts. Replica and planner are team research code.",
+    "Two frozen label files are not independent new model samples.",
+    "Recovered screen and confirmation lacked script hashes; recovery-audit reproduces four arms x300 rows exactly.",
+    "Factorial initial signs_veto used exact risk magnitude in ranking; corrected file supersedes only that arm."
+  ]
+}

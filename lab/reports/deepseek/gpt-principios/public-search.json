@@ -1,0 +1,60 @@
+{
+  "date_utc": "2026-10-27",
+  "scope": "Public GitHub main branches and Exa. No attribution to teams scoring 75 established.",
+  "skills": [
+    {
+      "url": "https://github.com/Kingjinsight/TechArena-UK-2026/blob/main/preliminary/skills/career-strategy/SKILL.md",
+      "sha": "a430eff9e1326511b47dfb903617818ac5991bbe"
+    },
+    {
+      "url": "https://github.com/Kingjinsight/TechArena-UK-2026/blob/main/preliminary/skills/event-choice/SKILL.md",
+      "sha": "4013b532a852ff0a288f5dfeab4c393de689cd10"
+    },
+    {
+      "url": "https://github.com/Kingjinsight/TechArena-UK-2026/blob/main/preliminary/skills/quarterly-planner/SKILL.md",
+      "sha": "688bf392a5f60b31246a552ea4dfdc7de066f4f8"
+    },
+    {
+      "url": "https://github.com/ShriyaSaxena/techarena-career-simu/blob/main/preliminary/skills/career-state-assessment/SKILL.md",
+      "sha": "8875d4571feecd143241f330d9a024d659319a89"
+    },
+    {
+      "url": "https://github.com/ShriyaSaxena/techarena-career-simu/blob/main/preliminary/skills/event-decision/SKILL.md",
+      "sha": "9d71f4b1a7991ebc5098bbc423883c9b98acfd11"
+    },
+    {
+      "url": "https://github.com/ShriyaSaxena/techarena-career-simu/blob/main/preliminary/skills/quarterly-planning/SKILL.md",
+      "sha": "bcc3a231e44de7eabd1d5f0a994f69006c4ea1e8"
+    },
+    {
+      "url": "https://github.com/YuLong111/techarena-career-sim/blob/main/preliminary/skills/career-strategy/SKILL.md",
+      "sha": "5d6a7c402be9a5fb495de2546e0f3cec0b332a50"
+    }
+  ],
+  "additional": [
+    {
+      "repository": "krsnkkv/KSL_TechArena",
+      "path": "preliminary/skills/event-decision/SKILL.md",
+      "sha": "9d71f4b1a7991ebc5098bbc423883c9b98acfd11",
+      "note": "same file as Shriya fork"
+    },
+    {
+      "repository": "Artepace/slopathone_winningteam",
+      "path": "preliminary/skills/career-strategy/SKILL.md",
+      "sha": "fa1d0013120715f0cbff6ec56fda96f70e640c08",
+      "note": "README calls preliminary design untested"
+    },
+    {
+      "repository": "peidi-L/preliminary",
+      "path": "skills/career_survival.md",
+      "sha": "19dafbbe92d5edc02d7dd967448b9b3a85bc39b3",
+      "note": "draft"
+    }
+  ],
+  "scoreboard": {
+    "url": "https://techarena-uk.hydro.ac/contest/6aad0b0020562bf065d1654f/scoreboard",
+    "observed": "2026-10-27 ~18:58 UTC",
+    "result": "All displayed scores 0, Cut-off1/2 blank; no corroboration of reported local score.",
+    "interpretation": "User clarified 75 is a consistent local game score, not composite or official scoreboard."
+  }
+}
