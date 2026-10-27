@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v11",
+  "parents": [
+    "observed-growth-v10"
+  ],
+  "idea_origin": "v10's capped-stat rule was not executed: Haiku always wrote 'Capped: none' and kept 'Output below best' because Output oscillates at its L4 ceiling; at L4 it chose key project, report and network maintenance, Skill learning once and rotation never.",
+  "operator": "targeted revision of v10",
+  "hypothesis": "Replacing the capped-stat detection with a signal Haiku can see (a review passed without promotion while Network and Output were at or one point from their best: Skill is the blocker until the next promotion) makes the actor choose rotation and Skill learning at L4, raising Skill per month at L4 and shortening time at L4.",
+  "change": "Status-line field Capped replaced by Blocker; allocation: Blocker Skill overrides review-near and review-far rules with rotation every quarter and Skill learning first; story preference for Skill-building options under Blocker Skill. Everything else as v10.",
+  "predicted_behaviour": "After the first unpromoted review at L4, notes show 'Blocker: Skill' and rotation as main action in most quarters, Skill learning in most allocations; Skill per month at L4 above v7 and v10; months at L4 below v7 and v10.",
+  "refutation": "8 Haiku episodes with the same actor. Reject if rotation and Skill learning at L4 stay rare (mechanism unexecuted) or if months at L4 and Skill per month at L4 do not improve on v7 and v10.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v11, built on matteo/observed-growth-v10."
+}
