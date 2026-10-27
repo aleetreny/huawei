@@ -10,3 +10,6 @@
 - Confirmación chain6 (2.000 semillas nuevas) refuta la mejora inicial: −0,50 puntos vs base. Confirmación terminal_q (1.200 semillas nuevas) +0,445; terminal anticipatorio +0,505. E7 aumenta algo L7 pero reduce Q al insistir demasiado en Skill.
 - Smoke oficial 4/4 completas, cero acciones rechazadas. Lote confirmatorio 600 partidas lanzado y aislado. Descubierta nómina terminal omitida por ambos generadores de réplica.
 - Tests de la base integrando ramas: `uv run --no-sync pytest -q`, 309 passed. La auditoría de datos históricos encontró gzip cortado en c02 (ya documentado por su autor); se retienen sólo registros completos y se informa del corte.
+
+## Cierre de validación
+600 partidas oficiales terminadas; análisis final y evidencia portable guardados. Suite final: 306 tests pasan (una advertencia de Authlib). Los 40 primeros resultados de confirmación se reproducen exactamente después de la corrección de liquidación usando el modo histórico explícito. Informe y Relevo completos; publicación en rama propia y PR como último paso.

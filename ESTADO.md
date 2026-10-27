@@ -104,7 +104,7 @@ El observed-growth-v3 de Matteo sacó en la carrera 61, 19, 52 y 64 (3 de 4 term
 
 ## 4. Tareas pendientes
 
-Investigación adicional solicitada por Alejandro: **Codex — `alejandro/mecanicas-emergentes` — en marcha**. Cuestionar límites del planificador y descubrir mecánicas útiles con simulaciones; [plan y relevo](lab/reports/mecanicas-emergentes/task_plan.md). Bots aislados de origen `emergentes`, sin IA ni gasto de APIs; no cambia T17/T20 ni sus ramas.
+Investigación adicional solicitada por Alejandro: **Codex — `alejandro/mecanicas-emergentes` — terminada, pendiente de integrar mediante PR**. [Informe y Relevo](lab/reports/mecanicas-emergentes/README.md): 20.400 trayectorias de réplica, 600 partidas oficiales sin IA (+4 smoke); cierre conjunto +0,55 Q ajustado, IC 95% [0,30; 0,80]. Descubierta y corregida nómina terminal omitida (mes 49, 48 nóminas), verificada en 1.156 completadas históricas. Origen aislado `emergentes`; sin APIs de pago ni cambios de manuales. No reasigna T17/T20.
 
 Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nuevas las añade el organizador.
 
