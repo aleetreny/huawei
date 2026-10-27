@@ -119,6 +119,10 @@ def learn(mem: Memory, st: dict) -> None:
     """Compare these stats with the last call: a published gain (quarterly action) that did not register
     means the stat has stalled at this level. Also refresh the risk estimate from the HR tone."""
     prev = mem.d.get("prev")
+    for k in GROWTH:  # a stat seen above its recorded stall point was not stalled after all
+        key = f"{st['level']}:{k}"
+        if key in mem.d["caps"] and st.get(k) is not None and st[k] > mem.d["caps"][key]:
+            del mem.d["caps"][key]
     if prev and prev.get("level") == st["level"] and prev.get("read") and P["story_detect"]:
         for k, x in prev["read"].items():  # a story gain you expected that did not move the stat
             if k in GROWTH and x > 0 and st.get(k) is not None and prev.get(k) is not None and st[k] <= prev[k]:
