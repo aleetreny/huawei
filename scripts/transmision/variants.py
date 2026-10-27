@@ -164,7 +164,125 @@ def build(out: Path) -> None:
     bundle(out, "t-multi", per, hypothesis="One Skill per rule, so each rule's trigger sits in the always-visible skill list.")
 
 
+
+
+# ----------------------------------------------------------------------------- round 2 (after bank round A)
+# Round A showed two failure modes: "avoid confrontation" made Haiku cave in (pleasing / backing down is itself
+# a risky answer), and the closing rule was too vague about the last quarterly phase.
+RULES2 = dict(RULES)
+RULES2["trigger"] = (
+    "No detonators under risk",
+    "While the HR remark is not the clear one, never pick an option that hides or denies something, lies or "
+    "invents, gossips or mocks, cuts a corner, stays silent to avoid trouble, caves in or agrees just to please, "
+    "or blames someone in public; and do not start formal processes (formal complaints, investigations, open "
+    "letters, going over your manager's head). Pick the option that is honest, calm and owns the problem: "
+    "stating your view respectfully is safe, backing down to please is not.")
+RULES2["review"] = (
+    "Protect the review",
+    "Reviews come every six months and are settled as the review month begins, before that month's stories, so "
+    "the story choices of the month just before a review month are the last ones that count. In that month never "
+    "pick an option that may lower Skill, Network or Output, even if another option looks more principled or adds "
+    "Dignity. Network is lost by blaming, accusing, refusing help or turning against someone in public; Output is "
+    "lost by dropping or pausing your own delivery for extra unplanned work, investigations or rework. Keeping "
+    "your view calmly and delivering your own work protects both; caving in is not safer.")
+RULES2["closing"] = (
+    "Close the career well",
+    "The ending evaluation counts level, wealth, health and dignity, skill, risk control and network. In the "
+    "career's last quarterly phase take Lay low and reduce risk as the main action, and spend Energy first on "
+    "Defuse legacy risk if the HR remark is not clear, then on Health recovery and Mental recovery until Health "
+    "and Dignity are full, then on Network maintenance; never High-intensity work or Skill learning there. In the "
+    "last months' stories pick the option that keeps you healthy, respected and out of trouble.")
+RULES2["hr"] = (
+    "Answer the HR remark",
+    "Each month an HR partner comments on your risk. Only the smiling, all-right remark means clear. Any remark "
+    "that mentions risk, worry or anger means hidden risk is piling up; it blows up when it gets high, and a "
+    "second blow-up ends the run. While the remark is not the clear one, in every quarterly phase: the first "
+    "Energy action is Defuse legacy risk (unless Health is nearly gone) and the main action is Lay low and reduce "
+    "risk. This comes before growth, before Skill and before any review plan.")
+
+VETO = ("## How to choose a story option\n"
+        "1. Read the context: months to the next review month, the latest HR remark, Wealth, months left.\n"
+        "2. Strike out every option a rule below forbids in this context.\n"
+        "3. Among the options left, pick the one that best builds Skill, Network and Output without costing Health "
+        "or Dignity you cannot spare. If every option is struck out, pick the one that breaks the fewest rules.\n"
+        "4. In the take_action notes write which options you struck out and why, in a few words.\n")
+
+
+def rules2_md(keys=ORDER) -> str:
+    return "\n".join(f"{i}. **{RULES2[k][0]}.** {RULES2[k][1]}" for i, k in enumerate(keys, 1)) + "\n"
+
+
+def build2(out: Path) -> None:
+    bundle(out, "t2-imp", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules2_md()},
+           hypothesis="Round-2 rule texts (no caving in under risk; explicit last quarterly phase), body imperative.")
+    bundle(out, "t2-veto", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n" + VETO + "\n## Rules\n" + rules2_md()},
+           hypothesis="Round-2 rules used as a veto filter on story options before the agent's own judgement.")
+    bundle(out, "t2-status", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Status line\n" + STATUS_LINE + "\n\n" + VETO + "\n## Rules\n" + rules2_md()},
+           instruction=STATUS_LINE.replace("\n", " "),
+           hypothesis="Round-2 rules with the status line and the veto filter.")
+
+
+# ----------------------------------------------------------------------------- round 3
+# Round 2: the Skill rule beat the closing rule in the final quarterly phase (rule order = priority for Haiku),
+# and "the career's last quarterly phase" was not recognised. Round 3 states the priority and names the
+# published end of the career.
+RULES3 = dict(RULES2)
+RULES3["closing"] = (
+    "Close the career well",
+    "The career ends after month 48 (the published length); the ending evaluation counts level, wealth, health and "
+    "dignity, skill, risk control and network. In the quarterly phase of that final month: main action Lay low and "
+    "reduce risk; Energy first on Defuse legacy risk if the HR remark is not clear, then Health recovery and Mental "
+    "recovery until Health and Dignity are full, then Network maintenance. Never High-intensity work or Skill "
+    "learning there: their gains come too late and their Health cost counts. In the stories of the last months, "
+    "pick the option that keeps you healthy, respected and out of trouble.")
+RULES3["skill"] = (
+    "Build Skill at senior levels",
+    "From L4 on, Skill is the slow stat that holds promotion back; Network and Output keep up on their own. In "
+    "every quarterly phase at L4 or above (except the career's final month), spend 2 Energy on Skill learning and "
+    "take Apply for rotation as the main action. In stories, prefer the option that teaches or builds capability.")
+ORDER3 = ("closing", "hr", "review", "trigger", "money", "skill")
+PRIORITY = ("Rules are listed in priority order: when two apply, the earlier one wins.")
+EXAMPLES = ("## Reading what an option costs\n"
+            "Option effects are hidden; read them from the wording. Invented examples (not from the game):\n"
+            "- \"Correct the director in front of the client\" lowers Network. \"Raise it with the director privately "
+            "afterwards\" keeps it.\n"
+            "- \"Spend the week rebuilding a colleague's slides\" lowers Output: your own delivery slips. \"Point them to "
+            "the template and finish your release\" keeps it.\n"
+            "- \"Agree to the impossible date to keep the peace\" or \"say nothing and hope\" add hidden risk. \"State "
+            "calmly what can be done by when\" is safe.\n"
+            "- \"Quietly fix it and tell nobody\" hides a problem: hidden risk. \"Fix it and note it in the ticket\" is safe.\n")
+
+
+def rules3_md(keys=ORDER3) -> str:
+    return PRIORITY + "\n\n" + "\n".join(f"{i}. **{RULES3[k][0]}.** {RULES3[k][1]}" for i, k in enumerate(keys, 1)) + "\n"
+
+
+def compact3() -> str:
+    short = {
+        "closing": "In the quarterly phase of month 48 (the last): Lay low and reduce risk, Energy on Defuse, Health and Dignity, then Network; never Skill learning or High-intensity work.",
+        "hr": "While the monthly HR remark is anything but the smiling, all-right one: first Energy action Defuse legacy risk, main action Lay low and reduce risk.",
+        "review": "In the month before a review month never pick a story option that may lower Skill, Network or Output.",
+        "trigger": "While that remark is not clear, never pick an option that hides, denies, lies, gossips, cuts corners, caves in to please or starts a formal process.",
+        "money": "While Wealth is only a few months of pay, refuse options that cost money.",
+        "skill": "At L4 and above, in every quarterly phase except the one of month 48: Skill learning with Energy and Apply for rotation as main action.",
+    }
+    return "Priority order, earlier wins: " + " ".join(f"({i}) {short[k]}" for i, k in enumerate(ORDER3, 1))
+
+
+def build3(out: Path) -> None:
+    bundle(out, "t3-imp", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules3_md()},
+           hypothesis="Round-3 rules in priority order (closing, HR, review, detonators, money, Skill), body imperative.")
+    bundle(out, "t3-ex", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules3_md() + "\n" + EXAMPLES},
+           hypothesis="Round-3 rules plus invented examples of reading an option's hidden cost from its wording.")
+    bundle(out, "t3-instr", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules3_md() + "\n" + EXAMPLES},
+           instruction=compact3(),
+           hypothesis="Round-3 rules and examples in the body, compact rules in the manifest instruction (always visible).")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
-    build(Path(ap.parse_args().out))
+    o = Path(ap.parse_args().out)
+    build(o)
+    build2(o)
+    build3(o)

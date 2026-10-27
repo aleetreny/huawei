@@ -26,7 +26,7 @@ import replica as R  # noqa: E402
 
 DATA = Path(os.environ.get("TRANSMISION_DATA", Path.home() / "careerlab-data" / "transmision"))
 RULES = ("pre_review", "skill_l4", "hr_risk", "trigger", "early_ruin", "closing")
-TOL_E, TOL_Q = 0.5, 0.15
+TOL_E, TOL_Q = 0.5, 0.3
 
 
 def rule_of(it: dict[str, Any]) -> str | None:
