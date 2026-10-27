@@ -2,6 +2,13 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026, 15:30 UTC: l6-routine-v1, the L6 bots' routine in Alejandro's T20 format
+
+- **What.** Alejandro's `t10-countdown` with one line changed. At L1–L3, Energy follows the fixed routine of the energy bots that reached L6: Health recovery, Mental recovery, then Prepare report materials, every quarter. The main action is a key project, with no Skill learning. It replaces "lift whichever stat is furthest from the review".
+- **Why.** The idea is in Alejandro's independent-chats plan. A fixed routine needs no judgement; t10's judgement line is the kind that sent the polish game's Energy to Skill learning at L1.
+- **Checks.** Lint has no errors; its 4 REVIEW notes are inherited from t10's lines. 302 tests pass.
+- **Not done.** No games. The fair test is Alejandro's T20 bank and interleaved games. Details in [l6-routine.md](l6-routine.md).
+
 ## 27 Oct 2026, 10:00 UTC: one Haiku game of f3-lean-polish-v1, live game page
 
 - **Result.** 28.5, dismissed at month 24, never left L1.
