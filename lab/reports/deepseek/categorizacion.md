@@ -71,6 +71,8 @@ Estabilidad de v3 entre dos pasadas: tipo 86 %, riesgo 88 %, indicadores 82–97
 | Haiku: tipos + indicadores | 49,1 | 5 % | 21 % | 15 % |
 | Haiku: sólo los 10 tipos (lo que había que superar) | 46,7 | 2 % | 30 % | 13 % |
 
+**Con la réplica corregida** (`main`, 27 oct 17:05: liquidación del mes 48 al terminar), 2.000 partidas: oráculo 68,1; Haiku tipos 46,0; v3 tipo + signos + riesgo 56,4; v3 signos + riesgo 56,2; regla escrita 53,9. Las diferencias no cambian.
+
 **Pérdida por decisión en el banco** (historias de ids-V2 y G1, una pasada; oráculo 0,77 y 0,82):
 
 | Lectura | Títulos de diseño | Títulos reservados |
