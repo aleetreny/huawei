@@ -29,17 +29,21 @@ class RuleBot(R.Policy):
     def __init__(self, on=ALL):
         self.on = set(on)
 
+    def cap(self, st: R.State, k: str) -> float:
+        """Ceiling the bot believes for stat k at its level (subclasses may learn it in-run)."""
+        return R.cap(st.level, k)
+
     def _val(self, st: R.State, fx: dict[str, float], risk_sign: int) -> float:
         on = self.on
         lv = st.level
         v = 0.0
         pre_review = st.month % 6 == 5
         endgame = st.month >= 46 and "R5" in on
-        at_cap = {k: getattr(st, k) >= R.cap(lv, k) for k in R.GROWTH}
+        at_cap = {k: getattr(st, k) >= self.cap(st, k) for k in R.GROWTH}
         for k in R.GROWTH:
             x = fx.get(k, 0)
             cur = getattr(st, k)
-            c = R.cap(lv, k)
+            c = self.cap(st, k)
             gain = (min(c, cur + x) - min(c, cur)) if "R3" in on else x
             if x < 0:
                 gain = max(R.MINS[k], cur + x) - cur
