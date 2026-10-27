@@ -1,0 +1,33 @@
+{
+  "mode": "replica",
+  "seed": 270000,
+  "games_per_arm": 400,
+  "variants": [
+    "base",
+    "joint",
+    "joint_clip",
+    "bank",
+    "bank_clip"
+  ],
+  "catalog_sha256": "8a438d93f495faf3818b8bd00358dee7557b97bfe291a168dd5616e78e201837",
+  "params": {
+    "w_below": 7.3,
+    "w_above": 0.81,
+    "w_skill_hi": 1.23,
+    "review_boost": 4.03,
+    "w_h": 1.24,
+    "w_d": 0.13,
+    "h_floor": 2,
+    "d_floor": 7,
+    "w_wealth": 0.38,
+    "risk_cost": 2.16,
+    "risk_cap": 2,
+    "w_cont": 0.45,
+    "end_from": 46,
+    "w_end": 1.77,
+    "low_n_risk": 0,
+    "defuse_at": 4,
+    "laylow_at": 2
+  },
+  "script_sha256": "6537d3a76bdd051c555bbb22089075af9481c6292371a2a517a7cd84f0bf145f"
+}

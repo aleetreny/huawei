@@ -14,8 +14,10 @@ import replica as R
 
 
 class Game:
-    def __init__(self, cat: R.Catalog, rng: random.Random, months: int = 48):
+    def __init__(self, cat: R.Catalog, rng: random.Random, months: int = 48,
+                 settle_completion: bool = True):
         self.cat, self.rng, self.months = cat, rng, months
+        self.settle_completion = settle_completion
         self.rep = R.Replica(cat, rng)
         self.st = R.State()
         self.st.out_hist[1] = self.st.output
@@ -63,6 +65,8 @@ class Game:
 
     def _advance(self) -> None:
         if self.st.month >= self.months or not self.st.alive:
+            if self.st.alive and self.months == 48 and self.st.month == 48 and self.settle_completion:
+                self.rep.month_change(self.st)
             self.phase = "over"
             return
         info = self.rep.month_change(self.st)

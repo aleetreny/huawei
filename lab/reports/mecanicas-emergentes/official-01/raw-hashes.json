@@ -1,0 +1,13 @@
+{
+  "source": "/Users/alejandrotreny/careerlab-data/mecanicas-emergentes/official-01",
+  "sha256": {
+    "games-p0.jsonl.gz": "ba687983096e14a44016a9a5214db43121e94778868ff910941d94ae9708a95f",
+    "games-p1.jsonl.gz": "6d9e736652220a573ee03ac1250a64fe1f85a1890ea0e72e3a782498f3a6ff60",
+    "manifest.json": "5b6fe3c1472eb7950299d647e4e3349f151e2fd3726138c1704d09a24e9a0b01",
+    "nodes-p0.jsonl": "f734f2896275c3995c5320fa6579f7c0a2bdec307ded844b313308e2932b8370",
+    "nodes-p1.jsonl": "342af30cfbfb7503c649d8a6ec812d27c9cf370306af8500f369b4bf1d2312c5",
+    "pgid.txt": "8cac05f604ad86b5add3184b7eca5797b21ed9435a177816de054e1113e4c786",
+    "texts-p0.jsonl": "09a9c448bdfa14d0bbba6829bfaa4bd6981675b69691cca45377e42bc8608dff",
+    "texts-p1.jsonl": "b9975ea4cb72c1721fc81901edbdb799dd06e34b8bf392cfb1c8c7cae06d6a67"
+  }
+}
