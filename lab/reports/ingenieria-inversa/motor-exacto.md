@@ -555,35 +555,82 @@ TF-IDF de 1–2 palabras con regresión, validado reservando títulos enteros (9
   - **suben el riesgo:** *deny, quietly, bet, coasting, force, hotfix, later, keep*;
   - **lo bajan:** *admit, compliance, security, investigation, report, apologise, checklist, own, fully, proper*.
 
-## Relevo (27 oct, 10:50 UTC)
+## Relevo (27 oct, 12:30 UTC): para seguir desde otro chat
 
-**1. Qué se ha hecho.** La Fase 3 completa (tabla final arriba):
-- **(a) Nota S:** descartada, con 24.525 evaluaciones.
-- **(b) Umbral de L6 → L7:** Skill 169–170, con 243 evaluaciones de L6. L8–L10 no son alcanzables.
-- **(c) Simulador:** 99,3 % en 600 partidas nuevas y sorteo real frente a generado reproducido.
-- **(d) Política óptima:** 72,39 en 360 partidas reales.
-- **(e) Reglas generales:** 7, probadas con parámetros alterados un 20 %.
-
-**2. Dónde está todo.**
+**Dónde está todo**
+- Rama `main-1nddsg` del repo `aleetreny/huawei`.
+- Informe: este archivo.
+  - M1–M17: reglas del motor.
+  - M18–M23: Fase 3, con su tabla final.
+  - M24–M28: Fase 4.
 - Código en `scripts/ingenieria-inversa/`:
-  - `replica.py`: simulador;
-  - `game.py`: partida paso a paso y mejora por simulación;
-  - `planner.py`: planificador;
-  - `rules.py`: bot de reglas generales;
-  - `replica_bot.py`: adaptador al juego real.
-- Datos y artefactos en `lab/data/ingenieria-inversa/`: `catalog_v2.json`, `riskd_v2.json`, `sampler_v1.json`, `politica_optima.json`, `answer_values.csv`, `validation_v03.txt`, `rules_scen.log` y los lotes.
 
-**3. Lo que falló o quedó a medias.**
-- La mejora por simulación no superó al planificador; haría falta mucho más cómputo por decisión.
-- R4 ("todo a Skill") no se ha conseguido formular sin números de forma que ayude.
-- Los umbrales exactos de Network y Output de L6 → L7 no se pueden medir: casi nadie llega a la Skill necesaria.
+  | Archivo | Qué es |
+  |---|---|
+  | `replica.py` | simulador |
+  | `game.py` | partida paso a paso que se puede copiar, y mejora por simulación |
+  | `planner.py` | planificador |
+  | `rules.py` | 7 reglas generales |
+  | `valuefn.py` | función de valor aprendida |
+  | `replica_bot.py` | adaptador al juego real |
+  | `harness.py` / `run.py` | lotes de bots |
 
-**4. Siguiente paso.** Llevar a una Skill sólo R1, R7, R3, R5 y R2 (en su forma "no cedas lo que necesitas para la evaluación") y R6, sin números ni eventos, y jugarla con Haiku o DeepSeek. Comandos:
+  El arnés tiene dos interruptores: `BB_COMPETITION=1` (modo de competición) y `BB_NOTES=empty|long`.
+- Datos en `lab/data/ingenieria-inversa/`:
+  - lotes;
+  - `catalog_v2.json` (el catálogo bueno, con sorteo);
+  - `riskd_v2.json`;
+  - `sampler_v1.json`;
+  - `politica_optima.json` (72,4 en 360 partidas reales);
+  - `answer_values.csv`;
+  - `vmodel.pkl` (función de valor);
+  - `validation_v03.txt`;
+  - `rules_scen.log`;
+  - `analisis/` (todos los scripts de análisis).
+
+  **El índice de los datos está en `lab/data/ingenieria-inversa/README.md`.**
+
+**Estado del conocimiento**
+- **El juego está modelado casi por completo.**
+  - El simulador acierta el 99,3 % de los pasos en partidas nuevas, también en modo de competición.
+  - Los eventos se desbloquean por semestre y el sorteo es casi uniforme.
+  - El riesgo oculto es el comentario de RR. HH. y explota en 5.
+  - La charla de aviso tiene una regla exacta (M24).
+- **Descartado con datos:**
+  - nota S (24.525 evaluaciones);
+  - L8–L10;
+  - eventos por nivel o por estado;
+  - variantes entre historias;
+  - efectos que dependen del estado;
+  - riesgo retardado;
+  - efecto de `notes`;
+  - diferencias del modo de competición local.
+- **Lo que queda abierto:**
+  - umbrales de Network y Output de L6 → L7 (sólo cotas: ≤ 65 y ≤ 48);
+  - ~2,5 % de las notas A frente a B;
+  - el riesgo de respuestas poco observadas.
+
+**En curso al escribir esto**
+- Evaluación de una política con la función de valor aprendida (`valuefn.ValuePolicy`) frente al planificador, en 80 partidas emparejadas del simulador. La primera, con 300 partidas, se cortó por tiempo.
+- El modelo de valor explica el 42 % de la nota final desde un estado intermedio.
+- Para repetirla:
+
+  ```bash
+  cd lab/data/ingenieria-inversa/analisis
+  python3 vfit.py 2500                                      # genera ~480k estados y reentrena vmodel.pkl (rutas en /home/user/rx: ajustar)
+  python3 veval.py ../vmodel.pkl 0,1.0 80                   # compara con el planificador
+  ```
+
+  Los scripts de `analisis/` usan rutas absolutas del contenedor (`/home/user/rx`, `/home/user/bbdata`). Al moverlos hay que cambiarlas por `lab/data/ingenieria-inversa`.
+
+**Siguientes pasos propuestos**
+1. Si la función de valor supera al planificador en el simulador, jugarla 300 partidas en el juego real.
+2. Pasar las reglas que aguantan (riesgo, salud, techo, limpieza final, "no cedas lo que necesitas para la evaluación" y reputación antes de la evaluación) a una Skill sin números ni eventos.
+3. Medir con DeepSeek si detecta las respuestas arriesgadas (banco con el riesgo exacto de ~900 respuestas de dev).
+
+**Reproducir la validación**
 
 ```bash
 export BB_DATA=$PWD/lab/data/ingenieria-inversa
 python3 scripts/ingenieria-inversa/replica.py validate --catalog $BB_DATA/catalog_v2.json --batches v03-validation
-python3 lab/data/ingenieria-inversa/analisis/rulestest.py base,thr+20 300 2
 ```
-
-**5. Línea de ESTADO.md:** actualizada (fase 3).

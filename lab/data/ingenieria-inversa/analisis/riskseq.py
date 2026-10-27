@@ -1,5 +1,5 @@
 """Sequential integer hidden-risk fit: R = HR level (exact below 4), clip at 0, explosions reset."""
-import tl, collections, tags, sys, json, random, numpy as np
+import tl, collections, tags, sys, json, random, os, numpy as np
 def key(s,e):
     if s[1]=='e': return 'E|'+s[2]+'|'+str(s[3])
     return s[1]+'|'+e['chosen']
@@ -65,8 +65,8 @@ def fit(G,init,iters=10,vals=range(-3,4),mode='reset'):
 if __name__=='__main__':
     G=load(sys.argv[1].split(','))
     sol=np.load('/home/user/rx/hrsol.npy'); keys=json.load(open('/home/user/rx/hrkeys.json'))
-    init=json.load(open('/home/user/rx/riskd.json')); init['REVIEW_WARN']=1
+    init=json.load(open(os.environ.get('RISK_INIT','/home/user/rx/riskd.json'))); init['REVIEW_WARN']=1
     print('games',len(G))
     d,err=fit(G,init,mode=sys.argv[2] if len(sys.argv)>2 else 'reset')
-    json.dump(d,open('/home/user/rx/riskd.json','w'))
+    json.dump(d,open(os.environ.get('RISK_OUT','/home/user/rx/riskd.json'),'w'))
     print('value hist',collections.Counter(d.values()))
