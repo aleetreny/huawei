@@ -1,0 +1,55 @@
+{
+ "games": 600,
+ "steps": 107033,
+ "step_acc": 0.9926751562602188,
+ "reviews": 4230,
+ "promo_acc": 0.9947990543735225,
+ "score_mae": 0.3349833333333336,
+ "score_within_2": 0.9983333333333333,
+ "field_miss": {
+  "wealth": 581,
+  "network": 189,
+  "dignity": 188,
+  "output": 110,
+  "health": 26,
+  "level": 22,
+  "duration_in_level": 22,
+  "skill": 12
+ },
+ "kind_miss": {
+  "|month|e": 420,
+  "|month|m": 194,
+  "blowup|month|e": 73,
+  "|in-month|e": 57,
+  "blowup|in-month|e": 40
+ },
+ "promo_confusion": {
+  "pred=True real=True": 2395,
+  "pred=False real=False": 1813,
+  "pred=False real=True": 20,
+  "pred=True real=False": 2
+ },
+ "by_phase": {
+  "e": {
+   "steps": 77000,
+   "acc": 0.9923376623376623
+  },
+  "q": {
+   "steps": 22026,
+   "acc": 1.0
+  },
+  "m": {
+   "steps": 8007,
+   "acc": 0.9757712001998251
+  }
+ },
+ "score_err_max": 6.93
+}
+| Lote | v03-validation (600 partidas) | |
+|---|---:|---|
+| Estado exacto tras cada paso (todos) | 99.3% de 107033 pasos | objetivo ≥ 95 % |
+| … tras respuestas a eventos | 99.2% de 77000 | |
+| … tras acciones de energía | 100.0% de 22026 | |
+| … tras acción principal | 97.6% de 8007 | |
+| Ascenso sí/no en cada evaluación | 99.5% de 4230 evaluaciones | objetivo ≥ 95 % |
+| Error medio de la nota final | 0.33 puntos (máx. 6.93; ≤2 en el 99.8%) | objetivo ≤ 2 |

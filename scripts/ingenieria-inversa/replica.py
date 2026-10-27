@@ -35,7 +35,7 @@ CAPS = {1: {"skill": 9, "network": 3, "output": 3}, 2: {"skill": 21, "network": 
         3: {"skill": 42, "network": 21, "output": 16}, 4: {"skill": 108, "network": 36, "output": 26},
         5: {"skill": 154, "network": 54, "output": 38}, 6: {"skill": 220, "network": 72, "output": 54}, 7: {"skill": 300, "network": 90, "output": 70}}
 MINS = {"health": 0, "dignity": 0, "skill": 1, "network": 0, "output": -1}
-THRESH = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32), 6: (165, 60, 45)}
+THRESH = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32), 6: (170, 60, 45)}
 SALARY = {1: 0.3, 2: 0.4, 3: 0.5, 4: 0.7, 5: 1.0, 6: 1.5, 7: 2.3, 8: 3.6, 9: 5.7, 10: 9.1}
 BONUS = {"S": 3.0, "A": 2.0, "B": 1.0, "C": 0.25, "D": 0.0}
 PROMO_NET = {1: 0, 2: 0, 3: -2, 4: -2, 5: -3, 6: -4}          # Network lost when promoted out of level L
@@ -580,10 +580,18 @@ class Policy:
 
 
 def draw_title(cat: Catalog, st: State, used: set[str], rng: random.Random) -> str | None:
-    lv = st.level
-    while str(lv) not in cat.pools and lv > 1:
-        lv -= 1
-    pool = {t: w for t, w in cat.pools.get(str(lv), {}).items() if t not in used and t in cat.d["first_node"]}
+    """M18: titles unlock in blocks at the start of a semester (months 1, 6, 12, 18, 24, 30) whatever the
+    level; the draw is close to uniform among unlocked unused titles. Stories that carry over to the next
+    month weigh ~0.6 (only one long story may be open at a time)."""
+    smp = cat.d.get("sampler")
+    if smp:
+        pool = {t: smp["weight"][t] for t, (m0, _m1) in smp["window"].items()
+                if m0 <= st.month and t not in used and t in cat.d["first_node"]}
+    else:
+        lv = st.level
+        while str(lv) not in cat.pools and lv > 1:
+            lv -= 1
+        pool = {t: w for t, w in cat.pools.get(str(lv), {}).items() if t not in used and t in cat.d["first_node"]}
     if not pool:
         return None
     tot = sum(pool.values())

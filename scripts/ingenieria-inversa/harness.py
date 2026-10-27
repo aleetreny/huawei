@@ -17,6 +17,7 @@ import asyncio
 import gzip
 import hashlib
 import json
+import os
 import shutil
 import time
 import uuid
@@ -28,6 +29,8 @@ from careerlab.mcp_client import GameClient, ServerSpec, is_terminal, phase
 
 STATS = ("health", "dignity", "skill", "network", "level", "duration_in_level", "output", "wealth", "energy")
 PHASE_CODE = {"document": "d", "event": "e", "energy": "q", "main_action": "m", "terminal": "t"}
+NOTES_TEXT = {"bb": "bb", "empty": "", "long": ("I pick this option because it keeps risk low, protects health and dignity, "
+              "and moves the weakest stat towards its ceiling before the next review. ") * 6}
 LOG_CODE = {"system": "S", "fixed_event": "F", "action": "A", "event": "E", "salary": "P", "talk": "T",
             "promotion": "R", "failure": "X", "ending_score": "Z"}
 
@@ -111,7 +114,8 @@ async def play_game(client: GameClient, policy: Any, shard: Shard, game_id: str,
             st = obs["current_state"]
             rec["steps"].append([st["time"]["current_month"], PHASE_CODE.get(ph, "?"), node, choice,
                                  status_vec(st["status"]), shard.text(ev) if ev else None, tag])
-            reply = await client.call("take_action", {"session_id": sid, "choice": int(choice), "notes": "bb"})
+            notes = NOTES_TEXT.get(os.environ.get("BB_NOTES", "bb"), "bb")
+            reply = await client.call("take_action", {"session_id": sid, "choice": int(choice), "notes": notes})
             if not (isinstance(reply, dict) and reply.get("success")):
                 rejected += 1
                 streak += 1
@@ -154,7 +158,8 @@ class Slot:
     async def get(self) -> GameClient:
         if self.client is None or self.used >= self.per_db:
             await self.close()
-            self.spec = ServerSpec(f"bb-{uuid.uuid4().hex[:8]}", self.root / uuid.uuid4().hex[:12], competition_mode=False)
+            self.spec = ServerSpec(f"bb-{uuid.uuid4().hex[:8]}", self.root / uuid.uuid4().hex[:12],
+                                   competition_mode=os.environ.get("BB_COMPETITION") == "1")
             self.client = GameClient(self.spec, self.settings)
             await self.client.__aenter__()
             self.used = 0
