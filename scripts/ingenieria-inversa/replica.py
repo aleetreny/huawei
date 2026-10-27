@@ -38,8 +38,8 @@ MINS = {"health": 0, "dignity": 0, "skill": 1, "network": 0, "output": -1}
 THRESH = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32), 6: (165, 60, 45)}
 SALARY = {1: 0.3, 2: 0.4, 3: 0.5, 4: 0.7, 5: 1.0, 6: 1.5, 7: 2.3, 8: 3.6, 9: 5.7, 10: 9.1}
 BONUS = {"S": 3.0, "A": 2.0, "B": 1.0, "C": 0.25, "D": 0.0}
-PROMO_NET = {1: 0, 2: 0, 3: -2, 4: -2, 5: -3}          # Network lost when promoted out of level L
-TOOFAST_NET = {2: -3, 3: -3}                           # extra when promoted after 6 months in L
+PROMO_NET = {1: 0, 2: 0, 3: -2, 4: -2, 5: -3, 6: -4}          # Network lost when promoted out of level L
+TOOFAST_NET = {2: -3, 3: -3, 4: -3, 5: -3, 6: -3}  # extra when promoted after 6 months in L
 MAIN_FX = {"Apply for a key project": {"output": 2, "skill": 1, "network": 1},
            "Report results to your manager": {"output": 1, "network": 1, "dignity": 1},
            "Fight for resources": {"output": 1, "network": 1},
@@ -269,7 +269,9 @@ class Replica:
             apply_delta(st, {"health": -1, "dignity": -2})
             st.risk += 1
         elif not fast:
-            apply_delta(st, {"dignity": 1})
+            apply_delta(st, {"dignity": 1, "network": 1} if tone == "praise" else {"dignity": 1})
+        elif tone == "praise":
+            apply_delta(st, {"network": 1})
         if g == "D" and st.level == 1:
             apply_delta(st, {"dignity": -3, "network": -1})   # "This half-year review fell short"
         if fast:
@@ -465,6 +467,7 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
     rev_n = rev_hit = 0
     rev_conf: collections.Counter = collections.Counter()
     score_err: list[float] = []
+    by_phase: dict[str, list[int]] = {}
     games = 0
     for g in b.games():
         if g["outcome"] not in ("eliminated", "completed"):
@@ -511,6 +514,9 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
                 nt = b.texts.get(nxt[5], "") if nxt[5] else ""
                 ok = all(abs(p - o) < 1e-6 for p, o in zip(pred, obs))
                 hits += int(ok)
+                by_phase.setdefault(s[1], [0, 0])
+                by_phase[s[1]][0] += 1
+                by_phase[s[1]][1] += int(ok)
                 if not ok:
                     for name, p, o in zip(VIS, pred, obs):
                         if abs(p - o) > 1e-6:
@@ -535,10 +541,26 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
            "promo_acc": rev_hit / max(1, rev_n), "score_mae": sum(score_err) / max(1, len(score_err)),
            "score_within_2": sum(1 for x in score_err if x <= 2) / max(1, len(score_err)),
            "field_miss": dict(field_miss.most_common()), "kind_miss": dict(kind_miss.most_common(12)),
-           "promo_confusion": {f"pred={k[0]} real={k[1]}": v for k, v in rev_conf.items()}}
+           "promo_confusion": {f"pred={k[0]} real={k[1]}": v for k, v in rev_conf.items()},
+           "by_phase": {k: {"steps": v[0], "acc": v[1] / max(1, v[0])} for k, v in by_phase.items()},
+           "score_err_max": max(score_err) if score_err else None}
     if verbose:
         print(json.dumps(res, indent=1))
+        print(table(res, batches))
     return res
+
+
+def table(res: dict[str, Any], batches: list[str]) -> str:
+    ph = res["by_phase"]
+    names = {"e": "respuestas a eventos", "q": "acciones de energía", "m": "acción principal"}
+    rows = [f"| Lote | {', '.join(batches)} ({res['games']} partidas) | |", "|---|---:|---|",
+            f"| Estado exacto tras cada paso (todos) | {res['step_acc']:.1%} de {res['steps']} pasos | objetivo ≥ 95 % |"]
+    for k in ("e", "q", "m"):
+        if k in ph:
+            rows.append(f"| … tras {names[k]} | {ph[k]['acc']:.1%} de {ph[k]['steps']} | |")
+    rows += [f"| Ascenso sí/no en cada evaluación | {res['promo_acc']:.1%} de {res['reviews']} evaluaciones | objetivo ≥ 95 % |",
+             f"| Error medio de la nota final | {res['score_mae']:.2f} puntos (máx. {res['score_err_max']:.2f}; ≤2 en el {res['score_within_2']:.1%}) | objetivo ≤ 2 |"]
+    return "\n".join(rows)
 
 
 # ----------------------------------------------------------------------------- generative play
