@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "assigned": 576,
+  "replayed_actions": 28523,
+  "groups": {
+    "balanced": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 8,
+      "trust_death": 19,
+      "health_death": 0,
+      "first_promotion_by_6": 148,
+      "first_promoted_alive_at_7": 148,
+      "second_promotion_by_12": 124,
+      "second_promotion_and_alive": 120,
+      "alive_through_12": 165
+    },
+    "control": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 2,
+      "trust_death": 0,
+      "health_death": 0,
+      "first_promotion_by_6": 140,
+      "first_promoted_alive_at_7": 140,
+      "second_promotion_by_12": 122,
+      "second_promotion_and_alive": 122,
+      "alive_through_12": 190
+    },
+    "constrained": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 5,
+      "trust_death": 6,
+      "health_death": 0,
+      "first_promotion_by_6": 141,
+      "first_promoted_alive_at_7": 141,
+      "second_promotion_by_12": 123,
+      "second_promotion_and_alive": 122,
+      "alive_through_12": 181
+    }
+  },
+  "narrative_override_trace": {
+    "balanced": {
+      "narrative_overrides": 364,
+      "higher_empirical_rate_after_incident": 106
+    },
+    "constrained": {
+      "narrative_overrides": 216
+    }
+  },
+  "nominal_constraint_decisions_verified": 9590,
+  "common_unknown_effect_decisions": 192,
+  "scope": "Complete initial denominators, reproducible blocked assignment, past-only incident memory, every public action replayed and outcomes independently reconstructed"
+}

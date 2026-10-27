@@ -1,6 +1,6 @@
 # First-year strategy — general research draft
 
-This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. Controlled incident, [financial-reserve](../financial-reserve-study/README.md) and [growth-priority studies](../growth-gap-study/README.md) evaluated frozen empirical bots, not agents reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
+This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. Controlled incident, [financial-reserve](../financial-reserve-study/README.md) [growth-priority](../growth-gap-study/README.md) and [safety-filter studies](../constrained-growth-study/README.md) evaluated frozen empirical bots, not agents reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
 
 ## Balance progress and the ability to continue
 
@@ -13,6 +13,8 @@ Check whether a proposed gain would open a gap in another part of the growth pro
 ## Keep incident history separate from current warnings
 
 Maintain separate records for current warnings, unresolved commitments and previous serious incidents. A risk-reduction action or a calmer warning does not establish that the consequences of an earlier incident have disappeared. Keep the incident in memory unless public evidence establishes that it no longer matters.
+
+Consider exposure before the first serious incident as well: visible growth can carry obligations or costs that emerge later. An alternative being no worse than a familiar choice on one estimated risk measure does not establish that either choice is safe.
 
 After a serious incident, raise the standard for accepting a shortcut, disclosure or promise. Prefer an option whose safeguards, validation, ownership and follow-through you can explain. Do not treat a small visible gain as sufficient compensation for exposure you cannot absorb. A temporary improvement in the panel does not prove that trust has been restored.
 
