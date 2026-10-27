@@ -1,0 +1,33 @@
+{
+  "questions_7_12": 261,
+  "available_answers": 649,
+  "tried_answers": 645,
+  "remaining_answers": 4,
+  "missing": [
+    {
+      "question": "2b6c879605dc3891ce8d",
+      "choice": 2,
+      "title": "You notice a remote colleague is often offline"
+    },
+    {
+      "question": "35db2cae4cae3bd74bfc",
+      "choice": 3,
+      "title": "Your first reaction to finding out a newer hire is paid more"
+    },
+    {
+      "question": "36e37fc332f917b6af17",
+      "choice": 3,
+      "title": "A database migration window clashes with peak trading"
+    },
+    {
+      "question": "a9362fb2b9c29a7db9bf",
+      "choice": 2,
+      "title": "A security hole that would be expensive to fix"
+    }
+  ],
+  "totals": {
+    "eliminated": 350,
+    "twelve_month_window": 418
+  },
+  "elapsed_seconds": 177.6
+}

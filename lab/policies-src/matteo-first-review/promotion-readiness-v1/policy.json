@@ -1,0 +1,13 @@
+{
+  "family": "matteo-first-review",
+  "name": "promotion-readiness-v1",
+  "parents": [
+    "observed-growth-v1"
+  ],
+  "hypothesis": "General prose distilled from public-response research improves first-window promotion with survival relative to observed-growth-v1 without access to the empirical action-effect lookup.",
+  "change": "Replace the existing manual with the operational paragraphs of the general-rule draft; no event titles, answer mappings, hidden numerical cutoffs or prescribed calendar positions.",
+  "predicted_behaviour": "The actor balances realised capability, working relationships and delivery before the review boundary, preserves dignity and capacity, and keeps promises and accumulated exposure visible.",
+  "refutation": "The initial balanced exploratory block has no superiority claim. If promotion with survival does not improve or survival deteriorates, the bundled improvement hypothesis is unsupported; inspect adherence before proposing revisions. Freeze both arms and compare the same actor, horizon and environment.",
+  "skill_count": 1,
+  "notes": "Six-month mechanism experiment, separate from prereg-v1 full-career race selection. Only operational draft paragraphs enter the actor context; research evidence, empirical model and catalogues are excluded."
+}

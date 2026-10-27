@@ -1,0 +1,51 @@
+{
+  "scope": "Every question offered in nonterminal public observations during months 7–12, including newly exposed continuations; not every hidden-state history",
+  "source_records": 3003,
+  "sources": [
+    {
+      "path": "lab/reports/second-review-search/closure/public-trajectories.jsonl.gz",
+      "sha256": "e687f622f048e9f1ea6d69d1bedaf4524fb8f70a2cd4119dd4417c3e2408e6b9"
+    },
+    {
+      "path": "lab/reports/second-review-search/discovery/public-trajectories.jsonl.gz",
+      "sha256": "8a596ec5405ac1cabf7a7e473762283348683cd742ea5bd3ba8fea2ccfa73eef"
+    },
+    {
+      "path": "lab/reports/second-review-search/exploration/public-trajectories.jsonl.gz",
+      "sha256": "1d7114af31f4f1f6381644b70c5d1d7d8938bc0c4f29ef0ec7738f9ac2af4197"
+    },
+    {
+      "path": "lab/reports/trust-risk-study/catalogue-closure/public-trajectories.jsonl.gz",
+      "sha256": "0ac058a406dabc7e6bcee0876318795c28af785e41b7c2d5cbd3c0a3ee4357a0"
+    },
+    {
+      "path": "lab/reports/trust-risk-study/factorial-v1/public-trajectories.jsonl.gz",
+      "sha256": "0670fa9b86f8b99353c0876f8c4db04971ecf9f7ad3d49183f5afaf6a0bbdc33"
+    },
+    {
+      "path": "lab/reports/financial-reserve-study/calibration-v1/public-trajectories.jsonl.gz",
+      "sha256": "01616fd768b189e34df6745acbf3568b36e430b91567fd56674729876c12ddf5"
+    },
+    {
+      "path": "lab/reports/financial-reserve-study/catalogue-closure/public-trajectories.jsonl.gz",
+      "sha256": "2ed0f1902f0142934b4f477dc7c49f3e2bf6d8bcdc46f28500b9058df12fbe35"
+    },
+    {
+      "path": "lab/reports/financial-reserve-study/study-v1/public-trajectories.jsonl.gz",
+      "sha256": "6935c07f7b3028386cd6935ee12ef363c0e8bdd8680799f41d81c388c8f99a6b"
+    }
+  ],
+  "questions": 268,
+  "story_questions": 266,
+  "titles": 126,
+  "available_answers": 663,
+  "witnessed_answers": 663,
+  "story_available_answers": 646,
+  "story_witnessed_answers": 646,
+  "new_nodes": [
+    "0018fb645fb0d1a6598b",
+    "2cc9f0e9c5d1fffd1929"
+  ],
+  "missing": [],
+  "closure_games": 73
+}

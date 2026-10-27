@@ -1,0 +1,958 @@
+{
+  "records": {
+    "records": 2589,
+    "six_month_window": 1406,
+    "promotion": 682,
+    "promotion_and_alive": 631,
+    "eliminated": 1152,
+    "interrupted": 31
+  },
+  "failures": {
+    "Blackout — your health hits zero. The screen goes dark and your body gives out before the KPIs do. Game over… remember to rest next time.": 546,
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 576,
+    "You resign. Work that needs other people cannot get done, and staying would only get worse.": 6,
+    "Obsolete — you are the weakest technical link on the team. Your manager suggests a role, somewhere else, that matches what you can actually do.": 1,
+    "Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 23
+  },
+  "groups": {
+    "capacity": {
+      "titles": 8,
+      "stages": 14,
+      "answers": 34,
+      "before_review_titles": 4,
+      "only_after_review_titles": 4
+    },
+    "collaboration": {
+      "titles": 20,
+      "stages": 49,
+      "answers": 121,
+      "before_review_titles": 20,
+      "only_after_review_titles": 0
+    },
+    "delivery": {
+      "titles": 22,
+      "stages": 52,
+      "answers": 119,
+      "before_review_titles": 16,
+      "only_after_review_titles": 6
+    },
+    "learning": {
+      "titles": 6,
+      "stages": 7,
+      "answers": 18,
+      "before_review_titles": 2,
+      "only_after_review_titles": 4
+    },
+    "recognition": {
+      "titles": 15,
+      "stages": 40,
+      "answers": 98,
+      "before_review_titles": 10,
+      "only_after_review_titles": 5
+    },
+    "trust": {
+      "titles": 18,
+      "stages": 51,
+      "answers": 120,
+      "before_review_titles": 12,
+      "only_after_review_titles": 6
+    }
+  },
+  "grouping_is_interpretive": true,
+  "title_count": 89,
+  "specific_early_story_titles_common_to_all_promotions": [],
+  "multistage_titles": 57,
+  "only_observed_after_first_review": [
+    "A former colleague asks you for internal company material",
+    "A job spec from the big tech firm you have always wanted to join",
+    "A junior asks to pair on your state machine",
+    "A merge conflict wrecks release day",
+    "A recruiter rings — do you take the call?",
+    "Anonymous feedback — do you own up?",
+    "Burnout, and the urge to coast",
+    "Caffeine dependence and a broken sleep pattern",
+    "Dependency upgrade breaks the build",
+    "Do you say the code was AI-generated?",
+    "Emergency hotfix — do you skip the process?",
+    "Grey-area items on a travel expense claim",
+    "How intensely to mentor a new intern",
+    "How thorough to be in code review as the team grows",
+    "Mentoring a graduate who breaks things",
+    "Neck pain with a deadline — whether to keep the physio appointment",
+    "Palpitations after weeks of overtime: whether to stop",
+    "Peer review finds a serious bug in a friend's code",
+    "The company tries to keep you after you look elsewhere",
+    "Where personal use of work kit stops",
+    "Whether to share the method you have kept to yourself",
+    "Whether to warn that the sprint is overcommitted",
+    "You notice promotions going to the people who play politics",
+    "You overhear a redundancy list that includes a friend",
+    "Your idea is pitched first by someone else"
+  ],
+  "title_month_counts": {
+    "A chatty, skiving colleague eating into your time": {
+      "2": 132,
+      "3": 112,
+      "1": 130,
+      "5": 102,
+      "6": 73,
+      "4": 113
+    },
+    "A collaborator shifts the blame in a meeting": {
+      "1": 146,
+      "2": 170,
+      "4": 130,
+      "5": 134,
+      "3": 171,
+      "6": 67
+    },
+    "A colleague hogging the printer": {
+      "3": 82,
+      "5": 71,
+      "2": 68,
+      "1": 93,
+      "4": 64,
+      "6": 31
+    },
+    "A colleague keeps @channel-ing questions already answered in the docs": {
+      "2": 87,
+      "4": 75,
+      "1": 86,
+      "3": 89,
+      "5": 68,
+      "6": 28
+    },
+    "A colleague keeps helping themselves to your snacks": {
+      "1": 96,
+      "3": 77,
+      "4": 87,
+      "2": 61,
+      "5": 68,
+      "6": 29
+    },
+    "A colleague who comes in ill": {
+      "3": 128,
+      "4": 120,
+      "5": 117,
+      "1": 135,
+      "2": 135,
+      "6": 95
+    },
+    "A colleague who keeps handing you his work": {
+      "1": 157,
+      "2": 156,
+      "3": 143,
+      "4": 137,
+      "5": 105,
+      "6": 88
+    },
+    "A colleague's clutter takes over the aisle": {
+      "6": 28,
+      "2": 96,
+      "1": 80,
+      "4": 71,
+      "5": 45,
+      "3": 83
+    },
+    "A colleague's late handovers keep pushing back your work": {
+      "3": 76,
+      "2": 81,
+      "4": 64,
+      "1": 100,
+      "6": 28,
+      "5": 69
+    },
+    "A dinner that is really a fishing trip for team gossip": {
+      "3": 101,
+      "5": 80,
+      "6": 49,
+      "2": 103,
+      "1": 126,
+      "4": 91
+    },
+    "A drunk colleague at the Christmas party": {
+      "1": 131,
+      "2": 131,
+      "5": 97,
+      "6": 86,
+      "3": 140,
+      "4": 137
+    },
+    "A former colleague asks you for internal company material": {
+      "6": 37
+    },
+    "A former colleague at a competitor fishes for intel": {
+      "2": 118,
+      "3": 129,
+      "1": 134,
+      "4": 100,
+      "5": 118,
+      "6": 73
+    },
+    "A job spec from the big tech firm you have always wanted to join": {
+      "6": 32
+    },
+    "A junior asks to pair on your state machine": {
+      "6": 44
+    },
+    "A leaver asks you to keep work files off the company systems": {
+      "4": 86,
+      "2": 103,
+      "3": 82,
+      "1": 104,
+      "5": 68,
+      "6": 43
+    },
+    "A live demo blows up in front of the client": {
+      "6": 90,
+      "3": 139,
+      "4": 132,
+      "1": 142,
+      "2": 142,
+      "5": 107
+    },
+    "A manager-free channel shares a screenshot of your boss": {
+      "2": 80,
+      "5": 65,
+      "6": 35,
+      "1": 99,
+      "4": 87,
+      "3": 86
+    },
+    "A merge conflict wrecks release day": {
+      "6": 12
+    },
+    "A metrics problem, ten minutes before the briefing": {
+      "1": 117,
+      "4": 104,
+      "2": 131,
+      "3": 133,
+      "5": 121,
+      "6": 50
+    },
+    "A milestone briefing for the execs": {
+      "5": 104,
+      "6": 96,
+      "1": 172,
+      "2": 172,
+      "3": 132,
+      "4": 132
+    },
+    "A new colleague with no sense of privacy": {
+      "1": 173,
+      "2": 172,
+      "3": 144,
+      "4": 135,
+      "5": 100,
+      "6": 90
+    },
+    "A newly hired VP talks to you alone for ten minutes on day one": {
+      "1": 144,
+      "5": 101,
+      "4": 121,
+      "2": 141,
+      "3": 110,
+      "6": 38
+    },
+    "A project you wanted going to someone else": {
+      "6": 55,
+      "2": 104,
+      "1": 108,
+      "3": 106,
+      "4": 110,
+      "5": 109
+    },
+    "A recruiter rings — do you take the call?": {
+      "6": 36
+    },
+    "A request to swap on-call over a peak trading bank holiday": {
+      "4": 77,
+      "1": 87,
+      "3": 78,
+      "2": 70,
+      "5": 78,
+      "6": 36
+    },
+    "A senior puts their name on an intern’s work": {
+      "4": 107,
+      "1": 105,
+      "2": 148,
+      "3": 141,
+      "5": 100,
+      "6": 58
+    },
+    "After dinner, karaoke with someone on the promotion panel": {
+      "3": 93,
+      "1": 132,
+      "2": 106,
+      "4": 119,
+      "5": 81,
+      "6": 42
+    },
+    "An engagement survey that asks for your staff ID": {
+      "3": 128,
+      "2": 167,
+      "5": 94,
+      "6": 51,
+      "1": 132,
+      "4": 144
+    },
+    "An intern accidentally emails a rant about the manager": {
+      "3": 173,
+      "5": 126,
+      "6": 75,
+      "1": 145,
+      "2": 181,
+      "4": 100
+    },
+    "An unpublished restructure, and a friend about to buy a flat": {
+      "2": 124,
+      "3": 114,
+      "4": 84,
+      "1": 135,
+      "5": 84,
+      "6": 51
+    },
+    "Anonymous feedback — do you own up?": {
+      "6": 73
+    },
+    "Another department’s major incident: do you volunteer?": {
+      "5": 82,
+      "6": 39,
+      "3": 86,
+      "1": 103,
+      "4": 95,
+      "2": 100
+    },
+    "Burnout, and the urge to coast": {
+      "6": 34
+    },
+    "Caffeine dependence and a broken sleep pattern": {
+      "6": 50
+    },
+    "Choosing a path for a legacy service hitting its limits": {
+      "2": 78,
+      "3": 79,
+      "5": 43,
+      "1": 100,
+      "4": 76,
+      "6": 40
+    },
+    "Choosing a stack for a new module": {
+      "5": 59,
+      "2": 77,
+      "6": 28,
+      "4": 79,
+      "1": 108,
+      "3": 78
+    },
+    "Christmas-party rehearsals eating your evenings": {
+      "1": 180,
+      "2": 178,
+      "3": 139,
+      "5": 91,
+      "6": 74,
+      "4": 133
+    },
+    "Client makes an inappropriate joke at dinner": {
+      "6": 105,
+      "1": 149,
+      "2": 149,
+      "3": 141,
+      "4": 135,
+      "5": 109
+    },
+    "Dependency upgrade breaks the build": {
+      "6": 49
+    },
+    "Dismissed in a team meeting as \"just engineering work\"": {
+      "1": 162,
+      "2": 144,
+      "5": 120,
+      "6": 59,
+      "3": 180,
+      "4": 106
+    },
+    "Do you say the code was AI-generated?": {
+      "6": 62
+    },
+    "Emergency hotfix — do you skip the process?": {
+      "6": 52
+    },
+    "Escape room: your manager is slowing you down, a quiet colleague is flying": {
+      "5": 82,
+      "4": 74,
+      "3": 94,
+      "1": 112,
+      "2": 87,
+      "6": 29
+    },
+    "Forced ranking: scoring a colleague who is also a friend": {
+      "4": 128,
+      "5": 90,
+      "3": 134,
+      "2": 122,
+      "6": 57,
+      "1": 138
+    },
+    "Forgetting to water the office plants on your rota": {
+      "5": 60,
+      "1": 102,
+      "3": 70,
+      "2": 92,
+      "4": 85,
+      "6": 30
+    },
+    "Going for a valuable certification that takes months": {
+      "2": 93,
+      "4": 81,
+      "1": 93,
+      "6": 41,
+      "3": 83,
+      "5": 58
+    },
+    "Grey-area items on a travel expense claim": {
+      "6": 47
+    },
+    "Health check returning the wrong status": {
+      "1": 91,
+      "3": 79,
+      "4": 62,
+      "5": 82,
+      "2": 85,
+      "6": 23
+    },
+    "Hosting an important client visit": {
+      "6": 33,
+      "2": 107,
+      "3": 79,
+      "1": 99,
+      "5": 78,
+      "4": 94
+    },
+    "How blunt to be in a code-review comment": {
+      "6": 33,
+      "2": 94,
+      "3": 75,
+      "1": 93,
+      "4": 68,
+      "5": 65
+    },
+    "How intensely to mentor a new intern": {
+      "6": 34
+    },
+    "How thorough to be in code review as the team grows": {
+      "6": 43
+    },
+    "In-house kernel versus an open-source stack": {
+      "1": 160,
+      "2": 160,
+      "3": 278,
+      "5": 246,
+      "4": 154,
+      "6": 145
+    },
+    "In-house senior architect certification over the weekend": {
+      "6": 26,
+      "1": 76,
+      "5": 55,
+      "2": 79,
+      "4": 73,
+      "3": 78
+    },
+    "Late-night work messages and the manager's reaction": {
+      "6": 52,
+      "5": 71,
+      "4": 102,
+      "2": 85,
+      "1": 90,
+      "3": 86
+    },
+    "Lunch with the team, or keep the break to yourself": {
+      "2": 152,
+      "3": 158,
+      "5": 101,
+      "1": 121,
+      "4": 111,
+      "6": 89
+    },
+    "Mentoring a graduate who breaks things": {
+      "6": 12
+    },
+    "Named on a department award you did not work on": {
+      "6": 65,
+      "2": 142,
+      "3": 152,
+      "4": 101,
+      "5": 96,
+      "1": 131
+    },
+    "Neck pain with a deadline — whether to keep the physio appointment": {
+      "6": 40
+    },
+    "One conference place, and a question about Jo": {
+      "3": 149,
+      "4": 130,
+      "1": 142,
+      "2": 142,
+      "6": 92,
+      "5": 142
+    },
+    "One umbrella, a downpour, and Jordan at going-home time": {
+      "4": 106,
+      "5": 89,
+      "2": 95,
+      "3": 85,
+      "1": 100,
+      "6": 40
+    },
+    "Palpitations after weeks of overtime: whether to stop": {
+      "6": 38
+    },
+    "Peer review finds a serious bug in a friend's code": {
+      "6": 26
+    },
+    "Pitching against a cheaper rival": {
+      "3": 156,
+      "4": 147,
+      "5": 125,
+      "6": 100,
+      "1": 156,
+      "2": 156
+    },
+    "Pushed on stage at the Christmas party": {
+      "5": 135,
+      "3": 137,
+      "4": 147,
+      "1": 153,
+      "2": 152,
+      "6": 113
+    },
+    "Raising a technical objection on another team's API design": {
+      "4": 134,
+      "1": 161,
+      "5": 146,
+      "6": 69,
+      "2": 172,
+      "3": 164
+    },
+    "Remote client keeps sending the work back": {
+      "1": 138,
+      "2": 138,
+      "5": 109,
+      "6": 95,
+      "3": 123,
+      "4": 129
+    },
+    "Seated with a senior leader at the Christmas party": {
+      "1": 181,
+      "2": 181,
+      "3": 154,
+      "4": 154,
+      "5": 106,
+      "6": 85
+    },
+    "Telling the client the project will be late": {
+      "1": 149,
+      "2": 148,
+      "5": 123,
+      "6": 98,
+      "3": 115,
+      "4": 111
+    },
+    "Thanking a colleague from the next team who went out of their way": {
+      "5": 56,
+      "2": 98,
+      "1": 96,
+      "3": 68,
+      "4": 70,
+      "6": 26
+    },
+    "The client adds three things 'while we're here'": {
+      "1": 125,
+      "2": 125,
+      "4": 114,
+      "5": 123,
+      "6": 101,
+      "3": 119
+    },
+    "The client praises a feature you did not build": {
+      "3": 158,
+      "4": 121,
+      "1": 115,
+      "5": 108,
+      "6": 62,
+      "2": 152
+    },
+    "The colleague who buys coffee is collecting favours for a lead vote": {
+      "3": 124,
+      "5": 89,
+      "4": 89,
+      "1": 95,
+      "2": 87,
+      "6": 52
+    },
+    "The company tries to keep you after you look elsewhere": {
+      "6": 5
+    },
+    "The gym after work, or staying late to get ahead": {
+      "2": 106,
+      "1": 94,
+      "3": 70,
+      "6": 46,
+      "5": 61,
+      "4": 77
+    },
+    "The office war over windows and heating": {
+      "4": 143,
+      "5": 121,
+      "6": 114,
+      "3": 144,
+      "1": 146,
+      "2": 146
+    },
+    "The person next to you wears very strong perfume": {
+      "1": 92,
+      "2": 86,
+      "5": 73,
+      "6": 31,
+      "4": 81,
+      "3": 79
+    },
+    "Vaping at the neighbouring desk": {
+      "6": 36,
+      "1": 81,
+      "2": 86,
+      "5": 71,
+      "4": 69,
+      "3": 73
+    },
+    "Where personal use of work kit stops": {
+      "6": 63
+    },
+    "Whether to invest in a CI automation suite": {
+      "3": 100,
+      "6": 64,
+      "5": 92,
+      "2": 85,
+      "1": 108,
+      "4": 100
+    },
+    "Whether to join a cross-team architecture review — and how hard to push": {
+      "2": 118,
+      "1": 113,
+      "4": 89,
+      "5": 99,
+      "3": 108,
+      "6": 54
+    },
+    "Whether to share the method you have kept to yourself": {
+      "6": 54
+    },
+    "Whether to warn that the sprint is overcommitted": {
+      "6": 44
+    },
+    "Who picks up the bill at a client lunch": {
+      "4": 75,
+      "2": 108,
+      "3": 70,
+      "5": 70,
+      "1": 91,
+      "6": 22
+    },
+    "You notice promotions going to the people who play politics": {
+      "6": 50
+    },
+    "You overhear a redundancy list that includes a friend": {
+      "6": 55
+    },
+    "You overhear an unpublished project naming you": {
+      "1": 114,
+      "6": 50,
+      "3": 110,
+      "4": 114,
+      "2": 117,
+      "5": 85
+    },
+    "Your idea is pitched first by someone else": {
+      "6": 74
+    }
+  },
+  "review_count": 1940,
+  "grades": {
+    "C": 1940
+  },
+  "clock": {
+    "5->6": 1940
+  },
+  "clean_review_count": 1595,
+  "clean_promotions": 588,
+  "clean_post_transition_table": {
+    "growth_gap/D<2": {
+      "n": 296,
+      "promoted": 0
+    },
+    "growth_gap/D>=2": {
+      "n": 696,
+      "promoted": 0
+    },
+    "growth_ready/D<2": {
+      "n": 16,
+      "promoted": 1
+    },
+    "growth_ready/D>=2": {
+      "n": 587,
+      "promoted": 587
+    }
+  },
+  "previous_separator_counterexamples": [
+    {
+      "run": 295,
+      "arm": [
+        "targeted-closure",
+        "growth",
+        "project"
+      ],
+      "before_time": {
+        "current_month": 5,
+        "current_quarter": 2,
+        "current_year": 1
+      },
+      "after_time": {
+        "current_month": 6,
+        "current_quarter": 2,
+        "current_year": 1
+      },
+      "before": {
+        "health": 9,
+        "dignity": 3,
+        "skill": 8,
+        "network": 3,
+        "level": "L1",
+        "duration_in_level": 5,
+        "output": 3,
+        "wealth": 0,
+        "energy": 0
+      },
+      "after": {
+        "health": 8,
+        "dignity": 1,
+        "skill": 8,
+        "network": 3,
+        "level": "L2",
+        "duration_in_level": 1,
+        "output": 3,
+        "wealth": 0,
+        "energy": 0
+      },
+      "choice": {
+        "choice": 4,
+        "action": "Recuse yourself and ask your manager to have someone else rate Ethan"
+      },
+      "review_events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nThe room feels tense. “Your name came up too often this half: slips, friction, questions about your attitude. This is your last chance to adjust. Show real change or I can’t protect you in the review.”\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, uneasy, you're on your own now.\n\nThe team’s old hand claps you on the shoulder: “Relax. I put in a good word at the review. Watch yourself next quarter.”\n\nPromotion notice: you passed the half-year review and moved from L1 to L2 (Engineer).\n\nPayday just means paying off debts. The bills turn up as reliably as you do. You start wondering whether lunch is really necessary…",
+      "promoted": true,
+      "support_text": true,
+      "outcome": "eliminated",
+      "final": {
+        "time": {
+          "current_month": 6,
+          "current_quarter": 2,
+          "current_year": 1
+        },
+        "status": {
+          "health": 8,
+          "dignity": 0,
+          "skill": 8,
+          "network": 3,
+          "level": "L2",
+          "duration_in_level": 1,
+          "output": 0,
+          "wealth": -1,
+          "energy": 0
+        },
+        "simulation_flags": {
+          "alive": false,
+          "failed": true,
+          "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        },
+        "session_id": "cdf0451f24f744a68b66b458b9264650",
+        "error": "GAME OVER: Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.",
+        "available_choice_count": 0
+      },
+      "batch": "known-closure-1"
+    }
+  ],
+  "pre_review_proxy": {
+    "factorial-v2/month-4": {
+      "gap": {
+        "n": 578,
+        "promoted": 38
+      },
+      "ready": {
+        "n": 111,
+        "promoted": 26
+      }
+    },
+    "factorial-v2/month-5": {
+      "gap": {
+        "n": 461,
+        "promoted": 32
+      },
+      "ready": {
+        "n": 87,
+        "promoted": 32
+      }
+    },
+    "frontier/month-4": {
+      "gap": {
+        "n": 215,
+        "promoted": 15
+      },
+      "ready": {
+        "n": 9,
+        "promoted": 1
+      }
+    },
+    "frontier/month-5": {
+      "gap": {
+        "n": 195,
+        "promoted": 12
+      },
+      "ready": {
+        "n": 18,
+        "promoted": 4
+      }
+    },
+    "known-closure-1/month-4": {
+      "gap": {
+        "n": 325,
+        "promoted": 85
+      },
+      "ready": {
+        "n": 263,
+        "promoted": 168
+      }
+    },
+    "known-closure-1/month-5": {
+      "gap": {
+        "n": 325,
+        "promoted": 57
+      },
+      "ready": {
+        "n": 248,
+        "promoted": 196
+      }
+    },
+    "known-closure-2/month-4": {
+      "gap": {
+        "n": 2,
+        "promoted": 1
+      },
+      "ready": {
+        "n": 2,
+        "promoted": 2
+      }
+    },
+    "known-closure-2/month-5": {
+      "gap": {
+        "n": 2,
+        "promoted": 1
+      },
+      "ready": {
+        "n": 2,
+        "promoted": 2
+      }
+    },
+    "learned-v2/month-4": {
+      "ready": {
+        "n": 310,
+        "promoted": 211
+      },
+      "gap": {
+        "n": 197,
+        "promoted": 125
+      }
+    },
+    "learned-v2/month-5": {
+      "ready": {
+        "n": 307,
+        "promoted": 237
+      },
+      "gap": {
+        "n": 196,
+        "promoted": 99
+      }
+    },
+    "public-action-coverage/month-4": {
+      "gap": {
+        "n": 238,
+        "promoted": 8
+      },
+      "ready": {
+        "n": 9,
+        "promoted": 0
+      }
+    },
+    "public-action-coverage/month-5": {
+      "gap": {
+        "n": 194,
+        "promoted": 6
+      },
+      "ready": {
+        "n": 14,
+        "promoted": 2
+      }
+    },
+    "reserve-energy-confirmation/month-4": {
+      "gap": {
+        "n": 31,
+        "promoted": 2
+      }
+    },
+    "reserve-energy-confirmation/month-5": {
+      "gap": {
+        "n": 26,
+        "promoted": 1
+      },
+      "ready": {
+        "n": 1,
+        "promoted": 1
+      }
+    }
+  },
+  "unrealised_positive_quarterly_investments_L1": {
+    "Network@3": 2039,
+    "Output@3": 1797,
+    "Skill@9": 812,
+    "Dignity@10": 1427,
+    "Dignity@3": 3,
+    "Health@3": 1,
+    "Output@0": 16,
+    "Health@10": 828,
+    "Dignity@2": 1,
+    "Dignity@8": 4,
+    "Health@2": 1,
+    "Dignity@6": 6,
+    "Dignity@4": 7,
+    "Health@4": 2,
+    "Health@6": 1,
+    "Health@5": 2,
+    "Dignity@9": 2,
+    "Network@1": 3,
+    "Dignity@1": 2,
+    "Dignity@7": 3,
+    "Dignity@5": 4,
+    "Output@-1": 6,
+    "Output@1": 6,
+    "Dignity@0": 1,
+    "Network@0": 3
+  },
+  "limits": [
+    "Post-transition values are not exact review inputs",
+    "Clear simultaneous risk messages excluded only for descriptive separator audit",
+    "Pre-review groups are observational, not randomised readiness interventions",
+    "Adaptive closure runs deliberately change state exposure",
+    "Story occurrence may follow promotion rather than cause it",
+    "No general-agent transfer result is available"
+  ]
+}

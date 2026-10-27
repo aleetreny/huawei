@@ -4,6 +4,8 @@
 
 The useful finding is a combination of **timing, balanced realised growth, dignity, and continued risk/health management**. There is a strong empirical promotion pattern, but no demonstrated universal policy for arbitrary agents or unseen histories.
 
+**Coverage follow-up:** the [known-catalogue closure](../known-catalogue-closure/README.md) added 597 resolved non-LLM experiments and reached **510/510 narrative answers**, across 213 encountered stages, with no untried options in the updated catalogue. Including public menus: 528/528. The original five-batch promotion findings and statistics below retain their original sample; 100% answer coverage is not exhaustive hidden-state or causal coverage.
+
 ## Results
 
 There are **1,961 resolved six-month experiments**, plus **31 recorded technical interruptions**, in five archived batches. A resolved experiment either dies within the window or reaches the first observation of month 7 without taking a month-7 action. This is not 1,961 complete 48-month careers.
@@ -42,6 +44,8 @@ There were **370 positive predictions, all promoted**, and 752 negative predicti
 
 This is an empirical separator, **not a recovered promotion formula, an exact causal threshold, or an ex ante guarantee**. It uses observations after settlement. Hidden state may jointly affect those observations and the decision; the clean subset excludes difficult transitions. Do not put these unpublished numbers into submission Skills. The audit is in [numeric-hypothesis-audit.json](numeric-hypothesis-audit.json).
 
+**Later-data correction:** the [scenario-pattern analysis](../scenario-patterns/README.md) expands the clean sample to 1,595 transitions and finds one counterexample to the previous exact separator: `known-closure-1/295` promoted with post-transition Dignity 1. The original 1,122-transition audit remains a frozen-sample result; its separator is no longer exact on the larger sample. Other automatic effects can change dignity in the same response. Use the observed pattern as descriptive evidence, not a hard promotion gate.
+
 ### 4. Review, promotion, risk settlement and death can share one action response
 
 Across the archived batches, **426 episodes promoted; 42 of these died before the end of the window**. In 53 promoted episodes, the review transition also reported an old-risk explosion. Some promoted careers immediately displayed Output 0 after the explosion. That is not proof that zero output satisfies promotion: the notice and subsequent penalties are bundled into one public response.
@@ -58,11 +62,11 @@ Likewise, recovery-heavy energy gave 92/128 promotions and 116/128 survivors; ri
 
 ## Scenario catalogue and causal bookkeeping
 
-The merged catalogue contains **89 narrative titles, 212 distinct narrative questions/stages**, and **503 exercised answers out of 508 encountered narrative alternatives** (99.0%). Including public quarterly/document nodes: 215 nodes and 521/526 answers. All encountered public quarterly action labels were exercised. This covers the action menu, not every energy-action order, every cross-quarter combination or every full narrative history.
+At the initial investigation freeze, the merged catalogue contained **89 narrative titles, 212 distinct narrative questions/stages**, and **503 exercised answers out of 508 encountered narrative alternatives** (99.0%). Including public quarterly/document nodes: 215 nodes and 521/526 answers. The subsequent coverage follow-up above closes the original frontier and the additional encountered stage. This covers the encountered action menu, not every energy-action order, every cross-quarter combination or every full narrative history.
 
 - [Readable question/answer catalogue](catalogue.md): full question text, every displayed option, counts, observed changes, later same-title stages and evidence IDs.
 - [Machine-readable catalogue](questions.json): observed delta distributions, immediate successors, possible delayed chains, example states, episode associations and explicit untried alternatives.
-- [Coverage overview and remaining frontier](overview.json): the five untried narrative alternatives, spanning four rare stages. Targeted exploration reduced the frontier but did not close it.
+- [Current coverage overview](overview.json): now an empty known-answer frontier. The five originally untried alternatives and their frozen input catalogue are preserved in `known-closure-1/`, with successful execution witnesses in the closure report.
 - Each batch contains `observed-edges.csv`, `reviews.json`, `quarterly-effects.json`, `summary.json`, `manifest.json`, and a lossless `public-trajectories.jsonl.gz` archive with SHA-256.
 
 An evidence ID is `batch/run/step`, using the zero-based `run` and step in the archived record. Every raw step retains the whole before-observation with **all available answers**, the chosen answer, action response, application flag and whole after-observation. Final public logs are retained. The catalogue includes episode promotion/failure associations but does not call them individual-answer causal effects.
@@ -106,4 +110,4 @@ Before pushing, the remote Matteo branch had advanced with the organiser's chang
 
 Technical failures are retained, not scored as failed games: the initial smoke attempted multiple games in one competition process; a 145-record exploratory batch was stopped after discovering an incorrect “No action” label; a four-record learned smoke preceded semantic/risk handling refinements. Those pilot records remain outside Git at `/Users/matteozabban/careerlab-data/matteo-first-review/` and are excluded from the five-batch totals. In the archived public-action batch, 31 reserve-energy attempts stopped on the incorrect skip label. The label was corrected, covered by a regression test, and a separate 36-episode confirmation batch completed without that error. Aborted sessions are not resumed or mistaken for zero scores.
 
-Raw per-session JSON, server storage and pilot records remain under `/Users/matteozabban/careerlab-data/matteo-first-review/`; the public-tool trajectory archives in this report preserve the analysed evidence without engine internals. Rebuild the catalogue with the command above. The next concrete investigation is an actor-controlled evaluation of the prose rule, with distinct promotion and survival outcomes, followed by ablations of realised-gain checks, dignity protection and obligation tracking. A universal first-promotion guarantee is not established; the empirical frontier and hidden-state counterfactuals remain open.
+Raw per-session JSON, server storage and pilot records remain under `/Users/matteozabban/careerlab-data/matteo-first-review/`; the public-tool trajectory archives in this report preserve the analysed evidence without engine internals. Rebuild the catalogue with the command above. The next concrete investigation is an actor-controlled evaluation of the prose rule, with distinct promotion and survival outcomes, followed by ablations of realised-gain checks, dignity protection and obligation tracking. A universal first-promotion guarantee is not established. The known-answer frontier was subsequently closed as documented above; unseen scenarios and hidden-state counterfactuals remain open.

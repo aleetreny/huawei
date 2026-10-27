@@ -1,0 +1,227 @@
+[
+  {
+    "question": "62590001dc1d070e49df",
+    "answer": 2,
+    "run": 83,
+    "step": 20,
+    "month": 6,
+    "choice": {
+      "choice": 2,
+      "action": "Decline, citing your current workload"
+    },
+    "batch": "known-closure-1",
+    "event": {
+      "title": "Mentoring a graduate who breaks things",
+      "description": "The department has taken on a new batch of interns. Your manager gives you Sam, who has the flashiest university and the biggest ego, and hints that mentoring is an unofficial requirement for a top rating this year. You hear Sam nearly caused trouble in another team by merging unreviewed code, and most of the old hands have kept their distance. Do you take on the mentor role?"
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 6,
+      "dignity": 1,
+      "skill": 8,
+      "network": 3,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 3,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 6,
+      "dignity": 2,
+      "skill": 8,
+      "network": 2,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 3,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after_feedback": "",
+    "episode_outcome": "six_month_window",
+    "failure": null
+  },
+  {
+    "question": "70cdb731398967478a3c",
+    "answer": 2,
+    "run": 97,
+    "step": 21,
+    "month": 6,
+    "choice": {
+      "choice": 2,
+      "action": "Let the rise decide it, and drop the idea of leaving on the spot"
+    },
+    "batch": "known-closure-1",
+    "event": {
+      "title": "The company tries to keep you after you look elsewhere",
+      "description": "You have been unhappy and have quietly thought about looking for another job, and it has started to show in how you talk. Your manager notices, takes it seriously and comes back with a retention package: a rise, a project, even a hint that you would be first in line at the next promotion round. Your doubts start to fade. You have to decide how to answer."
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 5,
+      "dignity": 1,
+      "skill": 9,
+      "network": 2,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": -1,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 5,
+      "dignity": 0,
+      "skill": 9,
+      "network": 2,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": -1,
+      "wealth": 1,
+      "energy": 0
+    },
+    "after_feedback": "",
+    "episode_outcome": "six_month_window",
+    "failure": null
+  },
+  {
+    "question": "70cdb731398967478a3c",
+    "answer": 3,
+    "run": 588,
+    "step": 20,
+    "month": 6,
+    "choice": {
+      "choice": 3,
+      "action": "Say you will stay, and keep looking on the quiet"
+    },
+    "batch": "known-closure-1",
+    "event": {
+      "title": "The company tries to keep you after you look elsewhere",
+      "description": "You have been unhappy and have quietly thought about looking for another job, and it has started to show in how you talk. Your manager notices, takes it seriously and comes back with a retention package: a rise, a project, even a hint that you would be first in line at the next promotion round. Your doubts start to fade. You have to decide how to answer."
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 8,
+      "dignity": 2,
+      "skill": 9,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 3,
+      "wealth": 2,
+      "energy": 0
+    },
+    "after": {
+      "health": 8,
+      "dignity": 2,
+      "skill": 9,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 3,
+      "wealth": 3,
+      "energy": 0
+    },
+    "after_feedback": "",
+    "episode_outcome": "six_month_window",
+    "failure": null
+  },
+  {
+    "question": "ae9ad6afa12adc953619",
+    "answer": 2,
+    "run": 246,
+    "step": 21,
+    "month": 6,
+    "choice": {
+      "choice": 2,
+      "action": "Deny you told him"
+    },
+    "batch": "known-closure-1",
+    "event": {
+      "title": "You overhear a redundancy list that includes a friend",
+      "description": "Ethan screenshots your messages about the package. It leaks. You are called into a meeting with compliance."
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 5,
+      "dignity": 6,
+      "skill": 10,
+      "network": 7,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 0,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 5,
+      "dignity": 3,
+      "skill": 10,
+      "network": 7,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 0,
+      "wealth": 0,
+      "energy": 3
+    },
+    "after_feedback": "",
+    "episode_outcome": "six_month_window",
+    "failure": null
+  },
+  {
+    "question": "eac3fd1ff4c1ed32ce84",
+    "answer": 2,
+    "run": 485,
+    "step": 22,
+    "month": 6,
+    "choice": {
+      "choice": 2,
+      "action": "Tell yourself you are just tired and keep going round the clock"
+    },
+    "batch": "known-closure-1",
+    "event": {
+      "title": "Palpitations after weeks of overtime: whether to stop",
+      "description": "You finish by pushing through, but the palpitations keep coming back over the next few days. You start to feel rattled."
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 4,
+      "dignity": 1,
+      "skill": 9,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 1,
+      "wealth": 0,
+      "energy": 0
+    },
+    "after": {
+      "health": 1,
+      "dignity": 0,
+      "skill": 9,
+      "network": 0,
+      "level": "L1",
+      "duration_in_level": 6,
+      "output": 0,
+      "wealth": -2,
+      "energy": 3
+    },
+    "after_feedback": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.",
+    "episode_outcome": "eliminated",
+    "failure": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+  }
+]

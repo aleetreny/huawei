@@ -1,0 +1,114 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-known-closure/batch-1",
+  "runs": 592,
+  "groups": {
+    "all": {
+      "six_month_window": 456,
+      "promotion": 253,
+      "review": 557,
+      "alive_promoted": 244,
+      "eliminated": 136
+    },
+    "arm:targeted-closure/growth/project": {
+      "six_month_window": 222,
+      "promotion": 170,
+      "review": 239,
+      "alive_promoted": 163,
+      "eliminated": 22
+    },
+    "arm:targeted-closure/low-dignity/project": {
+      "eliminated": 105,
+      "promotion": 0,
+      "review": 200,
+      "alive_promoted": 0,
+      "six_month_window": 121
+    },
+    "arm:targeted-closure/safe/project": {
+      "six_month_window": 113,
+      "promotion": 83,
+      "review": 118,
+      "alive_promoted": 81,
+      "eliminated": 9
+    },
+    "energy:growth": {
+      "six_month_window": 222,
+      "promotion": 170,
+      "review": 239,
+      "alive_promoted": 163,
+      "eliminated": 22
+    },
+    "energy:low-dignity": {
+      "eliminated": 105,
+      "promotion": 0,
+      "review": 200,
+      "alive_promoted": 0,
+      "six_month_window": 121
+    },
+    "energy:safe": {
+      "six_month_window": 113,
+      "promotion": 83,
+      "review": 118,
+      "alive_promoted": 81,
+      "eliminated": 9
+    },
+    "main:project": {
+      "six_month_window": 456,
+      "promotion": 253,
+      "review": 557,
+      "alive_promoted": 244,
+      "eliminated": 136
+    },
+    "story:targeted-closure": {
+      "six_month_window": 456,
+      "promotion": 253,
+      "review": 557,
+      "alive_promoted": 244,
+      "eliminated": 136
+    }
+  },
+  "failures": {
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 125,
+    "Broke — months with an empty wallet. Somehow this job makes you poorer the longer you stay.": 11
+  },
+  "question_nodes": 190,
+  "story_nodes": 187,
+  "available_question_answers": 476,
+  "tried_question_answers": 388,
+  "story_available_answers": 458,
+  "story_tried_answers": 380,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 54
+    },
+    {
+      "support_text": false,
+      "promotion": true,
+      "count": 54
+    },
+    {
+      "support_text": true,
+      "promotion": false,
+      "count": 250
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 199
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 7,
+    "output": 5
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}

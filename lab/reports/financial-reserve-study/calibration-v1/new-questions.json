@@ -1,0 +1,28 @@
+[
+  {
+    "id": "2cc9f0e9c5d1fffd1929",
+    "event": {
+      "title": "A dependent team is late — do you escalate in the open?",
+      "description": "Once senior managers are involved, the other team is held to a hard deadline. Their tech lead tells you privately that 'there will be no more informal flexibility after this'. The working atmosphere sours."
+    },
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Go to their tech lead, explain the escalation was about project risk, and try to repair the relationship"
+      },
+      {
+        "choice": 2,
+        "action": "Accept the new way of working: formalise every dependency and drop the informal chasing"
+      }
+    ],
+    "answers": {
+      "1": {
+        "run": 58,
+        "step": 47
+      }
+    },
+    "untried_choices": [
+      2
+    ]
+  }
+]

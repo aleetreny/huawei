@@ -1,0 +1,81 @@
+{
+  "inventory": [
+    {
+      "manual": "F6",
+      "path": "lab/policies-src/f6-commitment-ledger/f6-commitment-ledger-v1/bundle/skills/commitment-ledger/SKILL.md",
+      "sha256": "207b61aaf86ffa704770145b97f2b2ab5d2c127faa65035ff2a061c60cbfba06",
+      "memory_description": "Explicit full ledger in action notes; recovery from public logs"
+    },
+    {
+      "manual": "Observed growth v1",
+      "path": "lab/policies-src/matteo-feedback-growth/observed-growth-v1/bundle/skills/observed-growth/SKILL.md",
+      "sha256": "269f963bcdce1c2a61439a030b1ad751aef601bcdad7aa14730d7526cd817b48",
+      "memory_description": "Instruction to retain feedback, warnings, commitments and benefits; no fixed serialization"
+    },
+    {
+      "manual": "Promotion readiness v2",
+      "path": "lab/policies-src/matteo-first-review/promotion-readiness-v2/bundle/skills/promotion-readiness/SKILL.md",
+      "sha256": "4159eb073cd4765cd90675c04c38f29b0eee143e2dbb860d0425c6f36f2b24a8",
+      "memory_description": "Compact action/payoff memory and open commitments; no explicit persistent storage protocol"
+    },
+    {
+      "manual": "First-year draft",
+      "path": "lab/reports/trust-risk-study/first-year-strategy-draft.md",
+      "sha256": "bf1fe50ab9d825951456e25eb0576006f87cd321973a51064a7bf77d39c9c75b",
+      "memory_description": "Separates incident history, current warnings and open commitments; unvalidated prose draft"
+    },
+    {
+      "manual": "Ale champion targeted-1026-201334",
+      "source_commit": "26e976f9acbe44761f77457d9314e69ea31c4934",
+      "path": "lab/policies-src/f3-feedback-reactive/targeted-1026-201334/bundle/skills/balanced-feedback/SKILL.md",
+      "sha256": "6e7ed7404a448c9fb42488f04a522d6dca2802640deaf2ca0ae61bb29d0e5460",
+      "memory_description": "Risk state with step-down persistence, review plan and recent logs; no explicit incident-history ledger"
+    }
+  ],
+  "public_notes_witness": {
+    "archive": "lab/reports/constrained-growth-study/study-v1/public-trajectories.jsonl.gz",
+    "archive_sha256": "226bbf2e49501705fa1166b02df800e12ac9eb2c7b5e7fc9013cf7485548c205",
+    "run": 0,
+    "actions": 51,
+    "notes_returned": 50,
+    "exact_known_note_matches": 50,
+    "max_verified_note_characters": 60,
+    "unmatched_notes": {
+      "Frozen constrained-growth research: manual_inspired_gap_capacity_realised_gain": 1
+    },
+    "unmatched_choice": "Continue",
+    "limits": "Only already collected short notes. Does not verify long-ledger truncation, every action kind, small-count recovery or official-target context resets."
+  },
+  "illustrative_full_history_scenarios": [
+    {
+      "extra_tokens_per_action": 40,
+      "actions": 200,
+      "model_reads_per_later_action": 2,
+      "months": 48,
+      "extra_output": 8000,
+      "extra_input": 1592000,
+      "extra_total": 1600000,
+      "extra_per_month": 33333.333333333336,
+      "weighted_token_score_loss_if_in_linear_region": 0.13333333333333336
+    },
+    {
+      "extra_tokens_per_action": 60,
+      "actions": 200,
+      "model_reads_per_later_action": 2,
+      "months": 48,
+      "extra_output": 12000,
+      "extra_input": 2388000,
+      "extra_total": 2400000,
+      "extra_per_month": 50000.0,
+      "weighted_token_score_loss_if_in_linear_region": 0.2
+    }
+  ],
+  "scenario_limits": [
+    "Not target-model tokenizer measurements or empirical usage forecasts",
+    "Extra tokens are relative to existing notes, not total note length",
+    "Assumes each note is added at the end of an action and re-read twice on every later action; no compression or discarded history",
+    "Prompt instruction, log-recovery calls, extra reasoning and serialization overhead omitted",
+    "Score arithmetic uses the laboratory formula, only inside its linear region; clipping and early-exit caps can change the effect",
+    "Dollar cost requires route-specific billed input/cache/output prices; no live tariff or spend estimate claimed"
+  ]
+}
