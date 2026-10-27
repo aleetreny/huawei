@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "script-v2",
+  "mode": "agent",
+  "instruction": "Follow the career-advisor Skill and reread it whenever its rules are not in view. At the first decision of every month and after any resume, run: python3 ../skills/career-advisor/script/advisor.py \"sid=<session_id> m=<month> H=<health> D=<dignity> S=<skill> N=<network> O=<output> W=<wealth> L=<level number> E=<energy> hr=<HR worry 0-4> phase=status\" and start every note with its STATUS line. At the quarterly Energy menu run it once with phase=quarter and take its Energy picks and main action exactly. Decide stories yourself with the Skill's Story decisions: drop options that may bury a problem (private, anonymous, partial, later, hidden, skipping work to save time); in the two months before a review keep Network and Output at their Best and repair any loss at once; in the month before a review (Review in 1) never pick an option that may lower Skill, Network or Output when another avoids it. Keep notes short and in English."
+}

@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "script-v3b",
+  "mode": "agent",
+  "instruction": "Every decision goes through the career-advisor script; never pick a story or quarterly option yourself. Loop: observe; if there is only one choice take it; otherwise run with bash: python3 ../skills/career-advisor/script/advisor.py \"sid=<session_id> m=<month> H=<health> D=<dignity> S=<skill> N=<network> O=<output> W=<wealth> L=<level number> E=<energy> hr=<HR worry 0-4> phase=<story|energy|main> | 1: <codes> | 2: <codes>\" (story options only; codes: H D S N O W with + ++ - --, plus R+ if the option may bury a problem, R- if it clears one; when in doubt R+; R- only for documenting, reporting through the process, owning a mistake or a full fix). If the script prints READ NEXT, apply it to your next reading. Take exactly the printed CHOOSE number (by name in quarterly menus; repeat phase=energy until it prints Reserve energy) and start notes with its NOTE line. Read the career-advisor SKILL.md once for how to read options."
+}

@@ -92,6 +92,12 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B24 | `Bot + Haiku` **Nunca presentes una conducta arriesgada como forma de ganar un indicador.** Decirle a la IA que “venderte sube Output” dobla las crisis de confianza (73 → 174 por 1.000 partidas en la réplica, emparejadas) y baja la nota 5 puntos (53,2 → 48,1). Encaja con B7–B8. | Leah, `lab/reports/stat-perception/03-errores-output.md` (rama `leah/workspace`) |
 | B25 | `Programa` **Mecánica de la nota.**<br>• Guarda hasta 1.000 caracteres: lo que pasa se corta a 997 + “...”.<br>• En *Continue* no se guarda.<br>• Persiste tras reconectar y reiniciar el servidor.<br>• En `check_latest_logs`, `count=N` cuenta entradas del registro, no decisiones.<br>Hay que mantener la línea de estado de B23 corta y al principio. | Matteo, `lab/reports/action-notes-study/README.md` (rama `matteo-t4-growth`; 256 notas) |
 
+**Forma de entrega del manual (línea Formato, 27 oct)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B27 | `Programa` **El agente oficial puede ejecutar código del Skill en plena partida.** Tiene 52 herramientas, entre ellas `bash` y `code` (Python/JavaScript), además de `read_file`/`write_file`; los permisos de JiuwenSwarm están desactivados. El instalador copia el Skill entero (`script/`, `reference/`) a `…/agent/workspace/skills/<skill>/`, y `bash` arranca en `…/agent/workspace/projects`, así que `python3 ../skills/<skill>/script/x.py` funciona. Comprobado con un modelo falso (0 USD) y en partidas reales con DeepSeek, que llama al script sin fallos de formato. | formato, [README §1](lab/reports/formato/README.md) |
+
 ## C. Pistas sin confirmar
 
 | # | Pista | Fuente |
@@ -116,6 +122,8 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C15 | `Haiku` Los manuales de Matteo `observed-growth-v10` (59,6 ± 6,0; 8 partidas) y `v7` (57,6 ± 4,5; 9) igualan a t13-final (57,2 ± 5,1; 12), con otro actor, otro CLI y sin control común. v10 es la mejor de ~12 versiones (v3 bajó de 71 a 51 al repetirla). Llevan reglas de historias siempre visibles y no muestran la pérdida que describe la sección X. Hace falta un cara a cara alternado de ≥30 partidas por brazo. | Matteo, `research/matteo/INDICE.md`, `lab/registry-origins/matteo/` |
 | C16 | `Método` **El banco de transmisión no es verdad exacta.**<br>• Pierde las continuaciones de historias pendientes de respuestas anteriores.<br>• No liquida el último mes.<br>• Usa el catálogo v1 (19 diferencias de riesgo con v2).<br>• “Acierto” mezcla obedecer una regla con elegir lo mejor.<br>El 56,0 de B19 lo saca un bot que ve techos y riesgo exactos: es un techo, no una previsión. No cambia las conclusiones generales; hay que arreglarlo antes de afinar más con el banco. | ChatGPT, [review-2](lab/reports/deepseek/independent-designs/review-2.md) §2; comprobado en `bank.py` |
 
+| C18 | `DeepSeek` **"DeepSeek etiqueta, un script del Skill decide" tiene más techo y menos suelo que las reglas escritas.** Partidas oficiales: `script-v1` 76,87 (L6, la mejor de DeepSeek hasta hoy) y 13,23; `script-v3` 66,55 · 60,45 · 32,59; `t13-read-v4` 71,67 · 70,22. Cuando pasa L1 y no se arruina, el script lleva mejor los trimestres (Skill cuando Network y Output se estancan; L5 en el mes 36 frente al 42 de v4). Pero confía a ciegas en las etiquetas: un `O-` no visto en el mes previo a la evaluación o un `W-` con la cartera vacía (el panel redondea el dinero hacia abajo y oculta los negativos) acaban la partida. Gasta ~1,6 veces más fichas. n pequeño. | formato, [README §5](lab/reports/formato/README.md) |
+
 ## X. Descartado (no repetir sin una razón nueva)
 
 | Idea | Por qué no | Fuente |
@@ -134,3 +142,5 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | `Bot` Reaccionar a los avisos con 3 meses de margen (dinero, aislamiento, dignidad) o al de la tercera evaluación en L1 | 0 puntos en el simulador; las derrotas por condición casi no ocurren y la tercera evaluación en L1 ya no tiene arreglo | palancas, [avisos](lab/reports/palancas/avisos.md) |
 | `Bot` Preparar la reputación antes de la evaluación para evitar la charla de aviso (M24) | +0,1 con la regla exacta, −0,5 con la general | palancas, [reputación](lab/reports/palancas/reputacion.md) |
 | `Revisor de rúbrica` Llamar “Caps” o “techo del nivel” a lo que no sube | el revisor de la rúbrica lo lee como una mecánica sin publicar (el manual dice “0–unbounded”); hay que describir lo que se ve (“Stalled”) | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
+| `DeepSeek` Lista de comprobación (señales sí/no por opción) para leer las opciones | riesgo 90 % frente a 88 % de v3, Skill igual, el resto peor (una pasada del catálogo) | formato, [README §4](lab/reports/formato/README.md) |
+| `DeepSeek` Híbrido "DeepSeek decide historias, el script lleva estado y trimestre" (`script-v2`) | 51,12 y 30,6: DeepSeek vuelve a tomar riesgos "pragmáticos" en historias; pierde el techo del script sin ganar estabilidad | formato, [README §5](lab/reports/formato/README.md) |
