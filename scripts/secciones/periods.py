@@ -17,11 +17,19 @@ from pathlib import Path
 from careerlab.config import load_settings
 
 
-def at_floor(snap: dict | None, level: int) -> bool:
-    """L1 promotion floor seen in the black-box study (Skill one under its stall point, Network and Output at theirs)."""
-    if not snap or snap.get("level") != level or level != 1:
+FLOORS = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32)}  # black-box study (H6, H14); lab only
+
+
+def at_floor(review: dict | None) -> bool:
+    """Skill, Network and Output at the promotion floor of the level held before the review.
+
+    The review is applied at the start of its month, before any choice, so the first state of
+    the review month carries exactly the Skill, Network and Output the review judged."""
+    if not review or not review.get("before") or not review.get("after"):
         return False
-    return (snap.get("skill") or 0) >= 8 and (snap.get("network") or 0) >= 3 and (snap.get("output") or 0) >= 3
+    level, snap = review["before"].get("level"), review["after"]
+    floor = FLOORS.get(level)
+    return bool(floor) and all((snap.get(k) or 0) >= f for k, f in zip(("skill", "network", "output"), floor))
 
 
 def wilson(k: int, n: int) -> tuple[float, float]:
@@ -34,7 +42,15 @@ def wilson(k: int, n: int) -> tuple[float, float]:
     return (max(0.0, c - h), min(1.0, c + h))
 
 
-def rows(purpose: str | None, actor_filter: str | None) -> list[dict]:
+BATCHES = Path(__file__).resolve().parents[2] / "lab" / "reports" / "secciones" / "batches"
+
+
+def batch_jobs(name: str) -> set[str]:
+    data = json.loads((BATCHES / f"{name}.json").read_text())
+    return {j for jobs in data["arms"].values() for j in jobs}
+
+
+def rows(purpose: str | None, actor_filter: str | None, batch: str | None = None) -> list[dict]:
     s = load_settings()
     reg = s.registry()
     q = ("SELECT j.job_id, j.run_dir, p.name, a.config, e.outcome, e.score, e.survival_months FROM jobs j "
@@ -45,7 +61,10 @@ def rows(purpose: str | None, actor_filter: str | None) -> list[dict]:
         q += " AND j.purpose=?"
         args.append(purpose)
     out = []
+    keep = batch_jobs(batch) if batch else None
     for job_id, run_dir, name, cfg, outcome, score, months in reg.db.execute(q, args):
+        if keep is not None and job_id not in keep:
+            continue
         cfg = json.loads(cfg)
         cut = cfg.get("stop_at_month")
         if actor_filter and str(cut) != actor_filter:
@@ -69,8 +88,8 @@ def summarize(rs: list[dict]) -> list[dict]:
         rev = lambda g, k: next((x for x in (g["periods"] or {}).get("reviews", []) if x["review"] == k), None)
         r1 = [rev(g, 1) for g in played]
         promoted1 = sum(1 for x in r1 if x and x["promoted"])
-        floor1 = sum(1 for x in r1 if x and at_floor(x.get("before"), 1))
-        floor_prom = sum(1 for x in r1 if x and at_floor(x.get("before"), 1) and x["promoted"])
+        floor1 = sum(1 for x in r1 if at_floor(x))
+        floor_prom = sum(1 for x in r1 if at_floor(x) and x["promoted"])
         dead = sum(1 for g in played if g["outcome"] == "eliminated")
         blow = sum(len((g["periods"] or {}).get("blowup_months", [])) for g in played)
         lvl = [((g["periods"] or {}).get("final_state") or {}).get("level") for g in played]
@@ -93,9 +112,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--purpose")
     ap.add_argument("--cut", help="stop month of the actor; 'None' for full games")
+    ap.add_argument("--batch", help="only the jobs of lab/reports/secciones/batches/<name>.json")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
-    t = summarize(rows(a.purpose, a.cut))
+    t = summarize(rows(a.purpose, a.cut, a.batch))
     if a.json:
         print(json.dumps(t, indent=1))
         return
