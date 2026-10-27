@@ -1,0 +1,16 @@
+{
+  "family": "secciones",
+  "name": "periodos-v1",
+  "parents": [
+    "f3-lean-v1",
+    "f3-lean-clock-v2",
+    "f3-lean-climb-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "compose period winners",
+  "hypothesis": "A manual with one Skill per period beats f3-lean-v1 over full games: the core (f3-lean: risk signals, Health, weak-review plan) plus review-clock for the opening (knowing when the review lands halved month-5 losses and raised first-review promotion from 39 % to 54 % over 50 short games per arm), climb for L2-L4 (full games showed L3 blocked by Output for up to 18 months with Skill and Network idle at their caps, and L4 blocked by Skill) and closing for the end (Health, Dignity, no buried risk).",
+  "change": "f3-lean-v1 core with its Clear-state quarterly rule handed to review-clock (before the first promotion) and climb (after it); plus three Skills: review-clock, climb (feed the bottleneck input with Energy and the main action), closing.",
+  "predicted_behaviour": "Notes carry a review countdown and, after the first promotion, a 'blocker:' tag; quarter-end Energy goes to the blocking input (Prepare report materials at L3, Skill learning at L4); higher first-review promotion, shorter stays at L3 and L4, higher final level and mean Q than the reference; no rise in blackouts or trust crises.",
+  "refutation": "Refuted if over 25 full games per arm the mean quantitative score is not above the interleaved f3-lean-v1 reference, or if the final level does not rise; harmful if completions fall.",
+  "skill_count": 4
+}

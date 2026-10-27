@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "periodos-v3",
+  "parents": [
+    "periodos-v2"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "compose period winners",
+  "hypothesis": "In the final full games both arms spent 0-2 % of L4 quarter actions on Skill learning or rotation and stayed about 18-19 months at L4, although Skill is what L4 lacks. A climb Skill that identifies the blocker from the review talk, warnings and a failed review with Network and Output still rising (then Skill), and puts Skill learning plus rotation or mentorship there, will shorten the stay at L4 and raise the final level.",
+  "change": "periodos-v2 with climb replaced by climb-v3 (blocker identification order: named by review or warning; failed review while N and O rise -> Skill; else least risen).",
+  "predicted_behaviour": "At L4, Skill learning and rotation or mentorship become frequent quarter actions; 'blocker: Skill' in notes after a failed review at L4; shorter stay at L4 and more games reaching L5 and L6.",
+  "refutation": "Refuted if Skill learning stays rare at L4, or if months at L4 and the level at month 42 do not improve against periodos-v1 over 20+ games cut at month 42.",
+  "skill_count": 4
+}
