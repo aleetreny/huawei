@@ -1,0 +1,74 @@
+{
+  "base": {
+    "n": 400,
+    "mean": 73.474875,
+    "se": 0.4222226321369559,
+    "levels": {
+      "6": 319,
+      "1": 7,
+      "5": 70,
+      "4": 3,
+      "7": 1
+    },
+    "outcomes": {
+      "completed": 388,
+      "dismissed": 7,
+      "trust": 5
+    },
+    "promotions48": 196
+  },
+  "risk_clip": {
+    "n": 400,
+    "mean": 73.609325,
+    "se": 0.4419056315594398,
+    "levels": {
+      "6": 317,
+      "1": 8,
+      "5": 69,
+      "4": 5,
+      "7": 1
+    },
+    "outcomes": {
+      "completed": 388,
+      "dismissed": 8,
+      "trust": 4
+    },
+    "promotions48": 194
+  },
+  "late_close": {
+    "n": 400,
+    "mean": 73.391875,
+    "se": 0.4224417259996951,
+    "levels": {
+      "6": 328,
+      "1": 7,
+      "5": 57,
+      "4": 3,
+      "7": 5
+    },
+    "outcomes": {
+      "completed": 388,
+      "dismissed": 7,
+      "trust": 5
+    },
+    "promotions48": 213
+  },
+  "bank_clip": {
+    "n": 400,
+    "mean": 73.595725,
+    "se": 0.446081249481285,
+    "levels": {
+      "6": 320,
+      "1": 8,
+      "5": 64,
+      "4": 5,
+      "7": 3
+    },
+    "outcomes": {
+      "completed": 387,
+      "dismissed": 8,
+      "trust": 5
+    },
+    "promotions48": 187
+  }
+}

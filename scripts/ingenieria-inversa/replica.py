@@ -600,7 +600,8 @@ def draw_title(cat: Catalog, st: State, used: set[str], rng: random.Random) -> s
     return t
 
 
-def play(cat: Catalog, policy: Policy, rng: random.Random, months: int = 48) -> tuple[State, list]:
+def play(cat: Catalog, policy: Policy, rng: random.Random, months: int = 48,
+         settle_completion: bool = True) -> tuple[State, list]:
     """One whole career in the replica: 3 event decisions a month, quarter phases, month changes."""
     rep = Replica(cat, rng)
     st = State()
@@ -650,6 +651,11 @@ def play(cat: Catalog, policy: Policy, rng: random.Random, months: int = 48) -> 
             rep.main_action(st, a)
             trace.append((month, "m", a))
         if month == months:
+            # The official completion state is month 49: the last action settles
+            # month 48's salary and monthly conditions before the ending score.
+            # Short research horizons stop at their requested decision boundary.
+            if months == 48 and st.alive and settle_completion:
+                rep.month_change(st)
             break
         info = rep.month_change(st)
         if info.get("grade"):

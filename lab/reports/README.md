@@ -10,6 +10,10 @@ Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que 
 | [question-bank/](question-bank/) | **Categorías**: tipos de respuesta que la IA reconoce (rama `alejandro/optimistic-gauss-edyw1j`) | [README.md](question-bank/README.md) |
 | [transmision/](transmision/) | **Transmisión**: cómo escribir reglas que la IA obedezca (rama `alejandro/transmision`) | [resumen.md](transmision/resumen.md) |
 
+## Investigación terminada, pendiente de integración
+
+- [mecanicas-emergentes/](mecanicas-emergentes/README.md): asignación conjunta del cierre, 600 partidas oficiales y corrección de liquidación terminal; [PR #20](https://github.com/aleetreny/huawei/pull/20). Subtrabajo de motor, no nueva línea activa.
+
 ## Otros dueños (no se tocan aquí)
 
 | Carpeta o archivo | Dueño |
