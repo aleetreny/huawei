@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v12",
+  "parents": [
+    "observed-growth-v10"
+  ],
+  "idea_origin": "Alejandro's exact-engine study (branch main-1nddsg, motor-exacto.md M1-M17): HR remark is the integer hidden-risk gauge exploding at its top step; Lay low lowers risk like Defuse; no main action raises it; rotation and repair lower it; High-intensity work raises it; promotion needs thresholds plus Dignity; money losses scale with level; slow failures after persistent conditions; the planner's endgame cleanup.",
+  "operator": "rewrite of v10 around the exact engine rules",
+  "hypothesis": "Reading the HR remark as a five-step gauge, answering with Lay low as main action as soon as it is not smiling, rotation as the default main action, no High-intensity work, money guard at higher levels and an endgame cleanup cut trust crises and early ruin and speed Skill at L4, without hurting the first promotion.",
+  "change": "Status line gets HR tone and Wealth; allocation: Defuse from frowning, Lay low from quiet, rotation default, never no main action, never High-intensity work; story money guard above the first two levels; endgame cleanup. Review-near and honest-without-rigidity rules kept from v9/v10.",
+  "predicted_behaviour": "Notes name the HR step; Lay low appears whenever HR is not smiling; rotation is the most common main action after the first promotion; no trust crisis or ruin.",
+  "refutation": "Single exploratory episode at Matteo's request: only checks that the rules are executed (HR step in notes, Lay low and rotation used). No performance claim.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v12. No dev numbers in the Skill."
+}
