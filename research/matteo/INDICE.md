@@ -25,8 +25,10 @@ Tutti sono in `lab/policies-src/matteo-feedback-growth/` e giocati con Haiku, at
 
 | Manuale | Partite | Q media | Terminate | Cosa cambia | Esito |
 |---|---:|---:|---:|---|---|
-| **v10** | 8 | **59,56** | 7/8 | v9 + regola "Capped" + meccanica di Ale (Dignity, rischio, soldi, mai High-intensity) | **candidata migliore**; ma la regola Capped non viene eseguita, quindi rispetto alla v7 la differenza è probabilmente rumore |
-| bhr (M1 + BUILD/HOLD/REPAIR) | 8 | 59,49 | 7/8 | memoria nelle note + modalità esplicite | identica alla v10 (5/8 in L5, prima review 4/8); [report](../../lab/reports/matteo-bhr-haiku.md) |
+| **v10** | 16 | **55,35** | 11/16 | v9 + regola "Capped" + meccanica di Ale | **la migliore**: replica alternata contro BHR, +7,3 ± 6,9, P(migliore) 0,85; 9/16 in L5, una in L6; [report](../../lab/reports/matteo-v10-vs-bhr.md) |
+| v10 (solo pilota) | 8 | 59,56 | 7/8 | v9 + regola "Capped" + meccanica di Ale (Dignity, rischio, soldi, mai High-intensity) | **candidata migliore**; ma la regola Capped non viene eseguita, quindi rispetto alla v7 la differenza è probabilmente rumore |
+| bhr (M1 + BUILD/HOLD/REPAIR) | 17 | 48,06 | 11/17 | memoria nelle note + modalità esplicite | dopo la replica sotto la v10 (lotto alternato 37,9 contro 51,1; 5 licenziamenti in L1); [report](../../lab/reports/matteo-v10-vs-bhr.md) |
+| bhr (solo pilota) | 8 | 59,49 | 7/8 | memoria nelle note + modalità esplicite | identica alla v10 (5/8 in L5, prima review 4/8); [report](../../lab/reports/matteo-bhr-haiku.md) |
 | bhr-cooperate-1 (correzioni di bhr-cooperate + righe trimestrali di Ale) | 4 | 32,04 | 1/4 | engage limitato, rischio, salute, Skill in L4 | **scartata**: 2 crisi di fiducia, 1 partita senza soldi; Lay low non viene ripetuto; più il manuale si allunga, peggio va; [report](../../lab/reports/matteo-bhr-cooperate-1.md) |
 | bhr-cooperate (BHR + contatore + "engage, don't distance" nel mese prima della review) | 8 | 48,92 | 5/8 | regola visibile al posto della checklist dei costi | prima review **6/8** con Network al tetto 8/8; ma 2 crisi di fiducia, 1 esaurimento, 2/8 in L5: peggiore di BHR; [report](../../lab/reports/matteo-bhr-cooperate.md) |
 | bhr-countdown (BHR + contatore e checklist del mese 5) | 8 (fermate al mese 6–11) | — | — | contatore `Review in N` + marcature N/O | **scartata**: prima review 2/8 (BHR 4/8), 1 esaurimento; marca le opzioni ma non vede quale costa Network; [report](../../lab/reports/matteo-bhr-countdown.md) |
