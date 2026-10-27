@@ -13,3 +13,6 @@
 
 ## Cierre de validación
 600 partidas oficiales terminadas; análisis final y evidencia portable guardados. Suite final: 306 tests pasan (una advertencia de Authlib). Los 40 primeros resultados de confirmación se reproducen exactamente después de la corrección de liquidación usando el modo histórico explícito. Informe y Relevo completos; publicación en rama propia y PR como último paso.
+
+## Publicación y sincronización final
+PR #20 abierta y adjunta al chat. main avanzó durante el trabajo: se incorporó e53b53f y se conservó su ESTADO, añadiendo sólo la investigación terminada; HALLAZGOS e índice enlazan la evidencia. Suite tras sincronización: 313 tests pasan, una advertencia de Authlib, 48,60 s. Se solicita revisión/integración del PR, no se fusiona main desde este trabajo.

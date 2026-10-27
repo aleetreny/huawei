@@ -7,7 +7,7 @@ Rama propia `alejandro/mecanicas-emergentes`. Base inicial de exploración `4cec
 1. [x] Leer ESTADO, H1–H25, M1–M17, T18/T20 y código de la réplica.
 2. [x] Formular y probar intervenciones aisladas en la réplica.
 3. [x] Confirmar la mejor hipótesis en semillas nuevas y, si procede, bots por las cinco herramientas oficiales.
-4. [ ] Informe con incertidumbre, artefactos reproducibles y principios generales; tests; commit, push y PR.
+4. [x] Informe con incertidumbre, artefactos reproducibles y principios generales; tests; commit, push y PR.
 
 ## Hipótesis escritas antes de simular
 - E1: el planificador premia reducir riesgo incluso cuando ya está en cero. Corregir esa valoración podría liberar decisiones para crecer sin más explosiones (no cambia el motor).
