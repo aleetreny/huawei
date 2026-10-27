@@ -53,6 +53,26 @@ def main() -> None:
         dims = lambda k: ms([(x["dims"] or {}).get(k) for x in done])
         print(f"| {pol} | {n} | {r1}/{n} = {100 * r1 / n:.0f} % | {ms(l18)} | {ms(l36)} | {len(done)}/{n} | {ms(fin)} | {ms([x['score'] for x in g])} | "
               f"{dims('risk_control')} · {dims('resilience')} · {dims('network')} · {dims('skill')} · {dims('wealth')} |")
+    print()
+    print("| Manual | Meses en L2 (llegan) | Meses en L3 (llegan) | Meses en L4 (llegan) | Llegan a L5 |")
+    print("|---|---:|---:|---:|---:|")
+    for pol, g in sorted(by.items()):
+        stay = {lv: [] for lv in (2, 3, 4)}
+        l5 = 0
+        for x in g:
+            revs = x["periods"]["reviews"]
+            first = {}
+            for rv in revs:
+                lv = (rv.get("after") or {}).get("level")
+                if lv and lv not in first:
+                    first[lv] = rv["month"]
+            last = (x["periods"].get("final_state") or {}).get("month") or 48
+            for lv in (2, 3, 4):
+                if lv in first:
+                    stay[lv].append((first.get(lv + 1) or last) - first[lv])
+            l5 += 5 in first or 6 in first
+        cell = lambda v: f"{st.mean(v):.1f} ({len(v)})" if v else "–"
+        print(f"| {pol} | {cell(stay[2])} | {cell(stay[3])} | {cell(stay[4])} | {l5}/{len(g)} |")
     for pol, g in sorted(by.items()):
         fails = [x["failure"][:25] for x in g if x["outcome"] == "eliminated" and x["failure"]]
         print(f"- {pol}: eliminaciones {len(fails)}: {', '.join(sorted(fails))}")
