@@ -49,14 +49,16 @@ UNKNOWN = 1e9
 
 class LeverBot(rules.RuleBot):
     def __init__(self, caps: str = "exact", mem: int | None = None, warn: str | None = None, rep: str | None = None,
-                 risk: str = "live", eps: float = 0.0):
+                 risk: str = "live", eps: float = 0.0, pdet: float = 1.0):
         super().__init__()
         self.caps_mode, self.mem, self.warn, self.rep, self.risk_mode, self.eps = caps, mem, warn, rep, risk, eps
+        self.pdet = pdet   # chance of noticing a gain that did not register (Haiku in the cap bank: ~0.6)
         self.begin(0)
 
     # ------------------------------------------------------------------ per game
     def begin(self, seed: int) -> None:
         self.rng = random.Random(seed * 7919 + 17)
+        self.rng_det = random.Random(seed * 104729 + 3)
         self.learned: dict[tuple[int, str], tuple[float, int]] = {}
         self.month = None
         self.est = 0
@@ -103,7 +105,7 @@ class LeverBot(rules.RuleBot):
         R.apply_delta(tmp, fx)
         for k in R.GROWTH:
             x = fx.get(k, 0)
-            if x > 0 and getattr(tmp, k) < getattr(st, k) + x - 1e-9:
+            if x > 0 and getattr(tmp, k) < getattr(st, k) + x - 1e-9 and self.rng_det.random() < self.pdet:
                 self.learned[(st.level, k)] = (getattr(tmp, k), st.month)
 
     # ------------------------------------------------------------------ levers in the value
@@ -274,7 +276,8 @@ EXPERIMENTS: dict[str, dict[str, Any]] = {
     "caps": {"ref": "blind", "scens": ["base", "caps+20", "caps-10", "thr-10"], "title": "Palanca 2: techos",
              "arms": {"blind": {"caps": "blind"}, "detect": {"caps": "detect"}, "detect-3m": {"caps": "detect", "mem": 3},
                       "detect-1m": {"caps": "detect", "mem": 1},
-                      "detect-q": {"caps": "detect-q"}, "fixed-dev": {"caps": "fixed"}, "exact": {"caps": "exact"}}},
+                      "detect-q": {"caps": "detect-q"}, "detect-q-60": {"caps": "detect-q", "pdet": 0.6},
+                      "detect-60": {"caps": "detect", "pdet": 0.6}, "fixed-dev": {"caps": "fixed"}, "exact": {"caps": "exact"}}},
     "caps-noisy": {"ref": "blind", "scens": ["base", "caps+20"], "title": "Palanca 2: techos, jugador con ruido (30 % al azar)",
                    "arms": {"blind": {"caps": "blind", "eps": 0.3}, "detect": {"caps": "detect", "eps": 0.3},
                             "detect-1m": {"caps": "detect", "mem": 1, "eps": 0.3}, "exact": {"caps": "exact", "eps": 0.3}}},
