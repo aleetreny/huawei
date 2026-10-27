@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "games": 800,
+    "seed": 202630270,
+    "design": "Fixed five arms, same seeds and saved labels; add 5x wellbeing preference at public levels L3/4/5/6. Diagnostic, not deployable threshold.",
+    "script_sha256": "c832b027c26c02b9a9bae7c7df29ee2ec7224ae9159357e9b2ab4c0431cf294f",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ]
+  },
+  "arms": {
+    "control": {
+      "summary": {
+        "n": 800,
+        "mean": 53.6862875,
+        "se": 0.7013031253637658,
+        "completion": 0.6725,
+        "promoted_by_first": 0.51625,
+        "promoted_by_second": 0.74625,
+        "failures": {
+          "completed": 538,
+          "dismissed": 190,
+          "health": 18,
+          "trust": 54
+        },
+        "mean_feedback_updates": 0.0,
+        "completed_mean": 66.53275092936804,
+        "Q75_rate": 0.0525
+      },
+      "rows_count": 800
+    },
+    "L3": {
+      "summary": {
+        "n": 800,
+        "mean": 52.491324999999996,
+        "se": 0.6793170710605333,
+        "completion": 0.66,
+        "promoted_by_first": 0.51625,
+        "promoted_by_second": 0.74625,
+        "failures": {
+          "completed": 528,
+          "dismissed": 190,
+          "health": 16,
+          "trust": 66
+        },
+        "mean_feedback_updates": 0.0,
+        "completed_mean": 65.16920454545455,
+        "Q75_rate": 0.025
+      },
+      "delta_control": {
+        "mean": -1.1949625,
+        "se": 0.17578324008593957,
+        "ci95": [
+          -1.5394976505684415,
+          -0.8504273494315584
+        ]
+      },
+      "rows_count": 800
+    },
+    "L4": {
+      "summary": {
+        "n": 800,
+        "mean": 53.072275,
+        "se": 0.6876983021091979,
+        "completion": 0.66625,
+        "promoted_by_first": 0.51625,
+        "promoted_by_second": 0.74625,
+        "failures": {
+          "completed": 533,
+          "dismissed": 190,
+          "health": 17,
+          "trust": 60
+        },
+        "mean_feedback_updates": 0.0,
+        "completed_mean": 65.79450281425892,
+        "Q75_rate": 0.0325
+      },
+      "delta_control": {
+        "mean": -0.6140124999999999,
+        "se": 0.12829039788226818,
+        "ci95": [
+          -0.8654616798492455,
+          -0.3625633201507542
+        ]
+      },
+      "rows_count": 800
+    },
+    "L5": {
+      "summary": {
+        "n": 800,
+        "mean": 53.7004375,
+        "se": 0.7004617444398886,
+        "completion": 0.6725,
+        "promoted_by_first": 0.51625,
+        "promoted_by_second": 0.74625,
+        "failures": {
+          "completed": 538,
+          "dismissed": 190,
+          "health": 18,
+          "trust": 54
+        },
+        "mean_feedback_updates": 0.0,
+        "completed_mean": 66.49189591078067,
+        "Q75_rate": 0.05
+      },
+      "delta_control": {
+        "mean": 0.014149999999999902,
+        "se": 0.03077802207222464,
+        "ci95": [
+          -0.04617492326156039,
+          0.0744749232615602
+        ]
+      },
+      "rows_count": 800
+    },
+    "L6": {
+      "summary": {
+        "n": 800,
+        "mean": 53.6848375,
+        "se": 0.7012469860086565,
+        "completion": 0.6725,
+        "promoted_by_first": 0.51625,
+        "promoted_by_second": 0.74625,
+        "failures": {
+          "completed": 538,
+          "dismissed": 190,
+          "health": 18,
+          "trust": 54
+        },
+        "mean_feedback_updates": 0.0,
+        "completed_mean": 66.53059479553903,
+        "Q75_rate": 0.0525
+      },
+      "delta_control": {
+        "mean": -0.0014500000000000313,
+        "se": 0.0008539443196874336,
+        "ci95": [
+          -0.003123730866587401,
+          0.00022373086658733846
+        ]
+      },
+      "rows_count": 800
+    }
+  },
+  "raw_archive": {
+    "file": "objective-screen.json.gz",
+    "uncompressed_sha256": "218d9e63e6b91ce8285a58921708fc85d3e74596072c63a0599039b2e7a8a4af",
+    "archive_sha256": "6579fca673a3c8195681df14fc7e0b3237e14d707fa2c52736ad77cd5069a196",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}

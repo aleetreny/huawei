@@ -1,0 +1,30 @@
+{
+  "trials": 208,
+  "all_completed": true,
+  "invalid_actions": 0,
+  "error_count": 0,
+  "skill_reads": {
+    "1": 208
+  },
+  "models": {
+    "claude-haiku-5-5": 208
+  },
+  "cli_versions": {
+    "2.1.303": 208
+  },
+  "sum_trial_seconds": 1444.4299999999982,
+  "quota_observed_before": {
+    "five_hour": 0.1,
+    "seven_day": 0.37
+  },
+  "quota_observed_after": {
+    "five_hour": 0.11,
+    "seven_day": 0.38
+  },
+  "quota_caveat": "Shared account snapshots, not exact per-experiment attribution. No API charge or overage enabled.",
+  "exit_codes": {
+    "143": 207,
+    "not stored in initial pilot result": 1
+  },
+  "stopping": "Expected SIGTERM after target take_action was recorded; completion means trial decision obtained, not a completed career or a graceful full CLI session."
+}

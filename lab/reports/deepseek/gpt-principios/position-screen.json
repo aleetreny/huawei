@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "seed": 202680270,
+    "n": 1000,
+    "purpose": "diagnose option-order confound, not a compliant strategy or evidence about competitors",
+    "script_sha256": "cb8bb22e0dfd7f531055da6773c6a94b987b2d3c0f838ce4a22e345d6c718dbd",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764"
+  },
+  "arms": {
+    "first": {
+      "summary": {
+        "n": 1000,
+        "mean": 30.977400000000003,
+        "se": 0.5045677641988919,
+        "completion": 0.155,
+        "promoted_by_first": 0.296,
+        "promoted_by_second": 0.404,
+        "failures": {
+          "completed": 155,
+          "trust": 35,
+          "health": 654,
+          "dismissed": 155,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 1000
+    },
+    "last": {
+      "summary": {
+        "n": 1000,
+        "mean": 7.38333,
+        "se": 0.05868480482558852,
+        "completion": 0.0,
+        "promoted_by_first": 0.0,
+        "promoted_by_second": 0.0,
+        "failures": {
+          "trust": 920,
+          "health": 61,
+          "broke": 7,
+          "breakdown": 11,
+          "isolated": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 1000
+    },
+    "uniform": {
+      "summary": {
+        "n": 1000,
+        "mean": 11.831370000000001,
+        "se": 0.1317623897417258,
+        "completion": 0.0,
+        "promoted_by_first": 0.049,
+        "promoted_by_second": 0.069,
+        "failures": {
+          "trust": 696,
+          "health": 273,
+          "broke": 30,
+          "dismissed": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 1000
+    }
+  },
+  "context": "Confirmatory sanity check of an already historical lab device (energy-bots); no novel strategy or submission.",
+  "raw_sha256": "ad1bb4f605b12dc67791d4e6e1f607f96f58cf1e47809946e8e40809c0cff936",
+  "raw_path": "/Users/alejandrotreny/careerlab-data/deepseek/gpt-decision-audit/position-screen-full.json"
+}

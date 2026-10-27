@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "games": 600,
+    "seed": 202660270,
+    "arms": [
+      "perfect:1",
+      "perfect:2",
+      "perfect:3",
+      "predicted:1",
+      "predicted:2",
+      "predicted:3"
+    ],
+    "context": "Privileged risk/caps/thresholds and known quarter effects. Only story sign labels, uncertain positive risk stress-priced as 1/2/3; not actual magnitude prediction. Research only.",
+    "params": {
+      "policy": "planner.Planner",
+      "params": {
+        "w_below": 6.84,
+        "w_above": 1.34,
+        "w_skill_hi": 3.85,
+        "review_boost": 4.2,
+        "w_h": 0.83,
+        "w_d": 1.09,
+        "h_floor": 2,
+        "d_floor": 7,
+        "w_wealth": 1.85,
+        "risk_cost": 2.75,
+        "risk_cap": 2,
+        "w_cont": 0.74,
+        "end_from": 46,
+        "w_end": 2.15,
+        "low_n_risk": 1,
+        "defuse_at": 2,
+        "laylow_at": 3
+      },
+      "real_games": 360,
+      "real_mean": 72.39
+    },
+    "script_sha256": "04f5eb306600d70387d5f0e729df5f8a2d4fe172bc7b9aa718f53f5806221a4b",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ]
+  },
+  "arms": {
+    "perfect:1": {
+      "summary": {
+        "n": 600,
+        "mean": 56.540166666666664,
+        "se": 0.8339008690402077,
+        "completion": 0.625,
+        "promoted_by_first": 0.775,
+        "promoted_by_second": 0.93,
+        "failures": {
+          "completed": 375,
+          "trust": 203,
+          "dismissed": 16,
+          "broke": 3,
+          "health": 3
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 600
+    },
+    "perfect:2": {
+      "summary": {
+        "n": 600,
+        "mean": 68.66083333333333,
+        "se": 0.5030615854683027,
+        "completion": 0.9083333333333333,
+        "promoted_by_first": 0.8433333333333334,
+        "promoted_by_second": 0.965,
+        "failures": {
+          "completed": 545,
+          "trust": 34,
+          "dismissed": 18,
+          "health": 2,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_source_control": {
+        "mean": 12.120666666666667,
+        "se": 0.8094784475676973,
+        "ci95": [
+          10.53408890943398,
+          13.707244423899354
+        ]
+      },
+      "rows_count": 600
+    },
+    "perfect:3": {
+      "summary": {
+        "n": 600,
+        "mean": 69.08683333333333,
+        "se": 0.5010328969062108,
+        "completion": 0.9233333333333333,
+        "promoted_by_first": 0.82,
+        "promoted_by_second": 0.9516666666666667,
+        "failures": {
+          "completed": 554,
+          "dismissed": 28,
+          "trust": 17,
+          "health": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_source_control": {
+        "mean": 12.546666666666667,
+        "se": 0.8318784071537313,
+        "ci95": [
+          10.916184988645353,
+          14.17714834468798
+        ]
+      },
+      "rows_count": 600
+    },
+    "predicted:1": {
+      "summary": {
+        "n": 600,
+        "mean": 50.34146666666667,
+        "se": 0.8921290730592679,
+        "completion": 0.5583333333333333,
+        "promoted_by_first": 0.5633333333333334,
+        "promoted_by_second": 0.78,
+        "failures": {
+          "dismissed": 89,
+          "trust": 168,
+          "completed": 335,
+          "health": 7,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 600
+    },
+    "predicted:2": {
+      "summary": {
+        "n": 600,
+        "mean": 56.73135,
+        "se": 0.8008528835823603,
+        "completion": 0.7133333333333334,
+        "promoted_by_first": 0.5766666666666667,
+        "promoted_by_second": 0.8016666666666666,
+        "failures": {
+          "dismissed": 106,
+          "completed": 428,
+          "trust": 58,
+          "health": 8
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_source_control": {
+        "mean": 6.389883333333333,
+        "se": 0.7491232740486006,
+        "ci95": [
+          4.921601716198076,
+          7.8581649504685895
+        ]
+      },
+      "rows_count": 600
+    },
+    "predicted:3": {
+      "summary": {
+        "n": 600,
+        "mean": 56.4047,
+        "se": 0.8183349545209238,
+        "completion": 0.7033333333333334,
+        "promoted_by_first": 0.555,
+        "promoted_by_second": 0.78,
+        "failures": {
+          "dismissed": 125,
+          "completed": 422,
+          "trust": 49,
+          "health": 4
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_source_control": {
+        "mean": 6.063233333333334,
+        "se": 0.8592533640925253,
+        "ci95": [
+          4.379096739711985,
+          7.747369926954683
+        ]
+      },
+      "rows_count": 600
+    }
+  },
+  "raw_archive": {
+    "file": "risk-margin-screen.json.gz",
+    "uncompressed_sha256": "622dfb9bc2d233e34e0fac50d73ef1872c32987a392e39b57d0d0c045e25a30b",
+    "archive_sha256": "0634780a6226f958ab1ac6cddc52d53f0a25e4405c4339d666154266be7f02f3",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}
