@@ -98,6 +98,9 @@ Son ~64 llamadas más por partida, no ~230. En el simulador, planificar el trime
 
 ## Relevo
 
+**27 oct, 22:40 UTC.** Las 2 partidas de `script-v4` (lanzadas a las 22:25) se pararon a petición de Alejandro en los meses 8–9: no cuentan. Se sigue mañana. `script-v4` y `script-v3b` están listos y sin jugar.
+
+
 1. **Hecho y por qué.** Medí qué recibe y qué puede hacer el agente oficial (modelo falso, 0 USD): tiene `bash` y `code` y ejecuta scripts del Skill. Probé tres formas de usarlo en partidas oficiales con DeepSeek:
    - `script-v1`: DeepSeek etiqueta y el script decide todo;
    - `script-v2`: híbrido con las reglas de historias de v4;
