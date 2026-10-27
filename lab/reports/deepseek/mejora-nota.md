@@ -7,7 +7,7 @@
 ## 1. De dónde salen los puntos
 
 - **La nota final:** nivel 30 %, dinero 20 %, Health + Dignity 15 %, Skill 15 %, control de riesgo 10 %, Network 10 % (A1). Normalizaciones vistas en los informes oficiales: nivel = 10 × L, dinero sobre 80, Health + Dignity sobre 20, Skill sobre 120, Network sobre 60, riesgo 0 = 100. Para llegar a 70 hay que acabar los 48 meses en L6, con riesgo 0 y Health y Dignity llenos.
-- **Una partida eliminada pierde dos veces.** Pierde los meses que no juega, y su nota de competición es menor que la nota bruta: 42,5 → 29,8 y 15,0 → 10,5 en las dos partidas de t13-read-v1. Sobrevivir es la palanca número uno.
+- **La nota de cada partida oficial es su `quantitative_score`** (la media de 3 partidas da el 80 % de la versión). La `competition_partial_score` de los informes es siempre esa nota × 0,7 y no se usa para la clasificación (corregido: no es un castigo por eliminación). Una partida eliminada pierde los meses que no juega: nivel, dinero y lo que habría crecido.
 - **Las dos formas de perder con DeepSeek, vistas en partidas:**
   1. **Perder el primer ascenso.** En L1 el umbral de Network y Output coincide con lo máximo que admite el nivel. Un punto perdido en las historias justo antes de la evaluación cuesta el ascenso (f1 lo perdió así dos veces: Network en el mes 5 y Output en el 11). En L1, quien no asciende para el mes 12 acaba despedido en el mes 24.
   2. **La crisis de confianza**, por opciones que parecen constructivas (en privado, anónimas, por fases).
