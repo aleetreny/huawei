@@ -53,6 +53,6 @@ Most options move two or three stats; write every stat you think moves, includin
 
 - Hidden risk first. A blow-up erases months of results and a second one ends the career. The script refuses options you marked `R+` as soon as the HR remark is not relaxed, and spends the quarter on clearing risk (Defuse legacy risk, Lay low) until the remark is relaxed again.
 - Health and Dignity: it avoids options that push Health low and recovers Health in the quarter before it gets low; low Dignity blocks promotion.
-- Growth: it prefers options that raise Skill, Network and Output, most the one with most room. When a published gain stops registering ("stalled"), it stops spending on that stat at this level and moves on; in the month before each review (months 5, 11, 17, ...) it refuses to give up any growth point.
+- Growth: it prefers options that raise Skill, Network and Output, most the one with most room. When a published gain stops registering ("stalled"), it stops spending on that stat at this level and moves on; in the month before each half-year review it refuses to give up any growth point.
 - Money: losses grow with level, so it avoids paying at higher levels.
 - Last quarter of the career: it clears risk and restores Health and Dignity, which count at the end.
