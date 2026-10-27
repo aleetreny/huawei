@@ -495,6 +495,51 @@ def build8(out: Path) -> None:
            hypothesis="Only the quarterly phases are ruled (closing, health floor, HR risk, Skill from L4, growth otherwise); story events are left to the model.")
 
 
+# ----------------------------------------------------------------------------- round 9: HR remark by exclusion
+# t8: Haiku obeyed line 3 with a frowning remark (9/11) but not with the uneasy "you're on your own" one (0/5) or
+# the angry one (2/3): "piling up, serious or worse" did not cover wordings without the word risk. Round 9 names
+# the two mild remarks and makes every other remark trigger the rule.
+T9 = T8.replace(
+    """3. **The HR remark says risk is piling up, serious or worse** (anything stronger than a mild "some risk, not serious yet"): first Energy action Defuse legacy risk; main action Lay low and reduce risk.""",
+    """3. **The latest monthly HR remark is not one of the two mild ones.** Mild means only the friendly "you are doing all right" remark or the quiet "some risk, nothing serious yet" one. Any other remark (frowning, uneasy, "you are on your own", angry, anything about buried problems) means hidden risk is high: first Energy action Defuse legacy risk; main action Lay low and reduce risk. With the quiet "some risk" remark: first Energy action Defuse legacy risk, main action as in the lines below.""")
+assert T9 != T8
+
+
+def build9(out: Path) -> None:
+    bundle(out, "t9-quarter", {"career-rules": T9},
+           hypothesis="t8 with the HR line defined by exclusion: only the two mild remarks leave growth alone.")
+
+
+# ----------------------------------------------------------------------------- round 10: one story rule behind a computed countdown
+# The pre-review rule carries the most score at stake (replica: about 2.4 points lost per decision without it,
+# about 3.7 such decisions a game), but every visible story rule leaked into other months. Round 10 keeps t9's
+# quarterly list and adds one story rule that fires only on a countdown the agent writes in every story note;
+# its cost hints sit in a reference file opened only when the countdown says so.
+T10 = T9.replace("Story events: choose the option you judge best for a long, healthy career.",
+                 "Story events: start the note with the countdown below, then choose the option you judge best for a long, healthy career.")
+T10 = T10.replace('description: "Rules for the quarterly Energy allocation and main action in Career Survival, in priority order. Use in every quarterly phase; story events are left to your own judgement."',
+                  'description: "Rules for the quarterly Energy allocation and main action in Career Survival, in priority order, and the review countdown to write before every story choice. Read before deciding."')
+T10 += """
+## Story events: review countdown
+Reviews come every six months of the career. Before every story choice, start the note with `Review in N`, where N is how many months remain until the next review month: N = 6 - (current_month mod 6), and N = 6 when current_month is a multiple of 6.
+- **N = 1** (the last month before a review): open `reference/review-month.md` with `skill_tool` and apply it.
+- **Any other N:** no rule; choose by your own judgement.
+"""
+T10_REVIEW = T7_REVIEW.replace(
+    "Pick an option with neither mark.",
+    "Never save a point by hiding a problem, gambling that it will not surface or cutting a corner: that buries risk. "
+    "Pick an option with neither mark.")
+assert T10_REVIEW != T7_REVIEW
+
+
+def build10(out: Path) -> None:
+    bundle(out, "t10-countdown", {"career-rules": T10},
+           hypothesis="t9 plus one story rule (protect the review) gated by a countdown written in every story note; its hints in a reference file.")
+    root = out / "t10-countdown" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T10_REVIEW)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -507,3 +552,5 @@ if __name__ == "__main__":
     build6(o)
     build7(o)
     build8(o)
+    build9(o)
+    build10(o)
