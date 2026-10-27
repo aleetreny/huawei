@@ -254,7 +254,40 @@ La validación sobre un lote nuevo, `v01-validation`, está en curso.
   - **Trust crisis**: la 2.ª explosión.
   - **Obsolete**: Skill muy por debajo de lo esperado; 1 caso.
 
-## M16. El techo de L6
+## M16. L7 es alcanzable, por muy poco: el umbral de L6 → L7
 
-- En las evaluaciones de L6 vistas hasta ahora (16 en el mes 48) hay Skill de hasta 163, Network de hasta 67 y Output de hasta 52, **sin ascenso a L7**. El umbral de L6 → L7 queda por encima de esos valores.
-- Con una política voraz, el simulador llega a L6 en el mes 42 en el 11 % de las partidas, y casi nunca con más de 160 de Skill.
+**Una partida real llegó a L7** (lote `c01-greedy-real`, `p1-000282`, nota 74,55):
+
+| Mes | Ascenso | Skill / Network / Output |
+|---:|---|---|
+| 6 | L2 | |
+| 12 | L3 | |
+| 18 | L4 | |
+| 30 | L5 | |
+| 42 | L6 | |
+| 48 | L7 | 167 / 68 / 50 (nota B) |
+
+- **Las 16 evaluaciones de L6 que no ascendieron tenían Skill de 163 o menos**, aunque algunas tenían Network 63–67 y Output 46–52. El umbral de Skill de L6 → L7 está **entre 164 y 167** y cuadra con la serie 8, 18, 35, 90, 130, ~165. Los de Network y Output quedan por debajo de 68 y 50; en el simulador se usan, provisionalmente, 60 y 45.
+- **Techos de L6:** como mínimo 174 de Skill, 68 de Network y 52 de Output (valores vistos).
+- **Lo que pide L7.** Hay que ascender en todas las ventanas posibles (6, 12, 18, 30, 42 y 48) y sumar unos 125 de Skill entre el mes 18 (techo de L3: 42) y el 47, es decir, **~4,2 de Skill al mes durante 30 meses, frente a un máximo teórico de ~4,3** (M9). Además hay que guardar Skill en L5 hasta cerca de su techo (154), para llegar a L6 en el mes 42 con ~150.
+- En el simulador lo consigue el 0,5 % de las partidas voraces (3 de 600, con una nota máxima de 83,1). Hace falta suerte con los eventos: que sigan saliendo preguntas con +2 o +3 de Skill.
+
+## M17. Estrategia óptima según el simulador
+
+Búsqueda aleatoria de los pesos del planificador por etapas (`planner.py`, 60 configuraciones × 150 partidas, misma semilla) y comprobación de las 3 mejores con 600 semillas nuevas:
+
+| Política (en el simulador) | Nota media | L6 | Crisis de confianza | Despidos |
+|---|---:|---:|---:|---:|
+| Voraz de un paso | 68,9 | 58 % | 0,5 % | 4 % |
+| **Planificador ajustado** | **71,8** | 66 % | 1,7 % | 1,2 % |
+
+Lo que eligió la búsqueda:
+1. **Mucho peso a cumplir los umbrales de la próxima evaluación**, unas 7 veces lo que pesa crecer por encima de ellos, y aún más en el mes previo.
+2. **Presupuesto de riesgo bajo:** tope de 2–3, con un coste por cada punto. Hay que dejar sitio al +1 del aviso de la evaluación.
+3. **Lay low** en cuanto el riesgo llega a 2; Defuse sólo con riesgo alto.
+4. **Final de partida (meses 46–48):** cambiar de objetivo a la nota en sí, con riesgo a 0 y salud y dignidad a 10.
+5. **No elegir respuestas que cuestan dinero en los niveles altos** (pierden ×2 o ×3).
+
+**Techo práctico.** Para L6 en el mes 42 con limpieza final, unos 80 puntos (M9); para L7, unos 82,5. **Nota óptima esperada, unos 72**, con la variación que pone el sorteo de eventos.
+
+**Diferencia con el juego real.** La política voraz saca 63,9 en el juego real (300 partidas) y 69,5 en el simulador. Casi toda la diferencia son crisis de confianza: 19 % en el juego real y 0 % en el simulador. Se debe a que los riesgos de las respuestas poco observadas están mal medidos (M14), y una política que apura el riesgo hasta 4 las paga. En el juego real conviene **más margen de riesgo** del que pide el simulador.

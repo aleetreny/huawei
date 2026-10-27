@@ -33,9 +33,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # ----------------------------------------------------------------------------- rules (M1-M14)
 CAPS = {1: {"skill": 9, "network": 3, "output": 3}, 2: {"skill": 21, "network": 7, "output": 6},
         3: {"skill": 42, "network": 21, "output": 16}, 4: {"skill": 108, "network": 36, "output": 26},
-        5: {"skill": 154, "network": 54, "output": 38}, 6: {"skill": 220, "network": 72, "output": 54}}
+        5: {"skill": 154, "network": 54, "output": 38}, 6: {"skill": 220, "network": 72, "output": 54}, 7: {"skill": 300, "network": 90, "output": 70}}
 MINS = {"health": 0, "dignity": 0, "skill": 1, "network": 0, "output": -1}
-THRESH = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32), 6: (190, 60, 45)}
+THRESH = {1: (8, 3, 3), 2: (18, 6, 5), 3: (35, 18, 14), 4: (90, 30, 22), 5: (130, 45, 32), 6: (165, 60, 45)}
 SALARY = {1: 0.3, 2: 0.4, 3: 0.5, 4: 0.7, 5: 1.0, 6: 1.5, 7: 2.3, 8: 3.6, 9: 5.7, 10: 9.1}
 BONUS = {"S": 3.0, "A": 2.0, "B": 1.0, "C": 0.25, "D": 0.0}
 PROMO_NET = {1: 0, 2: 0, 3: -2, 4: -2, 5: -3}          # Network lost when promoted out of level L
