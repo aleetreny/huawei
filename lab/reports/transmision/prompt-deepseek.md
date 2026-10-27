@@ -52,7 +52,25 @@ Eres el investigador de la línea **DeepSeek** del equipo Gradient Depression (H
    - El banco en forma oficial con DeepSeek: control (sin Skill) y `t13-final`.
    - Unas 40 situaciones por regla de `ids-V2.txt` más el bloque general (`ids-G1.txt`).
    - Mide si lee el Skill, el acierto por regla y la huella en el bloque general.
-4. **Lo masticado.** Con lo que DeepSeek perciba bien y mal, diseña y prueba formas de dar las reglas. Ejemplos:
+4. **La categorización: el objetivo central.** Buscamos la forma de agrupar las respuestas que maximice dos cosas a la vez:
+   - (a) **que DeepSeek la entienda:** que ponga cada respuesta en su grupo de forma correcta y estable (repetido, el mismo grupo), leyendo sólo el texto;
+   - (b) **que discrimine:** que dentro de cada situación baste con una regla de grupo (“elige la del grupo X; si no hay, la del Y…”, con el contexto visible: riesgo, evaluación cercana, salud) para coger casi siempre la respuesta que más nota da.
+
+   Una categorización que DeepSeek no reconoce no sirve, aunque discrimine perfecto. Una que reconoce perfectamente pero mete juntas respuestas buenas y malas tampoco.
+
+   **Medida única que junta las dos:** la nota en el simulador (`scripts/question-bank/catbot.py`, 1.000 partidas con las mismas semillas) de un bot que elige las historias **sólo con los grupos que ha puesto DeepSeek**, más la regla de grupo. Compáralo con dos referencias:
+   - el bot con los efectos exactos (≈ 68), que es el techo;
+   - los 10 tipos actuales etiquetados por Haiku (46,7), que es lo que hay que superar.
+
+   Apunta también el acierto de etiquetado y la pérdida de nota en el banco.
+
+   Cómo probar:
+   - Prueba varias categorizaciones, de más simple a más fina. Por ejemplo, los 10 tipos actuales; grupos por lo que la respuesta hace a cada indicador; o tipo más indicador.
+   - Prueba también la redacción de cada definición: el texto que lee DeepSeek es parte de la categorización.
+   - Elige con unos títulos y comprueba con los reservados.
+   - La categorización y la regla de grupo ganadoras son la base del manual. Se escriben como principios generales, sin títulos ni respuestas concretas.
+
+5. **Lo masticado.** Con lo que DeepSeek perciba bien y mal, diseña y prueba formas de dar las reglas. Ejemplos:
    - una ficha corta de cómo leer el coste de una opción, si su percepción falla en un indicador concreto;
    - pedirle una línea por opción antes de elegir;
    - los 10 tipos con su respuesta preferida.
@@ -60,7 +78,7 @@ Eres el investigador de la línea **DeepSeek** del equipo Gradient Depression (H
    Normas de la prueba:
    - Una variante cada vez, comparada siempre con el control y con t13-final en las mismas situaciones.
    - Mira siempre la huella del bloque general: una regla de historias que cambia más de 1 de cada 10 historias fuera de su contexto ha estropeado partidas antes.
-5. **Sólo si te lo apruebo:** 1–2 partidas oficiales con DeepSeek del mejor manual (`make play` del runner), con el coste medido.
+6. **Sólo si te lo apruebo:** 1–2 partidas oficiales con DeepSeek del mejor manual (`make play` del runner), con el coste medido.
 
 ## Límites
 
