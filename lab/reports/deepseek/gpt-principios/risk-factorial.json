@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "games": 800,
+    "seed": 202650270,
+    "arms": [
+      "exact_risk_exact",
+      "exact_risk_sign",
+      "signs_risk_exact",
+      "signs_risk_sign",
+      "signs_veto",
+      "predicted",
+      "predicted_veto"
+    ],
+    "context": "Privileged current risk, true caps and promotion thresholds, known quarter effects. No future nodes. Conditional fixed labels. Research only.",
+    "params": {
+      "policy": "planner.Planner",
+      "params": {
+        "w_below": 6.84,
+        "w_above": 1.34,
+        "w_skill_hi": 3.85,
+        "review_boost": 4.2,
+        "w_h": 0.83,
+        "w_d": 1.09,
+        "h_floor": 2,
+        "d_floor": 7,
+        "w_wealth": 1.85,
+        "risk_cost": 2.75,
+        "risk_cap": 2,
+        "w_cont": 0.74,
+        "end_from": 46,
+        "w_end": 2.15,
+        "low_n_risk": 1,
+        "defuse_at": 2,
+        "laylow_at": 3
+      },
+      "real_games": 360,
+      "real_mean": 72.39
+    },
+    "script_sha256": "d712ba93ca477c9e63ef4a74717c12083c41870db30ab77bcabe375e210d9733",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "invalid_arm": "signs_veto used exact risk magnitude in ranking; superseded by risk-factorial-corrected.json"
+  },
+  "arms": {
+    "exact_risk_exact": {
+      "summary": {
+        "n": 800,
+        "mean": 71.0985375,
+        "se": 0.3960742568525425,
+        "completion": 0.93625,
+        "promoted_by_first": 0.86375,
+        "promoted_by_second": 0.965,
+        "failures": {
+          "dismissed": 28,
+          "completed": 749,
+          "trust": 23
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 800
+    },
+    "exact_risk_sign": {
+      "summary": {
+        "n": 800,
+        "mean": 53.952650000000006,
+        "se": 0.7236793523658637,
+        "completion": 0.54125,
+        "promoted_by_first": 0.82,
+        "promoted_by_second": 0.955,
+        "failures": {
+          "trust": 353,
+          "completed": 433,
+          "dismissed": 14
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -17.1458875,
+        "se": 0.7033179978843958,
+        "ci95": [
+          -18.524390775853416,
+          -15.767384224146586
+        ]
+      },
+      "rows_count": 800
+    },
+    "signs_risk_exact": {
+      "summary": {
+        "n": 800,
+        "mean": 70.6904375,
+        "se": 0.41405774166628545,
+        "completion": 0.94375,
+        "promoted_by_first": 0.8375,
+        "promoted_by_second": 0.95625,
+        "failures": {
+          "completed": 755,
+          "dismissed": 33,
+          "trust": 9,
+          "health": 3
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -0.4081000000000001,
+        "se": 0.4051304864655704,
+        "ci95": [
+          -1.202155753472518,
+          0.3859557534725179
+        ]
+      },
+      "rows_count": 800
+    },
+    "signs_risk_sign": {
+      "summary": {
+        "n": 800,
+        "mean": 58.1149125,
+        "se": 0.6998110275876955,
+        "completion": 0.6675,
+        "promoted_by_first": 0.7875,
+        "promoted_by_second": 0.9425,
+        "failures": {
+          "trust": 244,
+          "completed": 534,
+          "dismissed": 19,
+          "health": 3
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -12.983625,
+        "se": 0.7164121308215013,
+        "ci95": [
+          -14.387792776410143,
+          -11.579457223589857
+        ]
+      },
+      "rows_count": 800
+    },
+    "signs_veto": {
+      "summary": {
+        "n": 800,
+        "mean": 65.1446875,
+        "se": 0.5923379355171722,
+        "completion": 0.86625,
+        "promoted_by_first": 0.68875,
+        "promoted_by_second": 0.8675,
+        "failures": {
+          "completed": 693,
+          "dismissed": 104,
+          "broke": 1,
+          "health": 2
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -5.95385,
+        "se": 0.6063217950237118,
+        "ci95": [
+          -7.142240718246475,
+          -4.765459281753525
+        ]
+      },
+      "rows_count": 800
+    },
+    "predicted": {
+      "summary": {
+        "n": 800,
+        "mean": 49.95285,
+        "se": 0.7961859013580161,
+        "completion": 0.55625,
+        "promoted_by_first": 0.57,
+        "promoted_by_second": 0.7675,
+        "failures": {
+          "completed": 445,
+          "trust": 228,
+          "dismissed": 120,
+          "health": 7
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -21.145687499999998,
+        "se": 0.8171166523980603,
+        "ci95": [
+          -22.747236138700195,
+          -19.5441388612998
+        ]
+      },
+      "rows_count": 800
+    },
+    "predicted_veto": {
+      "summary": {
+        "n": 800,
+        "mean": 55.1431125,
+        "se": 0.7137390071900656,
+        "completion": 0.6975,
+        "promoted_by_first": 0.49875,
+        "promoted_by_second": 0.7275,
+        "failures": {
+          "completed": 558,
+          "dismissed": 215,
+          "trust": 27
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_exact": {
+        "mean": -15.955425,
+        "se": 0.7554656210112285,
+        "ci95": [
+          -17.43613761718201,
+          -14.474712382817993
+        ]
+      },
+      "rows_count": 800
+    }
+  },
+  "raw_archive": {
+    "file": "risk-factorial.json.gz",
+    "uncompressed_sha256": "5c061afdfeefa0537501a7b4b7aab3bc89bcdc8a83b19e2c2f82961f608e7145",
+    "archive_sha256": "31c9908c6c78e87f5ac12fa851c2bafef78347a5644cf12a7af8837e54fe3f73",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}

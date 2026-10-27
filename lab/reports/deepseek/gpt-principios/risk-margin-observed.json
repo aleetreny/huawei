@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "games": 2000,
+    "seed": 202670270,
+    "context": "Learned ceilings, lagged HR, no thresholds used by controller. RuleBot, not privileged Planner. Known quarter action deltas. Frozen saved signs, not model execution.",
+    "script_sha256": "0b714a48ed0ad3773e8c7a6cb955dadd9e0525a9478729f26b275d750be737a0",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ]
+  },
+  "arms": {
+    "observed": {
+      "summary": {
+        "n": 2000,
+        "mean": 48.829620000000006,
+        "se": 0.4616707007118254,
+        "completion": 0.564,
+        "promoted_by_first": 0.5045,
+        "promoted_by_second": 0.747,
+        "failures": {
+          "trust": 343,
+          "completed": 1128,
+          "health": 107,
+          "dismissed": 417,
+          "broke": 5
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "rows_count": 2000
+    },
+    "stress3": {
+      "summary": {
+        "n": 2000,
+        "mean": 51.371705,
+        "se": 0.45967146539625153,
+        "completion": 0.615,
+        "promoted_by_first": 0.5175,
+        "promoted_by_second": 0.7565,
+        "failures": {
+          "trust": 255,
+          "completed": 1230,
+          "health": 98,
+          "dismissed": 416,
+          "broke": 1
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 2.542085,
+        "se": 0.3917966597773568,
+        "ci95": [
+          1.7741635468363808,
+          3.3100064531636195
+        ]
+      },
+      "rows_count": 2000
+    },
+    "veto": {
+      "summary": {
+        "n": 2000,
+        "mean": 52.988690000000005,
+        "se": 0.4523965238033164,
+        "completion": 0.6625,
+        "promoted_by_first": 0.4955,
+        "promoted_by_second": 0.7265,
+        "failures": {
+          "dismissed": 512,
+          "completed": 1325,
+          "health": 58,
+          "trust": 105
+        },
+        "mean_feedback_updates": 0.0
+      },
+      "delta_observed": {
+        "mean": 4.15907,
+        "se": 0.4860401243918134,
+        "ci95": [
+          3.206431356192046,
+          5.111708643807954
+        ]
+      },
+      "rows_count": 2000
+    }
+  },
+  "raw_archive": {
+    "file": "risk-margin-observed.json.gz",
+    "uncompressed_sha256": "e15c1ce57499066e79c8ef78023fa5a365975c62331dad7947a1c28412f9dffe",
+    "archive_sha256": "83c64e45c5c61237133b89b5d98648013a062fb6d5d424eb1330b5c0b262a177",
+    "format": "gzip of full original JSON including per-seed rows"
+  }
+}

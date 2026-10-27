@@ -88,3 +88,8 @@ Read the supplied public handbook/rules and current manual including its review 
 ## Relevo — independent review 2 (27 October 2026)
 
 [Ranked audit, exact proposed Skill/reference patch, measurement reproductions and handoff](independent-designs/review-2.md). Corrects the previous review's timing criticism; recommends phase separation and survival precedence before changing strategy. Read-only implementation audit: no candidate/code/data edits, model calls or official games. Synthetic checks and saved-result analysis found dropped pending bank continuations, omitted bank terminal settlement, ideal-information context in the label bot and prescription/value metric differences. Recomputed +6.71 ±5.68 SE (95% CI −5.28 to +18.71); no confirmed career-score improvement. Four existing completion tests pass. Patch is proposed only; review it before any implementation or separately authorised model evaluation. Request integration of the report into main.
+
+
+## Auditoría desde principios básicos — objetivo75 de partida
+
+[Informe, datos y Relevo](gpt-principios/README.md), rama `alejandro/gpt-principios`. Búsqueda pública, recuperación reproducida y pruebas offline sin nuevas llamadas: magnitud de riesgo interactúa con el controlador; el beneficio del margen prudente no supera al veto conocido al retirar contexto ideal. Ningún75 estable demostrado. No sustituir t13-read-v2. Objetivo abierto.
