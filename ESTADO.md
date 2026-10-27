@@ -125,6 +125,13 @@ Ingeniería inversa con bots solicitada por Alejandro: **Claude — `alejandro/i
   - Validado en 600 partidas nuevas: 98,5 % de los pasos exactos, 99,8 % de los ascensos y un error de 0,35 puntos en la nota final.
   - L7 es alcanzable, pero sólo en ~0,5 % de las partidas (umbral de Skill de 164–167).
   - Un planificador ajustado sólo en el simulador saca 70,5 en el juego real, el mejor bot hasta ahora.
+- **Fase 3 (27 oct, 10:50 UTC, rama `main-1nddsg`):**
+  - Ninguna S en 24.525 evaluaciones; cada nivel tiene una nota máxima.
+  - L7 se alcanza con Skill 169–170 en el mes 48 como pronto. L8–L10 no son alcanzables; notas máximas: L6 79,6, L7 82,6.
+  - Los eventos se desbloquean por semestre, no por nivel.
+  - Simulador al 99,3 % en 600 partidas nuevas.
+  - **Política óptima: 72,4 de media en 360 partidas reales.**
+  - De 7 reglas generales sin números, aguantan con parámetros alterados las de riesgo, salud, llenar hasta el techo y limpieza final ([M18–M23](lab/reports/ingenieria-inversa/motor-exacto.md)).
 - Dos manuales candidatos, `bb-mechanics-v1` y `bb-mechanics-lean-v1` (en `lab/policies-src/bb-mechanics/`): lint sin avisos, **sin jugar aún con IA**. PR [#16](https://github.com/aleetreny/huawei/pull/16). No reasigna T1–T14.
 
 Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-probar` — preparada para PR nueva**. [Índice](research/ideas/README.md) y [exploración aleatoria instrumentada](research/ideas/exploracion-aleatoria.md): revisión de la corrida de Matteo (73.858 partidas, resumen agregado sin decisiones individuales publicadas), diseño de logs por decisión y límites de inferencia/conformidad. No se han lanzado partidas ni contactado organizadores. Relevo y siguiente paso de auditoría en la sección; no reasigna T1–T13.
