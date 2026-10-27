@@ -15,6 +15,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -34,7 +35,8 @@ GAME_TOOLS = [f"mcp__{GAME_SERVER}__{t}" for t in ("new_game", "observe", "take_
 class ClaudeWorkerConfig:
     model: str                      # alias ("haiku", "sonnet", "opus") or full id
     effort: str | None = None       # low | medium | high | xhigh | max ; None = CLI default
-    skills_mode: str = "inline"     # inline: SKILL.md bodies appended to the system prompt; plugin: real Skill tool
+    skills_mode: str = "inline"     # inline: SKILL.md bodies appended to the system prompt; plugin: real Skill tool;
+                                    # official: JiuwenSwarm's skills section (name + description) and a skill_tool to read bodies
     autocompact: str | None = None  # e.g. "100k" for a compact-context variant
     max_continues: int = 3          # official runner re-prompts a stopped agent to continue
     timeout_s: float = 7200.0
@@ -64,6 +66,14 @@ def load_bundle(bundle_dir: Path) -> tuple[str, list[tuple[str, str]]]:
     return str(manifest.get("instruction") or "").strip(), skills
 
 
+def skill_description(body: str) -> str:
+    import yaml
+
+    parts = body.split("---", 2)
+    fm = yaml.safe_load(parts[1]) if body.startswith("---") and len(parts) == 3 else {}
+    return str((fm or {}).get("description") or "")
+
+
 def render_system_prompt(instruction: str, skills: list[tuple[str, str]], skills_mode: str) -> str:
     template = (PROMPTS / "identity.md").read_text(encoding="utf-8")
     names = "- " + "\n- ".join(name for name, _ in skills) if skills else "- (none)"
@@ -71,7 +81,25 @@ def render_system_prompt(instruction: str, skills: list[tuple[str, str]], skills
     if skills_mode == "inline":
         for name, body in skills:
             text += f"\n\n## Skill: {name}\n\n{body}"
+    elif skills_mode == "official":
+        # JiuwenSwarm 0.2.4b3 SkillUseRail, skill_mode "all": only names and descriptions are in the system prompt
+        lines = "\n\n".join(f"{i}. {name}: {skill_description(body)}" for i, (name, body) in enumerate(skills))
+        text += ("\n\n# Skills\n\nRead the relevant SKILL.md using read_file before execution.\n\nAvailable skills:\n"
+                 + lines + "\nSelect the most relevant skill by reading its SKILL.md first.")
     return text
+
+
+SKILL_SERVER = Path(__file__).resolve().parents[2] / "scripts" / "transmision" / "fake_mcp.py"
+
+
+def add_skill_server(config: dict[str, Any], run_dir: Path, skills: list[tuple[str, str]]) -> dict[str, Any]:
+    """Official delivery: a JiuwenSwarm-like skill_tool that returns SKILL.md on request (calls are logged)."""
+    item = {"record": str(run_dir / "skill_reads.jsonl"), "session_id": "",
+            "skills": {name: {"SKILL.md": body} for name, body in skills}}
+    (run_dir / "skills_item.json").write_text(json.dumps(item, ensure_ascii=False))
+    servers = dict(config["mcpServers"])
+    servers["jiuwen"] = {"command": sys.executable, "args": [str(SKILL_SERVER), "skills", str(run_dir / "skills_item.json")]}
+    return {"mcpServers": servers}
 
 
 def build_plugin(run_dir: Path, skills: list[tuple[str, str]]) -> Path:
@@ -170,12 +198,16 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
     system_prompt = render_system_prompt(instruction, skills, cfg.skills_mode)
     (run_dir / "system_prompt.md").write_text(system_prompt, encoding="utf-8")
     config = mcp_override or mcp_config(settings, spec)
+    official = cfg.skills_mode == "official" and bool(skills)
+    if official:
+        config = add_skill_server(config, run_dir, skills)
     (run_dir / "mcp.json").write_text(json.dumps(config, indent=1))
     atomic_write_json(run_dir / "actor.json", cfg.record())
     base = [settings.claude_executable, "-p", "--setting-sources", "", "--strict-mcp-config",
             "--mcp-config", str(run_dir / "mcp.json"), "--model", cfg.model,
             "--tools", "Skill" if cfg.skills_mode == "plugin" else "",
-            "--allowedTools", ",".join(GAME_TOOLS + (["Skill"] if cfg.skills_mode == "plugin" else [])),
+            "--allowedTools", ",".join(GAME_TOOLS + (["Skill"] if cfg.skills_mode == "plugin" else [])
+                                       + (["mcp__jiuwen__skill_tool"] if official else [])),
             "--output-format", "stream-json", "--verbose", "--no-session-persistence",
             "--system-prompt", system_prompt, "--permission-mode", "dontAsk"]
     if cfg.effort:
