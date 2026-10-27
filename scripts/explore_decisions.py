@@ -217,7 +217,7 @@ def main():
     parser.add_argument("--cycle", required=True)
     parser.add_argument("--export-dir", type=Path, default=ROOT / "lab/registry")
     parser.add_argument("--runs-root", type=Path, required=True)
-    parser.add_argument("--spec", type=Path, default=ROOT / "research/careerlab/decision-research/exploration-v1.json")
+    parser.add_argument("--spec", type=Path, default=ROOT / "docs/historico/research/careerlab/decision-research/exploration-v1.json")
     parser.add_argument("--output-root", type=Path, default=ROOT / "lab/reports/decision-research/cycles")
     args = parser.parse_args()
     if not re.fullmatch(r"\d{3}", args.cycle):

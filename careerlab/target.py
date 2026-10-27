@@ -61,7 +61,7 @@ from careerlab.store import Registry, bundle_hash
 TARGET_ORIGIN = "deepseek"
 ACTOR_KIND = "jiuwenswarm-target"
 ROUTE = "competition-key"
-DEFAULT_WHY = "target pilot: cost, tokens and fidelity of one real deepseek-v4-flash game (research/careerlab/target-budget.md)"
+DEFAULT_WHY = "target pilot: cost, tokens and fidelity of one real deepseek-v4-flash game (docs/entrega/target-budget.md)"
 PLAY_REQUIRED = ("README.md", "design/skills_design.md", "design/decision_report.md")
 PLACEHOLDER = """# NOT FOR SUBMISSION
 

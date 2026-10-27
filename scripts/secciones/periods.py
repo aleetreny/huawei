@@ -120,7 +120,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--purpose")
     ap.add_argument("--cut", help="stop month of the actor; 'None' for full games")
-    ap.add_argument("--batch", help="only the jobs of lab/reports/secciones/batches/<name>.json")
+    ap.add_argument("--batch", help="only the jobs of lab/reports/historico/secciones/batches/<name>.json")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
     t = summarize(rows(a.purpose, a.cut, a.batch))

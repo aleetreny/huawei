@@ -4,7 +4,7 @@
 
 Arms are policy names or ids (registered first if a folder path is given). Each job gets
 priority = start - k so rounds interleave and later batches queue behind earlier ones.
-The job list goes to lab/reports/secciones/batches/<name>.json (used by periods.py --batch).
+The job list goes to lab/reports/historico/secciones/batches/<name>.json (used by periods.py --batch).
 """
 from __future__ import annotations
 
