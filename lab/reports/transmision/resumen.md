@@ -58,6 +58,7 @@ Alternativa para “antes de la evaluación”: las seis reglas en el cuerpo con
 | 5 | [partidas-g1.md](partidas-g1.md) | `t3-instr` frente a f3-lean-v1, partidas completas, entrega oficial | parado: −21 ± 8 puntos (7 + 7); la regla se salía de su contexto |
 | 7 | [bloque-general.md](bloque-general.md) | Huella de las elecciones en historias fuera de las reglas | hecho: toda regla de historias cambia 1 de cada 5 historias |
 | 8 | [ronda-8-10.md](ronda-8-10.md) | Sólo reparto trimestral (t8, t9) y una regla de historias tras una cuenta atrás (t10) | hecho |
+| 9 | [fase3-rubrica.md](fase3-rubrica.md) | Reescritura para la rúbrica (58 → 73) sin cambiar el comportamiento; calibrar con el registro (t14) no mejora la percepción | hecho |
 | 6 | partidas `g2-full` | `t6-scoped-instr` (reglas acotadas) frente a f3-lean-v1, 30 + 30 | en marcha desde las 12:30 UTC |
 
 ## Relevo
