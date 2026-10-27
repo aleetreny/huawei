@@ -327,41 +327,202 @@ Lo que eligió la búsqueda:
 **Diferencia con el juego real.** La política voraz saca 63,9 en el juego real (300 partidas) y 69,5 en el simulador. Casi toda la diferencia son crisis de confianza: 19 % en el juego real y 0 % en el simulador. Se debe a que los riesgos de las respuestas poco observadas están mal medidos (M14), y una política que apura el riesgo hasta 4 las paga. En el juego real conviene **más margen de riesgo** del que pide el simulador.
 
 
-## Relevo (27 oct, ~02:40 UTC)
+## Fase 3 (27 oct, 09:40–10:50 UTC): parte alta, sorteo, política óptima y reglas generales
 
-**1. Qué se ha hecho y por qué.**
-- Los datos del Mac no estaban en la nube, así que se regeneraron. Lotes:
+**Lotes nuevos, todos de bots y sin cuota de Claude** (datos en `lab/data/ingenieria-inversa/`):
 
-  | Lote | Partidas | Para qué |
-  |---|---:|---|
-  | b00 | ~9.700 | al azar |
-  | b01 | 571 | oráculo con un 15 % al azar |
-  | c01 | 300 | política voraz del simulador, en el juego real |
-  | c02 | 162 | planificador ajustado, en el juego real |
-  | v02 | 600 | validación |
+| Lote | Partidas | Para qué |
+|---|---:|---|
+| `h01-l6hunt` | 400 | planificador ajustado para llegar a L6 en el mes 42 |
+| `v03-validation` | 600 | validación nueva |
+| `d01-planner2` | 400 | 2 brazos de la nueva política |
+| `d02-planner2b` | 160 | más partidas del brazo 1 |
 
-- Se fijaron las reglas exactas M1–M17 y se escribió `replica.py`, el simulador completo, con el validador y el modo generativo. También `planner.py` (planificador), `replica_bot.py` (adaptador al juego real), `riskseq.py` (riesgo) y `gzrobust.py` (lector tolerante a gzip cortados).
-- El objetivo de Alejandro era recrear el juego y validarlo en un lote nuevo. Está cumplido (tabla de M14).
+### Tabla final
 
-**2. Resultados clave.**
-- El juego es **determinista salvo el sorteo de eventos**. El riesgo oculto es el comentario de RR. HH. y explota exactamente al llegar a 5.
-- Se puede llegar a L7 (umbral de Skill de 164–167), pero sólo en ~0,5 % de las partidas.
-- **El planificador ajustado en el simulador saca 70,5 en el juego real**, el mejor bot hasta ahora.
+| Punto | Resultado | Datos |
+|---|---|---|
+| **(a) Nota S** | **Descartada en 48 meses.** Ninguna S en **24.525 evaluaciones**. Cada nivel tiene una nota máxima:<br>• L1: C (9.913 C, 152 D)<br>• L2 y L3: B<br>• L4 y L5: A (4.346 A)<br>• L6: A en 4 de 243 casos, todas con Network de 69–71, cerca de su techo<br>Ni con todo en el techo, Dignity 10 y riesgo 0 se pasa de esa nota (M19). La S exigiría el techo de L6 o un nivel superior, inalcanzable en 48 meses (punto b) | 24.525 evaluaciones de 7 lotes |
+| **(b) Umbral de L6 → L7** | Skill **169–170** (estado justo antes de la evaluación):<br>• ascienden con 170 y 175<br>• no ascienden con 168/65/50 ni con 168/64/51<br>Network ≤ 65 y Output ≤ 48 no frenan; los umbrales exactos de esos dos no se pueden medir. Techos de L6 vistos: Skill ≥ 175, Network ≥ 72, Output ≥ 54 | **243 evaluaciones de L6** (87 de `h01`); 2 ascensos a L7 |
+| **(b) L8–L10** | **No alcanzables.** El primer ascenso posible a L7 es en el mes 48:<br>• L5 no puede llegar antes del 30: desde el techo de L3 (42 en el mes 18), 6 meses a ~4,3 no llegan a 90<br>• por la misma razón, L6 no llega antes del 42<br>• en el mes 47 se llega como mucho a ~167 de Skill, justo el umbral<br>L8 exigiría L7 en el mes 42, es decir, 130 de Skill en el mes 35, y el máximo es ~115. **Nota máxima por nivel final** (resto al máximo, sueldo y bonus del mejor calendario): **L5 75,8 · L6 79,6 · L7 82,6** | M9, M16 y cálculo del presupuesto de Skill |
+| **(c) Validación del simulador** | En **600 partidas nuevas** (`v03`), con el catálogo construido sin ellas:<br>• **99,3 % de pasos exactos** (eventos 99,2 %, energía 100 %, acción principal 97,6 %)<br>• **99,5 % de ascensos**<br>• **error medio de la nota final de 0,33 puntos**<br>**Sorteo real frente a generado** (misma política, 362 partidas terminadas por lado):<br>• frecuencia por título y partida: correlación **0,961**, diferencia media 0,029<br>• 99,0 frente a 98,2 títulos distintos por partida<br>• reparto por bloques de desbloqueo igual semestre a semestre (abajo) | `validation_v03.txt`, `analisis/cmpdraw.py` |
+| **(d) Política óptima** | **72,39 ± 0,51 en 360 partidas reales** (mediana 74,9, máximo 80,8). 72 % terminan en L6; 2 crisis de confianza, 5 ruinas y 7 despidos. Antes: 70,5 | `d01` brazo 1 + `d02`; parámetros en `politica_optima.json` |
+| **(e) Reglas generales** | 7 reglas sin números ni eventos; 88–89 % de acuerdo con la política óptima en las dos mitades de títulos. Aportación de cada una con parámetros cambiados un 20 %: ver M23 | `analisis/rulestest.py`, `rules_scen.log` |
 
-**3. Lo que falló.**
-- El primer lote de validación (v01) se corrompió porque se lanzó dos veces sobre los mismos archivos; se repitió como v02.
-- El reinicio del contenedor cortó c02 en 162 partidas.
+### M18. El sorteo de eventos: bloques por mes, no por nivel
 
-**4. Siguiente paso.**
-1. Medir mejor el riesgo de las respuestas poco observadas, con más exploración dirigida.
-2. Planificador con más profundidad (MCTS en el simulador) y búsqueda de una política para L7.
-3. **Traducir a la Skill sólo principios generales**:
-   - el contador de riesgo es el comentario de RR. HH. y nunca debe llegar a "angry" más una respuesta arriesgada;
-   - cumplir los umbrales antes de cada evaluación;
-   - guardar Skill desde L4;
-   - limpieza final;
-   - en niveles altos, las respuestas que cuestan dinero cuestan el doble o el triple.
+- **Los eventos se desbloquean al empezar cada semestre, sea cual sea el nivel:**
 
-   Nada de números ni de eventos.
+  | Mes | Títulos nuevos |
+  |---:|---:|
+  | 1 | 64 |
+  | 6 | 25 |
+  | 12 | 37 |
+  | 18 | 13 |
+  | 24 | 23 |
+  | 30 | 6 |
 
-Comandos en M14. Los datos están en `lab/data/ingenieria-inversa/` (Git, repo privado).
+  En total son 168.
+  - Prueba: desde el semestre 3, la proporción de eventos tardíos es igual en L1, L2, L3 y L4 (0,25 en todos).
+  - **No hay eventos exclusivos de niveles altos.**
+  - Tampoco hay eventos que dependan de la salud, el dinero, el riesgo, la dignidad o el tiempo en el nivel: desviaciones ≤ 0,15 una vez fijado el mes.
+- **El sorteo es casi uniforme** entre los títulos desbloqueados y no usados (no se repiten).
+  - Las historias que pasan al mes siguiente pesan ~0,6, frente a ~1,1 de las de un solo paso (correlación peso–duración de −0,61): no puede haber dos historias largas abiertas a la vez.
+- Reparto real frente a generado (proporción de títulos de cada bloque en cada semestre, real/simulado):
+
+  | Semestre | Bloque 1 | Bloque 6 | Bloque 12 | Bloque 18 | Bloque 24 | Bloque 30 |
+  |---|---|---|---|---|---|---|
+  | S2 | 0,66/0,64 | 0,29/0,30 | 0,04/0,06 | – | – | – |
+  | S4 | 0,37/0,38 | 0,19/0,18 | 0,30/0,29 | 0,12/0,12 | 0,02/0,03 | – |
+  | S6 | 0,28/0,30 | 0,15/0,15 | 0,24/0,24 | 0,09/0,09 | 0,18/0,18 | 0,05/0,05 |
+  | S8 | 0,30/0,29 | 0,15/0,15 | 0,23/0,24 | 0,09/0,10 | 0,18/0,17 | 0,05/0,04 |
+
+### M19. Huevos de Pascua: lo que hay y lo que no
+
+- **Nota máxima por nivel.** Con Skill, Network y Output en el techo, Dignity 10 y riesgo 0:
+
+  | Nivel | Nota máxima |
+  |---|---|
+  | L1 | C |
+  | L2–L3 | B |
+  | L4–L5 | A |
+
+  La nota mide el rendimiento frente a lo que se espera del nivel. **No hay S en 24.525 evaluaciones.**
+- **Ningún ascenso fuera de la evaluación** (10.659 de 10.659 en una evaluación) y ninguna bajada de nivel. No hay atajos.
+- **Mayores efectos de una sola respuesta** (suma de |efecto|): 11, en "Volunteer for the incident team" (Network +3, Skill +2, Health −3, Output −2, Dignity +1). Las historias que más Skill dan en total: 12 y 11 puntos.
+- **Skill al mes:** en algún mes suelto se ganan hasta 11 puntos, pero el ritmo sostenido máximo sigue siendo ~4,3 al mes. Ninguna vía permite ascender más deprisa.
+
+### M20. Correcciones del simulador en esta fase
+
+1. **Dinero.** Se sigue un intervalo del dinero real compatible con todos los valores vistos; el juego muestra el dinero redondeado hacia abajo y lo guarda con 1 decimal.
+2. **Dignity en la evaluación.** Primero el +1 de la charla neutra (o el +2 de la de elogio), hasta 10. Después el −1 de "too fast".
+3. **Charla de elogio:** Network +1, antes de restar el coste del ascenso.
+4. **"Too fast" en todos los niveles:** Network −3. Coste base del ascenso de L6: −4.
+5. **Umbral de L6** con Skill 170.
+6. **Sorteo por bloques de mes** (M18).
+7. **Catálogo v2** construido con 11.732 partidas (b00, b01, c01, c02, v02 y h01). El riesgo encaja exactamente en el 89 % de esas partidas.
+
+Lo que sigue fallando, por orden de peso:
+- dinero ±1 cuando el intervalo cruza un entero;
+- nota A frente a B (un modelo de árbol con riesgo y medias acierta el 88 %; queda una parte oculta);
+- acción principal (97,6 %).
+
+### M21. La política óptima y qué hace en cada etapa
+
+Búsqueda de pesos del planificador:
+- primero 150 configuraciones × 250 partidas con semillas comunes en el simulador;
+- después, las 8 mejores con 1.000 partidas nuevas;
+- por último, las 2 mejores en el juego real.
+
+La mejora por simulación ("rollouts") **no mejoró** al planificador: −0,27 ± 1,48 en 40 partidas emparejadas, porque el ruido del sorteo de eventos tapa las diferencias.
+
+Pesos ganadores (`politica_optima.json`):
+- mucho peso a cumplir los umbrales;
+- protección fuerte en el mes previo a la evaluación;
+- tope de riesgo de 2–3;
+- **Defuse desde riesgo 2 y Lay low desde 3**;
+- limpieza final a partir del mes 46.
+
+**Qué hace en cada momento** (360 partidas reales):
+
+| Semestre | Riesgo medio | Nivel antes de evaluar | S / N / O en el mes 5 del semestre | Energía más usada | Acción principal |
+|---|---:|---|---|---|---|
+| 1 | 0,3 | L1 | 9 / 3 / 3 (techo) | Health recovery, Report | Lay low, Rotation |
+| 2 | 0,4 | L2 (83 %) | 19 / 6 / 5 | Report, Health | Lay low, Key project |
+| 3 | 0,5 | L3 (79 %) | 35 / 16 / 13 | Report, Network | Key project |
+| 4 | 0,5 | L4 (66 %) | 52 / 26 / 20 | Report, Network | Rotation |
+| 5 | 0,4 | L4 | 75 / 33 / 24 | Health, Skill learning | Rotation |
+| 6 | 0,35 | L4 → L5 | 98 / 38 / 27 | Report, Skill learning | Rotation |
+| 7 | 0,4 | L5 | 120 / 45 / 32 | Report, Skill learning | Rotation |
+| 8 | 0,4 | L5 → L6 | 142 / 53 / 38 | Health, limpieza | Lay low |
+
+**Valor de cada respuesta en nota final esperada.** En 229 puntos de decisión, cada respuesta se valoró con 24 continuaciones de la política. La tabla completa (609 respuestas) está en `answer_values.csv`; es investigación y nunca va a una Skill.
+- La política elige la mejor en el **73 %** de los casos, con una pérdida media de **0,16 puntos** por decisión, en buena parte ruido.
+- Lo que cuesta elegir mal, según el riesgo de la respuesta:
+
+  | Riesgo de la respuesta | Pérdida media |
+  |---|---:|
+  | −1 | 0,08 |
+  | 0 | 0,43 |
+  | +1 | 0,52 |
+  | +2 | 1,07 |
+  | +3 | 3,39 |
+
+### M22. Reglas generales (sin números ni eventos)
+
+Un bot que sólo ve:
+- el efecto anunciado de cada opción;
+- el **signo** de su riesgo (arriesgada o prudente), no la cantidad;
+- el comentario de RR. HH.;
+- el techo visible del nivel.
+
+No conoce los umbrales. Juega con 7 reglas (`rules.py`):
+
+| Regla | Enunciado general |
+|---|---|
+| R1 | Mantén tranquilo el comentario de RR. HH. Si deja de estarlo, rechaza las opciones arriesgadas y usa el trimestre para bajar el riesgo |
+| R2 | En el mes previo a una evaluación, no cedas ni un punto de Skill, Network u Output |
+| R3 | Haz crecer primero el indicador más lejos de su techo visible. Lo que pasa del techo no vale nada |
+| R4 | Cuando Network y Output estén en su techo, todo a Skill |
+| R5 | En el último trimestre, riesgo a cero y salud y dignidad al máximo |
+| R6 | En niveles altos, evita las opciones que cuestan dinero |
+| R7 | Que la salud nunca baje cerca de cero; recupera en el trimestre |
+
+- Saca **68,1** en el simulador. El planificador, que lo sabe todo, saca ~73.
+- **Prueba con títulos reservados.** Coincide con las decisiones del planificador en el **88,9 %** y el **88,1 %** de las dos mitades de títulos sorteadas al azar. Las reglas no dependen de qué eventos salgan.
+
+### M23. ¿Aguantan las reglas si cambian los parámetros? (300 partidas por celda)
+
+Diferencia de nota al quitar cada regla (negativo = la regla ayuda):
+
+| Escenario | Con todas | −R1 riesgo | −R2 mes previo | −R3 techo | −R4 Skill | −R5 final | −R6 dinero | −R7 salud | Sin reglas |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Base | 68,1 | −45,8 | −2,6 | −7,3 | +0,6 | −2,2 | −0,5 | −12,6 | 19,2 |
+| Techos −20 % | 22,7* | −6,5 | +0,7 | −1,6 | +0,1 | 0,0 | 0,0 | −0,3 | 14,9 |
+| Techos +20 % | 74,3 | −50,9 | +0,5 | −2,5 | 0,0 | −2,6 | −0,6 | −22,2 | 20,8 |
+| Umbrales −20 % | 78,1 | −54,4 | +0,7 | −2,3 | −0,2 | −2,9 | −0,7 | −18,7 | 20,6 |
+| Umbrales +20 % | 23,3* | −7,0 | +0,6 | −1,8 | +0,1 | 0,0 | 0,0 | −0,3 | 15,2 |
+| Sorteo alterado | 68,0 | −45,0 | −4,8 | −4,4 | +0,2 | −2,1 | −0,3 | −12,6 | 18,7 |
+| Explota con 4 | 60,2 | −40,2 | −0,9 | −6,4 | +1,0 | −1,7 | −0,3 | −10,0 | 17,5 |
+| Explota con 6 | 69,9 | −45,4 | −3,0 | −7,1 | +0,4 | −2,1 | −0,4 | −13,2 | 20,4 |
+
+\* Con los techos por debajo de los umbrales nadie puede ascender, y todas las políticas acaban despedidas en el mes 24.
+
+**Veredicto:**
+- **Aguantan en todos los escenarios: R1 (riesgo), R7 (salud), R3 (techo) y R5 (limpieza final).** R1 vale 40–54 puntos.
+- **R2 (mes previo)** ayuda cuando el juego es el de dev o el sorteo cambia (−2,6 y −4,8), pero estorba un poco cuando los umbrales o los techos se mueven (+0,5 a +0,7). Conviene formularla como "no cedas lo que te hace falta para la evaluación", no como "nunca cedas nada".
+- **R6 (dinero)** aporta poco pero nunca resta.
+- **R4 ("todo a Skill"), tal como está escrita, no ayuda** (+0,6). El planificador sí gana guardando Skill desde L4, pero lo hace con los umbrales en la mano. Una regla sin números que lo capture está por encontrar.
+
+## Relevo (27 oct, 10:50 UTC)
+
+**1. Qué se ha hecho.** La Fase 3 completa (tabla final arriba):
+- **(a) Nota S:** descartada, con 24.525 evaluaciones.
+- **(b) Umbral de L6 → L7:** Skill 169–170, con 243 evaluaciones de L6. L8–L10 no son alcanzables.
+- **(c) Simulador:** 99,3 % en 600 partidas nuevas y sorteo real frente a generado reproducido.
+- **(d) Política óptima:** 72,39 en 360 partidas reales.
+- **(e) Reglas generales:** 7, probadas con parámetros alterados un 20 %.
+
+**2. Dónde está todo.**
+- Código en `scripts/ingenieria-inversa/`:
+  - `replica.py`: simulador;
+  - `game.py`: partida paso a paso y mejora por simulación;
+  - `planner.py`: planificador;
+  - `rules.py`: bot de reglas generales;
+  - `replica_bot.py`: adaptador al juego real.
+- Datos y artefactos en `lab/data/ingenieria-inversa/`: `catalog_v2.json`, `riskd_v2.json`, `sampler_v1.json`, `politica_optima.json`, `answer_values.csv`, `validation_v03.txt`, `rules_scen.log` y los lotes.
+
+**3. Lo que falló o quedó a medias.**
+- La mejora por simulación no superó al planificador; haría falta mucho más cómputo por decisión.
+- R4 ("todo a Skill") no se ha conseguido formular sin números de forma que ayude.
+- Los umbrales exactos de Network y Output de L6 → L7 no se pueden medir: casi nadie llega a la Skill necesaria.
+
+**4. Siguiente paso.** Llevar a una Skill sólo R1, R7, R3, R5 y R2 (en su forma "no cedas lo que necesitas para la evaluación") y R6, sin números ni eventos, y jugarla con Haiku o DeepSeek. Comandos:
+
+```bash
+export BB_DATA=$PWD/lab/data/ingenieria-inversa
+python3 scripts/ingenieria-inversa/replica.py validate --catalog $BB_DATA/catalog_v2.json --batches v03-validation
+python3 lab/data/ingenieria-inversa/analisis/rulestest.py base,thr+20 300 2
+```
+
+**5. Línea de ESTADO.md:** actualizada (fase 3).
