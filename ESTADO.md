@@ -1,7 +1,7 @@
 # ESTADO del proyecto: léelo primero
 
 Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*.
-Última actualización: **26 oct 2026, 22:24 UTC**, sesión de la nube (organizadora).
+Última actualización: **26 oct 2026, 22:50 UTC**, chat `alejandro/carrera-rapida` (cambio a chats independientes).
 
 Este documento es el punto de partida de cualquier persona o agente: dónde vamos, qué falta, qué está decidido y cómo trabajamos. Si un chat nuevo sólo puede leer un archivo, que sea este.
 
@@ -17,7 +17,9 @@ Este documento es el punto de partida de cualquier persona o agente: dónde vamo
 
 **El laboratorio funciona.** Juega partidas por la vía oficial, muchas a la vez, se recupera de fallos y guarda todo. Las instrucciones están en [lab/README.md](lab/README.md).
 
-**Cambio de sistema (26 oct, noche): carrera rápida.** Decisión de Alejandro: ir más rápido. Hay un campeón y los manuales nuevos suben una escalera de 2, 4, 8 y 12 partidas. Tras cada escalón se calcula la probabilidad de que el aspirante sea mejor que el campeón: si es baja, el manual se descarta y no juega más; si con 8 o 12 partidas es alta, pasa a ser campeón. Un diseñador automático (Opus) lee las peores partidas del campeón y escribe variantes, y cuando nos atascamos escribe ideas valientes. Explicación sencilla: [lab/fastloop/README.md](lab/fastloop/README.md). Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md) (tarea T14).
+**Desde el 26 oct a las 22:50 UTC trabajamos con chats independientes.** La carrera automática de la nube está parada. Motivo, con datos ([análisis](research/careerlab/estrategia-primeros-principios-2026-10-26.md)): entre manuales razonables el manual apenas cambia la nota (unos 2,5 puntos de diferencia real frente a 19 de azar por partida), así que buscar variantes con Haiku rinde poco. Lo que más sube nuestra nota es lo seguro: subir una versión distinta en cada corte (cuenta la mejor), SKILL.md escritos para la rúbrica de calidad, y vídeo y documentos. Cómo trabajamos ahora, con prompts listos: [chats-independientes-2026-10-26.md](research/careerlab/chats-independientes-2026-10-26.md).
+
+**Antes (26 oct, 19:39–22:22): carrera rápida.** Decisión de Alejandro: ir más rápido. Hay un campeón y los manuales nuevos suben una escalera de 2, 4, 8 y 12 partidas. Tras cada escalón se calcula la probabilidad de que el aspirante sea mejor que el campeón: si es baja, el manual se descarta y no juega más; si con 8 o 12 partidas es alta, pasa a ser campeón. Un diseñador automático (Opus) lee las peores partidas del campeón y escribe variantes, y cuando nos atascamos escribe ideas valientes. Explicación sencilla: [lab/fastloop/README.md](lab/fastloop/README.md). Estado en directo: [lab/reports/carrera-rapida.md](lab/reports/carrera-rapida.md) (tarea T14).
 
 Llevamos 150 partidas con IA (modelos de Claude haciendo de DeepSeek) y 550 con bots. Además hay 753.580 partidas en un juego de juguete que sirven para comprobar el método de elección.
 
@@ -122,15 +124,24 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 | T5 | Envío preliminar y clave de la API | Alejandro | **hecha**: clave recibida el 26 oct (OpenRouter, 50 USD, 0 gastados a las 19:05 UTC). Está sólo en el `.env` del programa oficial en el Mac de Alejandro, fuera de Git | — |
 | T6 | DeepSeek sólo en las puertas de [fastloop-v2](lab/protocol/fastloop-v2.md): 1 partida del campeón para comprobar el programa oficial y el coste; 2 antes de cada corte si el campeón ha cambiado | Alejandro (su Mac, chat `alejandro/carrera-rapida`) | **puerta 1 hecha** (26 oct, 19:51–20:11 UTC): F1 con DeepSeek por la vía oficial. El programa oficial funciona de punta a punta con nuestro manual. Resultado: despedido en el mes 24, sin salir del nivel 1 (nota 18,8). Coste exacto 0,185 USD (16 millones de tokens de entrada en 24 meses); quedan 49,81 USD. Una partida es una anécdota. **Decisión de Alejandro (26 oct, 20:18 UTC): de momento sólo las partidas previstas antes de cada corte.** Próxima: el 27 oct por la tarde (UK), antes del corte 1, 2 partidas del campeón si ya no es F1. Las lanza Alejandro desde su Mac (comandos en [el informe](research/careerlab/carrera-rapida-2026-10-26.md), Relevo) | origen `deepseek`: `lab/registry-origins/deepseek/` |
 | T7 | Vídeo `presentation.mp4` para el corte 1, en inglés, máximo 10 minutos y respondiendo a las 5 preguntas oficiales | equipo (personas) | pendiente | guion base en [jury-story.md](research/careerlab/jury-story.md) |
-| T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | nube (organizadora), revisa el equipo | **no empezar hasta el 27 oct** (decisión de Alejandro) | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
-| T9 | Elegir el manual del corte 1 (el líder de la última decisión), empaquetar y validar con `careerlab package` | nube (organizadora) | espera a T7 y T8 | `lab/submissions/r1/` |
+| T8 | Documentos de diseño del corte 1 (`skills_design.md`, `decision_report.md`) | chat A (T15), revisa el equipo | pasa a T15 | `cloud-lab-run`: `lab/submissions/r1-draft/design/` |
+| T9 | Elegir el manual del corte 1, empaquetar y validar con `careerlab package` | chat A (T15) y decisión de corte | pasa a T15 | `lab/submissions/r1/` |
 | T10 | Bots sin IA para estudiar el reparto de energía (no gasta cuota) | nube | hecha (400 partidas). Comprobado a las 19:41: 4 bots llegaron a L6 | `lab/reports/energy-bots/README.md`; detalle en `lab/fastloop/lessons.md` (Frontier) |
 | T11 | Permitir que varios ordenadores jueguen a la vez sin pisarse los resultados | Leah | hecha y juntada con `main` (26 oct, 16:20; 230 tests OK). La nube ya usa el registro migrado | código en `careerlab/`; informe en [lab/reports/t11-multi-machine](lab/reports/t11-multi-machine/README.md) |
-| T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | nube (organizadora) | en marcha: tras cada tanda y cada resultado importante (1ª vez: 26 oct, 16:20) | `main` |
+| T12 | Juntar `cloud-lab-run` y las ramas terminadas con `main` | cada chat con su PR; las junta Alejandro o el chat de decisión de cada corte | la nube dejó de juntar ramas el 26 oct (22:24) | `main` |
 | T13 | Techo del juego: 4–6 partidas de Opus al máximo esfuerzo con todo lo que sabemos en general. Nada de resúmenes de eventos concretos. No es una entrega: mide cuánto margen queda | nube | **hecha** (26 oct, 17:55): Y media 54,2, 5 de 6 terminadas → "cerca del techo"; el esfuerzo pasa a fiabilidad y tokens | `lab/reports/opus-ceiling/README.md`; resúmenes en `lab/reports/teacher-digests/opus-ceiling/` |
-| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | **en pausa** desde las 22:22 UTC (Alejandro: revisar la estrategia); último campeón `targeted-1026-201334` (nube) | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
+| T14 | Carrera rápida (fastloop-v2): campeón y aspirantes, diseñadores automáticos, ideas valientes al atascarse. Sustituye a T1 | nube (organizadora), diseñada por el chat `alejandro/carrera-rapida` | **parada** el 26 oct a las 22:22 UTC por decisión de Alejandro; se trabaja con chats independientes | `lab/reports/carrera-rapida.md`, `lab/fastloop/` (estado, historial, lecciones) |
+| T15 | **Chat A, entregas:** versión 1 para el corte del 27 oct (v7 si T16 la confirma, o el mejor manual general, reescrito para la rúbrica, comprobación de que no empeora, documentos de diseño, paquete validado); después, las versiones 2 y 3 | chat A (prompt en el documento de chats independientes) | por abrir | `lab/submissions/r1/` |
+| T16 | **Chat B, réplica del mecanismo del ascenso:** 25 partidas de Haiku de observed-growth-v7 de Matteo (PR #13; piloto de 8 partidas: 7 terminadas, media 61,3; las 8 ascendieron en el primer año) frente a 25 de f3-lean-v1 | chat B (prompt en el documento de chats independientes) | por abrir; informe para el 27 oct a las 14:00 UK | informe en su rama |
+| T17 | **Chat C, simulaciones brutas del juego** | chat local de Alejandro | en marcha (26 oct, 22:20) | lo que decida su chat |
+| T18 | **Laboratorio por secciones:** probar a mano, de uno en uno, planes muy distintos para cada parte del juego (cierre, apertura, salvavidas, escalada, crecimiento) y juntar los ganadores | chat nuevo (prompt en el plan maestro) | por abrir; empieza por el cierre (S5) | [plan maestro](research/careerlab/plan-maestro-secciones-2026-10-26.md); informes en `lab/reports/secciones/` |
+| T19 | **Comodines** (opcional): cuatro planes globales muy distintos (minimalista, fortaleza, lector de señales, procedimiento único) frente a f3-lean-v1 | chat nuevo (prompt en el plan maestro) | opcional | `lab/reports/comodines/` |
 
-## Relevo del organizador (26 oct, 16:20 UTC)
+## Coordinación (desde el 26 oct, 22:50 UTC)
+
+**No hay organizadora en la nube.** Cada chat trabaja en su rama y con su propio origen de registro, cambia sólo su línea de la tabla de arriba y deja su informe con relevo y su PR. Las PR las junta Alejandro desde GitHub, o un chat corto de decisión antes de cada corte, que además elige qué versión se sube. Reglas y prompts: [chats-independientes-2026-10-26.md](research/careerlab/chats-independientes-2026-10-26.md).
+
+## Relevo del organizador anterior (nube, 26 oct, 16:20–22:24 UTC)
 
 **La organizadora es la sesión de la nube "CareerLab continuous race in the cloud"** (rama `cloud-lab-run`). Juega las partidas, junta las ramas terminadas con `main` y mantiene este archivo. Para hablar con ella, abre esa sesión en claude.ai/code o en la app. Si se parase, su relevo completo (al final de `lab/reports/cloud-run-status.md`) trae un prompt para abrir otra sesión de nube que haga lo mismo. Nunca debe haber dos a la vez.
 
@@ -157,6 +168,7 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 - **Quién juega:** la carrera la juega la nube. Desde T11, otro ordenador puede jugar con su propio origen (ver *Partidas* en la sección 6).
 - **26 oct, Alejandro:** Claude no debe aparecer como contribuidor en GitHub. Los commits van a nombre de una persona y sin líneas `Co-Authored-By` de Claude. La nube hace los suyos a nombre de Alejandro.
 - **26 oct, Alejandro:** la nube hace push a `main` como organizadora (tras pasar los tests).
+- **26 oct, 22:45 UTC, Alejandro:** se para la carrera automática de la nube (también sus diseñadores) y se trabaja con chats independientes, uno por misión ([análisis](research/careerlab/estrategia-primeros-principios-2026-10-26.md)). El chat "Simulaciones brutas del juego" sigue.
 - **26 oct (noche), Alejandro:** carrera rápida. [fastloop-v2](lab/protocol/fastloop-v2.md) sustituye las reglas de reparto y elección de prereg-v1 para la carrera de Haiku; prereg-v1 no se edita y sus datos se reutilizan. Se descartan pronto los manuales que no funcionan, las partidas van a los aspirantes con opciones, y cuando nos atascamos se prueban ideas valientes. El ritmo semanal de cuota se adelanta: hasta un 45 % de la semana el 28 oct, un 75 % el 31 oct y un 90 % el 2 nov.
 - **26 oct (noche), Alejandro:** la clave de DeepSeek sólo se usa cuando sea seguro que aporta algo: las puertas de fastloop-v2, con el gasto exacto medido en cada partida y 15 USD de reserva para el último corte. Nunca para explorar. Confirmado el 26 oct a las 20:18 UTC, después de la primera partida (0,185 USD): no se amplía a comparar los mejores manuales con DeepSeek; sólo las partidas previstas antes de cada corte.
 
@@ -165,11 +177,11 @@ Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-pro
 **Empezar un chat nuevo.** Basta con escribir: *"Lee ESTADO.md y haz la tarea T4"*. Un chat por tarea. Si un chat se alarga mucho, deja lo hecho por escrito y abre otro: los chats largos gastan más cuota en cada mensaje.
 
 **Ramas**
-- `main` contiene lo común y comprobado. Sólo el organizador escribe directamente en `main` (ahora, la sesión de la nube), para actualizar este archivo y juntar ramas terminadas.
+- `main` contiene lo común y comprobado. Desde el 26 oct (22:50 UTC) nadie escribe directamente en `main`: cada chat abre su PR, y la junta Alejandro desde GitHub o el chat de decisión de cada corte.
 - Cada tarea va en su propia rama:
   - Si la app de Claude abre el chat en una copia aparte del proyecto (*worktree*), crea la rama sola con el prefijo de cada persona: en la app de Alejandro, `alejandro/...` (cambiado el 26 oct). Matteo puede poner `matteo` en **Ajustes → Claude Code → Branch prefix**. Usa esa rama tal cual.
   - Si no, créala con el nombre `<persona>/<tarea>`; por ejemplo `matteo/ideas-fuera` o `alejandro/video-r1`.
-- **El chat organizador es la excepción:** se abre directamente en la carpeta del proyecto, en `main`, sin copia aparte, porque es quien junta las ramas y edita este archivo.
+- Cada chat trabaja en su propia copia o rama. Si dos chats comparten la carpeta del proyecto, sólo uno puede cambiar de rama en ella.
 - Ramas que existen ahora:
 
   | Rama | Para qué | Estado |
@@ -209,8 +221,7 @@ Qué hay que dejar escrito, en una sección **Relevo** al final del informe de t
 Después, commit y push a tu rama. Una tarea no está terminada hasta que su relevo está en GitHub.
 
 **Partidas**
-- **La carrera la juega la nube.** Desde T11 (Leah), otro ordenador puede jugar sin pisarla. Primero `uv run careerlab origin set <nombre>`, y después se exporta a `lab/registry-origins/<nombre>/`; la organizadora lo importa con `careerlab import --dir lab/registry-origins/<nombre>`. Las partidas con Claude en la cuenta Max comparten el freno semanal, así que avisa antes en tu línea de la tabla. Los bots sin IA no gastan cuota.
-- Para proponer un manual nuevo:
+- **La carrera la j- **Cada chat juega con su propio origen** (`uv run careerlab origin set <nombre>`) y exporta a `lab/registry-origins/<nombre>/` (T11). Como mucho 3 chats jugando partidas de Claude a la vez y 4 partidas por chat; `--max-five-hour 0.80` para entregas y `0.65` para exploración. Los bots sin IA no gastan cuota. Detalle en [chats-independientes-2026-10-26.md](research/careerlab/chats-independientes-2026-10-26.md). manual nuevo:
   1. Copia la carpeta [f3-lean-v1](lab/policies-src/f3-feedback-reactive/f3-lean-v1/) como plantilla dentro de `lab/policies-src/<familia>/<nombre>-v1/`.
   2. Rellena `policy.json`: la idea (`hypothesis`), qué esperas ver (`predicted_behaviour`) y qué demostraría que es mala (`refutation`).
   3. Escribe el manual en `bundle/skills/<skill>/SKILL.md`, en inglés.
