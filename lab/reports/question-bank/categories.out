@@ -1,0 +1,28 @@
+1. Categories against exact effects (936 answers)
+cat          n  risk P(r>0) P(r<0)  heal  dign  skil  netw  outp  weal
+OWN         74 -0.39   0.14   0.49 -0.18  1.08  0.42  0.31 -0.08 -0.04
+FIX        278 -0.10   0.11   0.20 -0.11  0.91  0.96  0.71  0.25  0.05
+ESCALATE    35 -0.03   0.31   0.40  0.09  1.23  0.31 -0.57 -0.06 -0.20
+GUARD       82  0.00   0.12   0.18  0.52  0.78  0.22 -0.27  0.21 -0.07
+SELL        35  0.57   0.46   0.00 -0.29 -0.26  0.37  0.17  0.46 -0.14
+AVOID      149  0.63   0.54   0.05 -0.13 -0.23 -0.03 -0.27 -0.03 -0.01
+YIELD       93  0.96   0.65   0.00 -1.30 -0.33  0.19  0.45  0.06 -0.08
+PERSIST     28  1.00   0.82   0.07 -0.14 -0.21  0.11 -1.04 -0.36  0.04
+ATTACK      55  1.20   0.85   0.02  0.00 -0.65  0.04 -1.45 -0.02  0.00
+HIDE       107  1.68   0.88   0.04 -0.16 -1.08  0.07 -0.11  0.16  0.12
+risky = category in ['ATTACK', 'AVOID', 'HIDE', 'PERSIST', 'SELL', 'YIELD']: accuracy 0.779 (base rate not risky 0.592); recall of risky answers 0.840; precision 0.687
+answers with risk step >= 2: 157, flagged by category: 0.917
+  split 1: mean risk by category correlates 0.82 between halves; orders ['OWN', 'GUARD', 'FIX', 'SELL', 'ESCALATE', 'AVOID', 'PERSIST', 'YIELD', 'ATTACK', 'HIDE'] | ['ESCALATE', 'FIX', 'OWN', 'GUARD', 'SELL', 'AVOID', 'YIELD', 'PERSIST', 'ATTACK', 'HIDE']
+  split 2: mean risk by category correlates 0.92 between halves; orders ['ESCALATE', 'OWN', 'FIX', 'GUARD', 'SELL', 'AVOID', 'YIELD', 'PERSIST', 'ATTACK', 'HIDE'] | ['OWN', 'FIX', 'GUARD', 'ESCALATE', 'AVOID', 'SELL', 'PERSIST', 'YIELD', 'ATTACK', 'HIDE']
+  split 3: mean risk by category correlates 0.97 between halves; orders ['OWN', 'FIX', 'GUARD', 'ESCALATE', 'SELL', 'AVOID', 'YIELD', 'PERSIST', 'ATTACK', 'HIDE'] | ['OWN', 'ESCALATE', 'GUARD', 'FIX', 'SELL', 'AVOID', 'YIELD', 'PERSIST', 'ATTACK', 'HIDE']
+
+2. Is there always a best answer? (per question: one answer >= every other on all visible stats and <= on risk)
+  160 of 403 questions have an answer that dominates all others; its category: {'FIX': 119, 'OWN': 25, 'GUARD': 11, 'AVOID': 3, 'ESCALATE': 1, 'SELL': 1}
+  372 of 403 questions: the lowest-risk answer is in a safe category
+
+3. Expected final score per answer at 225 decision points (planner continuations)
+  best answer is in the best-ranked category present: 146/225
+  mean regret per decision, category rank         : 0.40 points
+  mean regret per decision, random                : 0.66 points
+  mean regret per decision, planner               : 0.21 points
+  mean regret per decision, safe set, best stats  : 0.49 points

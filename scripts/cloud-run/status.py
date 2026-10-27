@@ -1,4 +1,4 @@
-"""Write lab/reports/cloud-run-status.md from the registry (cloud lab run, 26-27 Oct 2026)."""
+"""Write lab/reports/historico/cloud-run-status.md from the registry (cloud lab run, 26-27 Oct 2026)."""
 
 import json
 import os
@@ -54,7 +54,7 @@ def main() -> None:
     ceil = reg.db.execute("SELECT j.status, e.outcome, e.score, e.survival_months FROM jobs j JOIN policies p USING(policy_id) "
                           "LEFT JOIN evaluations e USING(job_id) WHERE p.family='ceiling' ORDER BY j.replicate, j.attempt").fetchall()
     games = [f"Q {r['score']:.1f}/T {r['survival_months']}" for r in ceil if r["outcome"] in ("completed", "eliminated")]
-    out.insert(len(out) - 1, f"- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/opus-ceiling/README.md`): "
+    out.insert(len(out) - 1, f"- **T13 Opus ceiling** (`claude-cli:opus@max~100k`, 2-slot lane, see `lab/reports/historico/opus-ceiling/README.md`): "
                + (f"jobs {', '.join(f'{k} {v}' for k, v in sorted(__import__('collections').Counter(r['status'] for r in ceil).items()))}; "
                   f"finished games: {', '.join(games) or 'none yet'}." if ceil else "policy not registered yet; predictions pre-stated in the README."))
     rows = reg.db.execute("SELECT decision_id, at, payload FROM decisions WHERE kind='block_decision' AND subject=? ORDER BY decision_id",

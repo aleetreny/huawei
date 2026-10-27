@@ -135,7 +135,7 @@ def test_end_to_end_excludes_reserved_data_and_refuses_overwrite(tmp_path):
               "environments": [{"env_id": "env"}], "policies": [{"policy_id": "policy", "name": "p", "family": "f"}]}
     for name, rows in tables.items():
         (export / f"{name}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
-    spec_path = Path(__file__).parents[1] / "research/careerlab/decision-research/exploration-v1.json"
+    spec_path = Path(__file__).parents[1] / "docs/historico/research/careerlab/decision-research/exploration-v1.json"
     result = run(export, runs, spec_path, output)
     assert result["coverage"]["eligible_terminal_claude"] == 1
     assert result["coverage"]["excluded_by_purpose"] == {"confirm": 1}

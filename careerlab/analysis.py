@@ -24,8 +24,8 @@ def _actor_label(cfg: dict[str, Any]) -> str:
         label += f"@{cfg['effort']}"
     if cfg.get("autocompact"):
         label += f"~{cfg['autocompact']}"
-    if cfg.get("skills_mode") == "plugin":
-        label += "#plugin"
+    if cfg.get("skills_mode") in ("plugin", "official"):
+        label += "#" + cfg["skills_mode"]
     return label
 
 
@@ -73,7 +73,7 @@ def summarise(cells: list[dict[str, Any]]) -> dict[str, Any]:
 
     actors = []
     for actor, cs in sorted(by_actor.items()):
-        done = [c for c in cs if c["outcome"] != "interrupted"]
+        done = [c for c in cs if c["outcome"] in ("completed", "eliminated")]  # never interrupted or truncated
         actors.append({
             "actor": actor, "episodes": len(cs), "interrupted": len(cs) - len(done),
             "completion": round(sum(c["T"] == 48 for c in done) / max(len(done), 1), 2),
@@ -90,7 +90,7 @@ def summarise(cells: list[dict[str, Any]]) -> dict[str, Any]:
         })
     cells_tab = []
     for (actor, policy), cs in sorted(by_cell.items()):
-        done = [c for c in cs if c["outcome"] != "interrupted"]
+        done = [c for c in cs if c["outcome"] in ("completed", "eliminated")]  # never interrupted or truncated
         cells_tab.append({"actor": actor, "policy": policy, "n": len(done),
                           "Q": [round(c["Q"], 1) for c in done], "T": [c["T"] for c in done],
                           "mean_Y": round(st.mean(y(c) for c in done), 1) if done else None,

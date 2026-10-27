@@ -1,0 +1,20 @@
+1000 games per arm, same seeds
+  oracle            mean  67.7 ± 0.44  L6+  51%  outcomes {'dismissed': 66, 'completed': 897, 'trust': 34, 'health': 2, 'broke': 1}
+  category          mean  46.7 ± 0.63  L6+   2%  outcomes {'dismissed': 295, 'completed': 535, 'trust': 132, 'health': 22, 'broke': 16}
+  category-noisy20  mean  35.6 ± 0.55  L6+   0%  outcomes {'trust': 364, 'completed': 277, 'dismissed': 270, 'health': 68, 'broke': 21}
+  rank              mean  41.6 ± 0.62  L6+   2%  outcomes {'dismissed': 330, 'completed': 398, 'trust': 240, 'health': 19, 'broke': 13}
+  random            mean  12.0 ± 0.13  L6+   0%  outcomes {'health': 272, 'trust': 703, 'broke': 21, 'dismissed': 3, 'isolated': 1}
+  exact effect, category risk mean  58.9 ± 0.57  L6+  29%  outcomes {'dismissed': 91, 'completed': 686, 'trust': 219, 'health': 4}
+  category effect, exact risk mean  53.7 ± 0.64  L6+  11%  outcomes {'dismissed': 230, 'completed': 678, 'health': 47, 'trust': 27, 'broke': 18}
+  category + perfect stat tags mean  58.1 ± 0.58  L6+  24%  outcomes {'dismissed': 101, 'completed': 680, 'trust': 215, 'health': 4}
+  category + guessed stat tags mean  49.1 ± 0.65  L6+   5%  outcomes {'dismissed': 208, 'completed': 578, 'health': 48, 'trust': 152, 'broke': 14}
+  guessed tags, noisy20 mean  37.0 ± 0.58  L6+   2%  outcomes {'dismissed': 198, 'completed': 275, 'trust': 422, 'health': 83, 'broke': 22}
+  oracle - category: 21.0 ± 0.69 (paired)
+  oracle - category-noisy20: 32.1 ± 0.65 (paired)
+  oracle - rank: 26.1 ± 0.66 (paired)
+  oracle - random: 55.7 ± 0.46 (paired)
+  oracle - exact effect, category risk: 8.7 ± 0.57 (paired)
+  oracle - category effect, exact risk: 14.0 ± 0.69 (paired)
+  oracle - category + perfect stat tags: 9.6 ± 0.60 (paired)
+  oracle - category + guessed stat tags: 18.6 ± 0.68 (paired)
+  oracle - guessed tags, noisy20: 30.7 ± 0.65 (paired)

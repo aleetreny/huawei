@@ -1,0 +1,53 @@
+{
+ "name": "p3-h1-skill",
+ "cut": 30,
+ "n": 20,
+ "actor": "e2a60a74a4769fca",
+ "created": "2026-10-27T05:09:53Z",
+ "arms": {
+  "periodos-v1": [
+   "secciones-scre-8813f1ad-e2a60a-00000-a1",
+   "secciones-scre-8813f1ad-e2a60a-00001-a1",
+   "secciones-scre-8813f1ad-e2a60a-00002-a1",
+   "secciones-scre-8813f1ad-e2a60a-00003-a1",
+   "secciones-scre-8813f1ad-e2a60a-00004-a1",
+   "secciones-scre-8813f1ad-e2a60a-00005-a1",
+   "secciones-scre-8813f1ad-e2a60a-00006-a1",
+   "secciones-scre-8813f1ad-e2a60a-00007-a1",
+   "secciones-scre-8813f1ad-e2a60a-00008-a1",
+   "secciones-scre-8813f1ad-e2a60a-00009-a1",
+   "secciones-scre-8813f1ad-e2a60a-00010-a1",
+   "secciones-scre-8813f1ad-e2a60a-00011-a1",
+   "secciones-scre-8813f1ad-e2a60a-00012-a1",
+   "secciones-scre-8813f1ad-e2a60a-00013-a1",
+   "secciones-scre-8813f1ad-e2a60a-00014-a1",
+   "secciones-scre-8813f1ad-e2a60a-00015-a1",
+   "secciones-scre-8813f1ad-e2a60a-00016-a1",
+   "secciones-scre-8813f1ad-e2a60a-00017-a1",
+   "secciones-scre-8813f1ad-e2a60a-00018-a1",
+   "secciones-scre-8813f1ad-e2a60a-00019-a1"
+  ],
+  "periodos-v3": [
+   "secciones-scre-15e540ea-e2a60a-00000-a1",
+   "secciones-scre-15e540ea-e2a60a-00001-a1",
+   "secciones-scre-15e540ea-e2a60a-00002-a1",
+   "secciones-scre-15e540ea-e2a60a-00003-a1",
+   "secciones-scre-15e540ea-e2a60a-00004-a1",
+   "secciones-scre-15e540ea-e2a60a-00005-a1",
+   "secciones-scre-15e540ea-e2a60a-00006-a1",
+   "secciones-scre-15e540ea-e2a60a-00007-a1",
+   "secciones-scre-15e540ea-e2a60a-00008-a1",
+   "secciones-scre-15e540ea-e2a60a-00009-a1",
+   "secciones-scre-15e540ea-e2a60a-00010-a1",
+   "secciones-scre-15e540ea-e2a60a-00011-a1",
+   "secciones-scre-15e540ea-e2a60a-00012-a1",
+   "secciones-scre-15e540ea-e2a60a-00013-a1",
+   "secciones-scre-15e540ea-e2a60a-00014-a1",
+   "secciones-scre-15e540ea-e2a60a-00015-a1",
+   "secciones-scre-15e540ea-e2a60a-00016-a1",
+   "secciones-scre-15e540ea-e2a60a-00017-a1",
+   "secciones-scre-15e540ea-e2a60a-00018-a1",
+   "secciones-scre-15e540ea-e2a60a-00019-a1"
+  ]
+ }
+}
