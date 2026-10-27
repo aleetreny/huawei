@@ -1,6 +1,7 @@
 #!/bin/zsh
 # Official DeepSeek games in one slot, one after another, until the key's usage reaches a cap.
-# Never stops a game in play: the cap is checked only before starting the next one.
+# Never stops a game in play (CAREERLAB_TARGET_NEVER_STOP=1 turns the per-game watchdog off): the cap is
+# checked only before starting the next one.
 #
 #   scripts/deepseek/gameloop.sh <policy> <slot> <games> <usage cap USD> [why]
 #
@@ -9,7 +10,7 @@
 # Create ~/careerlab-data/deepseek/STOP to stop after the current game.
 policy=$1; slot=$2; games=$3; cap=$4; why=${5:-"DeepSeek score line, 27 Oct (Alejandro: up to 10 USD today)"}
 cd "${0:A:h}/../.." || exit 1
-export PYTHONWARNINGS=ignore CAREERLAB_ORIGIN=deepseek CAREERLAB_TARGET_PARALLEL=1
+export PYTHONWARNINGS=ignore CAREERLAB_ORIGIN=deepseek CAREERLAB_TARGET_PARALLEL=1 CAREERLAB_TARGET_NEVER_STOP=1
 out=~/careerlab-data/deepseek/games; mkdir -p $out
 for n in $(seq 1 $games); do
   while [ -e ~/careerlab-data/huawei-deepseek/target-slots/slot$slot.busy ] || \
