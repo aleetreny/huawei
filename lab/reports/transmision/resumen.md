@@ -21,17 +21,17 @@ Validación final (27 oct, 13:50–14:45 UTC): conjunto `ids-V2`, situaciones qu
 
 Alternativa para “antes de la evaluación”: las seis reglas en el cuerpo con filtro (`t2-veto`) da el mismo acierto (76 %; pérdida 1,60), pero cambia 1 de cada 5 historias de otros meses y empeora los detonantes (pérdida 0,96).
 
-**Resultado en partidas de Haiku** (completas, entrega oficial, intercaladas con f3-lean-v1; ver [partidas-g1.md](partidas-g1.md) y el lote `g6-full`, en marcha):
+**Resultado en partidas de Haiku** (completas, entrega oficial, intercaladas con f3-lean-v1 en los mismos lotes g1–g6; las de f3-lean se suman de todos los lotes; paradas a las 15:57 UTC del 27 oct a petición de Alejandro):
 
-| Manual | Partidas | Nota Q media ± SE | Terminadas |
-|---|---:|---:|---:|
-| f3-lean-v1 (todas las tandas) | 30 | 50,8 ± 2,9 | 21 |
-| t10-countdown (g5) | 10 | 49,0 ± 6,4 | 6 |
-| t3-instr (todas las reglas en el cuerpo, g1) | 9 | 38,4 ± 5,5 | 3 |
-| t9-quarter (sólo reparto, g3–g5) | 14 | 43,2 ± 5,8 | 6 |
-| t8-quarter (g3) | 3 | 56,2 ± 6,5 | 2 |
+| Manual | Partidas | Terminadas | Nota media ± error | Diferencia con f3-lean | Derrotas |
+|---|---:|---:|---:|---:|---|
+| f3-lean-v1 (referencia) | 43 | 30 | 50,5 ± 2,5 | — | despido 6, crisis de confianza 5, ruina 2 |
+| **t13-final** (manual que junta las reglas: reparto con prioridad + cuenta atrás de la evaluación, redactado para la rúbrica) | 12 | 10 | **57,2 ± 5,1** | **+6,7 ± 5,7** | agotamiento 1, despido 1 |
+| t10-countdown (mismas reglas, redacción anterior) | 13 | 7 | 47,6 ± 5,5 | −2,9 ± 6,0 | despido 3, ruina 2, crisis 1 |
+| t9-quarter (sólo reparto) | 15 | 7 | 44,0 ± 5,5 | −6,5 ± 6,0 | crisis 4, despido 4 |
+| t3-instr (todas las reglas en el cuerpo, también de historias) | 9 | 3 | 38,4 ± 5,5 | **−12,1 ± 6,0** | despido 3, crisis 2, agotamiento 1 |
 
-*(15:00 UTC; se actualiza con g6. Con 10 partidas por brazo la diferencia t10 − f3-lean es −1,8 ± 7,1: todavía no distingue 5 puntos.)*
+Sólo en el lote g6 (mismo tiempo y orden): t13-final 57,2 ± 5,1 (12) frente a f3-lean 48,4 ± 6,0 (11), +8,9 ± 7,9. **Lectura:** t13-final es el mejor manual de esta línea y va por delante de f3-lean, pero con 12 partidas la ventaja no es segura (aproximadamente 1,2 errores típicos). t10 tiene las mismas reglas y sale peor, así que una parte de la diferencia es azar. Lo que sí está claro es que poner reglas de historias a la vista (t3-instr) hunde la nota.
 
 ## Cómo escribir para que Haiku obedezca: lo aprendido
 
@@ -64,12 +64,21 @@ Alternativa para “antes de la evaluación”: las seis reglas en el cuerpo con
 
 ## Relevo
 
-**27 oct, 15:10 UTC — recorte de cuota.** A petición de Alejandro (mucho gasto): la semana pasó del 24 % al 34 % en el día. Se paran todos los bancos (t15 sin terminar) y el lote `g6-full` queda en f3-lean-v1 frente a t13-final, 20 partidas cada uno (≈ 37 partidas más, 4 a la vez). El resto del plan se retoma sólo si se pide.
-
-
-**27 oct, 13:10 UTC.**
-1. **Hecho.** Fase 0 ([fase0-carga-skills.md](fase0-carga-skills.md)); banco de 3.573 situaciones con verdad del simulador ([banco.md](banco.md)); rondas A–3 ([ronda-a.md](ronda-a.md)); partidas g1 paradas ([partidas-g1.md](partidas-g1.md)); bloque general y huella ([bloque-general.md](bloque-general.md)); modo `#official` del actor (`careerlab/actors/claude_cli.py`, lee también `reference/`).
-2. **Conclusión de trabajo.** El reparto trimestral se transmite (Skill en L4 17 % → 85 %, cierre 62 % → 93 %, RR. HH. 18 % → 79–85 %); las reglas de historias se transmiten a medias y se cuelan en el resto de historias (1 de cada 5 cambia, con menos Skill y más riesgo), lo que hundió a t3-instr en partidas.
-3. **En marcha.** Partidas `g4-full` (t9-quarter frente a f3-lean, 30 + 30; quedan 6 de g3 con t8). Banco: validación final `ids-V2` (control y t9/t8, ≥ 200 situaciones por regla con títulos reservados), t10-countdown (una sola regla de historias tras una cuenta atrás), contexto largo de t3.
-4. **Siguiente.** Tabla final con los números de `ids-V2`; partidas de t10 si su huella general queda cerca del control; fase 3 (rúbrica con `scripts/transmision/rubric.py`, t3-instr sacó 60).
-5. **Comandos.** `scripts/transmision/drive.sh <items> <ids> <slots> <brazo>=<bundle>`; `uv run python scripts/transmision/score.py --items ~/careerlab-data/transmision/items-final.jsonl --arms control,<brazo> --common`; `uv run python scripts/transmision/fingerprint.py --items ~/careerlab-data/transmision/items-gen.jsonl --arms control,<brazo>`; `uv run python scripts/transmision/games.py --batch g4-full`. Runner: `uv run careerlab run --kind claude-cli --continuous --slots 4 --max-five-hour 0.65 --stop-file ~/careerlab-data/huawei-transmision/STOP` (para pararlo, `touch` de ese archivo).
+**27 oct, 16:00 UTC: cierre de la línea en la nube.**
+1. **Hecho.**
+   - Fase 0: cómo carga Skills el programa oficial ([fase0-carga-skills.md](fase0-carga-skills.md)).
+   - Banco de obediencia con verdad del simulador ([banco.md](banco.md)); los datos, en `lab/data/transmision/`.
+   - Rondas de formulaciones ([ronda-a.md](ronda-a.md), [ronda-8-10.md](ronda-8-10.md)), contexto largo, bloque general y huella.
+   - Validación final en ≥ 200 situaciones por regla con títulos reservados ([validacion-final.md](validacion-final.md)).
+   - Valor de la obediencia ([valor-obediencia.md](valor-obediencia.md)) y rúbrica ([fase3-rubrica.md](fase3-rubrica.md)).
+   - Partidas g1–g6 (tabla de arriba).
+   - Modo `#official` en `careerlab/actors/claude_cli.py`.
+2. **Resultados.** Tabla principal y tabla de partidas de arriba. Manual recomendado: [t13-final](../../policies-src/transmision/t13-final/), 73 en la rúbrica y 57,2 frente a 50,5 de f3-lean en partidas.
+3. **Parado o a medias.**
+   - Lote g6 parado a petición de Alejandro: 13 partidas canceladas y las 4 en juego cortadas (quedan como interrumpidas).
+   - Bancos parados a medias, sin conclusión: t15 (ganancias perdidas por estar al máximo) y t9 sobre la validación.
+   - El runner está parado: existe `~/careerlab-data/huawei-transmision/STOP` en el contenedor de la nube.
+4. **Siguiente.**
+   - La línea sigue en local con DeepSeek: el prompt está en [prompt-deepseek.md](prompt-deepseek.md). Primero, qué percibe DeepSeek de cada opción (indicador que mueve y riesgo); después, el banco con DeepSeek frente al control y t13-final; por último, la forma masticada de darle las reglas.
+   - Comandos: `uv run python scripts/transmision/score.py --items <items> --arms control,<brazo> --common`; `uv run python scripts/transmision/fingerprint.py --items <items> --arms control,<brazo>`; `uv run python scripts/transmision/games.py --batch g6-full` (necesita el registro del contenedor; el exporte está en `lab/registry-origins/transmision/`).
+5. **ESTADO.md:** la fila de Transmisión pasa a “en pausa, sigue en la línea DeepSeek (local)”.

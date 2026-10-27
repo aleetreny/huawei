@@ -57,7 +57,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 
 | # | Pista | Fuente |
 |---|---|---|
-| C1 | El manual `t13-final` (reparto con prioridad + interruptor de evaluación) empata con f3-lean en partidas de Haiku (~50); faltan partidas para ver 5 puntos. | transmisión, lote `g6-full` |
+| C1 | El manual `t13-final` (reparto con prioridad + interruptor de evaluación) saca 57,2 ± 5,1 frente a 50,5 ± 2,5 de f3-lean en partidas de Haiku (12 frente a 43): +6,7 ± 5,7, prometedor pero no seguro; t10, con las mismas reglas y otra redacción, saca 47,6. | transmisión, lotes g1–g6 |
 | C2 | La instrucción del manifest no añade nada con Haiku; quizá sí con DeepSeek, que podría olvidar antes. | transmisión, [contexto largo](lab/reports/transmision/contexto-largo.md) |
 | C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Nadie ha medido todavía cómo etiqueta o percibe DeepSeek. | carrera (histórico) |
 | C4 | Una política por tipo de respuesta recupera dos tercios de la distancia entre el azar y la óptima (47 de 68 en el simulador). Falta saber cuánto saca DeepSeek razonando con esos tipos. | categorías §2 |
