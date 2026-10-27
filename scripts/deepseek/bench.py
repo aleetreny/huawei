@@ -32,7 +32,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(REPO / "scripts" / "transmision"))
-from ds import DATA, BudgetStop, DeepSeek  # noqa: E402
+from ds import BACKEND, DATA, BudgetStop, DeepSeek  # noqa: E402
 from runbench import SID, continue_prompt, load_variant, system_prompt  # noqa: E402
 
 BANK = REPO / "lab" / "data" / "transmision"
@@ -166,6 +166,8 @@ async def run_item(ds: DeepSeek, it: dict[str, Any], sp: str, skills: list, arm:
             am["tool_calls"] = calls
         if msg.get("reasoning_details"):
             am["reasoning_details"] = msg["reasoning_details"]
+        elif msg.get("reasoning_content"):
+            am["reasoning_content"] = msg["reasoning_content"]  # NIM: thinking goes back as DeepSeek's API expects
         messages.append(am)
         if msg.get("content"):
             texts.append(msg["content"][:400])
@@ -217,7 +219,7 @@ async def run(variant: str, name: str, ids_file: Path, limit: int | None, slots:
     sp = system_prompt(instruction, skills, "official")
     (arm_dir / "system_prompt.md").write_text(sp)
     (arm_dir / "arm.json").write_text(json.dumps({"variant": variant, "context": "month", "delivery": "official",
-                                                  "model": "deepseek-v4-flash"}, indent=1))
+                                                  "model": "deepseek-v4-flash", "backend": BACKEND}, indent=1))
     todo = [i for i in ids if not (arm_dir / f"{i.replace(':', '_')}.json").exists()]
     print(f"{name}: {len(ids)} items, {len(todo)} to run", flush=True)
     ds = DeepSeek(concurrency=slots)
