@@ -1,6 +1,6 @@
 # ¿Sirve NVIDIA NIM como DeepSeek gratis?
 
-**Conclusión: preparado y probado contra un servidor falso, sin lanzar; falta la clave de NIM.** La comparación no gasta nada de la clave del reto: el lado de OpenRouter ya está medido dos veces.
+**Conclusión: NIM no sirve.** La clave funciona, pero NIM retiró `deepseek-ai/deepseek-v4-flash` el 7 de agosto de 2026 (HTTP 410 *Gone*, `smoke` del 27 oct). Sólo ofrece `deepseek-v4.1-flash`, que es otro modelo. Sin vía gratis idéntica al reto, la versión del reto sólo se consigue por OpenRouter. La comparación queda preparada por si vuelve a estar disponible.
 
 ## Por qué
 

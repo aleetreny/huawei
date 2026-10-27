@@ -53,7 +53,7 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 
 ## Relevo
 
-**27 oct, NIM.** Comparación NVIDIA NIM frente a OpenRouter preparada y probada contra un servidor falso, sin lanzar: [nim.md](nim.md). Falta que alguien ponga la clave de NIM en `~/careerlab-data/deepseek/nim.env`. Después, `nimcheck.py smoke`, `run` y `compare` (~50 min, sin coste). La regla de decisión está fijada en el informe.
+**27 oct, NIM: descartado.** NIM retiró `deepseek-v4-flash` el 7 de agosto (HTTP 410) y sólo sirve V4.1 Flash, que es otro modelo ([nim.md](nim.md)). La versión del reto sólo se consigue por OpenRouter.
 
 **27 oct, 18:40 UTC.**
 1. **Qué se ha hecho y por qué.**
