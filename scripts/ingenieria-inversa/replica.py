@@ -53,6 +53,7 @@ ENERGY_FX = {"High-intensity work": ({"output": 2, "health": -1, "dignity": -1},
              "Defuse legacy risk": ({}, 2), "Mental recovery": ({"dignity": 2}, 1), "Health recovery": ({"health": 2}, 1),
              "Prepare report materials": ({"output": 1, "dignity": 1}, 1), "Reserve energy (no action)": ({}, 0)}
 BLOW_AT = 5
+PENALTY_EVERY_MONTH = False
 ACTION_RISK = {"q|High-intensity work": 1, "q|Defuse legacy risk": -1, "m|Lay low and reduce risk": -1}
 WARN_TONE = ("I had hopes", "The room feels tense", "HR marks the note")
 PRAISE_TONE = ("Your manager closes", "To be honest, I worried", "The talk is shorter")
@@ -225,30 +226,32 @@ class Replica:
         info: dict[str, Any] = {}
         st.month += 1
         st.duration_in_level += 1
+        # persistent-condition counters (M15): checked on the state before the salary
+        st.neg_wealth_months = st.neg_wealth_months + 1 if st.wealth < 0 else 0
+        st.zero_net_months = st.zero_net_months + 1 if st.network <= 0 else 0
+        st.low_dig_months = st.low_dig_months + 1 if st.dignity <= 1 else 0
         st.wealth = round(st.wealth + SALARY[st.level], 1)
         review = st.month % 6 == 0
         if review:
             info.update(self.review(st, explosion_now=bool(explosion)))
-        # warnings and their costs (M6)
-        if st.wealth < 0:
-            st.neg_wealth_months += 1
+        # warnings: shown once, at the 3rd month of the condition; failure at the 6th (M15)
+        pen = (lambda n: n >= 3) if PENALTY_EVERY_MONTH else (lambda n: n == 3)
+        if pen(st.neg_wealth_months):
             apply_delta(st, {"dignity": -1})
-        else:
-            st.neg_wealth_months = 0
-        st.zero_net_months = st.zero_net_months + 1 if st.network <= 0 else 0
-        if st.zero_net_months >= 3:
+        if pen(st.zero_net_months):
             apply_delta(st, {"health": -1, "dignity": -1, "output": -2})
-        st.low_dig_months = st.low_dig_months + 1 if st.dignity <= 1 else 0
-        if st.low_dig_months >= 3:
+        if pen(st.low_dig_months):
             apply_delta(st, {"health": -2, "network": -1})
         # month-start explosion (M10): deterministic once hidden risk reaches 5
         info["explosion"] = self._maybe_explode(st) if explosion is None or explosion else False
         st.out_hist[st.month] = st.output
-        # failures (M12)
-        if st.neg_wealth_months >= 4 and st.alive:
-            st.alive, st.failure = False, "broke"
-        if st.low_dig_months >= 4 and st.alive:
-            st.alive, st.failure = False, "resign"
+        if st.alive:
+            if st.neg_wealth_months >= 6:
+                st.alive, st.failure = False, "broke"
+            elif st.zero_net_months >= 6:
+                st.alive, st.failure = False, "isolated"
+            elif st.low_dig_months >= 6:
+                st.alive, st.failure = False, "breakdown"
         self._check_health(st)
         return info
 
@@ -538,6 +541,154 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
     return res
 
 
+# ----------------------------------------------------------------------------- generative play
+class Policy:
+    """Interface for replica policies: story(st, node) -> k, energy(st, left) -> name|None, main(st) -> name."""
+    def story(self, rep: "Replica", st: State, node: str) -> int: ...
+    def energy(self, rep: "Replica", st: State) -> str | None: ...
+    def main(self, rep: "Replica", st: State) -> str: ...
+
+
+def draw_title(cat: Catalog, st: State, used: set[str], rng: random.Random) -> str | None:
+    lv = st.level
+    while str(lv) not in cat.pools and lv > 1:
+        lv -= 1
+    pool = {t: w for t, w in cat.pools.get(str(lv), {}).items() if t not in used and t in cat.d["first_node"]}
+    if not pool:
+        return None
+    tot = sum(pool.values())
+    x = rng.random() * tot
+    for t, w in pool.items():
+        x -= w
+        if x <= 0:
+            return t
+    return t
+
+
+def play(cat: Catalog, policy: Policy, rng: random.Random, months: int = 48) -> tuple[State, list]:
+    """One whole career in the replica: 3 event decisions a month, quarter phases, month changes."""
+    rep = Replica(cat, rng)
+    st = State()
+    st.out_hist[1] = st.output
+    used: set[str] = set()
+    pending: list[str] = []
+    trace: list = []
+    for month in range(1, months + 1):
+        queue, pending, slots = pending, [], 3
+        while slots > 0 and st.alive:
+            if queue:
+                node = queue.pop(0)
+            else:
+                t = draw_title(cat, st, used, rng)
+                if t is None:
+                    break
+                used.add(t)
+                node = cat.d["first_node"][t]
+            while st.alive:
+                n = cat.nodes.get(node)
+                if not n or not n["choices"]:
+                    break
+                k = policy.story(rep, st, node)
+                rep.answer(st, node, k)
+                trace.append((month, "e", node, k))
+                slots -= 1
+                ch = n["choices"].get(str(k), {})
+                if "next" in ch:
+                    if ch.get("when") == "same" and slots > 0:
+                        node = ch["next"]
+                        continue
+                    pending.append(ch["next"])
+                break
+        if not st.alive:
+            break
+        if month % 3 == 0:
+            st.energy = 3
+            while st.alive:
+                a = policy.energy(rep, st)
+                if not a or ENERGY_FX.get(a, ({}, 9))[1] > st.energy:
+                    break
+                rep.energy_action(st, a)
+                trace.append((month, "q", a))
+            if not st.alive:
+                break
+            a = policy.main(rep, st)
+            rep.main_action(st, a)
+            trace.append((month, "m", a))
+        if month == months:
+            break
+        info = rep.month_change(st)
+        if info.get("grade"):
+            trace.append((st.month, "r", info))
+        if not st.alive:
+            break
+    return st, trace
+
+
+GROW_W = {"skill": 1.0, "network": 1.0, "output": 1.0}
+
+
+class Greedy(Policy):
+    """One-step greedy on the replica's own rules (a baseline, not an optimum)."""
+
+    def __init__(self, risk_cap: int = 3, w=None):
+        self.risk_cap, self.w = risk_cap, w or GROW_W
+
+    def value(self, rep: Replica, st: State, fx: dict[str, float], dr: int) -> float:
+        v = 0.0
+        t = THRESH.get(st.level, THRESH[6])
+        for i, k in enumerate(GROWTH):
+            x = fx.get(k, 0)
+            cur = getattr(st, k)
+            new = min(max(cap(st.level, k), cur), cur + x) if x > 0 else max(MINS[k], cur + x)
+            below = min(new, t[i]) - min(cur, t[i])
+            v += self.w[k] * (3 * below + (new - cur - below))
+        h = min(10, st.health + fx.get("health", 0))
+        d = min(10, st.dignity + fx.get("dignity", 0))
+        v += 0.5 * (h - st.health) + 0.4 * (d - st.dignity) - 4 * max(0, 3 - h) - 3 * max(0, 4 - d)
+        w = fx.get("wealth", 0) * (((st.level + 1) // 2) if fx.get("wealth", 0) < 0 else 1)
+        v += 0.6 * w - 4 * max(0, -(st.wealth + w))
+        r = st.risk + dr
+        v -= 1.5 * dr + (40 if r >= BLOW_AT else 0) + (8 * max(0, r - self.risk_cap))
+        return v
+
+    def story(self, rep, st, node):
+        best, bv = 1, -1e18
+        for k, ch in rep.cat.nodes[node]["choices"].items():
+            v = self.value(rep, st, ch["d"], rep.cat.answer_risk(node, int(k)))
+            if v > bv:
+                best, bv = int(k), v
+        return best
+
+    def energy(self, rep, st):
+        if st.health <= 5 and st.energy >= 1:
+            return "Health recovery"
+        if st.risk >= 2 and st.energy >= 2:
+            return "Defuse legacy risk"
+        opts = [(self.value(rep, st, ENERGY_FX[a][0], ACTION_RISK.get("q|" + a, 0)) / max(1, ENERGY_FX[a][1]), a)
+                for a in ("Prepare report materials", "Network maintenance", "Skill learning", "Mental recovery", "Health recovery")
+                if ENERGY_FX[a][1] <= st.energy]
+        if not opts:
+            return None
+        v, a = max(opts)
+        return a if v > 0 else None
+
+    def main(self, rep, st):
+        if st.risk >= 3:
+            return "Lay low and reduce risk"
+        return max(MAIN_FX, key=lambda a: self.value(rep, st, MAIN_FX[a], ACTION_RISK.get("m|" + a, 0)))
+
+
+def simulate(cat: Catalog, policy: Policy, games: int, seed: int = 0) -> dict[str, Any]:
+    scores, levels, fails = [], collections.Counter(), collections.Counter()
+    for i in range(games):
+        st, _ = play(cat, policy, random.Random(seed + i))
+        scores.append(Replica.score(st))
+        levels[st.level] += 1
+        fails[st.failure or "completed"] += 1
+    return {"games": games, "mean": round(sum(scores) / games, 2), "max": max(scores),
+            "levels": dict(sorted(levels.items())), "outcomes": dict(fails)}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -548,6 +699,9 @@ def main() -> None:
     p = sub.add_parser("validate")
     p.add_argument("--catalog", required=True)
     p.add_argument("--batches", required=True)
+    p = sub.add_parser("play")
+    p.add_argument("--catalog", required=True)
+    p.add_argument("--games", type=int, default=500)
     a = ap.parse_args()
     if a.cmd == "build":
         cat = build(a.batches.split(","), a.risk)
@@ -557,6 +711,8 @@ def main() -> None:
                           "risk_keys": len(cat["risk"]), "grade_levels": list(cat["grade"]), "tone_levels": list(cat["tone"])}))
     elif a.cmd == "validate":
         validate(Catalog(json.load(open(a.catalog))), a.batches.split(","))
+    elif a.cmd == "play":
+        print(json.dumps(simulate(Catalog(json.load(open(a.catalog))), Greedy(), a.games)))
 
 
 if __name__ == "__main__":

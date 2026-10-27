@@ -35,6 +35,14 @@ def policy_classes() -> dict[str, type]:
         for obj in vars(mod).values():
             if isinstance(obj, type) and issubclass(obj, policies.Base) and obj is not policies.Base:
                 found[obj.name] = obj
+    for extra in ("replica_bot",):
+        try:
+            mod = __import__(extra)
+            for obj in vars(mod).values():
+                if isinstance(obj, type) and issubclass(obj, policies.Base) and getattr(obj, "name", None) not in (None, "base"):
+                    found[obj.name] = obj
+        except ImportError:
+            pass
     try:
         import oracle  # noqa: F401  (optional, added once models exist)
         for obj in vars(oracle).values():
