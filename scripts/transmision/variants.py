@@ -279,6 +279,130 @@ def build3(out: Path) -> None:
            hypothesis="Round-3 rules and examples in the body, compact rules in the manifest instruction (always visible).")
 
 
+# ----------------------------------------------------------------------------- round 4 (pre-review perception, safer detonators)
+RULES4 = dict(RULES3)
+RULES4["review"] = (
+    "Protect the review",
+    "Reviews come every six months and are settled as the review month begins, before that month's stories, so the "
+    "story choices of the month just before a review month are the last ones that count. In that month never pick an "
+    "option that may lower Skill, Network or Output, even if another option looks more principled or adds Dignity. "
+    "Before choosing, mark each option: does it go against a person (blaming, correcting, refusing, reporting someone)? "
+    "Then it costs Network. Does it take time from your own delivery (extra or unplanned work, investigations, rework, "
+    "the slow thorough path, stopping to fix someone else's problem)? Then it costs Output. Pick an option with neither "
+    "mark; if every option has one, pick the one whose loss is on a stat that is not holding your promotion back.")
+RULES4["trigger"] = (
+    "No detonators under risk",
+    "While the HR remark is not the clear one, strike out every option that hides or denies something, lies or "
+    "invents, gossips or leaks, cuts a corner, or starts a formal process (formal complaints, investigations, open "
+    "letters, going over your manager's head). The more worried the remark, the more you prefer the quietest option "
+    "left that is not dishonest. Use your own judgement among the options that remain.")
+
+
+def rules4_md(keys=ORDER3) -> str:
+    return PRIORITY + "\n\n" + "\n".join(f"{i}. **{RULES4[k][0]}.** {RULES4[k][1]}" for i, k in enumerate(keys, 1)) + "\n"
+
+
+def build4(out: Path) -> None:
+    bundle(out, "t4-ex", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules4_md() + "\n" + EXAMPLES},
+           hypothesis="Round 4: per-option marks for the pre-review rule; detonator rule reduced to vetoes plus 'quietest honest option'.")
+    bundle(out, "t4-veto", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n" + VETO + "\n## Rules\n" + rules4_md() + "\n" + EXAMPLES},
+           hypothesis="Round 4 rules with the veto procedure and examples.")
+
+
+# ----------------------------------------------------------------------------- round 5: combined manual v2
+# First games of t3-instr: a blackout by month 3 (story choices kept costing Health; no rule protected it) and
+# a reviewer flag on the review timing stated as a known rule. Round 5 adds a Health and Dignity floor and words
+# the timing as something to plan for.
+RULES5 = dict(RULES4)
+RULES5["health"] = (
+    "Keep Health and Dignity safe",
+    "Health at zero ends the run at once, and Dignity left near zero ends it too. When Health is low (4 or less out "
+    "of 10): in stories never pick an option that costs Health (overtime, pushing through illness, skipping rest), "
+    "and spend Energy on Health recovery before anything else. When Dignity is low (3 or less), Mental recovery "
+    "comes first. Skill learning and High-intensity work cost Health: skip them while Health is low.")
+RULES5["review"] = (
+    "Protect the review",
+    "Reviews come every six months. Treat the month before each review month as the deadline: the review talk can "
+    "come as the review month opens, before its stories, so plan as if that month's stories will not count. In the "
+    "month before a review month never pick an option that may lower Skill, Network or Output, even if another option "
+    "looks more principled or adds Dignity. Before choosing, mark each option: does it go against a person (blaming, "
+    "correcting, refusing, reporting someone)? Then it costs Network. Does it take time from your own delivery (extra "
+    "or unplanned work, investigations, rework, the slow thorough path, stopping to fix someone else's problem)? Then "
+    "it costs Output. Pick an option with neither mark; if every option has one, pick the one whose loss is on a stat "
+    "that is not holding your promotion back.")
+RULES5["skill"] = (
+    "Build Skill at senior levels",
+    "From L4 on, the review bar rises fastest for Skill; watch whether reviews stall while Network and Output keep "
+    "growing. In every quarterly phase at L4 or above (except the career's final month), spend 2 Energy on Skill "
+    "learning and take Apply for rotation as the main action, unless a rule above says otherwise. In stories, prefer "
+    "the option that teaches or builds capability.")
+ORDER5 = ("closing", "health", "hr", "review", "trigger", "money", "skill")
+
+
+def rules5_md(keys=ORDER5) -> str:
+    return PRIORITY + "\n\n" + "\n".join(f"{i}. **{RULES5[k][0]}.** {RULES5[k][1]}" for i, k in enumerate(keys, 1)) + "\n"
+
+
+def compact5() -> str:
+    short = {
+        "closing": "In the quarterly phase of month 48 (the last): Lay low and reduce risk, Energy on Defuse, Health and Dignity, then Network; never Skill learning or High-intensity work.",
+        "health": "Health 4 or less: no story option that costs Health, Health recovery first; Dignity 3 or less: Mental recovery first.",
+        "hr": "While the monthly HR remark is anything but the smiling, all-right one: first Energy action Defuse legacy risk, main action Lay low and reduce risk.",
+        "review": "In the month before a review month never pick a story option that may lower Skill, Network or Output (going against a person costs Network; taking time from your own delivery costs Output).",
+        "trigger": "While that remark is not clear, never pick an option that hides, denies, lies, gossips, leaks, cuts corners or starts a formal process.",
+        "money": "While Wealth is only a few months of pay, refuse options that cost money.",
+        "skill": "At L4 and above, in every quarterly phase except the one of month 48: Skill learning with Energy and Apply for rotation as main action.",
+    }
+    return "Priority order, earlier wins: " + " ".join(f"({i}) {short[k]}" for i, k in enumerate(ORDER5, 1))
+
+
+def build5(out: Path) -> None:
+    bundle(out, "t5-instr", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules5_md() + "\n" + EXAMPLES},
+           instruction=compact5(),
+           hypothesis="Combined manual v2: round-4 texts, a Health and Dignity floor, timing worded as planning; compact rules in the manifest instruction.")
+    bundle(out, "t5-ex", {"career-rules": front("career-rules", DESC_GENERIC) + LOOP + "\n## Rules\n" + rules5_md() + "\n" + EXAMPLES},
+           hypothesis="Combined manual v2 with the rules only in the Skill body.")
+
+
+# ----------------------------------------------------------------------------- round 6: scoped rules
+# Games of t3-instr: Skill at the first review fell (S 2-7 at month 5 against 8-9 with f3-lean) because the
+# "protect your own delivery" advice leaked out of the pre-review month and Haiku stopped taking the options that
+# teach. Round 6 scopes every story rule to its context and leaves story choices to the model's own judgement
+# otherwise; quarterly phases (where a manual commands well) get the full priority list.
+T6 = """---
+name: career-rules
+description: "Rules for every Career Survival decision: quarterly Energy and main action, and the few story situations where your usual judgement is not enough. Read before deciding."
+---
+
+## Turn loop
+1. `observe`; read `events` first: the monthly HR remark, the review talk, any warning.
+2. Quarterly phases: apply the quarterly list below. Story events: check the four situations below; if none applies, choose as you judge best.
+3. `take_action` with the exact `choice` and a short note naming the rule used, or "judgement". If `success` is false, pick another option.
+
+## Quarterly phases (Energy, then main action): first matching line wins
+1. **The career's final month (month 48):** main action Lay low and reduce risk. Energy: Defuse legacy risk if the HR remark mentions risk, then Health recovery and Mental recovery until both are full, then Network maintenance. Never Skill learning or High-intensity work.
+2. **Health 4 or less:** Health recovery first. **Dignity 3 or less:** Mental recovery first. No Skill learning or High-intensity work until Health is back.
+3. **The HR remark says risk is piling up, serious or worse** (anything stronger than a mild "some risk, not serious yet"): first Energy action Defuse legacy risk; main action Lay low and reduce risk.
+4. **L4 or above:** Energy on Skill learning (2) plus one point where needed; main action Apply for rotation. From L4 the review bar rises fastest for Skill.
+5. **Otherwise:** Energy and main action on whichever of Skill, Network and Output is furthest from what the next review needs; Apply for a key project lifts all three.
+
+## Story events: only in these situations
+- **Month before a review month** (reviews come every six months; the review talk can arrive as the review month opens, so treat the month before as the deadline): do not pick an option that may lower Skill, Network or Output. Going against a person (blaming, correcting in public, refusing, reporting someone) costs Network; giving up time from your own delivery (extra unplanned work, investigations, rework) costs Output. This applies only in that month.
+- **HR remark says risk is piling up or worse:** strike out options that hide or deny, lie or invent, gossip or leak, cut a corner, or start a formal process (complaints, investigations, open letters, going over your manager's head). Choose among the rest.
+- **Health 4 or less:** strike out options that cost Health (overtime, pushing through illness, skipping rest).
+- **Wealth only a few months of pay:** strike out options that cost money.
+Otherwise there is no rule: choose the option you judge best for a long, healthy career. Options that teach you, help colleagues or deliver solid work usually pay off.
+"""
+
+
+def build6(out: Path) -> None:
+    bundle(out, "t6-scoped", {"career-rules": T6},
+           hypothesis="Rules scoped to their context: full priority list for quarterly phases, four narrow story situations, own judgement otherwise.")
+    bundle(out, "t6-scoped-instr", {"career-rules": T6},
+           instruction="Quarterly phases follow the career-rules list in order. Story events: only in the month before a review month, while the HR remark says risk is piling up, while Health is 4 or less, or while Wealth is low, apply the matching career-rules filter; otherwise choose by your own judgement.",
+           hypothesis="t6-scoped with a short always-visible reminder of the scope in the manifest instruction.")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -286,3 +410,6 @@ if __name__ == "__main__":
     build(o)
     build2(o)
     build3(o)
+    build4(o)
+    build5(o)
+    build6(o)

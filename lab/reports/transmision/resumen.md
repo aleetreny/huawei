@@ -20,7 +20,8 @@ Rama `alejandro/transmision` (desde `origin/main`, con `main-1nddsg` y `alejandr
 | 2 | [ronda-a.md](ronda-a.md) | Rondas A y 2: dónde y cómo escribir cada regla (contexto corto) | hecho |
 | 3 | ronda 3 | Prioridad explícita, ejemplos de cómo leer el coste de una opción, instrucción del manifest | en marcha |
 | 4 | contexto largo | Las mismas reglas con 18 decisiones de historial antes | en marcha |
-| 5 | partidas `g1-full` | `t3-instr` frente a f3-lean-v1, 40 + 40 completas, entrega oficial | en marcha desde las 11:48 UTC |
+| 5 | [partidas-g1.md](partidas-g1.md) | `t3-instr` frente a f3-lean-v1, partidas completas, entrega oficial | parado: −21 ± 8 puntos (7 + 7); la regla se salía de su contexto |
+| 6 | partidas `g2-full` | `t6-scoped-instr` (reglas acotadas) frente a f3-lean-v1, 30 + 30 | en marcha desde las 12:40 UTC |
 
 ## Relevo
 
