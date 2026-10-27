@@ -142,6 +142,30 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
 - `scripts/deepseek/promo.py`: por qué el bot no asciende (le falta un indicador antes del mes previo, o lo pierde en él).
 - `scripts/deepseek/groupbot.py`: modos nuevos de la regla escrita (`rvc`, `pw`, `pl1`, `dq`, `ll`, `blind`, `detect`, `ps`).
 
+## Techo y trampa de L1: por qué la media aún no es 70 (21:20 UTC)
+
+**El techo de una partida completa.** Las partidas completas de DeepSeek acaban en L5. L6 pide Skill 170 y se acaba con 105–122.
+- Sumando lo que puede dar cada parte: nivel 15 + dinero ~10 + Health y Dignity 15 + Skill ~14 + riesgo 10 + Network ~9 ≈ **72–73**.
+- Las dos partidas completas de v4 (71,7 y 70,2) ya están ahí. Lo que separa una de 70 de una de 67 es Network al final (54 frente a 34) y el dinero.
+
+**La trampa de L1 en el simulador** (trimestre parecido al de DeepSeek, regla del mes previo, 2.000 partidas por fila):
+
+| Regla añadida | Lectura de DeepSeek: nota / despidos / crisis | Lectura perfecta: nota / despidos / crisis |
+|---|---|---|
+| Ninguna (base) | 52,8 / 405 / 180 | — |
+| En L1, proteger Network y Output dos meses antes | 53,0 / 407 / 173 | — |
+| Reparar si bajan de su mejor valor con la evaluación cerca | 53,2 / 391 / 180 | — |
+| Las dos (lo que ya lleva v4) | 53,4 / 389 / 175 | 60,5 / 179 / 160 |
+| + si la pérdida es forzosa, que caiga en Skill | 53,4 / 389 / 175 | 61,1 / 154 / 165 |
+| + en L1, ascenso antes que riesgo con cualquier comentario de RR. HH. | 53,3 / 337 / 211 | 60,1 / 149 / 201 |
+
+**Lectura.**
+- Con lectura perfecta los despidos en L1 bajan del 19 % al 9 %: la trampa es sobre todo de percepción (DeepSeek no ve qué opciones cuestan Network u Output).
+- El 9 % que queda es estructural. En el 27 % de los meses de preparación la pérdida es forzosa; ninguna regla probada lo baja sin subir las crisis de confianza.
+- En partidas reales DeepSeek cae en la trampa ~1 de cada 9 veces, cerca de ese suelo.
+
+**Media esperada de v4:** 0,89 × ~70 + 0,11 × ~17 ≈ **63–65**. Para una media fiable de 70 haría falta eliminar la trampa de L1 o llegar a L6, y ninguna de las dos cosas está al alcance hoy. Las vías para los cortes 2 y 3: percibir mejor los costes de Network y Output en el mes de preparación, y que Network termine alta, como en la partida de 71,7.
+
 ## Relevo (27 oct, 21:05 UTC)
 
 1. **Qué se ha hecho y por qué.**

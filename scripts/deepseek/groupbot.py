@@ -174,7 +174,11 @@ class LexBot(GroupBot):
         self.protect_stalled = False # never lower a stalled stat before the review
         self.protect_l1 = False      # at the entry level, never lower a growth stat (any month)
         self.quarter = ""            # "blind": DeepSeek-like quarter (report, network, key project); "blind-l4": Skill from L4
-        self.stalled, self.last, self.lv = set(), None, None
+        self.stalled, self.last, self.lv, self.best = set(), None, None, {}
+        self.pw2_l1 = False          # at L1, also protect Network and Output two months before the review
+        self.rv_l1 = False           # at L1 with no blow-up yet, promotion first in the review month at any risk
+        self.skill_first_loss = False  # forced growth loss near a review: lose Skill, not Network or Output
+        self.repair = False          # review close: if Network or Output fell under its best at the level, raise it back
         self.risk_mode, self.risk_first, self.after_blowup = risk_mode, risk_first, after_blowup
         self.defuse_at, self.laylow_at = defuse_at, laylow_at  # HR level (0-4) from which the quarter cleans risk
 
@@ -209,7 +213,9 @@ class LexBot(GroupBot):
 
     def story(self, rep, st, node):
         if self.lv != st.level:
-            self.stalled, self.lv = set(), st.level
+            self.stalled, self.lv, self.best = set(), st.level, {}
+        for k in R.GROWTH:
+            self.best[k] = max(self.best.get(k, -99), getattr(st, k))
         if self.detect and self.last is not None:
             before, signs = self.last
             for k in R.GROWTH:
@@ -226,7 +232,8 @@ class LexBot(GroupBot):
             return rest or pool
         prep = 6 - st.month % 6 <= self.window if st.month % 6 else False  # months to the review month
         protect = lambda o: any(o[1].get(k, 0) < 0 for k in R.GROWTH)
-        if prep and self.review_first and (self.review_first == "always" or min(st.risk, 4) < 2):
+        if prep and self.review_first and (self.review_first == "always" or min(st.risk, 4) < 2
+                                           or (self.rv_l1 and st.level == 1 and st.blowups == 0)):
             opts = keep(opts, protect)  # promotion first in the preparation month
         if self.risk_mode == "survive":  # never take an option that ends the run at once
             opts = keep(opts, lambda o: st.health + o[1].get("health", 0) * 1 <= 0)
@@ -236,6 +243,16 @@ class LexBot(GroupBot):
         if self.risk_mode in ("strict", "survive") or not calm:
             opts = keep(opts, lambda o: o[2] > 0)
         opts = keep(opts, lambda o: (st.health <= 3 and o[1].get("health", 0) < 0) or (st.dignity <= 4 and o[1].get("dignity", 0) < 0))
+        if self.pw2_l1 and st.level == 1 and st.month % 6 and 6 - st.month % 6 == 2:
+            opts = keep(opts, lambda o: o[1].get("network", 0) < 0 or o[1].get("output", 0) < 0)
+        if self.skill_first_loss and st.month % 6 and 6 - st.month % 6 <= 2 and \
+                all(any(o[1].get(k, 0) < 0 for k in R.GROWTH) for o in opts):
+            # every option costs a growth stat: let the loss fall on Skill rather than Network or Output
+            opts = keep(opts, lambda o: o[1].get("network", 0) < 0 or o[1].get("output", 0) < 0)
+        if self.repair and st.month % 6 and 6 - st.month % 6 <= 2:
+            below = [k for k in ("network", "output") if getattr(st, k) < self.best.get(k, -99)]
+            if below:
+                opts = keep(opts, lambda o: not any(o[1].get(k, 0) > 0 for k in below))
         if (st.month % 6 and 6 - st.month % 6 <= self.protect_window) or (self.protect_l1 and st.level == 1):
             opts = keep(opts, lambda o: any(o[1].get(k, 0) < 0 for k in R.GROWTH))
         if self.protect_stalled and self.stalled and st.month % 6 and 6 - st.month % 6 <= 2:
@@ -285,6 +302,10 @@ def _bot(name: str, i: int) -> GroupBot:
         bot.detect = "detect" in spec
         bot.protect_stalled = "ps" in spec
         bot.protect_l1 = "pl1" in spec
+        bot.pw2_l1 = "lonetwo" in spec
+        bot.repair = "rep" in spec
+        bot.skill_first_loss = "sloss" in spec
+        bot.rv_l1 = "rvlone" in spec
         bot.quarter = "blind-l4c" if "qb4c" in spec else "blind-l4b" if "qb4b" in spec else ("blind-l4" if "qb4" in spec else ("blind" if "qb" in spec else ""))
         return bot
     return GroupBot(per, seed=i)
