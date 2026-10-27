@@ -1,0 +1,43 @@
+{
+ "name": "full-base",
+ "cut": null,
+ "n": 15,
+ "actor": "08e9167a965ed82c",
+ "created": "2026-10-27T01:07:37Z",
+ "arms": {
+  "f3-lean-v1": [
+   "secciones-conf-cc098e54-08e916-00000-a1",
+   "secciones-conf-cc098e54-08e916-00001-a1",
+   "secciones-conf-cc098e54-08e916-00002-a1",
+   "secciones-conf-cc098e54-08e916-00003-a1",
+   "secciones-conf-cc098e54-08e916-00004-a1",
+   "secciones-conf-cc098e54-08e916-00005-a1",
+   "secciones-conf-cc098e54-08e916-00006-a1",
+   "secciones-conf-cc098e54-08e916-00007-a1",
+   "secciones-conf-cc098e54-08e916-00008-a1",
+   "secciones-conf-cc098e54-08e916-00009-a1",
+   "secciones-conf-cc098e54-08e916-00010-a1",
+   "secciones-conf-cc098e54-08e916-00011-a1",
+   "secciones-conf-cc098e54-08e916-00012-a1",
+   "secciones-conf-cc098e54-08e916-00013-a1",
+   "secciones-conf-cc098e54-08e916-00014-a1"
+  ],
+  "bb-mechanics-lean-v1": [
+   "secciones-conf-ad2f21d7-08e916-00000-a1",
+   "secciones-conf-ad2f21d7-08e916-00001-a1",
+   "secciones-conf-ad2f21d7-08e916-00002-a1",
+   "secciones-conf-ad2f21d7-08e916-00003-a1",
+   "secciones-conf-ad2f21d7-08e916-00004-a1",
+   "secciones-conf-ad2f21d7-08e916-00005-a1",
+   "secciones-conf-ad2f21d7-08e916-00006-a1",
+   "secciones-conf-ad2f21d7-08e916-00007-a1",
+   "secciones-conf-ad2f21d7-08e916-00008-a1",
+   "secciones-conf-ad2f21d7-08e916-00009-a1",
+   "secciones-conf-ad2f21d7-08e916-00010-a1",
+   "secciones-conf-ad2f21d7-08e916-00011-a1",
+   "secciones-conf-ad2f21d7-08e916-00012-a1",
+   "secciones-conf-ad2f21d7-08e916-00013-a1",
+   "secciones-conf-ad2f21d7-08e916-00014-a1"
+  ]
+ }
+}

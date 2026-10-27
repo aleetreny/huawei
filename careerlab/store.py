@@ -49,6 +49,7 @@ CREATE INDEX IF NOT EXISTS evals_cell ON evaluations(policy_id, actor_id, env_id
 """
 
 TERMINAL_OUTCOMES = ("completed", "eliminated")
+CUT_OUTCOME = "truncated"  # short game stopped on purpose: stored, never scored (careerlab.truncate)
 EXPORT_KEYS = {"policies": "policy_id", "actors": "actor_id", "environments": "env_id", "jobs": "job_id",
                "evaluations": "job_id", "decisions": "decision_id"}
 
@@ -219,7 +220,7 @@ class Registry:
                  result.get("wall_seconds"), str(traj) if traj else None, file_sha256(traj) if traj and traj.exists() else None,
                  result.get("interruption"), time.time(), int(bool(result.get("resumed"))), job["replicate"]))
             self.db.execute("UPDATE jobs SET status=?, session_id=COALESCE(session_id, ?), updated_at=? WHERE job_id=?",
-                            ("done" if outcome in TERMINAL_OUTCOMES else "interrupted", result.get("session_id"), time.time(), job_id))
+                            ("done" if outcome in TERMINAL_OUTCOMES or outcome == CUT_OUTCOME else "interrupted", result.get("session_id"), time.time(), job_id))
         return outcome
 
     def cancel_queued(self, policy_id: str, actor_id: str, note: str) -> list[str]:

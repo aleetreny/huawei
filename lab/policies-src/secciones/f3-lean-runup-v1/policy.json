@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "f3-lean-runup-v1",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "add module(s): review-run-up",
+  "hypothesis": "Deepening H-P1a: one Skill that merges the review clock (which halved month-5 losses on f3-lean) with explicit discreet-honest alternatives to firm public stands (the exact pattern behind the remaining Network losses) will lift first-review promotion above the clock alone.",
+  "change": "f3-lean-v1 plus skill module(s) review-run-up",
+  "predicted_behaviour": "Fewer Network points lost in months 4-5 than with the clock alone; first-review promotion at or above the clock arm and above the reference.",
+  "refutation": "Refuted if first-review promotion over 25 short games is not above the clock-only arm of the same batch.",
+  "skill_count": 2
+}
