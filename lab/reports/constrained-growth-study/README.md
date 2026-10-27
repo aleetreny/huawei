@@ -97,7 +97,7 @@ Il problema aperto ha due parti: conservare preparazione senza comprare esposizi
 
 Origine `matteofilter`, dati esterni `/Users/matteozabban/careerlab-data/matteo-constrained-growth/study-v1`. Solo strumenti pubblici del gioco, nessun modello IA di gioco, quota IA, lettura degli interni del simulatore, registro cloud o automazione. Tutti i sei worker sono terminati. Skills di consegna e confronto Haiku congelato restano invariati e non giocati.
 
-**Pubblicazione remota da completare:** il lavoro e tutti gli archivi sono committati localmente nella branch `matteo-t4-growth`. I tentativi di push hanno restituito errori TLS/HTTP 408 e timeout; anche il fallback GitHub API fallisce nella connessione TLS. La PR #12 è stata aggiornata, ma non considerare i nuovi file disponibili nella sua branch finché il push non è confermato. Riprendere con `git push origin HEAD:matteo-t4-growth` e verificare che il riferimento remoto coincida con HEAD. Nessuna partita da rilanciare.
+**Pubblicazione remota completata:** il push fino ad `a180e29` è riuscito il 27 ottobre, includendo lo studio, il pannello e il confronto con Ale nella PR #12. I precedenti errori TLS/HTTP408 sono risolti; nessuna partita da rilanciare.
 
 **Possibile seguito, non avviato:** isolare un filtro applicato prima del primo incidente, con controllo fresco e stesso bonus. Trattarlo come nuova ipotesi, non correzione già dimostrata; prima ricostruire le 129 scelte pre-incidente per capire quanto il veto sposterebbe preparazione e costi. In alternativa approfondire la conservazione della preparazione nei casi del controllo che mancano la review, senza aggiungere un premio indiscriminato. Non lanciare una nuova raccolta modificando il protocollo esistente.
 
