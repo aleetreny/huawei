@@ -53,6 +53,13 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
 | B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
 
+**Cierre y fidelidad de la réplica (motor, investigación terminada).**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B15 | Planificar conjuntamente energía y acción principal tras la última evaluación mejora la ganancia de cierre en +0,552 Q (IC 95% [0,298; 0,805], 600 partidas oficiales aleatorizadas). El planificador dejaba energía útil sin usar y descartaba red que aún puntúa. La nota global sin ajustar no prueba un nuevo campeón; transferencia a Skill pendiente. | [Mecánicas emergentes §1](lab/reports/mecanicas-emergentes/README.md) |
+| B16 | La terminación liquida el mes 48 y deja estado en mes 49, con 48 nóminas. Ambos generadores de la réplica omitían esa transición. Confirmado en 1.156 completadas históricas y 568 nuevas; corrección con modo histórico explícito para reproducir experimentos. | [Mecánicas emergentes §2](lab/reports/mecanicas-emergentes/README.md) |
+
 ## C. Pistas sin confirmar
 
 | # | Pista | Fuente |
