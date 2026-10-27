@@ -191,7 +191,7 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
    - Una partida perdida por el límite de 20 reanudaciones (contexto de ~200 mil fichas y respuestas enlatadas en chino).
    - Una partida muerta por un choque de puertos de JiuwenSwarm con otro chat que arrancó sus huecos a la vez.
    - DeepSeek no usa "Stalled".
-4. **Siguiente paso.**
+4. **Siguiente paso.** Decisión de Alejandro (27 oct, noche): `t13-read-v4` va al corte 1 y se para por hoy. Mañana: combinar el enfoque de script de `alejandro/formato` con las protecciones de L1 de esta línea.
    - **Corte 1:** empaquetar `lab/policies-src/deepseek/t13-read-v4` (commit `09d5735`) y cambiar "t13-read-v2" por "t13-read-v4" en los borradores de `alejandro/entrega`.
    - **Cortes 2 y 3:** atacar la trampa de L1, que es la mayor fuente de varianza (margen cero en Network y Output; en el 27 % de los meses de preparación la pérdida es forzosa). Medir con 4–6 partidas por versión.
    - Para jugar: arrancar las instancias de una en una y comprobar los puertos con `lsof` si hay otros chats jugando.
