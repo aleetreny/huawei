@@ -64,6 +64,9 @@ Alternativa para “antes de la evaluación”: las seis reglas en el cuerpo con
 
 ## Relevo
 
+**27 oct, 15:10 UTC — recorte de cuota.** A petición de Alejandro (mucho gasto): la semana pasó del 24 % al 34 % en el día. Se paran todos los bancos (t15 sin terminar) y el lote `g6-full` queda en f3-lean-v1 frente a t13-final, 20 partidas cada uno (≈ 37 partidas más, 4 a la vez). El resto del plan se retoma sólo si se pide.
+
+
 **27 oct, 13:10 UTC.**
 1. **Hecho.** Fase 0 ([fase0-carga-skills.md](fase0-carga-skills.md)); banco de 3.573 situaciones con verdad del simulador ([banco.md](banco.md)); rondas A–3 ([ronda-a.md](ronda-a.md)); partidas g1 paradas ([partidas-g1.md](partidas-g1.md)); bloque general y huella ([bloque-general.md](bloque-general.md)); modo `#official` del actor (`careerlab/actors/claude_cli.py`, lee también `reference/`).
 2. **Conclusión de trabajo.** El reparto trimestral se transmite (Skill en L4 17 % → 85 %, cierre 62 % → 93 %, RR. HH. 18 % → 79–85 %); las reglas de historias se transmiten a medias y se cuelan en el resto de historias (1 de cada 5 cambia, con menos Skill y más riesgo), lo que hundió a t3-instr en partidas.
