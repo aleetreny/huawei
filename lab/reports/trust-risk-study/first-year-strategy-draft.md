@@ -1,12 +1,14 @@
 # First-year strategy — general research draft
 
-This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. Controlled incident and [financial-reserve studies](../financial-reserve-study/README.md) evaluated frozen empirical bots, not agents reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
+This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. Controlled incident, [financial-reserve](../financial-reserve-study/README.md) and [growth-priority studies](../growth-gap-study/README.md) evaluated frozen empirical bots, not agents reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
 
 ## Balance progress and the ability to continue
 
 Build capability, usable relationships and credited delivery together. Identify the current bottleneck from actual state changes and feedback. Choose feasible work with clear ownership and a verifiable result, while preserving health, dignity and the money needed to meet foreseeable obligations. Recognition bought through unaffordable personal spending can undermine the career it is intended to support.
 
 Before choosing, name the intended benefit, its cost and the downside you can absorb. After choosing, inspect the realised change and any new warning. If an investment repeatedly stops helping, redirect effort to another gap, capacity or an unresolved obligation. Reassess this diagnosis after a promotion: both the growth bar and the usefulness of previous investments may change.
+
+Check whether a proposed gain would open a gap in another part of the growth profile. Preserve preparation through subsequent choices, especially as a review approaches. A positive change in one statistic is insufficient evidence that the whole decision helps the career; retain capacity to absorb its other consequences.
 
 ## Keep incident history separate from current warnings
 
@@ -25,5 +27,7 @@ Track the affordability of recurring favours, personal contributions and uncerta
 ## Prepare before a review and consolidate afterwards
 
 Use the handbook and observed clock transitions to prepare before the decision boundary. Do not depend on an allocation that arrives after the review. At the review, inspect grade, level change, warnings and survival separately.
+
+If advancement is missed, distinguish a delayed initial promotion from stagnation at a new level. Use feedback and the history to plan recovery while protecting the ability to continue. Repeating an investment that has already stalled does not address a different missing requirement.
 
 After advancement, check whether working relationships or responsibilities have changed. Rebuild alignment and support where necessary while maintaining delivery and capacity. A promotion is a new state to manage, not evidence that every earlier liability has been resolved.
