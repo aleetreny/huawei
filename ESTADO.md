@@ -104,6 +104,8 @@ El observed-growth-v3 de Matteo sacó en la carrera 61, 19, 52 y 64 (3 de 4 term
 
 ## 4. Tareas pendientes
 
+Investigación adicional solicitada por Alejandro: **Codex — `alejandro/mecanicas-emergentes` — en marcha**. Cuestionar límites del planificador y descubrir mecánicas útiles con simulaciones; [plan y relevo](lab/reports/mecanicas-emergentes/task_plan.md). Bots aislados de origen `emergentes`, sin IA ni gasto de APIs; no cambia T17/T20 ni sus ramas.
+
 Cada uno actualiza **su propia línea** al empezar y al acabar. Las tareas nuevas las añade el organizador.
 
 Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicacion-repo` — terminada, pendiente de integrar mediante PR**. Explicación de estructura, tareas y resultados con Relevo en [este informe](research/careerlab/explicacion-repo-2026-10-26.md); 230 tests OK, sin partidas ni cambios del laboratorio. No añade una tarea de desarrollo a T1–T13.
