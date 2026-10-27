@@ -116,6 +116,14 @@ Lo visto mientras juegan:
 - La diferencia entre las dos está en Network (54 frente a 41) y en el dinero (38 frente a 27). v5 pone Skill primero desde L4, lo que el simulador ya decía que resta; v7 lo corrige.
 - **Coste: 0,7–0,8 USD por partida completa** (66–70 millones de fichas, ~1,4 millones por mes). Es caro en la parte de eficiencia de fichas (10 % de la nota de la versión), pero terminar pesa mucho más.
 
+### Confirmación de t13-read-v4 (2 partidas desde las 19:56 UTC) y t13-read-v7 (1 desde las 20:19)
+
+- **v4-00001: atascada en L1.** Perdió el ascenso del mes 6 por Network −1 en la última historia del mes 5, cuando la otra opción era filtrar información a la competencia (pérdida casi forzosa). Perdió el del mes 12 por Output −1 en el mes 11. En el mes 18, D por tiempo en el nivel. Murió en el mes 22 por un fallo de infraestructura: su servidor de agente arrancó con choques de puerto (21001) a la vez que otro chat arrancaba sus huecos, y se cerró a mitad de partida ("going away"). Sin nota; iba hacia el despido del mes 24.
+- v4-00002: L4 en el mes 26, sin explosiones (en juego).
+- v7: en juego.
+
+**La trampa de L1 es la mayor fuente de varianza que queda.** En L1 el umbral de Network y Output es su máximo: margen cero. En el 27 % de los meses de preparación la pérdida es forzosa (todas las opciones cuestan algo o son arriesgadas). De 8 partidas de la familia v2–v5, 1 se quedó en L1.
+
 ### Siguiente lote (histórico)
 
 Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge lo aprendido de v2: llenar los tres indicadores en el trimestre previo, quedarse en la propia entrega con la evaluación cerca, Skill primero desde L4, sin "Stalled".
