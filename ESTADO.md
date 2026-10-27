@@ -136,6 +136,8 @@ Ingeniería inversa con bots solicitada por Alejandro: **Claude — `alejandro/i
 
 Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-probar` — preparada para PR nueva**. [Índice](research/ideas/README.md) y [exploración aleatoria instrumentada](research/ideas/exploracion-aleatoria.md): revisión de la corrida de Matteo (73.858 partidas, resumen agregado sin decisiones individuales publicadas), diseño de logs por decisión y límites de inferencia/conformidad. No se han lanzado partidas ni contactado organizadores. Relevo y siguiente paso de auditoría en la sección; no reasigna T1–T13.
 
+Exploración solicitada por Alejandro: **chat `alejandro/optimistic-gauss-edyw1j` — banco de preguntas, categorías y objetivos por etapa — terminada, pendiente de integrar**. [Informe y Relevo](lab/reports/question-bank/README.md). 4.666 partidas de bots (sin cuota) y el catálogo exacto de `main-1nddsg`: 40 % de las preguntas tienen una respuesta dominante (casi siempre FIX/OWN/GUARD); 10 categorías etiquetadas a ciegas por Haiku detectan el 92 % de las respuestas de riesgo ≥ 2; en el simulador, un bot que sólo ve la categoría saca 46,7 frente a 67,7 del que ve efecto y riesgo exactos (12,0 al azar); los 21 puntos perdidos son ~14 por no saber qué indicador mueve cada opción y ~9 por juzgar el riesgo por la categoría. Sin partidas de Claude ni DeepSeek; no reasigna T1–T14.
+
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
 |---|---|---|---|---|
 | T1 | Carrera continua de manuales (jugar, decidir, generar hijas) | nube | **sustituida por T14** el 26 oct a las 19:39 UTC. Su última decisión fue la #157 (líder f1 línea de estado, 56,1) | `lab/reports/cloud-run-status.md` (histórico y relevo de la nube) |
