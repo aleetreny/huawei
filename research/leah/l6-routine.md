@@ -43,10 +43,37 @@ The new line follows the T20 writing rules (`lab/reports/transmision/resumen.md`
 - `uv run pytest -q`: 302 passed.
 - SKILL.md is 447 words; the reference file 168.
 
-## Not done, and what to check
+## Smoke test: one Haiku game (27 Oct, 15:45–16:25 UTC)
 
-- **No game played yet.**
-- `reference/review-month.md` is only read by the `#official` mode of the Claude CLI actor, which is on `alejandro/transmision` and not yet on `main`. A game from `leah/workspace` would not see it. The fair test is Alejandro's setup: his obedience bank and his interleaved games against t10-countdown and f3-lean-v1.
+Job `leah-pilo-32466d29-614d6e-00000-a1`: policy `32466d290c42d2f6`, actor `claude-cli:haiku`, origin `leah`, purpose `pilot`. It is outside every decision and only checks whether line 5 is obeyed. Checked with [scripts/leah/line5_check.py](../../scripts/leah/line5_check.py).
+
+**Line 5 was obeyed every time it applied.**
+
+| Month | Line that applied | Energy | Main action |
+|---:|---|---|---|
+| 3 | 2 (Health 3) and 3 (non-mild HR remark) | Health recovery, Defuse legacy risk | Lay low |
+| 6 | 3 (uneasy HR remark) | Defuse legacy risk, Network maintenance | Lay low |
+| 9 | **5** | Health, Mental, Report | key project |
+| 12 | 3 (quiet "some risk" remark: Defuse, then main as below) | Defuse legacy risk, Report | key project |
+| 15, 18, 21 | **5** | Health, Mental, Report | key project |
+
+- **Line 5: 4 of 4 quarters exactly as written**, and no Skill learning at all. The other 3 quarters went to higher lines, which is correct under first match.
+- Key project in 5 of 7 L1–L3 quarters (71%). That clears the refutation bar (70%) but misses the prediction (90%), and the 2 misses are Lay low from the risk line, not disobedience.
+- After every quarterly routine the stats were back at the L1 ceiling: Skill 9, Network 3, Output 3.
+
+**The game was lost anyway:** dismissed at month 24 at L1, grades C C C D, Q 23.0. At every review month one stat was a point short:
+- month 6: Output 1;
+- months 12 and 18: Network 2;
+- month 24: Network 2 and Output 2.
+
+Each time, the point was lost in a story event during the two months before the review, after the stats had been at the ceiling. That is the same failure Matteo found in v7.
+
+**Why this test can't judge the manual.** The rule against that failure lives in `reference/review-month.md`. On this branch's actor Haiku can't open it. It wrote `Review in 1` correctly every time, then "Reference file unavailable, so judgement" in 12 notes. The game was missing the one rule that protects the review. That's why a fair test needs Alejandro's `#official` actor.
+
+**Tokens.** 5.13 M over 24 months, about 214k a month (cache reads 5.0 M), 194 turns, list price 0.084 USD. That's below the polish game's 278k over the same 24 months.
+
+## What to check in Alejandro's setup
+
 - **What to measure** (also in `policy.json`):
   - share of key projects in L1–L3 quarters (prediction ≥ 90%);
   - Skill learning at L1–L3 (prediction under 5% of Energy actions);
@@ -56,13 +83,16 @@ The new line follows the T20 writing rules (`lab/reports/transmision/resumen.md`
 
 ## Relevo
 
-1. **Done.** `l6-routine-v1` written as a one-line variant of t10-countdown; lint has no errors and the tests pass.
-2. **Data.** None yet.
-3. **Open.**
-   - The manual depends on t10-countdown, which is on `alejandro/transmision`.
-   - Its `parents` field names `t10-countdown`, which has to be registered first.
-4. **Next.** Alejandro adds it to his T20 bank and games:
+1. **Done.**
+   - `l6-routine-v1` written as a one-line variant of t10-countdown; lint has no errors and the tests pass.
+   - One Haiku smoke test: line 5 obeyed 4 of 4 times. The game was lost at month 24 on pre-review story losses, with the reference rule unreadable on this branch.
+2. **Data.**
+   - `lab/registry-origins/leah/` (exported);
+   - live view in `lab/panel/live/game.json`;
+   - transcript outside Git under `~/careerlab-data/huawei-leah/runs/leah-pilo-32466d29-614d6e-00000-a1/`.
+3. **Open.** `parents` is empty because `t10-countdown` isn't registered on this machine. The lineage is in `idea_origin`. Set `parents: ["t10-countdown"]` once t10 is registered.
+4. **Next.** Alejandro adds it to his T20 bank and his interleaved games, where the reference file is read:
    ```bash
    scripts/transmision/drive.sh <items> <ids> <slots> l6=lab/policies-src/l6-routine/l6-routine-v1/bundle
    ```
-   For a quick check from this branch that Haiku follows line 5, one game under origin `leah` is enough; the review-month reference won't be read there.
+   Don't play more games of it from `leah/workspace`: without the reference rule they measure a different manual.

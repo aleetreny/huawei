@@ -1,8 +1,8 @@
 {
   "family": "l6-routine",
   "name": "l6-routine-v1",
-  "parents": ["t10-countdown"],
-  "idea_origin": "T10 energy bots: the 4 of 400 that reached L6 (lab/fastloop/lessons.md, Frontier); written with the T20 obedience rules",
+  "parents": [],
+  "idea_origin": "One-line variant of Alejandro's t10-countdown (T20, branch alejandro/transmision; not registered here, so parents is empty). Idea: T10 energy bots, the 4 of 400 that reached L6 (lab/fastloop/lessons.md, Frontier)",
   "operator": "one-line change",
   "hypothesis": "t10-countdown with one change: at L1-L3 the Energy mix is the fixed routine of the bots that reached L6 (Health recovery, Mental recovery, then Prepare report materials, every quarter) instead of lifting the stat furthest from the next review. Lifting the weakest stat sends Energy to Skill learning, which stalls at L1, and starves Output, which the first promotion needs.",
   "predicted_behaviour": "At L1-L3 the main action is Apply for a key project in at least 90% of quarters, and Energy goes to Health recovery, Mental recovery and Prepare report materials, with Skill learning in under 5% of Energy actions. More careers promoted at the first review than t10-countdown, with no more blackouts.",

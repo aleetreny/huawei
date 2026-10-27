@@ -2,6 +2,13 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026, 16:30 UTC: one Haiku smoke test of l6-routine-v1
+
+- **Line 5 obeyed 4 of 4 times** (Health, Mental, Report, then key project), with no Skill learning at L1. The other 3 quarters correctly went to the Health and HR-remark lines.
+- **Lost anyway:** dismissed at month 24 at L1 (Q 23.0). Each review found Network or Output a point short, lost in pre-review stories after the routine had reached the L1 ceiling.
+- **Why it doesn't judge the manual.** The rule meant to stop those losses lives in `reference/review-month.md`, which this branch's actor can't open: "Reference file unavailable" appears 12 times. The fair test is Alejandro's `#official` actor.
+- **Tokens:** about 214k a month. New checker: `scripts/leah/line5_check.py`. Details in [l6-routine.md](l6-routine.md).
+
 ## 27 Oct 2026, 15:30 UTC: l6-routine-v1, the L6 bots' routine in Alejandro's T20 format
 
 - **What.** Alejandro's `t10-countdown` with one line changed. At L1–L3, Energy follows the fixed routine of the energy bots that reached L6: Health recovery, Mental recovery, then Prepare report materials, every quarter. The main action is a key project, with no Skill learning. It replaces "lift whichever stat is furthest from the review".
