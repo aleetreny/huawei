@@ -4,7 +4,7 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 **Pregunta.** ¿Sabe `deepseek-v4-flash` ver qué indicador sube o baja cada respuesta y cuáles son arriesgadas? ¿Qué categorías reconoce y qué reglas obedece? Con eso, ¿cuál es la forma más masticada de darle las reglas?
 
-## Conclusiones (27 oct, 17:15 UTC)
+## Conclusiones (27 oct, 18:40 UTC)
 
 1. **DeepSeek ve bien el riesgo y mal Skill y Output.** Sin ayuda detecta el 83 % de las respuestas que suben el riesgo oculto y el 90 % de las peligrosas, pero sólo el 45 % de las que suben Skill y el 49 % de las que suben Output. Lee los tipos de respuesta mejor que Haiku ([percepcion.md](percepcion.md)).
 2. **La mejor categorización es leer cada opción como seis signos más el riesgo**, con definiciones que digan cómo suele moverse cada indicador (prompt v3). Un bot que elige sólo con esa lectura de DeepSeek saca **56,0** en el simulador, frente a 46,7 con los 10 tipos de Haiku (lo que había que superar) y 67,7 el oráculo. Con las mismas definiciones, los 10 tipos solos se quedan en 48,5. Se confirma con los títulos reservados en percepción y en el simulador, aunque no en la pérdida por decisión del banco ([categorizacion.md](categorizacion.md)).
@@ -15,7 +15,9 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 7. **Lo masticado: la ficha de lectura y la regla de historias dentro de t13-final** (`t13-read-v1`) arreglan los detonantes (acierto del 81 % al 91 %, pérdida −0,97) y la deriva lejos de Skill, y eligen las opciones de menos riesgo. En la pérdida media de las historias empatan con t13-final (−0,02) y mejoran a no tener manual (−0,47) ([masticado.md](masticado.md)).
 
-**Propuesta.** `t13-read-v1` como candidato para el corte, con `t13-final` de reserva: misma pérdida media en el banco, menos riesgo, sin el fallo de los detonantes. Cuesta un 25 % más de fichas en las historias. El banco no confirma la ganancia que predice el simulador, así que sólo partidas oficiales dirían más. Con 0,4–0,6 USD por partida, sirven para comprobar que funciona de punta a punta, no para separar dos manuales parecidos (harían falta unas 45 por brazo).
+8. **Partidas oficiales (2, aprobadas por Alejandro): las dos eliminadas por el riesgo oculto.** Partida 1: despido en el mes 24 en L1 (14,98). Partida 2: crisis de confianza en el mes 30 en L4 (42,51), tras crecer muy bien. En las dos el riesgo lo cargan opciones que parecen constructivas y que DeepSeek lee como prudentes: tratarlo en un 1:1 privado, una denuncia anónima, un cambio por fases, hacer menos para ganar tiempo. Coste: 0,23 y 0,31 USD; una partida completa costaría unos 0,45–0,50 ([partidas-oficiales.md](partidas-oficiales.md)).
+
+**Propuesta.** `t13-read-v1` sigue siendo el candidato (misma pérdida media que t13-final en el banco, menos riesgo, sin el fallo de los detonantes), pero las partidas dicen que **el siguiente paso es frenar el riesgo "constructivo" en las historias**. Hay que hacerlo antes de más partidas, y se puede comprobar gratis en el banco y en el simulador. Ver la lectura de [partidas-oficiales.md](partidas-oficiales.md).
 
 ## Gasto de DeepSeek
 
@@ -28,7 +30,8 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 | 16:28–16:50 | Banco de obediencia: control y t13-final, 459 situaciones cada uno | 5.979 | 1,20 | 1,27 |
 | 16:30–16:45 | Percepción v2 (×2), v3 (×2, todos los títulos), v1 en títulos reservados (×2) | 1.787 | 0,20 | 1,47 |
 | 16:50 | Control repetido en el bloque general (139 situaciones) | 563 | 0,08 | 1,55 |
-| 16:55–17:05 | Variante t13-read-v1 en 320 historias | 2.300 | 0,45 | **1,98** |
+| 16:55–17:05 | Variante t13-read-v1 en 320 historias | 2.300 | 0,45 | 1,98 |
+| 17:18–18:30 | 2 partidas oficiales de t13-read-v1 (aprobadas por Alejandro) | — | 0,54 (0,229 + 0,310) | **2,52** |
 
 ## Experimentos
 
@@ -38,6 +41,7 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 | [categorizacion.md](categorizacion.md) | Qué agrupación entiende DeepSeek y discrimina; medida única en el simulador; regla de grupo escrita | hecho |
 | [obediencia.md](obediencia.md) | Banco oficial con DeepSeek: control frente a t13-final; huella y control repetido | hecho |
 | [masticado.md](masticado.md) | t13-final + ficha de lectura + regla de historias, en el banco | hecho |
+| [partidas-oficiales.md](partidas-oficiales.md) | 2 partidas oficiales de t13-read-v1 con DeepSeek | hecho |
 
 ## Código y datos
 
@@ -49,42 +53,37 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 
 ## Relevo
 
-**27 oct, 17:15 UTC.**
+**27 oct, 18:40 UTC.**
 1. **Qué se ha hecho y por qué.**
    - Arnés barato para la clave, con coste por llamada y freno de gasto.
    - Percepción (v1, sin pistas), porque era lo más barato y lo que más faltaba saber.
    - Categorización con una medida única en el simulador: el bot del motor que elige sólo con lo que DeepSeek percibe, `groupbot.py`. Se eligió con los títulos de diseño y se comprobó con los reservados.
    - Banco oficial de obediencia: control, t13-final y control repetido para separar el efecto del manual del ruido de la temperatura.
    - Una variante masticada, `t13-read-v1`, que mete en el manual la lectura ganadora y una regla escrita.
-2. **Resultados:** conclusiones de arriba; detalles y tablas en [percepcion.md](percepcion.md), [categorizacion.md](categorizacion.md), [obediencia.md](obediencia.md) y [masticado.md](masticado.md). Datos en `~/careerlab-data/deepseek/` (fuera de Git: llevan texto del juego). Hallazgos B17–B21, C5–C8 y dos descartados en [HALLAZGOS.md](../../../HALLAZGOS.md).
+   - 2 partidas oficiales de `t13-read-v1`, con el visto bueno de Alejandro, para comprobar el funcionamiento de punta a punta y el coste.
+2. **Resultados:** conclusiones de arriba; detalles y tablas en [percepcion.md](percepcion.md), [categorizacion.md](categorizacion.md), [obediencia.md](obediencia.md), [masticado.md](masticado.md) y [partidas-oficiales.md](partidas-oficiales.md).
+   - Datos en `~/careerlab-data/deepseek/` (banco y etiquetas) y `~/careerlab-data/huawei-deepseek/runs/` (partidas), fuera de Git porque llevan texto del juego.
+   - El registro de las partidas está exportado en `lab/registry-origins/deepseek/`.
+   - Hallazgos B17–B21, C5–C9 y dos descartados en [HALLAZGOS.md](../../../HALLAZGOS.md).
 3. **Lo que falló o quedó a medias.**
    - `t13-read-v1` sólo se midió en historias, no en el reparto trimestral (que no cambia).
    - La pérdida por decisión del banco no confirma en los títulos reservados la mejora v1 → v3 que sí se ve en percepción y en el simulador.
    - DeepSeek casi nunca escribe la lectura por opción en el formato pedido; la hace al razonar.
-4. **Siguiente paso.**
-   - Con el visto bueno de Alejandro: 1–2 partidas oficiales de `t13-read-v1` con DeepSeek (`make play` del runner; unos 0,4–0,6 USD cada una), para comprobar que juega de punta a punta, cuánto cuesta y si termina.
-   - Sin gastar: mejorar la lectura de Output (+2 puntos en el simulador si se leyera bien) y probar si la regla escrita mejora con un paso de "el indicador que necesita la próxima evaluación".
+   - Las dos partidas oficiales acabaron eliminadas por el riesgo.
+4. **Siguiente paso** (sin gastar en partidas):
+   - En la regla de historias, cuando el comentario de RR. HH. no sea el tranquilo, descartar también lo privado, anónimo, a medias, por fases o para ganar tiempo.
+   - Acotar por escrito la regla 4 del reparto al trimestre.
+   - Medirlo en el banco (detonantes, bloque general y las historias de los meses posteriores a una C) y en el simulador, frente a `t13-read-v1` y `t13-final`.
+   - Más partidas oficiales, sólo con el visto bueno de Alejandro.
    - Comandos:
 
    ```bash
    uv run python scripts/deepseek/ds.py status
-   uv run python scripts/deepseek/perceive.py run --variant v4 --rep 1 --split dev
-   uv run python scripts/deepseek/groupbot.py --labels v3=$HOME/careerlab-data/deepseek/labels/ds-v3-r1-full.json+$HOME/careerlab-data/deepseek/labels/ds-v3-r2-full.json --arms signs:flag,signs:flag:strict --games 2000
    uv run python scripts/deepseek/bench.py run --variant <bundle> --name ds-<arm> --ids ~/careerlab-data/deepseek/ids-ds1-events.txt
-   uv run python scripts/deepseek/paired.py --a ds-t13-final --b ds-<arm> --phase e
+   uv run python scripts/deepseek/paired.py --a ds-t13-read --b ds-<arm> --phase e
+   uv run python scripts/deepseek/groupbot.py --labels v3=$HOME/careerlab-data/deepseek/labels/ds-v3-r1-full.json+$HOME/careerlab-data/deepseek/labels/ds-v3-r2-full.json --arms signs:flag,signs:flag:strict,signs:flag:calm --games 2000
+   CAREERLAB_ORIGIN=deepseek uv run python -m careerlab.target play --policy <name> --spend --games 1 --max-usd-per-game 1.2 --reserve-usd 15   # sólo con aprobación
    ```
 
-   Las etiquetas y la lista de situaciones se regeneran con `perceive.py export` y `bench.py select --per-rule 40 --out ~/careerlab-data/deepseek/ids-ds1.txt`.
-5. **Gasto:** 1,98 USD de los 5 de la línea; quedan 47,83 en la clave. Cuota de Claude: sólo este chat, sin partidas.
-
-## Independent design review (27 October 2026)
-
-[Three complete alternatives, short perception guide and t13-final critique](independent-designs/README.md). Recommendation: Evidence before preference. This is an untested design judgement, not a measured replacement for t13-read-v1. No games, API spending or changes to existing candidates. Standalone Skills: 387, 332 and 389 words; guide: 127 words.
-
-### Relevo — independent designs
-
-Read the supplied public handbook/rules and current manual including its review reference. Produced three alternatives within this existing line and checked word limits, front matter and report links. Full bundle lint does not apply before packaging. Next: review the proposed consequence-reading approach and validate perception/choice quality before funding full runs. See the report for exact files, falsifiers, limitations and handoff. Request integration of the design report with main; do not automatically submit or replace the current candidate.
-
-## Relevo — independent review 2 (27 October 2026)
-
-[Ranked audit, exact proposed Skill/reference patch, measurement reproductions and handoff](independent-designs/review-2.md). Corrects the previous review's timing criticism; recommends phase separation and survival precedence before changing strategy. Read-only implementation audit: no candidate/code/data edits, model calls or official games. Synthetic checks and saved-result analysis found dropped pending bank continuations, omitted bank terminal settlement, ideal-information context in the label bot and prescription/value metric differences. Recomputed +6.71 ±5.68 SE (95% CI −5.28 to +18.71); no confirmed career-score improvement. Four existing completion tests pass. Patch is proposed only; review it before any implementation or separately authorised model evaluation. Request integration of the report into main.
+   Las etiquetas y la lista de situaciones se regeneran con `perceive.py export` y `bench.py select --per-rule 40 --out ~/careerlab-data/deepseek/ids-ds1.txt`. Si aparece `No module named 'careerlab'` (iCloud), `chflags nohidden .venv/lib/python3.13/site-packages/*.pth` o `PYTHONPATH=.`.
+5. **Gasto:** 2,52 USD de los 5 de la línea (quedan 0,48 antes del tope de 3 en que hay que preguntar); la clave lleva 2,71 USD gastados y le quedan 47,29. Cuota de Claude: sólo este chat, sin partidas de Claude.
