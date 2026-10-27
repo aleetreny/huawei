@@ -53,7 +53,7 @@ def batch_jobs(name: str) -> set[str]:
 def rows(purpose: str | None, actor_filter: str | None, batch: str | None = None) -> list[dict]:
     s = load_settings()
     reg = s.registry()
-    q = ("SELECT j.job_id, j.run_dir, p.name, a.config, e.outcome, e.score, e.survival_months FROM jobs j "
+    q = ("SELECT j.job_id, j.run_dir, p.name, a.config, e.outcome, e.score, e.survival_months, e.dims FROM jobs j "
          "JOIN policies p USING(policy_id) JOIN actors a USING(actor_id) LEFT JOIN evaluations e USING(job_id) "
          "WHERE j.origin=? AND a.kind='claude-cli'")
     args = [s.origin]
@@ -62,7 +62,7 @@ def rows(purpose: str | None, actor_filter: str | None, batch: str | None = None
         args.append(purpose)
     out = []
     keep = batch_jobs(batch) if batch else None
-    for job_id, run_dir, name, cfg, outcome, score, months in reg.db.execute(q, args):
+    for job_id, run_dir, name, cfg, outcome, score, months, dims in reg.db.execute(q, args):
         if keep is not None and job_id not in keep:
             continue
         cfg = json.loads(cfg)
@@ -73,7 +73,8 @@ def rows(purpose: str | None, actor_filter: str | None, batch: str | None = None
         if run_dir and (Path(run_dir) / "result.json").exists():
             res = json.loads((Path(run_dir) / "result.json").read_text())
         out.append({"job": job_id, "policy": name, "cut": cut, "outcome": outcome or "pending", "score": score,
-                    "months": months, "periods": res.get("periods"), "usage": res.get("actor_usage")})
+                    "months": months, "periods": res.get("periods"), "usage": res.get("actor_usage"),
+                    "dims": json.loads(dims) if dims else None, "failure": res.get("failure_reason")})
     return out
 
 
@@ -99,12 +100,15 @@ def summarize(rs: list[dict]) -> list[dict]:
         mean_q = sum(qs) / len(qs) if qs else None
         se_q = (math.sqrt(sum((x - mean_q) ** 2 for x in qs) / (len(qs) - 1)) / math.sqrt(len(qs))) if len(qs) > 1 else None
         tok = [((g["usage"] or {}).get("tokens") or {}).get("cache_read_input_tokens", 0) for g in played]
+        fin = [g for g in played if g["outcome"] == "completed" and g["dims"]]
+        dim_means = {k: round(sum(g["dims"].get(k) or 0 for g in fin) / len(fin), 1) for k in (fin[0]["dims"] if fin else {})}
         lo, hi = wilson(promoted1, n)
         table.append({"policy": pol, "cut": cut, "n": n, "pending": len(group) - n, "promoted_r1": promoted1,
                       "promoted_r1_ci": (round(lo, 2), round(hi, 2)), "floor_r1": floor1, "floor_promoted": floor_prom,
                       "eliminated": dead, "blowups": blow, "mean_level_end": round(sum(lvl) / len(lvl), 2) if lvl else None,
                       "completed": sum(g["outcome"] == "completed" for g in played), "mean_q": round(mean_q, 1) if mean_q else None,
-                      "se_q": round(se_q, 1) if se_q else None, "cache_read_M": round(sum(tok) / max(n, 1) / 1e6, 2)})
+                      "se_q": round(se_q, 1) if se_q else None, "cache_read_M": round(sum(tok) / max(n, 1) / 1e6, 2),
+                      "dims_completed": dim_means, "failures": sorted(str(g["failure"])[:30] for g in done if g["outcome"] == "eliminated")})
     return table
 
 
