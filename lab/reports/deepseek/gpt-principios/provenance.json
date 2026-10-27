@@ -15,5 +15,17 @@
     "Two frozen label files are not independent new model samples.",
     "Recovered screen and confirmation lacked script hashes; recovery-audit reproduces four arms x300 rows exactly.",
     "Factorial initial signs_veto used exact risk magnitude in ranking; corrected file supersedes only that arm."
-  ]
+  ],
+  "continuation": {
+    "base_commit": "2704663",
+    "files_sha256": {
+      "scripts/deepseek/gpt_decision_audit.py": "8ae8d350b73193e9761f55b2011e94b743222b0e4f06fc81468af8d5e7d6884a",
+      "scripts/deepseek/gpt_decision_score.py": "4b11901e22213feadb379348aad8d5a56e275fdef67c6bfa3058219be0dafff0",
+      "scripts/deepseek/gpt_runtime_audit.py": "363638a5668cf7999324dbbf31499374e222fe74cf765835bd200e6797de2753",
+      "scripts/deepseek/gpt_posicion.py": "cb8bb22e0dfd7f531055da6773c6a94b987b2d3c0f838ce4a22e345d6c718dbd",
+      "scripts/deepseek/english-runtime.patch.gz": "214665b171aeae419212fa52e3f533016dde800b5709fd128a4d28f756e5c920"
+    },
+    "validation": "Both bundles lint clean; analyst bounds/immutability/wealth/title weighting checks pass; English runtime patch temporarily applied and33 mocked target tests passed, then reversed. No active config changed.",
+    "runtime_patch_uncompressed_sha256": "e209c8dbc3fec90383f73725e85deecf9f37699fff774bc538930f68f1cacc2b"
+  }
 }

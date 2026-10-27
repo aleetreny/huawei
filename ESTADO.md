@@ -14,7 +14,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 ## 2. Dónde vamos, en una frase
 
-Sabemos casi exactamente cómo funciona el juego (simulador al 99 %) y qué habría que hacer (la política óptima saca 72 en el juego real), pero **la IA no sabe ver qué indicador sube o baja cada respuesta**, y los manuales con IA siguen en ~50. El trabajo de ahora es esa percepción: categorías de respuestas que la IA reconozca y reglas que obedezca sin estropear el resto.
+Conocemos bien muchos mecanismos del juego (réplica validada al 99 %) y el mejor planificador medido saca 72 en el juego real con información privilegiada; eso no prueba optimalidad. Los manuales con IA siguen en ~50–60. **Hay errores de percepción, de decisión y de ejecución que debemos separar.** El objetivo nuevo es 75 de partida estable con DeepSeek, todavía sin demostrar y sin nuevas llamadas a su API.
 
 ## 3. Líneas activas (máximo 3)
 
@@ -30,7 +30,7 @@ Sabemos casi exactamente cómo funciona el juego (simulador al 99 %) y qué habr
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `Matteo`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
-**Auditoría desde principios básicos (27 oct, en curso):** apoyo a la línea DeepSeek en `alejandro/gpt-principios`, [informe](lab/reports/deepseek/gpt-principios/README.md), [PR22](https://github.com/aleetreny/huawei/pull/22) para integrar. Objetivo del usuario: **75 de partida estable con DeepSeek**, sin usar su API. Checkpoint: nueve Skills públicos distintos revisados sin score atribuible; factorial nuevo separa magnitud de riesgo y decisión. El margen prudente no supera al veto al quitar estado ideal. **75 no reproducido**; siguiente: comprobar decisión nativa frente a propuesta + auditoría breve, sin repetir estas variantes. Sin partidas Claude ni gasto API en esta auditoría. No abre otra línea activa.
+**Auditoría desde principios básicos (27 oct, 19:45):** apoyo a DeepSeek en `alejandro/gpt-principios`, [informe](lab/reports/deepseek/gpt-principios/README.md), [PR22](https://github.com/aleetreny/huawei/pull/22) para integrar. Objetivo: **75 de partida estable con DeepSeek**, todavía sin demostrar. Offline: el margen de riesgo no supera al veto al quitar información ideal. **Banco Haiku terminado:**208 decisiones,48 títulos; comprobación previa obedece92/92 pero no mejora (riesgo4→5/92, dominadas3→6/92). Cuota observada5h10→11%, semana37→38%, siempre bajo0,65/0,45. Sin partidas oficiales ni API DeepSeek nuevas. [Runtime](lab/reports/deepseek/gpt-principios/runtime-audit.md): tres slots actuales en chino y una traza con42 negativas; parche inglés preparado y probado, sin tocar instancias. Siguiente: aprender de consecuencias públicas nuevas, no repetir autocomprobación sin feedback. No abre otra línea activa.
 
 **Apoyo de entrega documentado (27 oct):** borradores ingleses de [diseño](docs/entrega/skills_design-draft.md) y [decisiones](docs/entrega/decision_report-draft.md), más [nota de cumplimiento t19](docs/entrega/t19-compliance.md), en `alejandro/entrega`. Pendiente resolver `TODO(final)` contra t13-read-v2 congelado y copiar los documentos aprobados al paquete. Sin partidas ni API; no abre otra línea de investigación.
 

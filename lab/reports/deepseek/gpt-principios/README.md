@@ -56,7 +56,7 @@ Auditamos la recuperación: cuatro brazos ×300 semillas coinciden fila a fila c
 
 ## 4. Pruebas nuevas: no repetir la carrera de manuales
 
-Ninguna partida oficial, llamada de modelo ni gasto nuevo. Sólo réplica y lecturas congeladas. Todos los brazos de un experimento parten de las mismas semillas; las trayectorias pueden divergir después de elegir. Los intervalos son incertidumbre sobre carreras simuladas **condicionada a dos lecturas fijas**, no sobre nuevas lecturas, nuevos eventos ni transferencia a otro modelo. No sumar ganancias de experimentos distintos.
+**Primer checkpoint offline:** ninguna partida oficial, llamada de modelo ni gasto nuevo. Sólo réplica y lecturas congeladas. La continuación con208 decisionesHaiku está documentada al final. Todos los brazos de un experimento parten de las mismas semillas; las trayectorias pueden divergir después de elegir. Los intervalos son incertidumbre sobre carreras simuladas **condicionada a dos lecturas fijas**, no sobre nuevas lecturas, nuevos eventos ni transferencia a otro modelo. No sumar ganancias de experimentos distintos.
 
 | Intervención | Datos | Resultado y decisión |
 |---|---|---|
@@ -122,3 +122,13 @@ Antes de gastar cuota en un nuevo manual, exigir que una intervención sobreviva
 ### Formato de los datos congelados
 
 Cada JSON de experimento es un resumen revisable con enlace y hash de su `.json.gz`. El archivo comprimido conserva todos los campos originales, incluidas las filas por semilla. Para comprobar o recuperar: `gzip -dc lab/reports/deepseek/gpt-principios/risk-margin-observed.json.gz > /tmp/risk-margin-observed-full.json`. Los hashes `uncompressed_sha256` se refieren a esos bytes originales. `summary.csv` conserva también el factorial inicial para trazabilidad: usar `risk-factorial-corrected.json` para `signs_veto`. No contar duplicados de reproducción como experimentos independientes.
+
+## Continuación: decisión nativa y entorno de ejecución
+
+La prueba [propuesta + comprobación](decision-audit.md) ha terminado con Haiku5.5, actor real identificado en sus streams:92 situaciones de48 títulos, ambos brazos y24 repeticiones de control. Selección y hashes en `decision-audit-selection.json`. No son carreras completas. Ambas variantes pasan lint y las208 pruebas cargaron el Skill, sin acciones inválidas. La comprobación no mejoró: riesgo4→5/92, dominadas3→6/92, con cumplimiento92/92. No pasará a partidas. Datos narrativos fuera del repo en `~/careerlab-data/deepseek/gpt-decision-audit/`.
+
+Además, [la auditoría del runtime](runtime-audit.md) descubre una traza oficial de DeepSeek viva enmes33/L2 al terminar por `max_continuations`, con42 negativas genéricas en chino. Las tres preferencias actuales de idioma son `zh`. El parche inglés está preparado y probado con33 tests offline, sin aplicarlo a instancias ni tocar el ejecutor común de forma permanente. No prueba causalidad ni una nota mejor.
+
+**Relevo de la continuación:** proceso terminado con208 resultados; no reanudar ni repetir. Para reproducir sólo el análisis, `uv run python scripts/deepseek/gpt_decision_score.py` exige que estén los208 resultados y usa efectosv2, sin Q antiguo. Si hay un fallo de transporte o tope de cuota, inspeccionar el resultado concreto antes de reintentar; no reiniciar por tiempo de observación agotado. No interpretar el banco como75 ni llamar a DeepSeek.
+
+**Cierre del segundo checkpoint:** la prueba negativa de autocomprobación separa adherencia de calidad. La siguiente prueba requiere feedback público nuevo y debe distinguir aprendizaje nativo del calibrador por grupos que ya falló. [Diseño y datos](decision-audit.md). El runtime en chino es una discrepancia concreta con parche revisable; la causalidad y el75 siguen sin demostrar. No se alteró ninguna instancia ni se inició una partida DeepSeek.

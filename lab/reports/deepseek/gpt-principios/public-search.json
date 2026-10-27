@@ -56,5 +56,10 @@
     "observed": "2026-10-27 ~18:58 UTC",
     "result": "All displayed scores 0, Cut-off1/2 blank; no corroboration of reported local score.",
     "interpretation": "User clarified 75 is a consistent local game score, not composite or official scoreboard."
+  },
+  "followup": {
+    "branches": "Five relevant participant repositories expose only main in the inspected branch lists.",
+    "commit_search": "No score commits found in those five repositories. Broader 75/DeepSeek/career commit search returned unrelated job applications and recruiting projects, discarded.",
+    "team_attribution": "Still missing; no specific team linked to raw score 75."
   }
 }

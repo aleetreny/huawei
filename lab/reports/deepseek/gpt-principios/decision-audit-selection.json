@@ -1,0 +1,609 @@
+{
+  "seed": 2026102719,
+  "n_items": 92,
+  "n_titles": 48,
+  "bank_sha256": "3639c33d96788b49ff19449168794e7c849ba2933ef2b715ea89e16e6dc8bea6",
+  "input_sha256": "c387356341c94a967a4b6384c5624528da8c65cf933322acd0877b839ff94d0e",
+  "items": [
+    {
+      "id": "c01-greedy-real:p0-000016:182",
+      "title_sha256": "4c1c7d5fda214e009c6cd2e515cf8157c9d6e1c5f2b302bab55a00d3feb91a55",
+      "month": 45,
+      "level": 5
+    },
+    {
+      "id": "b01-oracle-eps:p1-000851:40",
+      "title_sha256": "f2c88714401fb03ced7a63d0f8babf6a628001ecf56cfa96beebf1b87cd0c7d9",
+      "month": 11,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p2-001593:134",
+      "title_sha256": "f6869caed4fcb763cb93ac166813162266869db4895e1ce786137a083ebc997c",
+      "month": 33,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p1-000168:43",
+      "title_sha256": "3d142308b84f5bacffacfe6b72f4d750e430c5667b6cd8a43eb01e1c869bee97",
+      "month": 11,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p1-000778:123",
+      "title_sha256": "24ebb1086711555be7f65a0df707234415d00d6ab31a3bc5a9eb427a711879f5",
+      "month": 31,
+      "level": 4
+    },
+    {
+      "id": "b01-oracle-eps:p3-002274:144",
+      "title_sha256": "57df2518d3715359c4b9c28b7147e65a4fdececd9007d0fe0e9a837d523b3375",
+      "month": 36,
+      "level": 5
+    },
+    {
+      "id": "b01-oracle-eps:p1-000884:17",
+      "title_sha256": "e597e20f8b57877ae793e8363ea0b25d5b29fb9325386eab7171c93fbfdccb04",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p3-000548:80",
+      "title_sha256": "3828a3e03405ed0a1c50d4d7209eda9b14654d86d0f7d7245887ecf1ac8cdeef",
+      "month": 20,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p2-000378:94",
+      "title_sha256": "b03c8a6170d99c4e2292154ecf3b144a8f029b4392dcb189abb83b7b108f69f1",
+      "month": 23,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p1-000233:55",
+      "title_sha256": "2551d1c30bed62eda89e831b7f24d8ad53e86dd150315d4c2571ccd55aac788f",
+      "month": 14,
+      "level": 3
+    },
+    {
+      "id": "c02-planner-real:p0-000027:70",
+      "title_sha256": "ceda1e0b9582d75979ce737bf3a481074dc5783fa19529c349fd8ae0c55d4a47",
+      "month": 17,
+      "level": 2
+    },
+    {
+      "id": "v02-validation:p1-000232:141",
+      "title_sha256": "57df2518d3715359c4b9c28b7147e65a4fdececd9007d0fe0e9a837d523b3375",
+      "month": 34,
+      "level": 4
+    },
+    {
+      "id": "c02-planner-real:p0-000036:97",
+      "title_sha256": "f670159b13685cea9393075118a41b0e242a4fb91636e9f3dbb96f7b7427ef5f",
+      "month": 24,
+      "level": 4
+    },
+    {
+      "id": "b01-oracle-eps:p3-002375:14",
+      "title_sha256": "c7addcab35f643f358385fcb0bb68f335dbdc7379b5ca9810cdf7b0cd01d58c3",
+      "month": 4,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p1-000779:186",
+      "title_sha256": "bb0ec942fb704c81195247f2a636a02094019074c2d9592c37a72e8147f34d51",
+      "month": 46,
+      "level": 5
+    },
+    {
+      "id": "b01-oracle-eps:p3-002331:145",
+      "title_sha256": "2fae6bb72c86ed2cb83919fd656058b59566eae3f076c8c7519076c998646a71",
+      "month": 36,
+      "level": 4
+    },
+    {
+      "id": "b01-oracle-eps:p0-000059:105",
+      "title_sha256": "1fcda4cf644e04d351654c8e8639ffadd2fc70a7f842da9986039488f7e50812",
+      "month": 27,
+      "level": 4
+    },
+    {
+      "id": "b01-oracle-eps:p0-000126:81",
+      "title_sha256": "e55295e36dd897460ad8849e0272470ecd80d6e30a7c881dc8606d865118af98",
+      "month": 21,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p3-000560:50",
+      "title_sha256": "08502f9f44ce476da42135ba9c5c6c89ace60b12f393912e69dd96e0a3e62a41",
+      "month": 13,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001589:118",
+      "title_sha256": "fdeac4712e07214b0f650ac308c10474e42332821adaaa81ec47d1b9c63a0473",
+      "month": 29,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p1-000252:188",
+      "title_sha256": "aa7b19dda2bfbd177a5ba56785886ac66796d92e7f7b3490e75a3613d2d06ec0",
+      "month": 46,
+      "level": 5
+    },
+    {
+      "id": "v02-validation:p1-000236:7",
+      "title_sha256": "d467ff81ffca8392a50eea0489d48f8681cfdd68343f5937de72aa22c263a3a2",
+      "month": 3,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p0-000043:78",
+      "title_sha256": "b9e15e209b8b30b63c3d776c022a6144afcea7d358d23f5c1b4ebd7abc201753",
+      "month": 19,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001551:96",
+      "title_sha256": "44fd45c8aa907785031394ba4585fc17745669b08ed2169987e2b6043d871364",
+      "month": 24,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p1-000157:68",
+      "title_sha256": "5d53beec40501e9d1c65b4b904b7355025ad8896193b01d17c57babce8158d8e",
+      "month": 17,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p0-000109:117",
+      "title_sha256": "b03c8a6170d99c4e2292154ecf3b144a8f029b4392dcb189abb83b7b108f69f1",
+      "month": 29,
+      "level": 4
+    },
+    {
+      "id": "b01-oracle-eps:p2-001616:17",
+      "title_sha256": "05914ff665863dd737911fc881aac6a9719fc117ebfdd776eadc55bbb1caf160",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p3-000507:91",
+      "title_sha256": "ceda1e0b9582d75979ce737bf3a481074dc5783fa19529c349fd8ae0c55d4a47",
+      "month": 23,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p3-000553:52",
+      "title_sha256": "bb0ec942fb704c81195247f2a636a02094019074c2d9592c37a72e8147f34d51",
+      "month": 13,
+      "level": 3
+    },
+    {
+      "id": "c01-greedy-real:p1-000164:71",
+      "title_sha256": "ab469df1df5e2ef0b7b51e46047369de39d4751ccd693a63362a2e0743fe26bb",
+      "month": 18,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p1-000768:113",
+      "title_sha256": "45613e8428ef74e57c52bcc348e948230ee824f31c9b9d89903f29b00cc04b1d",
+      "month": 28,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p0-000047:41",
+      "title_sha256": "08502f9f44ce476da42135ba9c5c6c89ace60b12f393912e69dd96e0a3e62a41",
+      "month": 11,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p2-001547:52",
+      "title_sha256": "cec97d44b1abee55b44fb0766d0ca63700639b985c8e5f14f8ed4cbf171eca97",
+      "month": 13,
+      "level": 3
+    },
+    {
+      "id": "c02-planner-real:p1-000172:43",
+      "title_sha256": "60591d0d44242fbb9450156d516d5f98d56c6b982c718fd13cd55c71e73cbfe3",
+      "month": 11,
+      "level": 2
+    },
+    {
+      "id": "c01-greedy-real:p0-000090:67",
+      "title_sha256": "fd9eb045b738275647d19901cddf910d1ba76956ebf8671d2c2fde3c0460446d",
+      "month": 17,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p1-000758:161",
+      "title_sha256": "fdeac4712e07214b0f650ac308c10474e42332821adaaa81ec47d1b9c63a0473",
+      "month": 40,
+      "level": 5
+    },
+    {
+      "id": "c01-greedy-real:p1-000209:82",
+      "title_sha256": "5d53beec40501e9d1c65b4b904b7355025ad8896193b01d17c57babce8158d8e",
+      "month": 20,
+      "level": 4
+    },
+    {
+      "id": "c01-greedy-real:p1-000233:4",
+      "title_sha256": "ef59f0db01e43f5a2f9295f836829f23e305a48fe9b7c05b749e545ce96656f5",
+      "month": 2,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p2-001560:77",
+      "title_sha256": "2fae6bb72c86ed2cb83919fd656058b59566eae3f076c8c7519076c998646a71",
+      "month": 19,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p2-000301:44",
+      "title_sha256": "0579eb2d9f233d8b7168b49d5b2479a735d5acc5172461ca99114509ef1094e0",
+      "month": 12,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p0-000029:43",
+      "title_sha256": "05914ff665863dd737911fc881aac6a9719fc117ebfdd776eadc55bbb1caf160",
+      "month": 11,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p1-000881:43",
+      "title_sha256": "19c291cd787b11a694cf0673147eef8a4f7cde5ad34c6b3f3983d079e856850c",
+      "month": 11,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p3-002363:18",
+      "title_sha256": "d467ff81ffca8392a50eea0489d48f8681cfdd68343f5937de72aa22c263a3a2",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "c02-planner-real:p1-000153:196",
+      "title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774",
+      "month": 48,
+      "level": 6
+    },
+    {
+      "id": "b01-oracle-eps:p0-000051:39",
+      "title_sha256": "37b8bf1dfa39413165ef44b8789ca938dba8bcdccdcf6cbe2272f7880a5db816",
+      "month": 10,
+      "level": 1
+    },
+    {
+      "id": "c01-greedy-real:p0-000001:43",
+      "title_sha256": "ef0f3939e14e766c0f18b84abc4c66f16ff72dd295f0124c64a2554aeaf7538d",
+      "month": 11,
+      "level": 2
+    },
+    {
+      "id": "v02-validation:p0-000123:18",
+      "title_sha256": "3828a3e03405ed0a1c50d4d7209eda9b14654d86d0f7d7245887ecf1ac8cdeef",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p0-000014:90",
+      "title_sha256": "fd9eb045b738275647d19901cddf910d1ba76956ebf8671d2c2fde3c0460446d",
+      "month": 22,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001624:8",
+      "title_sha256": "943effc8625f6e9c7ee85cac564f7be1b7211ad284300e7ce71f1105cae0c750",
+      "month": 3,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p3-002283:51",
+      "title_sha256": "2dbcf544d5ef8bd19c67f5f0b82c6c43abb944ff3b11213db32bf719a12e6824",
+      "month": 13,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001591:100",
+      "title_sha256": "b6c4a14452d590a883dd2bfd235eeaf7dda25aa1e29fe86e2cb91f482a830ca6",
+      "month": 26,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p0-000109:4",
+      "title_sha256": "ae88526f792c2d1aba2116ece1d89424b67e63ef45efe47cc7a4d30825f708c8",
+      "month": 2,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p2-000353:116",
+      "title_sha256": "b9e15e209b8b30b63c3d776c022a6144afcea7d358d23f5c1b4ebd7abc201753",
+      "month": 29,
+      "level": 2
+    },
+    {
+      "id": "b01-oracle-eps:p3-002377:59",
+      "title_sha256": "2551d1c30bed62eda89e831b7f24d8ad53e86dd150315d4c2571ccd55aac788f",
+      "month": 15,
+      "level": 2
+    },
+    {
+      "id": "v02-validation:p1-000197:8",
+      "title_sha256": "c7addcab35f643f358385fcb0bb68f335dbdc7379b5ca9810cdf7b0cd01d58c3",
+      "month": 3,
+      "level": 1
+    },
+    {
+      "id": "c01-greedy-real:p1-000165:182",
+      "title_sha256": "cec97d44b1abee55b44fb0766d0ca63700639b985c8e5f14f8ed4cbf171eca97",
+      "month": 45,
+      "level": 6
+    },
+    {
+      "id": "b01-oracle-eps:p3-002337:30",
+      "title_sha256": "b8ca6a7b3f3cda9f3dabcab5b1020cbabdabb3b1e2846bc4d6f2a7755066971d",
+      "month": 8,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p2-001583:69",
+      "title_sha256": "2dbcf544d5ef8bd19c67f5f0b82c6c43abb944ff3b11213db32bf719a12e6824",
+      "month": 18,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p3-000551:76",
+      "title_sha256": "e55295e36dd897460ad8849e0272470ecd80d6e30a7c881dc8606d865118af98",
+      "month": 19,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p2-000374:53",
+      "title_sha256": "45613e8428ef74e57c52bcc348e948230ee824f31c9b9d89903f29b00cc04b1d",
+      "month": 13,
+      "level": 2
+    },
+    {
+      "id": "c02-planner-real:p0-000000:17",
+      "title_sha256": "943effc8625f6e9c7ee85cac564f7be1b7211ad284300e7ce71f1105cae0c750",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p1-000764:18",
+      "title_sha256": "0579eb2d9f233d8b7168b49d5b2479a735d5acc5172461ca99114509ef1094e0",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p3-002355:16",
+      "title_sha256": "ae88526f792c2d1aba2116ece1d89424b67e63ef45efe47cc7a4d30825f708c8",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p3-000554:66",
+      "title_sha256": "f670159b13685cea9393075118a41b0e242a4fb91636e9f3dbb96f7b7427ef5f",
+      "month": 17,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p3-002346:28",
+      "title_sha256": "1c2b8599aaaef3536c673cc08d655038d9d75d66b531bd6dfe600a14dcb60275",
+      "month": 8,
+      "level": 2
+    },
+    {
+      "id": "c01-greedy-real:p1-000298:170",
+      "title_sha256": "8311904a2d9c96d474428a367a727862de90b7c2ddf336ceac0fab8106366f51",
+      "month": 41,
+      "level": 5
+    },
+    {
+      "id": "b01-oracle-eps:p3-002280:66",
+      "title_sha256": "bd58429ab50392114a60f9054c66d4eb8b15760ea8240bd100d483e68120a20b",
+      "month": 17,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001568:44",
+      "title_sha256": "f2c88714401fb03ced7a63d0f8babf6a628001ecf56cfa96beebf1b87cd0c7d9",
+      "month": 12,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p2-001501:71",
+      "title_sha256": "e80744fbd54fe8df5d080d1311d2e3dd7328a0afe7715b9792eeaf9084b8dd94",
+      "month": 18,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p2-000321:3",
+      "title_sha256": "4c1c7d5fda214e009c6cd2e515cf8157c9d6e1c5f2b302bab55a00d3feb91a55",
+      "month": 2,
+      "level": 1
+    },
+    {
+      "id": "c02-planner-real:p1-000159:15",
+      "title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774",
+      "month": 4,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p3-002352:67",
+      "title_sha256": "ab469df1df5e2ef0b7b51e46047369de39d4751ccd693a63362a2e0743fe26bb",
+      "month": 17,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p0-000022:38",
+      "title_sha256": "60591d0d44242fbb9450156d516d5f98d56c6b982c718fd13cd55c71e73cbfe3",
+      "month": 10,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p1-000763:84",
+      "title_sha256": "bd58429ab50392114a60f9054c66d4eb8b15760ea8240bd100d483e68120a20b",
+      "month": 21,
+      "level": 4
+    },
+    {
+      "id": "v02-validation:p3-000460:66",
+      "title_sha256": "1c2b8599aaaef3536c673cc08d655038d9d75d66b531bd6dfe600a14dcb60275",
+      "month": 17,
+      "level": 3
+    },
+    {
+      "id": "b01-oracle-eps:p3-002364:94",
+      "title_sha256": "e597e20f8b57877ae793e8363ea0b25d5b29fb9325386eab7171c93fbfdccb04",
+      "month": 23,
+      "level": 4
+    },
+    {
+      "id": "c01-greedy-real:p1-000225:130",
+      "title_sha256": "37b8bf1dfa39413165ef44b8789ca938dba8bcdccdcf6cbe2272f7880a5db816",
+      "month": 32,
+      "level": 4
+    },
+    {
+      "id": "c01-greedy-real:p0-000106:187",
+      "title_sha256": "6ec106ddc7d42881bd944b92cf1ecf4cebd32ba83041bc86cdc8b7a10777d36f",
+      "month": 46,
+      "level": 5
+    },
+    {
+      "id": "c01-greedy-real:p1-000222:122",
+      "title_sha256": "8311904a2d9c96d474428a367a727862de90b7c2ddf336ceac0fab8106366f51",
+      "month": 30,
+      "level": 4
+    },
+    {
+      "id": "c02-planner-real:p0-000000:7",
+      "title_sha256": "ef0f3939e14e766c0f18b84abc4c66f16ff72dd295f0124c64a2554aeaf7538d",
+      "month": 3,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p0-000096:143",
+      "title_sha256": "e526aff9fe6c7d38d679525889566002eb203f88b220be6fcf636dea3f5b0b26",
+      "month": 35,
+      "level": 4
+    },
+    {
+      "id": "c02-planner-real:p1-000183:18",
+      "title_sha256": "3d142308b84f5bacffacfe6b72f4d750e430c5667b6cd8a43eb01e1c869bee97",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "v02-validation:p0-000029:18",
+      "title_sha256": "f6869caed4fcb763cb93ac166813162266869db4895e1ce786137a083ebc997c",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "c01-greedy-real:p0-000105:91",
+      "title_sha256": "b8ca6a7b3f3cda9f3dabcab5b1020cbabdabb3b1e2846bc4d6f2a7755066971d",
+      "month": 23,
+      "level": 1
+    },
+    {
+      "id": "c01-greedy-real:p0-000055:43",
+      "title_sha256": "fb11b684c1d25201357b85deabe94c86149fc9a7a463075d050f07f461f6e606",
+      "month": 11,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p0-000103:63",
+      "title_sha256": "fb11b684c1d25201357b85deabe94c86149fc9a7a463075d050f07f461f6e606",
+      "month": 16,
+      "level": 3
+    },
+    {
+      "id": "v02-validation:p3-000495:163",
+      "title_sha256": "6ec106ddc7d42881bd944b92cf1ecf4cebd32ba83041bc86cdc8b7a10777d36f",
+      "month": 40,
+      "level": 4
+    },
+    {
+      "id": "c02-planner-real:p1-000217:17",
+      "title_sha256": "ef59f0db01e43f5a2f9295f836829f23e305a48fe9b7c05b749e545ce96656f5",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "b01-oracle-eps:p2-001508:90",
+      "title_sha256": "24ebb1086711555be7f65a0df707234415d00d6ab31a3bc5a9eb427a711879f5",
+      "month": 22,
+      "level": 4
+    },
+    {
+      "id": "c02-planner-real:p1-000188:197",
+      "title_sha256": "e80744fbd54fe8df5d080d1311d2e3dd7328a0afe7715b9792eeaf9084b8dd94",
+      "month": 48,
+      "level": 6
+    },
+    {
+      "id": "v02-validation:p1-000275:17",
+      "title_sha256": "19c291cd787b11a694cf0673147eef8a4f7cde5ad34c6b3f3983d079e856850c",
+      "month": 5,
+      "level": 1
+    },
+    {
+      "id": "c01-greedy-real:p0-000127:2",
+      "title_sha256": "44fd45c8aa907785031394ba4585fc17745669b08ed2169987e2b6043d871364",
+      "month": 1,
+      "level": 1
+    }
+  ],
+  "variants": {
+    "native": {
+      "path": "native-craft-v1",
+      "skill_sha256": "988317ca357d4006dcbd12bf42bf94636e02662fe1411390d7473d3d27200cbd"
+    },
+    "audit": {
+      "path": "decisional-check-v1",
+      "skill_sha256": "f88e6184ee07bf011b814575f639d2a971dbd4501d4ba1344804001a7047893f"
+    },
+    "repeat": {
+      "path": "native-craft-v1",
+      "skill_sha256": "988317ca357d4006dcbd12bf42bf94636e02662fe1411390d7473d3d27200cbd"
+    }
+  },
+  "context": "one observed decision plus recorded prior logs; no forced-choice prefix transitions",
+  "model": "haiku",
+  "delivery": "official skill_tool emulation, not JiuwenSwarm target",
+  "limits": {
+    "max_five_hour": 0.65,
+    "max_weekly": 0.45,
+    "max_claude_processes": 4
+  },
+  "repeat_ids": [
+    "c01-greedy-real:p0-000016:182",
+    "b01-oracle-eps:p1-000851:40",
+    "b01-oracle-eps:p2-001593:134",
+    "v02-validation:p1-000168:43",
+    "b01-oracle-eps:p1-000778:123",
+    "b01-oracle-eps:p3-002274:144",
+    "b01-oracle-eps:p1-000884:17",
+    "v02-validation:p3-000548:80",
+    "v02-validation:p2-000378:94",
+    "v02-validation:p1-000233:55",
+    "c02-planner-real:p0-000027:70",
+    "v02-validation:p1-000232:141",
+    "c02-planner-real:p0-000036:97",
+    "b01-oracle-eps:p3-002375:14",
+    "b01-oracle-eps:p1-000779:186",
+    "b01-oracle-eps:p3-002331:145",
+    "b01-oracle-eps:p0-000059:105",
+    "b01-oracle-eps:p0-000126:81",
+    "v02-validation:p3-000560:50",
+    "b01-oracle-eps:p2-001589:118",
+    "v02-validation:p1-000252:188",
+    "v02-validation:p1-000236:7",
+    "b01-oracle-eps:p0-000043:78",
+    "b01-oracle-eps:p2-001551:96"
+  ]
+}
