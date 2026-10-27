@@ -11,6 +11,19 @@ Rama `alejandro/transmision` (desde `origin/main`, con `main-1nddsg` y `alejandr
 | Regla | Formulación ganadora | Situaciones | Acierto control | Acierto ganadora | Con títulos reservados |
 |---|---|---:|---:|---:|---|
 
+## Cómo escribir para que Haiku obedezca: lo aprendido
+
+1. **Haiku lee el Skill.** En la forma oficial (sólo nombre y descripción en el mensaje de sistema, cuerpo con `skill_tool`) lo lee en el 100 % de las situaciones, también tras el mensaje oficial de continuación. Poner la regla en la descripción o en la instrucción del manifest no cambia la obediencia, ni con 18 decisiones de historial ([contexto-largo.md](contexto-largo.md)).
+2. **Se obedece lo imperativo y concreto:** una condición visible y el nombre exacto de la acción del juego (“Energy: Skill learning; main action Apply for rotation”). Así el reparto trimestral pasa del 17–62 % al 73–93 %.
+3. **El orden es la prioridad.** Decir “first matching line wins” y ordenar: con la regla de cierre detrás de la de Skill, Haiku eligió Skill learning en el mes 48.
+4. **Una condición que el modelo debe reconocer se define por exclusión**, no con adjetivos: “cualquier comentario que no sea uno de estos dos suaves” (73 %) frente a “riesgo acumulado, serio o peor” (36 %).
+5. **Las reglas sobre historias tiñen todas las historias.** Cualquier texto sobre costes de las opciones cambia 1 de cada 5 historias aunque no aplique (más Output y riesgo, menos Skill) y eso hundió un manual en partidas (−21 puntos). Avisar “sólo en tal mes” no lo evita, ni esconderlo en `reference/` ([bloque-general.md](bloque-general.md)).
+6. **Un interruptor que el modelo calcula y escribe sí aísla la regla.** Con `Review in N` al principio de cada nota, Haiku acierta el número siempre, abre la referencia sólo cuando N = 1 y fuera de ese mes elige como sin manual ([ronda-8-10.md](ronda-8-10.md)).
+7. **Prohibir un efecto oculto exige percibirlo.** “No bajes Output” se obedece, pero Haiku no sabe qué opción cuesta Output; la ganancia en el mes previo a la evaluación es real pero parcial.
+8. **“Evita confrontar” se lee como “cede”,** y ceder para agradar también acumula riesgo. Hay que separar “mantener tu opinión con calma” de “ceder”.
+9. **Un solo Skill.** Con un Skill por regla, Haiku abre sólo el que cree relevante y la regla de RR. HH. cae al 36 %.
+10. **Medir efectos secundarios**, no sólo la regla: bloque de historias al azar, huella de las elecciones y un control repetido (96 % de coincidencia consigo mismo).
+
 ## Experimentos
 
 | # | Informe | Qué mide | Estado |

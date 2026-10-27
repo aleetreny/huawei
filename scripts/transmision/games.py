@@ -18,9 +18,12 @@ BATCHES = Path(__file__).resolve().parents[2] / "lab" / "reports" / "transmision
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", required=True)
+    ap.add_argument("--batch", required=True, help="batch name, or several joined by commas (arms are pooled)")
     a = ap.parse_args()
-    meta = json.loads((BATCHES / f"{a.batch}.json").read_text())
+    meta = {"arms": {}}
+    for b in a.batch.split(","):
+        for arm, jobs in json.loads((BATCHES / f"{b}.json").read_text())["arms"].items():
+            meta["arms"].setdefault(arm, []).extend(jobs)
     reg = load_settings().registry()
     print(f"| Manual | Terminadas / jugadas | Nota Q media ± SE | Nota de las terminadas | Nivel final medio | Derrotas | Tokens por mes |")
     print("|---|---:|---:|---:|---:|---|---:|")
@@ -61,10 +64,10 @@ def main() -> None:
         print(f"| {arm} | {len(done)}/{len(evs)} | {m:.1f} ± {se:.1f} | {sum(qd)/max(1,len(qd)):.1f} | "
               f"{sum(lv)/max(1,len(lv)):.2f} | {', '.join(f'{k} {v}' for k, v in fails.most_common())} | "
               f"{(sum(tpm)/len(tpm)/1000 if tpm else 0):.0f}k |")
-    if len(rows) == 2:
-        (a1, (q1, m1, s1)), (a2, (q2, m2, s2)) = rows.items()
-        d = m2 - m1
-        print(f"\nDiferencia {a2} − {a1}: {d:+.1f} ± {math.sqrt(s1**2 + s2**2):.1f} puntos")
+    if len(rows) >= 2:
+        (a1, (q1, m1, s1)), *rest = rows.items()
+        for a2, (q2, m2, s2) in rest:
+            print(f"\nDiferencia {a2} − {a1}: {m2 - m1:+.1f} ± {math.sqrt(s1**2 + s2**2):.1f} puntos")
 
 
 if __name__ == "__main__":
