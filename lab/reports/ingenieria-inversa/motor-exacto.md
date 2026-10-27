@@ -258,7 +258,7 @@ python3 scripts/ingenieria-inversa/replica.py validate --catalog catalog_v1.json
 python3 scripts/ingenieria-inversa/replica.py play --catalog catalog_v1.json --games 500
 ```
 
-El catálogo lleva títulos de eventos de dev. Por eso se queda fuera de Git, en la carpeta de datos, igual que las partidas.
+**Los datos están en el repo privado:** partidas, catálogo, riesgo, modelos y scripts de análisis, en [`lab/data/ingenieria-inversa/`](../../data/ingenieria-inversa/README.md). Para usarlos, `export BB_DATA=$PWD/lab/data/ingenieria-inversa`. Llevan texto del juego de desarrollo: son para estudiar y no se copian a un manual.
 
 ## M15. Derrotas por condición persistente
 
@@ -364,4 +364,4 @@ Lo que eligió la búsqueda:
 
    Nada de números ni de eventos.
 
-Comandos en M14. Los datos están en `/home/user/bbdata/` de este contenedor y no están en Git; si el contenedor se pierde, se regeneran con `run.py`.
+Comandos en M14. Los datos están en `lab/data/ingenieria-inversa/` (Git, repo privado).

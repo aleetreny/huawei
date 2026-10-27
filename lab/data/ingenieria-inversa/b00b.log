@@ -1,0 +1,40 @@
+/home/user/huawei/.venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+{"tag": "p1", "done": 200, "per_s": 1.23, "eliminated": 200}
+{"tag": "p0", "done": 200, "per_s": 1.22, "eliminated": 200}
+{"tag": "p2", "done": 200, "per_s": 1.19, "eliminated": 200}
+{"tag": "p3", "done": 200, "per_s": 1.17, "eliminated": 200}
+{"tag": "p1", "done": 400, "per_s": 1.17, "eliminated": 400}
+{"tag": "p3", "done": 400, "per_s": 1.15, "eliminated": 400}
+{"tag": "p0", "done": 400, "per_s": 1.15, "eliminated": 400}
+{"tag": "p2", "done": 400, "per_s": 1.15, "eliminated": 400}
+{"tag": "p1", "done": 600, "per_s": 1.2, "eliminated": 600}
+{"tag": "p2", "done": 600, "per_s": 1.15, "eliminated": 600}
+{"tag": "p0", "done": 600, "per_s": 1.14, "eliminated": 600}
+{"tag": "p3", "done": 600, "per_s": 1.14, "eliminated": 600}
+{"tag": "p1", "done": 800, "per_s": 1.16, "eliminated": 800}
+{"tag": "p2", "done": 800, "per_s": 1.14, "eliminated": 800}
+{"tag": "p3", "done": 800, "per_s": 1.14, "eliminated": 800}
+{"tag": "p0", "done": 800, "per_s": 1.13, "eliminated": 800}
+{"tag": "p1", "done": 1000, "per_s": 1.15, "eliminated": 1000}
+{"tag": "p0", "done": 1000, "per_s": 1.12, "eliminated": 1000}
+{"tag": "p2", "done": 1000, "per_s": 1.12, "eliminated": 1000}
+{"tag": "p3", "done": 1000, "per_s": 1.11, "eliminated": 1000}
+{"tag": "p1", "done": 1200, "per_s": 1.16, "eliminated": 1200}
+{"tag": "p0", "done": 1200, "per_s": 1.14, "eliminated": 1200}
+{"tag": "p2", "done": 1200, "per_s": 1.14, "eliminated": 1200}
+{"tag": "p3", "done": 1200, "per_s": 1.12, "eliminated": 1200}
+{"tag": "p1", "done": 1400, "per_s": 1.17, "eliminated": 1400}
+{"tag": "p2", "done": 1400, "per_s": 1.14, "eliminated": 1400}
+{"tag": "p0", "done": 1400, "per_s": 1.14, "eliminated": 1400}
+{"tag": "p3", "done": 1400, "per_s": 1.12, "eliminated": 1400}
+{"tag": "p1", "done": 1600, "per_s": 1.16, "eliminated": 1600}
+{"tag": "p0", "done": 1600, "per_s": 1.14, "eliminated": 1600}
+{"tag": "p2", "done": 1600, "per_s": 1.14, "eliminated": 1600}
+{"tag": "p3", "done": 1600, "per_s": 1.13, "eliminated": 1600}
+Process group termination failed for PID 24210: [Errno 3] No such process, falling back to simple terminate
+{"tag": "p1", "done": 1800, "per_s": 1.08, "eliminated": 1800}
+{"tag": "p2", "done": 1800, "per_s": 1.05, "eliminated": 1800}
+{"tag": "p0", "done": 1800, "per_s": 1.04, "eliminated": 1800}
+{"tag": "p3", "done": 1800, "per_s": 1.02, "eliminated": 1800}
