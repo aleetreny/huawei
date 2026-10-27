@@ -1,6 +1,6 @@
 # Experimento 5. Partidas g1: el manual combinado t3-instr frente a f3-lean
 
-27 oct 2026, 11:48–12:40 UTC. Haiku, CLI 2.1.303, **entrega oficial** (actor `claude-cli:haiku#official`: el mensaje de sistema lleva sólo nombre y descripción del Skill y la instrucción del manifest; el cuerpo se lee con `skill_tool`). Partidas completas, intercaladas, 4 a la vez. Lote en [batches/g1-full.json](batches/g1-full.json).
+27 oct 2026, 11:48–12:30 UTC. Haiku, CLI 2.1.303, **entrega oficial** (actor `claude-cli:haiku#official`: el mensaje de sistema lleva sólo nombre y descripción del Skill y la instrucción del manifest; el cuerpo se lee con `skill_tool`). Partidas completas, intercaladas, 4 a la vez. Lote en [batches/g1-full.json](batches/g1-full.json).
 
 ## Resultado (parado a las 9 partidas de t3-instr)
 
