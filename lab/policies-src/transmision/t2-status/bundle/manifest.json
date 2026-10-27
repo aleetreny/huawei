@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "t2-status",
+  "mode": "agent",
+  "instruction": "Before every take_action, start the notes with this line and fill it from observe: `Review in <months to the next review month> | HR <clear/risk> | Wealth <ok/low> | Left <months to 48> | Rule <which rule applies> | Pick <choice>` Months to the next review = 6 minus (current_month mod 6), and 0 when current_month is a multiple of 6. When Review in is 1, the review rule applies to every story choice."
+}

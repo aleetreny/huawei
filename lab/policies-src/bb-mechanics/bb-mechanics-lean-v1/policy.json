@@ -1,0 +1,15 @@
+{
+  "family": "bb-mechanics",
+  "name": "bb-mechanics-lean-v1",
+  "parents": [
+    "bb-mechanics-v1"
+  ],
+  "idea_origin": "black-box bot research, lab/reports/ingenieria-inversa (H1-H17)",
+  "operator": "refine (subtraction)",
+  "hypothesis": "Whole-career bot experiments through the five official tools show that (a) story answers carry most of the growth and almost all career-ending risk (randomising story answers for one half-year costs 10-40 points, randomising quarterly actions 0-4); (b) promotion is decided by Skill, Network and Output at the moment the review month begins, with all three needed, and each level caps every input; (c) at the entry level the review is usually lost through a single point given away in the last month; (d) answer character predicts effects on unseen stories (held-out-title R2 0.4-0.6 for risk, dignity, health, network, skill): concealing, deceiving, gossiping, cutting corners and blaming raise the three-month blow-up chance by 12-17 points; integrity costs almost nothing. A Skill that states these mechanics and gives an answer-evaluation procedure plus a protect-the-last-month rule will let the actor promote earlier and blow up less than the current champions, raising completion and mean quantitative_score.",
+  "change": "Same mechanics and rules as bb-mechanics-v1 in about half the words: keeps the mechanics summary, the reject list, what builds each input, tactful handling, the month-before-review rule, the scrutiny rule while risk is built up, and short quarterly rules. Drops the turn loop and the per-input explanations of Dignity and Health. Decision benchmarks (H22-H23) showed Haiku already judges answers well on its own; the lean version keeps only what changed choices or what the model cannot guess (review timing, caps, dignity requirement, risk signal and detonators).",
+  "predicted_behaviour": "Notes name the weakest input and the risk state. Story choices avoid concealing, deceiving, gossiping, shortcut and blaming options far more often than current champions. Fewer trust crises; first promotion at the earliest review in most runs; Skill-building main actions (rotation, mentorship) appear once Network and Output are at their ceilings. Defuse follows HR concern within the next Energy phase.",
+  "refutation": "Refuted if it does worse than bb-mechanics-v1 on paired runs (subtraction removed something used), or if trust-crisis exits rise.",
+  "skill_count": 1,
+  "notes": "Mechanics evidence and numbers live only in lab/reports/ingenieria-inversa/hallazgos.md (dev data, research only). The Skill states structure, not values: no thresholds, ceilings, weights, months or titles. Bot proxies (principles bot, oracle) are reported in the same folder; this manual itself still needs actor-controlled games."
+}

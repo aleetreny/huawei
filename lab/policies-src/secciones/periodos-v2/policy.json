@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "periodos-v2",
+  "parents": [
+    "periodos-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "compose period winners",
+  "hypothesis": "Same rules as periodos-v1, reworded for the official SKILL.md rubric (explicit precedence between skills, 'stalled' instead of unpublished caps, review timing stated without contradicting the handbook's month order). It plays like periodos-v1 and scores higher on document quality.",
+  "change": "Wording only plus an explicit priority list in feedback-response; see the rubric review in lab/reports/secciones/resumen-noche.md.",
+  "predicted_behaviour": "First-review promotion and notes as in periodos-v1.",
+  "refutation": "Refuted if first-review promotion over 25 short games falls clearly below periodos-v1's.",
+  "skill_count": 4
+}

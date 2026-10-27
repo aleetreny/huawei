@@ -1,0 +1,68 @@
+{
+  "args": {
+    "batch": "c02-planner-real",
+    "policy": "replica-greedy",
+    "games": 300,
+    "procs": 2,
+    "slots": 3,
+    "seed": 888000,
+    "offset": 0,
+    "nice": 10,
+    "kw": "{\"catalog\": \"/home/user/rx/catalog_v1.json\", \"policy\": \"planner\", \"arms\": [{\"params\": {\"w_below\": 7.3, \"w_above\": 0.81, \"w_skill_hi\": 1.23, \"review_boost\": 4.03, \"w_h\": 1.24, \"w_d\": 0.13, \"h_floor\": 2, \"d_floor\": 7, \"w_wealth\": 0.38, \"risk_cost\": 2.16, \"risk_cap\": 2, \"w_cont\": 0.45, \"end_from\": 46, \"w_end\": 1.77, \"low_n_risk\": 0, \"defuse_at\": 4, \"laylow_at\": 2}}, {\"params\": {\"w_below\": 7.3, \"w_above\": 0.81, \"w_skill_hi\": 1.23, \"review_boost\": 4.03, \"w_h\": 1.24, \"w_d\": 0.13, \"h_floor\": 2, \"d_floor\": 7, \"w_wealth\": 0.38, \"risk_cost\": 2.16, \"risk_cap\": 2, \"w_cont\": 0.45, \"end_from\": 46, \"w_end\": 1.77, \"low_n_risk\": 1, \"defuse_at\": 4, \"laylow_at\": 2}}]}"
+  },
+  "kwargs": {
+    "catalog": "/home/user/rx/catalog_v1.json",
+    "policy": "planner",
+    "arms": [
+      {
+        "params": {
+          "w_below": 7.3,
+          "w_above": 0.81,
+          "w_skill_hi": 1.23,
+          "review_boost": 4.03,
+          "w_h": 1.24,
+          "w_d": 0.13,
+          "h_floor": 2,
+          "d_floor": 7,
+          "w_wealth": 0.38,
+          "risk_cost": 2.16,
+          "risk_cap": 2,
+          "w_cont": 0.45,
+          "end_from": 46,
+          "w_end": 1.77,
+          "low_n_risk": 0,
+          "defuse_at": 4,
+          "laylow_at": 2
+        }
+      },
+      {
+        "params": {
+          "w_below": 7.3,
+          "w_above": 0.81,
+          "w_skill_hi": 1.23,
+          "review_boost": 4.03,
+          "w_h": 1.24,
+          "w_d": 0.13,
+          "h_floor": 2,
+          "d_floor": 7,
+          "w_wealth": 0.38,
+          "risk_cost": 2.16,
+          "risk_cap": 2,
+          "w_cont": 0.45,
+          "end_from": 46,
+          "w_end": 1.77,
+          "low_n_risk": 1,
+          "defuse_at": 4,
+          "laylow_at": 2
+        }
+      }
+    ]
+  },
+  "started": "2026-10-27T01:21:23Z",
+  "commit": "242df34",
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)",
+  "competition_mode": false,
+  "interface": "five official MCP tools only; no seeds, cloning or internal reads"
+}
