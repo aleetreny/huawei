@@ -56,6 +56,21 @@ Dos partidas en paralelo con DeepSeek (slots propios `~/careerlab-data/formato/s
 - `phase=quarter` una vez por trimestre: todo el reparto de energía y la acción principal.
 Son ~64 llamadas más por partida, no ~230. En el simulador, planificar el trimestre de una vez no pierde nada (51,1 frente a 51,5).
 
+## 5. Resultados de partidas oficiales con DeepSeek (programa oficial, juego de desarrollo)
+
+| Manual | Forma | Partidas (`quantitative_score`) | Detalle | Coste por partida |
+|---|---|---|---|---|
+| `t13-read-v4` (línea DeepSeek, referencia) | DeepSeek decide todo con reglas escritas | 71,67 · 70,22 · (una atascada en L1, cortada por un choque de puertos) | L5, riesgo 0 | 0,7–0,8 USD |
+| **`script-v1`** | DeepSeek lee y etiqueta; el script decide todo | **76,87** · 13,23 | 76,87: 48 meses, **L6**, Skill 147, Network 58, riesgo 1. 13,23: explosión en el mes 6 y un punto de Output perdido antes de la evaluación del mes 12 → despido en el mes 24 | 1,24 (completa) · 0,83 |
+| `script-v2` | Historias por DeepSeek (reglas de v4); el script lleva estado y trimestres | 51,12 · 30,6 | 51,12: atascado en L3 (Output). 30,6: dos explosiones por opciones "pragmáticas" (arreglo más tarde, vía corta) que DeepSeek justificó con la excepción de "el riesgo más pequeño" | 0,74 · 0,31 |
+
+**Lectura.**
+- `script-v1` da la mejor partida de DeepSeek que tenemos (76,87, por encima de 75) y llega a L6, que ningún manual había alcanzado con DeepSeek. Es todo o nada: si pasa L1, el script juega mejor el resto de la carrera que las reglas escritas (Skill cuando Network y Output se estancan, L5 en el mes 36 frente al 42 de v4).
+- Su punto débil es L1, donde un solo error de lectura en el mes previo a la evaluación cuesta el ascenso. En la partida de 13,23, DeepSeek leyó "S+ D+ R-" una opción (arreglar la build a fondo) que costaba Output −1, y el script la eligió.
+- El híbrido v2 pierde lo bueno de los dos: DeepSeek, decidiendo, vuelve a tomar riesgos "razonables". Descartado.
+- **`script-v3`** = v1 + **recordatorios de lectura justo a tiempo**: cuando quedan 1–2 meses para la evaluación, o el tono de RR. HH. no está tranquilo, la salida del script añade una línea `READ NEXT` con lo que suele costar Output/Network o esconder riesgo, justo antes de que DeepSeek lea la siguiente historia. Además, `R-` sólo cuando la opción documenta, informa, asume o arregla del todo. Tres partidas en juego desde las 21:02 UTC.
+- **Fichas:** v1 gasta ~2,3 millones de fichas por mes en la partida completa (110 M en total), frente a ~1,4 M de v4: la llamada extra al script en cada decisión con el contexto lleno. Eso baja la parte de eficiencia (10 % de la versión) de ~64 a ~28, unos 3,6 puntos de la versión. Hay que recortarlo si v3 se confirma.
+
 ## Relevo
 
 1. **Hecho:** medido qué ve y qué puede hacer el agente oficial (modelo falso, 0 USD); escrito `script-v1` y su simulador.
