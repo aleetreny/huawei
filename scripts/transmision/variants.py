@@ -668,6 +668,24 @@ def build14(out: Path) -> None:
     (root / "review-month.md").write_text(T14_REVIEW)
 
 
+# ----------------------------------------------------------------------------- round 15: wasted gains at the published cap
+# Fingerprint: Haiku's story choices add about +1 Dignity per decision while Dignity usually sits at its published
+# maximum (10), often trading away Network for it. Round 15 adds one state-gated story line pointing at growth.
+T15 = T13.replace(
+    """- **Any other N:** no extra rule. Choose the option you judge best for a long, healthy career, weighing what it likely does to Health, Dignity, Skill, Network, Output, Wealth and hidden risk.""",
+    """- **Any other N:** choose the option you judge best for a long, healthy career, weighing what it likely does to Health, Dignity, Skill, Network, Output, Wealth and hidden risk.
+- **Full stats:** Health and Dignity cannot go above 10 (handbook). When Dignity (or Health) is already 10, what an option adds to it is lost: among honest, low-risk options prefer the one that builds Skill, Network or Output instead of the one whose main gain is self-respect.""")
+assert T15 != T13
+
+
+def build15(out: Path) -> None:
+    bundle(out, "t15-caps", {"career-rules": T15},
+           hypothesis="t13 plus one state-gated story line: at a full Dignity or Health, prefer the honest option that builds Skill, Network or Output.")
+    root = out / "t15-caps" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T11_REVIEW)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -686,3 +704,4 @@ if __name__ == "__main__":
     build12(o)
     build13(o)
     build14(o)
+    build15(o)
