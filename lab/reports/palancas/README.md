@@ -6,8 +6,8 @@ Rama `alejandro/palancas`, código en [`scripts/palancas/`](../../../scripts/pal
 
 ## Conclusiones (27 oct, 18:00 UTC)
 
-1. **La palanca buena es la nota como memoria, con una línea de estado fija** (`Review in N | Now S N O | Stalled | Risky this month`, y `Expect` en el reparto). Haiku la rellena bien el 100 % de las veces, la recupera tras un resumen, obedece lo que apunta y no tiñe las historias. Manual candidato: [`t18-status`](../../policies-src/palancas/t18-status/), que es `t13-final` más la línea ([nota-memoria.md](nota-memoria.md)).
-2. **Lo que más vale apuntar es el techo del nivel**, descubierto en la partida cuando una subida anunciada no se mueve, nunca dado como número. En el simulador vale +8,8 puntos, y +4,9 con la detección que consigue Haiku (59 %). Haiku lo arrastra el 100 % de las veces y deja de gastar en él (del 27 % al 3 %) ([techos.md](techos.md)).
+1. **La palanca buena es la nota como memoria, con una línea de estado fija** (`Review in N | Now S N O | Stalled | Risky this month`, y `Expect` en el reparto). Haiku la rellena bien el 100 % de las veces, la recupera tras un resumen, obedece lo que apunta y no tiñe las historias. Manual candidato: [`t19-final`](../../policies-src/palancas/t19-final/), que es `t13-final` más la línea ([nota-memoria.md](nota-memoria.md)).
+2. **Lo que más vale apuntar es el techo del nivel**, descubierto en la partida cuando una subida anunciada no se mueve, nunca dado como número. En el simulador vale +8,8 puntos, y +4,9 con la detección que consigue Haiku (49–63 %). Haiku lo arrastra el 100 % de las veces y deja de gastar en él (del 27 % al 3 %) ([techos.md](techos.md)).
 3. **Contar las respuestas arriesgadas dentro del mes** vale +4,3 en el simulador para un jugador que se arriesga. Haiku apunta el contador, pero sólo reconoce el 19 % de sus respuestas arriesgadas, así que no cambia nada medible. Se deja porque no estorba; con DeepSeek está por medir ([riesgo.md](riesgo.md)).
 4. **No valen la pena:** reaccionar a los avisos con 3 meses de margen (0 puntos; [avisos.md](avisos.md)), preparar la reputación antes de la evaluación (+0,1 o −0,5; [reputacion.md](reputacion.md)) ni las cifras de riesgo del reparto como contador (+0,4).
 5. **Tokens:** valen como mucho +0,7 de nota final, y la línea de estado no añade tokens medibles ([tokens.md](tokens.md)).
@@ -17,8 +17,8 @@ Rama `alejandro/palancas`, código en [`scripts/palancas/`](../../../scripts/pal
 
 | # | Palanca | Valor en el simulador | Banco con Haiku | Informe |
 |---|---|---|---|---|
-| 1 | Nota como memoria (línea de estado) | +14,3 ± 0,3 (bot de reglas), +6,2 ± 0,2 (con ruido) | se rellena 100 %; vuelve tras un resumen 100 %; huella 86–88 % igual al control (`t13-final` 81 %) | [nota-memoria.md](nota-memoria.md) |
-| 2 | Techo del nivel, detectado y apuntado | +8,8 ± 0,3; **+4,9** con la detección de Haiku | detecta 59 % (16 % sin `Expect`); arrastra 100 %; gasto en techo apuntado 27 % → 3 % | [techos.md](techos.md) |
+| 1 | Nota como memoria (línea de estado) | +14,4 ± 0,3 (bot de reglas), +6,2 ± 0,2 (con ruido) | se rellena 100 %; vuelve tras un resumen 97–100 %; huella 86–89 % igual al control (`t13-final` 81–85 %) | [nota-memoria.md](nota-memoria.md) |
+| 2 | Techo del nivel, detectado y apuntado | +8,8 ± 0,3; **+4,9** con la detección de Haiku | detecta 49–63 % (16 % sin `Expect`); arrastra 97–100 %; gasto en techo apuntado 27 % → 3–9 % | [techos.md](techos.md) |
 | 3 | Avisos con 3 meses de margen | −0,00 ± 0,02 | no pasa | [avisos.md](avisos.md) |
 | 4 | Reputación antes de la evaluación | +0,07 ± 0,06 (exacta), −0,46 ± 0,17 (general) | no pasa | [reputacion.md](reputacion.md) |
 | 5 | Riesgo en cifras del reparto | +0,4; contar el signo de lo elegido, +4,3 | apunta el contador siempre, pero reconoce sólo el 19 % de sus respuestas arriesgadas; sin efecto medible | [riesgo.md](riesgo.md) |
@@ -38,7 +38,8 @@ Rama `alejandro/palancas`, código en [`scripts/palancas/`](../../../scripts/pal
 | `t16b-expect` | Más `Expect` en el reparto | detecta el 59 %, arrastra el 100 %; huella 86 % |
 | `t16c-feedback` | `t16b` con el techo redactado como señal de la partida | rúbrica 64,7 (igual); no se probó en el banco |
 | `t17b-status` | `t16b` más `Risky this month` | huella 88 %; pérdida 0,65 frente a 1,01 de `t13-final` |
-| **`t18-status`** | `t17b` con `Stalled` en lugar de `Caps` (no afirma ninguna mecánica oculta) | **candidato** |
+| `t18-status` | `t17b` con `Stalled` en lugar de `Caps` (no afirma ninguna mecánica oculta) | detecta 49 %; en L4 compara los números de `Now` entre sí |
+| **`t19-final`** | `t18` + “`Now` no es una clasificación” + cambio a Output en L4 sólo si la evaluación lo pide | **candidato**: detecta 63 %, arrastra 97 %, huella 89 %, rúbrica 66,7 |
 
 ## Relevo
 

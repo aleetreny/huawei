@@ -1,6 +1,6 @@
 # Palanca 2. Detectar el techo del nivel y apuntarlo en la nota
 
-**Conclusión:** en el simulador, detectar el techo durante la partida (una subida anunciada que no se mueve) y recordarlo todo el nivel vale **+8,8 puntos** frente a no saber que existe, el 78 % de lo que daría conocer los techos exactos (+11,3). Si se olvida al mes siguiente, sólo quedan +5,6: **apuntarlo en la nota vale unos 3 puntos**. En el banco, Haiku con la línea de estado lo detecta el 59 % de las veces y lo arrastra y respeta casi siempre; con esa detección, el simulador da **+4,9**.
+**Conclusión:** en el simulador, detectar el techo durante la partida (una subida anunciada que no se mueve) y recordarlo todo el nivel vale **+8,8 puntos** frente a no saber que existe, el 78 % de lo que daría conocer los techos exactos (+11,3). Si se olvida al mes siguiente, sólo quedan +5,6: **apuntarlo en la nota vale unos 3 puntos**. En el banco, Haiku con la línea de estado lo detecta el 49–63 % de las veces y lo arrastra y respeta casi siempre; con una detección del 60 %, el simulador da **+4,9**.
 
 27 oct 2026, 17:00–17:20 UTC. Simulador `replica.py` con el catálogo v2, sin cuota. Código: [`scripts/palancas/sim.py`](../../../scripts/palancas/sim.py) (`caps` y `caps-noisy`). Datos por partida: `~/careerlab-data/palancas/caps-4k.json`.
 
@@ -77,6 +77,9 @@ Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t1
 | t18-status (`Stalled`) | detect | 49 | 49 % | 14 % | 16 % | 33 % | 0,20 | 36k |
 | t18-status | carry | 33 | 97 % | 12 % | 6 % | 42 % | 0,36 | 35k |
 | t18-status | nocap | 50 | 98 % | 2 % | 0 % | 0 % | 0,34 | 35k |
+| **t19-final** | detect | 49 | **63 %** | 14 % | 10 % | 29 % | 0,19 | 33k |
+| t19-final | carry | 33 | 97 % | 9 % | 9 % | 36 % | 0,35 | 33k |
+| t19-final | nocap | 50 | 98 % | 2 % | 0 % | 0 % | 0,38 | 34k |
 
 (Pérdida de nota = puntos de nota final perdidos frente a la mejor opción, según el simulador con el planificador. Por decisión es pequeña: la ventaja de la palanca se acumula en la partida.)
 
@@ -86,7 +89,7 @@ Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t1
 3. **Lo que queda de gasto en techos son techos aún no descubiertos** (por ejemplo, Skill en L1 cuando ninguna acción la ha topado todavía). Es lo mismo que supone el simulador en `detect`.
 4. **No cuesta tokens:** 32k por situación en los dos manuales.
 5. Con lo medido (60 % de detección, sólo en el reparto), el simulador da **+4,9 puntos** a la palanca.
-6. **Llamarlo `Stalled` en vez de `Caps`** (para no afirmar una mecánica oculta, ver [nota-memoria.md](nota-memoria.md)) funciona casi igual: detecta el 49 % (59 % con `Caps`; con 49 casos, la diferencia cabe en el ruido), arrastra el 97 % y gasta en un techo apuntado el 6 %.
+6. **Llamarlo `Stalled` en vez de `Caps`** (para no afirmar una mecánica oculta, ver [nota-memoria.md](nota-memoria.md)) funciona igual: `t18-status` detecta el 49 % y `t19-final` el 63 % (con 49 casos, ±7 puntos de error típico), y los dos arrastran el 97 % y gastan en un techo apuntado el 6–9 %.
 
 ## Límites
 
