@@ -1,0 +1,6554 @@
+{
+"0085f55f8dd0:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0085f55f8dd0:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"018d96935057:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"018d96935057:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"01baf664974a:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"01baf664974a:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"033caaadb176:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"033caaadb176:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"0364764584dd:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"0364764584dd:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0364764584dd:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"03bc33cddf88:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"03bc33cddf88:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"03bc33cddf88:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"0755e0948935:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"07c8e918cda5:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"07c8e918cda5:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"07c8e918cda5:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"07f626b6d9cb:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"07f626b6d9cb:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"07f7c3477a61:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"07f7c3477a61:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0896936dad40:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0896936dad40:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"08ef8a7b4de6:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"08ef8a7b4de6:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"096807f07880:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"0a9e3caf4970:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0a9e3caf4970:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0a9e3caf4970:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0adf8ea56cf9:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"0adf8ea56cf9:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0adf8ea56cf9:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"0c5fa01a0687:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"0c5fa01a0687:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"0d17bad6dec1:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0d17bad6dec1:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0d41ef234c09:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0d41ef234c09:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"0d41ef234c09:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"0d4638eb2f6b:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"0d4638eb2f6b:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"0d4638eb2f6b:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"0d67061a569f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"0d67061a569f:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"0de905fc3c15:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"0de905fc3c15:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"0e1dcfcee727:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"0e1dcfcee727:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0e28adfafed4:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0e28adfafed4:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0eb42f1c2467:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0eb42f1c2467:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0eb42f1c2467:3": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0eb42f1c2467:4": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"0f346d6e4d3e:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0f346d6e4d3e:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"0f975ddc5526:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"0f975ddc5526:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"0ff722c16925:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"0ff722c16925:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"13b41a44f8c9:1": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"13b41a44f8c9:2": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"13b41a44f8c9:3": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"13b41a44f8c9:4": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"14a55d5bc427:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"14a55d5bc427:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"14a55d5bc427:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"14eca1b3be70:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"14eca1b3be70:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"150dfc3384c1:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"150dfc3384c1:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1511245e8c5e:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1511245e8c5e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1511245e8c5e:3": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"15bda0715899:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"15bda0715899:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"15bda0715899:3": {
+"dignity": -1,
+"health": 1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"168dba5be21a:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"16b81625d0ab:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"16b81625d0ab:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"181910e6b114:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"181910e6b114:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"19b8d4428dfd:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"19b8d4428dfd:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"19b8d4428dfd:3": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": -1
+},
+"19f27bf33801:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"19f27bf33801:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"1a36d76efe7f:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1a36d76efe7f:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"1a36d76efe7f:3": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1a6085e46de5:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1a6085e46de5:2": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1b2dba28e4f1:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"1b2dba28e4f1:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"1b60e9026be0:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1b60e9026be0:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1c06b932cd1a:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1c06b932cd1a:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1c1fe0a733df:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1c1fe0a733df:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1d60300df07b:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"1d60300df07b:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"1ddb9e7a8fd1:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"1f068500dd8d:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"1f27ca8a00ca:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1f27ca8a00ca:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1f27ca8a00ca:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1f27ca8a00ca:4": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1f8f614bb21c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1f8f614bb21c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"1fd3c946c998:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"1fd3c946c998:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"1fd3c946c998:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"1fe4d614ba24:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"1fe4d614ba24:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"207aa5bc82c1:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"207aa5bc82c1:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"217298e3c07d:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"217298e3c07d:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"21c9b9147fa9:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"21c9b9147fa9:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"21c9b9147fa9:3": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"22432e97c716:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"22432e97c716:2": {
+"dignity": -1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"232135469aa8:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"232135469aa8:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"2323596a0539:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2323596a0539:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"24cd954dc776:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"24cd954dc776:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"25a609bfc7e1:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"25a609bfc7e1:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"25a609bfc7e1:3": {
+"dignity": -1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"2609a7ac9b1c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"2609a7ac9b1c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"27004c40b56c:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"27004c40b56c:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 1
+},
+"27004c40b56c:3": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"27004c40b56c:4": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"270e81bd6397:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"270e81bd6397:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"275f67d8928c:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"275f67d8928c:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"278bead05620:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"278bead05620:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"28338d2cb560:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"28338d2cb560:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"28338d2cb560:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"286812cbad17:1": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"286812cbad17:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"29693d725de0:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"29693d725de0:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"296dab11327d:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"296dab11327d:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"29a10f21dbab:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"29a10f21dbab:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"29a10f21dbab:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"29d7b9b01079:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"2a24299330d4:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2a24299330d4:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2a4b6d5ebdb1:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"2a4b6d5ebdb1:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"2ae18ed1c0f9:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"2ae18ed1c0f9:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"2ae18ed1c0f9:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"2aec8a18e126:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"2aec8a18e126:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2aec8a18e126:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2aec8a18e126:4": {
+"dignity": -1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2afc19f6340b:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"2afc19f6340b:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"2bc01b1638f2:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"2bc01b1638f2:2": {
+"dignity": -1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"2cf4b074e7ca:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"2cf4b074e7ca:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"2cf4b074e7ca:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"2df0b2cd5662:1": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"2df0b2cd5662:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"2eacb385fd54:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"2eacb385fd54:2": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"2fa0e56e4058:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"2fa0e56e4058:2": {
+"dignity": -1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"2fcf4c1df6d3:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"2fcf4c1df6d3:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"300820081fbe:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"300820081fbe:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"30b909c271df:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"30b909c271df:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"30cb2e5fe268:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"30cb2e5fe268:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"30cb2e5fe268:3": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3346fbd482a3:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3346fbd482a3:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3387abd67dfe:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"3387abd67dfe:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"344ab51bb479:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"344ab51bb479:2": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"36a72de95b64:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"36a72de95b64:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"36a72de95b64:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"396f026fa76e:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"396f026fa76e:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"396f026fa76e:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"3972f45b76ab:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3972f45b76ab:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3a7e7317cad7:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3a7e7317cad7:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"3a8aea444ceb:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"3a8aea444ceb:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3b2d6186a1e4:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3b2d6186a1e4:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"3b488977854a:1": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3b488977854a:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3b7f405b90f7:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3b7f405b90f7:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"3b7f405b90f7:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"3d24b299375e:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"3d24b299375e:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"3d24b299375e:3": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3d62ca15fbb5:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"3d62ca15fbb5:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"3d8172a6f9b2:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"3d8172a6f9b2:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"3e82cb4c3196:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3e82cb4c3196:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"3f7c2f0d5bfb:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"3f7c2f0d5bfb:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"3ffa30e45adc:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"3ffa30e45adc:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"40890a450f1c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"40890a450f1c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"43cde09e9d6e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"43cde09e9d6e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"43cde09e9d6e:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"4437b842d1d8:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"4437b842d1d8:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"447e2772ea5a:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"447e2772ea5a:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"463563d349a8:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"463563d349a8:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"46685c440d04:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"46685c440d04:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"46685c440d04:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"46b115f9aa63:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 1
+},
+"46b115f9aa63:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": -1
+},
+"46b115f9aa63:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"49c605f69076:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"49c605f69076:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"49cad4b1bdb2:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"49cad4b1bdb2:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"49f5cda30810:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"49f5cda30810:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"49f5cda30810:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"4a1527dd4a1d:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"4a1527dd4a1d:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"4a1527dd4a1d:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"4ab0a079865b:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"4ab0a079865b:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"4c86f5e3ca5c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"4c86f5e3ca5c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"4c86f5e3ca5c:3": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"50a1ad6c7aee:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"50a1ad6c7aee:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"50a50a700e1d:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"50a50a700e1d:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"50d9bc1b5a7b:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"50d9bc1b5a7b:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"51a246f17b72:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"51a246f17b72:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": -1
+},
+"51a246f17b72:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"51b982742b80:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"51b982742b80:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"51b982742b80:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"5204148abfa9:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"5204148abfa9:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"52a77b82154d:1": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"52a77b82154d:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"54e5c54d627f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"54e5c54d627f:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"55be54a078f2:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"55be54a078f2:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"55be54a078f2:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"55ea7ab10ab8:1": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"55ea7ab10ab8:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"55ea7ab10ab8:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"566765c9f14b:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"566765c9f14b:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"57b0f72c07c2:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"57b0f72c07c2:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"57bc60dd65d8:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"57bc60dd65d8:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"57bc60dd65d8:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"57cfacff9564:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"57cfacff9564:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"57cfacff9564:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"586fc69e28b6:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"586fc69e28b6:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"586fc69e28b6:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"58898ba74773:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"58898ba74773:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"596b77b5116b:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"596b77b5116b:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"5a3fa16ce834:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"5a3fa16ce834:2": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"5a3fa16ce834:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"5af41f10eca7:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"5af41f10eca7:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"5b304c0c74aa:1": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"5b304c0c74aa:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"5b47e404352f:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"5b47e404352f:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"5d2ce1e8c306:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"5d2ce1e8c306:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"5d2ce1e8c306:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"5d4b22fb4497:1": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"5d4b22fb4497:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"5dd8637a70d4:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"5dd8637a70d4:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"601bc0a5175e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"601bc0a5175e:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"601bc0a5175e:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"601bc0a5175e:4": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"606ffe5fc95e:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"606ffe5fc95e:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"606ffe5fc95e:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"615eebee3ab7:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"615eebee3ab7:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"615eebee3ab7:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"620f31dc7c8e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"620f31dc7c8e:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"620f31dc7c8e:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"6268bfe7fb13:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"6268bfe7fb13:2": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"6268bfe7fb13:3": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"626e71b5e7d5:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"626e71b5e7d5:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6377deb5cab5:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6377deb5cab5:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"63f37880930a:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"63f37880930a:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"642bb20be594:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"642bb20be594:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"64b3abc9c97d:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"64b3abc9c97d:2": {
+"dignity": -1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"64b3abc9c97d:3": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"652995a4e87d:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"652995a4e87d:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6675f6eb93a2:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6675f6eb93a2:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"67b294bc6e4f:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"67b294bc6e4f:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"68892377cb7e:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"68892377cb7e:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"68892377cb7e:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"688b3634ff34:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"688b3634ff34:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"6a1d1ec95b66:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"6a1d1ec95b66:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"6b00dbae7557:1": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6b00dbae7557:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6b0f78038f1f:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"6b0f78038f1f:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"6b61efeefb32:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"6b61efeefb32:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6d0915d4c6c3:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6d386680bb54:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"6d386680bb54:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6d5fb9c2f294:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"6d5fb9c2f294:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6df399d431b1:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"6df399d431b1:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"6e016db0f86a:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"6e016db0f86a:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6e13acf42332:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6e13acf42332:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"6e13acf42332:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6e13acf42332:4": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"6e91406739d1:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"6e91406739d1:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"6eaaec0631ba:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"6ef410af405f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"6ef410af405f:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"6f83d26ea9d8:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"6f83d26ea9d8:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"71251431c1fc:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"71251431c1fc:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"71251431c1fc:3": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"721fa2282e6e:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"721fa2282e6e:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7234f844b95c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7234f844b95c:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7234f844b95c:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"724082d3e27e:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"724082d3e27e:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"7299fe171a1b:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"7299fe171a1b:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"7299fe171a1b:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"72e498369fda:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"72e498369fda:2": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7352a0e1aef9:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"7352a0e1aef9:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"735ffae103c9:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"735ffae103c9:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"73dc25a030ab:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"73dc25a030ab:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"73fd0f35b02d:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"73fd0f35b02d:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"74a86f489578:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"74a86f489578:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"74d9a35755c8:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"74d9a35755c8:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"74d9a35755c8:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"74d9a35755c8:4": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"7520ec2f8620:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"7520ec2f8620:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"75649c2a9f1c:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"75649c2a9f1c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"75649c2a9f1c:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"758728710c9c:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"758728710c9c:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"758728710c9c:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"762ff298d9d1:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"762ff298d9d1:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"76bf24f2cab8:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"76bf24f2cab8:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"77275d2f0b94:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"77275d2f0b94:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"77488149beeb:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"77488149beeb:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"77488149beeb:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"774ee0aba7a6:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"774ee0aba7a6:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"77660e585b81:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"77660e585b81:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"77660e585b81:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"785d8f808711:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"785d8f808711:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"78d7cfb4cd70:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"78d7cfb4cd70:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"78e43c634ee6:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"78e43c634ee6:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"797a9bb03684:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"797a9bb03684:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"797a9bb03684:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"79970c0e0631:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"79970c0e0631:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7ada24db9b30:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"7ada24db9b30:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7ada24db9b30:3": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7c9a905a3ed3:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"7c9a905a3ed3:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"7e8baea12fb0:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"7e8baea12fb0:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"7f4fb6deb62e:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"7f4fb6deb62e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"7f809673d971:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"7f809673d971:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"7fadd88f7d08:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"7fadd88f7d08:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"7fadd88f7d08:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"7fc9c29f1065:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"7fc9c29f1065:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"8034d7a663f4:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8034d7a663f4:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"805cf4026a03:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"805cf4026a03:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"8060da8ac6e7:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"8060da8ac6e7:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"806a7a11d21f:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"806a7a11d21f:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": -1
+},
+"807f005a6adb:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"807f005a6adb:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"80d596434dd5:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"80d596434dd5:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"80d596434dd5:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"817595b70dcd:1": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"817595b70dcd:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"81b3c6784393:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"81b3c6784393:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"81b3c6784393:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"81fc813b94f7:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"81fc813b94f7:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"82d4b8110ef5:1": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 1
+},
+"82d4b8110ef5:2": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"82d4b8110ef5:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"84192d5a7b02:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"84192d5a7b02:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"845e73bb76dc:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"845e73bb76dc:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"84e404ca743c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"84e404ca743c:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"850b7ff65ee4:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"850b7ff65ee4:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"850b7ff65ee4:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"857dc2b16712:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"857dc2b16712:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"85daedc9b56c:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"85daedc9b56c:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"85daedc9b56c:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"8640a52844d2:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"8640a52844d2:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"8640a52844d2:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"872c2542242f:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"872c2542242f:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"87419cb48b1b:1": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"87419cb48b1b:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"8b5416657168:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"8b5416657168:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"8b5416657168:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8b573078a5b5:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"8b573078a5b5:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"8b573078a5b5:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"8b6248c5eb13:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"8b6248c5eb13:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"8b9bf5486c95:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"8b9bf5486c95:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8b9bf5486c95:3": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"8c81681b83e4:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"8c81681b83e4:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"8cd89c9101bc:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8cd89c9101bc:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8cd89c9101bc:3": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"8e3aff4f9b76:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8e3aff4f9b76:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8e3aff4f9b76:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"8ee638c2e75c:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"8ee638c2e75c:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"8ee638c2e75c:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"8f418a6facbe:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"8f418a6facbe:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"8fad09397a68:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8fad09397a68:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"8fad09397a68:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9080e113a19c:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"9080e113a19c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"90c39716bd3e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"90c39716bd3e:2": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"90c39716bd3e:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9178d6ce5688:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"9178d6ce5688:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"92782979ad4e:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"92782979ad4e:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"927ed56a73ab:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"927ed56a73ab:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"933432539f49:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"933432539f49:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"933432539f49:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"939537b6c800:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"939537b6c800:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"939537b6c800:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"93980eac9a13:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"93980eac9a13:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"944fa5bf9273:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"944fa5bf9273:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"944fa5bf9273:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"968e25fb5d70:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"968e25fb5d70:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"96938b0a0a7b:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"96938b0a0a7b:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"96938b0a0a7b:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"96938b0a0a7b:4": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"97d36c58735f:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"97d36c58735f:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"989090f05b39:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"989090f05b39:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"989090f05b39:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"989377c65575:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"989377c65575:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"989377c65575:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"998140e25476:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"998140e25476:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"99f269c9e01e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"99f269c9e01e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"99f269c9e01e:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9a1fc53ea201:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9a1fc53ea201:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9a1fc53ea201:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9a31f8d9f452:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9a31f8d9f452:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9a769ee2a9cf:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"9a769ee2a9cf:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9a769ee2a9cf:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": -1
+},
+"9b0e720933d0:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9b0e720933d0:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"9c3a2272f29c:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"9c3a2272f29c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"9cba42517174:1": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9cba42517174:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9cba42517174:3": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9d6837da9d35:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9d6837da9d35:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9dda33820227:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9dda33820227:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"9e7e8aa0f326:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9e81d578e317:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"9e81d578e317:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"9eb8dd3309ae:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"9eb8dd3309ae:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9ef86d653154:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9ef86d653154:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9ef86d653154:3": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"9f1b3214cac8:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"9f1b3214cac8:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"9fde1c3e54a1:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"9fde1c3e54a1:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a14372106c74:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a14372106c74:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a17faeec0f07:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"a17faeec0f07:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": -1
+},
+"a17faeec0f07:3": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a3e5e635212d:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"a3e5e635212d:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": -1
+},
+"a51bfd3b129a:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a51bfd3b129a:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"a51bfd3b129a:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"a584dd5abf77:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"a584dd5abf77:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a58cc54807be:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a58cc54807be:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a58cc54807be:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a6ec66a39db6:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"a6ec66a39db6:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a75bc0f22588:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a75bc0f22588:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a75bc0f22588:3": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a75bc0f22588:4": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a7aefe689dfe:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a7aefe689dfe:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a89cf738e92b:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a89cf738e92b:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"a89cf738e92b:3": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"a955c62d2667:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"a955c62d2667:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"aa16cff401b7:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"aa16cff401b7:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"aa16cff401b7:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"aa3e6e549e1e:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"aaeb00b0e947:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"aaeb00b0e947:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"ab5f34d4cbe1:1": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 1
+},
+"ab5f34d4cbe1:2": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": -1
+},
+"ab9a3b9e678c:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ab9a3b9e678c:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"ab9a3b9e678c:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"ac3127970b24:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": -1,
+"skill": 1
+},
+"ac3127970b24:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"ac3127970b24:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": -1
+},
+"ac44790efd45:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"ac44790efd45:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"ad0a82ef8777:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ad0a82ef8777:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ad52a153fc57:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"ad52a153fc57:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"ada84185618b:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"ada84185618b:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"ae90bae63391:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"ae90bae63391:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"ae90bae63391:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"b065278afba1:1": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b065278afba1:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"b17ec9623cc5:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"b17ec9623cc5:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"b1effdb77fbb:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b1effdb77fbb:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"b3cb36a36e7d:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"b3cb36a36e7d:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"b3cb36a36e7d:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"b3f7d30c02d4:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"b3f7d30c02d4:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b4e949afe460:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"b4e949afe460:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b4e949afe460:3": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b4e949afe460:4": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b526a7bdc370:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b526a7bdc370:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b5a09286f316:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"b74621ceb19e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b74621ceb19e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"b76a593aac7d:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"b76a593aac7d:2": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b778b84f59a2:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"b863327870ac:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"b863327870ac:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b8bb70d839d4:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"b8bb70d839d4:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"b8bb70d839d4:3": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"b8cd3e61c27b:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"b8cd3e61c27b:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b987e684dad9:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"b987e684dad9:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"b987e684dad9:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ba8c41707c24:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"ba8c41707c24:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"baa67f453b26:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"baa67f453b26:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"bb0dd5f0ea00:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"bb0dd5f0ea00:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"bb11438fdc75:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"bb11438fdc75:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"bb11438fdc75:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bb5ccb9743b4:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"bb5ccb9743b4:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"bb8eb260914a:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bb8eb260914a:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bb8eb260914a:3": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bc47083fd307:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bc47083fd307:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bc47083fd307:3": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"bc4993d1e2d6:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 1
+},
+"bc4993d1e2d6:2": {
+"dignity": -1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": -1
+},
+"bc7c1522a743:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bc7c1522a743:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bd04d6e787f9:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bd04d6e787f9:2": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bd1bc7fd3328:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"bd1bc7fd3328:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"bd1bc7fd3328:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"bd24f8d08a0b:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bd24f8d08a0b:2": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bd24f8d08a0b:3": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bd24f8d08a0b:4": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"bf15b3541d28:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 1
+},
+"bf15b3541d28:2": {
+"dignity": -1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bf16e66fcb1f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"bf16e66fcb1f:2": {
+"dignity": -1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bf4b670138f3:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bf4b670138f3:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"bf4b670138f3:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c0119ebd042a:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"c0119ebd042a:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c0119ebd042a:3": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": -1,
+"skill": 0
+},
+"c1069c37da9f:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"c1069c37da9f:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"c146648a91af:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"c146648a91af:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 1,
+"skill": 0
+},
+"c146648a91af:3": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"c180d2405ffb:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"c180d2405ffb:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c29bd1377046:1": {
+"dignity": 1,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"c29bd1377046:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c32cb98e49bf:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"c32cb98e49bf:2": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c399a11d5d5d:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"c399a11d5d5d:2": {
+"dignity": -1,
+"health": 1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"c42d909511ad:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"c42d909511ad:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c4c50e3cc4c6:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"c4c50e3cc4c6:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c4c50e3cc4c6:3": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c5255c36c7ac:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"c5255c36c7ac:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"c5255c36c7ac:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"c6a8b64ee0da:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"c6a8b64ee0da:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"c6a8b64ee0da:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"c733fe736423:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"c733fe736423:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"c761ed5d2e85:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"c761ed5d2e85:2": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"c761ed5d2e85:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"c79b9c4ef557:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"c9ee8f93505b:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"c9ee8f93505b:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"ca620a2683a8:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"ca620a2683a8:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 1,
+"skill": 1
+},
+"cacdaf5c484e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"cacdaf5c484e:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"cc05a015912b:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"cc05a015912b:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"ce19f6fbc898:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"ce19f6fbc898:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"cfd501ed7504:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"cfd501ed7504:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d00919181ae0:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d00919181ae0:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d05ff804187a:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d05ff804187a:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d05ff804187a:3": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d0bc6fbafd8a:1": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d0bc6fbafd8a:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d0e4a10f3649:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d0e4a10f3649:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d0e4a10f3649:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d0e4a10f3649:4": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"d12cb1323b3a:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d12cb1323b3a:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"d12cb1323b3a:3": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d205454b1b10:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"d205454b1b10:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d389f5a4418e:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"d389f5a4418e:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d389f5a4418e:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d3df603756a4:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"d4631c5f2e93:1": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"d4631c5f2e93:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d5435f95e2de:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d5435f95e2de:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d5435f95e2de:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d674ff2c9f08:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"d674ff2c9f08:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"d6bc318b4981:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"d6bc318b4981:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"d6d7a7d4fb8b:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"d6d7a7d4fb8b:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d6d7a7d4fb8b:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d70b2d6f0af7:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"d70b2d6f0af7:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d7ae23484f41:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"d8263f1dd1b7:1": {
+"dignity": 0,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d8263f1dd1b7:2": {
+"dignity": -1,
+"health": 1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"d8263f1dd1b7:3": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d827bc6044d9:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"d827bc6044d9:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d8560ce9b512:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"d8560ce9b512:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"d8c4685218df:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"d8c4685218df:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": -1
+},
+"d8c4685218df:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"d9f24378d34d:1": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"d9f24378d34d:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"dafe55b72a3a:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"dafe55b72a3a:2": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"db4956f47d81:1": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"db4956f47d81:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"dd42ec7d098d:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"dd42ec7d098d:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"dd42ec7d098d:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"dd70cf8fec5c:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"dd70cf8fec5c:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"dd70cf8fec5c:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"df0f7ea33696:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"df0f7ea33696:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"df176d515a61:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"df176d515a61:2": {
+"dignity": 1,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"df3a5694d7b3:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"df3a5694d7b3:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"df3b77834e73:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"df3b77834e73:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"e09fb7b3f3c2:1": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": -1
+},
+"e09fb7b3f3c2:2": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": -1,
+"skill": 1
+},
+"e15d3d102237:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e15d3d102237:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e15d3d102237:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": -1
+},
+"e265df4c26ea:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e265df4c26ea:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"e2d9e95cfaa3:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e2d9e95cfaa3:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e2d9e95cfaa3:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"e3310018ad80:1": {
+"dignity": 0,
+"health": -1,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"e3310018ad80:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"e3310018ad80:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"e3310018ad80:4": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"e344277cc05c:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e344277cc05c:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"e4d9556b8ea5:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 1
+},
+"e4d9556b8ea5:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e6f094afadfa:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"e795a184adf7:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e795a184adf7:2": {
+"dignity": 0,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"e79bb72a3d10:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e79bb72a3d10:2": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e79bb72a3d10:3": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"e7f2a966b4c7:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"e7f2a966b4c7:2": {
+"dignity": 0,
+"health": 1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"e895c77e599a:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"e895c77e599a:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"eb3949a16468:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"eb3949a16468:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"eb654ba87e83:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"ec527ccbc4a8:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"ec527ccbc4a8:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ed337e5b57b4:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"ed337e5b57b4:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"ee931e41291f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"efc2085cd900:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"efc2085cd900:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f017a8240772:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f017a8240772:2": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"f0e348bd43db:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"f0e348bd43db:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f0ff4ae34269:1": {
+"dignity": 1,
+"health": -1,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f0ff4ae34269:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f140d5344d9f:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"f140d5344d9f:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"f140d5344d9f:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"f2055b5b73d4:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f2055b5b73d4:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"f2055b5b73d4:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f2ae5b8d98cb:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"f2ae5b8d98cb:2": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"f2b851ecccd1:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"f2c824141b8d:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"f2c824141b8d:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f36455cc968e:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f36455cc968e:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f36455cc968e:3": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"f4b3d2e1b543:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f4b3d2e1b543:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"f4b3d2e1b543:3": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": -1
+},
+"f4e37dc9c0e9:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f4e37dc9c0e9:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"f4e37dc9c0e9:3": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f5141bfadc00:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f5141bfadc00:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"f6855d7a804d:1": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"f6855d7a804d:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": -1
+},
+"f6855d7a804d:3": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": -1
+},
+"f696567d0062:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"f819346123f7:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f819346123f7:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f83bdf70ef64:1": {
+"dignity": 1,
+"health": 1,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"f83bdf70ef64:2": {
+"dignity": -1,
+"health": -1,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"f874c81e497c:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f874c81e497c:2": {
+"dignity": -1,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"f919cb29457e:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"f919cb29457e:2": {
+"dignity": 1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"f998abcab2f4:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 1
+},
+"f998abcab2f4:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"fbbc5dc173d9:1": {
+"dignity": 0,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"fbbc5dc173d9:2": {
+"dignity": 0,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"fcafef46f4d4:1": {
+"dignity": 1,
+"health": 1,
+"network": 0,
+"output": 1,
+"skill": 1
+},
+"fcafef46f4d4:2": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+},
+"fce9f15f4099:1": {
+"dignity": 0,
+"health": 1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"fce9f15f4099:2": {
+"dignity": 0,
+"health": -1,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"fdefc81be72f:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 0,
+"skill": 0
+},
+"fdefc81be72f:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 0
+},
+"fdefc81be72f:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"fe02373aed39:1": {
+"dignity": 1,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 1
+},
+"fe02373aed39:2": {
+"dignity": -1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": -1
+},
+"fe02373aed39:3": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": -1,
+"skill": 1
+},
+"fe17b4acc2cc:1": {
+"dignity": 1,
+"health": 0,
+"network": 1,
+"output": 1,
+"skill": 0
+},
+"fe17b4acc2cc:2": {
+"dignity": -1,
+"health": 0,
+"network": -1,
+"output": 0,
+"skill": 0
+},
+"fe69155b8239:1": {
+"dignity": 1,
+"health": -1,
+"network": 0,
+"output": 1,
+"skill": 0
+},
+"fe69155b8239:2": {
+"dignity": 0,
+"health": 0,
+"network": 0,
+"output": 0,
+"skill": 0
+},
+"fe69155b8239:3": {
+"dignity": -1,
+"health": 0,
+"network": 0,
+"output": -1,
+"skill": 0
+}
+}

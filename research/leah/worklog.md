@@ -2,6 +2,16 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026, 16:00 UTC: stat perception (step c of Alejandro's question bank)
+
+- **What.** Haiku labelled the 936 dev answers 7 ways (Pro account, 0.62 USD list; no Max quota). Each way was scored on a reserved half of the events and in the replica of `main-1nddsg` (1,000 games per arm, same seeds).
+- **Results.**
+  - A direction for every stat on every option, instead of Ale's salient tags: 49.1 → 53.3.
+  - A vote of 5 ways: 54.4, against 46.7 category only and 58.1 perfect.
+  - **Output is the stat worth perceiving (+2.5 if perfect); Skill isn't (−2.1).**
+  - Short meanings beat checklists and halve trust crises. One gain and one cost per option collapses (39.7). Calling self-promotion an Output gain backfires (48.1).
+- **Report.** [lab/reports/stat-perception/README.md](../../lab/reports/stat-perception/README.md).
+
 ## 27 Oct 2026, 16:30 UTC: one Haiku smoke test of l6-routine-v1
 
 - **Line 5 obeyed 4 of 4 times** (Health, Mental, Report, then key project), with no Skill learning at L1. The other 3 quarters correctly went to the Health and HR-remark lines.

@@ -1,0 +1,233 @@
+{
+ "oracle": {
+  "mean": 67.65497,
+  "se": 0.4374720102576379,
+  "l6": 0.506,
+  "vs_category": 0.0,
+  "vs_category_se": 0.0,
+  "outcomes": {
+   "dismissed": 66,
+   "completed": 897,
+   "trust": 34,
+   "health": 2,
+   "broke": 1
+  }
+ },
+ "category only": {
+  "mean": 46.65328,
+  "se": 0.6274946396299848,
+  "l6": 0.022,
+  "vs_category": 0.0,
+  "vs_category_se": 0.0,
+  "outcomes": {
+   "dismissed": 295,
+   "completed": 535,
+   "trust": 132,
+   "health": 22,
+   "broke": 16
+  }
+ },
+ "perfect signs": {
+  "mean": 58.05117,
+  "se": 0.5839529743115514,
+  "l6": 0.24,
+  "vs_category": 11.39789,
+  "vs_category_se": 0.7424229719756907,
+  "outcomes": {
+   "dismissed": 101,
+   "completed": 680,
+   "trust": 215,
+   "health": 4
+  }
+ },
+ "all-true cat+tags": {
+  "mean": 55.1265,
+  "se": 0.588147757910489,
+  "l6": 0.192,
+  "vs_category": 8.473220000000001,
+  "vs_category_se": 0.7492975351806703,
+  "outcomes": {
+   "dismissed": 112,
+   "completed": 624,
+   "trust": 249,
+   "broke": 9,
+   "health": 6
+  }
+ },
+ "all-true tags": {
+  "mean": 57.86537,
+  "se": 0.5694945247118507,
+  "l6": 0.266,
+  "vs_category": 11.21209,
+  "vs_category_se": 0.7351891556779973,
+  "outcomes": {
+   "dismissed": 96,
+   "completed": 686,
+   "trust": 212,
+   "broke": 2,
+   "health": 4
+  }
+ },
+ "vote5+true-dignity cat+tags": {
+  "mean": 54.490990000000004,
+  "se": 0.6139701847057458,
+  "l6": 0.064,
+  "vs_category": 7.8377099999999995,
+  "vs_category_se": 0.7573931507749069,
+  "outcomes": {
+   "completed": 704,
+   "dismissed": 212,
+   "trust": 77,
+   "health": 7
+  }
+ },
+ "vote5+true-dignity tags": {
+  "mean": 52.93862,
+  "se": 0.623964062143363,
+  "l6": 0.059,
+  "vs_category": 6.28534,
+  "vs_category_se": 0.7605026096626517,
+  "outcomes": {
+   "completed": 651,
+   "dismissed": 223,
+   "trust": 123,
+   "health": 3
+  }
+ },
+ "vote5+true-health cat+tags": {
+  "mean": 53.68087000000001,
+  "se": 0.6285549475305761,
+  "l6": 0.072,
+  "vs_category": 7.02759,
+  "vs_category_se": 0.7663004169520731,
+  "outcomes": {
+   "dismissed": 221,
+   "completed": 678,
+   "trust": 98,
+   "health": 3
+  }
+ },
+ "vote5+true-health tags": {
+  "mean": 51.57705,
+  "se": 0.6376172161350506,
+  "l6": 0.063,
+  "vs_category": 4.923769999999999,
+  "vs_category_se": 0.7705271853935658,
+  "outcomes": {
+   "dismissed": 247,
+   "completed": 618,
+   "trust": 135
+  }
+ },
+ "vote5+true-network cat+tags": {
+  "mean": 53.881170000000004,
+  "se": 0.6003806478005045,
+  "l6": 0.075,
+  "vs_category": 7.2278899999999995,
+  "vs_category_se": 0.7417028617870387,
+  "outcomes": {
+   "completed": 660,
+   "trust": 167,
+   "dismissed": 165,
+   "broke": 5,
+   "health": 3
+  }
+ },
+ "vote5+true-network tags": {
+  "mean": 55.230290000000004,
+  "se": 0.6001017674921874,
+  "l6": 0.095,
+  "vs_category": 8.577009999999998,
+  "vs_category_se": 0.7552399104140234,
+  "outcomes": {
+   "completed": 691,
+   "trust": 145,
+   "dismissed": 157,
+   "broke": 4,
+   "health": 3
+  }
+ },
+ "vote5+true-output cat+tags": {
+  "mean": 56.712720000000004,
+  "se": 0.5868772567719046,
+  "l6": 0.099,
+  "vs_category": 10.059439999999999,
+  "vs_category_se": 0.7078599132195177,
+  "outcomes": {
+   "completed": 721,
+   "trust": 111,
+   "dismissed": 149,
+   "health": 16,
+   "broke": 3
+  }
+ },
+ "vote5+true-output tags": {
+  "mean": 56.67188,
+  "se": 0.5726083916917702,
+  "l6": 0.082,
+  "vs_category": 10.0186,
+  "vs_category_se": 0.7423497304925505,
+  "outcomes": {
+   "completed": 708,
+   "trust": 148,
+   "dismissed": 136,
+   "health": 8
+  }
+ },
+ "vote5+true-skill cat+tags": {
+  "mean": 52.13259,
+  "se": 0.6461808245761784,
+  "l6": 0.083,
+  "vs_category": 5.47931,
+  "vs_category_se": 0.764487948398892,
+  "outcomes": {
+   "dismissed": 237,
+   "completed": 644,
+   "trust": 105,
+   "health": 6,
+   "broke": 8
+  }
+ },
+ "vote5+true-skill tags": {
+  "mean": 53.07296000000001,
+  "se": 0.662648162470572,
+  "l6": 0.15,
+  "vs_category": 6.41968,
+  "vs_category_se": 0.7822502929487585,
+  "outcomes": {
+   "dismissed": 239,
+   "completed": 646,
+   "trust": 108,
+   "broke": 3,
+   "health": 4
+  }
+ },
+ "vote5 cat+tags": {
+  "mean": 54.234930000000006,
+  "se": 0.6158813096552636,
+  "l6": 0.054,
+  "vs_category": 7.581650000000001,
+  "vs_category_se": 0.7570833162375362,
+  "outcomes": {
+   "completed": 707,
+   "dismissed": 207,
+   "trust": 74,
+   "broke": 5,
+   "health": 7
+  }
+ },
+ "vote5 tags": {
+  "mean": 52.819720000000004,
+  "se": 0.6180386342900216,
+  "l6": 0.05,
+  "vs_category": 6.166440000000001,
+  "vs_category_se": 0.7471849124680047,
+  "outcomes": {
+   "completed": 653,
+   "dismissed": 212,
+   "trust": 129,
+   "health": 3,
+   "broke": 3
+  }
+ }
+}
