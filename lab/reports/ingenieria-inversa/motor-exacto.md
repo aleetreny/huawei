@@ -234,3 +234,27 @@ Con `validate`, el simulador recibe el estado observado y la decisión de cada p
 | Error medio de la nota final | **0,43 puntos** |
 
 La validación sobre un lote nuevo, `v01-validation`, está en curso.
+
+## M15. Derrotas por condición persistente
+
+| Derrota | Aviso (una sola vez por partida) | Condición | Partidas (b00+b01) |
+|---|---|---|---:|
+| Broke | "Payday just means paying off debts…" | dinero bajo cero antes de cobrar | 755 |
+| You resign | "nobody asks you to lunch…" | Network en 0 | 160 |
+| Breakdown | "do I really need this job?" | Dignity agotada (≤1) | 6 |
+| Dismissed for capability | "This half-year review fell short…" | sigue en L1 | 25 |
+
+- **El aviso sale a los 3 meses seguidos de la condición, y la derrota llega a los 6** si sigue.
+  - De 755 ruinas, 680 llegan exactamente 3 meses después del aviso.
+  - En el aislamiento es igual, aunque con más dispersión: 86 de 160 a los 3 meses.
+- El despido llega 6 meses después de la evaluación con "fell short", en el mes 24 si sigues en L1.
+- Ruina y aislamiento se evitan saliendo de la condición una sola vez antes del 6.º mes.
+- Las demás derrotas:
+  - **Blackout**: Health llega a 0, en el acto.
+  - **Trust crisis**: la 2.ª explosión.
+  - **Obsolete**: Skill muy por debajo de lo esperado; 1 caso.
+
+## M16. El techo de L6
+
+- En las evaluaciones de L6 vistas hasta ahora (16 en el mes 48) hay Skill de hasta 163, Network de hasta 67 y Output de hasta 52, **sin ascenso a L7**. El umbral de L6 → L7 queda por encima de esos valores.
+- Con una política voraz, el simulador llega a L6 en el mes 42 en el 11 % de las partidas, y casi nunca con más de 160 de Skill.

@@ -40,20 +40,14 @@ class Batch:
                         self.nodes[r["id"]] = r
 
     def games(self) -> Iterator[dict[str, Any]]:
+        from gzrobust import read_lines  # tolerates truncated gzip members (batches stopped mid-write)
         for d in self.dirs:
             for p in sorted(glob.glob(str(d / "games-*.jsonl.gz"))):
-                with gzip.open(p, "rt", encoding="utf-8") as f:
-                    while True:
-                        try:
-                            line = f.readline()
-                        except (EOFError, OSError, UnicodeDecodeError, __import__("zlib").error):
-                            break  # shard still being written
-                        if not line:
-                            break
-                        try:
-                            yield json.loads(line)
-                        except ValueError:
-                            break
+                for line in read_lines(p):
+                    try:
+                        yield json.loads(line)
+                    except ValueError:
+                        continue
 
     def log_entries(self, g: dict[str, Any]) -> list[tuple[str, str]]:
         return [(code, self.texts.get(tid, "")) for code, tid in g.get("logs", [])]
