@@ -170,6 +170,8 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
 
 **Otro enfoque del equipo.** El chat "Scripts and alternative" (rama `alejandro/formato`, `script-v1`: DeepSeek etiqueta y un script del Skill decide) sacó **76,87** en una partida completa, en L6. Su otra partida cayó en la trampa de L1 (13,23). La combinación con más futuro para los cortes 2 y 3: su enfoque, que llega a L6, más las protecciones de L1 de esta línea (se las hemos pasado).
 
+**Última prueba (réplica, gratis).** Aceptar riesgo en L1 para salvar el ascenso y limpiarlo después en el trimestre (Defuse con RR. HH. "quiet", con y sin "Lay low"): 53,5 y 53,3, frente a 53,4 sin ello. Lo que se gana en despidos se pierde en crisis o agotamiento. Con las herramientas probadas, la trampa de L1 no baja más.
+
 ## Relevo (27 oct, 21:05 UTC)
 
 1. **Qué se ha hecho y por qué.**
