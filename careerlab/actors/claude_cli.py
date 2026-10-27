@@ -92,10 +92,11 @@ def render_system_prompt(instruction: str, skills: list[tuple[str, str]], skills
 SKILL_SERVER = Path(__file__).resolve().parents[2] / "scripts" / "transmision" / "fake_mcp.py"
 
 
-def add_skill_server(config: dict[str, Any], run_dir: Path, skills: list[tuple[str, str]]) -> dict[str, Any]:
-    """Official delivery: a JiuwenSwarm-like skill_tool that returns SKILL.md on request (calls are logged)."""
-    item = {"record": str(run_dir / "skill_reads.jsonl"), "session_id": "",
-            "skills": {name: {"SKILL.md": body} for name, body in skills}}
+def add_skill_server(config: dict[str, Any], run_dir: Path, bundle_dir: Path) -> dict[str, Any]:
+    """Official delivery: a JiuwenSwarm-like skill_tool that returns SKILL.md or a file of the Skill on request (calls are logged)."""
+    files = {d.name: {str(p.relative_to(d)): p.read_text(encoding="utf-8") for p in d.rglob("*") if p.is_file()}
+             for d in sorted((bundle_dir / "skills").iterdir()) if (d / "SKILL.md").is_file()}
+    item = {"record": str(run_dir / "skill_reads.jsonl"), "session_id": "", "skills": files}
     (run_dir / "skills_item.json").write_text(json.dumps(item, ensure_ascii=False))
     servers = dict(config["mcpServers"])
     servers["jiuwen"] = {"command": sys.executable, "args": [str(SKILL_SERVER), "skills", str(run_dir / "skills_item.json")]}
@@ -200,7 +201,7 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
     config = mcp_override or mcp_config(settings, spec)
     official = cfg.skills_mode == "official" and bool(skills)
     if official:
-        config = add_skill_server(config, run_dir, skills)
+        config = add_skill_server(config, run_dir, bundle_dir)
     (run_dir / "mcp.json").write_text(json.dumps(config, indent=1))
     atomic_write_json(run_dir / "actor.json", cfg.record())
     base = [settings.claude_executable, "-p", "--setting-sources", "", "--strict-mcp-config",
