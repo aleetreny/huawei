@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t-multi",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "One Skill per rule, so each rule's trigger sits in the always-visible skill list.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 6
+}

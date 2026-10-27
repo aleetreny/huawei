@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "f3-lean-climb-v1",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "add module(s): climb",
+  "hypothesis": "After each promotion the caps jump and stories alone lift Network and Output too slowly to reach the next bar within one half-year (the black-box study needs a large Network and Output jump at L3). A Skill that sends quarter-end Energy and main actions to Network and Output right after a promotion, and to Skill once Network and Output stall, will raise the level reached by month 18.",
+  "change": "f3-lean-v1 plus skill module(s) climb",
+  "predicted_behaviour": "More Prepare report materials, Network maintenance and key-project or report-results main actions in the two allocations after a promotion; more promotions at the second and third reviews; higher mean level at month 18 than the same-batch reference.",
+  "refutation": "Refuted if the mean level at month 18 over 25 games per arm is not above the interleaved reference, or if promotions at reviews 2 and 3 among games promoted at review 1 do not rise.",
+  "skill_count": 2
+}

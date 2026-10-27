@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "f3-lean-logcheck-v1",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "add module(s): log-check",
+  "hypothesis": "A Skill that has the actor read check_latest_logs after story choices in the months before a review will let it see announced effects before caps, detect capped stats and the kinds of answers that cost Network or Output in this run, and avoid them before the review.",
+  "change": "f3-lean-v1 plus skill module(s) log-check",
+  "predicted_behaviour": "Fewer Network or Output points lost in the two months before the first review; higher first-review promotion than the same-batch reference. plus check_latest_logs calls in those months.",
+  "refutation": "Refuted if first-review promotion over 25 short games per arm is not clearly above the interleaved reference (about 15 points). Also refuted as not executed if there are no check_latest_logs calls.",
+  "skill_count": 2
+}

@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t7-ref-instr",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "t7-ref with the opening rule repeated in the always-visible manifest instruction.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

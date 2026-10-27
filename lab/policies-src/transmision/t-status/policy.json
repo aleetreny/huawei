@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t-status",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "The agent fills a status line (months to review, HR state, wealth, months left, rule) before each choice.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

@@ -1,0 +1,53 @@
+{
+ "name": "p-v2-check",
+ "cut": 18,
+ "n": 20,
+ "actor": "dca2e96eb3ebec29",
+ "created": "2026-10-27T03:46:46Z",
+ "arms": {
+  "periodos-v1": [
+   "secciones-scre-8813f1ad-dca2e9-00000-a1",
+   "secciones-scre-8813f1ad-dca2e9-00001-a1",
+   "secciones-scre-8813f1ad-dca2e9-00002-a1",
+   "secciones-scre-8813f1ad-dca2e9-00003-a1",
+   "secciones-scre-8813f1ad-dca2e9-00004-a1",
+   "secciones-scre-8813f1ad-dca2e9-00005-a1",
+   "secciones-scre-8813f1ad-dca2e9-00006-a1",
+   "secciones-scre-8813f1ad-dca2e9-00007-a1",
+   "secciones-scre-8813f1ad-dca2e9-00008-a1",
+   "secciones-scre-8813f1ad-dca2e9-00009-a1",
+   "secciones-scre-8813f1ad-dca2e9-00010-a1",
+   "secciones-scre-8813f1ad-dca2e9-00011-a1",
+   "secciones-scre-8813f1ad-dca2e9-00012-a1",
+   "secciones-scre-8813f1ad-dca2e9-00013-a1",
+   "secciones-scre-8813f1ad-dca2e9-00014-a1",
+   "secciones-scre-8813f1ad-dca2e9-00015-a1",
+   "secciones-scre-8813f1ad-dca2e9-00016-a1",
+   "secciones-scre-8813f1ad-dca2e9-00017-a1",
+   "secciones-scre-8813f1ad-dca2e9-00018-a1",
+   "secciones-scre-8813f1ad-dca2e9-00019-a1"
+  ],
+  "periodos-v2": [
+   "secciones-scre-96dac841-dca2e9-00000-a1",
+   "secciones-scre-96dac841-dca2e9-00001-a1",
+   "secciones-scre-96dac841-dca2e9-00002-a1",
+   "secciones-scre-96dac841-dca2e9-00003-a1",
+   "secciones-scre-96dac841-dca2e9-00004-a1",
+   "secciones-scre-96dac841-dca2e9-00005-a1",
+   "secciones-scre-96dac841-dca2e9-00006-a1",
+   "secciones-scre-96dac841-dca2e9-00007-a1",
+   "secciones-scre-96dac841-dca2e9-00008-a1",
+   "secciones-scre-96dac841-dca2e9-00009-a1",
+   "secciones-scre-96dac841-dca2e9-00010-a1",
+   "secciones-scre-96dac841-dca2e9-00011-a1",
+   "secciones-scre-96dac841-dca2e9-00012-a1",
+   "secciones-scre-96dac841-dca2e9-00013-a1",
+   "secciones-scre-96dac841-dca2e9-00014-a1",
+   "secciones-scre-96dac841-dca2e9-00015-a1",
+   "secciones-scre-96dac841-dca2e9-00016-a1",
+   "secciones-scre-96dac841-dca2e9-00017-a1",
+   "secciones-scre-96dac841-dca2e9-00018-a1",
+   "secciones-scre-96dac841-dca2e9-00019-a1"
+  ]
+ }
+}

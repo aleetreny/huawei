@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t8-quarter",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "Only the quarterly phases are ruled (closing, health floor, HR risk, Skill from L4, growth otherwise); story events are left to the model.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}
