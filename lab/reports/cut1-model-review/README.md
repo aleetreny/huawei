@@ -79,3 +79,7 @@ Prossimo passo dell'organizzatore: riesaminare eventuali nuovi risultati script-
 ## Relevo — recording panel update
 
 Replaced video-script-en.md with the three-minute recording version in the required five-part order. Added frozen-t13-read-v4/bundle with the exact evaluated Skill and manifest from 09d5735; verified every byte and the registered bundle SHA256. Opened the recording script, Skill and manifest in Codex panels. No evaluated candidate changed and no games launched. Integrate these documentation/snapshot files into main with the review report.
+
+### Relevo — simpler recording copy
+
+Simplified the English recording script at the user's request: shorter sentences, familiar words, same five-question order and evidence limitations. Exact evaluated manual and manifest unchanged.

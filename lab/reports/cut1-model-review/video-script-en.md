@@ -1,43 +1,55 @@
-# Three-minute presentation — t13-read-v4
+# Three-minute presentation — simple English
 
-Reading copy. Follow the five sections in order; do not read the headings aloud. Approximately three minutes at 135–145 words per minute.
+Read the five sections in order. Do not read the headings aloud. Speak slowly and pause between sections.
 
-## 1 — Design approach
+## 1 — How we designed it
 
-Hello, we are Gradient Depression. Our submission guides DeepSeek through the career simulation using one English Skill.
+Hello, we are Gradient Depression.
 
-We explored balanced growth, early investment, relationships, and reacting to feedback. Our final design separates story decisions from quarterly planning and keeps a short memory of observations.
+We wrote one Skill: a set of instructions that helps DeepSeek play the career game.
 
-The priorities are to survive, manage risk, protect wellbeing, preserve progress before reviews, and then grow.
+We tried different ideas: keeping a good balance, learning more, building relationships, and reacting to feedback.
 
-## 2 — Debugging and improvements
+Our final Skill has two parts. One helps with story choices. The other plans how to use energy each quarter.
 
-The logs showed that an agent could rebuild its indicators during quarterly planning, then lose progress through story choices just before a review.
+The main idea is simple: stay safe, stay healthy, and grow without losing the progress already made.
 
-Matteo’s observed-growth experiments inspired recording the best values seen at the current level. Version four uses that memory to identify losses and guide recovery.
+## 2 — What we found and changed
 
-Apparently constructive choices could also precede worsening risk feedback. And quarterly instructions sometimes influenced story decisions. We separated the procedures explicitly and strengthened attention to warnings.
+When we read the game logs, we saw a common problem. The agent built good results, but sometimes lost them just before a review.
 
-Two local DeepSeek careers completed with scores of 71.67 and 70.22. A third was interrupted while still at level one, so we do not claim a reliable average of seventy.
+So we added a short note. It records the current stats, the best stats seen at the current level, and how soon the next review will happen.
 
-## 3 — Scripts and references
+Before a review, the agent tries to protect those stats and recover lost progress.
 
-The submitted version uses no executable scripts or separate reference files. We keep essential instructions together because agents did not always retrieve references when needed.
+We also saw that choices which sounded helpful could still lead to problems later. So we made the agent pay more attention to warnings.
 
-A separate script controller produced one excellent result, but also an early failure and higher token use. We preferred the text-only candidate for this submission.
+We tested this version locally with DeepSeek and the official runner. Two games finished with scores of about seventy-two and seventy. A third stopped because of a technical problem while still at level one. We cannot promise the same scores every time.
 
-## 4 — Generality and robustness
+## 3 — Why we did not include scripts
 
-The Skill reads current options and feedback rather than selecting fixed answers for named events.
+This version uses plain instructions, with no scripts or extra reference files.
 
-Its memory records observed values, not supplied promotion thresholds. A missing expected gain is provisional evidence; a count of concerns is not a measurement of hidden risk.
+We wanted the main rules to be easy to find in one place.
 
-The design can respond to changing outcomes, but robustness is not guaranteed. It relies on the published calendar, and interpreting unfamiliar choices remains difficult.
+We also tried a version with a script. It had one very good game, but another failed early and it used more tokens. We chose the text-only version for this submission.
+
+## 4 — How well it adapts
+
+The Skill reads the current choices, stats and feedback. It does not use a list of fixed answers for named events.
+
+It remembers what happened in the current game. It does not know the hidden promotion targets or the exact amount of hidden risk.
+
+It can react when results change. But it can still misunderstand a choice, and it depends on the published game calendar.
 
 ## 5 — What we learned
 
-Following instructions and making good decisions are different capabilities.
+Our biggest lesson is that following a rule is not the same as making a good choice.
 
-An agent can remember that a review is near and still misunderstand an option’s consequences. More rules or longer memory do not automatically solve that.
+The agent may know that a review is near, but still misunderstand what an option will do.
 
-Skills add priorities, structure and continuity. Their value must be measured through actual decisions and repeated outcomes. They support judgement, but do not replace it. Thank you.
+A Skill gives the agent a clear plan and helps it remember what matters. But more instructions do not always mean better results.
+
+We need to check what the agent actually does, test more than one game, and be honest about what still fails.
+
+Thank you.
