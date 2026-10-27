@@ -113,6 +113,17 @@ Revisión informativa solicitada por Alejandro: **Codex — `alejandro/explicaci
 Línea de investigación solicitada por Alejandro: **Codex — `alejandro/investigacion-decisiones` — primera exploración y estructura continua preparadas; PR #3 para integrar**. [Informe e insights](lab/reports/decision-research/cycles/002/interpretation.md), [continuar en este chat](research/careerlab/decision-research/CONTINUAR.md) y [Relevo](lab/reports/decision-research/README.md). Snapshot `9b8fbe9`: 204 terminales Claude, 99 trazas locales y 105 no localizadas aquí; regresión de estados del Haiku principal en 53 partidas, validada reservando políticas/familias. El estancamiento es una señal de riesgo, no un efecto causal: al segundo corte completan 2/14 aún L1 frente a 26/38 promovidas. No se ajustan modelos de comportamientos por sólo 20/17 prefijos completos. Ciclos con hashes/linaje, insights y cola de hipótesis; siguiente paso: recuperar trazas en nube. Sin nuevas partidas ni cambios de manuales/protocolo. No reasigna T1–T13.
 Diagnóstico solicitado por Alejandro: **Codex — `alejandro/diagnostico-estrategias` — terminado, [PR #4](https://github.com/aleetreny/huawei/pull/4) pendiente de integrar**. [Diagnóstico y Relevo](research/careerlab/diagnostico-2026-10-26/README.md), con cálculos reproducibles, sensibilidad del ranking, fallo de robustez reproducido y experimentos priorizados; 230 tests OK. Sin partidas ni cambios de la carrera; no añade tareas a T1–T13.
 
+Ingeniería inversa con bots solicitada por Alejandro: **Claude — `alejandro/ingenieria-inversa` — en marcha (26 oct, desde las 22:20 UTC)**. [Informe y estrategia por etapas](lab/reports/ingenieria-inversa/README.md), [hallazgos H1–H22](lab/reports/ingenieria-inversa/hallazgos.md) y [diario](lab/reports/ingenieria-inversa/progreso.md).
+- Unas 16.000 partidas de bots por las 5 herramientas, sin cuota.
+- La fórmula de la nota final, exacta.
+- El ascenso es casi determinista: Skill, Network y Output sobre el umbral del nivel al empezar el mes de la evaluación, la Dignidad no baja y el riesgo bajo.
+- Hay techos por nivel. Quien sigue en L1 en el mes 24 es despedido.
+- Las respuestas a eventos deciden la partida; el reparto trimestral apenas.
+- El carácter de una respuesta predice sus efectos en historias no vistas (R² 0,4–0,6).
+- Con riesgo acumulado, mentir o exponerse a una revisión formal lo hace estallar.
+- Oráculo con el catálogo de dev (no es una Skill): 67,9 de nota media en 1.200 partidas (mediana 71), 92 % terminadas y 71 % en L6.
+- Dos manuales candidatos, `bb-mechanics-v1` y `bb-mechanics-lean-v1` (en `lab/policies-src/bb-mechanics/`): lint sin avisos, **sin jugar aún con IA**. PR [#16](https://github.com/aleetreny/huawei/pull/16). No reasigna T1–T14.
+
 Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-probar` — preparada para PR nueva**. [Índice](research/ideas/README.md) y [exploración aleatoria instrumentada](research/ideas/exploracion-aleatoria.md): revisión de la corrida de Matteo (73.858 partidas, resumen agregado sin decisiones individuales publicadas), diseño de logs por decisión y límites de inferencia/conformidad. No se han lanzado partidas ni contactado organizadores. Relevo y siguiente paso de auditoría en la sección; no reasigna T1–T13.
 
 | # | Tarea | Quién | Estado | Dónde queda el resultado |
