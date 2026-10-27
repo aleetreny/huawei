@@ -30,6 +30,8 @@ Sabemos casi exactamente cómo funciona el juego (simulador al 99 %) y qué habr
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `Matteo`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
+**Apoyo de entrega documentado (27 oct):** borradores ingleses de [diseño](docs/entrega/skills_design-draft.md) y [decisiones](docs/entrega/decision_report-draft.md), más [nota de cumplimiento t19](docs/entrega/t19-compliance.md), en `alejandro/entrega`. Pendiente resolver `TODO(final)` contra t13-read-v2 congelado y copiar los documentos aprobados al paquete. Sin partidas ni API; no abre otra línea de investigación.
+
 ## 4. Fechas (hora UK)
 
 | Fecha | Qué hay |

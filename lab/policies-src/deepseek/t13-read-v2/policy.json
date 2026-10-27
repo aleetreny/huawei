@@ -1,0 +1,14 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v2",
+  "parents": [
+    "t13-read-v1",
+    "t19-final"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct evening: three official DeepSeek games lost to a missed first promotion (a Skill, Network or Output point lost in the month before a review) or to risk from options that look constructive; ChatGPT review 2 (phase routing, survival first, no numeric margins); palancas status line (t19-final, compliance wording)",
+  "operator": "repair and merge",
+  "hypothesis": "DeepSeek loses official games by (a) losing one growth point in the month before a review at L1, where the bar equals the point where gains stop, and (b) piling up risk through private, anonymous, partial or phased options it reads as safe; it also reads the Skill only twice per game and never reopens the review reference. Putting the review-month protection in the main body and the manifest instruction, routing phases strictly, adding a stricter risk step when the HR remark is not friendly, and keeping the status line with observed stalls should let DeepSeek finish more games.",
+  "predicted_behaviour": "Official DeepSeek games promoted at the first or second review more often and fewer trust crises than t13-read-v1 (0 of 2 finished) and f1 (0 of 1).",
+  "refutation": "Official DeepSeek games still eliminated by a missed L1 promotion or a trust crisis at the same rate (most of the batch).",
+  "skill_count": 1
+}

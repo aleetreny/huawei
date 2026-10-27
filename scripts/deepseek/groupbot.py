@@ -163,9 +163,10 @@ class LexBot(GroupBot):
        Dignity and lower risk instead. Ties: lowers risk, then more Health + Dignity, then no money lost.
     """
 
-    def __init__(self, per: Perception, seed: int = 0, risk_mode: str = "strict") -> None:
+    def __init__(self, per: Perception, seed: int = 0, risk_mode: str = "strict", risk_first: str = "",
+                 after_blowup: bool = False) -> None:
         super().__init__(per, seed)
-        self.risk_mode = risk_mode
+        self.risk_mode, self.risk_first, self.after_blowup = risk_mode, risk_first, after_blowup
 
     def story(self, rep, st, node):
         opts = []
@@ -177,7 +178,12 @@ class LexBot(GroupBot):
         def keep(pool, bad):
             rest = [o for o in pool if not bad(o)]
             return rest or pool
-        if self.risk_mode == "strict" or not calm:
+        if self.risk_mode == "survive":  # never take an option that ends the run at once
+            opts = keep(opts, lambda o: st.health + o[1].get("health", 0) * 1 <= 0)
+        alert = not calm or (self.after_blowup and st.blowups > 0)
+        if self.risk_first and (alert or self.risk_first == "always"):
+            opts = keep(opts, lambda o: o[2] >= 0)  # only options that lower risk, when there are any
+        if self.risk_mode in ("strict", "survive") or not calm:
             opts = keep(opts, lambda o: o[2] > 0)
         opts = keep(opts, lambda o: (st.health <= 3 and o[1].get("health", 0) < 0) or (st.dignity <= 4 and o[1].get("dignity", 0) < 0))
         if st.month % 6 == 5:
@@ -206,10 +212,12 @@ def _init(arms: dict[str, Perception | None]) -> None:
 
 
 def _bot(name: str, i: int) -> GroupBot:
+    """Lex specs: lex-<strict|calm|survive>[+rf-alert|+rf-always][+blow]."""
     per = _PER[name]
-    for mode in ("strict", "calm"):
-        if name.endswith(f"/lex-{mode}"):
-            return LexBot(per, seed=i, risk_mode=mode)
+    if "/lex-" in name:
+        spec = name.split("/lex-", 1)[1].split("+")
+        rf = next((x[3:] for x in spec if x.startswith("rf-")), "")
+        return LexBot(per, seed=i, risk_mode=spec[0], risk_first=rf, after_blowup="blow" in spec)
     return GroupBot(per, seed=i)
 
 
