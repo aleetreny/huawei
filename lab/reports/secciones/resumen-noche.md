@@ -30,8 +30,8 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
 | [H-P1a ronda 3](p1-h3-runup.md) | P1 | reloj (réplica) y reloj + respuestas discretas (`review-run-up`) | 24 | 38 % y 46 % frente a 50 % | reloj **descartado** (total 49 % frente a 42 %, no se confirma); run-up descartado |
 | [H-P2a](p2-h1-climb.md) | P2 | + `climb` (reparto al indicador que bloquea tras cada ascenso) | 24 (18 meses) | nivel en el mes 18: 2,25 frente a 2,29 | descartada |
 | [Final](#manual-compuesto-recomendado) | P1–P4 | `periodos-v1` (núcleo f3-lean + review-clock + climb v2 + closing) | 37 completas | 51,5 ± 3,0 frente a 50,4 ± 2,8 | **no gana** (+1,1 ± 4,1) |
-| Comprobación v2 | P1–P2 | `periodos-v2` (redacción para la rúbrica) frente a `periodos-v1` | V2_N (18 meses) | V2_RES | V2_DEC |
-| [H-P3a](#relevo) | P3 | `periodos-v3` (climb v3: cuello de botella por la charla de evaluación; Skill tras una evaluación fallida) | P3_N (30 meses) | P3_RES | P3_DEC |
+| Comprobación v2 | P1–P2 | `periodos-v2` (redacción para la rúbrica) frente a `periodos-v1` | 0 | no se llegó a jugar | pendiente |
+| [H-P3a](#relevo) | P3 | `periodos-v3` (climb v3: cuello de botella por la charla de evaluación; Skill tras una evaluación fallida) | 18 / 16 (30 meses, de 20) | nivel en el mes 30: 3,12 (v3) frente a 3,28 (v1); Skill learning en L4: 0 % en ambos | sin conclusión (menos de 20 por brazo); la regla no se ejecuta |
 
 ## Revisión de las 2 horas (02:10 UTC)
 
@@ -99,7 +99,7 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
 
 ## Relevo
 
-**Actualizado: 27 oct 2026, RELEVO_TIME UTC.** Rama `alejandro/lab-secciones`, origen `secciones`.
+**Actualizado: 27 oct 2026, 07:15 UTC.** Rama `alejandro/lab-secciones`, origen `secciones`.
 
 1. **Qué he hecho y por qué.**
    - Herramienta: corte de partidas de Claude en un mes (`careerlab/truncate.py`, actor `claude-cli:haiku^M`, resultado `truncated` que nunca cuenta como terminada ni eliminada) con instantánea de cada evaluación (estado antes y después, nota, ascenso, tono de RR. HH., explosiones). Pruebas en `tests/test_truncate.py` (309 tests OK).
@@ -107,10 +107,10 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
    - Experimentos en el orden de la tabla viva; un informe por hipótesis en `lab/reports/secciones/`.
 2. **Resultados con números:** tablas de arriba. Datos: `lab/registry-origins/secciones/` (exportado) y `~/careerlab-data/huawei-secciones/runs/*/result.json` (campo `periods`; fuera de Git). Bots en `~/careerlab-data/secciones-bots/` (fuera de Git; contienen texto del juego).
 3. **Lo que falló o quedó a medias.**
-   - La prueba del P3 (`p3-h1-skill`, periodos-v3 frente a periodos-v1, cortes en el mes 30) PENDIENTE_P3.
-   - La comprobación de `periodos-v2` PENDIENTE_V2.
-   - Del lote `full-base` sólo se jugaron 2 completas (1 por brazo); las 14 de f3-lean se cancelaron porque las sustituyen las de la prueba final, y las de bb-mechanics-lean quedaron en cola PENDIENTE_BB.
-   - Cuota: la semana pasó del 19 % (00:30) a QUOTA_END; nunca saltó el freno.
+   - La prueba del P3 (`p3-h1-skill`, periodos-v3 frente a periodos-v1, cortes en el mes 30) quedó en 18 y 16 partidas (de 20) al cerrar a las 07:12: nivel en el mes 30 de 3,28 (v1) frente a 3,12 (v3), sin conclusión. Lo importante: **tampoco con climb-v3 elige Haiku Skill learning en L4** (0 % de las acciones trimestrales en L4), así que la regla no se ejecuta. Antes de repetir, hay que entender por qué Haiku la evita (cuesta 2 de energía y salud; quizá prefiere la recuperación o el Defuse que manda el núcleo).
+   - La comprobación de `periodos-v2` no llegó a jugarse (20 + 20 partidas de 18 meses en cola, canceladas al cerrar); v2 sólo cambia la redacción, pero conviene comprobarla antes de entregarla.
+   - Del lote `full-base` sólo se jugaron 2 completas (1 por brazo); las 14 de f3-lean se cancelaron porque las sustituyen las de la prueba final, y las de bb-mechanics-lean quedaron en cola (14, canceladas al cerrar).
+   - Cuota: la semana pasó del 19 % (00:30) a 23 % a las 07:12 (unas 551 partidas de Haiku: 455 cortas y 96 completas); nunca saltó el freno.
 4. **Siguiente paso concreto.**
    - **P3 es la palanca con más margen y mecánica clara:** en L4 la Skill bloquea ~19 meses y Haiku dedica 0–2 % de las acciones trimestrales a Skill learning o rotación. Terminar `p3-h1-skill` (20 por brazo, cortes en el mes 30) y, si la Skill en L4 sube y el tiempo en L4 baja, jugar periodos-v3 con 25 completas frente a f3-lean.
    - Repetir la prueba final con más partidas (hace falta ~80 por brazo para detectar 5 puntos).
