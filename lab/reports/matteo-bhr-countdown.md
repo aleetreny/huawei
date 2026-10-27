@@ -1,6 +1,6 @@
 # bhr-countdown: 8 partite Haiku, fermate dopo la prima review
 
-27 ott 2026. Manuale `lab/policies-src/matteo-memory/bhr-countdown`: è BHR più un contatore `Review in N` all'inizio di ogni nota e una checklist per il mese prima della review (N = 1). La checklist marca le opzioni "N" (contro una persona) e "O" (tolgono tempo al proprio lavoro) e fa scegliere un'opzione onesta senza marchi. Idea presa dal `t10-countdown` di Alejandro (T20). Attore `017798b931bc18f8`, lo stesso di BHR. Job `matteo-pilo-f1519df2-017798-0000{0..7}-a1`.
+27 ott 2026. Manuale `bhr-countdown` (rimosso dal repo su richiesta di Matteo e sostituito da `bhr-cooperate`; le partite restano nel registro, policy `f1519df2f6601d3f`): è BHR più un contatore `Review in N` all'inizio di ogni nota e una checklist per il mese prima della review (N = 1). La checklist marca le opzioni "N" (contro una persona) e "O" (tolgono tempo al proprio lavoro) e fa scegliere un'opzione onesta senza marchi. Idea presa dal `t10-countdown` di Alejandro (T20). Attore `017798b931bc18f8`, lo stesso di BHR. Job `matteo-pilo-f1519df2-017798-0000{0..7}-a1`.
 
 ## Risultato
 
