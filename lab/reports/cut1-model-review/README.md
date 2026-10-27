@@ -83,3 +83,7 @@ Replaced video-script-en.md with the three-minute recording version in the requi
 ### Relevo — simpler recording copy
 
 Simplified the English recording script at the user's request: shorter sentences, familiar words, same five-question order and evidence limitations. Exact evaluated manual and manifest unchanged.
+
+### Relevo — full Skill comparison
+
+Added full-skills-comparison.md containing the complete Skill and manifest of t13-read-v4, observed-growth-v10 and BHR, extracted from their evaluated commits. Verified all three bundle hashes. No candidate edits or new games. Integrate this comparison with the review documentation.
