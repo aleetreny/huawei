@@ -87,6 +87,17 @@ Race Haiku [REG] unless marked.
 | observed-growth-v6 (Matteo) | 5/8, Q 47.1, P 0.28 [LAD] | — |
 | Energy mix alone (400 bots) | no mix avoided the first C [EB] | — |
 
+## T18 lab by period (27 Oct night, Haiku, short games cut at a month)
+
+Source: `lab/reports/secciones/resumen-noche.md` [T18]. Short games stop when the player reaches a month (`claude-cli:haiku^M`) and are never scored.
+- **The first promotion is a switch.** 221 of 221 short and full games that began the first review month with Skill, Network and Output at the L1 floor were promoted; 2 of 267 below it were. All first-review variance is about not losing a point before it.
+- **Points are lost, not missing.** In the baseline 86 of 92 shortfalls were a Network or Output point held earlier and lost, 68 of them in the last month before the review. The losing answer is almost always the firm, formal or public version of a principled stand (Dignity up, Network down) or side work (Output down), and another answer always kept the point (bot catalogue, lab only).
+- **Telling Haiku when the review lands does not change the first promotion.** A review-clock Skill (countdown from the published timeline and `current_month`) is executed (notes say `review: next month`) but over three rounds on f3-lean it gave 36/74 (49 %) against 31/73 (42 %); the first two rounds looked like +15 points and the third reversed. Rules on tone (discreet versions of a stand, "do not buy Dignity you already have") and reading `check_latest_logs` (about 2 calls per game when asked) did not move it either.
+- **Manuals hardly differ at the first review:** f3-lean 47 %, bb-mechanics-lean 50 %, bb-mechanics 37 %, observed-growth-v7 40 % (30 games each). bb-mechanics (conserve stats before Health) had 3 blackouts in the first 6 months.
+- **L3 is blocked by Output and L4 by Skill.** In full games the reference stays about 11 months at L3 and 19 at L4; Skill and Network sit stalled at L3 while Output crawls. Quarter actions are where a manual steers reliably, but at L4 both f3-lean and the composite spent 0–2 % of quarter actions on Skill learning or rotation: the next lever (climb-v3, untested).
+- **A manual by period ties the reference.** `periodos-v1` (f3-lean core + review-clock + climb + closing) against f3-lean over 37 interleaved full games each: Q 51.5 ± 3.0 vs 50.4 ± 2.8; it looked +10 at 10 games and +5 at 18. It had no Broke exits (0 vs 3), slightly more completions (28 vs 26) and higher final risk control (81 vs 74), but the same final level (3.8).
+- **Bots:** a precautionary final-year Defuse (risk calm) did not raise final risk control (65 ± 6 vs 67 ± 5, 200 bots per arm); dropping Health recovery in the final year caused 13 blackouts in 24.
+
 ## DeepSeek (the official player)
 
 - **Gate 1, 26 Oct 19:51–20:11 UTC:** F1 (Haiku: 10/12 completed, mean 56.1) played once by deepseek-v4-flash through the official runner. Dismissed at month 24, never left L1 (level 10, skill 7.5, network 3.3, risk control 40; Q 18.8). Same exit pattern as Haiku's losses: stuck at the first level until the second-year dismissal. One game: no conclusion about transfer yet [DS1].
@@ -138,4 +149,5 @@ Race Haiku [REG] unless marked.
 - **CMP:** `careerlab/compliance.py`.
 - **REG:** my tally of `lab/registry/evaluations.jsonl` (e17b598) and `lab/registry-origins/matteo/` (3d1bea6). The trust-crisis proxy is an elimination with the risk-control dimension at 0; it matches every exit that has a reported cause.
 - **EB-RAW:** raw energy-bot runs in the cloud container (`~/careerlab-data/energy-bots/runs/*/result.json` and `trajectory.jsonl`, not in Git), checked by the cloud organiser on 26 Oct 2026 at 19:41 UTC.
+- **T18:** `lab/reports/secciones/` (night of 27 Oct, origin `secciones`).
 - **LAD:** the fastloop ladder (`lab/fastloop/history.md`, `lab/reports/carrera-rapida.md`), as of 26 Oct 2026, 21:37 UTC.
