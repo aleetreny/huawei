@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "f3-lean-clock-v2",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "add module(s): review-clock",
+  "hypothesis": "A Skill that teaches the actor to locate the next review from the handbook timeline and the month counter, to recognise a capped stat, and to refuse answers that may cost Network or Output in the month before a review (but never at the price of low Health) will raise first-review promotion, because in the baseline every promotion failure with stats once at the floor came from a Network or Output point lost after it was reached, and Haiku's notes in the month before the review said the review was far.",
+  "change": "f3-lean-v1 plus skill module(s) review-clock",
+  "predicted_behaviour": "Notes start with a review countdown; in the month before a review month fewer answers cost Network or Output; share at the floor at the first review and share promoted rise over the same-batch reference; no rise in blackouts.",
+  "refutation": "Refuted if first-review promotion over 25 short games per arm is not clearly above the interleaved reference (about 15 points), or if notes do not carry the countdown (then the text is not executed).",
+  "skill_count": 2
+}
