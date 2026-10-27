@@ -127,3 +127,37 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
 - `scripts/deepseek/watch.py`: avisa de ascensos, explosiones, eliminaciones y finales.
 - `scripts/deepseek/promo.py`: por qué el bot no asciende (le falta un indicador antes del mes previo, o lo pierde en él).
 - `scripts/deepseek/groupbot.py`: modos nuevos de la regla escrita (`rvc`, `pw`, `pl1`, `dq`, `ll`, `blind`, `detect`, `ps`).
+
+## Relevo (27 oct, 20:10 UTC)
+
+1. **Qué se ha hecho y por qué.**
+   - Análisis desde los fundamentos: sobrevivir decide la nota, y con DeepSeek se perdía por el primer ascenso y por el riesgo "constructivo".
+   - Pruebas gratis en el simulador con la lectura real de DeepSeek: el ascenso va antes que el riesgo leve en el mes previo, y el trimestre de L4 equilibrado.
+   - Diagnóstico de cada partida oficial, leyendo el registro mes a mes.
+   - Manuales `t13-read-v2` a `v7`, cada uno corrigiendo lo que falló en las partidas anteriores.
+   - Partidas oficiales en paralelo (modo nuevo en `careerlab/target.py`).
+2. **Resultados.**
+   - `t13-read-v4` 71,67 y `t13-read-v5` 66,71: partidas completas, L5, riesgo 0.
+   - `t13-read-v3` llegó al mes 48 en L5 (66,6 según la réplica).
+   - v2: tres partidas sin eliminación por el juego (L3, L2 y L4, cortadas por nuestro vigilante o por el límite de reanudaciones).
+   - Datos: `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-*` (partidas), `lab/registry-origins/deepseek/` (registro exportado).
+3. **Lo que falló o quedó a medias.**
+   - Tres partidas buenas cortadas por nuestro vigilante. Se lanzaron con tope de 1,2 o 3 USD, y en paralelo el vigilante mide el gasto de toda la clave. Ya está corregido: tope 20 en paralelo.
+   - Una partida perdida por el límite de 20 reanudaciones del programa (contexto de ~200 mil fichas y respuestas enlatadas de proveedor).
+   - `t13-read-v6` y `v7` no se han jugado.
+   - DeepSeek no usa "Stalled".
+4. **Siguiente paso.**
+   - Ver las 2 partidas de confirmación de v4 (lanzadas a las 19:56 UTC, huecos 0 y 1).
+   - Corte 1: empaquetar `lab/policies-src/deepseek/t13-read-v4` (commit `09d5735`) y cambiar "t13-read-v2" por "t13-read-v4" en los borradores de `alejandro/entrega`.
+   - Con presupuesto (cortes 2 y 3): partidas de `t13-read-v7` frente a v4.
+   - Comandos (desde un worktree de `alejandro/deepseek`; las partidas necesitan las rutas del programa oficial):
+
+   ```bash
+   scripts/deepseek/start-loops.sh <tope de saldo de la clave> <manual hueco 0> <manual hueco 1> <manual hueco 2> <partidas por hueco>
+   python3 scripts/deepseek/watch.py <id de política (8 caracteres)>
+   CAREERLAB_TARGET_ENV=<runner>/.env uv run python scripts/deepseek/ds.py status
+   uv run python scripts/deepseek/groupbot.py --labels v3=<L>/ds-v3-r1-full.json+<L>/ds-v3-r2-full.json --arms signs:flag:strict+rvc+blind+qb4c --games 2000
+   ```
+
+5. **Gasto de DeepSeek:** hoy ~7,7 USD a las 19:56 UTC, más las 2 partidas de confirmación (~1,6), en total ~9,3 de los 10 permitidos. La clave conserva ~41 USD (reserva de 15 intacta).
+
