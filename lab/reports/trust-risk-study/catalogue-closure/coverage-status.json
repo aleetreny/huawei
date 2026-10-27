@@ -1,0 +1,12 @@
+{
+  "questions_7_12": 267,
+  "available_answers": 661,
+  "tried_answers": 661,
+  "remaining_answers": 0,
+  "missing": [],
+  "totals": {
+    "eliminated": 3,
+    "twelve_month_window": 7
+  },
+  "elapsed_seconds": 2.6
+}

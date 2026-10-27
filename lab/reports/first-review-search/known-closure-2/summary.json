@@ -1,0 +1,104 @@
+{
+  "source": "/Users/matteozabban/careerlab-data/matteo-known-closure/batch-2",
+  "runs": 5,
+  "groups": {
+    "all": {
+      "eliminated": 2,
+      "promotion": 3,
+      "review": 4,
+      "alive_promoted": 3,
+      "six_month_window": 3
+    },
+    "arm:targeted-closure/growth/project": {
+      "eliminated": 1,
+      "promotion": 2,
+      "review": 2,
+      "alive_promoted": 2,
+      "six_month_window": 2
+    },
+    "arm:targeted-closure/low-dignity/project": {
+      "eliminated": 1,
+      "promotion": 0,
+      "review": 1,
+      "alive_promoted": 0
+    },
+    "arm:targeted-closure/safe/project": {
+      "six_month_window": 1,
+      "promotion": 1,
+      "review": 1,
+      "alive_promoted": 1
+    },
+    "energy:growth": {
+      "eliminated": 1,
+      "promotion": 2,
+      "review": 2,
+      "alive_promoted": 2,
+      "six_month_window": 2
+    },
+    "energy:low-dignity": {
+      "eliminated": 1,
+      "promotion": 0,
+      "review": 1,
+      "alive_promoted": 0
+    },
+    "energy:safe": {
+      "six_month_window": 1,
+      "promotion": 1,
+      "review": 1,
+      "alive_promoted": 1
+    },
+    "main:project": {
+      "eliminated": 2,
+      "promotion": 3,
+      "review": 4,
+      "alive_promoted": 3,
+      "six_month_window": 3
+    },
+    "story:targeted-closure": {
+      "eliminated": 2,
+      "promotion": 3,
+      "review": 4,
+      "alive_promoted": 3,
+      "six_month_window": 3
+    }
+  },
+  "failures": {
+    "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere.": 2
+  },
+  "question_nodes": 64,
+  "story_nodes": 61,
+  "available_question_answers": 175,
+  "tried_question_answers": 75,
+  "story_available_answers": 157,
+  "story_tried_answers": 69,
+  "support_by_promotion": [
+    {
+      "support_text": false,
+      "promotion": false,
+      "count": 1
+    },
+    {
+      "support_text": false,
+      "promotion": true,
+      "count": 1
+    },
+    {
+      "support_text": true,
+      "promotion": true,
+      "count": 2
+    }
+  ],
+  "observed_L1_maxima": {
+    "skill": 9,
+    "network": 6,
+    "output": 3
+  },
+  "limits": [
+    "Unseeded sessions: no identical-state counterfactuals",
+    "Visible question identity is not hidden-state identity",
+    "Edges record temporal succession, not proven causation",
+    "Promotion is distinct from survival and performance grade",
+    "Effects at clock boundaries can include automatic settlement",
+    "Coverage is empirical, not exhaustive"
+  ]
+}

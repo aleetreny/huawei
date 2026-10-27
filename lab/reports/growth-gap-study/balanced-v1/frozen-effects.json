@@ -1,0 +1,5258 @@
+{
+  "Argue for an in-house kernel as a long-term technical asset": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Fix the endpoint now and check the other services": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell her gently that strong scent gives you headaches, and ask if she could wear less": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Quietly borrow the open-source kernel, rebrand it, and hit the milestone": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hint that things may move soon and she should be careful, without naming the document": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go to your manager and admit you dropped a vague hint": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell security and rush out a fallback from scratch": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Agree a handover time with him, and bring in the project schedule if it needs writing down": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Prepare report materials": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Network maintenance": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Health recovery": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apply for a key project": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Comment publicly on the shared design doc, with the load-test data attached": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Insist on a pre-launch fix and attach a complete proposed patch": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Take the lead with facilities and get the extras in": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ask Quinn to take the lock, and tell Chris: “You keep the big picture”": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Adopt the new framework and use this low-risk module to build experience": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 3.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Reply at once to look professional": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "A: Working dinner at a business restaurant, staying two hours": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Open with something light: an industry anecdote, or an honest take on the evening": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say in a couple of sentences what you do and why it matters, then stop without taking over the table": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Rewrite on a modern framework as a three-to-five-year foundation": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Give Jo fair credit for her strengths and say she would be a good fit": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Explain politely that you have something urgent and ask to jump in for two pages": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Say you do not know, every time, and change the subject": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Report results to your manager": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Congratulate her and ask what she got out of it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Refuse the files and tell him to use the proper handover": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Water them today and set a calendar reminder": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Smile and quietly remind him vaping inside isn't allowed and the shelter is downstairs": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Sign up for the certification and spend both days learning properly": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 3.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Neither accept nor refuse in the meeting, and promise an impact assessment and proposal afterwards": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Quietly point out the definition problem now and suggest correcting it in the room": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Offer to follow up with the VP on how the metric is defined": {
+    "health": -1.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Talk numbers: do the small one for free, and put the other two through change control with plan trade-offs": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Build a mentorship": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take the consecutive shifts and cover the three peak-trading days": {
+    "health": -2.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Having already paid quietly at the desk, say, \"This one's on us. You can host next time\"": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take it in good humour: a quick gag or a bit of audience interaction, just enough to lift the room": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Skip the blame game: work out the mismatch and propose prototypes or visual specs before building more": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Joke: \"Bring some next time and we can swap\", and leave it there": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Brief Chris on Hale's questions and your answers": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Build sign-off and a change log into the process to protect both the client and the team": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Set a steady revision plan over several months, broken into daily tasks you can finish": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Check in privately, ask her to go home, and offer to cover the urgent part": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Refuse to campaign. In the review, stick to the facts": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say in the room that what is live is next-day sync, and forecasting is a later proposal": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "No action": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell your manager you are covering Faye for now, and ask for a realistic plan": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Lead with the conclusion: key results first, then the risk and the plan to deal with it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Answer with a quantified worst case and a clear request for resources": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Name the problem directly and mark it as must-fix": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ask that the pack name only those who did the work, or limit your line to the kick-off": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Politely challenge that framing on the spot, with data and business impact": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Reframe updates in business language, but keep the technical value in the write-up": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell them directly but politely that you need to focus today and to come back later": {
+    "health": 1.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Spend ten minutes with them at lunch explaining the boundary and that you mean no ill will": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go with Quinn to apologise to Chris in person straight away": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Name Quinn’s specific contribution in the meeting that finalises the slides": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Walk your manager through the facts and ask for a fair rating": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Volunteer for the incident team": {
+    "health": -3.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 3.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Ask your manager for extra people on the benefits proposal in return": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Show up, and work with the organiser on a tighter rehearsal plan so the day job still fits": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Step up, run the last rehearsals and the night itself, and get the number on stage cleanly": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Go to the gym as planned and get the work done efficiently tomorrow": {
+    "health": 2.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Fill it in honestly, with examples and no swearing": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Walk in as if you have just come for water and say hello as normal": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Put your head down and let next quarter’s delivery speak": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Go to the karaoke bar, keep your drinking in check, and join in": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Walk through the timeline and the email trail, and set out who owned what": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Draft a joint improvement plan, copy your manager, and invite Chloe to co-author it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Tell them at once, with a cause analysis, a recovery plan and a new timetable": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Check what is feasible, then offer phased delivery: the core first, the rest after": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Refuse, and keep the chat to personal matters": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Laugh it off and gently draw a line: 'Let's not go there. Talk about something else?'": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Kindly suggest she gossips less and focuses on the work while she's new, for her own sake": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Play to your strengths: use technical depth and total cost of ownership to justify the higher price": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Offer staged payments plus a measurable ROI model procurement can repeat upstairs": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Help Quinn write a proper wash-up": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Review line by line and list every improvement": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Show interest and ask how to prepare for promotion": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "DM her a doc link and suggest checking the wiki or asking the owner before using @channel": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Spend two weeks building a full CI automation suite": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 3.0,
+    "network": -1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Keep the strict gates and make the team meet the higher bar": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Quit while you are ahead: hand the stage back and return to your table": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Help this time, and be clear: next time he drafts it first and you review": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Record what you help with in messages and ticket notes so credit is traceable, and reset the split": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Give the root cause straight, and promise a write-up of the investigation and fix afterwards": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Offer to share the umbrella and walk to the station together": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Accept, and listen to how the project is going": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Tell him the aisle is too tight and suggest sorting the clutter together": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Own it, walk through the feedback in person, and offer constructive suggestions": {
+    "health": 0.0,
+    "dignity": 3.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop using work kit for the personal project immediately, and move it onto your own machines": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Join the review and share how you keep work and personal kit separate": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Defuse legacy risk": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Give him a fair B and write clear points for improvement": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Help Ethan rework the write-up and keep the friendship": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Take them out for lunch privately, straight away": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": -2.0
+  },
+  "Change the subject without a scene, pull the talk back to the work, and give Chloe a way out": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Switch to lunching with colleagues at least three days a week": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep lunching with the team every day": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Brief your manager privately and factually, ask Chloe what support she wants, and raise it with the account lead": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Skill learning": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Steer him out, half-coaxing, half-supporting, and get him home with someone to look after him": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell him the truth: it never reached your manager, and suggest he watch his drinking next time": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Put on a mask, move away from the noise and the germs, and say nothing": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stay quiet and stick to your own work": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Stay out of it and leave Quinn to deal with it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Learn from it and propose a simple team rule: if you're ill, stay off, and the team covers": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Score everything as blandly positive": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Skip the gym, stay late, and clear the work tonight": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Be blunt: 'That's private. Please don't ask'": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lock the snacks away and stop sharing, without explaining": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Find a moment to soften it: you just don't discuss your private life, and it wasn't personal": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ignore it like everyone else and leave the question hanging": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Quietly take it on again so as not to sour the relationship": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Warn your manager privately that someone is trading favours for support": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Turn to other colleagues and moan that she \"stinks the place out\"": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Praise it insincerely and keep sitting there with a headache": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep deflecting without spelling it out, and stay out of it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Walk through the process in detail, still not reaching the point ten minutes in": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Treat it as too small to matter": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep reading the pack at your own pace": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": -1.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep manual review and let new joiners follow the existing process": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Stick with the mature stack and put reliable delivery first": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Adopt the open-source stack and aim for fast delivery": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Say outright that Chris’s approach is wrong": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Set out the moving goalposts, the credit-taking and the weekend messages as plain facts, without insults": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Wait and see": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Envy it and do nothing, telling yourself you would never get there anyway": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hint at gaps in Jo's recent work": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Offer no explanation and focus on the trip": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Quietly take Hale's team out to lunch to build on the impression": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep going round him": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep sharing, because you don't like to say anything": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Share non-confidential industry gossip": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Accept the canary plan and add monitoring and a rollback playbook": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Give your manager the facts on how the work was really split, and redraw the line": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Suggest submitting Lynx Payments instead, with you as the lead author": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Sit on the report and bet it will not be triggered soon": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 1.0
+  },
+  "Help sales revise the annex and push a phase-two forecasting proof of concept": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Use your manager's line and blame the upstream community": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Message Chris privately about team morale, without saying how you know": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Approach Owen privately: you supply the technical design, they stay the lead": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Acknowledge the improvement in the meeting so that it sticks": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Don't soften it. The boundary matters more than her feelings": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline gently: 'I'm swamped. You start it and I'll jump in if you're stuck'": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Recuse yourself and ask your manager to have someone else rate Ethan": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell him, 'If you're really stuck, come to me', and help without doing it for him": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Chat for a few minutes, then steer back to work and mention today's deadline": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Turn down the snack session firmly and suggest lunch another day": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Slash the price at the last minute to match them, and skate through the actual pitch": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Take it and report it to Information Security": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep betting everything on price: win the deal now and worry later": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stand by what you observed, admit your view is partial, and suggest more openness about how decisions are made": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take a swipe at the rival: imply their tech is weak and they have botched jobs before": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Call Tessa out in the channel: \"Could you read the docs before asking?\"": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep going on about their past failures": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hold off for now and email privately after the meeting": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lend Jordan the umbrella and make a dash through the rain for a cab": {
+    "health": -2.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Stay vague with 'shouldn't be too bad', offering no real assessment": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Skip a lot of sessions — “I’m not here to dance when there’s real work”": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave the channel and stay out of it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "C: Fully remote demo, no in-person visit": {
+    "health": 2.0,
+    "dignity": -1.0,
+    "skill": -1.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Change tack, find time to catch up, and fill the hole you left": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apologise and ask a colleague to cover this once": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Loosen the thresholds so the team can ease into the CI workflow": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell her about the draft merger plan and that Leo may be moved": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline politely and make sure you are sharp at the morning stand-up": {
+    "health": 2.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Freeze, eat, and say almost nothing all night": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say Sonya tricked it out of you": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Catch them before people leave and introduce yourself briefly, enough to leave a decent impression": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Join in and laugh along, to keep the ‘atmosphere’": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Brush it off as ‘just dinner banter’ and insist you did nothing wrong": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ask your manager if you can join the new project part-time": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Prioritise the live project, pause the new work, and tell your manager": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Answer each question, not wanting to embarrass a new colleague": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use questions so she spots the issue herself": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Talk to Lou: ask her not to pass it on, and set the line from now on": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Copy Tara and start sending late-night updates yourself": {
+    "health": -3.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say you cannot comment on internal plans or promise that any role is safe, so she must weigh the risk herself": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Carry both, working weekends to do it": {
+    "health": -3.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Accept the plan and give the live project your full attention": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Squeeze past every day and say nothing": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep talking technology and dodge the pricing question": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Tell Quinn to take it to your manager themselves": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline the swap and ask your manager to rebalance by the rules": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stick to the family weekend and pick work up next week as planned": {
+    "health": 2.0,
+    "dignity": 1.0,
+    "skill": -1.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Call her out for gossiping, in the team channel or in front of people": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Pull up the chat log and argue that they already confirmed it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Insist you did nothing wrong, and wait for them to blink first": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Afraid of annoying them, agree to all of it on the spot": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep taking whatever comes, and have the team work late to carry it": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go to more lunches to stay more visible": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep a light touch, let them explore, and stay focused on your own work": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Tell your manager her coming in ill is a health risk, and suggest sick leave while the team covers": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Approve it, and explain on Slack afterwards": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it. You did nothing wrong and there is no need to explain": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Follow Chris’s guesses so he is not made to look small": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Swallow it. A falling-out is not worth it": {
+    "health": -1.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Don't make a fuss, and keep delivering as normal": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Let your project results strengthen your position": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Praise Jo, and briefly add your own recent relevant work": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell compliance you may have overstepped the line": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep the talk on what you got out of it and reinforce your manager's good impression": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Reset: limit caffeine, keep a regular sleep routine and recover gradually": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Thank Jo in the talk for her earlier groundwork, then go and speak to her afterwards": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ask Rowan privately to correct the credit": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Drop it": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep quiet in the room and clarify in writing after the meeting": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "In a panic, say it is a problem on the client's network": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Admit at once that you got that wrong, apologise properly, and get back to the demo": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Walk over, cancel his job and print yours first": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Rework the lot without question, doing whatever they say": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stop the blind rework and put a proper sign-off in place before going further": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Try to do both: gym first, then stay up late to finish the work": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep hitting refresh as it gets messier, without switching plan": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep hammering at the bug until time runs out": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Give in, chat for a quarter of an hour, and catch up in the evening": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Tell your manager that Luke keeps breaking your concentration": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Smile and say, ‘Thanks, but not tonight’": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Get Jordan off the hook: steer the attention elsewhere and give them a way out": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep your distance. You are done being used as spare capacity": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "While he is away, pile all of it onto his desk": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell her privately what is planned and ask her to keep it strictly confidential": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell HR the truth about how the leak spread": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Give only the good news: hide the risk and stick to highlights throughout": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Run a review, own the bad call, and show the fix already in place": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Wrestle over the bill at the table until it gets awkward": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Post a snide note in the channel: \"some people might show a bit of consideration\"": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Do nothing special for now and help them next time they need it": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Sign it quietly and treat it as a favour from your manager": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Invent a contribution that matches your manager’s story": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Put headphones on, look busy, and give them the cold shoulder": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Agree to talk him up, in return for later support": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take the on-call and keep the relationship": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Work through the weekend to deliver the project on Monday morning": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Suggest sharing a cab and splitting the fare": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Admit you were not part of the core work": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Make the call: set the temperature most people like, and tell them both to stop": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Fix this service only": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Majority rules. Nobody needs extra looking after": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use the numbers to show the team is over capacity, and suggest cutting scope": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep the physio appointment and shift delivery by half a day": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Show your face for half an hour, then leave": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Bring breakfast in the next day for the people who stayed": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Refactor in stages on the current architecture": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Congratulate her in public, then tell your manager privately you want the next one": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Say nothing and let the briefing run": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Attend every rehearsal and let the day job pile up": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Reorder your priorities: catch up on the work and put a limit on rehearsals": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Clarify your actual contribution and what you want with your manager": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Work late to cover it and say nothing": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Take their owner aside for a 1:1 and walk through the load-test results privately": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Anonymise it as a \"performance review lesson\" and share it with both teams": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Go along with it and let the client pay": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stay silent and ask your manager to unpick it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Excuse it as \"not the moment to speak\"": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stay silent until it is over, and miss the whole evening": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Suggest to your manager privately that important items go by email": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Let it pass in the room, then privately encourage colleagues and spell out what the work achieved": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use the next meeting's pre-read to put business value in a summary your manager will see": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Apologise and accept the reprimand": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stop cutting and steer the contest back onto value": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ship the smallest performance patches and ride out this cycle": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Focus on core logic and risk, and leave the nits to the author": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Report 'on time', then quietly work late and try to catch up": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep patching it and play down how bad it was": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave them to deal with it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stay and watch, joining the crowd treating it as entertainment": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Write a formal recognition note and copy their manager": {
+    "health": 1.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Shrug it off — you didn’t pour the drinks": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Note in the PR that it was AI-assisted, and explain what you changed": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take it on and push for a team standard on being open about AI use": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Call IT first and ask whether the email can still be recalled": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go ahead with the apology": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Step back and stay out": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Argue that 'nobody could have seen this then'": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Refuse and draw a line": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Change tack at once: skip the broken step, talk about overall value, and demo it afterwards": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Say firmly that the remark is not on, and bring the talk back to the work": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Moan that it was a nine-day wonder": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decide you were in the right, and make no effort to repair it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Sign up, then study in fits and starts, and cram at the last minute": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Stay out of it to avoid annoying Rowan": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Drop the idea because it looks too hard": {
+    "health": 1.0,
+    "dignity": -1.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Reply to the email at once with the facts, and take ownership of the fixes": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell the whole story, pull the broken version, and set a delivery plan that will actually hold": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stay silent": {
+    "health": 0.0,
+    "dignity": -0.4339622641509434,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "B: Working lunch in the office café, then an afternoon demo covering everything in one go": {
+    "health": 1.0,
+    "dignity": -1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Start buying coffees yourself and join the favours game": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": -2.0
+  },
+  "Wait until delivery day in case you still make it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Join in and have a moan": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apologise to Chris": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep to what is public, but hint that the team may change": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Deny it": {
+    "health": 0.0,
+    "dignity": -2.8884462151394423,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Admit you got the assessment wrong and accept whatever sanction is appropriate": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Take the link without opening it, and plan to delete it later": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Deny knowing anything": {
+    "health": 0.0,
+    "dignity": -4.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Give him an A, taking the slot from a colleague you know less well": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Come forward and say you received a link you had not yet deleted": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Agree the fix in the 1:1, then record the problem and the decision in the design doc": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Say the umbrella only covers one, so you will each make your own way": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline and keep the time for your own team's delivery": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Call him out in the main channel as always holding things up": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep skipping the café, and let a strong afternoon prove the point": {
+    "health": 2.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Seize the moment and lay the praise on thick so they remember you": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hit back in the room: Chloe did not provide the integration environment on time": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Insist Chloe shifted the blame first and ask your manager for a fair ruling": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep finding new ways to compliment them": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Frown and put up with it without saying anything": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop, and go back to ordinary, honest conversation": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Insist Ethan deserved an A": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Deny it was you": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Refuse there and then: 'It's not in the contract. We can't do it'": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go to the client, smooth things over, explain where the line is, and offer a workable change proposal": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Offer two hours of remote Q&A in the channel, but do not join on site": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Admit you gave her a vague outline over dinner": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Suggest sending a follow-up claiming the account was hacked": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Cool things down: move from ‘who was wrong’ to ‘how we get this right’, and propose better sign-off": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Give him a C, because the incident has to show in the rating": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Try to explain the constraints of the rating system": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Be glad you didn't catch it, and leave it there": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apologise to your manager and submit a plan for working together better": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Stop at once and give the conclusion, the risk and your request in three sentences": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Wait in silence while the meeting starts without you": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Leave quietly and act as if you heard nothing": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stick to the full process, and turn on a degraded mode to limit the impact on the client": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Stay silent and let the review pass": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Produce the review recording and the scope pack in your defence": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Shut it down flat with “I’m not doing that”, and let the room go quiet": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell him about the draft merger plan, as a way of repaying the favour": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Cooperate with the investigation": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Sit the rest of the night out with a face like thunder, speaking to nobody": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep encouraging colleagues privately and do not raise it with your manager again": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep putting rehearsals first and let the work wait": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Say you each have strengths, and suggest choosing whoever fits the brief best": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take some of the blame for now to steady the client, and leave Chloe for later": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Fill your manager in on the facts so you do not become the permanent fall guy": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Compare the two of you in the one-pager and imply you are the better fit": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Take the win or the loss and put nothing more into the relationship": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Let it go in the meeting and speak to your manager afterwards": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep to your own patch and stop speaking for the team": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Admit you suggested the cover story": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep to the current pattern": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep your head down and work. It's not your problem": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it for on-call": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell him face to face what you actually need": {
+    "health": -1.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Accept, read the docs properly, and prepare comments": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 3.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Write a full risk assessment and submit it formally to the tech committee": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Decline, explain it is confidential company property that can't go outside, and keep things civil": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use the spec as a yardstick and close the gaps in your current role until you could get it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Publish the full version and build a personal brand": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 3.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Make more effort socially, without crossing your own lines": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop it now: tell the client and your manager where things stand, and reset scope and change control": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Write only your own part and make clear where it ends": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep skipping the café, and book 1:1s with the people who matter": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Carry all of it without telling anyone, and work late to catch up": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Defer to their judgement and file your comments as an appendix": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "To keep them happy, promise both the core and the full version by the original date": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Stand firm: 'I wasn't wrong. The contract is the contract'": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Talk to Maya privately and find her a way to keep warm, to soften the blunt call": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hack the code to match the new version": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Fudge it: 'Small issue, doesn't affect anything'": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Swallow it and do not pursue it": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apologise to Will, and put in a fair word for him with your manager": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say nothing": {
+    "health": 0.0,
+    "dignity": -0.02702702702702703,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -0.02702702702702703,
+    "wealth": 0.0
+  },
+  "You had the idea. They can chase it themselves": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go to Jo, clarify or apologise, and try to repair it": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Pull it back immediately and return to what your own proposal actually delivers": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Stick to the accurate scope and stay out of the wrangling with sales": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "In the debrief, name Quinn’s contribution": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Work late to catch up on the proposal yourself, without asking for anything": {
+    "health": -3.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Bottle it, pretend you are fine, and keep running on empty": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Accept that the friendship is over": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline the lead: “I’ll keep rehearsing, but I’m not running the thing”": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Deny it, suggest other possible sources, and protect the anonymity": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it there so your manager is not made to look small": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep the one-pager to business value and what you would bring back, without knocking Jo": {
+    "health": -1.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Go with the fake-hack story instead": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Reply in the morning and spell out your working hours": {
+    "health": 1.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Set up an on-call rota, with no replies on days you are not on call": {
+    "health": 1.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stick to “the job matters more than dancing” and keep missing it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave the client relationship with the account lead, and ask Chloe only what support she wants": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Start joining lunch occasionally, specifically to catch up": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Step in late with a middle option so both of them have a way out": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Deny it and say it may be a misunderstanding": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stay in the corner and listen to the rest": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Step out and say you were just passing, without admitting you listened": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep doubling down with another excuse": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Send the internal material because you feel you can't say no": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Own up that you joined in": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Reschedule: pair first, then fix the bug": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Recover by joining a later group game to show you are still part of things": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Treat it as a long status update, and sneak in a request while you are at it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Explain why you were a victim of this too": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go along with sales and accept “poor communication” as the explanation": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Speak to them privately afterwards, mention the discussion two weeks ago, and check where the idea came from": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Revert immediately, pin the version, and find the cause": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Push to get your work into team OKRs or the quarterly highlights": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Apologise in person at once, present a detailed recovery plan, and fix how you communicate": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Share your earlier thinking with the team, without directly challenging their claim to the idea": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Publicly recognise their independent development and delivery, and make clear you never questioned that": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Fix how you communicate, ignore the timeline, and just work longer hours": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Stay out of it. It's still not your problem": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Explain privately, ask how she is, and help her hand over what cannot wait": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decide it was handled and there is no need to raise it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell Ethan only about the published redundancy process and support channels, and nothing you overheard": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it. It's less hassle to keep helping": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Take on some of Rowan’s work to thaw the relationship": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Pair for an hour and do the rest asynchronously": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Offer no explanation and keep focusing on the work": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Carry on with the release and gamble that the code path will not be hit": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Get well away so none of it lands on you, and leave him to it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Be glad you stayed out of it, and leave it there": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Offer no explanation and let your work speak for itself": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "If you go, offer to take turns next time. If not, help Jo get ready": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Drop it and go back to focusing on the live project": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Check in afterwards and help him limit the damage": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Admit the rating was too generous": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it. Let the team decide who contributed what": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep to your hours anyway, whatever the reaction": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Claim as usual, taking colleagues' advice that 'everyone does this, it's fine'": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Drink some water, wait it out, and grind through to the end": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Take it seriously: a few days' annual leave, a saner pace, and a workload talk with your manager if needed": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Halt the release as soon as you notice and roll the merge back": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Arrange a time after work to hear them out, without disruption or commitment": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell no one and act as if you never heard it": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Send the weekly update and the git history to your manager": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say nothing extra, and let it read as ordinary engineering": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ship on a shortened path while the team prepares a rollback and completes the review within an hour": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Step out, say you heard your name, and ask whether this is a normal process": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Turn it into a story and tell it round the office in full colour": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Blame Quinn": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ask your manager and compliance whether the current use sits inside policy, and get it in writing": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep using it, but avoid commit times colleagues can see, and stay quiet about it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Point him at the docs and comments and let him work through it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Don't share it, and keep it to yourself": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "In the wash-up, admit the process was too rigid, and propose a graded response for future emergencies": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Block the review and require a fix before merge": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Mentor intensively so they can work independently within two weeks": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Talk about the project and leave promotion out, so it does not look transactional": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Still dreading the conversation after the assessment, cram all of it into the current plan": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep speaking up for engineering value in public and accept the political friction": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Go easier on this new colleague until they have found their feet": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Drop back to Tuesdays and Thursdays once you have the key information": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ride the moment and keep hosting, even as you start to run out of steam": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Own it: apologise properly to Chloe and admit you were out of order": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lead training for the whole group and step up as the technical expert": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 3.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Decline and catch the last train home": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep reworking on demand, exactly as they say": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Keep the work original, ask for a delay, and write the risk into the update": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Ease off, admit you may have lacked some information, and say you still rate their management overall": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Claim only the flights and hotels, which are clearly within policy, and drop every grey item": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Ask HR anonymously whether naming people who did not contribute is allowed": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop now, rest, see a doctor if needed, and work at a steadier pace from tomorrow": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Cut weekend use as advised, and move most of the development onto personal kit in your own time": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Turn the standard into a team code-review checklist and roll it out": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Disable Dependabot": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Give in to the urge to coast and start phoning the work in": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Hang up and block them, since even talking feels disloyal": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stick on a heat patch, tough it out, and leave physio for later": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Raise it privately with your manager after the meeting": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Accept the promise. Credit in the docs is enough": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep relying on caffeine and finish what is in front of you first": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Finally cut out caffeine and get back to regular sleeping hours": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep your distance and stay strictly professional": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Start looking elsewhere and ease off here": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Admit the risk, and propose a pre-authorised emergency path that sets out when the process can be shortened": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Go back to why you wanted to leave, and only stay if the package actually fixes that": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take it on and set out clearly how the mentoring will work": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Post a cut-down version and keep the core parameters back": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell Helen, the HR business partner, that the promotion criteria are too vague": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Wait to be asked, then stress that there was no clear rule at the time": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Talk it through at your desk, loud enough that colleagues overhear": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Quietly hotfix the wrongly merged files out": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Get checked straight away and make yourself keep a proper sleep routine": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep working the relationships": {
+    "health": -2.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell him he is on the list and what the package looks like": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 3.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say it is your own choice, and remind people what the policy actually allows": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ask them to say at the next update that the idea originally came from you": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep your head down. You don't need to preach about a personal choice": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stress quality first, and point out that a hotfix introducing a new fault would have cost more": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Spend the days daydreaming about leaving, refreshing job boards, and letting the day job drift": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Hint that Ethan should keep his head down and not resign in a hurry": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Comment but do not block": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Send it, plus extra they didn't ask for, to look generous": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Smile it off. Keep your own standard without commenting on anyone else's": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Help Ethan understand the consultation and how to prepare for it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Nod and take it on": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Move the appointment to the weekend and push through delivery first": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Increase the dose and keep pushing": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Admit you overheard, but say you did not name the list": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Find a better moment and admit you denied it to protect how anonymous feedback is meant to work": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Merge it and help him fix it this evening": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Refuse to play along and double down on technical output": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 3.0,
+    "network": -2.0,
+    "output": 3.0,
+    "wealth": 0.0
+  },
+  "Take the move": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 3.0,
+    "network": 2.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Worry about being replaced and start holding things back again": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Mental recovery": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline, citing your current workload": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Let the rise decide it, and drop the idea of leaving on the spot": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Repay it, admit you should have been stricter, and promise to stick to the policy": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Deny you told him": {
+    "health": 0.0,
+    "dignity": -3.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Suggest a more experienced colleague lead it, and stay involved": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Go back to the technical path": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Go to your manager, admit you did not label it, and say you should have thought it through": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell yourself you are just tired and keep going round the clock": {
+    "health": -3.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say you will stay, and keep looking on the quiet": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Stress that this success shows the team's skill with incidents, and argue for keeping the current flexibility": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lay low and reduce risk": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Apply for rotation": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Cooperate and explain exactly how it got out": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Fight for resources": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Repair a key relationship": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Showcase results": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "High-intensity work": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Live with it, let the work speak, and trust time to clear the misunderstanding": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Reserve energy (no action)": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stay on the Lynx team": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Push through this delivery and book the follow-up for the end of the month": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Take the main responsibility and say your oversight as mentor failed": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Sign the draft and put the main fault on Sam": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Keep coordinating privately, give them another week's buffer, and prepare a stopgap": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Own your misjudgement of the risk, and ask for a more formal way of tracking cross-team dependencies": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Roll back immediately and take responsibility": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Rebuild your sleep and exercise routine, and start actively managing your health": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Muddle on, and let your attitude sour": {
+    "health": -1.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Take Sam on and help clear the backlog": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Privately agree a longer compatibility layer with the reluctant team": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep staring at the ranking, feel more aggrieved each time, and let it hit your mood and your work": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Learn how the new organisation works and where the openings are, adapt, and find where you still add value": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Hold off, and use the frustration to decide properly whether to stay or go": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell nobody. Treat it quietly and push through": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Compare contributions, find what you can improve, and if needed ask your manager how the assessment was done": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Force the hotfix through": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Check your rating, the bonus rules and last year’s figures, then book a conversation about how it was calculated": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Look once, put it away, and spend your energy getting better so your next review is stronger": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Make sure everyone knows whose feature it was": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell them what is really bothering you, agree a fix, then stay with a clear head": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop the release completely and roll the merge back": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Hold a review and add a release checklist": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Don't spread it or take sides, and pay attention only to facts that affect you": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Volunteer as organiser": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 3.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Complain round the team about how unfair the company is, and spread the discontent": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take it as a warning: look hard at the company's prospects and adjust your own plans": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say in the room that the whole fault is Sam's": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Count the share options as a possible bonus and decide on the fundamentals of the job": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use the moment to start a team conversation about cutting pointless overtime": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Acknowledge the climate, then bring the conversation back to your actual contribution and market rates": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "If you write, stick to facts: no exaggeration, no confidential detail, no personal attacks": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Suggest that Priya, who knows this area well, gives the talk": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Message them privately to take it down now, on the understanding that it goes no further": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lead with the work: explain clearly what you are doing and ask what they expect, without grovelling or bristling": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Collect yourself, gather your results, and ask your manager for a pay review at the right moment": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Give a fair picture of the team and the work, without informing on anyone or running them down": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Grit it out, try exercise and meditation, and deal with it after the project": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Hold your nerve, keep delivering, build your case for next time, and agree a date to revisit it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ask for 20% of the sprint to explore, and commit to dropping it if there is no breakthrough in two weeks": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Rewrite it to match what happened: who skipped review, and which check in the process failed": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Come prepared and give a clear, professional update on your work and thinking, without hogging the floor": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Quietly accept the shift and skip going home": {
+    "health": -1.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Accept a later fix, but put temporary mitigations and monitoring in first": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Weigh the extra work against the increase, take what is fair, and say so if it would overload you": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Come clean now and adjust the plan": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Explore in your own time, and only ask for formal resource once you have early results": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Raise your actual contribution with whoever ran the split or your manager, and ask for a fairer adjustment": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Keep up your own pace, and privately give nearby colleagues some encouragement and a calmer view of things": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Just say the merge went wrong": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Volunteer to speak": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Accept the company is under pressure, focus on making yourself more valuable, and stay out of the griping": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Do not volunteer, and save your energy for the scheduled project": {
+    "health": 1.0,
+    "dignity": 0.0,
+    "skill": -1.0,
+    "network": -2.0,
+    "output": 3.0,
+    "wealth": 0.0
+  },
+  "Check in privately: ask how they are, and whether they need help or a change to the arrangement": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take leave now for specialist tests and hand over your work cleanly": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Invite product to review the scripts and scenarios with you": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Face the real issue: discuss your career path with your manager so that staying changes something": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Be straight: you want to stay, here is what the market pays, and would they review your pay": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Back a written case through a staff representative, and do not corner anyone": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Prioritise the new work, discuss resources and limits with your manager, and push for support or something in return": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Tell your manager, tactfully, that you need a lighter load for a while and will keep quality up": {
+    "health": 2.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Negotiate a fair swap with a colleague, and offer to cover them later": {
+    "health": 1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Propose dual-write with a two-week canary cutover": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "After the demo, email the client (cc'd) with the technical highlights": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Cut testing short and go ahead as planned": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Block the release until the hole is fully fixed and has passed a security audit": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": -2.0,
+    "wealth": 0.0
+  },
+  "Be open about the extra complexity, and ask the team to decide whether it is worth continuing": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Refuse outright and brusquely, even to give a normal briefing": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Don't sign up. Stay on delivery": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 2.0,
+    "wealth": 0.0
+  },
+  "Tell them to decide in their own time, and stay out of it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Help them take the post down, then report the accidental disclosure to security and say it was a mistake": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Escalate the risk to senior leadership and ask for a firm delivery commitment": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Refuse again and say you do not have the capacity": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep your head down and say nothing all meeting, terrified of saying the wrong thing": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Jump in on the call to explain how engineering built it": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Keep both options vaguely alive, one more day at a time": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decide health checks always scare people, and ignore it": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Want to join but fear the blowback, so half-agree and then pull out at the last minute": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stop sitting on the fence, commit, and win trust back by being consistent": {
+    "health": -1.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Stand by the numbers and ask to cut scope or slip the date": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Follow the sick-leave procedure, and privately agree the support and return-to-work plan you need": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Feel too awkward to be honest, take the rise and leave the real problem unsolved": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 1.0
+  },
+  "Once you feel better, go back to sitting all day": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use it as a prompt to change your habits, and set a timer to stand up": {
+    "health": 2.0,
+    "dignity": 0.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Decline the group pressure and make your own pay-review case on your contribution": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take the comparison table to your manager and demand an explanation of every difference": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Cling to the old culture, resist the new rules, and keep saying how much better it used to be": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Rush to pick their side and lay the flattery on": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Get carried away by the rise and accept every new piece of work without counting the load": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Ignore the options entirely, count only cash, and leave as soon as something better comes up": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Stew in jealousy, take against that colleague, and compete with them behind their back": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Forward it eagerly to every chat, adding your own embellishments": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "In a huff, tell the whole office 'I'll walk', with no actual plan": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Protest by coasting: the perks have gone, so you do less work": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Turn down a better offer in front of you and stay put for options that have been over-promised": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Join in, and block the doorway so your manager cannot leave until you have an answer": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Swallow it, say nothing, and go cold on the project from here": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Skip the on-call shift without warning anyone": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lose your temper and threaten to coast on the next project, saying nobody should count on you": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Compare the two on depth and long-term return, and argue yours is worth the bigger investment": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 2.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Lose heart at 'the climate' and cut your ask to something tiny": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": -1.0
+  },
+  "Tweak the test parameters until they 'pass', as product asked": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Lead the public complaining and stir people into having a go at the company": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Treat it as none of your business, look after yourself, and ignore the team's mood": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Play the chaos, commit to nobody, and wait to see who wins": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Leave it and trust that managing by outcomes will sort it out": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Get heated and snap that the climate is nothing to do with you, and the conversation turns into a row": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Help them ask your manager for flexible working, and try to keep them in the team": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Back the quicker option, and get your work put on the roadmap for later": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 1.0,
+    "network": 2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Join the gloom, pile into the complaining, and make the pessimism louder": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Feel shaken for a bit, then get busy and forget": {
+    "health": -1.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Take the rise but quietly dodge the extra work": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Tell yourself at least they are still paying it, and try not to think about it": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Storm into the office and demand to know why it is so low": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Complain in public and lead the moaning": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Ask around what everyone got and spread the comparison to whoever will listen": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Watch them coldly, resist, and talk about how much better the last one was": {
+    "health": 0.0,
+    "dignity": 0.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Keep hiding it and gamble that nobody notices": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Protest by coasting and drag your feet on everything you can": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Leave an anonymous comment adding more detail": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Start coasting in protest and stop doing the work properly": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Inflate the offer and quote your manager a much higher number": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Switch v2 off and force them to upgrade": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -3.0,
+    "output": 1.0,
+    "wealth": 0.0
+  },
+  "Talk over people, overstate your role, and put colleagues down to make yourself look good": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Use the offer as an ultimatum: “Match this number or I go today”": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -1.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Follow the 90-day process and publish a deprecation notice": {
+    "health": 0.0,
+    "dignity": 2.0,
+    "skill": 1.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Write a long, emotional recap of every grievance, including unverified claims": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Say nothing to their face, and snipe about the company in the team channel": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Embellish complaints about colleagues to please the new manager": {
+    "health": 0.0,
+    "dignity": -2.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Push back by coasting: the more that arrives, the more you half-do it": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Point to the other team's history of slipping, and stress you could only judge what you could see": {
+    "health": 0.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": -2.0,
+    "output": 0.0,
+    "wealth": 0.0
+  },
+  "Promise to finish the implementation yourself, without team time, in return for permission to keep going": {
+    "health": -2.0,
+    "dignity": 0.0,
+    "skill": 2.0,
+    "network": 0.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Ask to delay the migration and protect peak trading first": {
+    "health": 0.0,
+    "dignity": 1.0,
+    "skill": 0.0,
+    "network": 1.0,
+    "output": -1.0,
+    "wealth": 0.0
+  },
+  "Take the lot in silence and carry it at any cost": {
+    "health": -2.0,
+    "dignity": -1.0,
+    "skill": 0.0,
+    "network": 0.0,
+    "output": 1.0,
+    "wealth": 0.0
+  }
+}

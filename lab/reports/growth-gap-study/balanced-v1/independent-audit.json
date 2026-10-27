@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "assigned": 384,
+  "replayed_actions": 18901,
+  "groups": {
+    "control": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 3,
+      "trust_death": 7,
+      "health_death": 0,
+      "first_promotion_by_6": 140,
+      "first_promoted_alive_at_7": 140,
+      "second_promotion_by_12": 107,
+      "second_promotion_and_alive": 107,
+      "alive_through_12": 182
+    },
+    "balanced": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 6,
+      "trust_death": 17,
+      "health_death": 0,
+      "first_promotion_by_6": 147,
+      "first_promoted_alive_at_7": 147,
+      "second_promotion_by_12": 121,
+      "second_promotion_and_alive": 116,
+      "alive_through_12": 169
+    }
+  },
+  "narrative_override_trace": {
+    "balanced": {
+      "narrative_overrides": 329,
+      "higher_empirical_rate_after_incident": 101
+    }
+  },
+  "scope": "Complete initial denominators, reproducible blocked assignment, past-only incident memory, every public action replayed and outcomes independently reconstructed"
+}

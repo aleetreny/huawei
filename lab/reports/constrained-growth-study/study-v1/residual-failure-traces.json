@@ -1,0 +1,1143 @@
+{
+  "archive_sha256": "226bbf2e49501705fa1166b02df800e12ac9eb2c7b5e7fc9013cf7485548c205",
+  "exposure_counts": {
+    "before_first_incident_overrides": 206,
+    "before_first_incident_higher_empirical_hazard": 129,
+    "after_prior_incident_overrides": 10,
+    "after_prior_incident_higher_empirical_hazard": 0
+  },
+  "trust_failures": 6,
+  "trust_failure_profiles": {
+    "fatal_choice_matches_common": 6,
+    "earlier_growth_overrides": 4,
+    "prior_public_incident": 6
+  },
+  "cases": [
+    {
+      "run": 21,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 2,
+          "month": 1,
+          "phase": "event",
+          "event": {
+            "title": "Health check returning the wrong status",
+            "description": "Your load-balancer health-check endpoint returns 200, but the body says status is degraded, so traffic still hits unhealthy instances."
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Fix the endpoint now and check the other services"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Fix this service only"
+          },
+          "prior_incidents": 0,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.0049504950495049506,
+          "common_hazard_lookup": 0.046413502109704644,
+          "status_before": {
+            "health": 5,
+            "dignity": 6,
+            "skill": 2,
+            "network": 2,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "status_after": {
+            "health": 4,
+            "dignity": 6,
+            "skill": 4,
+            "network": 2,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "events": ""
+        },
+        {
+          "step": 24,
+          "month": 6,
+          "phase": "energy",
+          "event": {
+            "title": "Quarterly energy allocation",
+            "description": "A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats.",
+            "rules": [
+              "Energy budget is 3 points; combinations over budget are invalid.",
+              "The same action may be chosen more than once (e.g. two recovery blocks) if total Energy allows.",
+              "Unused Energy does not carry to the next quarter.",
+              "Status updates stack from each selected action’s status_updates."
+            ],
+            "max_selections": 3,
+            "remaining_energy": 1,
+            "energy_budget": 3
+          },
+          "choice": {
+            "choice": 7,
+            "action": "Prepare report materials",
+            "description": "Write up your visible wins early. Output and Dignity rise a little.",
+            "energy_cost": 1,
+            "status_updates": {
+              "Output": 1,
+              "Dignity": 1
+            }
+          },
+          "common_unexecuted": {
+            "choice": 3,
+            "action": "Network maintenance",
+            "description": "Keep up relationships inside and outside the team. Network and Dignity rise slightly.",
+            "energy_cost": 1,
+            "status_updates": {
+              "Network": 1,
+              "Dignity": 1
+            }
+          },
+          "prior_incidents": 0,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.25,
+          "common_hazard_lookup": 0.25,
+          "status_before": {
+            "health": 9,
+            "dignity": 10,
+            "skill": 11,
+            "network": 4,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 4,
+            "wealth": 2,
+            "energy": 1
+          },
+          "status_after": {
+            "health": 9,
+            "dignity": 10,
+            "skill": 11,
+            "network": 4,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 5,
+            "wealth": 2,
+            "energy": 0
+          },
+          "events": ""
+        },
+        {
+          "step": 29,
+          "month": 8,
+          "phase": "event",
+          "event": {
+            "title": "In-house kernel versus an open-source stack",
+            "description": "The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.47058823529411764,
+          "common_hazard_lookup": 0.47058823529411764,
+          "status_before": {
+            "health": 10,
+            "dignity": 10,
+            "skill": 11,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 3,
+            "output": 6,
+            "wealth": 3,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 10,
+            "dignity": 7,
+            "skill": 11,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 3,
+            "output": 2,
+            "wealth": 2,
+            "energy": 0
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 34,
+          "month": 9,
+          "phase": "event",
+          "event": {
+            "title": "Neck pain with a deadline — whether to keep the physio appointment",
+            "description": "A stretch of late nights has left your neck aching and your right hand tingling. Physio is booked for tomorrow afternoon, which is also when a delivery checkpoint falls."
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Keep the physio appointment and shift delivery by half a day"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Keep the physio appointment and shift delivery by half a day"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": true,
+          "chosen_hazard_lookup": 0.011834319526627219,
+          "common_hazard_lookup": 0.011834319526627219,
+          "status_before": {
+            "health": 9,
+            "dignity": 7,
+            "skill": 14,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 4,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 10,
+            "dignity": 7,
+            "skill": 14,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 4,
+            "output": 3,
+            "wealth": 1,
+            "energy": 3
+          },
+          "events": ""
+        },
+        {
+          "step": 38,
+          "month": 9,
+          "phase": "main_action",
+          "event": {
+            "title": "Quarterly main action",
+            "description": "This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates.",
+            "rules": [
+              "At most one main action per quarter.",
+              "You may choose no action (no stat changes).",
+              "Updates follow the selected action’s status_updates."
+            ],
+            "max_selections": 1
+          },
+          "choice": {
+            "choice": 4,
+            "action": "Apply for rotation",
+            "description": "Rotate into another team to broaden your skills. Skill rises strongly.",
+            "energy_cost": 0,
+            "status_updates": {
+              "Skill": 2,
+              "Network": 1
+            }
+          },
+          "common_unexecuted": {
+            "choice": 8,
+            "action": "Lay low and reduce risk",
+            "description": "Keep your head down. Health recovers and HiddenRisk falls.",
+            "energy_cost": 0,
+            "status_updates": {
+              "Health": 1,
+              "HiddenRisk": -1
+            }
+          },
+          "prior_incidents": 1,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.25,
+          "common_hazard_lookup": 0.25,
+          "status_before": {
+            "health": 10,
+            "dignity": 10,
+            "skill": 14,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 4,
+            "output": 6,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 10,
+            "dignity": 10,
+            "skill": 16,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 5,
+            "output": 6,
+            "wealth": 2,
+            "energy": 0
+          },
+          "events": "Monthly base salary: +0.4 (L2)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up."
+        },
+        {
+          "step": 42,
+          "month": 11,
+          "phase": "event",
+          "event": {
+            "title": "Mentoring a graduate who breaks things",
+            "description": "You have been mentoring Sam for barely two weeks when they skip your code review and merge lightly tested code into the pre-production branch. Staging is down all night and several neighbouring teams are blocked. At the next morning's standup your manager asks, stony-faced, 'Who is going to answer for this incident?' Sam stares at the floor. Everyone looks at you."
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Take the main responsibility and say your oversight as mentor failed"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Take the main responsibility and say your oversight as mentor failed"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.050359712230215826,
+          "common_hazard_lookup": 0.050359712230215826,
+          "status_before": {
+            "health": 8,
+            "dignity": 10,
+            "skill": 18,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 6,
+            "output": 6,
+            "wealth": 2,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 8,
+            "dignity": 8,
+            "skill": 18,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 6,
+            "output": 3,
+            "wealth": 0,
+            "energy": 0
+          },
+          "events": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 42,
+      "fatal_choice_matches_common": true
+    },
+    {
+      "run": 106,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 14,
+          "month": 4,
+          "phase": "event",
+          "event": {
+            "title": "Thanking a colleague from the next team who went out of their way",
+            "description": "Last week a nasty bug in a barely maintained legacy submodule had you stuck for two days. Chris, a senior engineer on the next team, sat at your desk for a whole afternoon and helped you find and fix it. Nobody required them to spend that long. It is Friday, and you want to say thank you. You could take them out for a good lunch on you, around £30–40. You could write a formal recognition note on the intranet, copied to Chris and their manager, recording their high-quality cross-team help. Or you could do nothing special now and make a point of helping them next time they need it."
+          },
+          "choice": {
+            "choice": 3,
+            "action": "Do nothing special for now and help them next time they need it"
+          },
+          "common_unexecuted": {
+            "choice": 3,
+            "action": "Do nothing special for now and help them next time they need it"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.1289134438305709,
+          "common_hazard_lookup": 0.1289134438305709,
+          "status_before": {
+            "health": 4,
+            "dignity": 8,
+            "skill": 8,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 4,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 5,
+            "dignity": 6,
+            "skill": 8,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 4,
+            "output": 0,
+            "wealth": -1,
+            "energy": 0
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 19,
+          "month": 6,
+          "phase": "event",
+          "event": {
+            "title": "A colleague who keeps handing you his work",
+            "description": "Dave on your team is very good at 'finding help'. One day it is two slides to rewrite, the next a script to run, and it is always 'you're better at this, it'll take minutes'. At first you were happy to help. Then you noticed more and more of his actual job coming your way as a matter of course, while he leaves early. Today there is another message: 'Mate, can you tidy this data? I've got to shoot off at five.'"
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Help this time, and be clear: next time he drafts it first and you review"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Help this time, and be clear: next time he drafts it first and you review"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": true,
+          "chosen_hazard_lookup": 0.0017857142857142857,
+          "common_hazard_lookup": 0.0017857142857142857,
+          "status_before": {
+            "health": 5,
+            "dignity": 7,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 6,
+            "output": 1,
+            "wealth": 0,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 5,
+            "dignity": 8,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 6,
+            "output": 1,
+            "wealth": 0,
+            "energy": 0
+          },
+          "events": ""
+        },
+        {
+          "step": 33,
+          "month": 9,
+          "phase": "event",
+          "event": {
+            "title": "Peer review finds a serious bug in a friend's code",
+            "description": "Craig, a colleague you get on well with, has an SQL injection risk in his merge request. He messages privately: “Merge it for now — I'll buy dinner tonight and fix it after.”"
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Block the review and require a fix before merge"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Block the review and require a fix before merge"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": true,
+          "chosen_hazard_lookup": 0.016666666666666666,
+          "common_hazard_lookup": 0.016666666666666666,
+          "status_before": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 9,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 9,
+            "network": 2,
+            "level": "L1",
+            "duration_in_level": 9,
+            "output": 3,
+            "wealth": 1,
+            "energy": 3
+          },
+          "events": ""
+        },
+        {
+          "step": 44,
+          "month": 12,
+          "phase": "event",
+          "event": {
+            "title": "Mentoring a graduate who breaks things",
+            "description": "You took responsibility in public and Sam is hugely grateful. That afternoon your manager pulls you into a meeting room: 'We're already over our incident quota. Group wants a named person on the accountability report. If you keep this on yourself, the team can't carry it. I suggest you sign the draft that puts the main fault on Sam. I'll try to sort Sam's conversion to permanent another way.' They slide a mostly written template across. Asking for a name to fill a quota is poor management. A fair account of an incident sets out what happened and who did what."
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Sign the draft and put the main fault on Sam"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Sign the draft and put the main fault on Sam"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.12371134020618557,
+          "common_hazard_lookup": 0.12371134020618557,
+          "status_before": {
+            "health": 9,
+            "dignity": 8,
+            "skill": 9,
+            "network": 3,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 3,
+            "wealth": 2,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 9,
+            "dignity": 4,
+            "skill": 9,
+            "network": 4,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 44,
+      "fatal_choice_matches_common": true
+    },
+    {
+      "run": 260,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 9,
+          "month": 3,
+          "phase": "event",
+          "event": {
+            "title": "A project you wanted going to someone else",
+            "description": "You are running a live project that needs your full attention. The timetable is tight, and you own the fallout if it goes wrong. Your manager has just started a new project you have wanted for a while, with a new framework and external visibility, but the slot went to your teammate Owen. Your manager bumps into you in the corridor: “Stabilise what you're on first. I don't want you split across the new work this time.” You need to decide how to respond."
+          },
+          "choice": {
+            "choice": 3,
+            "action": "Approach Owen privately: you supply the technical design, they stay the lead"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Accept the plan and give the live project your full attention"
+          },
+          "prior_incidents": 0,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.06325301204819277,
+          "common_hazard_lookup": 0.00558659217877095,
+          "status_before": {
+            "health": 6,
+            "dignity": 7,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 3,
+            "output": 3,
+            "wealth": 1,
+            "energy": 3
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 6,
+            "skill": 3,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 3,
+            "output": 3,
+            "wealth": 1,
+            "energy": 3
+          },
+          "events": ""
+        },
+        {
+          "step": 13,
+          "month": 4,
+          "phase": "event",
+          "event": {
+            "title": "In-house kernel versus an open-source stack",
+            "description": "The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.47058823529411764,
+          "common_hazard_lookup": 0.47058823529411764,
+          "status_before": {
+            "health": 8,
+            "dignity": 6,
+            "skill": 5,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 4,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 8,
+            "dignity": 3,
+            "skill": 5,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 4,
+            "output": 0,
+            "wealth": 0,
+            "energy": 0
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 42,
+          "month": 11,
+          "phase": "event",
+          "event": {
+            "title": "Anonymous feedback — do you own up?",
+            "description": "In the quarterly anonymous team survey you left specific suggestions about your manager's style, including some criticism. Afterwards they tell the team that 'anonymous feedback is cowardly — if there's a problem you should say it to my face'. A few days later they take you aside: 'I don't know who it was, but I think you're the most likely to have written those detailed points. I'd like to hear what you actually think.'"
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Own it, walk through the feedback in person, and offer constructive suggestions"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Own it, walk through the feedback in person, and offer constructive suggestions"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.08717948717948718,
+          "common_hazard_lookup": 0.08717948717948718,
+          "status_before": {
+            "health": 8,
+            "dignity": 10,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 11,
+            "output": 2,
+            "wealth": 3,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 7,
+            "dignity": 6,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 12,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\n“I had hopes.” Their voice cools. “Recent incidents mean I have to reset my view. Work got dropped and updates went missing. When leadership asks, I report the facts. Decide whether you still want to fight on this track.”\n\nHalf-year performance bonus (C): +0.075\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, angry, what were you waiting for? Everything you buried is about to go off.\n\nA senior colleague takes you aside: “You’ve dropped a few balls lately. That’s normal for a newcomer. I’ll have a word with people about your KPI targets.”\n\nTrust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 42,
+      "fatal_choice_matches_common": true
+    },
+    {
+      "run": 346,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 4,
+          "month": 2,
+          "phase": "event",
+          "event": {
+            "title": "In-house kernel versus an open-source stack",
+            "description": "The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.47058823529411764,
+          "common_hazard_lookup": 0.47058823529411764,
+          "status_before": {
+            "health": 6,
+            "dignity": 5,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": 2,
+            "wealth": 1,
+            "energy": 3
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 2,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": 0,
+            "wealth": 0,
+            "energy": 3
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 45,
+          "month": 12,
+          "phase": "event",
+          "event": {
+            "title": "A dependent team is late — do you escalate in the open?",
+            "description": "A critical piece of work your project depends on, owned by a sister team, is already two weeks late. Their tech lead says privately they 'need another week' but will not update the official plan. The risk to your project is about to show in an update to senior management. You can keep coordinating quietly, or escalate formally."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Keep coordinating privately, give them another week's buffer, and prepare a stopgap"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Keep coordinating privately, give them another week's buffer, and prepare a stopgap"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.1875,
+          "common_hazard_lookup": 0.1875,
+          "status_before": {
+            "health": 9,
+            "dignity": 9,
+            "skill": 9,
+            "network": 4,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 4,
+            "wealth": 4,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 9,
+            "dignity": 7,
+            "skill": 10,
+            "network": 6,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 3,
+            "wealth": 2,
+            "energy": 0
+          },
+          "events": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 45,
+      "fatal_choice_matches_common": true
+    },
+    {
+      "run": 455,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 27,
+          "month": 7,
+          "phase": "event",
+          "event": {
+            "title": "You overhear an unpublished project naming you",
+            "description": "In the fifteenth-floor kitchen, platform director Harper and Miles, a fellow manager, drop their voices: “Polaris starts in Q3. On the Lynx side we’ll have… lead the tech.” The word you half-catch in the gap is your surname. The project has not been announced. If Miles realises you were listening, it may look like you were fishing."
+          },
+          "choice": {
+            "choice": 3,
+            "action": "Stay in the corner and listen to the rest"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Walk in as if you have just come for water and say hello as normal"
+          },
+          "prior_incidents": 0,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.176,
+          "common_hazard_lookup": 0.0022727272727272726,
+          "status_before": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 13,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 2,
+            "output": 6,
+            "wealth": 3,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 9,
+            "skill": 14,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 2,
+            "output": 6,
+            "wealth": 3,
+            "energy": 0
+          },
+          "events": ""
+        },
+        {
+          "step": 30,
+          "month": 8,
+          "phase": "event",
+          "event": {
+            "title": "The colleague who buys coffee is collecting favours for a lead vote",
+            "description": "Harvey brings the team coffees from Pret every day and never takes money. You notice a notebook: “Favours ledger: Chris +2, Ethan +1…” The team is about to pick an acting lead, and Harvey is standing. Today he hands you a larger coffee: “Put in a word for me at the review tonight?”"
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Agree to talk him up, in return for later support"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Agree to talk him up, in return for later support"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.06930693069306931,
+          "common_hazard_lookup": 0.06930693069306931,
+          "status_before": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 15,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 3,
+            "output": 6,
+            "wealth": 3,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 6,
+            "skill": 15,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 3,
+            "output": 2,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 43,
+          "month": 11,
+          "phase": "event",
+          "event": {
+            "title": "Mentoring a graduate who breaks things",
+            "description": "You took responsibility in public and Sam is hugely grateful. That afternoon your manager pulls you into a meeting room: 'We're already over our incident quota. Group wants a named person on the accountability report. If you keep this on yourself, the team can't carry it. I suggest you sign the draft that puts the main fault on Sam. I'll try to sort Sam's conversion to permanent another way.' They slide a mostly written template across. Asking for a name to fill a quota is poor management. A fair account of an incident sets out what happened and who did what."
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Sign the draft and put the main fault on Sam"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Sign the draft and put the main fault on Sam"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.12371134020618557,
+          "common_hazard_lookup": 0.12371134020618557,
+          "status_before": {
+            "health": 8,
+            "dignity": 10,
+            "skill": 18,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 6,
+            "output": 6,
+            "wealth": 2,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 8,
+            "dignity": 6,
+            "skill": 18,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 6,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 43,
+      "fatal_choice_matches_common": true
+    },
+    {
+      "run": 502,
+      "final_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+      },
+      "timeline": [
+        {
+          "step": 16,
+          "month": 5,
+          "phase": "event",
+          "event": {
+            "title": "In-house kernel versus an open-source stack",
+            "description": "The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Sit on the report and bet it will not be triggered soon"
+          },
+          "prior_incidents": 0,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.47058823529411764,
+          "common_hazard_lookup": 0.47058823529411764,
+          "status_before": {
+            "health": 4,
+            "dignity": 8,
+            "skill": 7,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 5,
+            "output": 3,
+            "wealth": 2,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 4,
+            "dignity": 5,
+            "skill": 7,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 5,
+            "output": 0,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "Old landmines all go off at once, and half a year of work goes up in smoke!"
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "phase": "energy",
+          "event": {
+            "title": "Quarterly energy allocation",
+            "description": "A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats.",
+            "rules": [
+              "Energy budget is 3 points; combinations over budget are invalid.",
+              "The same action may be chosen more than once (e.g. two recovery blocks) if total Energy allows.",
+              "Unused Energy does not carry to the next quarter.",
+              "Status updates stack from each selected action’s status_updates."
+            ],
+            "max_selections": 3,
+            "remaining_energy": 3,
+            "energy_budget": 3
+          },
+          "choice": {
+            "choice": 7,
+            "action": "Prepare report materials",
+            "description": "Write up your visible wins early. Output and Dignity rise a little.",
+            "energy_cost": 1,
+            "status_updates": {
+              "Output": 1,
+              "Dignity": 1
+            }
+          },
+          "common_unexecuted": {
+            "choice": 4,
+            "action": "Defuse legacy risk",
+            "description": "Clear up old problems before they bite. HiddenRisk goes down.",
+            "energy_cost": 2,
+            "status_updates": {
+              "HiddenRisk": -1
+            }
+          },
+          "prior_incidents": 1,
+          "growth_override": true,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.25,
+          "common_hazard_lookup": 0.25,
+          "status_before": {
+            "health": 3,
+            "dignity": 5,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 6,
+            "output": 2,
+            "wealth": 0,
+            "energy": 3
+          },
+          "status_after": {
+            "health": 3,
+            "dignity": 6,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 6,
+            "output": 3,
+            "wealth": 0,
+            "energy": 2
+          },
+          "events": ""
+        },
+        {
+          "step": 30,
+          "month": 8,
+          "phase": "event",
+          "event": {
+            "title": "Peer review finds a serious bug in a friend's code",
+            "description": "Craig, a colleague you get on well with, has an SQL injection risk in his merge request. He messages privately: “Merge it for now — I'll buy dinner tonight and fix it after.”"
+          },
+          "choice": {
+            "choice": 1,
+            "action": "Block the review and require a fix before merge"
+          },
+          "common_unexecuted": {
+            "choice": 1,
+            "action": "Block the review and require a fix before merge"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": true,
+          "chosen_hazard_lookup": 0.016666666666666666,
+          "common_hazard_lookup": 0.016666666666666666,
+          "status_before": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 9,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 8,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 10,
+            "skill": 9,
+            "network": 2,
+            "level": "L1",
+            "duration_in_level": 9,
+            "output": 3,
+            "wealth": 1,
+            "energy": 0
+          },
+          "events": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up."
+        },
+        {
+          "step": 46,
+          "month": 12,
+          "phase": "event",
+          "event": {
+            "title": "Whether to invest in a CI automation suite",
+            "description": "Your team still lacks a proper automated-test CI pipeline. Every release depends on senior engineers manually reviewing critical paths. Your manager wants you to lead the platform work. Headcount has just doubled from five to ten. New joiners' PRs have piled up, review pressure has spiked, and releases are starting to slip. Building a CI suite from scratch, with mocks, load tests and coverage gates, would take about two solid weeks, and two of your scheduled projects would slip in that time. Your manager is not insisting on it, so the call is yours."
+          },
+          "choice": {
+            "choice": 2,
+            "action": "Keep manual review and let new joiners follow the existing process"
+          },
+          "common_unexecuted": {
+            "choice": 2,
+            "action": "Keep manual review and let new joiners follow the existing process"
+          },
+          "prior_incidents": 1,
+          "growth_override": false,
+          "filter_changed": false,
+          "chosen_hazard_lookup": 0.12941176470588237,
+          "common_hazard_lookup": 0.12941176470588237,
+          "status_before": {
+            "health": 8,
+            "dignity": 10,
+            "skill": 11,
+            "network": 6,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 4,
+            "wealth": 2,
+            "energy": 0
+          },
+          "status_after": {
+            "health": 6,
+            "dignity": 8,
+            "skill": 10,
+            "network": 7,
+            "level": "L2",
+            "duration_in_level": 1,
+            "output": 3,
+            "wealth": 0,
+            "energy": 3
+          },
+          "events": "Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take your talents elsewhere."
+        }
+      ],
+      "fatal_step": 46,
+      "fatal_choice_matches_common": true
+    }
+  ],
+  "limits": [
+    "Actual public histories and unexecuted same-state baseline choices only",
+    "An earlier override is not proof it caused a later crisis",
+    "The filter only bounds selected empirical and nominal comparisons; it does not establish true risk"
+  ]
+}

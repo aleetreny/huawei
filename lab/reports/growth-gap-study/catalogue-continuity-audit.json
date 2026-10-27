@@ -1,0 +1,20 @@
+{
+  "reference_sha256": {
+    "first_six": "929a322de590cb04578abdbf06fb54bee49e891acb0aab27257ed6013dabcd1b",
+    "second_six": "aba008ea01287249bcd09eee52acb8280e227b8b8b2e93f44a98bc14d0442996"
+  },
+  "archives": [
+    {
+      "archive": "lab/reports/growth-gap-study/balanced-v1/public-trajectories.jsonl.gz",
+      "records": 384,
+      "sha256": "712ea8ec60b6a8d40266c44cd920ab6718482c865d7ef46b2e4a67e74da32082"
+    },
+    {
+      "archive": "lab/reports/growth-gap-study/study-v1/public-trajectories.jsonl.gz",
+      "records": 768,
+      "sha256": "c512ef1e16ccf98d84e4a105c643e26693b5eaeb08999a0c19bb109ae72cdfba"
+    }
+  ],
+  "new_first_six": {},
+  "new_second_six": {}
+}

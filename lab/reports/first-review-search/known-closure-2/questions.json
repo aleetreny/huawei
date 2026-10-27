@@ -1,0 +1,5925 @@
+[
+  {
+    "id": "0da37ebad71f182309b7",
+    "event": {
+      "title": "New hire handbook",
+      "description": "Welcome to the product engineering group. Before your career clock starts, this handbook sets out the public rules. Everything in it is part of the published game design, and you can use it for long-term planning.",
+      "document": {
+        "doc_name": "New hire handbook",
+        "check_command": "show_employee_handbook"
+      }
+    },
+    "phase": "document",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Continue",
+        "description": "Start the career."
+      }
+    ],
+    "seen": 5,
+    "answers": {
+      "1": {
+        "action": "Continue",
+        "count": 5,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 5
+        },
+        "successors": {
+          "021528910bedb6729b89": 1,
+          "06f84b2fd3b18780235d": 1,
+          "7a661b5e34b29fd87fa6": 1,
+          "b24a9e0b98254e33b8c1": 1,
+          "7087786222f34f85b3e9": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 0,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          },
+          {
+            "run": 1,
+            "step": 0,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          },
+          {
+            "run": 2,
+            "step": 0,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 2,
+          "six_month_window": 3
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 3
+      }
+    },
+    "first_evidence": [
+      0,
+      0
+    ],
+    "untried_choices": []
+  },
+  {
+    "id": "021528910bedb6729b89",
+    "event": {
+      "title": "In-house kernel versus an open-source stack",
+      "description": "The company is setting up a new real-time compute platform, and your manager has put you in charge of the technology choice for your part of it. There are two options. You can build the kernel in-house, which fits the business but means a long build and a painful go-live. Or you can adopt a well-known open-source project, which lets you deliver quickly but leaves the kernel a black box and you at the mercy of upstream. The architecture review is next Friday and needs a decision."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Argue for an in-house kernel as a long-term technical asset"
+      },
+      {
+        "choice": 2,
+        "action": "Adopt the open-source stack and aim for fast delivery"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Adopt the open-source stack and aim for fast delivery",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "f3e37b4a4495574d18b7": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 1,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 4,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "f29efdc73f5b4c7cfd94": 1
+        },
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      0,
+      1
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "f3e37b4a4495574d18b7",
+    "event": {
+      "title": "The client praises a feature you did not build",
+      "description": "In the Cedar Retail project review, the client’s procurement director says: “This real-time stock sync can forecast next week’s bestsellers. That’s ahead of the market.” What you actually shipped is next-day (T+1) batch sync, and forecasting is on next year’s roadmap. Kim, the product manager, catches your eye. Your manager smiles and nods. The review is going smoothly, and about £80,000 of the contract is still waiting to be paid."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Say in the room that what is live is next-day sync, and forecasting is a later proposal"
+      },
+      {
+        "choice": 2,
+        "action": "Keep quiet in the room and clarify in writing after the meeting"
+      },
+      {
+        "choice": 3,
+        "action": "Stay silent and let the review pass"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "3": {
+        "action": "Stay silent and let the review pass",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -2, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 2, \"output\": 2, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "f83868dcab1a15f54324": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 2,
+            "before": {
+              "health": 5,
+              "dignity": 4,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 2,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "f83868dcab1a15f54324": 1
+        },
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      0,
+      2
+    ],
+    "untried_choices": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "f83868dcab1a15f54324",
+    "event": {
+      "title": "The client praises a feature you did not build",
+      "description": "The remaining payment comes in. Two months later the client finds there is no forecasting, and sends a solicitor’s letter alleging misrepresentation and asking for the money back."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Produce the review recording and the scope pack in your defence"
+      },
+      {
+        "choice": 2,
+        "action": "Go along with sales and accept “poor communication” as the explanation"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Go along with sales and accept “poor communication” as the explanation",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -2, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": -3, \"skill\": 0, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "f29efdc73f5b4c7cfd94": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 3,
+            "before": {
+              "health": 5,
+              "dignity": 2,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      0,
+      3
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "f29efdc73f5b4c7cfd94",
+    "event": {
+      "title": "In-house kernel versus an open-source stack",
+      "description": "The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell security and rush out a fallback from scratch"
+      },
+      {
+        "choice": 2,
+        "action": "Sit on the report and bet it will not be triggered soon"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Sit on the report and bet it will not be triggered soon",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "29faa6dc4c2a1b00c2ab": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 4,
+            "before": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 0,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      0,
+      4
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "29faa6dc4c2a1b00c2ab",
+    "event": {
+      "title": "Whether to invest in a CI automation suite",
+      "description": "Your team still lacks a proper automated-test CI pipeline. Every release depends on senior engineers manually reviewing critical paths. Your manager wants you to lead the platform work. Headcount has just doubled from five to ten. New joiners' PRs have piled up, review pressure has spiked, and releases are starting to slip. Building a CI suite from scratch, with mocks, load tests and coverage gates, would take about two solid weeks, and two of your scheduled projects would slip in that time. Your manager is not insisting on it, so the call is yours."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Spend two weeks building a full CI automation suite"
+      },
+      {
+        "choice": 2,
+        "action": "Keep manual review and let new joiners follow the existing process"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Keep manual review and let new joiners follow the existing process",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -2, \"network\": 0, \"output\": -1, \"skill\": -1, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "abb3cf2ec145846ceb80": 1
+        },
+        "examples": [
+          {
+            "run": 0,
+            "step": 5,
+            "before": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 0,
+              "energy": 3
+            },
+            "after": {
+              "health": 3,
+              "dignity": 0,
+              "skill": 0,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 0,
+              "wealth": -2,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      0,
+      5
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "06f84b2fd3b18780235d",
+    "event": {
+      "title": "A drunk colleague at the Christmas party",
+      "description": "A few rounds into the Christmas party, Will, usually quiet, is loudly tearing into the department and is close to marching off to ‘have it out’ with your manager. Nobody else can get through to him. He is a decent person having a bad night. If this continues he will hate himself in the morning, and the scene will be ugly. You are standing closest."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Steer him out, half-coaxing, half-supporting, and get him home with someone to look after him"
+      },
+      {
+        "choice": 2,
+        "action": "Stay and watch, joining the crowd treating it as entertainment"
+      },
+      {
+        "choice": 3,
+        "action": "Get well away so none of it lands on you, and leave him to it"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Steer him out, half-coaxing, half-supporting, and get him home with someone to look after him",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 2, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "4d9a3352e869e139b978": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 1,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "5825e236479b6253ef8f": 1
+        },
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      1
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "4d9a3352e869e139b978",
+    "event": {
+      "title": "An engagement survey that asks for your staff ID",
+      "description": "The annual engagement survey says answers are confidential. The portal asks for your staff ID and an SMS code, which may only be there to stop someone submitting twice. The page does not say whether anyone can later trace an answer back to you. You have a long list on Chris, your manager: goalposts that move, taking credit, weekend pings. A colleague believes that last year someone who wrote something sharp was frozen out afterwards."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Fill it in honestly, with examples and no swearing"
+      },
+      {
+        "choice": 2,
+        "action": "Score everything as blandly positive"
+      },
+      {
+        "choice": 3,
+        "action": "Set out the moving goalposts, the credit-taking and the weekend messages as plain facts, without insults"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "3": {
+        "action": "Set out the moving goalposts, the credit-taking and the weekend messages as plain facts, without insults",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "e3ded0affde319f9ba9e": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 2,
+            "before": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 1,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "e3ded0affde319f9ba9e": 1
+        },
+        "promotion_episodes": 0
+      },
+      "1": {
+        "action": "Fill it in honestly, with examples and no swearing",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "9302bd4b70b4302bb0b8": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 16,
+            "before": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 2,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 2,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "9302bd4b70b4302bb0b8": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      2
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "e3ded0affde319f9ba9e",
+    "event": {
+      "title": "An engagement survey that asks for your staff ID",
+      "description": "HR pass on “please set dates more clearly” to Chris. He tries two weeks of stand-ups to fix it."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Acknowledge the improvement in the meeting so that it sticks"
+      },
+      {
+        "choice": 2,
+        "action": "Wait and see"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Acknowledge the improvement in the meeting so that it sticks",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 2, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "5825e236479b6253ef8f": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 3,
+            "before": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 2,
+              "network": 5,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      3
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "5825e236479b6253ef8f",
+    "event": {
+      "title": "A drunk colleague at the Christmas party",
+      "description": "You get Will out before he does it in front of your manager. He is sick in the cab and, before he blacks out, mumbles a thanks. The next day he is mortified, and asks privately whether he made a scene and whether anyone senior saw."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell him the truth: it never reached your manager, and suggest he watch his drinking next time"
+      },
+      {
+        "choice": 2,
+        "action": "Turn it into a story and tell it round the office in full colour"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Tell him the truth: it never reached your manager, and suggest he watch his drinking next time",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": -2, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "de8d090c6e08553050c8": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 4,
+            "before": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 2,
+              "network": 5,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 9,
+              "skill": 3,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      4
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "de8d090c6e08553050c8",
+    "event": {
+      "title": "Named on a department award you did not work on",
+      "description": "Submissions for the department’s annual Breakthrough Award close tonight. Your manager sends you the Aurora data-platform pack to look over. You have been on Lynx Payments the whole time. The team next door delivered Aurora, and you only turned up to the kick-off. Your manager messages: “I’ve added you to the list to make the bench look stronger for the panel. Just sign it.”"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Ask that the pack name only those who did the work, or limit your line to the kick-off"
+      },
+      {
+        "choice": 2,
+        "action": "Sign it quietly and treat it as a favour from your manager"
+      },
+      {
+        "choice": 3,
+        "action": "Suggest submitting Lynx Payments instead, with you as the lead author"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "3": {
+        "action": "Suggest submitting Lynx Payments instead, with you as the lead author",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": -1, \"output\": 1, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "ec874e379e7767334554": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 5,
+            "before": {
+              "health": 4,
+              "dignity": 9,
+              "skill": 3,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 10,
+              "skill": 4,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      },
+      "1": {
+        "action": "Ask that the pack name only those who did the work, or limit your line to the kick-off",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 3, \"health\": 0, \"network\": -2, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 22,
+            "before": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 11,
+              "network": 6,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 11,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 2,
+              "energy": 3
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      5
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "ec874e379e7767334554",
+    "event": {
+      "title": "Lunch with the team, or keep the break to yourself",
+      "description": "At noon the team usually heads to a café near the office to swap project gossip and guesses about what your manager is thinking. It is where people pick up the unofficial news. For the past few months you have eaten at your desk or gone for a walk instead. You get a real break and are sharper in the afternoon. Colleagues have started calling you the lone wolf. At last week’s offsite your manager said you should mix with the team a bit more."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Switch to lunching with colleagues at least three days a week"
+      },
+      {
+        "choice": 2,
+        "action": "Keep skipping the café, and let a strong afternoon prove the point"
+      },
+      {
+        "choice": 3,
+        "action": "Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest"
+      }
+    ],
+    "seen": 3,
+    "answers": {
+      "3": {
+        "action": "Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 1, \"network\": 1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1,
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "624dec369b574242bbba": 2
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 6,
+            "before": {
+              "health": 4,
+              "dignity": 10,
+              "skill": 4,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          },
+          {
+            "run": 3,
+            "step": 15,
+            "before": {
+              "health": 10,
+              "dignity": 2,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 3,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1,
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "624dec369b574242bbba": 2
+        },
+        "promotion_episodes": 1
+      },
+      "1": {
+        "action": "Switch to lunching with colleagues at least three days a week",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": -4, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "c7d4b068456766f4a8b5": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 19,
+            "before": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "c7d4b068456766f4a8b5": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      6
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "624dec369b574242bbba",
+    "event": {
+      "title": "Lunch with the team, or keep the break to yourself",
+      "description": "After a month of lunching with the team twice a week, your manager stops talking about “mixing in”. Over lunch you learn Warren’s project is being folded into your module, so you have time to prepare."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Keep to the current pattern"
+      },
+      {
+        "choice": 2,
+        "action": "Go to more lunches to stay more visible"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "2": {
+        "action": "Go to more lunches to stay more visible",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "7a661b5e34b29fd87fa6": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 7,
+            "before": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 10,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      },
+      "1": {
+        "action": "Keep to the current pattern",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "3a7d5988cd50418f5024": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 16,
+            "before": {
+              "health": 10,
+              "dignity": 3,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 4,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      7
+    ],
+    "untried_choices": []
+  },
+  {
+    "id": "7a661b5e34b29fd87fa6",
+    "event": {
+      "title": "A colleague who comes in ill",
+      "description": "Faye at the next desk has a heavy cold. She is coughing constantly and has almost lost her voice, but she is still in: 'The milestone's tight, I can't drop the ball.' The whole open-plan floor can hear every cough, and two people have started sneezing. She sees it as doing her duty, but there is a real risk she will pass it on. You are on the same project."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Check in privately, ask her to go home, and offer to cover the urgent part"
+      },
+      {
+        "choice": 2,
+        "action": "Tell your manager her coming in ill is a health risk, and suggest sick leave while the team covers"
+      },
+      {
+        "choice": 3,
+        "action": "Put on a mask, move away from the noise and the germs, and say nothing"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "3": {
+        "action": "Put on a mask, move away from the noise and the germs, and say nothing",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": -1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "ea21e12d970a3cbe05c7": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 8,
+            "before": {
+              "health": 4,
+              "dignity": 10,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 3,
+              "dignity": 9,
+              "skill": 4,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "69843c907fffa45cf3fe": 1
+        },
+        "promotion_episodes": 0
+      },
+      "1": {
+        "action": "Check in privately, ask her to go home, and offer to cover the urgent part",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 2, \"output\": 1, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "d383609114d7f63ab9eb": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 1,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "af6d77551c117c67b940": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      8
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "ea21e12d970a3cbe05c7",
+    "event": {
+      "title": "A chatty, skiving colleague eating into your time",
+      "description": "Luke, a teammate, has taken to hovering at your desk for half-hour chats: gossip, moaning, memes. You can tell their own workload is light and they mostly want someone to skive with. You have a critical module due for QA today and have already been interrupted three times. You need to decide how to handle it."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell them directly but politely that you need to focus today and to come back later"
+      },
+      {
+        "choice": 2,
+        "action": "Put headphones on, look busy, and give them the cold shoulder"
+      },
+      {
+        "choice": 3,
+        "action": "Chat for a few minutes, then steer back to work and mention today's deadline"
+      },
+      {
+        "choice": 4,
+        "action": "Tell your manager that Luke keeps breaking your concentration"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "2": {
+        "action": "Put headphones on, look busy, and give them the cold shoulder",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": -2, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 9,
+            "before": {
+              "health": 3,
+              "dignity": 9,
+              "skill": 4,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 3,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      },
+      "1": {
+        "action": "Tell them directly but politely that you need to focus today and to come back later",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 2, \"duration_in_level\": 0, \"energy\": 0, \"health\": 1, \"network\": -1, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 9,
+            "before": {
+              "health": 5,
+              "dignity": 1,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 1,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 3,
+              "skill": 7,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      9
+    ],
+    "untried_choices": [
+      3,
+      4
+    ]
+  },
+  {
+    "id": "04047988ffcbc799025b",
+    "event": {
+      "title": "Quarterly energy allocation",
+      "description": "A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats.",
+      "rules": [
+        "Energy budget is 3 points; combinations over budget are invalid.",
+        "The same action may be chosen more than once (e.g. two recovery blocks) if total Energy allows.",
+        "Unused Energy does not carry to the next quarter.",
+        "Status updates stack from each selected action’s status_updates."
+      ],
+      "max_selections": 3,
+      "remaining_energy": 3,
+      "energy_budget": 3
+    },
+    "phase": "energy",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "High-intensity work",
+        "description": "Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.",
+        "energy_cost": 2,
+        "status_updates": {
+          "Output": 2,
+          "Health": -1,
+          "Dignity": -1,
+          "HiddenRisk": 1
+        }
+      },
+      {
+        "choice": 2,
+        "action": "Skill learning",
+        "description": "Spend time learning. Skill rises for the long run, but you are tired in the short term.",
+        "energy_cost": 2,
+        "status_updates": {
+          "Skill": 1,
+          "Health": -1
+        }
+      },
+      {
+        "choice": 3,
+        "action": "Network maintenance",
+        "description": "Keep up relationships inside and outside the team. Network and Dignity rise slightly.",
+        "energy_cost": 1,
+        "status_updates": {
+          "Network": 1,
+          "Dignity": 1
+        }
+      },
+      {
+        "choice": 4,
+        "action": "Defuse legacy risk",
+        "description": "Clear up old problems before they bite. HiddenRisk goes down.",
+        "energy_cost": 2,
+        "status_updates": {
+          "HiddenRisk": -1
+        }
+      },
+      {
+        "choice": 5,
+        "action": "Mental recovery",
+        "description": "Take time to reset. Dignity gets a solid boost.",
+        "energy_cost": 1,
+        "status_updates": {
+          "Dignity": 2
+        }
+      },
+      {
+        "choice": 6,
+        "action": "Health recovery",
+        "description": "Rest and recover. Health gets a solid boost.",
+        "energy_cost": 1,
+        "status_updates": {
+          "Health": 2
+        }
+      },
+      {
+        "choice": 7,
+        "action": "Prepare report materials",
+        "description": "Write up your visible wins early. Output and Dignity rise a little.",
+        "energy_cost": 1,
+        "status_updates": {
+          "Output": 1,
+          "Dignity": 1
+        }
+      },
+      {
+        "choice": 8,
+        "action": "Reserve energy (no action)",
+        "description": "Leave the rest of your Energy unused this quarter. It does not roll over.",
+        "energy_cost": 0,
+        "status_updates": {}
+      }
+    ],
+    "seen": 20,
+    "answers": {
+      "6": {
+        "action": "Health recovery",
+        "count": 16,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": -1, \"health\": 2, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 10,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": -1, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 4,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": -1, \"health\": 1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 2
+        },
+        "successors": {
+          "04047988ffcbc799025b": 10,
+          "83204810128f0754ec2f": 6
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 10,
+            "before": {
+              "health": 3,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 2
+            },
+            "month": 3
+          },
+          {
+            "run": 1,
+            "step": 11,
+            "before": {
+              "health": 5,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 2
+            },
+            "after": {
+              "health": 7,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 1
+            },
+            "month": 3
+          },
+          {
+            "run": 1,
+            "step": 12,
+            "before": {
+              "health": 7,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 1
+            },
+            "after": {
+              "health": 9,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 3,
+          "six_month_window": 13
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 13
+      },
+      "3": {
+        "action": "Network maintenance",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": -1, \"health\": 0, \"network\": 1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 2
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1,
+          "83204810128f0754ec2f": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 10,
+            "before": {
+              "health": 6,
+              "dignity": 3,
+              "skill": 7,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 4,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": -1,
+              "energy": 2
+            },
+            "month": 3
+          },
+          {
+            "run": 2,
+            "step": 24,
+            "before": {
+              "health": 8,
+              "dignity": 8,
+              "skill": 10,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 1
+            },
+            "after": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 2
+      },
+      "7": {
+        "action": "Prepare report materials",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": -1, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 11,
+            "before": {
+              "health": 6,
+              "dignity": 4,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": -1,
+              "energy": 2
+            },
+            "after": {
+              "health": 6,
+              "dignity": 5,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": -1,
+              "energy": 1
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      },
+      "4": {
+        "action": "Defuse legacy risk",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": -2, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 23,
+            "before": {
+              "health": 8,
+              "dignity": 8,
+              "skill": 10,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 8,
+              "dignity": 8,
+              "skill": 10,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 1
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      10
+    ],
+    "untried_choices": [
+      1,
+      2,
+      5,
+      8
+    ]
+  },
+  {
+    "id": "83204810128f0754ec2f",
+    "event": {
+      "title": "Quarterly main action",
+      "description": "This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates.",
+      "rules": [
+        "At most one main action per quarter.",
+        "You may choose no action (no stat changes).",
+        "Updates follow the selected action’s status_updates."
+      ],
+      "max_selections": 1
+    },
+    "phase": "main_action",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Apply for a key project",
+        "description": "Join a high-profile project. Output, Skill and Network all rise.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Output": 2,
+          "Skill": 1,
+          "Network": 1
+        }
+      },
+      {
+        "choice": 2,
+        "action": "Report results to your manager",
+        "description": "Tell leadership about your wins. You become more visible and better recognised.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Output": 1,
+          "Network": 1,
+          "Dignity": 1
+        }
+      },
+      {
+        "choice": 3,
+        "action": "Fight for resources",
+        "description": "Push for budget, headcount, or support for your work.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Output": 1,
+          "Network": 1
+        }
+      },
+      {
+        "choice": 4,
+        "action": "Apply for rotation",
+        "description": "Rotate into another team to broaden your skills. Skill rises strongly.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Skill": 2,
+          "Network": 1
+        }
+      },
+      {
+        "choice": 5,
+        "action": "Showcase results",
+        "description": "Present your results to a wider audience. Output and Dignity rise.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Output": 1,
+          "Dignity": 1
+        }
+      },
+      {
+        "choice": 6,
+        "action": "Build a mentorship",
+        "description": "Work with a senior mentor. Network and Skill improve.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Skill": 1,
+          "Network": 2
+        }
+      },
+      {
+        "choice": 7,
+        "action": "Repair a key relationship",
+        "description": "Mend a strained relationship. Network and Dignity recover.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Network": 1,
+          "Dignity": 1
+        }
+      },
+      {
+        "choice": 8,
+        "action": "Lay low and reduce risk",
+        "description": "Keep your head down. Health recovers and HiddenRisk falls.",
+        "energy_cost": 0,
+        "status_updates": {
+          "Health": 1,
+          "HiddenRisk": -1
+        }
+      },
+      {
+        "choice": 9,
+        "action": "No action",
+        "description": "Skip the main action this quarter. Your stats do not change.",
+        "energy_cost": 0,
+        "status_updates": {}
+      }
+    ],
+    "seen": 7,
+    "answers": {
+      "1": {
+        "action": "Apply for a key project",
+        "count": 7,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 2, \"skill\": 1, \"wealth\": 1}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 2, \"skill\": 0, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 1, \"skill\": 1, \"wealth\": 1}": 2,
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 2, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "69843c907fffa45cf3fe": 1,
+          "ceca8bafd65f3ae3abc9": 1,
+          "db163c0798e4cb8201ac": 1,
+          "cb7cd0f86360f885cc1d": 1,
+          "cf15ec0fa824eb814dee": 1,
+          "8945397b4afad63b76fa": 1,
+          "62590001dc1d070e49df": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 13,
+            "before": {
+              "health": 9,
+              "dignity": 9,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 9,
+              "skill": 5,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 3
+          },
+          {
+            "run": 2,
+            "step": 13,
+            "before": {
+              "health": 8,
+              "dignity": 5,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 5,
+              "skill": 8,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "month": 3
+          },
+          {
+            "run": 2,
+            "step": 25,
+            "before": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 11,
+              "network": 6,
+              "level": "L2",
+              "duration_in_level": 2,
+              "output": 5,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1,
+          "six_month_window": 6
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 6
+      }
+    },
+    "first_evidence": [
+      1,
+      13
+    ],
+    "untried_choices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "69843c907fffa45cf3fe",
+    "event": {
+      "title": "A colleague who comes in ill",
+      "description": "You kept your distance and said nothing. Within a week three more people on the team are ill. In the review afterwards your manager says, 'If someone had said something, we could have sent her home.' You think back to keeping quiet, and regret it."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Learn from it and propose a simple team rule: if you're ill, stay off, and the team covers"
+      },
+      {
+        "choice": 2,
+        "action": "Be glad you didn't catch it, and leave it there"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Be glad you didn't catch it, and leave it there",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": -1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "9f48c1d9caad36d658c8": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 14,
+            "before": {
+              "health": 9,
+              "dignity": 9,
+              "skill": 5,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 8,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      14
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "9f48c1d9caad36d658c8",
+    "event": {
+      "title": "A manager-free channel shares a screenshot of your boss",
+      "description": "In the Lynx late-night Slack channel, where no managers are allowed, someone posts a screenshot of Chris tearing into people: \"If you can't even do this, what bonus do you think you deserve?\" The next message: \"Thoughts? Should we reply as a group?\" You're in the channel. Passing a copy to HR, a staff representative, a union or a solicitor so they can deal with the complaint is not itself a disciplinary matter. Spreading it to people who have nothing to do with the complaint is another matter."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep"
+      },
+      {
+        "choice": 2,
+        "action": "Join in and have a moan"
+      },
+      {
+        "choice": 3,
+        "action": "Leave the channel and stay out of it"
+      },
+      {
+        "choice": 4,
+        "action": "Message Chris privately about team morale, without saying how you know"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "2": {
+        "action": "Join in and have a moan",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 2, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "447266990ff4dbb43c2b": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 15,
+            "before": {
+              "health": 9,
+              "dignity": 8,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 7,
+              "skill": 5,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "447266990ff4dbb43c2b": 1
+        },
+        "promotion_episodes": 0
+      },
+      "4": {
+        "action": "Message Chris privately about team morale, without saying how you know",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "2c2373ee508787b3c407": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 2,
+            "before": {
+              "health": 5,
+              "dignity": 6,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 3,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      15
+    ],
+    "untried_choices": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "447266990ff4dbb43c2b",
+    "event": {
+      "title": "A manager-free channel shares a screenshot of your boss",
+      "description": "You joined the mockery aimed at Chris himself, and the thread, with the screenshot and the jokes, was forwarded into channels that have nothing to do with the complaint. IT traces the chain. Handing the screenshot to HR, a representative, a union or a solicitor for the complaint is not part of what is being looked at."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Own up that you joined in"
+      },
+      {
+        "choice": 2,
+        "action": "Deny it"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Own up that you joined in",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": -2, \"output\": 0, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "94ee3e7a75fb3f15bc13": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 16,
+            "before": {
+              "health": 9,
+              "dignity": 7,
+              "skill": 5,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 8,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      16
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "94ee3e7a75fb3f15bc13",
+    "event": {
+      "title": "A milestone briefing for the execs",
+      "description": "At the company's quarterly leadership review, you have to report on a milestone for a project you own. The execs are short of time and only want conclusions and risks. They have no interest in process. There is still an unresolved risk on the project, and progress is only 'broadly on track'. You have ten minutes."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Lead with the conclusion: key results first, then the risk and the plan to deal with it"
+      },
+      {
+        "choice": 2,
+        "action": "Give only the good news: hide the risk and stick to highlights throughout"
+      },
+      {
+        "choice": 3,
+        "action": "Walk through the process in detail, still not reaching the point ten minutes in"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Give only the good news: hide the risk and stick to highlights throughout",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -3, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": -3, \"skill\": 0, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "2189daa19279a65dcf21": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 17,
+            "before": {
+              "health": 9,
+              "dignity": 8,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 5,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 0,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "5eb4e0c00b0a01f58ed8": 1
+        },
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      17
+    ],
+    "untried_choices": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "2189daa19279a65dcf21",
+    "event": {
+      "title": "A request to swap on-call over a peak trading bank holiday",
+      "description": "The bank-holiday on-call rota is out. Owen has a family matter and wants to swap with you. That would put you on cover for the three highest-risk days of the break in a row, during peak trading, when alerts are much more likely. Taking it would really help the team, and Owen would owe you. But three days straight means you cannot leave town, and it will drain you. You could decline and ask your manager to rebalance by the rules. You need to reply in the rota channel tonight."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Take the consecutive shifts and cover the three peak-trading days"
+      },
+      {
+        "choice": 2,
+        "action": "Decline the swap and ask your manager to rebalance by the rules"
+      }
+    ],
+    "seen": 3,
+    "answers": {
+      "2": {
+        "action": "Decline the swap and ask your manager to rebalance by the rules",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 1, \"network\": 0, \"output\": -1, \"skill\": 0, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 2, \"network\": -1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "a968fc96e977b4cf4994": 1,
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 18,
+            "before": {
+              "health": 9,
+              "dignity": 5,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 0,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 5,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          },
+          {
+            "run": 4,
+            "step": 9,
+            "before": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 7,
+              "dignity": 10,
+              "skill": 9,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1,
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      },
+      "1": {
+        "action": "Take the consecutive shifts and cover the three peak-trading days",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -2, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "86e6bb1b860f0d95f32a": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 18,
+            "before": {
+              "health": 9,
+              "dignity": 5,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 7,
+              "dignity": 6,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      18
+    ],
+    "untried_choices": []
+  },
+  {
+    "id": "a968fc96e977b4cf4994",
+    "event": {
+      "title": "Going for a valuable certification that takes months",
+      "description": "There is a well-regarded certification in the industry that would help your career, but preparing for it would take months of evenings and weekends. The exam fee is not cheap either. You are not sure whether to start now."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Set a steady revision plan over several months, broken into daily tasks you can finish"
+      },
+      {
+        "choice": 2,
+        "action": "Sign up, then study in fits and starts, and cram at the last minute"
+      },
+      {
+        "choice": 3,
+        "action": "Drop the idea because it looks too hard"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "3": {
+        "action": "Drop the idea because it looks too hard",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": -4, \"duration_in_level\": 1, \"energy\": 0, \"health\": -2, \"network\": 0, \"output\": 0, \"skill\": -1, \"wealth\": 0}": 1,
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 1, \"network\": 0, \"output\": 0, \"skill\": -1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "5eb4e0c00b0a01f58ed8": 1,
+          "c4604f963bb450e827ab": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 19,
+            "before": {
+              "health": 10,
+              "dignity": 5,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 1,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          },
+          {
+            "run": 3,
+            "step": 5,
+            "before": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1,
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      1,
+      19
+    ],
+    "untried_choices": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "5eb4e0c00b0a01f58ed8",
+    "event": {
+      "title": "A milestone briefing for the execs",
+      "description": "You only talked about highlights, and the execs came away impressed on the day. Two months later the risk materialises, the damage spreads, and leadership digs out the briefing notes: 'Why was there not a word about risk?' You are on the back foot."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Run a review, own the bad call, and show the fix already in place"
+      },
+      {
+        "choice": 2,
+        "action": "Argue that 'nobody could have seen this then'"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Run a review, own the bad call, and show the fix already in place",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "fbe394a47e26cfc1de05": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 20,
+            "before": {
+              "health": 8,
+              "dignity": 1,
+              "skill": 4,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 7,
+              "dignity": 2,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      20
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "fbe394a47e26cfc1de05",
+    "event": {
+      "title": "Emergency hotfix — do you skip the process?",
+      "description": "Production has a critical fault and needs an immediate hotfix. The standard path of code review, staging checks and a confirmed rollback would take about two hours. A client is in the middle of a live promotional stream, and every minute of downtime is a serious loss. The operations lead hints you could ship now and backfill the process later."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Stick to the full process, and turn on a degraded mode to limit the impact on the client"
+      },
+      {
+        "choice": 2,
+        "action": "Ship on a shortened path while the team prepares a rollback and completes the review within an hour"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Ship on a shortened path while the team prepares a rollback and completes the review within an hour",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 2, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "fbc58cf33400241af0f3": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 21,
+            "before": {
+              "health": 7,
+              "dignity": 2,
+              "skill": 5,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": -1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 7,
+              "dignity": 1,
+              "skill": 6,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": 1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {
+          "fbc58cf33400241af0f3": 1
+        },
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      21
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "fbc58cf33400241af0f3",
+    "event": {
+      "title": "Emergency hotfix — do you skip the process?",
+      "description": "The hotfix goes out in time and the live event carries on. When the process is completed afterwards, it finds an edge case the fix missed. The rollback is ready, so there is no second incident. The CTO asks you privately what would have happened if the rollback had failed."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Admit the risk, and propose a pre-authorised emergency path that sets out when the process can be shortened"
+      },
+      {
+        "choice": 2,
+        "action": "Stress that this success shows the team's skill with incidents, and argue for keeping the current flexibility"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Stress that this success shows the team's skill with incidents, and argue for keeping the current flexibility",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 3, \"health\": 0, \"network\": 0, \"output\": -1, \"skill\": 0, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "abb3cf2ec145846ceb80": 1
+        },
+        "examples": [
+          {
+            "run": 1,
+            "step": 22,
+            "before": {
+              "health": 7,
+              "dignity": 1,
+              "skill": 6,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": 1,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 7,
+              "dignity": 0,
+              "skill": 6,
+              "network": 0,
+              "level": "L1",
+              "duration_in_level": 6,
+              "output": 0,
+              "wealth": -2,
+              "energy": 3
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "eliminated": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 0
+      }
+    },
+    "first_evidence": [
+      1,
+      22
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "d383609114d7f63ab9eb",
+    "event": {
+      "title": "The gym after work, or staying late to get ahead",
+      "description": "You started going to the gym after work and have kept it up. You feel better and have more energy. Tonight there is a non-urgent piece of work that would make tomorrow easier if you finished it. You can only do one: the gym or staying late."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Go to the gym as planned and get the work done efficiently tomorrow"
+      },
+      {
+        "choice": 2,
+        "action": "Skip the gym, stay late, and clear the work tonight"
+      },
+      {
+        "choice": 3,
+        "action": "Try to do both: gym first, then stay up late to finish the work"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Go to the gym as planned and get the work done efficiently tomorrow",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 2, \"network\": 0, \"output\": -1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "588a735f62c42334bff7": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 2,
+            "before": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 7,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      2
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "588a735f62c42334bff7",
+    "event": {
+      "title": "Health check returning the wrong status",
+      "description": "Your load-balancer health-check endpoint returns 200, but the body says status is degraded, so traffic still hits unhealthy instances."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Fix the endpoint now and check the other services"
+      },
+      {
+        "choice": 2,
+        "action": "Fix this service only"
+      },
+      {
+        "choice": 3,
+        "action": "Leave it for on-call"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "1": {
+        "action": "Fix the endpoint now and check the other services",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "af6d77551c117c67b940": 1,
+          "65d2e3f9e56005788fcd": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 3,
+            "before": {
+              "health": 6,
+              "dignity": 7,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          },
+          {
+            "run": 3,
+            "step": 2,
+            "before": {
+              "health": 5,
+              "dignity": 6,
+              "skill": 3,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 5,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 2
+      }
+    },
+    "first_evidence": [
+      2,
+      3
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "af6d77551c117c67b940",
+    "event": {
+      "title": "A colleague who comes in ill",
+      "description": "Faye is touched but still hesitates: 'I feel bad, you've got your own work.' You take the most urgent part and she goes home. Now your own schedule is packed, the milestone is close, and you are feeling the strain."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell your manager you are covering Faye for now, and ask for a realistic plan"
+      },
+      {
+        "choice": 2,
+        "action": "Carry all of it without telling anyone, and work late to catch up"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Tell your manager you are covering Faye for now, and ask for a realistic plan",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "a98f64d9175fc8fcadf8": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 4,
+            "before": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 4,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 8,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      4
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "a98f64d9175fc8fcadf8",
+    "event": {
+      "title": "The person next to you wears very strong perfume",
+      "description": "Your new neighbour wears very heavy perfume. A morning of it has given you a headache. She clearly loves it, and even asks, \"Nice, isn't it?\" Saying no might hurt her feelings, but putting up with it is miserable."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell her gently that strong scent gives you headaches, and ask if she could wear less"
+      },
+      {
+        "choice": 2,
+        "action": "Praise it insincerely and keep sitting there with a headache"
+      },
+      {
+        "choice": 3,
+        "action": "Turn to other colleagues and moan that she \"stinks the place out\""
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Tell her gently that strong scent gives you headaches, and ask if she could wear less",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "c4604f963bb450e827ab": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 5,
+            "before": {
+              "health": 5,
+              "dignity": 8,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 9,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      5
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "c4604f963bb450e827ab",
+    "event": {
+      "title": "A former colleague at a competitor fishes for intel",
+      "description": "Former colleague Felix has moved to Helios. He once referred you into this job. Over dinner he asks, \"Has Lynx locked the team merger yet? What's the Polaris budget?\" His contract forbids him from fishing for commercial information from people who still work here."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Refuse, and keep the chat to personal matters"
+      },
+      {
+        "choice": 2,
+        "action": "Share non-confidential industry gossip"
+      },
+      {
+        "choice": 3,
+        "action": "Tell him about the draft merger plan, as a way of repaying the favour"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "3": {
+        "action": "Tell him about the draft merger plan, as a way of repaying the favour",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": -3, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 2
+        },
+        "successors": {
+          "27004f907057db1eacef": 2
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 6,
+            "before": {
+              "health": 6,
+              "dignity": 9,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 6,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          },
+          {
+            "run": 3,
+            "step": 6,
+            "before": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 4,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {
+          "27004f907057db1eacef": 2
+        },
+        "promotion_episodes": 2
+      }
+    },
+    "first_evidence": [
+      2,
+      6
+    ],
+    "untried_choices": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "27004f907057db1eacef",
+    "event": {
+      "title": "A former colleague at a competitor fishes for intel",
+      "description": "InfoSec opens an investigation. Your call records with Felix are pulled."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Cooperate with the investigation"
+      },
+      {
+        "choice": 2,
+        "action": "Deny it"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "2": {
+        "action": "Deny it",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": -5, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": -2, \"skill\": 0, \"wealth\": -2}": 1,
+          "{\"dignity\": -4, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": -2, \"skill\": 0, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "83927782025a75737fcb": 1,
+          "42b938c6ac9dc5b29dde": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 7,
+            "before": {
+              "health": 6,
+              "dignity": 6,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 6,
+              "dignity": 1,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          },
+          {
+            "run": 3,
+            "step": 7,
+            "before": {
+              "health": 5,
+              "dignity": 4,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 2
+      }
+    },
+    "first_evidence": [
+      2,
+      7
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "83927782025a75737fcb",
+    "event": {
+      "title": "Pitching against a cheaper rival",
+      "description": "The company is bidding for a major client project, and you are leading the pitch. Your main rival is known for undercutting on price. The panel is a mix of technical people and procurement, so they care about both the solution and the quote. You have heard the rival will almost certainly lead with “we’re cheaper.” How you open will set the tone."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Play to your strengths: use technical depth and total cost of ownership to justify the higher price"
+      },
+      {
+        "choice": 2,
+        "action": "Slash the price at the last minute to match them, and skate through the actual pitch"
+      },
+      {
+        "choice": 3,
+        "action": "Take a swipe at the rival: imply their tech is weak and they have botched jobs before"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Play to your strengths: use technical depth and total cost of ownership to justify the higher price",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "ea21e12d970a3cbe05c7": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 8,
+            "before": {
+              "health": 6,
+              "dignity": 1,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 1,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 1,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "ceca8bafd65f3ae3abc9": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      8
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "ceca8bafd65f3ae3abc9",
+    "event": {
+      "title": "Pitching against a cheaper rival",
+      "description": "You walk through a solid technical design and a cost-of-ownership model that explains the price. The technical panellists nod along. Procurement still stares at the number: “You’re well above the other bid. How do we sell this to our leadership?”"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Offer staged payments plus a measurable ROI model procurement can repeat upstairs"
+      },
+      {
+        "choice": 2,
+        "action": "Keep talking technology and dodge the pricing question"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Offer staged payments plus a measurable ROI model procurement can repeat upstairs",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "3371acfeda23ea7636e0": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 14,
+            "before": {
+              "health": 8,
+              "dignity": 5,
+              "skill": 8,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 6,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      14
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "3371acfeda23ea7636e0",
+    "event": {
+      "title": "The colleague who buys coffee is collecting favours for a lead vote",
+      "description": "Harvey brings the team coffees from Pret every day and never takes money. You notice a notebook: “Favours ledger: Chris +2, Ethan +1…” The team is about to pick an acting lead, and Harvey is standing. Today he hands you a larger coffee: “Put in a word for me at the review tonight?”"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Refuse to campaign. In the review, stick to the facts"
+      },
+      {
+        "choice": 2,
+        "action": "Agree to talk him up, in return for later support"
+      },
+      {
+        "choice": 3,
+        "action": "Warn your manager privately that someone is trading favours for support"
+      },
+      {
+        "choice": 4,
+        "action": "Start buying coffees yourself and join the favours game"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "4": {
+        "action": "Start buying coffees yourself and join the favours game",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": -2}": 1
+        },
+        "successors": {
+          "983b9732d645fe899fc1": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 15,
+            "before": {
+              "health": 8,
+              "dignity": 6,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 5,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -3,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      15
+    ],
+    "untried_choices": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "983b9732d645fe899fc1",
+    "event": {
+      "title": "An intern accidentally emails a rant about the manager",
+      "description": "Intern Quinn accidentally sends \"Chris changes his mind like a rollercoaster\" to the whole 200-person department. Two minutes later Quinn is in tears at your desk: \"What do I do? I can't recall it.\" Chris is on the thread and has already read it."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Go with Quinn to apologise to Chris in person straight away"
+      },
+      {
+        "choice": 2,
+        "action": "Suggest sending a follow-up claiming the account was hacked"
+      },
+      {
+        "choice": 3,
+        "action": "Stay out of it and leave Quinn to deal with it"
+      },
+      {
+        "choice": 4,
+        "action": "Call IT first and ask whether the email can still be recalled"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "4": {
+        "action": "Call IT first and ask whether the email can still be recalled",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 2, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "27fd68ea887552a5f95d": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 16,
+            "before": {
+              "health": 8,
+              "dignity": 5,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -3,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 7,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "27fd68ea887552a5f95d": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      16
+    ],
+    "untried_choices": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "27fd68ea887552a5f95d",
+    "event": {
+      "title": "An intern accidentally emails a rant about the manager",
+      "description": "IT cannot recall it, but they suggest you go and apologise. You take Quinn to see Chris."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Go ahead with the apology"
+      },
+      {
+        "choice": 2,
+        "action": "Go with the fake-hack story instead"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Go ahead with the apology",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 2, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "a313e10e3eac2f386baf": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 17,
+            "before": {
+              "health": 8,
+              "dignity": 7,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "a313e10e3eac2f386baf": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      17
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "a313e10e3eac2f386baf",
+    "event": {
+      "title": "An intern accidentally emails a rant about the manager",
+      "description": "Chris is silent for ten minutes, then says it must not happen again. Quinn gets a warning and keeps the internship."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Help Quinn write a proper wash-up"
+      },
+      {
+        "choice": 2,
+        "action": "Step back and stay out"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Help Quinn write a proper wash-up",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "5d7ef9ba9e8c6a4d57af": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 18,
+            "before": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      18
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "5d7ef9ba9e8c6a4d57af",
+    "event": {
+      "title": "Pushed on stage at the Christmas party",
+      "description": "The Christmas party is in full swing. The host spots you, and your table, colleagues and manager included, starts chanting for you to get up and do something to “get the room going.” You have nothing prepared and this is not your sort of thing, but every eye is on you and someone is already holding out a microphone."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Take it in good humour: a quick gag or a bit of audience interaction, just enough to lift the room"
+      },
+      {
+        "choice": 2,
+        "action": "Smile and say, ‘Thanks, but not tonight’"
+      },
+      {
+        "choice": 3,
+        "action": "Shut it down flat with “I’m not doing that”, and let the room go quiet"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "2": {
+        "action": "Smile and say, ‘Thanks, but not tonight’",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": -4, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 2}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "8945397b4afad63b76fa": 1,
+          "66ab6f5983c01987e66b": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 19,
+            "before": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": -2,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          },
+          {
+            "run": 4,
+            "step": 7,
+            "before": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 8,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {
+          "8945397b4afad63b76fa": 2
+        },
+        "promotion_episodes": 2
+      }
+    },
+    "first_evidence": [
+      2,
+      19
+    ],
+    "untried_choices": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "8945397b4afad63b76fa",
+    "event": {
+      "title": "Pushed on stage at the Christmas party",
+      "description": "You stay off the stage and at your table, chatting and clapping along. You are still very much part of the evening. Then the table turns on Jordan, a new joiner who hates this sort of thing, and they go bright red."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Get Jordan off the hook: steer the attention elsewhere and give them a way out"
+      },
+      {
+        "choice": 2,
+        "action": "Leave them to deal with it"
+      }
+    ],
+    "seen": 2,
+    "answers": {
+      "1": {
+        "action": "Get Jordan off the hook: steer the attention elsewhere and give them a way out",
+        "count": 2,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 2, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1,
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "42435b8aee796297267b": 1,
+          "b853f0c7f29012670d54": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 20,
+            "before": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 6
+          },
+          {
+            "run": 4,
+            "step": 14,
+            "before": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 1,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 1,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 2
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 2
+      }
+    },
+    "first_evidence": [
+      2,
+      20
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "42435b8aee796297267b",
+    "event": {
+      "title": "Grey-area items on a travel expense claim",
+      "description": "You have just finished a week on a client site and are putting the expenses together. A few items sit in a grey area: 1) coffees you bought the client as a gift (no VAT receipt, only a till slip); 2) a late dinner you ordered for yourself after overtime (policy covers a 'working meal'; late dinners are not spelled out); 3) the taxi to the airport diverted to pick up a colleague travelling with you (about £3 extra)."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item"
+      },
+      {
+        "choice": 2,
+        "action": "Claim as usual, taking colleagues' advice that 'everyone does this, it's fine'"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Claim as usual, taking colleagues' advice that 'everyone does this, it's fine'",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 1}": 1
+        },
+        "successors": {
+          "df11785dea15a7d1cda0": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 21,
+            "before": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "df11785dea15a7d1cda0": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      21
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "df11785dea15a7d1cda0",
+    "event": {
+      "title": "Grey-area items on a travel expense claim",
+      "description": "The claim goes through. Next month a spot audit flags your late-dinner line as 'possible non-compliance'. Finance asks you to explain or repay."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Repay it, admit you should have been stricter, and promise to stick to the policy"
+      },
+      {
+        "choice": 2,
+        "action": "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -1, \"duration_in_level\": 0, \"energy\": 3, \"health\": 0, \"network\": -1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 2,
+            "step": 22,
+            "before": {
+              "health": 8,
+              "dignity": 9,
+              "skill": 10,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 8,
+              "dignity": 8,
+              "skill": 10,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      2,
+      22
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "b24a9e0b98254e33b8c1",
+    "event": {
+      "title": "Seated with a senior leader at the Christmas party",
+      "description": "The Christmas party seating plan puts you, though you are not senior, on a table with a director you almost never see. A chance like this is rare, and easy to get wrong. After the opening small talk the table goes quiet, and they are looking round the group."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Open with something light: an industry anecdote, or an honest take on the evening"
+      },
+      {
+        "choice": 2,
+        "action": "Seize the moment and lay the praise on thick so they remember you"
+      },
+      {
+        "choice": 3,
+        "action": "Freeze, eat, and say almost nothing all night"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Open with something light: an industry anecdote, or an honest take on the evening",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 0, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "588a735f62c42334bff7": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 1,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 6,
+              "skill": 3,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "f8ed59cca187aa36e9ee": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      1
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "65d2e3f9e56005788fcd",
+    "event": {
+      "title": "You overhear an unpublished project naming you",
+      "description": "In the fifteenth-floor kitchen, platform director Harper and Miles, a fellow manager, drop their voices: “Polaris starts in Q3. On the Lynx side we’ll have… lead the tech.” The word you half-catch in the gap is your surname. The project has not been announced. If Miles realises you were listening, it may look like you were fishing."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Walk in as if you have just come for water and say hello as normal"
+      },
+      {
+        "choice": 2,
+        "action": "Leave quietly and act as if you heard nothing"
+      },
+      {
+        "choice": 3,
+        "action": "Stay in the corner and listen to the rest"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Walk in as if you have just come for water and say hello as normal",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 1, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "f8ed59cca187aa36e9ee": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 3,
+            "before": {
+              "health": 4,
+              "dignity": 6,
+              "skill": 5,
+              "network": 2,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      3
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "f8ed59cca187aa36e9ee",
+    "event": {
+      "title": "Seated with a senior leader at the Christmas party",
+      "description": "Your opener is well judged. The table warms up, they pick up the thread, and they ask in passing what you work on. It is a chance to be noticed, but it is only a passing question, time is short, and this is the wrong setting for a pitch."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Say in a couple of sentences what you do and why it matters, then stop without taking over the table"
+      },
+      {
+        "choice": 2,
+        "action": "Treat it as a long status update, and sneak in a request while you are at it"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Say in a couple of sentences what you do and why it matters, then stop without taking over the table",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "a968fc96e977b4cf4994": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 4,
+            "before": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 5,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": 2,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      4
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "42b938c6ac9dc5b29dde",
+    "event": {
+      "title": "A new colleague with no sense of privacy",
+      "description": "Lou has just joined and is over-familiar from the start. Within days she has asked whether you own or rent, whether you are seeing anyone and how you get on with your manager. At lunch she also presses you on 'who on the team doesn't get on'. She means no harm and just doesn't seem to know where the line is, but the questions make you uncomfortable, and people nearby look awkward too."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Laugh it off and gently draw a line: 'Let's not go there. Talk about something else?'"
+      },
+      {
+        "choice": 2,
+        "action": "Be blunt: 'That's private. Please don't ask'"
+      },
+      {
+        "choice": 3,
+        "action": "Answer each question, not wanting to embarrass a new colleague"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Laugh it off and gently draw a line: 'Let's not go there. Talk about something else?'",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "12c3a2e2117850438969": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 8,
+            "before": {
+              "health": 5,
+              "dignity": 0,
+              "skill": 6,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 1,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "cb7cd0f86360f885cc1d": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      8
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "12c3a2e2117850438969",
+    "event": {
+      "title": "Choosing a path for a legacy service hitting its limits",
+      "description": "A core order service you own has been live for three years and is reaching its performance limit. Monitoring shows QPS already at 80% of the original design limit, and in another quarter or two normal growth will probably overwhelm it. Your manager has given you three months to propose a path, without saying which one. You could rewrite it on a modern framework as a three-to-five-year foundation, refactor it in stages on the current architecture, or ship the smallest performance patches that will carry you through this cycle."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Rewrite on a modern framework as a three-to-five-year foundation"
+      },
+      {
+        "choice": 2,
+        "action": "Refactor in stages on the current architecture"
+      },
+      {
+        "choice": 3,
+        "action": "Ship the smallest performance patches and ride out this cycle"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Refactor in stages on the current architecture",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 9,
+            "before": {
+              "health": 5,
+              "dignity": 1,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 0,
+              "wealth": -1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 1,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": 1,
+              "wealth": -1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      9
+    ],
+    "untried_choices": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "cb7cd0f86360f885cc1d",
+    "event": {
+      "title": "A new colleague with no sense of privacy",
+      "description": "Lou picks up on it, looks a bit embarrassed and stops. You move the conversation on to work and hobbies, and things feel normal again. A couple of days later she is asking about 'team gossip' again. She really does not seem to know where the line is."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Kindly suggest she gossips less and focuses on the work while she's new, for her own sake"
+      },
+      {
+        "choice": 2,
+        "action": "Keep deflecting without spelling it out, and stay out of it"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Kindly suggest she gossips less and focuses on the work while she's new, for her own sake",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "ec874e379e7767334554": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 14,
+            "before": {
+              "health": 10,
+              "dignity": 1,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 2,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 3,
+              "wealth": -1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      14
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "3a7d5988cd50418f5024",
+    "event": {
+      "title": "Telling the client the project will be late",
+      "description": "An upstream dependency has failed on a project you own. You now know you will be a week late, and the original delivery date is three days away. The client cares a lot about this one and has even put their own name behind it internally. You need to decide how to tell them."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell them at once, with a cause analysis, a recovery plan and a new timetable"
+      },
+      {
+        "choice": 2,
+        "action": "Wait until delivery day in case you still make it"
+      },
+      {
+        "choice": 3,
+        "action": "Report 'on time', then quietly work late and try to catch up"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Tell them at once, with a cause analysis, a recovery plan and a new timetable",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "2189daa19279a65dcf21": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 17,
+            "before": {
+              "health": 10,
+              "dignity": 4,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 5,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "667cd136d203b05d83fe": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      17
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "86e6bb1b860f0d95f32a",
+    "event": {
+      "title": "Late-night work messages and the manager's reaction",
+      "description": "Colleague Tara posts \"today's progress\" and \"tomorrow's plan\" in the channel every night at 11pm. Your manager, Chris, is often first to react. You are never online at that hour. In the weekly meeting Chris said \"we need to respond promptly\". Tonight Tara @channels a question about an API field."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Reply at once to look professional"
+      },
+      {
+        "choice": 2,
+        "action": "Reply in the morning and spell out your working hours"
+      },
+      {
+        "choice": 3,
+        "action": "Suggest to your manager privately that important items go by email"
+      },
+      {
+        "choice": 4,
+        "action": "Copy Tara and start sending late-night updates yourself"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "3": {
+        "action": "Suggest to your manager privately that important items go by email",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": -2, \"duration_in_level\": -4, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "667cd136d203b05d83fe": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 19,
+            "before": {
+              "health": 7,
+              "dignity": 6,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 6,
+              "dignity": 4,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      19
+    ],
+    "untried_choices": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "id": "667cd136d203b05d83fe",
+    "event": {
+      "title": "Telling the client the project will be late",
+      "description": "You were straight with them early. The client is not pleased, but respects that you were professional and took responsibility: 'At least you didn't hide it. I can explain that internally.' Then they push: could you ship a usable core first and the rest next week?"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Check what is feasible, then offer phased delivery: the core first, the rest after"
+      },
+      {
+        "choice": 2,
+        "action": "To keep them happy, promise both the core and the full version by the original date"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Check what is feasible, then offer phased delivery: the core first, the rest after",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 2, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "d4968018089c0f473b27": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 20,
+            "before": {
+              "health": 6,
+              "dignity": 4,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 6,
+              "dignity": 5,
+              "skill": 11,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      20
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "d4968018089c0f473b27",
+    "event": {
+      "title": "A metrics problem, ten minutes before the briefing",
+      "description": "The department’s quarterly review starts in ten minutes. You have just checked the Nebula Growth dashboard. Slide 7 of your manager’s pack says “MAU up 38% month on month”, but that figure mixes trial accounts in with paying users. The external definition counts paying MAU only, which gives +12%. These numbers are the highlight of the briefing. Your manager is making small talk with the VP and asks you, “Pack’s fine, yes?”"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Quietly point out the definition problem now and suggest correcting it in the room"
+      },
+      {
+        "choice": 2,
+        "action": "Hold off for now and email privately after the meeting"
+      },
+      {
+        "choice": 3,
+        "action": "Say nothing and let the briefing run"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Quietly point out the definition problem now and suggest correcting it in the room",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 2, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "9c19b9e6c7fd7c9a815c": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 21,
+            "before": {
+              "health": 6,
+              "dignity": 5,
+              "skill": 11,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 6,
+              "dignity": 7,
+              "skill": 12,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 0,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "9c19b9e6c7fd7c9a815c": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      21
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "9c19b9e6c7fd7c9a815c",
+    "event": {
+      "title": "A metrics problem, ten minutes before the briefing",
+      "description": "Your manager’s face tightens. They drop the slide and go with +12%. The VP asks why it is lower than the figure in last week’s comms. Afterwards your manager says: “Check this a day ahead next time.”"
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Offer to follow up with the VP on how the metric is defined"
+      },
+      {
+        "choice": 2,
+        "action": "Leave it there so your manager is not made to look small"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Leave it there so your manager is not made to look small",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 3, \"health\": 0, \"network\": 1, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "04047988ffcbc799025b": 1
+        },
+        "examples": [
+          {
+            "run": 3,
+            "step": 22,
+            "before": {
+              "health": 6,
+              "dignity": 7,
+              "skill": 12,
+              "network": 4,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 0,
+              "energy": 0
+            },
+            "after": {
+              "health": 6,
+              "dignity": 7,
+              "skill": 12,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 0,
+              "energy": 3
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      3,
+      22
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "7087786222f34f85b3e9",
+    "event": {
+      "title": "The office war over windows and heating",
+      "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+      },
+      {
+        "choice": 2,
+        "action": "Make the call: set the temperature most people like, and tell them both to stop"
+      },
+      {
+        "choice": 3,
+        "action": "Keep your head down and work. It's not your problem"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 2, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "9f48c1d9caad36d658c8": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 1,
+            "before": {
+              "health": 5,
+              "dignity": 5,
+              "skill": 1,
+              "network": 1,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 6,
+              "skill": 2,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "39c098ca66e010ee1e72": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      1
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "2c2373ee508787b3c407",
+    "event": {
+      "title": "Whether to join a cross-team architecture review — and how hard to push",
+      "description": "The department tech committee is holding a cross-team architecture review next week, covering next-quarter rebuilds of several core services. Reviewers get a vote and share responsibility for the outcome later. You have been invited as a cross-team reviewer (you have a lot of experience with API performance and reliability). Accepting means three or four days reading their design docs and preparing comments. If you decline, they review it among themselves. You miss a chance at cross-team influence, but your own timetable is untouched."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Accept, read the docs properly, and prepare comments"
+      },
+      {
+        "choice": 2,
+        "action": "Decline and keep the time for your own team's delivery"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Accept, read the docs properly, and prepare comments",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 1, \"energy\": 0, \"health\": -1, \"network\": 3, \"output\": -1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "f1c441606c214c908aa4": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 3,
+            "before": {
+              "health": 5,
+              "dignity": 7,
+              "skill": 3,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 1,
+              "output": 0,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 5,
+              "network": 6,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 1
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "f1c441606c214c908aa4": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      3
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "f1c441606c214c908aa4",
+    "event": {
+      "title": "Whether to join a cross-team architecture review — and how hard to push",
+      "description": "You go in deep and raise a core objection to one design: they plan to introduce a framework that has not been used at scale inside the company, which carries a maintenance risk. Their owner disagrees in the meeting, fairly bluntly. The chair suggests you carry on the discussion afterwards. You need to decide what to do next."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Write a full risk assessment and submit it formally to the tech committee"
+      },
+      {
+        "choice": 2,
+        "action": "Defer to their judgement and file your comments as an appendix"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Write a full risk assessment and submit it formally to the tech committee",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 1, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": -3, \"output\": 0, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "39c098ca66e010ee1e72": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 4,
+            "before": {
+              "health": 4,
+              "dignity": 7,
+              "skill": 5,
+              "network": 6,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      4
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "39c098ca66e010ee1e72",
+    "event": {
+      "title": "The office war over windows and heating",
+      "description": "You set out what each of them needs and suggest a fixed middle temperature, a small screen to keep the draught off Maya, and a desk fan for Hugh. Both feel looked after, and most of the heat goes out of the row. To make it happen, someone has to ask facilities for the extras."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Take the lead with facilities and get the extras in"
+      },
+      {
+        "choice": 2,
+        "action": "You had the idea. They can chase it themselves"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "You had the idea. They can chase it themselves",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "20f82cb5af27b6e04930": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 5,
+            "before": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      5
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "20f82cb5af27b6e04930",
+    "event": {
+      "title": "Thanking a colleague from the next team who went out of their way",
+      "description": "Last week a nasty bug in a barely maintained legacy submodule had you stuck for two days. Chris, a senior engineer on the next team, sat at your desk for a whole afternoon and helped you find and fix it. Nobody required them to spend that long. It is Friday, and you want to say thank you. You could take them out for a good lunch on you, around £30–40. You could write a formal recognition note on the intranet, copied to Chris and their manager, recording their high-quality cross-team help. Or you could do nothing special now and make a point of helping them next time they need it."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Take them out for lunch privately, straight away"
+      },
+      {
+        "choice": 2,
+        "action": "Write a formal recognition note and copy their manager"
+      },
+      {
+        "choice": 3,
+        "action": "Do nothing special for now and help them next time they need it"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Write a formal recognition note and copy their manager",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 2, \"duration_in_level\": 1, \"energy\": 0, \"health\": 1, \"network\": 0, \"output\": 0, \"skill\": 1, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "5d7ef9ba9e8c6a4d57af": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 6,
+            "before": {
+              "health": 4,
+              "dignity": 8,
+              "skill": 7,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 2,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 8,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 2
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      6
+    ],
+    "untried_choices": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "66ab6f5983c01987e66b",
+    "event": {
+      "title": "A colleague keeps @channel-ing questions already answered in the docs",
+      "description": "In the main project channel, new joiner Tessa @channels questions several times a day that are clearly in the docs or a thirty-second search away. Plenty of people are tired of the pings. This time it's a question answered on the first page of the wiki."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "DM her a doc link and suggest checking the wiki or asking the owner before using @channel"
+      },
+      {
+        "choice": 2,
+        "action": "Call Tessa out in the channel: \"Could you read the docs before asking?\""
+      },
+      {
+        "choice": 3,
+        "action": "Ignore it like everyone else and leave the question hanging"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "DM her a doc link and suggest checking the wiki or asking the owner before using @channel",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "2189daa19279a65dcf21": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 8,
+            "before": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "after": {
+              "health": 5,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 3,
+              "output": -1,
+              "wealth": 1,
+              "energy": 3
+            },
+            "month": 3
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      8
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "b853f0c7f29012670d54",
+    "event": {
+      "title": "A colleague's late handovers keep pushing back your work",
+      "description": "Your work cannot start until your colleague Will hands his over. He always delivers at the last minute. This time it arrives on the afternoon of the deadline, so you are stuck working late. He shrugs, \"It was only a bit late.\""
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Agree a handover time with him, and bring in the project schedule if it needs writing down"
+      },
+      {
+        "choice": 2,
+        "action": "Work late to cover it and say nothing"
+      },
+      {
+        "choice": 3,
+        "action": "Call him out in the main channel as always holding things up"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Agree a handover time with him, and bring in the project schedule if it needs writing down",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "4d9a3352e869e139b978": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 15,
+            "before": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 1,
+              "wealth": 1,
+              "energy": 0
+            },
+            "after": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 4,
+              "output": 2,
+              "wealth": 1,
+              "energy": 0
+            },
+            "month": 4
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      15
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "9302bd4b70b4302bb0b8",
+    "event": {
+      "title": "An engagement survey that asks for your staff ID",
+      "description": "A month later Chris books a 1:1: “Someone said you’ve got an issue with me.” He does not know if it came from the survey."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Tell him face to face what you actually need"
+      },
+      {
+        "choice": 2,
+        "action": "Deny it and say it may be a misunderstanding"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Tell him face to face what you actually need",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": -1, \"network\": 0, \"output\": 0, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "b0816f87a837d11997ea": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 17,
+            "before": {
+              "health": 10,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 2,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 2,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      17
+    ],
+    "untried_choices": [
+      2
+    ]
+  },
+  {
+    "id": "b0816f87a837d11997ea",
+    "event": {
+      "title": "A live demo blows up in front of the client",
+      "description": "You are at the client's offices demonstrating a new feature. At the key checkout step the system throws an error and the page freezes. Their decision-makers sit opposite you, waiting to see it work. You know the demo environment is flaky, but the room has already gone cold."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value"
+      },
+      {
+        "choice": 2,
+        "action": "Keep hitting refresh as it gets messier, without switching plan"
+      },
+      {
+        "choice": 3,
+        "action": "In a panic, say it is a problem on the client's network"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 0, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "ec874e379e7767334554": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 18,
+            "before": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 2,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L1",
+              "duration_in_level": 5,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 5
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {
+          "26a3c794dfa9e474bc67": 1
+        },
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      18
+    ],
+    "untried_choices": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "c7d4b068456766f4a8b5",
+    "event": {
+      "title": "Lunch with the team, or keep the break to yourself",
+      "description": "At your third lunch you overhear people discussing who will get places on next quarter’s flagship project. Someone floats your name. Someone else says “we never see them.” You need to decide how often to keep going."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Keep lunching with the team every day"
+      },
+      {
+        "choice": 2,
+        "action": "Drop back to Tuesdays and Thursdays once you have the key information"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "2": {
+        "action": "Drop back to Tuesdays and Thursdays once you have the key information",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 1, \"network\": 2, \"output\": 1, \"skill\": 0, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "26a3c794dfa9e474bc67": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 20,
+            "before": {
+              "health": 8,
+              "dignity": 10,
+              "skill": 9,
+              "network": 3,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 3,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 4,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      20
+    ],
+    "untried_choices": [
+      1
+    ]
+  },
+  {
+    "id": "26a3c794dfa9e474bc67",
+    "event": {
+      "title": "A live demo blows up in front of the client",
+      "description": "You switch to the fallback without fuss, finish the core flow, and use it to talk through the system's fault-tolerance. The client even thinks you were well prepared. After the demo their engineering lead asks you privately what caused the error."
+    },
+    "phase": "event",
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Give the root cause straight, and promise a write-up of the investigation and fix afterwards"
+      },
+      {
+        "choice": 2,
+        "action": "Fudge it: 'Small issue, doesn't affect anything'"
+      }
+    ],
+    "seen": 1,
+    "answers": {
+      "1": {
+        "action": "Give the root cause straight, and promise a write-up of the investigation and fix afterwards",
+        "count": 1,
+        "delta_counts": {
+          "{\"dignity\": 0, \"duration_in_level\": 0, \"energy\": 0, \"health\": 0, \"network\": 1, \"output\": 1, \"skill\": 2, \"wealth\": 0}": 1
+        },
+        "successors": {
+          "de8d090c6e08553050c8": 1
+        },
+        "examples": [
+          {
+            "run": 4,
+            "step": 21,
+            "before": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 9,
+              "network": 5,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 4,
+              "wealth": 2,
+              "energy": 0
+            },
+            "after": {
+              "health": 9,
+              "dignity": 10,
+              "skill": 11,
+              "network": 6,
+              "level": "L2",
+              "duration_in_level": 1,
+              "output": 5,
+              "wealth": 2,
+              "energy": 0
+            },
+            "month": 6
+          }
+        ],
+        "episode_outcomes": {
+          "six_month_window": 1
+        },
+        "delayed_same_title": {},
+        "promotion_episodes": 1
+      }
+    },
+    "first_evidence": [
+      4,
+      21
+    ],
+    "untried_choices": [
+      2
+    ]
+  }
+]

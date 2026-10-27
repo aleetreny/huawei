@@ -1,0 +1,29 @@
+[
+  {
+    "id": "0018fb645fb0d1a6598b",
+    "event": {
+      "title": "How thorough to be in code review as the team grows",
+      "description": "You leave more than thirty comments. The new colleague starts by working through them carefully, but after the third round they message you privately: should they run everything against your bar themselves before opening a PR? Your manager has noticed their PRs are merging more slowly and books a 1:1 to ask how you are reviewing."
+    },
+    "choices": [
+      {
+        "choice": 1,
+        "action": "Turn the standard into a team code-review checklist and roll it out"
+      },
+      {
+        "choice": 2,
+        "action": "Go easier on this new colleague until they have found their feet"
+      }
+    ],
+    "answers": {
+      "2": {
+        "run": 492,
+        "step": 47,
+        "month": 12
+      }
+    },
+    "untried_choices": [
+      1
+    ]
+  }
+]

@@ -1,0 +1,2882 @@
+[
+  {
+    "position": 0,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 1,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 2,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 3,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 4,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 5,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 6,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 7,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 8,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 9,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 10,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 11,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 12,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 13,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 14,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 15,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 16,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 17,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 18,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 19,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 20,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 21,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 22,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 23,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 24,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 25,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 26,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 27,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 28,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 29,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 30,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 31,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 32,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 33,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 34,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 35,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 36,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 37,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 38,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 39,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 40,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 41,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 42,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 43,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 44,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 45,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 46,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 47,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 48,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 49,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 50,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 51,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 52,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 53,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 54,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 55,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 56,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 57,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 58,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 59,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 60,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 61,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 62,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 63,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 64,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 65,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 66,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 67,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 68,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 69,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 70,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 71,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 72,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 73,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 74,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 75,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 76,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 77,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 78,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 79,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 80,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 81,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 82,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 83,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 84,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 85,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 86,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 87,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 88,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 89,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 90,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 91,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 92,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 93,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 94,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 95,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 96,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 97,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 98,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 99,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 100,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 101,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 102,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 103,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 104,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 105,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 106,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 107,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 108,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 109,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 110,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 111,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 112,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 113,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 114,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 115,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 116,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 117,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 118,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 119,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 120,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 121,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 122,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 123,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 124,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 125,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 126,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 127,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 128,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 129,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 130,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 131,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 132,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 133,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 134,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 135,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 136,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 137,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 138,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 139,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 140,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 141,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 142,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 143,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 144,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 145,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 146,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 147,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 148,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 149,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 150,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 151,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 152,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 153,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 154,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 155,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 156,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 157,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 158,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 159,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 160,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 161,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 162,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 163,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 164,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 165,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 166,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 167,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 168,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 169,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 170,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 171,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 172,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 173,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 174,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 175,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 176,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 177,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 178,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 179,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 180,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 181,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 182,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 183,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 184,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 185,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 186,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 187,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 188,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 189,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 190,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 191,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 192,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 193,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 194,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 195,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 196,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 197,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 198,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 199,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 200,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 201,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 202,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 203,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 204,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 205,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 206,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 207,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 208,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 209,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 210,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 211,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 212,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 213,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 214,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 215,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 216,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 217,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 218,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 219,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 220,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 221,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 222,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 223,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 224,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 225,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 226,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 227,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 228,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 229,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 230,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 231,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 232,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 233,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 234,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 235,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 236,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 237,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 238,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 239,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 240,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 241,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 242,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 243,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 244,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 245,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 246,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 247,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 248,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 249,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 250,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 251,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 252,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 253,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 254,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 255,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 256,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 257,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 258,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 259,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 260,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 261,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 262,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 263,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 264,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 265,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 266,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 267,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 268,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 269,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 270,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 271,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 272,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 273,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 274,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 275,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 276,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 277,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 278,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 279,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 280,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 281,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 282,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 283,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 284,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 285,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 286,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 287,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 288,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 289,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 290,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 291,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 292,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 293,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 294,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 295,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 296,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 297,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 298,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 299,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 300,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 301,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 302,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 303,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 304,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 305,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 306,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 307,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 308,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 309,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 310,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 311,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 312,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 313,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 314,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 315,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 316,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 317,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 318,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 319,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 320,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 321,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 322,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 323,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 324,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 325,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 326,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 327,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 328,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 329,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 330,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 331,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 332,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 333,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 334,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 335,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 336,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 337,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 338,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 339,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 340,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 341,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 342,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 343,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 344,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 345,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 346,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 347,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 348,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 349,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 350,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 351,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 352,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 353,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 354,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 355,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 356,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 357,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 358,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 359,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 360,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 361,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 362,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 363,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 364,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 365,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 366,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 367,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 368,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 369,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 370,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 371,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 372,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 373,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 374,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 375,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 376,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 377,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 378,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 379,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 380,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 381,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 382,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 383,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 384,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 385,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 386,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 387,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 388,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 389,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 390,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 391,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 392,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 393,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 394,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 395,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 396,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 397,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 398,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 399,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 400,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 401,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 402,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 403,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 404,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 405,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 406,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 407,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 408,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 409,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 410,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 411,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 412,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 413,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 414,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 415,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 416,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 417,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 418,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 419,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 420,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 421,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 422,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 423,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 424,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 425,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 426,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 427,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 428,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 429,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 430,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 431,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 432,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 433,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 434,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 435,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 436,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 437,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 438,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 439,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 440,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 441,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 442,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 443,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 444,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 445,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 446,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 447,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 448,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 449,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 450,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 451,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 452,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 453,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 454,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 455,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 456,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 457,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 458,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 459,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 460,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 461,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 462,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 463,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 464,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 465,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 466,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 467,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 468,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 469,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 470,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 471,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 472,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 473,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 474,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 475,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 476,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 477,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 478,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 479,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 480,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 481,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 482,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 483,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 484,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 485,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 486,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 487,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 488,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 489,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 490,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 491,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 492,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 493,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 494,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 495,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 496,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 497,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 498,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 499,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 500,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 501,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 502,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 503,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 504,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 505,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 506,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 507,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 508,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 509,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 510,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 511,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 512,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 513,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 514,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 515,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 516,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 517,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 518,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 519,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 520,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 521,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 522,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 523,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 524,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 525,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 526,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 527,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 528,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 529,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 530,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 531,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 532,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 533,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 534,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 535,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 536,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 537,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 538,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 539,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 540,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 541,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 542,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 543,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 544,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 545,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 546,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 547,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 548,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 549,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 550,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 551,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 552,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 553,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 554,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 555,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 556,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 557,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 558,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 559,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 560,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 561,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 562,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 563,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 564,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 565,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 566,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 567,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 568,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 569,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 570,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 571,
+    "arm": "balanced",
+    "when": "before new_game"
+  },
+  {
+    "position": 572,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 573,
+    "arm": "constrained",
+    "when": "before new_game"
+  },
+  {
+    "position": 574,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 575,
+    "arm": "balanced",
+    "when": "before new_game"
+  }
+]

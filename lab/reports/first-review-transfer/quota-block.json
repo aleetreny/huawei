@@ -1,0 +1,53 @@
+[
+  {
+    "source": "preflight-stream.jsonl",
+    "rate_limit_info": {
+      "status": "allowed_warning",
+      "resetsAt": 1793049600,
+      "rateLimitType": "five_hour",
+      "utilization": 0.99,
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false,
+      "surpassedThreshold": 0.9,
+      "unifiedWindows": {
+        "five_hour": {
+          "utilization": 0.99,
+          "resetsAt": 1793049600
+        },
+        "seven_day": {
+          "utilization": 0.16,
+          "resetsAt": 1793588400
+        }
+      },
+      "overageEnabled": false
+    }
+  },
+  {
+    "source": "preflight-current.jsonl",
+    "rate_limit_info": {
+      "status": "rejected",
+      "resetsAt": 1793049600,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false,
+      "unifiedWindows": {
+        "five_hour": {
+          "utilization": 1,
+          "resetsAt": 1793049600
+        },
+        "seven_day": {
+          "utilization": 0.16,
+          "resetsAt": 1793588400
+        }
+      }
+    }
+  },
+  {
+    "source": "preflight-current.jsonl",
+    "api_error": "usage_limit_reached",
+    "api_error_status": 429,
+    "result": "You've hit your session limit \u00b7 resets 9:20pm (Europe/London)"
+  }
+]
