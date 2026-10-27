@@ -22,6 +22,7 @@ Rama `alejandro/transmision` (desde `origin/main`, con `main-1nddsg` y `alejandr
 | 4 | contexto largo | Las mismas reglas con 18 decisiones de historial antes | en marcha |
 | 5 | [partidas-g1.md](partidas-g1.md) | `t3-instr` frente a f3-lean-v1, partidas completas, entrega oficial | parado: −21 ± 8 puntos (7 + 7); la regla se salía de su contexto |
 | 7 | [bloque-general.md](bloque-general.md) | Huella de las elecciones en historias fuera de las reglas | hecho: toda regla de historias cambia 1 de cada 5 historias |
+| 8 | [ronda-8-10.md](ronda-8-10.md) | Sólo reparto trimestral (t8, t9) y una regla de historias tras una cuenta atrás (t10) | hecho |
 | 6 | partidas `g2-full` | `t6-scoped-instr` (reglas acotadas) frente a f3-lean-v1, 30 + 30 | en marcha desde las 12:30 UTC |
 
 ## Relevo
