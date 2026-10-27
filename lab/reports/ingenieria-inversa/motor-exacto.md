@@ -149,3 +149,88 @@ Con 3 eventos al mes y +3 por trimestre de acciones (rotación y aprendizaje), *
 | **Total** | **~80** |
 
 Coincide con la mejor partida observada (79,3). **El margen entre los mejores manuales (~60) y 80 está en jugar bien:** no explotar y ascender en cada ventana. Para pasar de 80 hace falta L7.
+
+## M10. Riesgo oculto: entero, visible y con explosión determinista (hallazgo central)
+
+1. **El comentario mensual de RR. HH. es el riesgo oculto**, con 0 = sonriente, 1 = en voz baja, 2 = ceño fruncido, 3 = inquieto y 4 = enfadado, que también significa 4 o más.
+   - Ajuste lineal sobre 22.156 cambios de mes: Defuse −1,06, High-intensity +1,18 y **Lay low −1,07**, que el juego no anuncia. Las demás acciones, ~0.
+2. **Cada respuesta suma un entero fijo** al riesgo, sin bajar de 0.
+   - Ajuste secuencial entero (`riskseq.py`) sobre 3.228 partidas: el 91 % cuadra exactamente en todos los meses y en el valor final.
+   - Reparto de los valores: 0 (431 respuestas), +1 (216), +2 (117), +3 (29), −1 (114), −2 (12), −3 (10).
+3. **Al llegar a 5 explota en el acto.** Pasa tras una respuesta, una acción de energía o el aviso de la evaluación:
+
+   | Riesgo tras la decisión | Explosiones |
+   |---|---|
+   | 4 o menos | ~1 % (errores del ajuste) |
+   | 5 | 1.200 de 1.208 |
+   | 6 o más | todas |
+
+   - Al empezar el mes, con riesgo 5 explota en 526 de 527 casos.
+   - Tras la explosión el riesgo vuelve a 0 (M4).
+   - La segunda explosión es la crisis de confianza.
+4. **Un aviso en la charla de la evaluación suma +1 de riesgo**, además de Health −1 y Dignity −2 (607 de 609 casos).
+5. **Consecuencia:** aparte del sorteo de eventos, **el juego es determinista**. Con el riesgo en 4, cualquier respuesta con riesgo positivo hace explotar; con el riesgo en 0, se pueden encajar respuestas de +3 o +4 sin explotar. Los "detonantes" de H20 son esto mismo: respuestas de riesgo alto con el contador ya cargado.
+
+## M11. Nota y tono de la evaluación
+
+- **La nota sale del estado justo antes de la evaluación**, sobre todo de Skill, Network y Output frente al techo y al umbral del nivel, y del tiempo en el nivel. Un modelo logístico por nivel la acierta:
+
+  | Nivel | Acierto |
+  |---|---:|
+  | L1 | 100 % |
+  | L2 | 96 % |
+  | L3 | 99 % |
+  | L4 | 93 % |
+  | L5 | 98 % |
+
+  - La D en L1 llega por quedarse: con 17 meses en el nivel.
+  - **No se ha visto ninguna S** en 4.436 evaluaciones.
+- **Bonus** = factor × sueldo mensual (S 3; A 2; B 1; C 0,25; D 0). El dinero se guarda redondeado a un decimal, así que el 0,075 de una C en L1 entra como 0,1.
+- **Efecto de la charla:**
+
+  | Charla | Efecto |
+  |---|---|
+  | Aviso | Health −1, Dignity −2, riesgo +1 |
+  | Neutra | Dignity +1 |
+  | D en L1 ("fell short") | además, Dignity −3 y Network −1 |
+  | Ascenso en la primera ocasión ("too fast") | Dignity −1 y sin el +1 de la neutra |
+
+## M12. Regla de ascenso
+
+Se asciende si se cumplen las tres condiciones:
+- Skill, Network y Output están en el umbral del nivel o por encima;
+- Dignity es 4 o más;
+- la nota no es D.
+
+Acierta el **99,5 %** de 4.436 evaluaciones. Las excepciones son D en el mes 18, con 17 meses todavía en L1.
+
+## M13. Pérdidas de dinero que escalan con el nivel
+
+Lo que una respuesta quita de dinero se multiplica según el nivel (2.060 casos, sin excepciones):
+
+| Niveles | Multiplicador |
+|---|---:|
+| L1–L2 | ×1 |
+| L3–L4 | ×2 |
+| L5–L6 | ×3 |
+
+- **Las ganancias no se multiplican**, y la explosión cuesta siempre −2.
+- Con un "−1" anunciado en L5 se pierden 3 de dinero, o 0,75 puntos de nota final.
+
+## M14. El simulador `replica.py` y su validación
+
+`scripts/ingenieria-inversa/replica.py` reúne M1–M13:
+- catálogo de respuestas con sus efectos, su riesgo y su continuación;
+- acciones trimestrales, techos, mínimos, sueldo, bonus, nota, tono, ascenso, avisos, explosiones, derrotas y nota final.
+
+Con `validate`, el simulador recibe el estado observado y la decisión de cada paso y predice el estado siguiente. También predice el ascenso de cada evaluación y la nota final.
+
+**Dentro de la muestra** (b01, 571 partidas, 67.839 pasos):
+
+| Medida | Resultado |
+|---|---:|
+| Estado exacto tras cada paso | **98,7 %** |
+| Ascenso sí o no | **99,2 %** |
+| Error medio de la nota final | **0,43 puntos** |
+
+La validación sobre un lote nuevo, `v01-validation`, está en curso.

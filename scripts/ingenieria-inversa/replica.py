@@ -52,6 +52,7 @@ ENERGY_FX = {"High-intensity work": ({"output": 2, "health": -1, "dignity": -1},
              "Skill learning": ({"skill": 1, "health": -1}, 2), "Network maintenance": ({"network": 1, "dignity": 1}, 1),
              "Defuse legacy risk": ({}, 2), "Mental recovery": ({"dignity": 2}, 1), "Health recovery": ({"health": 2}, 1),
              "Prepare report materials": ({"output": 1, "dignity": 1}, 1), "Reserve energy (no action)": ({}, 0)}
+BLOW_AT = 5
 ACTION_RISK = {"q|High-intensity work": 1, "q|Defuse legacy risk": -1, "m|Lay low and reduce risk": -1}
 WARN_TONE = ("I had hopes", "The room feels tense", "HR marks the note")
 PRAISE_TONE = ("Your manager closes", "To be honest, I worried", "The talk is shorter")
@@ -98,7 +99,7 @@ def apply_delta(st: State, d: dict[str, float]) -> None:
         d["output"] = d.get("output", 0) - 1
     for k, x in d.items():
         if k == "wealth":
-            st.wealth = round(st.wealth + x, 3)
+            st.wealth = round(st.wealth + x, 1)
             continue
         if k not in ("health", "dignity", "skill", "network", "output"):
             continue
@@ -191,6 +192,7 @@ class Replica:
             d["wealth"] *= (st.level + 1) // 2      # M13: losses x1 (L1-2), x2 (L3-4), x3 (L5-6)
         apply_delta(st, d)
         st.risk = max(0, st.risk + self.cat.answer_risk(node, k))
+        self._maybe_explode(st)
         self._check_health(st)
 
     def energy_action(self, st: State, name: str) -> None:
@@ -198,11 +200,20 @@ class Replica:
         apply_delta(st, fx)
         st.energy -= cost
         st.risk = max(0, st.risk + ACTION_RISK.get("q|" + name, 0))
+        self._maybe_explode(st)
         self._check_health(st)
 
     def main_action(self, st: State, name: str) -> None:
         apply_delta(st, MAIN_FX.get(name, {}))
         st.risk = max(0, st.risk + ACTION_RISK.get("m|" + name, 0))
+
+    @staticmethod
+    def _maybe_explode(st: State) -> bool:
+        """M10: the buried risk goes off as soon as hidden risk reaches 5."""
+        if st.risk >= BLOW_AT and st.alive:
+            explode(st)
+            return True
+        return False
 
     def _check_health(self, st: State) -> None:
         if st.health <= 0 and st.alive:
@@ -214,7 +225,7 @@ class Replica:
         info: dict[str, Any] = {}
         st.month += 1
         st.duration_in_level += 1
-        st.wealth = round(st.wealth + SALARY[st.level], 3)
+        st.wealth = round(st.wealth + SALARY[st.level], 1)
         review = st.month % 6 == 0
         if review:
             info.update(self.review(st, explosion_now=bool(explosion)))
@@ -230,12 +241,8 @@ class Replica:
         st.low_dig_months = st.low_dig_months + 1 if st.dignity <= 1 else 0
         if st.low_dig_months >= 3:
             apply_delta(st, {"health": -2, "network": -1})
-        # month-start explosion: only when the HR remark is at its worst (M10)
-        if explosion is None:
-            explosion = st.risk >= 4 and self.rng.random() < self.cat.d.get("p_blow_month", 0.27)
-        if explosion:
-            explode(st)
-        info["explosion"] = explosion
+        # month-start explosion (M10): deterministic once hidden risk reaches 5
+        info["explosion"] = self._maybe_explode(st) if explosion is None or explosion else False
         st.out_hist[st.month] = st.output
         # failures (M12)
         if st.neg_wealth_months >= 4 and st.alive:
@@ -249,7 +256,7 @@ class Replica:
         """M7, M11: grade, talk tone, bonus, promotion and its Network cost."""
         g = self.cat.grade.grade(st, explosion_now)
         st.grades.append(g)
-        st.wealth = round(st.wealth + BONUS[g] * SALARY[st.level], 3)
+        st.wealth = round(st.wealth + BONUS[g] * SALARY[st.level], 1)
         tone = "warn" if g in ("C", "D") and self._warn(st, g) else ("praise" if g == "A" else "neu")
         t = THRESH.get(st.level)
         meets = bool(t) and st.skill >= t[0] and st.network >= t[1] and st.output >= t[2]
@@ -486,7 +493,7 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
             if nxt is not None and s[1] == "e" and nxt[1] == "q":
                 st.energy = 3  # the quarter phase opens with 3 Energy
             if nxt is not None and nxt[0] != s[0]:
-                info = rep.month_change(st, explosion=False)
+                info = rep.month_change(st)
                 if "promoted" in info:
                     actual = nxt[4][4] > s[4][4]
                     rev_n += 1
