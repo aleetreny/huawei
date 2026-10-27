@@ -21,3 +21,15 @@ Exploración: brazos base y cambios aislados; 400 semillas por brazo. Selección
 - `/goal` ya había creado el objetivo; no se creó un duplicado.
 - Fetch completo devuelve colisión macOS `Matteo`/`matteo/*`. Las ramas de interés sí se actualizaron; no se modifica ninguna referencia ajena.
 - El primer estado local estaba >100 commits atrasado; se tomó la rama más reciente que incorpora la réplica, no main antiguo.
+
+## E5, formulada después de screen-03 y antes de screen-04
+El recurso escaso puede ser cada plaza de evento. Una continuación consume una plaza que podría producir otro evento: valorar sólo su beneficio bruto puede elegir historias largas con bajo rendimiento por decisión. Prueba: horizonte de cadena 6 con coste de oportunidad por continuación 0/3/6/10 (unidades de la función de valor, NO parámetros del motor). Se compara con base para separar profundidad y coste. No se copiarán respuestas ni catálogo a Skills.
+
+## E6, antes de screen-05
+El último trimestre permite recuperar salud/dignidad y reducir riesgo después de los últimos eventos. Ese recurso futuro cambia el coste real de aceptar un coste de salud en el último evento. Comparar base, optimizar sólo trimestre final, optimizar Q inmediata en eventos finales, anticipar trimestre final en eventos finales. Todas las decisiones anteriores al mes 48 permanecen iguales. No cambiar el motor.
+
+## E7, antes de screen-06
+`w_skill_hi` sólo multiplica habilidad por ENCIMA del umbral; las búsquedas previas ligaban todos los crecimientos bajo umbral al mismo peso. Probar multiplicadores de valor real de habilidad 2/3/5 desde L4, también bajo umbral, con cierre después de la última evaluación. Comparación con base y late_close. Predicción: mayor frecuencia L7 y ascensos adelantados, aunque podría costar salud/riesgo/dinero. No afirmar que mejora Q si sólo mejora nivel.
+
+## Confirmación oficial fijada antes de lanzar
+E6/terminal_q es el candidato: se limita a la última fase trimestral y enumera combinaciones completas. 300 partidas por brazo, asignación aleatoria, 2 procesos × 3 servidores aislados, sin semillas/clones del juego. Primaria: ganancia Q desde la entrada al último trimestre (control variate pretratamiento), entre quienes llegan a ese punto; secundaria Q final sin ajustar de todas las partidas. Todas las decisiones antes de ese punto son idénticas entre brazos; por tanto llegar al último trimestre es selección pretratamiento. Auditar además estados finales predichos frente a los oficiales y contrafactual de cada estado inicial (etiquetado como cálculo de réplica). No ampliar N según significación.
