@@ -56,3 +56,12 @@ for a,bh,c,t in itertools.product([1.0],[0,0.2,0.25,0.3,1/3,0.5],[1,1.5,2,2.5,3]
         best.append((np.mean(pred==yy),bh,c,t,thr))
 best.sort(reverse=True)
 for x in best[:8]: print(x)
+print('--- grid search exact rule: warn if D + a*H < c + 2R + 4*nblow (for C grades)')
+best=[]
+for a in (0,0.2,0.25,1/3,0.5):
+    for c in np.arange(4,9,0.25):
+        for kr in (1,2):
+            for kb in (2,3,4,5):
+                pred=np.where(X[:,5]+a*X[:,6] < c + kr*X[:,7] + kb*X[:,8], 'warn','neu')
+                best.append((float(np.mean(pred==y)),a,c,kr,kb))
+best.sort(reverse=True); print(best[:5])
