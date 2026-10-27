@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v7",
+  "parents": [
+    "t13-read-v6"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct night; ideas from Matteo's observed-growth-v10 (branch matteo/main): best value at the level, two-month review window, repair at once",
+  "operator": "one change (replica)",
+  "hypothesis": "In the replica, with a DeepSeek-like quarter that does not know the ceilings, a Skill-first quarter from L4 (Skill learning and rotation) scores 51.1 against 52.0 without it, because Output falls behind and Skill learning's Health cost ends more runs. A balanced L4 quarter (Health first when not high, then Skill learning plus Prepare report materials, main action Apply for a key project) scores 52.8 and doubles L6 (11 % against 6 %).",
+  "predicted_behaviour": "From L4, Skill and Output both grow; more L5 promotions than v6; no rise in Health failures.",
+  "refutation": "Fewer L5 promotions or more Health failures than v6 in official games.",
+  "skill_count": 1
+}
