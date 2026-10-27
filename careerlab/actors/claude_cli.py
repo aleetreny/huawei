@@ -15,6 +15,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -23,6 +24,7 @@ from typing import Any
 from careerlab.config import Settings
 from careerlab.episode import EpisodeResult, atomic_write_json, result_from_terminal
 from careerlab.mcp_client import GameClient, ServerSpec, is_terminal
+from careerlab.truncate import StreamWatcher, summarize
 
 PROMPTS = Path(__file__).resolve().parents[1] / "prompts"
 GAME_SERVER = "career-emulator-engine"
@@ -33,14 +35,19 @@ GAME_TOOLS = [f"mcp__{GAME_SERVER}__{t}" for t in ("new_game", "observe", "take_
 class ClaudeWorkerConfig:
     model: str                      # alias ("haiku", "sonnet", "opus") or full id
     effort: str | None = None       # low | medium | high | xhigh | max ; None = CLI default
-    skills_mode: str = "inline"     # inline: SKILL.md bodies appended to the system prompt; plugin: real Skill tool
+    skills_mode: str = "inline"     # inline: SKILL.md bodies appended to the system prompt; plugin: real Skill tool;
+                                    # official: JiuwenSwarm's skills section (name + description) and a skill_tool to read bodies
     autocompact: str | None = None  # e.g. "100k" for a compact-context variant
     max_continues: int = 3          # official runner re-prompts a stopped agent to continue
     timeout_s: float = 7200.0
     cli_version: str = ""
+    stop_at_month: int | None = None  # short game: stop the worker once it sees this month (result "truncated")
 
     def record(self) -> dict[str, Any]:
-        return {"kind": "claude-cli", **asdict(self), "prompts": "official-runner@00b084a8", "tools": GAME_TOOLS,
+        fields = asdict(self)
+        if fields["stop_at_month"] is None:  # keep the full-game actor id unchanged
+            del fields["stop_at_month"]
+        return {"kind": "claude-cli", **fields, "prompts": "official-runner@00b084a8", "tools": GAME_TOOLS,
                 "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
                 "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"}
 
@@ -59,6 +66,14 @@ def load_bundle(bundle_dir: Path) -> tuple[str, list[tuple[str, str]]]:
     return str(manifest.get("instruction") or "").strip(), skills
 
 
+def skill_description(body: str) -> str:
+    import yaml
+
+    parts = body.split("---", 2)
+    fm = yaml.safe_load(parts[1]) if body.startswith("---") and len(parts) == 3 else {}
+    return str((fm or {}).get("description") or "")
+
+
 def render_system_prompt(instruction: str, skills: list[tuple[str, str]], skills_mode: str) -> str:
     template = (PROMPTS / "identity.md").read_text(encoding="utf-8")
     names = "- " + "\n- ".join(name for name, _ in skills) if skills else "- (none)"
@@ -66,7 +81,26 @@ def render_system_prompt(instruction: str, skills: list[tuple[str, str]], skills
     if skills_mode == "inline":
         for name, body in skills:
             text += f"\n\n## Skill: {name}\n\n{body}"
+    elif skills_mode == "official":
+        # JiuwenSwarm 0.2.4b3 SkillUseRail, skill_mode "all": only names and descriptions are in the system prompt
+        lines = "\n\n".join(f"{i}. {name}: {skill_description(body)}" for i, (name, body) in enumerate(skills))
+        text += ("\n\n# Skills\n\nRead the relevant SKILL.md using read_file before execution.\n\nAvailable skills:\n"
+                 + lines + "\nSelect the most relevant skill by reading its SKILL.md first.")
     return text
+
+
+SKILL_SERVER = Path(__file__).resolve().parents[2] / "scripts" / "transmision" / "fake_mcp.py"
+
+
+def add_skill_server(config: dict[str, Any], run_dir: Path, bundle_dir: Path) -> dict[str, Any]:
+    """Official delivery: a JiuwenSwarm-like skill_tool that returns SKILL.md or a file of the Skill on request (calls are logged)."""
+    files = {d.name: {str(p.relative_to(d)): p.read_text(encoding="utf-8") for p in d.rglob("*") if p.is_file()}
+             for d in sorted((bundle_dir / "skills").iterdir()) if (d / "SKILL.md").is_file()}
+    item = {"record": str(run_dir / "skill_reads.jsonl"), "session_id": "", "skills": files}
+    (run_dir / "skills_item.json").write_text(json.dumps(item, ensure_ascii=False))
+    servers = dict(config["mcpServers"])
+    servers["jiuwen"] = {"command": sys.executable, "args": [str(SKILL_SERVER), "skills", str(run_dir / "skills_item.json")]}
+    return {"mcpServers": servers}
 
 
 def build_plugin(run_dir: Path, skills: list[tuple[str, str]]) -> Path:
@@ -165,12 +199,16 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
     system_prompt = render_system_prompt(instruction, skills, cfg.skills_mode)
     (run_dir / "system_prompt.md").write_text(system_prompt, encoding="utf-8")
     config = mcp_override or mcp_config(settings, spec)
+    official = cfg.skills_mode == "official" and bool(skills)
+    if official:
+        config = add_skill_server(config, run_dir, bundle_dir)
     (run_dir / "mcp.json").write_text(json.dumps(config, indent=1))
     atomic_write_json(run_dir / "actor.json", cfg.record())
     base = [settings.claude_executable, "-p", "--setting-sources", "", "--strict-mcp-config",
             "--mcp-config", str(run_dir / "mcp.json"), "--model", cfg.model,
             "--tools", "Skill" if cfg.skills_mode == "plugin" else "",
-            "--allowedTools", ",".join(GAME_TOOLS + (["Skill"] if cfg.skills_mode == "plugin" else [])),
+            "--allowedTools", ",".join(GAME_TOOLS + (["Skill"] if cfg.skills_mode == "plugin" else [])
+                                       + (["mcp__jiuwen__skill_tool"] if official else [])),
             "--output-format", "stream-json", "--verbose", "--no-session-persistence",
             "--system-prompt", system_prompt, "--permission-mode", "dontAsk"]
     if cfg.effort:
@@ -191,7 +229,8 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
                                                         cwd=str(run_dir), env=worker_env())
             (run_dir / "worker.pid").write_text(str(proc.pid))
             try:
-                await asyncio.wait_for(proc.wait(), timeout=max(cfg.timeout_s - (time.perf_counter() - started), 1))
+                await asyncio.wait_for(_wait_or_cut(proc, stream, cfg.stop_at_month, summary),
+                                       timeout=max(cfg.timeout_s - (time.perf_counter() - started), 1))
             except asyncio.TimeoutError:
                 proc.kill()
                 await proc.wait()
@@ -207,6 +246,10 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
             obs = await client.observe(session_id)
         if is_terminal(obs):
             result = result_from_terminal(job_id, session_id, obs)
+            break
+        month = int(obs.get("current_state", {}).get("time", {}).get("current_month") or 0)
+        if cfg.stop_at_month and month >= cfg.stop_at_month:
+            result = EpisodeResult(job_id, session_id, "truncated", survival_months=None)
             break
         if "timeout" in summary.errors:
             result = EpisodeResult(job_id, session_id, "interrupted", interruption="worker timeout")
@@ -228,5 +271,42 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
                           "rate_limit_last": summary.rate_limits[-1] if summary.rate_limits else None,
                           "errors": summary.errors[:10]}
     result.trajectory_path = str(run_dir / "stream-0.jsonl")
+    if session_id is not None and result.outcome != "interrupted":
+        result.periods = await _periods(settings, spec, session_id, run_dir, obs)
     atomic_write_json(run_dir / "result.json", asdict(result))
     return result
+
+
+async def _wait_or_cut(proc: asyncio.subprocess.Process, stream: Path, stop_at_month: int | None,
+                       summary: StreamSummary, poll_s: float = 2.0) -> None:
+    """Wait for the worker; with `stop_at_month`, stop it as soon as its stream shows that month."""
+    if not stop_at_month:
+        await proc.wait()
+        return
+    watcher = StreamWatcher(stream)
+    while proc.returncode is None:
+        try:
+            await asyncio.wait_for(proc.wait(), timeout=poll_s)
+        except asyncio.TimeoutError:
+            pass
+        if proc.returncode is None and watcher.poll() >= stop_at_month:
+            proc.terminate()
+            try:
+                await asyncio.wait_for(proc.wait(), timeout=20)
+            except asyncio.TimeoutError:
+                proc.kill()
+                await proc.wait()
+            summary.errors.append(f"cut at month {watcher.month}")
+
+
+async def _periods(settings: Settings, spec: ServerSpec, session_id: str, run_dir: Path,
+                   obs: dict[str, Any]) -> dict[str, Any] | None:
+    """Review snapshots from the player's own stream plus our verifier's log read (never scored)."""
+    try:
+        verifier = ServerSpec(f"logs-{spec.name}", spec.root, transport="stdio")
+        async with GameClient(verifier, settings) as client:
+            logs = await client.logs(session_id, 5000)
+        month = int(obs.get("current_state", {}).get("time", {}).get("current_month") or 0)
+        return summarize(sorted(run_dir.glob("stream-*.jsonl")), list(logs.get("entries") or []), month)
+    except Exception as exc:  # evidence only; never fails the episode
+        return {"error": repr(exc)[:300]}

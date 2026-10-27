@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t12-final",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "t11 plus a weak-review line in the quarterly list, an L4 Output fallback and hedged wording (rubric round 2).",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

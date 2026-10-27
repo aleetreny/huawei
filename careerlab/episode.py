@@ -4,6 +4,8 @@ Outcome classes keep game results apart from operational problems:
 
 - ``completed``: the career reached month 48 (ending_score.completed is true);
 - ``eliminated``: the game ended early through a game failure condition;
+- ``truncated``: a short game stopped on purpose at a given month (careerlab.truncate).
+  It carries no score and is never counted as completed, eliminated or zero;
 - ``interrupted``: an operational problem stopped the episode (tool error,
   timeout, actor failure, step cap). It carries no score and is never counted
   as a zero; the session id is kept so it can be inspected or resumed.
@@ -41,7 +43,7 @@ class DrivenActor(Protocol):
 class EpisodeResult:
     job_id: str
     session_id: str | None
-    outcome: str  # completed | eliminated | interrupted
+    outcome: str  # completed | eliminated | truncated | interrupted
     survival_months: int | None = None
     quantitative_score: float | None = None
     ending_score: dict[str, Any] | None = None
@@ -57,6 +59,7 @@ class EpisodeResult:
     trajectory_path: str | None = None
     resumed: bool = False
     db_root: str | None = None
+    periods: dict[str, Any] | None = None  # review snapshots (careerlab.truncate.summarize)
 
 
 def atomic_write_json(path: Path, payload: Any) -> None:

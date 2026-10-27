@@ -495,7 +495,7 @@ def _play_one(settings: Settings, reg: Registry, policy_id: str, prep: dict[str,
     entry = {
         "game": game, "started": True, "job_id": job_id, "policy_id": policy_id, "model_name": before["model_name"],
         "outcome": outcome,
-        "score": result.get("quantitative_score") if outcome != "interrupted" else None,
+        "score": result.get("quantitative_score") if outcome in ("completed", "eliminated") else None,
         "survival_months": result.get("survival_months"), "interruption": result.get("interruption"),
         "cost_usd": cost, "cost_settled": settled, "usage_before": before["usage"],
         "usage_after": None if after is None else after["usage"],

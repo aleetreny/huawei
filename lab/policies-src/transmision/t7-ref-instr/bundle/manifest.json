@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "t7-ref-instr",
+  "mode": "agent",
+  "instruction": "Before a story choice in the month before a review month, open career-rules reference/review-month.md; while the HR remark says risk is piling up, open reference/risk.md. Otherwise choose story options by your own judgement. Quarterly phases follow the career-rules list in order."
+}
