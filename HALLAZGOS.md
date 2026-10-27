@@ -1,6 +1,6 @@
 # Hallazgos, por importancia
 
-Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`).
+Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B15, B16, C5, C6 y tres filas de X).
 
 **Niveles**
 - **A:** decide la nota y está confirmado con muchos datos.
@@ -34,6 +34,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B4 | **Charla de aviso en la evaluación:** depende de Dignity y Health frente al riesgo (regla exacta en M24). Llegar a la evaluación con Dignity alta y riesgo bajo la evita. | motor M24 |
 | B5 | Techos por nivel: lo que pasa del techo se pierde. Skill es el freno de los niveles altos. L7 es alcanzable por muy poco; L8+ no; la nota S no existe. | motor H1, H14, M16, Fase 3 |
 | B6 | Las pérdidas de dinero se multiplican con el nivel (×2 en L3–L4, ×3 en L5–L6); las ganancias no. | motor M13 |
+| B15 | **Detectar el techo del nivel durante la partida vale +8,8 puntos en el simulador** (+4,9 con la detección que consigue Haiku). La pista es una subida anunciada que no se mueve. Después hay que dejar de gastar en ese indicador y no arriesgarse por él. Aguanta si cambian techos o umbrales (+5 a +10). Darlo como números sería peor (con techos −10 %, 56,7 frente a 59,6) y está prohibido. Olvidarlo al mes siguiente cuesta ~3 puntos. | palancas, [techos](lab/reports/palancas/techos.md) |
 
 **Sobre las respuestas a las historias**
 
@@ -52,6 +53,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B12 | **Un interruptor que la IA calcula y escribe** (“Review in N” en cada nota) aísla una regla de historias: la aplica sólo en su mes y el resto juega como sin manual. | transmisión, [rondas 8–10](lab/reports/transmision/ronda-8-10.md) |
 | B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
 | B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
+| B16 | **La nota sirve de memoria.** Una línea de estado fija en cada nota (`Review in N \| Now S N O \| Stalled \| Risky this month`):<br>• Haiku la rellena bien el 100 % de las veces;<br>• vuelve entera tras un resumen por `check_latest_logs` (100 %);<br>• se obedece: el gasto en un techo apuntado baja del 27 % al 3 %;<br>• no tiñe las historias (86–88 % de elecciones iguales al control, frente al 81 % de `t13-final`).<br>Para que la IA *descubra* el techo hay que apuntar lo que se espera (`Expect`) y comparar un número: así pasa del 16 % al 59 %. | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
 
 ## C. Pistas sin confirmar
 
@@ -61,6 +63,8 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C2 | La instrucción del manifest no añade nada con Haiku; quizá sí con DeepSeek, que podría olvidar antes. | transmisión, [contexto largo](lab/reports/transmision/contexto-largo.md) |
 | C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Nadie ha medido todavía cómo etiqueta o percibe DeepSeek. | carrera (histórico) |
 | C4 | Una política por tipo de respuesta recupera dos tercios de la distancia entre el azar y la óptima (47 de 68 en el simulador). Falta saber cuánto saca DeepSeek razonando con esos tipos. | categorías §2 |
+| C5 | Contar las respuestas arriesgadas elegidas desde el último comentario de RR. HH. vale +4,3 en el simulador para un jugador que se arriesga; las cifras de riesgo del reparto, solas, +0,4. Con Haiku el contador está siempre en la nota, pero sólo marca el 19 % de las respuestas arriesgadas que eligió (4 de 21; falsas alarmas, 1 %): no las reconoce (A6) y no cambia nada medible. Con DeepSeek, por medir. | palancas, [riesgo](lab/reports/palancas/riesgo.md) |
+| C6 | Los tokens valen como mucho +0,7 de nota final. La única partida oficial con DeepSeek gastó ~667.000 por mes, y el máximo se da con 500.000. La línea de estado no añade tokens medibles. Terminar la partida pesa mucho más: sin terminar, ese término se queda en 50. | palancas, [tokens](lab/reports/palancas/tokens.md) |
 
 ## X. Descartado (no repetir sin una razón nueva)
 
@@ -75,3 +79,6 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Reloj de evaluación, “no cambiar Dignity por Network”, leer el registro, limpieza preventiva del último año (noche del 26) | no mejoran | [histórico T18](lab/reports/historico/secciones/resumen-noche.md) |
 | Carrera de manuales por estilo (prereg-v1, fastloop) | mucha cuota para diferencias dentro del ruido | [ESTADO antiguo](docs/historico/ESTADO-2026-10-26-carrera.md) |
 | Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |
+| Reaccionar a los avisos con 3 meses de margen (dinero, aislamiento, dignidad) o al de la tercera evaluación en L1 | 0 puntos en el simulador; las derrotas por condición casi no ocurren y la tercera evaluación en L1 ya no tiene arreglo | palancas, [avisos](lab/reports/palancas/avisos.md) |
+| Preparar la reputación antes de la evaluación para evitar la charla de aviso (M24) | +0,1 con la regla exacta, −0,5 con la general | palancas, [reputación](lab/reports/palancas/reputacion.md) |
+| Llamar “Caps” o “techo del nivel” a lo que no sube | el revisor de la rúbrica lo lee como una mecánica sin publicar (el manual dice “0–unbounded”); hay que describir lo que se ve (“Stalled”) | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |

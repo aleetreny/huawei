@@ -33,6 +33,19 @@ El comentario de RR. HH. sale una vez al mes y muestra el riesgo oculto (0 a 4, 
 3. Por eso la línea de estado de la nota lleva `Risk: k risky since HR remark` ([nota-memoria.md](nota-memoria.md)). Exige que el modelo reconozca qué opción es arriesgada, que es justo lo que mide la línea DeepSeek; las categorías de respuesta lo aciertan un 78 % (HALLAZGOS B7).
 4. Ojo con el tamaño: el bot sin contador se arriesga más que Haiku, que ya evita casi siempre los detonantes (HALLAZGOS B9). Con Haiku la ganancia real será menor.
 
+## En el banco con Haiku
+
+27 oct, 17:30–17:45 UTC. Manual `t17b-status` (línea de estado con `Risky this month`) en el bloque general: 139 historias jugadas desde el principio del mes, 277 notas. Cada historia elegida en los pasos previos del mes se busca en el catálogo por título y opciones, y se mira el riesgo oculto real de la respuesta elegida ([`scripts/palancas/riskcount.py`](../../../scripts/palancas/riskcount.py)).
+
+| | |
+|---|---:|
+| Notas en las que el mes ya lleva alguna respuesta arriesgada | 8 % (21) |
+| … y Haiku lo apunta | **19 %** (4 de 21) |
+| Falsas alarmas (lo apunta sin respuesta arriesgada) | 1 % |
+| Número exacto | 93 % (casi siempre por los ceros) |
+
+**Lectura:** el contador se apunta bien de forma (siempre está en la nota), pero Haiku no reconoce cuándo una de sus respuestas era arriesgada. Es el cuello de botella de percepción de HALLAZGOS A6: el contador sólo vale lo que valga esa percepción. En el bloque general no estorba (huella 88 % igual al control) y baja un poco el riesgo medio elegido, dentro del ruido. Para DeepSeek hay que medir primero si reconoce las respuestas arriesgadas (línea DeepSeek).
+
 ## Cómo repetirlo
 
 ```bash
