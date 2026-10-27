@@ -6,14 +6,14 @@ Rama `alejandro/lab-secciones`, origen de registro `secciones`, actor Haiku de s
 
 ## Mejor estrategia por periodo
 
-Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del plan). P1 y P2 se miden con partidas cortas; P3 y P4, con las partidas completas de la prueba final (mismo lote, intercaladas). Nota (Q) media ± error estándar; sólo las partidas completas tienen nota.
+Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del plan). Porcentajes, niveles y notas con su error estándar. P1 y P2 se miden con partidas cortas; P3 y P4, con las partidas completas de la prueba final (mismo lote, intercaladas). Nota (Q) media ± error estándar; sólo las partidas completas tienen nota.
 
 | Periodo | Medida | Mejor estrategia probada | Partidas por brazo | Resultado (mejor / referencia) | Nota Q de esas partidas (mejor / referencia) | ¿Gana con claridad? |
 |---|---|---|---:|---|---|---|
-| **P1** meses 1–5 | % que asciende en la 1.ª evaluación | `review-clock` sobre f3-lean (cuenta atrás con el calendario publicado, no ceder N/O el mes previo) | 74 / 73 (3 rondas, 6 meses) | 49 % / 42 % | – (cortas) | **No** (+7 ± 8; las dos primeras rondas daban +15 y la tercera se dio la vuelta) |
-| **P2** meses 6–17 | nivel en el mes 18 | `climb` (reparto al indicador que bloquea tras cada ascenso) | 24 / 24 (18 meses) | 2,25 / 2,29 | – (cortas) | **No** |
-| **P3** meses 18–35 | nivel en el mes 36 · meses en L4 | manual compuesto `periodos-v1` (climb v2 dentro) | 37 / 37 (completas) | nivel en el mes 36: 3,3 / 3,1; meses en L4: 18,0 / 17,7 | 51,5 ± 3,0 / 50,4 ± 2,8 | **No** (en L4 casi nadie invierte en Skill: 0–2 % de las acciones) |
-| **P4** meses 36–48 | terminadas · dimensiones finales | manual compuesto `periodos-v1` (closing dentro) | 37 / 37 (completas) | terminadas 28/37 / 26/37; nivel final 3,8 / 3,8; control de riesgo 81 / 74 | 51,5 ± 3,0 / 50,4 ± 2,8 | **No** (más terminadas y mejor control de riesgo, sin significación) |
+| **P1** meses 1–5 | % que asciende en la 1.ª evaluación | `review-clock` sobre f3-lean (cuenta atrás con el calendario publicado, no ceder N/O el mes previo) | 74 / 73 (3 rondas, 6 meses) | 48,6 ± 5,8 % / 42,5 ± 5,8 % | sin nota (cortas); el compuesto que lo incluye, en completas: 51,5 ± 3,0 / 50,4 ± 2,8 | **No** (+6 ± 8; las dos primeras rondas daban +15 y la tercera se dio la vuelta) |
+| **P2** meses 6–17 | nivel en el mes 18 | `climb` (reparto al indicador que bloquea tras cada ascenso) | 23 / 24 (18 meses) | nivel 2,26 ± 0,24 / 2,33 ± 0,20 | sin nota (cortas); el compuesto que lo incluye, en completas: 51,5 ± 3,0 / 50,4 ± 2,8 | **No** |
+| **P3** meses 18–35 | nivel en el mes 36 · meses en L4 | manual compuesto `periodos-v1` (climb v2 dentro) | 37 / 37 (completas) | nivel en el mes 36: 3,3 ± 0,2 / 3,1 ± 0,2; meses en L4: 18,0 / 17,7 | 51,5 ± 3,0 / 50,4 ± 2,8 | **No** (en L4 casi nadie invierte en Skill: 0–2 % de las acciones) |
+| **P4** meses 36–48 | terminadas · dimensiones finales | manual compuesto `periodos-v1` (closing dentro) | 37 / 37 (completas) | terminadas 28/37 = 76 ± 7 % / 26/37 = 70 ± 8 %; nivel final 3,8 ± 0,3 / 3,8 ± 0,3; control de riesgo 81 ± 5 / 74 ± 5 | 51,5 ± 3,0 / 50,4 ± 2,8 | **No** (más terminadas y mejor control de riesgo, sin significación) |
 | Riesgo (todos) | eliminaciones por crisis de confianza · control de riesgo final | `periodos-v1` | 37 / 37 (completas) | crisis de confianza 3 / 2; ruina 0 / 3; control de riesgo final 81 ± 5 / 74 ± 5 | – | No |
 
 **En una frase:** ninguna táctica por periodo ganó con claridad en su propia medida. El manual compuesto `periodos-v1` empata con la referencia en 37 partidas completas por brazo (51,5 ± 3,0 frente a 50,4 ± 2,8); sólo mejora, sin llegar a prueba, el control de riesgo final y las ruinas.
@@ -28,7 +28,7 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
 | [H-P1c](p1-h2.md) | P1 | + `log-check` (leer el registro de efectos) | 25 | 36 % frente a 40 %; ~2 llamadas por partida | descartada |
 | [P4-bots](p4-bots-cierre.md) | P4 | Defuse + recuperación en el último año (bots) | 200 bots | control de riesgo 65 ± 6 frente a 67 ± 5; nota igual | descartada |
 | [H-P1a ronda 3](p1-h3-runup.md) | P1 | reloj (réplica) y reloj + respuestas discretas (`review-run-up`) | 24 | 38 % y 46 % frente a 50 % | reloj **descartado** (total 49 % frente a 42 %, no se confirma); run-up descartado |
-| [H-P2a](p2-h1-climb.md) | P2 | + `climb` (reparto al indicador que bloquea tras cada ascenso) | 24 (18 meses) | nivel en el mes 18: 2,25 frente a 2,29 | descartada |
+| [H-P2a](p2-h1-climb.md) | P2 | + `climb` (reparto al indicador que bloquea tras cada ascenso) | 23–24 (18 meses) | nivel en el mes 18: 2,26 ± 0,24 frente a 2,33 ± 0,20 | descartada |
 | [Final](#manual-compuesto-recomendado) | P1–P4 | `periodos-v1` (núcleo f3-lean + review-clock + climb v2 + closing) | 37 completas | 51,5 ± 3,0 frente a 50,4 ± 2,8 | **no gana** (+1,1 ± 4,1) |
 | Comprobación v2 | P1–P2 | `periodos-v2` (redacción para la rúbrica) frente a `periodos-v1` | 0 | no se llegó a jugar | pendiente |
 | [H-P3a](#relevo) | P3 | `periodos-v3` (climb v3: cuello de botella por la charla de evaluación; Skill tras una evaluación fallida) | 19 / 19 (30 meses, de 20) | nivel en el mes 30: 3,26 (v3) frente a 3,32 (v1); Skill learning en L4: 0 % en ambos | sin conclusión (menos de 20 por brazo); la regla no se ejecuta |
@@ -64,7 +64,7 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
 | H-P1d `cap-trade` (no comprar Dignidad llena a cambio de Network) | P1 | 40 % frente a 40 %; las pérdidas se desplazan del mes 5 al 4 |
 | H-P1c `log-check` (leer `check_latest_logs`) | P1 | 36 % frente a 40 %; Haiku lo llama unas 2 veces por partida aunque se le pida |
 | `review-run-up` (reloj + respuestas discretas) | P1 | 46 % frente a 50 % (ronda 3) |
-| H-P2a `climb` v1 | P2 | nivel en el mes 18 2,25 frente a 2,29; el P2 sigue dominado por salir de L1 |
+| H-P2a `climb` v1 | P2 | nivel en el mes 18 2,26 ± 0,24 frente a 2,33 ± 0,20 (23 y 24 partidas); el P2 sigue dominado por salir de L1 |
 | Limpieza preventiva del último año (bots) | P4 | sin efecto en el control de riesgo final ni en la nota; quitar la recuperación de salud provoca agotamientos |
 
 ## Manual compuesto recomendado
@@ -119,6 +119,7 @@ Referencia en todos los periodos: **f3-lean-v1** (el manual de referencia del pl
      ```bash
      cd /home/user/huawei   # o tu copia del repo, en la rama alejandro/lab-secciones
      uv run careerlab origin set secciones
+     rm -f ~/careerlab-data/huawei-secciones/STOP   # el runner se paró con este archivo
      export CAREERLAB_CLAUDE_EXE=~/claude-2.1.303/node_modules/.bin/claude
      uv run careerlab run --kind claude-cli --continuous --slots 4 --max-five-hour 0.65 --stop-file ~/careerlab-data/huawei-secciones/STOP &
      uv run python scripts/secciones/periods.py --batch p3-h1-skill
