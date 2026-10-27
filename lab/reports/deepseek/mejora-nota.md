@@ -1,6 +1,8 @@
 # Mejora de la nota de DeepSeek: análisis desde los fundamentos y manuales t13-read-v2 a v4
 
-**Conclusión (27 oct, 20:45 UTC).** **`t13-read-v4` saca 71,67 y 70,22 en sus dos partidas completas con DeepSeek** (48 meses, L5, riesgo 0, Health y Dignity al máximo). Su tercera partida se quedó en L1 (la trampa del primer ascenso) y murió por un choque de puertos con otro chat. `t13-read-v5` sacó 66,71, y `t13-read-v3` llegó al mes 48 en L5 (66,6 según la réplica; la cortó nuestro vigilante). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas (14,98 a 42,51). Media esperada de v4 con la trampa de L1 (~1 de cada 8–10 partidas): ~63; cuando asciende a tiempo, ~70.
+**Conclusión (27 oct, 21:05 UTC).** **Cuatro partidas completas de DeepSeek hoy, todas entre 66,7 y 71,7: `t13-read-v4` 71,67 y 70,22, `t13-read-v7` 67,27, `t13-read-v5` 66,71** (48 meses, L5, riesgo 0, Health y Dignity al máximo). Además, `t13-read-v3` llegó al mes 48 en L5 (66,6 según la réplica; la cortó nuestro vigilante). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas (14,98 a 42,51).
+
+Queda una fuente de varianza: la trampa del primer ascenso. Una partida de v4 se quedó en L1 y habría acabado despedida en el mes 24. Media esperada de v4 contándola (~1 de cada 8–10 partidas): ~63; cuando asciende a tiempo, ~70.
 
 Lo que lo ha conseguido:
 - proteger Skill, Network y Output en el mes previo a cada evaluación, en el cuerpo del Skill y en la instrucción del manifest (DeepSeek no vuelve a abrir archivos de referencia);
@@ -124,7 +126,7 @@ Lo visto mientras juegan:
 
 - **v4-00001: atascada en L1.** Perdió el ascenso del mes 6 por Network −1 en la última historia del mes 5, cuando la otra opción era filtrar información a la competencia (pérdida casi forzosa). Perdió el del mes 12 por Output −1 en el mes 11. En el mes 18, D por tiempo en el nivel. Murió en el mes 22 por un fallo de infraestructura: su servidor de agente arrancó con choques de puerto (21001) a la vez que otro chat arrancaba sus huecos, y se cerró a mitad de partida ("going away"). Sin nota; iba hacia el despido del mes 24.
 - **v4-00002: completa, 70,22** (48 meses, L5, Skill 122, Network 46, dinero 30,2, riesgo 0, Health y Dignity al máximo; 0,72 USD).
-- v7: en juego.
+- **v7: completa, 67,27** (48 meses, L5, Skill 106, Network 34, dinero 33,4, riesgo 0, Health y Dignity al máximo; 0,74 USD). Peor en Network que v4: las pistas de Network del mes previo y las notas cortas no ayudan con una sola partida.
 
 **La trampa de L1 es la mayor fuente de varianza que queda.** En L1 el umbral de Network y Output es su máximo: margen cero. En el 27 % de los meses de preparación la pérdida es forzosa (todas las opciones cuestan algo o son arriesgadas). De 8 partidas de la familia v2–v5, 1 se quedó en L1.
 
@@ -140,36 +142,35 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
 - `scripts/deepseek/promo.py`: por qué el bot no asciende (le falta un indicador antes del mes previo, o lo pierde en él).
 - `scripts/deepseek/groupbot.py`: modos nuevos de la regla escrita (`rvc`, `pw`, `pl1`, `dq`, `ll`, `blind`, `detect`, `ps`).
 
-## Relevo (27 oct, 20:10 UTC)
+## Relevo (27 oct, 21:05 UTC)
 
 1. **Qué se ha hecho y por qué.**
    - Análisis desde los fundamentos: sobrevivir decide la nota, y con DeepSeek se perdía por el primer ascenso y por el riesgo "constructivo".
    - Pruebas gratis en el simulador con la lectura real de DeepSeek: el ascenso va antes que el riesgo leve en el mes previo, y el trimestre de L4 equilibrado.
    - Diagnóstico de cada partida oficial, leyendo el registro mes a mes.
    - Manuales `t13-read-v2` a `v7`, cada uno corrigiendo lo que falló en las partidas anteriores.
-   - Partidas oficiales en paralelo (modo nuevo en `careerlab/target.py`).
+   - Partidas oficiales en paralelo (modo nuevo en `careerlab/target.py`, vigilante que nunca corta con `CAREERLAB_TARGET_NEVER_STOP=1`).
 2. **Resultados.**
-   - `t13-read-v4` 71,67 y `t13-read-v5` 66,71: partidas completas, L5, riesgo 0.
-   - `t13-read-v3` llegó al mes 48 en L5 (66,6 según la réplica).
-   - v2: tres partidas sin eliminación por el juego (L3, L2 y L4, cortadas por nuestro vigilante o por el límite de reanudaciones).
-   - Datos: `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-*` (partidas), `lab/registry-origins/deepseek/` (registro exportado).
-3. **Lo que falló o quedó a medias.**
-   - Tres partidas buenas cortadas por nuestro vigilante. Se lanzaron con tope de 1,2 o 3 USD, y en paralelo el vigilante mide el gasto de toda la clave. Ya está corregido: tope 20 en paralelo.
-   - Una partida perdida por el límite de 20 reanudaciones del programa (contexto de ~200 mil fichas y respuestas enlatadas de proveedor).
-   - `t13-read-v6` y `v7` no se han jugado.
+   - Partidas completas: v4 71,67 y 70,22; v7 67,27; v5 66,71.
+   - v3 llegó al mes 48 en L5 (66,6 según la réplica).
+   - v2: tres partidas sin eliminación por el juego.
+   - Una partida de v4 se quedó en L1.
+   - Datos: `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-*` (partidas), `lab/registry-origins/deepseek/` (registro exportado; volver a exportar con `CAREERLAB_ORIGIN=deepseek uv run careerlab export`).
+3. **Lo que falló.**
+   - Tres partidas buenas cortadas por nuestro vigilante (tope medido sobre toda la clave con partidas en paralelo). Ya corregido.
+   - Una partida perdida por el límite de 20 reanudaciones (contexto de ~200 mil fichas y respuestas enlatadas en chino).
+   - Una partida muerta por un choque de puertos de JiuwenSwarm con otro chat que arrancó sus huecos a la vez.
    - DeepSeek no usa "Stalled".
 4. **Siguiente paso.**
-   - Ver las 2 partidas de confirmación de v4 (lanzadas a las 19:56 UTC, huecos 0 y 1).
-   - Corte 1: empaquetar `lab/policies-src/deepseek/t13-read-v4` (commit `09d5735`) y cambiar "t13-read-v2" por "t13-read-v4" en los borradores de `alejandro/entrega`.
-   - Con presupuesto (cortes 2 y 3): partidas de `t13-read-v7` frente a v4.
-   - Comandos (desde un worktree de `alejandro/deepseek`; las partidas necesitan las rutas del programa oficial):
+   - **Corte 1:** empaquetar `lab/policies-src/deepseek/t13-read-v4` (commit `09d5735`) y cambiar "t13-read-v2" por "t13-read-v4" en los borradores de `alejandro/entrega`.
+   - **Cortes 2 y 3:** atacar la trampa de L1, que es la mayor fuente de varianza (margen cero en Network y Output; en el 27 % de los meses de preparación la pérdida es forzosa). Medir con 4–6 partidas por versión.
+   - Para jugar: arrancar las instancias de una en una y comprobar los puertos con `lsof` si hay otros chats jugando.
+   - Comandos (desde un worktree de `alejandro/deepseek`):
 
    ```bash
    scripts/deepseek/start-loops.sh <tope de saldo de la clave> <manual hueco 0> <manual hueco 1> <manual hueco 2> <partidas por hueco>
    python3 scripts/deepseek/watch.py <id de política (8 caracteres)>
    CAREERLAB_TARGET_ENV=<runner>/.env uv run python scripts/deepseek/ds.py status
-   uv run python scripts/deepseek/groupbot.py --labels v3=<L>/ds-v3-r1-full.json+<L>/ds-v3-r2-full.json --arms signs:flag:strict+rvc+blind+qb4c --games 2000
    ```
 
-5. **Gasto de DeepSeek:** hoy ~7,7 USD a las 19:56 UTC, más las 2 partidas de confirmación (~1,6), en total ~9,3 de los 10 permitidos. La clave conserva ~41 USD (reserva de 15 intacta).
-
+5. **Gasto de DeepSeek de esta línea hoy:** ~9,5 USD (coste por partida desde `score_report`). La clave lleva 12,86 USD usados, contando las partidas del chat "Scripts and alternative", y conserva 37,1 (reserva de 15 intacta).
