@@ -2,6 +2,18 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026, 10:00 UTC: one Haiku game of f3-lean-polish-v1, live game page
+
+- **Result.** 28.5, dismissed at month 24, never left L1.
+  - The rewrite changed behaviour: the explicit main-action order meant **no key projects at all** (f3-lean: 49%) and 26% Skill learning.
+  - The token lines worked: notes 60% shorter, about 13% fewer tokens per month.
+  - Recommendation: submit **f3-lean-v1 as written** tonight. Details in [f3-lean-polish.md](f3-lean-polish.md).
+- **Live game page.** `lab/panel/live.html`, fed by `scripts/panel/live.py`, follows a running game every 4 seconds: stats after each decision, reviews, promotions and the latest decisions with notes.
+- **Panel.**
+  - It now builds from `origin/main`, where the race ended: 521 race games, plus the origins `leah` (6), `matteo` (30) and `deepseek` (1).
+  - Games imported from other machines are no longer double-counted as race games.
+  - The page reloads `data.js` fresh every time.
+
 ## 27 Oct 2026: f3-lean-polish-v1, the R1 candidate rewritten for the rubric and tokens
 
 - **What.** A copy of f3-lean-v1 (the cloud's R1 recommendation) with the **same rules**, regrouped by turn type to fit the official document-quality rubric, plus token instructions (one `observe` per decision, notes of a few words). 287 words; lint-clean.

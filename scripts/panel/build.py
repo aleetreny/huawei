@@ -3,7 +3,7 @@
 Reads only committed results, never the simulator:
 
 - the race registry (``lab/registry/*.jsonl``) from a Git ref, by default
-  ``origin/cloud-lab-run``, or from the working tree with ``--race-ref ''``;
+  ``origin/main`` (where the closed race ended), or from the working tree with ``--race-ref ''``;
 - every other machine's export in ``lab/registry-origins/<origin>/`` (T11);
 - the T10 energy-bot table in ``lab/reports/energy-bots/README.md``;
 - Matteo's two manual runs (``docs/experiments/manual-skills-v0*-summary.json`` on ``origin/Matteo``);
@@ -57,6 +57,8 @@ def actor_label(actor: dict) -> tuple[str, str]:
     if actor["kind"] == "scripted":
         return "Bot", "Scripted bot"
     c = json.loads(actor["config"])
+    if actor["kind"] == "jiuwenswarm-target":  # the official runner with the competition model
+        return "DeepSeek", f"{c.get('model_name', 'DeepSeek')} (official runner)"
     model = (c.get("model") or "?").capitalize()
     extra = [x for x in (c.get("effort") and f"effort {c['effort']}", c.get("autocompact") and f"memory {c['autocompact']}") if x]
     return model, model + (f" ({', '.join(extra)})" if extra else "")
@@ -70,6 +72,8 @@ def registry_games(texts: dict[str, str | None], source: str) -> tuple[list[dict
     for e in jsonl(texts["evaluations"]):
         if e["outcome"] not in ("completed", "eliminated"):
             continue  # interruptions are never scored (prereg-v1)
+        if source == "race" and jobs.get(e["job_id"], {}).get("origin"):
+            continue  # imported from another machine: shown once, under its own origin
         pol, act = policies.get(e["policy_id"], {}), actors.get(e["actor_id"], {"kind": "?", "config": "{}"})
         group, label = actor_label(act)
         usage = json.loads(e.get("tokens") or "{}")
@@ -143,7 +147,7 @@ def summarise_exploration(root: Path) -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--race-ref", default="origin/cloud-lab-run", help="Git ref with the race registry; '' = working tree")
+    ap.add_argument("--race-ref", default="origin/main", help="Git ref with the race registry (the closed race ended on main); '' = working tree")
     ap.add_argument("--matteo-ref", default="origin/Matteo")
     ap.add_argument("--exploration", help="folder of local harness.py games to summarise into lab/panel/data/exploration.json")
     args = ap.parse_args()
