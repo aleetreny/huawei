@@ -61,7 +61,7 @@ from careerlab.store import Registry, bundle_hash
 TARGET_ORIGIN = "deepseek"
 ACTOR_KIND = "jiuwenswarm-target"
 ROUTE = "competition-key"
-DEFAULT_WHY = "target pilot: cost, tokens and fidelity of one real deepseek-v4-flash game (research/careerlab/target-budget.md)"
+DEFAULT_WHY = "target pilot: cost, tokens and fidelity of one real deepseek-v4-flash game (docs/entrega/target-budget.md)"
 PLAY_REQUIRED = ("README.md", "design/skills_design.md", "design/decision_report.md")
 PLACEHOLDER = """# NOT FOR SUBMISSION
 
@@ -495,7 +495,7 @@ def _play_one(settings: Settings, reg: Registry, policy_id: str, prep: dict[str,
     entry = {
         "game": game, "started": True, "job_id": job_id, "policy_id": policy_id, "model_name": before["model_name"],
         "outcome": outcome,
-        "score": result.get("quantitative_score") if outcome != "interrupted" else None,
+        "score": result.get("quantitative_score") if outcome in ("completed", "eliminated") else None,
         "survival_months": result.get("survival_months"), "interruption": result.get("interruption"),
         "cost_usd": cost, "cost_settled": settled, "usage_before": before["usage"],
         "usage_after": None if after is None else after["usage"],

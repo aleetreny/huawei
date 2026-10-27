@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t10-countdown",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "t9 plus one story rule (protect the review) gated by a countdown written in every story note; its hints in a reference file.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

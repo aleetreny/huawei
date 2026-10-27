@@ -1,0 +1,84 @@
+# Hallazgos, por importancia
+
+Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`).
+
+**Niveles**
+- **A:** decide la nota y está confirmado con muchos datos.
+- **B:** útil y confirmado.
+- **C:** pista, sin confirmar.
+- **X:** descartado con datos; no volver a probarlo sin una razón nueva.
+
+Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como número, umbral, título de evento ni respuesta fija: las normas lo prohíben aunque sea cierto ([NORMAS.md](NORMAS.md)).
+
+## A. Deciden la nota
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| A1 | **La nota final es una fórmula fija:** nivel 30 %, dinero 20 %, salud + dignidad 15 %, habilidad 15 %, control de riesgo 10 %, red 10 %. El nivel y el dinero (que sale del sueldo, es decir, del nivel) separan una partida buena de una excelente. | motor, H11 |
+| A2 | **Ascender es casi automático.** Se asciende en la evaluación semestral si, justo antes, Skill, Network y Output están en el umbral del nivel, Dignity es 4 o más y la nota no es D (acierta el 99,5 %). En L1 el umbral coincide con el techo: no hay margen, un punto perdido en el último mes cuesta el ascenso. | motor, M12, H2 |
+| A3 | **El riesgo oculto manda en las derrotas.** Cada respuesta suma o resta un número entero de riesgo que no se ve. El comentario mensual de RR. HH. lo muestra en 5 tonos (sonriente → enfadado). Al llegar a 5 explota (se pierde medio año de resultados, dinero y dignidad); la segunda explosión es el despido por crisis de confianza. En el simulador, la regla de riesgo vale 40–54 puntos. | motor, M10, M23 |
+| A4 | **Se pierde por dos caminos:** no ascender nunca en L1 (despido en el mes 24) y la crisis de confianza. | motor H8; nube |
+| A5 | **El margen está en las historias.** La política óptima saca 72,4 en el juego real (techo práctico ~80); los manuales con IA sacan ~50. Casi todo lo que falta se decide en las respuestas a las historias, no en el reparto trimestral. | motor M17, M21; transmisión |
+| A6 | **El cuello de botella de la IA es la percepción:** no sabe qué indicador sube o baja cada respuesta antes de elegir. Un bot que sólo ve el tipo de respuesta pierde 21 puntos frente al que ve los efectos; 14 de ellos por no saber qué indicador mueve. Haiku obedece la regla “no bajes Output antes de la evaluación”, pero no reconoce qué opción cuesta Output. | categorías §2; transmisión |
+| A7 | **Dónde manda un manual y dónde está la nota no coinciden.** Las reglas del reparto trimestral se obedecen (60–93 % frente a 14–70 % sin manual) pero valen poco (menos de 1,5 puntos). Las reglas de historias valen mucho, se obedecen a medias y **contaminan las demás historias**: cambian 1 de cada 5 decisiones aunque no apliquen, y un manual así perdió 12–21 puntos en partidas. | transmisión ([resumen](lab/reports/transmision/resumen.md)) |
+
+## B. Útiles y confirmados
+
+**Sobre el juego**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B1 | El simulador `scripts/ingenieria-inversa/replica.py` reproduce el 99,3 % de los pasos, el 99,5 % de los ascensos y la nota con 0,3 puntos de error en partidas nuevas. Permite probar estrategias sin cuota. | motor M14, Fase 3 |
+| B2 | Cada respuesta tiene **siempre el mismo efecto**; las historias siguen siempre el mismo camino; no hay riesgo retardado; no hay eventos por nivel ni por estado. Los eventos se desbloquean por semestre. | motor M18, M27 |
+| B3 | **7 reglas generales** (sin números) sacan 68,1 en el simulador. Aguantan si cambian los parámetros: riesgo (R1), salud (R7), techo del nivel (R3) y limpieza final (R5). “Todo a Skill desde L4” no aporta. | motor M22, M23 |
+| B4 | **Charla de aviso en la evaluación:** depende de Dignity y Health frente al riesgo (regla exacta en M24). Llegar a la evaluación con Dignity alta y riesgo bajo la evita. | motor M24 |
+| B5 | Techos por nivel: lo que pasa del techo se pierde. Skill es el freno de los niveles altos. L7 es alcanzable por muy poco; L8+ no; la nota S no existe. | motor H1, H14, M16, Fase 3 |
+| B6 | Las pérdidas de dinero se multiplican con el nivel (×2 en L3–L4, ×3 en L5–L6); las ganancias no. | motor M13 |
+
+**Sobre las respuestas a las historias**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B7 | **10 tipos de respuesta** (arreglar, asumir, protegerse, escalar, venderse, evitar, ceder, empecinarse, atacar, ocultar), etiquetados a ciegas por Haiku, separan el riesgo: 78 % de acierto y el 92 % de las respuestas peligrosas detectadas. | categorías §2 |
+| B8 | **Señales de lenguaje.** Suben el riesgo aunque suenen bien: resolverlo en privado, arreglarlo a medias o más tarde. Lo bajan: dejarlo por escrito, arreglarlo entero, asumirlo en el momento. | categorías §2; motor M28 |
+| B9 | Haiku ya elige casi siempre respuestas seguras (detonantes: 91 % bien sin manual; casi nunca gasta dinero con poco dinero). | transmisión; categorías |
+
+**Sobre cómo escribir el manual (transmisión)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B10 | En el programa oficial sólo el nombre y la descripción del Skill (y la instrucción del manifest) están siempre a la vista; el cuerpo se lee bajo demanda. Haiku lo lee siempre. El sitio de la regla no cambia la obediencia. | transmisión, [fase 0](lab/reports/transmision/fase0-carga-skills.md) |
+| B11 | Se obedece lo imperativo, en orden de prioridad (“la primera línea que aplica gana”) y con condiciones **definidas por exclusión** (“todo comentario que no sea uno de estos dos suaves”). | transmisión, rondas |
+| B12 | **Un interruptor que la IA calcula y escribe** (“Review in N” en cada nota) aísla una regla de historias: la aplica sólo en su mes y el resto juega como sin manual. | transmisión, [rondas 8–10](lab/reports/transmision/ronda-8-10.md) |
+| B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
+| B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
+
+**Cierre y fidelidad de la réplica (motor, investigación terminada).**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B15 | Planificar conjuntamente energía y acción principal tras la última evaluación mejora la ganancia de cierre en +0,552 Q (IC 95% [0,298; 0,805], 600 partidas oficiales aleatorizadas). El planificador dejaba energía útil sin usar y descartaba red que aún puntúa. La nota global sin ajustar no prueba un nuevo campeón; transferencia a Skill pendiente. | [Mecánicas emergentes §1](lab/reports/mecanicas-emergentes/README.md) |
+| B16 | La terminación liquida el mes 48 y deja estado en mes 49, con 48 nóminas. Ambos generadores de la réplica omitían esa transición. Confirmado en 1.156 completadas históricas y 568 nuevas; corrección con modo histórico explícito para reproducir experimentos. | [Mecánicas emergentes §2](lab/reports/mecanicas-emergentes/README.md) |
+
+## C. Pistas sin confirmar
+
+| # | Pista | Fuente |
+|---|---|---|
+| C1 | El manual `t13-final` (reparto con prioridad + interruptor de evaluación) saca 57,2 ± 5,1 frente a 50,5 ± 2,5 de f3-lean en partidas de Haiku (12 frente a 43): +6,7 ± 5,7, prometedor pero no seguro; t10, con las mismas reglas y otra redacción, saca 47,6. | transmisión, lotes g1–g6 |
+| C2 | La instrucción del manifest no añade nada con Haiku; quizá sí con DeepSeek, que podría olvidar antes. | transmisión, [contexto largo](lab/reports/transmision/contexto-largo.md) |
+| C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Nadie ha medido todavía cómo etiqueta o percibe DeepSeek. | carrera (histórico) |
+| C4 | Una política por tipo de respuesta recupera dos tercios de la distancia entre el azar y la óptima (47 de 68 en el simulador). Falta saber cuánto saca DeepSeek razonando con esos tipos. | categorías §2 |
+
+## X. Descartado (no repetir sin una razón nueva)
+
+| Idea | Por qué no | Fuente |
+|---|---|---|
+| Función de valor aprendida, mejora por simulación | no superan al planificador | motor M21, M29 |
+| “Todo a Skill desde L4” como regla sin umbrales | +0,6, nada | motor M23 |
+| Reglas sobre historias visibles todo el tiempo (también “sólo en tal mes” o en `reference/` sin interruptor) | contaminan 1 de cada 5 historias; −12 a −21 en partidas | transmisión |
+| “Evita confrontar / exponerte” | la IA cede para agradar, que también es arriesgado | transmisión, ronda A |
+| Varios Skills, uno por regla | la IA lee sólo uno | transmisión, ronda A |
+| Pedir que mire el registro para calibrar | lo mira (96 %), pero no elige mejor | transmisión, [fase 3](lab/reports/transmision/fase3-rubrica.md) |
+| Reloj de evaluación, “no cambiar Dignity por Network”, leer el registro, limpieza preventiva del último año (noche del 26) | no mejoran | [histórico T18](lab/reports/historico/secciones/resumen-noche.md) |
+| Carrera de manuales por estilo (prereg-v1, fastloop) | mucha cuota para diferencias dentro del ruido | [ESTADO antiguo](docs/historico/ESTADO-2026-10-26-carrera.md) |
+| Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |

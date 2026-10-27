@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t13-final",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "t12 with the senior-level line and the HR gauge worded from the handbook and in-run feedback.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

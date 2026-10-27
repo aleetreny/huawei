@@ -1,0 +1,11 @@
+{
+  "family": "transmision",
+  "name": "t-desc",
+  "parents": [],
+  "idea_origin": "T20 obedience bank",
+  "operator": "transmission variant",
+  "hypothesis": "Compact rules in the front-matter description, which the official runner keeps in every system prompt.",
+  "predicted_behaviour": "Measured in the obedience bank against the no-Skill control.",
+  "refutation": "No gain in right answers over the control on the bank.",
+  "skill_count": 1
+}

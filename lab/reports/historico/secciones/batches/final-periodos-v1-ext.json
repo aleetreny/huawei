@@ -1,0 +1,37 @@
+{
+ "name": "final-periodos-v1-ext",
+ "cut": null,
+ "n": 12,
+ "actor": "08e9167a965ed82c",
+ "created": "2026-10-27T05:08:05Z",
+ "arms": {
+  "f3-lean-v1": [
+   "secciones-audi-cc098e54-08e916-00025-a1",
+   "secciones-audi-cc098e54-08e916-00026-a1",
+   "secciones-audi-cc098e54-08e916-00027-a1",
+   "secciones-audi-cc098e54-08e916-00028-a1",
+   "secciones-audi-cc098e54-08e916-00029-a1",
+   "secciones-audi-cc098e54-08e916-00030-a1",
+   "secciones-audi-cc098e54-08e916-00031-a1",
+   "secciones-audi-cc098e54-08e916-00032-a1",
+   "secciones-audi-cc098e54-08e916-00033-a1",
+   "secciones-audi-cc098e54-08e916-00034-a1",
+   "secciones-audi-cc098e54-08e916-00035-a1",
+   "secciones-audi-cc098e54-08e916-00036-a1"
+  ],
+  "periodos-v1": [
+   "secciones-audi-8813f1ad-08e916-00025-a1",
+   "secciones-audi-8813f1ad-08e916-00026-a1",
+   "secciones-audi-8813f1ad-08e916-00027-a1",
+   "secciones-audi-8813f1ad-08e916-00028-a1",
+   "secciones-audi-8813f1ad-08e916-00029-a1",
+   "secciones-audi-8813f1ad-08e916-00030-a1",
+   "secciones-audi-8813f1ad-08e916-00031-a1",
+   "secciones-audi-8813f1ad-08e916-00032-a1",
+   "secciones-audi-8813f1ad-08e916-00033-a1",
+   "secciones-audi-8813f1ad-08e916-00034-a1",
+   "secciones-audi-8813f1ad-08e916-00035-a1",
+   "secciones-audi-8813f1ad-08e916-00036-a1"
+  ]
+ }
+}
