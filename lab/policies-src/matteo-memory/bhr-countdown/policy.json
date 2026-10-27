@@ -1,0 +1,13 @@
+{
+  "family": "matteo-memory",
+  "name": "bhr-countdown",
+  "parents": ["bhr"],
+  "idea_origin": "Matteo (27 Oct): BHR played 8 Haiku games, 59.49, identical to v10; first review 4/8, always a point of Network or Output lost in the month before the review. Alejandro's T20 found that a countdown the model computes and writes ('Review in N') is the only switch that isolates a story rule to its month, and that a no-loss checklist for N = 1 raises correct choices from 73 % to 76 % without changing other stories.",
+  "operator": "targeted revision of bhr",
+  "hypothesis": "Adding the review countdown to every note and a strict N-mark/O-mark checklist for the month before a review reduces lost Network or Output points just before reviews, raising first-review promotion above BHR's 4/8, with no change elsewhere.",
+  "change": "BHR unchanged plus: a 'Review in N' countdown at the start of every note; a 'Month before a review' checklist applied only when N = 1 (mark options that go against a person or take time from own delivery, pick an honest unmarked option); manifest instruction filled in.",
+  "predicted_behaviour": "Every note starts with a correct 'Review in N'. In N = 1 months notes list option marks and choices avoid marked options when an unmarked honest one exists. First-review promotion at least 5/8; completion and mean Q not below BHR.",
+  "refutation": "8 Haiku games with the same actor as BHR (017798b931bc18f8). Reject if first-review promotion is not above 4/8, or completion or mean Q fall clearly below BHR.",
+  "skill_count": 1,
+  "notes": "Branch matteo/main. The checklist is inline in SKILL.md (our Haiku actor only loads SKILL.md bodies); wording adapted from Alejandro's t10-countdown reference file."
+}
