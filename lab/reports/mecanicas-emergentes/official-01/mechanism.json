@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "baseline_unused_energy": 353,
+    "optimal_unused_energy": 52,
+    "better_health_dignity": 34,
+    "better_network": 460,
+    "more_remaining_risk": 5
+  },
+  "mean_model_score_contributions": {
+    "resilience": 0.10035211267605634,
+    "network": 0.36120892018779344,
+    "skill": 0.006822183098591549,
+    "risk": -0.008802816901408451
+  }
+}

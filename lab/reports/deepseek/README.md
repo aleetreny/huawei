@@ -56,7 +56,7 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
    - Categorización con una medida única en el simulador: el bot del motor que elige sólo con lo que DeepSeek percibe, `groupbot.py`. Se eligió con los títulos de diseño y se comprobó con los reservados.
    - Banco oficial de obediencia: control, t13-final y control repetido para separar el efecto del manual del ruido de la temperatura.
    - Una variante masticada, `t13-read-v1`, que mete en el manual la lectura ganadora y una regla escrita.
-2. **Resultados:** conclusiones de arriba; detalles y tablas en [percepcion.md](percepcion.md), [categorizacion.md](categorizacion.md), [obediencia.md](obediencia.md) y [masticado.md](masticado.md). Datos en `~/careerlab-data/deepseek/` (fuera de Git: llevan texto del juego). Hallazgos B15–B19, C5–C7 y dos descartados en [HALLAZGOS.md](../../../HALLAZGOS.md).
+2. **Resultados:** conclusiones de arriba; detalles y tablas en [percepcion.md](percepcion.md), [categorizacion.md](categorizacion.md), [obediencia.md](obediencia.md) y [masticado.md](masticado.md). Datos en `~/careerlab-data/deepseek/` (fuera de Git: llevan texto del juego). Hallazgos B17–B21, C5–C8 y dos descartados en [HALLAZGOS.md](../../../HALLAZGOS.md).
 3. **Lo que falló o quedó a medias.**
    - `t13-read-v1` sólo se midió en historias, no en el reparto trimestral (que no cambia).
    - La pérdida por decisión del banco no confirma en los títulos reservados la mejora v1 → v3 que sí se ve en percepción y en el simulador.
