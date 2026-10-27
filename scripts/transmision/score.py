@@ -36,6 +36,8 @@ def rule_of(it: dict[str, Any]) -> str | None:
         if r in tg:
             if r == "skill_l4" and it["state"]["risk"] >= 2:
                 continue
+            if r in ("skill_l4", "hr_risk") and it["phase"] == "q" and it["state"]["energy"] < 3:
+                continue  # only the first Energy choice of the quarter: later ones depend on what was already done
             return r
     return None
 
@@ -54,6 +56,8 @@ def right_set(it: dict[str, Any], rule: str) -> set[int]:
     if rule == "hr_risk":
         want = "Defuse legacy risk" if it["phase"] == "q" else "Lay low and reduce risk"
         ok = {k for k, n in names.items() if n == want}
+        if it["phase"] == "q" and st["health"] <= 3:
+            ok |= {k for k, n in names.items() if n == "Health recovery"}
         if it["phase"] == "q" and (st["energy"] < 2 or not ok):
             ok = {k for k, n in names.items() if n in ("Health recovery", "Mental recovery", "Reserve energy (no action)")}
         return ok
