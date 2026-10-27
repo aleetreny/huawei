@@ -53,6 +53,8 @@ ENERGY_FX = {"High-intensity work": ({"output": 2, "health": -1, "dignity": -1},
              "Defuse legacy risk": ({}, 2), "Mental recovery": ({"dignity": 2}, 1), "Health recovery": ({"health": 2}, 1),
              "Prepare report materials": ({"output": 1, "dignity": 1}, 1), "Reserve energy (no action)": ({}, 0)}
 BLOW_AT = 5
+DISPLAY = lambda w: math.floor(w + 1e-9)
+DISP_LO, DISP_HI = 0.0, 0.99
 PENALTY_EVERY_MONTH = False
 ACTION_RISK = {"q|High-intensity work": 1, "q|Defuse legacy risk": -1, "m|Lay low and reduce risk": -1}
 WARN_TONE = ("I had hopes", "The room feels tense", "HR marks the note")
@@ -85,7 +87,7 @@ class State:
 
     def vis(self) -> list:
         return [self.health, self.dignity, self.skill, self.network, self.level, self.duration_in_level,
-                self.output, math.floor(self.wealth + 1e-9), self.energy]
+                self.output, DISPLAY(self.wealth), self.energy]
 
 
 def cap(level: int, stat: str) -> float:
@@ -268,10 +270,10 @@ class Replica:
         if tone == "warn":
             apply_delta(st, {"health": -1, "dignity": -2})
             st.risk += 1
-        elif not fast:
-            apply_delta(st, {"dignity": 1, "network": 1} if tone == "praise" else {"dignity": 1})
         elif tone == "praise":
-            apply_delta(st, {"network": 1})
+            apply_delta(st, {"dignity": 2, "network": 1})
+        else:
+            apply_delta(st, {"dignity": 1})
         if g == "D" and st.level == 1:
             apply_delta(st, {"dignity": -3, "network": -1})   # "This half-year review fell short"
         if fast:
@@ -478,6 +480,7 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
         games += 1
         out = r[1]
         W, R, nb = 1.0, 0, 0
+        Wlo = Whi = 1.0  # interval of the true wealth consistent with every displayed (floored) value
         out_hist: dict[int, float] = {}
         counters = (0, 0, 0)
         for i, (s, e, a) in enumerate(out):
@@ -490,6 +493,7 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
             if "Old landmines" in t:
                 R, nb = 0, nb + 1
             st = obs_state(s[4], s[0])
+            W = (Wlo + Whi) / 2
             st.wealth, st.risk, st.blowups, st.out_hist = W, R, nb, dict(out_hist)
             st.neg_wealth_months, st.zero_net_months, st.low_dig_months = counters
             decide_apply(rep, st, s, e)
@@ -527,7 +531,11 @@ def validate(cat: Catalog, batches: list[str], verbose: bool = True) -> dict[str
                         tg = tuple(x for x in ("Old landmines", "Payday", "nobody asks", "self-respect", "fell short", "climbed too fast", "Half-year talk", "jargon") if x in nt)
                         DEBUG[(s[1], nxt[0] != s[0], tg, diff)] += 1
                 # wealth: keep the replica's fraction, resync the integer part if it drifted
-                W = st.wealth if math.floor(st.wealth + 1e-9) == obs[7] else obs[7] + (st.wealth - math.floor(st.wealth + 1e-9))
+                dw = st.wealth - W
+                Wlo, Whi = max(Wlo + dw, obs[7] + DISP_LO), min(Whi + dw, obs[7] + DISP_HI)
+                if Wlo > Whi + 1e-9:
+                    Wlo, Whi = obs[7] + DISP_LO, obs[7] + DISP_HI
+                W = (Wlo + Whi) / 2
         # final score from the last observed state and the replica's hidden risk
         fin = g["final"]["s"]
         stf = obs_state(fin, g["final"]["t"])
