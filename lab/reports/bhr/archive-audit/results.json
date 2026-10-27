@@ -1,0 +1,42 @@
+{
+  "scope": "Retrospective public-state description; no caps, readiness gold, counterfactuals or actor adherence identified.",
+  "collections": [
+    {
+      "source": "lab/reports/first-review-search/learned-v2/public-trajectories.jsonl.gz",
+      "sha256": "4380f058d045127e5bc7db92b7830a0402919439b52a391a9e4f4e92589c47fa",
+      "counts": {
+        "runs": 512,
+        "review_message": 496,
+        "promoted": 336,
+        "promoted_review_n": 336,
+        "promoted_any_observed_net_output_loss": 314,
+        "promoted_last_snapshot_below_running_best": 197,
+        "promoted_no_observed_net_output_loss": 22,
+        "non_review_net_output_loss_transitions": 1153,
+        "not_promoted_review_n": 160,
+        "not_promoted_any_observed_net_output_loss": 157,
+        "not_promoted_last_snapshot_below_running_best": 130,
+        "not_promoted_no_observed_net_output_loss": 3,
+        "no_review_message": 16
+      }
+    },
+    {
+      "source": "lab/reports/financial-reserve-study/calibration-v1/public-trajectories.jsonl.gz",
+      "sha256": "01616fd768b189e34df6745acbf3568b36e430b91567fd56674729876c12ddf5",
+      "counts": {
+        "runs": 512,
+        "review_message": 512,
+        "promoted": 385,
+        "promoted_review_n": 385,
+        "promoted_any_observed_net_output_loss": 367,
+        "promoted_last_snapshot_below_running_best": 211,
+        "promoted_no_observed_net_output_loss": 18,
+        "non_review_net_output_loss_transitions": 1254,
+        "not_promoted_review_n": 127,
+        "not_promoted_any_observed_net_output_loss": 123,
+        "not_promoted_last_snapshot_below_running_best": 92,
+        "not_promoted_no_observed_net_output_loss": 4
+      }
+    }
+  ]
+}
