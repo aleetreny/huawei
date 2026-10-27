@@ -319,6 +319,11 @@ def tags(cat: R.Catalog, sit: dict[str, Any], fx: dict[str, dict[str, Any]]) -> 
         out.append("early_ruin")
     if m >= 45:
         out.append("closing")
+    if st["health"] <= 3 and m < 45 and (ph in ("q",) or (ph == "e" and any(f["d"].get("health", 0) < 0 for f in fx.values())
+                                                         and any(f["d"].get("health", 0) >= 0 for f in fx.values()))):
+        out.append("low_health")
+    if ph == "e" and m < 45:
+        out.append("general")
     return out
 
 
@@ -328,7 +333,7 @@ def _truth_one(args: tuple[dict[str, Any], int]) -> dict[str, Any]:
     return {**sit, **v}
 
 
-def truth(sit_path: Path, out_path: Path, n: int, per_tag: int, seed: int) -> None:
+def truth(sit_path: Path, out_path: Path, n: int, per_tag: int, seed: int, only: str | None = None) -> None:
     cat = R.Catalog(json.loads(CATALOG.read_text()))
     cands: dict[str, list[dict[str, Any]]] = {}
     for line in sit_path.open():
@@ -351,6 +356,10 @@ def truth(sit_path: Path, out_path: Path, n: int, per_tag: int, seed: int) -> No
         sit["fx"], sit["tags"] = fx, tg
         sit["holdout"] = holdout(sit["title"]) if sit["phase"] == "e" else (hash(sit["game"]) % 10 < 3)
         for t in tg:
+            if only and t != only:
+                continue
+            if t == "general" and not only:
+                continue
             cands.setdefault(t, []).append(sit)
     rng = random.Random(seed)
     chosen: dict[str, dict[str, Any]] = {}
@@ -384,11 +393,12 @@ def main() -> None:
     p.add_argument("--rollouts", type=int, default=48)
     p.add_argument("--per-tag", type=int, default=700)
     p.add_argument("--seed", type=int, default=7)
+    p.add_argument("--only-tag")
     a = ap.parse_args()
     if a.cmd == "extract":
         extract(a.batches.split(","), Path(a.out), a.max_games)
     else:
-        truth(Path(a.sit), Path(a.out), a.rollouts, a.per_tag, a.seed)
+        truth(Path(a.sit), Path(a.out), a.rollouts, a.per_tag, a.seed, a.only_tag)
 
 
 if __name__ == "__main__":

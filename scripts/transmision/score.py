@@ -25,18 +25,18 @@ sys.path.insert(0, str(HERE.parent / "ingenieria-inversa"))
 import replica as R  # noqa: E402
 
 DATA = Path(os.environ.get("TRANSMISION_DATA", Path.home() / "careerlab-data" / "transmision"))
-RULES = ("pre_review", "skill_l4", "hr_risk", "trigger", "early_ruin", "closing")
+RULES = ("pre_review", "skill_l4", "hr_risk", "trigger", "early_ruin", "closing", "low_health", "general")
 TOL_E, TOL_Q = 0.5, 0.3
 
 
 def rule_of(it: dict[str, Any]) -> str | None:
     """Each item is scored under one rule (the most specific of its tags)."""
     tg = it["tags"]
-    for r in ("trigger", "early_ruin", "pre_review", "closing", "hr_risk", "skill_l4"):
+    for r in ("trigger", "early_ruin", "pre_review", "closing", "low_health", "hr_risk", "skill_l4", "general"):
         if r in tg:
             if r == "skill_l4" and it["state"]["risk"] >= 2:
                 continue
-            if r in ("skill_l4", "hr_risk") and it["phase"] == "q" and it["state"]["energy"] < 3:
+            if r in ("skill_l4", "hr_risk", "low_health") and it["phase"] == "q" and it["state"]["energy"] < 3:
                 continue  # only the first Energy choice of the quarter: later ones depend on what was already done
             return r
     return None
@@ -53,6 +53,8 @@ def right_set(it: dict[str, Any], rule: str) -> set[int]:
                 ok = {k for k, n in names.items() if n == "Health recovery"}
             return ok
         return {k for k, n in names.items() if n == "Apply for rotation"}
+    if rule == "low_health" and it["phase"] == "q":
+        return {k for k, n in names.items() if n == "Health recovery"}
     if rule == "hr_risk":
         want = "Defuse legacy risk" if it["phase"] == "q" else "Lay low and reduce risk"
         ok = {k for k, n in names.items() if n == want}
@@ -67,7 +69,7 @@ def right_set(it: dict[str, Any], rule: str) -> set[int]:
 
 
 def decisive(it: dict[str, Any], rule: str) -> bool:
-    if rule in ("skill_l4", "hr_risk"):
+    if rule in ("skill_l4", "hr_risk") or (rule == "low_health" and it["phase"] == "q"):
         return True
     q = list(it["q"].values())
     return (max(q) - min(q)) >= (2.0 if it["phase"] == "e" else 0.4) and len(right_set(it, rule)) < len(q)
@@ -83,6 +85,8 @@ def rule_fail(it: dict[str, Any], rule: str, k: int) -> bool:
         return st["risk"] + f["dr"] >= R.BLOW_AT
     if rule == "early_ruin":
         return f["d"].get("wealth", 0) < 0
+    if rule == "low_health" and it["phase"] == "e":
+        return f["d"].get("health", 0) < 0
     return k not in right_set(it, rule)
 
 
