@@ -1,10 +1,14 @@
 # Mejora de la nota de DeepSeek: análisis desde los fundamentos y manuales t13-read-v2 a v4
 
-**Conclusión (27 oct, 20:00 UTC).** **Primeras partidas completas de DeepSeek: `t13-read-v4` saca 71,67 y `t13-read-v5` 66,71** (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas (14,98 a 42,51). La partida de `t13-read-v3` llegó al mes 48 en L5 sin explosiones (66,6 según la réplica), pero la cortó nuestro vigilante. Lo que lo ha conseguido:
+**Conclusión (27 oct, 20:45 UTC).** **`t13-read-v4` saca 71,67 y 70,22 en sus dos partidas completas con DeepSeek** (48 meses, L5, riesgo 0, Health y Dignity al máximo). Su tercera partida se quedó en L1 (la trampa del primer ascenso) y murió por un choque de puertos con otro chat. `t13-read-v5` sacó 66,71, y `t13-read-v3` llegó al mes 48 en L5 (66,6 según la réplica; la cortó nuestro vigilante). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas (14,98 a 42,51). Media esperada de v4 con la trampa de L1 (~1 de cada 8–10 partidas): ~63; cuando asciende a tiempo, ~70.
+
+Lo que lo ha conseguido:
 - proteger Skill, Network y Output en el mes previo a cada evaluación, en el cuerpo del Skill y en la instrucción del manifest (DeepSeek no vuelve a abrir archivos de referencia);
 - separar del todo las reglas del trimestre y las de las historias;
 - un paso de riesgo más duro cuando RR. HH. no está tranquilo;
 - en v4, además, el mejor valor de cada indicador en el nivel, protección de Network y Output los dos últimos meses y reparación inmediata.
+
+**Recomendación para el corte 1: `t13-read-v4`** (commit `09d5735`).
 
 **Recomendación para el corte 1: `t13-read-v4`.** Se están jugando dos partidas más para tener tres, como la evaluación oficial.
 
@@ -119,7 +123,7 @@ Lo visto mientras juegan:
 ### Confirmación de t13-read-v4 (2 partidas desde las 19:56 UTC) y t13-read-v7 (1 desde las 20:19)
 
 - **v4-00001: atascada en L1.** Perdió el ascenso del mes 6 por Network −1 en la última historia del mes 5, cuando la otra opción era filtrar información a la competencia (pérdida casi forzosa). Perdió el del mes 12 por Output −1 en el mes 11. En el mes 18, D por tiempo en el nivel. Murió en el mes 22 por un fallo de infraestructura: su servidor de agente arrancó con choques de puerto (21001) a la vez que otro chat arrancaba sus huecos, y se cerró a mitad de partida ("going away"). Sin nota; iba hacia el despido del mes 24.
-- v4-00002: L4 en el mes 26, sin explosiones (en juego).
+- **v4-00002: completa, 70,22** (48 meses, L5, Skill 122, Network 46, dinero 30,2, riesgo 0, Health y Dignity al máximo; 0,72 USD).
 - v7: en juego.
 
 **La trampa de L1 es la mayor fuente de varianza que queda.** En L1 el umbral de Network y Output es su máximo: margen cero. En el 27 % de los meses de preparación la pérdida es forzosa (todas las opciones cuestan algo o son arriesgadas). De 8 partidas de la familia v2–v5, 1 se quedó en L1.
