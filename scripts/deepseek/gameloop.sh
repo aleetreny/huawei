@@ -18,7 +18,7 @@ for n in $(seq 1 $games); do
   usage=$(uv run python -c "from pathlib import Path; import os; from careerlab.target import key_status; print(key_status(Path(os.environ['CAREERLAB_TARGET_ENV']))['usage'])" 2>/dev/null)
   if (( usage >= cap )); then echo "key usage $usage >= cap $cap: stopping"; exit 0; fi
   echo "$(date -u +%H:%M) slot $slot game $n of $policy (key usage $usage)"
-  uv run python -m careerlab.target play --policy $policy --spend --games 1 --slot $slot --max-usd-per-game 3.0 \
+  uv run python -m careerlab.target play --policy $policy --spend --games 1 --slot $slot --max-usd-per-game 20 \
      --reserve-usd 15 --purpose pilot --why "$why" > $out/$policy-slot$slot-$n.json 2> $out/$policy-slot$slot-$n.err
   echo "$(date -u +%H:%M) slot $slot game $n done (exit $?)"
 done
