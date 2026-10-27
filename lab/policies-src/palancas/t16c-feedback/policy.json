@@ -1,0 +1,13 @@
+{
+  "family": "palancas",
+  "name": "t16c-feedback",
+  "parents": [
+    "t16b-expect"
+  ],
+  "idea_origin": "Palancas line (in-run levers)",
+  "operator": "status line in the note",
+  "hypothesis": "t16b-expect with the cap worded as in-run feedback (a stat that did not take an announced gain), never as a hidden per-level mechanic; same behaviour, safer for the rules and the rubric.",
+  "predicted_behaviour": "Writes the status line in every note, lists a stat in Caps after a gain that did not register, and stops spending on it.",
+  "refutation": "No better choices than t13-final on the cap items, or a fingerprint shift on the general block.",
+  "skill_count": 1
+}
