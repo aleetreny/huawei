@@ -75,3 +75,7 @@ Le famiglie storiche P0/F1–F8, M3, o1–o3, bb-mechanics, periodos/secciones, 
 Audit richiesto da Matteo per la prima submission: inventario completo dei branch, deduplicazione dei registri, lettura dei rapporti più recenti e controllo del bundle v4. Raccomandazione congelata sopra; nessun cambiamento ai manuali o alle linee degli altri. Nessun costo AI/API, nessuna nuova carriera. Il sito ufficiale non era accessibile via strumento web: calendario e requisiti sono riferiti ai documenti del repo, non verificati online in questa sessione.
 
 Prossimo passo dell'organizzatore: riesaminare eventuali nuovi risultati script-v3/v3b successivi agli SHA in refs.json; se non cambiano il quadro con più carriere complete e senza aumentare le sconfitte, confezionare v4 e validare la submission. Unire solo questo rapporto e gli allegati; non serve unire l'intera storia della branch di Matteo.
+
+## Relevo — recording panel update
+
+Replaced video-script-en.md with the three-minute recording version in the required five-part order. Added frozen-t13-read-v4/bundle with the exact evaluated Skill and manifest from 09d5735; verified every byte and the registered bundle SHA256. Opened the recording script, Skill and manifest in Codex panels. No evaluated candidate changed and no games launched. Integrate these documentation/snapshot files into main with the review report.
