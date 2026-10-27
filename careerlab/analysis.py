@@ -24,8 +24,8 @@ def _actor_label(cfg: dict[str, Any]) -> str:
         label += f"@{cfg['effort']}"
     if cfg.get("autocompact"):
         label += f"~{cfg['autocompact']}"
-    if cfg.get("skills_mode") == "plugin":
-        label += "#plugin"
+    if cfg.get("skills_mode") in ("plugin", "official"):
+        label += "#" + cfg["skills_mode"]
     return label
 
 

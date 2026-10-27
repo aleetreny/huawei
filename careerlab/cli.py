@@ -132,8 +132,8 @@ def _actor(reg: Registry, spec: str) -> tuple[str, str]:
         from careerlab.actors.claude_cli import ClaudeWorkerConfig, cli_version
 
         name, _, stop = name.partition("^")
-        skills_mode = "plugin" if name.endswith("#plugin") else "inline"
-        name = name.removesuffix("#plugin")
+        skills_mode = "plugin" if name.endswith("#plugin") else "official" if name.endswith("#official") else "inline"
+        name = name.removesuffix("#plugin").removesuffix("#official")
         name, _, compact = name.partition("~")
         model, _, effort = name.partition("@")
         cfg = ClaudeWorkerConfig(model=model, effort=effort or None, autocompact=compact or None,
@@ -364,7 +364,7 @@ def main(argv: list[str] | None = None) -> int:
     lt.set_defaults(fn=cmd_lint)
     e = sub.add_parser("enqueue")
     e.add_argument("--policy", required=True)
-    e.add_argument("--actor", required=True, help="scripted[:python-executor] | claude-cli:<model>[@effort][~autocompact][#plugin][^stop month]")
+    e.add_argument("--actor", required=True, help="scripted[:python-executor] | claude-cli:<model>[@effort][~autocompact][#plugin|#official][^stop month]")
     e.add_argument("--n", type=int, required=True)
     e.add_argument("--purpose", default="pilot", choices=["pilot", "screen", "calibrate", "audit", "confirm", "infra"])
     e.add_argument("--environment", default="real-dev", choices=["real-dev", "synthetic"])
