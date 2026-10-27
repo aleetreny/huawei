@@ -1,0 +1,14 @@
+{
+  "family": "secciones",
+  "name": "f3-lean-captrade-v1",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "T18 lab by period",
+  "operator": "add module(s): cap-trade",
+  "hypothesis": "A Skill that tells the actor that gains on a full or capped stat are lost, and that public principled stands tend to raise Dignity (already at its maximum in nearly every baseline game at month 6) while costing Network, will make the actor pick discreet honest answers and lose fewer Network points before the first review.",
+  "change": "f3-lean-v1 plus skill module(s) cap-trade",
+  "predicted_behaviour": "Fewer Network or Output points lost in the two months before the first review; higher first-review promotion than the same-batch reference.",
+  "refutation": "Refuted if first-review promotion over 25 short games per arm is not clearly above the interleaved reference (about 15 points).",
+  "skill_count": 2
+}

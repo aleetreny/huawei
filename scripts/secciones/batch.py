@@ -27,6 +27,8 @@ def main() -> None:
     ap.add_argument("--arms", nargs="+", required=True)
     ap.add_argument("--purpose", default="screen")
     ap.add_argument("--why", default="T18 interleaved batch")
+    ap.add_argument("--start", type=float, help="priority of round 0 (default: just below everything queued)")
+    ap.add_argument("--step", type=float, default=1.0, help="priority drop per round (smaller = spread among other batches)")
     a = ap.parse_args()
     s = load_settings()
     reg = s.registry()
@@ -42,11 +44,11 @@ def main() -> None:
             raise SystemExit(f"unknown policy {arm}")
         pids.append(row[0])
     low = reg.db.execute("SELECT COALESCE(MIN(priority), 0) FROM jobs WHERE status='queued' AND origin=?", (s.origin,)).fetchone()[0]
-    start = min(low, 0) - 1
+    start = a.start if a.start is not None else min(low, 0) - 1
     jobs: dict[str, list[str]] = {pid: [] for pid in pids}
     for k in range(a.n):
         for pid in pids:
-            jobs[pid] += reg.enqueue(pid, actor_id, env_id, a.purpose, 1, priority=start - k)
+            jobs[pid] += reg.enqueue(pid, actor_id, env_id, a.purpose, 1, priority=start - k * a.step)
     names = {pid: reg.db.execute("SELECT name FROM policies WHERE policy_id=?", (pid,)).fetchone()[0] for pid in pids}
     reg.decide("enqueue", a.name, {"cut": a.cut, "n": a.n, "arms": names, "actor": actor_id}, a.why)
     OUT.mkdir(parents=True, exist_ok=True)
