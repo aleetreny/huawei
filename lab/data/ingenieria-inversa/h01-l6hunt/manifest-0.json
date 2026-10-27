@@ -1,0 +1,43 @@
+{
+  "args": {
+    "batch": "h01-l6hunt",
+    "policy": "replica-greedy",
+    "games": 400,
+    "procs": 4,
+    "slots": 3,
+    "seed": 1100000,
+    "offset": 0,
+    "nice": 10,
+    "kw": "{\"catalog\": \"/home/user/huawei/lab/data/ingenieria-inversa/catalog_v1.json\", \"policy\": \"planner\", \"params\": {\"w_below\": 3.72, \"w_above\": 0.8, \"w_skill_hi\": 2.2, \"review_boost\": 3.03, \"w_h\": 0.97, \"w_d\": 1.16, \"h_floor\": 2, \"d_floor\": 7, \"w_wealth\": 0.74, \"risk_cost\": 2.2, \"risk_cap\": 4, \"w_cont\": 0.32, \"end_from\": 48, \"w_end\": 1.73, \"low_n_risk\": 1, \"defuse_at\": 4, \"laylow_at\": 4}}"
+  },
+  "kwargs": {
+    "catalog": "/home/user/huawei/lab/data/ingenieria-inversa/catalog_v1.json",
+    "policy": "planner",
+    "params": {
+      "w_below": 3.72,
+      "w_above": 0.8,
+      "w_skill_hi": 2.2,
+      "review_boost": 3.03,
+      "w_h": 0.97,
+      "w_d": 1.16,
+      "h_floor": 2,
+      "d_floor": 7,
+      "w_wealth": 0.74,
+      "risk_cost": 2.2,
+      "risk_cap": 4,
+      "w_cont": 0.32,
+      "end_from": 48,
+      "w_end": 1.73,
+      "low_n_risk": 1,
+      "defuse_at": 4,
+      "laylow_at": 4
+    }
+  },
+  "started": "2026-10-27T09:44:42Z",
+  "commit": "86bd640",
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)",
+  "competition_mode": false,
+  "interface": "five official MCP tools only; no seeds, cloning or internal reads"
+}
