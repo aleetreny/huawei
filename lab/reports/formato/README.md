@@ -2,7 +2,7 @@
 
 **Pregunta.** ¿Se acerca DeepSeek a 75 si cambiamos *qué* recibe el agente, *cuándo*, *en qué forma* y *qué puede hacer con ello*, en vez de escribir mejor el mismo manual?
 
-**Conclusión provisional (27 oct, 21:00).** El agente oficial puede ejecutar código: tiene las herramientas `bash` y `code` y corre un script de la carpeta del Skill en plena partida. Eso permite separar el trabajo: DeepSeek sólo **lee** (pone signos a cada opción y el tono de RR. HH.) y un **script decide**, siempre igual y con memoria propia de la partida. En el simulador, ese script con las lecturas reales de DeepSeek saca 51,5 (63,4 con lecturas exactas), frente a 15 y 42 de las dos últimas partidas oficiales de DeepSeek. Falta medirlo en partidas oficiales.
+**Conclusión (27 oct, 22:10 UTC).** El agente oficial puede ejecutar código (`bash`, `code`) y correr un script de la carpeta del Skill en plena partida. Con eso, DeepSeek sólo **lee** cada opción (signos de los indicadores y riesgo) y un **script decide** con memoria propia de la partida. **Ese formato dio la mejor partida de DeepSeek que tenemos: 76,87** (48 meses, L6, por encima de 75), pero **todavía no es estable**: las 5 partidas oficiales de `script-v1` y `script-v3` dan 76,87 · 66,55 · 60,45 · 32,59 · 13,23 (media 49,9), frente a 71,67 y 70,22 de `t13-read-v4` (DeepSeek decide con reglas escritas). Cada partida rota tiene una causa distinta y concreta (un punto perdido en L1, la cartera oculta, explosiones), y el script tiene más techo cuando juega limpio (L5–L6, Skill 103–147). **Para el corte 1, `t13-read-v4` sigue siendo la opción segura.**
 
 Rama `alejandro/formato`. Código en `scripts/formato/`, manuales en `lab/policies-src/formato/`, datos fuera de Git en `~/careerlab-data/formato/`.
 
@@ -71,13 +71,57 @@ Son ~64 llamadas más por partida, no ~230. En el simulador, planificar el trime
 - **`script-v3`** = v1 + **recordatorios de lectura justo a tiempo**: cuando quedan 1–2 meses para la evaluación, o el tono de RR. HH. no está tranquilo, la salida del script añade una línea `READ NEXT` con lo que suele costar Output/Network o esconder riesgo, justo antes de que DeepSeek lea la siguiente historia. Además, `R-` sólo cuando la opción documenta, informa, asume o arregla del todo. Tres partidas en juego desde las 21:02 UTC.
 - **Fichas:** v1 gasta ~2,3 millones de fichas por mes en la partida completa (110 M en total), frente a ~1,4 M de v4: la llamada extra al script en cada decisión con el contexto lleno. Eso baja la parte de eficiencia (10 % de la versión) de ~64 a ~28, unos 3,6 puntos de la versión. Hay que recortarlo si v3 se confirma.
 
+### `script-v3` (v1 + recordatorios de lectura justo a tiempo), 3 partidas desde las 21:02 UTC
+
+| Partida | Nota | Final | Coste |
+|---|---:|---|---:|
+| sv3-g1 | 66,55 | 48 meses, L5, Skill 103, Network 33, riesgo 0 | 1,22 USD |
+| sv3-g3 | 60,45 | 48 meses, L4, Skill 89, Network 36, riesgo 0 | 1,21 USD |
+| sv3-g2 | 32,59 | **ruina en el mes 10** | 0,12 USD |
+
+- **L1 resuelto en las tres** (ascenso en el mes 6); los `READ NEXT` se aplican (26 en una partida). Con v1, 1 de 2 se quedó en L1.
+- **Fallo nuevo: la cartera oculta.** El script eligió una opción bien leída como `W-` (−2 de dinero) con la cartera casi vacía. El panel redondea Wealth hacia abajo: mostró 0 seis meses mientras era negativo, y el juego eliminó la partida por ruina. `script-v3b` (sin jugar) prohíbe opciones `W-` con poco dinero visible si hay otra.
+- **Donde pierde frente a v4 cuando termina:** Network (33–36 frente a 54) y dinero (25–33 frente a 38), y ascensos atascados a mitad (L2 en los meses 12–18, L3–L4).
+
+### Resumen de las 11 partidas oficiales de la línea y de la referencia
+
+| Manual | Notas | Media | Completas |
+|---|---|---:|---:|
+| `t13-read-v4` (referencia, línea DeepSeek) | 71,67 · 70,22 | 70,9 | 2 de 2 (una tercera, cortada por un choque de puertos, iba atascada en L1) |
+| `script-v1` | 76,87 · 13,23 | 45,1 | 1 de 2 |
+| `script-v2` (híbrido) | 51,12 · 30,6 | 40,9 | 1 de 2 |
+| `script-v3` | 66,55 · 60,45 · 32,59 | 53,2 | 2 de 3 |
+
+**Fichas.** Las partidas completas con script gastan ~110 M de fichas (~2,3 M por mes) frente a ~70 M de v4: una llamada más por decisión con el contexto lleno. La parte de eficiencia (10 % de la versión) baja de ~64 a ~28 puntos: ~3,6 puntos de la versión.
+
+**Gasto de la línea:** 5,7 USD (partidas 5,67; una pasada de percepción 0,05). Tope anunciado: 8 USD.
+
 ## Relevo
 
-1. **Hecho:** medido qué ve y qué puede hacer el agente oficial (modelo falso, 0 USD); escrito `script-v1` y su simulador.
-2. **Resultados:** simulador arriba. Datos y logs en `~/careerlab-data/formato/` (`system_prompt.txt`, `tools.json`, `obs_seq.txt`).
-3. **A medias:** partidas oficiales de `script-v1` con DeepSeek (siguiente).
-4. **Retomar:**
+1. **Hecho y por qué.** Medí qué recibe y qué puede hacer el agente oficial (modelo falso, 0 USD): tiene `bash` y `code` y ejecuta scripts del Skill. Probé tres formas de usarlo en partidas oficiales con DeepSeek:
+   - `script-v1`: DeepSeek etiqueta y el script decide todo;
+   - `script-v2`: híbrido con las reglas de historias de v4;
+   - `script-v3`: v1 con recordatorios de lectura que el script imprime justo antes de las lecturas que más cuestan.
+
+   Descarté leer con lista de comprobación (banco, 0,05 USD) y los retoques de la regla del script en el simulador (todos ±0,5).
+2. **Resultados.** Tablas de §5. La mejor partida de DeepSeek hasta hoy es de este formato (76,87, L6), pero de media la familia script (49,9) queda por debajo de `t13-read-v4` (70,9, n = 2). Datos y trazas en `~/careerlab-data/formato/runs/<sv1-g1…sv3-g3>/` (play.log, cost.txt, output/events-*.jsonl, advisor-state/). Análisis de lectura en partida: `uv run python scripts/formato/ingame.py <events.jsonl>`.
+3. **Qué falló o quedó a medias.**
+   - Muestras muy pequeñas: hacen falta más partidas para separar formato y suerte.
+   - `script-v3b` (cartera) no se ha jugado.
+   - El gasto de fichas del formato script es ~1,6 veces el de v4.
+   - El script confía a ciegas en las etiquetas: cada error de lectura en un momento crítico se paga entero.
+4. **Siguiente paso** (para el corte 2, 30 oct):
+   - **Combinar al revés que v2:** DeepSeek decide las historias con v4 y el script sólo **vigila** (veto). Rechazaría la elección de DeepSeek si sus propias etiquetas dicen `W-` con poco dinero, `-S/-N/-O` en el mes previo a la evaluación, o `R+` con RR. HH. no tranquilo. Además planificaría el trimestre, sobre todo de L3 en adelante, donde el script ganó a v4: L5 en el mes 36 frente al 42 y Skill 147.
+   - Recortar fichas: notas de una línea y salida del script mínima.
+   - Con permiso, 3 partidas de cada candidato (~1,2 USD cada una).
+
+   Comandos:
    ```sh
-   uv run python scripts/formato/simadv.py --advisor lab/policies-src/formato/script-v1/bundle/skills/career-advisor/script/advisor.py \
-     --exact --rulebot --labels ds=$HOME/careerlab-data/deepseek/labels/ds-v3-r1-full.json+$HOME/careerlab-data/deepseek/labels/ds-v3-r2-full.json --games 2000
+   # simulador (gratis)
+   uv run python scripts/formato/simadv.py --advisor lab/policies-src/formato/script-v3b/bundle/skills/career-advisor/script/advisor.py \
+     --labels ds=$HOME/careerlab-data/deepseek/labels/ds-v3-r1-full.json+$HOME/careerlab-data/deepseek/labels/ds-v3-r2-full.json --games 3000
+   # una partida oficial en un slot propio (cuesta ~1,2 USD; arranques escalonados por up.sh)
+   cp -R lab/policies-src/formato/script-v3b/bundle ~/careerlab-data/formato/sol-x   # + README.md y design/
+   bash scripts/formato/game.sh ~/careerlab-data/formato/slot-a ~/careerlab-data/formato/sol-x <tag>
    ```
+   Slots: `~/careerlab-data/formato/slot-{a,b,c,d}` (runner 00b084a8, `.env` copiado de slot0). No tocar `local-runs/official-runner/.env`. Comprobar `lsof` antes de arrancar si otro chat juega.
