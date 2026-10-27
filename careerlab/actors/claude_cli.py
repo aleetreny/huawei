@@ -23,6 +23,7 @@ from typing import Any
 from careerlab.config import Settings
 from careerlab.episode import EpisodeResult, atomic_write_json, result_from_terminal
 from careerlab.mcp_client import GameClient, ServerSpec, is_terminal
+from careerlab.truncate import StreamWatcher, summarize
 
 PROMPTS = Path(__file__).resolve().parents[1] / "prompts"
 GAME_SERVER = "career-emulator-engine"
@@ -38,9 +39,13 @@ class ClaudeWorkerConfig:
     max_continues: int = 3          # official runner re-prompts a stopped agent to continue
     timeout_s: float = 7200.0
     cli_version: str = ""
+    stop_at_month: int | None = None  # short game: stop the worker once it sees this month (result "truncated")
 
     def record(self) -> dict[str, Any]:
-        return {"kind": "claude-cli", **asdict(self), "prompts": "official-runner@00b084a8", "tools": GAME_TOOLS,
+        fields = asdict(self)
+        if fields["stop_at_month"] is None:  # keep the full-game actor id unchanged
+            del fields["stop_at_month"]
+        return {"kind": "claude-cli", **fields, "prompts": "official-runner@00b084a8", "tools": GAME_TOOLS,
                 "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
                 "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"}
 
@@ -191,7 +196,8 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
                                                         cwd=str(run_dir), env=worker_env())
             (run_dir / "worker.pid").write_text(str(proc.pid))
             try:
-                await asyncio.wait_for(proc.wait(), timeout=max(cfg.timeout_s - (time.perf_counter() - started), 1))
+                await asyncio.wait_for(_wait_or_cut(proc, stream, cfg.stop_at_month, summary),
+                                       timeout=max(cfg.timeout_s - (time.perf_counter() - started), 1))
             except asyncio.TimeoutError:
                 proc.kill()
                 await proc.wait()
@@ -207,6 +213,10 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
             obs = await client.observe(session_id)
         if is_terminal(obs):
             result = result_from_terminal(job_id, session_id, obs)
+            break
+        month = int(obs.get("current_state", {}).get("time", {}).get("current_month") or 0)
+        if cfg.stop_at_month and month >= cfg.stop_at_month:
+            result = EpisodeResult(job_id, session_id, "truncated", survival_months=None)
             break
         if "timeout" in summary.errors:
             result = EpisodeResult(job_id, session_id, "interrupted", interruption="worker timeout")
@@ -228,5 +238,42 @@ async def run_claude_episode(settings: Settings, cfg: ClaudeWorkerConfig, bundle
                           "rate_limit_last": summary.rate_limits[-1] if summary.rate_limits else None,
                           "errors": summary.errors[:10]}
     result.trajectory_path = str(run_dir / "stream-0.jsonl")
+    if session_id is not None and result.outcome != "interrupted":
+        result.periods = await _periods(settings, spec, session_id, run_dir, obs)
     atomic_write_json(run_dir / "result.json", asdict(result))
     return result
+
+
+async def _wait_or_cut(proc: asyncio.subprocess.Process, stream: Path, stop_at_month: int | None,
+                       summary: StreamSummary, poll_s: float = 2.0) -> None:
+    """Wait for the worker; with `stop_at_month`, stop it as soon as its stream shows that month."""
+    if not stop_at_month:
+        await proc.wait()
+        return
+    watcher = StreamWatcher(stream)
+    while proc.returncode is None:
+        try:
+            await asyncio.wait_for(proc.wait(), timeout=poll_s)
+        except asyncio.TimeoutError:
+            pass
+        if proc.returncode is None and watcher.poll() >= stop_at_month:
+            proc.terminate()
+            try:
+                await asyncio.wait_for(proc.wait(), timeout=20)
+            except asyncio.TimeoutError:
+                proc.kill()
+                await proc.wait()
+            summary.errors.append(f"cut at month {watcher.month}")
+
+
+async def _periods(settings: Settings, spec: ServerSpec, session_id: str, run_dir: Path,
+                   obs: dict[str, Any]) -> dict[str, Any] | None:
+    """Review snapshots from the player's own stream plus our verifier's log read (never scored)."""
+    try:
+        verifier = ServerSpec(f"logs-{spec.name}", spec.root, transport="stdio")
+        async with GameClient(verifier, settings) as client:
+            logs = await client.logs(session_id, 5000)
+        month = int(obs.get("current_state", {}).get("time", {}).get("current_month") or 0)
+        return summarize(sorted(run_dir.glob("stream-*.jsonl")), list(logs.get("entries") or []), month)
+    except Exception as exc:  # evidence only; never fails the episode
+        return {"error": repr(exc)[:300]}
