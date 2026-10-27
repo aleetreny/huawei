@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "script-v4",
+  "mode": "agent",
+  "instruction": "Every turn: observe; if there is only one choice take it. Story: decide your pick with the career-advisor Skill's Story decisions (drop options that may bury a problem; in the two months before a review keep Network and Output at their Best; in the month before a review never lose Skill, Network or Output when another option avoids it), then run with bash: python3 ../skills/career-advisor/script/advisor.py \"sid=<session_id> m=<month> H=<health> D=<dignity> S=<skill> N=<network> O=<output> W=<wealth> L=<level number> E=<energy> hr=<HR worry 0-4> phase=story pick=<n> | 1: <codes> | 2: <codes>\" (codes: H D S N O W with + ++ - --, write the costs too; R+ if the option may bury a problem, when in doubt R+; R- only for documenting, reporting through the process, owning a mistake or a full fix). Quarterly menus: run the same line with phase=energy (repeat until Reserve energy) or phase=main, no options. Take exactly the printed CHOOSE number and start notes with its NOTE line; apply any READ NEXT to your next reading. Keep notes short and in English."
+}
