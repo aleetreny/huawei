@@ -5,7 +5,7 @@ Reads only committed results, never the simulator:
 - the race registry (``lab/registry/*.jsonl``) from a Git ref, by default
   ``origin/main`` (where the closed race ended), or from the working tree with ``--race-ref ''``;
 - every other machine's export in ``lab/registry-origins/<origin>/`` (T11);
-- the T10 energy-bot table in ``lab/reports/energy-bots/README.md``;
+- the T10 energy-bot table in ``lab/reports/historico/energy-bots/README.md``;
 - Matteo's two manual runs (``docs/experiments/manual-skills-v0*-summary.json`` on ``origin/Matteo``);
 - optionally a folder of local scripted games (``--exploration``), summarised to
   ``lab/panel/data/exploration.json`` so the raw files never enter Git.
@@ -176,7 +176,7 @@ def main() -> None:
         "built": time.time(), "race_ref": ref or "working tree",
         "race_commit": subprocess.run(["git", "rev-parse", "--short", ref or "HEAD"], cwd=REPO, capture_output=True, text=True).stdout.strip(),
         "weights": WEIGHTS, "games": games, "blocks": blocks, "status": policy_status(policies),
-        "origins": origins, "energy_bots": energy_bots(read(ref, "lab/reports/energy-bots/README.md")),
+        "origins": origins, "energy_bots": energy_bots(read(ref, "lab/reports/historico/energy-bots/README.md") or read(ref, "lab/reports/energy-bots/README.md")),
         "matteo": matteo_runs(args.matteo_ref), "exploration": exploration,
         "counts": dict(Counter(g["model"] for g in games)),
     }

@@ -1,7 +1,7 @@
 """Combine several stat labellings without new Haiku calls: a per-stat vote, or per-stat picks.
 
-    python3 scripts/leah/stat_perception/combine.py --out vote.json --vote tags-plain.json tags-defs.json tags-contrast.json
-    python3 scripts/leah/stat_perception/combine.py --out mix.json --pick skill=tags-defs.json network=tags-plain.json ...
+    python3 scripts/stat-perception/combine.py --out vote.json --vote tags-plain.json tags-defs.json tags-contrast.json
+    python3 scripts/stat-perception/combine.py --out mix.json --pick skill=tags-defs.json network=tags-plain.json ...
 
 Vote: the sign most labellings give (ties go to 0). Pick: each stat taken from one labelling.
 """

@@ -7,7 +7,7 @@ either {key: {stat: -1|0|1}} (label.py) or {key: {up: [...], down: [...]}} (Alej
 
 Also writes every tag file in Alejandro's up/down format to --catbot-dir, ready for his catbot.py --tags.
 
-    python3 scripts/leah/stat_perception/evaluate.py --answers A --split S --tags ale=X defs=Y ... --catbot-dir D
+    python3 scripts/stat-perception/evaluate.py --answers A --split S --tags ale=X defs=Y ... --catbot-dir D
 """
 
 from __future__ import annotations

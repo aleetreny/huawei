@@ -53,6 +53,14 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
 | B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
 
+**Sobre la percepción de indicadores (línea de Leah)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B15 | **Pedir a la IA la dirección de los 5 indicadores en cada opción**, en vez de sólo el evidente, sube la réplica de 49,1 a 53,3, con 1.000 partidas por brazo. Votar 5 formas de leer llega a 54,4; sólo la categoría saca 46,7 y las etiquetas perfectas 58,1. | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
+| B16 | **El indicador que vale percibir es Output, no Skill.** Con Output perfecto la nota sube +2,5; con Skill perfecto baja −2,1, porque el bot persigue Skill, que se estanca en los niveles bajos. Haiku confunde Output con "tiempo gastado"; en el juego baja al desentenderse, esquivar, pasar el trabajo a otro o pedir menos carga. | percepción, [02](lab/reports/stat-perception/02-que-indicador-vale.md), [03](lab/reports/stat-perception/03-errores-output.md) |
+| B17 | Un significado corto de cada indicador funciona mejor que una lista de pistas (53,2 frente a 52,0) y reduce a la mitad las crisis de confianza (73 frente a 136 por 1.000 partidas). | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
+
 ## C. Pistas sin confirmar
 
 | # | Pista | Fuente |
@@ -75,3 +83,5 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Reloj de evaluación, “no cambiar Dignity por Network”, leer el registro, limpieza preventiva del último año (noche del 26) | no mejoran | [histórico T18](lab/reports/historico/secciones/resumen-noche.md) |
 | Carrera de manuales por estilo (prereg-v1, fastloop) | mucha cuota para diferencias dentro del ruido | [ESTADO antiguo](docs/historico/ESTADO-2026-10-26-carrera.md) |
 | Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |
+| “Una ganancia y un coste por opción” al etiquetar indicadores | tira información: 39,7 en la réplica, por debajo de sólo la categoría | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
+| Describir una conducta arriesgada como forma de ganar un indicador (“venderte sube Output”) | detecta más subidas, pero la réplica baja de 53,2 a 48,1 y las crisis de confianza pasan de 73 a 174 | percepción, [03](lab/reports/stat-perception/03-errores-output.md) |

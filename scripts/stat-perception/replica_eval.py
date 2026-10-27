@@ -8,7 +8,7 @@ Two ways to use a labelling, both with risk judged by the category (as a reader 
   tags       the labels' signs alone, size 1 (like his "perfect stat tags" arm, but with guessed signs)
 Reference arms: oracle, category only, category + perfect signs.
 
-    .venv/bin/python scripts/leah/stat_perception/replica_eval.py --rx <main-1nddsg checkout> \\
+    .venv/bin/python scripts/stat-perception/replica_eval.py --rx <main-1nddsg checkout> \\
         --answers answers.json --tags-dir <dir of up/down files> --games 1000
 """
 

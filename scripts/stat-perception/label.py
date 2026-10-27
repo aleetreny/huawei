@@ -8,7 +8,7 @@ Haiku sees one question at a time: the event description and its options, never 
 Output: tags-<variant>.json, {node:choice: {skill: -1|0|1, network: ..., output: ..., health: ..., dignity: ...}},
 identifiers and codes only (no game text), so it can go into Git.
 
-    python3 scripts/leah/stat_perception/label.py --answers ~/careerlab-data/stat-perception/answers.json \\
+    python3 scripts/stat-perception/label.py --answers ~/careerlab-data/stat-perception/answers.json \\
         --variant defs --out lab/reports/stat-perception/tags-defs.json --slots 4
 """
 
