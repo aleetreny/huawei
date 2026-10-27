@@ -76,3 +76,11 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 
    Las etiquetas y la lista de situaciones se regeneran con `perceive.py export` y `bench.py select --per-rule 40 --out ~/careerlab-data/deepseek/ids-ds1.txt`.
 5. **Gasto:** 1,98 USD de los 5 de la línea; quedan 47,83 en la clave. Cuota de Claude: sólo este chat, sin partidas.
+
+## Independent design review (27 October 2026)
+
+[Three complete alternatives, short perception guide and t13-final critique](independent-designs/README.md). Recommendation: Evidence before preference. This is an untested design judgement, not a measured replacement for t13-read-v1. No games, API spending or changes to existing candidates. Standalone Skills: 387, 332 and 389 words; guide: 127 words.
+
+### Relevo — independent designs
+
+Read the supplied public handbook/rules and current manual including its review reference. Produced three alternatives within this existing line and checked word limits, front matter and report links. Full bundle lint does not apply before packaging. Next: review the proposed consequence-reading approach and validate perception/choice quality before funding full runs. See the report for exact files, falsifiers, limitations and handoff. Request integration of the design report with main; do not automatically submit or replace the current candidate.
