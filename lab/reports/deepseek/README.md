@@ -84,3 +84,7 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 ### Relevo — independent designs
 
 Read the supplied public handbook/rules and current manual including its review reference. Produced three alternatives within this existing line and checked word limits, front matter and report links. Full bundle lint does not apply before packaging. Next: review the proposed consequence-reading approach and validate perception/choice quality before funding full runs. See the report for exact files, falsifiers, limitations and handoff. Request integration of the design report with main; do not automatically submit or replace the current candidate.
+
+## Relevo — independent review 2 (27 October 2026)
+
+[Ranked audit, exact proposed Skill/reference patch, measurement reproductions and handoff](independent-designs/review-2.md). Corrects the previous review's timing criticism; recommends phase separation and survival precedence before changing strategy. Read-only implementation audit: no candidate/code/data edits, model calls or official games. Synthetic checks and saved-result analysis found dropped pending bank continuations, omitted bank terminal settlement, ideal-information context in the label bot and prescription/value metric differences. Recomputed +6.71 ±5.68 SE (95% CI −5.28 to +18.71); no confirmed career-score improvement. Four existing completion tests pass. Patch is proposed only; review it before any implementation or separately authorised model evaluation. Request integration of the report into main.
