@@ -1,0 +1,28 @@
+{
+  "args": {
+    "batch": "v02-validation",
+    "policy": "oracle",
+    "games": 600,
+    "procs": 4,
+    "slots": 3,
+    "seed": 919000,
+    "offset": 0,
+    "nice": 10,
+    "kw": "{\"model\": \"/home/user/bbdata/models/m02r.json\", \"eps\": 0.05, \"review_boost\": 5.0, \"skill_focus_from\": 3, \"w_skill_hi\": 2.0, \"detonators\": true}"
+  },
+  "kwargs": {
+    "model": "/home/user/bbdata/models/m02r.json",
+    "eps": 0.05,
+    "review_boost": 5.0,
+    "skill_focus_from": 3,
+    "w_skill_hi": 2.0,
+    "detonators": true
+  },
+  "started": "2026-10-27T01:31:43Z",
+  "commit": "76c6590",
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)",
+  "competition_mode": false,
+  "interface": "five official MCP tools only; no seeds, cloning or internal reads"
+}

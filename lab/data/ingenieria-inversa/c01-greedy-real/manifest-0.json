@@ -1,0 +1,23 @@
+{
+  "args": {
+    "batch": "c01-greedy-real",
+    "policy": "replica-greedy",
+    "games": 300,
+    "procs": 2,
+    "slots": 3,
+    "seed": 555000,
+    "offset": 0,
+    "nice": 10,
+    "kw": "{\"catalog\": \"/home/user/rx/cat_test.json\"}"
+  },
+  "kwargs": {
+    "catalog": "/home/user/rx/cat_test.json"
+  },
+  "started": "2026-10-27T01:01:39Z",
+  "commit": "b49a0ce",
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)",
+  "competition_mode": false,
+  "interface": "five official MCP tools only; no seeds, cloning or internal reads"
+}

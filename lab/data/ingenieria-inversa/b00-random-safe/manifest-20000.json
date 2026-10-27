@@ -1,0 +1,21 @@
+{
+  "args": {
+    "batch": "b00-random-safe",
+    "policy": "random-safe",
+    "games": 12000,
+    "procs": 4,
+    "slots": 3,
+    "seed": 1000000,
+    "offset": 20000,
+    "nice": 10,
+    "kw": "{}"
+  },
+  "kwargs": {},
+  "started": "2026-10-27T00:31:42Z",
+  "commit": "f9b1a8b",
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "engine_env": "official runner values (careerlab.config.OFFICIAL_ENGINE_ENV)",
+  "competition_mode": false,
+  "interface": "five official MCP tools only; no seeds, cloning or internal reads"
+}

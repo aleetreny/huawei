@@ -1,0 +1,15 @@
+/home/user/huawei/.venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+{"tag": "p2", "done": 200, "per_s": 1.1, "eliminated": 200}
+{"tag": "p3", "done": 200, "per_s": 1.07, "eliminated": 200}
+{"tag": "p0", "done": 200, "per_s": 1.07, "eliminated": 200}
+{"tag": "p1", "done": 200, "per_s": 1.02, "eliminated": 200}
+{"tag": "p3", "done": 400, "per_s": 1.14, "eliminated": 400}
+{"tag": "p2", "done": 400, "per_s": 1.13, "eliminated": 400}
+{"tag": "p1", "done": 400, "per_s": 1.1, "eliminated": 400}
+{"tag": "p0", "done": 400, "per_s": 1.1, "eliminated": 400}
+{"tag": "p3", "done": 600, "per_s": 1.12, "eliminated": 600}
+{"tag": "p2", "done": 600, "per_s": 1.11, "eliminated": 600}
+{"tag": "p0", "done": 600, "per_s": 1.09, "eliminated": 600}
+{"tag": "p1", "done": 600, "per_s": 1.06, "eliminated": 600}
