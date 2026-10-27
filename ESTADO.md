@@ -120,6 +120,11 @@ Ingeniería inversa con bots solicitada por Alejandro: **Claude — `alejandro/i
 - El carácter de una respuesta predice sus efectos en historias no vistas (R² 0,4–0,6).
 - Con riesgo acumulado, mentir o exponerse a una revisión formal lo hace estallar.
 - Oráculo con el catálogo de dev (no es una Skill): 67,9 de nota media en 1.200 partidas (mediana 71), 92 % terminadas y 71 % en L6.
+- **Fase 2 (27 oct, nube, rama `main-1nddsg`): [reglas exactas M1–M17 y simulador `replica.py`](lab/reports/ingenieria-inversa/motor-exacto.md).**
+  - El juego es determinista salvo el sorteo de eventos. El riesgo oculto es el comentario de RR. HH. y explota exactamente al llegar a 5.
+  - Validado en 600 partidas nuevas: 98,5 % de los pasos exactos, 99,8 % de los ascensos y un error de 0,35 puntos en la nota final.
+  - L7 es alcanzable, pero sólo en ~0,5 % de las partidas (umbral de Skill de 164–167).
+  - Un planificador ajustado sólo en el simulador saca 70,5 en el juego real, el mejor bot hasta ahora.
 - Dos manuales candidatos, `bb-mechanics-v1` y `bb-mechanics-lean-v1` (en `lab/policies-src/bb-mechanics/`): lint sin avisos, **sin jugar aún con IA**. PR [#16](https://github.com/aleetreny/huawei/pull/16). No reasigna T1–T14.
 
 Sección de ideas solicitada por Alejandro: **Codex — `alejandro/ideas-por-probar` — preparada para PR nueva**. [Índice](research/ideas/README.md) y [exploración aleatoria instrumentada](research/ideas/exploracion-aleatoria.md): revisión de la corrida de Matteo (73.858 partidas, resumen agregado sin decisiones individuales publicadas), diseño de logs por decisión y límites de inferencia/conformidad. No se han lanzado partidas ni contactado organizadores. Relevo y siguiente paso de auditoría en la sección; no reasigna T1–T13.

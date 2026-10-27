@@ -233,7 +233,32 @@ Con `validate`, el simulador recibe el estado observado y la decisión de cada p
 | Ascenso sí o no | **99,2 %** |
 | Error medio de la nota final | **0,43 puntos** |
 
-La validación sobre un lote nuevo, `v01-validation`, está en curso.
+**Validación en un lote nuevo** (`v02-validation`: 600 partidas del oráculo con un 5 % de decisiones al azar, jugadas el 27 oct después de fijar las reglas). Ninguna partida suya se usó para descubrir reglas: el catálogo `catalog_v1` sale sólo de b00 + b01. Salida completa en [validacion-v02.txt](validacion-v02.txt).
+
+| Medida | Resultado | Objetivo |
+|---|---:|---:|
+| Estado exacto tras cada paso (todos) | **98,5 %** de 107.698 pasos | ≥ 95 % |
+| … tras respuestas a eventos | 98,2 % de 77.410 | |
+| … tras acciones de energía | 100,0 % de 22.234 | |
+| … tras la acción principal | 97,0 % de 8.054 | |
+| Ascenso sí o no en cada evaluación | **99,8 %** de 4.246 evaluaciones (8 ascensos no previstos, 1 previsto de más) | ≥ 95 % |
+| Error medio de la nota final | **0,35 puntos** (máximo 1,43; el 100 % por debajo de 2) | ≤ 2 |
+
+Qué falla todavía, en orden de peso:
+1. **Dinero ±1 al cambiar de mes.** El juego muestra el dinero redondeado hacia abajo y una parte de los cambios no se puede reconstruir del todo.
+2. **Nota A frente a B en L4.** Cambia el bonus y el +1 de Network. El modelo acierta un 87 %, porque la nota depende también de la media del semestre.
+3. **Explosiones no previstas.** Se deben a respuestas poco observadas cuyo riesgo está mal medido.
+
+**Cómo se reproduce:**
+
+```bash
+BB_DATA=~/careerlab-data/ingenieria-inversa python3 scripts/ingenieria-inversa/riskseq.py b00-random-safe,b01-oracle-eps  # riesgo -> riskd.json
+python3 scripts/ingenieria-inversa/replica.py build --batches b00-random-safe,b01-oracle-eps --risk riskd.json --out catalog_v1.json
+python3 scripts/ingenieria-inversa/replica.py validate --catalog catalog_v1.json --batches v02-validation
+python3 scripts/ingenieria-inversa/replica.py play --catalog catalog_v1.json --games 500
+```
+
+El catálogo lleva títulos de eventos de dev. Por eso se queda fuera de Git, en la carpeta de datos, igual que las partidas.
 
 ## M15. Derrotas por condición persistente
 
@@ -300,3 +325,43 @@ Lo que eligió la búsqueda:
 **Es el mejor bot hasta ahora:** el oráculo anterior sacaba 67,9 y la política voraz real 63,9. El simulador predecía 71,8, así que **la estrategia encontrada sin jugar se traslada al juego real** con una diferencia de ~1,3 puntos.
 
 **Diferencia con el juego real.** La política voraz saca 63,9 en el juego real (300 partidas) y 69,5 en el simulador. Casi toda la diferencia son crisis de confianza: 19 % en el juego real y 0 % en el simulador. Se debe a que los riesgos de las respuestas poco observadas están mal medidos (M14), y una política que apura el riesgo hasta 4 las paga. En el juego real conviene **más margen de riesgo** del que pide el simulador.
+
+
+## Relevo (27 oct, ~02:40 UTC)
+
+**1. Qué se ha hecho y por qué.**
+- Los datos del Mac no estaban en la nube, así que se regeneraron. Lotes:
+
+  | Lote | Partidas | Para qué |
+  |---|---:|---|
+  | b00 | ~9.700 | al azar |
+  | b01 | 571 | oráculo con un 15 % al azar |
+  | c01 | 300 | política voraz del simulador, en el juego real |
+  | c02 | 162 | planificador ajustado, en el juego real |
+  | v02 | 600 | validación |
+
+- Se fijaron las reglas exactas M1–M17 y se escribió `replica.py`, el simulador completo, con el validador y el modo generativo. También `planner.py` (planificador), `replica_bot.py` (adaptador al juego real), `riskseq.py` (riesgo) y `gzrobust.py` (lector tolerante a gzip cortados).
+- El objetivo de Alejandro era recrear el juego y validarlo en un lote nuevo. Está cumplido (tabla de M14).
+
+**2. Resultados clave.**
+- El juego es **determinista salvo el sorteo de eventos**. El riesgo oculto es el comentario de RR. HH. y explota exactamente al llegar a 5.
+- Se puede llegar a L7 (umbral de Skill de 164–167), pero sólo en ~0,5 % de las partidas.
+- **El planificador ajustado en el simulador saca 70,5 en el juego real**, el mejor bot hasta ahora.
+
+**3. Lo que falló.**
+- El primer lote de validación (v01) se corrompió porque se lanzó dos veces sobre los mismos archivos; se repitió como v02.
+- El reinicio del contenedor cortó c02 en 162 partidas.
+
+**4. Siguiente paso.**
+1. Medir mejor el riesgo de las respuestas poco observadas, con más exploración dirigida.
+2. Planificador con más profundidad (MCTS en el simulador) y búsqueda de una política para L7.
+3. **Traducir a la Skill sólo principios generales**:
+   - el contador de riesgo es el comentario de RR. HH. y nunca debe llegar a "angry" más una respuesta arriesgada;
+   - cumplir los umbrales antes de cada evaluación;
+   - guardar Skill desde L4;
+   - limpieza final;
+   - en niveles altos, las respuestas que cuestan dinero cuestan el doble o el triple.
+
+   Nada de números ni de eventos.
+
+Comandos en M14. Los datos están en `/home/user/bbdata/` de este contenedor y no están en Git; si el contenedor se pierde, se regeneran con `run.py`.
