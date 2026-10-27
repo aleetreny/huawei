@@ -1,0 +1,2346 @@
+{
+  "totals": {
+    "games": 12,
+    "actions": 317,
+    "public_calls": 993,
+    "rejected": 0,
+    "tool_errors": 0,
+    "restart_logs_equal": 12,
+    "restart_observation_equal": 12,
+    "unknown_session_rejected": 12,
+    "log_count_checks": 287,
+    "suffix_order_matches": 287,
+    "latest_note_checks": 29,
+    "latest_note_recovered_count1": 16,
+    "latest_note_recovered_count2": 22,
+    "latest_note_recovered_count5": 29,
+    "latest_note_recovered_count10": 29,
+    "no_other_run_marker": 12
+  },
+  "cases": {
+    "ascii:0": {
+      "attempted": 25,
+      "accepted": 25,
+      "non_unique_or_empty": 25
+    },
+    "ascii:1": {
+      "attempted": 26,
+      "accepted": 26,
+      "non_unique_or_empty": 26
+    },
+    "ascii:64": {
+      "attempted": 26,
+      "accepted": 26,
+      "exact": 25,
+      "missing": 1
+    },
+    "ascii:999": {
+      "attempted": 26,
+      "accepted": 26,
+      "exact": 25,
+      "missing": 1
+    },
+    "ascii:1000": {
+      "attempted": 27,
+      "accepted": 27,
+      "exact": 26,
+      "missing": 1
+    },
+    "ascii:1001": {
+      "attempted": 28,
+      "accepted": 28,
+      "truncated_as_prefix997_plus_ellipsis": 27,
+      "missing": 1
+    },
+    "ascii:4096": {
+      "attempted": 28,
+      "accepted": 28,
+      "truncated_as_prefix997_plus_ellipsis": 27,
+      "missing": 1
+    },
+    "ascii:16000": {
+      "attempted": 28,
+      "accepted": 28,
+      "truncated_as_prefix997_plus_ellipsis": 27,
+      "missing": 1
+    },
+    "unicode:1000": {
+      "attempted": 27,
+      "accepted": 27,
+      "exact": 26,
+      "missing": 1
+    },
+    "unicode:1001": {
+      "attempted": 27,
+      "accepted": 27,
+      "truncated_as_prefix997_plus_ellipsis": 26,
+      "missing": 1
+    },
+    "multiline:1000": {
+      "attempted": 24,
+      "accepted": 24,
+      "exact": 23,
+      "missing": 1
+    },
+    "json:1000": {
+      "attempted": 25,
+      "accepted": 25,
+      "exact": 24,
+      "missing": 1
+    }
+  },
+  "missing_by_action": {
+    "document:Continue": 10
+  },
+  "max_verified_note_age_in_later_actions": 43,
+  "month_range": [
+    6,
+    12
+  ],
+  "unexpected_transformations": [],
+  "runs": [
+    {
+      "run": 0,
+      "actions": 33,
+      "month": 9,
+      "terminal": true,
+      "log_entries": 62,
+      "action_audit": [
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Lock the snacks away and stop sharing, without explaining",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Take them out for lunch privately, straight away",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Change tack at once: skip the broken step, talk about overall value, and demo it afterwards",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Decline and keep the time for your own team's delivery",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Politely challenge that framing on the spot, with data and business impact",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Reframe updates in business language, but keep the technical value in the write-up",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Praise Jo, and briefly add your own recent relevant work",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Follow Chris’s guesses so he is not made to look small",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "In the debrief, name Quinn’s contribution",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Freeze, eat, and say almost nothing all night",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Say you do not know, every time, and change the subject",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Offer to share the umbrella and walk to the station together",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Decline and catch the last train home",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Stay silent until it is over, and miss the whole evening",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 21,
+          "phase": "event",
+          "action": "Hit back in the room: Chloe did not provide the integration environment on time",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 22,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 23,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 26,
+          "phase": "event",
+          "action": "Quietly take Hale's team out to lunch to build on the impression",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 27,
+          "phase": "event",
+          "action": "Keep going round him",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 28,
+          "phase": "event",
+          "action": "Quietly borrow the open-source kernel, rebrand it, and hit the milestone",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 29,
+          "phase": "event",
+          "action": "Ask your manager and compliance whether the current use sits inside policy, and get it in writing",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 30,
+          "phase": "event",
+          "action": "Cut weekend use as advised, and move most of the development onto personal kit in your own time",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 31,
+          "phase": "event",
+          "action": "Sit on the report and bet it will not be triggered soon",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 32,
+          "phase": "event",
+          "action": "Ship on a shortened path while the team prepares a rollback and completes the review within an hour",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "actions": 19,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 39,
+      "action_audit": [
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Neither accept nor refuse in the meeting, and promise an impact assessment and proposal afterwards",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Hint that things may move soon and she should be careful, without naming the document",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Go to your manager and admit you dropped a vague hint",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Still dreading the conversation after the assessment, cram all of it into the current plan",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Walk through the timeline and the email trail, and set out who owned what",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Write only your own part and make clear where it ends",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Join in and laugh along, to keep the ‘atmosphere’",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Having already paid quietly at the desk, say, \"This one's on us. You can host next time\"",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Work late to cover it and say nothing",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Brush it off as ‘just dinner banter’ and insist you did nothing wrong",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Approve it, and explain on Slack afterwards",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Adopt the new framework and use this low-risk module to build experience",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Tell them at once, with a cause analysis, a recovery plan and a new timetable",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Warn your manager privately that someone is trading favours for support",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Accept, read the docs properly, and prepare comments",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "actions": 20,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 42,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:64",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Open with something light: an industry anecdote, or an honest take on the evening",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Go to the gym as planned and get the work done efficiently tomorrow",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Take their owner aside for a 1:1 and walk through the load-test results privately",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Agree the fix in the 1:1, then record the problem and the decision in the design doc",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Say in a couple of sentences what you do and why it matters, then stop without taking over the table",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Lock the snacks away and stop sharing, without explaining",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Lead with the conclusion: key results first, then the risk and the plan to deal with it",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Tell her privately what is planned and ask her to keep it strictly confidential",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Deny it was you",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Stay vague with 'shouldn't be too bad', offering no real assessment",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Hold off for now and email privately after the meeting",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Keep your head down and work. It's not your problem",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Give him an A, taking the slot from a colleague you know less well",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Admit the rating was too generous",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Stay out of it. It's still not your problem",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "actions": 43,
+      "month": 12,
+      "terminal": true,
+      "log_entries": 83,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:999",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Change the subject without a scene, pull the talk back to the work, and give Chloe a way out",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Work through the weekend to deliver the project on Monday morning",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Tell her about the draft merger plan and that Leo may be moved",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Apologise and accept the reprimand",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Decide it was handled and there is no need to raise it",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Keep skipping the café, and let a strong afternoon prove the point",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Keep skipping the café, and book 1:1s with the people who matter",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Get well away so none of it lands on you, and leave him to it",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Be glad you stayed out of it, and leave it there",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "C: Fully remote demo, no in-person visit",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Hint that things may move soon and she should be careful, without naming the document",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Go to your manager and admit you dropped a vague hint",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Freeze, eat, and say almost nothing all night",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Keep quiet in the room and clarify in writing after the meeting",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Catch them before people leave and introduce yourself briefly, enough to leave a decent impression",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Stay silent and ask your manager to unpick it",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 23,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 24,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 25,
+          "phase": "event",
+          "action": "Decline, citing your current workload",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 26,
+          "phase": "event",
+          "action": "Keep a light touch, let them explore, and stay focused on your own work",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 27,
+          "phase": "event",
+          "action": "Drink some water, wait it out, and grind through to the end",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 28,
+          "phase": "event",
+          "action": "Tell yourself you are just tired and keep going round the clock",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 29,
+          "phase": "event",
+          "action": "Take Sam on and help clear the backlog",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 30,
+          "phase": "event",
+          "action": "Go along with it and let the client pay",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 31,
+          "phase": "event",
+          "action": "Take the main responsibility and say your oversight as mentor failed",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 32,
+          "phase": "event",
+          "action": "Send it, plus extra they didn't ask for, to look generous",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 35,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 36,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 37,
+          "phase": "event",
+          "action": "Sign the draft and put the main fault on Sam",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 38,
+          "phase": "event",
+          "action": "Leave quietly and act as if you heard nothing",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 39,
+          "phase": "event",
+          "action": "Let it pass in the room, then privately encourage colleagues and spell out what the work achieved",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 40,
+          "phase": "event",
+          "action": "Keep encouraging colleagues privately and do not raise it with your manager again",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 41,
+          "phase": "event",
+          "action": "Adopt the open-source stack and aim for fast delivery",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 42,
+          "phase": "event",
+          "action": "Lend Jordan the umbrella and make a dash through the rain for a cab",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "actions": 27,
+      "month": 7,
+      "terminal": true,
+      "log_entries": 52,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:1000",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Decline the swap and ask your manager to rebalance by the rules",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Agree to talk him up, in return for later support",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Take the on-call and keep the relationship",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Fudge it: 'Small issue, doesn't affect anything'",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Water them today and set a calendar reminder",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Argue for an in-house kernel as a long-term technical asset",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Quietly borrow the open-source kernel, rebrand it, and hit the milestone",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Say nothing and let the briefing run",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Keep sharing, because you don't like to say anything",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Sit on the report and bet it will not be triggered soon",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Set a steady revision plan over several months, broken into daily tasks you can finish",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Decline and keep the time for your own team's delivery",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 22,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 23,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 24,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 25,
+          "phase": "event",
+          "action": "Join in and laugh along, to keep the ‘atmosphere’",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 26,
+          "phase": "event",
+          "action": "Claim as usual, taking colleagues' advice that 'everyone does this, it's fine'",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "actions": 19,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 39,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:1001",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Praise Jo, and briefly add your own recent relevant work",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Name the problem directly and mark it as must-fix",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Switch to lunching with colleagues at least three days a week",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Drop back to Tuesdays and Thursdays once you have the key information",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Thank Jo in the talk for her earlier groundwork, then go and speak to her afterwards",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Start buying coffees yourself and join the favours game",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Keep speaking up for engineering value in public and accept the political friction",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Keep taking whatever comes, and have the team work late to carry it",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Chat for a few minutes, then steer back to work and mention today's deadline",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Give in, chat for a quarter of an hour, and catch up in the evening",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Adopt the open-source stack and aim for fast delivery",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Walk through the timeline and the email trail, and set out who owned what",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Write only your own part and make clear where it ends",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "actions": 28,
+      "month": 8,
+      "terminal": true,
+      "log_entries": 54,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:4096",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Walk through the process in detail, still not reaching the point ten minutes in",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Hit back in the room: Chloe did not provide the integration environment on time",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Insist Chloe shifted the blame first and ask your manager for a fair ruling",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Stop at once and give the conclusion, the risk and your request in three sentences",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Sign up, then study in fits and starts, and cram at the last minute",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Tell them directly but politely that you need to focus today and to come back later",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Spend ten minutes with them at lunch explaining the boundary and that you mean no ill will",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Keep the work original, ask for a delay, and write the risk into the update",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Spend two weeks building a full CI automation suite",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Loosen the thresholds so the team can ease into the CI workflow",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Keep your head down and work. It's not your problem",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Say you cannot comment on internal plans or promise that any role is safe, so she must weigh the risk herself",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Stay out of it. It's still not your problem",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 21,
+          "phase": "event",
+          "action": "Keep quiet in the room and clarify in writing after the meeting",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 22,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 23,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 24,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 25,
+          "phase": "event",
+          "action": "Go back to why you wanted to leave, and only stay if the package actually fixes that",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 26,
+          "phase": "event",
+          "action": "Share your earlier thinking with the team, without directly challenging their claim to the idea",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 27,
+          "phase": "event",
+          "action": "Publicly recognise their independent development and delivery, and make clear you never questioned that",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "actions": 19,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 37,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "ascii:16000",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Argue for an in-house kernel as a long-term technical asset",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Chat for a few minutes, then steer back to work and mention today's deadline",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Turn down the snack session firmly and suggest lunch another day",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Quietly borrow the open-source kernel, rebrand it, and hit the milestone",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Produce the review recording and the scope pack in your defence",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Sit on the report and bet it will not be triggered soon",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Apologise and ask a colleague to cover this once",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Use your manager's line and blame the upstream community",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Message Chris privately about team morale, without saying how you know",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Hint that things may move soon and she should be careful, without naming the document",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Go to your manager and admit you dropped a vague hint",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "actions": 19,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 41,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "unicode:1000",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Slash the price at the last minute to match them, and skate through the actual pitch",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Show your face for half an hour, then leave",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Bring breakfast in the next day for the people who stayed",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Name the problem directly and mark it as must-fix",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Adopt the open-source stack and aim for fast delivery",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Stay silent and let the review pass",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Go along with sales and accept “poor communication” as the explanation",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Sit on the report and bet it will not be triggered soon",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Take it and report it to Information Security",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Name Quinn’s specific contribution in the meeting that finalises the slides",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Say nothing and let the briefing run",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "actions": 45,
+      "month": 12,
+      "terminal": true,
+      "log_entries": 88,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "unicode:1001",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "In a panic, say it is a problem on the client's network",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 2,
+          "phase": "event",
+          "action": "Comment publicly on the shared design doc, with the load-test data attached",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Score everything as blandly positive",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Use questions so she spots the issue herself",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Argue for an in-house kernel as a long-term technical asset",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Keep manual review and let new joiners follow the existing process",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Wrestle over the bill at the table until it gets awkward",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Keep the work original, ask for a delay, and write the risk into the update",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 14,
+          "phase": "event",
+          "action": "Suggest submitting Lynx Payments instead, with you as the lead author",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Wait until delivery day in case you still make it",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Walk over, cancel his job and print yours first",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Explain why you were a victim of this too",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Decline politely and make sure you are sharp at the morning stand-up",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 21,
+          "phase": "event",
+          "action": "Call IT first and ask whether the email can still be recalled",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 22,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 23,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 24,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 25,
+          "phase": "event",
+          "action": "Skip a lot of sessions — “I’m not here to dance when there’s real work”",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 26,
+          "phase": "event",
+          "action": "Send it, plus extra they didn't ask for, to look generous",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 29,
+          "phase": "event",
+          "action": "Change tack, find time to catch up, and fill the hole you left",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 30,
+          "phase": "event",
+          "action": "Do nothing special for now and help them next time they need it",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 31,
+          "phase": "event",
+          "action": "Tell your manager her coming in ill is a health risk, and suggest sick leave while the team covers",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 32,
+          "phase": "event",
+          "action": "Review line by line and list every improvement",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 33,
+          "phase": "event",
+          "action": "Go easier on this new colleague until they have found their feet",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 34,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 35,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 36,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 37,
+          "phase": "event",
+          "action": "Explain privately, ask how she is, and help her hand over what cannot wait",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 38,
+          "phase": "event",
+          "action": "Message Chris privately about team morale, without saying how you know",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 41,
+          "phase": "event",
+          "action": "Call Tessa out in the channel: \"Could you read the docs before asking?\"",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 42,
+          "phase": "event",
+          "action": "Adopt the new framework and use this low-risk module to build experience",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 43,
+          "phase": "event",
+          "action": "Keep deflecting without spelling it out, and stay out of it",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 44,
+          "phase": "event",
+          "action": "Leave it for on-call",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "actions": 22,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 49,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "multiline:1000",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 1,
+          "phase": "event",
+          "action": "Make the call: set the temperature most people like, and tell them both to stop",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Talk to Maya privately and find her a way to keep warm, to soften the blunt call",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Don't make a fuss, and keep delivering as normal",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Moan that it was a nine-day wonder",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Walk through the process in detail, still not reaching the point ten minutes in",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Say nothing and let the briefing run",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Post a snide note in the channel: \"some people might show a bit of consideration\"",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Defuse legacy risk",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Mental recovery",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 12,
+          "phase": "main_action",
+          "action": "Lay low and reduce risk",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 13,
+          "phase": "event",
+          "action": "Keep reading the pack at your own pace",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Say plainly it's a demo-environment glitch, and switch to a fallback or recording to show the core value",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Treat it as too small to matter",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Having already paid quietly at the desk, say, \"This one's on us. You can host next time\"",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Fudge it: 'Small issue, doesn't affect anything'",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Ask your manager if you can join the new project part-time",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 21,
+          "phase": "event",
+          "action": "Carry both, working weekends to do it",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "actions": 23,
+      "month": 6,
+      "terminal": true,
+      "log_entries": 46,
+      "action_audit": [
+        {
+          "step": 0,
+          "phase": "document",
+          "action": "Continue",
+          "case": "json:1000",
+          "returned_characters": null,
+          "outcome": "missing"
+        },
+        {
+          "step": 3,
+          "phase": "event",
+          "action": "Smile and quietly remind him vaping inside isn't allowed and the shelter is downstairs",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 4,
+          "phase": "event",
+          "action": "Leave it. It's less hassle to keep helping",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 5,
+          "phase": "event",
+          "action": "Skip the gym, stay late, and clear the work tonight",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 6,
+          "phase": "event",
+          "action": "Agree a handover time with him, and bring in the project schedule if it needs writing down",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 7,
+          "phase": "event",
+          "action": "Say firmly that the remark is not on, and bring the talk back to the work",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 8,
+          "phase": "event",
+          "action": "Lock the snacks away and stop sharing, without explaining",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 9,
+          "phase": "event",
+          "action": "Name Quinn’s specific contribution in the meeting that finalises the slides",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 10,
+          "phase": "energy",
+          "action": "Health recovery",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 11,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "multiline:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 12,
+          "phase": "energy",
+          "action": "Network maintenance",
+          "case": "json:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 15,
+          "phase": "event",
+          "action": "Say in the room that what is live is next-day sync, and forecasting is a later proposal",
+          "case": "ascii:64",
+          "returned_characters": 64,
+          "outcome": "exact"
+        },
+        {
+          "step": 16,
+          "phase": "event",
+          "action": "Stick to the accurate scope and stay out of the wrangling with sales",
+          "case": "ascii:999",
+          "returned_characters": 999,
+          "outcome": "exact"
+        },
+        {
+          "step": 17,
+          "phase": "event",
+          "action": "Stay and watch, joining the crowd treating it as entertainment",
+          "case": "ascii:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 18,
+          "phase": "event",
+          "action": "Leave it for on-call",
+          "case": "ascii:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 19,
+          "phase": "event",
+          "action": "Tell Quinn to take it to your manager themselves",
+          "case": "ascii:4096",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 20,
+          "phase": "event",
+          "action": "Shrug it off — you didn’t pour the drinks",
+          "case": "ascii:16000",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        },
+        {
+          "step": 21,
+          "phase": "event",
+          "action": "Tell your manager that Luke keeps breaking your concentration",
+          "case": "unicode:1000",
+          "returned_characters": 1000,
+          "outcome": "exact"
+        },
+        {
+          "step": 22,
+          "phase": "event",
+          "action": "Tell her privately what is planned and ask her to keep it strictly confidential",
+          "case": "unicode:1001",
+          "returned_characters": 1000,
+          "outcome": "truncated_as_prefix997_plus_ellipsis"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No LLM learning or compaction measured",
+    "No timed expiry claim",
+    "Short/empty notes not uniquely attributable",
+    "Independent games; no causal promotion or note-semantics claim",
+    "Latest note checks concern any recorded note, not necessarily a full ledger"
+  ]
+}
