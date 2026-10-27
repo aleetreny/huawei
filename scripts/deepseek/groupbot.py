@@ -173,6 +173,7 @@ class LexBot(GroupBot):
         self.detect = False          # story stall check: a perceived gain that did not move the stat
         self.protect_stalled = False # never lower a stalled stat before the review
         self.protect_l1 = False      # at the entry level, never lower a growth stat (any month)
+        self.quarter = ""            # "blind": DeepSeek-like quarter (report, network, key project); "blind-l4": Skill from L4
         self.stalled, self.last, self.lv = set(), None, None
         self.risk_mode, self.risk_first, self.after_blowup = risk_mode, risk_first, after_blowup
         self.defuse_at, self.laylow_at = defuse_at, laylow_at  # HR level (0-4) from which the quarter cleans risk
@@ -181,11 +182,29 @@ class LexBot(GroupBot):
         if not (st.health <= 4 and st.energy >= 1) and min(st.risk, 4) >= self.defuse_at and st.energy >= 3 \
                 and st.month < 46:
             return "Defuse legacy risk"  # once per quarter, as the first action
+        if self.quarter in ("blind", "blind-l4", "blind-l4b", "blind-l4c") and st.month < 46:
+            if st.health <= 4 and st.energy >= 1:
+                return "Health recovery"
+            if self.quarter in ("blind-l4", "blind-l4b", "blind-l4c") and st.level >= 4:
+                if self.quarter == "blind-l4c" and st.health <= 6 and st.energy >= 1:
+                    return "Health recovery"
+                if st.energy >= 2 and st.health > 4:
+                    return "Skill learning"
+                if self.quarter in ("blind-l4b", "blind-l4c"):
+                    return "Prepare report materials" if st.energy >= 1 else None
+                return "Network maintenance" if st.energy >= 1 else None
+            if st.energy == 3:
+                return "Prepare report materials"
+            if st.energy == 2:
+                return "Network maintenance"
+            return "Prepare report materials" if st.energy >= 1 else None
         return super().energy(rep, st)
 
     def main(self, rep, st):
         if min(st.risk, 4) >= self.laylow_at and st.month < 46:
             return "Lay low and reduce risk"
+        if self.quarter in ("blind", "blind-l4", "blind-l4b", "blind-l4c") and st.month < 46:
+            return "Apply for rotation" if self.quarter == "blind-l4" and st.level >= 4 else "Apply for a key project"
         return super().main(rep, st)
 
     def story(self, rep, st, node):
@@ -266,6 +285,7 @@ def _bot(name: str, i: int) -> GroupBot:
         bot.detect = "detect" in spec
         bot.protect_stalled = "ps" in spec
         bot.protect_l1 = "pl1" in spec
+        bot.quarter = "blind-l4c" if "qb4c" in spec else "blind-l4b" if "qb4b" in spec else ("blind-l4" if "qb4" in spec else ("blind" if "qb" in spec else ""))
         return bot
     return GroupBot(per, seed=i)
 
