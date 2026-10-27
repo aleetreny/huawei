@@ -403,6 +403,98 @@ def build6(out: Path) -> None:
            hypothesis="t6-scoped with a short always-visible reminder of the scope in the manifest instruction.")
 
 
+# ----------------------------------------------------------------------------- round 7: rules behind reference files
+# t6 still shifted ordinary story choices (fingerprint on the general block: less Skill, more risk) although its
+# notes said "judgement: no filter applies": the mere presence of the cost hints primes the model. Round 7 keeps
+# the story filters out of SKILL.md and puts them in reference files that the agent opens only when the
+# situation applies (the official skill_tool reads a Skill's files by relative path).
+T7 = """---
+name: career-rules
+description: "Rules for every Career Survival decision: the quarterly Energy and main action, and when to open the review-month or risk reference before a story choice. Read before deciding."
+---
+
+## Turn loop
+1. `observe`; read `events` first: the monthly HR remark, the review talk, any warning.
+2. Quarterly phases: apply the list below. Story events: check the situations below; if none applies, choose as you judge best.
+3. `take_action` with the exact `choice` and a short note naming the rule used, or "judgement". If `success` is false, pick another option.
+
+## Quarterly phases (Energy, then main action): first matching line wins
+1. **The career's final month (month 48):** main action Lay low and reduce risk. Energy: Defuse legacy risk if the HR remark mentions risk, then Health recovery and Mental recovery until both are full, then Network maintenance. Never Skill learning or High-intensity work.
+2. **Health 4 or less:** Health recovery first. **Dignity 3 or less:** Mental recovery first. No Skill learning or High-intensity work until Health is back.
+3. **The HR remark says risk is piling up, serious or worse** (anything stronger than a mild "some risk, not serious yet"): first Energy action Defuse legacy risk; main action Lay low and reduce risk.
+4. **L4 or above:** Energy on Skill learning (2) plus one point where needed; main action Apply for rotation. From L4 the review bar rises fastest for Skill.
+5. **Otherwise:** Energy and main action on whichever of Skill, Network and Output is furthest from what the next review needs; Apply for a key project lifts all three.
+
+## Story events
+- **Month before a review month** (reviews come every six months): before choosing, open `reference/review-month.md` with `skill_tool` (relative_file_path) and apply it.
+- **The HR remark says risk is piling up or worse:** before choosing, open `reference/risk.md` and apply it.
+- **Health 4 or less:** do not pick an option that costs Health.
+- **Wealth only a few months of pay:** do not pick an option that costs money.
+- **Otherwise:** no rule applies; choose as you judge best.
+"""
+T7_REVIEW = """# Month before a review month
+
+The review talk can arrive as the review month opens, before its stories, so this month's choices are the last ones that count for it.
+
+Do not pick an option that may lower Skill, Network or Output, even if another option looks more principled or adds Dignity: Dignity can be rebuilt later, a lost point can cost the promotion.
+
+Mark each option before choosing:
+- goes against a person (blaming, correcting in public, refusing, reporting someone): costs Network;
+- gives up time from your own delivery (extra unplanned work, investigations, rework, the slow thorough path, fixing someone else's problem): costs Output.
+
+Pick an option with neither mark. If every option has one, pick the one whose loss is on a stat that is not holding your promotion back. Outside this month these marks are not a reason to avoid an option.
+"""
+T7_RISK = """# HR remark: risk is piling up
+
+Buried risk goes off when it gets high, and a second blow-up ends the run. While the remark says risk is piling up, serious or worse:
+
+Strike out every option that hides or denies something, lies or invents, gossips or leaks, cuts a corner, or starts a formal process (formal complaints, investigations, open letters, going over your manager's head). Choose among the rest by your own judgement.
+"""
+
+
+def build7(out: Path) -> None:
+    bundle(out, "t7-ref", {"career-rules": T7}, hypothesis="Story filters moved to reference files opened only when their situation applies.")
+    root = out / "t7-ref" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T7_REVIEW)
+    (root / "risk.md").write_text(T7_RISK)
+    bundle(out, "t7-ref-instr", {"career-rules": T7},
+           instruction="Before a story choice in the month before a review month, open career-rules reference/review-month.md; while the HR remark says risk is piling up, open reference/risk.md. Otherwise choose story options by your own judgement. Quarterly phases follow the career-rules list in order.",
+           hypothesis="t7-ref with the opening rule repeated in the always-visible manifest instruction.")
+    root = out / "t7-ref-instr" / "bundle" / "skills" / "career-rules" / "reference"
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "review-month.md").write_text(T7_REVIEW)
+    (root / "risk.md").write_text(T7_RISK)
+
+
+# ----------------------------------------------------------------------------- round 8: quarterly-only manual
+# Rounds 6-7: any story rule shifts ordinary story choices (general block: 78-81 % same choice as the control,
+# control re-run 96 %), and Haiku cannot reliably tell the month before a review. Quarterly rules transmit well
+# (60-90 % obedience) and leave stories untouched. Round 8 commands only the quarterly phases.
+T8 = """---
+name: career-rules
+description: "Rules for the quarterly Energy allocation and main action in Career Survival, in priority order. Use in every quarterly phase; story events are left to your own judgement."
+---
+
+## Turn loop
+1. `observe`; read `events` first: the monthly HR remark, the review talk, any warning.
+2. Quarterly phases (Energy actions, then the main action): apply the list below, first matching line wins. Story events: choose the option you judge best for a long, healthy career.
+3. `take_action` with the exact `choice` and a short note naming the line used. If `success` is false, pick another option.
+
+## Quarterly phases: first matching line wins
+1. **The career's final month (month 48):** main action Lay low and reduce risk. Energy: Defuse legacy risk if the HR remark mentions risk, then Health recovery and Mental recovery until both are full, then Network maintenance. Never Skill learning or High-intensity work.
+2. **Health 4 or less:** Health recovery first. **Dignity 3 or less:** Mental recovery first. No Skill learning or High-intensity work until Health is back.
+3. **The HR remark says risk is piling up, serious or worse** (anything stronger than a mild "some risk, not serious yet"): first Energy action Defuse legacy risk; main action Lay low and reduce risk.
+4. **L4 or above:** Energy on Skill learning (2) plus one point where needed; main action Apply for rotation. From L4 the review bar rises fastest for Skill.
+5. **Otherwise:** Energy on whichever of Skill, Network and Output is furthest from what the next review needs (Prepare report materials for Output, Network maintenance for Network, Skill learning for Skill while Health is comfortable); main action Apply for a key project, which lifts all three.
+"""
+
+
+def build8(out: Path) -> None:
+    bundle(out, "t8-quarter", {"career-rules": T8},
+           hypothesis="Only the quarterly phases are ruled (closing, health floor, HR risk, Skill from L4, growth otherwise); story events are left to the model.")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="lab/policies-src/transmision")
@@ -413,3 +505,5 @@ if __name__ == "__main__":
     build4(o)
     build5(o)
     build6(o)
+    build7(o)
+    build8(o)
