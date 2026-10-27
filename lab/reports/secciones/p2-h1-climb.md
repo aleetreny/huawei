@@ -11,8 +11,8 @@
 
 | Brazo | Partidas | Ascienden en la 1.ª | Ascienden en la 2.ª (mes 12) | Ascienden en la 3.ª (mes 18) | Nivel en el mes 18 |
 |---|---:|---:|---:|---:|---:|
-| f3-lean-v1 | 24 | 11 | 13 | 7 | 2,29 |
-| f3-lean + climb (`f3-lean-climb-v1`) | 24 | 11 | 9 | 10 | 2,25 |
+| f3-lean-v1 | 24 | 11 | 13 | 7 | 2,33 ± 0,20 |
+| f3-lean + climb (`f3-lean-climb-v1`) | 23 | 11 | 9 | 10 | 2,26 ± 0,24 |
 
 - **Sin efecto** en el nivel del mes 18. El P2 sigue dominado por el P1: a los 12 meses, la mitad de las partidas de ambos brazos sigue en L1, y ahí `climb` no actúa.
 - Entre las que llegan a L3, el Output y la Network siguen siendo lo que falta (columna "short" de `scripts/secciones/reviews.py`).
