@@ -66,6 +66,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("bots")
     ap.add_argument("--batch", required=True)
+    ap.add_argument("--examples", type=int, default=0, help="print up to N examples per arm (game text: never into manuals)")
     a = ap.parse_args()
     cat = catalog(a.bots)
     print("catalog answers:", len(cat))
@@ -75,7 +76,9 @@ def main() -> None:
         if not run:
             continue
         for obs, k in decisions(run):
-            st = obs["current_state"]
+            st = obs.get("current_state") or {}
+            if "time" not in st:
+                continue
             month, status = st["time"]["current_month"], st["status"]
             ev = obs.get("current_event") or {}
             choices = obs.get("choices") or []
@@ -104,6 +107,11 @@ def main() -> None:
                     else:
                         safe = True
             c["safe_alternative" if safe else "risky_alternative" if risky else "unavoidable"] += 1
+            if a.examples and c["cost_capped_point"] <= a.examples:
+                print(f"  [{r['policy']}] m{month} lost {lost}: chose '{choices[k-1].get('action','')[:90]}' {mine}")
+                for j, f in enumerate(fx):
+                    if j != k - 1:
+                        print(f"      alt '{choices[j].get('action','')[:90]}' {f}")
     for pol, c in sorted(out.items()):
         print(pol, json.dumps(dict(c)))
 

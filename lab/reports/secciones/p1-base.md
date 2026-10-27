@@ -26,3 +26,18 @@
 - Lección para cualquier módulo: no anteponer los indicadores a la salud cuando la salud está baja.
 
 Datos: registro del origen `secciones` (`lab/registry-origins/secciones/`) y `result.json` de cada partida en `~/careerlab-data/huawei-secciones/runs/` (fuera de Git). Tablas: `uv run python scripts/secciones/periods.py --batch p1-base` y `scripts/secciones/fail_r1.py --batch p1-base`.
+
+## Diagnóstico de evitabilidad (01:40 UTC)
+
+Con un catálogo de efectos anunciados construido con bots aleatorios (`scripts/secciones/avoidable.py`, lote b00 de ~700 partidas en `~/careerlab-data/secciones-bots/`, fuera de Git; material de laboratorio que nunca entra en un manual), se revisaron las decisiones de Haiku en los meses 4–5, en L1, en las que la respuesta elegida restó un punto de Network u Output que estaba en su techo:
+
+| Manual | Decisiones de historia en los meses 4–5 | Restaron un punto en el techo | Había otra respuesta que conservaba ese indicador |
+|---|---:|---:|---:|
+| f3-lean-v1 | 180 | 32 | 32 |
+| bb-mechanics-lean-v1 | 172 | 29 | 29 |
+| bb-mechanics-v1 | 180 | 34 | 34 |
+| observed-growth-v7 | 180 | 48 | 48 |
+
+- **Siempre había alternativa**, aunque algunas son poco íntegras (los registros no muestran el riesgo oculto, así que no se puede separar "segura" de "arriesgada").
+- **El patrón es general:** la respuesta que eligió Haiku es casi siempre la versión firme, formal o pública de una postura de principios (sube Dignidad y resta Network), y casi siempre existe una versión discreta y honesta del mismo fondo (en privado, por escrito después, abstenerse, ayudar esta vez y fijar un límite, preguntar en vez de señalar) que conserva la red. Como la Dignidad ya está en 10 en casi todas las partidas, esa subida se pierde.
+- Consecuencia: la hipótesis `cap-trade` ("no compres lo que ya tienes": con la Dignidad alta, la versión discreta) ataca la causa exacta de los fallos.
