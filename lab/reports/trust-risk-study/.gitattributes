@@ -1,0 +1,4 @@
+*.json linguist-generated=true
+*.csv linguist-generated=true
+factorial-v1/sources/* linguist-generated=true
+catalogue-closure/runner-source.py linguist-generated=true
