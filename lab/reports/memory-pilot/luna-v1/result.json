@@ -1,0 +1,76 @@
+{
+  "job_id": "luna-memory-one",
+  "session_id": "2e7fbe2c5c504e9692524a9f0bc3a050",
+  "outcome": "eliminated",
+  "survival_months": 24,
+  "quantitative_score": 25.76,
+  "ending_score": {
+    "outcome": "eliminated",
+    "survival_months": 24,
+    "completed": false,
+    "quantitative_score": 25.76,
+    "competition_partial_score": 18.03,
+    "dimensions": [
+      {
+        "name": "level",
+        "label": "Career level",
+        "raw_value": 1.0,
+        "normalized_score": 10.0,
+        "weight": 0.3,
+        "weighted_score": 3.0
+      },
+      {
+        "name": "wealth",
+        "label": "Total wealth",
+        "raw_value": 10.2,
+        "normalized_score": 12.75,
+        "weight": 0.2,
+        "weighted_score": 2.55
+      },
+      {
+        "name": "resilience",
+        "label": "Health & dignity",
+        "raw_value": 13.0,
+        "normalized_score": 65.0,
+        "weight": 0.15,
+        "weighted_score": 9.75
+      },
+      {
+        "name": "skill",
+        "label": "Professional skill",
+        "raw_value": 9.0,
+        "normalized_score": 7.5,
+        "weight": 0.15,
+        "weighted_score": 1.12
+      },
+      {
+        "name": "risk_control",
+        "label": "Risk control",
+        "raw_value": 1.0,
+        "normalized_score": 90.0,
+        "weight": 0.1,
+        "weighted_score": 9.0
+      },
+      {
+        "name": "network",
+        "label": "Workplace network",
+        "raw_value": 2.0,
+        "normalized_score": 3.33,
+        "weight": 0.1,
+        "weighted_score": 0.33
+      }
+    ]
+  },
+  "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+  "interruption": null,
+  "steps": 93,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 0.0,
+  "tool_calls": {},
+  "tool_seconds": {},
+  "actor_usage": {},
+  "trajectory_path": null,
+  "resumed": false,
+  "db_root": null
+}

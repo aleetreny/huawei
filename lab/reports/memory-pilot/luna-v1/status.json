@@ -1,0 +1,122 @@
+{
+  "status": "eliminated",
+  "actions": 93,
+  "new_game_attempts": 1,
+  "updated_at": "2026-10-27T16:07:53.928808+00:00",
+  "session_id": "2e7fbe2c5c504e9692524a9f0bc3a050",
+  "last_state": {
+    "time": {
+      "current_month": 24,
+      "current_quarter": 8,
+      "current_year": 2
+    },
+    "status": {
+      "health": 8,
+      "dignity": 5,
+      "skill": 9,
+      "network": 2,
+      "level": "L1",
+      "duration_in_level": 24,
+      "output": 0,
+      "wealth": 10,
+      "energy": 0
+    },
+    "simulation_flags": {
+      "alive": false,
+      "failed": true,
+      "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in."
+    },
+    "session_id": "2e7fbe2c5c504e9692524a9f0bc3a050",
+    "error": "GAME OVER: Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+    "available_choice_count": 0
+  },
+  "last_observation": {
+    "current_state": {
+      "time": {
+        "current_month": 24,
+        "current_quarter": 8,
+        "current_year": 2
+      },
+      "status": {
+        "health": 8,
+        "dignity": 5,
+        "skill": 9,
+        "network": 2,
+        "level": "L1",
+        "duration_in_level": 24,
+        "output": 0,
+        "wealth": 10,
+        "energy": 0
+      },
+      "simulation_flags": {
+        "alive": false,
+        "failed": true,
+        "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in."
+      },
+      "session_id": "2e7fbe2c5c504e9692524a9f0bc3a050",
+      "error": "GAME OVER: Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+      "available_choice_count": 0
+    },
+    "current_event": null,
+    "choices": [],
+    "ending_score": {
+      "outcome": "eliminated",
+      "survival_months": 24,
+      "completed": false,
+      "quantitative_score": 25.76,
+      "competition_partial_score": 18.03,
+      "dimensions": [
+        {
+          "name": "level",
+          "label": "Career level",
+          "raw_value": 1.0,
+          "normalized_score": 10.0,
+          "weight": 0.3,
+          "weighted_score": 3.0
+        },
+        {
+          "name": "wealth",
+          "label": "Total wealth",
+          "raw_value": 10.2,
+          "normalized_score": 12.75,
+          "weight": 0.2,
+          "weighted_score": 2.55
+        },
+        {
+          "name": "resilience",
+          "label": "Health & dignity",
+          "raw_value": 13.0,
+          "normalized_score": 65.0,
+          "weight": 0.15,
+          "weighted_score": 9.75
+        },
+        {
+          "name": "skill",
+          "label": "Professional skill",
+          "raw_value": 9.0,
+          "normalized_score": 7.5,
+          "weight": 0.15,
+          "weighted_score": 1.12
+        },
+        {
+          "name": "risk_control",
+          "label": "Risk control",
+          "raw_value": 1.0,
+          "normalized_score": 90.0,
+          "weight": 0.1,
+          "weighted_score": 9.0
+        },
+        {
+          "name": "network",
+          "label": "Workplace network",
+          "raw_value": 2.0,
+          "normalized_score": 3.33,
+          "weight": 0.1,
+          "weighted_score": 0.33
+        }
+      ]
+    },
+    "events": "[Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:\n\nHR marks the note for follow-up. You get a list of issues: collaboration, warning signs on risk, and output measured against your level. “This isn’t a formality. It counts in this half-year’s review, for both performance and promotion. Be clear on that.”\n\nHalf-year performance bonus (D): 0.0\n\nMonthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.\n\nDismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in."
+  },
+  "rejected": 0
+}

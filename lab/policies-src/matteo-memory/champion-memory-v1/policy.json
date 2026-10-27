@@ -9,7 +9,7 @@
   "predicted_behaviour": "Action notes carry compact current-run facts, distinguish incident history from current warnings, preserve open commitments and verified payoffs; log recovery occurs only when context is missing. Existing safety and weak-review plans remain active.",
   "refutation": "Feasibility fails if the agent omits or fabricates memory, loses incident history after a calmer warning, or stops before an explicit ending for a memory-related reason. One episode cannot establish a score or survival advantage.",
   "skill_count": 1,
-  "notes": "Prepared only. Actor Luna identity awaits clarification; no registration, queue, model call or game launched. Parent frozen from cloud26e976f. Separate from the unplayed frozen Haiku4+4 transfer study.",
+  "notes": "User confirmed GPT-6 Luna + Ale champion on 27 October 2026. Exactly one isolated native-model pilot authorised; no central registration, no shared race restart. Parent frozen from cloud26e976f; separate from the unplayed Haiku4+4 study.",
   "idea_origin": "Matteo requests one exploratory game with memory on the current champion",
   "operator": "refine"
 }
