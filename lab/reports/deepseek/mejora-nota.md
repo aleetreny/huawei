@@ -166,6 +166,10 @@ Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge
 
 **Media esperada de v4:** 0,89 × ~70 + 0,11 × ~17 ≈ **63–65**. Para una media fiable de 70 haría falta eliminar la trampa de L1 o llegar a L6, y ninguna de las dos cosas está al alcance hoy. Las vías para los cortes 2 y 3: percibir mejor los costes de Network y Output en el mes de preparación, y que Network termine alta, como en la partida de 71,7.
 
+**Pistas de lectura para los costes de Network y Output (prompt de percepción v4, títulos de diseño, 0,04 USD).** No mejoran la lectura de los costes: bajadas de Output vistas, 47 % (igual que v3); de Network, 79 % (igual). Mejoran Dignity y algo el riesgo. No se hace un v8 por esta vía.
+
+**Otro enfoque del equipo.** El chat "Scripts and alternative" (rama `alejandro/formato`, `script-v1`: DeepSeek etiqueta y un script del Skill decide) sacó **76,87** en una partida completa, en L6. Su otra partida cayó en la trampa de L1 (13,23). La combinación con más futuro para los cortes 2 y 3: su enfoque, que llega a L6, más las protecciones de L1 de esta línea (se las hemos pasado).
+
 ## Relevo (27 oct, 21:05 UTC)
 
 1. **Qué se ha hecho y por qué.**
