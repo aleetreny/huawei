@@ -27,6 +27,7 @@ Tutti sono in `lab/policies-src/matteo-feedback-growth/` e giocati con Haiku, at
 |---|---:|---:|---:|---|---|
 | **v10** | 8 | **59,56** | 7/8 | v9 + regola "Capped" + meccanica di Ale (Dignity, rischio, soldi, mai High-intensity) | **candidata migliore**; ma la regola Capped non viene eseguita, quindi rispetto alla v7 la differenza è probabilmente rumore |
 | bhr (M1 + BUILD/HOLD/REPAIR) | 8 | 59,49 | 7/8 | memoria nelle note + modalità esplicite | identica alla v10 (5/8 in L5, prima review 4/8); [report](../../lab/reports/matteo-bhr-haiku.md) |
+| bhr-cooperate (BHR + contatore + "engage, don't distance" nel mese prima della review) | 8 | 48,92 | 5/8 | regola visibile al posto della checklist dei costi | prima review **6/8** con Network al tetto 8/8; ma 2 crisi di fiducia, 1 esaurimento, 2/8 in L5: peggiore di BHR; [report](../../lab/reports/matteo-bhr-cooperate.md) |
 | bhr-countdown (BHR + contatore e checklist del mese 5) | 8 (fermate al mese 6–11) | — | — | contatore `Review in N` + marcature N/O | **scartata**: prima review 2/8 (BHR 4/8), 1 esaurimento; marca le opzioni ma non vede quale costa Network; [report](../../lab/reports/matteo-bhr-countdown.md) |
 | m1 (v10 + checkpoint nelle note) | 1 | 64,06 | 1/1 | memoria fattuale nelle note | chiusa in L5; una partita sola; [report](../../lab/reports/matteo-m1-haiku.md) |
 | v7 | 9 | 57,56 | 7/9 | regole v6 con riga di stato fissa | PR #13. Nel test di Ale, 40 % promossi alla prima review contro 47 % di f3-lean: nessuna differenza |
