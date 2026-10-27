@@ -1,6 +1,6 @@
 # First-year strategy — general research draft
 
-This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. The controlled study evaluated a frozen empirical bot with a response-history lookup, not an agent reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
+This is a proposed synthesis of public-tool research, not a validated Skill or a guarantee. Controlled incident and [financial-reserve studies](../financial-reserve-study/README.md) evaluated frozen empirical bots, not agents reading these paragraphs. No event mappings, hidden numerical cutoffs or prescribed calendar triggers are part of the guidance below.
 
 ## Balance progress and the ability to continue
 
@@ -20,7 +20,7 @@ Use available risk reduction when the situation warrants it, and address the sou
 
 Keep a compact ledger: what remains open, who owns the next action, what resources it requires and what public evidence would close it. Return to the ledger when a related issue reappears. Protect confidential information, correct misleading claims and report material delivery risks with a feasible plan.
 
-Track the affordability of recurring favours, personal contributions and uncertain reimbursements from the start of the career. Do not wait until after promotion to protect the reserve. When money is tight, seek sustainable arrangements and clear terms rather than accepting discretionary costs for immediate approval. This is a research-motivated safeguard; its incremental effect has not yet been isolated in the controlled study.
+Track the affordability of recurring favours, personal contributions and uncertain reimbursements from the start of the career. Do not wait until after promotion to protect the reserve. Maintain a sustainable buffer while still funding affordable work, collaboration and necessary recovery with credible benefits. When money is tight, seek clear terms and sustainable arrangements. Continue checking growth and delivery alongside the balance: a healthy wallet alone does not establish promotion readiness. Controlled bot studies support investigating this safeguard; the best intensity and its transfer to an agent remain unresolved.
 
 ## Prepare before a review and consolidate afterwards
 

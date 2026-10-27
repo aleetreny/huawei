@@ -1,0 +1,2562 @@
+[
+  {
+    "position": 0,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 1,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 2,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 3,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 4,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 5,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 6,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 7,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 8,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 9,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 10,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 11,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 12,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 13,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 14,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 15,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 16,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 17,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 18,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 19,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 20,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 21,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 22,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 23,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 24,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 25,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 26,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 27,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 28,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 29,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 30,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 31,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 32,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 33,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 34,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 35,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 36,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 37,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 38,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 39,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 40,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 41,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 42,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 43,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 44,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 45,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 46,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 47,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 48,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 49,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 50,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 51,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 52,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 53,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 54,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 55,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 56,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 57,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 58,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 59,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 60,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 61,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 62,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 63,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 64,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 65,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 66,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 67,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 68,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 69,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 70,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 71,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 72,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 73,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 74,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 75,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 76,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 77,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 78,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 79,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 80,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 81,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 82,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 83,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 84,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 85,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 86,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 87,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 88,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 89,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 90,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 91,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 92,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 93,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 94,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 95,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 96,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 97,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 98,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 99,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 100,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 101,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 102,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 103,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 104,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 105,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 106,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 107,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 108,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 109,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 110,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 111,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 112,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 113,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 114,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 115,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 116,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 117,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 118,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 119,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 120,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 121,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 122,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 123,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 124,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 125,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 126,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 127,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 128,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 129,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 130,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 131,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 132,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 133,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 134,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 135,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 136,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 137,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 138,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 139,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 140,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 141,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 142,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 143,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 144,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 145,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 146,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 147,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 148,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 149,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 150,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 151,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 152,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 153,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 154,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 155,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 156,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 157,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 158,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 159,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 160,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 161,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 162,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 163,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 164,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 165,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 166,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 167,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 168,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 169,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 170,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 171,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 172,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 173,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 174,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 175,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 176,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 177,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 178,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 179,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 180,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 181,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 182,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 183,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 184,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 185,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 186,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 187,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 188,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 189,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 190,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 191,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 192,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 193,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 194,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 195,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 196,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 197,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 198,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 199,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 200,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 201,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 202,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 203,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 204,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 205,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 206,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 207,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 208,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 209,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 210,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 211,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 212,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 213,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 214,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 215,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 216,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 217,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 218,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 219,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 220,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 221,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 222,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 223,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 224,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 225,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 226,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 227,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 228,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 229,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 230,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 231,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 232,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 233,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 234,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 235,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 236,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 237,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 238,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 239,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 240,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 241,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 242,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 243,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 244,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 245,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 246,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 247,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 248,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 249,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 250,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 251,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 252,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 253,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 254,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 255,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 256,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 257,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 258,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 259,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 260,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 261,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 262,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 263,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 264,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 265,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 266,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 267,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 268,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 269,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 270,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 271,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 272,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 273,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 274,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 275,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 276,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 277,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 278,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 279,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 280,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 281,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 282,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 283,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 284,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 285,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 286,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 287,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 288,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 289,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 290,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 291,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 292,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 293,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 294,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 295,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 296,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 297,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 298,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 299,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 300,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 301,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 302,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 303,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 304,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 305,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 306,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 307,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 308,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 309,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 310,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 311,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 312,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 313,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 314,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 315,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 316,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 317,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 318,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 319,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 320,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 321,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 322,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 323,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 324,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 325,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 326,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 327,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 328,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 329,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 330,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 331,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 332,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 333,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 334,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 335,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 336,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 337,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 338,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 339,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 340,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 341,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 342,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 343,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 344,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 345,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 346,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 347,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 348,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 349,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 350,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 351,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 352,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 353,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 354,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 355,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 356,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 357,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 358,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 359,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 360,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 361,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 362,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 363,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 364,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 365,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 366,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 367,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 368,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 369,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 370,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 371,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 372,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 373,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 374,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 375,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 376,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 377,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 378,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 379,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 380,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 381,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 382,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 383,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 384,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 385,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 386,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 387,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 388,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 389,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 390,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 391,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 392,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 393,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 394,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 395,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 396,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 397,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 398,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 399,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 400,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 401,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 402,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 403,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 404,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 405,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 406,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 407,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 408,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 409,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 410,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 411,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 412,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 413,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 414,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 415,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 416,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 417,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 418,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 419,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 420,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 421,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 422,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 423,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 424,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 425,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 426,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 427,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 428,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 429,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 430,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 431,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 432,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 433,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 434,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 435,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 436,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 437,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 438,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 439,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 440,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 441,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 442,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 443,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 444,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 445,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 446,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 447,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 448,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 449,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 450,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 451,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 452,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 453,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 454,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 455,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 456,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 457,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 458,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 459,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 460,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 461,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 462,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 463,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 464,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 465,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 466,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 467,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 468,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 469,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 470,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 471,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 472,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 473,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 474,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 475,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 476,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 477,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 478,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 479,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 480,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 481,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 482,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 483,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 484,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 485,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 486,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 487,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 488,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 489,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 490,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 491,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 492,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 493,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 494,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 495,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 496,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 497,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 498,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 499,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 500,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 501,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 502,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 503,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 504,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 505,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 506,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 507,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 508,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 509,
+    "arm": "reserve",
+    "when": "before new_game"
+  },
+  {
+    "position": 510,
+    "arm": "baseline",
+    "when": "before new_game"
+  },
+  {
+    "position": 511,
+    "arm": "reserve",
+    "when": "before new_game"
+  }
+]
