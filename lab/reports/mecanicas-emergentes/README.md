@@ -124,6 +124,6 @@ Para repetir partidas oficiales, `official.py` exige un directorio nuevo. El man
 
 **Siguiente paso concreto.** Integrar la corrección de liquidación en la rama de réplica y después en `main`; usar el texto general de cierre en una comparación independiente de manuales si el equipo lo decide. La mejora de bot no prueba obediencia ni transferencia del modelo de lenguaje. No hacen falta nuevas partidas para revisar este resultado: ejecutar los tres comandos de análisis anteriores.
 
-**Validación de código.** 306 tests pasan en la rama final, incluidos cuatro de regresión para ambos generadores, no doble pago, horizonte corto, eliminación previa y el ejemplo de +3 puntos. `git diff --check` limpio.
+**Validación de código.** 313 tests pasan tras sincronizar la rama final con main (306 antes de la sincronización), incluidos cuatro de regresión para ambos generadores, no doble pago, horizonte corto, eliminación previa y el ejemplo de +3 puntos. `git diff --check` limpio.
 
 **Coordinación.** Línea propia de `ESTADO.md` actualizada; commit, push y PR de revisión hacia `main`. [PR #20](https://github.com/aleetreny/huawei/pull/20). La investigación del motor `main-1nddsg@da81e4a` ya está incorporada en `main`; se sincronizó esta rama con `origin/main@e53b53f`, conservando la nueva estructura y resolviendo sólo el conflicto documental en ESTADO. Los commits exploratorios con la integración de T20 se preservan localmente en `alejandro/mecanicas-emergentes-exploracion`; la rama enviada excluye esos cambios ajenos.
