@@ -40,6 +40,22 @@ Descomposición (1.000 partidas, script con parámetros prudentes): con riesgo e
 
 Ajustes probados en la regla (sin salto): proteger los meses 3–5 antes de la evaluación (−3), empujar los indicadores no estancados antes de la evaluación (0). Más prudencia con riesgo y salud: +4 (47,8 → 51,7). Los despidos vienen de llegar a la evaluación del mes 6 o 12 con un punto menos de Network u Output.
 
+## 4. Primeras partidas oficiales de `script-v1` y lo que enseñan (27 oct, 19:56–21:00 UTC)
+
+Dos partidas en paralelo con DeepSeek (slots propios `~/careerlab-data/formato/slot-a`, `slot-b`).
+- **El formato funciona mecánicamente.** DeepSeek lee el SKILL.md, monta la línea, ejecuta el script (con la ruta absoluta) y toma su elección: 14 de 14 decisiones al principio, sin fallos de formato. ~12–15 s por decisión, dentro del corte de 2 h del runner.
+- **Partida 1 (slot-a): atascada en L1.** El riesgo subió de 0 a 3 en un mes (leyó "N+ O+" una opción con riesgo +2 y usa `R-` de más), explotó en el mes 6, y en el mes 12 llegó con Output un punto por debajo. Es el fallo que el simulador ya predecía (25 % de despidos): con las lecturas de DeepSeek, que el script decida todo deja sin uso el juicio global de DeepSeek.
+- **Partida 2 (slot-b):** L3 en el mes 12.
+
+**Lectura de DeepSeek en partida** (`scripts/formato/ingame.py`, primeras 18 opciones): ve el riesgo (86 %) pero marca `R-` de más y casi no ve las subidas de Skill (17 %).
+
+**Lista de comprobación descartada.** Pedir señales sí/no por opción (prompt `scripts/deepseek/prompts/perceive-f1.md`, una pasada del catálogo, 0,05 USD) no mejora la lectura: riesgo 90 % (v3: 88 %), Skill igual, el resto peor.
+
+**Cambio de rumbo: híbrido `script-v2`.** La línea DeepSeek publicó `t13-read-v4`, 71,67 en una partida oficial completa (DeepSeek decide todo). Su traza muestra lo que DeepSeek no hace: nunca rellena "Stalled", y en L4 (meses 30–36) siguió gastando cada trimestre en Network y Output, parados en 36 y 26, mientras Skill, el freno de L4, subía despacio (ascenso a L5 en el mes 42). `script-v2` deja las historias a DeepSeek con las reglas de v4 y pasa al script sólo la contabilidad:
+- `phase=status` al empezar cada mes: línea de estado con Best, Stalled y Review in N calculados;
+- `phase=quarter` una vez por trimestre: todo el reparto de energía y la acción principal.
+Son ~64 llamadas más por partida, no ~230. En el simulador, planificar el trimestre de una vez no pierde nada (51,1 frente a 51,5).
+
 ## Relevo
 
 1. **Hecho:** medido qué ve y qué puede hacer el agente oficial (modelo falso, 0 USD); escrito `script-v1` y su simulador.
