@@ -80,11 +80,29 @@ Ojo: el jugador sin contador se arriesga mucho más que Haiku (41 % de crisis de
 
 **4. Las reglas del reparto siguen funcionando** (conjunto A de Transmisión; acierto %, mismas situaciones):
 
-RESULTADOS_A
+| Regla | n | control | t13-final | t16b-expect | t19-final | Pérdida t13 → t19 |
+|---|---:|---:|---:|---:|---:|---:|
+| No ceder puntos antes de la evaluación | 60 | 62 | 67 | 65 | 63 | 1,70 → 1,85 |
+| Skill en L4 | 60 | 17 | 60 | 50 | 53 | 0,32 → 0,34 |
+| Comentario de RR. HH. | 33 | 18 | 64 | 64 | 61 | 0,21 → 0,24 |
+| Cierre | 60 | 62 | 88 | 90 | **95** | 0,17 → 0,10 |
+| Detonantes (sólo t16b) | 85 | 91 | 87 | 87 | — | 1,02 → 1,38 (t16b) |
+| Ruina temprana (sólo t16b) | 60 | 65 | 67 | 67 | — | 0,67 → 0,71 (t16b) |
+
+- Todo cae dentro de los intervalos (±12 puntos con 60 situaciones). La línea de estado no rompe las reglas del reparto, y el cierre mejora.
+- **La bajada de “Skill en L4” es un artefacto del banco.** En los pasos previos del reparto, el servidor de imitación enseña el estado grabado del bot, no el que dejaría la acción que eligió Haiku. Así `Expect` no cuadra aunque no haya techo, y Haiku apunta un `Stalled` falso: le pasa en 5 de las 60 situaciones, todas con pasos previos del reparto. Sin esas 5, `t19-final` acierta el 56 % y `t13-final` el 58 %. En una partida real el estado sigue a la acción elegida; en el banco de techos, que no tiene ese problema, las falsas alarmas son del 2 %.
+- `t16b-expect` bajaba en esa regla por otra razón: comparaba los números de `Now` entre sí (“Output 26 frente a Skill 98”) y dejaba Skill por Output. `t19-final` lo corrige.
 
 **5. Contexto largo** (las 18 decisiones anteriores de la misma partida antes de la situación, como en [contexto-largo.md](../transmision/contexto-largo.md); 30 historias de partidas `v02`):
 
-RESULTADOS_LARGO
+| Manual | Notas | Con la línea | … en los 5 últimos pasos | `Review in N` bien | `Now` bien | Elección igual que t13-final | Tokens por situación |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| t13-final | 555 | — | — | — | — | — | 1,03 M |
+| t19-final | 555 | **99 %** | 147 de 150 | 96 % | 98 % | 29 de 30 | 0,98 M |
+
+- Con el Skill leído al principio y 14–18 decisiones después, la línea sigue saliendo en casi todas las notas. Haiku no la olvida al alargarse el historial, como ya pasaba con las reglas (Transmisión, contexto largo).
+- En estas 30 historias decide igual que `t13-final` (29 de 30) y acierta lo mismo.
+- Las situaciones se montaron con `runbench.py assemble --k-long 18` a partir de las partidas `v02` extraídas en local (`~/careerlab-data/palancas/items-long.jsonl`), porque el banco guardado sólo trae el mes en curso.
 
 **6. Calidad del Skill** (rúbrica oficial con Sonnet, 3 lecturas por manual):
 
