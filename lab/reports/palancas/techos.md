@@ -1,6 +1,6 @@
 # Palanca 2. Detectar el techo del nivel y apuntarlo en la nota
 
-**Conclusión:** en el simulador, detectar el techo durante la partida (una subida anunciada que no se mueve) y recordarlo todo el nivel vale **+8,8 puntos** frente a no saber que existe, el 78 % de lo que daría conocer los techos exactos (+11,3). Si se olvida al mes siguiente, sólo quedan +5,6: **apuntarlo en la nota vale unos 3 puntos**.
+**Conclusión:** en el simulador, detectar el techo durante la partida (una subida anunciada que no se mueve) y recordarlo todo el nivel vale **+8,8 puntos** frente a no saber que existe, el 78 % de lo que daría conocer los techos exactos (+11,3). Si se olvida al mes siguiente, sólo quedan +5,6: **apuntarlo en la nota vale unos 3 puntos**. En el banco, Haiku con la línea de estado lo detecta el 59 % de las veces y lo arrastra y respeta casi siempre; con esa detección, el simulador da **+4,9**.
 
 27 oct 2026, 17:00–17:20 UTC. Simulador `replica.py` con el catálogo v2, sin cuota. Código: [`scripts/palancas/sim.py`](../../../scripts/palancas/sim.py) (`caps` y `caps-noisy`). Datos por partida: `~/careerlab-data/palancas/caps-4k.json`.
 
@@ -47,10 +47,49 @@ Qué cambia, en el juego de desarrollo:
 3. **Dar los números sería peor además de prohibido.** Con los techos un 10 % más bajos, el bot que cree los de desarrollo (`fixed-dev`) saca 56,7 y el que los detecta 59,6. Detectarlos se adapta solo.
 4. Con un jugador que elige peor (30 % al azar) la palanca sigue valiendo +5,7.
 
+## Detectar sólo en el reparto, y no siempre
+
+El efecto anunciado de una historia sólo se ve en el registro (`take_action` devuelve sólo `success`). En el reparto trimestral, en cambio, el menú enseña los `status_updates` antes de elegir y el panel siguiente dice si se aplicaron. Por eso la versión barata detecta sólo ahí:
+
+| Brazo | Juego de desarrollo | Techos +20 % | Techos −10 % |
+|---|---:|---:|---:|
+| `detect` (en todas las decisiones) | +8,8 | +5,1 | +10,3 |
+| `detect-q` (sólo en el reparto) | +7,0 | +4,0 | +8,5 |
+| `detect-q-60` (sólo en el reparto, y lo nota el 60 % de las veces, como Haiku en el banco) | **+4,9 ± 0,3** | +3,3 | +6,4 |
+
+## En el banco con Haiku
+
+27 oct, 17:15–17:30 UTC. 132 situaciones reales del reparto trimestral (lotes `v02-validation` y `b00-random-safe`), servidas como el primer turno de una sesión nueva (mensaje oficial de continuación). La única memoria es el registro, con las notas anteriores escritas en el estilo de cada manual. Tres tipos de situación:
+- `detect`: la acción anterior anunciaba subir un indicador que no se movió, y ninguna nota lo dice aún;
+- `carry`: el techo salió antes en este nivel y la última nota ya lo apunta;
+- `nocap`: no hay techo (para ver si hay falsas alarmas).
+
+Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t16b-expect/), que es t13-final más la línea de estado `Review in N | Now S N O | Caps: … | Expect S N O`. Código: [`scripts/palancas/capbank.py`](../../../scripts/palancas/capbank.py).
+
+| Manual | Tipo | n | Apunta el techo bien | Falsa alarma | Gasta en un techo ya visto | Gasta en cualquier techo | Pérdida de nota | Tokens |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| t13-final | detect | 49 | — | — | 16 % | 31 % | 0,20 | 32k |
+| t16b-expect | detect | 49 | **59 %** | 14 % | 14 % | 29 % | 0,20 | 32k |
+| t13-final | carry | 33 | — | — | 27 % | 39 % | 0,35 | 32k |
+| t16b-expect | carry | 33 | **100 %** | 9 % | **3 %** | 42 % | 0,34 | 32k |
+| t13-final | nocap | 50 | — | — | 0 % | 0 % | 0,40 | 32k |
+| t16b-expect | nocap | 50 | 100 % (escribe `none`) | 0 % | 0 % | 0 % | 0,36 | 33k |
+
+(Pérdida de nota = puntos de nota final perdidos frente a la mejor opción, según el simulador con el planificador. Por decisión es pequeña: la ventaja de la palanca se acumula en la partida.)
+
+**Lectura:**
+1. **La nota funciona como memoria.** Un techo apuntado se arrastra el 100 % de las veces tras un resumen y se obedece: el gasto en ese indicador baja del 27 % al 3 %.
+2. **Descubrirlo es lo difícil.** La primera redacción (`t16-caps`, “compara con `Now` de tu última nota”) sólo lo detectaba el 16 % de las veces (19 casos). Escribir en la nota lo que se espera tras la acción (`Expect`) y comparar un solo número lo sube al 59 %. Aun así, tras detectarlo, Haiku a veces gasta en él en la misma decisión (14 % frente a 16 %).
+3. **Lo que queda de gasto en techos son techos aún no descubiertos** (por ejemplo, Skill en L1 cuando ninguna acción la ha topado todavía). Es lo mismo que supone el simulador en `detect`.
+4. **No cuesta tokens:** 32k por situación en los dos manuales.
+5. Con lo medido (60 % de detección, sólo en el reparto), el simulador da **+4,9 puntos** a la palanca.
+
 ## Límites
 
-- El bot percibe sin error el efecto de cada opción antes de elegir. El modelo real no (HALLAZGOS A6), y además tiene que notar que la subida no se registró. Eso lo mide el banco con Haiku: [nota-memoria.md](nota-memoria.md).
+- El bot del simulador percibe sin error el efecto de cada opción antes de elegir; el modelo real no (HALLAZGOS A6). El banco mide la detección y la memoria del techo, no la percepción de las historias.
+- El banco de techos sólo prueba decisiones del reparto. Que la regla no estropee las historias se mide en el bloque general ([nota-memoria.md](nota-memoria.md)).
 - El techo de Health y Dignity (10) está publicado en el manual y el bot ya lo usa; aquí sólo se miden los techos no publicados de Skill, Network y Output.
+- Ningún número de techo va al manual: el ejemplo de la nota usa valores que no son el techo de ningún nivel.
 
 ## Cómo repetirlo
 

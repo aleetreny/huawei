@@ -68,10 +68,13 @@ def note(style: str, sit: dict[str, Any], caps: list[str]) -> str:
     if sit["phase"] == "e":
         tail = ""
     else:
-        tail = " | quarterly line" if style in ("status", "expect") else "quarterly line"
-    if style in ("status", "expect"):
-        line = f"Review in {review_in(m)} | Now S{st['skill']:g} N{st['network']:g} O{st['output']:g} | Caps: {caps_str(caps)}"
-        if style == "expect" and sit["phase"] != "e":
+        tail = " | quarterly line" if style in ("status", "expect", "stalled") else "quarterly line"
+    if style in ("status", "expect", "stalled"):
+        label = "Stalled" if style == "stalled" else "Caps"
+        line = f"Review in {review_in(m)} | Now S{st['skill']:g} N{st['network']:g} O{st['output']:g} | {label}: {caps_str(caps)}"
+        if style == "stalled":
+            line += " | Risky this month: 0"
+        if style in ("expect", "stalled") and sit["phase"] != "e":
             fx = GAINS.get(chosen_name(sit) or "", {})
             line += " | Expect " + " ".join(f"{k[0].upper()}{st[k] + max(0, fx.get(k, 0)):g}" for k in R.GROWTH)
         return line + tail
@@ -158,7 +161,7 @@ def build(sit_paths: list[Path], out: Path, per_kind: int, rollouts: int, seed: 
                             if fx.get(k, 0) > 0 and n_["state"][k] < t["state"][k] + fx[k] - 1e-9 and k not in seen[t["state"]["level"]]:
                                 seen[t["state"]["level"]].append(k)
             s["notes_by_step"] = {style: {str(ci[j]): note(style, steps[j], caps_at[j]) for j in range(i) if j < len(ci)}
-                                  for style in ("t13", "status", "expect")}
+                                  for style in ("t13", "status", "expect", "stalled")}
             s["logs_full"] = lg[: s["log_upto"]][-30:]
             s["log_offset"] = max(0, s["log_upto"] - 30)
             s["kind"], s["cap_stat"], s["caps_prev"] = kind, stat, caps_prev
@@ -194,7 +197,7 @@ NOTE_RE = re.compile(r"\nNotes: .*\Z", re.S)
 
 def serve(bank: Path) -> None:
     items = [json.loads(line) for line in bank.open()]
-    for style in ("t13", "status", "expect"):
+    for style in ("t13", "status", "expect", "stalled"):
         path = OUT / f"items-caps-{style}.jsonl"
         with path.open("w") as f:
             for it in items:
@@ -214,7 +217,7 @@ def serve(bank: Path) -> None:
 
 # ----------------------------------------------------------------------------- score
 def parse_caps(notes: str | None) -> list[str] | None:
-    m = re.search(r"Caps:\s*([^|\n.;(]*)", notes or "")
+    m = re.search(r"(?:Caps|Stalled):\s*([^|\n.;(]*)", notes or "")
     if not m:
         return None
     txt = m.group(1).lower()
