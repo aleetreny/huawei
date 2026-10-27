@@ -19,7 +19,7 @@ Rama `alejandro/transmision` (desde `origin/main`, con `main-1nddsg` y `alejandr
 | 1 | [banco.md](banco.md) | Construcción del banco y verdad del simulador | hecho (1.869 situaciones decisivas) |
 | 2 | [ronda-a.md](ronda-a.md) | Rondas A y 2: dónde y cómo escribir cada regla (contexto corto) | hecho |
 | 3 | ronda 3 | Prioridad explícita, ejemplos de cómo leer el coste de una opción, instrucción del manifest | en marcha |
-| 4 | contexto largo | Las mismas reglas con 18 decisiones de historial antes | en marcha |
+| 4 | [contexto-largo.md](contexto-largo.md) | Las mismas reglas con 18 decisiones de historial antes | hecho: la obediencia no cae; la instrucción del manifest no añade nada |
 | 5 | [partidas-g1.md](partidas-g1.md) | `t3-instr` frente a f3-lean-v1, partidas completas, entrega oficial | parado: −21 ± 8 puntos (7 + 7); la regla se salía de su contexto |
 | 7 | [bloque-general.md](bloque-general.md) | Huella de las elecciones en historias fuera de las reglas | hecho: toda regla de historias cambia 1 de cada 5 historias |
 | 8 | [ronda-8-10.md](ronda-8-10.md) | Sólo reparto trimestral (t8, t9) y una regla de historias tras una cuenta atrás (t10) | hecho |
