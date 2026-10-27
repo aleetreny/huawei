@@ -88,15 +88,16 @@ class LeverBot(rules.RuleBot):
             return R.cap(st.level, k)
         if self.caps_mode == "fixed":
             return BASE_CAPS.get(st.level, BASE_CAPS[6]).get(k, UNKNOWN)
-        if self.caps_mode == "detect":
+        if self.caps_mode in ("detect", "detect-q"):
             hit = self.learned.get((st.level, k))
             if hit and (self.mem is None or st.month - hit[1] < self.mem):
                 return hit[0]
         return UNKNOWN
 
-    def _learn(self, st: R.State, fx: dict[str, float]) -> None:
-        """An announced gain that does not fully register shows the stat is at its ceiling."""
-        if self.caps_mode != "detect":
+    def _learn(self, st: R.State, fx: dict[str, float], quarter: bool = False) -> None:
+        """An announced gain that does not fully register shows the stat is at its ceiling (`detect-q`: only
+        seen in the quarter phase, whose menu prints each action's status_updates)."""
+        if self.caps_mode not in ("detect", "detect-q") or (self.caps_mode == "detect-q" and not quarter):
             return
         tmp = copy.copy(st)
         R.apply_delta(tmp, fx)
@@ -170,7 +171,7 @@ class LeverBot(rules.RuleBot):
         if a is None:
             a = super().energy(rep, v)
         if a:
-            self._learn(st, R.ENERGY_FX[a][0])
+            self._learn(st, R.ENERGY_FX[a][0], quarter=True)
             if "quarter" in self.risk_mode:
                 self.est = max(0, self.est + R.ACTION_RISK.get("q|" + a, 0))
         return a
@@ -178,7 +179,7 @@ class LeverBot(rules.RuleBot):
     def main(self, rep: R.Replica, st: R.State) -> str:
         self._tick(st)
         a = super().main(rep, self._view(st))
-        self._learn(st, R.MAIN_FX[a])
+        self._learn(st, R.MAIN_FX[a], quarter=True)
         if "quarter" in self.risk_mode:
             self.est = max(0, self.est + R.ACTION_RISK.get("m|" + a, 0))
         return a
@@ -272,7 +273,8 @@ def report(res, scens: list[str], arms: list[str], ref: str, title: str) -> str:
 EXPERIMENTS: dict[str, dict[str, Any]] = {
     "caps": {"ref": "blind", "scens": ["base", "caps+20", "caps-10", "thr-10"], "title": "Palanca 2: techos",
              "arms": {"blind": {"caps": "blind"}, "detect": {"caps": "detect"}, "detect-3m": {"caps": "detect", "mem": 3},
-                      "detect-1m": {"caps": "detect", "mem": 1}, "fixed-dev": {"caps": "fixed"}, "exact": {"caps": "exact"}}},
+                      "detect-1m": {"caps": "detect", "mem": 1},
+                      "detect-q": {"caps": "detect-q"}, "fixed-dev": {"caps": "fixed"}, "exact": {"caps": "exact"}}},
     "caps-noisy": {"ref": "blind", "scens": ["base", "caps+20"], "title": "Palanca 2: techos, jugador con ruido (30 % al azar)",
                    "arms": {"blind": {"caps": "blind", "eps": 0.3}, "detect": {"caps": "detect", "eps": 0.3},
                             "detect-1m": {"caps": "detect", "mem": 1, "eps": 0.3}, "exact": {"caps": "exact", "eps": 0.3}}},
@@ -293,6 +295,7 @@ EXPERIMENTS: dict[str, dict[str, Any]] = {
                        "caps-only": {"caps": "detect", "risk": "stale"},
                        "risk-only": {"caps": "detect", "mem": 1, "risk": "sign+quarter"},
                        "status-line": {"caps": "detect", "risk": "sign+quarter"},
+                       "status-line-q": {"caps": "detect-q", "risk": "sign+quarter"},
                        "plain-noisy": {"caps": "detect", "mem": 1, "risk": "stale", "eps": 0.3},
                        "status-line-noisy": {"caps": "detect", "risk": "sign+quarter", "eps": 0.3}}},
 }
