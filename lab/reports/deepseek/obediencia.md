@@ -47,10 +47,14 @@ Comparación emparejada (las mismas situaciones; intervalo al 95 % por remuestre
 | Haiku sin manual | +0,82 | +0,53 | +0,09 | +0,01 | +1,09 | −0,19 | 86 % |
 | Haiku t13-final | +0,74 | +0,72 | +0,16 | −0,10 | +0,99 | −0,13 | 81 % |
 
-Con el manual, DeepSeek elige historias con menos Skill y más Output, el mismo sesgo que se vio con Haiku. Aun así, su pérdida en esas historias baja. Para saber si el 13 % de elecciones distintas es efecto del manual o ruido de la temperatura, se repite el control (abajo).
+| DeepSeek sin manual, repetido | +0,88 | +0,73 | +0,08 | −0,06 | +0,99 | −0,19 | 91 % |
+
+**Control repetido.** DeepSeek sin manual coincide consigo mismo en el 91 % de las historias del bloque general (Haiku, 96 %): la temperatura 0,95 cambia una de cada once. `t13-final` coincide con los dos controles en el 87–88 %, así que **el manual cambia 3–4 historias de cada 100 más que el ruido**, siempre hacia menos Skill y más Output (el control repetido no se mueve: Skill +0,88, Output +0,08).
+
+Frente al control repetido, la pérdida en el bloque general (132 historias de G1) baja de 0,96 a 0,56: −0,40 (−1,06 a +0,03). Entre los dos controles la diferencia es −0,10 (−0,42 a +0,16). **La mejora en historias es probable, pero no segura** con este tamaño.
 
 ## Lo que significa
 
-- El manual de la línea de transmisión **se transmite a DeepSeek**: lo lee, obedece el reparto y no le estropea las historias; al contrario, se las mejora un poco.
+- El manual de la línea de transmisión **se transmite a DeepSeek**: lo lee, obedece el reparto y no le estropea las historias. Probablemente se las mejora un poco, aunque las aparte algo de Skill.
 - Los **detonantes** (riesgo ya cargado) son el único punto donde el manual empeora. Es la misma señal pequeña que con Haiku, y el siguiente sitio donde mirar.
 - La cuenta atrás no aísla la referencia tan bien como con Haiku: DeepSeek la abre de más. No se nota en la pérdida, pero cuesta tokens.
