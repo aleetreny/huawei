@@ -53,14 +53,28 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
 | B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
 
+**Sobre DeepSeek (`deepseek-v4-flash`, con la clave de la competición)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B15 | **DeepSeek ve bien el riesgo y mal Skill y Output.** Leyendo sólo el texto de la opción, sin ayuda, detecta el 83 % de las respuestas que suben el riesgo oculto (90 % de las de +2 o más), pero sólo el 45 % de las que suben Skill y el 49 % de las que suben Output. Lee los 10 tipos mejor que Haiku. | deepseek, [percepción](lab/reports/deepseek/percepcion.md) |
+| B16 | **Pistas de lectura generales mejoran su percepción y lo confirman los títulos reservados.** “Skill sube siempre que usas tu propio juicio (analizar, aportar datos, preparar, aprender, negociar con argumentos), también en temas de personas o dinero”, “Output baja cuando tu tiempo o tu mérito se van a otros” y las señales de riesgo de B8 más “quejarse de la empresa, su cultura o sus reglas, aunque sea por el canal formal”. Con ellas ve el 78 % de las subidas de Skill (antes 45 %) y el 86 % de los riesgos. | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| B17 | **La mejor categorización para DeepSeek es leer cada opción como seis signos más el riesgo**, no los 10 tipos. Un bot que elige sólo con esa lectura de DeepSeek saca 56,0 en el simulador, frente a 46,7 con los tipos de Haiku y 67,7 el oráculo. Con etiquetas perfectas, esa lectura casi iguala al oráculo (67); las agrupaciones gruesas no pasan de 53–63. Una regla escrita por orden (descarta lo arriesgado, lo que baja Health o Dignity si están bajas y, antes de la evaluación, lo que baja Skill, Network u Output; después, lo que más sube los indicadores de crecimiento) saca 53,7. | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| B18 | **DeepSeek lee el Skill en el 100 % de las situaciones y obedece el reparto trimestral como Haiku** (con t13-final: Skill en L4 del 2 % al 65 %; comentario de RR. HH. del 15 % al 65 %). | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| B19 | **DeepSeek es menos constante que Haiku**: sin manual repite la elección en el 91 % de las historias (Haiku, 96 %), y entre dos lecturas cambia el 12–18 % de las etiquetas. Una sola pasada de etiquetas hace variar 5–7 puntos la nota de un bot en el simulador: hay que medir con varias pasadas. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md), [categorización](lab/reports/deepseek/categorizacion.md) |
+
 ## C. Pistas sin confirmar
 
 | # | Pista | Fuente |
 |---|---|---|
 | C1 | El manual `t13-final` (reparto con prioridad + interruptor de evaluación) saca 57,2 ± 5,1 frente a 50,5 ± 2,5 de f3-lean en partidas de Haiku (12 frente a 43): +6,7 ± 5,7, prometedor pero no seguro; t10, con las mismas reglas y otra redacción, saca 47,6. | transmisión, lotes g1–g6 |
 | C2 | La instrucción del manifest no añade nada con Haiku; quizá sí con DeepSeek, que podría olvidar antes. | transmisión, [contexto largo](lab/reports/transmision/contexto-largo.md) |
-| C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Nadie ha medido todavía cómo etiqueta o percibe DeepSeek. | carrera (histórico) |
+| C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Cómo percibe y etiqueta DeepSeek ya está medido (B15–B19). | carrera (histórico) |
 | C4 | Una política por tipo de respuesta recupera dos tercios de la distancia entre el azar y la óptima (47 de 68 en el simulador). Falta saber cuánto saca DeepSeek razonando con esos tipos. | categorías §2 |
+| C5 | Con DeepSeek, t13-final probablemente **mejora** las historias del bloque general (pérdida −0,40 a −0,79 puntos por decisión según el control de referencia; con Haiku no era seguro), aunque las aparta un poco de Skill (cambia 3–4 historias de cada 100 más que el ruido). | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C6 | Con DeepSeek, t13-final empeora los detonantes (pérdida +0,95, al límite): ante un comentario de RR. HH. inquieto, la regla trimestral “protégete” se cuela en las historias y elige arreglos en privado, que suman riesgo. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C7 | La cuenta atrás “Review in N” aísla peor con DeepSeek: abre la referencia del mes de evaluación en todos los meses previos a una evaluación, pero también en un 9–26 % de los demás. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C8 | Con DeepSeek, añadir a t13-final la ficha de lectura y la regla de historias por orden (`t13-read-v1`) arregla los detonantes (−0,97) y la deriva lejos de Skill, pero empata con t13-final en la pérdida media de las historias (−0,02 ± 0,30). Falta confirmarlo en partidas. | deepseek, [masticado](lab/reports/deepseek/masticado.md) |
 
 ## X. Descartado (no repetir sin una razón nueva)
 
@@ -75,3 +89,5 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Reloj de evaluación, “no cambiar Dignity por Network”, leer el registro, limpieza preventiva del último año (noche del 26) | no mejoran | [histórico T18](lab/reports/historico/secciones/resumen-noche.md) |
 | Carrera de manuales por estilo (prereg-v1, fastloop) | mucha cuota para diferencias dentro del ruido | [ESTADO antiguo](docs/historico/ESTADO-2026-10-26-carrera.md) |
 | Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |
+| Agrupaciones gruesas de respuestas para DeepSeek (sólo el riesgo; el indicador que más sube; tipo + riesgo) | aun con etiquetas perfectas se quedan en 47–63, frente a 67 con los seis signos | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| Mejorar los 10 tipos con pistas de lectura | con DeepSeek, las pistas mejoran los signos (+5,5) pero no los tipos (49,4 → 48,5) | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
