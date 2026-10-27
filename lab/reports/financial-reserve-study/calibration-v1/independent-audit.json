@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "assigned": 512,
+  "source_records": 512,
+  "replayed_actions": 25133,
+  "groups": {
+    "baseline": {
+      "assigned": 256,
+      "resolved": 256,
+      "broke": 35,
+      "trust_death": 4,
+      "health_death": 0,
+      "first_promotion_by_6": 186,
+      "first_promoted_alive_at_7": 183,
+      "second_promotion_by_12": 129,
+      "second_promotion_and_alive": 125,
+      "alive_through_12": 217
+    },
+    "reserve": {
+      "assigned": 256,
+      "resolved": 256,
+      "broke": 5,
+      "trust_death": 5,
+      "health_death": 0,
+      "first_promotion_by_6": 199,
+      "first_promoted_alive_at_7": 199,
+      "second_promotion_by_12": 171,
+      "second_promotion_and_alive": 166,
+      "alive_through_12": 246
+    }
+  },
+  "scope": "All initial assignments retained, every resolved public choice replayed under frozen policy, no future incident memory, outcomes reconstructed independently"
+}

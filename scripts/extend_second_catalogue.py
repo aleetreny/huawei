@@ -11,7 +11,7 @@ from careerlab.mcp_client import month_index, phase, is_terminal
 from scripts.first_review_search import node_key
 
 
-def extend(old_root,study_root,closure_source):
+def extend(old_root,study_root,closure_source,additional_roots=()):
     dest=study_root/"catalogue-closure"
     dest.mkdir(parents=True,exist_ok=True)
     archive=dest/"public-trajectories.jsonl.gz"
@@ -29,7 +29,7 @@ def extend(old_root,study_root,closure_source):
     questions={}
     provenance=[]
     count=0
-    for root in (old_root,study_root):
+    for root in (old_root,*additional_roots,study_root):
         for a in sorted(root.glob("*/public-trajectories.jsonl.gz")):
             expected=(a.parent/"archive-sha256.txt").read_text().split()[0]
             actual=hashlib.sha256(a.read_bytes()).hexdigest()
@@ -71,4 +71,4 @@ def extend(old_root,study_root,closure_source):
 
 
 if __name__=="__main__":
-    extend(Path(sys.argv[1]),Path(sys.argv[2]),Path(sys.argv[3]))
+    extend(Path(sys.argv[1]),Path(sys.argv[2]),Path(sys.argv[3]),tuple(Path(p) for p in sys.argv[4:]))

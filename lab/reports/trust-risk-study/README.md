@@ -2,6 +2,8 @@
 
 27 ottobre 2026. Studio richiesto da Matteo dopo l'esplorazione dei mesi 7–12. Solo bot Python e strumenti pubblici: nessuna chiamata a modelli IA e nessuna valutazione delle Skills con agenti.
 
+**Seguito del 27 ottobre:** lo [studio della riserva economica](../financial-reserve-study/README.md) ha ora isolato due interventi economici dalla nuova partita e incontrato un'altra fase narrativa. Il catalogo conosciuto dei mesi 7–12 è esteso a 646/646 risposte narrative e 663/663 totali. I risultati di rischio e la fotografia da 661 risposte qui sotto restano quelli di questa raccolta.
+
 ## Risultato principale
 
 Il segnale più chiaro è **cambiare prudenza dopo un incidente**, anziché affidarsi soltanto a ripulire il rischio corrente. Nel confronto randomizzato del bot congelato, la guardia che conserva la storia degli incidenti e usa associazioni empiriche di rischio porta le crisi di fiducia da **20/256 a 4/256**. La seconda promozione con sopravvivenza passa da **174/256 a 194/256**.
@@ -94,7 +96,7 @@ Le prime due regole sono motivate dal confronto del pacchetto memoria/lookup, ma
 
 **Limiti:** risultati relativi al bot empirico e alla popolazione già promossa al menu del mese 6. Il denominatore non misura l'efficacia di una strategia per tutte le nuove carriere. Il catalogo e le frequenze storiche non sono un manuale trasferibile. Le conseguenze oltre il mese 12 non sono osservate. L'assenza di un beneficio chiaro della sola pulizia non equivale a inutilità.
 
-**Prossimo studio concreto:** isolare la protezione economica nel prefisso, con assegnazione casuale dalla nuova partita, mantenendo fissa la prudenza sugli incidenti. Misurare prima promozione, seconda promozione e sopravvivenza sull'intero denominatore iniziale, oltre alle spese e alla riserva al cambio di livello. Questo studio non è stato avviato né pianificato automaticamente.
+**Seguito eseguito dopo questa raccolta:** la protezione economica nel prefisso è stata isolata con assegnazione casuale dalla nuova partita, mantenendo fissa la prudenza sugli incidenti e misurando le promozioni sull'intero denominatore iniziale. Le due raccolte e i loro limiti sono nello [studio economico](../financial-reserve-study/README.md). Nessuna ulteriore attività è pianificata automaticamente.
 
 Validazione del software: **267 test passati**, con il warning Authlib già esistente. I controlli aggiunti verificano eleggibilità, fattori, costo uguale e recupero, memoria persistente, frequenze congelate, incertezza con zero eventi e ricostruzione della storia. Gli audit pubblici dei 512 esiti e delle 661 risposte sono completati. Questi controlli del codice non sono una valutazione delle Skills.
 
