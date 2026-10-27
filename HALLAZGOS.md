@@ -92,6 +92,12 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B24 | `Bot + Haiku` **Nunca presentes una conducta arriesgada como forma de ganar un indicador.** Decirle a la IA que “venderte sube Output” dobla las crisis de confianza (73 → 174 por 1.000 partidas en la réplica, emparejadas) y baja la nota 5 puntos (53,2 → 48,1). Encaja con B7–B8. | Leah, `lab/reports/stat-perception/03-errores-output.md` (rama `leah/workspace`) |
 | B25 | `Programa` **Mecánica de la nota.**<br>• Guarda hasta 1.000 caracteres: lo que pasa se corta a 997 + “...”.<br>• En *Continue* no se guarda.<br>• Persiste tras reconectar y reiniciar el servidor.<br>• En `check_latest_logs`, `count=N` cuenta entradas del registro, no decisiones.<br>Hay que mantener la línea de estado de B23 corta y al principio. | Matteo, `lab/reports/action-notes-study/README.md` (rama `matteo-t4-growth`; 256 notas) |
 
+**Forma de entrega del manual (línea Formato, 27 oct)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B27 | `Programa` **El agente oficial puede ejecutar código del Skill en plena partida.** Tiene 52 herramientas, entre ellas `bash` y `code` (Python/JavaScript), además de `read_file`/`write_file`; los permisos de JiuwenSwarm están desactivados. El instalador copia el Skill entero (`script/`, `reference/`) a `…/agent/workspace/skills/<skill>/`, y `bash` arranca en `…/agent/workspace/projects`, así que `python3 ../skills/<skill>/script/x.py` funciona. Comprobado con un modelo falso (0 USD) y en partidas reales con DeepSeek, que llama al script sin fallos de formato. | formato, [README §1](lab/reports/formato/README.md) |
+
 ## C. Pistas sin confirmar
 
 | # | Pista | Fuente |
@@ -131,3 +137,4 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | `Bot` Reaccionar a los avisos con 3 meses de margen (dinero, aislamiento, dignidad) o al de la tercera evaluación en L1 | 0 puntos en el simulador; las derrotas por condición casi no ocurren y la tercera evaluación en L1 ya no tiene arreglo | palancas, [avisos](lab/reports/palancas/avisos.md) |
 | `Bot` Preparar la reputación antes de la evaluación para evitar la charla de aviso (M24) | +0,1 con la regla exacta, −0,5 con la general | palancas, [reputación](lab/reports/palancas/reputacion.md) |
 | `Revisor de rúbrica` Llamar “Caps” o “techo del nivel” a lo que no sube | el revisor de la rúbrica lo lee como una mecánica sin publicar (el manual dice “0–unbounded”); hay que describir lo que se ve (“Stalled”) | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
+| `DeepSeek` Lista de comprobación (señales sí/no por opción) para leer las opciones | riesgo 90 % frente a 88 % de v3, Skill igual, el resto peor (una pasada del catálogo) | formato, [README §4](lab/reports/formato/README.md) |
