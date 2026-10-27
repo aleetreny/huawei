@@ -31,10 +31,13 @@ STATS = ("health", "dignity", "skill", "network", "output", "wealth")
 LETTER = {"H": "health", "D": "dignity", "S": "skill", "N": "network", "O": "output", "W": "wealth"}
 GROWTH = ("skill", "network", "output")
 UNKNOWN = 1e9
+# Published in the employee handbook: a 48-month career, a formal review every 6 months, quarters of 3 months.
+CAREER_MONTHS, REVIEW_EVERY, QUARTER = 48, 6, 3
+LAST_QUARTER = CAREER_MONTHS - QUARTER + 1   # first month of the career's last quarter
 # Policy knobs (our own prudence settings, not game rules).
 P = {"h_recover": 6, "h_floor": 2, "h_w": 0.5, "risk_base": 4.0, "risk_hr": 3.0, "risk_veto_hr": 1,
      "risk_veto": 20.0, "defuse_hr": 1, "laylow_hr": 1, "h_minus": 2.0,
-     "guard": (5,), "guard_w": 6.0, "push_w": 0.0, "surprise_w": 0.0, "surprise_decay": 0.5,
+     "guard": (1,), "guard_w": 6.0, "push_w": 0.0, "surprise_w": 0.0, "surprise_decay": 0.5,
      "story_detect": 0, "rminus_w": 1.0}
 
 # Quarterly menus, as published in the employee handbook (signs) and the in-game menu text ("solid",
@@ -149,8 +152,8 @@ def risk_level(mem: Memory) -> int:
 # ----------------------------------------------------------------------------------------- valuation
 def value(st: dict, mem: Memory, fx: dict, risk: int) -> float:
     lv, month = st["level"] or 1, st["month"] or 1
-    pre_review = month % 6 in P["guard"]
-    endgame = month >= 46
+    pre_review = REVIEW_EVERY - month % REVIEW_EVERY in P["guard"]
+    endgame = month >= LAST_QUARTER
     v = 0.0
     at_cap = {k: (st[k] or 0) >= mem.cap(lv, k) for k in GROWTH}
     for k in GROWTH:
@@ -210,7 +213,7 @@ def decide_energy(st: dict, mem: Memory) -> int:
         return names.index("Health recovery") + 1
     if hr >= P["defuse_hr"] and e >= 2:
         return names.index("Defuse legacy risk") + 1
-    if (st["month"] or 0) >= 46:
+    if (st["month"] or 0) >= LAST_QUARTER:
         if hr > 0 and e >= 2:
             return names.index("Defuse legacy risk") + 1
         if (st["health"] or 0) < 10 and e >= 1:
@@ -230,7 +233,7 @@ def decide_energy(st: dict, mem: Memory) -> int:
 def decide_main(st: dict, mem: Memory) -> int:
     names = [a[0] for a in MAIN]
     hr = risk_level(mem)
-    if hr >= P["laylow_hr"] or ((st["month"] or 0) >= 46 and hr > 0):
+    if hr >= P["laylow_hr"] or ((st["month"] or 0) >= LAST_QUARTER and hr > 0):
         return names.index("Lay low and reduce risk") + 1
     return max(range(len(MAIN)), key=lambda i: value(st, mem, MAIN[i][1], 0)) + 1
 
@@ -261,12 +264,12 @@ def run(line: str, root: Path | None) -> str:
     mem.save()
     lv = st["level"] or 1
     stalled = [g[0].upper() for g in GROWTH if mem.cap(lv, g) < UNKNOWN]
-    review_in = 6 - ((st["month"] or 1) % 6) if (st["month"] or 1) % 6 else 6
+    review_in = REVIEW_EVERY - (st["month"] or 1) % REVIEW_EVERY
     label = f" ({name})" if name else ""
     out = (f"CHOOSE {k}{label}\n"
            f"NOTE: Review in {review_in} | Stalled {''.join(stalled) or 'none'} | HR {risk_level(mem)} | advisor {k}")
     hints = []
-    if review_in <= 2 and (st["month"] or 1) < 46:
+    if review_in <= 2 and (st["month"] or 1) < LAST_QUARTER:
         hints.append("Review close: a lost Skill, Network or Output point can cost the promotion. When you read the next "
                      "options, write O- if your time or credit goes to unplanned work, investigating or fixing, rework, "
                      "the slow thorough path, meetings or someone else's problem; N- if you refuse, correct, report, "
