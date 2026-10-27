@@ -57,6 +57,8 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 
 ## Relevo
 
+**27 oct, clave propia:** preparada sin comprar ([clave-propia.md](clave-propia.md)); el archivo `~/careerlab-data/own-openrouter/.env` espera la clave.
+
 **27 oct, NIM: descartado.** NIM retiró `deepseek-v4-flash` el 7 de agosto (HTTP 410) y sólo sirve V4.1 Flash, que es otro modelo ([nim.md](nim.md)). La versión del reto sólo se consigue por OpenRouter.
 
 **27 oct, 18:40 UTC.**
