@@ -1,0 +1,13 @@
+{
+  "family": "formato",
+  "name": "script-v3",
+  "parents": [
+    "script-v1"
+  ],
+  "idea_origin": "script-v1 official games: 76.87 (L6, the best DeepSeek game so far) and 13.23 (stuck in L1: a proper fix read as S+ D+ R- cost Output -1 in the month before the review). The script knows when a misreading is costly; it can print the relevant reading cue right before the next reading.",
+  "operator": "change the delivery form",
+  "hypothesis": "Just-in-time reading cues from the script (before reviews and when HR is uneasy) cut the L1 failures of script-v1 while keeping its upside.",
+  "predicted_behaviour": "Fewer missed Output/Network costs in review months, fewer R- on polite-but-risky options; most games pass L1 by month 12.",
+  "refutation": "Games still stuck in L1 or blown up at the same rate as script-v1 (1 of 2).",
+  "skill_count": 1
+}
