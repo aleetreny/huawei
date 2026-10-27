@@ -31,6 +31,8 @@ Los tres, también con un jugador que elige el 30 % de las historias al azar. 4.
 2. **El aviso de la tercera evaluación en L1 no tiene arreglo.** Con 17 meses en L1 la nota es D siempre, y con D no se asciende. Las partidas despedidas se deciden en las evaluaciones de los meses 6 y 12, casi siempre por **un punto de Output o de Network** (en L1 el umbral es el techo). Eso es la palanca 2 ([techos.md](techos.md)), no la 3.
 3. Lo que ya dice `t13-final` (“si Network o el dinero están cerca de cero durante meses, arréglalo primero”) basta. Con Haiku hubo 2 ruinas en 43 partidas de f3-lean; si DeepSeek se arruina más, convendrá revisar por qué gasta (multiplicador de pérdidas en niveles altos), no añadir una regla de avisos.
 
+**Réplica corregida.** Repetido a las 17:45 UTC con la réplica de `main`, que liquida el mes 48 al terminar (HALLAZGOS B16): las diferencias cambian 0,12 puntos o menos y las conclusiones no cambian. Datos en `~/careerlab-data/palancas/*-4k-v2.json`.
+
 ## Cómo repetirlo
 
 ```bash

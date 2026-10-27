@@ -1,6 +1,6 @@
 # Palanca 6. Tokens por mes
 
-**Conclusión:** la línea de estado no cambia el gasto de tokens que se puede medir (32k por situación con y sin ella, y una sola lectura del registro por situación en los dos casos). Toda la parte de tokens vale como mucho **+0,7 puntos** de nota final: la única partida oficial con DeepSeek gastó ~667.000 tokens por mes, y el máximo se alcanza con 500.000.
+**Conclusión:** la línea de estado no cambia el gasto de tokens que se puede medir en un mes jugado (63–66k por situación con y sin ella, y una sola lectura del registro por situación en los dos casos). Toda la parte de tokens vale como mucho **+0,7 puntos** de nota final: la única partida oficial con DeepSeek gastó ~667.000 tokens por mes, y el máximo se alcanza con 500.000.
 
 27 oct 2026, 17:35 UTC. Sin cuota nueva: números del banco de esta línea y de partidas anteriores.
 
@@ -20,13 +20,16 @@
 
 ## Lo que añade la línea de estado
 
-| Medida | `t13-final` | `t16b-expect` (línea de estado) | Fuente |
-|---|---:|---:|---|
-| Tokens por situación de un turno (banco de techos, 132 situaciones) | 32k | 32–33k | [techos.md](techos.md) |
-| Lecturas del registro por situación | 0,97 | 1,01 | `notecheck.py` |
-| Caracteres por nota (mediana) | 194 | 265–297 | `notecheck.py` |
+| Medida | `t13-final` | `t16b-expect` | `t17b-status` | `t18-status` | Fuente |
+|---|---:|---:|---:|---:|---|
+| Palabras del SKILL.md | 777 | 1.126 | 1.241 | 1.248 | `wc -w` |
+| Tokens por situación de un turno (banco de techos, 132) | 32k | 32–33k | — | 35–36k | [techos.md](techos.md) |
+| Tokens por situación jugada desde el principio del mes (bloque general, 139) | 66k | 63k | 65k | 66k | `score.py` |
+| Lecturas del registro por situación (bloque general) | 0,99 | 1,00 | 0,98 | 0,97 | `notecheck.py` |
+| Caracteres por nota (mediana, bloque general) | 220 | 296 | 286 | 295 | `notecheck.py` |
 
-- **Unos 80 caracteres más por nota** (~20 tokens). Con ~5 decisiones al mes, aunque cada nota se reenviara en las 30 llamadas siguientes, serían ~3.000 tokens por mes: menos del 0,5 % de 667.000.
+- **En una sesión de un turno, el Skill más largo se nota** (+3k tokens con `t18-status`, unas 470 palabras más). El cuerpo del Skill se lee una vez por sesión, así que en una partida entera pesa poco.
+- **En un mes jugado no se nota:** 63–66k con y sin la línea. Las notas son ~75 caracteres más largas (~20 tokens), y con ~5 decisiones al mes, aunque cada nota se reenviara en las 30 llamadas siguientes, serían ~3.000 tokens por mes: menos del 0,5 % de 667.000.
 - **No añade llamadas:** el registro se lee sólo al retomar, como ya hacía `t13-final`.
 
 ## Qué haría falta para saberlo de verdad
