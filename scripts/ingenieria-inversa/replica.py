@@ -580,10 +580,18 @@ class Policy:
 
 
 def draw_title(cat: Catalog, st: State, used: set[str], rng: random.Random) -> str | None:
-    lv = st.level
-    while str(lv) not in cat.pools and lv > 1:
-        lv -= 1
-    pool = {t: w for t, w in cat.pools.get(str(lv), {}).items() if t not in used and t in cat.d["first_node"]}
+    """M18: titles unlock in blocks at the start of a semester (months 1, 6, 12, 18, 24, 30) whatever the
+    level; the draw is close to uniform among unlocked unused titles. Stories that carry over to the next
+    month weigh ~0.6 (only one long story may be open at a time)."""
+    smp = cat.d.get("sampler")
+    if smp:
+        pool = {t: smp["weight"][t] for t, (m0, _m1) in smp["window"].items()
+                if m0 <= st.month and t not in used and t in cat.d["first_node"]}
+    else:
+        lv = st.level
+        while str(lv) not in cat.pools and lv > 1:
+            lv -= 1
+        pool = {t: w for t, w in cat.pools.get(str(lv), {}).items() if t not in used and t in cat.d["first_node"]}
     if not pool:
         return None
     tot = sum(pool.values())
