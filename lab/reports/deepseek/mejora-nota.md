@@ -61,7 +61,24 @@ Lo visto mientras juegan:
   - Mes 9: en el trimestre previo gastó 2 de energía en limpiar riesgo con RR. HH. tranquilo, en vez de llenar Output (en L2 el máximo deja un punto de margen).
 - **Incidente:** la primera partida (hueco 0) se lanzó en modo normal con tope de 1,2 USD. El vigilante mide el gasto de toda la clave y, con las otras dos partidas en paralelo, la cortó en el mes 26, en L3, sin explosiones. Lección: en paralelo, tope alto y coste por partida desde el informe del programa.
 
-### Siguiente lote
+**Cómo acabaron** (ninguna eliminada por el juego):
+
+| Partida | Final | Causa |
+|---|---|---|
+| v2-00000 | mes 26, L3, sin explosiones | cortada por el vigilante (tope de 1,2 USD medido sobre toda la clave con tres partidas en paralelo; error nuestro) |
+| v2-00001 | mes 33, L2, sin explosiones | **límite de 20 reanudaciones del programa** (ver abajo); 1,32 USD |
+| v2-00002 | mes 40, L4, una explosión | cortada por el vigilante (tope de 3 USD, mismo error); ahora el tope en paralelo es 20 USD |
+
+**La partida atascada en L2 (v2-00001)** perdió cuatro evaluaciones seguidas igual: Network u Output caen uno o dos puntos con la última decisión antes de la evaluación (Output 4 en el mes 12; Network 5 en los meses 18, 24 y 30), con un margen de un punto en L2.
+
+**El contexto y el límite de reanudaciones.** JiuwenSwarm no comprime el historial en estas partidas. La entrada por llamada crece en línea recta: 37 mil fichas al empezar, ~160 mil en el mes 26, ~200 mil en el mes 33 (unas 1.150 fichas por decisión). En v2-00001, a partir de 158 mil algunas llamadas volvieron con un mensaje enlatado de proveedor, en chino, en vez de jugar. Cada respuesta así termina el turno del agente sin herramientas, y el programa oficial sólo reanuda 20 veces: la partida acabó sin nota. Otra partida llegó a 224 mil sin ese problema, así que depende del proveedor que toque. Afecta a cualquier manual y también a la evaluación oficial. Desde el Skill sólo se puede escribir menos (v6 pide notas cortas en inglés).
+
+### Lote 2 y siguientes
+
+- v3, v4 y v5: una partida de cada uno.
+- `t13-read-v6` = v5 + en el mes previo, una lista de lo que suele costar Network (decir que no a un colega, corregirlo o denunciarlo, quedarse fuera de algo de grupo, anteponer lo propio a quien pidió ayuda) y, en la duda, la opción más cooperativa que aún entrega lo propio; notas cortas en inglés. Desde las 19:20 UTC los tres huecos juegan v6.
+
+### Siguiente lote (histórico)
 
 Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge lo aprendido de v2: llenar los tres indicadores en el trimestre previo, quedarse en la propia entrega con la evaluación cerca, Skill primero desde L4, sin "Stalled".
 
