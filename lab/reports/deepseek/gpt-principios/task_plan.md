@@ -35,3 +35,10 @@ signs_veto pasó riesgo exacto a la función de valor antes del veto, cuando deb
 2000 semillas nuevas202670270+: RuleBot observado, mismo bot con riesgo+ estresado como3, y veto. Caps aprendidos y HR retrasado; no umbrales de ascenso. No extrapolar el +6.4 del Planner privilegiado. Esta prueba es obligatoria antes de pasar a un manual/Haiku.
 
 Error de revisión: csv.writer emitió CRLF y diff --check lo marcó como whitespace; normalizado a LF. Datos por semilla comprimidos sin pérdida con SHA para no introducir medio millón de líneas numéricas en el diff.
+
+## Continuación
+- Prueba decisional nativa/auditoría: completa,208 decisiones válidas; no mejora. No pasar a partidas completas ni repetir.
+- Runtime: auditado un ensayo oficial interrumpido. Parche de idioma preparado y probado offline; no aplicado a instancias.
+- Criterio de cierre del objetivo sigue siendo75 estable con DeepSeek; ninguna de estas comprobaciones lo certifica.
+
+Siguiente mecanismo: corrección con efecto público de una acción elegida y prueba en una decisión nueva, con control sin ese feedback. Pendiente diseño; no nuevas llamadas en este checkpoint.

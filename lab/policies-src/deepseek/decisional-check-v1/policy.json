@@ -1,0 +1,10 @@
+{
+  "family": "deepseek",
+  "name": "decisional-check-v1",
+  "parents": [],
+  "idea_origin": "first-principles decision intervention",
+  "hypothesis": "A brief proposal check improves selected-option consequences compared with identical direct judgement.",
+  "refutation": "No improvement in selected risk and unacceptable loss of growth; no inference about DeepSeek without target evaluation.",
+  "skill_count": 1,
+  "operator": "matched decision audit"
+}

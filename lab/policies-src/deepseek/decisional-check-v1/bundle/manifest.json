@@ -1,0 +1,6 @@
+{
+  "team": "Gradient Depression",
+  "name": "decisional-check-v1",
+  "mode": "agent",
+  "instruction": "Use career-craft for the current decision. Continue the active session until the career ends."
+}

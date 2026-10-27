@@ -41,3 +41,7 @@ Contrastar planificación CONJUNTA de todas las acciones trimestrales frente a e
 
 ## Resultado final del margen observado
 2000 semillas:48.8296→51.3717; veto52.9887. El margen no mejora el veto. No proponer otra Skill ni partidas Haiku desde esta pantalla. El valor del factorial es mostrar interacción representación/control, no dar por resuelta la transferencia.
+
+Continuación: los cinco repos públicos relevantes comprobados sólo tienen rama main; no hay otra rama pública que explique75. Banco de decisión diseñado con92 situaciones de48 títulos, variantes fijadas y transporte correcto. Se evalúa con efectos v2 y bootstrap por título, sin Q heredado.
+
+Chequeo de sesgo de posición: los resultados del banco eligen a menudo la primera opción, pero eso no explica75. Control de réplica1000 semillas da30.98 con primera opción,7.38 última;654 fallos por salud en primera. El histórico energy-bots ya usaba esta regla como dispositivo de laboratorio y advertía no transferirla; no es una idea nueva ni se debe volver a probar. Nunca incluir índices fijos en una Skill.
