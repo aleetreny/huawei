@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v1",
+  "parents": [
+    "t13-final"
+  ],
+  "idea_origin": "DeepSeek line: perception and categorisation (lab/reports/deepseek/categorizacion.md)",
+  "operator": "add a reading guide and a story rule",
+  "hypothesis": "DeepSeek misses half of the Skill and Output changes of story options and a few risky ones; with the v3 reading guide its perception improves (Skill rises seen 45% -> 78%) and a bot that chooses with that reading scores 56 against 51.8 in the replica. Giving DeepSeek the same guide, a one-line reading per option and the ordered story rule should lower its story regret on the bank.",
+  "predicted_behaviour": "Lower story regret than t13-final and the control on the bank's story items, with no rise in trigger failures; the note carries one reading per option.",
+  "refutation": "Story regret on the bank no lower than t13-final's, or trigger failures up, or the fingerprint on the general block moving away from Skill as with the earlier story rules.",
+  "skill_count": 1
+}
