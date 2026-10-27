@@ -555,6 +555,21 @@ TF-IDF de 1–2 palabras con regresión, validado reservando títulos enteros (9
   - **suben el riesgo:** *deny, quietly, bet, coasting, force, hotfix, later, keep*;
   - **lo bajan:** *admit, compliance, security, investigation, report, apologise, checklist, own, fully, proper*.
 
+### M29. Función de valor aprendida: no supera al planificador
+
+- Se entrenó un modelo de gradiente con ~480.000 estados de partidas del simulador (planificador con un 10 % de exploración). El objetivo era la nota final, y el modelo explica el 42 % de su varianza desde un estado intermedio; el resto es el azar de los eventos que faltan.
+- Se jugó eligiendo la opción cuyo estado siguiente tiene más valor estimado. Resultados en 400 partidas emparejadas del simulador:
+
+  | Margen a favor de la opción del planificador | Nota | Diferencia |
+  |---|---:|---:|
+  | Planificador solo | 73,76 | — |
+  | 0 | 37,1 | −36,6 |
+  | 1 | 60,1 | −13,7 |
+  | 3 | 71,7 | −2,0 ± 0,6 |
+
+- **Al elegir con un valor imperfecto, el jugador se cuela justo por sus errores** (persigue los estados que el modelo sobrestima). Junto con la mejora por simulación, que tampoco ganó (M21), esto indica que **el planificador está cerca de lo mejor que se consigue con esta información**. El margen que queda es el azar de los eventos.
+- Nota técnica: con varios procesos, el modelo de gradiente de sklearn lanza hilos que se pisan, y una evaluación pasó de minutos a horas. Hay que usar `OMP_NUM_THREADS=1`.
+
 ## Relevo (27 oct, 12:30 UTC): para seguir desde otro chat
 
 **Dónde está todo**
@@ -610,7 +625,9 @@ TF-IDF de 1–2 palabras con regresión, validado reservando títulos enteros (9
   - ~2,5 % de las notas A frente a B;
   - el riesgo de respuestas poco observadas.
 
-**En curso al escribir esto**
+**Resuelto después de escribir esto:** la función de valor no supera al planificador (M29).
+
+**Antes en curso**
 - Evaluación de una política con la función de valor aprendida (`valuefn.ValuePolicy`) frente al planificador, en 80 partidas emparejadas del simulador. La primera, con 300 partidas, se cortó por tiempo.
 - El modelo de valor explica el 42 % de la nota final desde un estado intermedio.
 - Para repetirla:
