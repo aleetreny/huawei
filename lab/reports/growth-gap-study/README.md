@@ -2,6 +2,8 @@
 
 27 ottobre 2026. Richiesta di Matteo: studiare gli 80 percorsi vivi senza seconda promozione, mantenendo riserva leggera e prudenza sugli incidenti, poi esplorare correzioni con bot senza quota IA.
 
+Seguito completato: il [filtro di sostenibilità](../constrained-growth-study/README.md) recupera parte della sopravvivenza rispetto al bonus congiunto, ma non supera il controllo. Lo studio storico e i suoi protocolli restano invariati.
+
 ## Conclusione operativa
 
 **Nessuna delle nuove varianti giustifica sostituire il controllo attuale.** Una priorità tecnica aggiuntiva corregge il gap tecnico osservato ma non migliora l'outcome complessivo; spingere relazioni o risultati peggiora il conteggio di seconde promozioni con sopravvivenza. Un successivo bonus di preparazione congiunta dà un piccolo aumento numerico delle promozioni con sopravvivenza, incerto, e un calo della sopravvivenza.

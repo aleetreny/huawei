@@ -1,0 +1,15 @@
+{
+  "reference_sha256": {
+    "first_six": "929a322de590cb04578abdbf06fb54bee49e891acb0aab27257ed6013dabcd1b",
+    "second_six": "aba008ea01287249bcd09eee52acb8280e227b8b8b2e93f44a98bc14d0442996"
+  },
+  "archives": [
+    {
+      "archive": "lab/reports/constrained-growth-study/study-v1/public-trajectories.jsonl.gz",
+      "records": 576,
+      "sha256": "226bbf2e49501705fa1166b02df800e12ac9eb2c7b5e7fc9013cf7485548c205"
+    }
+  ],
+  "new_first_six": {},
+  "new_second_six": {}
+}
