@@ -1,9 +1,9 @@
 ---
-name: bhr-countdown
-description: Uses BUILD, HOLD and REPAIR to grow toward review readiness, preserve supported targets and restore losses, with factual memory; every note starts with a review countdown, and the month before a review follows a strict no-loss checklist. Use for every decision.
+name: bhr-cooperate
+description: Uses BUILD, HOLD and REPAIR to grow toward review readiness, preserve supported targets and restore losses, with factual memory; every note starts with a review countdown, and in the month before a review choices engage with people instead of distancing. Use for every decision.
 ---
 
-# BHR with review countdown: Build, Hold, Repair
+# BHR with review countdown: Build, Hold, Repair, and stay on side before reviews
 
 ## Every decision
 1. `observe`: read current statistics, phase, events and the last result. Read the handbook initially for timing and available actions. Current evidence governs current values; history supplies commitments and incidents.
@@ -13,17 +13,20 @@ description: Uses BUILD, HOLD and REPAIR to grow toward review readiness, preser
 
 ## Review countdown: write it first, every time
 Reviews come every six months of the career. Start every note with `Review in N`, where N is the number of months until the next review month: N = 6 - (current_month mod 6), and N = 6 when current_month is a multiple of 6.
-- **N = 1** (the last month before a review): apply the checklist in *Month before a review* to every story choice, before any mode reasoning.
-- **Any other N:** the checklist does not apply; choose by mode as usual.
+- **N = 1** (the last month before a review): follow *Month before a review* for every story choice, before any mode reasoning.
+- **Any other N:** that section does not apply; choose by mode as usual.
 
 ## Month before a review (only when N = 1)
-The review is applied as the review month opens, before its stories, so this month's choices are the last ones that count for it. A single lost point of Skill, Network or Output can cost the promotion; Dignity can be rebuilt later.
+The review is applied as the review month opens, before its stories, so this month's choices are the last ones that count for it. A single lost point of Network or Output can cost the promotion; Dignity can be rebuilt later.
 
-Mark each option before choosing:
-- **N-mark:** goes against a person (blaming, correcting in public, refusing outright, reporting someone, a formal stand-off): may cost Network.
-- **O-mark:** gives up time from your own delivery (extra unplanned work, investigations, rework, the slow thorough path, fixing someone else's problem): may cost Output.
+Network is lost by distancing yourself from people, even politely. This month:
+- **Choose the option that engages with the other person and keeps them on side:** help, join in, go along with a reasonable request, offer support, talk it through with them privately.
+- **Do not choose an option that distances you:** refusing, declining, staying out of it, staying quiet, doing only your own part, a firm rebuke, setting out who was at fault, or a harsh judgement of a colleague, however principled it sounds.
+- **Do not postpone or slow your own deliverable;** finish it now.
+- Engaging never means lying, concealing a problem, cutting a corner or making a promise you cannot keep. If the only engaging option requires one of these, take the mildest honest option instead.
+- If Health is low, avoid options that cost Health.
 
-Pick an honest option with neither mark. If every option has a mark, pick the one whose loss falls on a stat that is not holding your promotion back. Never save a point by hiding a problem, gambling that it will not surface or cutting a corner: that builds hidden risk. Write the marks in the note: `Review in 1 | marks: 1=N 2=- 3=O → 2`.
+Write it in the note: `Review in 1 | engage: option X because ...`.
 
 ## Select one mode
 Safety overrides every mode: address urgent risk, protect cash and recover Health. HOLD does not suspend these duties.
