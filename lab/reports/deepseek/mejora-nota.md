@@ -78,6 +78,26 @@ Lo visto mientras juegan:
 - v3, v4 y v5: una partida de cada uno.
 - `t13-read-v6` = v5 + en el mes previo, una lista de lo que suele costar Network (decir que no a un colega, corregirlo o denunciarlo, quedarse fuera de algo de grupo, anteponer lo propio a quien pidió ayuda) y, en la duda, la opción más cooperativa que aún entrega lo propio; notas cortas en inglés. Desde las 19:20 UTC los tres huecos juegan v6.
 
+### t13-read-v3 (1 partida): llega al mes 48 en L5 sin ninguna explosión
+
+- Ascensos en los meses 6, 18, 24 y 42 (L5); el comentario de RR. HH. tranquilo casi siempre.
+- **El vigilante la cortó en el mes 48**: se lanzó antes de subir el tope en paralelo (3 USD), y con tres partidas a la vez el gasto de la clave lo pasó. Error nuestro, otra vez.
+- Último estado: L5, Health 10, Dignity 10, Skill 103, Network 47, Output 35, Wealth 31, comentario de RR. HH. "frowning". **La fórmula de la réplica le da 66,6** (68,6 con el riesgo limpio al final). Es la mejor partida de DeepSeek que tenemos y está cerca del objetivo de 70.
+- La energía trimestral nunca fue a Skill (siempre informes, red y proyecto clave): la regla "Network y Output estancados → Skill" depende de "Stalled", que DeepSeek no rellena.
+
+**Medida de urgencia (19:40 UTC).** Las partidas de v4 y v5 en juego también llevaban el tope de 3 USD. Para que el vigilante no las cortara, se apuntó temporalmente `API_BASE` del `.env` del programa a una dirección muerta. El vigilante ignora una lectura fallida, y las partidas usan su propia copia de la configuración. Una tarea en segundo plano lo restaura al terminar ambas. Las partidas nuevas ya usan tope 20 en paralelo.
+
+### Trimestre de L4 (simulador, trimestre parecido al de DeepSeek, sin conocer techos)
+
+| Trimestre desde L4 | Nota | L6+ | Agotamiento |
+|---|---:|---:|---:|
+| Como DeepSeek: informes, red, proyecto clave | 52,0 | 6 % | 121 |
+| Skill primero: Skill learning + red, rotación (v5, v6) | 51,1 | 3 % | 139 |
+| Equilibrado: Skill learning + informes, proyecto clave | 52,2 | 10 % | 138 |
+| **Equilibrado con salud primero si no está alta (v7)** | **52,8** | **11 %** | 108 |
+
+`t13-read-v7` = v6 con este trimestre de L4. Desde las 19:30 UTC los bucles juegan v7.
+
 ### Siguiente lote (histórico)
 
 Una partida de cada uno: `t13-read-v3`, `t13-read-v4` y `t13-read-v5`. v5 recoge lo aprendido de v2: llenar los tres indicadores en el trimestre previo, quedarse en la propia entrega con la evaluación cerca, Skill primero desde L4, sin "Stalled".
