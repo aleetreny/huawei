@@ -1,6 +1,12 @@
 # Mejora de la nota de DeepSeek: análisis desde los fundamentos y manuales t13-read-v2 a v4
 
-**Conclusión (provisional, 27 oct por la noche).** Con DeepSeek, la nota la decide sobrevivir: las tres partidas oficiales anteriores (f1 y dos de t13-read-v1) acabaron eliminadas, dos de ellas por perder el primer ascenso. En el simulador, con la lectura real de DeepSeek, lo que más puntos mueve es **proteger Skill, Network y Output en el mes previo a la evaluación por delante de un riesgo leve, mientras el comentario de RR. HH. esté tranquilo** (+1,6 y despidos −24 %). Las demás ideas (riesgo primero, limpieza preventiva, ventanas más largas, detectar techos en las historias) no mueven al bot. Las partidas de `t13-read-v2`, `v3` y `v4` están en juego; resultados abajo.
+**Conclusión (27 oct, 20:00 UTC).** **Primeras partidas completas de DeepSeek: `t13-read-v4` saca 71,67 y `t13-read-v5` 66,71** (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas (14,98 a 42,51). La partida de `t13-read-v3` llegó al mes 48 en L5 sin explosiones (66,6 según la réplica), pero la cortó nuestro vigilante. Lo que lo ha conseguido:
+- proteger Skill, Network y Output en el mes previo a cada evaluación, en el cuerpo del Skill y en la instrucción del manifest (DeepSeek no vuelve a abrir archivos de referencia);
+- separar del todo las reglas del trimestre y las de las historias;
+- un paso de riesgo más duro cuando RR. HH. no está tranquilo;
+- en v4, además, el mejor valor de cada indicador en el nivel, protección de Network y Output los dos últimos meses y reparación inmediata.
+
+**Recomendación para el corte 1: `t13-read-v4`.** Se están jugando dos partidas más para tener tres, como la evaluación oficial.
 
 27 oct 2026, rama `alejandro/deepseek` (worktree `~/huawei-ds`). Encargo de Alejandro: subir la nota de DeepSeek pensando desde los fundamentos, hasta 10 USD hoy.
 
@@ -97,6 +103,18 @@ Lo visto mientras juegan:
 | **Equilibrado con salud primero si no está alta (v7)** | **52,8** | **11 %** | 108 |
 
 `t13-read-v7` = v6 con este trimestre de L4. Desde las 19:30 UTC los bucles juegan v7.
+
+### t13-read-v4 y t13-read-v5: las primeras partidas completas
+
+| Manual | Nota | Meses | Nivel | Riesgo final | Health + Dignity | Skill | Network | Dinero | Coste | Fichas de entrada |
+|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
+| **t13-read-v4** | **71,67** | 48 | L5 | 0 | 20 | 105 | 54 | 38,2 | 0,81 USD | 70,4 M |
+| t13-read-v5 | 66,71 | 48 | L5 | 0 | 20 | 105 | 41 | 27,0 | 0,72 USD | 66,6 M |
+
+- v4 ascendió en los meses 6, 12 y 24, y a L5 hacia el mes 42. v5 llegó a L4 en el mes 30 y a L5 al final. Ninguna tuvo una explosión.
+- Las dos terminaron con riesgo 0 y Health y Dignity al máximo: el trimestre final funciona.
+- La diferencia entre las dos está en Network (54 frente a 41) y en el dinero (38 frente a 27). v5 pone Skill primero desde L4, lo que el simulador ya decía que resta; v7 lo corrige.
+- **Coste: 0,7–0,8 USD por partida completa** (66–70 millones de fichas, ~1,4 millones por mes). Es caro en la parte de eficiencia de fichas (10 % de la nota de la versión), pero terminar pesa mucho más.
 
 ### Siguiente lote (histórico)
 
