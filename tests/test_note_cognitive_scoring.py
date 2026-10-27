@@ -5,7 +5,7 @@ from scripts.analyze_note_cognitive_benchmark import score
 def case(category='latest_review', answer='C'):
     return {'category':category,'answer':answer,'support':'S001R','related_support':'S001B',
             'current':{'data':{'choices':[{'choice':2}]}},
-            'history':[{'id':'S001B','kind':'observe','data':{}},{'id':'S001R','kind':'observe','data':{}}]}
+            'history':[{'id':'S001B','kind':'observe','data':{'value':1}},{'id':'S001R','kind':'observe','data':{'value':2}}]}
 
 
 def response(answer='C', ids=None):
@@ -47,3 +47,16 @@ def test_unknown_can_be_correct_and_hidden_parameter_guess_is_flagged():
     assert score(c,'full_history',response('unknown'))['supported_correct']
     row=score(c,'full_history',response('42',['S001R']))
     assert not row['raw_correct'] and row['unsupported_nonabstention']
+
+
+def test_identical_next_observation_is_valid_equivalent_public_support():
+    c=case()
+    c['history'].append({'id':'S002B','kind':'observe','data':{'value':2}})
+    assert score(c,'full_history',response(ids=['S002B']))['supported_correct']
+
+
+def test_posthoc_normalization_does_not_correct_wrong_fact_from_note():
+    from scripts.diagnose_note_cognitive_errors import normalized_answer
+    assert normalized_answer('No. Explicitly not reported.','no')=='no'
+    assert normalized_answer('+1','0')=='1'
+    assert normalized_answer('unknown','0')=='unknown'

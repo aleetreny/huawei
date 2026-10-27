@@ -1,0 +1,17 @@
+{
+  "name": "luna-cache-prefix-idle-v1",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "max_seconds_per_request": 180,
+  "max_requests": 3,
+  "delay_after_first_unique_completion_seconds": 300,
+  "created_at": "2026-10-27T17:54:33.841301+00:00",
+  "script_sha256": "fecdc69bfaafd5c58fdc1b8c600377696cfc34841745577679d6d84809b84c21",
+  "request_harness_sha256": "db91d066e909484db61185ee8728944c93720063bfbb4be2f65a2e88809eba9a",
+  "limits": [
+    "No API retention option or manual cache eviction invoked",
+    "Other benchmark traffic remains active; only the unique user prefix is idle",
+    "Cache counters observe reuse, not semantic memory or a universal expiry time",
+    "Three additional non-game model requests, separate from the576 main decisions"
+  ]
+}

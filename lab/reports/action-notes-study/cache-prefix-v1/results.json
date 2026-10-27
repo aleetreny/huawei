@@ -1,0 +1,101 @@
+{
+  "protocol": {
+    "name": "luna-cache-prefix-idle-v1",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "low",
+    "max_seconds_per_request": 180,
+    "max_requests": 3,
+    "delay_after_first_unique_completion_seconds": 300,
+    "created_at": "2026-10-27T17:54:33.841301+00:00",
+    "script_sha256": "fecdc69bfaafd5c58fdc1b8c600377696cfc34841745577679d6d84809b84c21",
+    "request_harness_sha256": "db91d066e909484db61185ee8728944c93720063bfbb4be2f65a2e88809eba9a",
+    "limits": [
+      "No API retention option or manual cache eviction invoked",
+      "Other benchmark traffic remains active; only the unique user prefix is idle",
+      "Cache counters observe reuse, not semantic memory or a universal expiry time",
+      "Three additional non-game model requests, separate from the576 main decisions"
+    ]
+  },
+  "results": [
+    {
+      "at": "2026-10-27T17:54:37.099810+00:00",
+      "job": 0,
+      "stage": "initial",
+      "model_requested": "gpt-6-luna",
+      "elapsed_seconds": 3.257475833990611,
+      "exit_code": 0,
+      "error": null,
+      "usage": {
+        "input_tokens": 13513,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 36,
+        "reasoning_output_tokens": 0
+      },
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [],
+        "choice": 0,
+        "updated_note": "Transport probe only.",
+        "request_logs": false
+      },
+      "tool_attempts": [],
+      "prompt_sha256": "956e48752881b6e04a831c65461f728dee4b60152dc86456359b1cddd27358ba",
+      "stderr_tail": "2026-10-27T17:54:33.897228Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back\n2026-10-27T17:54:36.748021Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf(\"/Users/matteozabban/.codex/shell_snapshots/01a17e7f-e70d-74e1-9456-50791c789de8.1793123673870572000.sh\"): Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n"
+    },
+    {
+      "at": "2026-10-27T17:54:40.560309+00:00",
+      "job": 1,
+      "stage": "initial",
+      "model_requested": "gpt-6-luna",
+      "elapsed_seconds": 3.4588520830729976,
+      "exit_code": 0,
+      "error": null,
+      "usage": {
+        "input_tokens": 22617,
+        "cached_input_tokens": 13056,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 36,
+        "reasoning_output_tokens": 0
+      },
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [],
+        "choice": 0,
+        "updated_note": "Transport probe only.",
+        "request_logs": false
+      },
+      "tool_attempts": [],
+      "prompt_sha256": "7a085d7b5c912d3f75103c8e25bc28b656bce729bdb66b5607deecd39c6268f6",
+      "stderr_tail": "2026-10-27T17:54:37.162782Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back\n2026-10-27T17:54:40.198309Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf(\"/Users/matteozabban/.codex/shell_snapshots/01a17e7f-f3d0-77d1-9db9-5e4535824c8d.1793123677138477000.sh\"): Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n"
+    },
+    {
+      "at": "2026-10-27T17:59:43.188764+00:00",
+      "job": 2,
+      "stage": "after_idle",
+      "model_requested": "gpt-6-luna",
+      "elapsed_seconds": 2.6245176249649376,
+      "exit_code": 0,
+      "error": null,
+      "usage": {
+        "input_tokens": 22065,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 36,
+        "reasoning_output_tokens": 0
+      },
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [],
+        "choice": 0,
+        "updated_note": "Transport probe only.",
+        "request_logs": false
+      },
+      "tool_attempts": [],
+      "prompt_sha256": "7a085d7b5c912d3f75103c8e25bc28b656bce729bdb66b5607deecd39c6268f6",
+      "stderr_tail": "2026-10-27T17:59:40.624774Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back\n",
+      "idle_seconds_before_launch": 300.0042223329656
+    }
+  ],
+  "complete": true
+}

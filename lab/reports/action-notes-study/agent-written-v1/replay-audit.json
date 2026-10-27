@@ -1,0 +1,20 @@
+{
+  "writer_reader_pairs": 16,
+  "writer_reader_prompt_hashes": 32,
+  "writer_reader_usage": {
+    "input_tokens": 657361,
+    "cached_input_tokens": 409600,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4651,
+    "reasoning_output_tokens": 0
+  },
+  "all_work_unique_threads": 719,
+  "all_work_usage": {
+    "input_tokens": 15037662,
+    "cached_input_tokens": 8819840,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 90241,
+    "reasoning_output_tokens": 329
+  },
+  "limits": "Reconstruction of actual usage and supplied prompts, not a bill, backend routing receipt or universal cache expiry proof"
+}

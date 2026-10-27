@@ -40,3 +40,13 @@ def test_recovery_exposes_logs_only_after_request_and_closes_request_channel():
     assert second['logs_available_on_request'] is False and second['public_history']
     assert 'STALE_ONLY_SENTINEL' in initial and 'HISTORY_ONLY_SENTINEL' not in initial
     assert 'HISTORY_ONLY_SENTINEL' in final
+
+
+def test_memory_writer_does_not_see_later_question_or_gold():
+    from scripts.probe_agent_written_notes import writer_prompt
+    c=fixture_case()
+    c['question']='FUTURE_QUIZ_MUST_NOT_BE_SENT'
+    rendered=writer_prompt(c,'FIXED_SKILL',128)
+    assert 'HISTORY_ONLY_SENTINEL' in rendered
+    assert 'FUTURE_QUIZ_MUST_NOT_BE_SENT' not in rendered
+    assert 'GOLD_LABEL_MUST_NOT_BE_SENT' not in rendered

@@ -1,4 +1,6 @@
-# Benchmark cognitivo delle note — protocollo da congelare prima dei modelli
+# Benchmark cognitivo delle note — proposta iniziale
+
+**Aggiornamento:** dopo “bene vai avanti” è stato congelato ed eseguito il benchmark v1:576 decisioni Luna,107 recuperi,683 richieste. [Risultati, protocollo operativo e limiti](cognition-v1/README.md). Il testo seguente conserva la proposta precedente; non descrive più lo stato di esecuzione.
 
 Obiettivo: misurare se il modello recupera fatti corretti e li usa, separando conservazione, ricordo, aggiornamento e decisione. Il benchmark non è stato eseguito; non è una nuova versione del manuale o una prova di promozione. Zero nuove chiamate modello in questa indagine meccanica.
 
