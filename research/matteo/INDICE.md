@@ -26,6 +26,8 @@ Tutti sono in `lab/policies-src/matteo-feedback-growth/` e giocati con Haiku, at
 | Manuale | Partite | Q media | Terminate | Cosa cambia | Esito |
 |---|---:|---:|---:|---|---|
 | **v10** | 8 | **59,56** | 7/8 | v9 + regola "Capped" + meccanica di Ale (Dignity, rischio, soldi, mai High-intensity) | **candidata migliore**; ma la regola Capped non viene eseguita, quindi rispetto alla v7 la differenza è probabilmente rumore |
+| bhr (M1 + BUILD/HOLD/REPAIR) | 8 | 59,49 | 7/8 | memoria nelle note + modalità esplicite | identica alla v10 (5/8 in L5, prima review 4/8); [report](../../lab/reports/matteo-bhr-haiku.md) |
+| m1 (v10 + checkpoint nelle note) | 1 | 64,06 | 1/1 | memoria fattuale nelle note | chiusa in L5; una partita sola; [report](../../lab/reports/matteo-m1-haiku.md) |
 | v7 | 9 | 57,56 | 7/9 | regole v6 con riga di stato fissa | PR #13. Nel test di Ale, 40 % promossi alla prima review contro 47 % di f3-lean: nessuna differenza |
 | v3 | 8 | 51,04 | 5/8 | ripristinata la pulizia del rischio | il primo 71,4 era fortuna; nella gara: 61, 19, 52, 64 |
 | v6 | 8 | 50,08 | 6/8 | regole del promotion-study | in gara 5 di 8 |
