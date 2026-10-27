@@ -1,0 +1,11 @@
+{
+  "family": "stat-perception",
+  "name": "t13-perc",
+  "parents": [],
+  "idea_origin": "Leah's stat-perception line (lab/reports/stat-perception/): t13-final (T20) with its Output mark rewritten from the measured Output errors",
+  "operator": "one-line change",
+  "hypothesis": "t13-final's review-month reference marks options that 'give up time from your own delivery' as costing Output, which is the misreading measured in the stat-perception line (Haiku treats time spent as an Output cost; the game lowers Output when you disengage). Asking to consider all five stats and marking disengagement instead should cut lost Network or Output points in the month before a review.",
+  "predicted_behaviour": "On the T20 bank's pre_review items, fewer choices that lose a needed point and lower regret than t13-final; on the general block, choices barely change (the reference is only read with Review in 1).",
+  "refutation": "No fewer lost points before reviews than t13-final on the same items, or a fingerprint on the general block above 1 in 10 changed choices.",
+  "skill_count": 1
+}

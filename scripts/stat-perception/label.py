@@ -47,6 +47,11 @@ DEFS2 = DEFS.replace(
     "- Output: your own visible delivery. UP when you ship, deliver, show a result or protect your own deadline. DOWN when the option takes time away from your own delivery (pausing work, investigations, rework, the slow thorough path, fixing someone else's problem, extra meetings) or delays shipping.",
     "- Output: your visible contribution and momentum at work. UP when you push your own work, results or standing forward: deliver, take more on, set a recovery plan with dates, keep focusing on the work, even promote yourself. DOWN when you disengage or step back: say nothing, swallow it, dodge responsibility, hand your work off, ask for a lighter load, rest instead of working, or get worn down. A short conversation, a review or a bit of help does not cost Output.")
 assert DEFS2 != DEFS
+# Round 4: keep only the cost side of Output (defs2's "even promote yourself" pulled risky answers in as gains).
+DEFS3 = DEFS.replace(
+    "- Output: your own visible delivery. UP when you ship, deliver, show a result or protect your own deadline. DOWN when the option takes time away from your own delivery (pausing work, investigations, rework, the slow thorough path, fixing someone else's problem, extra meetings) or delays shipping.",
+    "- Output: your own visible delivery. UP when you ship, deliver, show a result or protect your own deadline. DOWN when you disengage or step back: say nothing, swallow it, dodge a responsibility, hand your own work to someone else, ask for a lighter load, rest instead of working, or get worn down. A short conversation, a review or a bit of help does not cost Output.")
+assert DEFS3 != DEFS
 
 FORMAT = """Answer with JSON only: {"<option number>": {"skill": s, "network": s, "output": s, "health": s, "dignity": s}, ...} for every option of every question, keyed "<question id>". Each s is 1 (goes up), -1 (goes down) or 0 (no clear change). Example shape: {"q1": {"1": {"skill": 1, "network": 0, "output": -1, "health": 0, "dignity": 1}, "2": {...}}}"""
 
@@ -63,6 +68,8 @@ VARIANTS = {
     "reason": DEFS + "\n\nFor each option, first think in a few words about what it spends (your time, your health, a relationship, your integrity) and what it earns, then say which way choosing it moves each stat. Put the reasoning in a field \"why\" (at most 12 words) next to the stats.",
     # defs with Output redefined as visible momentum (round 3)
     "defs2": DEFS2 + "\n\nFor each option, say which way choosing it moves each stat.",
+    # defs with only the cost side of Output (round 4)
+    "defs3": DEFS3 + "\n\nFor each option, say which way choosing it moves each stat.",
     # one trade per option: the stat it mainly buys and the stat it mainly pays with (written as +1 / -1, rest 0)
     "trade": DEFS + "\n\nEvery option is a trade. For each option pick the ONE stat it mainly buys (+1) and the ONE stat it mainly pays with (-1); use none when there is no clear gain or no clear cost. Every other stat is 0.",
 }

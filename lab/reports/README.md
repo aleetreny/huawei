@@ -15,7 +15,7 @@ Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que 
 | Carpeta o archivo | Dueño |
 |---|---|
 | `matteo-*.md`, `matteo-observed-growth-haiku-pilot.json`, [first-review-search/](first-review-search/) | Matteo |
-| [stat-perception/](stat-perception/README.md) | Leah: **percepción de indicadores**, el paso (c) de Categorías: qué forma de etiquetar entiende Haiku y cuánto vale en la réplica (rama `leah/workspace`) |
+| [stat-perception/](stat-perception/README.md) | Leah: **percepción de indicadores**, el paso (c) de Categorías: qué forma de etiquetar entiende Haiku, cuánto vale en la réplica y si cambia las elecciones (rama `leah/workspace`; cerrada con Haiku) |
 | [t11-multi-machine/](t11-multi-machine/) | Leah |
 
 ## Históricos que se quedan aquí porque el código los usa

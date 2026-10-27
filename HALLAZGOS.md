@@ -57,7 +57,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 
 | # | Hallazgo | Fuente |
 |---|---|---|
-| B15 | **Pedir a la IA la dirección de los 5 indicadores en cada opción**, en vez de sólo el evidente, sube la réplica de 49,1 a 53,3, con 1.000 partidas por brazo. Votar 5 formas de leer llega a 54,4; sólo la categoría saca 46,7 y las etiquetas perfectas 58,1. | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
+| B15 | **Pedir a la IA la dirección de los 5 indicadores en cada opción**, en vez de sólo el evidente, sube la réplica de 49,1 a 52–53, con 1.000 partidas por brazo. Votar 5 lecturas llega a 54–55; sólo la categoría saca 46,7 y las etiquetas perfectas 58,1. Repetir un mismo etiquetado mueve la réplica 1,2 puntos. | percepción, [01](lab/reports/stat-perception/01-siete-formas.md), [04](lab/reports/stat-perception/04-defs3-y-ruido.md) |
 | B16 | **El indicador que vale percibir es Output, no Skill.** Con Output perfecto la nota sube +2,5; con Skill perfecto baja −2,1, porque el bot persigue Skill, que se estanca en los niveles bajos. Haiku confunde Output con "tiempo gastado"; en el juego baja al desentenderse, esquivar, pasar el trabajo a otro o pedir menos carga. | percepción, [02](lab/reports/stat-perception/02-que-indicador-vale.md), [03](lab/reports/stat-perception/03-errores-output.md) |
 | B17 | Un significado corto de cada indicador funciona mejor que una lista de pistas (53,2 frente a 52,0) y reduce a la mitad las crisis de confianza (73 frente a 136 por 1.000 partidas). | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
 
@@ -85,3 +85,4 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |
 | “Una ganancia y un coste por opción” al etiquetar indicadores | tira información: 39,7 en la réplica, por debajo de sólo la categoría | percepción, [01](lab/reports/stat-perception/01-siete-formas.md) |
 | Describir una conducta arriesgada como forma de ganar un indicador (“venderte sube Output”) | detecta más subidas, pero la réplica baja de 53,2 a 48,1 y las crisis de confianza pasan de 73 a 174 | percepción, [03](lab/reports/stat-perception/03-errores-output.md) |
+| Línea de percepción en la referencia del mes previo de `t13-final` (“considera los 5 indicadores; desentenderse cuesta Output”, t13-perc) | mejora el etiquetado, pero no las elecciones: en el banco pierde un punto necesario un 30 % frente al 18 % de t13-final (n = 60) y cambia el 10 % de las historias de otros meses | percepción, [05](lab/reports/stat-perception/05-prueba-de-elecciones.md) |

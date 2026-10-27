@@ -1,0 +1,828 @@
+{
+"perc-g1": {
+"b01-oracle-eps:p0-000034:3": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 22522
+},
+"b01-oracle-eps:p0-000051:39": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 43127
+},
+"b01-oracle-eps:p0-000092:3": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 28956
+},
+"b01-oracle-eps:p0-000096:143": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 85647
+},
+"b01-oracle-eps:p0-000100:66": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 42575
+},
+"b01-oracle-eps:p1-000756:79": {
+"choice": 2,
+"skill_reads": 1,
+"tokens": 28671
+},
+"b01-oracle-eps:p1-000762:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 61802
+},
+"b01-oracle-eps:p1-000762:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66564
+},
+"b01-oracle-eps:p1-000765:27": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 74217
+},
+"b01-oracle-eps:p1-000773:68": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 29025
+},
+"b01-oracle-eps:p1-000776:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66179
+},
+"b01-oracle-eps:p1-000797:131": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 28455
+},
+"b01-oracle-eps:p1-000826:40": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 74119
+},
+"b01-oracle-eps:p1-000828:69": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 49412
+},
+"b01-oracle-eps:p1-000881:43": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 108790
+},
+"b01-oracle-eps:p2-001518:103": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 76305
+},
+"b01-oracle-eps:p2-001611:52": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 72483
+},
+"b01-oracle-eps:p2-001615:100": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 30938
+},
+"b01-oracle-eps:p2-001629:66": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 57040
+},
+"b01-oracle-eps:p2-001632:70": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 22432
+},
+"b01-oracle-eps:p2-001633:13": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 71025
+},
+"b01-oracle-eps:p3-002254:6": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 30744
+},
+"b01-oracle-eps:p3-002335:54": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 96630
+},
+"b01-oracle-eps:p3-002339:39": {
+"choice": 4,
+"skill_reads": 1,
+"tokens": 74524
+},
+"b01-oracle-eps:p3-002340:77": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 28395
+},
+"b01-oracle-eps:p3-002380:77": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 74835
+},
+"b01-oracle-eps:p3-002381:65": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 42351
+},
+"c01-greedy-real:p0-000039:2": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 79839
+},
+"c01-greedy-real:p0-000042:91": {
+"choice": 3,
+"skill_reads": 1,
+"tokens": 50462
+},
+"c01-greedy-real:p0-000056:70": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 49853
+},
+"c01-greedy-real:p0-000089:85": {
+"choice": 2,
+"skill_reads": 1,
+"tokens": 105684
+},
+"c01-greedy-real:p0-000117:49": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 70816
+},
+"c01-greedy-real:p0-000132:92": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 48296
+},
+"c01-greedy-real:p1-000167:0": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 21408
+},
+"c01-greedy-real:p1-000170:90": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 78937
+},
+"c01-greedy-real:p1-000243:141": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 42329
+},
+"c01-greedy-real:p1-000246:1": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 52415
+},
+"c01-greedy-real:p1-000261:38": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 73923
+},
+"c02-planner-real:p0-000062:8": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 100253
+},
+"c02-planner-real:p0-000077:67": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 56060
+},
+"c02-planner-real:p1-000165:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 46818
+},
+"c02-planner-real:p1-000173:118": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 43509
+},
+"c02-planner-real:p1-000177:26": {
+"choice": 2,
+"skill_reads": 1,
+"tokens": 70116
+},
+"c02-planner-real:p1-000190:165": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 64708
+},
+"c02-planner-real:p1-000196:85": {
+"choice": 3,
+"skill_reads": 1,
+"tokens": 40749
+},
+"v02-validation:p0-000035:19": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 31103
+},
+"v02-validation:p0-000049:15": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 71731
+},
+"v02-validation:p0-000052:52": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 43128
+},
+"v02-validation:p0-000124:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 94237
+},
+"v02-validation:p1-000164:131": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 81787
+},
+"v02-validation:p1-000176:17": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 79947
+},
+"v02-validation:p1-000197:25": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 33634
+},
+"v02-validation:p1-000212:4": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 51464
+},
+"v02-validation:p1-000236:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 36250
+},
+"v02-validation:p1-000244:39": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 94743
+},
+"v02-validation:p1-000256:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 88418
+},
+"v02-validation:p1-000259:54": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 62071
+},
+"v02-validation:p1-000292:128": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 35628
+},
+"v02-validation:p1-000292:56": {
+"choice": 4,
+"skill_reads": 1,
+"tokens": 106088
+},
+"v02-validation:p1-000299:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66445
+},
+"v02-validation:p2-000365:88": {
+"choice": 4,
+"skill_reads": 1,
+"tokens": 73934
+},
+"v02-validation:p2-000370:28": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 61789
+},
+"v02-validation:p2-000433:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 98443
+},
+"v02-validation:p3-000509:87": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 82212
+},
+"v02-validation:p3-000526:41": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 43233
+},
+"v02-validation:p3-000544:64": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 69988
+},
+"v02-validation:p3-000547:4": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 56605
+},
+"v02-validation:p3-000563:165": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 106564
+},
+"v02-validation:p3-000579:145": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 113377
+},
+"v02-validation:p3-000579:31": {
+"choice": 1,
+"skill_reads": 1,
+"tokens": 102372
+}
+},
+"perc-pre": {
+"b01-oracle-eps:p0-000011:44": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 93077
+},
+"b01-oracle-eps:p0-000039:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 91023
+},
+"b01-oracle-eps:p0-000067:93": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 93233
+},
+"b01-oracle-eps:p0-000083:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 49464
+},
+"b01-oracle-eps:p0-000103:115": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 108810
+},
+"b01-oracle-eps:p1-000767:67": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 91245
+},
+"b01-oracle-eps:p1-000769:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 94891
+},
+"b01-oracle-eps:p1-000791:66": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 66836
+},
+"b01-oracle-eps:p1-000808:44": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 93430
+},
+"b01-oracle-eps:p1-000809:41": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 54714
+},
+"b01-oracle-eps:p1-000888:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 39300
+},
+"b01-oracle-eps:p2-001510:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 114133
+},
+"b01-oracle-eps:p2-001524:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 79446
+},
+"b01-oracle-eps:p2-001525:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 43403
+},
+"b01-oracle-eps:p2-001535:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66747
+},
+"b01-oracle-eps:p2-001554:17": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 73075
+},
+"b01-oracle-eps:p2-001595:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 109842
+},
+"b01-oracle-eps:p2-001611:16": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 42418
+},
+"b01-oracle-eps:p3-002258:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 125461
+},
+"b01-oracle-eps:p3-002259:15": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 35737
+},
+"b01-oracle-eps:p3-002274:41": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 71973
+},
+"b01-oracle-eps:p3-002287:17": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 84851
+},
+"b01-oracle-eps:p3-002320:66": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 65973
+},
+"b01-oracle-eps:p3-002326:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 46859
+},
+"b01-oracle-eps:p3-002327:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 39368
+},
+"b01-oracle-eps:p3-002375:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 95783
+},
+"c01-greedy-real:p0-000066:16": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 54050
+},
+"c01-greedy-real:p0-000074:41": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 47618
+},
+"c01-greedy-real:p0-000097:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 42778
+},
+"c01-greedy-real:p0-000109:66": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66891
+},
+"c01-greedy-real:p0-000115:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 120929
+},
+"c01-greedy-real:p0-000115:67": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 48326
+},
+"c01-greedy-real:p0-000124:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 117931
+},
+"c01-greedy-real:p1-000219:69": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 97224
+},
+"c01-greedy-real:p1-000239:69": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 92503
+},
+"c01-greedy-real:p1-000264:17": {
+"choice": 3,
+"skill_reads": 2,
+"tokens": 92740
+},
+"c01-greedy-real:p1-000284:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 128848
+},
+"c02-planner-real:p0-000010:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 48739
+},
+"c02-planner-real:p0-000015:69": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 129178
+},
+"c02-planner-real:p0-000029:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 135265
+},
+"c02-planner-real:p0-000040:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 84203
+},
+"c02-planner-real:p0-000074:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66436
+},
+"v02-validation:p0-000003:44": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 118707
+},
+"v02-validation:p0-000026:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 92147
+},
+"v02-validation:p0-000042:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 90308
+},
+"v02-validation:p0-000045:44": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 133920
+},
+"v02-validation:p0-000050:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 65402
+},
+"v02-validation:p0-000073:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 72778
+},
+"v02-validation:p0-000085:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 56263
+},
+"v02-validation:p0-000107:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 58380
+},
+"v02-validation:p0-000118:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 83316
+},
+"v02-validation:p0-000134:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 92546
+},
+"v02-validation:p1-000160:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 80572
+},
+"v02-validation:p1-000269:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 81753
+},
+"v02-validation:p1-000284:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66783
+},
+"v02-validation:p2-000327:69": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 93885
+},
+"v02-validation:p2-000375:41": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66545
+},
+"v02-validation:p2-000393:42": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 43302
+},
+"v02-validation:p2-000447:92": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 58439
+},
+"v02-validation:p3-000472:44": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 116076
+},
+"v02-validation:p3-000485:42": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 66491
+},
+"v02-validation:p3-000501:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 100250
+},
+"v02-validation:p3-000505:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 38656
+},
+"v02-validation:p3-000507:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 49390
+},
+"v02-validation:p3-000532:42": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 66391
+},
+"v02-validation:p3-000556:42": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 42227
+},
+"v02-validation:p3-000564:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 54162
+},
+"v02-validation:p3-000567:67": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 80687
+},
+"v02-validation:p3-000592:69": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 96147
+}
+},
+"t13own-pre": {
+"b01-oracle-eps:p0-000039:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 91376
+},
+"b01-oracle-eps:p0-000083:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 35728
+},
+"b01-oracle-eps:p0-000103:115": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 80143
+},
+"b01-oracle-eps:p1-000767:67": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 91322
+},
+"b01-oracle-eps:p1-000808:44": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 88314
+},
+"b01-oracle-eps:p2-001510:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 79617
+},
+"b01-oracle-eps:p2-001525:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 39038
+},
+"b01-oracle-eps:p3-002258:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 100531
+},
+"b01-oracle-eps:p3-002320:66": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 58315
+},
+"b01-oracle-eps:p3-002326:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 53539
+},
+"b01-oracle-eps:p3-002375:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 81190
+},
+"c01-greedy-real:p0-000066:16": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 53692
+},
+"c01-greedy-real:p0-000109:66": {
+"choice": 3,
+"skill_reads": 2,
+"tokens": 59358
+},
+"c01-greedy-real:p0-000115:18": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 84752
+},
+"c01-greedy-real:p1-000264:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 129778
+},
+"c02-planner-real:p0-000040:68": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 79877
+},
+"v02-validation:p0-000003:44": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 104256
+},
+"v02-validation:p0-000026:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 102306
+},
+"v02-validation:p0-000118:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 72590
+},
+"v02-validation:p0-000134:16": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 91625
+},
+"v02-validation:p1-000160:43": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 80992
+},
+"v02-validation:p1-000269:17": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 72781
+},
+"v02-validation:p2-000327:69": {
+"choice": 1,
+"skill_reads": 2,
+"tokens": 111545
+},
+"v02-validation:p3-000532:42": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 63245
+},
+"v02-validation:p3-000567:67": {
+"choice": 2,
+"skill_reads": 2,
+"tokens": 86333
+}
+}
+}
