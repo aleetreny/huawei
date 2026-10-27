@@ -1,0 +1,29 @@
+{
+  "status": "complete_time_limit",
+  "target": 1000000,
+  "finished_runs": 73858,
+  "actions": 1563578,
+  "elapsed_seconds": 14400.19,
+  "runs_per_second": 5.129,
+  "time_limit_hours": 4,
+  "remaining_seconds": 0,
+  "deadline_unix": 1792990378.665247,
+  "mean_survival_months": 5.905575563919954,
+  "min_survival_months": 1,
+  "max_survival_months": 24,
+  "score_count": 73858,
+  "mean_score": 11.784165560941952,
+  "min_score": 3.1,
+  "max_score": 28.9,
+  "outcomes": {
+    "Trust crisis": 30559,
+    "Blackout": 40496,
+    "Broke": 2430,
+    "You resign. Work that needs other people cannot get done, and staying would only get worse.": 359,
+    "Obsolete": 12,
+    "Dismissed for capability": 1,
+    "Breakdown": 1
+  },
+  "error": null,
+  "method": "uniform random available choices; not a Skill benchmark"
+}
