@@ -47,7 +47,7 @@ Rama `alejandro/palancas`, código en [`scripts/palancas/`](../../../scripts/pal
    - Rama, carpeta y fila en ESTADO.md.
    - Palancas 2 a 5 en el simulador (4.000 partidas emparejadas por brazo y escenario).
    - Banco de techos (132 situaciones) con `t13-final`, `t16`, `t16b` y `t18`; bloque general (139) con `t16b`, `t17b` y `t18`; reglas A (385) con `t16b`; rúbrica de `t13-final`, `t16b`, `t16c` y `t18`.
-   - HALLAZGOS: B15, B16, C5, C6 y tres filas de X.
+   - HALLAZGOS: B22, B23, C9, C10 y tres filas de X.
 2. **Resultados.** Tablas de arriba y de cada informe.
    - Datos (fuera de Git, con texto del juego): `~/careerlab-data/palancas/`, con las partidas del simulador `*-4k.json`, el banco de techos `caps-bank.jsonl` e `items-caps-*.jsonl`, y las respuestas de Haiku en `bench/runs/<brazo>/`.
    - Cuota: unas 1.300 sesiones cortas de Haiku y 12 lecturas de Sonnet; la ventana de 5 horas iba por el 3 % y la semana por el 36 % (18:00 UTC).

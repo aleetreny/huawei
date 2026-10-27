@@ -1,6 +1,6 @@
 # Hallazgos, por importancia
 
-Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B15, B16, C5, C6 y tres filas de X).
+Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B22, B23, C9, C10 y tres filas de X).
 
 **Niveles**
 - **A:** decide la nota y está confirmado con muchos datos.
@@ -34,7 +34,6 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B4 | **Charla de aviso en la evaluación:** depende de Dignity y Health frente al riesgo (regla exacta en M24). Llegar a la evaluación con Dignity alta y riesgo bajo la evita. | motor M24 |
 | B5 | Techos por nivel: lo que pasa del techo se pierde. Skill es el freno de los niveles altos. L7 es alcanzable por muy poco; L8+ no; la nota S no existe. | motor H1, H14, M16, Fase 3 |
 | B6 | Las pérdidas de dinero se multiplican con el nivel (×2 en L3–L4, ×3 en L5–L6); las ganancias no. | motor M13 |
-| B15 | **Detectar el techo del nivel durante la partida vale +8,8 puntos en el simulador** (+4,9 con la detección que consigue Haiku). La pista es una subida anunciada que no se mueve. Después hay que dejar de gastar en ese indicador y no arriesgarse por él. Aguanta si cambian techos o umbrales (+5 a +10). Darlo como números sería peor (con techos −10 %, 56,7 frente a 59,6) y está prohibido. Olvidarlo al mes siguiente cuesta ~3 puntos. | palancas, [techos](lab/reports/palancas/techos.md) |
 
 **Sobre las respuestas a las historias**
 
@@ -53,7 +52,30 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B12 | **Un interruptor que la IA calcula y escribe** (“Review in N” en cada nota) aísla una regla de historias: la aplica sólo en su mes y el resto juega como sin manual. | transmisión, [rondas 8–10](lab/reports/transmision/ronda-8-10.md) |
 | B13 | Un solo Skill: con varios, la IA abre sólo el que cree relevante y se pierden reglas. | transmisión, ronda A |
 | B14 | Medir siempre los efectos secundarios: un bloque de historias al azar y la “huella” de las elecciones frente a un control repetido (que coincide consigo mismo un 96 %). | transmisión, [bloque general](lab/reports/transmision/bloque-general.md) |
-| B16 | **La nota sirve de memoria.** Una línea de estado fija en cada nota (`Review in N \| Now S N O \| Stalled \| Risky this month`):<br>• Haiku la rellena bien el 100 % de las veces;<br>• vuelve entera tras un resumen por `check_latest_logs` (100 %);<br>• se obedece: el gasto en un techo apuntado baja del 27 % al 3 %;<br>• no tiñe las historias (86–88 % de elecciones iguales al control, frente al 81 % de `t13-final`).<br>Para que la IA *descubra* el techo hay que apuntar lo que se espera (`Expect`) y comparar un número: así pasa del 16 % al 59 %. | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
+
+**Cierre y fidelidad de la réplica (motor, investigación terminada).**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B15 | Planificar conjuntamente energía y acción principal tras la última evaluación mejora la ganancia de cierre en +0,552 Q (IC 95% [0,298; 0,805], 600 partidas oficiales aleatorizadas). El planificador dejaba energía útil sin usar y descartaba red que aún puntúa. La nota global sin ajustar no prueba un nuevo campeón; transferencia a Skill pendiente. | [Mecánicas emergentes §1](lab/reports/mecanicas-emergentes/README.md) |
+| B16 | La terminación liquida el mes 48 y deja estado en mes 49, con 48 nóminas. Ambos generadores de la réplica omitían esa transición. Confirmado en 1.156 completadas históricas y 568 nuevas; corrección con modo histórico explícito para reproducir experimentos. | [Mecánicas emergentes §2](lab/reports/mecanicas-emergentes/README.md) |
+
+**Sobre DeepSeek (`deepseek-v4-flash`, con la clave de la competición)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B17 | **DeepSeek ve bien el riesgo y mal Skill y Output.** Leyendo sólo el texto de la opción, sin ayuda, detecta el 83 % de las respuestas que suben el riesgo oculto (90 % de las de +2 o más), pero sólo el 45 % de las que suben Skill y el 49 % de las que suben Output. Lee los 10 tipos mejor que Haiku. | deepseek, [percepción](lab/reports/deepseek/percepcion.md) |
+| B18 | **Pistas de lectura generales mejoran su percepción y lo confirman los títulos reservados.** “Skill sube siempre que usas tu propio juicio (analizar, aportar datos, preparar, aprender, negociar con argumentos), también en temas de personas o dinero”, “Output baja cuando tu tiempo o tu mérito se van a otros” y las señales de riesgo de B8 más “quejarse de la empresa, su cultura o sus reglas, aunque sea por el canal formal”. Con ellas ve el 78 % de las subidas de Skill (antes 45 %) y el 86 % de los riesgos. | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| B19 | **La mejor categorización para DeepSeek es leer cada opción como seis signos más el riesgo**, no los 10 tipos. Un bot que elige sólo con esa lectura de DeepSeek saca 56,0 en el simulador, frente a 46,7 con los tipos de Haiku y 67,7 el oráculo. Con etiquetas perfectas, esa lectura casi iguala al oráculo (67); las agrupaciones gruesas no pasan de 53–63. Una regla escrita por orden (descarta lo arriesgado, lo que baja Health o Dignity si están bajas y, antes de la evaluación, lo que baja Skill, Network u Output; después, lo que más sube los indicadores de crecimiento) saca 53,7. | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| B20 | **DeepSeek lee el Skill en el 100 % de las situaciones y obedece el reparto trimestral como Haiku** (con t13-final: Skill en L4 del 2 % al 65 %; comentario de RR. HH. del 15 % al 65 %). | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| B21 | **DeepSeek es menos constante que Haiku**: sin manual repite la elección en el 91 % de las historias (Haiku, 96 %), y entre dos lecturas cambia el 12–18 % de las etiquetas. Una sola pasada de etiquetas hace variar 5–7 puntos la nota de un bot en el simulador: hay que medir con varias pasadas. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md), [categorización](lab/reports/deepseek/categorizacion.md) |
+
+**Palancas del juego (nota como memoria, techos)**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B22 | **Detectar el techo del nivel durante la partida vale +8,8 puntos en el simulador** (+4,9 con la detección que consigue Haiku). La pista es una subida anunciada que no se mueve. Después hay que dejar de gastar en ese indicador y no arriesgarse por él. Aguanta si cambian techos o umbrales (+5 a +10). Darlo como números sería peor (con techos −10 %, 56,7 frente a 59,6) y está prohibido. Olvidarlo al mes siguiente cuesta ~3 puntos. | palancas, [techos](lab/reports/palancas/techos.md) |
+| B23 | **La nota sirve de memoria.** Una línea de estado fija en cada nota (`Review in N \| Now S N O \| Stalled \| Risky this month`):<br>• Haiku la rellena bien el 100 % de las veces;<br>• vuelve entera tras un resumen por `check_latest_logs` (97–100 %);<br>• se obedece: el gasto en un techo apuntado baja del 27 % al 3–6 %;<br>• no tiñe las historias (86–88 % de elecciones iguales al control, frente al 81 % de `t13-final`).<br>Para que la IA *descubra* el techo hay que apuntar lo que se espera (`Expect`) y comparar un número: así pasa del 16 % al 49–59 %. | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
 
 ## C. Pistas sin confirmar
 
@@ -61,10 +83,14 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 |---|---|---|
 | C1 | El manual `t13-final` (reparto con prioridad + interruptor de evaluación) saca 57,2 ± 5,1 frente a 50,5 ± 2,5 de f3-lean en partidas de Haiku (12 frente a 43): +6,7 ± 5,7, prometedor pero no seguro; t10, con las mismas reglas y otra redacción, saca 47,6. | transmisión, lotes g1–g6 |
 | C2 | La instrucción del manifest no añade nada con Haiku; quizá sí con DeepSeek, que podría olvidar antes. | transmisión, [contexto largo](lab/reports/transmision/contexto-largo.md) |
-| C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Nadie ha medido todavía cómo etiqueta o percibe DeepSeek. | carrera (histórico) |
+| C3 | DeepSeek: una sola partida oficial (despedido en el mes 24, nota 18,8, 0,19 USD). Es una anécdota. Cómo percibe y etiqueta DeepSeek ya está medido (B17–B21). | carrera (histórico) |
 | C4 | Una política por tipo de respuesta recupera dos tercios de la distancia entre el azar y la óptima (47 de 68 en el simulador). Falta saber cuánto saca DeepSeek razonando con esos tipos. | categorías §2 |
-| C5 | Contar las respuestas arriesgadas elegidas desde el último comentario de RR. HH. vale +4,3 en el simulador para un jugador que se arriesga; las cifras de riesgo del reparto, solas, +0,4. Con Haiku el contador está siempre en la nota, pero sólo marca el 19 % de las respuestas arriesgadas que eligió (4 de 21; falsas alarmas, 1 %): no las reconoce (A6) y no cambia nada medible. Con DeepSeek, por medir. | palancas, [riesgo](lab/reports/palancas/riesgo.md) |
-| C6 | Los tokens valen como mucho +0,7 de nota final. La única partida oficial con DeepSeek gastó ~667.000 por mes, y el máximo se da con 500.000. La línea de estado no añade tokens medibles. Terminar la partida pesa mucho más: sin terminar, ese término se queda en 50. | palancas, [tokens](lab/reports/palancas/tokens.md) |
+| C5 | Con DeepSeek, t13-final probablemente **mejora** las historias del bloque general (pérdida −0,40 a −0,79 puntos por decisión según el control de referencia; con Haiku no era seguro), aunque las aparta un poco de Skill (cambia 3–4 historias de cada 100 más que el ruido). | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C6 | Con DeepSeek, t13-final empeora los detonantes (pérdida +0,95, al límite): ante un comentario de RR. HH. inquieto, la regla trimestral “protégete” se cuela en las historias y elige arreglos en privado, que suman riesgo. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C7 | La cuenta atrás “Review in N” aísla peor con DeepSeek: abre la referencia del mes de evaluación en todos los meses previos a una evaluación, pero también en un 9–26 % de los demás. | deepseek, [obediencia](lab/reports/deepseek/obediencia.md) |
+| C8 | Con DeepSeek, añadir a t13-final la ficha de lectura y la regla de historias por orden (`t13-read-v1`) arregla los detonantes (−0,97) y la deriva lejos de Skill, pero empata con t13-final en la pérdida media de las historias (−0,02 ± 0,30). Falta confirmarlo en partidas. | deepseek, [masticado](lab/reports/deepseek/masticado.md) |
+| C9 | Contar las respuestas arriesgadas elegidas desde el último comentario de RR. HH. vale +4,3 en el simulador para un jugador que se arriesga; las cifras de riesgo del reparto, solas, +0,4. Con Haiku el contador está siempre en la nota, pero sólo marca el 19 % de las respuestas arriesgadas que eligió (4 de 21; falsas alarmas, 1 %): no las reconoce (A6) y no cambia nada medible. DeepSeek ve mejor el riesgo (B17): con él, por medir. | palancas, [riesgo](lab/reports/palancas/riesgo.md) |
+| C10 | Los tokens valen como mucho +0,7 de nota final. La única partida oficial con DeepSeek gastó ~667.000 por mes, y el máximo se da con 500.000. La línea de estado no añade tokens medibles. Terminar la partida pesa mucho más: sin terminar, ese término se queda en 50. | palancas, [tokens](lab/reports/palancas/tokens.md) |
 
 ## X. Descartado (no repetir sin una razón nueva)
 
@@ -79,6 +105,8 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Reloj de evaluación, “no cambiar Dignity por Network”, leer el registro, limpieza preventiva del último año (noche del 26) | no mejoran | [histórico T18](lab/reports/historico/secciones/resumen-noche.md) |
 | Carrera de manuales por estilo (prereg-v1, fastloop) | mucha cuota para diferencias dentro del ruido | [ESTADO antiguo](docs/historico/ESTADO-2026-10-26-carrera.md) |
 | Nota S, niveles L8–L10, variantes de historias, efectos según el estado, efecto del campo `notes` | no existen | motor M19, M26, M27 |
+| Agrupaciones gruesas de respuestas para DeepSeek (sólo el riesgo; el indicador que más sube; tipo + riesgo) | aun con etiquetas perfectas se quedan en 47–63, frente a 67 con los seis signos | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
+| Mejorar los 10 tipos con pistas de lectura | con DeepSeek, las pistas mejoran los signos (+5,5) pero no los tipos (49,4 → 48,5) | deepseek, [categorización](lab/reports/deepseek/categorizacion.md) |
 | Reaccionar a los avisos con 3 meses de margen (dinero, aislamiento, dignidad) o al de la tercera evaluación en L1 | 0 puntos en el simulador; las derrotas por condición casi no ocurren y la tercera evaluación en L1 ya no tiene arreglo | palancas, [avisos](lab/reports/palancas/avisos.md) |
 | Preparar la reputación antes de la evaluación para evitar la charla de aviso (M24) | +0,1 con la regla exacta, −0,5 con la general | palancas, [reputación](lab/reports/palancas/reputacion.md) |
 | Llamar “Caps” o “techo del nivel” a lo que no sube | el revisor de la rúbrica lo lee como una mecánica sin publicar (el manual dice “0–unbounded”); hay que describir lo que se ve (“Stalled”) | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
