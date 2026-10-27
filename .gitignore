@@ -9,3 +9,4 @@ __pycache__/
 local-runs/
 .claude/worktrees/
 .careerlab-origin
+.career-lab/
