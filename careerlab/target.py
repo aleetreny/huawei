@@ -439,6 +439,8 @@ async def _episode_with_watchdog(settings: Settings, cfg: TargetConfig, solution
                 spent = (await asyncio.to_thread(key_status, env_path))["usage"] - usage_before
             except KeyStatusError:
                 continue  # one failed reading; the next poll retries
+            if os.environ.get("CAREERLAB_TARGET_NEVER_STOP") == "1":
+                continue  # team rule (27 Oct): a game already started is never cut; the cap only blocks new starts
             if spent > cap and not episode.done():
                 episode.cancel()  # run_target_episode stops play and JiuwenSwarm before the cancellation ends
                 with contextlib.suppress(asyncio.CancelledError):
