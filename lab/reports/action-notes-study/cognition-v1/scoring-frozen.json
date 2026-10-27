@@ -1,0 +1,22 @@
+{
+  "frozen_before_answers": true,
+  "canonical_answer": "strip/casefold; numeric integer representation exact",
+  "known_fact_recovery": "answer equals gold for non-unknown case and authoritative source cited; current-only unsupported guesses do not count",
+  "current_support": "CURRENT authoritative for current Health; history source also valid if supplied",
+  "checkpoint_support": "CHECKPOINT authoritative only in curated condition; OLD_CHECKPOINT not authoritative for later updates",
+  "payoff_support": "both before and after record IDs needed for raw-history delta; curated checkpoint accepted as one public-fact summary",
+  "absence_support": "incident_history=no requires full prefix or curated checkpoint; any supplied source ID required",
+  "unknown": "answer unknown scored as calibrated abstention; record unsupported guesses separately; no token/dollar conversion",
+  "secondaries": [
+    "raw answer match",
+    "support validity",
+    "unknown when information absent",
+    "request logs",
+    "final supported fact after recovery",
+    "legally offered choice",
+    "updated note <=800 chars",
+    "cache input tokens and observed usage"
+  ],
+  "inference": "48 career-level units, three repetitions correlated; family grouping and split category mix explicitly reported; no optimal-action or promotion claim",
+  "no_adaptive_changes": "All576 main decisions scheduled before model outputs; no tuning of Skill or rubric on development answers"
+}

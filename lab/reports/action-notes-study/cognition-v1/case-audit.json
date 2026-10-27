@@ -1,0 +1,319 @@
+{
+  "cases_verified": 48,
+  "unique_source_careers": 48,
+  "family_split_disjoint": true,
+  "checks": [
+    {
+      "id": "NC00",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC01",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC02",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC03",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC04",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC05",
+      "category": "open_commitment",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC06",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC07",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC08",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC09",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC10",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC11",
+      "category": "explicit_resolution",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC12",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC13",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC14",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC15",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC16",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC17",
+      "category": "delayed_consequence",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC18",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC19",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC20",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC21",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC22",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC23",
+      "category": "observed_payoff",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC24",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC25",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC26",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC27",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC28",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC29",
+      "category": "latest_review",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC30",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC31",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC32",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC33",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC34",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC35",
+      "category": "incident_history",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC36",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC37",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC38",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC39",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC40",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC41",
+      "category": "fresh_over_stale",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC42",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC43",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC44",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC45",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC46",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    },
+    {
+      "id": "NC47",
+      "category": "unknown",
+      "temporal_prefix_verified": true,
+      "fact_reconstructed": true
+    }
+  ],
+  "category_by_split": {
+    "development": {
+      "open_commitment": 2,
+      "explicit_resolution": 3,
+      "delayed_consequence": 2,
+      "observed_payoff": 2,
+      "latest_review": 6,
+      "incident_history": 6,
+      "unknown": 3
+    },
+    "confirmation": {
+      "open_commitment": 4,
+      "explicit_resolution": 3,
+      "delayed_consequence": 4,
+      "observed_payoff": 4,
+      "fresh_over_stale": 6,
+      "unknown": 3
+    }
+  },
+  "case_sha256": "36a375c35dd7f4ffa30a0a791c305f80c39d018bf900790226f7b87c0ae90d2b",
+  "limits": [
+    "Deterministic second pass and analyst review of semantic anchors, not an independent blinded human panel",
+    "Unknown hidden-parameter labels are public-information insufficiency judgments, not recovered hidden engine values"
+  ]
+}
