@@ -1,0 +1,27 @@
+{
+  "verified_primary_decisions": 576,
+  "verified_requests": 683,
+  "unique_native_thread_ids": 683,
+  "verified_prompt_hashes": 683,
+  "recovery_requests": 107,
+  "observed_usage": {
+    "input_tokens": 14308667,
+    "cached_input_tokens": 8373120,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85467,
+    "reasoning_output_tokens": 329
+  },
+  "raw_answer_counts_reconstructed": {
+    "stale_recovery": 110,
+    "current_only": 36,
+    "curated_checkpoint": 137,
+    "full_history": 89
+  },
+  "no_unexpected_tool_use": true,
+  "no_model_call_errors": true,
+  "limits": [
+    "Requested model/harness recorded; no separate backend model-resolution receipt",
+    "Fresh CLI threads and public task evidence do not establish absence of all hidden provider-side transformations",
+    "Raw answer reconstruction verifies accounting; semantic anchor judgments remain those of the fixed dataset"
+  ]
+}

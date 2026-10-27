@@ -1,0 +1,13 @@
+{
+  "completed": 576,
+  "assigned": 576,
+  "target": 576,
+  "usage": {
+    "input_tokens": 14308667,
+    "output_tokens": 85467,
+    "cached_input_tokens": 8373120,
+    "reasoning_output_tokens": 329,
+    "requests": 683
+  },
+  "stop_reasons": []
+}

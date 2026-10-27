@@ -1,0 +1,8 @@
+{
+  "scripts/analyze_note_cognitive_benchmark.py": "722eba0c37279b930bc6f29bf8743e9efb1e57b2c07a65d9aaf4a78ee55a92e5",
+  "scripts/audit_note_cognitive_results.py": "e7ae51f954b3436db44fd7806502d4bf155bd3e761dc7c379cf9c3379d5be3fa",
+  "scripts/diagnose_note_cognitive_errors.py": "2af66d133773a1b00dc0952964b6de183ed970ce01de555978f10a9bf0c3c5ad",
+  "scripts/probe_agent_written_notes.py": "8c495f86be98d030e3939d50cfd4af76fca41152baa2e4f3c29cfac663026bec",
+  "scripts/probe_luna_prompt_cache.py": "fecdc69bfaafd5c58fdc1b8c600377696cfc34841745577679d6d84809b84c21",
+  "scripts/audit_agent_written_notes.py": "c38a7641fc2eecd13d6d358b2586b0ff0dd9a59deddc56874c1aa650241bf6f5"
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "type": "thread.started",
+    "thread_id": "01a17e7f-e70d-74e1-9456-50791c789de8"
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_0",
+      "type": "agent_message",
+      "text": "{\"answer\":\"unknown\",\"evidence_ids\":[],\"choice\":0,\"updated_note\":\"Transport probe only.\",\"request_logs\":false}"
+    }
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 13513,
+      "cached_input_tokens": 13056,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 36,
+      "reasoning_output_tokens": 0
+    }
+  }
+]

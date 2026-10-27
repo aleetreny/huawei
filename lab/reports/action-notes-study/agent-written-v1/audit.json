@@ -1,0 +1,22 @@
+{
+  "pairs_verified": 16,
+  "requests_verified": 32,
+  "unique_threads": 32,
+  "question_withheld_from_writer": true,
+  "only_bounded_note_crosses_context_boundary": true,
+  "prompt_hashes_verified": 32,
+  "observed_usage": {
+    "input_tokens": 657361,
+    "cached_input_tokens": 409600,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4651,
+    "reasoning_output_tokens": 0
+  },
+  "historical_fact_cases": 6,
+  "historical_correct_by_budget": {
+    "128": 0,
+    "800": 0
+  },
+  "over_1000_in_800_arm": 3,
+  "limitations": "Exploratory reuse of8 cases; no optimal-action, causal promotion, or reliable budget-effect estimate"
+}

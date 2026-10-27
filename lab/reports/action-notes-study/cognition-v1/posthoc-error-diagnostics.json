@@ -1,0 +1,172 @@
+{
+  "post_hoc": true,
+  "counts": {
+    "stale_recovery": {
+      "n": 144,
+      "raw_answer_match_after_format_normalization": 115,
+      "supported_after_format_and_explicit_provenance_resolution": 111,
+      "known_n": 126,
+      "known_answer_match_after_format_normalization": 97,
+      "known_supported_after_format_and_explicit_provenance_resolution": 93
+    },
+    "current_only": {
+      "n": 144,
+      "raw_answer_match_after_format_normalization": 36,
+      "supported_after_format_and_explicit_provenance_resolution": 36,
+      "known_n": 126,
+      "known_answer_match_after_format_normalization": 18,
+      "known_supported_after_format_and_explicit_provenance_resolution": 18
+    },
+    "curated_checkpoint": {
+      "n": 144,
+      "raw_answer_match_after_format_normalization": 138,
+      "supported_after_format_and_explicit_provenance_resolution": 138,
+      "known_n": 126,
+      "known_answer_match_after_format_normalization": 120,
+      "known_supported_after_format_and_explicit_provenance_resolution": 120
+    },
+    "full_history": {
+      "n": 144,
+      "raw_answer_match_after_format_normalization": 113,
+      "supported_after_format_and_explicit_provenance_resolution": 99,
+      "known_n": 126,
+      "known_answer_match_after_format_normalization": 95,
+      "known_supported_after_format_and_explicit_provenance_resolution": 81
+    }
+  },
+  "selected_witnesses": [
+    {
+      "position": 25,
+      "condition": "full_history",
+      "case_id": "NC09",
+      "question": "According to the earlier public description of 'Emergency hotfix — do you skip the process?': Does this description report a second incident? Answer yes/no.",
+      "gold": "no",
+      "answer": {
+        "answer": "yes",
+        "evidence_ids": [
+          "S042R"
+        ],
+        "choice": 3,
+        "updated_note": "Observed: At Y1 Q4, L3; Health 10, Dignity 8, Skill 24, Network 5, Output 6, Wealth 3, Energy 1. S042R says the rollback was ready and there was no second incident after the emergency hotfix. Historical serious incidents: unknown. Earlier risk signals included buried CVE and HR warnings (S004R, S007R); follow-up review cited collaboration, risk warnings, and output (S042R). Expectation: Defusing legacy risk should reduce HiddenRisk; no evidence confirms resulting value. ",
+        "request_logs": false
+      },
+      "public_fact_checkpoint": {
+        "id": "CHECKPOINT",
+        "saved_after_step": 46,
+        "text": "Public description of 'Emergency hotfix — do you skip the process?': The hotfix goes out in time and the live event carries on. When the process is completed afterwards, it finds an edge case the fix missed. The rollback is ready, so there is no second incident. The CTO asks you privately what would have happened if the rollback had failed.",
+        "sources": [
+          "S043B"
+        ]
+      },
+      "finding": "Analyst-selected witness: answer field disagrees with an explicit relevant fact in the same response note; inspect wording and sources, not a global contradiction rate."
+    },
+    {
+      "position": 31,
+      "condition": "full_history",
+      "case_id": "NC23",
+      "question": "What was the visible Network change across the earlier step 12 action 'Apply for rotation'? Return the numeric delta as a string; unknown if unsupported.",
+      "gold": "0",
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [
+          "S012A",
+          "S012R"
+        ],
+        "choice": 1,
+        "updated_note": "Observed: step 12 Apply for rotation raised Network from 3 to 3 (delta 0), despite its listed +1 update. Current: Y1 Q2 M5, L1; Health 7, Dignity 10, Skill 9, Network 3, Output 3, Wealth 2, Energy 0. HR feedback is positive; no explicit risk signal in current event. Expectation: assess the client's added requirements and propose impact/options after the meeting; acceptance and scope impact remain unresolved.",
+        "request_logs": false
+      },
+      "public_fact_checkpoint": {
+        "id": "CHECKPOINT",
+        "saved_after_step": 15,
+        "text": "Step 12: Apply for rotation; visible Network 3 -> 3, observed delta 0; advertised 1.",
+        "sources": [
+          "S012R"
+        ]
+      },
+      "finding": "Analyst-selected witness: answer field disagrees with an explicit relevant fact in the same response note; inspect wording and sources, not a global contradiction rate."
+    },
+    {
+      "position": 47,
+      "condition": "stale_recovery",
+      "case_id": "NC18",
+      "question": "What was the visible Network change across the earlier step 13 action 'Apply for a key project'? Return the numeric delta as a string; unknown if unsupported.",
+      "gold": "0",
+      "answer": {
+        "answer": "+1",
+        "evidence_ids": [
+          "S013A",
+          "S012R",
+          "S013R"
+        ],
+        "choice": 1,
+        "updated_note": "Observed: Y1 Q2 M5; Health 10, Dignity 9, Skill 3, Network 0, Output 2, Wealth 2, Energy 0; L1. HR partner says risks have piled up. Earlier step 13, Apply for a key project, changed Network from 3 to 3 (+0). Past serious incidents, open commitments, latest review weakness, and investment payoff: unknown. Expectation: guiding Will home with someone to care for him may prevent an ugly scene.",
+        "request_logs": false
+      },
+      "public_fact_checkpoint": {
+        "id": "CHECKPOINT",
+        "saved_after_step": 16,
+        "text": "Step 13: Apply for a key project; visible Network 3 -> 3, observed delta 0; advertised 1.",
+        "sources": [
+          "S013R"
+        ]
+      },
+      "finding": "Analyst-selected witness: answer field disagrees with an explicit relevant fact in the same response note; inspect wording and sources, not a global contradiction rate."
+    },
+    {
+      "position": 311,
+      "condition": "curated_checkpoint",
+      "case_id": "NC35",
+      "question": "Has an official public \"Old landmines\" message appeared anywhere earlier in this recorded career prefix? Answer yes/no; a calm current message is not historical evidence.",
+      "gold": "no",
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [
+          "CHECKPOINT"
+        ],
+        "choice": 1,
+        "updated_note": "Observed: Public Old landmines messages in prefix: 0 (CHECKPOINT). Current state: Y1 Q3 M7; Health 10, Dignity 7, Skill 9, Network 3, Output 3, Wealth 2, L1. Current event is a retention package after considering leaving; HR partner says buried issues are about to go off. Expectation: unknown whether an official Old landmines message appeared earlier.",
+        "request_logs": false
+      },
+      "public_fact_checkpoint": {
+        "id": "CHECKPOINT",
+        "saved_after_step": 26,
+        "text": "Public Old landmines messages in the prefix: 0.",
+        "sources": [
+          "PREFIX_ABSENCE"
+        ]
+      },
+      "finding": "Analyst-selected witness: answer field disagrees with an explicit relevant fact in the same response note; inspect wording and sources, not a global contradiction rate."
+    },
+    {
+      "position": 422,
+      "condition": "curated_checkpoint",
+      "case_id": "NC22",
+      "question": "What was the visible Output change across the earlier step 13 action 'Apply for a key project'? Return the numeric delta as a string; unknown if unsupported.",
+      "gold": "0",
+      "answer": {
+        "answer": "unknown",
+        "evidence_ids": [],
+        "choice": 2,
+        "updated_note": "Observed: Step 13 Apply for a key project had visible Output 3→3 (delta 0), advertised 2 (CHECKPOINT; source S013R). Current Y1 Q2 M5: Health 8, Dignity 8, Skill 9, Network 3, Output 2, Wealth 1, Energy 0; HR partner reports some risk, not serious yet (CURRENT). Expectation: unknown.",
+        "request_logs": false
+      },
+      "public_fact_checkpoint": {
+        "id": "CHECKPOINT",
+        "saved_after_step": 16,
+        "text": "Step 13: Apply for a key project; visible Output 3 -> 3, observed delta 0; advertised 2.",
+        "sources": [
+          "S013R"
+        ]
+      },
+      "finding": "Analyst-selected witness: answer field disagrees with an explicit relevant fact in the same response note; inspect wording and sources, not a global contradiction rate."
+    }
+  ],
+  "normalization": "Leading yes/no/unknown or leading integer; only provenance IDs explicitly supplied in curated checkpoint mapped to CHECKPOINT; no gold substitution, no correction from response notes",
+  "limits": [
+    "Frozen primary exact-answer/source scores remain unchanged",
+    "Post-hoc diagnostics are not independent confirmation of checkpoint superiority",
+    "Unknown versus not-reported wording can also contribute; semantic interpretation is bounded by original question",
+    "Five selected contradiction witnesses are not a population frequency"
+  ]
+}

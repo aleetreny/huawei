@@ -1,0 +1,9 @@
+{
+  "visible_prompt_hash_equal": true,
+  "idle_seconds": 300.0042223329656,
+  "input_tokens_first_unique": 22617,
+  "input_tokens_after_idle": 22065,
+  "cached_input_first_unique": 13056,
+  "cached_input_after_idle": 11008,
+  "limits": "Identical supplied prompt but reported total input differs; full server-rendered context not controlled or exposed. Routing/prefix changes versus expiry cannot be separated."
+}

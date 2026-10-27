@@ -29,6 +29,10 @@ def score(case, condition, response, recovered=False):
     if condition=='curated_checkpoint':available.add('CHECKPOINT')
     if condition=='stale_recovery':available.add('OLD_CHECKPOINT')
     valid_ids=ids<=available
+    def equivalent_sources(source_id):
+        original=next((r for r in case['history'] if r['id']==source_id),None)
+        if original is None or original['kind']!='observe':return {source_id}
+        return {r['id'] for r in case['history'] if r['kind']=='observe' and r['data']==original['data']}
     support=False
     if case['category']=='fresh_over_stale':
         support='CURRENT' in ids or (history_present and case['support'] in ids)
@@ -42,9 +46,9 @@ def score(case, condition, response, recovered=False):
             else:
                 support=bool(ids&available)
         elif case['category']=='observed_payoff':
-            support={case['support'],case['related_support']}<=ids
+            support=bool(ids&equivalent_sources(case['support'])) and bool(ids&equivalent_sources(case['related_support'])) and len(ids)>=2
         elif case['category']!='unknown':
-            support=support or case['support'] in ids
+            support=support or bool(equivalent_sources(case['support'])&ids)
     unknown=case['answer']=='unknown'
     supported=raw_match and valid_ids and (unknown or support)
     legal={c['choice'] for c in case['current']['data']['choices']}
@@ -101,6 +105,7 @@ def analyze(root,out):
     cases={c['id']:c for c in json.loads((root/'cases.json').read_text())}
     completed=json.loads((root/'completed.json').read_text());schedule=json.loads((root/'schedule.json').read_text())
     rows,initials,usage=[],[],Counter();requests=set();prompt_checks=0;max_character_prompt=0
+    usage_by_condition=defaultdict(Counter);request_counts=Counter();request_latencies=defaultdict(list)
     from scripts.run_note_cognitive_benchmark import prompt_for
     skill=(root/'frozen-skill.md').read_text()
     for r in completed:
@@ -115,7 +120,10 @@ def analyze(root,out):
             assert (directory/'prompt.txt').read_text()==expected
             assert sha(directory/'prompt.txt')==result['prompt_sha256']
             max_character_prompt=max(max_character_prompt,len(expected));prompt_checks+=1
-            for k,v in result['usage'].items():usage[k]+=int(v or 0)
+            request_counts[r['condition']]+=1
+            request_latencies[r['condition']].append(result['elapsed_seconds'])
+            for k,v in result['usage'].items():
+                usage[k]+=int(v or 0);usage_by_condition[r['condition']][k]+=int(v or 0)
         meta={k:r[k] for k in ('position','case_id','condition','replicate','recovered')}
         meta.update(category=case['category'],split=case['split'],family=case['family'])
         rows.append({**meta,**score(case,r['condition'],r['final'],r['recovered'])})
@@ -123,6 +131,8 @@ def analyze(root,out):
     summary={'complete':len(completed)==len(schedule),'completed':len(completed),'target':len(schedule),
              'model_requested':p['model'],'harness':p['route'],'requests':len(requests),'prompt_hash_checks':prompt_checks,
              'largest_prompt_characters':max_character_prompt,'observed_usage':dict(usage),
+             'usage_by_condition':{c:dict(u) for c,u in usage_by_condition.items()},'request_counts_by_condition':dict(request_counts),
+             'median_request_seconds':{c:statistics.median(v) for c,v in request_latencies.items()},
              'conditions':{c:summarize([r for r in rows if r['condition']==c]) for c in sorted({r['condition'] for r in rows})},
              'initial_stale':summarize([r for r in initials if r['condition']=='stale_recovery']),
              'by_category':{cat:{c:summarize([r for r in rows if r['category']==cat and r['condition']==c]) for c in sorted({r['condition'] for r in rows})} for cat in sorted({r['category'] for r in rows})},
