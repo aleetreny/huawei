@@ -22,9 +22,10 @@ uv sync
 1. **La nota (`notes`) como memoria.**
    - Una línea de estado fija en cada `take_action`, por ejemplo `Review in N | Risk: k risky since calm HR | Missing: Output`, y al retomar tras un resumen, leer las últimas notas con `check_latest_logs`.
    - Mídelo en el banco (`scripts/transmision/runbench.py`) con el mensaje oficial de continuación y con contexto largo: ¿la IA rellena bien la línea y decide mejor?
-2. **Detectar el techo del nivel.** Si una respuesta anunciaba subir un marcador y éste no se movió, ya está en el techo: lo que sobra se pierde.
-   - Simulador: cuánto vale que el bot deje de buscar un marcador que ya está en su techo.
-   - Banco: ¿lo aplica Haiku sin que se cuele en otras decisiones? Mira la huella con `fingerprint.py`.
+2. **Detectar el techo del nivel y recordarlo con la nota.** Si una respuesta anunciaba subir un marcador y éste no se movió, ya está en el techo: lo que sobra se pierde.
+   - **No le damos los techos como números.** Los conocemos por el simulador, pero las normas prohíben poner en un Skill umbrales no publicados (“unpublished thresholds… presented as known rules”), aunque sean ciertos. Además pueden cambiar en la evaluación oficial. La IA tiene que **descubrirlos en la partida** y **apuntarlos en su nota** cuando los vea (por ejemplo `Cap seen: Network 3 at L1`), para arrastrarlos aunque se resuma la conversación. Al ascender, los techos cambian y se borran de la nota.
+   - Simulador: cuánto vale que el bot deje de buscar un marcador en cuanto ve que está en su techo, comparado con no saberlo y con conocer los techos exactos (la regla del techo ya vale ~7 puntos en `rules.py`).
+   - Banco: ¿lo detecta y lo apunta Haiku en la nota, y lo aplica sin que se cuele en otras decisiones? Mira la huella con `fingerprint.py`.
 3. **Los avisos con 3 meses de margen** (dinero, aislamiento, dignidad agotada) y el aviso de la tercera evaluación en L1. Simulador: cuánto vale reaccionar en cuanto salen. Banco: si la IA los reconoce.
 4. **Llegar a la evaluación con la autoestima alta y el riesgo bajo**, para evitar la charla de aviso (regla exacta en M24). Simulador: cuánto vale en el reparto del trimestre anterior.
 5. **El riesgo en cifras del reparto de energía** (Defuse, Lay low y trabajo intenso enseñan su efecto en el riesgo). Banco: si usarlo como contador del riesgo ayuda.
