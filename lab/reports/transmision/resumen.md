@@ -6,10 +6,32 @@ Rama `alejandro/transmision` (desde `origin/main`, con `main-1nddsg` y `alejandr
 
 ## Tabla principal: regla → formulación ganadora → obediencia frente al control
 
-*(en construcción; se rellena al terminar cada experimento)*
+Validación final (27 oct, 13:50–14:45 UTC): conjunto `ids-V2`, situaciones que **no** se usaron para elegir formulaciones, ≥ 200 por regla, con **todos** los títulos reservados (30 % de los títulos, nunca vistos al diseñar). Haiku, entrega oficial, contexto corto. Manual ganador: **`t10-countdown`** (lista trimestral con prioridad + cuenta atrás de la evaluación; [carpeta](../../policies-src/transmision/t10-countdown/)). Acierto = elige una opción a 0,5 puntos o menos de la mejor según el simulador (o la acción de la regla en el reparto); entre paréntesis, intervalo al 95 %. Pérdida = nota final media perdida frente a la mejor opción (simulador).
 
-| Regla | Formulación ganadora | Situaciones | Acierto control | Acierto ganadora | Con títulos reservados |
-|---|---|---:|---:|---:|---|
+| Regla | Formulación ganadora | Situaciones | Acierto control | Acierto ganadora | Pérdida de nota (control → ganadora) | Sólo títulos reservados (n: control → ganadora) |
+|---|---|---:|---|---|---|---|
+| No ceder puntos antes de la evaluación | Cuenta atrás `Review in N` escrita en cada nota de historia; con N = 1, abrir `reference/review-month.md` (marcar qué opción va contra una persona o quita tiempo de la entrega propia; nunca salvar un punto escondiendo o apostando) | 230 | 73 % (67–78) | 76 % (70–81) | 2,05 → 1,56 | 150: 71 % → 77 % |
+| Skill en L4 | Línea imperativa del reparto: “L4 or above: Energy on Skill learning (2)…; main action Apply for rotation” | 230 | 14 % (10–19) | **77 % (71–82)** | 0,23 → 0,21 | 150: 11 % → 73 % |
+| Comentario de RR. HH. | Línea del reparto definida por exclusión: cualquier comentario que no sea uno de los dos suaves → Defuse legacy risk y Lay low and reduce risk | 230 | 18 % (14–24) | **60 % (53–66)** | 0,43 → 0,30 | 150: 19 % → 58 % |
+| Detonantes | **Sin regla** (Haiku ya los evita; toda regla probada empeoró: “evita exponerte” lleva a ceder, que también es riesgo) | 230 | 91 % (87–94) | 88 % (83–92) | 0,51 → 0,70 | 150: 93 % → 92 % |
+| Ruina temprana | **Sin regla** (Haiku casi nunca gasta con poco dinero: 2–3 % sin Skill) | 210 | 54 % (48–61) | 54 % (48–61) | 1,57 → 1,40 | 109: 44 % → 45 % |
+| Cierre | Primera línea del reparto: “Final month of the career (month 48): main action Lay low…; Energy Defuse, Health, Dignity, then Network; never Skill learning” | 210 | 70 % (63–76) | **83 % (78–88)** | 0,33 → 0,20 | 72: 71 % → 81 % |
+| Salud baja (añadida tras las partidas) | Línea del reparto: Health recovery primero con Health baja | 230 | 89 % (84–92) | 91 % (87–94) | 1,05 → 0,94 | 101: 86 % → 92 % |
+| Efectos secundarios (historias fuera de las reglas) | — | 223 | 72 % (66–77) | 73 % (66–78) | 1,15 → 1,11 | 68: 72 % → 75 % |
+
+Alternativa para “antes de la evaluación”: las seis reglas en el cuerpo con filtro (`t2-veto`) da el mismo acierto (76 %; pérdida 1,60), pero cambia 1 de cada 5 historias de otros meses y empeora los detonantes (pérdida 0,96).
+
+**Resultado en partidas de Haiku** (completas, entrega oficial, intercaladas con f3-lean-v1; ver [partidas-g1.md](partidas-g1.md) y el lote `g6-full`, en marcha):
+
+| Manual | Partidas | Nota Q media ± SE | Terminadas |
+|---|---:|---:|---:|
+| f3-lean-v1 (todas las tandas) | 30 | 50,8 ± 2,9 | 21 |
+| t10-countdown (g5) | 10 | 49,0 ± 6,4 | 6 |
+| t3-instr (todas las reglas en el cuerpo, g1) | 9 | 38,4 ± 5,5 | 3 |
+| t9-quarter (sólo reparto, g3–g5) | 14 | 43,2 ± 5,8 | 6 |
+| t8-quarter (g3) | 3 | 56,2 ± 6,5 | 2 |
+
+*(15:00 UTC; se actualiza con g6. Con 10 partidas por brazo la diferencia t10 − f3-lean es −1,8 ± 7,1: todavía no distingue 5 puntos.)*
 
 ## Cómo escribir para que Haiku obedezca: lo aprendido
 
