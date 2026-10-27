@@ -1,0 +1,16 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v7",
+  "parents": [
+    "observed-growth-v6",
+    "f1-status-line-v1"
+  ],
+  "idea_origin": "v3 is the family's best in the race (12 games, mean 55.4, 10 completed); f1-status-line showed that a fixed status line helps Haiku; the promotion study gave review timing and the ceiling rule. v7 rewrites v6's rules in the status-line format and shorter.",
+  "operator": "format rewrite of v6 in the status-line style",
+  "hypothesis": "v6's rules are right but too long and in prose, so Haiku does not reliably hold Skill, Network and Output at their best when a review is applied. A fixed line (Review near or far, Below best, Risk, Health) filled before every choice will make the actor guard Network and Output before reviews and top up whatever is below its best, raising first-review promotions and completions while cutting tokens.",
+  "change": "Same rules as v6 (review timing, ceiling rule, risk cleanup on any signal, Health recovery at or below mid-range, build versus review allocation, weak-review plan) written as a status line with ordered needs, following f1-status-line-v1's format. About half the length of v6.",
+  "predicted_behaviour": "Every action note starts with the status line. Before reviews, story notes cite Network or Output protection. More careers at the visible ceiling at the first review than v3 and v6 (4/8 each) and at least v6's completion (6/8).",
+  "refutation": "Compare 8 Haiku episodes with v3 and v6 (8 each) under the same actor and harness. Reject if first-review promotions and completions do not exceed both, or if Health or trust failures increase. If notes lack the status line, mark the mechanism unexecuted.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v7, built on main. Format borrowed from f1-status-line-v1; no event titles, months or numeric thresholds beyond the published 0-10 range."
+}

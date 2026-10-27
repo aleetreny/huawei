@@ -1,0 +1,15 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v10",
+  "parents": [
+    "observed-growth-v9"
+  ],
+  "idea_origin": "Matteo's L4 analysis (27 Oct): about 70 % of quarterly actions at L4 went to Network or Output already at their ceilings, Skill learning 7 and rotation 1 out of 359; Skill from Energy 31 against 1,102 from stories; reviews at L4 missed by a few Skill points. Plus Alejandro's reverse-engineering (PR #16): deterministic promotion thresholds, the last month-5 decision decides the first review, Dignity blocks promotion when low, risk triggers under formal scrutiny, early ruin from money-costing answers, High-intensity work raises hidden risk.",
+  "operator": "targeted revision of v9",
+  "hypothesis": "Telling the actor to detect capped stats and stop spending on them, with rotation and Skill learning once Network and Output are capped, raises Skill gained per month at L4 and shortens time at L4 by about one review window; Alejandro's mechanics (state after the last decision before a review, Dignity, risk triggers, money guard, no High-intensity work) protect the first promotion and survival at no cost.",
+  "change": "v9 plus: a short 'How promotion works' section; a 'Capped' field in the status line; story rules on formal scrutiny under raised risk, capped stats, money and Dignity guards; allocation 'never spend on a Capped stat', rotation and Skill learning when Network and Output are capped; avoid High-intensity work; risk raised defined by the HR remark tone.",
+  "predicted_behaviour": "At L4 most main actions are rotation and Skill learning appears most quarters; Skill gained per month at L4 above v7's; months at L4 below v7's (median 18); first-review promotion at least v7's (5 of 9).",
+  "refutation": "8 Haiku episodes with the same actor as v7. Reject the L4 hypothesis if Skill per month at L4 and months at L4 do not improve on v7, or if completion falls.",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v10, built on matteo/observed-growth-v9. No numbers from the dev dataset in the Skill."
+}
