@@ -290,4 +290,13 @@ Lo que eligió la búsqueda:
 
 **Techo práctico.** Para L6 en el mes 42 con limpieza final, unos 80 puntos (M9); para L7, unos 82,5. **Nota óptima esperada, unos 72**, con la variación que pone el sorteo de eventos.
 
+**Comprobado en el juego real** (lote `c02-planner-real`, 162 partidas antes de que se reiniciara el contenedor):
+
+| Brazo | Partidas | Nota media | L6 | Crisis de confianza |
+|---|---:|---:|---:|---:|
+| Planificador ajustado | 82 | **70,5** | 72 % | 4 % |
+| Igual, con cautela ante respuestas poco observadas | 80 | 70,0 | 65 % | 4 % |
+
+**Es el mejor bot hasta ahora:** el oráculo anterior sacaba 67,9 y la política voraz real 63,9. El simulador predecía 71,8, así que **la estrategia encontrada sin jugar se traslada al juego real** con una diferencia de ~1,3 puntos.
+
 **Diferencia con el juego real.** La política voraz saca 63,9 en el juego real (300 partidas) y 69,5 en el simulador. Casi toda la diferencia son crisis de confianza: 19 % en el juego real y 0 % en el simulador. Se debe a que los riesgos de las respuestas poco observadas están mal medidos (M14), y una política que apura el riesgo hasta 4 las paga. En el juego real conviene **más margen de riesgo** del que pide el simulador.
