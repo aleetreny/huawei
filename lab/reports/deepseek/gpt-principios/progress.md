@@ -8,3 +8,5 @@
 Cierre de este checkpoint: factorial de riesgo corregido y reproducido; pantalla de margen y control sin privilegios terminados. Documentado resultado negativo de transferencia. Sin API, partidas Claude ni subagentes. Objetivo75 permanece abierto.
 
 12 archivos comprimidos verificados por SHA de archivo, SHA descomprimido, tamaño de filas y resúmenes. diff --check limpio tras normalizar CSV.
+
+27 oct19:13 UTC: commit4cd5ac8 y push confirmados; PR22 abierto y adjunto al chat. Integración a main solicitada; objetivo75 activo y sin demostrar.

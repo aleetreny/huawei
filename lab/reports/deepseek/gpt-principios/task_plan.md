@@ -4,7 +4,7 @@ Investigar cómo alcanzar 75 con DeepSeek sin ejecutar su API. Apoyo a la línea
 1. Reconstrucción de reglas y evidencia anterior: completa.
 2. Investigación pública de leaderboard, repositorios y estrategias: barrido completado; sin atribución de75.
 3. Intervenciones offline nuevas y validación de mecanismo: completas para este checkpoint.
-4. Informe revisable y push: en curso. No candidato superior ni justificación de partidas proxy todavía.
+4. Informe revisable, commit4cd5ac8, push y PR22: completos. No candidato superior ni justificación de partidas proxy todavía.
 5. Objetivo75: abierto; siguiente intervención debe medir decisión nativa/auditoría, no repetir estas variantes.
 
 ## Restricciones
