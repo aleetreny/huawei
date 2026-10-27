@@ -117,7 +117,7 @@ Antes de gastar cuota en un nuevo manual, exigir que una intervención sobreviva
 - **Coste:** cero API DeepSeek, cero partidas Claude, cero subagentes. No se han modificado candidatos actuales ni enviado entregas.
 - **Validación:** recuperación4×300 coincide exactamente; suite del repo313 tests pasa. Reproducir con `uv run python scripts/deepseek/gpt_riesgo.py --out /tmp/risk-factorial.json` y `uv run python scripts/deepseek/gpt_margen.py --out /tmp/risk-margin.json`. No apuntar `--out` a resultados congelados si se quiere conservarlos.
 - **Pendiente inmediato:** no repetir las variantes de esta carpeta. La precaución no mejora al veto observado. Investigar por separado la calidad de la decisión nativa del modelo, la compresión de consecuencias y los errores de ejecución: propuesta seguida de comprobación breve antes de actuar, con un control contemporáneo y consecuencias de la opción elegida como medida. Sólo pasar a partidas si una prueba de banco lo justifica; anunciar número y topes en ESTADO antes de lanzarla. Si se obtiene evidencia de los equipos75, contrastar versión, configuración, muestra y trazas públicas.
-- **Integración:** commit y push a `alejandro/gpt-principios`; solicitar revisión y unión a main. No marcar el objetivo como completado ni reemplazar automáticamente la entrega vigente.
+- **Integración:** commit `4cd5ac8` publicado en `alejandro/gpt-principios`; [PR22](https://github.com/aleetreny/huawei/pull/22) abierto para revisión y unión a main. No marcar el objetivo como completado ni reemplazar automáticamente la entrega vigente.
 
 ### Formato de los datos congelados
 
