@@ -1,0 +1,14 @@
+{
+  "family": "formato",
+  "name": "script-v2",
+  "parents": [
+    "script-v1",
+    "t13-read-v4"
+  ],
+  "idea_origin": "Formato line: script-v1 (script decides everything) lost a game at L1 on story readings; t13-read-v4 (DeepSeek decides stories) scored 71.67 but never fills Stalled and never moves Energy to Skill. Hybrid: DeepSeek keeps v4's story rules; the script keeps the status line (Best, Stalled) and plans each quarter.",
+  "operator": "change the delivery form",
+  "hypothesis": "Moving only the bookkeeping DeepSeek fails at (stall detection, best values, quarterly allocation) into a script keeps v4's story quality and adds the ceiling lever (+5 to +9 in the replica, B22) at ~60 extra tool calls per game.",
+  "predicted_behaviour": "Status line with Stalled filled from the first L1 quarter; Energy moves to Skill once Network and Output stall; level L5-L6 at month 48.",
+  "refutation": "Official games score below t13-read-v4 or the agent stops calling the script.",
+  "skill_count": 1
+}

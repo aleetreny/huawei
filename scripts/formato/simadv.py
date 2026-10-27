@@ -32,6 +32,7 @@ import replica as R  # noqa: E402
 import rules  # noqa: E402
 
 ADV = None
+QPLAN = False
 ARMS: dict = {}
 
 
@@ -71,7 +72,15 @@ class AdvisorPolicy(R.Policy):
                 "hr": self.hr, "health": st.health, "dignity": st.dignity, "skill": st.skill,
                 "network": st.network, "output": st.output, "wealth": float(R.DISPLAY(st.wealth))}
 
+    qplan = False
+
+    def _status(self, st):
+        if self.qplan and getattr(self, "_smonth", None) != st.month:
+            self._smonth = st.month
+            self.adv.step(self._view(st, "status"), {}, self.mem)
+
     def story(self, rep, st, node):
+        self._status(st)
         opts = {}
         for kk in rep.cat.nodes[node]["choices"]:
             k = int(kk)
@@ -87,16 +96,27 @@ class AdvisorPolicy(R.Policy):
         return k
 
     def energy(self, rep, st):
+        if self.qplan:
+            if getattr(self, "_qmonth", None) != st.month:
+                self._qmonth = st.month
+                self.adv.step(self._view(st, "quarter"), {}, self.mem)
+                self._picks = list(self.mem.d["plan"]["energy"])
+            k = self._picks.pop(0) if self._picks else len(self.adv.ENERGY)
+            name = self.adv.ENERGY[k - 1][0]
+            return None if name.startswith("Reserve") else name
         k, name = self.adv.step(self._view(st, "energy"), {}, self.mem)
         return None if name.startswith("Reserve") else name
 
     def main(self, rep, st):
+        if self.qplan:
+            return self.adv.MAIN[self.mem.d["plan"]["main"] - 1][0]
         k, name = self.adv.step(self._view(st, "main"), {}, self.mem)
         return name
 
 
-def _init(adv_path, arms, params=None):
-    global ADV
+def _init(adv_path, arms, params=None, qplan=False):
+    global ADV, QPLAN
+    QPLAN = qplan
     ADV = load_advisor(adv_path)
     ADV.P.update(params or {})
     ARMS.update(arms)
@@ -110,6 +130,7 @@ def _play(args):
     else:
         pol = AdvisorPolicy(ADV, per, i, hr_noise)
         pol.cheat = name.split("#", 1)[1] if "#" in name else ""
+        pol.qplan = QPLAN
     st, _ = R.play(G.CAT, pol, random.Random(seed0 + i))
     return R.Replica.score(st), st.level, st.failure or "completed"
 
@@ -125,6 +146,7 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--hr-noise", type=float, default=0.0)
     ap.add_argument("--params", default="{}", help="JSON overrides of the advisor's P knobs")
+    ap.add_argument("--qplan", action="store_true", help="v2 protocol: status call each month, one quarter plan")
     a = ap.parse_args()
     arms = {}
     if a.rulebot:
@@ -141,7 +163,7 @@ def main() -> None:
         pers = [G.Perception(lab, fxm, rm) for lab in sets]
         arms[f"advisor {name}"] = pers[0] if len(pers) == 1 else G.Mixed(pers)
     print(f"{a.games} games per arm, seeds {a.seed}+i")
-    with ProcessPoolExecutor(a.workers, initializer=_init, initargs=(a.advisor, arms, json.loads(a.params))) as ex:
+    with ProcessPoolExecutor(a.workers, initializer=_init, initargs=(a.advisor, arms, json.loads(a.params), a.qplan)) as ex:
         for name in arms:
             out = list(ex.map(_play, [(name, i, a.seed, a.hr_noise) for i in range(a.games)], chunksize=25))
             s = np.array([o[0] for o in out])
