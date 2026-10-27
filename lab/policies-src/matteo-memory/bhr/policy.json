@@ -1,0 +1,15 @@
+{
+  "family": "matteo-memory",
+  "name": "bhr",
+  "parents": [
+    "m1"
+  ],
+  "idea_origin": "Matteo requests BUILD/HOLD/REPAIR after discussing loss of readiness before reviews.",
+  "operator": "explicit state-based revision",
+  "hypothesis": "Explicit modes and an action-specific reason reduce avoidable readiness losses and redundant investment versus M1 without causing stagnation or impairing safety.",
+  "change": "Add auditable BUILD/HOLD/REPAIR entry, exit and exception rules; preserve M1 factual memory and safety. Distinguish supported targets from personal bests and provisional plateaus. Failed reviews invalidate HOLD assumptions.",
+  "predicted_behaviour": "Each action note records the mode, target source, gap and option-specific reason. Observed losses cause REPAIR; supported restoration permits HOLD; non-promotion causes BUILD diagnosis. Safety duties remain active in HOLD.",
+  "refutation": "Execution fails if the actor claims HOLD from a single zero gain, omits a mode/target basis, ignores an observed protected loss, stays in HOLD after non-promotion, or contradicts its reason without an explicit exception. Efficacy requires a future frozen matched comparison against M1; reduced growth, worse survival or no improvement in readiness retention rejects adoption.",
+  "skill_count": 1,
+  "notes": "Unplayed candidate only, no registration/model calls/new careers. Offline archive audit describes visible drawdowns, not cap attainment, BHR adherence or optimal unchosen actions. Parent M1 commit 18b8685. See lab/reports/bhr/README.md."
+}
