@@ -1,0 +1,15 @@
+{
+  "family": "f3-feedback-reactive",
+  "name": "f3-lean-polish-v1",
+  "parents": [
+    "f3-lean-v1"
+  ],
+  "idea_origin": "Leah 27 Oct: rubric and token polish of the R1 recommendation (cloud hand-off, 26 Oct 23:30)",
+  "operator": "rewrite (same rules)",
+  "hypothesis": "f3-lean-v1 is the recommended R1 manual (simplest of the statistically tied leaders: 11/12 completed, Q 55.5). The official document-quality rubric rewards a description of what the Skill does and when to use it, executable priorities, behaviour near limits, a whole-career view and robustness to reworded events; f3-lean states its rules tersely and mixes turn types. Reorganising the same rules by turn type (story, Energy, main action) with an explicit main-action order, plus token instructions (one observe per decision, notes of a few words), should raise the document-quality score and trim tokens without changing play.",
+  "change": "Same rules as f3-lean-v1, regrouped: risk state (Clear/Raised/Escalating, step down after a quiet quarter); recovery first when Health or Dignity is low or named; story, Energy and main-action rules listed per turn type; the weak review plan ranks above Lay low for the main action exactly as in the parent. Added: observe once per decision, notes of a few words, judge signals by meaning not wording, rules apply for the whole career. 287 words (parent 250).",
+  "predicted_behaviour": "Same choices as f3-lean-v1 in the same states; notes shorter; no extra observe or log calls; tokens per month at or below the parent's.",
+  "refutation": "Not a pure rewrite if, on comparable games, Defuse, Lay low or weak-review main actions appear in different states than in f3-lean-v1 traces. Fails its purpose if tokens per month are higher than the parent's.",
+  "skill_count": 1,
+  "notes": "Written by Leah 27 Oct on leah/workspace. Proposal for R1, not a team decision. Lint: no findings. Untested with any model at writing time."
+}

@@ -2,6 +2,13 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026: f3-lean-polish-v1, the R1 candidate rewritten for the rubric and tokens
+
+- **What.** A copy of f3-lean-v1 (the cloud's R1 recommendation) with the **same rules**, regrouped by turn type to fit the official document-quality rubric, plus token instructions (one `observe` per decision, notes of a few words). 287 words; lint-clean.
+- **Why.** Telling the tied top manuals apart would need about 130 games each, so the text-only 20% of the automated score (document quality and tokens) is what can still move today. Token gains are small: DeepSeek's one game used about 670k tokens a month, about 93 if completed.
+- **Not done.** No game has been played with it. Submitting it is the team's call (T9).
+- **Write-up.** [f3-lean-polish.md](f3-lean-polish.md).
+
 ## 26 Oct 2026, 17:05 UTC: v1 ×3, v2 and v3 (5 Haiku games)
 
 - **Results.**
