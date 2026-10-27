@@ -53,3 +53,17 @@ Matteo asked whether careers at the L1 ceiling that were still not promoted shar
 - **Haiku at the ceiling**: 16/29 promoted (55 %, the same rate as the bots), with no difference in Dignity (all 10 among the misses) or Health.
 
 So at the ceiling the promotion is close to a coin with about 55 % per review window. That makes holding the ceiling at every window the lever: three windows at the ceiling give roughly a 9 in 10 chance of leaving L1, one window about 1 in 2.
+
+## Correction (27 Oct, 09:20 UTC): the "55 % coin" was a measurement error
+
+Alejandro's reverse-engineering study (PR #16, finding H2) showed that the state that counts is the one **after** the last decision of month 5; the analyses above used the state before that decision. Re-measured on the same trajectories (state in the observation that carries the review, which the review itself does not change):
+
+| | At the L1 threshold at the first review | Promoted | Below | Promoted |
+|---|---:|---:|---:|---:|
+| v7 (9) | 5 | **5** | 4 | 0 |
+| v8 (8) | 1 | **1** | 7 | 0 |
+| v9 (8) | 4 | **4** | 4 | 0 |
+
+- Promotion at the first review is **deterministic in our data**: every career at the threshold was promoted, none below it. There is no coin; the misses at "the ceiling" were careers that lost a point of Network or Output in the very last decision of month 5.
+- v9 was at the threshold in **4 of 8** first reviews, not 6 of 8 as stated above, and is not distinguishable from v7 (5 of 9). The "at the ceiling but not promoted" section above is withdrawn.
+- Alejandro's overnight lab (PR #17) tested observed-growth-v7 in the first semester: 40 % promoted at the first review in 30 games, against 47 % for f3-lean-v1, not different. Its H22–H24 show that Haiku's story choices barely change with the manual, which is consistent with v8 and v9 moving little.
