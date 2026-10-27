@@ -1,0 +1,99 @@
+{
+  "base": {
+    "n": 400,
+    "mean": 72.3862,
+    "se": 0.5468664954168647,
+    "levels": {
+      "6": 310,
+      "5": 70,
+      "1": 14,
+      "3": 1,
+      "4": 3,
+      "7": 2
+    },
+    "outcomes": {
+      "completed": 381,
+      "dismissed": 13,
+      "trust": 5,
+      "health": 1
+    },
+    "promotions48": 209
+  },
+  "chain0": {
+    "n": 400,
+    "mean": 72.662625,
+    "se": 0.5124901584955799,
+    "levels": {
+      "6": 303,
+      "5": 79,
+      "4": 3,
+      "1": 12,
+      "3": 1,
+      "7": 2
+    },
+    "outcomes": {
+      "completed": 384,
+      "trust": 4,
+      "dismissed": 12
+    },
+    "promotions48": 199
+  },
+  "chain3": {
+    "n": 400,
+    "mean": 72.7196,
+    "se": 0.5084827431685864,
+    "levels": {
+      "6": 300,
+      "5": 83,
+      "1": 13,
+      "4": 2,
+      "7": 1,
+      "2": 1
+    },
+    "outcomes": {
+      "completed": 383,
+      "dismissed": 13,
+      "trust": 3,
+      "broke": 1
+    },
+    "promotions48": 190
+  },
+  "chain6": {
+    "n": 400,
+    "mean": 73.23995,
+    "se": 0.47217429796941224,
+    "levels": {
+      "6": 307,
+      "5": 80,
+      "7": 2,
+      "1": 10,
+      "2": 1
+    },
+    "outcomes": {
+      "completed": 388,
+      "dismissed": 9,
+      "health": 1,
+      "trust": 1,
+      "broke": 1
+    },
+    "promotions48": 204
+  },
+  "chain10": {
+    "n": 400,
+    "mean": 73.167075,
+    "se": 0.40440849529108125,
+    "levels": {
+      "6": 300,
+      "5": 90,
+      "7": 3,
+      "1": 7
+    },
+    "outcomes": {
+      "completed": 390,
+      "trust": 3,
+      "dismissed": 6,
+      "broke": 1
+    },
+    "promotions48": 204
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "base": {
+    "n": 400,
+    "mean": 73.892425,
+    "se": 0.40160912202123117,
+    "levels": {
+      "6": 309,
+      "1": 4,
+      "5": 78,
+      "3": 3,
+      "4": 4,
+      "7": 2
+    },
+    "outcomes": {
+      "completed": 392,
+      "dismissed": 4,
+      "broke": 1,
+      "trust": 3
+    },
+    "promotions48": 179
+  },
+  "late_close": {
+    "n": 400,
+    "mean": 73.913525,
+    "se": 0.39977965523872583,
+    "levels": {
+      "6": 324,
+      "1": 4,
+      "5": 63,
+      "3": 3,
+      "4": 3,
+      "7": 3
+    },
+    "outcomes": {
+      "completed": 392,
+      "dismissed": 4,
+      "broke": 1,
+      "trust": 3
+    },
+    "promotions48": 197
+  },
+  "skill2": {
+    "n": 400,
+    "mean": 73.85665,
+    "se": 0.4015211373678014,
+    "levels": {
+      "6": 329,
+      "1": 4,
+      "5": 55,
+      "3": 3,
+      "4": 3,
+      "7": 6
+    },
+    "outcomes": {
+      "completed": 392,
+      "dismissed": 4,
+      "broke": 1,
+      "trust": 3
+    },
+    "promotions48": 197
+  },
+  "skill3": {
+    "n": 400,
+    "mean": 73.1332,
+    "se": 0.400223808815589,
+    "levels": {
+      "6": 309,
+      "5": 76,
+      "1": 4,
+      "3": 3,
+      "4": 1,
+      "7": 7
+    },
+    "outcomes": {
+      "completed": 391,
+      "dismissed": 4,
+      "broke": 1,
+      "trust": 4
+    },
+    "promotions48": 199
+  },
+  "skill5": {
+    "n": 400,
+    "mean": 72.7911,
+    "se": 0.4161761266531154,
+    "levels": {
+      "6": 299,
+      "5": 86,
+      "1": 4,
+      "3": 3,
+      "4": 2,
+      "7": 6
+    },
+    "outcomes": {
+      "completed": 388,
+      "dismissed": 4,
+      "broke": 1,
+      "trust": 7
+    },
+    "promotions48": 201
+  }
+}
