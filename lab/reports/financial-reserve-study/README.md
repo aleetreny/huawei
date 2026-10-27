@@ -2,6 +2,8 @@
 
 27 ottobre 2026. Studio autorizzato da Matteo: esplorare con bot, senza quota IA, se proteggere le risorse economiche fin dall'inizio evita le morti successive senza sacrificare le promozioni.
 
+**Seguito:** la [diagnosi dei sopravvissuti senza seconda promozione](../growth-gap-study/README.md) e 1.152 ulteriori partite hanno esplorato priorità di crescita separate e congiunte. Nessuna nuova variante ha giustificato sostituire il controllo con riserva leggera; nessun nuovo nodo di domanda è emerso. I risultati economici qui sotto restano quelli delle due raccolte originarie.
+
 ## Risultato
 
 La protezione economica riduce le insolvenze in entrambi i confronti. La prima versione, più severa, migliora la sopravvivenza ma **non migliora il conteggio dell'obiettivo principale**, seconda promozione con sopravvivenza. Una calibrazione più leggera, congelata prima di altre partite e confrontata con un nuovo controllo, dà un segnale promettente anche su quell'obiettivo.

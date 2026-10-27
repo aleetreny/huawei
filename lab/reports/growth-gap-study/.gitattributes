@@ -1,0 +1,3 @@
+*.json linguist-generated=true
+study-v1/sources/* linguist-generated=true
+balanced-v1/sources/* linguist-generated=true

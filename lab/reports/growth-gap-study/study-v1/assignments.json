@@ -1,0 +1,3842 @@
+[
+  {
+    "position": 0,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 1,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 2,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 3,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 4,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 5,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 6,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 7,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 8,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 9,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 10,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 11,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 12,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 13,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 14,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 15,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 16,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 17,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 18,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 19,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 20,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 21,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 22,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 23,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 24,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 25,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 26,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 27,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 28,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 29,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 30,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 31,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 32,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 33,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 34,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 35,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 36,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 37,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 38,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 39,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 40,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 41,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 42,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 43,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 44,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 45,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 46,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 47,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 48,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 49,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 50,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 51,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 52,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 53,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 54,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 55,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 56,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 57,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 58,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 59,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 60,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 61,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 62,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 63,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 64,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 65,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 66,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 67,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 68,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 69,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 70,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 71,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 72,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 73,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 74,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 75,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 76,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 77,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 78,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 79,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 80,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 81,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 82,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 83,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 84,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 85,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 86,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 87,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 88,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 89,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 90,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 91,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 92,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 93,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 94,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 95,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 96,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 97,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 98,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 99,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 100,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 101,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 102,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 103,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 104,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 105,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 106,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 107,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 108,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 109,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 110,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 111,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 112,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 113,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 114,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 115,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 116,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 117,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 118,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 119,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 120,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 121,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 122,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 123,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 124,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 125,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 126,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 127,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 128,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 129,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 130,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 131,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 132,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 133,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 134,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 135,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 136,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 137,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 138,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 139,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 140,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 141,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 142,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 143,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 144,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 145,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 146,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 147,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 148,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 149,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 150,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 151,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 152,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 153,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 154,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 155,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 156,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 157,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 158,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 159,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 160,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 161,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 162,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 163,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 164,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 165,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 166,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 167,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 168,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 169,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 170,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 171,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 172,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 173,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 174,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 175,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 176,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 177,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 178,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 179,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 180,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 181,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 182,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 183,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 184,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 185,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 186,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 187,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 188,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 189,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 190,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 191,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 192,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 193,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 194,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 195,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 196,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 197,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 198,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 199,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 200,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 201,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 202,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 203,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 204,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 205,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 206,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 207,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 208,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 209,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 210,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 211,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 212,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 213,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 214,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 215,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 216,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 217,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 218,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 219,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 220,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 221,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 222,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 223,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 224,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 225,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 226,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 227,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 228,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 229,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 230,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 231,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 232,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 233,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 234,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 235,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 236,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 237,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 238,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 239,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 240,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 241,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 242,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 243,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 244,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 245,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 246,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 247,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 248,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 249,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 250,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 251,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 252,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 253,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 254,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 255,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 256,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 257,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 258,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 259,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 260,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 261,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 262,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 263,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 264,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 265,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 266,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 267,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 268,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 269,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 270,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 271,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 272,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 273,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 274,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 275,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 276,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 277,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 278,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 279,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 280,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 281,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 282,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 283,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 284,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 285,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 286,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 287,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 288,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 289,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 290,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 291,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 292,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 293,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 294,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 295,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 296,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 297,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 298,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 299,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 300,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 301,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 302,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 303,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 304,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 305,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 306,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 307,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 308,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 309,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 310,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 311,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 312,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 313,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 314,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 315,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 316,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 317,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 318,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 319,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 320,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 321,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 322,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 323,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 324,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 325,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 326,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 327,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 328,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 329,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 330,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 331,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 332,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 333,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 334,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 335,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 336,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 337,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 338,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 339,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 340,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 341,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 342,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 343,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 344,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 345,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 346,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 347,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 348,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 349,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 350,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 351,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 352,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 353,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 354,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 355,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 356,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 357,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 358,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 359,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 360,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 361,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 362,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 363,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 364,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 365,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 366,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 367,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 368,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 369,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 370,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 371,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 372,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 373,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 374,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 375,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 376,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 377,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 378,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 379,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 380,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 381,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 382,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 383,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 384,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 385,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 386,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 387,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 388,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 389,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 390,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 391,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 392,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 393,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 394,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 395,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 396,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 397,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 398,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 399,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 400,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 401,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 402,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 403,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 404,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 405,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 406,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 407,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 408,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 409,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 410,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 411,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 412,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 413,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 414,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 415,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 416,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 417,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 418,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 419,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 420,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 421,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 422,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 423,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 424,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 425,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 426,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 427,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 428,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 429,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 430,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 431,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 432,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 433,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 434,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 435,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 436,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 437,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 438,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 439,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 440,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 441,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 442,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 443,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 444,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 445,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 446,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 447,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 448,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 449,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 450,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 451,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 452,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 453,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 454,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 455,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 456,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 457,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 458,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 459,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 460,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 461,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 462,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 463,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 464,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 465,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 466,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 467,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 468,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 469,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 470,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 471,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 472,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 473,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 474,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 475,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 476,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 477,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 478,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 479,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 480,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 481,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 482,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 483,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 484,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 485,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 486,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 487,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 488,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 489,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 490,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 491,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 492,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 493,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 494,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 495,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 496,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 497,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 498,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 499,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 500,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 501,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 502,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 503,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 504,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 505,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 506,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 507,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 508,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 509,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 510,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 511,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 512,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 513,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 514,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 515,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 516,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 517,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 518,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 519,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 520,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 521,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 522,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 523,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 524,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 525,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 526,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 527,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 528,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 529,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 530,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 531,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 532,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 533,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 534,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 535,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 536,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 537,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 538,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 539,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 540,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 541,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 542,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 543,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 544,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 545,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 546,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 547,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 548,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 549,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 550,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 551,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 552,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 553,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 554,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 555,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 556,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 557,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 558,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 559,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 560,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 561,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 562,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 563,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 564,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 565,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 566,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 567,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 568,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 569,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 570,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 571,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 572,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 573,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 574,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 575,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 576,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 577,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 578,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 579,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 580,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 581,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 582,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 583,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 584,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 585,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 586,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 587,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 588,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 589,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 590,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 591,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 592,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 593,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 594,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 595,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 596,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 597,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 598,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 599,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 600,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 601,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 602,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 603,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 604,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 605,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 606,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 607,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 608,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 609,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 610,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 611,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 612,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 613,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 614,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 615,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 616,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 617,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 618,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 619,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 620,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 621,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 622,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 623,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 624,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 625,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 626,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 627,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 628,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 629,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 630,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 631,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 632,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 633,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 634,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 635,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 636,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 637,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 638,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 639,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 640,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 641,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 642,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 643,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 644,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 645,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 646,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 647,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 648,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 649,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 650,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 651,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 652,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 653,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 654,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 655,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 656,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 657,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 658,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 659,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 660,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 661,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 662,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 663,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 664,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 665,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 666,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 667,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 668,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 669,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 670,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 671,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 672,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 673,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 674,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 675,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 676,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 677,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 678,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 679,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 680,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 681,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 682,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 683,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 684,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 685,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 686,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 687,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 688,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 689,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 690,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 691,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 692,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 693,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 694,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 695,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 696,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 697,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 698,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 699,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 700,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 701,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 702,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 703,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 704,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 705,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 706,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 707,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 708,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 709,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 710,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 711,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 712,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 713,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 714,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 715,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 716,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 717,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 718,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 719,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 720,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 721,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 722,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 723,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 724,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 725,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 726,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 727,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 728,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 729,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 730,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 731,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 732,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 733,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 734,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 735,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 736,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 737,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 738,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 739,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 740,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 741,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 742,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 743,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 744,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 745,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 746,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 747,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 748,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 749,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 750,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 751,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 752,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 753,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 754,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 755,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 756,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 757,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 758,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 759,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 760,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 761,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 762,
+    "arm": "control",
+    "when": "before new_game"
+  },
+  {
+    "position": 763,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 764,
+    "arm": "skill",
+    "when": "before new_game"
+  },
+  {
+    "position": 765,
+    "arm": "output",
+    "when": "before new_game"
+  },
+  {
+    "position": 766,
+    "arm": "network",
+    "when": "before new_game"
+  },
+  {
+    "position": 767,
+    "arm": "control",
+    "when": "before new_game"
+  }
+]
