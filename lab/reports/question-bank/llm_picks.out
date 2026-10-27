@@ -1,0 +1,9 @@
+286 games, 30917 story decisions matched to the catalogue
+haiku       27788 decisions: risky 11.5%, avoidable 6.5%; picks by category {'FIX': 18201, 'GUARD': 4270, 'OWN': 1726, 'ESCALATE': 1214, 'AVOID': 1000, 'SELL': 899, 'HIDE': 231, 'YIELD': 209, 'ATTACK': 26, 'PERSIST': 12}
+           risky picks by category {'FIX': 1847, 'OWN': 585, 'GUARD': 260, 'ESCALATE': 215, 'AVOID': 161, 'SELL': 48, 'HIDE': 39, 'YIELD': 33}
+opus         1154 decisions: risky 13.5%, avoidable 6.5%; picks by category {'FIX': 730, 'GUARD': 152, 'OWN': 82, 'AVOID': 54, 'ESCALATE': 48, 'SELL': 44, 'YIELD': 30, 'HIDE': 13, 'PERSIST': 1}
+           risky picks by category {'FIX': 95, 'OWN': 29, 'ESCALATE': 12, 'AVOID': 7, 'YIELD': 6, 'GUARD': 3, 'HIDE': 2, 'SELL': 2}
+opus~100k    1975 decisions: risky 10.4%, avoidable 5.7%; picks by category {'FIX': 1272, 'GUARD': 300, 'OWN': 104, 'AVOID': 82, 'SELL': 80, 'ESCALATE': 67, 'YIELD': 40, 'HIDE': 28, 'PERSIST': 2}
+           risky picks by category {'FIX': 123, 'OWN': 31, 'AVOID': 17, 'YIELD': 11, 'GUARD': 8, 'ESCALATE': 8, 'HIDE': 6, 'SELL': 1}
+haiku completed: 146 games, avoidable risk steps per 100 decisions 15.9
+haiku eliminated: 110 games, avoidable risk steps per 100 decisions 21.0

@@ -1,0 +1,6550 @@
+{
+"0085f55f8dd0:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"0085f55f8dd0:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"018d96935057:1": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"018d96935057:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"01baf664974a:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"01baf664974a:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"033caaadb176:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"033caaadb176:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"0364764584dd:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"0364764584dd:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"0364764584dd:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"03bc33cddf88:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"03bc33cddf88:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"03bc33cddf88:3": {
+"up": [],
+"down": [
+"skill",
+"output"
+]
+},
+"0755e0948935:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"07c8e918cda5:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"07c8e918cda5:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"07c8e918cda5:3": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"07f626b6d9cb:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"07f626b6d9cb:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"07f7c3477a61:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"07f7c3477a61:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"0896936dad40:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"0896936dad40:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"08ef8a7b4de6:1": {
+"up": [
+"output",
+"skill"
+],
+"down": []
+},
+"08ef8a7b4de6:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"096807f07880:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"0a9e3caf4970:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"0a9e3caf4970:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"0a9e3caf4970:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"0adf8ea56cf9:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"0adf8ea56cf9:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"0adf8ea56cf9:3": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"0c5fa01a0687:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"0c5fa01a0687:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"0d17bad6dec1:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"0d17bad6dec1:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"0d41ef234c09:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"0d41ef234c09:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"0d41ef234c09:3": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"0d4638eb2f6b:1": {
+"up": [
+"health",
+"skill"
+],
+"down": []
+},
+"0d4638eb2f6b:2": {
+"up": [],
+"down": [
+"health",
+"dignity"
+]
+},
+"0d4638eb2f6b:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"0d67061a569f:1": {
+"up": [
+"network",
+"output"
+],
+"down": []
+},
+"0d67061a569f:2": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"0de905fc3c15:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"0de905fc3c15:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"0e1dcfcee727:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"0e1dcfcee727:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"0e28adfafed4:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"0e28adfafed4:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"0eb42f1c2467:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"0eb42f1c2467:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"0eb42f1c2467:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"0eb42f1c2467:4": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"0f346d6e4d3e:1": {
+"up": [
+"health",
+"dignity"
+],
+"down": []
+},
+"0f346d6e4d3e:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"0f975ddc5526:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"0f975ddc5526:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"0ff722c16925:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"0ff722c16925:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"13b41a44f8c9:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"13b41a44f8c9:2": {
+"up": [
+"dignity",
+"health"
+],
+"down": []
+},
+"13b41a44f8c9:3": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"13b41a44f8c9:4": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"14a55d5bc427:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"14a55d5bc427:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"14a55d5bc427:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"14eca1b3be70:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"14eca1b3be70:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"150dfc3384c1:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"150dfc3384c1:2": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"1511245e8c5e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"1511245e8c5e:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"1511245e8c5e:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"15bda0715899:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"15bda0715899:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"15bda0715899:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"168dba5be21a:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"16b81625d0ab:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"16b81625d0ab:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"181910e6b114:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"181910e6b114:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"19b8d4428dfd:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"19b8d4428dfd:2": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"19b8d4428dfd:3": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"19f27bf33801:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"19f27bf33801:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"1a36d76efe7f:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"1a36d76efe7f:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"1a36d76efe7f:3": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"1a6085e46de5:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"1a6085e46de5:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"1b2dba28e4f1:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"1b2dba28e4f1:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"1b60e9026be0:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"1b60e9026be0:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"1c06b932cd1a:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"1c06b932cd1a:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"1c1fe0a733df:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"1c1fe0a733df:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"1d60300df07b:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"1d60300df07b:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"1ddb9e7a8fd1:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"1f068500dd8d:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"1f27ca8a00ca:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"1f27ca8a00ca:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"1f27ca8a00ca:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"1f27ca8a00ca:4": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"1f8f614bb21c:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"1f8f614bb21c:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"1fd3c946c998:1": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"1fd3c946c998:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"1fd3c946c998:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"1fe4d614ba24:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"1fe4d614ba24:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"207aa5bc82c1:1": {
+"up": [
+"output",
+"network"
+],
+"down": []
+},
+"207aa5bc82c1:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"217298e3c07d:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"217298e3c07d:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"21c9b9147fa9:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"21c9b9147fa9:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"21c9b9147fa9:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"22432e97c716:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"22432e97c716:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"232135469aa8:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"232135469aa8:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"2323596a0539:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"2323596a0539:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"24cd954dc776:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"24cd954dc776:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"25a609bfc7e1:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"25a609bfc7e1:2": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"25a609bfc7e1:3": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"2609a7ac9b1c:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"2609a7ac9b1c:2": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"27004c40b56c:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"27004c40b56c:2": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"27004c40b56c:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"27004c40b56c:4": {
+"up": [
+"health"
+],
+"down": []
+},
+"270e81bd6397:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"270e81bd6397:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"275f67d8928c:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"275f67d8928c:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"278bead05620:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"278bead05620:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"28338d2cb560:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"28338d2cb560:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"28338d2cb560:3": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"286812cbad17:1": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"286812cbad17:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"29693d725de0:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"29693d725de0:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"296dab11327d:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"296dab11327d:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"29a10f21dbab:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"29a10f21dbab:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"29a10f21dbab:3": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"29d7b9b01079:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"2a24299330d4:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"2a24299330d4:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"2a4b6d5ebdb1:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"2a4b6d5ebdb1:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"2ae18ed1c0f9:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"2ae18ed1c0f9:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"2ae18ed1c0f9:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"2aec8a18e126:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"2aec8a18e126:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"2aec8a18e126:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"2aec8a18e126:4": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"2afc19f6340b:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"2afc19f6340b:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"2bc01b1638f2:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"2bc01b1638f2:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"2cf4b074e7ca:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"2cf4b074e7ca:2": {
+"up": [
+"health"
+],
+"down": [
+"skill"
+]
+},
+"2cf4b074e7ca:3": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"2df0b2cd5662:1": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"2df0b2cd5662:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"2eacb385fd54:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"2eacb385fd54:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"2fa0e56e4058:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"2fa0e56e4058:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"2fcf4c1df6d3:1": {
+"up": [
+"dignity",
+"skill"
+],
+"down": []
+},
+"2fcf4c1df6d3:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"300820081fbe:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"300820081fbe:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"30b909c271df:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"30b909c271df:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"30cb2e5fe268:1": {
+"up": [
+"dignity",
+"health"
+],
+"down": []
+},
+"30cb2e5fe268:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"30cb2e5fe268:3": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"3346fbd482a3:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"3346fbd482a3:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"3387abd67dfe:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"3387abd67dfe:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"344ab51bb479:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"344ab51bb479:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"36a72de95b64:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"36a72de95b64:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"36a72de95b64:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"396f026fa76e:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"396f026fa76e:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"396f026fa76e:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"3972f45b76ab:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"3972f45b76ab:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"3a7e7317cad7:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"3a7e7317cad7:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"3a8aea444ceb:1": {
+"up": [
+"health",
+"dignity"
+],
+"down": []
+},
+"3a8aea444ceb:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"3b2d6186a1e4:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"3b2d6186a1e4:2": {
+"up": [],
+"down": [
+"output",
+"network"
+]
+},
+"3b488977854a:1": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"3b488977854a:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"3b7f405b90f7:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"3b7f405b90f7:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"3b7f405b90f7:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"3d24b299375e:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"3d24b299375e:2": {
+"up": [
+"output",
+"health"
+],
+"down": [
+"network"
+]
+},
+"3d24b299375e:3": {
+"up": [
+"network"
+],
+"down": []
+},
+"3d62ca15fbb5:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"3d62ca15fbb5:2": {
+"up": [
+"network"
+],
+"down": [
+"health",
+"output"
+]
+},
+"3d8172a6f9b2:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"3d8172a6f9b2:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"3e82cb4c3196:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"3e82cb4c3196:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"3f7c2f0d5bfb:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"3f7c2f0d5bfb:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"3ffa30e45adc:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"3ffa30e45adc:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"40890a450f1c:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"40890a450f1c:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"43cde09e9d6e:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"43cde09e9d6e:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"43cde09e9d6e:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"4437b842d1d8:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"4437b842d1d8:2": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"447e2772ea5a:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"447e2772ea5a:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"463563d349a8:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"463563d349a8:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"46685c440d04:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"46685c440d04:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"46685c440d04:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"46b115f9aa63:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"46b115f9aa63:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"46b115f9aa63:3": {
+"up": [
+"network"
+],
+"down": []
+},
+"49c605f69076:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"49c605f69076:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"49cad4b1bdb2:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"49cad4b1bdb2:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"49f5cda30810:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"49f5cda30810:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"49f5cda30810:3": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"4a1527dd4a1d:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"4a1527dd4a1d:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"4a1527dd4a1d:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"4ab0a079865b:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"4ab0a079865b:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"4c86f5e3ca5c:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"4c86f5e3ca5c:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"4c86f5e3ca5c:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"50a1ad6c7aee:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"50a1ad6c7aee:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"50a50a700e1d:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"50a50a700e1d:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"50d9bc1b5a7b:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"50d9bc1b5a7b:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"51a246f17b72:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"51a246f17b72:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"51a246f17b72:3": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"51b982742b80:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"51b982742b80:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"51b982742b80:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"5204148abfa9:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"5204148abfa9:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"52a77b82154d:1": {
+"up": [
+"skill"
+],
+"down": [
+"dignity"
+]
+},
+"52a77b82154d:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"54e5c54d627f:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"54e5c54d627f:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"55be54a078f2:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"55be54a078f2:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"55be54a078f2:3": {
+"up": [],
+"down": [
+"skill",
+"dignity"
+]
+},
+"55ea7ab10ab8:1": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"55ea7ab10ab8:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"55ea7ab10ab8:3": {
+"up": [
+"network"
+],
+"down": [
+"skill"
+]
+},
+"566765c9f14b:1": {
+"up": [
+"output",
+"network"
+],
+"down": [
+"health"
+]
+},
+"566765c9f14b:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"57b0f72c07c2:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"57b0f72c07c2:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"57bc60dd65d8:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"57bc60dd65d8:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"57bc60dd65d8:3": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"57cfacff9564:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"57cfacff9564:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"57cfacff9564:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"586fc69e28b6:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"586fc69e28b6:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"586fc69e28b6:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"58898ba74773:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"58898ba74773:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"596b77b5116b:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"596b77b5116b:2": {
+"up": [],
+"down": [
+"output",
+"health"
+]
+},
+"5a3fa16ce834:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"5a3fa16ce834:2": {
+"up": [
+"network"
+],
+"down": [
+"output",
+"health"
+]
+},
+"5a3fa16ce834:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"5af41f10eca7:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"5af41f10eca7:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"5b304c0c74aa:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"5b304c0c74aa:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"5b47e404352f:1": {
+"up": [
+"skill",
+"output"
+],
+"down": [
+"network"
+]
+},
+"5b47e404352f:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"5d2ce1e8c306:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"5d2ce1e8c306:2": {
+"up": [
+"network"
+],
+"down": [
+"skill"
+]
+},
+"5d2ce1e8c306:3": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"5d4b22fb4497:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"5d4b22fb4497:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"5dd8637a70d4:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"5dd8637a70d4:2": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"601bc0a5175e:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"601bc0a5175e:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"601bc0a5175e:3": {
+"up": [],
+"down": []
+},
+"601bc0a5175e:4": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"606ffe5fc95e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"606ffe5fc95e:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"606ffe5fc95e:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"615eebee3ab7:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"615eebee3ab7:2": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"615eebee3ab7:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"620f31dc7c8e:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"620f31dc7c8e:2": {
+"up": [],
+"down": []
+},
+"620f31dc7c8e:3": {
+"up": [],
+"down": [
+"output",
+"network"
+]
+},
+"6268bfe7fb13:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"6268bfe7fb13:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"6268bfe7fb13:3": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"626e71b5e7d5:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"626e71b5e7d5:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"6377deb5cab5:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"6377deb5cab5:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"63f37880930a:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"63f37880930a:2": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"642bb20be594:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"642bb20be594:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"64b3abc9c97d:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"64b3abc9c97d:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"64b3abc9c97d:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"652995a4e87d:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"652995a4e87d:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"6675f6eb93a2:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"6675f6eb93a2:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"67b294bc6e4f:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"67b294bc6e4f:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"68892377cb7e:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"68892377cb7e:2": {
+"up": [],
+"down": [
+"dignity",
+"output"
+]
+},
+"68892377cb7e:3": {
+"up": [],
+"down": [
+"health",
+"output"
+]
+},
+"688b3634ff34:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"688b3634ff34:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"6a1d1ec95b66:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"6a1d1ec95b66:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"6b00dbae7557:1": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"6b00dbae7557:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"6b0f78038f1f:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"6b0f78038f1f:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"6b61efeefb32:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"6b61efeefb32:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"6d0915d4c6c3:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"6d386680bb54:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"6d386680bb54:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"6d5fb9c2f294:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"6d5fb9c2f294:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"6df399d431b1:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"6df399d431b1:2": {
+"up": [],
+"down": [
+"skill",
+"output"
+]
+},
+"6e016db0f86a:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"6e016db0f86a:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"6e13acf42332:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"6e13acf42332:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"6e13acf42332:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"6e13acf42332:4": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"6e91406739d1:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"6e91406739d1:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"6eaaec0631ba:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"6ef410af405f:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"6ef410af405f:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"6f83d26ea9d8:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"6f83d26ea9d8:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"71251431c1fc:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"71251431c1fc:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"71251431c1fc:3": {
+"up": [],
+"down": [
+"health"
+]
+},
+"721fa2282e6e:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"721fa2282e6e:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"7234f844b95c:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"7234f844b95c:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"7234f844b95c:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"724082d3e27e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"health"
+]
+},
+"724082d3e27e:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"7299fe171a1b:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"7299fe171a1b:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"7299fe171a1b:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"72e498369fda:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"72e498369fda:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"7352a0e1aef9:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"7352a0e1aef9:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"735ffae103c9:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"735ffae103c9:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"73dc25a030ab:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"73dc25a030ab:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"73fd0f35b02d:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"73fd0f35b02d:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"74a86f489578:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"74a86f489578:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"74d9a35755c8:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": [
+"network"
+]
+},
+"74d9a35755c8:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"74d9a35755c8:3": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"74d9a35755c8:4": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"7520ec2f8620:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"7520ec2f8620:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"75649c2a9f1c:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": [
+"health"
+]
+},
+"75649c2a9f1c:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"75649c2a9f1c:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"758728710c9c:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"758728710c9c:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"758728710c9c:3": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"762ff298d9d1:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"762ff298d9d1:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"76bf24f2cab8:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"76bf24f2cab8:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"77275d2f0b94:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"77275d2f0b94:2": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"77488149beeb:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"77488149beeb:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"77488149beeb:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"774ee0aba7a6:1": {
+"up": [
+"dignity",
+"health"
+],
+"down": []
+},
+"774ee0aba7a6:2": {
+"up": [],
+"down": [
+"health",
+"dignity"
+]
+},
+"77660e585b81:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"77660e585b81:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"77660e585b81:3": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"785d8f808711:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"785d8f808711:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"78d7cfb4cd70:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"78d7cfb4cd70:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"78e43c634ee6:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"78e43c634ee6:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"797a9bb03684:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"797a9bb03684:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"797a9bb03684:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"79970c0e0631:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"79970c0e0631:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"7ada24db9b30:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"7ada24db9b30:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"7ada24db9b30:3": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"7c9a905a3ed3:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"7c9a905a3ed3:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"7e8baea12fb0:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"7e8baea12fb0:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network",
+"output"
+]
+},
+"7f4fb6deb62e:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"7f4fb6deb62e:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"7f809673d971:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"7f809673d971:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"7fadd88f7d08:1": {
+"up": [
+"health",
+"skill"
+],
+"down": []
+},
+"7fadd88f7d08:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"7fadd88f7d08:3": {
+"up": [],
+"down": [
+"health",
+"output"
+]
+},
+"7fc9c29f1065:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"7fc9c29f1065:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"8034d7a663f4:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"8034d7a663f4:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"805cf4026a03:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"805cf4026a03:2": {
+"up": [],
+"down": [
+"output",
+"health"
+]
+},
+"8060da8ac6e7:1": {
+"up": [
+"health",
+"network"
+],
+"down": []
+},
+"8060da8ac6e7:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"806a7a11d21f:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"806a7a11d21f:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"807f005a6adb:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"807f005a6adb:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"80d596434dd5:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"80d596434dd5:2": {
+"up": [],
+"down": [
+"health",
+"dignity"
+]
+},
+"80d596434dd5:3": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"817595b70dcd:1": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"817595b70dcd:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"81b3c6784393:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"81b3c6784393:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"81b3c6784393:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"81fc813b94f7:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"81fc813b94f7:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"82d4b8110ef5:1": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"82d4b8110ef5:2": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"82d4b8110ef5:3": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"84192d5a7b02:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"84192d5a7b02:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"845e73bb76dc:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"845e73bb76dc:2": {
+"up": [
+"health"
+],
+"down": [
+"dignity"
+]
+},
+"84e404ca743c:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"84e404ca743c:2": {
+"up": [],
+"down": []
+},
+"850b7ff65ee4:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"850b7ff65ee4:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"850b7ff65ee4:3": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"857dc2b16712:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"857dc2b16712:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"85daedc9b56c:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"85daedc9b56c:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"85daedc9b56c:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"8640a52844d2:1": {
+"up": [
+"skill",
+"network"
+],
+"down": []
+},
+"8640a52844d2:2": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"8640a52844d2:3": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"872c2542242f:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"872c2542242f:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"87419cb48b1b:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"87419cb48b1b:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"8b5416657168:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"8b5416657168:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"8b5416657168:3": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"8b573078a5b5:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"8b573078a5b5:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"8b573078a5b5:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"8b6248c5eb13:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"8b6248c5eb13:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"8b9bf5486c95:1": {
+"up": [
+"network",
+"skill"
+],
+"down": [
+"health"
+]
+},
+"8b9bf5486c95:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"8b9bf5486c95:3": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"8c81681b83e4:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"8c81681b83e4:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"8cd89c9101bc:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"8cd89c9101bc:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"8cd89c9101bc:3": {
+"up": [
+"health",
+"network"
+],
+"down": []
+},
+"8e3aff4f9b76:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"8e3aff4f9b76:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"8e3aff4f9b76:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"8ee638c2e75c:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"8ee638c2e75c:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"8ee638c2e75c:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"8f418a6facbe:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"8f418a6facbe:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"8fad09397a68:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"8fad09397a68:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"8fad09397a68:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"9080e113a19c:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"9080e113a19c:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"90c39716bd3e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"health"
+]
+},
+"90c39716bd3e:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"90c39716bd3e:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9178d6ce5688:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"9178d6ce5688:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"92782979ad4e:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"92782979ad4e:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"927ed56a73ab:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"927ed56a73ab:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"933432539f49:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"933432539f49:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"933432539f49:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"939537b6c800:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"939537b6c800:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"939537b6c800:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"93980eac9a13:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"93980eac9a13:2": {
+"up": [
+"network"
+],
+"down": []
+},
+"944fa5bf9273:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"944fa5bf9273:2": {
+"up": [],
+"down": [
+"dignity",
+"output"
+]
+},
+"944fa5bf9273:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"968e25fb5d70:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"968e25fb5d70:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"96938b0a0a7b:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": [
+"network"
+]
+},
+"96938b0a0a7b:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"96938b0a0a7b:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"96938b0a0a7b:4": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"97d36c58735f:1": {
+"up": [
+"skill"
+],
+"down": [
+"output"
+]
+},
+"97d36c58735f:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"989090f05b39:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"989090f05b39:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"989090f05b39:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"989377c65575:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"989377c65575:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"989377c65575:3": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"998140e25476:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"998140e25476:2": {
+"up": [
+"output"
+],
+"down": [
+"health",
+"dignity"
+]
+},
+"99f269c9e01e:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"99f269c9e01e:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"99f269c9e01e:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9a1fc53ea201:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"9a1fc53ea201:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9a1fc53ea201:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"9a31f8d9f452:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"9a31f8d9f452:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"9a769ee2a9cf:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"9a769ee2a9cf:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9a769ee2a9cf:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9b0e720933d0:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"9b0e720933d0:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"9c3a2272f29c:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"9c3a2272f29c:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"9cba42517174:1": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"9cba42517174:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9cba42517174:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9d6837da9d35:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"9d6837da9d35:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9dda33820227:1": {
+"up": [
+"health",
+"dignity"
+],
+"down": []
+},
+"9dda33820227:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"9e7e8aa0f326:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"9e81d578e317:1": {
+"up": [
+"output",
+"health"
+],
+"down": []
+},
+"9e81d578e317:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"9eb8dd3309ae:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"9eb8dd3309ae:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"9ef86d653154:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9ef86d653154:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9ef86d653154:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"9f1b3214cac8:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"9f1b3214cac8:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"9fde1c3e54a1:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"9fde1c3e54a1:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"a14372106c74:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"a14372106c74:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"a17faeec0f07:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"a17faeec0f07:2": {
+"up": [
+"network"
+],
+"down": [
+"health",
+"output"
+]
+},
+"a17faeec0f07:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"a3e5e635212d:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"a3e5e635212d:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"a51bfd3b129a:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"a51bfd3b129a:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"a51bfd3b129a:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"a584dd5abf77:1": {
+"up": [
+"network",
+"output"
+],
+"down": []
+},
+"a584dd5abf77:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"a58cc54807be:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"a58cc54807be:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"a58cc54807be:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"a6ec66a39db6:1": {
+"up": [
+"network",
+"skill"
+],
+"down": [
+"health"
+]
+},
+"a6ec66a39db6:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"a75bc0f22588:1": {
+"up": [],
+"down": []
+},
+"a75bc0f22588:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"a75bc0f22588:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"a75bc0f22588:4": {
+"up": [
+"network"
+],
+"down": []
+},
+"a7aefe689dfe:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"a7aefe689dfe:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"a89cf738e92b:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"a89cf738e92b:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"a89cf738e92b:3": {
+"up": [
+"dignity",
+"health"
+],
+"down": []
+},
+"a955c62d2667:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"a955c62d2667:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"aa16cff401b7:1": {
+"up": [
+"skill",
+"network"
+],
+"down": []
+},
+"aa16cff401b7:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"aa16cff401b7:3": {
+"up": [],
+"down": [
+"output",
+"skill"
+]
+},
+"aa3e6e549e1e:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"aaeb00b0e947:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"aaeb00b0e947:2": {
+"up": [],
+"down": [
+"dignity",
+"output"
+]
+},
+"ab5f34d4cbe1:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"ab5f34d4cbe1:2": {
+"up": [
+"network"
+],
+"down": [
+"skill"
+]
+},
+"ab9a3b9e678c:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"ab9a3b9e678c:2": {
+"up": [
+"health"
+],
+"down": [
+"dignity"
+]
+},
+"ab9a3b9e678c:3": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"ac3127970b24:1": {
+"up": [
+"skill",
+"network"
+],
+"down": [
+"health"
+]
+},
+"ac3127970b24:2": {
+"up": [
+"health"
+],
+"down": [
+"skill"
+]
+},
+"ac3127970b24:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"ac44790efd45:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"ac44790efd45:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"ad0a82ef8777:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"ad0a82ef8777:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"ad52a153fc57:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"ad52a153fc57:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"ada84185618b:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"ada84185618b:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"ae90bae63391:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"ae90bae63391:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"ae90bae63391:3": {
+"up": [],
+"down": [
+"health"
+]
+},
+"b065278afba1:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"b065278afba1:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"b17ec9623cc5:1": {
+"up": [
+"network",
+"skill"
+],
+"down": []
+},
+"b17ec9623cc5:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"b1effdb77fbb:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"b1effdb77fbb:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"b3cb36a36e7d:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"b3cb36a36e7d:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"b3cb36a36e7d:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"b3f7d30c02d4:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"b3f7d30c02d4:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"b4e949afe460:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"b4e949afe460:2": {
+"up": [
+"output"
+],
+"down": []
+},
+"b4e949afe460:3": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"b4e949afe460:4": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"b526a7bdc370:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"b526a7bdc370:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"b5a09286f316:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"b74621ceb19e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"b74621ceb19e:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"b76a593aac7d:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"b76a593aac7d:2": {
+"up": [
+"dignity",
+"output"
+],
+"down": [
+"network"
+]
+},
+"b778b84f59a2:1": {
+"up": [
+"dignity"
+],
+"down": [
+"health"
+]
+},
+"b863327870ac:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"b863327870ac:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"b8bb70d839d4:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"b8bb70d839d4:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"b8bb70d839d4:3": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"b8cd3e61c27b:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"b8cd3e61c27b:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"b987e684dad9:1": {
+"up": [
+"skill",
+"network"
+],
+"down": []
+},
+"b987e684dad9:2": {
+"up": [],
+"down": [
+"network",
+"skill"
+]
+},
+"b987e684dad9:3": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"ba8c41707c24:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"ba8c41707c24:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"baa67f453b26:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"baa67f453b26:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"bb0dd5f0ea00:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"bb0dd5f0ea00:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"bb11438fdc75:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"bb11438fdc75:2": {
+"up": [],
+"down": [
+"output",
+"skill"
+]
+},
+"bb11438fdc75:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"bb5ccb9743b4:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"bb5ccb9743b4:2": {
+"up": [
+"output"
+],
+"down": []
+},
+"bb8eb260914a:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"bb8eb260914a:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"bb8eb260914a:3": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"bc47083fd307:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"bc47083fd307:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"bc47083fd307:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"bc4993d1e2d6:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"bc4993d1e2d6:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"bc7c1522a743:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"bc7c1522a743:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"bd04d6e787f9:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"bd04d6e787f9:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"bd1bc7fd3328:1": {
+"up": [],
+"down": []
+},
+"bd1bc7fd3328:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"bd1bc7fd3328:3": {
+"up": [],
+"down": []
+},
+"bd24f8d08a0b:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"bd24f8d08a0b:2": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"bd24f8d08a0b:3": {
+"up": [
+"network"
+],
+"down": []
+},
+"bd24f8d08a0b:4": {
+"up": [],
+"down": [
+"network"
+]
+},
+"bf15b3541d28:1": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"bf15b3541d28:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"bf16e66fcb1f:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"bf16e66fcb1f:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"bf4b670138f3:1": {
+"up": [],
+"down": []
+},
+"bf4b670138f3:2": {
+"up": [],
+"down": []
+},
+"bf4b670138f3:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"c0119ebd042a:1": {
+"up": [
+"network",
+"dignity"
+],
+"down": []
+},
+"c0119ebd042a:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"c0119ebd042a:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"c1069c37da9f:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"c1069c37da9f:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"c146648a91af:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"c146648a91af:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"c146648a91af:3": {
+"up": [
+"network"
+],
+"down": []
+},
+"c180d2405ffb:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"c180d2405ffb:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"c29bd1377046:1": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"c29bd1377046:2": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"c32cb98e49bf:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"c32cb98e49bf:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"c399a11d5d5d:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"c399a11d5d5d:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"c42d909511ad:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"c42d909511ad:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"c4c50e3cc4c6:1": {
+"up": [
+"output",
+"network"
+],
+"down": []
+},
+"c4c50e3cc4c6:2": {
+"up": [
+"output"
+],
+"down": [
+"network",
+"dignity"
+]
+},
+"c4c50e3cc4c6:3": {
+"up": [],
+"down": [
+"output",
+"network"
+]
+},
+"c5255c36c7ac:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"c5255c36c7ac:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"c5255c36c7ac:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"c6a8b64ee0da:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"c6a8b64ee0da:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"c6a8b64ee0da:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"c733fe736423:1": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"c733fe736423:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"c761ed5d2e85:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"c761ed5d2e85:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"c761ed5d2e85:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"c79b9c4ef557:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"c9ee8f93505b:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"c9ee8f93505b:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"ca620a2683a8:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"ca620a2683a8:2": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"cacdaf5c484e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"cacdaf5c484e:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"cc05a015912b:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"cc05a015912b:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"ce19f6fbc898:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": [
+"network"
+]
+},
+"ce19f6fbc898:2": {
+"up": [],
+"down": [
+"dignity",
+"output"
+]
+},
+"cfd501ed7504:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"cfd501ed7504:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"d00919181ae0:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"d00919181ae0:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"d05ff804187a:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"d05ff804187a:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"d05ff804187a:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"d0bc6fbafd8a:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"d0bc6fbafd8a:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"d0e4a10f3649:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"d0e4a10f3649:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"d0e4a10f3649:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"d0e4a10f3649:4": {
+"up": [],
+"down": []
+},
+"d12cb1323b3a:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"d12cb1323b3a:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"d12cb1323b3a:3": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"d205454b1b10:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"d205454b1b10:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"d389f5a4418e:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"d389f5a4418e:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"d389f5a4418e:3": {
+"up": [],
+"down": [
+"dignity",
+"output"
+]
+},
+"d3df603756a4:1": {
+"up": [
+"network",
+"output"
+],
+"down": []
+},
+"d4631c5f2e93:1": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"d4631c5f2e93:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"d5435f95e2de:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"d5435f95e2de:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"d5435f95e2de:3": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"d674ff2c9f08:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"d674ff2c9f08:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"d6bc318b4981:1": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"d6bc318b4981:2": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"d6d7a7d4fb8b:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"d6d7a7d4fb8b:2": {
+"up": [
+"skill"
+],
+"down": [
+"network"
+]
+},
+"d6d7a7d4fb8b:3": {
+"up": [],
+"down": [
+"network",
+"output"
+]
+},
+"d70b2d6f0af7:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"d70b2d6f0af7:2": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"d7ae23484f41:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"d8263f1dd1b7:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"d8263f1dd1b7:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"d8263f1dd1b7:3": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"d827bc6044d9:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"d827bc6044d9:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"d8560ce9b512:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"d8560ce9b512:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"d8c4685218df:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"d8c4685218df:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"d8c4685218df:3": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"d9f24378d34d:1": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"d9f24378d34d:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"dafe55b72a3a:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"dafe55b72a3a:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"db4956f47d81:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"db4956f47d81:2": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"dd42ec7d098d:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"dd42ec7d098d:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"dd42ec7d098d:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"dd70cf8fec5c:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"dd70cf8fec5c:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"dd70cf8fec5c:3": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"df0f7ea33696:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"df0f7ea33696:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"df176d515a61:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"df176d515a61:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"df3a5694d7b3:1": {
+"up": [
+"dignity"
+],
+"down": [
+"health"
+]
+},
+"df3a5694d7b3:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"df3b77834e73:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"df3b77834e73:2": {
+"up": [
+"output"
+],
+"down": [
+"network",
+"dignity"
+]
+},
+"e09fb7b3f3c2:1": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"e09fb7b3f3c2:2": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"e15d3d102237:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"e15d3d102237:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"e15d3d102237:3": {
+"up": [],
+"down": [
+"output",
+"dignity"
+]
+},
+"e265df4c26ea:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"e265df4c26ea:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"e2d9e95cfaa3:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"e2d9e95cfaa3:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"e2d9e95cfaa3:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"e3310018ad80:1": {
+"up": [
+"skill"
+],
+"down": [
+"health"
+]
+},
+"e3310018ad80:2": {
+"up": [
+"health"
+],
+"down": [
+"output"
+]
+},
+"e3310018ad80:3": {
+"up": [],
+"down": [
+"dignity",
+"network"
+]
+},
+"e3310018ad80:4": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"e344277cc05c:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"e344277cc05c:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"e4d9556b8ea5:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"e4d9556b8ea5:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"e6f094afadfa:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"e795a184adf7:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"e795a184adf7:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"e79bb72a3d10:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"e79bb72a3d10:2": {
+"up": [
+"output"
+],
+"down": []
+},
+"e79bb72a3d10:3": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"e7f2a966b4c7:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"e7f2a966b4c7:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"e895c77e599a:1": {
+"up": [
+"output"
+],
+"down": []
+},
+"e895c77e599a:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"eb3949a16468:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"eb3949a16468:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"eb654ba87e83:1": {
+"up": [
+"skill",
+"dignity"
+],
+"down": []
+},
+"ec527ccbc4a8:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"ec527ccbc4a8:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"ed337e5b57b4:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"ed337e5b57b4:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"ee931e41291f:1": {
+"up": [
+"output"
+],
+"down": [
+"network"
+]
+},
+"efc2085cd900:1": {
+"up": [
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"efc2085cd900:2": {
+"up": [
+"output"
+],
+"down": [
+"dignity"
+]
+},
+"f017a8240772:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f017a8240772:2": {
+"up": [
+"output"
+],
+"down": []
+},
+"f0e348bd43db:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"f0e348bd43db:2": {
+"up": [],
+"down": [
+"network"
+]
+},
+"f0ff4ae34269:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"f0ff4ae34269:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"f140d5344d9f:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f140d5344d9f:2": {
+"up": [],
+"down": [
+"output"
+]
+},
+"f140d5344d9f:3": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"f2055b5b73d4:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f2055b5b73d4:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"f2055b5b73d4:3": {
+"up": [],
+"down": [
+"output"
+]
+},
+"f2ae5b8d98cb:1": {
+"up": [
+"network"
+],
+"down": []
+},
+"f2ae5b8d98cb:2": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f2b851ecccd1:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"f2c824141b8d:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"f2c824141b8d:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"f36455cc968e:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"f36455cc968e:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"f36455cc968e:3": {
+"up": [
+"output",
+"dignity"
+],
+"down": []
+},
+"f4b3d2e1b543:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f4b3d2e1b543:2": {
+"up": [
+"output"
+],
+"down": []
+},
+"f4b3d2e1b543:3": {
+"up": [],
+"down": [
+"output",
+"network"
+]
+},
+"f4e37dc9c0e9:1": {
+"up": [
+"health",
+"dignity"
+],
+"down": []
+},
+"f4e37dc9c0e9:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"f4e37dc9c0e9:3": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"f5141bfadc00:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"f5141bfadc00:2": {
+"up": [
+"output"
+],
+"down": [
+"health"
+]
+},
+"f6855d7a804d:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"f6855d7a804d:2": {
+"up": [],
+"down": [
+"skill"
+]
+},
+"f6855d7a804d:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"f696567d0062:1": {
+"up": [
+"dignity",
+"output"
+],
+"down": []
+},
+"f819346123f7:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f819346123f7:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"f83bdf70ef64:1": {
+"up": [
+"dignity"
+],
+"down": []
+},
+"f83bdf70ef64:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"f874c81e497c:1": {
+"up": [
+"health",
+"dignity"
+],
+"down": [
+"output"
+]
+},
+"f874c81e497c:2": {
+"up": [
+"output"
+],
+"down": [
+"health",
+"dignity"
+]
+},
+"f919cb29457e:1": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"f919cb29457e:2": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"f998abcab2f4:1": {
+"up": [
+"network",
+"output"
+],
+"down": []
+},
+"f998abcab2f4:2": {
+"up": [
+"network"
+],
+"down": [
+"output"
+]
+},
+"fbbc5dc173d9:1": {
+"up": [
+"network"
+],
+"down": [
+"health"
+]
+},
+"fbbc5dc173d9:2": {
+"up": [
+"health"
+],
+"down": [
+"network"
+]
+},
+"fcafef46f4d4:1": {
+"up": [
+"skill",
+"output"
+],
+"down": []
+},
+"fcafef46f4d4:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"fce9f15f4099:1": {
+"up": [
+"health"
+],
+"down": []
+},
+"fce9f15f4099:2": {
+"up": [],
+"down": [
+"health"
+]
+},
+"fdefc81be72f:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"fdefc81be72f:2": {
+"up": [],
+"down": [
+"network",
+"dignity"
+]
+},
+"fdefc81be72f:3": {
+"up": [
+"health"
+],
+"down": []
+},
+"fe02373aed39:1": {
+"up": [
+"skill"
+],
+"down": []
+},
+"fe02373aed39:2": {
+"up": [
+"output"
+],
+"down": [
+"skill"
+]
+},
+"fe02373aed39:3": {
+"up": [],
+"down": [
+"network"
+]
+},
+"fe17b4acc2cc:1": {
+"up": [
+"dignity",
+"network"
+],
+"down": []
+},
+"fe17b4acc2cc:2": {
+"up": [],
+"down": [
+"dignity"
+]
+},
+"fe69155b8239:1": {
+"up": [
+"dignity"
+],
+"down": [
+"network"
+]
+},
+"fe69155b8239:2": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+},
+"fe69155b8239:3": {
+"up": [
+"network"
+],
+"down": [
+"dignity"
+]
+}
+}
