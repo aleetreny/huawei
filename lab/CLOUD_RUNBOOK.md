@@ -1,6 +1,6 @@
 # Running CareerLab unattended in a Claude Code cloud session
 
-Verified on 26 Oct 2026 (`lab/reports/cloud-portability-2026-10-26.md` on branch `cloud-portability-test`). The container has 4 vCPUs and 15 GiB of memory, and `claude` is authenticated through the session's OAuth token. A Haiku worker completed a 48-month episode in 7.7 minutes. Container storage is ephemeral, so everything that matters must be pushed.
+Verified on 26 Oct 2026 (`lab/reports/historico/cloud-portability-2026-10-26.md` on branch `cloud-portability-test`). The container has 4 vCPUs and 15 GiB of memory, and `claude` is authenticated through the session's OAuth token. A Haiku worker completed a 48-month episode in 7.7 minutes. Container storage is ephemeral, so everything that matters must be pushed.
 
 ```sh
 uv sync

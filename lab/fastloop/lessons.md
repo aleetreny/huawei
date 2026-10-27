@@ -89,7 +89,7 @@ Race Haiku [REG] unless marked.
 
 ## T18 lab by period (27 Oct night, Haiku, short games cut at a month)
 
-Source: `lab/reports/secciones/resumen-noche.md` [T18]. Short games stop when the player reaches a month (`claude-cli:haiku^M`) and are never scored.
+Source: `lab/reports/historico/secciones/resumen-noche.md` [T18]. Short games stop when the player reaches a month (`claude-cli:haiku^M`) and are never scored.
 - **The first promotion is a switch.** 221 of 221 short and full games that began the first review month with Skill, Network and Output at the L1 floor were promoted; 2 of 267 below it were. All first-review variance is about not losing a point before it.
 - **Points are lost, not missing.** In the baseline 86 of 92 shortfalls were a Network or Output point held earlier and lost, 68 of them in the last month before the review. The losing answer is almost always the firm, formal or public version of a principled stand (Dignity up, Network down) or side work (Output down), and another answer always kept the point (bot catalogue, lab only).
 - **Telling Haiku when the review lands does not change the first promotion.** A review-clock Skill (countdown from the published timeline and `current_month`) is executed (notes say `review: next month`) but over three rounds on f3-lean it gave 36/74 (49 %) against 31/73 (42 %); the first two rounds looked like +15 points and the third reversed. Rules on tone (discreet versions of a stand, "do not buy Dignity you already have") and reading `check_latest_logs` (about 2 calls per game when asked) did not move it either.
@@ -134,20 +134,20 @@ Source: `lab/reports/secciones/resumen-noche.md` [T18]. Short games stop when th
 
 ## Source keys
 
-- **CRS:** `lab/reports/cloud-run-status.md`. **CRS+:** the same file at commit e17b598.
-- **B3, B5:** `lab/reports/cloud-run-diagnostics/block{3,5}-generation.md`.
+- **CRS:** `lab/reports/historico/cloud-run-status.md`. **CRS+:** the same file at commit e17b598.
+- **B3, B5:** `lab/reports/historico/cloud-run-diagnostics/block{3,5}-generation.md`.
 - **MG2, MG3:** `lab/reports/matteo-observed-growth-v{2,3}.md`.
 - **MG4:** `lab/reports/matteo-observed-growth-v4.md`. **MG5:** branch `matteo/observed-growth-v5`, `lab/reports/matteo-observed-growth-v5.md` (pending merge into main).
 - **V4P:** `lab/policies-src/matteo-feedback-growth/observed-growth-v4/policy.json`.
-- **LEAH, LEAH1:** `research/leah/l1-review-clock-{v1-v3,first-read}.md`.
+- **LEAH, LEAH1:** `docs/historico/research/leah/l1-review-clock-{v1-v3,first-read}.md`.
 - **DR:** `lab/reports/teacher-digests/distilled-rules.md`.
-- **EB:** `lab/reports/energy-bots/README.md`.
-- **OC:** `lab/reports/opus-ceiling/README.md`.
+- **EB:** `lab/reports/historico/energy-bots/README.md`.
+- **OC:** `lab/reports/historico/opus-ceiling/README.md`.
 - **DEC:** `lab/reports/decision-research/cycles/002/interpretation.md`.
-- **DIAG:** branch `alejandro/diagnostico-estrategias` (PR #4), `research/careerlab/diagnostico-2026-10-26/findings.md`.
+- **DIAG:** branch `alejandro/diagnostico-estrategias` (PR #4), `docs/historico/research/careerlab/diagnostico-2026-10-26/findings.md`.
 - **FIND:** `findings.md`.
 - **CMP:** `careerlab/compliance.py`.
 - **REG:** my tally of `lab/registry/evaluations.jsonl` (e17b598) and `lab/registry-origins/matteo/` (3d1bea6). The trust-crisis proxy is an elimination with the risk-control dimension at 0; it matches every exit that has a reported cause.
 - **EB-RAW:** raw energy-bot runs in the cloud container (`~/careerlab-data/energy-bots/runs/*/result.json` and `trajectory.jsonl`, not in Git), checked by the cloud organiser on 26 Oct 2026 at 19:41 UTC.
-- **T18:** `lab/reports/secciones/` (night of 27 Oct, origin `secciones`).
+- **T18:** `lab/reports/historico/secciones/` (night of 27 Oct, origin `secciones`).
 - **LAD:** the fastloop ladder (`lab/fastloop/history.md`, `lab/reports/carrera-rapida.md`), as of 26 Oct 2026, 21:37 UTC.

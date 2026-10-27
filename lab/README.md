@@ -1,6 +1,6 @@
 # CareerLab
 
-The laboratory that generates, evaluates and archives Career Survival policies through the official MCP server. The method and its justification are in [`research/careerlab/method-decision.md`](../research/careerlab/method-decision.md); the pre-registered statistics are in [`protocol/prereg-v1.md`](protocol/prereg-v1.md).
+The laboratory that generates, evaluates and archives Career Survival policies through the official MCP server. The method and its justification are in [`docs/historico/research/careerlab/method-decision.md`](../research/careerlab/method-decision.md); the pre-registered statistics are in [`protocol/prereg-v1.md`](protocol/prereg-v1.md).
 
 ## Install (reproducible)
 
