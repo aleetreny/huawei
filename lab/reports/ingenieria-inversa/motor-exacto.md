@@ -108,3 +108,44 @@ Sin avisos, el 99 % de los cambios de mes no tocan los indicadores, salvo el sue
   | L5 → L6 | −3 (a veces −2) |
 
   Además, **ascender en la primera ocasión dentro del nivel** (6 meses en él) trae el aviso "You climbed too fast…" y **3 de Network más** en L2 → L3 y L3 → L4.
+
+## M8. Acciones trimestrales: iguales en todos los niveles
+
+El efecto de las acciones principales y de energía es el mismo de L1 a L6 (miles de casos por nivel):
+- Rotation: Skill +2, Network +1.
+- Skill learning: Skill +1, Health −1.
+- Key project: Output +2, Skill +1, Network +1.
+
+Lo mismo para las demás. **No escalan con el nivel**, así que en los niveles altos el crecimiento sale casi todo de los eventos.
+
+## M9. Cuánta Skill puede dar el juego, y el techo de nota que eso impone
+
+**Skill que ofrecen los eventos.** Para cada evento que salió, se tomó la mayor subida de Skill entre sus respuestas (367 preguntas exploradas del todo, 102.000 eventos):
+
+| Nivel | Skill máxima media por decisión | Reparto (0 / +1 / +2 / +3) |
+|---|---:|---|
+| L1 | 1,09 | 25 % / 46 % / 27 % / 3 % |
+| L4 | 1,07 | 26 % / 44 % / 28 % / 2 % |
+| L5 | 1,04 | 27 % / 43 % / 28 % / 2 % |
+
+Con 3 eventos al mes y +3 por trimestre de acciones (rotación y aprendizaje), **el máximo de Skill es de unos 4,3 al mes**, y eso eligiendo siempre lo que más Skill da.
+
+**Calendario más rápido posible** con los umbrales medidos (H6, H14):
+
+| Ascenso | Mes | Por qué |
+|---|---:|---|
+| L2, L3, L4 | 6, 12, 18 | |
+| L5 | 30 | De ~42 (techo de L3) a 90 hace falta +48, unos 11 meses |
+| L6 | 42 | De ~90 a 130 hace falta +40, unos 9 meses, y la evaluación siguiente llega a los 12 |
+| L7 | ? | Umbral desconocido. Con L6 en el mes 42 se llegaría al 48 con unos 165 de Skill |
+
+**Techo de nota sin L7:**
+
+| Dimensión | Puntos |
+|---|---:|
+| Nivel 6 | 18 |
+| Dinero (sueldos ~38 + 1 inicial + bonus ~8 = ~46, sobre 80) | 11,5 |
+| Habilidad, red, salud+dignidad y riesgo al máximo | 50 |
+| **Total** | **~80** |
+
+Coincide con la mejor partida observada (79,3). **El margen entre los mejores manuales (~60) y 80 está en jugar bien:** no explotar y ascender en cada ventana. Para pasar de 80 hace falta L7.

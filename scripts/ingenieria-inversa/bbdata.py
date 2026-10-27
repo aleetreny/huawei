@@ -46,7 +46,7 @@ class Batch:
                     while True:
                         try:
                             line = f.readline()
-                        except (EOFError, OSError):
+                        except (EOFError, OSError, UnicodeDecodeError, __import__("zlib").error):
                             break  # shard still being written
                         if not line:
                             break
