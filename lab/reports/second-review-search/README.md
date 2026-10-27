@@ -2,6 +2,8 @@
 
 26 ottobre 2026. Ricerca richiesta da Matteo: proseguire l'esplorazione del gioco con bot, senza usare quota IA e senza valutare manuali con un modello.
 
+**Aggiornamento del 27 ottobre:** questo rapporto conserva la fotografia iniziale da 659 risposte. Lo [studio successivo del rischio](../trust-risk-study/README.md) ha incontrato e chiuso una fase ulteriore: il catalogo esteso è ora 644/644 risposte narrative e 661/661 totali. I numeri della raccolta originaria qui sotto restano invariati.
+
 ## Risultato e ambito
 
 **1.183 partite nuove risolte, nessuna interruzione tecnica.** Ogni bot parte da una nuova partita e conserva il percorso completo dei mesi 1–12. Nessuno stato L2 è costruito artificialmente. Si fermano alla prima osservazione del mese 13 o alla morte; non viene eseguita alcuna azione nel mese 13.
