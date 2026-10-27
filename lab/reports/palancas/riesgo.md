@@ -46,6 +46,8 @@ El comentario de RR. HH. sale una vez al mes y muestra el riesgo oculto (0 a 4, 
 
 **Lectura:** el contador se apunta bien de forma (siempre está en la nota), pero Haiku no reconoce cuándo una de sus respuestas era arriesgada. Es el cuello de botella de percepción de HALLAZGOS A6: el contador sólo vale lo que valga esa percepción. En el bloque general no estorba (huella 88 % igual al control) y baja un poco el riesgo medio elegido, dentro del ruido. Para DeepSeek hay que medir primero si reconoce las respuestas arriesgadas (línea DeepSeek).
 
+**Réplica corregida.** Repetido a las 17:45 UTC con la réplica de `main`, que liquida el mes 48 al terminar (HALLAZGOS B16): las diferencias cambian 0,12 puntos o menos y las conclusiones no cambian. Datos en `~/careerlab-data/palancas/*-4k-v2.json`.
+
 ## Cómo repetirlo
 
 ```bash

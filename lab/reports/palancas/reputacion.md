@@ -31,6 +31,8 @@ En el último trimestre antes de cada evaluación (el reparto del mes 3 del seme
 2. **La regla general cuesta más de lo que ahorra:** gasta trimestres en recuperar Dignity justo cuando hacen falta para el ascenso (los despidos en L1 suben del 6,3 % al 7,7 %). Baja algo las crisis porque frena el riesgo, pero eso ya lo hace la regla del comentario de RR. HH.
 3. Lo útil de M24 ya está en otras reglas: tener el riesgo bajo (regla de RR. HH.) y no dejar caer la Dignity (regla de salud y dignidad de `t13-final`).
 
+**Réplica corregida.** Repetido a las 17:45 UTC con la réplica de `main`, que liquida el mes 48 al terminar (HALLAZGOS B16): las diferencias cambian 0,12 puntos o menos y las conclusiones no cambian. Datos en `~/careerlab-data/palancas/*-4k-v2.json`.
+
 ## Cómo repetirlo
 
 ```bash

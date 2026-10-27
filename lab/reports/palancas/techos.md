@@ -74,6 +74,9 @@ Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t1
 | t16b-expect | carry | 33 | **100 %** | 9 % | **3 %** | 42 % | 0,34 | 32k |
 | t13-final | nocap | 50 | — | — | 0 % | 0 % | 0,40 | 32k |
 | t16b-expect | nocap | 50 | 100 % (escribe `none`) | 0 % | 0 % | 0 % | 0,36 | 33k |
+| t18-status (`Stalled`) | detect | 49 | 49 % | 14 % | 16 % | 33 % | 0,20 | 36k |
+| t18-status | carry | 33 | 97 % | 12 % | 6 % | 42 % | 0,36 | 35k |
+| t18-status | nocap | 50 | 98 % | 2 % | 0 % | 0 % | 0,34 | 35k |
 
 (Pérdida de nota = puntos de nota final perdidos frente a la mejor opción, según el simulador con el planificador. Por decisión es pequeña: la ventaja de la palanca se acumula en la partida.)
 
@@ -83,6 +86,7 @@ Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t1
 3. **Lo que queda de gasto en techos son techos aún no descubiertos** (por ejemplo, Skill en L1 cuando ninguna acción la ha topado todavía). Es lo mismo que supone el simulador en `detect`.
 4. **No cuesta tokens:** 32k por situación en los dos manuales.
 5. Con lo medido (60 % de detección, sólo en el reparto), el simulador da **+4,9 puntos** a la palanca.
+6. **Llamarlo `Stalled` en vez de `Caps`** (para no afirmar una mecánica oculta, ver [nota-memoria.md](nota-memoria.md)) funciona casi igual: detecta el 49 % (59 % con `Caps`; con 49 casos, la diferencia cabe en el ruido), arrastra el 97 % y gasta en un techo apuntado el 6 %.
 
 ## Límites
 
@@ -90,6 +94,8 @@ Manuales: `t13-final` (control) y [`t16b-expect`](../../policies-src/palancas/t1
 - El banco de techos sólo prueba decisiones del reparto. Que la regla no estropee las historias se mide en el bloque general ([nota-memoria.md](nota-memoria.md)).
 - El techo de Health y Dignity (10) está publicado en el manual y el bot ya lo usa; aquí sólo se miden los techos no publicados de Skill, Network y Output.
 - Ningún número de techo va al manual: el ejemplo de la nota usa valores que no son el techo de ningún nivel.
+
+**Réplica corregida.** Repetido a las 17:45 UTC con la réplica de `main`, que liquida el mes 48 al terminar (HALLAZGOS B16): las diferencias cambian 0,12 puntos o menos y las conclusiones no cambian. Datos en `~/careerlab-data/palancas/*-4k-v2.json`.
 
 ## Cómo repetirlo
 
