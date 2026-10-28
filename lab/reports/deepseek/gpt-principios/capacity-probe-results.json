@@ -1,0 +1,348 @@
+{
+  "meaning": "12 current-panel L1 decisions, six pre-review, same Skill and no previous logs. Counts are diagnostic only; no game score, whole-career effect, strong-model superiority or DS transfer inferred. Gold is used only after choices. Startup cap exception may affect positive-gain comparisons; no positive-gain ranking endpoint used.",
+  "script_sha256": "087d185a904eb0e5150d9bcc68f2af3b2025146098c94c1b2bd4f1149bcdcb26",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "models": {
+    "claude-haiku-5-5": 12,
+    "claude-sonnet-5-5": 12
+  },
+  "arms": {
+    "haiku": {
+      "n": 12,
+      "positive_risk": 2,
+      "growth_loss": 1,
+      "avoidable_pre_review_loss": 1,
+      "avoidable_positive_risk": 1
+    },
+    "sonnet": {
+      "n": 12,
+      "positive_risk": 2,
+      "growth_loss": 0,
+      "avoidable_pre_review_loss": 0,
+      "avoidable_positive_risk": 1
+    }
+  },
+  "same_choice": 9,
+  "rows": [
+    {
+      "id": "296dab11327d",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "296dab11327d",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "d0e4a10f3649",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 4,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "d0e4a10f3649",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "2eacb385fd54",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": []
+    },
+    {
+      "id": "2eacb385fd54",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": []
+    },
+    {
+      "id": "872c2542242f",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": true,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "872c2542242f",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": true,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "6b61efeefb32",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "6b61efeefb32",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2
+      ]
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2
+      ]
+    },
+    {
+      "id": "944fa5bf9273",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "944fa5bf9273",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "1a36d76efe7f",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "1a36d76efe7f",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "c0119ebd042a",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "c0119ebd042a",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "275f67d8928c",
+      "model": "haiku",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "275f67d8928c",
+      "model": "sonnet",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        1
+      ]
+    },
+    {
+      "id": "e79bb72a3d10",
+      "model": "haiku",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "e79bb72a3d10",
+      "model": "sonnet",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "safe_alternatives": [
+        2,
+        1
+      ]
+    }
+  ]
+}

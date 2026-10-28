@@ -1,0 +1,366 @@
+{
+  "meaning": "Paired one-step transfer, n=16, remaining targets=False. Teachers/careers may overlap across studies; not independent corpus replication. Both arms have identical recorded history except the after panel. Gold only scores completed choices. No career Q, population efficacy or DeepSeek transfer inferred.",
+  "script_sha256": "c94cf8155295e06d990f697e08c38916eb4a4f5c19697e6196531edbf9bd3937",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "models": {
+    "claude-haiku-5-5": 32
+  },
+  "arms": {
+    "history_only": {
+      "n": 16,
+      "positive_risk": 1,
+      "growth_loss": 6,
+      "avoidable_pre_review_loss": 1,
+      "avoidable_positive_risk": 0
+    },
+    "observed_outcome": {
+      "n": 16,
+      "positive_risk": 1,
+      "growth_loss": 4,
+      "avoidable_pre_review_loss": 0,
+      "avoidable_positive_risk": 0
+    }
+  },
+  "same_choice": 13,
+  "paired_changes": {
+    "positive_risk": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "growth_loss": {
+      "improved": 2,
+      "worsened": 0
+    },
+    "avoidable_pre_review_loss": {
+      "improved": 1,
+      "worsened": 0
+    },
+    "avoidable_positive_risk": {
+      "improved": 0,
+      "worsened": 0
+    }
+  },
+  "risk_admission_block": false,
+  "rows": [
+    {
+      "id": "150dfc3384c1",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "150dfc3384c1",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "a17faeec0f07",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "a17faeec0f07",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "bf4b670138f3",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "bf4b670138f3",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "75649c2a9f1c",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "75649c2a9f1c",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "989377c65575",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "989377c65575",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "77488149beeb",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "77488149beeb",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "872c2542242f",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "872c2542242f",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "90c39716bd3e",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "90c39716bd3e",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "1b2dba28e4f1",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "1b2dba28e4f1",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "3346fbd482a3",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "3346fbd482a3",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "606ffe5fc95e",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "606ffe5fc95e",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "46b115f9aa63",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "46b115f9aa63",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "d8c4685218df",
+      "arm": "history_only",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "d8c4685218df",
+      "arm": "observed_outcome",
+      "pre_review": true,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "54e5c54d627f",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "54e5c54d627f",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "82d4b8110ef5",
+      "arm": "history_only",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    },
+    {
+      "id": "82d4b8110ef5",
+      "arm": "observed_outcome",
+      "pre_review": false,
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false
+    }
+  ]
+}

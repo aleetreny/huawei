@@ -1,8 +1,8 @@
 # Desde principios básicos: qué falta para 75 de partida con DeepSeek
 
-**Todavía no hemos reproducido 75 consistente ni identificado la técnica de los equipos que lo consiguen. Sí hemos encontrado un fallo causal del controlador: tratar todo aumento de riesgo como un único punto puede destruir carreras incluso con percepción perfecta.** No presentar esta auditoría como una solución ya probada con DeepSeek.
+**El equipo ya obtuvo 76,87 con DeepSeek y un script del Skill, pero todavía no ha demostrado 75 consistente. Hemos reproducido su ejecución y memoria; no hemos identificado el método privado de los otros equipos.** Esta auditoría distingue ese resultado real de las hipótesis aún sin validar.
 
-Objetivo confirmado por Alejandro: **nota de partida ≈75, repetible, con DeepSeek**, no nota ponderada de entrega. Restricción: ninguna llamada nueva a la API de DeepSeek. Esta carpeta apoya la línea DeepSeek; rama `alejandro/gpt-principios`. No abre otra línea activa ni reemplaza t13-read-v2.
+Objetivo confirmado por Alejandro: **nota de partida ≈75, repetible, con DeepSeek**, no nota ponderada de entrega. Restricción: ninguna llamada nueva a la API de DeepSeek. Esta carpeta apoya la línea DeepSeek; rama `alejandro/gpt-principios`. No abre otra línea activa ni reemplaza el manual entregado t13-read-v4.
 
 ## 1. Qué entregamos y qué problema estamos resolviendo
 
@@ -150,3 +150,13 @@ Las correcciones de riesgo no mejoran Q. Corregir solo el campo HR no cambia opc
 Siguiente prueba: 12 menus L1 con el mismo v4, Haiku/Sonnet, maximo 25 llamadas Max incluida admision; ninguna carrera completa ni API DeepSeek. READY con Sonnet 5.5 valido, cuota fresca 1% cinco horas / 40% semanal. Primer menu rechazo de CLI antes de modelo: --allowedTools consumio el prompt. Proceso 1150 terminal, sin decision; corregir orden de flags y conservar fallo antes de reintentar el mismo caso.
 
 313 tests pasan (47,82 s), guardas sinteticas de riesgo pasan. Todas las simulaciones anteriores terminaron. Source original de la primera pantalla conservado con hash exacto en risk-credit-script-v1.py.gz. PR22 ya esta integrado; este checkpoint necesita PR nuevo. Repo canonico /Users/alejandrotreny/huawei. Objetivo 75 estable activo; el turno anterior fue progreso, no una espera ni un bloqueo.
+
+## Relevo 28 oct, capacidad y feedback
+
+[Capacidad y aprendizaje](capacity-and-learning.md):24decisiones emparejadas con v4, Haiku/Sonnet, difieren en3/12opciones; ambos2riesgos, Sonnet evita la unica perdida de crecimiento evitable. Una referencia Sonnet completa termina49,95/L4,202acciones sin rechazos; no se repite ni permite afirmar que un modelo mayor soluciona el juego.
+
+Feedback real de un episodio anterior y de otro titulo: primera pantalla16paresHaiku,32/32validos. Perdidas6→4, evitablespre-evaluacion1→0, riesgo1→1. Senal exploratoria pequena, sinQ ni eficacia demostrada. En marcha contraste congelado de43objetivos restantes/86decisiones, mismos brazos. Comparten carreras/docentes; no es replica de corpus independiente. Ninguna llamada nueva aDeepSeek.
+
+Proceso del contraste: `uv run python scripts/deepseek/gpt_learning_probe.py --holdout --calls 86`, ya iniciado; **inspeccionar su PID/resultados antes de intentar retomarlo**. Analisis sin llamadas: `uv run python scripts/deepseek/gpt_learning_score.py --holdout`. Datos en `~/careerlab-data/deepseek/gpt-learning-feedback-holdout/`. Los16pares iniciales y la carreraSonnet estan terminados. No ejecutar otra carrera de referencia. Scripts nuevos compilados; verificacion estructural16/16episodios docentes, fuente/accion/orden/diferencia detitulo correctos. Suite comun313tests ya paso este checkpoint, no hubo cambios deproduccion despues.
+
+El objetivo75consistente sigue abierto. No promover un candidato por esta pantalla ni duplicar el veto hibrido que ya estudiaFormato. Este checkpoint se solicita juntar conmain mediantePR23; sin cambios en slots/credenciales/entrega actual.

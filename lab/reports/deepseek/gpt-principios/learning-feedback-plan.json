@@ -1,0 +1,133 @@
+{
+  "n_items": 16,
+  "n_calls_max": 32,
+  "arms": [
+    "history_only",
+    "observed_outcome"
+  ],
+  "model": "haiku",
+  "source_sha256": {
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g1/output/events-20261027T195612Z.jsonl": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g2/output/events-20261027T200001Z.jsonl": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g1/output/events-20261027T210457Z.jsonl": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g2/output/events-20261027T210347Z.jsonl": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g3/output/events-20261027T210235Z.jsonl": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8"
+  },
+  "input_sha256": "623226265daf4c155b833c0a3f05d7c36d08a605d69f0358e5a188c62f276879",
+  "seed": 2026102810,
+  "selection": [
+    {
+      "id": "150dfc3384c1",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "a17faeec0f07",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "bf4b670138f3",
+      "pre_review": true,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "75649c2a9f1c",
+      "pre_review": true,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "989377c65575",
+      "pre_review": true,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "77488149beeb",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "872c2542242f",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "90c39716bd3e",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "1b2dba28e4f1",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "3346fbd482a3",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 3,
+      "teacher_title_sha256": "875742fd529d920c7eb7860635ff4d0daacf5a7b7796f24faa74de10b171ca40"
+    },
+    {
+      "id": "606ffe5fc95e",
+      "pre_review": true,
+      "teacher_month": 3,
+      "teacher_row_index": 6,
+      "teacher_title_sha256": "84195e30f8b5540b2ff8c9993dee2fdcbab69db2b3219b9de9bd2f9825ec0b75"
+    },
+    {
+      "id": "46b115f9aa63",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "pre_review": true,
+      "teacher_month": 5,
+      "teacher_row_index": 18,
+      "teacher_title_sha256": "e0dcf53e86abee0bf6f676ddc708bb72f4c44c9db2d7100502300b081dcde1cc"
+    },
+    {
+      "id": "d8c4685218df",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "54e5c54d627f",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "82d4b8110ef5",
+      "pre_review": false,
+      "teacher_month": 3,
+      "teacher_row_index": 6,
+      "teacher_title_sha256": "84195e30f8b5540b2ff8c9993dee2fdcbab69db2b3219b9de9bd2f9825ec0b75"
+    }
+  ],
+  "meaning": "Actual earlier isolated story action with an unforeseen visible growth cost, followed by a different-title target in the same recorded career. Both arms see the past event, original choice, prediction and before panel. Only outcome arm sees the after panel. No true hidden risk, catalog effects, future events or fixed event answers taught. Actual history is provided, not forced counterfactual prefix actions. One-step learning diagnostic, not a career score."
+}
