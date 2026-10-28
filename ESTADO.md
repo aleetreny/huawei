@@ -83,3 +83,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Revision factual real cerrada:**24/24validas;gate2cambios,riesgo3→4,evitables2→2. No admitir a carreras. Proceso terminado, sin nuevos juegos/DeepSeek. Resultado fact-career-results.json en apoyo gpt-principios.
 
 **Diagnostico factual:** ambos errores reales sin flags de coste; unflag sobre opcionsegura causa cambioarriesgado. No afinar gate por esoscasos. Analisisoffline fact-bottleneck.json, sin llamadas adicionales.
+
+**Suficiencia factual:**3/24menus contienen opciones con lasmismas4respuestas y diferentescostes/riesgo. Analisisoffline fact-sufficiency.json; no otra candidatura ni llamadas.
