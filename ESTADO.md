@@ -93,3 +93,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Auditoria reasoning:**traza76,87sin metadatos de razonamiento yconfigsactualesFormato sin campos thinking/effort; modo efectivo indeterminado, no disabled demostrado. Proximo:adaptador publicoJiuwen. Sin llamadas/cambiosslots.
 
 **Runtime auditado:**inyectorreasoning_level no reconoceOpenRouter,6casospuros sin inyeccion/controlAPIoficialpositivo; modo efectivoproveedor sigueindeterminado. Sin llamadas/slotsmodificados.
+
+**Limite runtime:**ninguna ruta entregableverificada para esfuerzo desdeSkills; no parchearSDK/slots ni seleccionarhosting. Soporteclientextra_body no prueba exposicion alagente. Auditoria sin API.
