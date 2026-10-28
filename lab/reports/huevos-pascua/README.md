@@ -38,6 +38,17 @@ Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easte
 
 La plaza que ocupa un título repetido la habría llenado otro título nuevo, así que repetir no da crecimiento extra apreciable. **No adelanta ningún ascenso** (L7 sigue en el 0,3 %) y no cambia la nota. La réplica del Motor puede quedarse como está.
 
+## 2b. Añadido el 28 oct: la tercera evaluación en L1 se puede salvar
+
+Mirando los fallos de la regla de ascenso apareció que la nota D por llevar 17 meses en L1 no es automática (`l1_rescue.py`, 204 evaluaciones del mes 18 en L1):
+
+| Comentario de RR. HH. en la evaluación del mes 18 | Nota | Asciende si llega al umbral |
+|---|---|---|
+| sonriente (riesgo oculto 0) | C en 36 de 36 | 31 de 32 |
+| «quiet», ceño fruncido, inquieto o enfadado | D en 168 de 168 | nunca; despido en el mes 24 |
+
+En los meses 6 y 12 la nota en L1 es siempre C, con cualquier tono. **Una partida atascada en L1 no está perdida:** llegar a la tercera evaluación con el riesgo a cero y Dignity alta la saca del despido. Es el hallazgo B30.
+
 ## 3. Qué significa para el manual
 
 - **No hay atajo que enseñar.** El ascenso depende sólo del estado justo antes de la evaluación (Skill, Network y Output en el umbral, Dignity ≥ 4 y nota distinta de D); sube como mucho un nivel cada seis meses. Lo que separa una partida buena de una excelente sigue siendo no perder ninguna ventana y no explotar (HALLAZGOS A2, A3, B5).
