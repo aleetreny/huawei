@@ -59,6 +59,8 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 
 ## Relevo
 
+**28 oct, sustitutos:** [sustitutos.md](sustitutos.md). El más parecido a DeepSeek es Sonnet 5 (95 sobre 100); para Output gratis, Qwen local. Haiku 5.5, el que usábamos, ve Output mejor que DeepSeek. No se han buscado más créditos gratis: Azure for Students tiene cuota 0 para DeepSeek (denegada), y los regalos chinos o de terceros son de V4.1 o no llegan a una partida. Pendiente: créditos de Google Cloud (1.500 €) para montar el modelo de abril en 8 × H100; falta que se carguen y la cuota de GPU.
+
 **27 oct, clave propia:** preparada sin comprar ([clave-propia.md](clave-propia.md)); el archivo `~/careerlab-data/own-openrouter/.env` espera la clave.
 
 **27 oct, NIM: descartado.** NIM retiró `deepseek-v4-flash` el 7 de agosto (HTTP 410) y sólo sirve V4.1 Flash, que es otro modelo ([nim.md](nim.md)). La versión del reto sólo se consigue por OpenRouter.

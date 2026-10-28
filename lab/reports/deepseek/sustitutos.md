@@ -10,7 +10,7 @@
   - **Qwen3.6-35B-A3B** en 4 bits, local con oMLX: 3 tandas de 20, ~4 min por tanda, gratis;
   - **Haiku** con la CLI de Claude: 3 llamadas;
   - **Luna**, en un chat de ChatGPT sin acceso al repo (el repo tiene las respuestas), nivel medio, en un solo mensaje.
-- **Datos:** prompts y respuestas en `~/careerlab-data/proxies/` (tienen texto del juego).
+- **Datos:** prompts y respuestas en `~/careerlab-data/proxies/` (tienen texto del juego). Código en `scripts/deepseek/proxies/`: `run_proxies.py` etiqueta y `score_proxies.py` compara.
 
 ## Resultados
 
@@ -37,6 +37,16 @@ Bajadas reales que no ven, y cuántas de ellas tampoco ve DeepSeek (lectura 1):
 | Haiku 4.5 | 6 (6 en común) | 7 (5 en común) | 83 % / 20 % |
 | Sonnet 4.6 | 6 (5 en común) | 9 (5 en común) | 86 % / 20 % |
 | **Sonnet 5** | **9 (7 en común)** | 11 (6 en común) | 85 % / 20 % |
+
+## En una escala
+
+Media de coincidencia en Output, Network, Skill y riesgo; 100 = lo que DeepSeek coincide consigo mismo (86 %). Margen de error de ±2–3 puntos con 146 opciones.
+
+| Sonnet 5 | Sonnet 4.6 | Haiku 4.5 | Qwen local | Haiku 5.5 | Luna |
+|---:|---:|---:|---:|---:|---:|
+| 95 | 93 | 90 | 88 | 88 | 86 |
+
+Sonnet 5 y Sonnet 4.6 no se distinguen. Frente al resto, Sonnet 5 sale algo mejor. En Output, que es lo que importa para la trampa de L1, sólo Sonnet 5 y Qwen fallan donde falla DeepSeek.
 
 ## Cómo usarlo
 
