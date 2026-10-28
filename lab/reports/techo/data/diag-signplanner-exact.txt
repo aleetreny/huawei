@@ -1,0 +1,190 @@
+
+=== sp [exact]: Q 69.11 | L6+ 60% | {'ok': 894, 'dismissed': 31, 'trust': 29, 'health': 46}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       986       82%  | L1 lost in prep: O:54, L1 lost in prep: N:50, L1 blew:23, L1 short before prep: N:18, L1 short before prep: O:11
+m12      979       86%  | L2 lost in prep: N:49, L2 lost in prep: O:38, L1 lost in prep: N:12, L2 short before prep: O:9, L1 lost in prep: O:9
+m18      976       81%  | L3 short before prep: N:45, L1 lost in prep: N:24, L3 lost in prep: O:22, L3 short before prep: NO:15, L3 short before prep: SN:14
+m24      927       34%  | L4 short before prep: S:241, L4 short before prep: SN:197, L4 short before prep: SO:45, L4 short before prep: SNO:30, L4 lost in prep: O:25
+m30      921       16%  | L4 short before prep: S:617, L4 short before prep: SN:88, L4 short before prep: SNO:21, L4 short before prep: SO:20, L4 lost in prep: O:18
+m36      910       59%  | L4 short before prep: S:266, L5 short before prep: S:44, L4 short before prep: SO:12, L4 short before prep: SN:11, L5 short before prep: SN:11
+m42      904       48%  | L5 short before prep: S:271, L5 short before prep: SN:66, L4 short before prep: S:47, L5 short before prep: SO:37, L5 short before prep: SNO:19
+m48      896       52%  | L5 short before prep: S:124, L6 short before prep: SN:70, L5 short before prep: SN:52, L6 short before prep: S:48, L6 short before prep: SNO:27
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.4         1.45       0.08
+L2       6.8         2.08       0.34
+L3       7.2         2.91       0.37
+L4      16.7         3.77       0.77
+L5       9.5         3.61       0.63
+L6       3.8         2.86       0.22
+mes medio del ascenso a: {'L2': '6.9 (95%)', 'L3': '13.7 (94%)', 'L4': '20.9 (94%)', 'L5': '37.8 (91%)', 'L6': '46.2 (60%)', 'L7': '48.0 (0%)'}
+
+=== sp+signmag [exact]: Q 71.48 | L6+ 72% | {'ok': 938, 'trust': 29, 'dismissed': 30, 'health': 3}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       997       84%  | L1 lost in prep: N:61, L1 lost in prep: O:59, L1 short before prep: O:13, L1 short before prep: N:12, L1 blew:6
+m12      997       90%  | L2 lost in prep: O:34, L2 lost in prep: N:20, L1 short before prep: O:8, L2 short before prep: O:8, L1 lost in prep: N:8
+m18      996       84%  | L3 short before prep: N:35, L1 lost in prep: N:23, L3 short before prep: NO:20, L3 short before prep: O:16, L3 lost in prep: O:12
+m24      961       28%  | L4 short before prep: S:288, L4 short before prep: SN:187, L4 short before prep: SO:57, L4 short before prep: SNO:56, L4 lost in prep: O:33
+m30      955       20%  | L4 short before prep: S:637, L4 short before prep: SN:61, L4 short before prep: SO:25, L4 lost in prep: O:20, L4 short before prep: SNO:18
+m36      951       62%  | L4 short before prep: S:197, L5 short before prep: S:76, L5 short before prep: SN:25, L5 short before prep: SO:20, L4 short before prep: SO:11
+m42      947       52%  | L5 short before prep: S:277, L5 short before prep: SN:70, L4 short before prep: S:33, L5 short before prep: SO:28, L5 short before prep: SNO:17
+m48      940       49%  | L6 short before prep: SN:97, L5 short before prep: S:86, L6 short before prep: S:83, L6 short before prep: SNO:47, L5 short before prep: SN:41
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.4         1.47       0.07
+L2       6.5         2.20       0.34
+L3       7.0         2.98       0.37
+L4      16.5         3.83       0.76
+L5       9.8         3.69       0.64
+L6       4.4         2.97       0.24
+mes medio del ascenso a: {'L2': '6.8 (97%)', 'L3': '13.3 (97%)', 'L4': '20.3 (96%)', 'L5': '36.8 (94%)', 'L6': '45.6 (72%)', 'L7': '48.0 (0%)'}
+
+=== sp+capthr [exact]: Q 63.88 | L6+ 46% | {'ok': 787, 'health': 110, 'dismissed': 49, 'trust': 54}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       986       79%  | L1 lost in prep: O:63, L1 lost in prep: N:59, L1 blew:22, L1 short before prep: N:21, L1 short before prep: O:20
+m12      967       86%  | L2 lost in prep: O:35, L2 lost in prep: N:25, L1 lost in prep: O:21, L2 blew:12, L1 lost in prep: N:10
+m18      948       75%  | L3 short before prep: N:96, L1 lost in prep: N:39, L3 short before prep: SN:20, L3 lost in prep: O:13, L2 lost in prep: O:12
+m24      875       39%  | L4 short before prep: SN:239, L4 short before prep: S:188, L4 short before prep: SNO:19, L4 short before prep: SO:16, L3 short before prep: N:15
+m30      845       13%  | L4 short before prep: S:589, L4 short before prep: SN:111, L4 blew:17, L4 short before prep: SO:9, L4 short before prep: SNO:7
+m36      820       56%  | L4 short before prep: S:304, L5 short before prep: S:23, L4 short before prep: SN:14, L5 short before prep: SN:11, L4 blew:4
+m42      803       40%  | L5 short before prep: S:256, L5 short before prep: SN:121, L4 short before prep: S:60, L5 short before prep: SO:16, L5 blew:10
+m48      789       58%  | L5 short before prep: S:138, L5 short before prep: SN:108, L6 short before prep: SN:33, L6 short before prep: S:17, L5 lost in prep: N:10
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.8         1.36       0.11
+L2       6.6         2.11       0.34
+L3       7.4         2.80       0.39
+L4      16.6         3.57       0.66
+L5       9.7         3.33       0.47
+L6       2.8         2.69       0.09
+mes medio del ascenso a: {'L2': '7.0 (93%)', 'L3': '13.7 (91%)', 'L4': '21.2 (89%)', 'L5': '38.5 (81%)', 'L6': '47.2 (46%)'}
+
+=== sp+nocont [exact]: Q 68.58 | L6+ 61% | {'ok': 887, 'trust': 58, 'broke': 2, 'health': 25, 'dismissed': 28}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       992       83%  | L1 lost in prep: O:47, L1 lost in prep: N:43, L1 blew:31, L1 short before prep: N:16, L1 lost in prep: NO:12
+m12      985       86%  | L2 lost in prep: N:51, L2 lost in prep: O:39, L2 short before prep: O:10, L1 lost in prep: O:9, L1 lost in prep: N:9
+m18      981       80%  | L3 short before prep: N:49, L3 short before prep: NO:21, L1 lost in prep: N:21, L2 lost in prep: N:16, L3 lost in prep: O:15
+m24      936       33%  | L4 short before prep: SN:218, L4 short before prep: S:203, L4 short before prep: SO:53, L4 short before prep: SNO:49, L4 lost in prep: O:21
+m30      924       18%  | L4 short before prep: S:613, L4 short before prep: SN:83, L4 short before prep: SO:26, L4 short before prep: SNO:10, L4 lost in prep: O:10
+m36      913       59%  | L4 short before prep: S:242, L5 short before prep: S:53, L4 short before prep: SN:21, L5 short before prep: SN:18, L4 blew:8
+m42      898       46%  | L5 short before prep: S:275, L5 short before prep: SN:72, L4 short before prep: S:57, L5 short before prep: SO:30, L5 short before prep: SNO:16
+m48      887       54%  | L5 short before prep: S:108, L6 short before prep: SN:58, L6 short before prep: S:52, L5 short before prep: SN:46, L6 short before prep: SNO:36
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.3         1.47       0.08
+L2       6.9         2.04       0.33
+L3       7.2         2.91       0.36
+L4      16.6         3.75       0.75
+L5       9.5         3.63       0.62
+L6       3.8         2.92       0.22
+mes medio del ascenso a: {'L2': '6.8 (96%)', 'L3': '13.7 (95%)', 'L4': '20.9 (94%)', 'L5': '37.7 (90%)', 'L6': '46.2 (61%)'}
+
+=== sp+norb [exact]: Q 65.79 | L6+ 48% | {'ok': 847, 'dismissed': 101, 'health': 39, 'trust': 13}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       989       72%  | L1 lost in prep: N:167, L1 lost in prep: O:47, L1 short before prep: N:28, L1 lost in prep: NO:12, L1 short before prep: O:8
+m12      985       76%  | L2 lost in prep: N:62, L2 lost in prep: O:51, L1 lost in prep: N:37, L1 lost in prep: O:29, L2 short before prep: O:14
+m18      983       71%  | L1 lost in prep: N:79, L3 short before prep: N:43, L3 lost in prep: O:27, L2 lost in prep: O:22, L2 lost in prep: N:18
+m24      870       41%  | L4 short before prep: S:182, L4 short before prep: SN:140, L4 short before prep: SO:33, L4 short before prep: SNO:28, L4 lost in prep: O:26
+m30      868       20%  | L4 short before prep: S:506, L4 short before prep: SN:100, L4 short before prep: SO:21, L4 lost in prep: O:17, L4 short before prep: SNO:16
+m36      859       51%  | L4 short before prep: S:311, L5 short before prep: S:27, L4 short before prep: SN:25, L4 short before prep: SO:11, L5 short before prep: SO:9
+m42      852       49%  | L5 short before prep: S:211, L4 short before prep: S:83, L5 short before prep: SN:52, L5 short before prep: SO:33, L5 lost in prep: O:15
+m48      847       51%  | L5 short before prep: S:133, L5 short before prep: SN:56, L6 short before prep: SN:55, L6 short before prep: S:32, L4 short before prep: S:18
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       7.9         1.14       0.07
+L2       7.3         1.90       0.32
+L3       7.7         2.75       0.35
+L4      16.7         3.75       0.77
+L5       9.1         3.58       0.61
+L6       3.5         2.82       0.21
+mes medio del ascenso a: {'L2': '7.2 (89%)', 'L3': '14.5 (88%)', 'L4': '22.2 (88%)', 'L5': '38.8 (83%)', 'L6': '46.4 (48%)', 'L7': '48.0 (0%)'}
+
+=== sp+nohd [exact]: Q 66.66 | L6+ 56% | {'ok': 808, 'broke': 1, 'dismissed': 30, 'health': 129, 'trust': 32}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       985       82%  | L1 lost in prep: N:54, L1 lost in prep: O:52, L1 blew:24, L1 short before prep: N:17, L1 short before prep: O:11
+m12      968       87%  | L2 lost in prep: N:49, L2 lost in prep: O:34, L1 lost in prep: N:13, L1 lost in prep: O:11, L2 short before prep: O:6
+m18      955       82%  | L3 short before prep: N:37, L3 lost in prep: O:25, L1 lost in prep: N:23, L3 short before prep: SN:13, L3 short before prep: S:12
+m24      905       33%  | L4 short before prep: S:247, L4 short before prep: SN:199, L4 short before prep: SO:39, L4 short before prep: SNO:29, L4 lost in prep: O:20
+m30      873       17%  | L4 short before prep: S:579, L4 short before prep: SN:91, L4 short before prep: SO:18, L4 lost in prep: O:16, L4 short before prep: SNO:12
+m36      857       59%  | L4 short before prep: S:253, L5 short before prep: S:46, L5 short before prep: SN:15, L4 short before prep: SN:11, L5 short before prep: SO:8
+m42      837       46%  | L5 short before prep: S:259, L5 short before prep: SN:72, L4 short before prep: S:46, L5 short before prep: SO:30, L5 short before prep: SNO:18
+m48      809       55%  | L5 short before prep: S:115, L6 short before prep: SN:51, L6 short before prep: S:43, L5 short before prep: SN:42, L6 short before prep: SNO:31
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.4         1.46       0.09
+L2       6.7         2.10       0.35
+L3       7.1         2.93       0.37
+L4      16.3         3.74       0.76
+L5       9.6         3.62       0.62
+L6       3.6         2.86       0.21
+mes medio del ascenso a: {'L2': '6.9 (95%)', 'L3': '13.6 (93%)', 'L4': '20.8 (92%)', 'L5': '37.7 (85%)', 'L6': '46.3 (56%)'}
+
+=== sp+flat [exact]: Q 67.10 | L6+ 43% | {'ok': 872, 'dismissed': 79, 'trust': 4, 'health': 45}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       993       76%  | L1 lost in prep: N:102, L1 short before prep: NO:39, L1 lost in prep: O:34, L1 short before prep: N:30, L1 short before prep: O:21
+m12      988       81%  | L2 lost in prep: N:37, L2 lost in prep: O:36, L1 lost in prep: N:21, L1 lost in prep: O:20, L2 short before prep: O:16
+m18      985       66%  | L3 short before prep: N:145, L1 lost in prep: N:58, L3 short before prep: SN:24, L3 short before prep: NO:22, L2 lost in prep: N:17
+m24      898       42%  | L4 short before prep: SN:278, L4 short before prep: S:104, L3 short before prep: N:51, L3 short before prep: SN:17, L3 lost in prep: O:13
+m30      884       19%  | L4 short before prep: S:487, L4 short before prep: SN:191, L4 short before prep: SNO:9, L4 blew:7, L4 short before prep: SO:7
+m36      882       47%  | L4 short before prep: S:372, L4 short before prep: SN:52, L5 short before prep: S:18, L5 short before prep: SN:17, L4 short before prep: O:4
+m42      878       44%  | L5 short before prep: S:171, L5 short before prep: SN:167, L4 short before prep: S:117, L5 short before prep: SNO:8, L4 short before prep: SN:7
+m48      872       55%  | L5 short before prep: SN:141, L5 short before prep: S:130, L6 short before prep: SN:43, L5 lost in prep: N:14, L4 short before prep: S:13
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       7.4         1.24       0.08
+L2       6.9         2.02       0.31
+L3       8.3         2.60       0.36
+L4      17.1         3.64       0.64
+L5       8.9         3.43       0.47
+L6       2.9         2.82       0.10
+mes medio del ascenso a: {'L2': '7.1 (91%)', 'L3': '14.0 (91%)', 'L4': '22.3 (90%)', 'L5': '39.6 (87%)', 'L6': '47.1 (43%)', 'L7': '48.0 (0%)'}
+
+=== sp+lexq [exact]: Q 67.53 | L6+ 43% | {'ok': 890, 'trust': 19, 'dismissed': 32, 'health': 59}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       987       81%  | L1 lost in prep: N:55, L1 lost in prep: O:54, L1 blew:24, L1 short before prep: N:16, L1 short before prep: O:12
+m12      975       85%  | L2 lost in prep: N:57, L2 lost in prep: O:34, L1 lost in prep: N:12, L1 lost in prep: O:10, L2 short before prep: O:9
+m18      962       76%  | L3 short before prep: N:54, L3 short before prep: O:26, L1 lost in prep: N:23, L3 short before prep: SN:19, L3 short before prep: NO:18
+m24      921       38%  | L4 short before prep: SN:211, L4 short before prep: S:192, L4 short before prep: SO:36, L4 short before prep: SNO:30, L3 short before prep: N:12
+m30      912       11%  | L4 short before prep: S:631, L4 short before prep: SN:122, L4 short before prep: SO:24, L4 short before prep: SNO:15, L4 lost in prep: O:7
+m36      904       51%  | L4 short before prep: S:395, L4 short before prep: SN:24, L5 short before prep: S:9, L4 short before prep: SNO:4, L5 short before prep: SN:4
+m42      898       39%  | L5 short before prep: S:292, L5 short before prep: SN:98, L4 short before prep: S:90, L5 short before prep: SO:28, L5 short before prep: SNO:16
+m48      890       56%  | L5 short before prep: S:223, L5 short before prep: SN:92, L5 short before prep: SO:21, L5 lost in prep: N:13, L6 short before prep: SN:9
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.5         1.43       0.21
+L2       6.8         2.06       0.31
+L3       7.6         2.69       0.31
+L4      17.8         3.31       0.31
+L5       9.5         3.21       0.28
+L6       2.2         2.40       0.02
+mes medio del ascenso a: {'L2': '6.9 (95%)', 'L3': '13.7 (94%)', 'L4': '21.4 (93%)', 'L5': '39.4 (90%)', 'L6': '47.8 (43%)'}
+
+=== sp+noskhi [exact]: Q 69.23 | L6+ 60% | {'ok': 896, 'dismissed': 31, 'trust': 30, 'health': 43}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       986       82%  | L1 lost in prep: O:54, L1 lost in prep: N:50, L1 blew:23, L1 short before prep: N:18, L1 short before prep: O:11
+m12      979       86%  | L2 lost in prep: N:49, L2 lost in prep: O:38, L1 lost in prep: N:12, L2 short before prep: O:9, L1 lost in prep: O:9
+m18      976       81%  | L3 short before prep: N:45, L1 lost in prep: N:24, L3 lost in prep: O:22, L3 short before prep: NO:15, L3 short before prep: SN:14
+m24      927       34%  | L4 short before prep: S:241, L4 short before prep: SN:197, L4 short before prep: SO:45, L4 short before prep: SNO:30, L4 lost in prep: O:25
+m30      921       16%  | L4 short before prep: S:617, L4 short before prep: SN:88, L4 short before prep: SNO:21, L4 short before prep: SO:20, L4 lost in prep: O:17
+m36      913       59%  | L4 short before prep: S:266, L5 short before prep: S:44, L4 short before prep: SO:12, L4 short before prep: SN:11, L5 short before prep: SN:11
+m42      905       43%  | L5 short before prep: S:332, L5 short before prep: SN:67, L4 short before prep: S:47, L5 short before prep: SO:32, L5 short before prep: SNO:12
+m48      897       58%  | L5 short before prep: S:142, L5 short before prep: SN:52, L6 short before prep: SN:46, L6 short before prep: S:44, L6 short before prep: SNO:21
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.4         1.45       0.08
+L2       6.8         2.08       0.34
+L3       7.2         2.91       0.37
+L4      16.6         3.63       0.64
+L5       9.8         3.48       0.52
+L6       3.3         2.82       0.19
+mes medio del ascenso a: {'L2': '6.9 (95%)', 'L3': '13.7 (94%)', 'L4': '20.9 (94%)', 'L5': '37.8 (91%)', 'L6': '46.7 (60%)'}
+
+=== sp+capthr+lexq [exact]: Q 62.72 | L6+ 29% | {'ok': 790, 'trust': 45, 'dismissed': 54, 'health': 111}
+ventana  vivas  ascienden  | por que no (nivel, causa)
+m6       990       78%  | L1 lost in prep: O:65, L1 lost in prep: N:65, L1 short before prep: O:22, L1 blew:20, L1 short before prep: N:20
+m12      971       85%  | L2 lost in prep: O:35, L2 lost in prep: N:28, L1 lost in prep: O:23, L2 blew:14, L1 lost in prep: N:12
+m18      942       72%  | L3 short before prep: N:68, L1 lost in prep: N:41, L3 short before prep: O:26, L3 short before prep: SN:22, L3 short before prep: SO:17
+m24      861       39%  | L4 short before prep: SN:199, L4 short before prep: S:159, L4 short before prep: SNO:36, L4 short before prep: SO:27, L3 short before prep: N:17
+m30      835       12%  | L4 short before prep: S:566, L4 short before prep: SN:102, L4 short before prep: SO:36, L4 short before prep: SNO:14, L4 blew:13
+m36      818       46%  | L4 short before prep: S:412, L4 short before prep: SN:9, L4 short before prep: SO:5, L4 blew:3, L4 lost in prep: O:2
+m42      802       42%  | L5 short before prep: S:232, L4 short before prep: S:102, L5 short before prep: SN:84, L5 short before prep: SO:30, L5 blew:7
+m48      790       48%  | L5 short before prep: S:232, L5 short before prep: SN:109, L5 short before prep: SO:21, L5 lost in prep: N:14, L5 short before prep: SNO:10
+nivel  meses(media)  Skill/mes  de los cuales trimestre/mes
+L1       6.9         1.33       0.22
+L2       6.7         2.09       0.30
+L3       7.7         2.63       0.30
+L4      17.6         3.19       0.30
+L5       9.2         3.05       0.26
+L6       2.1         2.43       0.02
+mes medio del ascenso a: {'L2': '7.0 (93%)', 'L3': '13.7 (91%)', 'L4': '21.6 (88%)', 'L5': '39.8 (80%)', 'L6': '47.9 (29%)'}
