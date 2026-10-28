@@ -192,3 +192,6 @@ Preparado y compilado gpt_fact_career_read.py; mantiene preguntas/gate, cambia f
 
 ### Relevo de puntuacion preparado
 Proceso de revision factual verificado vivo (PID52296/sesion95901), primeras5lecturas validas. Preparado gpt_fact_career_score.py: compara original, recomendacion y gate exacto de gpt_fact_second_score.select; conserva rechazos con fallback. Compilacion correcta; ejecutarlo no llama modelos y devuelve pendientes hasta completar24. Añadida lectura de cuota propia de esta tanda para futuras admisiones; el proceso ya iniciado usa su modulo cargado, sin reiniciarlo. No resultados completos aun ni candidatura.
+
+## Relevo final: revision factual real
+Cerrada24/24lecturasSonnet5.5,38evidenciasliteralesvalidas,7desacuerdos. Gate2cambios conserva2perdidas evitables y añade riesgo3→4; bloqueado paraadmision. Recomendacion directa empeora ademascrecimiento y agotaHealthenunaopcion. No candidato, no partidas nuevas/DeepSeek. Sesion95901exit0. Reanalisis gpt_fact_career_score.py sin llamadas; datos numericos fact-career-results.json, narrativas fuera deGit. Solicito integrar evidencia enPR23.

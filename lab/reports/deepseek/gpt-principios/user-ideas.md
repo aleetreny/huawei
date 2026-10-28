@@ -56,3 +56,10 @@ La constatación de errores compartidos orienta una prueba distinta: si se retom
 Completadas y no repetir:64lecturas de ablación,16críticas y24decontextofresco. Todos los procesos terminaron; no quedan actores que reanudar. Análisis sin llamadas: `uv run python scripts/deepseek/gpt_narrative_score.py`, `gpt_fact_second_score.py` y `gpt_fresh_context_score.py`.
 
 Datos privados: `~/careerlab-data/deepseek/gpt-narrative-ablation/`, `gpt-fact-second-read/`, `gpt-fresh-context/`. Narrativas/citas no van aGit. Scripts compilados y controles de identidad/panel/evidencia pasan. Cuota compartida al cierre:5h4%, semana40%, redondeada; no atribuir consumo individual. Objetivo75repetible abierto. Evidencia actual no justifica nuevoSkill ni cambio de entrega.
+
+## Contraste factual sobre la carrera real: cerrado
+
+**La revision factual no rescata los errores y añade riesgo; no admitir a carreras.** Todos24turnoscriticos de la carreraSonnet, mismo lector factual/gate, modeloSonnet5.5.24/24respuestas con evidencia literal valida,38flagsyes,7desacuerdos. Gatecambia2elecciones: riesgo3→4, perdidas9→9, evitables2→2. Recomendacion sin gate: riesgo4, perdidas10, evitables3 yunaopcionagotaHealth. Cita literal no prueba efecto deljuego. Comparacionhistorica de n1carrera, sinQni transferenciaDS.
+
+### Relevo
+Proceso95901terminadoexit0; no reiniciar. Analisis sin llamadas: `uv run python scripts/deepseek/gpt_fact_career_score.py`. Datos privados gpt-fact-career-read/, resultados numericos fact-career-results.json. No hubo juegosnuevos/DeepSeek. No seguir afinando esta variante por historias concretas: el requisito de evidencia se cumple pero la inferencia de efectos siguefallando. Objetivo75abierto; esta prueba no lo resuelve.

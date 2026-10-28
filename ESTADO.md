@@ -79,3 +79,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
 
 **Revision factual de carrera anunciada28oct:**24lecturasSonnetMax maximo, mismas preguntas y gate anteriores sobre todos24turnoscriticos reales, sin elegir por errores. Sin juegos/DeepSeek. Cuota fresca5h4%/semana40%, topes0,65/0,45 y4procesos. No reparar/repetir citas no literales; fallbackprimera. Plan fact-career-plan.json.
+
+**Revision factual real cerrada:**24/24validas;gate2cambios,riesgo3→4,evitables2→2. No admitir a carreras. Proceso terminado, sin nuevos juegos/DeepSeek. Resultado fact-career-results.json en apoyo gpt-principios.
