@@ -53,7 +53,6 @@ Código en [`scripts/huevos-pascua/`](../../../scripts/huevos-pascua/):
 | `scan.py` | tipos de nodo, menús, `simulation_flags`, mensajes del registro, saltos de nivel |
 | `state_jumps.py` | cambios de nivel, tiempo en el nivel o energía dentro de un mes; indicadores en las líneas de efecto |
 | `promo_misses.py` | evaluaciones donde falla la regla de ascenso, con contexto y clasificación |
-| `blow_review.py`, `blow_review2.py` | primeras pruebas de explosión y ascenso (aproximadas; las supera `promo_misses.py`) |
 | `unlocks.py` | requisitos y bloqueos entre respuestas y títulos |
 | `main_resid.py` | fallos de la réplica en la acción principal |
 | `probe_interface.py` | sondeo de `observe`, `take_action` y el manual del juego |
