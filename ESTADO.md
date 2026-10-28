@@ -82,3 +82,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Memoriaretornos propia:**110transicionesaisladas/201,89ambiguas+2inesperadasrechazadas,5guardasvalidadas.97observacionesdiminishedno97limites. Proximo medirimpacto conlectorigual antesdeSonnet. Sin llamadas.
 
 **Retornosregistrados replica:**600semillas47,35→52,74,+5,39IC[3,71;7,07],completas315→373. Guardiaefectospostaccionvalida;falta600confirmacion ytransporteactor. No75niDSprobado, sin llamadas.
+
+**Retornos confirmados:**otras600semillas48,56→52,86,+4,30IC[2,53;6,07],completas326→374. Sin llamadas. FaltahelpertransporteypruebaSonnetv4, no75demostrado.
