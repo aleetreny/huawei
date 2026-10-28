@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "games": 800,
+    "seed": 202610280,
+    "script_sha256": "dd13189841be6af63ef2df73c80119e5dd15204c665d39c34b94b076708d0488",
+    "advisor_sha256": "f3f93ad0d3dab1e19241495e9c241bd3870ef2aa2955aca467cf56820c9c7206",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "meaning": "Research replica conditioned on two frozen DS readings, as simadv. Four arms fixed before calls; no extra labels/caps/thresholds. Marginal effect floors risk decrease at currently estimated zero; tracking floor prevents storing risk below estimated zero. Not an actor score or proof of DS transfer."
+  },
+  "arms": {
+    "baseline": {
+      "summary": {
+        "n": 800,
+        "mean": 51.7079,
+        "se": 0.7167455578731643,
+        "completed": 501,
+        "failure_counts": {
+          "dismissed": 203,
+          "trust": 89,
+          "completed": 501,
+          "health": 7
+        },
+        "mean_level": 3.80625
+      }
+    },
+    "floor": {
+      "summary": {
+        "n": 800,
+        "mean": 51.531762500000006,
+        "se": 0.7196333601578356,
+        "completed": 499,
+        "failure_counts": {
+          "dismissed": 206,
+          "trust": 88,
+          "completed": 499,
+          "health": 7
+        },
+        "mean_level": 3.7875
+      },
+      "paired_delta": {
+        "mean": -0.17613749999999992,
+        "se": 0.12469306725473524,
+        "ci95": [
+          -0.42053591181928096,
+          0.06826091181928115
+        ]
+      }
+    },
+    "marginal": {
+      "summary": {
+        "n": 800,
+        "mean": 51.206137500000004,
+        "se": 0.7159087214893375,
+        "completed": 467,
+        "failure_counts": {
+          "dismissed": 185,
+          "completed": 467,
+          "trust": 142,
+          "health": 6
+        },
+        "mean_level": 3.82125
+      },
+      "paired_delta": {
+        "mean": -0.5017625,
+        "se": 0.6065024845707396,
+        "ci95": [
+          -1.6905073697586497,
+          0.6869823697586496
+        ]
+      }
+    },
+    "both": {
+      "summary": {
+        "n": 800,
+        "mean": 51.765249999999995,
+        "se": 0.7152706360797445,
+        "completed": 483,
+        "failure_counts": {
+          "dismissed": 189,
+          "completed": 483,
+          "trust": 122,
+          "health": 6
+        },
+        "mean_level": 3.83625
+      },
+      "paired_delta": {
+        "mean": 0.057350000000000005,
+        "se": 0.5948213575571515,
+        "ci95": [
+          -1.108499860812017,
+          1.223199860812017
+        ]
+      }
+    }
+  },
+  "archive": {
+    "file": "risk-credit-screen.json.gz",
+    "sha256": "f424963e52b670124f33aac551f8491ab6be35fcb905bb56fa5d10af1fa73396",
+    "uncompressed_sha256": "18acb9bd08cf636c371a4a13d167b0aef02b86f67edcbfbbd331d1f3b55d0af0"
+  }
+}

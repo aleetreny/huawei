@@ -1,0 +1,78 @@
+{
+  "meaning": "One-step algorithm intervention: replace only passed HR ordinal with the contemporaneous public remark decoded by existing research parser. Same actual past memory, stats and option readings. Counterfactual history never propagated; no game Q forecast or inference about missed external outcomes. Unknown public feedback excluded. Quarter changes unscored.",
+  "script_sha256": "ab77c09179e1e75bbbadc07684a47d5742268d460fcd38b3007ca74f52ec46f1",
+  "parser_sha256": "5c91fe6dd15d0e704e8bc057e3bd80fcabd94dbd085c4cfb9a28c6e68612c0e6",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "runs": [
+    {
+      "run": "sv1-g1",
+      "report_sha256": "9c5388a9048b5cd1f0b9419f5a84151e964189e9be4d416974f2197a0f108cc6",
+      "script_sha256": "71dadd51562001a3fd0b88b62f84e1286883acfc4b1071b3c50d2e14e7799691",
+      "events_sha256": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+      "comparable_accepted_decisions": 89,
+      "changed": 0,
+      "changed_stories_scored": 0,
+      "old_positive_risk": 0,
+      "new_positive_risk": 0,
+      "old_growth_loss": 0,
+      "new_growth_loss": 0,
+      "changes": []
+    },
+    {
+      "run": "sv1-g2",
+      "report_sha256": "b47334c8a0d9fce246c9d6925530e3ff1a7b19c30ff333dadc53b04b7339d7c3",
+      "script_sha256": "71dadd51562001a3fd0b88b62f84e1286883acfc4b1071b3c50d2e14e7799691",
+      "events_sha256": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+      "comparable_accepted_decisions": 204,
+      "changed": 0,
+      "changed_stories_scored": 0,
+      "old_positive_risk": 0,
+      "new_positive_risk": 0,
+      "old_growth_loss": 0,
+      "new_growth_loss": 0,
+      "changes": []
+    },
+    {
+      "run": "sv3-g1",
+      "report_sha256": "42d59b2d738369003cc11f8d6e5432f0e3f0290b4b6525d7e90f75e21a701037",
+      "script_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+      "comparable_accepted_decisions": 202,
+      "changed": 0,
+      "changed_stories_scored": 0,
+      "old_positive_risk": 0,
+      "new_positive_risk": 0,
+      "old_growth_loss": 0,
+      "new_growth_loss": 0,
+      "changes": []
+    },
+    {
+      "run": "sv3-g2",
+      "report_sha256": "3850ae6bdb034ada61c89445fed6802ea0178ad169dbefed8f902ba47cbe84b3",
+      "script_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+      "comparable_accepted_decisions": 35,
+      "changed": 0,
+      "changed_stories_scored": 0,
+      "old_positive_risk": 0,
+      "new_positive_risk": 0,
+      "old_growth_loss": 0,
+      "new_growth_loss": 0,
+      "changes": []
+    },
+    {
+      "run": "sv3-g3",
+      "report_sha256": "c95a2f084297488fd63d12abac88efeee11bd22e590eb4965c733b48c1abc996",
+      "script_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8",
+      "comparable_accepted_decisions": 202,
+      "changed": 0,
+      "changed_stories_scored": 0,
+      "old_positive_risk": 0,
+      "new_positive_risk": 0,
+      "old_growth_loss": 0,
+      "new_growth_loss": 0,
+      "changes": []
+    }
+  ]
+}

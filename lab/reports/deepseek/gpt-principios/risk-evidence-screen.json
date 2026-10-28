@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "games": 800,
+    "seed": 202620280,
+    "script_sha256": "ea93e0ee09e9f31aa1ff8462deeda03565951f358936f3cca362e9f66d7e42e0",
+    "advisor_sha256": "f3f93ad0d3dab1e19241495e9c241bd3870ef2aa2955aca467cf56820c9c7206",
+    "label_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "meaning": "Research replica conditioned on two frozen DS readings, as simadv. Four arms fixed before calls; no extra labels/caps/thresholds. Marginal effect floors risk decrease at currently estimated zero; tracking floor prevents storing risk below estimated zero. Not an actor score or proof of DS transfer."
+  },
+  "arms": {
+    "baseline": {
+      "summary": {
+        "n": 800,
+        "mean": 52.843687499999994,
+        "se": 0.6995956851550323,
+        "completed": 505,
+        "failure_counts": {
+          "completed": 505,
+          "trust": 104,
+          "dismissed": 178,
+          "health": 13
+        },
+        "mean_level": 3.93125
+      }
+    },
+    "verified_only": {
+      "summary": {
+        "n": 800,
+        "mean": 52.583525,
+        "se": 0.6910460062082258,
+        "completed": 529,
+        "failure_counts": {
+          "dismissed": 204,
+          "completed": 529,
+          "trust": 54,
+          "health": 13
+        },
+        "mean_level": 3.76375
+      },
+      "paired_delta": {
+        "mean": -0.26016250000000013,
+        "se": 0.40133021127725604,
+        "ci95": [
+          -1.046769714103422,
+          0.5264447141034216
+        ]
+      }
+    }
+  },
+  "archive": {
+    "file": "risk-evidence-screen.json.gz",
+    "sha256": "c5ef830ebc754f89fccdc3f9aa74f1237a3d51cc1c2479962dd7e755d2b544e1",
+    "uncompressed_sha256": "aff6ea89b3d02b09525be44f6714061ec1638401fa8bfb984b90dad8e56a440d"
+  }
+}
