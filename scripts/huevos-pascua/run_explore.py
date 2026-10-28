@@ -19,6 +19,10 @@ OPT = {"w_below": 5.32, "w_above": 0.58, "w_skill_hi": 2.04, "review_boost": 4.5
 
 def proc_main(k, args, per):
     os.nice(10)
+    if args.notes is not None:
+        harness.NOTES_TEXT['custom'] = args.notes; os.environ['BB_NOTES'] = 'custom'
+    if args.competition:
+        os.environ['BB_COMPETITION'] = '1'
     shared = Explorer.load_shared(catalog=str(CAT))
     factory = lambda i: Explorer(args.seed + i, shared=shared, catalog=str(CAT), policy="planner", params=OPT,
                                  explore_below=args.explore_below, risk_room=args.risk_room)
@@ -31,10 +35,12 @@ if __name__ == "__main__":
     ap.add_argument("--batch", required=True); ap.add_argument("--games", type=int, required=True)
     ap.add_argument("--procs", type=int, default=4); ap.add_argument("--slots", type=int, default=3)
     ap.add_argument("--seed", type=int, default=7_100_000); ap.add_argument("--explore-below", type=int, default=60); ap.add_argument("--risk-room", type=int, default=2)
+    ap.add_argument("--notes", default=None, help="texto fijo para el campo notes (sondeo de palabras clave)")
+    ap.add_argument("--competition", action="store_true", help="servidor en modo --competition")
     args = ap.parse_args()
     out = OUT / args.batch; out.mkdir(parents=True, exist_ok=True)
     (out / "manifest.json").write_text(json.dumps({"args": vars(args), "started": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "engine": version("career-emulator-engine"), "dataset": version("career-emulator-techarena"), "params": OPT,
+        "engine": version("career-emulator-engine"), "dataset": version("career-emulator-techarena"), "params": OPT, "notes": args.notes, "competition": args.competition,
         "interface": "five official MCP tools only"}, indent=2))
     per = -(-args.games // args.procs)
     ps = [mp.Process(target=proc_main, args=(k, args, per)) for k in range(args.procs)]
