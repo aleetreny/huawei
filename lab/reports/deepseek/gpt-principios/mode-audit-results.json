@@ -1,0 +1,38 @@
+{
+  "meaning": "Independent local mode samples, same Planner, not paired engine seeds. Pilot CI normal approximation, no small-shift equivalence claim. Interrupted runs never scored as zero; failures explicitly retained. No DeepSeek or competition-heldout score inference.",
+  "selection_warning": "Competition has operational missingness if failures>0; reported means/CI are conditional on valid games and cannot identify a mode effect without checking missingness.",
+  "modes": {
+    "dev": {
+      "attempted": 60,
+      "valid": 60,
+      "operational_failures": 0,
+      "mean": 73.69883333333334,
+      "se": 0.5865018430990381,
+      "min": 59.38,
+      "max": 79.75,
+      "at_least75": 32,
+      "completed": 60,
+      "policy_hash": "844903f844a6d3d234871f8e794e29efaa38a881556245ed67a2a8b257add29d"
+    },
+    "competition": {
+      "attempted": 60,
+      "valid": 32,
+      "operational_failures": 28,
+      "mean": 73.213125,
+      "se": 2.181968510345905,
+      "min": 22.23,
+      "max": 79.85,
+      "at_least75": 21,
+      "completed": 30,
+      "policy_hash": "844903f844a6d3d234871f8e794e29efaa38a881556245ed67a2a8b257add29d"
+    }
+  },
+  "competition_minus_dev": {
+    "mean": -0.48570833333333496,
+    "ci95": [
+      -4.914168174322095,
+      3.9427515076554247
+    ]
+  },
+  "script_sha256": "dc26ea4bd5947c327e0d548eaf26936b5199307869238ddd6ccfafac68118ee2"
+}

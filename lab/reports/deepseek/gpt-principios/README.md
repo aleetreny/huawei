@@ -276,3 +276,8 @@ Reproducir `uv run python scripts/deepseek/gpt_panel_constraint.py`. Plan/result
 
 ## Relevo: comparacion de modo local
 Los datos c01-explore-comp citados por otra linea no estan en estehost. Se prepara piloto independiente60dev+60competition, mismoPlanner viaExplorerconexplore_below0; fuentes desconocidas mantienenfallback. No es busqueda deatajos ni nueva variante deSkill. Planmode-audit-plan.json; sin API/modelos. Ejecutado gpt_mode_audit.py --run: inspeccionar proceso/logs en ~/careerlab-data/deepseek/gpt-mode-audit/ antes deretomar; directorios existentes bloqueanrepeticion. Falta cierre/resumen de notas y distribucion; n60no excluye diferenciaspequenas. Objetivo75abierto; integrarPR23.
+
+## Relevo: modo local y preferenciaSonnet
+**Piloto no permite afirmar que competition sea masfacil.** dev60/60validas Q73,70;competition32/60validas Q73,21,28KeyError(session_id). Los fallos no se puntuan0; ausencia potencialmente selectiva, medias/ICcondicionadosnoefectocausal. Proceso55759exit0, no repetir carreras. Scorer gpt_mode_score.py, solooutputs propios, sin engineinternals/API.
+
+Alejandro pide priorizarSonnet: se adopta para futuras pruebasLLM; las recientes24contexto/24factual/24forecastyaeranSonnet. HALLAZGOSde mainb57f90c menciona juecesHaiku/Sonnet pero no demuestra similitudjugadorDS; no afirmartransferenciaverificada. MergeconflictoESTADOresuelto conmain y filaapoyoreañadida segunNORMAS; informespropiospreservados. Solicito integrarPR23.
