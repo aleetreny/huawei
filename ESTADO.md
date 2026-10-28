@@ -74,3 +74,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Publicv11auditado:**modeloDSflashreportado(2usage,2unknown);scriptlee logMCP,modosN/G/R/D,trimestresdeterministas,LLMhistorias. n1raw73,1,scriptsemantica/compliancependiente. No copiarSkillnumerico.
 
 **V11helper:**3pruebas aisladas de ledger pasan; usa efectosregistradosvsestado. Trimestres/modos contienenconstantesnoportables sin revision. No candidata75ni llamadas.
+
+**Parserpublicov11revisado:**deltasprocedenlogMCP,aislamiento porpath, fallbackporrecencianoportar. Contabilizadousodetools, semantica/replaypendiente. SinAPI.
