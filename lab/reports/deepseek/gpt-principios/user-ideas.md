@@ -63,3 +63,8 @@ Datos privados: `~/careerlab-data/deepseek/gpt-narrative-ablation/`, `gpt-fact-s
 
 ### Relevo
 Proceso95901terminadoexit0; no reiniciar. Analisis sin llamadas: `uv run python scripts/deepseek/gpt_fact_career_score.py`. Datos privados gpt-fact-career-read/, resultados numericos fact-career-results.json. No hubo juegosnuevos/DeepSeek. No seguir afinando esta variante por historias concretas: el requisito de evidencia se cumple pero la inferencia de efectos siguefallando. Objetivo75abierto; esta prueba no lo resuelve.
+
+## Diagnostico del fallo de la revision
+**El problema no es solo una regla demasiado estricta: los hechos preguntados no identifican los costes relevantes.** En amboserrores evitables el revisor no marca ninguncoste de la eleccion original; la alternativa segura tiene incertidumbre en relacion/problema pendiente. Una eleccion originalmente segura recibe unflag y se cambia por unaarriesgada; el otrocambio no mejora losendpoints. Esto no prueba que la respuesta factual sea falsa: la correspondencia entre el hecho textual y el efecto deljuego no es una equivalencia.
+
+Analisisposthoc numerico en fact-bottleneck.json, regenerable con `uv run python scripts/deepseek/gpt_fact_bottleneck.py`; sin modelos/juegos ni relatos enGit. No aflojar el gate o codificar respuestas de esos eventos como solucion. Siguiente pregunta de investigacion: antes de otra taxonomia, medir la suficiencia de los predicados para distinguir costes, separando extraccion textual y correspondencia con efectos. Objetivo75abierto; diagnostico no candidatura.
