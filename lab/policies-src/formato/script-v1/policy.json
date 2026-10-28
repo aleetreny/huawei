@@ -1,0 +1,11 @@
+{
+  "family": "formato",
+  "name": "script-v1",
+  "parents": ["t13-read-v1"],
+  "idea_origin": "Formato line, 27 Oct night: the official JiuwenSwarm agent has bash and code tools and can run a script inside the Skill folder in a headless game (tested with a fake model, zero cost). Split the agent into reader (labels) and script (decision).",
+  "operator": "change the delivery form",
+  "hypothesis": "DeepSeek loses official games to decision and execution errors (rule contamination, forgetting, hand arithmetic), not only to perception. If DeepSeek only reads each option into sign codes and a script makes every decision with memory across the run, the official score should approach the replica score of a script fed DeepSeek's own labels (~51) instead of 15-42.",
+  "predicted_behaviour": "DeepSeek calls the advisor on every non-trivial decision, takes its choice, finishes 48 months more often; fewer missed L1 promotions.",
+  "refutation": "DeepSeek skips the script, mangles the line, or games end as early as before.",
+  "skill_count": 1
+}

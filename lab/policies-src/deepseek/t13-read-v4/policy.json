@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v4",
+  "parents": [
+    "t13-read-v3"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct night; ideas from Matteo's observed-growth-v10 (branch matteo/main): best value at the level, two-month review window, repair at once",
+  "operator": "merge ideas",
+  "hypothesis": "An official t13-read-v2 game lost its first promotion when, two months before the review, DeepSeek chased a Network gain it could no longer take and lost two Output points. Recording the best value of Skill, Network and Output at the level (Matteo's observed-growth idea), protecting Network and Output over the last two months, repairing any loss at once, and detecting stalls from story choices too should keep more first promotions.",
+  "predicted_behaviour": "First promotion at the first review more often than t13-read-v2/v3; no rise in trust crises.",
+  "refutation": "Same or more missed first promotions than t13-read-v2/v3 in official games.",
+  "skill_count": 1
+}

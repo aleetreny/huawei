@@ -30,7 +30,7 @@ from typing import Any
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(HERE))
-from ds import DATA, BudgetStop, DeepSeek  # noqa: E402
+from ds import DATA, SUFFIX, BudgetStop, DeepSeek  # noqa: E402
 
 RX = REPO / "lab" / "data" / "ingenieria-inversa"
 STATS = ["health", "dignity", "skill", "network", "output", "wealth"]
@@ -104,7 +104,7 @@ async def run(variant: str, rep: int, split: str, limit: int | None, slots: int,
     random.Random(5).shuffle(qs)
     if limit:
         qs = qs[:limit]
-    out_dir = DATA / "perceive" / f"{variant}-r{rep}"
+    out_dir = DATA / "perceive" / f"{variant}-r{rep}{SUFFIX}"
     out_dir.mkdir(parents=True, exist_ok=True)
     todo = [q for q in qs if not (out_dir / f"{q['node']}.json").exists()]
     print(f"perceive {variant} r{rep} {split}: {len(qs)} questions, {len(todo)} to run", flush=True)
@@ -202,9 +202,9 @@ def score_labels(qs: list[dict[str, Any]], lab: dict[tuple[str, int], dict[str, 
     return res
 
 
-def load_run(variant: str, rep: int) -> dict[tuple[str, int], dict[str, str]]:
+def load_run(variant: str, rep: int, suffix: str = "") -> dict[tuple[str, int], dict[str, str]]:
     lab = {}
-    for p in (DATA / "perceive" / f"{variant}-r{rep}").glob("*.json"):
+    for p in (DATA / "perceive" / f"{variant}-r{rep}{suffix}").glob("*.json"):
         r = json.loads(p.read_text())
         for ch, v in (r.get("labels") or {}).items():
             lab[(r["node"], int(ch))] = v

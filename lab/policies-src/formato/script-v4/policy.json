@@ -1,0 +1,14 @@
+{
+  "family": "formato",
+  "name": "script-v4",
+  "parents": [
+    "script-v3b",
+    "t13-read-v4"
+  ],
+  "idea_origin": "script-v1/v3 have the higher ceiling (76.87, L6) but trust labels blindly; t13-read-v4 (DeepSeek decides) is steadier (71.67, 70.22). Keep DeepSeek's holistic pick and let the script only veto picks that its own codes flag, plus decide quarters.",
+  "operator": "change the delivery form",
+  "hypothesis": "A veto keeps v4's judgement while removing the risky 'pragmatic' picks (v2), the review-month losses and the hidden-wallet ruin, and the script's quarters keep the late-career upside.",
+  "predicted_behaviour": "Games complete; L5-L6; vetoes are rare (a few per game) and mostly R+ picks.",
+  "refutation": "Scores at or below t13-read-v4, or vetoes that DeepSeek fights or ignores.",
+  "skill_count": 1
+}
