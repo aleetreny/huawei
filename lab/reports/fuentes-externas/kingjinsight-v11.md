@@ -112,3 +112,10 @@ En resumen, lo único con valor sigue siendo Kingjinsight (secciones 1–5, C37�
   - Web, en inglés y en chino: LinkedIn, YouTube, Medium y Bilibili.
   - Sin relación con el reto: otros retos de TechArena (CTR y otros) y la edición 2025.
 - **No accesibles desde la nube:** huggingface.co, gitee.com, gitlab.com, reddit.com, techarena-uk.hydro.ac y la documentación en readthedocs. La API de GitHub tampoco; se usan `git ls-remote` y clones.
+
+## Primera revisión diaria (28 oct, 19:45 UTC)
+
+No hay nada nuevo: los repos no han cambiado y la clasificación sigue sin notas.
+- **Hugging Face** (modelos, datasets y spaces; búsquedas techarena, career-survival, jiuwen y career_emu): nada del reto.
+- **Gitee** (API de búsqueda): nada. Algunas consultas cortan la conexión.
+- **Reddit:** la API JSON no se puede usar desde la sesión, porque el clasificador de permisos la bloquea como bot, y el buscador web no indexa reddit.com. Queda sin cubrir.
