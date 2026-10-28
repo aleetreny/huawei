@@ -1,0 +1,13 @@
+{
+  "family": "techo",
+  "name": "v4-t0",
+  "parents": [
+    "v4-c5"
+  ],
+  "idea_origin": "Techo line, 28 Oct: the single change with most value in the replica (lab/reports/techo/README.md)",
+  "operator": "one quarterly line",
+  "hypothesis": "v4-c5 with only quarterly line 5 changed: from level 4 the quarter goes to Skill learning and Apply for rotation on a visible condition, because DeepSeek never fills Stalled and in L4 Network and Output sit at their ceiling for months.",
+  "predicted_behaviour": "Replica with v4-like reading: +0.5, L6 from 16 % to 25 % (exact reading), final Skill +9; first-promotion rate unchanged. DeepSeek: Skill learning and rotation in L4+ quarters.",
+  "refutation": "DeepSeek games where the L4+ quarter does not go to Skill, or lower final Skill than v4-c5 careers, or a quality score below v4-c5.",
+  "skill_count": 1
+}

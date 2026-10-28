@@ -104,12 +104,57 @@ Otras: proteger Dignity desde 7 en vez de 4 (`dprot=7`), +0,4 y menos crisis (el
 | Proteger S/N/O todos los meses de L1, tras el riesgo (`pl1=safe`) | 59,6 | 41,1 (igual) |
 | … antes del riesgo (`pl1=first`) | 58,3, despidos 175 → 217 | — |
 | Tolerancia al riesgo tipo planificador (`rt=safe0`, con o sin techos, desde L2 o L4) | 57,7–59,6, crisis +20–40 % | — |
+| Tolerancia sólo para opciones que suben Network en L1–L3 (`rtn`, `data/battery7-rtn-exact.txt`) | 58,8–59,1, despidos 175 → 197 | — |
 
 **Lectura.**
 - Lo que sube con las dos lecturas y no toca L1: **trimestre a Skill desde L4, Dignity protegida desde 7 y Skill doble en las historias desde L4**: +1,1 (exacta) / +0,9 (ruidosa), L6 del 16 % al 26 % con lectura exacta, Skill final +10. Es poco en nota (una partida de 70 pasa a ~71) y **no basta para L6 con la lectura de DeepSeek** (1 % → 2–3 %).
 - **La marca «Stalled» de v4 no vale nada tal como está definida** (se borra cuando el indicador «vuelve a subir», y como no sube nunca más en el nivel, lo que la rompe son las bajadas: una pérdida deja la marca puesta sobre un indicador que ya tiene hueco y el bot deja de invertir en él; 34 % de marcas falsas en Network de L1). **Anclada al valor** («Stalled: N at 7», se quita sólo cuando Now baja de ese valor o cambia el nivel) recupera casi todo lo que vale conocer los techos (+0,7 frente a +1,2 sobre v4). Vale para un script de línea de estado o para el texto; DeepSeek no la rellena (C18), así que en el texto es poco útil y la condición «nivel 4 o más» hace su trabajo en el caso que importa.
 - **Descartado:** Network doble en L2–L3 (pierde Skill y no gana ascensos), proteger L1 todos los meses antes del riesgo (más despidos por explosiones) y cualquier tolerancia al riesgo escrita como regla.
 
-## Relevo
+## 7. Candidatos (`lab/policies-src/techo/`) y qué debe correr el chat local con DeepSeek
 
-(se rellena al final)
+Los dos parten de `calidad/v4-c5` y pasan `careerlab lint` sin errores (sólo avisos de revisión, los mismos que c5 más los números de margen).
+
+| Candidato | Cambios sobre v4-c5 | Réplica (lectura exacta / ruidosa) | Juez de calidad (Haiku / Sonnet, 3 lecturas) |
+|---|---|---|---|
+| `v4-t0` | Sólo la línea 5 del trimestre: **«nivel 4 o más, o Network y Output estancados» → Skill learning + Apply for rotation**, con la misma frase en la instrucción del manifest | +0,5 / +0,3; L6 16 % → 25 % (exacta); Skill final +9 | (ver `data/j-techo-*.jsonl`; se rellena abajo) |
+| `v4-t1` | t0 + Skill cuenta doble en el paso Crecer desde el nivel 4 + Dignity protegida desde 7 en Bienestar + «Stalled» anclado al valor y sin la mecánica `Expect` + párrafo del plan en «Los 48 meses» | +1,1 / +0,9; L6 16 % → 26 %; Skill final +10 | primera redacción: 62 / 68 frente a 66 / 70 de c5; segunda: 63 / 65 frente a 68 / 69 (los jueces leen la justificación empírica y los márgenes como mecánica inventada; corregida una frase falsa sobre las acciones que suben Skill); tercera redacción: pendiente |
+
+**Lo que cambia de verdad en una partida** es el trimestre desde L4 (DeepSeek obedece las reglas de trimestre: B20, «Skill en L4» del 2 % al 65 % con t13-final). Lo demás vale décimas.
+
+**Plan para el chat local (con la clave), por orden de coste:**
+
+1. **Banco de DeepSeek, trimestre de L4** (~0,2 USD): las 40 situaciones «Skill en L4» de `ids-V2.txt` con `v4-t0` frente a `v4-c5`.
+   ```bash
+   uv run python scripts/deepseek/bench.py run --variant lab/policies-src/techo/v4-t0/bundle --name ds-t0 --ids <ids de la regla "Skill en L4" de ~/careerlab-data/deepseek/ids-ds1.txt>
+   ```
+   Confirma si elige Skill learning o Apply for rotation en ≥ 60 % (c5 y v4: ~2 %; t13-final: 65 %).
+2. **Banco de DeepSeek, historias de control** (~0,5 USD): las 40 historias de control de hacia-80 (`ids-v9-all.txt`, serie de control) y las 29 de control de riesgo con `v4-t1`, comparadas con `ds-v4-full10` y `ds-v4-rep`. Confirma si la pérdida por decisión no sube más que entre dos pasadas de v4 (0,37) y no hay más elecciones con riesgo. Si t1 empeora las historias, entregar t0.
+3. **Juez con DeepSeek** (~0,1 USD): `scripts/calidad-skills/ds_judge.py` con c5, t0 y t1, 5 lecturas. Entregar el que no baje de c5.
+4. **Partidas completas** (0,7–0,8 USD cada una, sólo para confirmar): 3 partidas del candidato elegido. Lo que lo confirma: Skill learning o rotación en todos los trimestres desde L4 (leer `events-*.jsonl`), Skill final ≥ 120 (v4: 105–122), L5 antes del mes 42 en 2 de 3; y lo que lo refuta: un primer ascenso perdido más que con v4 (1 de 9) o una explosión nueva. **Una partida que llegue a L6 sería suerte, no la regla**: en la réplica con la lectura de DeepSeek, L6 pasa del 1 % al 2–3 %.
+
+**Lo que no hay que probar con DeepSeek** (ya descartado en la réplica): tolerancia al riesgo escrita como regla, Network doble en L2–L3, proteger L1 todos los meses, estancamiento por «no ha subido en el trimestre», Skill en el trimestre desde L3.
+
+**Sobre un script de línea de estado** (idea de C37): su valor en la réplica es el de conocer los techos, ≤ +0,7 sobre el texto (y 0 si DeepSeek sigue sin usar Stalled, porque la condición «nivel 4 o más» cubre el caso que importa). Con el coste de fichas de una llamada por decisión (C23: −3,6 puntos de versión) no compensa; sólo tendría sentido una llamada por trimestre, y entonces basta la condición de nivel. No se ha construido.
+
+## Relevo (28 oct, noche)
+
+1. **Qué se ha hecho y por qué.** La pregunta era por qué las partidas completas de DeepSeek se quedan en L5 y qué regla general las llevaría a L6. Se construyó un bot que sigue las reglas de v4-c5 tal como están escritas sobre una lectura imperfecta (`scripts/techo/techobot.py`), un diagnóstico por ventana de evaluación (`diag.py`) y un planificador que sólo ve signos con ablaciones, y se probaron ~40 variantes de regla en la réplica con semillas comunes (2.000 partidas por brazo). Después se escribieron dos candidatos desde v4-c5 y se pasaron por lint, juez de calidad y banco con Haiku.
+2. **Resultados.** §2–§7 y HALLAZGOS B33–B35 más tres filas de X. En una frase: las ventanas se pierden por Network en L3 y por el ritmo de Skill en L4; la ventaja del planificador es tolerar riesgo con el contador a 0 y **no se traslada** a una regla escrita; lo que aguanta (trimestre a Skill desde L4, Dignity desde 7, Skill doble en historias desde L4) vale ~+1 y no lleva a L6 con la lectura de DeepSeek (1 % → 2–3 %). Datos en `data/` (sin texto del juego); banco con Haiku en `~/careerlab-data/techo/bank/runs/` de este contenedor (texto del juego, fuera de Git).
+3. **Qué falló o quedó a medias.**
+   - El modelo de lectura ruidosa (`noisy`) es demasiado pesimista en crisis (32 % frente a ~9 % con etiquetas reales de DeepSeek): el ruido real está correlacionado con las palabras. Sirve para comparar brazos, no para cifras absolutas. Las etiquetas reales de DeepSeek (`~/careerlab-data/deepseek/labels/`) sólo están en el Mac; con ellas habría que repetir `battery5` (`--labels` no está implementado en `techobot.py`; `groupbot.Perception` sirve de modelo).
+   - **El juez de calidad baja los candidatos** frente a v4-c5 (primera y segunda redacción: −4 a −5 con Haiku, −1 a −4 con Sonnet): lee la justificación del plan de L4 y los márgenes como mecánica inventada, y una frase de la primera redacción era falsa (ya corregida). La tercera redacción está en `data/j-techo-3.jsonl` (resultado abajo si llegó a tiempo). Si sigue por debajo, la regla del trimestre puede ir sólo en la instrucción del manifest, que el juez no puntúa, y el SKILL.md quedarse como c5.
+   - No se construyó el script de línea de estado (§7): su valor en la réplica no compensa las fichas.
+   - No se ha medido nada con DeepSeek: el plan está en §7.
+4. **Siguiente paso.** El chat local con la clave sigue §7 por orden (banco «Skill en L4» con `v4-t0`, controles de historias con `v4-t1`, juez con DeepSeek, 3 partidas). Para repetir lo de aquí:
+
+   ```bash
+   # réplica: tandas (flags en la cabecera de techobot.py)
+   uv run python scripts/techo/techobot.py --arms "base,qskill=4+dprot=7+sskill=4" --per exact --games 2000
+   uv run python scripts/techo/diag.py --arms planner,base,sp+capthr+lexq+hfloor4 --per exact --games 1000
+   # juez y banco (Claude, 0 USD)
+   python3 scripts/calidad-skills/judge.py --out lab/reports/techo/data/j-x.jsonl --models haiku,sonnet --reps 4 lab/policies-src/calidad/v4-c5 lab/policies-src/techo/v4-t1
+   TRANSMISION_DATA=~/careerlab-data/techo/bank CAREERLAB_CLAUDE_EXE=$(which claude) uv run python scripts/transmision/runbench.py run --items ~/careerlab-data/techo/bank/items.jsonl --variant lab/policies-src/techo/v4-t1/bundle --name hk-t1 --ids ~/careerlab-data/techo/bank/ids-calidad.txt --slots 4
+   TRANSMISION_DATA=~/careerlab-data/techo/bank python3 scripts/calidad-skills/compare_bank.py --a hk-c5 --b hk-t1
+   ```
+   (`items.jsonl` sale de `gunzip -c lab/data/transmision/bank-items.jsonl.gz`; copiar también `lab/data/transmision/handbook.md` a esa carpeta.)

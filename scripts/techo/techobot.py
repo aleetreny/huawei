@@ -129,6 +129,7 @@ class V4Bot(R.Policy):
         self.pl1 = f.get("pl1", "")              # en L1 proteger S/N/O todos los meses: "safe" tras el filtro de riesgo,
                                                  # "first" antes (como la excepcion del mes previo, con RR. HH. amable)
         self.ndouble = int(f.get("ndouble", 0))  # hasta este nivel, una subida de Network cuenta doble al crecer
+        self.rtn = int(f.get("rtn", 0))         # hasta este nivel, tolerar una marcada que suba Network (RR. HH. amable, sin Concerns)
         self.rtall = bool(f.get("rtall", False))
         self.rtlv = int(f.get("rtlv", 1))
         self.rt = f.get("rt", "")                # tolerancia tipo planificador: "safe0" = aceptar una marcada si crece y
@@ -246,6 +247,12 @@ class V4Bot(R.Policy):
                 alt = max(cand, key=score)
                 if score(alt)[0] >= 1 and score(pick)[0] <= 0:
                     pick = alt
+        if self.rtn and st.level <= self.rtn and not endgame and self.hr == FRIENDLY and self.concerns == 0 \
+                and (self.rtall or n not in (1, 2)) and st.health > self.hprot and st.dignity > self.dprot \
+                and pick[1]["network"] <= 0:
+            cand = [o for o in risky_pool if o[2] > 0 and o[1]["network"] > 0 and not any(o[1][k] < 0 for k in R.GROWTH)]
+            if cand:
+                pick = max(cand, key=score)
         if self.risktol and not endgame and self.hr == FRIENDLY and self.concerns == 0 and n not in (1, 2) \
                 and st.health > self.hprot and st.dignity > self.dprot:
             # tolerancia: una opcion arriesgada que crece claramente mas, una vez al mes, con RR. HH. amable
