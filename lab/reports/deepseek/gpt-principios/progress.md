@@ -54,3 +54,5 @@ Continuacion: turno previo fue progreso (104lecturas cerradas); main revalidado 
 Cierre factual real:24respuestasvalidas, gate2cambios/riesgo3→4/evitables2→2. Noadmision. Fuentehistorica n1, noQ. Procesoexit0, sin reinicios ni sustituciones.
 
 Diagnostico posthoc:2errores originales sin flags; alternativasseguras inciertas. Unflag sobre opcionsegura causa cambioarriesgado. No es un simple bloqueo de gate, sino relacionpredicado/efecto insuficiente. Guardadofact-bottleneck.json sin narrativa ni llamadas.
+
+Suficienciaoffline:3/24menus con identicovector4respuestas y distintosresultados riesgo/crecimiento. Solo prueba insuficiencia de estosvectoresobservados, no deltexto/citas/politicacompleta niQ. Sin llamadas.

@@ -1,0 +1,72 @@
+{
+  "meaning": "Posthoc within-menu collisions: same public state and identical saved four-predicate answers, different gold risk/growth-loss outcomes. Shows these particular observed predicate vectors alone are insufficient; not a bound on richer text/state policies, perfect factual annotation, career Q or DeepSeek. No answer map delivered as Skill.",
+  "n_menus": 24,
+  "menus_with_collisions": 3,
+  "colliding_groups": 3,
+  "rows": [
+    {
+      "id": "30a555fdf7b5b972",
+      "flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "yes",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "options": [
+        {
+          "choice": 1,
+          "positive_risk": false,
+          "growth_loss": false
+        },
+        {
+          "choice": 2,
+          "positive_risk": false,
+          "growth_loss": true
+        }
+      ]
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "yes",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "options": [
+        {
+          "choice": 2,
+          "positive_risk": false,
+          "growth_loss": false
+        },
+        {
+          "choice": 3,
+          "positive_risk": true,
+          "growth_loss": true
+        }
+      ]
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "no",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "options": [
+        {
+          "choice": 1,
+          "positive_risk": false,
+          "growth_loss": false
+        },
+        {
+          "choice": 2,
+          "positive_risk": true,
+          "growth_loss": true
+        }
+      ]
+    }
+  ],
+  "script_sha256": "82d7e80958674ed9fdb2595c816c26bf5a7c849b183ce6ae48c79cddc1b07199"
+}

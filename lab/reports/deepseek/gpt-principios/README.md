@@ -204,3 +204,9 @@ Cerrada24/24lecturasSonnet5.5,38evidenciasliteralesvalidas,7desacuerdos. Gate2ca
 Analisisposthoc numerico en fact-bottleneck.json, regenerable con `uv run python scripts/deepseek/gpt_fact_bottleneck.py`; sin modelos/juegos ni relatos enGit. No aflojar el gate o codificar respuestas de esos eventos como solucion. Siguiente pregunta de investigacion: antes de otra taxonomia, medir la suficiencia de los predicados para distinguir costes, separando extraccion textual y correspondencia con efectos. Objetivo75abierto; diagnostico no candidatura.
 
 Codigo compilado y diff --check limpio; no procesos nuevos. Solicito integrar evidencia dePR23.
+
+## Suficiencia de las cuatro respuestas
+**En3de24menus, opciones con identicas cuatro respuestas tienen riesgo/perdida de crecimiento distintos.** Estado publico igual dentro de cada menu. Es evidencia de perdida de informacion en los vectores observados de respuestas, no prueba de que las preguntas perfectamente anotadas fallen, ni de que citas/texto/rawrecommendation no puedan distinguirlas. El gate real tambien recibe recomendacion/primeraeleccion: esto no es una cota de toda esa politica ni deQ.
+
+### Relevo
+Analisisposthoc sin modelos/juegos, reproducible con `uv run python scripts/deepseek/gpt_fact_sufficiency.py`; salida numerica fact-sufficiency.json. No convertir colisiones en respuestas fijas por evento. Antes de otra tabla de categorias, exigir prueba de que conserva diferencias relevantes para decision. Codigo compilado y diff --check limpio. Objetivo75abierto, sin nueva candidatura.
