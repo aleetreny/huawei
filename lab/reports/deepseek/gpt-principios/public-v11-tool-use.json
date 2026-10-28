@@ -1,7 +1,6 @@
 {
   "source_sha256": "d712234cd0a04ff14fafcfcc2c1ae948f3b0836d6eedcd6332d9be76805ea127",
   "tool_calls": {
-    "": 550,
     "skill_tool": 2,
     "mcp_career-emulator-engine_new_game": 1,
     "mcp_career-emulator-engine_check_latest_logs": 2,
@@ -11,5 +10,6 @@
   },
   "career_script_mentions": 163,
   "log_calls": 2,
-  "scope": "Counts only, not semantic correctness or model identity guarantee."
+  "scope": "Named call counts only; unnamed/delta frames separate. No execution-correctness or per-action compliance claim.",
+  "unnamed_or_delta_call_frames": 550
 }
