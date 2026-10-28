@@ -231,3 +231,8 @@ Sin nuevas llamadas/partidas. Hipotesis distinta de otra redaccion de manual; si
 Se inspeccionaron solo lineas de generacion permitidas de config.yaml de slotsFormato a/b: cinco temperature0.95 en cadauno, sin thinking/reasoning_effort/enable_thinking/thinking_budget/max_tokens. No se leyeron.env ni se imprimieron credenciales; los configs actuales tampoco certifican los usados historicamente. Falta revisar el adaptador publico deJiuwen que construye solicitudes para saber que defaults aplica y que telemetria puede conservarse en futuras pruebas autorizadas. No cambiarslotsni llamarAPI para completar esta auditoria.
 
 Sin candidato ni75demostrado. Proximo paso conserva esta hipotesis abierta, no afirmar que subir effort mejoraria. Solicito integrar checkpoint enPR23.
+
+## Relevo: localizado inyector de razonamiento
+**Jiuwen tiene un control interno reasoning_level que el inventario previo no incluia; falta determinar su valor efectivo en la ruta usada.** Localizado en jiuwenswarm/common/reasoning_injector.py del runtime publico instalado (no motor). inject_reasoning_paramsretorna sin inyectar si levelNone o targetdesconocido; rutas deepseek_official/dashscopeinyectan thinking/enable_thinking. No inferir efectoOpenRouter sin leer resolve_reasoning_target.
+
+La busqueda inicial de directoriosignorados dio0resultados; corregida con --hidden --no-ignore antes de interpretar ausencia. Siguiente paso:leer reasoning_config.py y llamada efectiva de esteinyector, luego simulacion pura de kwargs con modelo/URLficticios, sin clientes/red/secretos. No cambiarconfig ni usarAPI. Objetivo75abierto. Solicito integrarPR23.
