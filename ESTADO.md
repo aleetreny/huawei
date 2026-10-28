@@ -64,3 +64,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
 
 **Apoyo gpt-principios:**PR23/alejandro/gpt-principios, informes propios preservados tras merge de main. Preferencia deAlejandro:priorizarSonnet como proxy en proximas pruebasLLM, sin inferir equivalenciaDeepSeek. Pruebasrecientes yaSonnet; modoslocalesbot completados dev60validas ycompetition32validas/28KeyError(session_id), comparacioncondicionada no concluyente. Sin nuevosmodelos/API.
+
+**B30revisado:**terceraoportunidadL1existe;probedegrade replica compatible en3estadossinteticos. No Skillconmesesprivados. Proxima pantalla:feedbackHRtrasestancamiento, sin llamadas actuales.

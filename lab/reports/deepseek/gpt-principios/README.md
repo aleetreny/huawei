@@ -281,3 +281,10 @@ Los datos c01-explore-comp citados por otra linea no estan en estehost. Se prepa
 **Piloto no permite afirmar que competition sea masfacil.** dev60/60validas Q73,70;competition32/60validas Q73,21,28KeyError(session_id). Los fallos no se puntuan0; ausencia potencialmente selectiva, medias/ICcondicionadosnoefectocausal. Proceso55759exit0, no repetir carreras. Scorer gpt_mode_score.py, solooutputs propios, sin engineinternals/API.
 
 Alejandro pide priorizarSonnet: se adopta para futuras pruebasLLM; las recientes24contexto/24factual/24forecastyaeranSonnet. HALLAZGOSde mainb57f90c menciona juecesHaiku/Sonnet pero no demuestra similitudjugadorDS; no afirmartransferenciaverificada. MergeconflictoESTADOresuelto conmain y filaapoyoreañadida segunNORMAS; informespropiospreservados. Solicito integrarPR23.
+
+## Relevo: B30 y tercera oportunidad de L1
+**Fallar dosascensos no implica perder necesariamente: B30documenta rescate con feedbackHRmasfavorable.** Revisado informe nuevo:36/36notasCconsmiling,31/32ascensoscuando crecimientoalcanza;168/168Dconotrostonoenesaevaluacion. No incorporar meses/umbralesprivados alSkill. Esto corrige el lenguaje anterior de dosunicasoportunidades.
+
+Probe sintetico de compatibilidad sobre replicaconcrecimientoalto/Dignity10/Health8/duracion17: riesgo0→C,1/2→D. Concuerda en esos3puntos conB30, no validaciongeneral ni nuevosdatosdemotor. Salida l1-grade-probe.json; primerllamado uso malCatalog.gradecomo funcion y se corrigio aGradeModel.grade, sin modificarreplica.
+
+Siguiente pantalla barata: controlador que ante repetidosascensosfallidos priorice recuperar el feedbackHRmaspositivo frente a conformarseconquiet, usando solo historialpublico; compararsemillas nuevas y mismolectorcongelado, sin reglasprivadas/candidaturahastaresultado. No repetirla busqueda de atajos. Sin llamadas/juegos nuevosestecheckpoint. Solicito integrarPR23.

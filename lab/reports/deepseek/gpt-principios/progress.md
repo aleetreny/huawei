@@ -119,3 +119,10 @@ Resultado posthoc numerico panel-forecast-bottleneck.json, sin relatosni llamada
 **La restriccion no mejora frentealcontrol y añade daños:riesgo3→5,unaeleccionagotaHealth.** Regla fijada antesdeejecutar, posthoc sobre24prediccionescongeladas:mantenerrecomendacionsinperdida;si la tiene,buscaralternativa sinperdida prevista yrecursosprotegidos;desempate mincrecimiento,sumaynumero.4cambios,perdidas8vs9control,evitables2vs2. PredicciondeHealthfalla enunaalternativa quepareciaviable. No admitir.
 
 Reproducir `uv run python scripts/deepseek/gpt_panel_constraint.py`. Plan/resultadosnumericos separados;goldsoloevaluador. Sin modelos/juegosnuevos. No optimizarumbrales o desempates por estos24casos: falta informacionfiable de riesgo/recursos y debe medirse conjuntamenteantes de otrocontroller. Codigo compilado y diff --checkcorrectos. Objetivo75abierto; integrarPR23.
+
+## Relevo: B30 y tercera oportunidad de L1
+**Fallar dosascensos no implica perder necesariamente: B30documenta rescate con feedbackHRmasfavorable.** Revisado informe nuevo:36/36notasCconsmiling,31/32ascensoscuando crecimientoalcanza;168/168Dconotrostonoenesaevaluacion. No incorporar meses/umbralesprivados alSkill. Esto corrige el lenguaje anterior de dosunicasoportunidades.
+
+Probe sintetico de compatibilidad sobre replicaconcrecimientoalto/Dignity10/Health8/duracion17: riesgo0→C,1/2→D. Concuerda en esos3puntos conB30, no validaciongeneral ni nuevosdatosdemotor. Salida l1-grade-probe.json; primerllamado uso malCatalog.gradecomo funcion y se corrigio aGradeModel.grade, sin modificarreplica.
+
+Siguiente pantalla barata: controlador que ante repetidosascensosfallidos priorice recuperar el feedbackHRmaspositivo frente a conformarseconquiet, usando solo historialpublico; compararsemillas nuevas y mismolectorcongelado, sin reglasprivadas/candidaturahastaresultado. No repetirla busqueda de atajos. Sin llamadas/juegos nuevosestecheckpoint. Solicito integrarPR23.
