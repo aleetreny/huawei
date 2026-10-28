@@ -126,10 +126,18 @@ class V4Bot(R.Policy):
         self.hprot = int(f.get("hprot", 4))      # bienestar: proteger Health desde este valor
         self.risktol = int(f.get("risktol", 0))  # aceptar una opcion arriesgada con RR. HH. amable y sin Concerns si crece >= N mas
         self.lossw = int(f.get("lossw", 1))      # cuanto resta cada indicador de crecimiento que baja
+        self.pl1 = f.get("pl1", "")              # en L1 proteger S/N/O todos los meses: "safe" tras el filtro de riesgo,
+                                                 # "first" antes (como la excepcion del mes previo, con RR. HH. amable)
+        self.ndouble = int(f.get("ndouble", 0))  # hasta este nivel, una subida de Network cuenta doble al crecer
+        self.rtall = bool(f.get("rtall", False))
+        self.rtlv = int(f.get("rtlv", 1))
+        self.rt = f.get("rt", "")                # tolerancia tipo planificador: "safe0" = aceptar una marcada si crece y
+                                                 # ninguna segura crece; "+all" tambien con N=1,2; "+lv2" solo desde L2
         self.prev: dict[str, float] | None = None
         self.lv = None
         self.best: dict[str, float] = {}
         self.stalled: set[str] = set()
+        self.stall_at: dict[str, float] = {}
         self.qmark: dict[str, float] | None = None  # Now en el ultimo trimestre
         self.last_read: tuple[dict[str, float], dict[str, int]] | None = None
         self.concerns = 0
@@ -147,7 +155,7 @@ class V4Bot(R.Policy):
                 self.promos.append(st.month)
                 if self.pfall and self.prev:
                     self.fell = {k: self.prev[k] for k in R.GROWTH if getattr(st, k) < self.prev[k]}
-            self.lv, self.best, self.stalled, self.qmark = st.level, {}, set(), None
+            self.lv, self.best, self.stalled, self.qmark, self.stall_at = st.level, {}, set(), None, {}
         for k in list(self.fell):
             if getattr(st, k) >= self.fell[k]:
                 del self.fell[k]
@@ -161,9 +169,14 @@ class V4Bot(R.Policy):
             for k in R.GROWTH:
                 if signs.get(k, 0) > 0 and getattr(st, k) <= before[k]:
                     self.stalled.add(k)
+                    self.stall_at[k] = getattr(st, k)   # "Stalled: N at 3"
                 elif getattr(st, k) > before[k]:
                     self.stalled.discard(k)
             self.last_read = None
+        if self.detect:
+            for k in list(self.stalled):   # la marca vale mientras el indicador siga en el valor en que se paro
+                if k in self.stall_at and getattr(st, k) < self.stall_at[k]:
+                    self.stalled.discard(k)
 
     @staticmethod
     def n_to_review(st: R.State) -> int:
@@ -186,6 +199,8 @@ class V4Bot(R.Policy):
         opts = keep(opts, lambda o: st.health <= 1 and o[1]["health"] < 0)
         # 4 antes que 2 en el mes previo con RR. HH. tranquilo o quiet (excepcion de v3/v4)
         review_first = n == 1 and self.hr in (FRIENDLY, QUIET) and self.concerns == 0  # paso 2 con Concerns>=1 quita lo "leve"
+        if self.pl1 == "first" and st.level == 1 and self.hr in (FRIENDLY, QUIET) and self.concerns == 0:
+            review_first = True
         lowers_growth = lambda o: any(o[1][k] < 0 for k in R.GROWTH)
         lowers_no = lambda o: o[1]["network"] < 0 or o[1]["output"] < 0
         if review_first:
@@ -197,6 +212,8 @@ class V4Bot(R.Policy):
         # 3. bienestar
         opts = keep(opts, lambda o: (st.health <= self.hprot and o[1]["health"] < 0) or (st.dignity <= self.dprot and o[1]["dignity"] < 0))
         opts = keep(opts, lambda o: st.wealth < 0 and o[1]["wealth"] < 0)
+        if self.pl1 and st.level == 1:
+            opts = keep(opts, lowers_growth)
         # 4. cerca de la evaluacion
         if n in (1, 2):
             opts = keep(opts, lowers_no)
@@ -217,10 +234,18 @@ class V4Bot(R.Policy):
                 main = 0
                 for k in grow:
                     if sg[k] > 0:
-                        main += 2 if (k == "skill" and st.level >= self.sskill) or k in self.fell else 1
+                        main += 2 if (k == "skill" and st.level >= self.sskill) or k in self.fell \
+                            or (k == "network" and st.level <= self.ndouble) else 1
                 main -= self.lossw * sum(1 for k in R.GROWTH if sg[k] < 0)
             return (main, -o[2], sg["health"] + sg["dignity"], sg["wealth"] >= 0, self.rng.random())
         pick = max(opts, key=score)
+        if self.rt and not endgame and self.hr == FRIENDLY and self.concerns == 0 and (self.rtall or n not in (1, 2)) \
+                and st.level >= self.rtlv and st.health > self.hprot and st.dignity > self.dprot:
+            cand = [o for o in risky_pool if o[2] > 0 and not any(o[1][k] < 0 for k in R.GROWTH)]
+            if cand:
+                alt = max(cand, key=score)
+                if score(alt)[0] >= 1 and score(pick)[0] <= 0:
+                    pick = alt
         if self.risktol and not endgame and self.hr == FRIENDLY and self.concerns == 0 and n not in (1, 2) \
                 and st.health > self.hprot and st.dignity > self.dprot:
             # tolerancia: una opcion arriesgada que crece claramente mas, una vez al mes, con RR. HH. amable
