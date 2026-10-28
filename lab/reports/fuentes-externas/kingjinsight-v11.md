@@ -92,8 +92,10 @@ Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HA
 ## Vigilancia periódica (desde el 28 oct)
 
 - `scripts/fuentes-externas/vigilar.py` revisa cada repo de `fuentes.json` con `git ls-remote`. Si cambia, lo clona en `~/ext/` y saca las notas de sus `score_report.json`. El último estado visto queda en `estado.json`. No ejecuta nada de esos repos.
-- Una revisión programada lo corre cada 6 horas, busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS.
-- La clasificación oficial (`techarena-uk.hydro.ac`) no se puede leer desde la nube mientras ese dominio no esté permitido en los ajustes de red del entorno.
+- Una revisión programada lo corre una vez al día (19:43, hora UK), busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS. Hay otra el 31 oct, tras el corte 2.
+- **Clasificación oficial:** desde el 28 oct a las 19:30 UTC el dominio está permitido. `vigilar.py` la lee como JSON (cabecera `Accept: application/json`) y guarda sólo equipo, puesto y notas. El JSON de Hydro trae también correos, IP y códigos de invitación de cada equipo, y eso no se guarda. Los nombres de equipo que son un correo se guardan como «(correo)».
+- El 28 oct había 227 equipos y ninguno tenía aún nota del corte 1.
+- **Hay dos equipos llamados «Gradient Depression»,** uno creado el 21 oct y otro el 24 oct, cada uno con tres miembros. Hay que confirmar cuál es el nuestro y si el otro sobra.
 
 ## Barrido amplio (28 oct, 18:30 UTC)
 

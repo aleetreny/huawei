@@ -1,7 +1,7 @@
 {
  "kingjinsight/techarena-uk-2026": {
   "sha": "e6c33cbde514792006fb70c824a8f5242a704a04",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": [
    {
     "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
@@ -98,7 +98,7 @@
  },
  "krsnkkv/ksl_techarena": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -111,7 +111,7 @@
  },
  "krsnkkv/techarena-career-simu": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -124,7 +124,7 @@
  },
  "shriyasaxena/techarena-career-simu": {
   "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -137,42 +137,1633 @@
  },
  "lrado-253/ksl-techarena": {
   "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "artepace/slopathone_winningteam": {
   "sha": "3151064933fb1b21b17d79e077d0eaea4b5d521b",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "peidi-l/preliminary": {
   "sha": "00b0e745b7161a9eebd8784732163b18ac842acc",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "ray23257/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "yulong111/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "bernardoguterres/huawei-gradient-depression": {
   "sha": null,
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "rickyyyy-bit/techarena-huawei": {
   "sha": "5236f5e49f0efb29f4345043e7fc3fbd9fc892b1",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
  },
  "colinfornia/techarena-project": {
   "sha": "b74a7ffc5d185a7a0c15a05eab05493dc0bb0244",
-  "visto": "2026-10-28T19:19Z",
+  "visto": "2026-10-28T19:21Z",
   "scores": []
- }
+ },
+ "clasificacion": [
+  {
+   "equipo": "Yuanyuan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jackwz's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ShenzhenFan01's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "dataStream's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "wendoj's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jon8652's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Sky's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ruifeng's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Golden Trio",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "One team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "YuZheng's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ThatEpicCreeper's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "The Raytirement Plan",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "K2 Nova's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ShanshanMao's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "JasonXu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Yy.'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jomo works",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Pranati Sattarapu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "IQ2 Only",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Miles Ahead",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "nmaatkazieva's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Panic's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jerry6's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "MattKep7777's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "umut300's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Yiblimac's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "DestinyX",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Simple",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "PHP Security",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "aman_abdulsalam's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Winner Winner Chicken Dinner",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Craftman's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Chinese can fly",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "学习小伙伴",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Gradient Depression",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "gengyuan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "bulentdayioglu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jiawei_Wang's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Spärk AI",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "fins house",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Janarthanan_Gnanamurthy's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "johnny's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Frappuccino",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "R.A.P. conjecture",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "TheREALPifteck's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ILoveMahjong",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "hyeok9855's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Siyu Hou's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Winning team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ROR",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jayverm's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ZiyueF's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "TLL",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Attention Is All We Have",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Nalini's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "404 Brain Not Find",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Out of Distribution",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Gradient Depression",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "kristy's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Autumn&Kathy",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "The Pem Queens",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Don't stop me now",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "panther-0707's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Blank",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Oolong's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "KSL",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Saul Goodman",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Grassmoo",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "WishLee",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "manocw's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Bomi's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "chkill",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Not Cheating",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "shivareddy003's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "christyww's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Vishwa Karma",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Iqrasid2's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Foresight Agents",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "prardas's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Hachimi Mambo",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "YanYing Tech",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Prince's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "nanva",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "King of Workers",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Leo's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "theali's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Rawan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Alexli's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "seankwong's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Sophie_13_09's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "yuyu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Anushka's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Power Electronics",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Talenmud's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Surrey team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "its._.mina's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Roonila's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Hinton's CaucAsian Homies",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Danjel_ruebe's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "AI Air",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Overtime Agents",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "JamilHassiba's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "hsiayunjia's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Adspaces's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "1337",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "R_Rena's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ashaz325's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "beatzonosu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Sexy rangers",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "sunrise's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "shashitnak's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Vin's Team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Bingda's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Bingqian's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jyothsna999's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Orange's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "yaoshiro's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Nine's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "natalie's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "S2841363's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "def boolean Arena(char** team) {return winning;}",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mineral's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Cache_me_IF_u_can",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "STC",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "kleinblue811's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Hhhhhhhhhhhhh's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ttms's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "dylanjenkins's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Ashikaparveen Rasheedkhan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Ouazza111's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Apurva's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "gurupreet_dhande's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "jasong's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Diamond Dog",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Evan Kang's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Sushi's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mbd1g23's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "YancyChan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "PranavManoj's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Zander's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Trish's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "r0w's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Wynture's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "eclipsed",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Techmaxxers",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "UkrHack",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ko8907's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "15776630388's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Bruce's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Iam_alag's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Mottysc's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Marc x Nihal",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Malik's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "anezhenska's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "MAKE / BREAK",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Pakhomchik's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ART",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Aboody2003's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ghc1997's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Can’t stop the J-train",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Clankers",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "AkhilP35's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "DavidPoveda's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "KindredSoul's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mxa2098's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Sakshi's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "viper312's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "team 1",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "HenryWang's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Rowan01's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Kayan2004's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "jayajad's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ALKK's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "SHENMING's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "sarbulandd's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "SaniAtiku's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "AdityaPande128's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "sae1u26's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Majd's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "IDube's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "sanxiaoyu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "aph's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mayanklaxkar008's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "kaikai2026's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ryan_vincent's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "uvooo's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "yumisha",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Shadrach's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Abdulloh's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "TeaM",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jxk541's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Jet2Holidays",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "manni's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Abdelrahman_Mohammed's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "dcrac-soton's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Kohdyism's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Aditya0001",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Charles Thompson's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mila's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mutong's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "AidanaBekkereyeva's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ZZ Bond",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Kanishq007's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "TechGals",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "SKM Studio",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Azmiddin's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Rajeshkumar's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "hannah's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "12345",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "YukunShang's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Ashwath's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Umair's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "tanktunk's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "(correo)'s team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Yuanzhu's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "planetdancer's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Son lite",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Mohan AI Lab",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "YahuiDuan's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "Azure Sky",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "shruthisri's team",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  }
+ ]
 }

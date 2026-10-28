@@ -5,7 +5,7 @@ Uso: python3 -I scripts/fuentes-externas/vigilar.py
 Lista de fuentes: lab/reports/fuentes-externas/fuentes.json. Estado (último commit visto y notas):
 lab/reports/fuentes-externas/estado.json. Clones en ~/ext/ (fuera del repo).
 """
-import json, os, subprocess, sys, time
+import json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -36,6 +36,22 @@ def scores(d):
     return sorted(out, key=lambda x: x["archivo"])
 
 
+def clasificacion(url):
+    """Lee la clasificación oficial (Hydro devuelve JSON con Accept: application/json).
+    Sólo guarda nombre de equipo, puesto y notas: el udict trae correos e IPs que no deben ir al repo."""
+    req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": "Mozilla/5.0"})
+    d = json.load(urllib.request.urlopen(req, timeout=60))
+    head_, *rows = d["rows"]
+    cols = [c.get("value") for c in head_]
+    out = []
+    for r in rows:
+        u = d["udict"].get(str(r[1].get("raw")), {})
+        notas = {cols[i]: c.get("value") for i, c in enumerate(r) if i >= 2}
+        nombre = re.sub(r"[\w.+-]+@[\w.-]+", "(correo)", u.get("displayName") or "")  # hay equipos con el correo por nombre
+        out.append({"equipo": nombre, "puesto": r[0].get("value"), **notas})
+    return out
+
+
 def main():
     src = json.load(open(SRC))
     state = json.load(open(STATE)) if STATE.exists() else {}
@@ -60,6 +76,23 @@ def main():
             for s in nuevos:
                 news.append(f"    {s}")
         state[key] = rec
+    for pg in src.get("paginas", []):
+        if "scoreboard" not in pg["url"]:
+            continue
+        try:
+            tabla = clasificacion(pg["url"])
+        except Exception as e:
+            news.append(f"clasificación: no se pudo leer ({e})")
+            continue
+        old = {(r["equipo"], r["puesto"]): r for r in state.get("clasificacion", [])}
+        con_nota = [r for r in tabla if any(v not in ("—", "0", "", None) for k, v in r.items() if k not in ("equipo", "puesto"))]
+        cambios = [r for r in con_nota if old.get((r["equipo"], r["puesto"])) != r]
+        if cambios:
+            news.append(f"clasificación: {len(con_nota)} de {len(tabla)} equipos con nota; {len(cambios)} filas nuevas o cambiadas")
+            for r in sorted(con_nota, key=lambda r: -float(r.get("Score") or 0))[:15]:
+                news.append(f"    {r}")
+            news += [f"    nosotros: {r}" for r in tabla if r["equipo"] == "Gradient Depression"]
+        state["clasificacion"] = tabla
     json.dump(state, open(STATE, "w"), indent=1, ensure_ascii=False)
     print("\n".join(news) if news else "sin cambios")
 
