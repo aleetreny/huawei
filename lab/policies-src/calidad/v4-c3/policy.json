@@ -1,0 +1,13 @@
+{
+  "family": "calidad",
+  "name": "v4-c3",
+  "parents": [
+    "v4-c2"
+  ],
+  "idea_origin": "Calidad line, 28 Oct: Claude judges on the official rubric",
+  "operator": "model rewrite for the rubric (Sonnet), decisions frozen",
+  "hypothesis": "A full restructure by Sonnet with the decisions frozen raises clarity and the quality score further than wording fixes.",
+  "predicted_behaviour": "Same story and quarterly choices as t13-read-v4 on the bank, within the control-repeat noise.",
+  "refutation": "Quality score not higher, or bank choices differ from t13-read-v4 more than a repeat of v4 does.",
+  "skill_count": 1
+}
