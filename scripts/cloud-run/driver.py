@@ -90,7 +90,7 @@ def main() -> None:
         log(f"batch {batch}: {n} queued, limit {limit}, slots {slots}")
         started = time.time()
         with (LOGS / f"batch-{batch}.log").open("w") as out:
-            rc = subprocess.run(["uv", "run", "careerlab", "run", "--kind", "claude-cli", "--slots", str(slots), "--max-five-hour", "0.80",
+            rc = subprocess.run(["uv", "run", "careerlab", "run", "--kind", "claude-cli", "--slots", str(slots), "--max-five-hour", "0.95",
                                  "--limit", str(limit)], cwd=REPO, stdout=out, stderr=subprocess.STDOUT).returncode
         reg = Registry(s.registry_path)
         requeued = requeue_interrupted(reg)

@@ -8,8 +8,8 @@ uv run career-emulator-engine update --source distribution --split dev
 uv run careerlab import                      # lab/registry/*.jsonl -> this machine's registry
 uv run careerlab recover
 uv run careerlab status
-echo '{"max_five_hour": 0.80}' > ~/careerlab-data/huawei/quota_cap.json   # the window is shared with every session on the account
-uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.80
+echo '{"max_five_hour": 0.95}' > ~/careerlab-data/huawei/quota_cap.json   # the window is shared with every session on the account
+uv run careerlab run --kind claude-cli --slots 6 --max-five-hour 0.95
 ```
 
 The loop for one block:

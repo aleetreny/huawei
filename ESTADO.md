@@ -47,7 +47,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 - **Dinero:** sólo los 50 USD de la clave de DeepSeek (OpenRouter), en el `.env` del Mac de Alejandro. Quedan ~35,8 USD (27 oct, 23:30). Hay una clave propia de OpenRouter preparada y sin comprar ([clave-propia.md](lab/reports/deepseek/clave-propia.md)). DeepSeek sólo en pruebas aprobadas por Alejandro, con 15 USD de reserva para el último corte. Presupuesto: [docs/entrega/target-budget.md](docs/entrega/target-budget.md).
 - No preguntamos en Discord. Riesgo conocido: la norma dice *"the absence of an express prohibition is not permission"*.
 - Claude no aparece como contribuidor en GitHub.
-- Cuota: ritmo semanal de [NORMAS.md](NORMAS.md) §5. A las 15:00 del 27 oct la semana iba por el 34 %.
+- Cuota de Claude: sin topes de equipo desde el 28 oct. Las herramientas sólo esperan si la ventana de 5 horas pasa del 95 %, y el ritmo semanal ya no se aplica salvo que `quota_cap.json` lo pida (`weekly_pace`). Ojo: la semana de la cuenta se reinicia el 2 nov a las 16:00 UTC, después del último corte; si se agota antes, no queda Claude para nadie hasta el final del reto.
 - Manual de referencia para comparar en partidas: `f3-lean-v1` (~51 de nota con Haiku, 30 partidas).
 
 ## 6. Mapa

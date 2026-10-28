@@ -161,8 +161,9 @@ class Scheduler:
         return counts
 
     async def wait_for_quota(self, max_five_hour: float) -> None:
-        """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator)
-        or the seven-day window is ahead of its pace to the last cutoff (see `weekly_allowance`)."""
+        """Hold new episodes while the shared five-hour window is above the cap (it also serves the orchestrator).
+        The seven-day pace (`weekly_allowance`) applies only when quota_cap.json sets "weekly_pace": the team
+        dropped its weekly quota pace on 28 Oct."""
         while True:
             cap_file = self.settings.data_dir / "quota_cap.json"  # live override, editable while schedulers run
             cap, pace = max_five_hour, None
@@ -177,14 +178,14 @@ class Scheduler:
             util, resets_at = latest_quota(self.settings.runs_dir)
             week, week_resets = latest_quota(self.settings.runs_dir, window="seven_day")
             five_ok = util is None or util < cap or bool(resets_at and now > resets_at)
-            week_ok = week is None or not week_resets or now > week_resets or week < weekly_allowance(now, week_resets, pace)
+            week_ok = pace is None or week is None or not week_resets or now > week_resets or week < weekly_allowance(now, week_resets, pace)
             if five_ok and week_ok:
                 return
             self._beat({"waiting_for_quota": util, "resets_at": resets_at, "seven_day": week, "seven_day_resets_at": week_resets})
             await asyncio.sleep(60)
 
     async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None,
-                         max_five_hour: float = 0.75) -> dict[str, int]:
+                         max_five_hour: float = 0.95) -> dict[str, int]:
         jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli", purpose=purpose)
         counts: dict[str, int] = {}
         sem = asyncio.Semaphore(concurrency)
@@ -209,7 +210,7 @@ class Scheduler:
         beat.cancel()
         return counts
 
-    async def run_claude_continuous(self, concurrency: int, stop_file: Path, max_five_hour: float = 0.80,
+    async def run_claude_continuous(self, concurrency: int, stop_file: Path, max_five_hour: float = 0.95,
                                     purpose: str | None = None, poll_s: float = 20.0) -> dict[str, int]:
         """Fast race: lease one job whenever a slot frees, so a job queued a minute ago with a higher priority
         runs next. Stops leasing when `stop_file` exists and lets the games in flight finish."""
