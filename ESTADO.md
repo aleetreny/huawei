@@ -78,3 +78,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Parserpublicov11revisado:**deltasprocedenlogMCP,aislamiento porpath, fallbackporrecencianoportar. Contabilizadousodetools, semantica/replaypendiente. SinAPI.
 
 **Parserpropio validado:**201acciones alineadaspor mes/choice,195retornosvisibles,Notesexcluidas. Aunnoledger/candidato. Sin llamadas.
+
+**Memoriaretornos propia:**110transicionesaisladas/201,89ambiguas+2inesperadasrechazadas,5guardasvalidadas.97observacionesdiminishedno97limites. Proximo medirimpacto conlectorigual antesdeSonnet. Sin llamadas.
