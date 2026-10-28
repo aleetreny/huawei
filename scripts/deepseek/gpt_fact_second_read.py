@@ -61,10 +61,10 @@ def validate(it,result):
             if f['answer']=='yes':assert f['quote'] and f['quote'] in actions[row['choice']],'Nonliteral evidence'
             else:assert f['quote']=='','Unexpected evidence for no/unclear'
 
-async def one(it,system,data_root=None,model='haiku'):
+async def one(it,system,data_root=None,model='haiku',schema_override=None,validator=None):
     d=(data_root or DATA)/it['id'];d.mkdir(exist_ok=False);(d/'mcp.json').write_text('{"mcpServers":{}}')
     user=json.dumps(it['observe'],ensure_ascii=False);(d/'user_prompt.json').write_text(user);(d/'system_prompt.md').write_text(system)
-    cmd=[shutil.which('claude'),'-p','--setting-sources','','--strict-mcp-config','--mcp-config',str(d/'mcp.json'),'--model',model,'--tools','','--output-format','stream-json','--verbose','--json-schema',json.dumps(schema(it)),'--no-session-persistence','--system-prompt',system,'--permission-mode','dontAsk',user]
+    cmd=[shutil.which('claude'),'-p','--setting-sources','','--strict-mcp-config','--mcp-config',str(d/'mcp.json'),'--model',model,'--tools','','--output-format','stream-json','--verbose','--json-schema',json.dumps(schema_override or schema(it)),'--no-session-persistence','--system-prompt',system,'--permission-mode','dontAsk',user]
     started=time.monotonic()
     with (d/'stream.jsonl').open('w') as out,(d/'stderr.log').open('w') as err:
         proc=await asyncio.create_subprocess_exec(*cmd,cwd=d,env=RB.env(),stdout=out,stderr=err,stdin=asyncio.subprocess.DEVNULL)
@@ -79,7 +79,7 @@ async def one(it,system,data_root=None,model='haiku'):
     result=final.get('structured_output') if final else None;valid=False;error=None
     try:
         assert proc.returncode==0 and final and not final.get('is_error') and result,'Incomplete structured response'
-        validate(it,result);valid=True
+        (validator or validate)(it,result);valid=True
     except (AssertionError,KeyError,TypeError) as e:error=str(e)
     record={'id':it['id'],'done':valid,'error':error,'exit_code':proc.returncode,'models':sorted(m for m in models if m),'seconds':round(time.monotonic()-started,2),'response':result}
     (d/'result.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')

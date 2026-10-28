@@ -95,3 +95,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Runtime auditado:**inyectorreasoning_level no reconoceOpenRouter,6casospuros sin inyeccion/controlAPIoficialpositivo; modo efectivoproveedor sigueindeterminado. Sin llamadas/slotsmodificados.
 
 **Limite runtime:**ninguna ruta entregableverificada para esfuerzo desdeSkills; no parchearSDK/slots ni seleccionarhosting. Soporteclientextra_body no prueba exposicion alagente. Auditoria sin API.
+
+**Panelforecast preparado, no lanzado:**cuota guardada caducada (>7h), guardiafalse.24casos existentes, sin nuevasllamadas/juegos; obtener cuota fresca antes de admision.
