@@ -1,0 +1,301 @@
+{
+  "meaning": "24critical public panels plus past-return packets. Target effect and choice not stored or passed. Prefix-only function receives no future actions. No actor use/Q claim. Raw observations remain private.",
+  "n": 24,
+  "nonempty_packets": 21,
+  "items_sha256": "ada1daa1042110e9b9c3e63c486ad97d6ba40a1c1dba0c1ea159a32080238c5e",
+  "selection": [
+    {
+      "id": "71bf09449bbc296b",
+      "past_action_count": 16,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "past_action_count": 17,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "past_action_count": 18,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3,
+          "skill": 9
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "past_action_count": 41,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3,
+          "skill": 9
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "past_action_count": 42,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3,
+          "skill": 9
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "past_action_count": 43,
+      "packet": {
+        "role": 1,
+        "observed_diminished_returns": {
+          "network": 3,
+          "output": 3,
+          "skill": 9
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "8561ee88a915143c",
+      "past_action_count": 67,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "past_action_count": 68,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "past_action_count": 69,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "past_action_count": 92,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "e85b9142d880585b",
+      "past_action_count": 93,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "past_action_count": 94,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "past_action_count": 117,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "77015d2875a771a7",
+      "past_action_count": 118,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "past_action_count": 119,
+      "packet": {
+        "role": 2,
+        "observed_diminished_returns": {
+          "network": 7,
+          "output": 6,
+          "skill": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "past_action_count": 142,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "past_action_count": 143,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "2592798ce2982351",
+      "past_action_count": 144,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "past_action_count": 167,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21,
+          "skill": 42,
+          "output": 16
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "past_action_count": 168,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21,
+          "skill": 42,
+          "output": 16
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "past_action_count": 169,
+      "packet": {
+        "role": 3,
+        "observed_diminished_returns": {
+          "network": 21,
+          "skill": 42,
+          "output": 16
+        },
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "past_action_count": 192,
+      "packet": {
+        "role": 4,
+        "observed_diminished_returns": {},
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "past_action_count": 193,
+      "packet": {
+        "role": 4,
+        "observed_diminished_returns": {},
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "past_action_count": 194,
+      "packet": {
+        "role": 4,
+        "observed_diminished_returns": {},
+        "meaning": "Past isolated logged positive returns did not fully appear in observed growth. Provisional observations, not published limits or promises about current options. Reopen when growth resumes."
+      }
+    }
+  ],
+  "script_sha256": "a7068f99c4bb5edd386120a12c925e00c66aefdb696eb3ad8ecfc4b1f19b50db"
+}
