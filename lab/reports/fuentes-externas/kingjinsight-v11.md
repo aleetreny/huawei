@@ -88,3 +88,9 @@ Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HA
 | `Ray23257/techarena-career-sim`, `YuLong111/techarena-career-sim`, `bernardoguterres/huawei-gradient-depression` | ya no son públicos (piden credenciales) | — |
 
 **Ninguno muestra una media estable por encima de 70 ni llega a L6.** Lo aprovechable de Artepace es la forma de su `decision_report.md`: apoya cada regla en un principio conocido (evitar la ruina, actualizar con lo observado, constancia entre las 3 partidas) y dice qué se ha validado y qué no. Sirve de modelo para nuestros documentos del jurado. Los repos se clonaron en sólo lectura fuera del repo; no se ejecutó nada suyo.
+
+## Vigilancia periódica (desde el 28 oct)
+
+- `scripts/fuentes-externas/vigilar.py` revisa cada repo de `fuentes.json` con `git ls-remote`. Si cambia, lo clona en `~/ext/` y saca las notas de sus `score_report.json`. El último estado visto queda en `estado.json`. No ejecuta nada de esos repos.
+- Una revisión programada lo corre cada 6 horas, busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS.
+- La clasificación oficial (`techarena-uk.hydro.ac`) no se puede leer desde la nube mientras ese dominio no esté permitido en los ajustes de red del entorno.
