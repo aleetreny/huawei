@@ -55,9 +55,60 @@ Por qué no asciende en cada ventana (bot v4):
 
 Lectura: ninguna regla de trimestre ni de prioridad pasa de +0,6 ni lleva L6 más allá del 25 % con lectura perfecta. **La detección de estancamiento por «no ha subido en el trimestre» es peor que nada** (marca indicadores que simplemente no tuvieron ocasión y deja de invertir en ellos; sube los despidos). El margen grande está en otra parte: en cómo elige las historias en L2–L4.
 
-## 4. Qué parte de la ventaja del planificador es regla (en curso) — `data/diag-signplanner-exact.txt`
+## 4. Qué parte de la ventaja del planificador es regla — `data/diag-signplanner-exact.txt`, `data/diag-sp-noprivilege-exact.txt`
 
-(se rellena)
+Planificador ajustado (`politica_optima.json`) que en las historias **sólo ve signos ±1 y la marca de riesgo** (como DeepSeek con lectura perfecta), 1.000 partidas, lectura exacta:
+
+| Variante | Nota | L6 | L4 en el mes | L5 en el mes |
+|---|---:|---:|---:|---:|
+| Planificador con efectos exactos | 73,1 | 76 % | 20,0 | 36,4 |
+| Sólo signos (`sp`) | 69,1 | 60 % | 20,9 | 37,8 |
+| … con magnitudes pero riesgo sólo como marca | 71,5 | 72 % | | |
+| `sp` sin umbrales (usa los techos) | 63,9 | 46 % | 21,2 | 38,5 |
+| `sp` sin refuerzo del mes previo | 65,8 | 48 % | 22,2 | 38,8 |
+| `sp` sin valorar Health y Dignity | 66,7 | 56 % | | |
+| `sp` con el mismo peso por encima y por debajo del umbral | 67,1 | 43 % | 22,3 | 39,6 |
+| `sp` con el trimestre de v4 | 67,5 | 43 % | 21,4 | 39,4 |
+| `sp` sin continuación de la historia | 68,6 | 61 % (crisis ×2) | | |
+| **`sp` sin umbrales y con el trimestre de v4** (lo que puede saber DeepSeek) | **62,7** | **29 %** | 21,6 | 39,8 |
+| … y además con el suelo de salud de v4 (4 en vez de 2) | **64,8** | **33 %** | 21,5 | 39,7 |
+| … y además riesgo estricto (una marcada sólo si no hay otra) | 59,6 | 18 % | 24,8 | 41,8 |
+| Reglas de v4 (`techobot` base) | 59,4 | 14 % | 24,3 | 42,0 |
+
+**Lectura.**
+- Sin información privilegiada (ni umbrales ni efectos exactos ni trimestre con techos), el planificador de signos sigue sacando **64,8 frente a 59,4** de las reglas de v4 y llega a L4 tres meses antes (21,5 frente a 24,3).
+- **Casi toda esa diferencia es el riesgo:** al hacerlo estricto (como el paso 2 de v4), cae a 59,6, el ascenso a L4 vuelve al mes 24,8, y en L3 gana menos Skill (2,3 frente a 2,6 al mes) y menos Network (1,8 frente a 2,3). En L1 pasa del 78 % al 61 % de ascensos en el mes 6, casi todo por Network perdido en el mes previo (152 casos).
+- El planificador toma una opción marcada **voluntariamente** 6,4 veces por partida (`data/riskwhen-sp.txt`): el 81 % con el contador de riesgo a 0, el 44 % en los dos meses previos a una evaluación, y casi siempre porque **la mejor opción segura perdía un indicador (1.250 casos) o no ganaba nada (1.201)** mientras la marcada ganaba uno o dos. Riesgo real medio de esas opciones: 1,6.
+- El suelo de salud ajustado del planificador (2) es demasiado bajo para jugar con signos: con 4, +2,1 y la mitad de muertes por salud. El de v4 (4) está bien.
+- La continuación de la historia (ver el siguiente paso) vale poco en nota pero **dobla las crisis** si falta. Una IA no puede verlo; sí puede desconfiar de opciones que llevan a situaciones sin salida.
+
+## 5. Tolerancia al riesgo en el bot de v4 — `data/battery2-exact.txt`, `data/battery3-exact.txt`
+
+Copiar la regla del planificador al bot de v4 **sin más** empeora: aceptar una opción marcada cuando RR. HH. está amable, no se ha tomado riesgo este mes y ninguna opción segura crece (`rt=safe0`) baja de 59,4 a 57,9 (crisis 179 → 221 de 2.000; despidos 175 → 183). Pedirle dos indicadores más de ventaja (`risktol=2`), 58,4. La diferencia con el planificador: éste sólo cuenta las subidas que **caben** (por debajo del techo) y sabe el contador vivo; el bot de v4 no sabe qué subidas valen nada y en L1 (Network y Output llenos casi siempre) toma riesgos por subidas inútiles. Comprobación en §6.
+
+Otras: proteger Dignity desde 7 en vez de 4 (`dprot=7`), +0,4 y menos crisis (el aviso de la evaluación depende de Dignity; la Dignity alta evita el +1 de riesgo del aviso); proteger Health sólo desde 2, −0,4 y más muertes; contar doble las pérdidas, 0.
+
+## 6. Lo que aguanta con las dos lecturas (2.000 partidas por brazo) — `data/battery4-exact.txt`, `data/battery5-*.txt`, `data/battery6-detect-exact.txt`
+
+| Regla (sobre v4) | exact: nota / L6 / Skill final | noisy: nota / L6 / Skill final |
+|---|---|---|
+| v4 (base) | 59,4 / 16 % / 118 | 40,6 / 1 % / 101 |
+| Trimestre a Skill desde L4 (`qskill=4`) | 59,8 / 25 % / 127 | 40,9 / 2 % / 108 |
+| Dignity protegida desde 7 (`dprot=7`) | 59,8 / 17 % / 118 | 41,0 / 1 % / 100 |
+| Las dos | 60,3 / 25 % / 127 | 41,3 / 2 % / 108 |
+| Las dos + Skill doble en historias desde L4 (`sskill=4`) | **60,5 / 26 % / 128** | **41,5 / 2 % / 109** |
+| Las dos + Skill learning sólo con Health > 6 | 60,6 / 26 % / 126 | 41,5 / 2 % / 107 |
+| Las dos + marca Stalled anclada al valor (`detect`) | 60,6 / 26 % / 128 | — |
+| Las dos + techos conocidos (cota) | 60,9 / 27 % / 128 | 42,3 / 3 % / 110 |
+| Network doble en historias hasta L3 (`ndouble=3`) | 58,9 (peor) | 39,6 (peor) |
+| Proteger S/N/O todos los meses de L1, tras el riesgo (`pl1=safe`) | 59,6 | 41,1 (igual) |
+| … antes del riesgo (`pl1=first`) | 58,3, despidos 175 → 217 | — |
+| Tolerancia al riesgo tipo planificador (`rt=safe0`, con o sin techos, desde L2 o L4) | 57,7–59,6, crisis +20–40 % | — |
+
+**Lectura.**
+- Lo que sube con las dos lecturas y no toca L1: **trimestre a Skill desde L4, Dignity protegida desde 7 y Skill doble en las historias desde L4**: +1,1 (exacta) / +0,9 (ruidosa), L6 del 16 % al 26 % con lectura exacta, Skill final +10. Es poco en nota (una partida de 70 pasa a ~71) y **no basta para L6 con la lectura de DeepSeek** (1 % → 2–3 %).
+- **La marca «Stalled» de v4 no vale nada tal como está definida** (se borra cuando el indicador «vuelve a subir», y como no sube nunca más en el nivel, lo que la rompe son las bajadas: una pérdida deja la marca puesta sobre un indicador que ya tiene hueco y el bot deja de invertir en él; 34 % de marcas falsas en Network de L1). **Anclada al valor** («Stalled: N at 7», se quita sólo cuando Now baja de ese valor o cambia el nivel) recupera casi todo lo que vale conocer los techos (+0,7 frente a +1,2 sobre v4). Vale para un script de línea de estado o para el texto; DeepSeek no la rellena (C18), así que en el texto es poco útil y la condición «nivel 4 o más» hace su trabajo en el caso que importa.
+- **Descartado:** Network doble en L2–L3 (pierde Skill y no gana ascensos), proteger L1 todos los meses antes del riesgo (más despidos por explosiones) y cualquier tolerancia al riesgo escrita como regla.
 
 ## Relevo
 
