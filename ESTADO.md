@@ -28,6 +28,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Apoyo a DeepSeek,28oct:** auditoría `alejandro/gpt-principios`, [checkpoint](lab/reports/deepseek/gpt-principios/native-pilot.md). Tres carrerasHaiku nativas66,86/18,23/64,15; cuarta cancelada sin empezar, no75estable. Pruebas de aprendizaje/replay no admiten nuevo manual. Todo terminado; no APIDeepSeek de esta auditoría. Próximo: explicar el76,87real y los70reales ya registrados por el equipo, con el runtime real; no duplicar el veto híbrido deFormato. El objetivo externo de75repetible permanece abierto y no crea una cuarta línea.
 
+**Diagnóstico de capacidad anunciado28oct:** apoyo de `alejandro/gpt-principios`: hasta25llamadasMax (una admisión READY/Sonnet +12menúsL1 por Haiku/Sonnet), mismo manualv4 congelado. No partidas completas ni APIDeepSeek. Selección sin etiquetas, diseño en capacity-probe-plan.json; límites0,65/0,45, secuencial y máximo4procesos. Primero obtener cuota actual; si supera topes, no abrir la tanda.
+
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
 **Coordinación entre chats (27 oct).** La clave es compartida: medir el coste de cada partida con `total_cost` del informe, nunca con la diferencia de saldo; el vigilante de `careerlab.target` sólo apunta (`CAREERLAB_TARGET_NEVER_STOP=1`) y **ninguna partida lanzada se corta**. Arrancar instancias de JiuwenSwarm de una en una, con `lsof` antes: dos a la vez chocan en los puertos. No tocar `local-runs/official-runner/.env`.
