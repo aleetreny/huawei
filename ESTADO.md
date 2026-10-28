@@ -101,3 +101,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Admision panelforecast anunciada:**hasta25invocacionesMax(1READYpara cuota actual+24lecturasSonnet previamente fijadas), sin juegos/DeepSeek. Si cuota5h>=0,65o semanal>=0,45,no abrirlecturas. Max4procesos. Planoriginalsin cambios.
 
 **Panelforecast admitido:**READYcompleto, cuota actual5h5%/semana42%;iniciadas24lecturasSonnet, sin juegos/DeepSeek. No repetir admision.
+
+**Panelforecast cerrado:**24respuestas/67opciones; evitables2→3,riesgo3→3, noadmision. Sin juegosnuevos/DeepSeek. Resultado panel-forecast-results.json.
