@@ -1,0 +1,10 @@
+{
+  "source_sha256": "b5a4795709bb0953124777869f34d0581fcd1c29da9f9466adbc6a3c25d47e6b",
+  "isolated_function": "update_limits",
+  "synthetic_checks": {
+    "productive_gain_not_marked_stalled": true,
+    "logged_positive_gain_without_observed_gain_marks_stall": true,
+    "later_gain_reopens_stall": true
+  },
+  "limits": "Isolated function only, no arbitrary module executed, no real traces/whole-script fidelity or causal score effect tested. No source constants copied to candidate."
+}

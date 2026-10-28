@@ -72,3 +72,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Nueva fuente publica:**Kingjinsightv11raw73,1verificado n1, modelopendiente. Commit e6c33cb; auditarSkills/procedencia antesdeprobar. No75estable demostrado.
 
 **Publicv11auditado:**modeloDSflashreportado(2usage,2unknown);scriptlee logMCP,modosN/G/R/D,trimestresdeterministas,LLMhistorias. n1raw73,1,scriptsemantica/compliancependiente. No copiarSkillnumerico.
+
+**V11helper:**3pruebas aisladas de ledger pasan; usa efectosregistradosvsestado. Trimestres/modos contienenconstantesnoportables sin revision. No candidata75ni llamadas.
