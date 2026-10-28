@@ -60,8 +60,9 @@ def prepare():
     else:p.write_text(json.dumps(plan,indent=2)+'\n')
     return observations
 
-def quota():
+def quota(extra_roots=()):
     paths=list(DATA.glob('*/stream.jsonl'))+list((DATA.parent/'gpt-fact-second-read').glob('*/stream.jsonl'))+list((DATA.parent/'gpt-narrative-ablation').glob('*/stream.jsonl'))
+    for root in extra_roots:paths.extend(root.glob('*/stream.jsonl'))
     for p in sorted(paths,key=lambda p:p.stat().st_mtime,reverse=True):
         for line in reversed(p.read_text(errors='replace').splitlines()):
             if '"rate_limit_event"' not in line:continue

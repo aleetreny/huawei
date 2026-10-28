@@ -189,3 +189,6 @@ Reanalisis sinllamadas con gpt_narrative_score.py, gpt_fact_second_score.py y gp
 
 ## Relevo: revision factual de carrera
 Preparado y compilado gpt_fact_career_read.py; mantiene preguntas/gate, cambia fuente a todos24turnoscriticos reales y modeloSonnetigualalcontrol. Plan congelado antes de llamadas; no selecciona errores. Se inicia tanda24lecturas como maximo, sin juegos/DeepSeek. Datos en ~/careerlab-data/deepseek/gpt-fact-career-read/. Inspeccionar proceso y resultados antes de retomar, nunca reiniciar por timeout. Falta cerrar coleccion y puntuar contra original_choice usando select de gpt_fact_second_score sin modificarlo. No hay candidato admitido. Solicito integrar checkpoint enPR23.
+
+### Relevo de puntuacion preparado
+Proceso de revision factual verificado vivo (PID52296/sesion95901), primeras5lecturas validas. Preparado gpt_fact_career_score.py: compara original, recomendacion y gate exacto de gpt_fact_second_score.select; conserva rechazos con fallback. Compilacion correcta; ejecutarlo no llama modelos y devuelve pendientes hasta completar24. Añadida lectura de cuota propia de esta tanda para futuras admisiones; el proceso ya iniciado usa su modulo cargado, sin reiniciarlo. No resultados completos aun ni candidatura.
