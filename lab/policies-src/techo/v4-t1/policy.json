@@ -1,0 +1,13 @@
+{
+  "family": "techo",
+  "name": "v4-t1",
+  "parents": [
+    "v4-c5"
+  ],
+  "idea_origin": "Techo line, 28 Oct: replica diagnosis of why v4 careers end in L5 (lab/reports/techo/README.md)",
+  "operator": "add quarterly and weighting rules",
+  "hypothesis": "v4-c5 careers reach L5 around month 42 because in L4 Network and Output sit at their ceiling for months while every quarter still goes to reports and networking, and DeepSeek never fills Stalled. A visible condition (level 4 or above) that sends the quarter to Skill learning and rotation, a Skill gain counted twice in stories from level 4, a Dignity margin of 7 in the wellbeing step and a value-anchored Stalled mark should bring L5 forward and raise final Skill without touching the first promotion.",
+  "predicted_behaviour": "In the replica with v4-like reading: +0.7 to +0.9 of final score, L6 from 16 % to 25 % (exact reading), final Skill +9; same first-promotion rate and no more trust crises. In DeepSeek games: Skill learning and rotation in every L4+ quarter; final Skill above 120; L5 before month 42.",
+  "refutation": "DeepSeek games where the quarter does not go to Skill from level 4, or more missed first promotions or trust crises than v4-c5, or a quality score below v4-c5.",
+  "skill_count": 1
+}
