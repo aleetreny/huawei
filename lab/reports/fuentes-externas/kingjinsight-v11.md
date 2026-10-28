@@ -94,3 +94,19 @@ Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HA
 - `scripts/fuentes-externas/vigilar.py` revisa cada repo de `fuentes.json` con `git ls-remote`. Si cambia, lo clona en `~/ext/` y saca las notas de sus `score_report.json`. El último estado visto queda en `estado.json`. No ejecuta nada de esos repos.
 - Una revisión programada lo corre cada 6 horas, busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS.
 - La clasificación oficial (`techarena-uk.hydro.ac`) no se puede leer desde la nube mientras ese dominio no esté permitido en los ajustes de red del entorno.
+
+## Barrido amplio (28 oct, 18:30 UTC)
+
+En resumen, lo único con valor sigue siendo Kingjinsight (secciones 1–5, C37–C42). Lo demás está vacío o no tiene que ver con el reto.
+
+- **Nuevas:** `rickyyyy-bit/TechArena-Huawei` («Jon8652's team») sólo tiene dos Skills preliminares genéricos, sin partidas, porque no tenían clave. `Colinfornia/Techarena-Project` sólo tiene un README vacío. Las dos se vigilan. `Sherlock-shy` y `QuantumBitstream` son forks del repo oficial sin cambios.
+- **Sin cambios:** KSL (las cuatro copias), Artepace y peidi-L. Ray23257, YuLong111 y bernardoguterres siguen privadas. No hay versiones nuevas de los paquetes del motor en PyPI desde el 25 oct.
+- **Kingjinsight coincide con nuestra réplica:**
+  - Sus topes medidos en L1 (O3 N3 S9) cuadran con lo nuestro.
+  - Su «Skill ≥ ~90 y nota A para pasar de L4 a L5» coincide con `THRESH[4]` (Skill 90).
+  - Su escalera de frases de RR. HH. y su fórmula de nota leída del log no aportan nada que la réplica no tenga.
+- **Sin resultado:**
+  - GitHub: búsquedas por techarena, tech-arena, techarena-uk, jiuwenswarm, career survival y career sim, nombres de repo adivinados, y los forks y perfiles de los equipos conocidos.
+  - Web, en inglés y en chino: LinkedIn, YouTube, Medium y Bilibili.
+  - Sin relación con el reto: otros retos de TechArena (CTR y otros) y la edición 2025.
+- **No accesibles desde la nube:** huggingface.co, gitee.com, gitlab.com, reddit.com, techarena-uk.hydro.ac y la documentación en readthedocs. La API de GitHub tampoco; se usan `git ls-remote` y clones.
