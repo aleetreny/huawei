@@ -85,3 +85,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Diagnostico factual:** ambos errores reales sin flags de coste; unflag sobre opcionsegura causa cambioarriesgado. No afinar gate por esoscasos. Analisisoffline fact-bottleneck.json, sin llamadas adicionales.
 
 **Suficiencia factual:**3/24menus contienen opciones con lasmismas4respuestas y diferentescostes/riesgo. Analisisoffline fact-sufficiency.json; no otra candidatura ni llamadas.
+
+**Apoyo gpt-principios actualizado:**main e332b14 integrado; revisada lineaLeah532d672.74,3delean esrubrica,noQ; no candidato75nuevo ni llamadas. No duplicar lean ni atajos cerrados.

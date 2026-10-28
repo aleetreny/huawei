@@ -210,3 +210,10 @@ Codigo compilado y diff --check limpio; no procesos nuevos. Solicito integrar ev
 
 ### Relevo
 Analisisposthoc sin modelos/juegos, reproducible con `uv run python scripts/deepseek/gpt_fact_sufficiency.py`; salida numerica fact-sufficiency.json. No convertir colisiones en respuestas fijas por evento. Antes de otra tabla de categorias, exigir prueba de que conserva diferencias relevantes para decision. Codigo compilado y diff --check limpio. Objetivo75abierto, sin nueva candidatura.
+
+## Relevo: contraste con evidencia nueva del equipo
+**Los74,3de v4-lean son rubrica, noQde partida; no explican el75raw solicitado.** Revisado origin/leah/workspace@532d672: banco139situaciones,92–93%elecciones iguales a v4, precisión dentrodelruido. TrimestreSkilldesdeL4 aporta~0,6en replica (informe07), no salto a75. No duplicar sus candidatos ni confundir ahorro/rubrica con resultado de juego.
+
+Integrado origin/main@e332b14 sin conflictos. B28explica repeticion de titulos por interrupcion trimestral de continuaciones, efectoQ−0,18±0,15en3000semillas; B29ordenevaluacionantesdeexplosion. Busqueda de atajos cerrada sin efecto superior. Esto actualiza contexto de las colisiones deID: repetir unmenu en otroestado no es una observacion identica ni permite reutilizar respuesta sin vincularpanel. No repetir busqueda de eastereggs ni ajustar por formulasprivadas.
+
+No llamadas ni partidas nuevas. Siguiente paso debe medir una mejora de decision con una representacion que conserve informacion, no una mejora de rubrica o repeticion del mismo razonamiento. Objetivo75abierto. Solicito integrar checkpoint dePR23 conmain.
