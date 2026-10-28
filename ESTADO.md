@@ -86,3 +86,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Retornos confirmados:**otras600semillas48,56→52,86,+4,30IC[2,53;6,07],completas326→374. Sin llamadas. FaltahelpertransporteypruebaSonnetv4, no75demostrado.
 
 **Paquetesretornos preparados:**24casoscriticos/21paquetes conmemoria, prefijopublicosin efectoobjetivo. Falta comparacion48lecturasSonnetregistrada antes deejecutar. Sin llamadas actuales.
+
+**ComparacionSonnetmemoria anunciada:**48lecturasMax maximo(24panelesx2brazos), v4/systemoriginal,3notasiguales ylineainterpretacioncomun;unica diferencia paquetederetornos anterior. Ordenalternado, sin juegos/DeepSeek. Cuotavalida5h5%/semana42%(menos1h), topes0,65/0,45y4procesos. Plan return-packet-probe-plan.jsonfijado. No sustituir respuestas.
