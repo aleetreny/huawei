@@ -107,3 +107,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Correccion diagnostico panelforecast:**elmodelo si predicecostes enambos errores originales, pero loselige. Proximo:restriccioncontrolador conpredicciones congeladas, sin nuevas llamadas ni goldaldecisor. No soluciondemostrada.
 
 **Restriccionforecast offline cerrada:**riesgo3→5,evitables2→2,unaeleccionagotaHealth; noadmision.4cambios sin nuevasllamadas/juegos.
+
+**Modo local auditado:**iniciar60dev+60competition con mismoPlanner, sinexploracion conocida, solo5herramientas oficiales, 2procesos/2slots. Piloto dedistribucion, nosemillaspareadas ni inferenciaDS; sin modelos/API. Datos privadosgpt-mode-audit/. No repetir carreras si directorioexiste.
