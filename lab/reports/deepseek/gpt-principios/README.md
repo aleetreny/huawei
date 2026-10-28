@@ -140,3 +140,13 @@ Además, [la auditoría del runtime](runtime-audit.md) descubre una traza oficia
 **Relevo:** todos los procesos de este checkpoint terminaron; datos narrativos fuera deGit. `gpt_native_pilot.py --run` no debe retomarse. Prototipo observable-allocation-v1 sólo lint, sin admisión. Verificados11tests de truncation/completion, compilación de scripts y guardas sintéticas de aprendizaje. Cuota compartida5h11→14%, semana38→38%; ninguna llamadaDeepSeek.
 
 El28oct al revalidar `origin/main` aparece evidencia posterior deotraslíneas: v4DeepSeek71,67/70,22 y un script oficial76,87, con media de familia mucho menor. Formato midió52herramientas reales incluidasbash/code; nuestroproxy5herramientas+Skillno reproduce ese ámbito. Cambiar la siguiente investigación aesas trazas yevitar duplicar su veto híbrido. Esto es progreso de evidencia, no75estable ni atribución a equipos externos. Solicitar integración del checkpoint conmain enPR22.
+
+## Relevo 28 oct, 10:15 UTC
+
+Nueva evidencia posterior al primer informe: el equipo midio 76,87 con un script del Skill. Esta auditoria reproduce las 750 salidas, 747 acciones y cinco memorias de sus cinco trazas: [informe](format-trace-audit.md). Su familia sigue sin 75 estable; no atribuir a otros equipos una tecnica no publicada. Alejandro confirma que vio esas partidas privadamente.
+
+Las correcciones de riesgo no mejoran Q. Corregir solo el campo HR no cambia opciones en 732 decisiones locales. Las etiquetas del ganador, congeladas sobre semillas nuevas, no producen 75 estable. No repetir esos brazos ni el checklist F1 de Formato. El prototipo observable-allocation-v1 no esta validado ni admitido. El proxy previo de cinco herramientas no equivale al agente oficial con bash/code.
+
+Siguiente prueba: 12 menus L1 con el mismo v4, Haiku/Sonnet, maximo 25 llamadas Max incluida admision; ninguna carrera completa ni API DeepSeek. READY con Sonnet 5.5 valido, cuota fresca 1% cinco horas / 40% semanal. Primer menu rechazo de CLI antes de modelo: --allowedTools consumio el prompt. Proceso 1150 terminal, sin decision; corregir orden de flags y conservar fallo antes de reintentar el mismo caso.
+
+313 tests pasan (47,82 s), guardas sinteticas de riesgo pasan. Todas las simulaciones anteriores terminaron. Source original de la primera pantalla conservado con hash exacto en risk-credit-script-v1.py.gz. PR22 ya esta integrado; este checkpoint necesita PR nuevo. Repo canonico /Users/alejandrotreny/huawei. Objetivo 75 estable activo; el turno anterior fue progreso, no una espera ni un bloqueo.
