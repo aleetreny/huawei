@@ -288,3 +288,8 @@ Alejandro pide priorizarSonnet: se adopta para futuras pruebasLLM; las recientes
 Probe sintetico de compatibilidad sobre replicaconcrecimientoalto/Dignity10/Health8/duracion17: riesgo0→C,1/2→D. Concuerda en esos3puntos conB30, no validaciongeneral ni nuevosdatosdemotor. Salida l1-grade-probe.json; primerllamado uso malCatalog.gradecomo funcion y se corrigio aGradeModel.grade, sin modificarreplica.
 
 Siguiente pantalla barata: controlador que ante repetidosascensosfallidos priorice recuperar el feedbackHRmaspositivo frente a conformarseconquiet, usando solo historialpublico; compararsemillas nuevas y mismolectorcongelado, sin reglasprivadas/candidaturahastaresultado. No repetirla busqueda de atajos. Sin llamadas/juegos nuevosestecheckpoint. Solicito integrarPR23.
+
+## Relevo: recuperacion tras estancamiento no mejora
+**600semillas pareadas:Q49,643→49,628,delta−0,01465(IC95aprox−0,1605;+0,1312).** Misma lectura congelada, historias y controller salvo reparacion deHRtras2reviews fallidas.1072reparaciones;completas342→343,despidos119→119,trust112→111,health27igual. No admitir aSonnetniSkill. No refutaB30:esta implementacion no produce gananciarelevante.
+
+Planfijadoantesderun, sin pesosafinado. Datosnumericos stall-recovery-results.json y planseparado;reproducir uv run python scripts/deepseek/gpt_stall_recovery.py. Verificadocontador2fallos yresetpromocion;compilacion/diffcorrectos. SinAPI/modelos/juegosoficialesnuevos. Proxima mejora necesita recuperar decisiones previas alatasco, no gastar masreparacionesconmisma lectura. Objetivo75abierto;integrarPR23.
