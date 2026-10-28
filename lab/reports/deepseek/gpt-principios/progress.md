@@ -56,3 +56,10 @@ Cierre factual real:24respuestasvalidas, gate2cambios/riesgo3→4/evitables2→2
 Diagnostico posthoc:2errores originales sin flags; alternativasseguras inciertas. Unflag sobre opcionsegura causa cambioarriesgado. No es un simple bloqueo de gate, sino relacionpredicado/efecto insuficiente. Guardadofact-bottleneck.json sin narrativa ni llamadas.
 
 Suficienciaoffline:3/24menus con identicovector4respuestas y distintosresultados riesgo/crecimiento. Solo prueba insuficiencia de estosvectoresobservados, no deltexto/citas/politicacompleta niQ. Sin llamadas.
+
+## Relevo: contraste con evidencia nueva del equipo
+**Los74,3de v4-lean son rubrica, noQde partida; no explican el75raw solicitado.** Revisado origin/leah/workspace@532d672: banco139situaciones,92–93%elecciones iguales a v4, precisión dentrodelruido. TrimestreSkilldesdeL4 aporta~0,6en replica (informe07), no salto a75. No duplicar sus candidatos ni confundir ahorro/rubrica con resultado de juego.
+
+Integrado origin/main@e332b14 sin conflictos. B28explica repeticion de titulos por interrupcion trimestral de continuaciones, efectoQ−0,18±0,15en3000semillas; B29ordenevaluacionantesdeexplosion. Busqueda de atajos cerrada sin efecto superior. Esto actualiza contexto de las colisiones deID: repetir unmenu en otroestado no es una observacion identica ni permite reutilizar respuesta sin vincularpanel. No repetir busqueda de eastereggs ni ajustar por formulasprivadas.
+
+No llamadas ni partidas nuevas. Siguiente paso debe medir una mejora de decision con una representacion que conserve informacion, no una mejora de rubrica o repeticion del mismo razonamiento. Objetivo75abierto. Solicito integrar checkpoint dePR23 conmain.
