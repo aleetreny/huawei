@@ -14,6 +14,7 @@ Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que 
 ## Investigación terminada, pendiente de integración
 
 - [mecanicas-emergentes/](mecanicas-emergentes/README.md): asignación conjunta del cierre, 600 partidas oficiales y corrección de liquidación terminal; [PR #20](https://github.com/aleetreny/huawei/pull/20). Subtrabajo de motor, no nueva línea activa.
+- [huevos-pascua/](huevos-pascua/README.md): búsqueda de combinaciones ocultas y atajos de ascenso (28 oct, sólo bots): no existen; mecánica nueva del trimestre (HALLAZGOS B28, B29). Rama `claude/hidden-combos-easter-eggs-eb0edx`. Investigación corta, no línea activa.
 
 ## Otros dueños (no se tocan aquí)
 
