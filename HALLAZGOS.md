@@ -133,6 +133,9 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 
 | C23 | `DeepSeek` **"DeepSeek etiqueta, un script del Skill decide" tiene más techo y menos suelo que las reglas escritas.** Partidas oficiales: `script-v1` 76,87 (L6, la mejor de DeepSeek hasta hoy) y 13,23; `script-v3` 66,55 · 60,45 · 32,59; `t13-read-v4` 71,67 · 70,22. Cuando pasa L1 y no se arruina, el script lleva mejor los trimestres (Skill cuando Network y Output se estancan; L5 en el mes 36 frente al 42 de v4). Pero confía a ciegas en las etiquetas: un `O-` no visto en el mes previo a la evaluación o un `W-` con la cartera vacía (el panel redondea el dinero hacia abajo y oculta los negativos) acaban la partida. Gasta ~1,6 veces más fichas. n pequeño. | formato, [README §5](lab/reports/formato/README.md) |
 
+| C24 | `Haiku, tres carreras` Control profesional native-craft-v1: 66,86 / 18,23 / 64,15, media49,75, dos completas. Cuarta cancelada antes de llamar, sin sustituir derrotas. Un banco de48titulos no acredita fiabilidad de carrera. | [piloto](lab/reports/deepseek/gpt-principios/native-pilot.md) |
+| C25 | `DeepSeek + Programa, cinco trazas` Reproducidas750salidas,747acciones y cinco memorias exactas del advisor entregado. El76,87es real, pero la familia no es estable. Arreglar creditos de riesgo no mejoraQ; cambiar soloHRno cambia ninguna eleccion local. | [auditoria](lab/reports/deepseek/gpt-principios/format-trace-audit.md) |
+
 ## X. Descartado (no repetir sin una razón nueva)
 
 | Idea | Por qué no | Fuente |
