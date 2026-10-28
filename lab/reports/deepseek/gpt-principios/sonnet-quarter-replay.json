@@ -1,0 +1,1400 @@
+{
+  "meaning": "Fixed Sonnet story choices/path. Tests only quarter allocation against an observed path; different quarters could change subsequent model choices. No future story path passed to ranking, no whole-agent Q forecast. Interpret alternative arms only if actual quarter baseline reproduces outcome and Q within half a point. No hidden thresholds or event answers delivered as Skill.",
+  "actual_Q": 49.95,
+  "baseline_fidelity_within_half_point_and_outcome": true,
+  "public_log_action_pairings": 201,
+  "stale_menu_quarter_attributions_repaired": 12,
+  "result_sha256": "685cb99de9064f98b65fc203506aca7f9f3630dca57578b8523195ab3e72f663",
+  "script_sha256": "f8a679253f2c4b0b76976b9f080de4dff1c4c39511ae689c8f27d4edabba58f9",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "arms": {
+    "replay_actual": [
+      {
+        "Q": 49.83,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 58.0,
+        "network": 33.0,
+        "output": 18.0,
+        "health": 7.0,
+        "dignity": 10,
+        "wealth": 29.3,
+        "risk": 0,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 42,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 10,
+          "Network maintenance": 7,
+          "Apply for a key project": 10,
+          "Apply for rotation": 1,
+          "Defuse legacy risk": 6,
+          "Prepare report materials": 17,
+          "Lay low and reduce risk": 5,
+          "Skill learning": 1
+        },
+        "censored_original_path": false,
+        "learned": {},
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      },
+      {
+        "Q": 50.05,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 58.0,
+        "network": 33.0,
+        "output": 18.0,
+        "health": 7.0,
+        "dignity": 10,
+        "wealth": 30.2,
+        "risk": 0,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 42,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 10,
+          "Network maintenance": 7,
+          "Apply for a key project": 10,
+          "Apply for rotation": 1,
+          "Defuse legacy risk": 6,
+          "Prepare report materials": 17,
+          "Lay low and reduce risk": 5,
+          "Skill learning": 1
+        },
+        "censored_original_path": false,
+        "learned": {},
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      }
+    ],
+    "observed_quarter": [
+      {
+        "Q": 25.52,
+        "completed": false,
+        "alive": false,
+        "failure": "health",
+        "month": 24,
+        "level": 2,
+        "skill": 21,
+        "network": 7.0,
+        "output": 6,
+        "health": 0,
+        "dignity": 8.0,
+        "wealth": 10.9,
+        "risk": 3,
+        "blowups": 0,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          }
+        ],
+        "actions": {
+          "Health recovery": 5,
+          "Prepare report materials": 6,
+          "Build a mentorship": 1,
+          "Network maintenance": 6,
+          "Apply for rotation": 4,
+          "Apply for a key project": 1,
+          "Defuse legacy risk": 1,
+          "Skill learning": 1,
+          "Lay low and reduce risk": 1
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 6,
+          "network": 7,
+          "skill": 21
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      },
+      {
+        "Q": 25.74,
+        "completed": false,
+        "alive": false,
+        "failure": "health",
+        "month": 24,
+        "level": 2,
+        "skill": 21,
+        "network": 7.0,
+        "output": 6,
+        "health": 0,
+        "dignity": 8.0,
+        "wealth": 11.8,
+        "risk": 3,
+        "blowups": 0,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          }
+        ],
+        "actions": {
+          "Health recovery": 5,
+          "Prepare report materials": 6,
+          "Build a mentorship": 1,
+          "Network maintenance": 6,
+          "Apply for rotation": 4,
+          "Apply for a key project": 1,
+          "Defuse legacy risk": 1,
+          "Skill learning": 1,
+          "Lay low and reduce risk": 1
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 6,
+          "network": 7,
+          "skill": 21
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      }
+    ],
+    "main_aware_quarter": [
+      {
+        "Q": 51.92,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 74.0,
+        "network": 36.0,
+        "output": 26,
+        "health": 6.0,
+        "dignity": 10,
+        "wealth": 30.7,
+        "risk": 0,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 36,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 9,
+          "Prepare report materials": 18,
+          "Build a mentorship": 1,
+          "Skill learning": 2,
+          "Lay low and reduce risk": 4,
+          "Network maintenance": 5,
+          "Apply for a key project": 9,
+          "Apply for rotation": 2,
+          "Defuse legacy risk": 5,
+          "Mental recovery": 1
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 26,
+          "network": 36
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      },
+      {
+        "Q": 52.15,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 74.0,
+        "network": 36.0,
+        "output": 26,
+        "health": 6.0,
+        "dignity": 10,
+        "wealth": 31.6,
+        "risk": 0,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 36,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 9,
+          "Prepare report materials": 18,
+          "Build a mentorship": 1,
+          "Skill learning": 2,
+          "Lay low and reduce risk": 4,
+          "Network maintenance": 5,
+          "Apply for a key project": 9,
+          "Apply for rotation": 2,
+          "Defuse legacy risk": 5,
+          "Mental recovery": 1
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 26,
+          "network": 36
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      }
+    ],
+    "calm_quarter": [
+      {
+        "Q": 52.42,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 74.0,
+        "network": 36.0,
+        "output": 26,
+        "health": 8.0,
+        "dignity": 10,
+        "wealth": 30.7,
+        "risk": 1,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 36,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 9,
+          "Prepare report materials": 17,
+          "Build a mentorship": 1,
+          "Network maintenance": 6,
+          "Apply for rotation": 4,
+          "Defuse legacy risk": 6,
+          "Apply for a key project": 6,
+          "Lay low and reduce risk": 5,
+          "Skill learning": 2
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 26,
+          "network": 36
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      },
+      {
+        "Q": 52.65,
+        "completed": true,
+        "alive": true,
+        "failure": null,
+        "month": 49,
+        "level": 4,
+        "skill": 74.0,
+        "network": 36.0,
+        "output": 26,
+        "health": 8.0,
+        "dignity": 10,
+        "wealth": 31.6,
+        "risk": 1,
+        "blowups": 1,
+        "promotions": [
+          {
+            "month": 12,
+            "level": 2
+          },
+          {
+            "month": 30,
+            "level": 3
+          },
+          {
+            "month": 36,
+            "level": 4
+          }
+        ],
+        "actions": {
+          "Health recovery": 9,
+          "Prepare report materials": 17,
+          "Build a mentorship": 1,
+          "Network maintenance": 6,
+          "Apply for rotation": 4,
+          "Defuse legacy risk": 6,
+          "Apply for a key project": 6,
+          "Lay low and reduce risk": 5,
+          "Skill learning": 2
+        },
+        "censored_original_path": false,
+        "learned": {
+          "output": 26,
+          "network": 36
+        },
+        "proposal_switches": 0,
+        "branching_guard_exclusions": 0
+      }
+    ]
+  },
+  "story_diagnostics": {
+    "n": 144,
+    "positive_risk": 18,
+    "growth_loss": 39,
+    "avoidable_pre_review_loss": 2,
+    "rows": [
+      {
+        "month": 1,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 1,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 1,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 2,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 2,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 2,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 3,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 3,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 3,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 4,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 4,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 4,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 5,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": true
+      },
+      {
+        "month": 5,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 5,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 6,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 6,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 6,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 7,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 7,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 7,
+        "level": 1,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 8,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 8,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 8,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 9,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 9,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 9,
+        "level": 1,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 10,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 10,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 10,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 11,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 11,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": true
+      },
+      {
+        "month": 11,
+        "level": 1,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 12,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 12,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 12,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 13,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 13,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 13,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 14,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 14,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 14,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 15,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 15,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 15,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 16,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 16,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 16,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 17,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 17,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 17,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 18,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 18,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 18,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 19,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 19,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 19,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 20,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 20,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 20,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 21,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 21,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 21,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 22,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 22,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 22,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 23,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 23,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 23,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 24,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 24,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 24,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 25,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 25,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 25,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 26,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 26,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 26,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 27,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 27,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 27,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 28,
+        "level": 2,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 28,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 28,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 29,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 29,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 29,
+        "level": 2,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 30,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 30,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 30,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 31,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 31,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 31,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 32,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 32,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 32,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 33,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 33,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 33,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 34,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 34,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 34,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 35,
+        "level": 3,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 35,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 35,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 36,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 36,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 36,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 37,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 37,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 37,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 38,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 38,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 38,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 39,
+        "level": 3,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 39,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 39,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 40,
+        "level": 3,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 40,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 40,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 41,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 41,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 41,
+        "level": 3,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 42,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 42,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 42,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 43,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 43,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 43,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 44,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 44,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 44,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 45,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 45,
+        "level": 4,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 45,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 46,
+        "level": 4,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 46,
+        "level": 4,
+        "positive_risk": true,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 46,
+        "level": 4,
+        "positive_risk": true,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 47,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 47,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": true,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 47,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 48,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 48,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      },
+      {
+        "month": 48,
+        "level": 4,
+        "positive_risk": false,
+        "growth_loss": false,
+        "avoidable_pre_review_loss": false
+      }
+    ]
+  }
+}

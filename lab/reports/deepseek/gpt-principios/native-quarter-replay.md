@@ -15,3 +15,6 @@ No son muestras independientes, agentes completos ni estimaciones de media. Cong
 ## Relevo
 
 Código `scripts/deepseek/gpt_native_replay.py`, resultados y hashes en `native-quarter-replay.json`. No procesos pendientes ni llamadas. Un camino original censurado que se rescate queda sinQsi faltan eventos futuros; no se inventa una carrera completa. Corregida la etiqueta de censura cuando ya había muerte al cambio de mes. Próximo paso: auditar el77real deFormato y los70reales deDeepSeek, incluyendo su formato y fallos. No promover `observable-allocation-v1` por esta pantalla.
+
+## Comprobacion con registros oficiales,28oct
+El problema de menus encadenados detectado posteriormente enSonnet motivó reemparejar todas las acciones con los registros publicos propios: `gpt_native_replay_aligned.py`, archivo separado `native-quarter-replay-aligned.json`. Las tres carrerasHaiku requieren cero correcciones; se mantienen los resultados originales y la exclusion de la primera por falta de fidelidad. No se atribuye su desviacion a este parser. No hubo partidas ni llamadas de modelo adicionales.

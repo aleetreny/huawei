@@ -136,6 +136,9 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C24 | `Haiku, tres carreras` Control profesional native-craft-v1: 66,86 / 18,23 / 64,15, media49,75, dos completas. Cuarta cancelada antes de llamar, sin sustituir derrotas. Un banco de48titulos no acredita fiabilidad de carrera. | [piloto](lab/reports/deepseek/gpt-principios/native-pilot.md) |
 | C25 | `DeepSeek + Programa, cinco trazas` Reproducidas750salidas,747acciones y cinco memorias exactas del advisor entregado. El76,87es real, pero la familia no es estable. Arreglar creditos de riesgo no mejoraQ; cambiar soloHRno cambia ninguna eleccion local. | [auditoria](lab/reports/deepseek/gpt-principios/format-trace-audit.md) |
 
+| C26 | `Haiku/Sonnet` Con v4igual,12menús emparejados: riesgo2ambos, una pérdida evitableHaiku frente0Sonnet. Una carreraSonnet completa49,95/L4,202acciones sin rechazos. Mayor capacidad no basta en esta referencia; no inferir diferencia media ni transferenciaDS. | [capacidad](lab/reports/deepseek/gpt-principios/capacity-and-learning.md) |
+| C27 | `Haiku, banco` Resultado real de un episodio anterior: piloto16pares pérdidas6→4/riesgo1→1; contraste43objetivos restantes13→14/riesgo2→2.118decisiones válidas, docentes/carreras compartidos. No conserva mejora; no admitir a carreras. No invalida toda posible memoria. | [feedback](lab/reports/deepseek/gpt-principios/capacity-and-learning.md) |
+
 ## X. Descartado (no repetir sin una razón nueva)
 
 | Idea | Por qué no | Fuente |
