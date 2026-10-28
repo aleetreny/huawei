@@ -1,0 +1,12 @@
+{
+  "family": "deepseek",
+  "name": "observable-allocation-v1",
+  "parents": [
+    "native-craft-v1"
+  ],
+  "idea_origin": "first-principles decision intervention",
+  "hypothesis": "Separate measured public returns from guessed story benefits; use a persistent return ledger to avoid paying scarce resources for stalled gains. Quarterly allocation observes after every spend.",
+  "refutation": "Fails to avoid measured no-return investments or sacrifices viable useful growth; no full-game efficacy assumed.",
+  "skill_count": 1,
+  "operator": "isolated public-feedback allocation"
+}

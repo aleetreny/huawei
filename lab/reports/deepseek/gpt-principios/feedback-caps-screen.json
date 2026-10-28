@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "games": 600,
+    "seed": 202680270,
+    "script_sha256": "e38a85de8f23d0b33a67480e4757d98a459981b250fe9f066017ba2a3cedf640",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "labels_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "meaning": "Own replica, frozen expectations, not native model learning or game Q forecast. Same-month observed changes only. Actual caps never enter DS policy; false_updates uses caps only as an outcome metric."
+  },
+  "arms": {
+    "ds_baseline": {
+      "summary": {
+        "n": 600,
+        "mean": 54.04943333333333,
+        "se": 0.8157798464967663,
+        "completion": 0.6733333333333333,
+        "promoted_by_first": 0.54,
+        "promoted_by_second": 0.7483333333333333,
+        "failures": {
+          "completed": 404,
+          "dismissed": 143,
+          "trust": 35,
+          "health": 18
+        },
+        "mean_feedback_updates": 0.0,
+        "mean_false_updates": 0.0,
+        "mean_revoked": 0.0
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "ds_one": {
+      "summary": {
+        "n": 600,
+        "mean": 53.786966666666665,
+        "se": 0.8260213483252563,
+        "completion": 0.6583333333333333,
+        "promoted_by_first": 0.535,
+        "promoted_by_second": 0.7383333333333333,
+        "failures": {
+          "completed": 395,
+          "trust": 45,
+          "dismissed": 153,
+          "health": 7
+        },
+        "mean_feedback_updates": 19.893333333333334,
+        "mean_false_updates": 13.021666666666667,
+        "mean_revoked": 10.808333333333334
+      },
+      "paired_delta": {
+        "mean": -0.2624666666666666,
+        "se": 0.6663464378703277,
+        "ci95": [
+          -1.5685056848925087,
+          1.0435723515591755
+        ]
+      }
+    },
+    "ds_two": {
+      "summary": {
+        "n": 600,
+        "mean": 54.41211666666667,
+        "se": 0.8167828705871389,
+        "completion": 0.6833333333333333,
+        "promoted_by_first": 0.55,
+        "promoted_by_second": 0.7483333333333333,
+        "failures": {
+          "completed": 410,
+          "trust": 33,
+          "dismissed": 144,
+          "health": 13
+        },
+        "mean_feedback_updates": 5.99,
+        "mean_false_updates": 1.37,
+        "mean_revoked": 1.2016666666666667
+      },
+      "paired_delta": {
+        "mean": 0.36268333333333347,
+        "se": 0.5533529571745164,
+        "ci95": [
+          -0.7218884627287185,
+          1.4472551293953855
+        ]
+      }
+    },
+    "ds_three": {
+      "summary": {
+        "n": 600,
+        "mean": 54.43606666666667,
+        "se": 0.8099701096412973,
+        "completion": 0.6816666666666666,
+        "promoted_by_first": 0.5466666666666666,
+        "promoted_by_second": 0.75,
+        "failures": {
+          "completed": 409,
+          "dismissed": 143,
+          "trust": 33,
+          "health": 15
+        },
+        "mean_feedback_updates": 3.6,
+        "mean_false_updates": 0.14666666666666667,
+        "mean_revoked": 0.13166666666666665
+      },
+      "paired_delta": {
+        "mean": 0.3866333333333333,
+        "se": 0.4756795654310278,
+        "ci95": [
+          -0.5456986149114812,
+          1.3189652815781479
+        ]
+      }
+    },
+    "signs_baseline": {
+      "summary": {
+        "n": 600,
+        "mean": 60.70468333333333,
+        "se": 0.7403309825079555,
+        "completion": 0.79,
+        "promoted_by_first": 0.655,
+        "promoted_by_second": 0.84,
+        "failures": {
+          "completed": 474,
+          "dismissed": 94,
+          "trust": 18,
+          "health": 9,
+          "broke": 5
+        },
+        "mean_feedback_updates": 0.0,
+        "mean_false_updates": 0.0,
+        "mean_revoked": 0.0
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "signs_two": {
+      "summary": {
+        "n": 600,
+        "mean": 62.59985,
+        "se": 0.6993212678254533,
+        "completion": 0.8266666666666667,
+        "promoted_by_first": 0.6633333333333333,
+        "promoted_by_second": 0.8583333333333333,
+        "failures": {
+          "completed": 496,
+          "health": 3,
+          "dismissed": 83,
+          "trust": 15,
+          "broke": 3
+        },
+        "mean_feedback_updates": 6.093333333333334,
+        "mean_false_updates": 0.0,
+        "mean_revoked": 0.0
+      },
+      "paired_delta": {
+        "mean": 1.8951666666666664,
+        "se": 0.504084381222719,
+        "ci95": [
+          0.9071612794701371,
+          2.8831720538631957
+        ]
+      }
+    }
+  },
+  "archive": {
+    "file": "feedback-caps-screen.json.gz",
+    "sha256": "844fc054cf9cfd1f1e23c8de1ccb3fe90695354f3a65005a30c5894cdf72e195",
+    "uncompressed_sha256": "5ddea434b7b7d5d4acc6dcac936f32bf105a87f65179519426fd8a8a28fe98ee"
+  }
+}

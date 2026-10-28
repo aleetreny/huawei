@@ -132,3 +132,11 @@ Además, [la auditoría del runtime](runtime-audit.md) descubre una traza oficia
 **Relevo de la continuación:** proceso terminado con208 resultados; no reanudar ni repetir. Para reproducir sólo el análisis, `uv run python scripts/deepseek/gpt_decision_score.py` exige que estén los208 resultados y usa efectosv2, sin Q antiguo. Si hay un fallo de transporte o tope de cuota, inspeccionar el resultado concreto antes de reintentar; no reiniciar por tiempo de observación agotado. No interpretar el banco como75 ni llamar a DeepSeek.
 
 **Cierre del segundo checkpoint:** la prueba negativa de autocomprobación separa adherencia de calidad. La siguiente prueba requiere feedback público nuevo y debe distinguir aprendizaje nativo del calibrador por grupos que ya falló. [Diseño y datos](decision-audit.md). El runtime en chino es una discrepancia concreta con parche revisable; la causalidad y el75 siguen sin demostrar. No se alteró ninguna instancia ni se inició una partida DeepSeek.
+
+## Checkpoint28oct: carreras nativas y nuevo estado del equipo
+
+[Caracterización completa](native-pilot.md): tresHaiku reales66,86/18,23/64,15; cuarta cancelada antes de empezar, sin sustituir derrotas. El banco limitado no predecía fiabilidad. [Aprendizaje de ganancias](feedback-caps.md): no mejora clara con expectativasDScongeladas; no repetir. [Replay](native-quarter-replay.md): un reparto mejor puede llevar un camino aL6/~70,6, pero no75ni rescatar otro.
+
+**Relevo:** todos los procesos de este checkpoint terminaron; datos narrativos fuera deGit. `gpt_native_pilot.py --run` no debe retomarse. Prototipo observable-allocation-v1 sólo lint, sin admisión. Verificados11tests de truncation/completion, compilación de scripts y guardas sintéticas de aprendizaje. Cuota compartida5h11→14%, semana38→38%; ninguna llamadaDeepSeek.
+
+El28oct al revalidar `origin/main` aparece evidencia posterior deotraslíneas: v4DeepSeek71,67/70,22 y un script oficial76,87, con media de familia mucho menor. Formato midió52herramientas reales incluidasbash/code; nuestroproxy5herramientas+Skillno reproduce ese ámbito. Cambiar la siguiente investigación aesas trazas yevitar duplicar su veto híbrido. Esto es progreso de evidencia, no75estable ni atribución a equipos externos. Solicitar integración del checkpoint conmain enPR22.

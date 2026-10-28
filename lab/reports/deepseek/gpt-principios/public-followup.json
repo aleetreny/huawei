@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-27",
+  "queries": [
+    {
+      "provider": "web",
+      "query": "\"TechArena\" \"Career\" \"75\" DeepSeek",
+      "attributable_75": false
+    },
+    {
+      "provider": "Exa",
+      "query": "\"TechArena\" \"career\" (\"75\" OR \"0.75\" OR \"score\")",
+      "attributable_75": false
+    },
+    {
+      "provider": "GitHub repositories",
+      "query": "\"career-emulator\" in:readme is:public",
+      "total": 5,
+      "new_uk_candidate": false
+    },
+    {
+      "provider": "GitHub repositories",
+      "query": "\"Career Survival\" in:readme is:public",
+      "total": 56,
+      "new_relevant_candidate": false
+    },
+    {
+      "provider": "GitHub repositories",
+      "query": "\"JiuwenSwarm\" \"TechArena\" in:readme is:public",
+      "total": 2,
+      "repos": [
+        "krsnkkv/KSL_TechArena",
+        "Artepace/slopathone_winningteam"
+      ]
+    }
+  ],
+  "new_exclusion": {
+    "url": "https://github.com/peicongwu777-rgb/zhichangshengchun/blob/main/README.md",
+    "reason": "Different Next.js/Vercel narrative RPG with initial talents, countries and user-provided DM; unrelated to Huawei UK official tools."
+  },
+  "technical_source": {
+    "url": "https://github.com/openJiuwen-ai/jiuwenswarm/blob/develop/docs/en/Configuration.md",
+    "relevance": "Public develop docs describe preferred_language default zh; not proof of behavior in competition-pinned 0.2.4b3."
+  },
+  "caveat": "Negative searches do not disprove a private/local 75 score and do not identify teams."
+}

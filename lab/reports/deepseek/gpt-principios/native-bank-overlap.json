@@ -1,0 +1,25 @@
+{
+  "meaning": "Exploratory first two terminal careers only; raw risk rates confound sampled events, states and long-running context. Agreement with either bank context is permissive. No context-length causal attribution.",
+  "rows": [
+    {
+      "game": "game-1",
+      "catalog_story_actions": 144,
+      "bank_overlap_actions": 30,
+      "bank_overlap_nodes": 30,
+      "same_as_any_bank_choice": 26,
+      "positive_risk_overlap": 2,
+      "positive_risk_nonoverlap": 14,
+      "nonoverlap_actions": 114
+    },
+    {
+      "game": "game-2",
+      "catalog_story_actions": 69,
+      "bank_overlap_actions": 18,
+      "bank_overlap_nodes": 18,
+      "same_as_any_bank_choice": 17,
+      "positive_risk_overlap": 3,
+      "positive_risk_nonoverlap": 7,
+      "nonoverlap_actions": 51
+    }
+  ]
+}

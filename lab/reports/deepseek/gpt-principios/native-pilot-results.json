@@ -1,0 +1,146 @@
+{
+  "n_requested": 4,
+  "n_finished_processes": 3,
+  "rows": [
+    {
+      "job_id": "native-craft-pilot-1",
+      "outcome": "completed",
+      "quantitative_score": 66.86,
+      "survival_months": 48,
+      "steps": 198,
+      "rejected_actions": 0,
+      "wall_seconds": 674.45,
+      "source_sha256": "f93bc06bd708989af840d0b36e1f584f1bfa5f36dffd3fb585a106ea9e27eb80",
+      "models": {
+        "claude-haiku-5-5": {
+          "inputTokens": 406,
+          "outputTokens": 51224,
+          "cacheReadInputTokens": 19769658,
+          "cacheCreationInputTokens": 191461,
+          "webSearchRequests": 0,
+          "costUSD": 0.9741395799999999,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 5194,
+          "canonicalModel": "claude-haiku-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "rate_limit_last": {
+        "status": "allowed",
+        "resetsAt": 1793138400,
+        "rateLimitType": "five_hour",
+        "overageStatus": "rejected",
+        "overageDisabledReason": "org_level_disabled",
+        "isUsingOverage": false,
+        "unifiedWindows": {
+          "five_hour": {
+            "utilization": 0.13,
+            "resetsAt": 1793138400
+          },
+          "seven_day": {
+            "utilization": 0.38,
+            "resetsAt": 1793635200
+          }
+        }
+      }
+    },
+    {
+      "job_id": "native-craft-pilot-2",
+      "outcome": "eliminated",
+      "quantitative_score": 18.23,
+      "survival_months": 24,
+      "steps": 97,
+      "rejected_actions": 0,
+      "wall_seconds": 196.93,
+      "source_sha256": "2094493e6565fdce855958e88265391b1dfbd16c8962185f22844c91730e105f",
+      "models": {
+        "claude-haiku-5-5": {
+          "inputTokens": 200,
+          "outputTokens": 29096,
+          "cacheReadInputTokens": 5219373,
+          "cacheCreationInputTokens": 100427,
+          "webSearchRequests": 0,
+          "costUSD": 0.10363373000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4578,
+          "canonicalModel": "claude-haiku-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "rate_limit_last": {
+        "status": "allowed",
+        "resetsAt": 1793138400,
+        "rateLimitType": "five_hour",
+        "overageStatus": "rejected",
+        "overageDisabledReason": "org_level_disabled",
+        "isUsingOverage": false,
+        "unifiedWindows": {
+          "five_hour": {
+            "utilization": 0.13,
+            "resetsAt": 1793138400
+          },
+          "seven_day": {
+            "utilization": 0.38,
+            "resetsAt": 1793635200
+          }
+        }
+      }
+    },
+    {
+      "job_id": "native-craft-pilot-3",
+      "outcome": "completed",
+      "quantitative_score": 64.15,
+      "survival_months": 48,
+      "steps": 197,
+      "rejected_actions": 0,
+      "wall_seconds": 904.82,
+      "source_sha256": "ab145373e99332bba12d6ecd0713d09588474363d7d3a0ec89ad80c01e66e03e",
+      "models": {
+        "claude-haiku-5-5": {
+          "inputTokens": 714,
+          "outputTokens": 48680,
+          "cacheReadInputTokens": 29312693,
+          "cacheCreationInputTokens": 157578,
+          "webSearchRequests": 0,
+          "costUSD": 1.1442472500000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 4456,
+          "canonicalModel": "claude-haiku-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "rate_limit_last": {
+        "status": "allowed",
+        "resetsAt": 1793138400,
+        "rateLimitType": "five_hour",
+        "overageStatus": "rejected",
+        "overageDisabledReason": "org_level_disabled",
+        "isUsingOverage": false,
+        "unifiedWindows": {
+          "five_hour": {
+            "utilization": 0.14,
+            "resetsAt": 1793138400
+          },
+          "seven_day": {
+            "utilization": 0.38,
+            "resetsAt": 1793635200
+          }
+        }
+      }
+    }
+  ],
+  "quota": {
+    "allowed": true,
+    "age_seconds": 2,
+    "five_hour": 0.14,
+    "seven_day": 0.38,
+    "source": "/Users/alejandrotreny/careerlab-data/deepseek/gpt-native-pilot/game-3/stream-0.jsonl"
+  },
+  "meaning": "Actual Haiku full-career scores; no DeepSeek transfer established. Operational interruptions have no imputed score."
+}
