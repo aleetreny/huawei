@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v3",
+  "parents": [
+    "t13-read-v2"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct evening: three official DeepSeek games lost to a missed first promotion (a Skill, Network or Output point lost in the month before a review) or to risk from options that look constructive; ChatGPT review 2 (phase routing, survival first, no numeric margins); palancas status line (t19-final, compliance wording)",
+  "operator": "one change",
+  "hypothesis": "In the replica, with DeepSeek's own readings, putting the review-month protection before the avoidance of mild risk while the HR remark is friendly or quiet raises the written-rule bot from 53.9 to 55.5 (dismissals -24 %); doing it at any risk level or over a wider window is worse. 26 % of questions offer no option that is both safe and free of growth losses.",
+  "predicted_behaviour": "More first promotions kept in the review month than t13-read-v2, with no rise in trust crises.",
+  "refutation": "No fewer missed first promotions than t13-read-v2 in official games, or more trust crises.",
+  "skill_count": 1
+}

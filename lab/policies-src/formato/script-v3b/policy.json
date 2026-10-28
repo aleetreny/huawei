@@ -1,0 +1,13 @@
+{
+  "family": "formato",
+  "name": "script-v3b",
+  "parents": [
+    "script-v3"
+  ],
+  "idea_origin": "script-v3 official game 2 eliminated as Broke in month 10: a correctly read W- option (-2) with a near-empty wallet; the panel rounds Wealth down, so neither agent nor script saw it was negative.",
+  "operator": "change the delivery form",
+  "hypothesis": "With little visible Wealth, never take a money-losing option when another exists.",
+  "predicted_behaviour": "Fewer missed Output/Network costs in review months, fewer R- on polite-but-risky options; most games pass L1 by month 12.",
+  "refutation": "Games still stuck in L1 or blown up at the same rate as script-v1 (1 of 2).",
+  "skill_count": 1
+}
