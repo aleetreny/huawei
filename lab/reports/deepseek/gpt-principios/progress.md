@@ -168,3 +168,10 @@ Researchhelper gpt_measured_ledger.py, noSkillni politica. measured-ledger-audit
 Guardiadetemporalidad:spyenCatalog.effectverifica0consultas antesdeprimerchoice y soloconsultadel elegido al syncposterior;motorreplicaconsultapropiaefectoparaaplicar, separadadellector. No alternativasverdaderas nibaremocaps aportados alcontrolador. La replica simula texto log nominal como sensor; faltaconfirmartransportecompleto delparser enactorreal.
 
 Plan/resultados return-learning-*.json,scriptgpt_return_learning.py compilado. Proximopasonecesario:confirmar600semillas nuevas conmisma regla antesdeSonnet; noafinarpesos nipromoverporunpantalla. Conservar sourceoriginaldeestecommitparareproducibilidad. SinAPI/modelos/juegosoficialesnuevos;objetivo75abierto,integrarPR23.
+
+## Relevo: confirmacion del aprendizaje de retornos
+**La mejora se mantiene en600semillas nuevas:48,560→52,864,delta+4,304(IC95aprox+2,535;+6,074).** Completas326→374,trust100→91,despidos146→119,health28→16. Regla ylecturasiguales; solo cambia seed2026302900 frente2026202900anterior. Primerafuente+5,387;confirmacion+4,304. No sumar estasganancias av4ni afirmar75/DS.
+
+Reproducir `uv run python scripts/deepseek/gpt_return_learning.py --confirm`; plan/resultados return-learning-confirm-*.json. Codigooriginal deprimerapantalla preservado encommit01bba46; nuevoflagcambia solo semilla/nombreartefacto,noLearner. Sin API/modelos/juegosoficiales.
+
+Siguientepaso autorizado: transporte delhelper:lecturaderegistropublico, observacionactual, memoria por sesion/cursor y paquete de retornosdisminuidos; validarlo sin gold en historias de la carrera propia. Despues compararSonnetconmismo v4y mismo contexto, añadiendo solo paquetedelhelper; no fingir que elproxy5tools pruebaejecucionscriptJiuwen. No copiar modos/constantes v11. Necesario ese paso antes de carreras de confirmacion. Objetivo75abierto;integrarPR23.
