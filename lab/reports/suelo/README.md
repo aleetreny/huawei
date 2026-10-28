@@ -47,6 +47,19 @@ Con el lector ruidoso a escala completa (1,0), `mag` + `rescue` + `blow` dan 55,
 
 **Lo que queda después:** con lector exacto, 2,8 % de despidos (atascadas en L1 que llegan al mes 18 cortas de Output o Network: pérdidas forzosas sin opción de reparar) y 1,6 % de crisis. En L1 los techos son los umbrales y no hay colchón posible; ninguna regla probada baja más los despidos sin subir las crisis.
 
+**¿Aguantan si cambian los parámetros del juego?** (como M23: 2.000 partidas por celda, lector exacto; nota de v4 con B30 → con `mag` → con `mag` + `rescue` + `blow`):
+
+| Escenario | v4 | + tamaño del riesgo | + rescate + tras explosión |
+|---|---:|---:|---:|
+| Juego de dev | 62,3 | 65,7 | 65,9 |
+| Explota con 4 | 54,1 | 62,3 | 62,2 |
+| Explota con 6 | 64,6 | 67,2 | 67,3 |
+| Umbrales −20 % | 71,4 | 75,1 | 75,3 |
+| Techos +20 % | 72,0 | 75,5 | 75,7 |
+| Umbrales +20 % o techos −20 % | 24–25 | 25 | 26–27 |
+
+Las tres reglas suman en todos los escenarios jugables (con los techos por debajo de los umbrales nadie asciende, como en M23). El tamaño del riesgo vale más cuanto antes explota el juego (+8 si explota con 4).
+
 **El tamaño del riesgo se puede leer sin eventos.** Con las etiquetas de Haiku de los 10 tipos (`lab/reports/question-bank/labels.json`) frente al riesgo del catálogo v2: ocultar (HIDE) es arriesgado el 88 % de las veces y de +2 o más el 64 %; atacar, empecinarse y ceder (ATTACK, PERSIST, YIELD), arriesgados el 65–85 % y de +2 o más el 25–35 %; evitar y venderse (AVOID, SELL), arriesgados el 46–54 % y de +2 o más el 9–14 %; arreglar, asumir y protegerse, 11–14 %. De ahí la escala del manual: aplazar o rodear < forzar, confrontar o ceder < ocultar, negar o apostar.
 
 ## 3. Los cortes del programa (contexto)
