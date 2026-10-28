@@ -1,0 +1,25 @@
+{
+  "meaning": "Posthoc diagnosis of numeric prediction, no new selection rule. True/forecast growth-loss confusion over67options; gold is evaluator only. Does not prove no controller can improve globally.",
+  "confusion_actual_forecast": {
+    "(False, False)": 26,
+    "(True, True)": 26,
+    "(True, False)": 5,
+    "(False, True)": 10
+  },
+  "original_avoidable_errors": [
+    {
+      "id": "71bf09449bbc296b",
+      "month": 5,
+      "original": 1,
+      "forecast_detected_growth_cost": true,
+      "recommendation": 1
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "month": 11,
+      "original": 2,
+      "forecast_detected_growth_cost": true,
+      "recommendation": 2
+    }
+  ]
+}

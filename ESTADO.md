@@ -103,3 +103,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Panelforecast admitido:**READYcompleto, cuota actual5h5%/semana42%;iniciadas24lecturasSonnet, sin juegos/DeepSeek. No repetir admision.
 
 **Panelforecast cerrado:**24respuestas/67opciones; evitables2→3,riesgo3→3, noadmision. Sin juegosnuevos/DeepSeek. Resultado panel-forecast-results.json.
+
+**Correccion diagnostico panelforecast:**elmodelo si predicecostes enambos errores originales, pero loselige. Proximo:restriccioncontrolador conpredicciones congeladas, sin nuevas llamadas ni goldaldecisor. No soluciondemostrada.
