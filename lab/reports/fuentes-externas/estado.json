@@ -1,0 +1,168 @@
+{
+ "kingjinsight/techarena-uk-2026": {
+  "sha": "e6c33cbde514792006fb70c824a8f5242a704a04",
+  "visto": "2026-10-28T19:11Z",
+  "scores": [
+   {
+    "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
+    "q": 32.26,
+    "meses": 24,
+    "nivel": 2.0,
+    "fichas": 23081171
+   },
+   {
+    "archivo": "runs/v11_run1_20261028T131911Z/results/score_report.json",
+    "q": 73.1,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 80527871
+   },
+   {
+    "archivo": "runs/v3.1_run1_20261027T144516Z/results/score_report.json",
+    "q": 68.81,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 51181259
+   },
+   {
+    "archivo": "runs/v3.1_run2_20261027T230646Z/results/score_report.json",
+    "q": 58.87,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 45593739
+   },
+   {
+    "archivo": "runs/v3.3_run1_20261027T155158Z/results/score_report.json",
+    "q": 22.98,
+    "meses": 24,
+    "nivel": 1.0,
+    "fichas": 16000387
+   },
+   {
+    "archivo": "runs/v3_run1_20261027T132510Z/results/score_report.json",
+    "q": 68.15,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 54748971
+   },
+   {
+    "archivo": "runs/v4_run1_20261027T162152Z/results/score_report.json",
+    "q": 63.63,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 50736655
+   },
+   {
+    "archivo": "runs/v6_run1_20261027T175240Z/results/score_report.json",
+    "q": 71.35,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 53911300
+   },
+   {
+    "archivo": "runs/v6_run2_20261027T190811Z/results/score_report.json",
+    "q": 24.68,
+    "meses": 24,
+    "nivel": 1.0,
+    "fichas": 13840084
+   },
+   {
+    "archivo": "runs/v7_run1_20261027T195953Z/results/score_report.json",
+    "q": 68.46,
+    "meses": 48,
+    "nivel": 5.0,
+    "fichas": 50971464
+   },
+   {
+    "archivo": "runs/v7_run2_20261027T205033Z/results/score_report.json",
+    "q": 43.2,
+    "meses": 39,
+    "nivel": 4.0,
+    "fichas": 35153699
+   },
+   {
+    "archivo": "runs/v8_run1_20261028T000720Z/results/score_report.json",
+    "q": 26.23,
+    "meses": 24,
+    "nivel": 1.0,
+    "fichas": 17236245
+   },
+   {
+    "archivo": "runs/v8_run2_20261028T002701Z/results/score_report.json",
+    "q": 42.82,
+    "meses": 40,
+    "nivel": 4.0,
+    "fichas": 31589826
+   }
+  ]
+ },
+ "krsnkkv/ksl_techarena": {
+  "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
+  "visto": "2026-10-28T19:11Z",
+  "scores": [
+   {
+    "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
+    "q": 57.38,
+    "meses": 48,
+    "nivel": 4.0,
+    "fichas": 62875892
+   }
+  ]
+ },
+ "krsnkkv/techarena-career-simu": {
+  "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
+  "visto": "2026-10-28T19:11Z",
+  "scores": [
+   {
+    "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
+    "q": 57.38,
+    "meses": 48,
+    "nivel": 4.0,
+    "fichas": 62875892
+   }
+  ]
+ },
+ "shriyasaxena/techarena-career-simu": {
+  "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
+  "visto": "2026-10-28T19:11Z",
+  "scores": [
+   {
+    "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
+    "q": 57.38,
+    "meses": 48,
+    "nivel": 4.0,
+    "fichas": 62875892
+   }
+  ]
+ },
+ "lrado-253/ksl-techarena": {
+  "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ },
+ "artepace/slopathone_winningteam": {
+  "sha": "3151064933fb1b21b17d79e077d0eaea4b5d521b",
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ },
+ "peidi-l/preliminary": {
+  "sha": "00b0e745b7161a9eebd8784732163b18ac842acc",
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ },
+ "ray23257/techarena-career-sim": {
+  "sha": null,
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ },
+ "yulong111/techarena-career-sim": {
+  "sha": null,
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ },
+ "bernardoguterres/huawei-gradient-depression": {
+  "sha": null,
+  "visto": "2026-10-28T19:11Z",
+  "scores": []
+ }
+}
