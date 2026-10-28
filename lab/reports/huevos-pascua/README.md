@@ -72,7 +72,7 @@ Datos nuevos (con texto del juego, fuera de Git): `~/careerlab-data/huevos-pascu
 **Resultados.** Tabla §1 y §2. No hay atajos de ascenso en el juego de desarrollo. Mecánica nueva B28 (el trimestre corta historias y el título vuelve), sin valor para la nota. Orden evaluación → explosión (B29). El umbral de Network de L4 podría ser 29 (un caso).
 
 **Qué quedó abierto.**
-- 5 respuestas raras siguen sin jugarse (sus títulos salen poco).
+- 5 respuestas raras no se jugaron en los lotes nuevos (cuatro continuaciones que sólo se alcanzan tras respuestas arriesgadas y una de riesgo +3), pero ya estaban observadas entre 3 y 20 veces en los lotes antiguos, con efectos corrientes y sin cambio de nivel. **Todas las respuestas del catálogo están observadas al menos una vez.**
 - El conjunto de eventos y parámetros de la evaluación oficial no se ve en local; si en Discord hablan de algo concreto (un título, un personaje), hace falta ese dato para comprobarlo aquí.
 
 **Para retomar.**
