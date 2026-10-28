@@ -42,6 +42,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | B4 | `Juego` **Charla de aviso en la evaluación:** depende de Dignity y Health frente al riesgo (regla exacta en M24). Llegar a la evaluación con Dignity alta y riesgo bajo la evita. | motor M24 |
 | B5 | `Juego` Techos por nivel: lo que pasa del techo se pierde. Skill es el freno de los niveles altos. L7 es alcanzable por muy poco; L8+ no; la nota S no existe. | motor H1, H14, M16, Fase 3 |
 | B6 | `Juego` Las pérdidas de dinero se multiplican con el nivel (×2 en L3–L4, ×3 en L5–L6); las ganancias no. | motor M13 |
+| B30 | `Juego` **La trampa de L1 todavía se salva en el mes 18, pero sólo con el riesgo oculto a cero.** En las evaluaciones de L1 de los meses 6 y 12 la nota es siempre C. En la del mes 18 (17 meses en el nivel), con el comentario de RR. HH. sonriente la nota es C y se asciende si Skill, Network y Output llegan al umbral (31 de 32). Con cualquier otro tono, también «quiet», es D en 168 de 168 casos, y llega el despido en el mes 24. Una partida que ha perdido los ascensos de los meses 6 y 12 debe llevar el riesgo a cero y Dignity arriba antes de la tercera evaluación; v4 se conforma con «quiet». | [huevos-pascua](lab/reports/huevos-pascua/README.md) §5, `scripts/huevos-pascua/l1_rescue.py` (204 evaluaciones) |
 
 **Sobre las respuestas a las historias**
 
