@@ -4,11 +4,12 @@
 
 Es el paso (c) de la línea **Categorías** de Alejandro ([question-bank/](../question-bank/README.md)), sobre su réplica del juego (línea **Motor**) y su banco de obediencia (línea **Transmisión**). Rama `leah/workspace`, código en [scripts/stat-perception/](../../../scripts/stat-perception/). Datos con texto del juego, fuera de Git, en `~/careerlab-data/stat-perception/` y `~/careerlab-data/transmision/`.
 
-**Estado (27 oct, 16:50 UTC).** Hechos:
+**Estado (28 oct, 10:30 UTC).** Hechos:
 - 9 etiquetados con Haiku, medidos en una mitad reservada de los eventos y en la réplica;
-- una prueba de elecciones en el banco de Transmisión.
+- una prueba de elecciones en el banco de Transmisión;
+- un estudio de la trampa del primer ascenso (L1) en la réplica, con 13 brazos.
 
-Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y la ventana de 5 horas del 34 % al 42 % en el banco); nada de la Max. No se ha jugado ninguna partida completa. **La línea queda cerrada con Haiku. Lo siguiente es con DeepSeek, en la línea de Alejandro.**
+Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y la ventana de 5 horas del 34 % al 42 % en el banco); nada de la Max. No se ha jugado ninguna partida completa. **Con Haiku y la réplica no queda nada prometedor. Lo siguiente es con DeepSeek, en la línea de Alejandro.**
 
 ## Conclusiones
 
@@ -27,7 +28,14 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 
    [03](03-errores-output.md), [04](04-defs3-y-ruido.md)
 4. **Percibir mejor no es elegir mejor.** Al poner la línea de percepción en la referencia del mes previo de `t13-final` (t13-perc), Haiku **no** elige mejor antes de la evaluación. Tiende a peor: pierde un punto necesario en el 30 % de las situaciones frente al 18 %, aunque con n = 60 los intervalos se solapan. Además cambia el 10 % de las historias de otros meses. [05](05-prueba-de-elecciones.md)
-5. **Redacción, para quien escriba manuales:**
+5. **La trampa de L1 es sobre todo pérdida forzosa, no sólo percepción.**
+   - En los dos meses previos a una evaluación en L1, 2 de cada 3 puntos de Network u Output perdidos no tenían alternativa segura; con lectura perfecta, 3 de cada 4.
+   - La nota D de los meses 18 y 24 es consecuencia de fallar los meses 6 y 12.
+   - Ninguna de 7 reglas nuevas baja los despidos sin subir las crisis: vetar tipos de respuesta, dos lecturas prudentes, priorizar subidas y llenar en el trimestre.
+   - La palanca con efecto sigue siendo leer mejor: con lectura perfecta, acabar en L1 baja del 23 % al 13 %.
+
+   [06](06-trampa-l1.md)
+6. **Redacción, para quien escriba manuales:**
    - un significado corto de cada indicador funciona mejor que una lista de pistas y reduce a la mitad las crisis de confianza (73 frente a 136 por 1.000 partidas);
    - "una ganancia y un coste por opción" hunde la nota (39,7);
    - nunca presentar una conducta arriesgada como forma de ganar un indicador.
@@ -50,6 +58,7 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | [03-errores-output.md](03-errores-output.md) | Haiku confunde Output con tiempo gastado, y corregirlo diciendo "venderte sube Output" sale caro. |
 | [04-defs3-y-ruido.md](04-defs3-y-ruido.md) | Repetir un etiquetado mueve la réplica 1,2 puntos; defs3 sola etiqueta peor, pero en la votación da la mejor nota (55,1). |
 | [05-prueba-de-elecciones.md](05-prueba-de-elecciones.md) | La línea de percepción en la referencia del mes previo no hace elegir mejor a Haiku (pierde un punto necesario un 30 % frente al 18 % de t13-final). |
+| [06-trampa-l1.md](06-trampa-l1.md) | 2 de cada 3 puntos perdidos antes de una evaluación en L1 son forzosos, y ninguna de 7 reglas nuevas baja los despidos sin subir las crisis. |
 
 ## Archivos
 
@@ -59,13 +68,15 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | `split.json` | Mitad de diseño y mitad reservada, como identificadores de nodo |
 | `eval.json`, `replica*.json` | Tablas completas del etiquetado |
 | `choice-test.out`, `choice-test-answers.json` | Prueba de elecciones: tablas de `score.py` y `fingerprint.py`, y elecciones por identificador |
+| `l1-trap.json` | Trampa de L1: nota, despidos, crisis, causas y pérdidas por brazo |
 
 Scripts en [scripts/stat-perception/](../../../scripts/stat-perception/):
 - `label.py`: etiqueta con Haiku;
 - `evaluate.py`: acierto en la mitad reservada;
 - `replica_eval.py`: valor en la réplica;
 - `combine.py`: votación;
-- `run-choice.sh`: prueba de elecciones en el banco de Transmisión.
+- `run-choice.sh`: prueba de elecciones en el banco de Transmisión;
+- `l1_trap.py`: la trampa de L1 en la réplica (causas de cada evaluación fallida, pérdidas forzosas o evitables, brazos).
 
 Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies-src/stat-perception/t13-perc/).
 
@@ -78,16 +89,21 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
 ## Relevo
 
 1. **Hecho.**
-   - Paso (c) de Categorías: 9 etiquetados con Haiku (7 formas, defs3 y una repetición), medidos en la mitad reservada y en la réplica.
+   - Paso (c) de Categorías: 9 etiquetados con Haiku, medidos en la mitad reservada y en la réplica.
    - El valor de percibir bien cada indicador.
-   - Una prueba de elecciones en el banco de Transmisión: t13-perc frente a t13-final y control, comprobación de versión del CLI y bloque general.
-2. **Resultados.** Los de arriba; el detalle está en `01`–`05` y en los `.json` y `.out` de esta carpeta.
+   - Una prueba de elecciones en el banco de Transmisión (01–05).
+   - **28 oct:** la trampa de L1 en la réplica (06):
+     - de qué fallan las evaluaciones;
+     - qué parte de las pérdidas es forzosa;
+     - 13 brazos con 7 reglas nuevas y sus combinaciones.
+2. **Resultados.** Los de arriba; el detalle está en `01`–`06` y en los `.json` y `.out` de esta carpeta.
 3. **A medias o descartado.**
-   - La línea de percepción no entra en el manual: no mejora las elecciones (05).
-   - La prueba de elecciones es de una pasada y n = 60; repetirla sólo merece la pena con una idea nueva.
-4. **Siguiente paso.** Esta línea queda cerrada con Haiku. Lo que sigue es de la línea DeepSeek de Alejandro:
-   - medir si DeepSeek etiqueta como Haiku, con `label.py` adaptado a su arnés: las mismas instrucciones `plain` y `defs`, comparadas con `split.json`;
-   - si una **votación de varias lecturas** se puede convertir en algo que haga un solo lector, por ejemplo dos lecturas dentro de la misma respuesta.
+   - La línea de percepción no entra en el manual (05).
+   - Ninguna regla nueva contra la trampa de L1 gana en la réplica (06), así que no se ha probado en el banco ni en partidas.
+   - Las medidas de 06 usan la lectura de Haiku, porque las etiquetas de DeepSeek de Alejandro no están en el repo.
+4. **Siguiente paso.** Lo que queda es de la línea DeepSeek:
+   - medir si leer dos veces y votar dentro de la misma respuesta mejora la percepción de los costes de Network y Output en DeepSeek (con Haiku, la votación quita crisis pero apenas despidos);
+   - repetir `l1_trap.py` con las etiquetas de DeepSeek (`--reading` acepta archivos de etiquetas con el formato de `tags-*.json`; las de DeepSeek habría que convertirlas).
 
    Para repetir:
    ```bash
@@ -98,4 +114,6 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    .venv/bin/python scripts/stat-perception/replica_eval.py --rx ~/careerlab-data/stat-perception/rx-ref --answers ~/careerlab-data/stat-perception/answers.json --tags-dir /tmp/ct --games 1000
    # prueba de elecciones (necesita lab/data/transmision/ descomprimido en ~/careerlab-data/transmision/)
    scripts/stat-perception/run-choice.sh
+   # trampa de L1 (sin cuota; usa la réplica de main)
+   .venv/bin/python scripts/stat-perception/l1_trap.py --games 2000 --arms base,perfect,cat1,fill,vote --json-out /tmp/l1.json
    ```
