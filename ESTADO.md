@@ -105,3 +105,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Panelforecast cerrado:**24respuestas/67opciones; evitables2→3,riesgo3→3, noadmision. Sin juegosnuevos/DeepSeek. Resultado panel-forecast-results.json.
 
 **Correccion diagnostico panelforecast:**elmodelo si predicecostes enambos errores originales, pero loselige. Proximo:restriccioncontrolador conpredicciones congeladas, sin nuevas llamadas ni goldaldecisor. No soluciondemostrada.
+
+**Restriccionforecast offline cerrada:**riesgo3→5,evitables2→2,unaeleccionagotaHealth; noadmision.4cambios sin nuevasllamadas/juegos.

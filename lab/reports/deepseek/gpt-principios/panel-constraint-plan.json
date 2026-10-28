@@ -1,0 +1,5 @@
+{
+  "meaning": "Posthoc mechanism screen, fixed before executing selector. No model calls. Numeric forecasts already observed; not an independent efficacy trial.",
+  "rule": "Keep recommendation if no predicted Skill/Network/Output loss. Otherwise consider options with no predicted growth loss and Health>0, Dignity>=current, Wealth>=current. Choose maximum minimum growth delta, then total growth delta, then lower choice index. If none, keep. No gold or risk labels in selector.",
+  "admission": "Any increase in actual risk blocks; no game Q inferred."
+}
