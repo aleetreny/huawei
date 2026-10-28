@@ -52,3 +52,5 @@ Cierre28oct11:24: ablacion64/64validas conpanelcorrecto, riesgo1→3/evitables0�
 Continuacion: turno previo fue progreso (104lecturas cerradas); main revalidado sin cambios. Preparada comparacion factual sobre24turnos reales, mismo prompt/gate y modeloSonnet; plan y topes registrados antes de iniciar.
 
 Cierre factual real:24respuestasvalidas, gate2cambios/riesgo3→4/evitables2→2. Noadmision. Fuentehistorica n1, noQ. Procesoexit0, sin reinicios ni sustituciones.
+
+Diagnostico posthoc:2errores originales sin flags; alternativasseguras inciertas. Unflag sobre opcionsegura causa cambioarriesgado. No es un simple bloqueo de gate, sino relacionpredicado/efecto insuficiente. Guardadofact-bottleneck.json sin narrativa ni llamadas.
