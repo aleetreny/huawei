@@ -143,6 +143,8 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C29 | `Haiku, banco` Revisión factual independiente con cita literal:15/16evidencias válidas, una no literal conservada/fallback. Regla de seguridad0cambios; recomendación sin regla añadiría un riesgo y una pérdida evitable. Primera lectura ya tenía0evitables: no permite descartar rescate de errores reales. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md) |
 | C30 | `Sonnet, una carrera fuente` Releer los24turnos críticos con mismo modelo/Skill/systemprompt, panel original y3notas previas, conserva22/24elecciones y exactamente los2fallos evitables del control; riesgo3→3. No muestra rescate por este paquete de contexto fresco; no es ensayo aleatorizado de carreras ni transferenciaDS. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md),24relecturas |
 
+| C31 | `Sonnet, carrera fuente` Revisor factual sobre24turnoscriticos reales:24evidenciasvalidas, gate2cambios pero riesgo3→4 y evitables2→2. No rescate; no admitir. Literalidad no prueba efectos. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md) |
+
 ## X. Descartado (no repetir sin una razón nueva)
 
 | Idea | Por qué no | Fuente |
