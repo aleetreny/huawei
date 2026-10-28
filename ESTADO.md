@@ -1,6 +1,6 @@
 # ESTADO del proyecto: léelo primero
 
-Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **27 oct 2026, 23:45 UTC** (corte 1 entregado; ramas juntadas; repo fuera de iCloud).
+Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **28 oct 2026, noche** (corte 1 entregado; línea Techo añadida como subtrabajo de DeepSeek).
 
 Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo aprendido, por importancia) y [NORMAS.md](NORMAS.md) (cómo trabajamos).
 
@@ -22,6 +22,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 |---|---|---|---|---|---|
 | **DeepSeek** | ¿Cómo sube la nota de DeepSeek a partir de los mejores manuales? | `alejandro/deepseek` (worktree `~/huawei-ds`) | [lab/reports/deepseek/](lab/reports/deepseek/) · `scripts/deepseek/` · manuales `lab/policies-src/deepseek/` | `t13-read-v4` 71,67 y 70,22; `t13-read-v7` 67,27; `t13-read-v5` 66,71. Una tercera de v4 se quedó en L1 y murió por un choque de puertos. [Informe](lab/reports/deepseek/mejora-nota.md). Clave: quedan 35,8 USD (23:30) | Variantes de v4 contra la trampa de L1, primero en la réplica y el banco; partidas sólo para confirmar |
 | **Entrega** | Vídeo, documentos de diseño y paquete de cada corte | `alejandro/deepseek` (documentos en `docs/entrega/cut1-t13-read-v4/`) | [docs/entrega/](docs/entrega/) | **Corte 1 entregado (27 oct):** `t13-read-v4`, ZIP en `~/careerlab-data/entrega/cut1/`, validación oficial OK, vídeo de 6 min 22 s. Matteo tiene un guion y una auditoría de cumplimiento en `matteo-review/cut1` | Corte 2 (30 oct): mismo proceso con el mejor manual de DeepSeek; revisar los documentos frente a los Skills entregados |
+
+**Subtrabajo de la línea DeepSeek — Techo** (28 oct, noche; rama `alejandro/tender-franklin-3ap5yw`, carpeta [lab/reports/techo/](lab/reports/techo/), código `scripts/techo/`, candidatos `lab/policies-src/techo/v4-t0` y `v4-t1`): por qué las partidas completas se quedan en L5. Réplica: las reglas de v4 llegan a L4 en el mes 24 y a L5 en el 42 (planificador: 20 y 36); la ventana del 18 se pierde por Network en L3 y las del 30/36 por el ritmo de Skill en L4; la ventaja del planificador es sobre todo tolerar riesgo con el contador a 0, y eso **no se traslada** como regla escrita. Lo que aguanta: trimestre a Skill desde L4 (+0,5; L6 ×1,5 con lectura exacta), Dignity desde 7 (+0,4), Skill doble en historias desde L4 (+0,2); con la lectura de DeepSeek, L6 sigue en el 2–3 % (HALLAZGOS B33–B35). Siguiente paso, con la clave: banco de DeepSeek «Skill en L4» con `v4-t0` (~0,2 USD) y controles de historias con `v4-t1` (~0,5 USD), juez con DeepSeek, y 3 partidas del elegido ([plan](lab/reports/techo/README.md) §7).
 
 **En pausa, fuera del cupo:** Formato (`alejandro/formato`, [lab/reports/formato/](lab/reports/formato/)): mejor partida 76,87 pero media 49,9; sólo vuelve si una idea concreta gana en la réplica. Sus hallazgos ya están en HALLAZGOS (B27, C23).
 
