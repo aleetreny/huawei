@@ -1,0 +1,676 @@
+{
+  "meaning": "Posthoc fixed selector on24historical states, no new model information. Gold only evaluator; no Q or DS claim. Choice-index tie break is only a research convention, not a validated strategy.",
+  "changes_from_forecast": 4,
+  "arms": {
+    "original": {
+      "positive_risk": 3,
+      "growth_loss": 9,
+      "avoidable_loss": 2,
+      "health_zero": 0
+    },
+    "forecast": {
+      "positive_risk": 3,
+      "growth_loss": 10,
+      "avoidable_loss": 3,
+      "health_zero": 0
+    },
+    "constraint": {
+      "positive_risk": 5,
+      "growth_loss": 8,
+      "avoidable_loss": 2,
+      "health_zero": 1
+    }
+  },
+  "risk_admission_block": true,
+  "rows": [
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "original",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "forecast",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "constraint",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "forecast",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": true
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "forecast",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "forecast",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "constraint",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "forecast",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "forecast",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "forecast",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "constraint",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": true,
+      "health_zero": false
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "original",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "forecast",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "constraint",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_loss": false,
+      "health_zero": false
+    }
+  ],
+  "script_sha256": "5828ddf354bd6c510a87c8d0848bb4aaa8cb69e989f0ff4e25ec072967e172b0"
+}
