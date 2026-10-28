@@ -1,6 +1,6 @@
 # Huevos de Pascua y atajos de ascenso
 
-**Conclusión en una frase:** en el juego de desarrollo no hay ninguna combinación, personaje ni entrada oculta que permita saltarse un nivel o ascender fuera de la evaluación semestral; lo único nuevo es una mecánica sin documentar (la fase trimestral corta algunas historias y su título vuelve a salir) que vale __REPLAY__ en el simulador.
+**Conclusión en una frase:** en el juego de desarrollo no hay ninguna combinación, personaje ni entrada oculta que permita saltarse un nivel o ascender fuera de la evaluación semestral; lo único nuevo es una mecánica sin documentar (la fase trimestral corta algunas historias y su título vuelve a salir) que no cambia la nota ni adelanta ningún ascenso en el simulador.
 
 Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easter-eggs-eb0edx`). Pregunta: *¿existen combinaciones ocultas o huevos de Pascua que permitan saltarse niveles de ascenso, por ejemplo interactuando con personajes clave?* (en Discord se dijo que sí).
 
@@ -18,7 +18,7 @@ Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easte
 | 6 | Textos que hablen de vía rápida, doble ascenso, ascenso fuera de ciclo, *high potential*, *talent pool* | **Ninguno** en 403 preguntas y ~2.000 textos de desenlace | búsqueda en `nodes-*.jsonl` |
 | 7 | Combinaciones del trimestre (energía y acción principal) | La energía cuadra al 100 % sumando efectos; los fallos de la acción principal son redondeo del dinero y el aviso de deudas. Menú idéntico en todas las partidas | `main_resid.py` |
 | 8 | Entradas raras a las herramientas | `take_action` rechaza 0, negativos, fuera de rango, decimales y argumentos extra; el estado no se mueve. `observe` sólo tiene los campos conocidos (más `available_choice_count`) | `probe_interface.py` |
-| 9 | Ramas nunca jugadas | El bot explorador jugó __COVER__ de las 212 respuestas con menos de 30 casos (las 20 «nunca elegidas» incluidas): todas tienen efectos corrientes y negativos, ninguna toca el nivel | lote `e01-explore`, __N__ partidas |
+| 9 | Ramas nunca jugadas | El bot explorador jugó 194 de las 212 respuestas con menos de 30 casos (185 con 10 o más casos nuevos), entre ellas las 20 «nunca elegidas»: 13 efectos nuevos, todos corrientes y negativos; ninguna respuesta ya conocida cambió de efecto; 0 cambios de nivel, 0 preguntas nuevas, ningún mensaje de registro nuevo. La regla de ascenso falla en 22 de 22.937 evaluaciones: 18 por la nota, 2 por el orden de la explosión y 1 ascenso de L4 con Network 29 (el umbral de Network de L4 sería ≤ 29, no los 30 de la réplica) | lote `e01-explore`, 3.000 partidas (2.639 completas, nota media 67,4) |
 | 10 | **Mecánica nueva: la fase trimestral corta historias** | En los meses 3, 6, 9…, si la respuesta de la **tercera plaza** del mes tiene continuación «del mismo mes», la historia **se descarta (98 %)** y su título vuelve al bombo: puede salir otra vez desde la primera pregunta y cobrarse de nuevo. En los demás meses la continuación pasa al mes siguiente (100 %). Ocurre ~1,4–1,7 veces por partida larga | `drop_rule.py`, `repeats.py`; v03 + d01 (fuera de trimestre, 0 descartes en 6.606 casos; en trimestre, 3.239 descartes en 3.296) y confirmado en `e01` |
 
 ## 2. ¿Vale algo la mecánica del punto 10?
@@ -64,4 +64,24 @@ Datos nuevos (con texto del juego, fuera de Git): `~/careerlab-data/huevos-pascu
 
 ## Relevo
 
-__RELEVO__
+**Qué se hizo y por qué (28 oct).** Se buscó, sin gastar DeepSeek ni lanzar partidas con Claude, cualquier forma de saltarse niveles: (1) escaneo de los 13 lotes de bots guardados (13.333 partidas); (2) análisis de cada evaluación donde la regla de ascenso falla; (3) prueba de desbloqueos entre respuestas y títulos; (4) lectura de las historias con personajes y ganchos de ascenso; (5) sondeo de la interfaz; (6) un lote nuevo de 3.000 partidas de un bot que elige a propósito las respuestas menos vistas; (7) simulación de la única mecánica nueva.
+
+**Resultados.** Tabla §1 y §2. No hay atajos de ascenso en el juego de desarrollo. Mecánica nueva B28 (el trimestre corta historias y el título vuelve), sin valor para la nota. Orden evaluación → explosión (B29). El umbral de Network de L4 podría ser 29 (un caso).
+
+**Qué quedó abierto.**
+- 18 respuestas raras siguen sin jugarse (sus títulos salen poco o el explorador las descartó por riesgo).
+- El conjunto de eventos y parámetros de la evaluación oficial no se ve en local; si en Discord hablan de algo concreto (un título, un personaje), hace falta ese dato para comprobarlo aquí.
+- No se probaron palabras clave en `notes`: M26 ya mostró que las notas no tienen efecto mecánico y usarlas así lo prohíben las reglas («manipulate… agent notes»).
+
+**Para retomar.**
+
+```bash
+uv sync && uv run career-emulator-engine update --source distribution --split dev
+PYTHONPATH=. .venv/bin/python scripts/huevos-pascua/run_explore.py --batch e02-explore --games 3000 --explore-below 60 --risk-room 2
+BB_DATA=~/careerlab-data/huevos-pascua python3 scripts/huevos-pascua/explore_report.py e02-explore
+BB_DATA=~/careerlab-data/huevos-pascua python3 scripts/huevos-pascua/promo_misses.py e02-explore
+BB_DATA=lab/data/ingenieria-inversa python3 scripts/huevos-pascua/drop_rule.py v03-validation,d01-planner2
+python3 scripts/huevos-pascua/replay_sim.py 3000
+```
+
+**Coste.** 0 USD. Ninguna partida con Claude ni con DeepSeek; sólo CPU del contenedor (~1 h de lote).
