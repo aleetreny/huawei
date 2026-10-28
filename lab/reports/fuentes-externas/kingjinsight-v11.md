@@ -77,3 +77,38 @@ Leído el 28 oct en el commit `e6c33cb` (clon de sólo lectura en la nube). Todo
 ## Relevo
 
 Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HALLAZGOS (filas C37–C41) e ideas. No se ejecutó nada suyo. Siguiente paso: las ideas 1, 2 y 4 se prueban gratis en la réplica o el catálogo; la 3 en el banco y después en partidas con DeepSeek (chat local). Para releer el repo: `GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/Kingjinsight/techarena-uk-2026` y comprobar el commit `e6c33cb`.
+
+## Otros repos públicos (búsqueda del 28 oct por la tarde)
+
+| Repo | Qué hay | Nota publicada |
+|---|---|---|
+| `krsnkkv/KSL_TechArena` (= `krsnkkv/techarena-career-simu`, `ShriyaSaxena/techarena-career-simu`, `LRado-253/ksl-techarena`: el mismo equipo, KSL) | 3 Skills cortos (~1.200 palabras en total): estado, historias y trimestre | una partida de 57,38: 48 meses, L4, Skill 75, riesgo 2, 62,9 M de fichas (1,31 M por mes), 0,68 USD |
+| `Artepace/slopathone_winningteam` | diseño preliminar y un `solution.zip` con 4 Skills y documentos de diseño | su primera versión, una partida local: 68,6, L5, ~54 M de fichas (1,1 M por mes); la versión actual, sin partidas |
+| `peidi-L/preliminary` | un borrador | — |
+| `Ray23257/techarena-career-sim`, `YuLong111/techarena-career-sim`, `bernardoguterres/huawei-gradient-depression` | ya no son públicos (piden credenciales) | — |
+
+**Ninguno muestra una media estable por encima de 70 ni llega a L6.** Lo aprovechable de Artepace es la forma de su `decision_report.md`: apoya cada regla en un principio conocido (evitar la ruina, actualizar con lo observado, constancia entre las 3 partidas) y dice qué se ha validado y qué no. Sirve de modelo para nuestros documentos del jurado. Los repos se clonaron en sólo lectura fuera del repo; no se ejecutó nada suyo.
+
+## Vigilancia periódica (desde el 28 oct)
+
+- `scripts/fuentes-externas/vigilar.py` revisa cada repo de `fuentes.json` con `git ls-remote`. Si cambia, lo clona en `~/ext/` y saca las notas de sus `score_report.json`. El último estado visto queda en `estado.json`. No ejecuta nada de esos repos.
+- Una revisión programada lo corre una vez al día (19:43, hora UK), busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS. Hay otra el 31 oct, tras el corte 2.
+- **Clasificación oficial:** desde el 28 oct a las 19:30 UTC el dominio está permitido. `vigilar.py` la lee como JSON (cabecera `Accept: application/json`) y guarda sólo equipo, puesto y notas. El JSON de Hydro trae también correos, IP y códigos de invitación de cada equipo, y eso no se guarda. Los nombres de equipo que son un correo se guardan como «(correo)».
+- El 28 oct había 227 equipos y ninguno tenía aún nota del corte 1.
+- **Hay dos equipos llamados «Gradient Depression»,** uno creado el 21 oct y otro el 24 oct, cada uno con tres miembros. Hay que confirmar cuál es el nuestro y si el otro sobra.
+
+## Barrido amplio (28 oct, 18:30 UTC)
+
+En resumen, lo único con valor sigue siendo Kingjinsight (secciones 1–5, C37–C42). Lo demás está vacío o no tiene que ver con el reto.
+
+- **Nuevas:** `rickyyyy-bit/TechArena-Huawei` («Jon8652's team») sólo tiene dos Skills preliminares genéricos, sin partidas, porque no tenían clave. `Colinfornia/Techarena-Project` sólo tiene un README vacío. Las dos se vigilan. `Sherlock-shy` y `QuantumBitstream` son forks del repo oficial sin cambios.
+- **Sin cambios:** KSL (las cuatro copias), Artepace y peidi-L. Ray23257, YuLong111 y bernardoguterres siguen privadas. No hay versiones nuevas de los paquetes del motor en PyPI desde el 25 oct.
+- **Kingjinsight coincide con nuestra réplica:**
+  - Sus topes medidos en L1 (O3 N3 S9) cuadran con lo nuestro.
+  - Su «Skill ≥ ~90 y nota A para pasar de L4 a L5» coincide con `THRESH[4]` (Skill 90).
+  - Su escalera de frases de RR. HH. y su fórmula de nota leída del log no aportan nada que la réplica no tenga.
+- **Sin resultado:**
+  - GitHub: búsquedas por techarena, tech-arena, techarena-uk, jiuwenswarm, career survival y career sim, nombres de repo adivinados, y los forks y perfiles de los equipos conocidos.
+  - Web, en inglés y en chino: LinkedIn, YouTube, Medium y Bilibili.
+  - Sin relación con el reto: otros retos de TechArena (CTR y otros) y la edición 2025.
+- **No accesibles desde la nube:** huggingface.co, gitee.com, gitlab.com, reddit.com, techarena-uk.hydro.ac y la documentación en readthedocs. La API de GitHub tampoco; se usan `git ls-remote` y clones.
