@@ -1,0 +1,107 @@
+{
+  "meaning": "Research prototype learned only from own public logged nominal returns and isolated observed panels. No true caps or hidden risk read. Diminished return is provisional, not an engine rule or score guarantee. Batched/settlement transitions and unexpected losses excluded. No actor use or policy efficacy tested.",
+  "counts": {
+    "isolated_accepted": 110,
+    "ambiguous_rejected": 89,
+    "unexpected_loss_rejected": 2,
+    "diminished_observations": 97
+  },
+  "unique_actions": 201,
+  "state_changes": [
+    {
+      "month": 3,
+      "level": 1,
+      "diminished": {
+        "network": 3
+      }
+    },
+    {
+      "month": 4,
+      "level": 1,
+      "diminished": {
+        "network": 3,
+        "output": 3
+      }
+    },
+    {
+      "month": 5,
+      "level": 1,
+      "diminished": {
+        "network": 3,
+        "output": 3,
+        "skill": 9
+      }
+    },
+    {
+      "month": 12,
+      "level": 2,
+      "diminished": {}
+    },
+    {
+      "month": 13,
+      "level": 2,
+      "diminished": {
+        "network": 7
+      }
+    },
+    {
+      "month": 14,
+      "level": 2,
+      "diminished": {
+        "network": 7,
+        "output": 6
+      }
+    },
+    {
+      "month": 15,
+      "level": 2,
+      "diminished": {
+        "network": 7,
+        "output": 6,
+        "skill": 21
+      }
+    },
+    {
+      "month": 30,
+      "level": 3,
+      "diminished": {}
+    },
+    {
+      "month": 34,
+      "level": 3,
+      "diminished": {
+        "network": 21
+      }
+    },
+    {
+      "month": 37,
+      "level": 3,
+      "diminished": {
+        "network": 21,
+        "skill": 42
+      }
+    },
+    {
+      "month": 37,
+      "level": 3,
+      "diminished": {
+        "network": 21,
+        "skill": 42,
+        "output": 16
+      }
+    },
+    {
+      "month": 42,
+      "level": 4,
+      "diminished": {}
+    }
+  ],
+  "guards_passed": [
+    "deduplication",
+    "cross_session_rejection",
+    "conflicting_identity_rejection",
+    "diminished_observation",
+    "reopening"
+  ],
+  "script_sha256": "379c1fa3f885ff227812c1a1b13afcf86881796c37820f1cd7cd6288821526b3"
+}
