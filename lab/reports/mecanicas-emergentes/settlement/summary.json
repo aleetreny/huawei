@@ -1,0 +1,49 @@
+{
+  "c02-planner-real": {
+    "n": 151,
+    "final49": 151,
+    "pay48": 151,
+    "salary_consistent": 151,
+    "duration_plus1": 151,
+    "levels": {
+      "6": 111,
+      "5": 39,
+      "4": 1
+    }
+  },
+  "d01-planner2": {
+    "n": 380,
+    "final49": 380,
+    "pay48": 380,
+    "salary_consistent": 380,
+    "duration_plus1": 380,
+    "levels": {
+      "6": 298,
+      "5": 80,
+      "4": 2
+    }
+  },
+  "d02-planner2b": {
+    "n": 154,
+    "final49": 154,
+    "pay48": 154,
+    "salary_consistent": 154,
+    "duration_plus1": 154,
+    "levels": {
+      "6": 111,
+      "5": 43
+    }
+  },
+  "v03-validation": {
+    "n": 471,
+    "final49": 471,
+    "pay48": 471,
+    "salary_consistent": 471,
+    "duration_plus1": 471,
+    "levels": {
+      "6": 292,
+      "5": 168,
+      "4": 11
+    }
+  }
+}

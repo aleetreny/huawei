@@ -1,6 +1,6 @@
 # ESTADO del proyecto: léelo primero
 
-Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **27 oct 2026, 16:00 UTC** (reorganización del repo).
+Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **27 oct 2026, 23:45 UTC** (corte 1 entregado; ramas juntadas; repo fuera de iCloud).
 
 Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo aprendido, por importancia) y [NORMAS.md](NORMAS.md) (cómo trabajamos).
 
@@ -14,30 +14,34 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 ## 2. Dónde vamos, en una frase
 
-Sabemos casi exactamente cómo funciona el juego (simulador al 99 %) y qué habría que hacer (la política óptima saca 72 en el juego real), pero **la IA no sabe ver qué indicador sube o baja cada respuesta**, y los manuales con IA siguen en ~50. El trabajo de ahora es esa percepción: categorías de respuestas que la IA reconozca y reglas que obedezca sin estropear el resto.
+**DeepSeek ya termina carreras:** `t13-read-v4` saca 71,67 y 70,22 en partidas completas (L5, riesgo 0), y es lo que se entregó en el corte 1. El trabajo ahora es partir de los mejores manuales y cambiar una cosa cada vez para subir hacia 75. Lo que más resta es la trampa del primer ascenso (L1), que es sobre todo de percepción.
 
 ## 3. Líneas activas (máximo 3)
 
-| Línea | Pregunta | Rama | Carpeta | Estado (27 oct, 16:00) | Siguiente paso |
+| Línea | Pregunta | Rama | Carpeta | Estado (27 oct, 23:45) | Siguiente paso |
 |---|---|---|---|---|---|
-| **Motor** | ¿Cómo funciona el juego por dentro y cuál es la jugada óptima? | `main-1nddsg` | [lab/reports/ingenieria-inversa/](lab/reports/ingenieria-inversa/) · código `scripts/ingenieria-inversa/` · datos `lab/data/ingenieria-inversa/` | Simulador validado (99,3 %); política óptima 72,4 en 360 partidas reales; 7 reglas generales; la función de valor no mejora al planificador (M29) | Pasar las reglas que aguantan a principios generales; medir si DeepSeek detecta las respuestas arriesgadas |
-| **Categorías** | ¿Se pueden agrupar las respuestas en tipos que la IA reconozca, con una respuesta buena por tipo? | `alejandro/optimistic-gauss-edyw1j` | [lab/reports/question-bank/](lab/reports/question-bank/) · `scripts/question-bank/` | 10 tipos etiquetados a ciegas: separan el riesgo (78 %); un bot que sólo ve el tipo saca 47 frente a 68; lo que falta es saber qué indicador mueve cada respuesta | Mejorar la detección de Skill en la taxonomía; medir cómo etiqueta DeepSeek (~0,02 USD, si lo aprueba Alejandro) |
-| **Transmisión** | ¿Cómo se escribe una regla para que la IA la obedezca? | `alejandro/transmision` | [lab/reports/transmision/](lab/reports/transmision/) · `scripts/transmision/` · manuales `lab/policies-src/transmision/` | **En pausa (27 oct, 16:00)**: sigue en local como línea DeepSeek ([prompt](lab/reports/transmision/prompt-deepseek.md)). Banco de 3.573 situaciones; el reparto trimestral obedece, las reglas de historias contaminan; el interruptor “Review in N” aísla una regla; manual recomendado `t13-final` (73 en la rúbrica; 57,2 frente a 50,5 de f3-lean en partidas de Haiku, 12 frente a 43) | Banco y percepción con DeepSeek |
+| **DeepSeek** | ¿Cómo sube la nota de DeepSeek a partir de los mejores manuales? | `alejandro/deepseek` (worktree `~/huawei-ds`) | [lab/reports/deepseek/](lab/reports/deepseek/) · `scripts/deepseek/` · manuales `lab/policies-src/deepseek/` | `t13-read-v4` 71,67 y 70,22; `t13-read-v7` 67,27; `t13-read-v5` 66,71. Una tercera de v4 se quedó en L1 y murió por un choque de puertos. [Informe](lab/reports/deepseek/mejora-nota.md). Clave: quedan 35,8 USD (23:30) | Variantes de v4 contra la trampa de L1, primero en la réplica y el banco; partidas sólo para confirmar |
+| **Formato** | ¿Dar el manual de otra forma (script del Skill que decide) acerca a 75? | `alejandro/formato` (worktree `.claude/worktrees/formato`) | [lab/reports/formato/](lab/reports/formato/) · `scripts/formato/` · manuales `lab/policies-src/formato/` | **En pausa.** Mejor partida de DeepSeek (76,87, L6), pero media 49,9 en 5 partidas frente a ~71 de v4, y ~2,3 M fichas por mes. Hallazgos útiles: el agente oficial tiene `bash`/`code`, el mensaje de sistema va en chino | Sólo si una idea concreta (veto del script sobre v4) gana en la réplica antes de jugar |
+| **Entrega** | Vídeo, documentos de diseño y paquete de cada corte | `alejandro/deepseek` (documentos en `docs/entrega/cut1-t13-read-v4/`) | [docs/entrega/](docs/entrega/) | **Corte 1 entregado (27 oct):** `t13-read-v4`, ZIP en `~/careerlab-data/entrega/cut1/`, validación oficial OK, vídeo de 6 min 22 s. Matteo tiene un guion y una auditoría de cumplimiento en `matteo-review/cut1` | Corte 2 (30 oct): mismo proceso con el mejor manual de DeepSeek; revisar los documentos frente a los Skills entregados |
 
-**Otras ramas.** Las de Matteo (`matteo/...`, `Matteo`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos. Leah hizo la **percepción de indicadores**, el paso (c) de Categorías ([lab/reports/stat-perception/](lab/reports/stat-perception/README.md)). Pedir los 5 indicadores en cada opción sube la réplica de 49,1 a 52–53, y el indicador que vale percibir es Output, no Skill. Pero poner esa percepción en el manual no hace elegir mejor a Haiku. Línea cerrada con Haiku; lo siguiente, con DeepSeek.
+**Cerradas y juntadas en `main`** (sus informes siguen en su carpeta): Motor (`lab/reports/ingenieria-inversa/`, réplica al 99,3 %), Categorías (`lab/reports/question-bank/`), Transmisión (`lab/reports/transmision/`), Palancas (`lab/reports/palancas/`), Mecánicas emergentes (`lab/reports/mecanicas-emergentes/`) y la auditoría desde principios básicos (`lab/reports/deepseek/gpt-principios/`).
+
+**Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
+
+**Coordinación entre chats (27 oct).** La clave es compartida: medir el coste de cada partida con `total_cost` del informe, nunca con la diferencia de saldo; el vigilante de `careerlab.target` sólo apunta (`CAREERLAB_TARGET_NEVER_STOP=1`) y **ninguna partida lanzada se corta**. Arrancar instancias de JiuwenSwarm de una en una, con `lsof` antes: dos a la vez chocan en los puertos. No tocar `local-runs/official-runner/.env`.
 
 ## 4. Fechas (hora UK)
 
 | Fecha | Qué hay |
 |---|---|
-| **27 oct, 24:00** | **Corte 1.** La entrega necesita `presentation.mp4`, `design/skills_design.md`, `design/decision_report.md` y las Skills. **Pendiente: vídeo (equipo), documentos de diseño y paquete.** Guion base: [docs/entrega/jury-story.md](docs/entrega/jury-story.md) |
-| 30 oct, 24:00 | Corte 2 |
+| 27 oct, 24:00 | Corte 1: **entregado** `t13-read-v4` |
+| **30 oct, 24:00** | **Corte 2** |
 | 1 nov, 24:00 | Corte 3, el último |
 
 ## 5. Decisiones en vigor
 
 - Se permiten partidas con modelos de Claude como sustitutos de DeepSeek; los bots no tienen límite.
-- **Dinero:** sólo los 50 USD de la clave de DeepSeek (OpenRouter), en el `.env` del Mac de Alejandro. Quedan ~49,8 USD. DeepSeek sólo en pruebas aprobadas por Alejandro, con 15 USD de reserva para el último corte. Presupuesto: [docs/entrega/target-budget.md](docs/entrega/target-budget.md).
+- **Dinero:** sólo los 50 USD de la clave de DeepSeek (OpenRouter), en el `.env` del Mac de Alejandro. Quedan ~35,8 USD (27 oct, 23:30). Hay una clave propia de OpenRouter preparada y sin comprar ([clave-propia.md](lab/reports/deepseek/clave-propia.md)). DeepSeek sólo en pruebas aprobadas por Alejandro, con 15 USD de reserva para el último corte. Presupuesto: [docs/entrega/target-budget.md](docs/entrega/target-budget.md).
 - No preguntamos en Discord. Riesgo conocido: la norma dice *"the absence of an express prohibition is not permission"*.
 - Claude no aparece como contribuidor en GitHub.
 - Cuota: ritmo semanal de [NORMAS.md](NORMAS.md) §5. A las 15:00 del 27 oct la semana iba por el 34 %.
@@ -47,6 +51,7 @@ Sabemos casi exactamente cómo funciona el juego (simulador al 99 %) y qué habr
 
 | Para | Dónde |
 |---|---|
+| Dónde está el repo | `~/huawei` (fuera de iCloud desde el 27 oct; la ruta antigua de iCloud es un enlace a esta). Copias duplicadas de iCloud apartadas en `~/huawei-icloud-duplicados/` |
 | Todo lo aprendido, por importancia | [HALLAZGOS.md](HALLAZGOS.md) |
 | Cómo trabajamos | [NORMAS.md](NORMAS.md) |
 | Índice de informes (activos e históricos) | [lab/reports/README.md](lab/reports/README.md) |

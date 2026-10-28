@@ -9,6 +9,11 @@ Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que 
 | [ingenieria-inversa/](ingenieria-inversa/) | **Motor**: reglas exactas del juego, simulador, política óptima (rama `main-1nddsg`) | [README.md](ingenieria-inversa/README.md), después [motor-exacto.md](ingenieria-inversa/motor-exacto.md) |
 | [question-bank/](question-bank/) | **Categorías**: tipos de respuesta que la IA reconoce (rama `alejandro/optimistic-gauss-edyw1j`) | [README.md](question-bank/README.md) |
 | [transmision/](transmision/) | **Transmisión**: cómo escribir reglas que la IA obedezca (rama `alejandro/transmision`) | [resumen.md](transmision/resumen.md) |
+| [palancas/](palancas/) | **Palancas**: cuánto vale cada pista o herramienta del juego (nota como memoria, techos, avisos, reputación, riesgo, tokens) y cómo hacer que la IA la use (rama `alejandro/palancas`) | [README.md](palancas/README.md) |
+
+## Investigación terminada, pendiente de integración
+
+- [mecanicas-emergentes/](mecanicas-emergentes/README.md): asignación conjunta del cierre, 600 partidas oficiales y corrección de liquidación terminal; [PR #20](https://github.com/aleetreny/huawei/pull/20). Subtrabajo de motor, no nueva línea activa.
 
 ## Otros dueños (no se tocan aquí)
 

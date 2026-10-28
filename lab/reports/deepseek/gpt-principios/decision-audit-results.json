@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "selection_sha256": "9d17949deffd593a23edcf63f2ef7c76197f4539e4881d8d9183545279b57fa0",
+    "script_sha256": "4b11901e22213feadb379348aad8d5a56e275fdef67c6bfa3058219be0dafff0",
+    "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+    "complete": true,
+    "n_missing": 0,
+    "models": {
+      "claude-haiku-5-5": 208
+    },
+    "trial_stopping": "CLI terminated after target decision was recorded; emitted token totals omit the final CLI result and are not settled billing or full-career efficiency",
+    "meaning": "one-step Haiku decision test; visible deltas include bounds and scaled wealth losses, exclude risk explosions/settlement. Pre-review loss is joint incidence over all sampled decisions. Not a full-game score or evidence of DeepSeek transfer"
+  },
+  "arms": {
+    "native": {
+      "n": 92,
+      "positive_risk": 0.043478260869565216,
+      "risk_delta": -0.25,
+      "avoidable_positive_risk": 0.010869565217391304,
+      "dominated": 0.03260869565217391,
+      "growth_loss": 0.33695652173913043,
+      "pre_review_growth_loss": 0.09782608695652174,
+      "health_delta": 0.16304347826086957,
+      "dignity_delta": 0.25,
+      "skill_delta": 0.5108695652173914,
+      "network_delta": 0.043478260869565216,
+      "output_delta": -0.08695652173913043,
+      "wealth_delta": -0.01138586956521739,
+      "audit_record": 0.0,
+      "revised": 0.0,
+      "record_matches_action": 0.0
+    },
+    "audit": {
+      "n": 92,
+      "positive_risk": 0.05434782608695652,
+      "risk_delta": -0.21739130434782608,
+      "avoidable_positive_risk": 0.021739130434782608,
+      "dominated": 0.06521739130434782,
+      "growth_loss": 0.34782608695652173,
+      "pre_review_growth_loss": 0.09782608695652174,
+      "health_delta": 0.13043478260869565,
+      "dignity_delta": 0.2608695652173913,
+      "skill_delta": 0.5108695652173914,
+      "network_delta": 0.010869565217391304,
+      "output_delta": -0.13043478260869565,
+      "wealth_delta": -0.01138586956521739,
+      "audit_record": 1.0,
+      "revised": 0.1956521739130435,
+      "record_matches_action": 1.0
+    },
+    "repeat": {
+      "n": 24,
+      "positive_risk": 0.0,
+      "risk_delta": -0.08333333333333333,
+      "avoidable_positive_risk": 0.0,
+      "dominated": 0.041666666666666664,
+      "growth_loss": 0.20833333333333334,
+      "pre_review_growth_loss": 0.041666666666666664,
+      "health_delta": 0.20833333333333334,
+      "dignity_delta": 0.3333333333333333,
+      "skill_delta": 0.5833333333333334,
+      "network_delta": 0.25,
+      "output_delta": 0.0,
+      "wealth_delta": 0.041666666666666664,
+      "audit_record": 0.0,
+      "revised": 0.0,
+      "record_matches_action": 0.0
+    }
+  },
+  "audit_minus_native": {
+    "positive_risk": {
+      "mean": 0.010416666666666666,
+      "ci95": [
+        0.0,
+        0.03125
+      ],
+      "n_titles": 48
+    },
+    "risk_delta": {
+      "mean": 0.03125,
+      "ci95": [
+        0.0,
+        0.08333333333333333
+      ],
+      "n_titles": 48
+    },
+    "avoidable_positive_risk": {
+      "mean": 0.010416666666666666,
+      "ci95": [
+        0.0,
+        0.03125
+      ],
+      "n_titles": 48
+    },
+    "dominated": {
+      "mean": 0.03125,
+      "ci95": [
+        0.0,
+        0.07291666666666667
+      ],
+      "n_titles": 48
+    },
+    "growth_loss": {
+      "mean": 0.010416666666666666,
+      "ci95": [
+        0.0,
+        0.03125
+      ],
+      "n_titles": 48
+    },
+    "pre_review_growth_loss": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 48
+    },
+    "health_delta": {
+      "mean": -0.03125,
+      "ci95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "n_titles": 48
+    },
+    "dignity_delta": {
+      "mean": 0.010416666666666666,
+      "ci95": [
+        0.0,
+        0.03125
+      ],
+      "n_titles": 48
+    },
+    "skill_delta": {
+      "mean": 0.0,
+      "ci95": [
+        -0.03125,
+        0.03125
+      ],
+      "n_titles": 48
+    },
+    "network_delta": {
+      "mean": -0.03125,
+      "ci95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "n_titles": 48
+    },
+    "output_delta": {
+      "mean": -0.041666666666666664,
+      "ci95": [
+        -0.11458333333333333,
+        0.0
+      ],
+      "n_titles": 48
+    },
+    "wealth_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 48
+    },
+    "same_choice": {
+      "mean": 0.9479166666666666,
+      "ci95": [
+        0.8854166666666666,
+        0.9895833333333334
+      ],
+      "n_titles": 48
+    }
+  },
+  "repeat_minus_native": {
+    "positive_risk": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "risk_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "avoidable_positive_risk": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "dominated": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "growth_loss": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "pre_review_growth_loss": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "health_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "dignity_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "skill_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "network_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "output_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "wealth_delta": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n_titles": 23
+    },
+    "same_choice": {
+      "mean": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n_titles": 23
+    }
+  },
+  "stream_reported_tokens": {
+    "native": {
+      "input_tokens": 1416,
+      "cache_creation_input_tokens": 910595,
+      "cache_read_input_tokens": 1905940,
+      "output_tokens": 3765
+    },
+    "audit": {
+      "input_tokens": 1378,
+      "cache_creation_input_tokens": 928621,
+      "cache_read_input_tokens": 1837739,
+      "output_tokens": 3806
+    },
+    "repeat": {
+      "input_tokens": 374,
+      "cache_creation_input_tokens": 230452,
+      "cache_read_input_tokens": 542458,
+      "output_tokens": 1037
+    }
+  },
+  "raw_archive": {
+    "file": "decision-audit-rows.json.gz",
+    "archive_sha256": "fe64e93c7480f09064cbc124a109e83ef9b9423ab7d11feeeb84b50130d897bd",
+    "uncompressed_sha256": "1b5cff4f3bdbb5f16e6133b724f5b8680bbccaa14588693612a8706973e77894"
+  }
+}

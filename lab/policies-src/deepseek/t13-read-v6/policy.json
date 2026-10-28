@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v6",
+  "parents": [
+    "t13-read-v5"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct night; ideas from Matteo's observed-growth-v10 (branch matteo/main): best value at the level, two-month review window, repair at once",
+  "operator": "repair from official games",
+  "hypothesis": "An official t13-read-v2 game stayed 27 months at L2 because Network or Output dropped one or two points with the last story choices before four reviews in a row; another ended by the runner's continuation limit after late calls (context near 200k tokens) came back as a canned provider reply. Naming the everyday ways of losing Network in the review month, a cooperative fallback, and short English notes should keep more promotions and finish more runs.",
+  "predicted_behaviour": "More reviews passed at L2 and L3 than t13-read-v2; shorter assistant text; no max_continuations endings.",
+  "refutation": "Promotions missed at the same rate as t13-read-v2, or runs still ending at the continuation limit.",
+  "skill_count": 1
+}

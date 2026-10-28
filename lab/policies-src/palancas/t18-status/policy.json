@@ -1,0 +1,13 @@
+{
+  "family": "palancas",
+  "name": "t18-status",
+  "parents": [
+    "t17b-status"
+  ],
+  "idea_origin": "Palancas line (in-run levers)",
+  "operator": "status line in the note",
+  "hypothesis": "t17b-status with the cap worded only as run feedback (Stalled: stats that did not take an announced gain), so the Skill claims no hidden mechanic.",
+  "predicted_behaviour": "Writes the status line in every note, lists a stat in Caps after a gain that did not register, and stops spending on it.",
+  "refutation": "No better choices than t13-final on the cap items, or a fingerprint shift on the general block.",
+  "skill_count": 1
+}
