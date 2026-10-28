@@ -1,0 +1,1396 @@
+{
+"lean-bank": {
+"b01-oracle-eps:p0-000011:44": {
+"choice": 1,
+"note_chars": 308,
+"output_tokens": 45
+},
+"b01-oracle-eps:p0-000034:3": {
+"choice": 1,
+"note_chars": 191,
+"output_tokens": 33
+},
+"b01-oracle-eps:p0-000039:18": {
+"choice": 1,
+"note_chars": 203,
+"output_tokens": 66
+},
+"b01-oracle-eps:p0-000051:39": {
+"choice": 2,
+"note_chars": 195,
+"output_tokens": 52
+},
+"b01-oracle-eps:p0-000067:93": {
+"choice": 1,
+"note_chars": 202,
+"output_tokens": 100
+},
+"b01-oracle-eps:p0-000083:16": {
+"choice": 1,
+"note_chars": 199,
+"output_tokens": 36
+},
+"b01-oracle-eps:p0-000092:3": {
+"choice": 1,
+"note_chars": 174,
+"output_tokens": 43
+},
+"b01-oracle-eps:p0-000096:143": {
+"choice": 1,
+"note_chars": 200,
+"output_tokens": 100
+},
+"b01-oracle-eps:p0-000100:66": {
+"choice": 1,
+"note_chars": 203,
+"output_tokens": 29
+},
+"b01-oracle-eps:p0-000103:115": {
+"choice": 1,
+"note_chars": 202,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000756:79": {
+"choice": 1,
+"note_chars": 216,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000762:16": {
+"choice": 1,
+"note_chars": 252,
+"output_tokens": 14
+},
+"b01-oracle-eps:p1-000762:43": {
+"choice": 1,
+"note_chars": 201,
+"output_tokens": 41
+},
+"b01-oracle-eps:p1-000765:27": {
+"choice": 1,
+"note_chars": 212,
+"output_tokens": 38
+},
+"b01-oracle-eps:p1-000767:67": {
+"choice": 2,
+"note_chars": 243,
+"output_tokens": 41
+},
+"b01-oracle-eps:p1-000769:18": {
+"choice": 1,
+"note_chars": 247,
+"output_tokens": 38
+},
+"b01-oracle-eps:p1-000773:68": {
+"choice": 1,
+"note_chars": 263,
+"output_tokens": 14
+},
+"b01-oracle-eps:p1-000776:68": {
+"choice": 1,
+"note_chars": 286,
+"output_tokens": 26
+},
+"b01-oracle-eps:p1-000791:66": {
+"choice": 2,
+"note_chars": 151,
+"output_tokens": 69
+},
+"b01-oracle-eps:p1-000797:131": {
+"choice": 1,
+"note_chars": 192,
+"output_tokens": 24
+},
+"b01-oracle-eps:p1-000808:44": {
+"choice": 1,
+"note_chars": 283,
+"output_tokens": 116
+},
+"b01-oracle-eps:p1-000809:41": {
+"choice": 2,
+"note_chars": 190,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000826:40": {
+"choice": 1,
+"note_chars": 202,
+"output_tokens": 50
+},
+"b01-oracle-eps:p1-000828:69": {
+"choice": 1,
+"note_chars": 206,
+"output_tokens": 41
+},
+"b01-oracle-eps:p1-000881:43": {
+"choice": 2,
+"note_chars": 275,
+"output_tokens": 35
+},
+"b01-oracle-eps:p1-000888:16": {
+"choice": 1,
+"note_chars": 282,
+"output_tokens": 32
+},
+"b01-oracle-eps:p2-001510:18": {
+"choice": 1,
+"note_chars": 247,
+"output_tokens": 53
+},
+"b01-oracle-eps:p2-001518:103": {
+"choice": 1,
+"note_chars": 222,
+"output_tokens": 108
+},
+"b01-oracle-eps:p2-001524:17": {
+"choice": 4,
+"note_chars": 207,
+"output_tokens": 26
+},
+"b01-oracle-eps:p2-001525:16": {
+"choice": 1,
+"note_chars": 280,
+"output_tokens": 16
+},
+"b01-oracle-eps:p2-001535:16": {
+"choice": 3,
+"note_chars": 274,
+"output_tokens": 63
+},
+"b01-oracle-eps:p2-001554:17": {
+"choice": 2,
+"note_chars": 206,
+"output_tokens": 80
+},
+"b01-oracle-eps:p2-001595:43": {
+"choice": 1,
+"note_chars": 155,
+"output_tokens": 110
+},
+"b01-oracle-eps:p2-001611:16": {
+"choice": 1,
+"note_chars": 228,
+"output_tokens": 29
+},
+"b01-oracle-eps:p2-001611:52": {
+"choice": 1,
+"note_chars": 207,
+"output_tokens": 51
+},
+"b01-oracle-eps:p2-001615:100": {
+"choice": 1,
+"note_chars": 249,
+"output_tokens": 41
+},
+"b01-oracle-eps:p2-001629:66": {
+"choice": 1,
+"note_chars": 222,
+"output_tokens": 51
+},
+"b01-oracle-eps:p2-001632:70": {
+"choice": 1,
+"note_chars": 242,
+"output_tokens": 24
+},
+"b01-oracle-eps:p2-001633:13": {
+"choice": 1,
+"note_chars": 195,
+"output_tokens": 38
+},
+"b01-oracle-eps:p3-002254:6": {
+"choice": 1,
+"note_chars": 227,
+"output_tokens": 23
+},
+"b01-oracle-eps:p3-002258:17": {
+"choice": 1,
+"note_chars": 163,
+"output_tokens": 116
+},
+"b01-oracle-eps:p3-002259:15": {
+"choice": 1,
+"note_chars": 284,
+"output_tokens": 26
+},
+"b01-oracle-eps:p3-002274:41": {
+"choice": 1,
+"note_chars": 343,
+"output_tokens": 53
+},
+"b01-oracle-eps:p3-002287:17": {
+"choice": 2,
+"note_chars": 158,
+"output_tokens": 65
+},
+"b01-oracle-eps:p3-002320:66": {
+"choice": 1,
+"note_chars": 212,
+"output_tokens": 41
+},
+"b01-oracle-eps:p3-002326:16": {
+"choice": 1,
+"note_chars": 288,
+"output_tokens": 29
+},
+"b01-oracle-eps:p3-002327:16": {
+"choice": 2,
+"note_chars": 255,
+"output_tokens": 26
+},
+"b01-oracle-eps:p3-002335:54": {
+"choice": 1,
+"note_chars": 212,
+"output_tokens": 57
+},
+"b01-oracle-eps:p3-002339:39": {
+"choice": 4,
+"note_chars": 229,
+"output_tokens": 104
+},
+"b01-oracle-eps:p3-002340:77": {
+"choice": 1,
+"note_chars": 256,
+"output_tokens": 17
+},
+"b01-oracle-eps:p3-002375:17": {
+"choice": 1,
+"note_chars": 211,
+"output_tokens": 72
+},
+"b01-oracle-eps:p3-002380:77": {
+"choice": 1,
+"note_chars": 196,
+"output_tokens": 104
+},
+"b01-oracle-eps:p3-002381:65": {
+"choice": 1,
+"note_chars": 226,
+"output_tokens": 29
+},
+"c01-greedy-real:p0-000039:2": {
+"choice": 1,
+"note_chars": 238,
+"output_tokens": 50
+},
+"c01-greedy-real:p0-000042:91": {
+"choice": 1,
+"note_chars": 223,
+"output_tokens": 41
+},
+"c01-greedy-real:p0-000056:70": {
+"choice": 1,
+"note_chars": 232,
+"output_tokens": 29
+},
+"c01-greedy-real:p0-000066:16": {
+"choice": 2,
+"note_chars": 196,
+"output_tokens": 17
+},
+"c01-greedy-real:p0-000074:41": {
+"choice": 2,
+"note_chars": 298,
+"output_tokens": 20
+},
+"c01-greedy-real:p0-000089:85": {
+"choice": 2,
+"note_chars": 241,
+"output_tokens": 81
+},
+"c01-greedy-real:p0-000097:16": {
+"choice": 1,
+"note_chars": 203,
+"output_tokens": 20
+},
+"c01-greedy-real:p0-000109:66": {
+"choice": 1,
+"note_chars": 302,
+"output_tokens": 32
+},
+"c01-greedy-real:p0-000115:18": {
+"choice": 2,
+"note_chars": 224,
+"output_tokens": 106
+},
+"c01-greedy-real:p0-000115:67": {
+"choice": 1,
+"note_chars": 229,
+"output_tokens": 41
+},
+"c01-greedy-real:p0-000117:49": {
+"choice": 1,
+"note_chars": 185,
+"output_tokens": 62
+},
+"c01-greedy-real:p0-000124:18": {
+"choice": 1,
+"note_chars": 230,
+"output_tokens": 100
+},
+"c01-greedy-real:p0-000132:92": {
+"choice": 1,
+"note_chars": 231,
+"output_tokens": 29
+},
+"c01-greedy-real:p1-000167:0": {
+"choice": 1,
+"note_chars": 225,
+"output_tokens": 30
+},
+"c01-greedy-real:p1-000170:90": {
+"choice": 1,
+"note_chars": 173,
+"output_tokens": 59
+},
+"c01-greedy-real:p1-000219:69": {
+"choice": 1,
+"note_chars": 241,
+"output_tokens": 35
+},
+"c01-greedy-real:p1-000239:69": {
+"choice": 2,
+"note_chars": 220,
+"output_tokens": 65
+},
+"c01-greedy-real:p1-000243:141": {
+"choice": 1,
+"note_chars": 214,
+"output_tokens": 22
+},
+"c01-greedy-real:p1-000246:1": {
+"choice": 1,
+"note_chars": 122,
+"output_tokens": 119
+},
+"c01-greedy-real:p1-000261:38": {
+"choice": 1,
+"note_chars": 153,
+"output_tokens": 100
+},
+"c01-greedy-real:p1-000264:17": {
+"choice": 3,
+"note_chars": 294,
+"output_tokens": 118
+},
+"c01-greedy-real:p1-000284:18": {
+"choice": 1,
+"note_chars": 207,
+"output_tokens": 100
+},
+"c02-planner-real:p0-000010:68": {
+"choice": 1,
+"note_chars": 249,
+"output_tokens": 14
+},
+"c02-planner-real:p0-000015:69": {
+"choice": 1,
+"note_chars": 287,
+"output_tokens": 120
+},
+"c02-planner-real:p0-000029:18": {
+"choice": 1,
+"note_chars": 251,
+"output_tokens": 56
+},
+"c02-planner-real:p0-000040:68": {
+"choice": 1,
+"note_chars": 199,
+"output_tokens": 44
+},
+"c02-planner-real:p0-000062:8": {
+"choice": 1,
+"note_chars": 176,
+"output_tokens": 62
+},
+"c02-planner-real:p0-000074:17": {
+"choice": 1,
+"note_chars": 220,
+"output_tokens": 46
+},
+"c02-planner-real:p0-000077:67": {
+"choice": 1,
+"note_chars": 200,
+"output_tokens": 32
+},
+"c02-planner-real:p1-000165:16": {
+"choice": 1,
+"note_chars": 262,
+"output_tokens": 24
+},
+"c02-planner-real:p1-000173:118": {
+"choice": 1,
+"note_chars": 293,
+"output_tokens": 24
+},
+"c02-planner-real:p1-000177:26": {
+"choice": 2,
+"note_chars": 175,
+"output_tokens": 26
+},
+"c02-planner-real:p1-000190:165": {
+"choice": 1,
+"note_chars": 189,
+"output_tokens": 47
+},
+"c02-planner-real:p1-000196:85": {
+"choice": 1,
+"note_chars": 263,
+"output_tokens": 41
+},
+"v02-validation:p0-000003:44": {
+"choice": 2,
+"note_chars": 240,
+"output_tokens": 47
+},
+"v02-validation:p0-000026:43": {
+"choice": 1,
+"note_chars": 242,
+"output_tokens": 175
+},
+"v02-validation:p0-000035:19": {
+"choice": 1,
+"note_chars": 177,
+"output_tokens": 17
+},
+"v02-validation:p0-000042:17": {
+"choice": 1,
+"note_chars": 199,
+"output_tokens": 128
+},
+"v02-validation:p0-000045:44": {
+"choice": 1,
+"note_chars": 282,
+"output_tokens": 35
+},
+"v02-validation:p0-000049:15": {
+"choice": 1,
+"note_chars": 228,
+"output_tokens": 110
+},
+"v02-validation:p0-000050:17": {
+"choice": 1,
+"note_chars": 197,
+"output_tokens": 29
+},
+"v02-validation:p0-000052:52": {
+"choice": 1,
+"note_chars": 283,
+"output_tokens": 50
+},
+"v02-validation:p0-000073:18": {
+"choice": 1,
+"note_chars": 317,
+"output_tokens": 38
+},
+"v02-validation:p0-000085:16": {
+"choice": 1,
+"note_chars": 215,
+"output_tokens": 17
+},
+"v02-validation:p0-000107:17": {
+"choice": 1,
+"note_chars": 124,
+"output_tokens": 56
+},
+"v02-validation:p0-000118:17": {
+"choice": 1,
+"note_chars": 222,
+"output_tokens": 31
+},
+"v02-validation:p0-000124:43": {
+"choice": 1,
+"note_chars": 215,
+"output_tokens": 85
+},
+"v02-validation:p0-000134:16": {
+"choice": 1,
+"note_chars": 205,
+"output_tokens": 70
+},
+"v02-validation:p1-000160:43": {
+"choice": 1,
+"note_chars": 253,
+"output_tokens": 41
+},
+"v02-validation:p1-000164:131": {
+"choice": 1,
+"note_chars": 193,
+"output_tokens": 123
+},
+"v02-validation:p1-000176:17": {
+"choice": 2,
+"note_chars": 143,
+"output_tokens": 26
+},
+"v02-validation:p1-000197:25": {
+"choice": 1,
+"note_chars": 168,
+"output_tokens": 32
+},
+"v02-validation:p1-000212:4": {
+"choice": 1,
+"note_chars": 181,
+"output_tokens": 44
+},
+"v02-validation:p1-000236:68": {
+"choice": 1,
+"note_chars": 230,
+"output_tokens": 17
+},
+"v02-validation:p1-000244:39": {
+"choice": 1,
+"note_chars": 150,
+"output_tokens": 65
+},
+"v02-validation:p1-000256:68": {
+"choice": 1,
+"note_chars": 207,
+"output_tokens": 34
+},
+"v02-validation:p1-000259:54": {
+"choice": 1,
+"note_chars": 156,
+"output_tokens": 29
+},
+"v02-validation:p1-000269:17": {
+"choice": 1,
+"note_chars": 149,
+"output_tokens": 26
+},
+"v02-validation:p1-000284:68": {
+"choice": 1,
+"note_chars": 261,
+"output_tokens": 44
+},
+"v02-validation:p1-000292:128": {
+"choice": 1,
+"note_chars": 253,
+"output_tokens": 49
+},
+"v02-validation:p1-000292:56": {
+"choice": 4,
+"note_chars": 173,
+"output_tokens": 60
+},
+"v02-validation:p1-000299:68": {
+"choice": 1,
+"note_chars": 201,
+"output_tokens": 35
+},
+"v02-validation:p2-000327:69": {
+"choice": 1,
+"note_chars": 221,
+"output_tokens": 62
+},
+"v02-validation:p2-000365:88": {
+"choice": 4,
+"note_chars": 212,
+"output_tokens": 47
+},
+"v02-validation:p2-000370:28": {
+"choice": 1,
+"note_chars": 226,
+"output_tokens": 62
+},
+"v02-validation:p2-000375:41": {
+"choice": 2,
+"note_chars": 218,
+"output_tokens": 28
+},
+"v02-validation:p2-000393:42": {
+"choice": 1,
+"note_chars": 256,
+"output_tokens": 32
+},
+"v02-validation:p2-000433:68": {
+"choice": 4,
+"note_chars": 271,
+"output_tokens": 53
+},
+"v02-validation:p2-000447:92": {
+"choice": 2,
+"note_chars": 192,
+"output_tokens": 46
+},
+"v02-validation:p3-000472:44": {
+"choice": 1,
+"note_chars": 174,
+"output_tokens": 63
+},
+"v02-validation:p3-000485:42": {
+"choice": 1,
+"note_chars": 175,
+"output_tokens": 100
+},
+"v02-validation:p3-000501:68": {
+"choice": 1,
+"note_chars": 164,
+"output_tokens": 114
+},
+"v02-validation:p3-000505:16": {
+"choice": 1,
+"note_chars": 208,
+"output_tokens": 17
+},
+"v02-validation:p3-000507:16": {
+"choice": 1,
+"note_chars": 217,
+"output_tokens": 32
+},
+"v02-validation:p3-000509:87": {
+"choice": 1,
+"note_chars": 247,
+"output_tokens": 53
+},
+"v02-validation:p3-000526:41": {
+"choice": 1,
+"note_chars": 300,
+"output_tokens": 17
+},
+"v02-validation:p3-000532:42": {
+"choice": 2,
+"note_chars": 286,
+"output_tokens": 32
+},
+"v02-validation:p3-000544:64": {
+"choice": 1,
+"note_chars": 194,
+"output_tokens": 78
+},
+"v02-validation:p3-000547:4": {
+"choice": 1,
+"note_chars": 200,
+"output_tokens": 53
+},
+"v02-validation:p3-000556:42": {
+"choice": 1,
+"note_chars": 231,
+"output_tokens": 17
+},
+"v02-validation:p3-000563:165": {
+"choice": 2,
+"note_chars": 250,
+"output_tokens": 50
+},
+"v02-validation:p3-000564:16": {
+"choice": 1,
+"note_chars": 352,
+"output_tokens": 24
+},
+"v02-validation:p3-000567:67": {
+"choice": 1,
+"note_chars": 234,
+"output_tokens": 41
+},
+"v02-validation:p3-000579:145": {
+"choice": 1,
+"note_chars": 257,
+"output_tokens": 50
+},
+"v02-validation:p3-000579:31": {
+"choice": 1,
+"note_chars": 184,
+"output_tokens": 38
+},
+"v02-validation:p3-000592:69": {
+"choice": 1,
+"note_chars": 230,
+"output_tokens": 29
+}
+},
+"v4-bank": {
+"b01-oracle-eps:p0-000011:44": {
+"choice": 1,
+"note_chars": 239,
+"output_tokens": 59
+},
+"b01-oracle-eps:p0-000034:3": {
+"choice": 1,
+"note_chars": 222,
+"output_tokens": 14
+},
+"b01-oracle-eps:p0-000039:18": {
+"choice": 1,
+"note_chars": 279,
+"output_tokens": 53
+},
+"b01-oracle-eps:p0-000051:39": {
+"choice": 1,
+"note_chars": 231,
+"output_tokens": 47
+},
+"b01-oracle-eps:p0-000067:93": {
+"choice": 1,
+"note_chars": 273,
+"output_tokens": 98
+},
+"b01-oracle-eps:p0-000083:16": {
+"choice": 1,
+"note_chars": 295,
+"output_tokens": 29
+},
+"b01-oracle-eps:p0-000092:3": {
+"choice": 1,
+"note_chars": 292,
+"output_tokens": 17
+},
+"b01-oracle-eps:p0-000096:143": {
+"choice": 1,
+"note_chars": 295,
+"output_tokens": 120
+},
+"b01-oracle-eps:p0-000100:66": {
+"choice": 1,
+"note_chars": 294,
+"output_tokens": 22
+},
+"b01-oracle-eps:p0-000103:115": {
+"choice": 1,
+"note_chars": 408,
+"output_tokens": 29
+},
+"b01-oracle-eps:p1-000756:79": {
+"choice": 1,
+"note_chars": 339,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000762:16": {
+"choice": 2,
+"note_chars": 394,
+"output_tokens": 38
+},
+"b01-oracle-eps:p1-000762:43": {
+"choice": 1,
+"note_chars": 374,
+"output_tokens": 40
+},
+"b01-oracle-eps:p1-000765:27": {
+"choice": 1,
+"note_chars": 238,
+"output_tokens": 47
+},
+"b01-oracle-eps:p1-000767:67": {
+"choice": 2,
+"note_chars": 347,
+"output_tokens": 80
+},
+"b01-oracle-eps:p1-000769:18": {
+"choice": 1,
+"note_chars": 288,
+"output_tokens": 66
+},
+"b01-oracle-eps:p1-000773:68": {
+"choice": 1,
+"note_chars": 261,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000776:68": {
+"choice": 1,
+"note_chars": 329,
+"output_tokens": 72
+},
+"b01-oracle-eps:p1-000791:66": {
+"choice": 2,
+"note_chars": 388,
+"output_tokens": 56
+},
+"b01-oracle-eps:p1-000797:131": {
+"choice": 1,
+"note_chars": 260,
+"output_tokens": 32
+},
+"b01-oracle-eps:p1-000808:44": {
+"choice": 1,
+"note_chars": 413,
+"output_tokens": 63
+},
+"b01-oracle-eps:p1-000809:41": {
+"choice": 2,
+"note_chars": 326,
+"output_tokens": 22
+},
+"b01-oracle-eps:p1-000826:40": {
+"choice": 1,
+"note_chars": 351,
+"output_tokens": 41
+},
+"b01-oracle-eps:p1-000828:69": {
+"choice": 1,
+"note_chars": 301,
+"output_tokens": 41
+},
+"b01-oracle-eps:p1-000881:43": {
+"choice": 2,
+"note_chars": 318,
+"output_tokens": 75
+},
+"b01-oracle-eps:p1-000888:16": {
+"choice": 1,
+"note_chars": 379,
+"output_tokens": 24
+},
+"b01-oracle-eps:p2-001510:18": {
+"choice": 1,
+"note_chars": 296,
+"output_tokens": 59
+},
+"b01-oracle-eps:p2-001518:103": {
+"choice": 1,
+"note_chars": 280,
+"output_tokens": 41
+},
+"b01-oracle-eps:p2-001524:17": {
+"choice": 4,
+"note_chars": 291,
+"output_tokens": 26
+},
+"b01-oracle-eps:p2-001525:16": {
+"choice": 1,
+"note_chars": 264,
+"output_tokens": 22
+},
+"b01-oracle-eps:p2-001535:16": {
+"choice": 3,
+"note_chars": 369,
+"output_tokens": 45
+},
+"b01-oracle-eps:p2-001554:17": {
+"choice": 2,
+"note_chars": 306,
+"output_tokens": 56
+},
+"b01-oracle-eps:p2-001595:43": {
+"choice": 1,
+"note_chars": 356,
+"output_tokens": 53
+},
+"b01-oracle-eps:p2-001611:16": {
+"choice": 1,
+"note_chars": 295,
+"output_tokens": 17
+},
+"b01-oracle-eps:p2-001611:52": {
+"choice": 1,
+"note_chars": 294,
+"output_tokens": 30
+},
+"b01-oracle-eps:p2-001615:100": {
+"choice": 1,
+"note_chars": 232,
+"output_tokens": 14
+},
+"b01-oracle-eps:p2-001629:66": {
+"choice": 1,
+"note_chars": 261,
+"output_tokens": 102
+},
+"b01-oracle-eps:p2-001632:70": {
+"choice": 1,
+"note_chars": 332,
+"output_tokens": 29
+},
+"b01-oracle-eps:p2-001633:13": {
+"choice": 1,
+"note_chars": 218,
+"output_tokens": 29
+},
+"b01-oracle-eps:p3-002254:6": {
+"choice": 1,
+"note_chars": 344,
+"output_tokens": 21
+},
+"b01-oracle-eps:p3-002258:17": {
+"choice": 1,
+"note_chars": 230,
+"output_tokens": 50
+},
+"b01-oracle-eps:p3-002259:15": {
+"choice": 1,
+"note_chars": 391,
+"output_tokens": 15
+},
+"b01-oracle-eps:p3-002274:41": {
+"choice": 1,
+"note_chars": 403,
+"output_tokens": 45
+},
+"b01-oracle-eps:p3-002287:17": {
+"choice": 2,
+"note_chars": 319,
+"output_tokens": 44
+},
+"b01-oracle-eps:p3-002320:66": {
+"choice": 1,
+"note_chars": 282,
+"output_tokens": 44
+},
+"b01-oracle-eps:p3-002326:16": {
+"choice": 1,
+"note_chars": 397,
+"output_tokens": 29
+},
+"b01-oracle-eps:p3-002327:16": {
+"choice": 2,
+"note_chars": 284,
+"output_tokens": 58
+},
+"b01-oracle-eps:p3-002335:54": {
+"choice": 1,
+"note_chars": 241,
+"output_tokens": 47
+},
+"b01-oracle-eps:p3-002339:39": {
+"choice": 4,
+"note_chars": 424,
+"output_tokens": 51
+},
+"b01-oracle-eps:p3-002340:77": {
+"choice": 1,
+"note_chars": 345,
+"output_tokens": 32
+},
+"b01-oracle-eps:p3-002375:17": {
+"choice": 1,
+"note_chars": 265,
+"output_tokens": 38
+},
+"b01-oracle-eps:p3-002380:77": {
+"choice": 1,
+"note_chars": 274,
+"output_tokens": 74
+},
+"b01-oracle-eps:p3-002381:65": {
+"choice": 1,
+"note_chars": 325,
+"output_tokens": 17
+},
+"c01-greedy-real:p0-000039:2": {
+"choice": 1,
+"note_chars": 253,
+"output_tokens": 126
+},
+"c01-greedy-real:p0-000042:91": {
+"choice": 3,
+"note_chars": 333,
+"output_tokens": 35
+},
+"c01-greedy-real:p0-000056:70": {
+"choice": 1,
+"note_chars": 317,
+"output_tokens": 41
+},
+"c01-greedy-real:p0-000066:16": {
+"choice": 1,
+"note_chars": 327,
+"output_tokens": 18
+},
+"c01-greedy-real:p0-000074:41": {
+"choice": 2,
+"note_chars": 290,
+"output_tokens": 14
+},
+"c01-greedy-real:p0-000089:85": {
+"choice": 2,
+"note_chars": 230,
+"output_tokens": 38
+},
+"c01-greedy-real:p0-000097:16": {
+"choice": 1,
+"note_chars": 325,
+"output_tokens": 26
+},
+"c01-greedy-real:p0-000109:66": {
+"choice": 3,
+"note_chars": 306,
+"output_tokens": 29
+},
+"c01-greedy-real:p0-000115:18": {
+"choice": 1,
+"note_chars": 258,
+"output_tokens": 44
+},
+"c01-greedy-real:p0-000115:67": {
+"choice": 1,
+"note_chars": 247,
+"output_tokens": 32
+},
+"c01-greedy-real:p0-000117:49": {
+"choice": 1,
+"note_chars": 325,
+"output_tokens": 64
+},
+"c01-greedy-real:p0-000124:18": {
+"choice": 1,
+"note_chars": 276,
+"output_tokens": 35
+},
+"c01-greedy-real:p0-000132:92": {
+"choice": 1,
+"note_chars": 290,
+"output_tokens": 26
+},
+"c01-greedy-real:p1-000167:0": {
+"choice": 1,
+"note_chars": 261,
+"output_tokens": 32
+},
+"c01-greedy-real:p1-000170:90": {
+"choice": 1,
+"note_chars": 266,
+"output_tokens": 145
+},
+"c01-greedy-real:p1-000219:69": {
+"choice": 1,
+"note_chars": 382,
+"output_tokens": 35
+},
+"c01-greedy-real:p1-000239:69": {
+"choice": 2,
+"note_chars": 213,
+"output_tokens": 102
+},
+"c01-greedy-real:p1-000243:141": {
+"choice": 1,
+"note_chars": 280,
+"output_tokens": 29
+},
+"c01-greedy-real:p1-000246:1": {
+"choice": 1,
+"note_chars": 263,
+"output_tokens": 66
+},
+"c01-greedy-real:p1-000261:38": {
+"choice": 1,
+"note_chars": 316,
+"output_tokens": 62
+},
+"c01-greedy-real:p1-000264:17": {
+"choice": 1,
+"note_chars": 339,
+"output_tokens": 53
+},
+"c01-greedy-real:p1-000284:18": {
+"choice": 1,
+"note_chars": 260,
+"output_tokens": 97
+},
+"c02-planner-real:p0-000010:68": {
+"choice": 1,
+"note_chars": 225,
+"output_tokens": 40
+},
+"c02-planner-real:p0-000015:69": {
+"choice": 1,
+"note_chars": 208,
+"output_tokens": 94
+},
+"c02-planner-real:p0-000029:18": {
+"choice": 1,
+"note_chars": 320,
+"output_tokens": 65
+},
+"c02-planner-real:p0-000040:68": {
+"choice": 1,
+"note_chars": 268,
+"output_tokens": 112
+},
+"c02-planner-real:p0-000062:8": {
+"choice": 1,
+"note_chars": 364,
+"output_tokens": 44
+},
+"c02-planner-real:p0-000074:17": {
+"choice": 1,
+"note_chars": 381,
+"output_tokens": 26
+},
+"c02-planner-real:p0-000077:67": {
+"choice": 1,
+"note_chars": 235,
+"output_tokens": 26
+},
+"c02-planner-real:p1-000165:16": {
+"choice": 1,
+"note_chars": 322,
+"output_tokens": 20
+},
+"c02-planner-real:p1-000173:118": {
+"choice": 1,
+"note_chars": 343,
+"output_tokens": 29
+},
+"c02-planner-real:p1-000177:26": {
+"choice": 1,
+"note_chars": 283,
+"output_tokens": 70
+},
+"c02-planner-real:p1-000190:165": {
+"choice": 1,
+"note_chars": 276,
+"output_tokens": 41
+},
+"c02-planner-real:p1-000196:85": {
+"choice": 1,
+"note_chars": 295,
+"output_tokens": 60
+},
+"v02-validation:p0-000003:44": {
+"choice": 2,
+"note_chars": 295,
+"output_tokens": 44
+},
+"v02-validation:p0-000026:43": {
+"choice": 1,
+"note_chars": 358,
+"output_tokens": 47
+},
+"v02-validation:p0-000035:19": {
+"choice": 1,
+"note_chars": 284,
+"output_tokens": 36
+},
+"v02-validation:p0-000042:17": {
+"choice": 1,
+"note_chars": 340,
+"output_tokens": 96
+},
+"v02-validation:p0-000045:44": {
+"choice": 1,
+"note_chars": 338,
+"output_tokens": 124
+},
+"v02-validation:p0-000049:15": {
+"choice": 1,
+"note_chars": 241,
+"output_tokens": 134
+},
+"v02-validation:p0-000050:17": {
+"choice": 1,
+"note_chars": 272,
+"output_tokens": 30
+},
+"v02-validation:p0-000052:52": {
+"choice": 1,
+"note_chars": 318,
+"output_tokens": 26
+},
+"v02-validation:p0-000073:18": {
+"choice": 4,
+"note_chars": 282,
+"output_tokens": 68
+},
+"v02-validation:p0-000085:16": {
+"choice": 1,
+"note_chars": 299,
+"output_tokens": 32
+},
+"v02-validation:p0-000107:17": {
+"choice": 1,
+"note_chars": 208,
+"output_tokens": 41
+},
+"v02-validation:p0-000118:17": {
+"choice": 1,
+"note_chars": 331,
+"output_tokens": 32
+},
+"v02-validation:p0-000124:43": {
+"choice": 1,
+"note_chars": 298,
+"output_tokens": 89
+},
+"v02-validation:p0-000134:16": {
+"choice": 1,
+"note_chars": 235,
+"output_tokens": 82
+},
+"v02-validation:p1-000160:43": {
+"choice": 1,
+"note_chars": 293,
+"output_tokens": 44
+},
+"v02-validation:p1-000164:131": {
+"choice": 1,
+"note_chars": 233,
+"output_tokens": 134
+},
+"v02-validation:p1-000176:17": {
+"choice": 2,
+"note_chars": 259,
+"output_tokens": 41
+},
+"v02-validation:p1-000197:25": {
+"choice": 1,
+"note_chars": 199,
+"output_tokens": 63
+},
+"v02-validation:p1-000212:4": {
+"choice": 1,
+"note_chars": 245,
+"output_tokens": 33
+},
+"v02-validation:p1-000236:68": {
+"choice": 1,
+"note_chars": 288,
+"output_tokens": 16
+},
+"v02-validation:p1-000244:39": {
+"choice": 1,
+"note_chars": 356,
+"output_tokens": 44
+},
+"v02-validation:p1-000256:68": {
+"choice": 1,
+"note_chars": 279,
+"output_tokens": 62
+},
+"v02-validation:p1-000259:54": {
+"choice": 1,
+"note_chars": 260,
+"output_tokens": 37
+},
+"v02-validation:p1-000269:17": {
+"choice": 1,
+"note_chars": 258,
+"output_tokens": 41
+},
+"v02-validation:p1-000284:68": {
+"choice": 1,
+"note_chars": 243,
+"output_tokens": 75
+},
+"v02-validation:p1-000292:128": {
+"choice": 1,
+"note_chars": 318,
+"output_tokens": 29
+},
+"v02-validation:p1-000292:56": {
+"choice": 1,
+"note_chars": 282,
+"output_tokens": 47
+},
+"v02-validation:p1-000299:68": {
+"choice": 1,
+"note_chars": 244,
+"output_tokens": 68
+},
+"v02-validation:p2-000327:69": {
+"choice": 1,
+"note_chars": 321,
+"output_tokens": 77
+},
+"v02-validation:p2-000365:88": {
+"choice": 4,
+"note_chars": 270,
+"output_tokens": 62
+},
+"v02-validation:p2-000370:28": {
+"choice": 1,
+"note_chars": 315,
+"output_tokens": 52
+},
+"v02-validation:p2-000375:41": {
+"choice": 2,
+"note_chars": 215,
+"output_tokens": 26
+},
+"v02-validation:p2-000393:42": {
+"choice": 1,
+"note_chars": 310,
+"output_tokens": 44
+},
+"v02-validation:p2-000433:68": {
+"choice": 1,
+"note_chars": 238,
+"output_tokens": 41
+},
+"v02-validation:p2-000447:92": {
+"choice": 2,
+"note_chars": 293,
+"output_tokens": 46
+},
+"v02-validation:p3-000472:44": {
+"choice": 1,
+"note_chars": 403,
+"output_tokens": 42
+},
+"v02-validation:p3-000485:42": {
+"choice": 1,
+"note_chars": 279,
+"output_tokens": 41
+},
+"v02-validation:p3-000501:68": {
+"choice": 1,
+"note_chars": 337,
+"output_tokens": 77
+},
+"v02-validation:p3-000505:16": {
+"choice": 1,
+"note_chars": 266,
+"output_tokens": 32
+},
+"v02-validation:p3-000507:16": {
+"choice": 1,
+"note_chars": 338,
+"output_tokens": 22
+},
+"v02-validation:p3-000509:87": {
+"choice": 1,
+"note_chars": 259,
+"output_tokens": 50
+},
+"v02-validation:p3-000526:41": {
+"choice": 1,
+"note_chars": 347,
+"output_tokens": 17
+},
+"v02-validation:p3-000532:42": {
+"choice": 2,
+"note_chars": 401,
+"output_tokens": 35
+},
+"v02-validation:p3-000544:64": {
+"choice": 1,
+"note_chars": 236,
+"output_tokens": 38
+},
+"v02-validation:p3-000547:4": {
+"choice": 1,
+"note_chars": 299,
+"output_tokens": 29
+},
+"v02-validation:p3-000556:42": {
+"choice": 1,
+"note_chars": 274,
+"output_tokens": 17
+},
+"v02-validation:p3-000563:165": {
+"choice": 2,
+"note_chars": 308,
+"output_tokens": 90
+},
+"v02-validation:p3-000564:16": {
+"choice": 1,
+"note_chars": 411,
+"output_tokens": 32
+},
+"v02-validation:p3-000567:67": {
+"choice": 1,
+"note_chars": 318,
+"output_tokens": 41
+},
+"v02-validation:p3-000579:145": {
+"choice": 1,
+"note_chars": 262,
+"output_tokens": 38
+},
+"v02-validation:p3-000579:31": {
+"choice": 1,
+"note_chars": 239,
+"output_tokens": 65
+},
+"v02-validation:p3-000592:69": {
+"choice": 1,
+"note_chars": 472,
+"output_tokens": 65
+}
+}
+}

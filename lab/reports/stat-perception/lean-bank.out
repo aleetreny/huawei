@@ -1,0 +1,33 @@
+139 situations answered by both arms
+| arm | output tokens / situation | median note chars | input tokens / situation | Skill reads / situation |
+|---|---:|---:|---:|---:|
+| v4-bank | 49 | 293 | 66k | 1.00 |
+| lean-bank | 51 | 220 | 65k | 1.00 |
+same choice, pre_review: 65/71 (92 %)
+same choice, other: 63/68 (93 %)
+
+| arm | rule | n | right % (95 % CI) | rule failures % | regret (pts) | read Skill % | logs % | tokens |
+|---|---|---:|---|---:|---:|---:|---:|---:|
+| controlale | pre_review | 61 | 61 (48–72) | 30 | 2.20 | 0 | 98 | 0k |
+| t13ale | pre_review | 61 | 67 (55–78) | 18 | 1.67 | 100 | 100 | 0k |
+| v4-bank | pre_review | 61 | 67 (55–78) | 23 | 1.81 | 100 | 98 | 66k |
+| lean-bank | pre_review | 61 | 67 (55–78) | 26 | 1.98 | 100 | 100 | 67k |
+| controlale | trigger | 7 | 71 (36–92) | 14 | 1.55 | 0 | 100 | 0k |
+| t13ale | trigger | 7 | 71 (36–92) | 14 | 1.55 | 100 | 100 | 0k |
+| v4-bank | trigger | 7 | 86 (49–97) | 14 | 1.10 | 100 | 100 | 65k |
+| lean-bank | trigger | 7 | 71 (36–92) | 14 | 1.55 | 100 | 100 | 64k |
+| controlale | early_ruin | 5 | 100 (57–100) | 0 | 0.05 | 0 | 100 | 0k |
+| t13ale | early_ruin | 5 | 100 (57–100) | 0 | 0.05 | 100 | 100 | 0k |
+| v4-bank | early_ruin | 5 | 100 (57–100) | 0 | 0.05 | 100 | 100 | 81k |
+| lean-bank | early_ruin | 5 | 100 (57–100) | 0 | 0.05 | 100 | 100 | 78k |
+| controlale | general | 66 | 73 (61–82) | 27 | 0.81 | 0 | 100 | 0k |
+| t13ale | general | 66 | 74 (63–83) | 26 | 0.82 | 100 | 100 | 0k |
+| v4-bank | general | 66 | 74 (63–83) | 26 | 0.77 | 100 | 94 | 64k |
+| lean-bank | general | 66 | 70 (58–79) | 30 | 0.85 | 100 | 98 | 63k |
+
+139 story items, months 1-44
+| arm | skill | network | output | health | dignity | wealth | risk | same choice as control % |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| v4-bank | +0.80 | +0.52 | +0.18 | -0.04 | +1.04 | -0.01 | -0.16 | 100 |
+| lean-bank | +0.81 | +0.50 | +0.16 | -0.04 | +1.04 | -0.01 | -0.13 | 92 |
+| controlale | +0.78 | +0.45 | +0.15 | -0.04 | +1.09 | -0.01 | -0.17 | 88 |

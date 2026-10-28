@@ -9,7 +9,8 @@ Es el paso (c) de la línea **Categorías** de Alejandro ([question-bank/](../qu
 - una prueba de elecciones en el banco de Transmisión;
 - un estudio de la trampa del primer ascenso (L1) en la réplica, con 13 brazos;
 - un estudio del camino a L6 en la réplica;
-- un plan para superar la nota de v4: tokens, rúbrica y juego, con la rúbrica de v4 medida.
+- un plan para superar la nota de v4 (tokens, rúbrica y juego);
+- **v4-lean y v4-lean-q**, el candidato para el corte 2, medidos con el revisor y en el banco.
 
 Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y la ventana de 5 horas del 34 % al 42 % en el banco); nada de la Max. No se ha jugado ninguna partida completa. **Con Haiku y la réplica no queda nada prometedor. Lo siguiente es con DeepSeek, en la línea de Alejandro.**
 
@@ -44,12 +45,15 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
    - Empezar en L3 cuesta 1,8.
 
    [07](07-camino-l6.md)
-7. **Para superar a v4 hay más nota fuera del juego que dentro.**
-   - Tokens: v4 saca ~64 de 100 (1,35–1,47 M por mes), porque JiuwenSwarm no comprime el historial y cada decisión añade ~1.150 fichas. Recortar a la mitad lo que deja cada decisión daría ~86, **+2,2 puntos**.
-   - Calidad del SKILL.md: el revisor da a v4 un **66**, frente a 72,7 de t13-final. Hay +1,4 a +1,9 si se reescribe sin cambiar el comportamiento.
-   - En total, unos **+4 de nota automática** sin tocar la estrategia de historias.
+7. **Para superar a v4 hay nota fuera del juego, y ya está en un manual: v4-lean-q.**
+   - Juega como v4 en el banco (93 % de elecciones iguales con Haiku).
+   - Rúbrica ~+2: v4 saca ~70–72 con 9 pasadas, no 66.
+   - Línea de L4 visible.
+   - Planifica el trimestre con un solo `observe`: −15 % de tokens en el modelo.
+   - Total esperado ~+1,5 de nota automática sobre v4, más si DeepSeek escribía mucho.
+   - Falta una partida oficial para medir tokens.
 
-   [08](08-subir-nota-v4.md)
+   [08](08-subir-nota-v4.md), [09](09-v4-lean.md)
 8. **Redacción, para quien escriba manuales:**
    - un significado corto de cada indicador funciona mejor que una lista de pistas y reduce a la mitad las crisis de confianza (73 frente a 136 por 1.000 partidas);
    - "una ganancia y un coste por opción" hunde la nota (39,7);
@@ -75,7 +79,8 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | [05-prueba-de-elecciones.md](05-prueba-de-elecciones.md) | La línea de percepción en la referencia del mes previo no hace elegir mejor a Haiku (pierde un punto necesario un 30 % frente al 18 % de t13-final). |
 | [06-trampa-l1.md](06-trampa-l1.md) | 2 de cada 3 puntos perdidos antes de una evaluación en L1 son forzosos, y ninguna de 7 reglas nuevas baja los despidos sin subir las crisis. |
 | [07-camino-l6.md](07-camino-l6.md) | L6 vale +7 por partida pero se pierde tiempo en L4; Skill learning y rotation en el trimestre desde L4, sin condiciones, es la única regla que ayuda (+0,6). |
-| [08-subir-nota-v4.md](08-subir-nota-v4.md) | Sin cambiar la estrategia hay ~+4 puntos de nota automática sobre v4: tokens (de ~64 a ~86) y calidad del SKILL.md (66 medido). |
+| [08-subir-nota-v4.md](08-subir-nota-v4.md) | Los tokens (v4 ~64 de 100) son la parte de la nota con más margen; la rúbrica, menos de lo que parecía (corregido en 09). |
+| [09-v4-lean.md](09-v4-lean.md) | v4-lean juega como v4 y sube la rúbrica ~+2; v4-lean-q además planifica el trimestre con un `observe` (−15 % de tokens en el modelo). |
 
 ## Archivos
 
@@ -87,6 +92,7 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | `choice-test.out`, `choice-test-answers.json` | Prueba de elecciones: tablas de `score.py` y `fingerprint.py`, y elecciones por identificador |
 | `l1-trap.json` | Trampa de L1: nota, despidos, crisis, causas y pérdidas por brazo |
 | `l6.json` | Camino a L6: nota, % en L5 y L6, Skill final y mes de L5 por brazo, con lectura perfecta y de Haiku |
+| `rubric.json`, `lean-bank.out`, `lean-bank-answers.json` | v4 y v4-lean: revisor de rúbrica (todas las pasadas) y banco con Haiku |
 
 Scripts en [scripts/stat-perception/](../../../scripts/stat-perception/):
 - `label.py`: etiqueta con Haiku;
@@ -95,9 +101,10 @@ Scripts en [scripts/stat-perception/](../../../scripts/stat-perception/):
 - `combine.py`: votación;
 - `run-choice.sh`: prueba de elecciones en el banco de Transmisión;
 - `l1_trap.py`: la trampa de L1 en la réplica (causas de cada evaluación fallida, pérdidas forzosas o evitables, brazos);
-- `l6.py`: el camino a L6 en la réplica (meses de cada ascenso, por qué fallan las evaluaciones de L4 y L5, reglas de trimestre).
+- `l6.py`: el camino a L6 en la réplica (meses de cada ascenso, por qué fallan las evaluaciones de L4 y L5, reglas de trimestre);
+- `lean_compare.py`: dos brazos del banco comparados (fichas escritas, notas, misma elección).
 
-Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies-src/stat-perception/t13-perc/).
+Manuales: [t13-perc](../../policies-src/stat-perception/t13-perc/) (05), **[v4-lean](../../policies-src/stat-perception/v4-lean/) y [v4-lean-q](../../policies-src/stat-perception/v4-lean-q/) (09, candidatos para el corte 2)**.
 
 ## Herramientas de Leah que siguen en uso
 
@@ -111,7 +118,8 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    - Paso (c) de Categorías: 9 etiquetados con Haiku, medidos en la mitad reservada y en la réplica.
    - El valor de percibir bien cada indicador.
    - Una prueba de elecciones en el banco de Transmisión (01–05).
-   - **28 oct:** plan para superar a v4 (08): desglose de la nota, modelo de tokens y rúbrica de v4 medida (66).
+   - **28 oct:** v4-lean y v4-lean-q (09): manuales escritos, revisor de rúbrica 6 pasadas por manual y banco con Haiku (139 situaciones por brazo).
+   - **28 oct:** plan para superar a v4 (08): desglose de la nota y modelo de tokens.
    - **28 oct:** el camino a L6 en la réplica (07): dónde se pierde el tiempo y 9 variantes de trimestre e historias.
    - **28 oct:** la trampa de L1 en la réplica (06):
      - de qué fallan las evaluaciones;
@@ -123,7 +131,7 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    - Ninguna regla nueva contra la trampa de L1 gana en la réplica (06), así que no se ha probado en el banco ni en partidas.
    - Las medidas de 06 usan la lectura de Haiku, porque las etiquetas de DeepSeek de Alejandro no están en el repo.
 4. **Siguiente paso.** Lo que queda es de la línea DeepSeek:
-   - **v4-lean para el corte 2 (08):** línea de estado corta, nota de una frase, sin razonamiento escrito, registro sólo al reanudar, y la línea 5 en "L4 or above" (07). Comprobarlo con la rúbrica y el banco de DeepSeek, y medir tokens con una partida;
+   - **v4-lean-q para el corte 2 (09)**, ya escrito y medido con Haiku: una partida oficial de DeepSeek para medir tokens por mes (v4: 1,35–1,47 M) y que el trimestre de un solo `observe` no da acciones rechazadas;
    - **medir en las trazas de DeepSeek** qué parte de las ~1.150 fichas por decisión escribe el modelo y qué parte es `observe` (08);
    - medir si leer dos veces y votar dentro de la misma respuesta mejora la percepción de los costes de Network y Output en DeepSeek (con Haiku, la votación quita crisis pero apenas despidos);
    - repetir `l1_trap.py` con las etiquetas de DeepSeek (`--reading` acepta archivos de etiquetas con el formato de `tags-*.json`; las de DeepSeek habría que convertirlas).

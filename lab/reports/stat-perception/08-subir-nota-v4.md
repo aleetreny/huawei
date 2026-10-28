@@ -1,6 +1,8 @@
 # 08. Cómo superar la nota de `t13-read-v4` (corte 1): dónde están los puntos
 
-**Conclusión: sin cambiar la estrategia de juego hay unos +3,5 a +4 puntos de nota automática en dos partes que nadie optimiza: los tokens (v4 saca ~64 de 100, y se puede subir a ~86 recortando lo que cada decisión añade al historial) y la calidad del SKILL.md (v4 saca 66 con el revisor, frente a 72,7 de t13-final). En el juego, la trampa de L1 es lo que más vale (hasta +2,3), pero no hay regla que la baje; la línea de L4 (07) suma ~+0,5.**
+**Corrección (28 oct, tarde, [09](09-v4-lean.md)): con 9 pasadas del revisor, v4 saca ~70–72 en la rúbrica, no 66, así que la palanca de calidad vale ~+0,2 a +0,4 y no +1,4 a +1,9. La de tokens se concreta en v4-lean-q (~+0,7 seguro, más si DeepSeek escribía mucho).**
+
+**Conclusión: sin cambiar la estrategia de juego hay puntos de nota automática en dos partes que nadie optimiza: los tokens (v4 saca ~64 de 100, y se puede subir recortando lo que cada decisión añade al historial) y la calidad del SKILL.md (con 3 pasadas parecía 66; con 9, ~70–72). En el juego, la trampa de L1 es lo que más vale (hasta +2,3), pero no hay regla que la baje; la línea de L4 (07) suma ~+0,5.**
 
 28 oct, 11:45–12:30 UTC. Fuentes:
 - reglas oficiales (`competition-rules.rst` del repositorio oficial, copia local en `~/techarena-career-sim`);
