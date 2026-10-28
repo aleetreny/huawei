@@ -20,6 +20,8 @@ Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easte
 | 8b | Lo que se dice en público | Ningún repositorio ni página pública de la competición habla de atajos, huevos de Pascua o ascensos ocultos (búsqueda web del 28 oct; el repositorio público `krsnkkv/techarena-career-simu` sólo recoge las normas). Discord no se puede consultar desde aquí | búsqueda web |
 | 8 | Entradas raras a las herramientas | `take_action` rechaza 0, negativos, fuera de rango, decimales y argumentos extra; el estado no se mueve. `observe` sólo tiene los campos conocidos (más `available_choice_count`) | `probe_interface.py` |
 | 9 | Ramas nunca jugadas | Dos lotes del bot explorador (`e01`: riesgo hasta 2; `e02`: hasta 4) jugaron **207 de las 212** respuestas con menos de 30 casos (201 con 10 o más casos nuevos), entre ellas las 20 «nunca elegidas»: sus efectos son corrientes y negativos; ninguna respuesta ya conocida cambió de efecto; 0 cambios de nivel, 0 preguntas nuevas, ningún mensaje de registro nuevo. La regla de ascenso falla en 39 de 33.970 evaluaciones: 33 por la nota, 5 por el orden de la explosión y 1 ascenso de L4 con Network 29 (el umbral de Network de L4 sería ≤ 29, no los 30 de la réplica) | lotes `e01-explore` (3.000 partidas) y `e02-explore` (1.500); 3.762 completas de 4.500 |
+| 9b | Modo competición del servidor (`--competition`, lo más parecido en local a la evaluación oficial) con el explorador | Las mismas 403 preguntas (0 nuevas), 0 cambios de nivel, ninguna respuesta con efecto distinto del catálogo, ningún mensaje nuevo; la regla de ascenso falla en 3 de 4.454 evaluaciones (2 por la nota, 1 por el orden). El servidor en este modo deja de crear partidas tras unas 100 por proceso: 597 de 1.200 no empezaron y se descartan | lote `c01-explore-comp`, 603 partidas válidas |
+| 9c | Palabras clave en `notes` («promote me», *fast track*, *skip level*, *easter egg*, *cheat code*, *god mode*, el código Konami, «Helen and Hale… Polaris») | Nada: 0 cambios de nivel, 0 preguntas nuevas, ningún mensaje nuevo; la regla de ascenso falla en 3 de 2.265 evaluaciones, las 3 por la nota. Sólo se probó para saber si existía: usarlo lo prohíben las reglas («manipulate… agent notes») | lote `n01-notes-keywords`, 300 partidas |
 | 10 | **Mecánica nueva: la fase trimestral corta historias** | En los meses 3, 6, 9…, si la respuesta de la **tercera plaza** del mes tiene continuación «del mismo mes», la historia **se descarta (98 %)** y su título vuelve al bombo: puede salir otra vez desde la primera pregunta y cobrarse de nuevo. En los demás meses la continuación pasa al mes siguiente (100 %). Ocurre ~1,4–1,7 veces por partida larga | `drop_rule.py`, `repeats.py`; v03 + d01 (fuera de trimestre, 0 descartes en 6.606 casos; en trimestre, 3.239 descartes en 3.296) y confirmado en `e01` |
 
 ## 2. ¿Vale algo la mecánica del punto 10?
@@ -72,17 +74,16 @@ Datos nuevos (con texto del juego, fuera de Git): `~/careerlab-data/huevos-pascu
 **Qué quedó abierto.**
 - 5 respuestas raras siguen sin jugarse (sus títulos salen poco).
 - El conjunto de eventos y parámetros de la evaluación oficial no se ve en local; si en Discord hablan de algo concreto (un título, un personaje), hace falta ese dato para comprobarlo aquí.
-- No se probaron palabras clave en `notes`: M26 ya mostró que las notas no tienen efecto mecánico y usarlas así lo prohíben las reglas («manipulate… agent notes»).
 
 **Para retomar.**
 
 ```bash
 uv sync && uv run career-emulator-engine update --source distribution --split dev
-PYTHONPATH=. .venv/bin/python scripts/huevos-pascua/run_explore.py --batch e02-explore --games 3000 --explore-below 60 --risk-room 2
+PYTHONPATH=. .venv/bin/python scripts/huevos-pascua/run_explore.py --batch e03-explore --games 3000 --explore-below 60 --risk-room 2   # --competition, --notes "..." para los otros sondeos
 BB_DATA=~/careerlab-data/huevos-pascua python3 scripts/huevos-pascua/explore_report.py e02-explore
 BB_DATA=~/careerlab-data/huevos-pascua python3 scripts/huevos-pascua/promo_misses.py e02-explore
 BB_DATA=lab/data/ingenieria-inversa python3 scripts/huevos-pascua/drop_rule.py v03-validation,d01-planner2
 python3 scripts/huevos-pascua/replay_sim.py 3000
 ```
 
-**Coste.** 0 USD. Ninguna partida con Claude ni con DeepSeek; sólo CPU del contenedor (~1,5 h de lotes).
+**Coste.** 0 USD. Ninguna partida con Claude ni con DeepSeek; sólo CPU del contenedor (~2,5 h de lotes).

@@ -12,7 +12,7 @@ OLD = os.path.join(HERE, '..', '..', 'lab', 'data', 'ingenieria-inversa')
 cat = json.load(open(os.path.join(OLD, 'catalog_v2.json')))
 N = cat['nodes']
 b = Batch(*sys.argv[1].split(','))
-games = list(b.games())
+games = [g for g in b.games() if g.get('end') is not None]
 print('partidas', len(games), collections.Counter(g['outcome'] for g in games))
 q = [g['end']['q'] for g in games if g['end'].get('q') is not None]
 print('nota media', round(sum(q) / max(1, len(q)), 2), 'nivel final', collections.Counter(g['final']['s'][4] for g in games if g.get('final')))
