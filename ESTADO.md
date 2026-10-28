@@ -76,3 +76,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **V11helper:**3pruebas aisladas de ledger pasan; usa efectosregistradosvsestado. Trimestres/modos contienenconstantesnoportables sin revision. No candidata75ni llamadas.
 
 **Parserpublicov11revisado:**deltasprocedenlogMCP,aislamiento porpath, fallbackporrecencianoportar. Contabilizadousodetools, semantica/replaypendiente. SinAPI.
+
+**Parserpropio validado:**201acciones alineadaspor mes/choice,195retornosvisibles,Notesexcluidas. Aunnoledger/candidato. Sin llamadas.

@@ -1,0 +1,2177 @@
+{
+  "meaning": "Nominal visible returns extracted from our public player log. Not measured actual state deltas or hidden risk, not evidence of caps or policy efficacy. Notes excluded so predictions cannot masquerade as returns. Onboarding without Chose is excluded. No narrative retained.",
+  "source_sha256": "19fce387ddf74811c52eae2d34c763853a75448edb6298f633ff04a3636e2d05",
+  "n_entries": 370,
+  "accepted_choice_records": 201,
+  "records_with_visible_returns": 195,
+  "kind_counts": {
+    "action": 144,
+    "fixed_event": 57
+  },
+  "rows": [
+    {
+      "month": 1,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 1,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "network": 1.0,
+        "skill": -1.0,
+        "health": -2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 1,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 2,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 2.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 2,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 2,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 3,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "network": 2.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 3,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 3,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "dignity": 2.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 3,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 3,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 3,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 3,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 4,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "network": 1.0,
+        "dignity": 1.0,
+        "health": -1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 4,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 4,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "health": -1.0,
+        "output": 0.0,
+        "dignity": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 5,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "health": -2.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 5,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 5,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0,
+        "skill": 1.0,
+        "network": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 6,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 6,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "output": 2.0,
+        "health": 1.0,
+        "skill": 1.0,
+        "wealth": 0.0,
+        "dignity": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 6,
+      "choice": 4,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 6,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 6,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 6,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 6,
+      "choice": 4,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 7,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "network": 1.0,
+        "output": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 7,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 1.0,
+        "network": -2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 7,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "skill": -1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 8,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 2.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 8,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 1.0,
+        "network": 0.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 8,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 2.0,
+        "network": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 9,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 9,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 2.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 9,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": -2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 9,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 9,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 9,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 10,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 10,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 10,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "output": 0.0,
+        "skill": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 11,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 11,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "health": 1.0,
+        "network": -1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 11,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 2.0,
+        "health": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 12,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 12,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 12,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 2.0,
+        "network": 1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 12,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 12,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 12,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 12,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 13,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "skill": 1.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 13,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 13,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 2.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 14,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 2.0,
+        "dignity": 1.0,
+        "output": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 14,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "health": 2.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 14,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 2.0,
+        "network": 0.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 15,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "output": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 15,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 15,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0,
+        "network": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 15,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 15,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 15,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 15,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 16,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 1.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 16,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 3.0,
+        "network": -2.0,
+        "skill": -1.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 16,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 17,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 17,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "dignity": 1.0,
+        "skill": -1.0,
+        "network": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 17,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 18,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "output": -2.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 18,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": -2.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 18,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 18,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 18,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 18,
+      "choice": 8,
+      "nominal_visible_changes": {
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 19,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 19,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 19,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 20,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "wealth": 1.0,
+        "skill": 1.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 20,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 1.0,
+        "network": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 20,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 2.0,
+        "output": -1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 21,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "network": -1.0,
+        "dignity": 0.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 21,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 21,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 21,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 21,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 21,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 21,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 22,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 2.0,
+        "output": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 22,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "health": -2.0,
+        "output": 0.0,
+        "dignity": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 22,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 0.0,
+        "health": -2.0,
+        "dignity": -2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 23,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 23,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "output": -1.0,
+        "health": -2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 23,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": -1.0,
+        "network": -2.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 24,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "output": 1.0,
+        "wealth": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 24,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 24,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "health": 2.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 24,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 24,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 24,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 24,
+      "choice": 8,
+      "nominal_visible_changes": {
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 25,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 25,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 25,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 2.0,
+        "output": -1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 26,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 2.0,
+        "network": 1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 26,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "network": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 26,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "wealth": 1.0,
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 27,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 27,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 27,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 2.0,
+        "network": 1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 27,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 27,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 27,
+      "choice": 8,
+      "nominal_visible_changes": {
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 28,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 28,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": 1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 28,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 29,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "health": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 29,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "health": 2.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 29,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "output": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 30,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 30,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "health": -2.0,
+        "output": 0.0,
+        "dignity": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 30,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "output": 1.0,
+        "dignity": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 30,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 30,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 30,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 31,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "output": -2.0,
+        "dignity": 2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 31,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "health": 1.0,
+        "skill": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 31,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "network": 2.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 32,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 32,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 32,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 33,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 33,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "wealth": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 33,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "network": 1.0,
+        "output": 0.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 33,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 33,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 33,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 33,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 34,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 34,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 1.0,
+        "network": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 34,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 3.0,
+        "output": -2.0,
+        "network": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 35,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "output": 1.0,
+        "skill": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 35,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 35,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 3.0,
+        "output": 1.0,
+        "dignity": 2.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 36,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 3.0,
+        "network": 2.0,
+        "output": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 36,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "wealth": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 36,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "health": 2.0,
+        "dignity": 1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 36,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 36,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 36,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 37,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 37,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "output": 1.0,
+        "network": -1.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 37,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0,
+        "health": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 38,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "network": 2.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 38,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 38,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "output": 1.0,
+        "health": -2.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 39,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0,
+        "wealth": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 39,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 1.0,
+        "network": -1.0,
+        "output": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 39,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 1.0,
+        "network": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 39,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 39,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 39,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 39,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 40,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 40,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 40,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "dignity": 2.0,
+        "skill": 1.0,
+        "output": -1.0,
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 41,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 1.0,
+        "network": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 41,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 41,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "dignity": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 42,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "output": 2.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 42,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 42,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 42,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 42,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 42,
+      "choice": 8,
+      "nominal_visible_changes": {
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 43,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": -2.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 43,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 43,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "health": -1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 44,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 3.0,
+        "health": -1.0,
+        "wealth": 1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 44,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": -1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 44,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "skill": 1.0,
+        "network": -1.0,
+        "output": 0.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 45,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "network": 1.0,
+        "skill": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 45,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 45,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": 1.0,
+        "output": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 45,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 45,
+      "choice": 7,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 45,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 45,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 2.0,
+        "skill": 1.0,
+        "network": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 46,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "skill": -1.0,
+        "dignity": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 46,
+      "choice": 2,
+      "nominal_visible_changes": {
+        "network": 1.0,
+        "dignity": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 46,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "dignity": 1.0,
+        "network": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 47,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "network": 2.0,
+        "dignity": 1.0,
+        "output": 1.0,
+        "health": -1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 47,
+      "choice": 3,
+      "nominal_visible_changes": {
+        "dignity": 2.0,
+        "network": -1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 47,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 48,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "output": 1.0,
+        "dignity": 1.0,
+        "network": 1.0,
+        "skill": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 48,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 1.0,
+        "output": 1.0,
+        "dignity": 1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 48,
+      "choice": 1,
+      "nominal_visible_changes": {
+        "skill": 2.0,
+        "dignity": 1.0,
+        "health": -1.0
+      },
+      "conflicts": [],
+      "kind": "action"
+    },
+    {
+      "month": 48,
+      "choice": 4,
+      "nominal_visible_changes": {},
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 48,
+      "choice": 6,
+      "nominal_visible_changes": {
+        "health": 2.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    },
+    {
+      "month": 48,
+      "choice": 8,
+      "nominal_visible_changes": {
+        "health": 1.0
+      },
+      "conflicts": [],
+      "kind": "fixed_event"
+    }
+  ],
+  "script_sha256": "7cc21c045b0a514ac04e178e88e563c7624b7225446a792c7fc6aabdae1e2a7f"
+}
