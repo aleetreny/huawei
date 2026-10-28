@@ -77,3 +77,14 @@ Leído el 28 oct en el commit `e6c33cb` (clon de sólo lectura en la nube). Todo
 ## Relevo
 
 Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HALLAZGOS (filas C37–C41) e ideas. No se ejecutó nada suyo. Siguiente paso: las ideas 1, 2 y 4 se prueban gratis en la réplica o el catálogo; la 3 en el banco y después en partidas con DeepSeek (chat local). Para releer el repo: `GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/Kingjinsight/techarena-uk-2026` y comprobar el commit `e6c33cb`.
+
+## Otros repos públicos (búsqueda del 28 oct por la tarde)
+
+| Repo | Qué hay | Nota publicada |
+|---|---|---|
+| `krsnkkv/KSL_TechArena` (= `krsnkkv/techarena-career-simu`, `ShriyaSaxena/techarena-career-simu`, `LRado-253/ksl-techarena`: el mismo equipo, KSL) | 3 Skills cortos (~1.200 palabras en total): estado, historias y trimestre | una partida de 57,38: 48 meses, L4, Skill 75, riesgo 2, 62,9 M de fichas (1,31 M por mes), 0,68 USD |
+| `Artepace/slopathone_winningteam` | diseño preliminar y un `solution.zip` con 4 Skills y documentos de diseño | su primera versión, una partida local: 68,6, L5, ~54 M de fichas (1,1 M por mes); la versión actual, sin partidas |
+| `peidi-L/preliminary` | un borrador | — |
+| `Ray23257/techarena-career-sim`, `YuLong111/techarena-career-sim`, `bernardoguterres/huawei-gradient-depression` | ya no son públicos (piden credenciales) | — |
+
+**Ninguno muestra una media estable por encima de 70 ni llega a L6.** Lo aprovechable de Artepace es la forma de su `decision_report.md`: apoya cada regla en un principio conocido (evitar la ruina, actualizar con lo observado, constancia entre las 3 partidas) y dice qué se ha validado y qué no. Sirve de modelo para nuestros documentos del jurado. Los repos se clonaron en sólo lectura fuera del repo; no se ejecutó nada suyo.
