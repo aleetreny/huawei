@@ -1,0 +1,10 @@
+{
+  "n_per_mode": 60,
+  "modes": [
+    "dev",
+    "competition"
+  ],
+  "policy": "Existing optimal Planner parameters through Explorer with explore_below=0; same in both arms. Unknown nodes retain existing fallback.",
+  "scope": "Independent random careers, not paired engine seeds. Pilot for difficulty/sample distribution differences, not power to exclude small shifts, not a Skill candidate or DS proof. Only five official tools, no package/database inspection. No API/model calls.",
+  "data": "/Users/alejandrotreny/careerlab-data/deepseek/gpt-mode-audit"
+}
