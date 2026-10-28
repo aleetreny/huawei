@@ -1,6 +1,6 @@
 # Suelo: que ninguna de las 3 partidas oficiales se hunda
 
-**Conclusión en una frase (28 oct, en curso):** en la réplica, con un jugador que imita a `t13-read-v4`, las partidas hundidas salen de dos sitios, quedarse en L1 (despido) y la segunda explosión (crisis de confianza), y cuatro reglas generales las recortan a menos de la mitad sin bajar la media: el rescate de la tercera evaluación en L1 con el riesgo a cero (B30), «si todas las opciones son arriesgadas decide el tamaño del riesgo, no el crecimiento», más prudencia tras una explosión y menos texto en el contexto. Están en el candidato `lab/policies-src/suelo/suelo-v1`; falta confirmarlas con DeepSeek (chat local).
+**Conclusión en una frase (28 oct, 20:00 UTC):** en la réplica, con un jugador que imita a `t13-read-v4`, las partidas hundidas salen de dos sitios, quedarse en L1 (despido) y la segunda explosión (crisis de confianza), y tres reglas generales las recortan a la mitad o menos sin bajar la media: el rescate de la tercera evaluación en L1 con el riesgo a cero (B30), «si todas las opciones son arriesgadas decide el tamaño del riesgo, no el crecimiento», y más prudencia tras una explosión (B33–B35). Están en los candidatos `lab/policies-src/suelo/suelo-v1` y `suelo-v1-min` (lint limpio, juez de calidad igual o mejor que v4-c5 el `min`); el banco con Haiku demuestra que el texto no mueve a Haiku (95 % de elecciones iguales), así que la confirmación sólo puede venir de DeepSeek en el chat local (§6, ≈ 3,5 USD).
 
 Subtrabajo de la línea DeepSeek. Rama `claude/linea-suelo-hundimientos-5xjrnm`, carpeta `lab/reports/suelo/`, código en `scripts/suelo/`. Sin clave de DeepSeek: todo lo de aquí sale de la réplica, de los lotes de bots, del juez de calidad y del banco con Haiku.
 
@@ -89,11 +89,29 @@ Pasa `uv run careerlab lint` (sólo avisos REVIEW, los mismos que v4-c5). Juez d
 |---|---:|---:|---:|
 | `calidad/v4-c5` (base) | 2.099 | 61,5 ± 4,1 | 62,5 ± 5,7 |
 | `suelo/suelo-v1` | 2.634 | 61,5 ± 5,0 | 61,0 ± 1,7 |
-| `suelo/suelo-v1-min` | 2.415 | (en curso) | (en curso) |
+| `suelo/suelo-v1-min` | 2.415 | 59,0 ± 1,7 | 63,0 ± 3,3 |
 
-Igual que la base dentro del ruido del juez (±5). Lo que los jueces señalan de nuevo en `suelo-v1`: la línea de estado es más larga (siete campos) y la frase del rescate parecía una mecánica sin fuente; la segunda se reescribió como supuesto de trabajo. En una tanda anterior con el texto antiguo, Haiku 62,7 / Sonnet 62,3 (`data-j-suelo-v1.jsonl`); la base en esa tanda, 45,7 / 63,3 con una lectura a 0 de Haiku por «contradice el juego» en la frase del mes previo que v4-c5 ya llevaba: el juez tiene ese ruido.
+Tanda final con el texto definitivo (3 lecturas por modelo, `data-j-final.jsonl`): v4-c5 61,3 / 62,7; `suelo-v1` **54,3** / 62,0; `suelo-v1-min` **62,3 / 66,0**. El juez de Haiku se mueve ±5 entre tandas (v1 empataba con la base en la tanda anterior), pero la queja es constante y razonable: la línea de estado de `suelo-v1` tiene siete campos y la cascada de historias acumula excepciones (mes previo, arranque atascado, tras explosión, todas arriesgadas). `suelo-v1-min` (sin «Blow-ups» ni la regla de tras la explosión) no paga ese precio: **si DeepSeek aplica las dos reglas grandes igual con los dos, entregar `suelo-v1-min`.** Lo que los jueces señalan de nuevo en `suelo-v1`: la línea de estado es más larga (siete campos) y la frase del rescate parecía una mecánica sin fuente; la segunda se reescribió como supuesto de trabajo. En una tanda anterior con el texto antiguo, Haiku 62,7 / Sonnet 62,3 (`data-j-suelo-v1.jsonl`); la base en esa tanda, 45,7 / 63,3 con una lectura a 0 de Haiku por «contradice el juego» en la frase del mes previo que v4-c5 ya llevaba: el juez tiene ese ruido.
 
-**Banco de trampas con Haiku** (`scripts/suelo/trapbank.py` + `scripts/transmision/runbench.py`, entrega oficial del Skill, Haiku por la CLI 2.1.312; 176 situaciones de los lotes de bots `v03`, `v02`, `b01`, `d01`, `c01`, `h01`, 45 por tipo: L1 tras dos evaluaciones sin ascenso (28 historias, 17 trimestres), L1 en el mes previo, todas las opciones arriesgadas con tamaños distintos, tras una explosión con RR. HH. inquieto). Se puntúa lo que pide la regla, no el valor de la réplica (`scripts/suelo/trapscore.py`), porque la réplica sin B30 no puede valorar el rescate. Resultados: (en curso; se añaden abajo al terminar).
+**Banco de trampas con Haiku** (`scripts/suelo/trapbank.py` + `scripts/transmision/runbench.py`, entrega oficial del Skill, Haiku por la CLI 2.1.312; 176 situaciones de los lotes de bots `v03`, `v02`, `b01`, `d01`, `c01`, `h01`, 45 por tipo: L1 tras dos evaluaciones sin ascenso (28 historias, 17 trimestres), L1 en el mes previo, todas las opciones arriesgadas con tamaños distintos, tras una explosión con RR. HH. inquieto). Se puntúa lo que pide la regla, no el valor de la réplica (`scripts/suelo/trapscore.py`), porque la réplica sin B30 no puede valorar el rescate. Resultados (176 situaciones comunes; `hk-suelo-v1b` repite las 73 de riesgo y rescate con el texto final):
+
+| Situación | Medida | v4-c5 | suelo-v1 | suelo-v1-min |
+|---|---|---:|---:|---:|
+| L1 tras dos evaluaciones, historias (28) | elige una opción que añade riesgo | 11 % | 11 % | 11 % |
+| | elige la de menor riesgo | 79 % | 79 % | 79 % |
+| L1 tras dos evaluaciones, trimestres con RR. HH. no tranquilo (4 + 2) | Defuse / Lay low | 25 % / 50 % | 25 % / 100 % | 25 % / 100 % |
+| Todas arriesgadas (45) | elige la de menor riesgo | 73 % | 73 % (texto final: 72 %) | 67 % |
+| Tras una explosión (45) | añade riesgo | 9 % | 7 % | 7 % |
+| L1, mes previo (45) | pierde Network u Output pudiendo evitarlo | 32 % | 36 % | 41 % |
+| Todas | misma elección que v4-c5 | — | 95 % | ~94 % |
+| Todas | caracteres de la nota | 283 | **195** | 295 |
+
+- **Haiku elige lo mismo con los tres manuales** (95 % de coincidencia; repetir v4 consigo mismo da 92 %, C24): las reglas nuevas no cambian lo que hace Haiku, ni para bien ni para mal. Es el mismo resultado que la línea Calidad con c2 y c5. Lo que Haiku no ve (el tamaño del riesgo, A6) no lo puede aplicar: en las situaciones de «todas arriesgadas» sigue eligiendo «lo abierto y documentado» aunque sea una carta firmada a la dirección (+3) frente a una salida discreta (+1).
+- **Sí rellena los campos nuevos de la línea de estado:** «Reviews here: 2» en todos los meses 13–17 de L1 partiendo de cero (lee el registro); en el mes 12 contaba 1 hasta la aclaración del texto final («counting the one that arrived this month»: 3 de 10 pasan a 2). «Blow-ups» siempre presente.
+- **Las notas de `suelo-v1` son un 30 % más cortas** (195 frente a 283 caracteres): la higiene de contexto sí se transmite.
+- Con n = 4–6, los trimestres del rescate no dicen nada: Haiku no hace Defuse con RR. HH. «quiet» ni con v4-c5 (que ya lo pide).
+
+**Lo que esto significa:** el banco con Haiku descarta una regresión y confirma la transmisión de la memoria y de las notas cortas, pero no puede confirmar las reglas de decisión; sólo DeepSeek, que ve el riesgo y su tamaño (B17), puede.
 
 ## 6. Qué debe correr el chat local con DeepSeek
 
@@ -159,19 +177,19 @@ Confirma: las 3 completas, media de las completas ≥ 68 (v4: 70–72), ninguna 
 
 **Coste total del plan: ≈ 3,5 USD** (de los ~35 que quedan, 15 de reserva).
 
-## Relevo (28 oct, 19:40 UTC; se actualiza al cerrar)
+## Relevo (28 oct, 20:00 UTC)
 
-1. **Qué se ha hecho y por qué.** Se midió en la réplica, con un jugador que imita a v4 y dos lectores (exacto y con el ruido de DeepSeek), de dónde salen las partidas hundidas y cuánto recorta cada regla candidata (`scripts/suelo/floor.py`). Se parcheó la réplica con B30 (la de `main` no lo tiene). Con lo que ganó se escribieron `suelo-v1` (cuatro reglas) y `suelo-v1-min` (las dos de más efecto), se pasaron por el lint y el juez, y se construyó un banco de 176 situaciones trampa (`scripts/suelo/trapbank.py`) jugado con Haiku en la entrega oficial del Skill.
-2. **Resultados.** §1–§2: B33–B35 y C43 en HALLAZGOS. §5: juez igual que v4-c5; Haiku elige lo mismo con los tres manuales en el 95 % de las situaciones (el texto no mueve a Haiku; sólo DeepSeek puede confirmar), rellena bien los campos nuevos de la línea de estado y escribe notas un 30 % más cortas. Datos: réplica en la salida de `floor.py` (reproducible con las semillas); juicios en `lab/reports/suelo/data-j-*.jsonl`; banco en `~/careerlab-data/suelo/` (texto del juego, fuera de Git; se regenera con los comandos de §6).
-3. **Qué falló o quedó a medias.** No hay clave de DeepSeek aquí: nada está confirmado con el modelo de la evaluación. El lector ruidoso a escala completa es más torpe que DeepSeek en partida (muere por salud), así que las cifras absolutas de la réplica son pesimistas. El banco de Haiku corrió con el texto anterior a dos frases añadidas al final (el matiz de «Reviews here» en el mes de la charla y «lo abierto contra la empresa no es el riesgo menor»); el brazo `hk-suelo-v1b` repite las situaciones de riesgo con el texto final.
-4. **Siguiente paso.** El plan de §6 en el chat local (≈ 3,5 USD): juez con DeepSeek, banco de trampas con DeepSeek y, si confirma, 3 partidas de `suelo-v1`. Si DeepSeek tampoco cambia de elección con el texto, la salida es llevar el rescate y el tamaño del riesgo a la instrucción del manifest con más peso, o al script de la línea Formato.
+1. **Qué se ha hecho y por qué.** Se midió en la réplica, con un jugador que imita a v4 y dos lectores (exacto y con el ruido de DeepSeek), de dónde salen las partidas hundidas y cuánto recorta cada regla candidata (`scripts/suelo/floor.py`, con la réplica parcheada con B30, que la de `main` no tiene, y escenarios de parámetros como M23). Con lo que ganó se escribieron `suelo-v1` (cuatro reglas) y `suelo-v1-min` (las dos de más efecto), se pasaron por el lint y el juez, y se construyó un banco de 176 situaciones trampa (`scripts/suelo/trapbank.py`, `trapscore.py`) jugado con Haiku en la entrega oficial del Skill.
+2. **Resultados.** §1–§2 (B33–B35, C43 en HALLAZGOS): con B30, la mitad de las atascadas en L1 se salvan solas; la regla de rescate lleva el riesgo a 0 en casi todas; «si todo es arriesgado, el menor riesgo» baja las crisis a una séptima parte; tras una explosión, un tercio menos de crisis con lectura ruidosa. §5: juez igual o mejor que v4-c5 con `suelo-v1-min`, peor con Haiku para `suelo-v1` (línea de estado de siete campos); Haiku elige lo mismo con los tres manuales en el 95 % de las situaciones, rellena los campos nuevos y escribe notas un 30 % más cortas. Datos: réplica reproducible con las semillas de `floor.py`; juicios en `lab/reports/suelo/data-j-*.jsonl`; banco en `~/careerlab-data/suelo/` (texto del juego, fuera de Git; se regenera con los comandos de §6).
+3. **Qué falló o quedó a medias.** Sin clave de DeepSeek aquí: nada está confirmado con el modelo de la evaluación, y Haiku no sirve para confirmarlo (no cambia de elección con el texto). El lector ruidoso a escala completa es más torpe que DeepSeek en partida (muere por salud), así que las cifras absolutas de la réplica son pesimistas y lo que vale es la comparación emparejada. Los brazos `hk-suelo-v1` y `hk-suelo-v1-min` corrieron con el texto anterior a dos frases añadidas al final (el matiz de «Reviews here» en el mes de la charla y «lo abierto contra la empresa no es el riesgo menor»); `hk-suelo-v1b` repite las 73 situaciones de riesgo y rescate con el texto final y no cambia nada. En L1 queda un suelo estructural (pérdidas forzosas de Output o Network sin colchón) que ninguna regla baja sin subir las crisis.
+4. **Siguiente paso.** El plan de §6 en el chat local (≈ 3,5 USD): juez con DeepSeek, banco de trampas con DeepSeek y, si confirma, 3 partidas. Regla de decisión: si DeepSeek aplica el rescate y el tamaño del riesgo con los dos manuales, entregar `suelo-v1-min` (mejor juez); si sólo `suelo-v1` reduce el riesgo tras una explosión y eso compensa, `suelo-v1`. Si DeepSeek tampoco cambia de elección con el texto, llevar las dos reglas al script de la línea Formato (que decide con etiquetas) o a la instrucción del manifest con más peso.
 
 ```bash
 python3 scripts/suelo/floor.py --games 3000 --arms base+hw+mag+exact,base+hw+mag+rescue+blow+exact,base+hw+mag+scale0.5,base+hw+mag+rescue+blow+scale0.5
 ```
 
 ```bash
-SUELO_DATA=~/careerlab-data/suelo python3 scripts/suelo/trapscore.py --arms hk-c5,hk-suelo-v1,hk-suelo-v1-min
+SUELO_DATA=~/careerlab-data/suelo python3 scripts/suelo/trapscore.py --arms hk-c5,hk-suelo-v1,hk-suelo-v1-min,hk-suelo-v1b
 ```
 
-**Coste.** 0 USD de DeepSeek. Claude: unas 600 sesiones de banco con Haiku y 60 lecturas de juez (Haiku y Sonnet); CPU del contenedor, ~1 h.
+**Coste.** 0 USD de DeepSeek. Claude: unas 600 sesiones de banco con Haiku y unas 80 lecturas de juez (Haiku y Sonnet); CPU del contenedor, ~1,5 h.
