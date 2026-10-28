@@ -347,3 +347,8 @@ Datos privados ~/careerlab-data/deepseek/gpt-return-packets/items.json; auditori
 **48lecturas maximo anunciadas antes de inicio; resultados pendientes.**24paneles mismos,originalsystem/Skill,3notasprevias ylineainterpretacionigual. Solo disponibilidaddepaquetecambia. No es ejeucuciondehelperenJiuwen, sino pruebadedato. Cuotafresca5h5%/semana42%validamenos1h,guardas65/45%,4procesos,secuencial. Prefijos/inputscongelados enreturn-packet-probe-plan.json.
 
 Se inicia gpt_return_packet_probe.py --calls48; verificarproceso/resultados antes decontinuar, no reiniciar por timeout. Datos ~/careerlab-data/deepseek/gpt-return-packet-probe/. Falta scorer:usar node por IDdeitems originalgpt-fresh-context; comparar ambos brazos enmismospaneles, goldsoloevaluador,riesgo mayorbloquea. No QniDSinferido. Sin juegosnuevos/DeepSeek,objetivo75abierto;integrarPR23.
+
+## Relevo: puntuacion de comparacion preparada
+**Coleccion48lecturas verificada activa, primeras6validas, no resultado final aun.** Proceso68526/sesion67463 confirmado en ejecucion y resultados incrementales. gpt_return_packet_score.pyvalida panel,prefijo,systemhash ySonnet5.5; goldsolo evaluador. NotasStalledcon indicadorpresenteenpaquete se cuentan como proxy deuso, no prueba devalorcorrecto ni adherencia deeleccion. Compilacioncorrecta.
+
+Continuar observando mismohandle; no reiniciar. Ejecutarscorer sinllamadas informa pendientes hasta48. Guardas de cuota siguenactivas. Sin nuevaspartidas/DeepSeek;no candidaturahastaresultado. Solicito integrarPR23.
