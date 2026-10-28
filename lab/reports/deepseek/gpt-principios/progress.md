@@ -63,3 +63,10 @@ Suficienciaoffline:3/24menus con identicovector4respuestas y distintosresultados
 Integrado origin/main@e332b14 sin conflictos. B28explica repeticion de titulos por interrupcion trimestral de continuaciones, efectoQ−0,18±0,15en3000semillas; B29ordenevaluacionantesdeexplosion. Busqueda de atajos cerrada sin efecto superior. Esto actualiza contexto de las colisiones deID: repetir unmenu en otroestado no es una observacion identica ni permite reutilizar respuesta sin vincularpanel. No repetir busqueda de eastereggs ni ajustar por formulasprivadas.
 
 No llamadas ni partidas nuevas. Siguiente paso debe medir una mejora de decision con una representacion que conserve informacion, no una mejora de rubrica o repeticion del mismo razonamiento. Objetivo75abierto. Solicito integrar checkpoint dePR23 conmain.
+
+## Relevo: modo de razonamiento como hipotesis de runtime
+**El modo de razonamiento sigue sin verificarse en las solicitudes reales deJiuwen; no afirmar que esta desactivado.** Documentacion primaria DeepSeek consultada: https://api-docs.deepseek.com/guides/thinking_mode/ y https://api-docs.deepseek.com/api/create-chat-completion/ . Distingue thinking y esfuerzo; la documentacion actual indica thinking habilitado/high por defecto en suAPI directa, no necesariamente enOpenRouter/Jiuwen. No extrapolar proveedor ni alias.
+
+Inspeccionlocal sin secretos: scripts/deepseek/ds.py envia temperatura y soporta NIM_EXTRAconthinking; no demuestra configuracion de las partidas oficiales. Runner transcript omite deltasreasoning de la transcripcion: ausencia de texto razonado en ella no prueba ausencia de razonamiento. Siguiente paso: auditar metadatos de solicitudes/uso propios y configuracion publica deJiuwen, sinleer.env ni motores, sinAPI, antes de proponer cambio. No usar prefijos especiales de modelos ni alterarinstancias.
+
+Sin nuevas llamadas/partidas. Hipotesis distinta de otra redaccion de manual; sin candidato ni75demostrado. Solicito integrar checkpoint enPR23.

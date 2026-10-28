@@ -87,3 +87,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Suficiencia factual:**3/24menus contienen opciones con lasmismas4respuestas y diferentescostes/riesgo. Analisisoffline fact-sufficiency.json; no otra candidatura ni llamadas.
 
 **Apoyo gpt-principios actualizado:**main e332b14 integrado; revisada lineaLeah532d672.74,3delean esrubrica,noQ; no candidato75nuevo ni llamadas. No duplicar lean ni atajos cerrados.
+
+**Hipotesis runtime pendiente:**auditar thinking/esfuerzo en solicitudes reales, sinAPIninuevaspartidas. API directaDeepSeek no implica defaultsOpenRouter/Jiuwen; ausencia en transcript no prueba desactivacion. Apoyo gpt-principios.
