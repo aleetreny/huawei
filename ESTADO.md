@@ -80,3 +80,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Parserpropio validado:**201acciones alineadaspor mes/choice,195retornosvisibles,Notesexcluidas. Aunnoledger/candidato. Sin llamadas.
 
 **Memoriaretornos propia:**110transicionesaisladas/201,89ambiguas+2inesperadasrechazadas,5guardasvalidadas.97observacionesdiminishedno97limites. Proximo medirimpacto conlectorigual antesdeSonnet. Sin llamadas.
+
+**Retornosregistrados replica:**600semillas47,35→52,74,+5,39IC[3,71;7,07],completas315→373. Guardiaefectospostaccionvalida;falta600confirmacion ytransporteactor. No75niDSprobado, sin llamadas.

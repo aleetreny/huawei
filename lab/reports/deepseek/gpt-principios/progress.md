@@ -161,3 +161,10 @@ Datosnumericos public-return-parser.json conhash. No es efectoobservadodelpanel 
 **Prototipo procesa201acciones:110transicionesaisladas,89ambiguasrechazadas,2perdidasinesperadasrechazadas.**97observaciones de retornomenorqueanunciado, no97limitesindependientes. Retornosnominales delregistro, paneles observados, mismafecha/rol y accionunica. Duplicado seignora;IDreusadoconotroevidencia y otrasesionse rechazan;gananciaposterior reabre. Cinco controles pasan.
 
 Researchhelper gpt_measured_ledger.py, noSkillni politica. measured-ledger-audit.jsonnumerico;ninguna lecturadelmotor ni catalogodentrodeMeasuredLedger. No confundir memoria con eficacia. Siguiente estudio: mismolector/controlador, permitirle aprender retornos de historias realmente registradas frente a aprender solo inversiones trimestrales; retroalimentacion solo despues deaccion comprometida, nunca efectorverdadero antesdeelegir. Compararprimeroenreplica con semillasnuevas antesdeSonnet. No usar umbralesprivados/eventos enSkill. Sin llamadas/partidas nuevas. Objetivo75abierto;integrarPR23.
+
+## Relevo: aprendizaje de retornos registrados mejora en replica
+**600semillas nuevas:47,349→52,736,delta+5,387(IC95aprox+3,708;+7,066).** MismaslecturasDScongeladas/controller, agrega soloaprendizaje delretornonominal escogido revelado despuesdecompromiso. Completas315→373;trust128→91,despidos123→112,health34→24. NoQesperadadeSonnet/DSni75estable.34775observacionesdiminished,nofactosindependientes.
+
+Guardiadetemporalidad:spyenCatalog.effectverifica0consultas antesdeprimerchoice y soloconsultadel elegido al syncposterior;motorreplicaconsultapropiaefectoparaaplicar, separadadellector. No alternativasverdaderas nibaremocaps aportados alcontrolador. La replica simula texto log nominal como sensor; faltaconfirmartransportecompleto delparser enactorreal.
+
+Plan/resultados return-learning-*.json,scriptgpt_return_learning.py compilado. Proximopasonecesario:confirmar600semillas nuevas conmisma regla antesdeSonnet; noafinarpesos nipromoverporunpantalla. Conservar sourceoriginaldeestecommitparareproducibilidad. SinAPI/modelos/juegosoficialesnuevos;objetivo75abierto,integrarPR23.
