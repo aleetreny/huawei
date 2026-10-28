@@ -21,6 +21,8 @@ Resultados con 3.000 partidas por brazo, mismas semillas en todos (`python3 scri
 | v4 sin B30 en la réplica (lo que medía la línea DeepSeek) | 63,3 | 11,4 % | 30 % | 10,4 % | 0 | 0,31 | 306 | 45 |
 | v4 con B30 (el juego real) | 66,0 | 4,0 % | 11,6 % | 10,4 % | 151 de 313 | 0,33 | 85 | 49 |
 
+Dos avisos sobre el jugador. (1) El bot con el lector ruidoso a escala completa muere por salud en el 5 % de las partidas y explota 0,6 veces por partida, cosas que DeepSeek con v4 no hace en partidas reales (Health 10 al final, 0–1 explosión en 4–8 partidas): la lectura en frío del banco de percepción es peor que la lectura en contexto con el manual, así que las cifras absolutas de la réplica son pesimistas y lo que vale es la comparación emparejada entre reglas. (2) El bot protege la salud sólo desde 3; subir ese margen a 5 (`hw`, como el «4 o menos» de v4-c5 y C41) quita todas las muertes por salud con lector exacto (59 → 0 de 1.000) y suma +0,3: v4-c5 ya lo lleva.
+
 Lectura: **la mitad de las partidas atascadas en L1 ya se salva en el mes 18 con las reglas trimestrales de v4** (Defuse con RR. HH. «quiet»), porque el juego real asciende en la tercera evaluación si el riesgo está a cero (B30). La réplica de `main` no lo modelaba y por eso la línea DeepSeek estimaba un suelo peor del que hay.
 
 Por qué se pierden las evaluaciones de L1 (lector exacto, 3.000 partidas): en el mes 6, 2.073 ascienden, 475 llegan al mes 5 ya cortas (casi siempre Network u Output) y 452 pierden el punto durante el mes 5; en el mes 12, 612 / 153 / 160. En L1 el techo de Network y Output es su mínimo de ascenso, así que no hay colchón: la mitad de los fallos son pérdidas forzosas del mes previo.
