@@ -70,3 +70,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Recuperacionstall offlinecerrada:**600semillas porbrazo,49,643→49,628,deltaCIincluye0;1072reparaciones sinmejora. NoadmisionSonnet. Sin llamadas.
 
 **Nueva fuente publica:**Kingjinsightv11raw73,1verificado n1, modelopendiente. Commit e6c33cb; auditarSkills/procedencia antesdeprobar. No75estable demostrado.
+
+**Publicv11auditado:**modeloDSflashreportado(2usage,2unknown);scriptlee logMCP,modosN/G/R/D,trimestresdeterministas,LLMhistorias. n1raw73,1,scriptsemantica/compliancependiente. No copiarSkillnumerico.
