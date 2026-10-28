@@ -91,3 +91,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Hipotesis runtime pendiente:**auditar thinking/esfuerzo en solicitudes reales, sinAPIninuevaspartidas. API directaDeepSeek no implica defaultsOpenRouter/Jiuwen; ausencia en transcript no prueba desactivacion. Apoyo gpt-principios.
 
 **Auditoria reasoning:**traza76,87sin metadatos de razonamiento yconfigsactualesFormato sin campos thinking/effort; modo efectivo indeterminado, no disabled demostrado. Proximo:adaptador publicoJiuwen. Sin llamadas/cambiosslots.
+
+**Runtime auditado:**inyectorreasoning_level no reconoceOpenRouter,6casospuros sin inyeccion/controlAPIoficialpositivo; modo efectivoproveedor sigueindeterminado. Sin llamadas/slotsmodificados.
