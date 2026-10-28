@@ -30,6 +30,9 @@ def public_rules() -> str:
     parts = []
     for f in ("handbook.rst", "rules.rst", "failure-and-ending.rst"):
         parts.append(f"===== {f} =====\n" + (DOCS / f).read_text())
+    hb = ROOT / "lab" / "data" / "transmision" / "handbook.md"  # lo que devuelve show_employee_handbook
+    if os.environ.get("JUDGE_GAME_HANDBOOK", "1") == "1" and hb.exists():
+        parts.append("===== show_employee_handbook (the handbook the agent receives in the game) =====\n" + hb.read_text())
     t = (DOCS / "competition-rules.rst").read_text()
     i = t.index("Hard-coded") if "Hard-coded" in t else 0
     parts.append("===== competition-rules.rst (prohibited content) =====\n" + t[i:i + 6000])
