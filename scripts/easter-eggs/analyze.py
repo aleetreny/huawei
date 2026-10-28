@@ -54,7 +54,7 @@ def load_jsonl(pattern: str) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(Path.home() / "careerlab-data/easter-eggs"))
-    ap.add_argument("--out", default=str(ROOT / "lab/reports/easter-eggs/summary.json"))
+    ap.add_argument("--out", default=str(Path.home() / "careerlab-data/easter-eggs/summary.json"))
     a = ap.parse_args()
 
     old_nodes = load_jsonl(str(BASE / "*/nodes-*.jsonl"))
