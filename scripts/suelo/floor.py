@@ -129,6 +129,8 @@ class FloorBot(G.LexBot):
         self.hw = "hw" in spec
         self.rv_l1 = "rvl1" in spec
         self.mag = "mag" in spec
+        self.q3l1 = "q3l1" in spec   # C40: at L1 with HR quiet, the quarter fills Output/Network before Defuse
+        self.prep_short = []
         self.window = 1
         self.protect_window = 1
         self.know_caps = False
@@ -148,6 +150,8 @@ class FloorBot(G.LexBot):
         return "rescue" in self.spec and st.level == 1 and st.month >= 13
 
     def energy(self, rep, st):
+        if self.q3l1 and st.level == 1 and min(st.risk, 4) <= 1 and st.month < 13 and st.energy == 3:
+            return "Prepare report materials"
         if self.hw and st.health <= 5 and st.energy >= 1 and st.month < 46:
             return "Health recovery"
         if self._rescue(st) and min(st.risk, 4) > 0 and st.energy >= 2 and not (st.health <= 4):
@@ -172,6 +176,9 @@ class FloorBot(G.LexBot):
         if st.month == 19 and st.level == 2 and self.stuck12:
             self.promo18 = True
         prep = st.month % 6 == 5
+        if prep and self.slot == 1 and st.level == 1:
+            t = R.THRESH[1]
+            self.prep_short.append((st.month, [k for k, v in zip(R.GROWTH, t) if getattr(st, k) < v]))
         if self._rescue(st):
             opts = []
             for kk in rep.cat.nodes[node]["choices"]:
@@ -300,6 +307,9 @@ def _play(args):
     st, trace = R.play(CAT, bot, random.Random(seed0 + i))
     blow = st.blowups
     l1 = [r for r in REVIEWS if r["level"] == 1]
+    start = {m: sh for m, sh in bot.prep_short}
+    for r in l1:
+        r["start_short"] = start.get(r["month"] - 1, [])
     return (R.Replica.score(st), st.level, st.failure or "completed", bot.stuck12, bot.promo18, blow, st.month, l1)
 
 
@@ -324,6 +334,7 @@ def run(arms: dict[str, dict], n: int, seed0: int, workers: int):
                 for r in rows:
                     for rv in r[7]:
                         key = (rv["month"], "short:" + "+".join(rv["short"]) if rv["short"] else "at bar",
+                               ("already short at month start: " + "+".join(rv["start_short"])) if rv["start_short"] else "lost in prep month" if rv["short"] else "",
                                "risk0" if rv["risk"] == 0 else f"risk{min(rv['risk'],4)}", "dig<4" if rv["dig"] < 4 else "")
                         why[key] += 1
                 for k, v in sorted(why.items()):
