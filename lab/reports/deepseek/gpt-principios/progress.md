@@ -99,3 +99,8 @@ No cambiosdepaquetes/slots ni llamadas. Elhallazgo sirve para evitar un experime
 **Guardia impide llamadas:cuota disponible tiene mas de7horas, no es admisionvalida.** Preparado gpt_panel_forecast.py,24estadoscriticos originales, mismoSkill/modeloSonnet, formato nuevo de6valores despues de cadaaccion y recomendacion. Diferente de signos/predicados. Fuenteoriginal_choice nuncaalactor. Plan panel-forecast-plan.json congelado, compilacioncorrecta. Falta cuota fresca antes de anunciar/admitir llamadas, y scorer que separe errorprediccion/deeleccion; no inferirQ. No se llamo almodelo ni se iniciaronjuegos.
 
 Helpers modificados solo con opcionales schema/validator, predeterminados previos iguales. Proximo: obtenercuota actual por mecanismoMaxautorizado, comprobar0,65/0,45y4procesos, registrar admision antes de --calls. No usar datoantiguo para saltarseguardia. Objetivo75abierto; solicitar integrarPR23.
+
+## Relevo: panelforecast admitido
+**Cuota fresca permite iniciar, resultados pendientes.** Una admisionREADYMax completa6,21s, Sonnet5.5, sin juego. Cuota actual5h5%/semana42%, topes65%/45%. Iniciadas24lecturas fijadas via gpt_panel_forecast.py --calls24, sin modificar prompt/seleccion. Inspeccionar proceso/resultados en ~/careerlab-data/deepseek/gpt-panel-forecast/ antes de retomar; no repetir READY ni respuestas. Falta scorer: comparar recommended_choice con original_choice y calcular error/signo de after contra estado+realised catalogo, solo evaluador. No usar gold alactor ni afirmarQ.
+
+Max25invocaciones incluyendoadmision,4procesos, ningunaAPI/partidaDeepSeek. Objetivo75abierto, sin candidato. Solicito integrarPR23.
