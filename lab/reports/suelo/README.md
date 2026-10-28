@@ -66,11 +66,83 @@ Pasa `uv run careerlab lint` (sólo avisos REVIEW, los mismos que v4-c5). Juez d
 
 ## 5. Comprobaciones aquí (sin DeepSeek)
 
-(En curso: juez con Haiku y Sonnet, 3 lecturas; banco de trampas con Haiku.)
+**Lint.** `suelo-v1` y `suelo-v1-min` pasan `uv run careerlab lint` sin errores (sólo avisos REVIEW, los mismos de v4-c5: disparadores de calendario y el margen «4 o menos» declarado como nuestro).
+
+**Juez de calidad** (`scripts/calidad-skills/judge.py`, rúbrica oficial, mismo lote, 4 lecturas por modelo; datos en `data-j-pair.jsonl`, `data-j-min.jsonl`):
+
+| Manual | palabras | Haiku | Sonnet |
+|---|---:|---:|---:|
+| `calidad/v4-c5` (base) | 2.099 | 61,5 ± 4,1 | 62,5 ± 5,7 |
+| `suelo/suelo-v1` | 2.634 | 61,5 ± 5,0 | 61,0 ± 1,7 |
+| `suelo/suelo-v1-min` | 2.415 | (en curso) | (en curso) |
+
+Igual que la base dentro del ruido del juez (±5). Lo que los jueces señalan de nuevo en `suelo-v1`: la línea de estado es más larga (siete campos) y la frase del rescate parecía una mecánica sin fuente; la segunda se reescribió como supuesto de trabajo. En una tanda anterior con el texto antiguo, Haiku 62,7 / Sonnet 62,3 (`data-j-suelo-v1.jsonl`); la base en esa tanda, 45,7 / 63,3 con una lectura a 0 de Haiku por «contradice el juego» en la frase del mes previo que v4-c5 ya llevaba: el juez tiene ese ruido.
+
+**Banco de trampas con Haiku** (`scripts/suelo/trapbank.py` + `scripts/transmision/runbench.py`, entrega oficial del Skill, Haiku por la CLI 2.1.312; 176 situaciones de los lotes de bots `v03`, `v02`, `b01`, `d01`, `c01`, `h01`, 45 por tipo: L1 tras dos evaluaciones sin ascenso (28 historias, 17 trimestres), L1 en el mes previo, todas las opciones arriesgadas con tamaños distintos, tras una explosión con RR. HH. inquieto). Se puntúa lo que pide la regla, no el valor de la réplica (`scripts/suelo/trapscore.py`), porque la réplica sin B30 no puede valorar el rescate. Resultados: (en curso; se añaden abajo al terminar).
 
 ## 6. Qué debe correr el chat local con DeepSeek
 
-(Se completa al final: comandos, coste y resultado que confirma cada regla.)
+Todo desde la carpeta del repo en el Mac, con la rama de esta línea juntada (o `main` cuando se junte). Orden por coste y por lo que enseña; parar en cuanto algo refute.
+
+**1. Juez con DeepSeek (≈ 0,2 USD).** ¿Ve el modelo designado la misma calidad?
+
+```bash
+uv run python scripts/calidad-skills/ds_judge.py --out lab/reports/suelo/data-j-deepseek.jsonl --reps 5 --budget 0.30 lab/policies-src/calidad/v4-c5 lab/policies-src/suelo/suelo-v1 lab/policies-src/suelo/suelo-v1-min
+```
+
+Confirma: `suelo-v1` no baja más de 5 puntos frente a `v4-c5` (el ruido del juez). Si baja más, usar `suelo-v1-min`.
+
+**2. Banco de trampas con DeepSeek (≈ 0,3 USD por brazo; tres brazos ≈ 0,9 USD).** ¿Hace DeepSeek lo que piden las reglas? Es la prueba que de verdad confirma: en 3 partidas la trampa de L1 casi nunca aparece.
+
+Regenerar el banco (determinista a partir de `lab/data/ingenieria-inversa`, ~5 min, 2,7 GB en `~/careerlab-data/suelo/`):
+
+```bash
+python3 scripts/suelo/trapbank.py extract
+```
+
+```bash
+python3 scripts/suelo/trapbank.py truth --per-tag 45 --rollouts 48
+```
+
+```bash
+python3 scripts/suelo/trapbank.py ids --out ~/careerlab-data/suelo/ids-suelo.txt
+```
+
+```bash
+TRANSMISION_DATA=~/careerlab-data/suelo uv run python scripts/transmision/runbench.py assemble --bank ~/careerlab-data/suelo/bank.jsonl --sit ~/careerlab-data/suelo/sit.jsonl --out ~/careerlab-data/suelo/items.jsonl --k-long 18
+```
+
+Jugarlo con DeepSeek (el arnés de la línea DeepSeek, `bench.py`, lee `items.jsonl` de la carpeta que diga `DEEPSEEK_DATA` y escribe en `runs/<brazo>/`; lleva su tope de gasto):
+
+```bash
+DEEPSEEK_DATA=~/careerlab-data/suelo uv run python scripts/deepseek/bench.py run --variant lab/policies-src/calidad/v4-c5/bundle --name ds-c5 --ids ~/careerlab-data/suelo/ids-suelo.txt
+```
+
+```bash
+DEEPSEEK_DATA=~/careerlab-data/suelo uv run python scripts/deepseek/bench.py run --variant lab/policies-src/suelo/suelo-v1/bundle --name ds-suelo-v1 --ids ~/careerlab-data/suelo/ids-suelo.txt
+```
+
+```bash
+SUELO_DATA=~/careerlab-data/suelo python3 scripts/suelo/trapscore.py --arms ds-c5,ds-suelo-v1
+```
+
+Confirma `suelo-v1` (frente a `ds-c5` en las mismas situaciones):
+- **L1 tras dos evaluaciones, historias:** «adds risk» a la mitad o menos que c5 y «lowest risk» ≥ 85 %; «loses N/O avoidably» no sube.
+- **L1 tras dos evaluaciones, trimestres con RR. HH. no tranquilo:** Defuse ≥ 80 % de las fases de energía y Lay low ≥ 80 % de las acciones principales (c5 no lo hace con «quiet» en la principal).
+- **Todas arriesgadas:** «lowest risk» ≥ 85 % (Haiku con c5: 81 %).
+- **Tras una explosión:** «adds risk» ≤ 10 %.
+- **Mes previo en L1:** «loses N/O avoidably» igual o menor que c5 (sin regresión).
+Si falla sólo lo de después de la explosión, vale `suelo-v1-min` (brazo `ds-suelo-v1-min`, otros 0,3 USD). Si DeepSeek no aplica el rescate (añade riesgo igual que c5 en L1 tras dos evaluaciones), la regla hay que llevarla a la instrucción del manifest con más peso o descartarla: no gastar en partidas.
+
+**3. Partidas oficiales (0,7–0,8 USD cada una; 3 ≈ 2,4 USD).** Sólo si 1 y 2 confirman. Comprueban que no hay regresión en una partida normal; no pueden medir el suelo (la trampa sale 1 de cada 9 veces).
+
+```bash
+scripts/deepseek/start-loops.sh <tope de saldo> lab/policies-src/suelo/suelo-v1 lab/policies-src/suelo/suelo-v1 lab/policies-src/suelo/suelo-v1 1
+```
+
+Confirma: las 3 completas, media de las completas ≥ 68 (v4: 70–72), ninguna explosión en una partida con RR. HH. tranquilo la mayor parte del tiempo, y en las notas aparecen `Reviews here` y `Blow-ups` rellenos (DeepSeek no rellenaba «Stalled», C18: si tampoco rellena estos, el rescate depende de que lea el nivel y cuente las evaluaciones por su cuenta). Refuta: una eliminación, o media de completas < 66.
+
+**Coste total del plan: ≈ 3,5 USD** (de los ~35 que quedan, 15 de reserva).
 
 ## Relevo
 
