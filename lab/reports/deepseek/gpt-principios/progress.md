@@ -70,3 +70,10 @@ No llamadas ni partidas nuevas. Siguiente paso debe medir una mejora de decision
 Inspeccionlocal sin secretos: scripts/deepseek/ds.py envia temperatura y soporta NIM_EXTRAconthinking; no demuestra configuracion de las partidas oficiales. Runner transcript omite deltasreasoning de la transcripcion: ausencia de texto razonado en ella no prueba ausencia de razonamiento. Siguiente paso: auditar metadatos de solicitudes/uso propios y configuracion publica deJiuwen, sinleer.env ni motores, sinAPI, antes de proponer cambio. No usar prefijos especiales de modelos ni alterarinstancias.
 
 Sin nuevas llamadas/partidas. Hipotesis distinta de otra redaccion de manual; sin candidato ni75demostrado. Solicito integrar checkpoint enPR23.
+
+## Relevo: evidencia local de razonamiento
+**No se puede determinar el modo de razonamiento con estos artefactos.** En la traza propia ganadora sv1-g2:1274tool_call,1274tool_result,14usage y13frame_final. El inventario recursivo de claves muestra tokens de entrada/salida/total/cache, sin campo de razonamiento. Esto es ausencia de metadatos, no evidencia de disabled.
+
+Se inspeccionaron solo lineas de generacion permitidas de config.yaml de slotsFormato a/b: cinco temperature0.95 en cadauno, sin thinking/reasoning_effort/enable_thinking/thinking_budget/max_tokens. No se leyeron.env ni se imprimieron credenciales; los configs actuales tampoco certifican los usados historicamente. Falta revisar el adaptador publico deJiuwen que construye solicitudes para saber que defaults aplica y que telemetria puede conservarse en futuras pruebas autorizadas. No cambiarslotsni llamarAPI para completar esta auditoria.
+
+Sin candidato ni75demostrado. Proximo paso conserva esta hipotesis abierta, no afirmar que subir effort mejoraria. Solicito integrar checkpoint enPR23.
