@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v8",
+  "parents": [
+    "t13-read-v4"
+  ],
+  "idea_origin": "DeepSeek line, 28 Oct: audit of 419 real story decisions of t13-read-v2..v7 against the exact catalogue",
+  "operator": "one rule added",
+  "hypothesis": "In real games, the largest single cause of costly story choices (37 of 76, 35% of the loss) is picking an option for a Health or Dignity rise while that stat is already at 10, giving up Skill, Network or Output at the same risk (S10 N7 O10 in five games, mostly L1-L3). The published 0-10 range makes such a rise worthless; saying so in the body and the always-visible instruction should stop the trade without other changes.",
+  "predicted_behaviour": "On bank items with a full Health or Dignity and a growth option at the same risk, DeepSeek picks the growth option more often than with t13-read-v4; elsewhere its choices do not change beyond the control noise.",
+  "refutation": "No drop in q-loss on those bank items, or a rise in q-loss or risky picks on the other story items.",
+  "skill_count": 1
+}
