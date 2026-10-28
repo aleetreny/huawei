@@ -1,0 +1,45 @@
+{
+  "source_commit": "e6c33cbde514792006fb70c824a8f5242a704a04",
+  "usage_models": {
+    "unknown": 2,
+    "deepseek-v4-flash": 2
+  },
+  "script_inventory": {
+    "functions": [
+      "parse_stats",
+      "parse_log",
+      "state_path",
+      "load_state",
+      "save_state",
+      "update_limits",
+      "resolve_log",
+      "risk_now",
+      "months_since",
+      "at_limit",
+      "review_info",
+      "short_opt",
+      "fmt_delta",
+      "last_pick",
+      "costly_since",
+      "stats_at_talk",
+      "plan_final",
+      "plan_energy",
+      "plan_main",
+      "state_line",
+      "mode_lines",
+      "feedback_lines",
+      "quarter_lines",
+      "main"
+    ],
+    "imports": [
+      "import argparse",
+      "import itertools",
+      "import json",
+      "import os",
+      "import re",
+      "import tempfile"
+    ],
+    "sha256": "b5a4795709bb0953124777869f34d0581fcd1c29da9f9466adbc6a3c25d47e6b"
+  },
+  "scope": "Public participant architecture, one73.1run; no repeatability/whole-trace model guarantee. Script semantics/compliance not yet audited. No narrative copied into report."
+}
