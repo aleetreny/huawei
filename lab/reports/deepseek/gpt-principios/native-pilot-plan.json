@@ -1,0 +1,38 @@
+{
+  "n": 4,
+  "candidate": "native-craft-v1",
+  "actor": {
+    "kind": "claude-cli",
+    "model": "haiku",
+    "effort": null,
+    "skills_mode": "official",
+    "autocompact": null,
+    "max_continues": 3,
+    "timeout_s": 1800,
+    "cli_version": "2.1.303 (Claude Code)",
+    "prompts": "official-runner@00b084a8",
+    "tools": [
+      "mcp__career-emulator-engine__new_game",
+      "mcp__career-emulator-engine__observe",
+      "mcp__career-emulator-engine__take_action",
+      "mcp__career-emulator-engine__check_latest_logs",
+      "mcp__career-emulator-engine__show_employee_handbook"
+    ],
+    "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+    "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"
+  },
+  "skill_sha256": "988317ca357d4006dcbd12bf42bf94636e02662fe1411390d7473d3d27200cbd",
+  "manifest_sha256": "e44ee62914bcb067531ba21dac0c3a9e98be88f6bf1a5e18c40f02be533a7381",
+  "script_sha256": "72b601f878559e2a6c9c765cc959c0590f4a363dafbae2882f94c090f27bf6ad",
+  "design": "Four independent unseeded official dev careers, no paired historical causal comparison. Screening only. Report every terminal score, operational interruptions separately. No optional replacement of low scores.",
+  "sample_rationale": "n=4 can screen a large ~20-point route relative to historical 50\u201360 (SE~5 at SD10); too small to certify consistency or a narrow improvement. No blind claim from historical comparison.",
+  "admission": "92 valid fresh native Haiku decisions, 4 positive-risk actions, 3 immediate dominated. This admits an end-to-end characterization, not an efficacy claim over current Skills.",
+  "limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "max_processes": 4,
+    "concurrency": 1,
+    "max_new_games": 4
+  },
+  "data": "/Users/alejandrotreny/careerlab-data/deepseek/gpt-native-pilot"
+}

@@ -1,0 +1,20 @@
+{
+  "engine": "1.0.6",
+  "dataset": "1.0.8",
+  "fastmcp": "2.14.7",
+  "engine_env": {
+    "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+    "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+    "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+  },
+  "split": "dev",
+  "competition_mode": true,
+  "actual_game_1_server_args": [
+    "--update",
+    "skip",
+    "--log-level",
+    "WARNING",
+    "--competition"
+  ],
+  "runner_source_sha256": "476245460282ccfd4ae88fe2784daad194141d88b33543148c4543a3339280cb"
+}

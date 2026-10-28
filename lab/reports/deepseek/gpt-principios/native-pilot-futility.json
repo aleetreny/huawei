@@ -1,0 +1,12 @@
+{
+  "reason": "Post-hoc operational futility decision: do not start fourth unchanged native career. First two scores66.86/18.23; even remaining100/100 yields realized planned four-game mean71.2725. This does not bound population mean or prove statistical inferiority. Third already running completes under existing quota watchdog.",
+  "first_two_scores": [
+    66.86,
+    18.23
+  ],
+  "mathematical_max_planned_four_mean": 71.27250000000001,
+  "cancelled_before_model_call": true,
+  "original_plan_sha256": "e5c5c638aa489f6e119c336adf610292214d1ba63dc737f12feb3f068855b66f",
+  "timestamp_unix": 1793132266.465462,
+  "mechanism": "Create cancellation directory for game4. Frozen parent already fails closed on existing directory without result; it will stop after current third finishes. No changes to actor, Skill, active child or quota guards."
+}
