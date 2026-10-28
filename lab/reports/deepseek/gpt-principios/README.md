@@ -293,3 +293,8 @@ Siguiente pantalla barata: controlador que ante repetidosascensosfallidos priori
 **600semillas pareadas:Q49,643→49,628,delta−0,01465(IC95aprox−0,1605;+0,1312).** Misma lectura congelada, historias y controller salvo reparacion deHRtras2reviews fallidas.1072reparaciones;completas342→343,despidos119→119,trust112→111,health27igual. No admitir aSonnetniSkill. No refutaB30:esta implementacion no produce gananciarelevante.
 
 Planfijadoantesderun, sin pesosafinado. Datosnumericos stall-recovery-results.json y planseparado;reproducir uv run python scripts/deepseek/gpt_stall_recovery.py. Verificadocontador2fallos yresetpromocion;compilacion/diffcorrectos. SinAPI/modelos/juegosoficialesnuevos. Proxima mejora necesita recuperar decisiones previas alatasco, no gastar masreparacionesconmisma lectura. Objetivo75abierto;integrarPR23.
+
+## Relevo: nueva evidencia publica relevante
+**Kingjinsightv11tiene73,1departida verificado en score_report publico, n1, modelo aun sinverificar.** Commit e6c33cbde514792006fb70c824a8f5242a704a04del28oct14:32incluyeversiones/runs/analisisnuevos. Informe14:20completado48mesesL5,Skill119,Network51,Health+Dignity20,riesgo0,Wealth38,9. No confundirpartial51,17conraw73,1. Noes75estable ni identificaciondeequiposprivados.
+
+Metadata trazable public-v11-evidence.json; no seleyeron engine.log/transcripts/narrativas. Proximo:leer solo solutions/v11/manifest.json y dosSkills career-state/zeng-guofan, masmetadata de modelo de sus propiastrazas sincontenidonarrativo. Contrastar arquitectura con nuestrosfracasos antes de intentar copiar/testear. NoasumirprogramaBDCIrelacionadoequivalentealUK. Sin nuevas llamadasAPI/partidas;integrarPR23.
