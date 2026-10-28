@@ -281,6 +281,31 @@ def _init(arms: dict[str, dict]) -> None:
     CAT.grade = B30Grade(getattr(CAT.grade, "inner", CAT.grade), on=True)
 
 
+_BASE = {"caps": json.loads(json.dumps(R.CAPS)), "thr": dict(R.THRESH), "blow": R.BLOW_AT}
+
+
+def _scenario(spec: set[str]) -> None:
+    """Parameter changes as in motor M23: capsup / capsdn / thrup / thrdn (±20 %) / blow4 / blow6."""
+    for lv, d in _BASE["caps"].items():
+        R.CAPS[lv] = dict(d)
+    R.THRESH.clear()
+    R.THRESH.update({k: tuple(v) for k, v in _BASE["thr"].items()})
+    R.BLOW_AT = _BASE["blow"]
+    for f in spec:
+        if f in ("capsup", "capsdn"):
+            m = 1.2 if f == "capsup" else 0.8
+            for lv in R.CAPS:
+                R.CAPS[lv] = {k: round(v * m) for k, v in R.CAPS[lv].items()}
+        if f in ("thrup", "thrdn"):
+            m = 1.2 if f == "thrup" else 0.8
+            for lv in list(R.THRESH):
+                R.THRESH[lv] = tuple(round(v * m) for v in R.THRESH[lv])
+        if f == "blow4":
+            R.BLOW_AT = 4
+        if f == "blow6":
+            R.BLOW_AT = 6
+
+
 REVIEWS: list = []
 _orig_review = R.Replica.review
 
@@ -303,6 +328,7 @@ def _play(args):
     per = Exact() if a["reader"] == "exact" else Noisy(seed=seed0 * 7 + i, scale=a.get("scale", 1.0))
     bot = FloorBot(per, i, spec)
     CAT.grade.on = "nob30" not in spec
+    _scenario(spec)
     REVIEWS.clear()
     st, trace = R.play(CAT, bot, random.Random(seed0 + i))
     blow = st.blowups
