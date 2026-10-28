@@ -1,0 +1,32 @@
+base [haiku]                       Q 32.22±0.37 | L6+   0% | pasa L1  60% -> Q  41.4, L6+   0% | Skill fin  93.4 | {'dismissed': 440, 'trust': 600, 'ok': 468, 'health': 430, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:6% m48:9%
+qskill=4 [haiku]                   Q 32.43±0.38 | L6+   0% | pasa L1  60% -> Q  41.8, L6+   1% | Skill fin  99.7 | {'dismissed': 440, 'trust': 594, 'ok': 455, 'health': 449, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:8% m42:9% m48:9%
+qskill=3 [haiku]                   Q 31.22±0.36 | L6+   0% | pasa L1  60% -> Q  39.8, L6+   0% | Skill fin  90.7 | {'dismissed': 440, 'trust': 589, 'ok': 431, 'health': 478, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:21% m24:16% m30:13% m36:8% m42:8% m48:8%
+qskill=5 [haiku]                   Q 32.19±0.37 | L6+   0% | pasa L1  60% -> Q  41.4, L6+   0% | Skill fin  93.7 | {'dismissed': 440, 'trust': 601, 'ok': 465, 'health': 432, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:6% m48:9%
+qstall [haiku]                     Q 31.73±0.38 | L6+   0% | pasa L1  57% -> Q  41.8, L6+   0% | Skill fin  92.9 | {'dismissed': 509, 'trust': 545, 'ok': 456, 'health': 427, 'broke': 63}
+                                   ascensos m6:42% m12:37% m18:21% m24:19% m30:14% m36:7% m42:7% m48:8%
+qstall+sos [haiku]                 Q 31.61±0.37 | L6+   0% | pasa L1  57% -> Q  41.6, L6+   1% | Skill fin  93.2 | {'dismissed': 502, 'trust': 533, 'ok': 456, 'health': 446, 'broke': 63}
+                                   ascensos m6:42% m12:36% m18:21% m24:18% m30:13% m36:7% m42:8% m48:8%
+caps [haiku]                       Q 34.32±0.39 | L6+   0% | pasa L1  63% -> Q  43.5, L6+   0% | Skill fin  98.4 | {'dismissed': 423, 'ok': 537, 'trust': 562, 'health': 411, 'broke': 67}
+                                   ascensos m6:44% m12:44% m18:24% m24:25% m30:16% m36:7% m42:10% m48:11%
+detect [haiku]                     Q 33.44±0.39 | L6+   0% | pasa L1  58% -> Q  44.3, L6+   0% | Skill fin  94.8 | {'dismissed': 507, 'trust': 510, 'ok': 537, 'health': 376, 'broke': 70}
+                                   ascensos m6:41% m12:40% m18:22% m24:22% m30:16% m36:7% m42:9% m48:11%
+sskill=4 [haiku]                   Q 32.33±0.38 | L6+   0% | pasa L1  60% -> Q  41.6, L6+   0% | Skill fin  94.1 | {'dismissed': 440, 'trust': 597, 'ok': 472, 'health': 429, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:7% m48:9%
+pfall [haiku]                      Q 32.14±0.37 | L6+   0% | pasa L1  60% -> Q  41.3, L6+   0% | Skill fin  93.2 | {'dismissed': 440, 'trust': 602, 'ok': 462, 'health': 433, 'broke': 63}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:6% m48:9%
+q3l1 [haiku]                       Q 32.24±0.38 | L6+   0% | pasa L1  60% -> Q  41.5, L6+   0% | Skill fin  93.2 | {'dismissed': 430, 'trust': 610, 'ok': 473, 'health': 425, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:6% m48:9%
+hguard=3 [haiku]                   Q 32.22±0.37 | L6+   0% | pasa L1  60% -> Q  41.4, L6+   0% | Skill fin  93.4 | {'dismissed': 440, 'trust': 600, 'ok': 468, 'health': 430, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:6% m48:9%
+qskill=4+hguard=3 [haiku]          Q 32.43±0.38 | L6+   1% | pasa L1  60% -> Q  41.8, L6+   1% | Skill fin 100.3 | {'dismissed': 440, 'trust': 593, 'ok': 463, 'health': 442, 'broke': 62}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:8% m42:8% m48:9%
+qskill=4+qstall [haiku]            Q 31.77±0.38 | L6+   0% | pasa L1  57% -> Q  41.8, L6+   1% | Skill fin  98.1 | {'dismissed': 509, 'trust': 543, 'ok': 433, 'health': 452, 'broke': 63}
+                                   ascensos m6:42% m12:37% m18:21% m24:19% m30:14% m36:7% m42:9% m48:8%
+qskill=4+pfall [haiku]             Q 32.38±0.38 | L6+   0% | pasa L1  60% -> Q  41.7, L6+   1% | Skill fin  99.6 | {'dismissed': 440, 'trust': 595, 'ok': 454, 'health': 448, 'broke': 63}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:7% m42:9% m48:9%
+qskill=4+pfall+q3l1 [haiku]        Q 32.40±0.38 | L6+   0% | pasa L1  60% -> Q  41.8, L6+   1% | Skill fin  99.4 | {'dismissed': 430, 'trust': 605, 'ok': 460, 'health': 442, 'broke': 63}
+                                   ascensos m6:42% m12:41% m18:22% m24:22% m30:15% m36:8% m42:9% m48:9%
