@@ -1,0 +1,64 @@
+{
+  "source": "https://github.com/Kingjinsight/TechArena-UK-2026/blob/e6c33cbde514792006fb70c824a8f5242a704a04/runs/v11_run1_20261028T131911Z/results/score_report.json",
+  "commit": "e6c33cbde514792006fb70c824a8f5242a704a04",
+  "score_report_sha256": "126de9f2c3ac4c743f4d99d00f53e3d83564cff675e8637ab9b969a081877db6",
+  "ending_score": {
+    "competition_partial_score": 51.17,
+    "completed": true,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 50.0,
+        "raw_value": 5.0,
+        "weight": 0.3,
+        "weighted_score": 15.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 48.62,
+        "raw_value": 38.9,
+        "weight": 0.2,
+        "weighted_score": 9.72
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 100.0,
+        "raw_value": 20.0,
+        "weight": 0.15,
+        "weighted_score": 15.0
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 99.17,
+        "raw_value": 119.0,
+        "weight": 0.15,
+        "weighted_score": 14.88
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 100.0,
+        "raw_value": 0.0,
+        "weight": 0.1,
+        "weighted_score": 10.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 85.0,
+        "raw_value": 51.0,
+        "weight": 0.1,
+        "weighted_score": 8.5
+      }
+    ],
+    "outcome": "completed",
+    "quantitative_score": 73.1,
+    "survival_months": 48
+  },
+  "termination_reason": null,
+  "meaning": "Public participant report, one73.1career verified, model identity and repeatability not yet checked. Not attribution to private teams and not75stable."
+}

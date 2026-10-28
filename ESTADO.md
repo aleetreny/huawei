@@ -68,3 +68,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **B30revisado:**terceraoportunidadL1existe;probedegrade replica compatible en3estadossinteticos. No Skillconmesesprivados. Proxima pantalla:feedbackHRtrasestancamiento, sin llamadas actuales.
 
 **Recuperacionstall offlinecerrada:**600semillas porbrazo,49,643→49,628,deltaCIincluye0;1072reparaciones sinmejora. NoadmisionSonnet. Sin llamadas.
+
+**Nueva fuente publica:**Kingjinsightv11raw73,1verificado n1, modelopendiente. Commit e6c33cb; auditarSkills/procedencia antesdeprobar. No75estable demostrado.
