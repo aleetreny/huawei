@@ -16,6 +16,7 @@ Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que 
 - [mecanicas-emergentes/](mecanicas-emergentes/README.md): asignación conjunta del cierre, 600 partidas oficiales y corrección de liquidación terminal; [PR #20](https://github.com/aleetreny/huawei/pull/20). Subtrabajo de motor, no nueva línea activa.
 - [fuentes-externas/](fuentes-externas/kingjinsight-v11.md): repo público de otro participante (v11, 73,1 en una partida), arquitectura, contraste con HALLAZGOS e ideas (C37–C41). 28 oct.
 - [huevos-pascua/](huevos-pascua/README.md): búsqueda de combinaciones ocultas y atajos de ascenso (28 oct, sólo bots): no existen; mecánica nueva del trimestre (HALLAZGOS B28, B29). Rama `claude/hidden-combos-easter-eggs-eb0edx`. Investigación corta, no línea activa.
+- [suelo/](suelo/README.md): **Suelo**: que ninguna de las 3 partidas se hunda (28 oct): rutas de hundimiento en la réplica con B30, reglas contra la trampa de L1 y la crisis de confianza, candidato `lab/policies-src/suelo/suelo-v1`. Subtrabajo de la línea DeepSeek, rama `claude/linea-suelo-hundimientos-5xjrnm`.
 
 ## Otros dueños (no se tocan aquí)
 

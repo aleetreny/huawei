@@ -1,0 +1,13 @@
+{
+  "family": "suelo",
+  "name": "suelo-v1-min",
+  "parents": [
+    "v4-c5"
+  ],
+  "idea_origin": "Suelo line, 28 Oct: replica floor study (scripts/suelo/floor.py) and HALLAZGOS B30, C38, C40",
+  "operator": "add floor rules",
+  "hypothesis": "The two floor rules with the largest replica effect only (stalled-start rescue, B30; size of the risk when every option is risky), on top of v4-c5, as the conservative fallback if suelo-v1 changes DeepSeek more than wanted.",
+  "predicted_behaviour": "As v4-c5 except in L1 after two missed reviews (risk first) and in all-risky stories (mildest option).",
+  "refutation": "Trust crises or dismissals as frequent as with v4 in official games, or a lower mean of completed games, or DeepSeek not applying the stalled-start and all-risky rules on the trap bank.",
+  "skill_count": 1
+}
