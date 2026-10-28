@@ -1,7 +1,7 @@
 {
  "kingjinsight/techarena-uk-2026": {
   "sha": "e6c33cbde514792006fb70c824a8f5242a704a04",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": [
    {
     "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
@@ -98,7 +98,7 @@
  },
  "krsnkkv/ksl_techarena": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -111,7 +111,7 @@
  },
  "krsnkkv/techarena-career-simu": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -124,7 +124,7 @@
  },
  "shriyasaxena/techarena-career-simu": {
   "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -137,32 +137,42 @@
  },
  "lrado-253/ksl-techarena": {
   "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  },
  "artepace/slopathone_winningteam": {
   "sha": "3151064933fb1b21b17d79e077d0eaea4b5d521b",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  },
  "peidi-l/preliminary": {
   "sha": "00b0e745b7161a9eebd8784732163b18ac842acc",
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  },
  "ray23257/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  },
  "yulong111/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  },
  "bernardoguterres/huawei-gradient-depression": {
   "sha": null,
-  "visto": "2026-10-28T19:11Z",
+  "visto": "2026-10-28T19:19Z",
+  "scores": []
+ },
+ "rickyyyy-bit/techarena-huawei": {
+  "sha": "5236f5e49f0efb29f4345043e7fc3fbd9fc892b1",
+  "visto": "2026-10-28T19:19Z",
+  "scores": []
+ },
+ "colinfornia/techarena-project": {
+  "sha": "b74a7ffc5d185a7a0c15a05eab05493dc0bb0244",
+  "visto": "2026-10-28T19:19Z",
   "scores": []
  }
 }
