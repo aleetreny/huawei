@@ -170,3 +170,19 @@ Verificados201emparejamientos de accionesSonnet con registro oficial;12atribucio
 Todos los procesos de este checkpoint terminaron. Reanalizar sin llamadas con `gpt_learning_score.py --holdout`, `gpt_sonnet_replay.py` y `gpt_native_replay_aligned.py` bajo `uv run python scripts/deepseek/`. No repetir los runners `--run/--calls` sobre estos datos.
 
 Objetivo75consistente abierto; no se conoce el metodo privado de los equipos. Proxima pregunta distinta: antes de otro modelo/manual, determinar que parte de la brecha del controlador con informacion publica es recuperable sin umbrales privados, y separar techo de informacion, control y transporte. No repetir autocomprobacion, correcciones de saldoHR/riesgo o el feedback de un episodio general que ya no paso contraste. Evidencia lista enPR23para juntar conmain; ningun cambio de entrega/slots/credenciales ni nueva llamadaDeepSeek.
+
+## Relevo de ideas del usuario,28oct11:18UTC
+
+[Doslecturas, preguntasobjetivas yformato](user-ideas.md). Ablacion narrativa64decisiones: riesgo1→3, perdidas8→10, evitablespre-evaluacion0→3; bloqueada paraadmision. Criticoindependiente16lecturas:15evidenciasvalidas, una no literalconservada/fallback;41flags literales. Regla final0cambios ysinmejora. Seguircriticosinregla agregariaunriesgo yuna perdidaevitable. No descarta dospensamientos en situacionesconfallos, porqueestecontrol ya tenia0perdidas evitables.
+
+Correccionesdocumentadas antesdeinterpretar:31menus/32contextos; una colisiondeID omitiauncontexto. Verificado elpanel real de cadarespuesta, conservadas62lecturas y completadassolo2faltantes, sin cambiarseleccion ni superar64. SourceIDdelcritico filtrado porestratopre-evaluacion. No publicar métricas de32menusindependientes.
+
+Enmarcha24relecturasSonnet5.5de su carrera v4completa, mismoSkill/systemprompt, sin historiallargo salvo3notasprevias y panelactualoriginal. No mostraroriginal_choicealactor. Proceso30007ya lanzado; no reiniciar por un timeout. Regeneraranalisis sinllamadas `uv run python scripts/deepseek/gpt_fresh_context_score.py`. Cuotafresca5h4%, semana40%. SinAPIDeepSeek,nuevascarreras ni cambiosslots/credenciales.
+
+## Relevo final,28oct11:24UTC
+
+Cerradaslas3pruebas de [ideasdelusuario](user-ideas.md):64lecturasHaiku deablacion (riesgo1→3; evitables0→3),16criticasHaiku (15evidenciasliteralesvalidas; una respuesta no literalconservada/fallback; gate0cambios) y24relecturasSonnet decontextofresco. Ultima conserva22/24elecciones y exactamente2perdidas evitables/3riesgos delcontrol; norescataerrores. Todoslosprocesosterminaron. Total104lecturas nuevasestecheckpoint, sin juegoscompletos niAPIDeepSeek. Cuotacompartidafinal5h4%, semana40%.
+
+Ningunacandidatura admitida. Verificados64panelesrealesservidoscontra32contextosplanificados (31menus); corregidaclave de cache sin repetirlecturasvalidas ni superar64previstas. Encritico se documentaenmiendadecontinuaciontrascita no literal, sin ocultarfallo. Contextofrescoverifica24mensajesdesistemaexactos, modelo5.5, Skillsleidos y ausencia deoriginal_choiceenentradaalactor. Scripts compilados;seisguardassinteticasdelgatey diff --checkpasan. Suitecomun313previapasaba; sin cambiosdeproduccion.
+
+Reanalisis sinllamadas con gpt_narrative_score.py, gpt_fact_second_score.py y gpt_fresh_context_score.py via uv run python scripts/deepseek/. No relanzarcolecciones. Datosdehistoriaycitas solo encareerlab-data; todoslosJSONdelrepo sonnumericos/metadatos. Proximo diagnostico justificablesi secontinua: medir la misma verificacionfactual en el conjunto completo de24turnoscriticos reales (no soloerrores), porque elbanco factualanterior carecia deerroresevitables y no podia medirrescate. No inventarotro promptpor contenidosdehistorias. PR23listoparaintegracion; objetivo75permaneceabierto.

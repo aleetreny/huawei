@@ -1,0 +1,9 @@
+{
+  "reason": "After two valid replies and one schema-complete nonliteral-evidence rejection, original runner stopped. A nonliteral quote is a failed evidence outcome, not a reason to replace that model reply.",
+  "calls_already_completed": 3,
+  "evidence_valid": 2,
+  "evidence_rejected": 1,
+  "remaining_calls_max": 13,
+  "original_prompt_selection_gate_unchanged": true,
+  "handling": "Keep all original responses. Nonliteral-evidence cases fall back to first choice, never repaired or retried. Score all16 first/raw-critic recommendations and the gate, with evidence validity counted. Other transport/schema failures still stop. Operational continuation amendment, not original preregistration."
+}

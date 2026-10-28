@@ -53,9 +53,10 @@ def quota():
                 return {'allowed':age<3600 and w['five_hour']['utilization']<.65 and w['seven_day']['utilization']<.45,'five_hour':w['five_hour']['utilization'],'seven_day':w['seven_day']['utilization'],'age_seconds':round(age)}
     return {'allowed':False,'reason':'Fresh quota not known'}
 
-async def one(it,model,probe=False,prefix='',data_root=None):
+async def one(it,model,probe=False,prefix='',data_root=None,system_override=None):
     d=(data_root or DATA)/('admission' if probe else f'{model}-{it["id"]}');d.mkdir(exist_ok=False);record=d/'record.jsonl'
     instruction,skills=RB.load_variant(str(BUNDLE));sp='Reply with READY only.' if probe else RB.system_prompt(instruction,skills,'official')
+    if system_override is not None:sp=system_override
     config={'mcpServers':{}}
     if not probe:
         item={'record':str(record),'session_id':RB.SID,'steps':[it['observe']],'logs_at':[[]],'handbook':(ROOT/'lab/data/transmision/handbook.md').read_text(),'skills':{n:f for n,_,f in skills}}

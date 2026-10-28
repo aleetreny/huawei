@@ -1,0 +1,172 @@
+{
+  "n": 24,
+  "max_new_reads": 24,
+  "model_alias": "sonnet",
+  "original_model": "claude-sonnet-5-5",
+  "skill": "t13-read-v4 unchanged",
+  "items_sha256": "196d954298a051b418a72c7362be837b75eca419263e5f81c8df429c90221662",
+  "source_sha256": {
+    "/Users/alejandrotreny/careerlab-data/deepseek/gpt-sonnet-reference/run-1/stream-0.jsonl": "414cc36fde2013da719f605c97d55675836385766816ce5c92c31a8d8fcb002d"
+  },
+  "system_prompt_sha256": "be861350d674efb83bd9f8d8ef963d90a32e090610b4687483d0ad036cf8ccc8",
+  "bundle_sha256": {
+    "manifest.json": "2b9605b80757955d992eb3d67e563271b545a030d9e18c6f5a9a8f57a209355d",
+    "skills/career-rules/SKILL.md": "ef8962852f0034a4bdda580f88f1626850e2329c456f0f0a1e61963d0c10f819"
+  },
+  "prefix_sha256": [
+    "01f218aa8dae73704cb3201c0724bf72c3cb6ba4d182f8b46b541b7b80d6810c",
+    "970fe2cc80372f9be95db0e5fd477be59a479347446c2890554c10ff6fcfdc26",
+    "518fd76c75e56103cff5cc5c84a026276dfad26b3b57aa5de9ed3822d9218436",
+    "582e108d3d04ad167dab99d807e9aa0564633cb87550cc787bfb3b204a38ce63",
+    "0278c3d6192f20721031e4ebdf1337d722db87c2887ebe2aff221c09ea5cabe6",
+    "e7ed2c760ea13b2b550901f25c3d41edd5ccaf75f02490d9fe924791e9eed963",
+    "85c2461de060fcfe306bdb5990462251285acb0867bbc1f3fcfa9e52a19d37f8",
+    "70da6164b859cdf69bbeb8323a07f9876a693767181ce1a8c1c6d9c26a200d13",
+    "32c71fe806ff13e80206a1cc46eaf8a2606f0c1daed80b4483426d22eff7efb4",
+    "dce900a4d2006c07de717ecf98f638adb9e1c81f204f266ed3e5f7c4505e9ab7",
+    "cfec0e7c551f2ffd66e7f9fcd5ca5c8f5962cac68fec42d9597313ba263a6976",
+    "7890a23e3d6ed84d483fc3212e1d98ae6a63e71dac0d0b06cbecaf76031cc45b",
+    "9a6da1efddceb1ab0a5a11beb216faa7c0ad2503e7209a61f5502c0f1fca6c49",
+    "9d1124b32e9c987725b83cf0cd536e1a178a7e82d95647997afc3cf2a4684eaa",
+    "186a68121b4ee56c51ff77b34da43aa999802daef463ef7117c172f0d11c8824",
+    "ccc3b738318b048b0aea6d3b1a22ea002569d79e6a40a1f511a514cfb7f2c8a3",
+    "6889a940d62be28efd2db7ab0667f4af38aa1cc91c43705033862af0a33be953",
+    "0cc10b0ed2f95d54fcf9979abed310aff5ef75057a03e8a2c4319b3fc8e338da",
+    "61eac533a23b2568e61d4b71aa35a11b70aac159651594c4489d0fa75a78e6e2",
+    "94966876dede2384ce6a1b0c46a9cbbf71e1534924b4f1a325edf56641f75316",
+    "3ba011683d66e63467f331fbf70913002c17c49dbffac09ce9a089997e322e72",
+    "8118fc58609cbd1a8ca1a83531e92a51daa4c4716f4aec8293bd81a66a660133",
+    "65fcbb188f9e2ff50d6654ec248544ea316a35228a6e75ffc309895501306206",
+    "f40e571d7a5e3ae4e364b536a060bc674b4500b41589b59ebf29e3e417f077f0"
+  ],
+  "selection": [
+    {
+      "id": "71bf09449bbc296b",
+      "month": 5,
+      "level": "L1"
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "month": 5,
+      "level": "L1"
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "month": 5,
+      "level": "L1"
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "month": 11,
+      "level": "L1"
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "month": 11,
+      "level": "L1"
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "month": 11,
+      "level": "L1"
+    },
+    {
+      "id": "8561ee88a915143c",
+      "month": 17,
+      "level": "L2"
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "month": 17,
+      "level": "L2"
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "month": 17,
+      "level": "L2"
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "month": 23,
+      "level": "L2"
+    },
+    {
+      "id": "e85b9142d880585b",
+      "month": 23,
+      "level": "L2"
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "month": 23,
+      "level": "L2"
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "month": 29,
+      "level": "L2"
+    },
+    {
+      "id": "77015d2875a771a7",
+      "month": 29,
+      "level": "L2"
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "month": 29,
+      "level": "L2"
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "month": 35,
+      "level": "L3"
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "month": 35,
+      "level": "L3"
+    },
+    {
+      "id": "2592798ce2982351",
+      "month": 35,
+      "level": "L3"
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "month": 41,
+      "level": "L3"
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "month": 41,
+      "level": "L3"
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "month": 41,
+      "level": "L3"
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "month": 47,
+      "level": "L4"
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "month": 47,
+      "level": "L4"
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "month": 47,
+      "level": "L4"
+    }
+  ],
+  "meaning": "All24accepted story decisions immediately before reviews in the completed Sonnet-v4 career. No gold-selected mistakes. Fresh same-model read with EXACT original system prompt/Skill, current original public panel and last3prior accepted notes; no original target choice/notes, no future history. Historical first choice versus fresh-context second thought, not randomized full-career efficacy. Baseline already completed at49.95. No new games/API, no claims of transfer toDS.",
+  "endpoint": "Immediate risk and avoidable growth losses. Compare all24, not just errors. Risk increase blocks admission. No game score extrapolation.",
+  "limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "max_claude_processes": 4,
+    "concurrency": 1
+  }
+}

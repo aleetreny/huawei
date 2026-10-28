@@ -1,0 +1,41 @@
+{
+  "n": 16,
+  "max_cli_reads": 16,
+  "model_alias": "haiku",
+  "first_study_items_sha256": "3fc81b2a160b1fc254abd9ff4f927a3ecdbbd75697b000dbb93a937678fbd90c",
+  "selection": [
+    "82d4b8110ef5",
+    "36a72de95b64",
+    "0adf8ea56cf9",
+    "a17faeec0f07",
+    "606ffe5fc95e",
+    "8b573078a5b5",
+    "9d6837da9d35",
+    "fbbc5dc173d9",
+    "bf4b670138f3",
+    "9a1fc53ea201",
+    "344ab51bb479",
+    "77660e585b81",
+    "49f5cda30810",
+    "bd24f8d08a0b",
+    "989377c65575",
+    "1511245e8c5e"
+  ],
+  "system_sha256": "e0f6a289ef177f207fe89b2d8704f002030eb728f399dd706c71787143f3ec07",
+  "meaning": "Independent critic on the16pre-review menus of the frozen narrative study. Does not see first choice/notes. Exact action-text evidence or unclear. No gold to reader. Gate only after both collections: use critic recommendation if first choice has an explicit critical-cost flag and recommended option has no/never unclear on all growth/risk flags. Add payment guard only when current displayed wealth is nonpositive. No effect-size/power claim; no game-Q or DS transfer.",
+  "gate": {
+    "growth_flags": [
+      "time_diversion",
+      "relationship_rupture"
+    ],
+    "risk_flag": "unresolved_issue",
+    "unknown_handling": "cannot establish safe replacement",
+    "replacement_requires_different_choice": true
+  },
+  "limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "max_claude_processes": 4,
+    "concurrency": 1
+  }
+}

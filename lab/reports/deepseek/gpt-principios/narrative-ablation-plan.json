@@ -1,0 +1,201 @@
+{
+  "n_items": 32,
+  "n_calls_max": 64,
+  "arms": [
+    "full",
+    "options_only"
+  ],
+  "seed": 2026102812,
+  "input_sha256": "3fc81b2a160b1fc254abd9ff4f927a3ecdbbd75697b000dbb93a937678fbd90c",
+  "source_sha256": {
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g1/output/events-20261027T195612Z.jsonl": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g2/output/events-20261027T200001Z.jsonl": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g1/output/events-20261027T210457Z.jsonl": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g2/output/events-20261027T210347Z.jsonl": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g3/output/events-20261027T210235Z.jsonl": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8",
+    "/Users/alejandrotreny/careerlab-data/deepseek/gpt-native-pilot/game-1/stream-0.jsonl": "dd587ba4075ac971e91e61933573c0368d49164a52921fe5a49b6e8f71c0a02c",
+    "/Users/alejandrotreny/careerlab-data/deepseek/gpt-native-pilot/game-2/stream-0.jsonl": "2153584f6103dd83acbec80d23c969f266f162aa6e3628e7ee529aea3259e160",
+    "/Users/alejandrotreny/careerlab-data/deepseek/gpt-native-pilot/game-3/stream-0.jsonl": "c6c2f9fca1bc78ead052a5e6327e7d0a5ee7359d593d7cd311798988e8c97fa2",
+    "/Users/alejandrotreny/careerlab-data/deepseek/gpt-sonnet-reference/run-1/stream-0.jsonl": "414cc36fde2013da719f605c97d55675836385766816ce5c92c31a8d8fcb002d"
+  },
+  "available": {
+    "True": 34,
+    "False": 91
+  },
+  "selection": [
+    {
+      "id": "dd42ec7d098d",
+      "pre_review": false
+    },
+    {
+      "id": "82d4b8110ef5",
+      "pre_review": true
+    },
+    {
+      "id": "1a36d76efe7f",
+      "pre_review": false
+    },
+    {
+      "id": "36a72de95b64",
+      "pre_review": true
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "pre_review": true
+    },
+    {
+      "id": "a17faeec0f07",
+      "pre_review": true
+    },
+    {
+      "id": "606ffe5fc95e",
+      "pre_review": true
+    },
+    {
+      "id": "9ef86d653154",
+      "pre_review": false
+    },
+    {
+      "id": "8b573078a5b5",
+      "pre_review": true
+    },
+    {
+      "id": "c5255c36c7ac",
+      "pre_review": false
+    },
+    {
+      "id": "2aec8a18e126",
+      "pre_review": false
+    },
+    {
+      "id": "9d6837da9d35",
+      "pre_review": true
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "pre_review": true
+    },
+    {
+      "id": "b4e949afe460",
+      "pre_review": false
+    },
+    {
+      "id": "bf4b670138f3",
+      "pre_review": true
+    },
+    {
+      "id": "9a1fc53ea201",
+      "pre_review": true
+    },
+    {
+      "id": "615eebee3ab7",
+      "pre_review": false
+    },
+    {
+      "id": "586fc69e28b6",
+      "pre_review": false
+    },
+    {
+      "id": "344ab51bb479",
+      "pre_review": true
+    },
+    {
+      "id": "77660e585b81",
+      "pre_review": true
+    },
+    {
+      "id": "36a72de95b64",
+      "pre_review": false
+    },
+    {
+      "id": "927ed56a73ab",
+      "pre_review": false
+    },
+    {
+      "id": "49f5cda30810",
+      "pre_review": true
+    },
+    {
+      "id": "77488149beeb",
+      "pre_review": false
+    },
+    {
+      "id": "bd24f8d08a0b",
+      "pre_review": true
+    },
+    {
+      "id": "1b2dba28e4f1",
+      "pre_review": false
+    },
+    {
+      "id": "989377c65575",
+      "pre_review": true
+    },
+    {
+      "id": "5204148abfa9",
+      "pre_review": false
+    },
+    {
+      "id": "1511245e8c5e",
+      "pre_review": true
+    },
+    {
+      "id": "9fde1c3e54a1",
+      "pre_review": false
+    },
+    {
+      "id": "4ab0a079865b",
+      "pre_review": false
+    },
+    {
+      "id": "3346fbd482a3",
+      "pre_review": false
+    }
+  ],
+  "bundle_sha256": {
+    "manifest.json": "2b9605b80757955d992eb3d67e563271b545a030d9e18c6f5a9a8f57a209355d",
+    "skills/career-rules/SKILL.md": "ef8962852f0034a4bdda580f88f1626850e2329c456f0f0a1e61963d0c10f819"
+  },
+  "meaning": "Information ablation, unchanged v4/Haiku. Same public state/options/events; mask only title and description. No previous logs. Selection without gold. Primary avoidable pre-review growth loss, risk increase blocks admission. Secondary total growth loss/resource safety. Exploratory bank, not game Q or DS transfer. May reuse menus from earlier studies; no independent-corpus claim.",
+  "mask_sha256": "a113bac995a3965f49b05108ca2af4067bbfec644c73519af28f0da38daa1489",
+  "masked_panels_sha256": [
+    "5f10899c8644dd953d92aa04b514bdf58628c4b9bccc16bac3be764060c7b670",
+    "8a1755121bffe78b38e6e7293cd3a2ea1ccfe910c7278682b9fcccff0f303f81",
+    "d792b0807a638906f1028c427877e927e48cdd17551ebfbca0765ffbe6d5899b",
+    "9b5b28f6f1a7c14342ecc2ef21fa9519c1362cfbdb5f228a96fbdd5ff382e530",
+    "8b875658002faf5fce23b6cf8d1188a079930e0219ad591d6d3674c61b39ad68",
+    "5bb7887d5145c2bdd4bafd1df00c1322d475888a932f76fedb2ffbea7f1a0a56",
+    "d6a98e961d2f0aa2648576cbda3fd1316dda03b6f0f90870d4669bf09ea2fc4d",
+    "d581bda33062c97587b18c587060e44c90512b92f028069f0b68b5bbfeb977e9",
+    "e131421f688d6a800aba560c66d08572714041073d1769eba8607a6980604e71",
+    "27f78700b247408c0e8bf8cc9a8efa5625327ea135e232610bb213d0d39b558e",
+    "50caaac8e2d3ea8781b2bb58d493e981a7aebc44eab6884e67dd80add221ea76",
+    "88b5a275354a687e384f912ce307fe505aa47fa36e82c23fa635bf634e419db9",
+    "865f316194a871c9d1e798a1c9ee30fb08a665c43a79dbb9b5627775bfd90107",
+    "e330a082b0cb64917b5112a1deeb2cce062bae127e6761d68d62c0721bc5e98e",
+    "795953905b4c5c5cbdcde14e5b0e326187e2b428b0371aa9518d6aca03d59472",
+    "ee0f4d916211caedcab9a17d6e330930aa498149e239a629aa86b45c28c46e4c",
+    "141b230df5df3afea143b1911004a18379390ba2170fe6b41e90a19153d6390b",
+    "f2e32fa71829138790ec0a5156018ceb238095089b00a3e10834794691033962",
+    "d05bac57f57b8d72b3e4d479ac30fac0ac5b76911733d30dc94a43a4e31f4ac1",
+    "d41300a0cf791b9ffbcdb6a7405946b5caaea933301cb4223200a3a485c41c9b",
+    "391fad0702348aded309b32e171ee0fcc1626397d7e4c0c239692d4d981c38a6",
+    "635b479a2913b0798ea24e377e9120f7082cc5d46cb5c7e62de679fed7db0934",
+    "79eeb36fd8d99d98a96862204afd231a7547446c8d93f68c43c73ead5090f4ec",
+    "76308151eec5f9be0dbb316c959a066e35c59fc042ae135cfab8cc5e8e3d0d44",
+    "cb3e8688f9897c41edd3f08eca1e49062598c39699060da645aff90c72d7262b",
+    "dc4165703cb6673578b1c9fbd5af1e0f2c1de13c985a4f68d15bc6323f1e3e8b",
+    "bc68f6a6515fee1587bd7820b1b94b3269e8b9009c1b071d05293820dac4ac3d",
+    "1375887d3ee20833af354632921bf6dc80583f17bb61acfb24b360e5d0d0723f",
+    "72258b5094c5bc4f0375859978661593210821a55b780590a0761b79cf8da309",
+    "b738c0aafee948ae87a9a935b854891996102c23aabf38f84a961178148f68b1",
+    "25cd159b6f4a2ca85066cacad1e254c9b9ea60d8777e52b6a25dee31799f7058",
+    "3699d21da83509c3121d567b20cb4100cd2819090e03f1faf1a6851ce96718e3"
+  ],
+  "limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "max_claude_processes": 4,
+    "concurrency": 1
+  }
+}

@@ -1,0 +1,770 @@
+{
+  "meaning": "Independent evidence-bound second read on16critical menus; first reader choice/notes withheld from critic. First reader is the cached full arm of narrative study, not selected by performance. Critic gets v4 inline and structured output, different task/delivery. No game-score/DS-transfer/population claim. Exact quote validation proves literal evidence presence, not entailment or actual stat effects. Gold used only in scoring.",
+  "script_sha256": "426ae43b763b79beb566df3f560cd1ba51e7acc2556fb99f1acacb81becf4fd1",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "critic_models": {
+    "claude-haiku-5-5": 16
+  },
+  "n_evidence_valid": 15,
+  "rejected_evidence_fallback_to_first": [
+    {
+      "id": "0adf8ea56cf9",
+      "error": "Nonliteral evidence"
+    }
+  ],
+  "n_valid_literal_yes_flags": 41,
+  "critic_disagreements": 1,
+  "gate_changes": 0,
+  "arms": {
+    "first": {
+      "n": 16,
+      "positive_risk": 0,
+      "growth_loss": 2,
+      "avoidable_pre_review_loss": 0,
+      "avoidable_positive_risk": 0,
+      "health_zero_after": 0,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    },
+    "independent_read": {
+      "n": 16,
+      "positive_risk": 1,
+      "growth_loss": 3,
+      "avoidable_pre_review_loss": 1,
+      "avoidable_positive_risk": 1,
+      "health_zero_after": 0,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    },
+    "two_read_gate": {
+      "n": 16,
+      "positive_risk": 0,
+      "growth_loss": 2,
+      "avoidable_pre_review_loss": 0,
+      "avoidable_positive_risk": 0,
+      "health_zero_after": 0,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    }
+  },
+  "paired_gate_changes": {
+    "positive_risk": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "growth_loss": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "avoidable_pre_review_loss": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "avoidable_positive_risk": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "health_zero_after": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "dignity_zero_after": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "wealth_cost_when_display_nonpositive": {
+      "improved": 0,
+      "worsened": 0
+    }
+  },
+  "risk_admission_block": false,
+  "rows": [
+    {
+      "id": "82d4b8110ef5",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "82d4b8110ef5",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "82d4b8110ef5",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "36a72de95b64",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "36a72de95b64",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "36a72de95b64",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "arm": "independent_read",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "arm": "two_read_gate",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "a17faeec0f07",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "a17faeec0f07",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": true,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "a17faeec0f07",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "606ffe5fc95e",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "606ffe5fc95e",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "606ffe5fc95e",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "8b573078a5b5",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "8b573078a5b5",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "8b573078a5b5",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "9d6837da9d35",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "9d6837da9d35",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "9d6837da9d35",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "bf4b670138f3",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "bf4b670138f3",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "bf4b670138f3",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "9a1fc53ea201",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "9a1fc53ea201",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "9a1fc53ea201",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "344ab51bb479",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "344ab51bb479",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "344ab51bb479",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "77660e585b81",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "77660e585b81",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "77660e585b81",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "49f5cda30810",
+      "arm": "first",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "49f5cda30810",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "49f5cda30810",
+      "arm": "two_read_gate",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "bd24f8d08a0b",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "bd24f8d08a0b",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "bd24f8d08a0b",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "989377c65575",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "989377c65575",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "989377c65575",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "1511245e8c5e",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "1511245e8c5e",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "1511245e8c5e",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    }
+  ]
+}
