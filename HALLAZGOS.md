@@ -1,6 +1,6 @@
 # Hallazgos, por importancia
 
-Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B22, B23, C9, C10 y tres filas de X).
+Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B22, B23, C9, C10 y tres filas de X); el 28 oct, con la búsqueda de huevos de Pascua (B28, B29 y una fila de X).
 
 **Niveles**
 - **A:** decide la nota y está confirmado con muchos datos.
@@ -98,6 +98,13 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 |---|---|---|
 | B27 | `Programa` **El agente oficial puede ejecutar código del Skill en plena partida.** Tiene 52 herramientas, entre ellas `bash` y `code` (Python/JavaScript), además de `read_file`/`write_file`; los permisos de JiuwenSwarm están desactivados. El instalador copia el Skill entero (`script/`, `reference/`) a `…/agent/workspace/skills/<skill>/`, y `bash` arranca en `…/agent/workspace/projects`, así que `python3 ../skills/<skill>/script/x.py` funciona. Comprobado con un modelo falso (0 USD) y en partidas reales con DeepSeek, que llama al script sin fallos de formato. | formato, [README §1](lab/reports/formato/README.md) |
 
+**Huevos de Pascua y atajos de ascenso (28 oct, sólo bots).**
+
+| # | Hallazgo | Fuente |
+|---|---|---|
+| B28 | `Juego` **La fase trimestral corta historias y su título vuelve a salir.** En los meses 3, 6, 9…, si la respuesta de la tercera plaza del mes tiene continuación «del mismo mes», la historia se descarta (3.239 de 3.296) y el título puede volver a salir entero más tarde (~1,4–1,7 veces por partida larga); en los demás meses pasa al mes siguiente (6.606 de 6.606). La réplica no lo modelaba, pero **no cambia la nota** (−0,18 ± 0,15 en 3.000 partidas) y aprovecharlo tampoco (±0,02). | [huevos-pascua](lab/reports/huevos-pascua/README.md) §1.10, §2 |
+| B29 | `Juego` **La evaluación se hace antes de la explosión de riesgo que llega al empezar el mes**: se asciende y después explota (77 de los 117 fallos de la regla de ascenso; los otros 39 son la nota mal prevista por la réplica). No es un atajo: la explosión cuesta lo de siempre. | [huevos-pascua](lab/reports/huevos-pascua/README.md) §1.3 |
+
 **Auditoría de representación y control (27 oct, apoyo a DeepSeek).**
 
 | # | Hallazgo | Fuente |
@@ -164,4 +171,5 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | `Bot` Preparar la reputación antes de la evaluación para evitar la charla de aviso (M24) | +0,1 con la regla exacta, −0,5 con la general | palancas, [reputación](lab/reports/palancas/reputacion.md) |
 | `Revisor de rúbrica` Llamar “Caps” o “techo del nivel” a lo que no sube | el revisor de la rúbrica lo lee como una mecánica sin publicar (el manual dice “0–unbounded”); hay que describir lo que se ve (“Stalled”) | palancas, [nota-memoria](lab/reports/palancas/nota-memoria.md) |
 | `DeepSeek` Lista de comprobación (señales sí/no por opción) para leer las opciones | riesgo 90 % frente a 88 % de v3, Skill igual, el resto peor (una pasada del catálogo) | formato, [README §4](lab/reports/formato/README.md) |
+| `Juego` Huevos de Pascua o atajos de ascenso: saltos de nivel, ascensos fuera de la evaluación, respuestas o personajes (Helen, Hale, Polaris…) que adelanten un ascenso, eventos que se desbloqueen con una respuesta, combinaciones del trimestre, entradas raras a `take_action` | no existen en el juego de desarrollo: 19.420 ascensos de un nivel y siempre en evaluación, 0 cambios de nivel por respuesta, 0 ascensos con un indicador bajo el umbral salvo el orden de B29, ninguna respuesta requisito o bloqueo de otro título, 207 de 212 respuestas raras jugadas a propósito en 4.500 partidas sin nada especial; tampoco en modo `--competition` (603 partidas) ni con palabras clave en `notes` (300). Lo que use el conjunto oficial no se ve en local | [huevos-pascua](lab/reports/huevos-pascua/README.md) |
 | `DeepSeek` Híbrido "DeepSeek decide historias, el script lleva estado y trimestre" (`script-v2`) | 51,12 y 30,6: DeepSeek vuelve a tomar riesgos "pragmáticos" en historias; pierde el techo del script sin ganar estabilidad | formato, [README §5](lab/reports/formato/README.md) |
