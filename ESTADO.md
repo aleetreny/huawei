@@ -97,3 +97,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 **Limite runtime:**ninguna ruta entregableverificada para esfuerzo desdeSkills; no parchearSDK/slots ni seleccionarhosting. Soporteclientextra_body no prueba exposicion alagente. Auditoria sin API.
 
 **Panelforecast preparado, no lanzado:**cuota guardada caducada (>7h), guardiafalse.24casos existentes, sin nuevasllamadas/juegos; obtener cuota fresca antes de admision.
+
+**Admision panelforecast anunciada:**hasta25invocacionesMax(1READYpara cuota actual+24lecturasSonnet previamente fijadas), sin juegos/DeepSeek. Si cuota5h>=0,65o semanal>=0,45,no abrirlecturas. Max4procesos. Planoriginalsin cambios.
+
+**Panelforecast admitido:**READYcompleto, cuota actual5h5%/semana42%;iniciadas24lecturasSonnet, sin juegos/DeepSeek. No repetir admision.
