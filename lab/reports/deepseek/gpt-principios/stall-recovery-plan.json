@@ -1,0 +1,14 @@
+{
+  "n": 600,
+  "seed": 2026102900,
+  "arms": [
+    "observed",
+    "recovery"
+  ],
+  "rule": "After two consecutive observed reviews without promotion, prioritise reducing non-best monthly HR feedback in quarters; health priority retained. Stories unchanged. Reset misses on promotion.",
+  "scope": "Research replica and frozen DS labels, not a Skill or Q forecast. No API. Same random seeds; path divergence possible. No private month/threshold rule delivered.",
+  "labels_sha256": [
+    "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+    "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+  ]
+}
