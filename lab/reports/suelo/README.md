@@ -159,6 +159,19 @@ Confirma: las 3 completas, media de las completas ≥ 68 (v4: 70–72), ninguna 
 
 **Coste total del plan: ≈ 3,5 USD** (de los ~35 que quedan, 15 de reserva).
 
-## Relevo
+## Relevo (28 oct, 19:40 UTC; se actualiza al cerrar)
 
-(Se completa al final.)
+1. **Qué se ha hecho y por qué.** Se midió en la réplica, con un jugador que imita a v4 y dos lectores (exacto y con el ruido de DeepSeek), de dónde salen las partidas hundidas y cuánto recorta cada regla candidata (`scripts/suelo/floor.py`). Se parcheó la réplica con B30 (la de `main` no lo tiene). Con lo que ganó se escribieron `suelo-v1` (cuatro reglas) y `suelo-v1-min` (las dos de más efecto), se pasaron por el lint y el juez, y se construyó un banco de 176 situaciones trampa (`scripts/suelo/trapbank.py`) jugado con Haiku en la entrega oficial del Skill.
+2. **Resultados.** §1–§2: B33–B35 y C43 en HALLAZGOS. §5: juez igual que v4-c5; Haiku elige lo mismo con los tres manuales en el 95 % de las situaciones (el texto no mueve a Haiku; sólo DeepSeek puede confirmar), rellena bien los campos nuevos de la línea de estado y escribe notas un 30 % más cortas. Datos: réplica en la salida de `floor.py` (reproducible con las semillas); juicios en `lab/reports/suelo/data-j-*.jsonl`; banco en `~/careerlab-data/suelo/` (texto del juego, fuera de Git; se regenera con los comandos de §6).
+3. **Qué falló o quedó a medias.** No hay clave de DeepSeek aquí: nada está confirmado con el modelo de la evaluación. El lector ruidoso a escala completa es más torpe que DeepSeek en partida (muere por salud), así que las cifras absolutas de la réplica son pesimistas. El banco de Haiku corrió con el texto anterior a dos frases añadidas al final (el matiz de «Reviews here» en el mes de la charla y «lo abierto contra la empresa no es el riesgo menor»); el brazo `hk-suelo-v1b` repite las situaciones de riesgo con el texto final.
+4. **Siguiente paso.** El plan de §6 en el chat local (≈ 3,5 USD): juez con DeepSeek, banco de trampas con DeepSeek y, si confirma, 3 partidas de `suelo-v1`. Si DeepSeek tampoco cambia de elección con el texto, la salida es llevar el rescate y el tamaño del riesgo a la instrucción del manifest con más peso, o al script de la línea Formato.
+
+```bash
+python3 scripts/suelo/floor.py --games 3000 --arms base+hw+mag+exact,base+hw+mag+rescue+blow+exact,base+hw+mag+scale0.5,base+hw+mag+rescue+blow+scale0.5
+```
+
+```bash
+SUELO_DATA=~/careerlab-data/suelo python3 scripts/suelo/trapscore.py --arms hk-c5,hk-suelo-v1,hk-suelo-v1-min
+```
+
+**Coste.** 0 USD de DeepSeek. Claude: unas 600 sesiones de banco con Haiku y 60 lecturas de juez (Haiku y Sonnet); CPU del contenedor, ~1 h.
