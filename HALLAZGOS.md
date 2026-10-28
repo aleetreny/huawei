@@ -139,6 +139,10 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C26 | `Haiku/Sonnet` Con v4igual,12menús emparejados: riesgo2ambos, una pérdida evitableHaiku frente0Sonnet. Una carreraSonnet completa49,95/L4,202acciones sin rechazos. Mayor capacidad no basta en esta referencia; no inferir diferencia media ni transferenciaDS. | [capacidad](lab/reports/deepseek/gpt-principios/capacity-and-learning.md) |
 | C27 | `Haiku, banco` Resultado real de un episodio anterior: piloto16pares pérdidas6→4/riesgo1→1; contraste43objetivos restantes13→14/riesgo2→2.118decisiones válidas, docentes/carreras compartidos. No conserva mejora; no admitir a carreras. No invalida toda posible memoria. | [feedback](lab/reports/deepseek/gpt-principios/capacity-and-learning.md) |
 
+| C28 | `Haiku, banco` Quitar título/narración manteniendo estado/opciones/v4 empeora:32contextos(31menús), riesgo1→3 y pérdidas evitables antes de evaluación0→3.64lecturas válidas, vinculadas al panel exacto. No admitir a carreras. No descarta todo cambio de formato. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md) |
+| C29 | `Haiku, banco` Revisión factual independiente con cita literal:15/16evidencias válidas, una no literal conservada/fallback. Regla de seguridad0cambios; recomendación sin regla añadiría un riesgo y una pérdida evitable. Primera lectura ya tenía0evitables: no permite descartar rescate de errores reales. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md) |
+| C30 | `Sonnet, una carrera fuente` Releer los24turnos críticos con mismo modelo/Skill/systemprompt, panel original y3notas previas, conserva22/24elecciones y exactamente los2fallos evitables del control; riesgo3→3. No muestra rescate por este paquete de contexto fresco; no es ensayo aleatorizado de carreras ni transferenciaDS. | [ideas](lab/reports/deepseek/gpt-principios/user-ideas.md),24relecturas |
+
 ## X. Descartado (no repetir sin una razón nueva)
 
 | Idea | Por qué no | Fuente |

@@ -1,0 +1,298 @@
+{
+  "reason": "One menu node was sampled in both timing strata with different public panels. Legacy node-only keys wrongly skipped the later context, not 64 actual reads. Bind all results to actual served panels.",
+  "original_selection_and_prompts_unchanged": true,
+  "completed_reads_before_correction": 62,
+  "remaining_reads": 2,
+  "n_contexts": 32,
+  "n_unique_menu_nodes": 31,
+  "bindings": [
+    {
+      "index": 0,
+      "node": "dd42ec7d098d",
+      "pre_review": false,
+      "trials": {
+        "full": "dd42ec7d098d-full",
+        "options_only": "dd42ec7d098d-options_only"
+      }
+    },
+    {
+      "index": 1,
+      "node": "82d4b8110ef5",
+      "pre_review": true,
+      "trials": {
+        "full": "82d4b8110ef5-full",
+        "options_only": "82d4b8110ef5-options_only"
+      }
+    },
+    {
+      "index": 2,
+      "node": "1a36d76efe7f",
+      "pre_review": false,
+      "trials": {
+        "full": "1a36d76efe7f-full",
+        "options_only": "1a36d76efe7f-options_only"
+      }
+    },
+    {
+      "index": 3,
+      "node": "36a72de95b64",
+      "pre_review": true,
+      "trials": {
+        "full": "36a72de95b64-full",
+        "options_only": "36a72de95b64-options_only"
+      }
+    },
+    {
+      "index": 4,
+      "node": "0adf8ea56cf9",
+      "pre_review": true,
+      "trials": {
+        "full": "0adf8ea56cf9-full",
+        "options_only": "0adf8ea56cf9-options_only"
+      }
+    },
+    {
+      "index": 5,
+      "node": "a17faeec0f07",
+      "pre_review": true,
+      "trials": {
+        "full": "a17faeec0f07-full",
+        "options_only": "a17faeec0f07-options_only"
+      }
+    },
+    {
+      "index": 6,
+      "node": "606ffe5fc95e",
+      "pre_review": true,
+      "trials": {
+        "full": "606ffe5fc95e-full",
+        "options_only": "606ffe5fc95e-options_only"
+      }
+    },
+    {
+      "index": 7,
+      "node": "9ef86d653154",
+      "pre_review": false,
+      "trials": {
+        "full": "9ef86d653154-full",
+        "options_only": "9ef86d653154-options_only"
+      }
+    },
+    {
+      "index": 8,
+      "node": "8b573078a5b5",
+      "pre_review": true,
+      "trials": {
+        "full": "8b573078a5b5-full",
+        "options_only": "8b573078a5b5-options_only"
+      }
+    },
+    {
+      "index": 9,
+      "node": "c5255c36c7ac",
+      "pre_review": false,
+      "trials": {
+        "full": "c5255c36c7ac-full",
+        "options_only": "c5255c36c7ac-options_only"
+      }
+    },
+    {
+      "index": 10,
+      "node": "2aec8a18e126",
+      "pre_review": false,
+      "trials": {
+        "full": "2aec8a18e126-full",
+        "options_only": "2aec8a18e126-options_only"
+      }
+    },
+    {
+      "index": 11,
+      "node": "9d6837da9d35",
+      "pre_review": true,
+      "trials": {
+        "full": "9d6837da9d35-full",
+        "options_only": "9d6837da9d35-options_only"
+      }
+    },
+    {
+      "index": 12,
+      "node": "fbbc5dc173d9",
+      "pre_review": true,
+      "trials": {
+        "full": "fbbc5dc173d9-full",
+        "options_only": "fbbc5dc173d9-options_only"
+      }
+    },
+    {
+      "index": 13,
+      "node": "b4e949afe460",
+      "pre_review": false,
+      "trials": {
+        "full": "b4e949afe460-full",
+        "options_only": "b4e949afe460-options_only"
+      }
+    },
+    {
+      "index": 14,
+      "node": "bf4b670138f3",
+      "pre_review": true,
+      "trials": {
+        "full": "bf4b670138f3-full",
+        "options_only": "bf4b670138f3-options_only"
+      }
+    },
+    {
+      "index": 15,
+      "node": "9a1fc53ea201",
+      "pre_review": true,
+      "trials": {
+        "full": "9a1fc53ea201-full",
+        "options_only": "9a1fc53ea201-options_only"
+      }
+    },
+    {
+      "index": 16,
+      "node": "615eebee3ab7",
+      "pre_review": false,
+      "trials": {
+        "full": "615eebee3ab7-full",
+        "options_only": "615eebee3ab7-options_only"
+      }
+    },
+    {
+      "index": 17,
+      "node": "586fc69e28b6",
+      "pre_review": false,
+      "trials": {
+        "full": "586fc69e28b6-full",
+        "options_only": "586fc69e28b6-options_only"
+      }
+    },
+    {
+      "index": 18,
+      "node": "344ab51bb479",
+      "pre_review": true,
+      "trials": {
+        "full": "344ab51bb479-full",
+        "options_only": "344ab51bb479-options_only"
+      }
+    },
+    {
+      "index": 19,
+      "node": "77660e585b81",
+      "pre_review": true,
+      "trials": {
+        "full": "77660e585b81-full",
+        "options_only": "77660e585b81-options_only"
+      }
+    },
+    {
+      "index": 20,
+      "node": "36a72de95b64",
+      "pre_review": false,
+      "trials": {
+        "full": "36a72de95b64-full-context-7f65348e586c0b89",
+        "options_only": "36a72de95b64-options_only-context-391fad0702348ade"
+      }
+    },
+    {
+      "index": 21,
+      "node": "927ed56a73ab",
+      "pre_review": false,
+      "trials": {
+        "full": "927ed56a73ab-full",
+        "options_only": "927ed56a73ab-options_only"
+      }
+    },
+    {
+      "index": 22,
+      "node": "49f5cda30810",
+      "pre_review": true,
+      "trials": {
+        "full": "49f5cda30810-full",
+        "options_only": "49f5cda30810-options_only"
+      }
+    },
+    {
+      "index": 23,
+      "node": "77488149beeb",
+      "pre_review": false,
+      "trials": {
+        "full": "77488149beeb-full",
+        "options_only": "77488149beeb-options_only"
+      }
+    },
+    {
+      "index": 24,
+      "node": "bd24f8d08a0b",
+      "pre_review": true,
+      "trials": {
+        "full": "bd24f8d08a0b-full",
+        "options_only": "bd24f8d08a0b-options_only"
+      }
+    },
+    {
+      "index": 25,
+      "node": "1b2dba28e4f1",
+      "pre_review": false,
+      "trials": {
+        "full": "1b2dba28e4f1-full",
+        "options_only": "1b2dba28e4f1-options_only"
+      }
+    },
+    {
+      "index": 26,
+      "node": "989377c65575",
+      "pre_review": true,
+      "trials": {
+        "full": "989377c65575-full",
+        "options_only": "989377c65575-options_only"
+      }
+    },
+    {
+      "index": 27,
+      "node": "5204148abfa9",
+      "pre_review": false,
+      "trials": {
+        "full": "5204148abfa9-full",
+        "options_only": "5204148abfa9-options_only"
+      }
+    },
+    {
+      "index": 28,
+      "node": "1511245e8c5e",
+      "pre_review": true,
+      "trials": {
+        "full": "1511245e8c5e-full",
+        "options_only": "1511245e8c5e-options_only"
+      }
+    },
+    {
+      "index": 29,
+      "node": "9fde1c3e54a1",
+      "pre_review": false,
+      "trials": {
+        "full": "9fde1c3e54a1-full",
+        "options_only": "9fde1c3e54a1-options_only"
+      }
+    },
+    {
+      "index": 30,
+      "node": "4ab0a079865b",
+      "pre_review": false,
+      "trials": {
+        "full": "4ab0a079865b-full",
+        "options_only": "4ab0a079865b-options_only"
+      }
+    },
+    {
+      "index": 31,
+      "node": "3346fbd482a3",
+      "pre_review": false,
+      "trials": {
+        "full": "3346fbd482a3-full",
+        "options_only": "3346fbd482a3-options_only"
+      }
+    }
+  ]
+}
