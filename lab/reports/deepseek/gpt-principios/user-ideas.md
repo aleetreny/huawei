@@ -74,3 +74,8 @@ Analisisposthoc numerico en fact-bottleneck.json, regenerable con `uv run python
 
 ### Relevo
 Analisisposthoc sin modelos/juegos, reproducible con `uv run python scripts/deepseek/gpt_fact_sufficiency.py`; salida numerica fact-sufficiency.json. No convertir colisiones en respuestas fijas por evento. Antes de otra tabla de categorias, exigir prueba de que conserva diferencias relevantes para decision. Codigo compilado y diff --check limpio. Objetivo75abierto, sin nueva candidatura.
+
+## Relevo final: panelforecast cerrado
+**Predecir paneles numericos no mejora: perdidas evitables2→3, riesgo3→3.**24/24respuestas completasSonnet5.5,67opciones previstas. PrecisiondireccionalSkill64,18%,Network74,63%,Output71,64%; contraefectosdirectos de replica, no resultados contrafactualesobservados. MAEdepende de panelmostrado y redondeoWealth. No demuestra mejorapredictiva frenteaotraslecturas sinprediccionescomparables.
+
+No admitir a carreras: perdidascrecimiento9→10, sin gananciaendpoint.1READY+24lecturas, sin juegosnuevos/DeepSeek. Proceso61468terminado. Analisis sinllamadas: `uv run python scripts/deepseek/gpt_panel_forecast_score.py`; panel-forecast-results.jsonnumerico. Scorercompilado/diff --checklimpio. Proxima intervencion debe cambiar informacion o controlador, no volver a etiquetar la misma lectura con otra salida. Objetivo75abierto; solicitar integrarPR23.

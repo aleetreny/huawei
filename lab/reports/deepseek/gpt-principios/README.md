@@ -258,3 +258,8 @@ Helpers modificados solo con opcionales schema/validator, predeterminados previo
 **Cuota fresca permite iniciar, resultados pendientes.** Una admisionREADYMax completa6,21s, Sonnet5.5, sin juego. Cuota actual5h5%/semana42%, topes65%/45%. Iniciadas24lecturas fijadas via gpt_panel_forecast.py --calls24, sin modificar prompt/seleccion. Inspeccionar proceso/resultados en ~/careerlab-data/deepseek/gpt-panel-forecast/ antes de retomar; no repetir READY ni respuestas. Falta scorer: comparar recommended_choice con original_choice y calcular error/signo de after contra estado+realised catalogo, solo evaluador. No usar gold alactor ni afirmarQ.
 
 Max25invocaciones incluyendoadmision,4procesos, ningunaAPI/partidaDeepSeek. Objetivo75abierto, sin candidato. Solicito integrarPR23.
+
+## Relevo final: panelforecast cerrado
+**Predecir paneles numericos no mejora: perdidas evitables2→3, riesgo3→3.**24/24respuestas completasSonnet5.5,67opciones previstas. PrecisiondireccionalSkill64,18%,Network74,63%,Output71,64%; contraefectosdirectos de replica, no resultados contrafactualesobservados. MAEdepende de panelmostrado y redondeoWealth. No demuestra mejorapredictiva frenteaotraslecturas sinprediccionescomparables.
+
+No admitir a carreras: perdidascrecimiento9→10, sin gananciaendpoint.1READY+24lecturas, sin juegosnuevos/DeepSeek. Proceso61468terminado. Analisis sinllamadas: `uv run python scripts/deepseek/gpt_panel_forecast_score.py`; panel-forecast-results.jsonnumerico. Scorercompilado/diff --checklimpio. Proxima intervencion debe cambiar informacion o controlador, no volver a etiquetar la misma lectura con otra salida. Objetivo75abierto; solicitar integrarPR23.
