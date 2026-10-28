@@ -28,9 +28,13 @@ def main(holdout=False):
             rows.append({'id':it['id'],'arm':arm,'pre_review':it['pre_review'],'choice':k,
                          'positive_risk':risk[k]>0,'growth_loss':loss,
                          'avoidable_pre_review_loss':bool(it['pre_review'] and loss and safe),
-                         'avoidable_positive_risk':bool(risk[k]>0 and safe)})
+                         'avoidable_positive_risk':bool(risk[k]>0 and safe),
+                         'health_zero_after':st['health']+fx[k]['health']<=0,
+                         'dignity_zero_after':st['dignity']+fx[k]['dignity']<=0,
+                         'wealth_cost_when_display_nonpositive':st['wealth']<=0 and fx[k]['wealth']<0})
     if missing:print(json.dumps({'pending':len(missing),'available':len(rows)}));return
     keys=('positive_risk','growth_loss','avoidable_pre_review_loss','avoidable_positive_risk')
+    extra=('health_zero_after','dignity_zero_after','wealth_cost_when_display_nonpositive')
     arms={a:{'n':sum(r['arm']==a for r in rows),**{k:sum(bool(r[k]) for r in rows if r['arm']==a) for k in keys}} for a in plan['arms']}
     pairs={it['id']:{} for it in items}
     for r in rows:pairs[r['id']][r['arm']]=r
@@ -40,6 +44,8 @@ def main(holdout=False):
          'models':dict(models),'arms':arms,'same_choice':sum(p['history_only']['choice']==p['observed_outcome']['choice'] for p in pairs.values()),
          'paired_changes':{k:{'improved':sum(p['history_only'][k] and not p['observed_outcome'][k] for p in pairs.values()),'worsened':sum(not p['history_only'][k] and p['observed_outcome'][k] for p in pairs.values())} for k in keys},
          'risk_admission_block':arms['observed_outcome']['positive_risk']>arms['history_only']['positive_risk'],'rows':rows}
+    out['posthoc_resource_safety']={'meaning':'Additional harm checks added after the n16 pilot while held-out collection was unfinished. Original endpoints unchanged. Displayed wealth is truncated, so a cost with nonpositive display is a warning, not observed bankruptcy. These are immediate checks, not whole-career safety.',
+                                    'arms':{a:{k:sum(bool(r[k]) for r in rows if r['arm']==a) for k in extra} for a in plan['arms']}}
     (REPORT/f'{name}-results.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps({k:v for k,v in out.items() if k!='rows'},indent=2))
 if __name__=='__main__':

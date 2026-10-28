@@ -79,3 +79,5 @@ Hipotesis: una consecuencia realmente observada puede corregir una creencia al e
 
 ## Contraste de feedback, antes de llamadas adicionales
 Exploracion n16 deja6→4perdidas,1→0evitable pre-evaluacion,1→1riesgo;13/16opciones iguales. Sin modificar metodo, probar todos43menus restantes de la poblacion elegible59:7pre-evaluacion/36otros. Se excluyen objetivos iniciales y no se elige por etiqueta verdadera ni por donde funciono. Mismos episodios docentes/carreras pueden repetirse: independencia de objetivo no implica independencia estadistica de corpus. Max86decisionesHaikuMax, sin nuevas carreras niDeepSeek. Mantener endpoints y bloquear admision si aumenta riesgo. No afinar prompt ni parar por nota intermedia.
+
+Resultado delcontraste: negativo paraadmision.43parescompletos, perdidas13→14, riesgo2→2; no se mantiene mejora. No ejecutar nuevos juegos de esta variante. Objetivo75abierto; proxima hipotesis debe separar identificabilidad delestado/control con herramientaspublicas de obediencia/formato yaauditados.
