@@ -1,0 +1,371 @@
+{
+ "perfect": {
+  "blind": {
+   "score": 55.652215,
+   "se": 0.3884104436137648,
+   "l6": 0.0585,
+   "l5plus": 0.6615,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 61,
+    "4": 337,
+    "5": 1206,
+    "6": 117
+   },
+   "completed": 0.701,
+   "skill_end_completed": 112.66119828815977,
+   "network_end_completed": 44.146932952924395,
+   "month_reach_l5": 43.08843537414966,
+   "l5_reviews": {
+    "skill": 909,
+    "network": 280,
+    "output": 130,
+    "promoted": 117
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1402,
+    "trust": 352,
+    "health": 2
+   }
+  },
+  "blind+net3": {
+   "score": 55.003569999999996,
+   "se": 0.3841731922562715,
+   "l6": 0.0405,
+   "l5plus": 0.6335,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 84,
+    "4": 370,
+    "5": 1186,
+    "6": 81
+   },
+   "completed": 0.7005,
+   "skill_end_completed": 109.74660956459671,
+   "network_end_completed": 43.05424696645253,
+   "month_reach_l5": 43.7379636937648,
+   "l5_reviews": {
+    "skill": 772,
+    "network": 239,
+    "output": 124,
+    "promoted": 81
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1401,
+    "trust": 353,
+    "health": 2
+   }
+  },
+  "blind+ss4": {
+   "score": 55.692935,
+   "se": 0.38832205026916783,
+   "l6": 0.06,
+   "l5plus": 0.6645,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 61,
+    "4": 331,
+    "5": 1209,
+    "6": 120
+   },
+   "completed": 0.7035,
+   "skill_end_completed": 112.90831556503198,
+   "network_end_completed": 44.147121535181235,
+   "month_reach_l5": 43.05643340857788,
+   "l5_reviews": {
+    "skill": 916,
+    "network": 297,
+    "output": 130,
+    "promoted": 120
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1407,
+    "trust": 347,
+    "health": 2
+   }
+  },
+  "blind+ss3": {
+   "score": 55.743945000000004,
+   "se": 0.38704830530414014,
+   "l6": 0.0635,
+   "l5plus": 0.665,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 58,
+    "4": 333,
+    "5": 1203,
+    "6": 127
+   },
+   "completed": 0.708,
+   "skill_end_completed": 112.53601694915254,
+   "network_end_completed": 44.08686440677966,
+   "month_reach_l5": 43.05563909774436,
+   "l5_reviews": {
+    "skill": 908,
+    "network": 289,
+    "output": 129,
+    "promoted": 127
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1416,
+    "trust": 338,
+    "health": 2
+   }
+  },
+  "blind+net3+ss4": {
+   "score": 55.000935,
+   "se": 0.384196853382432,
+   "l6": 0.0425,
+   "l5plus": 0.6335,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 84,
+    "4": 370,
+    "5": 1182,
+    "6": 85
+   },
+   "completed": 0.7005,
+   "skill_end_completed": 109.92862241256246,
+   "network_end_completed": 43.03426124197002,
+   "month_reach_l5": 43.72375690607735,
+   "l5_reviews": {
+    "skill": 772,
+    "network": 252,
+    "output": 120,
+    "promoted": 85
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1401,
+    "trust": 353,
+    "health": 2
+   }
+  },
+  "sk4r+net3+ss4": {
+   "score": 55.73044500000001,
+   "se": 0.39333311969310597,
+   "l6": 0.099,
+   "l5plus": 0.6695,
+   "levels": {
+    "1": 262,
+    "2": 17,
+    "3": 84,
+    "4": 298,
+    "5": 1141,
+    "6": 198
+   },
+   "completed": 0.7025,
+   "skill_end_completed": 119.89537366548042,
+   "network_end_completed": 44.07686832740214,
+   "month_reach_l5": 42.35847647498133,
+   "l5_reviews": {
+    "skill": 829,
+    "network": 381,
+    "output": 700,
+    "promoted": 198
+   },
+   "failures": {
+    "dismissed": 244,
+    "completed": 1405,
+    "trust": 345,
+    "health": 6
+   }
+  },
+  "ref": {
+   "score": 57.563915,
+   "se": 0.3886871822870219,
+   "l6": 0.1345,
+   "l5plus": 0.714,
+   "levels": {
+    "1": 246,
+    "2": 13,
+    "3": 59,
+    "4": 254,
+    "5": 1159,
+    "6": 269
+   },
+   "completed": 0.712,
+   "skill_end_completed": 119.29775280898876,
+   "network_end_completed": 47.12008426966292,
+   "month_reach_l5": 41.8109243697479,
+   "l5_reviews": {
+    "skill": 1119,
+    "network": 189,
+    "output": 209,
+    "promoted": 269
+   },
+   "failures": {
+    "dismissed": 229,
+    "completed": 1424,
+    "trust": 345,
+    "health": 2
+   }
+  }
+ },
+ "haiku": {
+  "blind": {
+   "score": 49.697265,
+   "se": 0.4242797081764253,
+   "l6": 0.0125,
+   "l5plus": 0.4835,
+   "levels": {
+    "1": 464,
+    "2": 20,
+    "3": 87,
+    "4": 462,
+    "5": 942,
+    "6": 25
+   },
+   "completed": 0.5855,
+   "skill_end_completed": 105.27241673783091,
+   "network_end_completed": 42.0333048676345,
+   "month_reach_l5": 44.14684591520165,
+   "l5_reviews": {
+    "skill": 561,
+    "network": 169,
+    "output": 77,
+    "promoted": 25
+   },
+   "failures": {
+    "completed": 1171,
+    "trust": 376,
+    "dismissed": 441,
+    "health": 11,
+    "broke": 1
+   }
+  },
+  "sk4": {
+   "score": 49.967169999999996,
+   "se": 0.4312865106546764,
+   "l6": 0.04,
+   "l5plus": 0.5185,
+   "levels": {
+    "1": 464,
+    "2": 20,
+    "3": 87,
+    "4": 392,
+    "5": 957,
+    "6": 80
+   },
+   "completed": 0.5795,
+   "skill_end_completed": 110.30457290767903,
+   "network_end_completed": 42.52459016393443,
+   "month_reach_l5": 43.388621022179365,
+   "l5_reviews": {
+    "skill": 651,
+    "network": 257,
+    "output": 206,
+    "promoted": 80
+   },
+   "failures": {
+    "completed": 1159,
+    "trust": 385,
+    "dismissed": 441,
+    "health": 14,
+    "broke": 1
+   }
+  },
+  "sk4r": {
+   "score": 50.317710000000005,
+   "se": 0.43564068655468907,
+   "l6": 0.0485,
+   "l5plus": 0.5135,
+   "levels": {
+    "1": 464,
+    "2": 20,
+    "3": 87,
+    "4": 402,
+    "5": 930,
+    "6": 97
+   },
+   "completed": 0.582,
+   "skill_end_completed": 115.18384879725086,
+   "network_end_completed": 42.850515463917525,
+   "month_reach_l5": 42.96397273612463,
+   "l5_reviews": {
+    "skill": 607,
+    "network": 275,
+    "output": 555,
+    "promoted": 97
+   },
+   "failures": {
+    "completed": 1164,
+    "trust": 380,
+    "dismissed": 441,
+    "health": 14,
+    "broke": 1
+   }
+  },
+  "sk3r": {
+   "score": 47.905955,
+   "se": 0.4120304742975481,
+   "l6": 0.016,
+   "l5plus": 0.3755,
+   "levels": {
+    "1": 464,
+    "2": 20,
+    "3": 158,
+    "4": 607,
+    "5": 719,
+    "6": 32
+   },
+   "completed": 0.579,
+   "skill_end_completed": 101.39119170984456,
+   "network_end_completed": 38.568221070811745,
+   "month_reach_l5": 44.55659121171771,
+   "l5_reviews": {
+    "skill": 320,
+    "network": 154,
+    "output": 298,
+    "promoted": 32
+   },
+   "failures": {
+    "completed": 1158,
+    "trust": 385,
+    "dismissed": 441,
+    "health": 15,
+    "broke": 1
+   }
+  },
+  "ref": {
+   "score": 51.41981,
+   "se": 0.4302838874439141,
+   "l6": 0.0465,
+   "l5plus": 0.544,
+   "levels": {
+    "1": 453,
+    "2": 12,
+    "3": 88,
+    "4": 359,
+    "5": 995,
+    "6": 93
+   },
+   "completed": 0.597,
+   "skill_end_completed": 111.49748743718592,
+   "network_end_completed": 44.77386934673367,
+   "month_reach_l5": 43.06985294117647,
+   "l5_reviews": {
+    "skill": 736,
+    "network": 123,
+    "output": 148,
+    "promoted": 93
+   },
+   "failures": {
+    "completed": 1194,
+    "trust": 365,
+    "dismissed": 432,
+    "health": 8,
+    "broke": 1
+   }
+  }
+ }
+}

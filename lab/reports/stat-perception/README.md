@@ -7,7 +7,8 @@ Es el paso (c) de la línea **Categorías** de Alejandro ([question-bank/](../qu
 **Estado (28 oct, 10:30 UTC).** Hechos:
 - 9 etiquetados con Haiku, medidos en una mitad reservada de los eventos y en la réplica;
 - una prueba de elecciones en el banco de Transmisión;
-- un estudio de la trampa del primer ascenso (L1) en la réplica, con 13 brazos.
+- un estudio de la trampa del primer ascenso (L1) en la réplica, con 13 brazos;
+- un estudio del camino a L6 en la réplica.
 
 Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y la ventana de 5 horas del 34 % al 42 % en el banco); nada de la Max. No se ha jugado ninguna partida completa. **Con Haiku y la réplica no queda nada prometedor. Lo siguiente es con DeepSeek, en la línea de Alejandro.**
 
@@ -35,7 +36,14 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
    - La palanca con efecto sigue siendo leer mejor: con lectura perfecta, acabar en L1 baja del 23 % al 13 %.
 
    [06](06-trampa-l1.md)
-6. **Redacción, para quien escriba manuales:**
+6. **El camino a L6 se pierde en L4, y una regla de trimestre ayuda un poco.**
+   - Llegar a L6 vale +7 puntos por partida, pero se llega a L5 en el mes ~43 tras 17–18 meses en L4 ganando Skill, casi todo con historias.
+   - La línea de v4 que pone Skill en el trimestre depende de "Stalled", que DeepSeek no rellena, así que no se aplica nunca.
+   - Ponerla sin condiciones **a partir de L4** (Skill learning y Apply for rotation, como en t13-final) da +0,6 de nota y L6 del 1 % al 5 % con lectura de Haiku.
+   - Empezar en L3 cuesta 1,8.
+
+   [07](07-camino-l6.md)
+7. **Redacción, para quien escriba manuales:**
    - un significado corto de cada indicador funciona mejor que una lista de pistas y reduce a la mitad las crisis de confianza (73 frente a 136 por 1.000 partidas);
    - "una ganancia y un coste por opción" hunde la nota (39,7);
    - nunca presentar una conducta arriesgada como forma de ganar un indicador.
@@ -59,6 +67,7 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | [04-defs3-y-ruido.md](04-defs3-y-ruido.md) | Repetir un etiquetado mueve la réplica 1,2 puntos; defs3 sola etiqueta peor, pero en la votación da la mejor nota (55,1). |
 | [05-prueba-de-elecciones.md](05-prueba-de-elecciones.md) | La línea de percepción en la referencia del mes previo no hace elegir mejor a Haiku (pierde un punto necesario un 30 % frente al 18 % de t13-final). |
 | [06-trampa-l1.md](06-trampa-l1.md) | 2 de cada 3 puntos perdidos antes de una evaluación en L1 son forzosos, y ninguna de 7 reglas nuevas baja los despidos sin subir las crisis. |
+| [07-camino-l6.md](07-camino-l6.md) | L6 vale +7 por partida pero se pierde tiempo en L4; Skill learning y rotation en el trimestre desde L4, sin condiciones, es la única regla que ayuda (+0,6). |
 
 ## Archivos
 
@@ -69,6 +78,7 @@ Todo con la cuota Pro de Leah (unos 0,9 USD a precio de lista en etiquetado, y l
 | `eval.json`, `replica*.json` | Tablas completas del etiquetado |
 | `choice-test.out`, `choice-test-answers.json` | Prueba de elecciones: tablas de `score.py` y `fingerprint.py`, y elecciones por identificador |
 | `l1-trap.json` | Trampa de L1: nota, despidos, crisis, causas y pérdidas por brazo |
+| `l6.json` | Camino a L6: nota, % en L5 y L6, Skill final y mes de L5 por brazo, con lectura perfecta y de Haiku |
 
 Scripts en [scripts/stat-perception/](../../../scripts/stat-perception/):
 - `label.py`: etiqueta con Haiku;
@@ -76,7 +86,8 @@ Scripts en [scripts/stat-perception/](../../../scripts/stat-perception/):
 - `replica_eval.py`: valor en la réplica;
 - `combine.py`: votación;
 - `run-choice.sh`: prueba de elecciones en el banco de Transmisión;
-- `l1_trap.py`: la trampa de L1 en la réplica (causas de cada evaluación fallida, pérdidas forzosas o evitables, brazos).
+- `l1_trap.py`: la trampa de L1 en la réplica (causas de cada evaluación fallida, pérdidas forzosas o evitables, brazos);
+- `l6.py`: el camino a L6 en la réplica (meses de cada ascenso, por qué fallan las evaluaciones de L4 y L5, reglas de trimestre).
 
 Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies-src/stat-perception/t13-perc/).
 
@@ -92,6 +103,7 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    - Paso (c) de Categorías: 9 etiquetados con Haiku, medidos en la mitad reservada y en la réplica.
    - El valor de percibir bien cada indicador.
    - Una prueba de elecciones en el banco de Transmisión (01–05).
+   - **28 oct:** el camino a L6 en la réplica (07): dónde se pierde el tiempo y 9 variantes de trimestre e historias.
    - **28 oct:** la trampa de L1 en la réplica (06):
      - de qué fallan las evaluaciones;
      - qué parte de las pérdidas es forzosa;
@@ -102,6 +114,7 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    - Ninguna regla nueva contra la trampa de L1 gana en la réplica (06), así que no se ha probado en el banco ni en partidas.
    - Las medidas de 06 usan la lectura de Haiku, porque las etiquetas de DeepSeek de Alejandro no están en el repo.
 4. **Siguiente paso.** Lo que queda es de la línea DeepSeek:
+   - **propuesta concreta para v4:** cambiar la condición de la línea 5 del trimestre de "Stalled" a "L4 or above" (07), y comprobarlo en su banco antes de jugar;
    - medir si leer dos veces y votar dentro de la misma respuesta mejora la percepción de los costes de Network y Output en DeepSeek (con Haiku, la votación quita crisis pero apenas despidos);
    - repetir `l1_trap.py` con las etiquetas de DeepSeek (`--reading` acepta archivos de etiquetas con el formato de `tags-*.json`; las de DeepSeek habría que convertirlas).
 
@@ -116,4 +129,6 @@ Manual de la prueba: [lab/policies-src/stat-perception/t13-perc/](../../policies
    scripts/stat-perception/run-choice.sh
    # trampa de L1 (sin cuota; usa la réplica de main)
    .venv/bin/python scripts/stat-perception/l1_trap.py --games 2000 --arms base,perfect,cat1,fill,vote --json-out /tmp/l1.json
+   # camino a L6 (sin cuota)
+   .venv/bin/python scripts/stat-perception/l6.py --games 2000 --reading tags-plain.json+tags-plain-rerun.json --arms blind,sk4,sk4r,sk3r,ref
    ```
