@@ -39,8 +39,3 @@ Después, commit y push a tu rama, y actualiza tu línea de la tabla de ESTADO.m
 - Poner en un Skill títulos de eventos, respuestas fijas, meses concretos, umbrales o fórmulas no publicadas, aunque sean ciertos. `uv run careerlab lint <carpeta>` lo vigila. El catálogo de eventos y el simulador sirven para investigar, nunca para copiar a un Skill.
 - Pasar texto del juego a un diseñador de manuales.
 - Gastar dinero de API sin un presupuesto confirmado por Alejandro. DeepSeek, sólo en las pruebas que él apruebe.
-- Lanzar partidas con Claude sin decirlo en tu línea de ESTADO. Topes: 4 partidas a la vez y `--max-five-hour 0.65`.
-
-## 5. Cuota de Claude (cuenta Max)
-
-Ritmo semanal acordado: hasta un 45 % de la semana el 28 oct, un 75 % el 31 oct y un 90 % al final. El laboratorio lo respeta solo (`quota_cap.json`). Si una línea gasta más de un 5 % de la semana en un día, lo dice en su Relevo.

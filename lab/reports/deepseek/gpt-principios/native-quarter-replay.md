@@ -1,20 +1,15 @@
-# Repartos contrafactuales en caminos observados
+# Reconstrucción de los trimestres
 
-**Cambiar sólo el reparto lleva un camino de réplica de63,83–64,05 a70,47–70,70/L6, pero no resuelve otro que muere enL1 ni demuestra75.** No convertir estos replays en una nota del modelo.
+**Cambiar los trimestres de un camino fijo no demuestra una mejora del agente completo.**
 
-Se conservan historias y respuestas observadas en cada carrera; los nuevos repartos no ven las historias futuras. Ancla al inicio del mes3 para evitar la excepción de capsstartup, usando sólo el estado público y el historial deOutput de los meses anteriores. El dinero visible define intervalo inicial+0..0,9. Reproducción de las acciones originales antes de interpretar intervenciones: mismo desenlace yQreal dentro de0,5 del intervalo.
+En la primera carrera de Haiku, el baseline de 65,71–65,93 no reproduce suficientemente el 66,86 real: sus diferencias contrafactuales quedan excluidas. La segunda reproduce el despido y no se rescata cambiando el trimestre. La tercera reproduce aproximadamente 64,15 y llega a 70,47–70,70 al cambiar la gestión trimestral, conservando una explosión.
 
-- Carrera1: control65,71–65,93 frente a66,86 real: **no pasa fidelidad**; no interpretar sus diferencias como efecto confirmado.
-- Carrera2:18,08–18,31 frente a18,23; reproduce el despido. Reparto observado, aprendizaje de main y limpieza conHRalgo preocupado no la rescatan.
-- Carrera3:63,83–64,05 frente a64,15; mismo desenlace. El controlador observado existente llega aL6 y70,47–70,70, pero conserva una explosión. Añadir aprendizaje de main no cambia esa nota; actuar conHRmenos preocupado da70,30–70,53 y tampoco evita la explosión.
+Se mantienen las historias y respuestas reales; los controladores no reciben las historias futuras para elegir. Un agente que volviera a jugar podría cambiar sus respuestas al cambiar el estado, por lo que estos resultados no son una previsión de nota. Los caminos rescatados sin continuación observada quedan sin puntuar.
 
-Ampliaciones explícitamente exploratorias, registradas después del primer replay: usar signosDeepSeek ya guardados para vigilar la propuesta nativa (riesgo conHR>=2), más dominancia estimada descontando ganancias aprendidas como bloqueadas. Sin lecturas nuevas, sin efectos verdaderos para elegir. Se restringe a nodos sin continuaciones en ninguna opción para no invalidar el camino futuro guardado: **esa restricción usa el catálogo y no es entregable**. En el tercer camino cambian1o3elecciones, sin mejora sobre70,47–70,70. No rescatan el segundo. En el primero, que no pasó fidelidad, no atribuir mejoras.
+La alineación posterior con registros oficiales no corrigió ninguna atribución de las tres carreras de Haiku. En Sonnet sí se corrigieron 12 atribuciones trimestrales; su baseline reproduce 49,95, pero las alternativas no lo llevan a 75.
 
-No son muestras independientes, agentes completos ni estimaciones de media. Congelar respuestas futuras del nativo es una intervención artificial; un modelo real cambiaría sus decisiones al cambiar el estado. No confundir alcance de esta prueba con la líneaFormato, que ya probó scripts reales conDeepSeek y plantea un veto híbrido.
+## Evidencia y relevo
 
-## Relevo
+Los detalles numéricos y criterios se conservan en [native-quarter-replay-aligned.json](native-quarter-replay-aligned.json) y en los archivos relacionados de esta carpeta. Los originales con narrativas permanecen fuera de Git. El historial de commits conserva las versiones extensas anteriores de este informe.
 
-Código `scripts/deepseek/gpt_native_replay.py`, resultados y hashes en `native-quarter-replay.json`. No procesos pendientes ni llamadas. Un camino original censurado que se rescate queda sinQsi faltan eventos futuros; no se inventa una carrera completa. Corregida la etiqueta de censura cuando ya había muerte al cambio de mes. Próximo paso: auditar el77real deFormato y los70reales deDeepSeek, incluyendo su formato y fallos. No promover `observable-allocation-v1` por esta pantalla.
-
-## Comprobacion con registros oficiales,28oct
-El problema de menus encadenados detectado posteriormente enSonnet motivó reemparejar todas las acciones con los registros publicos propios: `gpt_native_replay_aligned.py`, archivo separado `native-quarter-replay-aligned.json`. Las tres carrerasHaiku requieren cero correcciones; se mantienen los resultados originales y la exclusion de la primera por falta de fidelidad. No se atribuye su desviacion a este parser. No hubo partidas ni llamadas de modelo adicionales.
+No repetir las colecciones terminadas ni presentar estos resultados como una solución para 75 consistente. Consultar el [Relevo principal](README.md#relevo) antes de continuar.
