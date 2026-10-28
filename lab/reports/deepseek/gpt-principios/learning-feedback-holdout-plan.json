@@ -1,0 +1,341 @@
+{
+  "n_items": 43,
+  "n_calls_max": 86,
+  "arms": [
+    "history_only",
+    "observed_outcome"
+  ],
+  "model": "haiku",
+  "source_sha256": {
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g1/output/events-20261027T195612Z.jsonl": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g2/output/events-20261027T200001Z.jsonl": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g1/output/events-20261027T210457Z.jsonl": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g2/output/events-20261027T210347Z.jsonl": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g3/output/events-20261027T210235Z.jsonl": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8"
+  },
+  "input_sha256": "38999e236ba7a78df7ebd0220c255d22802954c816a4f10bb76d5ae71f1d15e8",
+  "seed": 2026102811,
+  "selection": [
+    {
+      "id": "d0e4a10f3649",
+      "pre_review": true,
+      "teacher_month": 3,
+      "teacher_row_index": 6,
+      "teacher_title_sha256": "84195e30f8b5540b2ff8c9993dee2fdcbab69db2b3219b9de9bd2f9825ec0b75"
+    },
+    {
+      "id": "22432e97c716",
+      "pre_review": true,
+      "teacher_month": 3,
+      "teacher_row_index": 6,
+      "teacher_title_sha256": "84195e30f8b5540b2ff8c9993dee2fdcbab69db2b3219b9de9bd2f9825ec0b75"
+    },
+    {
+      "id": "939537b6c800",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "29693d725de0",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 1,
+      "teacher_title_sha256": "c7addcab35f643f358385fcb0bb68f335dbdc7379b5ca9810cdf7b0cd01d58c3"
+    },
+    {
+      "id": "8fad09397a68",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "36a72de95b64",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "c0119ebd042a",
+      "pre_review": true,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "49f5cda30810",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "cacdaf5c484e",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "b4e949afe460",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 3,
+      "teacher_title_sha256": "875742fd529d920c7eb7860635ff4d0daacf5a7b7796f24faa74de10b171ca40"
+    },
+    {
+      "id": "55ea7ab10ab8",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "f36455cc968e",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "b3cb36a36e7d",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "bf16e66fcb1f",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "4ab0a079865b",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "8f418a6facbe",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "bc7c1522a743",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 3,
+      "teacher_title_sha256": "875742fd529d920c7eb7860635ff4d0daacf5a7b7796f24faa74de10b171ca40"
+    },
+    {
+      "id": "652995a4e87d",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "805cf4026a03",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "9cba42517174",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "dd70cf8fec5c",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "9ef86d653154",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "2fa0e56e4058",
+      "pre_review": false,
+      "teacher_month": 3,
+      "teacher_row_index": 6,
+      "teacher_title_sha256": "84195e30f8b5540b2ff8c9993dee2fdcbab69db2b3219b9de9bd2f9825ec0b75"
+    },
+    {
+      "id": "601bc0a5175e",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "586fc69e28b6",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 13,
+      "teacher_title_sha256": "4c1c7d5fda214e009c6cd2e515cf8157c9d6e1c5f2b302bab55a00d3feb91a55"
+    },
+    {
+      "id": "0eb42f1c2467",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "c5255c36c7ac",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "bd24f8d08a0b",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "f919cb29457e",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 13,
+      "teacher_title_sha256": "4c1c7d5fda214e009c6cd2e515cf8157c9d6e1c5f2b302bab55a00d3feb91a55"
+    },
+    {
+      "id": "aaeb00b0e947",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "e09fb7b3f3c2",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "71251431c1fc",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "dd42ec7d098d",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "ae90bae63391",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "ba8c41707c24",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "275f67d8928c",
+      "pre_review": false,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "57cfacff9564",
+      "pre_review": false,
+      "teacher_month": 2,
+      "teacher_row_index": 5,
+      "teacher_title_sha256": "4a1c5332088283216ddb0765589438f3acfd6fe36018a7d2621067d5a285363f"
+    },
+    {
+      "id": "615eebee3ab7",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "40a77ea04ef86515a982dd6552c90538f3e95e415e2f865224f710858a84f892"
+    },
+    {
+      "id": "d5435f95e2de",
+      "pre_review": true,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "1a36d76efe7f",
+      "pre_review": true,
+      "teacher_month": 4,
+      "teacher_row_index": 14,
+      "teacher_title_sha256": "712ce0e77efc4972565f489af7649bc3ed79db0c80c0505d18afbd053167f774"
+    },
+    {
+      "id": "2aec8a18e126",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 1,
+      "teacher_title_sha256": "c7addcab35f643f358385fcb0bb68f335dbdc7379b5ca9810cdf7b0cd01d58c3"
+    },
+    {
+      "id": "9a1fc53ea201",
+      "pre_review": false,
+      "teacher_month": 1,
+      "teacher_row_index": 0,
+      "teacher_title_sha256": "d53c64641eea34e41df524e00e31470ed7c0e80f359a72ec1961789b823fb7a0"
+    }
+  ],
+  "meaning": "Actual earlier isolated story action with an unforeseen visible growth cost, followed by a different-title target in the same recorded career. Both arms see the past event, original choice, prediction and before panel. Only outcome arm sees the after panel. No true hidden risk, catalog effects, future events or fixed event answers taught. Actual history is provided, not forced counterfactual prefix actions. One-step learning diagnostic, not a career score.",
+  "exploratory_targets_excluded": [
+    "150dfc3384c1",
+    "a17faeec0f07",
+    "bf4b670138f3",
+    "75649c2a9f1c",
+    "989377c65575",
+    "77488149beeb",
+    "872c2542242f",
+    "90c39716bd3e",
+    "1b2dba28e4f1",
+    "3346fbd482a3",
+    "606ffe5fc95e",
+    "46b115f9aa63",
+    "0adf8ea56cf9",
+    "d8c4685218df",
+    "54e5c54d627f",
+    "82d4b8110ef5"
+  ],
+  "scope": "All remaining eligible target nodes in the same five-source corpus. No target overlap, but teachers and careers overlap: not independent corpus replication. Frozen before new calls, same arms and endpoints; no Q inference."
+}

@@ -1,0 +1,379 @@
+{
+  "result": {
+    "job_id": "v4-sonnet-reference-1",
+    "outcome": "completed",
+    "quantitative_score": 49.95,
+    "survival_months": 48,
+    "steps": 202,
+    "rejected_actions": 0,
+    "wall_seconds": 821.62
+  },
+  "result_sha256": "685cb99de9064f98b65fc203506aca7f9f3630dca57578b8523195ab3e72f663",
+  "models": {
+    "claude-sonnet-5-5": {
+      "inputTokens": 342,
+      "outputTokens": 57977,
+      "cacheReadInputTokens": 14255060,
+      "cacheCreationInputTokens": 161682,
+      "webSearchRequests": 0,
+      "costUSD": 2.652687999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 7273,
+      "canonicalModel": "claude-sonnet-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "ending_score": {
+    "competition_partial_score": 34.96,
+    "completed": true,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 40.0,
+        "raw_value": 4.0,
+        "weight": 0.3,
+        "weighted_score": 12.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 37.25,
+        "raw_value": 29.8,
+        "weight": 0.2,
+        "weighted_score": 7.45
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 85.0,
+        "raw_value": 17.0,
+        "weight": 0.15,
+        "weighted_score": 12.75
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 48.33,
+        "raw_value": 58.0,
+        "weight": 0.15,
+        "weighted_score": 7.25
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 50.0,
+        "raw_value": 5.0,
+        "weight": 0.1,
+        "weighted_score": 5.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 55.0,
+        "raw_value": 33.0,
+        "weight": 0.1,
+        "weighted_score": 5.5
+      }
+    ],
+    "outcome": "completed",
+    "quantitative_score": 49.95,
+    "survival_months": 48
+  },
+  "periods": {
+    "reviews": [
+      {
+        "review": 1,
+        "month": 6,
+        "before": {
+          "month": 5,
+          "level": 1,
+          "skill": 9,
+          "network": 3,
+          "output": 2,
+          "health": 2,
+          "dignity": 10,
+          "wealth": 2
+        },
+        "after": {
+          "month": 6,
+          "level": 1,
+          "skill": 9,
+          "network": 2,
+          "output": 3,
+          "health": 2,
+          "dignity": 10,
+          "wealth": 2
+        },
+        "promoted": false,
+        "grade": "C",
+        "hr_tier_before": 0
+      },
+      {
+        "review": 2,
+        "month": 12,
+        "before": {
+          "month": 11,
+          "level": 1,
+          "skill": 9,
+          "network": 2,
+          "output": 3,
+          "health": 3,
+          "dignity": 10,
+          "wealth": 4
+        },
+        "after": {
+          "month": 12,
+          "level": 2,
+          "skill": 9,
+          "network": 3,
+          "output": 3,
+          "health": 4,
+          "dignity": 10,
+          "wealth": 4
+        },
+        "promoted": true,
+        "grade": "C",
+        "hr_tier_before": 0
+      },
+      {
+        "review": 3,
+        "month": 18,
+        "before": {
+          "month": 17,
+          "level": 2,
+          "skill": 20,
+          "network": 5,
+          "output": 6,
+          "health": 8,
+          "dignity": 10,
+          "wealth": 6
+        },
+        "after": {
+          "month": 18,
+          "level": 2,
+          "skill": 21,
+          "network": 5,
+          "output": 6,
+          "health": 8,
+          "dignity": 10,
+          "wealth": 7
+        },
+        "promoted": false,
+        "grade": "C",
+        "hr_tier_before": 2
+      },
+      {
+        "review": 4,
+        "month": 24,
+        "before": {
+          "month": 23,
+          "level": 2,
+          "skill": 21,
+          "network": 7,
+          "output": 5,
+          "health": 2,
+          "dignity": 8,
+          "wealth": 10
+        },
+        "after": {
+          "month": 24,
+          "level": 2,
+          "skill": 20,
+          "network": 5,
+          "output": 6,
+          "health": 2,
+          "dignity": 6,
+          "wealth": 10
+        },
+        "promoted": false,
+        "grade": "D",
+        "hr_tier_before": 4
+      },
+      {
+        "review": 5,
+        "month": 30,
+        "before": {
+          "month": 29,
+          "level": 2,
+          "skill": 21,
+          "network": 7,
+          "output": 5,
+          "health": 10,
+          "dignity": 10,
+          "wealth": 14
+        },
+        "after": {
+          "month": 30,
+          "level": 3,
+          "skill": 21,
+          "network": 7,
+          "output": 6,
+          "health": 10,
+          "dignity": 10,
+          "wealth": 15
+        },
+        "promoted": true,
+        "grade": "B",
+        "hr_tier_before": 0
+      },
+      {
+        "review": 6,
+        "month": 36,
+        "before": {
+          "month": 35,
+          "level": 3,
+          "skill": 35,
+          "network": 21,
+          "output": 12,
+          "health": 8,
+          "dignity": 10,
+          "wealth": 18
+        },
+        "after": {
+          "month": 36,
+          "level": 3,
+          "skill": 37,
+          "network": 21,
+          "output": 13,
+          "health": 8,
+          "dignity": 10,
+          "wealth": 19
+        },
+        "promoted": false,
+        "grade": "B",
+        "hr_tier_before": 1
+      },
+      {
+        "review": 7,
+        "month": 42,
+        "before": {
+          "month": 41,
+          "level": 3,
+          "skill": 42,
+          "network": 21,
+          "output": 16,
+          "health": 6,
+          "dignity": 10,
+          "wealth": 24
+        },
+        "after": {
+          "month": 42,
+          "level": 4,
+          "skill": 42,
+          "network": 19,
+          "output": 16,
+          "health": 6,
+          "dignity": 10,
+          "wealth": 25
+        },
+        "promoted": true,
+        "grade": "B",
+        "hr_tier_before": 3
+      },
+      {
+        "review": 8,
+        "month": 48,
+        "before": {
+          "month": 47,
+          "level": 4,
+          "skill": 52,
+          "network": 32,
+          "output": 16,
+          "health": 6,
+          "dignity": 10,
+          "wealth": 27
+        },
+        "after": {
+          "month": 48,
+          "level": 4,
+          "skill": 54,
+          "network": 32,
+          "output": 16,
+          "health": 5,
+          "dignity": 10,
+          "wealth": 29
+        },
+        "promoted": false,
+        "grade": "B",
+        "hr_tier_before": 2
+      }
+    ],
+    "final_state": {
+      "month": 49,
+      "level": 4,
+      "skill": 58,
+      "network": 33,
+      "output": 18,
+      "health": 7,
+      "dignity": 10,
+      "wealth": 29
+    },
+    "blowup_months": [
+      45
+    ],
+    "hr_by_month": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 1,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 1,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 2,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 1,
+      "22": 2,
+      "23": 4,
+      "24": 3,
+      "25": 4,
+      "26": 3,
+      "27": 2,
+      "28": 1,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 1,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 1,
+      "40": 3,
+      "41": 3,
+      "42": 1,
+      "43": 0,
+      "44": 0,
+      "45": 1,
+      "46": 4,
+      "47": 2,
+      "48": 0
+    },
+    "grades": [
+      "C",
+      "C",
+      "C",
+      "D",
+      "B",
+      "B",
+      "B",
+      "B"
+    ]
+  },
+  "meaning": "One Sonnet capacity reference, not evidence of repeatability or DS performance. Operational interruption is unscored, never zero."
+}

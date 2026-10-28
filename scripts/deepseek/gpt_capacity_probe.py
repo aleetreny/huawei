@@ -53,8 +53,8 @@ def quota():
                 return {'allowed':age<3600 and w['five_hour']['utilization']<.65 and w['seven_day']['utilization']<.45,'five_hour':w['five_hour']['utilization'],'seven_day':w['seven_day']['utilization'],'age_seconds':round(age)}
     return {'allowed':False,'reason':'Fresh quota not known'}
 
-async def one(it,model,probe=False):
-    d=DATA/('admission' if probe else f'{model}-{it["id"]}');d.mkdir(exist_ok=False);record=d/'record.jsonl'
+async def one(it,model,probe=False,prefix='',data_root=None):
+    d=(data_root or DATA)/('admission' if probe else f'{model}-{it["id"]}');d.mkdir(exist_ok=False);record=d/'record.jsonl'
     instruction,skills=RB.load_variant(str(BUNDLE));sp='Reply with READY only.' if probe else RB.system_prompt(instruction,skills,'official')
     config={'mcpServers':{}}
     if not probe:
@@ -62,8 +62,13 @@ async def one(it,model,probe=False):
         (d/'item.json').write_text(json.dumps(item,ensure_ascii=False))
         for server,mode in [(RB.GAME,'game'),('jiuwen','skills')]:config['mcpServers'][server]={'command':sys.executable,'args':[str(ROOT/'scripts/transmision/fake_mcp.py'),mode,str(d/'item.json')]}
     (d/'mcp.json').write_text(json.dumps(config));cmd=[shutil.which('claude'),'-p','--setting-sources','','--strict-mcp-config','--mcp-config',str(d/'mcp.json'),'--model',model,'--tools','','--output-format','stream-json','--verbose','--no-session-persistence','--system-prompt',sp,'--permission-mode','dontAsk']
-    if not probe:cmd+=['--allowedTools',','.join(RB.GAME_TOOLS+[RB.SKILL_TOOL])]
-    cmd+=['Reply READY.' if probe else RB.continue_prompt(it['observe'])]
+    if not probe:
+        index=cmd.index('--output-format')
+        cmd[index:index]=['--allowedTools',','.join(RB.GAME_TOOLS+[RB.SKILL_TOOL])]
+    user_prompt='Reply READY.' if probe else prefix+RB.continue_prompt(it['observe'])
+    (d/'user_prompt.txt').write_text(user_prompt)
+    (d/'system_prompt.md').write_text(sp)
+    cmd+=[user_prompt]
     started=time.monotonic()
     with (d/'stream.jsonl').open('w') as f,(d/'stderr.log').open('w') as err:
         proc=await asyncio.create_subprocess_exec(*cmd,stdout=f,stderr=err,stdin=subprocess.DEVNULL,cwd=d,env=RB.env());seen=None
