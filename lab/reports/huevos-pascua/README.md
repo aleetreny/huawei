@@ -2,7 +2,7 @@
 
 **Conclusión en una frase:** en el juego de desarrollo no hay ninguna combinación, personaje ni entrada oculta que permita saltarse un nivel o ascender fuera de la evaluación semestral; lo único nuevo es una mecánica sin documentar (la fase trimestral corta algunas historias y su título vuelve a salir) que no cambia la nota ni adelanta ningún ascenso en el simulador.
 
-Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easter-eggs-eb0edx`). Pregunta: *¿existen combinaciones ocultas o huevos de Pascua que permitan saltarse niveles de ascenso, por ejemplo interactuando con personajes clave?* (en Discord se dijo que sí).
+Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easter-eggs-eb0edx`). Pregunta: *¿existen combinaciones ocultas o huevos de Pascua que permitan saltarse niveles de ascenso, por ejemplo interactuando con personajes clave?*.
 
 **Cómo se ha medido.** Sin DeepSeek y sin Claude jugando: sólo bots en el servidor local, por las 5 herramientas oficiales, y los ~13.300 partidas de bots ya guardadas en `lab/data/ingenieria-inversa/`. No se ha leído el paquete del juego ni su dataset (NORMAS §4). Coste: 0 USD; cuota de Claude, la de esta conversación.
 
@@ -17,7 +17,7 @@ Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easte
 | 5 | Personajes y proyectos recurrentes (Helen del comité de ascensos, el VP Hale, Polaris, el jefe Chris, el equipo Lynx) | Son decorado compartido. Sus historias tienen efectos fijos, ninguna toca el nivel y ninguna desbloquea nada (puntos 2 y 4). La respuesta «di que sí al ascenso por el sueldo» (*"Pay and level go up"*) da Skill −1, Wealth +1 y riesgo, sin cambiar de nivel | `story.py`, `explore_report.py` |
 | 6 | Textos que hablen de vía rápida, doble ascenso, ascenso fuera de ciclo, *high potential*, *talent pool* | **Ninguno** en 403 preguntas y ~2.000 textos de desenlace | búsqueda en `nodes-*.jsonl` |
 | 7 | Combinaciones del trimestre (energía y acción principal) | La energía cuadra al 100 % sumando efectos; los fallos de la acción principal son redondeo del dinero y el aviso de deudas. Menú idéntico en todas las partidas | `main_resid.py` |
-| 8b | Lo que se dice en público | Ningún repositorio ni página pública de la competición habla de atajos, huevos de Pascua o ascensos ocultos (búsqueda web del 28 oct; el repositorio público `krsnkkv/techarena-career-simu` sólo recoge las normas). Discord no se puede consultar desde aquí | búsqueda web |
+| 8b | Lo que se dice en público | Ningún repositorio ni página pública de la competición habla de atajos, huevos de Pascua o ascensos ocultos (búsqueda web del 28 oct; el repositorio público `krsnkkv/techarena-career-simu` sólo recoge las normas). | búsqueda web |
 | 8 | Entradas raras a las herramientas | `take_action` rechaza 0, negativos, fuera de rango, decimales y argumentos extra; el estado no se mueve. `observe` sólo tiene los campos conocidos (más `available_choice_count`) | `probe_interface.py` |
 | 9 | Ramas nunca jugadas | Dos lotes del bot explorador (`e01`: riesgo hasta 2; `e02`: hasta 4) jugaron **207 de las 212** respuestas con menos de 30 casos (201 con 10 o más casos nuevos), entre ellas las 20 «nunca elegidas»: sus efectos son corrientes y negativos; ninguna respuesta ya conocida cambió de efecto; 0 cambios de nivel, 0 preguntas nuevas, ningún mensaje de registro nuevo. La regla de ascenso falla en 39 de 33.970 evaluaciones: 33 por la nota, 5 por el orden de la explosión y 1 ascenso de L4 con Network 29 (el umbral de Network de L4 sería ≤ 29, no los 30 de la réplica) | lotes `e01-explore` (3.000 partidas) y `e02-explore` (1.500); 3.762 completas de 4.500 |
 | 9b | Modo competición del servidor (`--competition`, lo más parecido en local a la evaluación oficial) con el explorador | Las mismas 403 preguntas (0 nuevas), 0 cambios de nivel, ninguna respuesta con efecto distinto del catálogo, ningún mensaje nuevo; la regla de ascenso falla en 3 de 4.454 evaluaciones (2 por la nota, 1 por el orden). El servidor en este modo deja de crear partidas tras unas 100 por proceso: 597 de 1.200 no empezaron y se descartan | lote `c01-explore-comp`, 603 partidas válidas |
@@ -42,7 +42,7 @@ La plaza que ocupa un título repetido la habría llenado otro título nuevo, as
 
 - **No hay atajo que enseñar.** El ascenso depende sólo del estado justo antes de la evaluación (Skill, Network y Output en el umbral, Dignity ≥ 4 y nota distinta de D); sube como mucho un nivel cada seis meses. Lo que separa una partida buena de una excelente sigue siendo no perder ninguna ventana y no explotar (HALLAZGOS A2, A3, B5).
 - **Aunque existiera, no se podría usar.** Las reglas oficiales prohíben respuestas fijas por evento y «explotar un error, resquicio o comportamiento inesperado» ([competition-rules.rst](../../../local-runs/official-runner/docs/competition-rules.rst), tras `sh scripts/setup_official_runner.sh`). La mecánica del punto 10 sólo podría entrar como idea general («una historia que el trimestre deja a medias puede volver»), y su valor no lo justifica.
-- **Lo que no se puede descartar desde aquí:** la evaluación oficial usa la configuración de los organizadores y puede tener otros eventos (lo dice `failure-and-ending.rst`). Lo que se diga en Discord sobre ese conjunto no se puede comprobar en local. El manual del juego dice que lo no publicado se infiere de «correos, actas de reuniones y comentarios del jefe», y el primer documento es de tipo *initialization*; en 13.333 partidas no ha salido ningún otro documento.
+- **Lo que no se puede descartar desde aquí:** la evaluación oficial usa la configuración de los organizadores y puede tener otros eventos (lo dice `failure-and-ending.rst`). El manual del juego dice que lo no publicado se infiere de «correos, actas de reuniones y comentarios del jefe», y el primer documento es de tipo *initialization*; en 13.333 partidas no ha salido ningún otro documento.
 
 ## 4. Archivos
 
@@ -73,7 +73,7 @@ Datos nuevos (con texto del juego, fuera de Git): `~/careerlab-data/huevos-pascu
 
 **Qué quedó abierto.**
 - 5 respuestas raras no se jugaron en los lotes nuevos (cuatro continuaciones que sólo se alcanzan tras respuestas arriesgadas y una de riesgo +3), pero ya estaban observadas entre 3 y 20 veces en los lotes antiguos, con efectos corrientes y sin cambio de nivel. **Todas las respuestas del catálogo están observadas al menos una vez.**
-- El conjunto de eventos y parámetros de la evaluación oficial no se ve en local; si en Discord hablan de algo concreto (un título, un personaje), hace falta ese dato para comprobarlo aquí.
+- El conjunto de eventos y parámetros de la evaluación oficial no se ve en local.
 
 **Para retomar.**
 
