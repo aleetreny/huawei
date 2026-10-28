@@ -29,6 +29,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** confirmar `v4-c5` con el juez y el banco de DeepSeek (≈ 1,3 USD; comandos y regla de decisión en [calidad-skills §4](lab/reports/calidad-skills/README.md)) y llevar B30 al manual.
 
+**Apoyo a DeepSeek:** `alejandro/gpt-principios` ([informe](lab/reports/deepseek/gpt-principios/README.md), PR #23): auditoría de estrategias y memoria de retornos; comparación con Sonnet terminada sin candidatura, sin nuevas llamadas a DeepSeek.
+
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
 **Coordinación entre chats (27 oct).** La clave es compartida: medir el coste de cada partida con `total_cost` del informe, nunca con la diferencia de saldo; el vigilante de `careerlab.target` sólo apunta (`CAREERLAB_TARGET_NEVER_STOP=1`) y **ninguna partida lanzada se corta**. Arrancar instancias de JiuwenSwarm de una en una, con `lsof` antes: dos a la vez chocan en los puertos. No tocar `local-runs/official-runner/.env`.
@@ -47,7 +49,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 - **Dinero:** sólo los 50 USD de la clave de DeepSeek (OpenRouter), en el `.env` del Mac de Alejandro. Quedan ~35,8 USD (27 oct, 23:30). Hay una clave propia de OpenRouter preparada y sin comprar ([clave-propia.md](lab/reports/deepseek/clave-propia.md)). DeepSeek sólo en pruebas aprobadas por Alejandro, con 15 USD de reserva para el último corte. Presupuesto: [docs/entrega/target-budget.md](docs/entrega/target-budget.md).
 - No preguntamos en Discord. Riesgo conocido: la norma dice *"the absence of an express prohibition is not permission"*.
 - Claude no aparece como contribuidor en GitHub.
-- Cuota: ritmo semanal de [NORMAS.md](NORMAS.md) §5. A las 15:00 del 27 oct la semana iba por el 34 %.
+- Cuota de Claude: sin topes de equipo desde el 28 oct. Las herramientas sólo esperan si la ventana de 5 horas pasa del 95 %, y el ritmo semanal ya no se aplica salvo que `quota_cap.json` lo pida (`weekly_pace`). Ojo: la semana de la cuenta se reinicia el 2 nov a las 16:00 UTC, después del último corte; si se agota antes, no queda Claude para nadie hasta el final del reto.
 - Manual de referencia para comparar en partidas: `f3-lean-v1` (~51 de nota con Haiku, 30 partidas).
 
 ## 6. Mapa
@@ -62,29 +64,3 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Reglas oficiales | `sh scripts/setup_official_runner.sh`, después `local-runs/official-runner/docs/` |
 | Entrega: guion del vídeo, presupuesto de DeepSeek | [docs/entrega/](docs/entrega/) |
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
-
-**Apoyo gpt-principios:**PR23/alejandro/gpt-principios, informes propios preservados tras merge de main. Preferencia deAlejandro:priorizarSonnet como proxy en proximas pruebasLLM, sin inferir equivalenciaDeepSeek. Pruebasrecientes yaSonnet; modoslocalesbot completados dev60validas ycompetition32validas/28KeyError(session_id), comparacioncondicionada no concluyente. Sin nuevosmodelos/API.
-
-**B30revisado:**terceraoportunidadL1existe;probedegrade replica compatible en3estadossinteticos. No Skillconmesesprivados. Proxima pantalla:feedbackHRtrasestancamiento, sin llamadas actuales.
-
-**Recuperacionstall offlinecerrada:**600semillas porbrazo,49,643→49,628,deltaCIincluye0;1072reparaciones sinmejora. NoadmisionSonnet. Sin llamadas.
-
-**Nueva fuente publica:**Kingjinsightv11raw73,1verificado n1, modelopendiente. Commit e6c33cb; auditarSkills/procedencia antesdeprobar. No75estable demostrado.
-
-**Publicv11auditado:**modeloDSflashreportado(2usage,2unknown);scriptlee logMCP,modosN/G/R/D,trimestresdeterministas,LLMhistorias. n1raw73,1,scriptsemantica/compliancependiente. No copiarSkillnumerico.
-
-**V11helper:**3pruebas aisladas de ledger pasan; usa efectosregistradosvsestado. Trimestres/modos contienenconstantesnoportables sin revision. No candidata75ni llamadas.
-
-**Parserpublicov11revisado:**deltasprocedenlogMCP,aislamiento porpath, fallbackporrecencianoportar. Contabilizadousodetools, semantica/replaypendiente. SinAPI.
-
-**Parserpropio validado:**201acciones alineadaspor mes/choice,195retornosvisibles,Notesexcluidas. Aunnoledger/candidato. Sin llamadas.
-
-**Memoriaretornos propia:**110transicionesaisladas/201,89ambiguas+2inesperadasrechazadas,5guardasvalidadas.97observacionesdiminishedno97limites. Proximo medirimpacto conlectorigual antesdeSonnet. Sin llamadas.
-
-**Retornosregistrados replica:**600semillas47,35→52,74,+5,39IC[3,71;7,07],completas315→373. Guardiaefectospostaccionvalida;falta600confirmacion ytransporteactor. No75niDSprobado, sin llamadas.
-
-**Retornos confirmados:**otras600semillas48,56→52,86,+4,30IC[2,53;6,07],completas326→374. Sin llamadas. FaltahelpertransporteypruebaSonnetv4, no75demostrado.
-
-**Paquetesretornos preparados:**24casoscriticos/21paquetes conmemoria, prefijopublicosin efectoobjetivo. Falta comparacion48lecturasSonnetregistrada antes deejecutar. Sin llamadas actuales.
-
-**ComparacionSonnetmemoria anunciada:**48lecturasMax maximo(24panelesx2brazos), v4/systemoriginal,3notasiguales ylineainterpretacioncomun;unica diferencia paquetederetornos anterior. Ordenalternado, sin juegos/DeepSeek. Cuotavalida5h5%/semana42%(menos1h), topes0,65/0,45y4procesos. Plan return-packet-probe-plan.jsonfijado. No sustituir respuestas.

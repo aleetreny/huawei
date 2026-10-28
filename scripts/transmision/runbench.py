@@ -279,7 +279,7 @@ def main() -> None:
     p.add_argument("--limit", type=int)
     p.add_argument("--slots", type=int, default=8)
     p.add_argument("--model", default="haiku")
-    p.add_argument("--max-five-hour", type=float, default=0.65)
+    p.add_argument("--max-five-hour", type=float, default=0.95)
     a = ap.parse_args()
     if a.cmd == "assemble":
         assemble(Path(a.bank), Path(a.sit), Path(a.out), a.k_long)
