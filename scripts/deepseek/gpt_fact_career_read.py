@@ -1,9 +1,10 @@
 """Same evidence reader on all24real critical turns; default freezes without calls."""
 import argparse,asyncio,hashlib,json
-from gpt_fresh_context import DATA as SOURCE,REPORT,quota
+from gpt_fresh_context import DATA as SOURCE,REPORT,quota as shared_quota
 from gpt_fact_second_read import prepare as critic_prepare,one
 from gpt_decision_audit import processes
 DATA=SOURCE.with_name('gpt-fact-career-read')
+def quota():return shared_quota(extra_roots=(DATA,))
 def prepare():
     _,system=critic_prepare();p=SOURCE/'items.json';items=json.loads(p.read_text());assert len(items)==24
     DATA.mkdir(parents=True,exist_ok=True)
