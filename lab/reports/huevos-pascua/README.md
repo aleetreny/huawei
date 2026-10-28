@@ -23,7 +23,17 @@ Línea corta de investigación del 28 oct 2026 (rama `claude/hidden-combos-easte
 
 ## 2. ¿Vale algo la mecánica del punto 10?
 
-__SIM__
+**No.** Se añadió la regla a una copia del simulador (`replay_sim.py`, sin tocar `replica.py`) y se jugó la política óptima en 3.000 partidas por brazo con las mismas semillas. Con la regla, el simulador da 1,1–1,2 repeticiones por partida (el juego real, 1,4–1,7 con el planificador), así que la reproduce razonablemente.
+
+| Brazo | Nota | Frente a «real» | L6 | L7 | Repeticiones por partida |
+|---|---:|---:|---:|---:|---:|
+| Sin la regla (simulador de hasta ahora) | 73,36 ± 0,18 | +0,18 ± 0,15 | 2.365 | 9 | 0 |
+| Con la regla (lo que pasa en el juego) | 73,18 ± 0,18 | — | 2.352 | 10 | 1,17 |
+| Sabe que esa continuación no llegará | 73,20 ± 0,18 | +0,02 ± 0,05 | 2.358 | 9 | 1,10 |
+| Además valora que el título vuelva (peso 0,5) | 73,16 ± 0,18 | −0,02 ± 0,06 | 2.349 | 9 | 1,12 |
+| Además valora que el título vuelva (peso 1,0) | 73,17 ± 0,18 | −0,01 ± 0,06 | 2.349 | 10 | 1,13 |
+
+La plaza que ocupa un título repetido la habría llenado otro título nuevo, así que repetir no da crecimiento extra apreciable. **No adelanta ningún ascenso** (L7 sigue en el 0,3 %) y no cambia la nota. La réplica del Motor puede quedarse como está.
 
 ## 3. Qué significa para el manual
 
