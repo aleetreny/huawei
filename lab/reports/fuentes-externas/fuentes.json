@@ -1,0 +1,70 @@
+{
+  "repos": [
+    {
+      "url": "https://github.com/Kingjinsight/techarena-uk-2026",
+      "equipo": "Kingjinsight",
+      "nota": "v11 73,1 (una partida), C37"
+    },
+    {
+      "url": "https://github.com/krsnkkv/KSL_TechArena",
+      "equipo": "KSL",
+      "nota": "57,38 en L4, C42"
+    },
+    {
+      "url": "https://github.com/krsnkkv/techarena-career-simu",
+      "equipo": "KSL",
+      "nota": "copia de KSL_TechArena"
+    },
+    {
+      "url": "https://github.com/ShriyaSaxena/techarena-career-simu",
+      "equipo": "KSL",
+      "nota": "copia de KSL_TechArena"
+    },
+    {
+      "url": "https://github.com/LRado-253/ksl-techarena",
+      "equipo": "KSL",
+      "nota": "preliminar"
+    },
+    {
+      "url": "https://github.com/Artepace/slopathone_winningteam",
+      "equipo": "Artepace",
+      "nota": "v1 68,6 (una partida); solution.zip sin partidas"
+    },
+    {
+      "url": "https://github.com/peidi-L/preliminary",
+      "equipo": "peidi-L",
+      "nota": "borrador"
+    },
+    {
+      "url": "https://github.com/Ray23257/techarena-career-sim",
+      "equipo": "Ray23257",
+      "nota": "no público el 28 oct"
+    },
+    {
+      "url": "https://github.com/YuLong111/techarena-career-sim",
+      "equipo": "YuLong111",
+      "nota": "no público el 28 oct"
+    },
+    {
+      "url": "https://github.com/bernardoguterres/huawei-gradient-depression",
+      "equipo": "¿nuestro?",
+      "nota": "no público el 28 oct; lleva el nombre de nuestro equipo"
+    },
+    {
+      "url": "https://github.com/rickyyyy-bit/TechArena-Huawei",
+      "equipo": "Jon8652 (rickyyyy-bit)",
+      "nota": "sólo diseño preliminar genérico, sin partidas (27 oct)"
+    },
+    {
+      "url": "https://github.com/Colinfornia/Techarena-Project",
+      "equipo": "Colinfornia",
+      "nota": "README vacío (27 oct); vigilar por si lo llena"
+    }
+  ],
+  "paginas": [
+    {
+      "url": "https://techarena-uk.hydro.ac/contest/6aad0b0020562bf065d1654f/scoreboard",
+      "nota": "clasificación oficial"
+    }
+  ]
+}
