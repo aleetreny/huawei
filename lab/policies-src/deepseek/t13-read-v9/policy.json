@@ -1,0 +1,13 @@
+{
+  "family": "deepseek",
+  "name": "t13-read-v9",
+  "parents": [
+    "t13-read-v4"
+  ],
+  "idea_origin": "DeepSeek line, 28 Oct: bench of t13-read-v4 on bank items of L1 review-close months (q-loss ~4.4 points per decision, ten times a common story) and the notes of costly real choices (half reject the best option as a private or later fix)",
+  "operator": "one idea: the quiet path before a review",
+  "hypothesis": "Before an L1 review the costly picks are polite options with a hidden Network or Output cost (turning a colleague down, correcting in public, putting own work next to a colleague), chosen because the risk list marks the quiet alternative (a private word, a written follow-up) as burying the problem, although in the catalogue 40-45% of private or later options carry no risk. Naming the social costs and saying that a private word or written follow-up to the people concerned is not burying a problem should cut those picks without more risky choices.",
+  "predicted_behaviour": "Lower q-loss and fewer Network/Output-losing picks than t13-read-v4 on bank items of L1 review-close months; no more risky picks on the control items.",
+  "refutation": "Same q-loss on the L1 review-close items, or more risky picks or q-loss on the control items.",
+  "skill_count": 1
+}

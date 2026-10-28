@@ -6,6 +6,8 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 ## Conclusiones (27 oct, 20:05 UTC)
 
+**28 oct: [hacia-80.md](hacia-80.md).** Una media de 80 está por encima del techo (jugador perfecto: 72,4). Hoy: auditoría de 419 decisiones reales y banco. `t13-read-v8`, `perceive-v5` y `t13-read-v9` descartados, sin partidas (1,6 USD). `t13-read-v4` sigue siendo el mejor. Siguiente paso: trimestre por script.
+
 **Lo más importante: primeras partidas completas de DeepSeek.** `t13-read-v4` saca **71,67** y `t13-read-v5` 66,71 (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas. **Manual recomendado para el corte 1: [`t13-read-v4`](../../policies-src/deepseek/t13-read-v4/)** (commit `09d5735`). Detalles en [mejora-nota.md](mejora-nota.md).
 
 Lo aprendido antes, con el banco y el simulador:
