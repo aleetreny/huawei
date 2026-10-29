@@ -55,6 +55,19 @@ def traj(d):
                 t,title,titles=lastobs
                 c=args.get('choice'); 
                 act=titles[c-1] if isinstance(c,int) and 0<c<=len(titles) else str(c)
+                # batched quarter: once the Energy menu's budget is spent, later numbers refer to the main-action menu
+                if title.startswith('Quarterly energy'):
+                    COST={'High-intensity work':2,'Skill learning':2,'Defuse legacy risk':2,'Network maintenance':1,'Mental recovery':1,'Health recovery':1,'Prepare report materials':1,'Reserve energy (no action)':0}
+                    MAIN=['Apply for a key project','Report results to your manager','Fight for resources','Apply for rotation','Showcase results','Build a mentorship','Repair a key relationship','Lay low and reduce risk','No action']
+                    spent=getattr(traj,'_qspent',0)
+                    if spent>=3 or act=='Reserve energy (no action)' and spent>0 and False:
+                        act=MAIN[c-1] if isinstance(c,int) and 0<c<=len(MAIN) else str(c)
+                        title='Quarterly main action (batched)'
+                    else:
+                        spent+=COST.get(act,0)
+                    traj._qspent=spent
+                else:
+                    traj._qspent=0
                 actions.append((t,title,act,args.get('notes','')))
     return months,actions
 if __name__=='__main__':
