@@ -1,0 +1,16 @@
+{
+  "family": "mejora",
+  "name": "mv-1",
+  "parents": [
+    "ex-v1",
+    "t13-read-v9"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "ex-v1 + Story step 4 'read the hidden costs' (scoped to Review in 1-2) + the same cue in the manifest instruction",
+  "hypothesis": "In the L1 bank, t13-read-v9 cut N/O-losing picks from 24 to 19 of 90 (best 61 % -> 69 %), but its global risk rewrite made it pick private, risky options elsewhere (riskcheck 0.93 -> 2.15). Keeping the v4/ex-v1 risk list and adding only the hidden-cost reading in the review months should keep the L1 gain without the riskcheck loss. Calibrated replica: an L1 veto that sees 30-50 % more of the losses is worth +0.8 to +1.3 on top of ex-v1 (+2.3 over v4 with the v4 choice model).",
+  "predicted_behaviour": "L1 bank: N/O-losing picks <= 20 of 90, risky picks <= 9, q-loss <= v4 (3.31-3.68). riskcheck: q-loss <= 1.2 (v4 0.93). control: unchanged (0.38).",
+  "refutation": "L1 bank N/O-losing picks >= 23 (no gain over v4 noise) or riskcheck q-loss > 1.5 or control q-loss > 0.6.",
+  "skill_count": 1,
+  "change": "ex-v1 -> mv-1: Story step 4 in bullets with a 'read the hidden costs' bullet (Network falls when someone is let down even politely or fairly; Output falls when time or credit goes to someone else or to process) and a comfort tie-break when every option has such a cost; manifest instruction carries the same cue in one parenthesis. Quarter, Health brake, risk list and turn loop unchanged from ex-v1.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}

@@ -1,0 +1,98 @@
+{
+  "job_id": "deepseek-pilo-0f4bf379-dff20f-00003-a1",
+  "session_id": "97191062f06949e79a6b2fed504f68f0",
+  "outcome": "eliminated",
+  "survival_months": 24,
+  "quantitative_score": 18.98,
+  "ending_score": {
+    "competition_partial_score": 13.29,
+    "completed": false,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 10.0,
+        "raw_value": 1.0,
+        "weight": 0.3,
+        "weighted_score": 3.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 8.88,
+        "raw_value": 7.1,
+        "weight": 0.2,
+        "weighted_score": 1.78
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 45.0,
+        "raw_value": 9.0,
+        "weight": 0.15,
+        "weighted_score": 6.75
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 7.5,
+        "raw_value": 9.0,
+        "weight": 0.15,
+        "weighted_score": 1.12
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 60.0,
+        "raw_value": 4.0,
+        "weight": 0.1,
+        "weighted_score": 6.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 3.33,
+        "raw_value": 2.0,
+        "weight": 0.1,
+        "weighted_score": 0.33
+      }
+    ],
+    "outcome": "eliminated",
+    "quantitative_score": 18.98,
+    "survival_months": 24
+  },
+  "failure_reason": "eliminated",
+  "interruption": null,
+  "steps": 0,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 856.1,
+  "tool_calls": {},
+  "tool_seconds": {},
+  "actor_usage": {
+    "tokens": {
+      "input_tokens": 10306420,
+      "output_tokens": 66333,
+      "total_tokens": 10372753,
+      "total_cost": 0.13149,
+      "by_model": {
+        "deepseek-v4-flash": {
+          "input_tokens": 10306420,
+          "output_tokens": 66333,
+          "total_tokens": 10372753,
+          "total_cost": 0.13149
+        }
+      }
+    },
+    "total_tokens": 10372753,
+    "runner_cost": 0.13149,
+    "termination_reason": null,
+    "play_exit_code": 0,
+    "key_cost_usd": 0.123702,
+    "key_cost_settled": true
+  },
+  "trajectory_path": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-0f4bf379-dff20f-00003-a1/events.jsonl",
+  "resumed": false,
+  "db_root": null,
+  "periods": null
+}
