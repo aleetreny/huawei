@@ -185,3 +185,25 @@ Fuentes (clonadas en `~/ext/`, sin ejecutar nada suyo):
 - Alias de los 12 primeros en GitHub: ShenzhenFan01, MattKep7777 y aman_abdulsalam no existen; los demás existen pero no tienen repos del reto, o son nombres demasiado genéricos.
 - Búsqueda de código en GitHub (`show_employee_handbook`, `check_latest_logs`, «Defuse legacy risk», `career_emulator`).
 - LinkedIn, Zhihu, CSDN, Bilibili y Hugging Face.
+
+### BDCI: material oficial y premiados (29 oct)
+
+- **Dónde se jugó.** El reto estaba en xir.cn (competition/1165), no en DataFountain.
+- **Premiados.** 乃龙 63,31 · 我们两个真厉害 62,43 · 这次肯定队 62,2 · xx 61,29 · finewords 61,1, sobre 70 (63,31 ≈ 90 en nuestra escala).
+  - Ninguno ha publicado su método. Tenían que subirlo a gitcode.com/openJiuwen/agent-store, y para este reto sigue vacío.
+  - Tres equipos con mejor nota que el 4.º y el 5.º no entraron entre los finalistas. Probablemente, la revisión manual.
+- **Formato.** Cada entrega se jugaba 3 veces, y la nota bailaba mucho: el primero sacó 63,31, 57,71 y 42,74 en días distintos. Un paquete idéntico conservaba la nota.
+- **Los ceros.** 43 con motivo en las 7 actas diarias:
+  - respuestas fijas en el Skill o el manifest, ~10;
+  - modo de agente erróneo, 9;
+  - paquete incompleto, 8;
+  - consecuencias ocultas en tablas, 5;
+  - leer estado oculto, 4;
+  - descodificar el motor, 2.
+- **Lo que dijeron los organizadores en su vídeo de dudas (28 jul):**
+  - el simulador de la evaluación es el mismo que el de desarrollo; sólo cambia el juego de datos;
+  - el nombre de cada opción coincide con su efecto, así que el agente puede deducir el efecto del texto;
+  - el riesgo se acumula hasta un umbral, por lo que hay que planificar a largo plazo;
+  - las fichas y el tiempo cuentan;
+  - no hay que optimizar a lo bruto una sola dimensión.
+- **Copias locales:** actas, transcripción del vídeo y documentación oficial en chino, en `/root/ext/bdci-web/`, en el contenedor de la nube y fuera de Git.
