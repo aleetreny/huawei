@@ -287,6 +287,22 @@ Avisos suyos sobre cp-v9: el uso de «Best» para detectar techos choca con B38 
 | cp-v9 (manifest en prosa), sonda 1 | DeepInfra | **6 de 6** | 102–402, chino | 0 |
 | cp-v9 (manifest en prosa), sonda 2 | DeepInfra | 0 de 6 | 189–550, chino | 0 |
 
+**Qué proveedores sirven el canal de razonamiento** (las 16.072 llamadas registradas de la línea DeepSeek, bancos y sondas):
+
+| Proveedor | Llamadas | Con razonamiento oculto | Fichas de salida por llamada |
+|---|---:|---:|---:|
+| Baidu | 10.736 | 100 % | 592 |
+| GMICloud | 2.538 | 95 % | 906 |
+| **DeepInfra** | 694 | **0 %** | 375 |
+| Parasail | 671 | 100 % | 818 |
+| Venice | 632 | 100 % | 777 |
+| SiliconFlow | 356 | 92 % | 803 |
+| Relace | 300 | 100 % | 1.365 |
+| Cloudflare | 61 | 98 % | 618 |
+| Crusoe, Wafer, DigitalOcean, Azure | 85 | 0 % | 150–510 |
+
+DeepInfra y los cuatro pequeños sirven el modelo sin canal de razonamiento (o sin devolverlo); los demás, con él. En nuestro histórico son el 5 % de las llamadas, pero el 100 % de las de esta mañana: el reparto cambia por horas.
+
 Partidas (sin proveedor registrado, pero con el razonamiento oculto total de `gametokens`): las siete que emparejaron tienen 72–132 mil fichas de razonamiento oculto; la segunda de cp-v8, que narró y no emparejó, **24 mil**. Lectura: **cuando el proveedor no sirve el canal de razonamiento, DeepSeek piensa en voz alta en el contenido, y el texto antes de la llamada rompe el patrón de dos llamadas** (CP3: lo que mantiene la pareja es el historial). Con DeepInfra la pareja sale a cara o cruz en la primera respuesta y luego se mantiene (6 de 6 o 0 de 6). La nota oficial usa «organiser-controlled upstream routing» (`docs/mcp.rst`): si ese proveedor no sirve razonamiento, las fichas de cualquier manual vuelven a ~1,3 M por mes (nota ~65) y lo que queda de cp-v5a es su juego (igual que v4). No podemos elegir el proveedor en la entrega («Do not add OpenRouter provider routing settings»); sí anclarlo en nuestras sondas para medir (`DS_PROVIDER`, sólo en `ds.py`, nunca en el runner). Sondas ancladas de cp-v5a (3 en DeepInfra, 3 en GMICloud, ~0,07 USD): se anotan abajo. Lo que vale medir después, si DeepInfra narra siempre: qué texto consigue la pareja también sin canal de razonamiento (por ejemplo, exigir que la primera respuesta de la carrera, el «Continue», lleve ya las dos llamadas, para sembrar el patrón).
 
 ### 6.10 `cp-v10`: la pareja de llamadas sin depender del proveedor (predicción escrita antes de medir)
