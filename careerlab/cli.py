@@ -376,7 +376,7 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--slots", type=int, default=8)
     run.add_argument("--limit", type=int)
     run.add_argument("--purpose")
-    run.add_argument("--max-five-hour", type=float, default=0.75, help="pause new Claude episodes above this five-hour utilisation")
+    run.add_argument("--max-five-hour", type=float, default=0.95, help="pause new Claude episodes above this five-hour utilisation")
     run.add_argument("--continuous", action="store_true", help="claude-cli: lease one job per free slot until --stop-file exists (fast race)")
     run.add_argument("--stop-file", help="default: <data dir>/fastloop/STOP-SCHEDULER")
     run.set_defaults(fn=cmd_run)
