@@ -28,6 +28,8 @@ Los planes detallados, resultados y comprobaciones de integridad están en los a
 
 ## Relevo
 
+Dirección ampliada del 29 oct: [ocho líneas vinculadas a las familias actuales](direccion-investigacion.md). Revisión del inventario completo de 21 partidas y auditorías, sin releer íntegramente todas las trazas ni ejecutar hipótesis. Otro modelo hará las comprobaciones.
+
 Encargo actualizado: sólo proponer líneas; otro modelo las comprobará. Prioridad: [líneas para el salto](lineas-salto.md). No lanzar más experimentos desde este chat.
 
 29 oct, prueba de representación terminada: 48 lecturas válidas de Sonnet. Comparar alternativas mantiene las pérdidas evitables en 3 de 24, reduce el riesgo positivo de 4 a 2 y las elecciones que agotarían la salud de 1 a 0. No mejora el resultado principal y no se promueve a partidas. El tratamiento mezcla comparación y advertencia contra pistas léxicas; no identifica cuál produjo la diferencia. Resultados en `pairwise-probe-results.json`; análisis reproducible con `uv run python scripts/deepseek/gpt_pairwise_score.py`. Los 313 tests pasaron antes del cierre; desde entonces sólo se añadieron resultados y documentación. La sesión 99501 terminó con código 0. Se solicita integrar este checkpoint. Siguiente paso: completar la descomposición de historial de DeepSeek y buscar intervenciones que aporten información distinta a sus errores compartidos, sin repetir este banco.
