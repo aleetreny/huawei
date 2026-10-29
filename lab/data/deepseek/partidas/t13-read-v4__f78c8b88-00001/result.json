@@ -1,0 +1,24 @@
+{
+  "job_id": "deepseek-pilo-f78c8b88-dff20f-00001-a1",
+  "session_id": null,
+  "outcome": "interrupted",
+  "survival_months": null,
+  "quantitative_score": null,
+  "ending_score": null,
+  "failure_reason": null,
+  "interruption": "play wrote no new score report (exit 1; see play.log)",
+  "steps": 0,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 1496.8,
+  "tool_calls": {},
+  "tool_seconds": {},
+  "actor_usage": {
+    "key_cost_usd": 2.032281,
+    "key_cost_settled": true
+  },
+  "trajectory_path": null,
+  "resumed": false,
+  "db_root": null,
+  "periods": null
+}

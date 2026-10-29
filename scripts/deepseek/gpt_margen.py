@@ -6,6 +6,7 @@ import argparse,hashlib,json,math,random
 from pathlib import Path
 import gpt_principios as B
 import planner as P
+from datapaths import deepseek_dir as _dsdir
 R=B.R
 class Controller(P.Planner):
     def __init__(self,arm,seed,labels,params):
@@ -27,7 +28,7 @@ class Controller(P.Planner):
 def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=600);ap.add_argument('--seed',type=int,default=202660270);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     cp=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json';cat=R.Catalog(json.loads(cp.read_text()));params=json.loads((B.ROOT/'lab/data/ingenieria-inversa/politica_optima.json').read_text())
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
     arms=('perfect:1','perfect:2','perfect:3','predicted:1','predicted:2','predicted:3')
     out={'meta':{'games':a.games,'seed':a.seed,'arms':arms,'context':'Privileged risk/caps/thresholds and known quarter effects. Only story sign labels, uncertain positive risk stress-priced as 1/2/3; not actual magnitude prediction. Research only.',
       'params':params,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'catalog_sha256':hashlib.sha256(cp.read_bytes()).hexdigest(),

@@ -12,8 +12,9 @@ import planner as P
 R = G.R
 import numpy as np
 from concurrent.futures import ProcessPoolExecutor
+from datapaths import deepseek_dir as _dsdir
 params = json.load(open(Path(__file__).resolve().parents[2] / 'lab/data/ingenieria-inversa/politica_optima.json'))['params']
-L = str(Path.home() / 'careerlab-data' / 'deepseek' / 'labels') + '/'
+L = str(_dsdir() / 'labels') + '/'
 
 class SignPlanner(P.Planner):
     """The tuned planner, but stories are valued only from perceived signs (+-1) and the risk flag."""

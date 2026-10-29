@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse,hashlib,json,math,random
 from pathlib import Path
 import gpt_incertidumbre as U
+from datapaths import deepseek_dir as _dsdir
 B=U.B;R=B.R
 class Controller(U.Controller):
     def __init__(self,arm,seed,labels):
@@ -19,7 +20,7 @@ class Controller(U.Controller):
 def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=800);ap.add_argument('--seed',type=int,default=202630270);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     cp=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json';cat=R.Catalog(json.loads(cp.read_text()))
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
     out={'meta':{'games':a.games,'seed':a.seed,'design':'Fixed five arms, same seeds and saved labels; add 5x wellbeing preference at public levels L3/4/5/6. Diagnostic, not deployable threshold.',
       'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
       'catalog_sha256':hashlib.sha256(cp.read_bytes()).hexdigest(),

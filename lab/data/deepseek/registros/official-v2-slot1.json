@@ -1,0 +1,46 @@
+[
+  {
+    "game": 1,
+    "started": true,
+    "job_id": "deepseek-pilo-0b43b18e-dff20f-00001-a1",
+    "policy_id": "0b43b18e8c260664",
+    "model_name": "deepseek-v4-flash",
+    "outcome": "interrupted",
+    "score": null,
+    "survival_months": null,
+    "interruption": "runner ended without ending_score: max_continuations",
+    "cost_usd": 2.91706,
+    "cost_settled": true,
+    "usage_before": 2.732805816,
+    "usage_after": 5.649865436,
+    "limit_remaining_after": 44.350134564,
+    "tokens": {
+      "input_tokens": 36591920,
+      "output_tokens": 91545,
+      "total_tokens": 36683465,
+      "total_cost": 1.3159649999999998,
+      "by_model": {
+        "deepseek-v4-flash": {
+          "input_tokens": 36591920,
+          "output_tokens": 91545,
+          "total_tokens": 36683465,
+          "total_cost": 1.3159649999999998
+        }
+      }
+    },
+    "total_tokens": 36683465,
+    "runner_cost": 1.3159649999999998,
+    "termination_reason": "max_continuations",
+    "wall_seconds": 1926.6,
+    "watchdog_spend_usd": null,
+    "max_usd_per_game": 3.0,
+    "reserve_usd": 15.0,
+    "actor_id": "dff20fcea96c188d",
+    "env_id": "a00cc82743c5752c",
+    "solution_sha256": "d34d6c2d42b44f272282a6b92c46cb776f8dc24fc86bbda4ad5c20741d8907c3",
+    "run_dir": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-0b43b18e-dff20f-00001-a1",
+    "trajectory": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-0b43b18e-dff20f-00001-a1/events.jsonl",
+    "redacted_files": 0,
+    "stopped": "game interrupted: runner ended without ending_score: max_continuations"
+  }
+]

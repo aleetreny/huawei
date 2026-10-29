@@ -11,8 +11,11 @@ import sys
 import time
 import urllib.request
 from pathlib import Path
+import sys as _sys
+_sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parents[1]))
+from datapaths import proxies_dir as _proxies_dir  # noqa: E402
 
-D = Path.home() / "careerlab-data/proxies"
+D = _proxies_dir()
 who = sys.argv[1]
 model = sys.argv[2] if len(sys.argv) > 2 else "haiku"
 out = D / who
