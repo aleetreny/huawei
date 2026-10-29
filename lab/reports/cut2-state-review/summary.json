@@ -1,0 +1,189 @@
+[
+  {
+    "manual": "cp-v10",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 1,
+    "mean_game_score": 42.11,
+    "game_scores": [
+      22.98,
+      61.24
+    ]
+  },
+  {
+    "manual": "cp-v11",
+    "recorded_runs": 1,
+    "scored_runs": 1,
+    "completed": 0,
+    "mean_game_score": 25.75,
+    "game_scores": [
+      25.75
+    ]
+  },
+  {
+    "manual": "cp-v12",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 2,
+    "mean_game_score": 59.815,
+    "game_scores": [
+      56.8,
+      62.83
+    ]
+  },
+  {
+    "manual": "cp-v3",
+    "recorded_runs": 1,
+    "scored_runs": 1,
+    "completed": 1,
+    "mean_game_score": 56.92,
+    "game_scores": [
+      56.92
+    ]
+  },
+  {
+    "manual": "cp-v5a",
+    "recorded_runs": 3,
+    "scored_runs": 3,
+    "completed": 3,
+    "mean_game_score": 66.5,
+    "game_scores": [
+      66.27,
+      65.1,
+      68.13
+    ]
+  },
+  {
+    "manual": "cp-v7",
+    "recorded_runs": 3,
+    "scored_runs": 3,
+    "completed": 2,
+    "mean_game_score": 53.56333333333333,
+    "game_scores": [
+      62.25,
+      69.88,
+      28.56
+    ]
+  },
+  {
+    "manual": "cp-v8",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 1,
+    "mean_game_score": 48.24,
+    "game_scores": [
+      68.2,
+      28.28
+    ]
+  },
+  {
+    "manual": "f1-steady-balance-v1",
+    "recorded_runs": 1,
+    "scored_runs": 1,
+    "completed": 0,
+    "mean_game_score": 18.76,
+    "game_scores": [
+      18.76
+    ]
+  },
+  {
+    "manual": "script-v1",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 1,
+    "mean_game_score": 45.050000000000004,
+    "game_scores": [
+      13.23,
+      76.87
+    ]
+  },
+  {
+    "manual": "script-v2",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 1,
+    "mean_game_score": 40.86,
+    "game_scores": [
+      51.12,
+      30.6
+    ]
+  },
+  {
+    "manual": "script-v3",
+    "recorded_runs": 3,
+    "scored_runs": 3,
+    "completed": 2,
+    "mean_game_score": 53.196666666666665,
+    "game_scores": [
+      66.55,
+      32.59,
+      60.45
+    ]
+  },
+  {
+    "manual": "script-v4",
+    "recorded_runs": 2,
+    "scored_runs": 0,
+    "completed": 0,
+    "mean_game_score": null,
+    "game_scores": []
+  },
+  {
+    "manual": "t13-read-v1",
+    "recorded_runs": 2,
+    "scored_runs": 2,
+    "completed": 0,
+    "mean_game_score": 28.744999999999997,
+    "game_scores": [
+      14.98,
+      42.51
+    ]
+  },
+  {
+    "manual": "t13-read-v2",
+    "recorded_runs": 3,
+    "scored_runs": 0,
+    "completed": 0,
+    "mean_game_score": null,
+    "game_scores": []
+  },
+  {
+    "manual": "t13-read-v3",
+    "recorded_runs": 1,
+    "scored_runs": 0,
+    "completed": 0,
+    "mean_game_score": null,
+    "game_scores": []
+  },
+  {
+    "manual": "t13-read-v4",
+    "recorded_runs": 3,
+    "scored_runs": 2,
+    "completed": 2,
+    "mean_game_score": 70.945,
+    "game_scores": [
+      71.67,
+      70.22
+    ]
+  },
+  {
+    "manual": "t13-read-v5",
+    "recorded_runs": 1,
+    "scored_runs": 1,
+    "completed": 1,
+    "mean_game_score": 66.71,
+    "game_scores": [
+      66.71
+    ]
+  },
+  {
+    "manual": "t13-read-v7",
+    "recorded_runs": 1,
+    "scored_runs": 1,
+    "completed": 1,
+    "mean_game_score": 67.27,
+    "game_scores": [
+      67.27
+    ]
+  }
+]
