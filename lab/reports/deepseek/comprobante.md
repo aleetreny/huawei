@@ -85,8 +85,10 @@ La sonda reconstruye la petición exacta del runner (mensaje de sistema de Jiuwe
 | `cp-v2` | 63,3 | 61,0 |
 | `calidad/v4-c5` (tercer lote) | 62,7 | 64,0 |
 | **`cp-v4`** (mismas reglas, texto más corto) | **64,0** | **69,3** |
+| `calidad/v4-c5` (cuarto lote) | 63,3 | 70,7 |
+| `cp-v5a` (cp-v4 + ejemplo literal del formato de respuesta) | 62,7 | 65,0 |
 
-Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto (2.421 palabras) y en su lote queda igual o por encima de c5 con los dos jueces. El juez se mueve ±5 entre lotes: léase «no baja». **El texto a entregar es el de `cp-v4`**; falta comprobar en el banco de DeepSeek que elige como cp-v3 (en curso).
+Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto (2.421 palabras) y en su lote queda igual o por encima de c5 con los dos jueces. El juez se mueve ±5 entre lotes: léase «no baja». El ejemplo del formato de respuesta de `cp-v5a` le cuesta a Sonnet ~5 puntos (≈ −0,5 de versión) frente a cp-v4, mientras que las dos llamadas por respuesta que provoca valen ~+2 de versión en fichas: se queda. Queda por probar, si hay tiempo, una redacción del ejemplo en prosa que el juez no castigue.
 
 ### 5.3 Banco de DeepSeek: ¿cambian las elecciones? (`scripts/deepseek/bench.py`, 69 situaciones de hacia-80: 40 de control y 29 de control de riesgo; ~0,13 USD por brazo)
 
