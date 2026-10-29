@@ -6,15 +6,11 @@
 
 ## Cambios por gravedad
 
-### P0. Quitar reglas de despido no publicadas y su implementación
+### Corrección: contadores publicados en el handbook de la partida
 
-`cp-v5a/bundle/skills/career-rules/SKILL.md:15–16,40,53,55,64`:
+Retiro el P0 que calificaba ambos contadores de no publicados. `show_employee_handbook` sí publica «two weak half-year reviews» y «after a second blow-up»; copia en `lab/data/transmision/handbook.md:141–147`. Mi revisión inicial se limitó incorrectamente al resumen RST. La cita adecuada es: “Source: in-game employee handbook, returned by show_employee_handbook, Risk and failure → Ways people say a run ends.” Añadir la ruta de la copia en los documentos de diseño permite comprobarla sin añadir archivos al bundle.
 
-- «The handbook says two weak half-year reviews mean dismissal» y «the next one is the last chance» atribuyen al handbook un contador y una fecha de despido que no publica.
-- «a second blow-up ends a run in a trust crisis» afirma otro contador oculto.
-- `Reviews here = 2` activa la política especial de arranque sobre esa premisa. Cambiar solamente la atribución por «our strategy» no elimina la dependencia de conocimiento interno.
-
-`competition-rules.rst:437–475` prohíbe umbrales y disparadores no publicados; `failure-and-ending.rst` dice expresamente que no publica contadores ni requisitos consecutivos. **Cambio:** eliminar esas afirmaciones y el rescate condicionado al contador exacto; usar advertencias y deterioro observados en la partida para intensificar prudencia. Actualizar todas sus referencias, no sólo el párrafo inicial. No afirmar que la corrección conserva la conducta medida.
+Esto no acredita la equivalencia entre dos reviews sin promoción y dos reviews débiles, ni la frase «the next one is the last chance». Son inferencias adicionales del candidato: no atribuirlas al handbook. No se propone alterar el contador publicado ni el manual en este encargo.
 
 ### P0. Retirar la garantía de numeración futura y el trimestre ejecutado a ciegas
 
@@ -117,3 +113,19 @@ Recomendación: conservar cp-v5a como padre con evidencia de tres carreras y apl
 - Recalculadas medias y eficiencia desde los tres score reports. No se verificó la cronología completa de ascensos; las contradicciones quedan señaladas para quien empaquete. No se inspeccionó un ZIP final, que no forma parte de este candidato documental.
 - No se cambia política ni se gastan APIs. Sólo este informe, README y la línea de apoyo en ESTADO. Revisar diff, commit y push en `alejandro/gpt-principios`; pedir integrar el informe en main.
 - Siguiente responsable: quien prepara el corte 2 debe resolver P0/P1, alinear documentos con el paquete corregido y volver a pasar el lint anterior. Las notas de cp-v5a permanecen como evidencia del padre; cualquier revisión debe declarar que aún no tiene sus propias carreras.
+
+## Relevo actualizado: corrección y entrega documental
+
+Los documentos de corte 2 ahora describen cp-v5a existente, sin TODO, con sus cifras verificadas y sus limitaciones. No se ha tocado el Skill ni el manifest. Esta corrección prevalece sobre las referencias anteriores a retirar ambos contadores publicados.
+
+Propuesta mínima para que valore el comprobador, en Skill y manifest donde se exige el lote trimestral:
+
+> Quarterly phase: use the choices returned by the current observe. Send one take_action followed by observe in the same reply. Read the returned menu before selecting the next Energy action or the main action. Use its current choice identifier; do not assume identifiers remain unchanged across phases or quarters.
+
+Con 2–3 acciones de energía y una principal, pasar de un lote completo a parejas añade 2–3 respuestas del modelo y 2–3 observe por trimestre: 32–48 de cada uno en 16 trimestres. No añade acciones de juego. Es un techo frente al ideal de un lote por trimestre; cp-v5a ya hizo algunas acciones separadas, por lo que el incremento real puede ser menor. Si por “fase” se entiende sólo el cambio de energía a acción principal, el mínimo sería 16 respuestas adicionales, pero no protege cambios de menú entre acciones de energía.
+
+Estimación orientativa, no medida: a 100–150 mil fichas de contexto medio, 32–48 respuestas añaden 3,2–7,2 millones de fichas de entrada por reenvío, más las observaciones adicionales que se vuelven a reenviar y salidas. Son 67–150 mil por mes antes de ese segundo efecto: pérdida de eficiencia de 2,7–6 puntos y de nota automática de 0,27–0,60. El contexto medio es un supuesto de sensibilidad, no una medición de las llamadas nuevas. No dar un máximo de coste total sin reproducir el historial; las observaciones insertadas tienen coste acumulativo.
+
+Necesario para entregar con una defensa coherente: documentos fieles y sin pendientes; citar el handbook real; no atribuirle equivalencias o fechas que no publica; resolver la dependencia de identificadores futuros y la presentación de consecuencias internas como certezas. El comprobador decide la edición y valida sus efectos. Sólo prudencia: quitar todo número que sea un margen propio declarado, eliminar constantes de calendario realmente públicas, cambiar de familia por el banco de L1 o renunciar al bloque literal/silencio. No hay base para exigir esas últimas medidas como prohibiciones oficiales automáticas.
+
+Validación: diff sin errores de espacios; ninguna API ni partida nueva. Solicito integrar los documentos y esta corrección en main.
