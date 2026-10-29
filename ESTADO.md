@@ -42,6 +42,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en [pendientes.md](lab/reports/deepseek/pendientes.md), con su coste, sus comandos y su regla de decisión.
 
+**Apoyo a DeepSeek (29 oct, diagnóstico sin API):** [estancamiento y vías de mejora](lab/reports/deepseek/gpt-principios/diagnostico-estancamiento.md): eficiencia mejorada, juego aún sin superioridad demostrada; control de política/bucle y evaluación de decisiones críticas antes de nuevas versiones.
+
 **Apoyo a DeepSeek:** `alejandro/gpt-principios` (PR #23): [auditoría adversarial del corte 2](lab/reports/deepseek/gpt-principios/auditoria-cut2.md), handbook corregido y documentos cp-v5a actualizados; propuesta trimestral pendiente del comprobador, sin API.
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
