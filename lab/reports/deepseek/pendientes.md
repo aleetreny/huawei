@@ -59,3 +59,7 @@ Ya está descartado en la réplica o con DeepSeek (fila X de HALLAZGOS):
 ## 5. Estrategia de cortes
 
 Cuenta la mejor versión de todas las publicadas. El corte 1 (v4) ya está dentro, y su nota oficial aún no ha salido. Una versión nueva sólo suma si supera a la mejor que ya haya, así que en los cortes 2 y 3 tiene sentido entregar algo con más techo que v4, aunque sea algo menos seguro, siempre que no tenga una regresión clara.
+
+## 6. Línea Comprobante (29 oct, rama `alejandro/comprobante`)
+
+Informe: [comprobante.md](comprobante.md). Lo nuevo: las fichas dependen sobre todo del **número de llamadas al modelo** (cada llamada reenvía el historial entero; el total es cuadrático en las llamadas), y el runner oficial **ejecuta en orden varias llamadas de una misma respuesta**. Un bucle de una respuesta por decisión (`take_action` + `observe`) y una por trimestre deja la partida en 0,4–0,7 M de fichas por mes (nota de fichas 90–100). Candidato `comprobante/cp-v1b` = c5 + t0 + suelo-v1-min + ese bucle, con línea de estado de cuatro campos. Pruebas en curso con DeepSeek: sonda del bucle, banco de 69 situaciones (control + riesgo), una partida de medición.
