@@ -58,3 +58,7 @@ El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramie
 ## Relevo — mv-3/mv-4 y consistencia de 77,78
 
 [Auditoría de las actualizaciones](mv-3-mv-4-consistencia.md): score reports y transiciones verificados desde huawei-mejora (a160964, documentación posterior sin commit). Ocho puntuadas, media 58,095; seis completas, 68,12; una en L6/77,78. Diferencia con 69,62: nivel y riqueza principalmente. Hallada contradicción ejecutada con el veto a lo anónimo bajo HR angry. Prioridad: aplicación del modo estricto y primeras ventanas de ascenso perdidas, conservando bucle mv-4. Sin API ni partidas; no prometer todas a 77,78. Solicitar integración de este diagnóstico en main.
+
+## Relevo — hoja de ruta para Opus: L6 repetible
+
+[Encargo completo](hoja-ruta-opus-l6.md): diagnóstico de ventanas, planificación hacia atrás con información incompleta, tres mecanismos aislados (Skill/Output, salud que habilita crecimiento, aplicación del modo estricto), percepción crítica y cierre. Objetivos P(L6 completo) y P(Q≥77,78), con protección de la cola baja. Hipótesis aún sin ejecutar; prohibido DeepSeek en este encargo. Actualizada la rama con main que ya integra Mejora. Sin mensajes a otros chats. Solicitar integración documental.
