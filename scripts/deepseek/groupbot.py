@@ -179,13 +179,37 @@ class LexBot(GroupBot):
         self.rv_l1 = False           # at L1 with no blow-up yet, promotion first in the review month at any risk
         self.skill_first_loss = False  # forced growth loss near a review: lose Skill, not Network or Output
         self.repair = False          # review close: if Network or Output fell under its best at the level, raise it back
+        self.nofar = False           # count no stat twice in Grow (t13-read-v4 as DeepSeek plays it)
+        self.skw = 0                 # >0: fixed Skill weight in Grow instead of the "furthest" double count
+        self.skl = 1                 # the Skill weight applies from this level on
+        self.npsk = False
+        self.hdw = ""                # "any": counts a Health/Dignity rise like growth (DeepSeek's habit); "cap": only under 10
+        self.l1no = 0                # >0: at L1, Network and Output weigh this much in Grow            # after a review with no promotion and no warning: Skill focus until promoted
+        self.focus = False
+        self.seen_reviews = 0
         self.risk_mode, self.risk_first, self.after_blowup = risk_mode, risk_first, after_blowup
         self.defuse_at, self.laylow_at = defuse_at, laylow_at  # HR level (0-4) from which the quarter cleans risk
 
+    def _review_seen(self, st):
+        n = len(st.grades)
+        if n != self.seen_reviews:
+            self.seen_reviews = n
+            if self.lv == st.level and st.grades[-1] in ("A", "B"):
+                self.focus = self.npsk  # reviewed, no warning, not promoted: Skill is what holds it back
+        if self.lv != st.level:
+            self.focus = False
+
     def energy(self, rep, st):
+        self._review_seen(st)
         if not (st.health <= 4 and st.energy >= 1) and min(st.risk, 4) >= self.defuse_at and st.energy >= 3 \
                 and st.month < 46:
             return "Defuse legacy risk"  # once per quarter, as the first action
+        if self.focus and st.month < 46:
+            if st.health <= 4 and st.energy >= 1:
+                return "Health recovery"
+            if st.energy >= 2:
+                return "Skill learning"
+            return "Prepare report materials" if st.energy >= 1 else None
         if self.quarter in ("blind", "blind-l4", "blind-l4b", "blind-l4c") and st.month < 46:
             if st.health <= 4 and st.energy >= 1:
                 return "Health recovery"
@@ -207,11 +231,14 @@ class LexBot(GroupBot):
     def main(self, rep, st):
         if min(st.risk, 4) >= self.laylow_at and st.month < 46:
             return "Lay low and reduce risk"
+        if self.focus and st.month < 46:
+            return "Apply for rotation"
         if self.quarter in ("blind", "blind-l4", "blind-l4b", "blind-l4c") and st.month < 46:
             return "Apply for rotation" if self.quarter == "blind-l4" and st.level >= 4 else "Apply for a key project"
         return super().main(rep, st)
 
     def story(self, rep, st, node):
+        self._review_seen(st)
         if self.lv != st.level:
             self.stalled, self.lv, self.best = set(), st.level, {}
         for k in R.GROWTH:
@@ -263,6 +290,15 @@ class LexBot(GroupBot):
         else:
             room = {k: (0.0 if k in self.stalled else 0.5) for k in R.GROWTH}
         far = max(room, key=room.get)
+        if self.nofar:
+            far = None
+        if self.focus:
+            far = "skill"
+        w = {k: (2 if k == far else 1) for k in R.GROWTH}
+        if self.skw and st.level >= self.skl and not self.focus:
+            w["skill"] = self.skw
+        if self.l1no and st.level == 1:
+            w["network"] = w["output"] = self.l1no  # the entry review needs both full: fill them first
         endgame = st.month >= 46
 
         def score(o):
@@ -270,8 +306,11 @@ class LexBot(GroupBot):
             if endgame:
                 main = sg.get("health", 0) + sg.get("dignity", 0) - 2 * o[2]
             else:
-                main = sum((2 if k == far else 1) * (room[k] > 0) for k in R.GROWTH if sg.get(k, 0) > 0)
+                main = sum(w[k] * (room[k] > 0) for k in R.GROWTH if sg.get(k, 0) > 0)
                 main -= sum(1 for k in R.GROWTH if sg.get(k, 0) < 0)
+                if self.hdw:  # values a Health or Dignity rise as growth; "cap": only while it is under 10
+                    main += sum(1 for k in ("health", "dignity") if sg.get(k, 0) > 0
+                                and (self.hdw == "any" or getattr(st, k) < 10))
             return (main, -o[2], sg.get("health", 0) + sg.get("dignity", 0), sg.get("wealth", 0) >= 0, self.rng.random())
         pick = max(opts, key=score)
         self.last = ({k: getattr(st, k) for k in R.GROWTH}, pick[1])
@@ -306,15 +345,27 @@ def _bot(name: str, i: int) -> GroupBot:
         bot.repair = "rep" in spec
         bot.skill_first_loss = "sloss" in spec
         bot.rv_l1 = "rvlone" in spec
+        bot.nofar = "nofar" in spec
+        bot.skw = next((int(x[3:]) for x in spec if x.startswith("skw")), 0)
+        bot.skl = next((int(x[3:]) for x in spec if x.startswith("skl")), 1)
+        bot.npsk = "npsk" in spec
+        bot.hdw = "any" if "hdwany" in spec else ("cap" if "hdwcap" in spec else "")
+        bot.l1no = next((int(x[4:]) for x in spec if x.startswith("l1no")), 0)
         bot.quarter = "blind-l4c" if "qb4c" in spec else "blind-l4b" if "qb4b" in spec else ("blind-l4" if "qb4" in spec else ("blind" if "qb" in spec else ""))
         return bot
     return GroupBot(per, seed=i)
 
 
-def _play(args: tuple[str, int, int]) -> tuple[float, int, str]:
+def _play(args: tuple[str, int, int]) -> tuple[float, int, str, float, int]:
     name, i, seed0 = args
-    st, _ = R.play(CAT, _bot(name, i), random.Random(seed0 + i))
-    return R.Replica.score(st), st.level, st.failure or "completed"
+    st, trace = R.play(CAT, _bot(name, i), random.Random(seed0 + i))
+    lv, m5 = 1, 99
+    for t in trace:
+        if t[1] == "r" and t[2].get("promoted"):
+            lv += 1
+            if lv == 5:
+                m5 = t[0]
+    return R.Replica.score(st), st.level, st.failure or "completed", st.skill, m5
 
 
 def games(arms: dict[str, Perception | None], n: int, seed0: int, workers: int) -> dict[str, np.ndarray]:
@@ -326,8 +377,13 @@ def games(arms: dict[str, Perception | None], n: int, seed0: int, workers: int) 
             lv = collections.Counter(o[1] for o in out)
             fails = collections.Counter(o[2] for o in out)
             res[name] = s
+            done = [o for o in out if o[2] == "completed"]
+            dm = np.mean([o[0] for o in done]) if done else float("nan")
+            m5 = [o[4] for o in done if o[4] < 99]
             print(f"  {name:28s} {s.mean():5.1f} ± {s.std(ddof=1) / np.sqrt(len(s)):.2f}  L6+ "
-                  f"{sum(v for k, v in lv.items() if k >= 6) / len(s):4.0%}  {dict(fails)}", flush=True)
+                  f"{sum(v for k, v in lv.items() if k >= 6) / len(s):4.0%}  completed {len(done) / len(s):4.0%} "
+                  f"mean {dm:5.1f} L5 by m{np.mean(m5) if m5 else 0:4.1f} ({len(m5) / max(1, len(done)):4.0%}) "
+                  f"Skill {np.mean([o[3] for o in done]) if done else 0:5.1f}  {dict(fails)}", flush=True)
     return res
 
 
