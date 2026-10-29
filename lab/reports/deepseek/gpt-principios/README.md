@@ -50,3 +50,7 @@ La comparación de 48 lecturas de Sonnet ya terminó. Con memoria de retornos, l
 Tras la limpieza, la siguiente investigación prioritaria es descomponer el crecimiento del historial en las trazas reales de DeepSeek: observaciones, texto del modelo, notas, lecturas del Skill y consultas al registro. Las comprobaciones C39 y C40 son alternativas baratas. Antes de nuevas llamadas, comprobar la cuota y registrar el tamaño de la prueba en ESTADO.
 
 El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramientas; no entrega todavía una estrategia que lo consiga.
+
+## Relevo — diagnóstico del estancamiento (29 octubre, sin API)
+
+[Diagnóstico y vías de mejora](diagnostico-estancamiento.md): contrastadas las versiones hasta cp-v12/ex-v1 y recalculado juego+fichas desde score reports. v4 63,108; cp-v5a 62,658; cp-v12 57,852 antes de calidad. No hay superioridad de juego demostrada, ni evidencia para atribuir toda la diferencia al azar. Prioridades: control v4 con sólo bucle, auditoría de decisiones críticas con títulos reservados, ex-v1 incremental y validación de la réplica por familia. Sin nuevas partidas, modelos ni cambios de manual. Siguiente responsable: seguir el Relevo del informe; DeepSeek expresamente excluido por el usuario. Solicitar integración en main.
