@@ -249,7 +249,7 @@ Banco `ds-cp9-l1` (90 situaciones de L1 con la evaluación cerca, 0,12 USD, serv
 
 **Réplica, excepción del mes previo estrecha frente a ancha** (`rfnarrow`): si en N = 1 sólo se protegen las opciones sin pérdida cuyo riesgo real es 1 como mucho (lo que DeepSeek hace de hecho), frente a protegerlas todas (lo que dice el texto y hace el bot): 59,65 frente a 59,83; despidos 218 frente a 175, crisis 149 frente a 179. **Ampliar la excepción en el texto vale +0,2 en la réplica**: no merece banco ni partida.
 
-Juez del texto final (`j-cp9d.jsonl`, Haiku y Sonnet × 3, misma tanda que cp-v8): se anota abajo.
+Juez del texto final (`j-cp9d.jsonl`, Haiku y Sonnet × 3, misma tanda que cp-v8): **cp-v9 64,3 / 62,0 frente a cp-v8 59,7 / 63,3**, sin ceros: empate dentro del ruido (±5).
 
 Qué cambiaría una decisión de entrega: nada de cp-v9 toca las historias ni el bucle; sus dos reglas sólo actúan tras una explosión o desde L5. Con 3 partidas (~2,7 USD) no se puede ver una diferencia de +0,3–0,5 de media: **cp-v9 no se juega** (regla 4). Es la base para el corte 3 sólo si Alejandro prefiere llevar las dos reglas de la réplica sin partidas; con pruebas, cp-v5a.
 
@@ -288,6 +288,16 @@ Avisos suyos sobre cp-v9: el uso de «Best» para detectar techos choca con B38 
 | cp-v9 (manifest en prosa), sonda 2 | DeepInfra | 0 de 6 | 189–550, chino | 0 |
 
 Partidas (sin proveedor registrado, pero con el razonamiento oculto total de `gametokens`): las siete que emparejaron tienen 72–132 mil fichas de razonamiento oculto; la segunda de cp-v8, que narró y no emparejó, **24 mil**. Lectura: **cuando el proveedor no sirve el canal de razonamiento, DeepSeek piensa en voz alta en el contenido, y el texto antes de la llamada rompe el patrón de dos llamadas** (CP3: lo que mantiene la pareja es el historial). Con DeepInfra la pareja sale a cara o cruz en la primera respuesta y luego se mantiene (6 de 6 o 0 de 6). La nota oficial usa «organiser-controlled upstream routing» (`docs/mcp.rst`): si ese proveedor no sirve razonamiento, las fichas de cualquier manual vuelven a ~1,3 M por mes (nota ~65) y lo que queda de cp-v5a es su juego (igual que v4). No podemos elegir el proveedor en la entrega («Do not add OpenRouter provider routing settings»); sí anclarlo en nuestras sondas para medir (`DS_PROVIDER`, sólo en `ds.py`, nunca en el runner). Sondas ancladas de cp-v5a (3 en DeepInfra, 3 en GMICloud, ~0,07 USD): se anotan abajo. Lo que vale medir después, si DeepInfra narra siempre: qué texto consigue la pareja también sin canal de razonamiento (por ejemplo, exigir que la primera respuesta de la carrera, el «Continue», lleve ya las dos llamadas, para sembrar el patrón).
+
+### 6.10 `cp-v10`: la pareja de llamadas sin depender del proveedor (predicción escrita antes de medir)
+
+`lab/policies-src/comprobante/cp-v10` = cp-v9 + un bucle de turno que no depende del silencio: el Turn loop abre con las tres primeras respuestas escritas (`new_game`; `observe`; la pantalla «Continue» ya como pareja `take_action` + `observe`), el paso 2 pide silencio «si puedes» y dice que la pareja no depende del texto («si escribes, una línea corta, y las dos llamadas en la misma respuesta»), y el paso 3 añade «desde la pantalla Continue hasta el último mes»; lo mismo en la instrucción del manifest, en prosa. Lint: 15 avisos REVIEW, sin errores.
+
+**Por qué:** §6.9. Con un proveedor sin canal de razonamiento DeepSeek narra, y la pareja sale a cara o cruz en la primera respuesta de historia; una vez salida, se mantiene (CP3). Si la pareja se siembra en la pantalla Continue y se desacopla del silencio, debería salir aunque narre. Una partida emparejada que narra cuesta ~0,73 M de fichas por mes (nota ~91, tabla de §2) frente a ~1,3 M sin pareja (~65).
+
+**Predicción (antes de las sondas):** ancladas a DeepInfra, cp-v10 empareja en 4 de 5 arranques en frío o más (cp-v5a allí: ~la mitad; control en marcha, 3 sondas); ancladas a GMICloud, sigue en silencio y emparejando. Coste: ~0,06 USD por brazo.
+
+**Decisión según salga:** si se cumple, cp-v10 pasa a candidato del corte 2 en lugar de cp-v5a, con una partida de confirmación (~0,9 USD; lo que la confirmaría: pareja desde la segunda respuesta, fichas < 800 mil por mes, elecciones de historias como siempre; una partida no juzga la nota) y, si Alejandro lo aprueba, dos más antes del corte 3. Si no se cumple (≤ 2 de 5), la pareja no se puede asegurar en proveedores sin razonamiento, se queda cp-v5a y el riesgo queda documentado en CP6 para la entrega.
 
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
