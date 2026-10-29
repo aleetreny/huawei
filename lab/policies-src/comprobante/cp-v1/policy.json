@@ -1,0 +1,11 @@
+{
+  "family": "comprobante",
+  "name": "cp-v1",
+  "parents": ["v4-c5", "v4-t0", "suelo-v1-min", "v4-lean-q"],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter)",
+  "operator": "merge candidates + new turn loop",
+  "hypothesis": "One model reply per decision (take_action and observe in the same reply), one reply per quarterly phase, no written analysis and one-line notes cut the model calls from ~420 to ~210 and the tokens per month from ~1.4 M to ~0.5-0.7 M (token score 62 -> 90+), without changing the decision rules of v4-c5 beyond the tested t0 quarter and suelo-min floor rules.",
+  "predicted_behaviour": "Replies with two or more tool calls; no visible text; notes of one line; tokens per month under 800k in an official game; same story choices as v4-c5 on the bank within repeat noise; Skill learning and Apply for rotation every quarter from level 4.",
+  "refutation": "DeepSeek keeps one tool call per reply or writes analysis anyway (tokens per month above 1.1 M), or story choices move away from v4 more than a repeat of v4 does, or a missed first promotion or a trust crisis appears that v4 avoids.",
+  "skill_count": 1
+}
