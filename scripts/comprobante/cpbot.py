@@ -17,6 +17,7 @@ class CPBot(T.V4Bot):
         self.lockdown=bool(f.get('lockdown',False)) # after a blow-up: HR remark read one step worse for the rest of the run
         self.lockq=bool(f.get('lockq',False))       # after a blow-up: Defuse+Lay low every quarter only (stories unchanged)
         self.atpromo=None
+        self.rfnarrow=int(f.get('rfnarrow',0))  # N=1 exception narrowed: loss-free options kept only if their risk <= this (replica risk units); 0 = wide (base)
         self.rf2=bool(f.get('rf2',False))   # review-first (step 4 before risk) also at N=2 when HR friendly, counter 0
         self.rf2l1=bool(f.get('rf2l1',False)) # same, only at level 1
         self.hpen=float(f.get('hpen',0))   # Grow: penalty per Health loss when Health below full
@@ -43,6 +44,19 @@ class CPBot(T.V4Bot):
         return None
     def story(self, rep, st, node):
         n=self.n_to_review(st)
+        if self.rfnarrow and n==1 and self.hr in (0,1) and self.concerns==0:
+            # emulate the narrow exception: a loss-free option with real risk above rfnarrow is NOT protected (looks like a plain risky option that also loses)
+            orig_see=self.per.see
+            cache={int(kk):orig_see(node,int(kk)) for kk in rep.cat.nodes[node]["choices"]}
+            realrisk={int(kk):rep.cat.answer_risk(node,int(kk)) for kk in rep.cat.nodes[node]["choices"]}
+            def see(nd,k):
+                sg,rs=cache[k] if nd==node and k in cache else orig_see(nd,k)
+                if nd==node and k in cache and rs>0 and realrisk[k]>self.rfnarrow and not any(sg[g]<0 for g in R.GROWTH):
+                    sg=dict(sg); sg['output']=-1   # pretend it loses, so review_first drops it
+                return sg,rs
+            self.per.see=see
+            try: return super().story(rep, st, node)
+            finally: self.per.see=orig_see
         if (self.rf2 or (self.rf2l1 and st.level==1)) and n==2 and self.hr in (0,1) and self.concerns==0:
             # emulate review_first at N=2: drop options that lower a growth stat before the risk filter, if any remain
             orig_see=self.per.see
