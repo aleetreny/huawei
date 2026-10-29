@@ -207,3 +207,20 @@ Fuentes (clonadas en `~/ext/`, sin ejecutar nada suyo):
   - las fichas y el tiempo cuentan;
   - no hay que optimizar a lo bruto una sola dimensión.
 - **Copias locales:** actas, transcripción del vídeo y documentación oficial en chino, en `/root/ext/bdci-web/`, en el contenedor de la nube y fuera de Git.
+
+### BDCI: vídeo oficial de dudas, segunda pasada (29 oct)
+
+**Conclusión:** el vídeo no trae ninguna regla nueva. Confirma lo que ya teníamos.
+
+Esta vez se leyó la única diapositiva del reto entera y el audio se transcribió con Whisper large-v3. Copias en `/root/ext/bdci-web/video/`, en el contenedor de la nube y fuera de Git.
+
+Lo que sirve:
+1. **El nombre de cada opción coincide con su efecto**, y se puede deducir del texto («siempre sigue la lógica de la vida real»). Los textos de respuesta del juego «suelen ser pistas de los mecanismos ocultos».
+2. **Riesgo oculto:** se acumula hasta un umbral y estalla más tarde, y también lo suben las historias de cada mes, sin decir cuáles.
+3. **Ascenso:** mira Skill, Network y Output «acumulados a largo plazo»; un buen mes no lo garantiza.
+4. **Qué conviene subir:** el nivel y la riqueza, siempre; la salud basta con mantenerla por encima del suelo.
+5. **Nada de optimizar a lo bruto** una sola dimensión.
+6. **Trimestre:** la energía que no se gasta se pierde, y todas las acciones tienen efectos secundarios.
+7. **Historias:** cada elección cambia también el rumbo de las historias siguientes.
+8. **Evaluación:** mismo motor que en desarrollo y otro juego de datos; cuentan los recursos consumidos; no hace falta un sistema de varios agentes.
+9. **Datos oficiales:** no enseñan ninguna historia real del juego.
