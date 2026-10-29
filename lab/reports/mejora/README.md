@@ -81,7 +81,16 @@ Las mismas 159 situaciones que v9 (`ids-v9-all.txt`: 90 del mes previo de L1, 29
 
 ## 7. Partidas
 
-PENDIENTE.
+Programa oficial (slot 1, juego de desarrollo, runner `00b084a8`), `careerlab.target play`, una cada vez, ninguna cortada. Datos en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-e8cdf663-*`; análisis con `scripts/comprobante/gametokens.py` y `traj.py`.
+
+| Partida | Nota | Fin | Ascensos (mes) | Final S / N / dinero / H+D / riesgo | Fichas por mes (nota) | Paradas | Coste |
+|---|---:|---|---|---|---|---:|---:|
+| mv-3 n.º 1 | **68,64** | completa, L5 | 12, 18, 24, 42 | 123 / 46 / 29 / 18 / 0 | 704 mil (91,8) | 8 | 0,45 |
+| mv-3 n.º 2 | **77,78** | completa, **L6** | 6, 12, 18, 36, 48 | 134 / 53 / 43 / 20 / 0 | 486 mil (100) | 0 | 0,29 |
+
+- **N.º 1.** Perdió el ascenso del mes 6 (RR. HH. ya «frowning» en el mes 5: el modo estricto anuló la excepción y Output quedó en 2), pero encadenó 12, 18 y 24 y llegó a L5 en el 42 con Skill 123. El trimestre se cumplió como estaba escrito (mes 3: toda la energía a informes).
+- **N.º 2: la mejor partida de DeepSeek del proyecto** (antes, 76,87 de `script-v1`). Ascendió en cada evaluación hasta L4 en el mes 18 (el ritmo del planificador perfecto), L5 en el 36 y L6 en el 48. En los meses de evaluación de L1 eligió lo que el planificador elige en el banco («bromear con lo de los snacks», «charlar unos minutos y volver al plazo», «prometer una evaluación de impacto», «un no firme a la merienda y comer otro día»): la lectura nueva actúa en partida real.
+- **Paradas del agente.** En 9 respuestas el proveedor escribió las llamadas como texto (XML roto y con erratas: `mcp_career-emulaor-engne_tak_ction`), el runner no vio ninguna llamada y tuvo que reanudar la partida (8 reanudaciones; el programa corta en 20 y la partida quedaría a medias). cp-v12 tuvo 1–2 por partida. Cada reanudación trae un `check_latest_logs` y un `observe` de más: 224 llamadas al modelo frente a ~170, y 704 mil fichas por mes. Es la degradación de algunos proveedores cuando el modelo narra mucho (C56), no las reglas.
 
 ## Relevo
 
