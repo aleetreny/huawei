@@ -1,6 +1,14 @@
 # Pendientes de DeepSeek: candidatos y pruebas por confirmar
 
-**En una frase (29 oct):** hay seis manuales candidatos derivados de `t13-read-v4`, todos probados sólo con la réplica, jueces de Claude o Haiku. Ninguno se ha confirmado con DeepSeek. La apuesta con más probabilidad de pasar a DeepSeek es el trimestre de L4 (`techo/v4-t0`), porque DeepSeek obedece las reglas del trimestre (B20). Las reglas de historias (`suelo`) son las más dudosas, porque las elecciones de DeepSeek en historias dependen de cómo lee las opciones y casi no cambian con la redacción (C27, `hacia-80.md`).
+**En una frase (29 oct, noche):** la base es **`comprobante/cp-v12`**: las reglas de cp-v5a más el bucle de dos llamadas por respuesta, que los organizadores permiten (C49). Nota de fichas ~95–100 con cualquier proveedor. Sus dos partidas completaron: 56,80 y 62,83. Corte 1 oficial: 64,75, puesto 13 (C45).
+
+Las reglas añadidas en cp-v8–cp-v11 quedan fuera mientras la réplica no esté calibrada. Lo que más puntos tiene es no hundirse (4 de 19 partidas largas) y llegar antes a L5 (C57, C58).
+
+**Siguientes pasos, por orden:**
+1. **Calibrar la réplica con las 35 partidas reales** (0 USD; §6). Sin eso, ninguna regla nueva que se apoye en la réplica debe entrar: su lectura ruidosa saca ~42 frente a ~65 en la realidad.
+2. **Comprobar si el juego empeoró al cambiar las reglas.** Las partidas completas de la familia cp sacan de media 65,2 (13), frente a ~69 de las de t13-read v4/v5/v7 (4). Prueba barata: `t13-read-v4` tal cual + sólo el bucle de cp-v10, 2 partidas.
+3. **Script en partida**: estado, techos y trimestre una vez por trimestre, y asesor sólo en los momentos críticos, con la condición de estabilidad de C48. Permitido por C49. Se diseña en la réplica calibrada; línea `script-partida`.
+4. **Reglas generales de BDCI, en banco** (~0,2 USD): freno de salud por carga de trabajo, y proyecto clave en L4 cuando falta Output (C48).
 
 Este es el sitio único de lo que falta probar con la clave. Quien gaste DeepSeek mantiene la lista: al terminar una prueba, actualiza la fila y pasa el resultado a [HALLAZGOS](../../../HALLAZGOS.md). Los comandos exactos están en el informe de cada línea, que es la fuente; aquí sólo se enlazan.
 

@@ -84,6 +84,11 @@
       "url": "https://github.com/ShaFuFuDeLiu/Competitions-CareerSim-BDCI26",
       "equipo": "BDCI",
       "nota": "tablas de eventos descodificadas: ejemplo de lo que da un 0; no copiar"
+    },
+    {
+      "url": "https://gitcode.com/openJiuwen/agent-store",
+      "equipo": "openJiuwen (repositorio de los premiados de BDCI)",
+      "nota": "los premiados deben subir aquí su método; vacío para este reto el 29 oct"
     }
   ],
   "paginas": [
