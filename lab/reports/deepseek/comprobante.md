@@ -60,17 +60,59 @@ Lint: sólo avisos REVIEW, los mismos de c5, t0 y suelo (disparadores de calenda
 
 ## 5. Pruebas (se van añadiendo)
 
-### 5.1 ¿Obedece DeepSeek el bucle? (`scripts/comprobante/turnprobe.py`)
-Pendiente.
+### 5.1 ¿Obedece DeepSeek el bucle? (`scripts/comprobante/turnprobe.py`, ~0,01 USD por sonda)
+La sonda reconstruye la petición exacta del runner (mensaje de sistema de JiuwenSwarm con el IDENTITY del manual, las 52 herramientas, el primer mensaje del runner, el recordatorio por llamada) y deja a DeepSeek jugar 4–6 turnos sobre los `observe` grabados de la partida de v4.
 
-### 5.2 Juez de calidad
-Pendiente.
+| Manual | Texto visible por respuesta | Nota | Llamadas por respuesta |
+|---|---:|---|---|
+| `t13-read-v4` (control; reproduce la partida real) | 170–360 caracteres en chino | línea de estado + razón (235 caracteres en partida) | 1 |
+| `cp-v1` («decide en silencio, sólo llamadas») | **0** | una línea (~75 caracteres) | 1 |
+| `cp-v1b` (regla dura: dos llamadas por respuesta) | 0 | una línea | 1 |
+| `cp-v1c` (en términos de API: «parallel tool calls») | 0–45 | una línea | 1 |
+| `cp-v1b` en el trimestre (posición 9) | 0 | una línea | 1, pero **tres `take_action` seguidos sin `observe` entre medias** |
 
-### 5.3 Banco de DeepSeek: ¿cambian las elecciones?
-Pendiente.
+- **El silencio funciona:** DeepSeek deja de escribir y razona en el canal oculto (`reasoning_tokens` 200–1.000 por decisión frente a 20–340 con v4), que no vuelve al historial.
+- **En la sonda no junta `take_action` y `observe` en una respuesta**, con ninguna redacción. Pero **en el banco sí** (§5.3): 97 respuestas con `take_action` + `observe` frente a 32 con `take_action` solo. La diferencia puede ser el mensaje de sistema o el patrón de la historia sintética (una llamada por mensaje). Lo decide la partida real (§5.4).
+- El trimestre con un solo `observe` se obedece.
+
+### 5.2 Juez de calidad (`scripts/calidad-skills/judge.py`, Haiku y Sonnet × 3, mismo lote que c5)
+
+| Manual | Haiku | Sonnet |
+|---|---:|---:|
+| `calidad/v4-c5` | 64,0 · 65,3 | 68,7 · 69,7 |
+| `cp-v1` | 64,7 | 62,3 |
+| `cp-v2` | 63,3 | 61,0 |
+
+Sonnet baja 6–8 puntos (≈ −0,7 de versión) y repite tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto; medido en §5.2 cuando termine.
+
+### 5.3 Banco de DeepSeek: ¿cambian las elecciones? (`scripts/deepseek/bench.py`, 69 situaciones de hacia-80: 40 de control y 29 de control de riesgo; 0,12 USD por brazo)
+
+| Serie | `t13-read-v4` (pasada 1) | `cp-v1b` |
+|---|---|---|
+| Control (40): pérdida por decisión / elige la mejor / arriesgadas | 0,38 / 88 % / 3 | 0,77 / 82 % / 2 |
+| Control de riesgo (29) | 0,93 / 66 % / 1 | 1,04 / 59 % / 0 |
+| Misma elección que v4 | — | 36 de 40 · 24 de 26 |
+
+- 90 % de coincidencia, igual que v4 consigo mismo (B21). De las 4 elecciones distintas del control, dos son cp-v1b más prudente en el mes previo (rechaza el riesgo +2 que v4 acepta por la excepción; una le sale mejor y otra peor), y dos son errores de lectura (una «callarse» leída como sin riesgo, −10 puntos de q). Para saber si el +0,39 es ruido corren una segunda pasada de v4 y una de `cp-v3` sobre las mismas 69.
+- Texto visible: 63 caracteres por situación (v4: cientos); nota 102 caracteres (v4: 258).
 
 ### 5.4 Partida oficial: fichas por mes
-Pendiente.
+`cp-v3` (= cp-v1b sin la llamada al handbook) en juego desde las 02:02 UTC en el hueco 1 (`deepseek-pilo-b37dbff8-dff20f-00000-a1`). Lo que decide: fichas por mes (v4: 1,35–1,47 M), si hay respuestas con dos llamadas, si el trimestre va con un `observe`, y ninguna acción rechazada. Análisis con `python3 scripts/comprobante/gametokens.py <run>`.
 
 ## Gasto
-- Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres. Gasto de esta línea: se anota aquí por prueba con `total_cost`/`cost`.
+- Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
+- Sondas `turnprobe` (8 tandas): ~0,21 USD. Banco `ds-cp1b`: 0,12. Bancos `ds-v4-rep2` y `ds-cp3`: ~0,25 (en curso). Partida `cp-v3`: pendiente de `total_cost`.
+
+## Relevo (29 oct, 03:20 UTC)
+1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2): el coste es cuadrático en las llamadas, y el modelo escribe menos de lo que parecía (el texto en inglés de las trazas es razonamiento oculto). Prueba del runner con un modelo falso (§3): varias llamadas por respuesta se ejecutan en orden. Manual `cp-v1`→`cp-v4` (§4) y sondas con DeepSeek (§5.1): el silencio y las notas cortas se obedecen; las dos llamadas por respuesta, en el banco sí y en la sonda no. Juez (§5.2): Sonnet baja 6–8 puntos; `cp-v4` lo intenta arreglar. Banco (§5.3): elecciones iguales al 90 %, pérdida algo mayor, ruido por medir.
+2. **Resultados.** Tablas de §2–§5. Datos: `~/careerlab-data/comprobante/` (sondas, probe falso, ids), `~/careerlab-data/deepseek/runs/ds-cp1b` (banco), partida en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-b37dbff8-*`. Juez en `lab/reports/deepseek/comprobante-data/`.
+3. **A medias.** La partida de medición; los dos bancos de ruido; el juez de `cp-v4`. No hay aún recomendación de corte.
+4. **Siguiente paso.** Leer la partida con `gametokens.py`; si las fichas por mes bajan de ~1 M y no hay regresión en el banco, jugar 2 partidas más del candidato final (texto de `cp-v4` si el juez lo prefiere y el banco con Haiku no cambia elecciones) y recomendar para el corte 2. Comandos:
+   ```bash
+   cd ~/huawei-comp && export CAREERLAB_ORIGIN=deepseek CAREERLAB_RUNNER_DIR=~/huawei/local-runs/official-runner CAREERLAB_TARGET_ENV=~/huawei/local-runs/official-runner/.env CAREERLAB_TARGET_PARALLEL=1 CAREERLAB_TARGET_NEVER_STOP=1
+   uv run python -m careerlab.target register lab/policies-src/comprobante/<manual>
+   uv run python -m careerlab.target play --policy <manual> --spend --games 1 --slot 1 --max-usd-per-game 3 --reserve-usd 15 --purpose pilot --why "..."
+   python3 scripts/comprobante/gametokens.py ~/careerlab-data/huawei-deepseek/runs/<run>
+   DS_STOP_USD=14 uv run python scripts/deepseek/bench.py run --variant lab/policies-src/comprobante/<manual>/bundle --name ds-<x> --ids ~/careerlab-data/comprobante/ids-ctrl69.txt
+   uv run python scripts/deepseek/bench_sets.py ~/careerlab-data/deepseek/ids-v9-sets.json ds-v4-full10 ds-v4-rep2 ds-cp1b ds-cp3
+   ```
