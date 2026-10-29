@@ -112,22 +112,25 @@ Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada 
 - Auditoría de decisiones contra el catálogo (`real_audit.py`): elige la mejor opción el 67 % en L1, 60 % en L2, 88 % en L3 y 64 % en L4 (las dos partidas completas de v4: 61 %, 90 %, 78 %, 83 %). El exceso de L4 viene de preferir Health, que estaba baja. No hay señal de que el silencio empeore las historias; es una partida de la cola baja de la familia (v5 y v7 sacaron 66,7 y 67,3; una de v4 se quedó en L1).
 - **Coste:** 1,73 USD por 57 M de fichas, cuando v4 pagó 0,81 por 70 M: el proveedor que sirvió esta partida cobra más (la ruta la fija la organización). Cuenta para el presupuesto, no para la nota.
 
-**`cp-v5a` (dos llamadas por respuesta), hueco 2, desde las 02:32 UTC.** A mitad (mes 36, 03:11): 161 llamadas, **120 respuestas con dos llamadas y 41 con una**; contexto 186 mil. Proyección: ~215 llamadas, ~30 M de fichas, **~0,6 M por mes, nota de fichas ~95**. Segunda partida de `cp-v5a` en el hueco 1 desde las 03:15.
+**`cp-v5a` (dos llamadas por respuesta), partida 1, hueco 2, 02:32–03:27 UTC: 66,27, 48 meses, 31,4 M de fichas (654 mil por mes, nota de fichas 93,8), 1,06 USD.**
+- Fichas: 221 llamadas al modelo (178 `observe`, 201 `take_action`); **162 respuestas con dos llamadas**, 58 con una (trimestres y arranque). El historial crece 913 por llamada (dos llamadas) y la última petición lleva 238 mil fichas. **La proyección de §2 se cumple: la pareja de llamadas baja las fichas de 1,43 M a 0,65 M por mes.**
+- Juego: L2 en el mes 12 (en el mes previo al 6 eligió una opción leída como segura que costó un punto de Output: la trampa de L1 de siempre), L3 en el 18, L4 en el 30 (una ventana perdida en L3 con RR. HH. frowning), L5 en el 48 (Skill 108 en el 42 con RR. HH. uneasy/frowning: ventana perdida; promoción en la última evaluación). Final: Skill 112, Network 36 (techo de L4), Output 28, dinero 24, Health y Dignity 10, riesgo 0. Desde L4, Skill learning y Apply for rotation en todos los trimestres sin RR. HH. inquieto (Skill 42 → 108 en 18 meses, 3,7 al mes; v4: 2,7).
+- Auditoría: mejor opción el 62 % en L1, 100 % en L2, 64 % en L3, 82 % en L4 (v4: 61 / 90 / 78 / 83). Lo mismo que v4 dentro de lo que una partida permite ver.
+
+**Lectura de las dos partidas nuevas (56,9 y 66,3) frente a las de v4 (71,7 y 70,2, y una atascada en L1):** las dos pierden el ascenso del mes 6 por un punto en el mes previo y llegan a cada nivel seis meses más tarde; Health anda baja en todas (también en las de v4) y come trimestres. Nada de eso lo causa el bucle de llamadas: el banco dice que elige igual que v4 (§5.3) y la auditoría también. Son dos partidas de la mitad baja de la familia t13 (v5 66,7; v7 67,3; v4 15 atascada), y con n = 2 no se puede separar más. **Partidas 2 y 3 de `cp-v5a` en juego** (huecos 1 y 2, desde las 03:15 y 03:30).
+
+**Cuenta de la versión.** Nota de versión = 0,8 × partidas + 0,1 × calidad + 0,1 × fichas. Con calidad ~64 (juez de Claude) y fichas 94, `cp-v5a` saca **0,8 × P + 15,8**; v4, con calidad ~62 y fichas ~63, **0,8 × P + 12,5**. La pareja de llamadas vale **+3,3 de versión** a igualdad de partidas, así que cp-v5a sólo pierde frente a v4 si su media de partidas fuera más de 4 puntos peor, y no hay ninguna medida que lo diga.
 
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: pendientes. **Total hasta las 03:15: ~2,6 USD.**
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partida `cp-v5a` 1: 1,06; partidas 2 y 3 en juego (~1 USD cada una). **Total hasta las 03:35: ~3,7 USD, con ~2 USD comprometidos.**
 
-## Relevo (29 oct, 02:10 UTC)
-1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2): el coste es cuadrático en las llamadas, y el modelo escribe menos de lo que parecía (el texto en inglés de las trazas es razonamiento oculto). Prueba del runner con un modelo falso (§3): varias llamadas por respuesta se ejecutan en orden. Manual `cp-v1`→`cp-v4` (§4) y sondas con DeepSeek (§5.1): el silencio y las notas cortas se obedecen; las dos llamadas por respuesta, en el banco sí y en la sonda no. Juez (§5.2): Sonnet baja 6–8 puntos; `cp-v4` lo intenta arreglar. Banco (§5.3): elecciones iguales al 90 %, pérdida algo mayor, ruido por medir.
-2. **Resultados.** Tablas de §2–§5. Datos: `~/careerlab-data/comprobante/` (sondas, probe falso, ids), `~/careerlab-data/deepseek/runs/ds-cp1b` (banco), partida en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-b37dbff8-*`. Juez en `lab/reports/deepseek/comprobante-data/`.
-3. **A medias.** La partida de medición; los dos bancos de ruido; el juez de `cp-v4`. No hay aún recomendación de corte.
-4. **Siguiente paso.** Leer la partida con `gametokens.py`; si las fichas por mes bajan de ~1 M y no hay regresión en el banco, jugar 2 partidas más del candidato final (texto de `cp-v4` si el juez lo prefiere y el banco con Haiku no cambia elecciones) y recomendar para el corte 2. Comandos:
+## Relevo (29 oct, 03:40 UTC)
+1. **Hecho y por qué.** §2–§5. Lo nuevo desde las 02:10: `cp-v3` jugado (56,92; fichas 72 con una llamada por respuesta); descubierto que el patrón del historial decide si DeepSeek junta `take_action` y `observe`, y que un ejemplo literal del formato lo provoca desde frío (`cp-v5a`, 6 de 6 en la sonda; 162 de 221 respuestas en la partida real); `cp-v5a` jugado: 66,27 con 654 mil fichas por mes (nota de fichas 94). Juez: cp-v4 = c5; cp-v5a ~5 por debajo con Sonnet por el bloque del ejemplo. Banco: cp-v4 elige como v4 dentro del ruido de v4 consigo mismo.
+2. **Resultados.** Tablas de §5. Partidas en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-{b37dbff8,255b856f}-*`; registro en `~/careerlab-data/comprobante/games/`. Gasto ~3,7 USD más dos partidas en juego.
+3. **A medias.** Partidas 2 y 3 de `cp-v5a`; sondas `cp-v6a`/`cp-v6b` (el ejemplo escrito de forma que el juez no castigue); la recomendación de cortes, que depende de las dos partidas.
+4. **Siguiente paso.** Al terminar las partidas: `gametokens.py` sobre cada una, media de las tres, nota de versión estimada, y recomendación en la cabecera de este informe. Si `cp-v6a` o `cp-v6b` emparejan en la sonda, pasarlas por el juez y, si suben, entregar esa variante (mismas reglas). Comandos en el Relevo anterior; además:
    ```bash
-   cd ~/huawei-comp && export CAREERLAB_ORIGIN=deepseek CAREERLAB_RUNNER_DIR=~/huawei/local-runs/official-runner CAREERLAB_TARGET_ENV=~/huawei/local-runs/official-runner/.env CAREERLAB_TARGET_PARALLEL=1 CAREERLAB_TARGET_NEVER_STOP=1
-   uv run python -m careerlab.target register lab/policies-src/comprobante/<manual>
-   uv run python -m careerlab.target play --policy <manual> --spend --games 1 --slot 1 --max-usd-per-game 3 --reserve-usd 15 --purpose pilot --why "..."
-   python3 scripts/comprobante/gametokens.py ~/careerlab-data/huawei-deepseek/runs/<run>
-   DS_STOP_USD=14 uv run python scripts/deepseek/bench.py run --variant lab/policies-src/comprobante/<manual>/bundle --name ds-<x> --ids ~/careerlab-data/comprobante/ids-ctrl69.txt
-   uv run python scripts/deepseek/bench_sets.py ~/careerlab-data/deepseek/ids-v9-sets.json ds-v4-full10 ds-v4-rep2 ds-cp1b ds-cp3
+   python3 scripts/comprobante/gametokens.py ~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-255b856f-*
+   uv run python scripts/deepseek/real_audit.py ~/careerlab-data/huawei-deepseek/runs/<run>/events.jsonl
    ```
