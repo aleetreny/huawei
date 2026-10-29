@@ -165,3 +165,23 @@ Lectura:
 - **Kingjinsight.** Su v3.1 sacó 56,69 oficial, ~10 puntos de media de partidas por debajo de sus partidas locales: una partida oficial mala pesa mucho.
 
 La búsqueda de los repos de los diez primeros está en marcha.
+
+## BDCI: el mismo reto, antes, en China (29 oct)
+
+En resumen: ninguno de los 12 equipos que nos superan en TechArena UK tiene repos públicos. Lo nuevo viene de **CCF BDCI 2026** (jul–oct de 2026), la misma competición de Huawei openJiuwen («Agent 职场长程生存与晋升挑战»). Usa el mismo motor `career-emulator`, DeepSeek V4 Flash y JiuwenSwarm, terminó el 5 oct, y varios equipos han publicado después sus análisis. Hallazgos C46–C48.
+
+Fuentes (clonadas en `~/ext/`, sin ejecutar nada suyo):
+
+| Repo | Equipo | Qué tiene |
+|---|---|---|
+| Xianmuyingyue/careersim-bdci26-postmortem | 悟空, 12.º el 5 oct | 3 Skills, documentos de diseño, 109 partidas locales; deduplicación por hash; mejor partida 76,28 (L6 en el mes 42) |
+| YUMinRan/CareerSim-BDCI26 y smileDSG/CareerSim-BDCI26 | 熊起707 (oficial 56) | Truncado del Skill a ~60 k caracteres, motivos para un 0, libro de partidas con fichas (0,7–0,85 M al mes) |
+| Winfred666/CareerSim-BDCI26 | winfred | Expertos por indicador con anclas −3…+3; el script decide sólo si su elección es estable con ruido de percepción |
+| ShaFuFuDeLiu/Competitions-CareerSim-BDCI26 | — | Tablas de eventos descodificadas: es justo lo que daba un 0. Sólo como aviso |
+
+**Cumplimiento.** Dos de estas guías sacan sus cifras de descodificar el dataset y el simulador de BDCI. No se lee el simulador de BDCI (`openJiuwen-ai/CareerSim-BDCI26`, NORMAS §4) y ninguna cifra suya pasa a un Skill. Además, los parámetros difieren de los nuestros: allí el bonus C/D es negativo.
+
+**Lo buscado sin resultado:**
+- Alias de los 12 primeros en GitHub: ShenzhenFan01, MattKep7777 y aman_abdulsalam no existen; los demás existen pero no tienen repos del reto, o son nombres demasiado genéricos.
+- Búsqueda de código en GitHub (`show_employee_handbook`, `check_latest_logs`, «Defuse legacy risk», `career_emulator`).
+- LinkedIn, Zhihu, CSDN, Bilibili y Hugging Face.
