@@ -62,10 +62,10 @@ Cuenta la mejor versión de todas las publicadas. El corte 1 (v4) ya está dentr
 
 ## 6. Línea Comprobante (29 oct, rama `alejandro/comprobante`)
 
-Informe: [comprobante.md](comprobante.md). **Candidato para el corte 2: `comprobante/cp-v7`** (= v4-c5 + t0 + suelo-v1-min + bucle de una respuesta por decisión con `take_action` y `observe` juntos, sin texto, notas de una línea). Medido con DeepSeek:
+Informe: [comprobante.md](comprobante.md). **Candidato para el corte 2: `comprobante/cp-v5a`** (= v4-c5 + t0 + suelo-v1-min + bucle de una respuesta por decisión con `take_action` y `observe` juntos, sin texto, notas de una línea). Para el corte 3: `cp-v8` (cp-v5a + Defuse primero con RR. HH. no tranquilo aunque Health esté baja), a confirmar con 2–3 partidas. Medido con DeepSeek:
 - fichas: 615–654 mil por mes en dos partidas completas de `cp-v5a` (nota de fichas 94–95; v4: 61–66), +3,2 de versión;
-- partidas: 66,27 y 65,10 (L5, riesgo 0), tercera en juego; `cp-v3` (una llamada por respuesta) 56,92;
+- partidas: `cp-v5a` 66,27 · 65,10 · 68,13 (L5, riesgo 0); `cp-v7` (sin «Lay low por Health») 62,25 · 69,88 · 28,56 (crisis de confianza); `cp-v3` (una llamada por respuesta) 56,92;
 - banco: elige como v4 dentro del ruido (control, riesgo y L1);
 - juez: 63–69, como c5.
 
-Lo que queda por confirmar con la clave: la partida de `cp-v7` (en juego; sólo difiere de cp-v5a en que con Health baja el trimestre mantiene el proyecto clave en vez de Lay low). Lo que no hay que pagar: redacciones en prosa para la pareja de llamadas (0 de 5 en sondas; sólo el bloque literal `tool_calls: [...]` funciona).
+Lo que queda por confirmar con la clave: 2–3 partidas de `cp-v8` antes del corte 3 (~0,9 USD cada una). Lo que no hay que pagar: redacciones en prosa para la pareja de llamadas (0 de 5 en sondas; sólo el bloque literal `tool_calls: [...]` funciona).
