@@ -1,0 +1,15 @@
+{
+  "family": "mejora",
+  "name": "mv-4",
+  "parents": [
+    "mv-3"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-3 + one prose sentence in the manifest instruction: never end a reply with text only; every reply carries its tool calls",
+  "hypothesis": "In mv-3 games the agent ended 0-15 replies with text and no tool call (the provider wrote its analysis and stopped, sometimes with the calls as broken XML text), each forcing a runner continuation (limit 20); cp-v12 had 1-2. A standing instruction against text-only replies, in prose (C59: prose in the manifest does not break the pair), cuts the stops.",
+  "predicted_behaviour": "3 of 3 DeepInfra probes paired; in games <= 3 text-only replies.",
+  "refutation": "Probes unpaired, or games with as many stops as mv-3.",
+  "skill_count": 1,
+  "change": "mv-3 -> mv-4: manifest instruction, after 'Never send take_action alone and never observe in a reply of its own.', adds 'Never end a reply with text only: until the run is over, every reply carries its tool calls, so put the decision in the take_action call, not in prose.'",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}

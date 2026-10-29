@@ -1,0 +1,15 @@
+{
+  "family": "mejora",
+  "name": "mv-3",
+  "parents": [
+    "mv-2"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-2 + Story step 4 reordered (repair a stat under its Best first), Output cue narrowed to extra work that is not your own deliverable (a quick bounded favour usually costs nothing), comfort tie-break restricted to options that pass the risk step",
+  "hypothesis": "In the DeepSeek bank mv-1 cut L1 N/O-losing picks 24-25 -> 15 and q-loss 3.31-3.68 -> 2.58 but lost 38 q-points on riskcheck, 32 of them on one false alarm (declined to help with Network under its Best, reading help as an Output cost) and 5 on the tie-break picking a private +2-risk option at L3. Fixing the order and the scope keeps the L1 gain and removes those two failure modes.",
+  "predicted_behaviour": "L1 bank N/O-losing picks <= 18, q-loss <= 3.0; riskcheck q-loss <= 1.2; control <= 0.5.",
+  "refutation": "L1 N/O-losing picks >= 21 or riskcheck q-loss > 1.5.",
+  "skill_count": 1,
+  "change": "mv-2 -> mv-3: step 4 bullets: 'Repair first' before the drops; Output cue = 'extra work that is not your own deliverable' plus 'a quick, bounded favour that keeps you on your own work usually costs nothing'; tie-break 'when every option that passes step 2 has one of these costs'.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}
