@@ -136,10 +136,15 @@ Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada 
 | `cp-v5a` 3 | 68,13 | 638k | 94,5 | 6, 12, 18, 42 | 0,91 |
 | **media `cp-v5a`** | **66,5** | **636k** | **94,6** | | |
 | `cp-v7` 1 (cp-v5a sin «Lay low por Health») | 62,25 | 450k | **100** | 6, 12, 18, 30 (L5; Skill 92, dinero 19) | 0,65 |
+| `cp-v7` 3 | **28,56** (eliminada, mes 21) | 383k | 50 (tope por no terminar) | 6, 12 (L3); crisis de confianza | ~0,3 |
 | `cp-v3` (una llamada por respuesta) | 56,92 | 1.196k | 72,1 | 12, 18, 30 | 1,73 |
 | `t13-read-v4` (referencia) | 71,67 · 70,22 · (atascada en L1) | 1.470k · 1.354k | 61,2 · 65,8 | 6, 12, 24, 42 | 0,81 · 0,72 |
 
 **Nota de versión estimada de `cp-v5a`: 0,8 × 66,5 + 0,1 × 65 + 0,1 × 94,6 ≈ 69,2.** Las mismas tres partidas con las fichas y la calidad de v4 darían ~65,8. Con la partida de `cp-v7` la familia nueva suma cuatro partidas completas (media 65,4; v4: dos completas de 71 y una atascada), ninguna hundida.
+
+**El hundimiento de `cp-v7` 3 (crisis de confianza en el mes 21).** Primera explosión en el mes 12: en el trimestre del mes 9, con Health 2 y RR. HH. «quiet», la línea 2 («cerca de un límite») se llevó las 3 de energía a Health recovery y Network, y no hubo Defuse (la línea 3 va después); RR. HH. pasó a frowning (10), uneasy (11) y angry (12). Segunda, en el 21: con RR. HH. frowning en los meses 19–20 eligió «ayudar en silencio a los que se van», «dejarlo ahí para no dejar mal al jefe» y, en el 21, «negarse al traslado». Es la ruta de derrota conocida (C6: opciones «pragmáticas» con RR. HH. inquieto) y el mismo tipo de hundimiento que la familia v4 tuvo con `t13-read-v1`. En la familia nueva: 1 hundimiento en 6 partidas (v4: 1 atascada en 3).
+
+De ahí **`cp-v8`** = cp-v5a + una excepción en la línea 2: si RR. HH. no está tranquilo, Defuse se lleva las dos primeras de energía y la recuperación la tercera. Una partida de mecánica en juego; es el candidato para el corte 3, no para el 2 (sin partidas).
 
 `cp-v7` 1 gastó aún menos (167 llamadas: los 16 trimestres enteros en una respuesta cada uno, 163 `observe` para 204 acciones) y sacó la nota de fichas máxima, 100. Su juego fue el más flojo de los cuatro (Skill 92, dinero 19): la auditoría da 75 % / 70 % / 79 % / 80 % de mejores elecciones en L1–L4, como las demás; la diferencia está en la suerte de las historias, no en una regla distinta (sólo cambia la frase del trimestre con Health baja, que esta partida no usó en el mes 3).
 
