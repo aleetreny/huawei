@@ -356,6 +356,14 @@ Lo que cambia respecto a cp-v5a y debe decir `skills_design.md` (en inglés), si
 
 Predicción antes de lanzarla: la pareja de llamadas en ≥ 90 % de las respuestas de historia sea cual sea el proveedor; si el proveedor no sirve razonamiento, narración de ~250 fichas por decisión y 0,5–0,7 M de fichas por mes; si sirve, silencio y ~0,6 M. Juego: la misma familia (ascenso en el mes 6 con ~70 % de probabilidad; L4 en el 24–30; trimestres de L4 con Skill learning y rotación; **si llega a L5, trimestres con Skill learning + Prepare report materials + Apply for a key project**, que es la regla nueva que sólo una partida completa puede enseñar; si hay una explosión, Defuse y Lay low cada trimestre después). Lo que no decide: ninguna regla cambia por su nota (regla 1); lo que sí enseña: si las dos reglas de trimestre y cierre se ejecutan cuando toca, y el coste real de fichas de una partida completa narradora.
 
+**Resultado (hueco 1, 14:33–15:20 UTC, `deepseek-pilo-76e845c2-dff20f-00001-a1`, 0,65 USD): 61,24, completa, L5 en el mes 48; 21,9 M de fichas, 455 mil por mes, nota de fichas 100** con 1.186 fichas de razonamiento en toda la partida (proveedor sin razonamiento, narrando: 364 fichas escritas por llamada) y la pareja en 162 respuestas (163 `observe` para 195 `take_action`). Dimensiones: Skill 96 (12 de 15), Network 34 (5,7), dinero 34 (8,6), riesgo 5 (una explosión en el mes 23).
+
+Lo que enseña, como mecanismo (no como nota):
+- **El cierre tras explosión tal como estaba escrito es demasiado caro.** Explosión en el mes 23 (L3); desde el mes 24 hasta el 48, los nueve trimestres fueron Defuse legacy risk + Network maintenance + Lay low and reduce risk, con RR. HH. sonriente en 19 de esos 25 meses: 24 meses sin Skill learning, rotación ni proyecto clave. L4 llegó en el 30 y L5 en el 48; Skill final 96. La réplica (§6.15) confirma que el cierre completo cuesta L6 y Skill, y que basta con Defuse cada trimestre. cp-v11 lo cambia.
+- **Output se queda atrás en L3 cuando Skill y Network ya están en su tope.** Meses 17–29: Skill 40–42 y Network 19–21 (sus topes de L3), Output 8–15 cuando el umbral de L4 pedía 14; los trimestres de los meses 12–21 gastaron Skill learning (inútil con Skill en el tope) y un informe. La línea 7 de la familia cp permite Skill learning en L1–L3; la de v4 no (informes, red, informes + proyecto clave), y las dos partidas de v4 llegaron al tope de Output en todos los niveles. cp-v11 vuelve a la orden de v4 en L1–L3 (sin Skill learning).
+- **Fichas:** una partida completa narradora con la pareja cuesta 455 mil por mes (100), menos que cp-v5a en silencio (615–654 mil): sin razonamiento oculto las respuestas son más cortas en total aunque narren. El bucle de cp-v10 vale en los dos tipos de proveedor.
+- Mes 6: ascendió con Output 3 desde el mes 3 (el trimestre del mes 3 incluyó un informe) pese a Health 3–4 y Network 1 en el mes 5 (recuperado a 3 por la historia siguiente).
+
 ### 6.14 Los primeros seis meses de las 14 partidas con registro, y una regla de trimestre que sale de ahí
 
 | Partida | Mes 6 | Health m1–m6 | Output m1–m6 | Trimestre del mes 3 |
@@ -379,9 +387,24 @@ Predicción antes de lanzarla: la pareja de llamadas en ≥ 90 % de las respuest
 - **De los seis ascensos perdidos en el mes 6:** cuatro tienen una pérdida de Network u Output en una historia del mes 5 (la trampa estructural, §6.3), y dos (cp-v8 n.º 2 y cp-v10) llegaron al mes 5 con Output en 2 porque nunca lo compraron.
 - **Réplica (`cpbot.py`, flag `q1out`): en el nivel inicial, Energy a Prepare report materials hasta que Output deje de subir (después Network maintenance), proyecto clave de acción principal:** 60,27 frente a 59,83 con lectura exacta (+0,4) y 41,91 frente a 40,86 con la ruidosa (+1,0; error típico 0,4), con el mismo paso de L1 (91 % / 74 %) y sin más crisis. Es una regla de trimestre, así que la réplica es la prueba que pide la regla 3 de §6.8; se escribe en **`cp-v11`** (= cp-v10 + una frase en la línea 7 y en el manifest: «at your starting level, Prepare report materials comes first with every Energy point that lines 2 and 3 leave»). Lint sin errores; juez en `j-cp11.jsonl`. Health sigue teniendo prioridad (línea 2) y el riesgo también (línea 3).
 
+### 6.15 Réplica: cómo cerrar tras una explosión sin congelar la partida (2.000 partidas por brazo, sobre `qskill=4+q1out`)
+
+| Variante | Exacta: nota / L6 / crisis / Skill final | Ruidosa: nota / crisis |
+|---|---|---|
+| sin regla tras explosión | 60,27 / 25 % / 175 / 127 | 41,91 / 645 |
+| cierre completo (cp-v10: comentario un paso peor en historias y trimestres) | 60,01 / 21 % / 148 / 123 | 41,97 / 574 |
+| sólo trimestres (Defuse + Lay low cada trimestre) | 60,08 / 21 % / 160 / 123 | 41,87 / 600 |
+| sólo historias (comentario un paso peor en historias) | 60,28 / 25 % / 188 / 128 | 41,17 / 710 |
+| **sólo Defuse cada trimestre, acción principal normal** (cp-v11) | **60,33 / 24 % / 173 / 127** | **42,08 / 620** |
+| Defuse cada trimestre + historias un paso peor | 60,41 / 24 % / 171 / 127 | 41,84 / 652 |
+
+El cierre completo compra crisis a cambio de L6 y Skill; en la partida real costó 24 meses de crecimiento. Defuse cada trimestre y nada más es la única variante igual o mejor en las dos lecturas. Con la lectura ruidosa, endurecer las historias tras la explosión **empeora** (más crisis: el bot descarta tanto que acaba en opciones peores).
+
+**cp-v11, texto final** (`lab/policies-src/comprobante/cp-v11`; lint sin errores): cp-v10 + (1) línea 7 de L1–L3 con la orden de v4 (informes, red, informes; proyecto clave; sin Skill learning), (2) tras una explosión sólo Defuse cada trimestre. Juez en `j-cp11b.jsonl` (la primera redacción, sólo con el primer trimestre a Output, dio 64,0 / 66,0 frente a 60,7 / 60,3 de cp-v10).
+
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas del 29 oct (cp-v9 ×3, cp-v5a control y 6 ancladas, cp-v10 8 ancladas): ~0,24. Bancos `ds-cp9-l1` 0,19, `ds-cp10-l1-GMICloud` 0,10, `ds-cp10-l1-DeepInfra` 0,12. Partidas `cp-v8` n.º 2 0,42 y `cp-v10` 0,28. **Total de la línea: 9.35 USD** (partidas 8.09 + llamadas sueltas 1.26; techo de Alejandro ~15).
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas del 29 oct (cp-v9 ×3, cp-v5a control y 6 ancladas, cp-v10 8 ancladas): ~0,24. Bancos `ds-cp9-l1` 0,19, `ds-cp10-l1-GMICloud` 0,10, `ds-cp10-l1-DeepInfra` 0,12. Partidas `cp-v8` n.º 2 0,42 y `cp-v10` 0,28. **Total de la línea: 10,00 USD** (con la segunda partida de cp-v10, 0,65) (partidas 8.09 + llamadas sueltas 1.26; techo de Alejandro ~15).
 
 ## Relevo (29 oct, 05:25 UTC; cierre de la línea)
 1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2); prueba del runner con un modelo falso (§3); manuales `cp-v1`→`cp-v8` (§4); sondas con DeepSeek del bucle (§5.1); juez (§5.2); bancos de control, riesgo y L1 (§5.3); **9 partidas oficiales** (§5.4): cp-v3 56,92; cp-v5a 66,27 · 65,10 · 68,13; cp-v7 62,25 · 69,88 · 28,56; cp-v8 68,20. La conclusión y la recomendación de cortes están en la cabecera: **cp-v5a al corte 2; cp-v8 candidato al corte 3 si consigue 2–3 partidas sin regresión.**
