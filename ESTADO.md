@@ -90,4 +90,6 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Entrega: guion del vídeo, presupuesto de DeepSeek | [docs/entrega/](docs/entrega/) |
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
 
-**Apoyo: hoja de ruta L6 (sin API).** [Encargo para Opus](lab/reports/deepseek/gpt-principios/hoja-ruta-opus-l6.md), rama alejandro/gpt-principios: priorizar ventanas de ascenso y P(L6 completo/Q≥77,78); hipótesis de Skill/Output, salud preventiva y aplicación del modo estricto antes de nuevos manuales. Documento propuesto, no experimentos ejecutados.
+**Apoyo: hoja de ruta L6 (sustituida por revisión de evidencia, sin API).** [Encargo para Opus](lab/reports/deepseek/gpt-principios/hoja-ruta-opus-l6.md), rama alejandro/gpt-principios: priorizar ventanas de ascenso y P(L6 completo/Q≥77,78); hipótesis de Skill/Output, salud preventiva y aplicación del modo estricto antes de nuevos manuales. Documento propuesto, no experimentos ejecutados.
+
+**Apoyo: decisión revisada para 76 general.** [Encargo acotado para Opus](lab/reports/deepseek/gpt-principios/encargo-opus-score76.md): máximo dos mecanismos demostrables de lectura/prioridades; evitar repetir planificación trimestral y salud ya probadas. Auditoría de 1.050 registros y corrección del caso anónimo en [informe](lab/reports/deepseek/gpt-principios/decision-opus-score76.md). Sin DeepSeek, APIs ni partidas nuevas.

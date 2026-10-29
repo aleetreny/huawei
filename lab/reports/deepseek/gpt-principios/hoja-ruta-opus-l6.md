@@ -1,5 +1,7 @@
 # Encargo para Opus: L6 repetible y carreras de 77–78
 
+> **Sustituida para el siguiente encargo:** leer [decisión revisada](decision-opus-score76.md) y [encargo acotado](encargo-opus-score76.md). La revisión encontró experimentos negativos que despriorizan varias ideas de esta hoja y corrigió el diagnóstico de la denuncia anónima.
+
 **Conclusión: el objetivo central es completar L6 conservando riqueza, bienestar y control de riesgo; optimizar sólo supervivencia o ganancia inmediata de indicadores no basta. Esta hoja de ruta propone experimentos, no resultados ya obtenidos.**
 
 ## Encargo y límites

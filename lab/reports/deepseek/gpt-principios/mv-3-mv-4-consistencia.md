@@ -1,5 +1,7 @@
 # mv-3 / mv-4: convertir el 77,78 en rendimiento repetible
 
+> **Corrección posterior:** la denuncia anónima tenía riesgo +1 frente a +2 de la otra opción: no prueba incumplimiento del modo estricto. Véase [revisión de evidencia](decision-opus-score76.md), que sustituye esa interpretación y las prioridades derivadas.
+
 **Conclusión: 77,78 demuestra un recorrido alcanzable, no una política que lo garantice; faltan tanto ascensos tempranos como protección fiable frente a crisis. El objetivo práctico debe ser elevar la frecuencia de carreras de ese nivel y reducir la cola de pérdidas.**
 
 ## Alcance y fuentes

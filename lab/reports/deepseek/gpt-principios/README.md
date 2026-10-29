@@ -62,3 +62,7 @@ El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramie
 ## Relevo — hoja de ruta para Opus: L6 repetible
 
 [Encargo completo](hoja-ruta-opus-l6.md): diagnóstico de ventanas, planificación hacia atrás con información incompleta, tres mecanismos aislados (Skill/Output, salud que habilita crecimiento, aplicación del modo estricto), percepción crítica y cierre. Objetivos P(L6 completo) y P(Q≥77,78), con protección de la cola baja. Hipótesis aún sin ejecutar; prohibido DeepSeek en este encargo. Actualizada la rama con main que ya integra Mejora. Sin mensajes a otros chats. Solicitar integración documental.
+
+## Relevo — decisión revisada para 76 general
+
+[Informe](decision-opus-score76.md) y [encargo acotado para Opus](encargo-opus-score76.md) sustituyen la hoja amplia de L6. Auditados 1.050 registros, fórmula oficial y pruebas negativas previas. Corrección material: denuncia anónima con +1 frente a +2, no error demostrado; priorizar errores previos recuperables. Script scripts/deepseek/gpt_mv_evidence.py y salida mv-evidence.json; sin API ni partidas. Dos hipótesis como máximo, basadas en casos repetidos, antes de cambiar políticas. Actualizado ESTADO, commit/push y solicitar integración.
