@@ -6,6 +6,8 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 ## Conclusiones (27 oct, 20:05 UTC)
 
+**28 oct: [hacia-80.md](hacia-80.md).** Una media de 80 está por encima del techo (jugador perfecto: 72,4). Hoy: auditoría de 419 decisiones reales y banco. `t13-read-v8`, `perceive-v5` y `t13-read-v9` descartados, sin partidas (1,6 USD). `t13-read-v4` sigue siendo el mejor. Siguiente paso: trimestre por script.
+
 **Lo más importante: primeras partidas completas de DeepSeek.** `t13-read-v4` saca **71,67** y `t13-read-v5` 66,71 (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas. **Manual recomendado para el corte 1: [`t13-read-v4`](../../policies-src/deepseek/t13-read-v4/)** (commit `09d5735`). Detalles en [mejora-nota.md](mejora-nota.md).
 
 Lo aprendido antes, con el banco y el simulador:
@@ -56,6 +58,8 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 - Datos fuera de Git (llevan texto del juego): `~/careerlab-data/deepseek/` (respuestas de DeepSeek, etiquetas, ejecuciones del banco).
 
 ## Relevo
+
+**28 oct, sustitutos:** [sustitutos.md](sustitutos.md). El más parecido a DeepSeek es Sonnet 5 (95 sobre 100); para Output gratis, Qwen local. Haiku 5.5, el que usábamos, ve Output mejor que DeepSeek. No se han buscado más créditos gratis: Azure for Students tiene cuota 0 para DeepSeek (denegada), y los regalos chinos o de terceros son de V4.1 o no llegan a una partida. Pendiente: créditos de Google Cloud (1.500 €) para montar el modelo de abril en 8 × H100; falta que se carguen y la cuota de GPU.
 
 **27 oct, clave propia:** preparada sin comprar ([clave-propia.md](clave-propia.md)); el archivo `~/careerlab-data/own-openrouter/.env` espera la clave.
 
