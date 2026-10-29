@@ -13,8 +13,10 @@ Para personas y agentes. Si sólo lees dos archivos, que sean [ESTADO.md](ESTADO
    - se borra la rama.
    Una rama que lleva un día sin cambios y no está en la tabla de ESTADO se junta o se borra.
 5. **Lo viejo va a `docs/historico/` o a `lab/reports/historico/`**, no se borra. Si un código lee una carpeta, la carpeta se queda donde está y se marca como histórica en [lab/reports/README.md](lab/reports/README.md).
-6. **Los datos con texto del juego no van a Git**, salvo los que ya están (repo privado). Van en `~/careerlab-data/<línea>/`, y el informe dice cómo regenerarlos.
+6. **Los datos con texto del juego no van a Git**, salvo los que ya están (repo privado). Van en `~/careerlab-data/<línea>/`, y el informe dice cómo regenerarlos. **Lo que costó dinero** (partidas y bancos de DeepSeek) se resume además sin texto del juego en `lab/data/<línea>/`: identificadores, opción elegida, cambios de los indicadores, fichas por llamada, `score_report.json`. Así lo pueden usar los chats de la nube y no se pierde si falla el Mac.
 7. **Prueba antes de partidas.** Una idea se comprueba primero con el simulador o con el banco de situaciones, que son baratos; las partidas con IA sólo confirman. Antes de lanzar partidas, se escribe cuántas hacen falta para ver la diferencia esperada.
+8. **Los números de HALLAZGOS se ponen al juntar con `main`.** En la rama se usan nombres provisionales (`suelo-1`, `techo-2`…), para que dos líneas en paralelo no gasten el mismo número. Al juntar, se toma el siguiente libre y se añaden los temas en el mapa de HALLAZGOS.
+9. **Cada manual candidato y cada prueba pendiente de DeepSeek se apuntan en [pendientes.md](lab/reports/deepseek/pendientes.md)**: padre, qué cambia, qué se ha medido, coste y regla de decisión. Quien gaste DeepSeek la tiene al día.
 
 ## 2. Documentar siempre
 
@@ -39,8 +41,3 @@ Después, commit y push a tu rama, y actualiza tu línea de la tabla de ESTADO.m
 - Poner en un Skill títulos de eventos, respuestas fijas, meses concretos, umbrales o fórmulas no publicadas, aunque sean ciertos. `uv run careerlab lint <carpeta>` lo vigila. El catálogo de eventos y el simulador sirven para investigar, nunca para copiar a un Skill.
 - Pasar texto del juego a un diseñador de manuales.
 - Gastar dinero de API sin un presupuesto confirmado por Alejandro. DeepSeek, sólo en las pruebas que él apruebe.
-- Lanzar partidas con Claude sin decirlo en tu línea de ESTADO. Topes: 4 partidas a la vez y `--max-five-hour 0.65`.
-
-## 5. Cuota de Claude (cuenta Max)
-
-Ritmo semanal acordado: hasta un 45 % de la semana el 28 oct, un 75 % el 31 oct y un 90 % al final. El laboratorio lo respeta solo (`quota_cap.json`). Si una línea gasta más de un 5 % de la semana en un día, lo dice en su Relevo.

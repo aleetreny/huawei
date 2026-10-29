@@ -1,0 +1,13 @@
+{
+  "family": "suelo",
+  "name": "suelo-v1",
+  "parents": [
+    "v4-c5"
+  ],
+  "idea_origin": "Suelo line, 28 Oct: replica floor study (scripts/suelo/floor.py) and HALLAZGOS B30, C38, C40",
+  "operator": "add floor rules",
+  "hypothesis": "v4 sinks about one game in nine, almost always by staying at the entry level after two reviews or by a second blow-up. Four rules measured in the replica raise the floor without lowering the mean: (1) a stalled start puts hidden risk first until promoted, so the third review arrives with the HR remark friendly (B30 rescue); (2) when every option is risky the size of the risk decides, not the growth; (3) after a blow-up the HR remark is read one step worse; (4) fewer calls to check_latest_logs and shorter notes, against the continuation limit.",
+  "predicted_behaviour": "Same choices as v4-c5 in ordinary months; in L1 after two missed reviews, only risk-lowering stories and Defuse plus Lay low in the quarter; in all-risky stories, the mildest option; after a blow-up, Defuse with a friendly remark. Fewer trust crises and dismissals in official games; no fall in the mean of completed games.",
+  "refutation": "Trust crises or dismissals as frequent as with v4 in official games, or a lower mean of completed games, or DeepSeek not applying the stalled-start and all-risky rules on the trap bank.",
+  "skill_count": 1
+}

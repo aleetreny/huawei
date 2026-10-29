@@ -31,7 +31,7 @@ def main() -> None:
         log(f"ceiling run {run}: {n} pilot jobs queued")
         with (LOGS / f"ceiling-{run}.log").open("w") as out:
             rc = subprocess.run(["uv", "run", "careerlab", "run", "--kind", "claude-cli", "--slots", "2", "--purpose", "pilot",
-                                 "--max-five-hour", "0.80"], cwd=REPO, stdout=out, stderr=subprocess.STDOUT).returncode
+                                 "--max-five-hour", "0.95"], cwd=REPO, stdout=out, stderr=subprocess.STDOUT).returncode
         reg = Registry(s.registry_path)
         requeued = requeue_interrupted(reg, pilot=True)
         (LOGS / f"ceiling-{run}.done.json").write_text(json.dumps({"run": run, "rc": rc, "finished_utc": now(), "requeued": requeued}))
