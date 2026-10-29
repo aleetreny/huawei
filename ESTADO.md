@@ -1,6 +1,6 @@
 # ESTADO del proyecto: léelo primero
 
-Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **29 oct 2026, noche** (notas oficiales del corte 1; comprobante juntado en `main`; permiso de los organizadores para el bucle de fichas y los scripts en partida).
+Equipo **Gradient Depression**, Huawei TechArena UK 2026, reto *Career Survival*. Actualizado: **29 oct 2026, noche** (notas oficiales del corte 1; comprobante y exploración juntados en `main`; permiso de los organizadores para el bucle de fichas y los scripts en partida, también con estado en archivo, C60).
 
 Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo aprendido, por importancia) y [NORMAS.md](NORMAS.md) (cómo trabajamos).
 
@@ -16,13 +16,14 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Corte 1 oficial: 64,75, puesto 13** (el top 10 empieza en 68,17; el primero tiene 75,99; HALLAZGOS C45). Cuadra con lo esperado de v4: partidas de ~65 de media con algún hundimiento. El juego de la evaluación parece el de desarrollo.
 
-**El mejor manual ahora es `comprobante/cp-v12`:** las reglas de cp-v5a más el bucle de dos llamadas por respuesta, que da una nota de fichas de ~95–100 con cualquier proveedor (C51–C59). Los organizadores lo permiten (C49). Con partidas como las de v4 daría ~68.
+**El manual de referencia es `comprobante/cp-v12`:** las reglas de cp-v5a más el bucle de dos llamadas por respuesta, que da una nota de fichas de ~95–100 con cualquier proveedor (C51–C59). Los organizadores lo permiten (C49). Con partidas como las de v4 daría ~68.
 
-**Lo que falta es jugar mejor:**
-- no hundirse: 4 de 19 partidas largas de la familia (21 %), y cada hundimiento cuesta ~10 de nota de versión;
-- llegar antes a L5 (C57).
+**Candidato nuevo para el corte 2: `exploracion/ex-v1`.** Es cp-v12 con trimestres mejores y un freno de salud, y el texto reescrito para la rúbrica. En la réplica calibrada con las partidas reales (C61) suma +1,8 de partidas (C64) y +8 de calidad con los jueces de Claude (C66). Antes de entregarlo hacen falta las sondas de la pareja y el banco de L1, ~0,2 USD: [plan-deepseek.md](lab/reports/exploracion/plan-deepseek.md).
 
-Con texto en las historias ya no se saca más (C58). La siguiente vía es un script en partida: estado, techos y trimestre, y asesor en los momentos críticos (C48, C49).
+**Lo que falta es percepción, no reglas ni scripts:**
+- en la réplica calibrada, las reglas y los scripts mueven la media ±1–2 (C63, C64);
+- el hueco con el planificador perfecto (~15) se concentra en el mes previo a cada evaluación, sobre todo en L1 (C62);
+- la única regla nueva con señal es `exploracion/ex-v3`: lo discreto antes que plantarse en público en el mes previo de L1 (C65). Pendiente del banco de DeepSeek.
 
 **Antes de nada, en un chat nuevo:** lee [pendientes.md](lab/reports/deepseek/pendientes.md) (candidatos y siguiente paso) y la cabecera de [comprobante.md](lab/reports/deepseek/comprobante.md).
 
@@ -37,7 +38,7 @@ Con texto en las historias ya no se saca más (C58). La siguiente vía es un scr
 
 **En pausa, fuera del cupo:** Formato (`alejandro/formato`, [lab/reports/formato/](lab/reports/formato/)): mejor partida 76,87 pero media 49,9; sólo vuelve si una idea concreta gana en la réplica. Sus hallazgos ya están en HALLAZGOS (B27, C23).
 
-**Cerradas y juntadas en `main`** (sus informes siguen en su carpeta): **Suelo** (`lab/reports/suelo/`, B33–B35) y **Techo** (`lab/reports/techo/`, B36–B38), las dos el 28 oct; Motor (`lab/reports/ingenieria-inversa/`, réplica al 99,3 %), Categorías (`lab/reports/question-bank/`), Transmisión (`lab/reports/transmision/`), Palancas (`lab/reports/palancas/`), Mecánicas emergentes (`lab/reports/mecanicas-emergentes/`), la auditoría desde principios básicos (`lab/reports/deepseek/gpt-principios/`) el 28 oct, **Huevos de Pascua** (`lab/reports/huevos-pascua/`): no hay atajos de ascenso en el juego de desarrollo, pero la tercera evaluación en L1 se salva con el riesgo a cero (HALLAZGOS B28–B30); y **Calidad** (`lab/reports/calidad-skills/`): candidato `lab/policies-src/calidad/v4-c5`, +4,2 de calidad con las mismas elecciones que v4 en el banco con Haiku (C24, C25). Sólo bots y Claude, 0 USD.
+**Cerradas y juntadas en `main`** (sus informes siguen en su carpeta): **Exploración** (`lab/reports/exploracion/`, rama `claude/gradient-depression-skills-k3b6u0`, 29 oct): réplica calibrada con las decisiones reales de DeepSeek, descomposición de los puntos, scripts con estado medidos, candidatos `ex-v1`/`ex-v3`/`ex-s1` y plan de pruebas para DeepSeek (C61–C67); **Suelo** (`lab/reports/suelo/`, B33–B35) y **Techo** (`lab/reports/techo/`, B36–B38), las dos el 28 oct; Motor (`lab/reports/ingenieria-inversa/`, réplica al 99,3 %), Categorías (`lab/reports/question-bank/`), Transmisión (`lab/reports/transmision/`), Palancas (`lab/reports/palancas/`), Mecánicas emergentes (`lab/reports/mecanicas-emergentes/`), la auditoría desde principios básicos (`lab/reports/deepseek/gpt-principios/`) el 28 oct, **Huevos de Pascua** (`lab/reports/huevos-pascua/`): no hay atajos de ascenso en el juego de desarrollo, pero la tercera evaluación en L1 se salva con el riesgo a cero (HALLAZGOS B28–B30); y **Calidad** (`lab/reports/calidad-skills/`): candidato `lab/policies-src/calidad/v4-c5`, +4,2 de calidad con las mismas elecciones que v4 en el banco con Haiku (C24, C25). Sólo bots y Claude, 0 USD.
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en [pendientes.md](lab/reports/deepseek/pendientes.md), con su coste, sus comandos y su regla de decisión.
 
