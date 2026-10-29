@@ -15,7 +15,9 @@ class CPBot(T.V4Bot):
         self.qlag=f.get('qlag','')        # 'prop': target the stat with least proportional growth since promotion (from qskill level)
         self.qoracle=bool(f.get('qoracle',False))  # target the stat with largest remaining fraction to the true threshold
         self.lockdown=bool(f.get('lockdown',False)) # after a blow-up: HR remark read one step worse for the rest of the run
-        self.lockq=bool(f.get('lockq',False))       # after a blow-up: Defuse+Lay low every quarter only (stories unchanged)
+        self.lockq=bool(f.get('lockq',False))
+        self.lockstory=bool(f.get('lockstory',False))  # after a blow-up: stories read HR one step worse; quarters: Defuse only while not friendly (normal rules)
+        self.lockdef=bool(f.get('lockdef',False))      # after a blow-up: Defuse every quarter (friendly counts as quiet), main action normal       # after a blow-up: Defuse+Lay low every quarter only (stories unchanged)
         self.atpromo=None
         self.q1out=bool(f.get('q1out',False))   # level 1: Energy to Prepare report materials (x3), main action key project
         self.rfnarrow=int(f.get('rfnarrow',0))  # N=1 exception narrowed: loss-free options kept only if their risk <= this (replica risk units); 0 = wide (base)
@@ -44,6 +46,10 @@ class CPBot(T.V4Bot):
             return min(g,key=g.get)
         return None
     def story(self, rep, st, node):
+        if self.lockstory and st.blowups>=1 and self.hr<2:
+            saved=self.hr; self.hr=2
+            try: return super().story(rep, st, node)
+            finally: self.hr=saved
         n=self.n_to_review(st)
         if self.rfnarrow and n==1 and self.hr in (0,1) and self.concerns==0:
             # emulate the narrow exception: a loss-free option with real risk above rfnarrow is NOT protected (looks like a plain risky option that also loses)
@@ -99,7 +105,7 @@ class CPBot(T.V4Bot):
         if self.lockq and st.blowups>=1 and hr<2: hr=2
         if st.month>=46 or st.health<=4 or st.dignity<=4 or st.network<=0:
             return super().energy(rep,st)
-        if hr!=FRIENDLY and e==3:
+        if (hr!=FRIENDLY or (self.lockdef and st.blowups>=1)) and e==3:
             return "Defuse legacy risk"
         if self.q1out and st.level==1 and e>=1:
             return "Prepare report materials" if st.output<R.cap(1,'output') else ("Network maintenance" if st.network<R.cap(1,'network') else "Health recovery" if st.health<10 else "Prepare report materials")
