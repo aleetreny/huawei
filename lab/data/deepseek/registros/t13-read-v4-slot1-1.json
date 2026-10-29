@@ -1,0 +1,33 @@
+[
+  {
+    "game": 1,
+    "started": true,
+    "job_id": "deepseek-pilo-f78c8b88-dff20f-00001-a1",
+    "policy_id": "f78c8b8834082a8c",
+    "model_name": "deepseek-v4-flash",
+    "outcome": "interrupted",
+    "score": null,
+    "survival_months": null,
+    "interruption": "play wrote no new score report (exit 1; see play.log)",
+    "cost_usd": 2.032281,
+    "cost_settled": true,
+    "usage_before": 7.879217687,
+    "usage_after": 9.911498305,
+    "limit_remaining_after": 40.088501695,
+    "tokens": null,
+    "total_tokens": null,
+    "runner_cost": null,
+    "termination_reason": null,
+    "wall_seconds": 1496.8,
+    "watchdog_spend_usd": null,
+    "max_usd_per_game": 20.0,
+    "reserve_usd": 15.0,
+    "actor_id": "dff20fcea96c188d",
+    "env_id": "a00cc82743c5752c",
+    "solution_sha256": "f311a1599ec77236a6980496f3cb1ce84c3fcf32bb96efa0c76f8eae1cdfba3f",
+    "run_dir": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-f78c8b88-dff20f-00001-a1",
+    "trajectory": null,
+    "redacted_files": 0,
+    "stopped": "game interrupted: play wrote no new score report (exit 1; see play.log)"
+  }
+]

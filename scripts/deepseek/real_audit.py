@@ -9,6 +9,7 @@ option at the same or lower risk grows Skill/Network/Output more; and how many c
 hidden-risk words in the agent's own note.
 
     uv run python scripts/deepseek/real_audit.py ~/careerlab-data/huawei-deepseek/runs/<run>/events.jsonl ...
+    uv run python scripts/deepseek/real_audit.py lab/data/deepseek/partidas/t13-read-v4__*/events.jsonl.gz   # Git copy
 """
 import collections
 import json
@@ -20,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(REPO / "scripts" / "ingenieria-inversa"))
 import planner as P  # noqa: E402
+from datapaths import open_text  # noqa: E402
 import replica as R  # noqa: E402
 
 CAT = json.load(open(REPO / "lab/data/ingenieria-inversa/catalog_v2.json"))
@@ -37,7 +39,7 @@ def risk(nid: str, k) -> int:
 def decisions(path: str):
     """(observation, choice, note) for every multi-option story decision of one game."""
     obs = None
-    for line in open(path):
+    for line in open_text(path):
         e = json.loads(line)
         p = e.get("payload", {})
         if "delta" in p:

@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts/ingenieria-inversa'))
 import replica as R
 import rules
+from datapaths import deepseek_dir as _dsdir
 K=('health','dignity','skill','network','output','wealth')
 ARMS=('ideal_context','observed','true_risk','true_growth','true_all','loss_only','scheduled','blind_feedback','blind_scheduled','online')
 def sign(x):return (x>0)-(x<0)
@@ -107,7 +108,7 @@ def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=800);ap.add_argument('--seed',type=int,default=831000)
     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--arms',default=','.join(ARMS));a=ap.parse_args()
     cat=R.Catalog(json.loads((ROOT/'lab/data/ingenieria-inversa/catalog_v2.json').read_text()))
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)]
     labels=[json.loads(p.read_text()) for p in paths]
     required={f'{n}:{k}' for n,nd in cat.nodes.items() for k in nd['choices']}
     assert all(required<=set(lab) for lab in labels),'No oracle completion of missing labels allowed'

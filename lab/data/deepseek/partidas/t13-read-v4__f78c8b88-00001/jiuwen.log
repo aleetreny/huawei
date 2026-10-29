@@ -1,0 +1,208 @@
+[start_services] Checking ports for instance 'career_emu'...
+  ✓ agent_server: 20092 - available
+  ✓ web: 21000 - available
+  ✓ gateway: 21001 - available
+  ✓ frontend: 7173 - available
+2026-10-27 19:56:05.420 INFO jiuwenswarm.instance_manager.bootstrap: Created bootstrap .env for instance 'career_emu': ~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu/.env
+[start_services] starting app: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/bin/python -m jiuwenswarm.app --dotenv ~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu/.env (cwd=~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu)
+[start_services] starting web: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/bin/python -m jiuwenswarm.channels.web.app_web --dotenv ~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu/.env (cwd=~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu)
+2026-10-27 19:56:05.426 INFO jiuwenswarm.instance_manager.lock: Wrote PID file for instance 'career_emu': pid=22154, path=~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.jiuwenswarm-instances/career_emu/.instance.pid
+[start_services] Instance 'career_emu' started
+2026-10-27 19:56:05.564 INFO jiuwenswarm.common.debug_dump: [debug_dump] async dump handler installed for app: kill -USR1 22158
+2026-10-27 19:56:05 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-10-27 19:56:05 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-10-27 19:56:05 | common | default_trace_id | INFO | Registered connector pool type: default
+2026-10-27 19:56:05 | common | default_trace_id | INFO | Registered connector pool type: httpx
+2026-10-27 19:56:06.546 INFO jiuwenswarm.common.debug_dump: [debug_dump] async dump handler installed for gateway: kill -USR1 22167
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered query expression support for milvus
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered query expression support for chroma
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .xlsx
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .csv
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ExcelParser for .tsv
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .txt
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser HTMLFileParser for .htm
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .md
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser HTMLFileParser for .html
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser TxtMdParser for .markdown
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser HTMLFileParser for .htm
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser HTMLFileParser for .html
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser JSONParser for .json
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser PDFParser for .pdf
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser WordParser for .docx
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .png
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpg
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jpeg
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .webp
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .gif
+2026-10-27 19:56:07 | common | default_trace_id | INFO | Registered parser ImageParser for .jfif
+[start_services] ✓ Web UI ready (port 7173)
+
+================================================================
+  服务启动中，端口信息如下：
+  ✓ Web UI                 http://localhost:7173
+  … AgentServer WebSocket  ws://localhost:20092
+  … Gateway HTTP           http://localhost:21001
+  … WebChannel WebSocket   ws://localhost:21000/ws
+================================================================
+
+2026-10-27 19:56:08.507 INFO jiuwenswarm.llm_sse_patch: [llm_sse_patch] OpenAIModelClient._parse_response SSE 兼容补丁已应用
+2026-10-27 19:56:08.511 INFO jiuwenswarm.common.debug_dump: [debug_dump] async dump handler installed for agentserver: kill -USR1 22166
+2026-10-27 19:56:08.924 INFO jiuwenswarm.common.debug_dump: [debug_dump] async dump handler installed for web: kill -USR1 22159
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/channels/web/app_web.py", line 1363, in <module>
+    main()
+    ~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/channels/web/app_web.py", line 1327, in main
+    server = ThreadingHTTPServer((args.host, args.port), handler)
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 48] Address already in use
+[start_services] ✓ AgentServer WebSocket ready (port 20092)
+2026-10-27 19:56:09.101 INFO jiuwenswarm.common.utils: [AgentServer] starting: ws://127.0.0.1:20092
+2026-10-27 19:56:09.126 INFO jiuwenswarm.common.utils: [ExtensionLoader] 开始搜索扩展路径: [PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions')]
+2026-10-27 19:56:09.128 INFO jiuwenswarm.common.utils: [ExtensionManager] 发现扩展路径: [PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/symphony'), PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/agentos'), PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/agent_client')]
+2026-10-27 19:56:09.132 INFO jiuwenswarm.common.utils: [ExtensionLoader] 扩展 symphony 依赖 json-repair 已安装
+2026-10-27 19:56:09.133 INFO jiuwenswarm.common.utils: [ExtensionLoader] 扩展 symphony 依赖 rich 已安装
+2026-10-27 19:56:09.201 INFO jiuwenswarm.common.utils: [ExtensionManager] 加载 [<jiuwenswarm.loaded_extension.symphony.SymphonyExtension object at 0x11d5ad2b0>]
+2026-10-27 19:56:09.218 INFO jiuwenswarm.common.utils: [AgentServer] 扩展加载完成，共 1 个
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/server/app_agentserver.py", line 287, in <module>
+    main()
+    ~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/server/app_agentserver.py", line 283, in main
+    asyncio.run(_run(host=host, port=port))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/runners.py", line 205, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/runners.py", line 128, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/server/app_agentserver.py", line 171, in _run
+    await server.start()
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/server/agent_ws_server.py", line 995, in start
+    self._server = await legacy_serve(
+                   ^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/websockets/legacy/server.py", line 1123, in __await_impl__
+    server = await self._create_server()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/base_events.py", line 1638, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 48] error while attempting to bind on address ('127.0.0.1', 20092): [errno 48] address already in use
+[start_services] a required process exited during startup wait; stop waiting for remaining ports
+[start_services] ⏳ Gateway HTTP starting... (port 21001)
+[start_services] ⏳ WebChannel WebSocket starting... (port 21000)
+
+================================================================
+  服务启动中，端口信息如下：
+  ✓ Web UI                 http://localhost:7173
+  ✓ AgentServer WebSocket  ws://localhost:20092
+  … Gateway HTTP           http://localhost:21001
+  … WebChannel WebSocket   ws://localhost:21000/ws
+================================================================
+
+[start_services] web exited with code 1
+[start_services] terminating app (pid=22158)
+2026-10-27 19:56:12.494 INFO jiuwenswarm.gateway: [App] Gateway starting, connecting AgentServer: ws://127.0.0.1:20092
+2026-10-27 19:56:12.516 INFO jiuwenswarm.common.utils: [ExtensionLoader] 开始搜索扩展路径: [PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions')]
+2026-10-27 19:56:12.518 INFO jiuwenswarm.common.utils: [ExtensionManager] 发现扩展路径: [PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/symphony'), PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/agentos'), PosixPath('~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/extensions/agent_client')]
+2026-10-27 19:56:12.521 INFO jiuwenswarm.common.utils: [ExtensionLoader] 扩展 symphony 依赖 json-repair 已安装
+2026-10-27 19:56:12.521 INFO jiuwenswarm.common.utils: [ExtensionLoader] 扩展 symphony 依赖 rich 已安装
+2026-10-27 19:56:12.559 INFO jiuwenswarm.common.utils: [ExtensionManager] 加载 [<jiuwenswarm.loaded_extension.symphony.SymphonyExtension object at 0x122a6a3c0>]
+2026-10-27 19:56:12.569 INFO jiuwenswarm.gateway: [App] extensions loaded: 1
+2026-10-27 19:56:12.570 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] 正在连接: ws://127.0.0.1:20092
+2026-10-27 19:56:12.575 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] 已连接: ws://127.0.0.1:20092
+2026-10-27 19:56:12.575 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] connect 首帧(raw): {"type": "event", "event": "connection.ack", "payload": {"status": "ready"}}
+2026-10-27 19:56:12.576 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] connect 首帧(parsed): {"event": "connection.ack", "payload": {"status": "ready"}, "type": "event"}
+2026-10-27 19:56:12.577 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] 收到 connection.ack，AgentServer 已就绪
+2026-10-27 19:56:12.577 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] 消息接收任务已启动
+2026-10-27 19:56:12.577 INFO jiuwenswarm.gateway: [App] connected to AgentServer: ws://127.0.0.1:20092
+2026-10-27 19:56:12.578 INFO jiuwenswarm.gateway.message_handler.message_handler: [MessageHandler] 转发循环已启动 (_user_messages -> AgentServer -> _robot_messages)
+2026-10-27 19:56:12.583 INFO jiuwenswarm.gateway.heartbeat.heartbeat: Gateway heartbeat started (every 3600.0s)
+2026-10-27 19:56:12.584 INFO jiuwenswarm.common.cleanup: background_cleanup: started (first_delay=600s, interval=86400s, retention=30d)
+2026-10-27 19:56:12.587 INFO jiuwenswarm.gateway.channel_manager.channel_manager: [ChannelManager] 已注册 Channel: channel_id=a2a, 当前共 4 个
+2026-10-27 19:56:12.587 INFO jiuwenswarm.gateway: [App] channels.dingtalk.enabled = false, DingTalkChannel disabled
+2026-10-27 19:56:12.587 INFO jiuwenswarm.gateway: [App] channels.telegram.enabled = false, TelegramChannel disabled
+2026-10-27 19:56:12.588 INFO jiuwenswarm.gateway: [App] channels.discord.enabled = false, DiscordChannel disabled
+2026-10-27 19:56:12.588 INFO jiuwenswarm.gateway: [App] channels.slack.enabled = false, SlackChannel disabled
+2026-10-27 19:56:12.588 INFO jiuwenswarm.gateway: [App] channels.whatsapp.enabled = false, WhatsAppChannel disabled
+2026-10-27 19:56:12.588 INFO jiuwenswarm.gateway: [App] channels.wecom.enabled = false, WecomChannel disabled
+2026-10-27 19:56:12.589 INFO jiuwenswarm.gateway: [App] channels.wechat.enabled = false, WechatChannel disabled
+2026-10-27 19:56:12.590 INFO jiuwenswarm.gateway: [App] channels.ssh.enabled = false, SshChannel disabled
+2026-10-27 19:56:12.590 INFO jiuwenswarm.gateway.channel_manager.channel_manager: [ChannelManager] 出队派发循环已启动 (robot_messages -> Channel.send)
+2026-10-27 19:56:12.591 INFO jiuwenswarm.gateway.channel_manager.protocol.a2a.a2a_connect: [A2AChannel] disabled by config
+2026-10-27 19:56:12.591 INFO jiuwenswarm.gateway.cron.scheduler: [Cron] scheduler started
+2026-10-27 19:56:12.594 INFO jiuwenswarm.gateway.routing.agent_client: [WebSocketAgentServerClient] 消息接收任务已停止
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/gateway/app_gateway.py", line 2825, in <module>
+    main()
+    ~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/gateway/app_gateway.py", line 2814, in main
+    asyncio.run(
+    ~~~~~~~~~~~^
+        _run(
+        ^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/runners.py", line 205, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/runners.py", line 128, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/gateway/app_gateway.py", line 2567, in _run
+    await gateway_server.start()
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/jiuwenswarm/gateway/app_gateway.py", line 823, in start
+    self._server = await ws_serve(
+                   ^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/websockets/legacy/server.py", line 1123, in __await_impl__
+    server = await self._create_server()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/careerlab-data/huawei-deepseek/target-slots/slot1/home/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/asyncio/base_events.py", line 1638, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 48] error while attempting to bind on address ('127.0.0.1', 21001): [errno 48] address already in use

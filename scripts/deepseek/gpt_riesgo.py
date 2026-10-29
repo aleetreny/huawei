@@ -6,6 +6,7 @@ import argparse,hashlib,json,math,random
 from pathlib import Path
 import gpt_principios as B
 import planner as P
+from datapaths import deepseek_dir as _dsdir
 R=B.R
 class Controller(P.Planner):
     def __init__(self,arm,seed,labels,params):
@@ -28,7 +29,7 @@ def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=800);ap.add_argument('--seed',type=int,default=202650270);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     cp=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json';cat=R.Catalog(json.loads(cp.read_text()))
     params=json.loads((B.ROOT/'lab/data/ingenieria-inversa/politica_optima.json').read_text())
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
     arms=('exact_risk_exact','exact_risk_sign','signs_risk_exact','signs_risk_sign','signs_veto','predicted','predicted_veto')
     out={'meta':{'games':a.games,'seed':a.seed,'arms':arms,'context':'Privileged current risk, true caps and promotion thresholds, known quarter effects. No future nodes. Conditional fixed labels. Research only.',
       'params':params,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'catalog_sha256':hashlib.sha256(cp.read_bytes()).hexdigest(),

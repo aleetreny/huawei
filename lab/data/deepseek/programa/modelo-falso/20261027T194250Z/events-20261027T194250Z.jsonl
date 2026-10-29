@@ -1,0 +1,83 @@
+{"seq": 1, "ts": "2026-10-27T19:42:53.783721+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 2, "ts": "2026-10-27T19:42:53.783926+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 3, "ts": "2026-10-27T19:42:53.784181+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 4, "ts": "2026-10-27T19:42:53.789786+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 5, "ts": "2026-10-27T19:42:53.830397+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 6, "ts": "2026-10-27T19:42:53.830547+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 7, "ts": "2026-10-27T19:42:53.830794+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 8, "ts": "2026-10-27T19:42:53.831562+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 9, "ts": "2026-10-27T19:42:53.871721+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 10, "ts": "2026-10-27T19:42:53.871873+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 11, "ts": "2026-10-27T19:42:53.872123+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 12, "ts": "2026-10-27T19:42:53.872856+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 13, "ts": "2026-10-27T19:42:54.076386+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 14, "ts": "2026-10-27T19:42:54.076545+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 15, "ts": "2026-10-27T19:42:54.076792+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 16, "ts": "2026-10-27T19:42:54.077578+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 17, "ts": "2026-10-27T19:42:54.135130+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 18, "ts": "2026-10-27T19:42:54.135348+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 19, "ts": "2026-10-27T19:42:54.135642+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 20, "ts": "2026-10-27T19:42:54.136829+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 21, "ts": "2026-10-27T19:42:54.195674+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 22, "ts": "2026-10-27T19:42:54.195864+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 23, "ts": "2026-10-27T19:42:54.196166+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 24, "ts": "2026-10-27T19:42:54.196949+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 25, "ts": "2026-10-27T19:42:54.246265+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 26, "ts": "2026-10-27T19:42:54.246406+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 27, "ts": "2026-10-27T19:42:54.246650+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 28, "ts": "2026-10-27T19:42:54.247469+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 29, "ts": "2026-10-27T19:42:54.298415+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 30, "ts": "2026-10-27T19:42:54.298560+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 31, "ts": "2026-10-27T19:42:54.298817+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 32, "ts": "2026-10-27T19:42:54.299587+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 33, "ts": "2026-10-27T19:42:54.352348+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 34, "ts": "2026-10-27T19:42:54.352496+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 35, "ts": "2026-10-27T19:42:54.352768+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 36, "ts": "2026-10-27T19:42:54.353584+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 37, "ts": "2026-10-27T19:42:54.408410+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 38, "ts": "2026-10-27T19:42:54.408558+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 39, "ts": "2026-10-27T19:42:54.408796+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 40, "ts": "2026-10-27T19:42:54.409573+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 41, "ts": "2026-10-27T19:42:54.641240+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 42, "ts": "2026-10-27T19:42:54.641382+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 43, "ts": "2026-10-27T19:42:54.641623+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 44, "ts": "2026-10-27T19:42:54.642382+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 45, "ts": "2026-10-27T19:42:54.702116+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 46, "ts": "2026-10-27T19:42:54.702256+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 47, "ts": "2026-10-27T19:42:54.702538+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 48, "ts": "2026-10-27T19:42:54.703310+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 49, "ts": "2026-10-27T19:42:54.766423+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 50, "ts": "2026-10-27T19:42:54.766584+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 51, "ts": "2026-10-27T19:42:54.766833+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 52, "ts": "2026-10-27T19:42:54.767591+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 53, "ts": "2026-10-27T19:42:54.833109+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 54, "ts": "2026-10-27T19:42:54.833293+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 55, "ts": "2026-10-27T19:42:54.833537+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 56, "ts": "2026-10-27T19:42:54.834355+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 57, "ts": "2026-10-27T19:42:55.116386+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 58, "ts": "2026-10-27T19:42:55.116535+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 59, "ts": "2026-10-27T19:42:55.116786+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 60, "ts": "2026-10-27T19:42:55.117591+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 61, "ts": "2026-10-27T19:42:55.188475+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 62, "ts": "2026-10-27T19:42:55.188626+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 63, "ts": "2026-10-27T19:42:55.188874+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 64, "ts": "2026-10-27T19:42:55.189672+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 65, "ts": "2026-10-27T19:42:55.269872+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 66, "ts": "2026-10-27T19:42:55.270019+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 67, "ts": "2026-10-27T19:42:55.270280+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 68, "ts": "2026-10-27T19:42:55.271125+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 69, "ts": "2026-10-27T19:42:55.344111+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 70, "ts": "2026-10-27T19:42:55.344277+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 71, "ts": "2026-10-27T19:42:55.344600+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 72, "ts": "2026-10-27T19:42:55.345336+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 73, "ts": "2026-10-27T19:42:55.686242+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 74, "ts": "2026-10-27T19:42:55.686376+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 75, "ts": "2026-10-27T19:42:55.686611+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 76, "ts": "2026-10-27T19:42:55.687461+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 77, "ts": "2026-10-27T19:42:55.793966+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 78, "ts": "2026-10-27T19:42:55.794113+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 79, "ts": "2026-10-27T19:42:55.794346+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 80, "ts": "2026-10-27T19:42:55.795170+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}
+{"seq": 81, "ts": "2026-10-27T19:42:55.875146+00:00", "kind": "usage", "model": "unknown", "usage": {}}
+{"seq": 82, "ts": "2026-10-27T19:42:55.875292+00:00", "kind": "usage", "model": "deepseek-v4-flash", "usage": {"input_tokens": 10, "output_tokens": 5, "total_tokens": 15, "cache_tokens": 0, "cache_hit_rate": "0.0%"}}
+{"seq": 83, "ts": "2026-10-27T19:42:55.875540+00:00", "kind": "frame_final", "response_kind": "e2a.complete", "status": "succeeded", "is_final": true}

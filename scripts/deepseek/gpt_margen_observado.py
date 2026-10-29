@@ -4,6 +4,7 @@ Same RuleBot utility, learned ceilings, lagged HR and frozen label readings as r
 import argparse,json,math,random,hashlib
 from pathlib import Path
 import gpt_principios as B
+from datapaths import deepseek_dir as _dsdir
 class Controller(B.Controller):
     def __init__(self,arm,seed,labels):
         super().__init__('hard_risk' if arm=='veto' else 'observed',seed,labels);self.stress=arm=='stress3'
@@ -12,7 +13,7 @@ class Controller(B.Controller):
 def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=2000);ap.add_argument('--seed',type=int,default=202670270);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     cp=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json';cat=B.R.Catalog(json.loads(cp.read_text()))
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
     out={'meta':{'games':a.games,'seed':a.seed,'context':'Learned ceilings, lagged HR, no thresholds used by controller. RuleBot, not privileged Planner. Known quarter action deltas. Frozen saved signs, not model execution.',
      'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'catalog_sha256':hashlib.sha256(cp.read_bytes()).hexdigest(),
      'label_sha256':[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths]},'arms':{}}

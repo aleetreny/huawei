@@ -1,0 +1,24 @@
+{
+  "job_id": "deepseek-pilo-4bdd76ad-dff20f-00000-a1",
+  "session_id": null,
+  "outcome": "interrupted",
+  "survival_months": null,
+  "quantitative_score": null,
+  "ending_score": null,
+  "failure_reason": null,
+  "interruption": "budget watchdog: the key spent USD 3.0552 during the game, above the USD 3.00 cap",
+  "steps": 0,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 0.0,
+  "tool_calls": {},
+  "tool_seconds": {},
+  "actor_usage": {
+    "key_cost_usd": null,
+    "key_cost_settled": false
+  },
+  "trajectory_path": null,
+  "resumed": false,
+  "db_root": null,
+  "periods": null
+}
