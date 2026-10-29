@@ -48,7 +48,11 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 - Se permiten partidas con modelos de Claude como sustitutos de DeepSeek; los bots no tienen límite.
 - **Dinero:** sólo los 50 USD de la clave de DeepSeek (OpenRouter), en el `.env` del Mac de Alejandro. Quedan ~35,8 USD (27 oct, 23:30). Hay una clave propia de OpenRouter preparada y sin comprar ([clave-propia.md](lab/reports/deepseek/clave-propia.md)). DeepSeek sólo en pruebas aprobadas por Alejandro, con 15 USD de reserva para el último corte. Presupuesto: [docs/entrega/target-budget.md](docs/entrega/target-budget.md).
-- No preguntamos en Discord. Riesgo conocido: la norma dice *"the absence of an express prohibition is not permission"*.
+- **Discord (29 oct):** el reglamento obliga a preguntar en Discord antes de usar un método dudoso (*"the absence of an express prohibition is not permission"*), así que se pregunta. Los organizadores dijeron que sí a tres preguntas (HALLAZGOS C49):
+  1. varias llamadas a herramientas en una misma respuesta, y pedir al agente que escriba poco;
+  2. scripts del Skill que usan sólo lo que devuelve la partida en curso;
+  3. describir lo observado en nuestras partidas como observaciones y heurísticas propias.
+  Lo que sigue prohibido: tablas o datos sacados del paquete del motor, y umbrales o fórmulas presentados como reglas del juego.
 - Claude no aparece como contribuidor en GitHub.
 - Cuota de Claude: sin topes de equipo desde el 28 oct. Las herramientas sólo esperan si la ventana de 5 horas pasa del 95 %, y el ritmo semanal ya no se aplica salvo que `quota_cap.json` lo pida (`weekly_pace`). Ojo: la semana de la cuenta se reinicia el 2 nov a las 16:00 UTC, después del último corte; si se agota antes, no queda Claude para nadie hasta el final del reto.
 - Manual de referencia para comparar en partidas: `f3-lean-v1` (~51 de nota con Haiku, 30 partidas).
