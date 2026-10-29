@@ -61,6 +61,7 @@ Con texto en las historias ya no se saca más (C58). La siguiente vía es un scr
   1. varias llamadas a herramientas en una misma respuesta, y pedir al agente que escriba poco;
   2. scripts del Skill que usan sólo lo que devuelve la partida en curso;
   3. describir lo observado en nuestras partidas como observaciones y heurísticas propias.
+  4. (después) que un script guarde un archivo de datos durante la partida para recordar entre llamadas; dura sólo esa partida (C60).
   Lo que sigue prohibido: tablas o datos sacados del paquete del motor, y umbrales o fórmulas presentados como reglas del juego.
 - Claude no aparece como contribuidor en GitHub.
 - Cuota de Claude: sin topes de equipo desde el 28 oct. Las herramientas sólo esperan si la ventana de 5 horas pasa del 95 %, y el ritmo semanal ya no se aplica salvo que `quota_cap.json` lo pida (`weekly_pace`). Ojo: la semana de la cuenta se reinicia el 2 nov a las 16:00 UTC, después del último corte; si se agota antes, no queda Claude para nadie hasta el final del reto.
