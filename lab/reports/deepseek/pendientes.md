@@ -60,12 +60,16 @@ Ya está descartado en la réplica o con DeepSeek (fila X de HALLAZGOS):
 
 Cuenta la mejor versión de todas las publicadas. El corte 1 (v4) ya está dentro, y su nota oficial aún no ha salido. Una versión nueva sólo suma si supera a la mejor que ya haya, así que en los cortes 2 y 3 tiene sentido entregar algo con más techo que v4, aunque sea algo menos seguro, siempre que no tenga una regresión clara.
 
-## 6. Línea Comprobante (29 oct, rama `alejandro/comprobante`)
+## 6. Línea Comprobante (29 oct, rama `alejandro/comprobante`; al día 11:10 UTC)
 
-Informe: [comprobante.md](comprobante.md). **Candidato para el corte 2: `comprobante/cp-v5a`** (= v4-c5 + t0 + suelo-v1-min + bucle de una respuesta por decisión con `take_action` y `observe` juntos, sin texto, notas de una línea). Para el corte 3: `cp-v8` (cp-v5a + Defuse primero con RR. HH. no tranquilo aunque Health esté baja), a confirmar con 2–3 partidas. Medido con DeepSeek:
-- fichas: 615–654 mil por mes en dos partidas completas de `cp-v5a` (nota de fichas 94–95; v4: 61–66), +3,2 de versión;
-- partidas: `cp-v5a` 66,27 · 65,10 · 68,13 (L5, riesgo 0); `cp-v7` (sin «Lay low por Health») 62,25 · 69,88 · 28,56 (crisis de confianza); `cp-v3` (una llamada por respuesta) 56,92; `cp-v8` 68,20 (una partida, riesgo final 5);
-- banco: elige como v4 dentro del ruido (control, riesgo y L1);
-- juez: 63–69, como c5.
+Informe: [comprobante.md](comprobante.md). **Red de seguridad para el corte 2: `comprobante/cp-v5a`** (= v4-c5 + t0 + suelo-v1-min + bucle de una respuesta por decisión con `take_action` y `observe` juntos, sin texto, notas de una línea): 3 de 3 completas (66,27 · 65,10 · 68,13), 615–654 mil fichas por mes (nota de fichas 94–95). Sólo se sustituye por algo que la supere con pruebas (reglas de trabajo en comprobante.md §6.8).
 
-Lo que queda por confirmar con la clave: 2–3 partidas de `cp-v8` antes del corte 3 (~0,9 USD cada una). Lo que no hay que pagar: redacciones en prosa para la pareja de llamadas (0 de 5 en sondas; sólo el bloque literal `tool_calls: [...]` funciona).
+Medido con DeepSeek:
+- partidas de la familia (mismas reglas de historias): 13 largas, 10 completas de media 66,6, 2 hundidas (cp-v7 crisis mes 21; **cp-v8 atascada en L1, 28,28**), 1 explosión (cp-v8 68,20, mes 38, −5 de riesgo). `cp-v8` queda 68,20 · 28,28: su regla (Defuse antes de recuperar con RR. HH. inquieto) no intervino en ninguna de las dos;
+- **el bucle de fichas es bimodal por partida:** 7 de 8 partidas emparejan; la octava (hoy) narró desde la primera respuesta. Sondas de hoy: 1 de 4 empareja, 4 de 4 narran (ayer 13 de 13 en silencio). Causa desconocida;
+- lo que separa 66 de 72 en una partida completa es el mes en que llega L5 (Network tope 36 en L4 y 54 en L5; sueldo 0,7 → 1,0): 4–5 puntos. L4 se atasca en Skill (21 de 36 ascensos perdidos) y Output (12);
+- la trampa de L1 es estructural: en el 24 % de las historias no hay opción sin riesgo que no cueste Network u Output; un lector estricto perfecto tiene una pérdida forzada en el 57 % de los meses previos (réplica: 73 % de ascensos en el mes 6, 9 % atascados; DeepSeek: 7 de 10 y 2 de 13).
+
+**Candidato `cp-v9`** (= cp-v8 + cierre tras explosión B35 + paso 4 antes que bienestar en N = 1 + pista del catálogo «implicar a otros casi nunca cuesta Output; el gesto de integridad fuerte cuesta Network la mitad de las veces» + «no se mueve» sobre el campo Best + trimestre de L5 a Skill learning + informes + proyecto clave). Réplica: neutro en nota, crisis −10 a −17 %, Output final +2,5. **Pendiente:** banco `ds-cp9-l1` (lanzado), juez `j-cp9c`. Sólo con las dos pruebas a favor: 3 partidas (~2,7 USD) con predicción escrita; entregar cp-v9 sólo si las 3 completan con media ≥ 66 y fichas como cp-v5a.
+
+Lo que no hay que pagar: redacciones en prosa para la pareja de llamadas (0 de 5 en sondas; sólo el bloque literal `tool_calls: [...]` funciona, y en el manifest, dentro de la instrucción, **rompe** el emparejamiento: 0 de 6); proteger S/N/O antes del riesgo también en N = 2 (réplica: −1,5, más despidos); contar las pérdidas de Health en Crecer (réplica: −0,7, más despidos en L1); trimestre al indicador «que menos ha crecido» sin conocer techos (réplica: 0).
