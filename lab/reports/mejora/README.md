@@ -11,7 +11,7 @@
   - la redacción del bucle de `ex-v1` no empareja con DeepInfra (0 de 3 sondas);
   - con el texto de mv-3 el agente acaba respuestas sin llamada y una partida se quedó sin nota (`max_continuations`). mv-4 lo corrige: 1–2 por partida, como cp-v12.
 
-En nota de versión esperada, mv-4 ≈ v4 + 3,5 (fichas y calidad) + lo que valgan sus mejores decisiones en L1 (réplica +1 a +2, sin confirmar en partidas). Lo que sigue decidiendo la nota son los hundimientos, y sus causas son variadas (§8).
+En nota de versión esperada, mv-4 ≈ v4 + 3,5 (fichas y calidad) + lo que valgan sus mejores decisiones en L1 (réplica +1 a +2, sin confirmar en partidas). Lo que sigue decidiendo la nota son los hundimientos, y sus causas son variadas (§8). Hallazgos: C68–C72.
 
 Pregunta: ¿qué manual saca más nota de versión que `t13-read-v4` (corte 1: 64,75), partiendo de sus reglas? Rama `alejandro/mejora-v4` (worktree `~/huawei-mejora`), subtrabajo de la línea DeepSeek. Candidato: [`lab/policies-src/mejora/mv-4`](../../policies-src/mejora/mv-4). Scripts: `scripts/mejora/`. Presupuesto aprobado por Alejandro: 5 USD de DeepSeek; **gastados 3,23** (clave de 28,63 a 31,86 USD usados, 18:10–22:40 UTC; quedan 18,14).
 
