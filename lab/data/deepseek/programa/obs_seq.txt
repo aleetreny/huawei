@@ -1,0 +1,765 @@
+M1 L1 H5 D5 S1 N1 O0 W1 E3 dur1 | New hire handbook
+     1 Continue | Start the career.
+  >> ACTION 1 | Starting the career - initial onboarding step.
+M1 L1 H5 D5 S1 N1 O0 W1 E3 dur1 | The client adds three things 'while we're here'
+     1 Neither accept nor refuse in the meeting, and promise an impact assessment and proposal afterwards | 
+     2 Afraid of annoying them, agree to all of it on the spot | 
+     3 Refuse there and then: 'It's not in the contract. We can't do it' | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ options (2,3). Chose 1: professional approach - impact assessment, follows process, R-.
+M1 L1 H5 D6 S3 N2 O0 W1 E3 dur1 | A chatty, skiving colleague eating into your time
+     1 Tell them directly but politely that you need to focus today and to come back later | 
+     2 Put headphones on, look busy, and give them the cold shoulder | 
+     3 Chat for a few minutes, then steer back to work and mention today's deadline | 
+     4 Tell your manager that Luke keeps breaking your concentration | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ (4). Chose 1: raises S+O, Output furthest from review need (currently 0), counted double.
+M1 L1 H6 D8 S3 N1 O1 W1 E3 dur1 | A chatty, skiving colleague eating into your time
+     1 Spend ten minutes with them at lunch explaining the boundary and that you mean no ill will | 
+     2 Offer no explanation and keep focusing on the work | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ (option 2). Chose 1: repair relationship, N+ D+ R-.
+M2 L1 H6 D9 S3 N3 O1 W1 E3 dur2 | The client adds three things 'while we're here'
+   DESC You assessed it properly afterwards. One of the three is small, but the other two would push the date back a long way. You have a table of impact, cost and schedule ready. The client is chasing for an answer. | EVENTS Monthly base salary: +0.3 (L1)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Talk numbers: do the small one for free, and put the other two through change control with plan trade-offs | 
+     2 Still dreading the conversation after the assessment, cram all of it into the current plan | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ (option 2). Chose 1: talk numbers, professional scope management, R-.
+M2 L1 H6 D10 S5 N3 O3 W1 E3 dur2 | Whether to join a cross-team architecture review — and how hard to push
+     1 Accept, read the docs properly, and prepare comments | 
+     2 Decline and keep the time for your own team's delivery | 
+  >> ACTION 2 | Story rule filter 4: Output counted double (furthest from review need). Option 2: O+×2=2 vs Option 1: S+1+N+1+O-(1×2)=0. Option 2 wins.
+M2 L1 H7 D10 S4 N1 O3 W1 E3 dur2 | Lunch with the team, or keep the break to yourself
+     1 Switch to lunching with colleagues at least three days a week | 
+     2 Keep skipping the café, and let a strong afternoon prove the point | 
+     3 Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest | 
+  >> ACTION 3 | Story rule: filter 1 dropped R+ (option 2). Option 3 wins: N+1, no downside. Network=1 near zero needs fixing.
+M3 L1 H8 D10 S4 N3 O3 W1 E3 dur3 | Lunch with the team, or keep the break to yourself
+   DESC After a month of lunching with the team twice a week, your manager stops talking about “mixing in”. Over lunch you learn Warren’s project is being folded into your module, so you have time to prepare. | EVENTS Monthly base salary: +0.3 (L1)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Keep to the current pattern | 
+     2 Go to more lunches to stay more visible | 
+  >> ACTION 1 | Story rule tiebreaker: R- wins. Option 1: keep working pattern.
+M3 L1 H9 D10 S4 N3 O3 W1 E3 dur3 | Christmas-party rehearsals eating your evenings
+     1 Show up, and work with the organiser on a tighter rehearsal plan so the day job still fits | 
+     2 Attend every rehearsal and let the day job pile up | 
+     3 Skip a lot of sessions — “I’m not here to dance when there’s real work” | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ (2,3). Chose 1: show up with tighter plan, S+ N+ R-.
+M3 L1 H8 D10 S5 N3 O3 W1 E3 dur3 | A colleague keeps helping themselves to your snacks
+     1 Joke: "Bring some next time and we can swap", and leave it there | 
+     2 Keep sharing, because you don't like to say anything | 
+     3 Lock the snacks away and stop sharing, without explaining | 
+  >> ACTION 1 | Story rule filter 4: Option 1 (S+ N+) scores highest at +2.
+M3 L1 H8 D10 S6 N3 O3 W1 E3 dur3 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 7 | Quarterly energy: L1-L3 rule, Output furthest behind review need. Prepare report materials (1E): Output+1, Dignity+1.
+  >> ACTION 3 | Quarterly energy: Network maintenance (1E): Network+1, Dignity+1. Network tied for furthest from review need.
+  >> ACTION 6 | Quarterly energy: Health recovery (1E): Health+2. Keeping health safe for future quarters.
+M3 L1 H10 D10 S6 N3 O3 W1 E0 dur3 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 1 | Quarterly main action: L1-L3 rule. Apply for a key project lifts Output, Skill and Network.
+M4 L1 H10 D10 S7 N3 O3 W1 E0 dur4 | Christmas-party rehearsals eating your evenings
+   DESC You suggest splitting into small-group practice plus a few full run-throughs. It saves a lot of time, people stop staying late every night, and the organiser is grateful. Close to the party they have a family problem and ask whether you can take the last rehearsals and the on-the-night logistics. | EVENTS Monthly base salary: +0.3 (L1)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Step up, run the last rehearsals and the night itself, and get the number on stage cleanly | 
+     2 Decline the lead: “I’ll keep rehearsing, but I’m not running the thing” | 
+  >> ACTION 2 | Story rule filter 4: Review in 2 months, Output furthest need. Option 2 (O+×2-N-1=1) vs Option 1 (S+1+N+1+O-2=0).
+M4 L1 H10 D10 S7 N3 O3 W1 E0 dur4 | A project you wanted going to someone else
+     1 Accept the plan and give the live project your full attention | 
+     2 Ask your manager if you can join the new project part-time | 
+     3 Approach Owen privately: you supply the technical design, they stay the lead | 
+  >> ACTION 1 | Story rule filter 1: dropped R+ (2,3). Chose 1: accept, follow manager, focus on delivery, R-.
+M4 L1 H10 D10 S6 N3 O3 W1 E0 dur4 | Late-night work messages and the manager's reaction
+     1 Reply at once to look professional | 
+     2 Reply in the morning and spell out your working hours | 
+     3 Suggest to your manager privately that important items go by email | 
+     4 Copy Tara and start sending late-night updates yourself | 
+  >> ACTION 2 | Story rule tiebreaker: Option 2 is R- and offers H+/D+. Sets healthy boundaries professionally.
+M5 L1 H10 D10 S6 N2 O3 W2 E0 dur5 | Late-night work messages and the manager's reaction
+   DESC Chris says, "In principle that's fine, but we can't slip client deadlines." | EVENTS Monthly base salary: +0.3 (L1)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Set up an on-call rota, with no replies on days you are not on call | 
+     2 Keep to your hours anyway, whatever the reaction | 
+  >> ACTION 1 | Review month rule: N=1. Option 1 has no marks (no personal conflict, no delivery time lost). S+ N+ O0 safe. Option 2 may lower Network (ignoring manager's caveat).
+M5 L1 H10 D10 S8 N3 O3 W2 E0 dur5 | A new colleague with no sense of privacy
+     1 Laugh it off and gently draw a line: 'Let's not go there. Talk about something else?' | 
+     2 Be blunt: 'That's private. Please don't ask' | 
+     3 Answer each question, not wanting to embarrass a new colleague | 
+  >> ACTION 1 | Review N=1 rule: Option 2 lowers N (dropped). Option 1 (S+ N+ R-) beats Option 3 (0).
+M5 L1 H10 D10 S9 N3 O3 W2 E0 dur5 | In-house senior architect certification over the weekend
+     1 Sign up for the certification and spend both days learning properly | 
+     2 Work through the weekend to deliver the project on Monday morning | 
+     3 Stick to the family weekend and pick work up next week as planned | 
+  >> ACTION 2 | Review N=1 rule: Option 1 lowers O (dropped). Option 2 raises N+O with O counted double = 3. Beats Option 3 (0).
+M6 L2 H8 D10 S8 N3 O3 W2 E0 dur1 | A new colleague with no sense of privacy
+   DESC Lou picks up on it, looks a bit embarrassed and stops. You move the conversation on to work and hobbies, and things feel normal again. A couple of days later she is asking about 'team gossip' again. She really does not seem to know where the line is. | EVENTS [Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:
+
+The feedback covers schedule, collaboration and your sense of risk. The summary: “This isn’t a reprimand. But don’t look like someone who works hard and never wins. Same bar in six months.”
+
+Half-year performance bonus (C): +0.075
+
+Monthly base salary: +0.3 (L1)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+
+Your mentor texts: “The client was ready to escalate that bug — I talked them down.”
+
+Promotion notice: you passed the half-year review
+     1 Kindly suggest she gossips less and focuses on the work while she's new, for her own sake | 
+     2 Keep deflecting without spelling it out, and stay out of it | 
+  >> ACTION 1 | After C-grade review. Story: Option 1 (S+ N+ R-) beats Option 2 (0). Kindly advise new colleague.
+M6 L2 H8 D10 S9 N5 O3 W2 E0 dur1 | How thorough to be in code review as the team grows
+     1 Review line by line and list every improvement | 
+     2 Focus on core logic and risk, and leave the nits to the author | 
+  >> ACTION 2 | After C-grade review, Output is key priority. Option 2 (S+ N+ O+ R-) scores 4 vs Option 1 (S+ N+ O- = 1).
+M6 L2 H9 D10 S8 N7 O5 W2 E0 dur1 | The gym after work, or staying late to get ahead
+     1 Go to the gym as planned and get the work done efficiently tomorrow | 
+     2 Skip the gym, stay late, and clear the work tonight | 
+     3 Try to do both: gym first, then stay up late to finish the work | 
+  >> ACTION 2 | Post-C review focused on Output. Tiebreaker: Option 2 (H-) beats Option 3 (H--).
+M6 L2 H8 D10 S8 N7 O6 W2 E3 dur1 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 1 | Q2 Energy: Post-C review, Output focus. High-intensity work (2E): O+2, but H-1 D-1. H=8→7 still safe.
+  >> ACTION 7 | Q2 Energy: Prepare report materials (1E): O+1, D+1. Second action to boost Output further.
+M6 L2 H7 D10 S8 N7 O6 W2 E0 dur1 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 1 | Q2 Main Action: Post-C review rule - Apply for a key project. O+2 S+1 N+1.
+M7 L2 H7 D10 S9 N7 O6 W3 E0 dur2 | Mentoring a graduate who breaks things
+   DESC The department has taken on a new batch of interns. Your manager gives you Sam, who has the flashiest university and the biggest ego, and hints that mentoring is an unofficial requirement for a top rating this year. You hear Sam nearly caused trouble in another team by merging unreviewed code, and most of the old hands have kept their distance. Do you take on the mentor role? | EVENTS Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, uneasy, you're on your own now.
+     1 Take it on and set out clearly how the mentoring will work | 
+     2 Decline, citing your current workload | 
+  >> ACTION 1 | Month 7 story: Option 1 (S+ N+ O- = 1) beats Option 2 (-1+1=0). Manager hint about rating. HR remark uneasy - be careful.
+M7 L2 H7 D10 S10 N7 O6 W3 E0 dur2 | Dismissed in a team meeting as "just engineering work"
+     1 Politely challenge that framing on the spot, with data and business impact | 
+     2 Let it go in the meeting and speak to your manager afterwards | 
+     3 Let it pass in the room, then privately encourage colleagues and spell out what the work achieved | 
+  >> ACTION 2 | Month 7 event 2: HR uneasy, avoid public confrontation. Option 2 (S+ N+ R-=2) beats Option 3 (N+1=1). Speak to manager privately.
+M7 L2 H6 D9 S10 N7 O6 W3 E0 dur2 | Dismissed in a team meeting as "just engineering work"
+     1 Push to get your work into team OKRs or the quarterly highlights | 
+     2 Keep to your own patch and stop speaking for the team | 
+  >> ACTION 1 | Month 7 event 3: After manager softened, push for team OKR visibility. Option 1 (S+ N+ O+ = 3) wins.
+M8 L2 H5 D9 S11 N7 O6 W3 E0 dur3 | Mentoring a graduate who breaks things
+   DESC You have been mentoring Sam for barely two weeks when they skip your code review and merge lightly tested code into the pre-production branch. Staging is down all night and several neighbouring teams are blocked. At the next morning's standup your manager asks, stony-faced, 'Who is going to answer for this incident?' Sam stares at the floor. Everyone looks at you. | EVENTS Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, angry, what were you waiting for? Everything you buried is about to go off.
+     1 Take the main responsibility and say your oversight as mentor failed | 
+     2 Say in the room that the whole fault is Sam's | 
+  >> ACTION 1 | Month 8 crisis: HR remark at highest risk level. Option 2 is R+ (blaming). Option 1: own mistake R-.
+M8 L2 H5 D8 S11 N7 O3 W1 E0 dur3 | Neck pain with a deadline — whether to keep the physio appointment
+   DESC A stretch of late nights has left your neck aching and your right hand tingling. Physio is booked for tomorrow afternoon, which is also when a delivery checkpoint falls. | EVENTS Old landmines all go off at once, and half a year of work goes up in smoke!
+     1 Keep the physio appointment and shift delivery by half a day | 
+     2 Move the appointment to the weekend and push through delivery first | 
+     3 Stick on a heat patch, tough it out, and leave physio for later | 
+  >> ACTION 1 | Health falling for months triggers safety margin. Option 1: H+ S+ N+ R- (score 2) beats Option 2 (O+ H- = 1).
+M8 L2 H7 D8 S11 N7 O3 W1 E0 dur3 | A colleague's late handovers keep pushing back your work
+     1 Agree a handover time with him, and bring in the project schedule if it needs writing down | 
+     2 Work late to cover it and say nothing | 
+     3 Call him out in the main channel as always holding things up | 
+  >> ACTION 1 | Month 8 event 3: Option 1 (S+ N+ O+ H+ R-=3) beats Option 2 (O+1=1). Option 3 R+ dropped.
+M9 L2 H7 D9 S12 N7 O4 W1 E0 dur4 | Mentoring a graduate who breaks things
+   DESC You took responsibility in public and Sam is hugely grateful. That afternoon your manager pulls you into a meeting room: 'We're already over our incident quota. Group wants a named person on the accountability report. If you keep this on yourself, the team can't carry it. I suggest you sign the draft that puts the main fault on Sam. I'll try to sort Sam's conversion to permanent another way.' They slide a mostly written template across. Asking for a name to fill a quota is poor management. A fair account of an incident sets out what happened and who did what. | EVENTS Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Sign the draft and put the main fault on Sam | 
+     2 Rewrite it to match what happened: who skipped review, and which check in the process failed | 
+  >> ACTION 2 | Month 9: Option 1 R+ (blaming Sam). Option 2 R- (fair report, document process failure). Only option 2 survives.
+M9 L2 H7 D10 S12 N6 O3 W1 E0 dur4 | Palpitations after weeks of overtime: whether to stop
+     1 Stop now, rest, see a doctor if needed, and work at a steadier pace from tomorrow | 
+     2 Drink some water, wait it out, and grind through to the end | 
+  >> ACTION 1 | Month 9: Health warning signs. Option 2 R+. Option 1 only safe choice - H+ S+ R-.
+M9 L2 H9 D10 S12 N6 O2 W1 E0 dur4 | Escape room: your manager is slowing you down, a quiet colleague is flying
+     1 Ask Quinn to take the lock, and tell Chris: “You keep the big picture” | 
+     2 Say outright that Chris’s approach is wrong | 
+     3 Follow Chris’s guesses so he is not made to look small | 
+  >> ACTION 1 | Q3 end story: Escape room. Option 2 R+. Option 1 wins: S+ N+ O+ = 3.
+M9 L2 H9 D10 S13 N7 O2 W1 E3 dur4 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 7 | Q3 Energy 1/3: Prepare report materials (1E) - O+1 D+1. Post-C review Output focus.
+  >> ACTION 7 | Q3 Energy 2/3: Prepare report materials again (1E) - O+1 D+1. Stacking Output boost.
+  >> ACTION 3 | Q3 Energy 3/3: Network maintenance (1E) - N+1 D+1. Building relationships alongside Output focus.
+M9 L2 H9 D10 S13 N7 O4 W1 E0 dur4 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 1 | Q3 Main Action: Post-C review rule - Apply for a key project. O+2 S+1 N+1.
+M10 L2 H9 D10 S14 N7 O6 W2 E0 dur5 | The office war over windows and heating
+   DESC The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you. | EVENTS Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen | 
+     2 Make the call: set the temperature most people like, and tell them both to stop | 
+     3 Keep your head down and work. It's not your problem | 
+  >> ACTION 1 | Month 10 story: Office temperature conflict. Option 1 (S+ N+ R-) wins with score 2.
+M10 L2 H9 D10 S15 N7 O6 W2 E0 dur5 | A dinner that is really a fishing trip for team gossip
+     1 Say you do not know, every time, and change the subject | 
+     2 Keep to what is public, but hint that the team may change | 
+     3 Tell her about the draft merger plan and that Leo may be moved | 
+  >> ACTION 1 | Month 10 event 2: Fishing for confidential info. Option 2 and 3 R+. Option 1 R- only safe choice.
+M10 L2 H9 D10 S15 N7 O6 W2 E0 dur5 | An engagement survey that asks for your staff ID
+     1 Fill it in honestly, with examples and no swearing | 
+     2 Score everything as blandly positive | 
+     3 Set out the moving goalposts, the credit-taking and the weekend messages as plain facts, without insults | 
+  >> ACTION 2 | Month 10 event 3: Engagement survey with staff ID. Retaliation risk real. Option 2 (R-) only safe choice.
+M11 L2 H9 D8 S15 N7 O6 W2 E0 dur6 | The office war over windows and heating
+   DESC You set out what each of them needs and suggest a fixed middle temperature, a small screen to keep the draught off Maya, and a desk fan for Hugh. Both feel looked after, and most of the heat goes out of the row. To make it happen, someone has to ask facilities for the extras. | EVENTS Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Take the lead with facilities and get the extras in | 
+     2 You had the idea. They can chase it themselves | 
+  >> ACTION 2 | Review N=1: Both options have marks. Option 1 loses Output (weakest stat=6, holds back promotion). Option 2 loses Network (7, stronger). Pick the less damaging loss.
+M11 L2 H9 D8 S15 N7 O6 W2 E0 dur6 | How intensely to mentor a new intern
+     1 Mentor intensively so they can work independently within two weeks | 
+     2 Keep a light touch, let them explore, and stay focused on your own work | 
+M11 L2 H9 D8 S15 N7 O6 W2 E0 dur6 | How intensely to mentor a new intern
+     1 Mentor intensively so they can work independently within two weeks | 
+     2 Keep a light touch, let them explore, and stay focused on your own work | 
+  >> ACTION 2 | Review N=1 rule: Option 1 lowers O (weakest stat=6, holds back promotion). Option 2 has no marks, protects Output.
+M11 L2 H10 D8 S16 N5 O6 W2 E0 dur6 | Anonymous feedback — do you own up?
+     1 Own it, walk through the feedback in person, and offer constructive suggestions | 
+     2 Deny it, suggest other possible sources, and protect the anonymity | 
+  >> ACTION 1 | Review N=1: Option 2 R+ (hiding+denying). Option 1: private constructive conversation, no R+, no review-month marks. Own it professionally.
+M12 L3 H10 D9 S18 N3 O6 W3 E0 dur1 | Anonymous feedback — do you own up?
+   DESC Your manager praises you for raising it face to face, then gets defensive about the substance. They explain why those decisions were reasonable, and hint that 'you're only seeing a slice'. | EVENTS [Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:
+
+Your manager goes through the half-year checklist: “Acceptable overall. Boxes ticked, no standout wins, no disasters. Keep going. Flag blockers early and don’t suffer in silence.” The tone is neutral.
+
+Half-year performance bonus (B): +0.4
+
+Monthly base salary: +0.4 (L2)
+
+An HR partner you get on with says, frowning, the risks have piled up. Deal with them yourself.
+
+Promotion notice: you passed the half-year review and moved from L2 to L3 (Senior engineer).
+
+You climbed too fast, and you
+     1 Stand by what you observed, admit your view is partial, and suggest more openness about how decisions are made | 
+     2 Ease off, admit you may have lacked some information, and say you still rate their management overall | 
+  >> ACTION 1 | Month 12 review passed (B grade, L3). HR frowning = risk phase. Story: Option 1 (S+ N+ R-=2) beats Option 2 (N+1=1).
+M12 L3 H10 D10 S20 N4 O6 W3 E0 dur1 | A milestone briefing for the execs
+     1 Lead with the conclusion: key results first, then the risk and the plan to deal with it | 
+     2 Give only the good news: hide the risk and stick to highlights throughout | 
+     3 Walk through the process in detail, still not reaching the point ten minutes in | 
+  >> ACTION 1 | Month 12 story: HR warned about piled-up risks. Option 2 R+. Option 1: transparent exec briefing, S+ N+ O+ R-.
+M12 L3 H10 D10 S22 N4 O7 W3 E0 dur1 | One umbrella, a downpour, and Jordan at going-home time
+     1 Offer to share the umbrella and walk to the station together | 
+     2 Lend Jordan the umbrella and make a dash through the rain for a cab | 
+     3 Suggest sharing a cab and splitting the fare | 
+     4 Say the umbrella only covers one, so you will each make your own way | 
+  >> ACTION 3 | Tiebreaker: all R-, Option 3 has H+ (best Health), Option 1 H0, Option 2 H-.
+M12 L3 H10 D10 S22 N5 O7 W1 E3 dur1 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 4 | Q4 Energy 1/3: HR frowning rule - first action Defuse legacy risk (2E). Must reduce HiddenRisk.
+  >> ACTION 3 | Q4 Energy 2/3: Network maintenance (1E) - N+1 D+1. Repairing Network dropped by fast promotion.
+M12 L3 H10 D10 S22 N6 O7 W1 E0 dur1 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 8 | Q4 Main Action: HR frowning rule - Lay low and reduce risk. Health+1 HiddenRisk-1.
+M13 L3 H10 D10 S22 N6 O7 W1 E0 dur2 | A milestone briefing for the execs
+   DESC You opened with the results, then one slide on the risk and the plan already in place. An exec presses: 'What's the worst this risk does? What do you need?' This is a chance to show you have it under control. | EVENTS Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Answer with a quantified worst case and a clear request for resources | 
+     2 Stay vague with 'shouldn't be too bad', offering no real assessment | 
+  >> ACTION 1 | Month 13: HR friendly again. Option 2 R+. Option 1: quantified exec response, S+ N+ O+ R-.
+M13 L3 H10 D10 S24 N7 O9 W1 E0 dur2 | You overhear a redundancy list that includes a friend
+     1 Tell no one and act as if you never heard it | 
+     2 Hint that Ethan should keep his head down and not resign in a hurry | 
+     3 Tell him he is on the list and what the package looks like | 
+     4 Tell Ethan only about the published redundancy process and support channels, and nothing you overheard | 
+  >> ACTION 4 | Month 13: Overheard redundancy list. Options 2&3 R+. Option 4: support friend via official channels, S+ N+ R-.
+M13 L3 H10 D10 S24 N8 O9 W1 E0 dur2 | A newly hired VP talks to you alone for ten minutes on day one
+     1 Brief Chris on Hale's questions and your answers | 
+     2 Don't make a fuss, and keep delivering as normal | 
+     3 Quietly take Hale's team out to lunch to build on the impression | 
+  >> ACTION 1 | Month 13 event 3: VP Hale talked to me. Option 3 R+ (bypassing manager). Option 1 (brief Chris, S+ N+ R-=2) beats Option 2 (O+1=1).
+M14 L3 H10 D10 S24 N10 O9 W2 E0 dur3 | Your company is acquired and the culture flips
+   DESC A larger company buys yours, and reporting lines, processes and culture all have to fall in line with theirs. Everything you knew is changing. Some people are already leaving, and others are watching anxiously. The new owner’s rules and pace still feel foreign. With this much changing, where do you stand? | EVENTS Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Learn how the new organisation works and where the openings are, adapt, and find where you still add value | 
+     2 Cling to the old culture, resist the new rules, and keep saying how much better it used to be | 
+     3 Play the chaos, commit to nobody, and wait to see who wins | 
+  >> ACTION 1 | Month 14: Company acquisition. Options 2&3 R+. Option 1 only choice: adapt and find value, S+ N+ O+ R-.
+M14 L3 H10 D10 S25 N11 O10 W2 E0 dur3 | A request to swap on-call over a peak trading bank holiday
+     1 Take the consecutive shifts and cover the three peak-trading days | 
+     2 Decline the swap and ask your manager to rebalance by the rules | 
+  >> ACTION 1 | Month 14 event 2: On-call swap. Option 1 (S+ N+ H- R-=2) beats Option 2 (0). Health 10 can handle it.
+M14 L3 H8 D10 S25 N12 O11 W2 E0 dur3 | An intern accidentally emails a rant about the manager
+     1 Go with Quinn to apologise to Chris in person straight away | 
+     2 Suggest sending a follow-up claiming the account was hacked | 
+     3 Stay out of it and leave Quinn to deal with it | 
+     4 Call IT first and ask whether the email can still be recalled | 
+  >> ACTION 1 | Month 14 event 3: Intern Quinn's email disaster. Option 2 R++. Tie between 1 and 4 - Option 1 wins: direct apology shows leadership.
+M15 L3 H7 D10 S25 N14 O11 W2 E0 dur4 | An intern accidentally emails a rant about the manager
+   DESC Chris is silent for ten minutes, then says it must not happen again. Quinn gets a warning and keeps the internship. | EVENTS Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Help Quinn write a proper wash-up | 
+     2 Step back and stay out | 
+  >> ACTION 1 | Month 15: Follow through as mentor. Option 1 (S+ N+ R-=2) beats Option 2 (N- O+ =0).
+M15 L3 H7 D10 S26 N17 O11 W2 E0 dur4 | Your company is acquired and the culture flips
+     1 Take the bridging role, get both sides working together, and build credibility with both companies | 
+     2 Duck the responsibility and push the cross-team work onto someone else | 
+  >> ACTION 1 | Month 15 event 2: Post-acquisition bridging role. Option 1 (S+ N+ O+ R-=3) wins.
+M15 L3 H6 D10 S28 N19 O12 W2 E0 dur4 | Whether to share the method you have kept to yourself
+     1 Publish the full version and build a personal brand | 
+     2 Post a cut-down version and keep the core parameters back | 
+     3 Don't share it, and keep it to yourself | 
+  >> ACTION 2 | Tiebreaker: Option 2 has R-, beats Option 1 (R0). Share cut-down version, keep core parameters.
+M15 L3 H6 D10 S29 N20 O12 W2 E3 dur4 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 6 | Q5 Energy 1/3: Health recovery (1E) - H+2. Health falling for months (10→8→7→6), rule 2 triggered.
+  >> ACTION 7 | Q5 Energy 2/3: Prepare report materials (1E) - O+1 D+1.
+  >> ACTION 3 | Q5 Energy 3/3: Network maintenance (1E) - N+1 D+1.
+M15 L3 H8 D10 S29 N21 O13 W2 E0 dur4 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 1 | Q5 Main Action: L1-L3 fallback rule - Apply for a key project. O+2 S+1 N+1. Health recovered to 8.
+M16 L3 H8 D10 S30 N21 O15 W3 E0 dur5 | In-house kernel versus an open-source stack
+   DESC The company is setting up a new real-time compute platform, and your manager has put you in charge of the technology choice for your part of it. There are two options. You can build the kernel in-house, which fits the business but means a long build and a painful go-live. Or you can adopt a well-known open-source project, which lets you deliver quickly but leaves the kernel a black box and you at the mercy of upstream. The architecture review is next Friday and needs a decision. | EVENTS Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.
+     1 Argue for an in-house kernel as a long-term technical asset | 
+     2 Adopt the open-source stack and aim for fast delivery | 
+  >> ACTION 2 | Month 16: Tech choice. Option 2 wins (S+ O+ R-=2 vs S+ O- =0). Open-source for fast delivery.
+M16 L3 H8 D10 S29 N21 O16 W3 E0 dur5 | The person next to you wears very strong perfume
+     1 Tell her gently that strong scent gives you headaches, and ask if she could wear less | 
+     2 Praise it insincerely and keep sitting there with a headache | 
+     3 Turn to other colleagues and moan that she "stinks the place out" | 
+  >> ACTION 1 | Month 16 event 2: Perfume issue. Option 3 R+. Option 1 wins: gentle honest communication.
+M16 L3 H9 D10 S29 N21 O16 W3 E0 dur5 | Thanking a colleague from the next team who went out of their way
+     1 Take them out for lunch privately, straight away | 
+     2 Write a formal recognition note and copy their manager | 
+     3 Do nothing special for now and help them next time they need it | 
+  >> ACTION 2 | Tiebreaker: both R-, Option 2 costs no money. Formal recognition note + copy manager.
+M17 L3 H10 D10 S30 N21 O15 W3 E0 dur6 | In-house kernel versus an open-source stack
+   DESC The platform goes live on the open-source stack on time and the business is pleased. Then a routine security scan flags a problem: this version has an undisclosed candidate CVE, and details are already circulating among a few people internally. If it can be triggered in production, it would hit your core clients. The call is yours. | EVENTS Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says, frowning, the risks have piled up. Deal with them yourself.
+     1 Tell security and rush out a fallback from scratch | 
+     2 Sit on the report and bet it will not be triggered soon | 
+  >> ACTION 1 | Review N=1: Option 2 violates "never hide a problem" rule (R++). Option 1 only ethical choice - report security, transparent.
+M17 L3 H10 D10 S31 N20 O13 W3 E0 dur6 | A job spec from the big tech firm you have always wanted to join
+     1 Use the spec as a yardstick and close the gaps in your current role until you could get it | 
+     2 Spend the days daydreaming about leaving, refreshing job boards, and letting the day job drift | 
+     3 Envy it and do nothing, telling yourself you would never get there anyway | 
+  >> ACTION 1 | Review N=1: Option 2 lowers O. Option 1 (no marks, S+ O+=2) beats Option 3 (0). Use spec as yardstick.
+M17 L3 H10 D10 S33 N20 O14 W3 E0 dur6 | Choosing a path for a legacy service hitting its limits
+     1 Rewrite on a modern framework as a three-to-five-year foundation | 
+     2 Refactor in stages on the current architecture | 
+     3 Ship the smallest performance patches and ride out this cycle | 
+  >> ACTION 2 | Review N=1: Option 3 = gambling (banned). Option 1 (big O-). Option 2 (minimal O-) wins as least damage to promotion-critical stat.
+M18 L4 H9 D9 S35 N15 O15 W4 E0 dur1 | A colleague accidentally posts internal architecture online
+   DESC Browsing GitHub, you find that a colleague has posted an architecture diagram of an internal system in a public technical thread. Names have been removed, but anyone who knows the company would recognise it. It is clearly an accident: they were in a hurry to get help with a hard problem. Report it, and they may face disciplinary action. Warn them privately, and you may later be treated as having known and said nothing. | EVENTS [Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:
+
+The feedback covers schedule, collaboration and your sense of risk. The summary: “This isn’t a reprimand. But don’t look like someone who works hard and never wins. Same bar in six months.”
+
+Half-year performance bonus (B): +0.5
+
+Monthly base salary: +0.5 (L3)
+
+An HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.
+
+Promotion notice: you passed the half-year review and moved from L3 to L4 (Staff engineer).
+
+You climbed too fast, and your old contac
+     1 Help them take the post down, then report the accidental disclosure to security and say it was a mistake | 
+     2 Message them privately to take it down now, on the understanding that it goes no further | 
+  >> ACTION 1 | Month 18: Post-review, L4 promotion. Option 2 R+. Option 1: report security properly, protect colleague.
+M18 L4 H9 D10 S36 N13 O15 W4 E0 dur1 | Annual bonus cut and paid in instalments
+     1 Take it as a warning: look hard at the company's prospects and adjust your own plans | 
+     2 Complain in public and lead the moaning | 
+     3 Tell yourself at least they are still paying it, and try not to think about it | 
+  >> ACTION 1 | Month 18 story: Company bonus cut. Option 2 R+. Option 1 (S+ R-=1) beats Option 3 (0). Strategic awareness as L4.
+M18 L4 H9 D10 S36 N14 O15 W4 E0 dur1 | Dependency upgrade breaks the build
+     1 Revert immediately, pin the version, and find the cause | 
+     2 Hack the code to match the new version | 
+     3 Disable Dependabot | 
+  >> ACTION 1 | Month 18: Build broken by dependency upgrade. Options 2&3 R+. Option 1: proper engineering revert+pín+diagnose.
+M18 L4 H9 D10 S38 N14 O14 W4 E3 dur1 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 4 | Q6 Energy 1/3: HR quiet rule - first action Defuse legacy risk (2E). Must reduce HiddenRisk.
+  >> ACTION 3 | Q6 Energy 2/3: Network maintenance (1E) - N+1 D+1. Repairing network after L4 promotion dip.
+M18 L4 H9 D10 S38 N15 O14 W4 E0 dur1 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 4 | Q6 Main Action: L4+ rule - Apply for rotation. S+2 N+1. Broadening skills as Staff Engineer.
+M19 L4 H9 D10 S40 N16 O14 W5 E0 dur2 | A colleague accidentally posts internal architecture online
+   DESC Security investigates and judges the leak containable. Your colleague is hurt to find out you reported it, and tells the people they are close to that you shopped them. Helping them take the post down and then reporting the accident was the normal security step. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Explain to the team how the report worked, and that security rules are not optional | 
+     2 Say nothing, and trust that time will show you made the right call | 
+  >> ACTION 1 | Month 19: Colleague upset about security report. Option 1 (S+ N+ R-=2) beats Option 2 (-1). L4 leadership - educate the team.
+M19 L4 H9 D10 S41 N15 O14 W5 E0 dur2 | A leaver asks you to keep work files off the company systems
+     1 Refuse the files and tell him to use the proper handover | 
+     2 Take the link without opening it, and plan to delete it later | 
+     3 Take it and report it to Information Security | 
+  >> ACTION 1 | Month 19: Colleague asked to stash files off company systems. Option 2 R+. Tie between 1&3 - Option 1 wins: refuse, proper handover, firm but fair.
+M19 L4 H9 D10 S41 N14 O14 W5 E0 dur2 | You find out a peer got a bigger increase
+     1 Compare contributions, find what you can improve, and if needed ask your manager how the assessment was done | 
+     2 Stew in jealousy, take against that colleague, and compete with them behind their back | 
+     3 Ask around what everyone got and spread the comparison to whoever will listen | 
+  >> ACTION 1 | Month 19 event 3: Pay disparity. Options 2&3 R+. Option 1: professional, constructive approach.
+M20 L4 H9 D10 S42 N14 O15 W6 E0 dur3 | Pushed on stage at the Christmas party
+   DESC The Christmas party is in full swing. The host spots you, and your table, colleagues and manager included, starts chanting for you to get up and do something to “get the room going.” You have nothing prepared and this is not your sort of thing, but every eye is on you and someone is already holding out a microphone. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Take it in good humour: a quick gag or a bit of audience interaction, just enough to lift the room | 
+     2 Smile and say, ‘Thanks, but not tonight’ | 
+     3 Shut it down flat with “I’m not doing that”, and let the room go quiet | 
+  >> ACTION 1 | Month 20: Christmas party. Option 1 (S+ N+ R-=2) wins. Lighthearted leadership presence.
+M20 L4 H8 D10 S42 N16 O15 W6 E0 dur3 | Your first reaction to finding out a newer hire is paid more
+     1 Collect yourself, gather your results, and ask your manager for a pay review at the right moment | 
+     2 Start coasting in protest and stop doing the work properly | 
+     3 Complain round the team about how unfair the company is, and spread the discontent | 
+  >> ACTION 1 | Month 20 event 2: New hire paid more. Options 2&3 R+. Option 1: professional, data-driven pay review request.
+M20 L4 H8 D10 S43 N16 O16 W6 E0 dur3 | A manager-free channel shares a screenshot of your boss
+     1 Ask them to stop spreading it, keep the evidence the target needs, and raise it through a grievance or staff rep | 
+     2 Join in and have a moan | 
+     3 Leave the channel and stay out of it | 
+     4 Message Chris privately about team morale, without saying how you know | 
+  >> ACTION 1 | Month 20 event 3: Manager screenshot leaked. Option 2 R+. Tie between 1&4 - Option 1 wins on R- tiebreaker. Handle through proper channels.
+M21 L4 H8 D10 S43 N17 O16 W7 E0 dur4 | Pushed on stage at the Christmas party
+   DESC You get up and run a quick game for the whole room. It goes down better than you expected. People are laughing, and your manager gives you a thumbs-up. Afterwards the host tries to keep you up there for the next part. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Quit while you are ahead: hand the stage back and return to your table | 
+     2 Ride the moment and keep hosting, even as you start to run out of steam | 
+  >> ACTION 1 | Month 21: Christmas party follow-up. Option 1 (S+ R-=1) beats Option 2 (0). Quit while ahead.
+M21 L4 H9 D10 S43 N18 O16 W7 E0 dur4 | Team morale is on the floor — should you step up?
+     1 Keep up your own pace, and privately give nearby colleagues some encouragement and a calmer view of things | 
+     2 Join the gloom, pile into the complaining, and make the pessimism louder | 
+     3 Treat it as none of your business, look after yourself, and ignore the team's mood | 
+  >> ACTION 1 | Month 21 event 2: Low team morale. Option 2 R+. Option 1 (S+ N+ O+ R-=3) beats Option 3 (O+1=1). Staff Engineer leadership.
+M21 L4 H9 D10 S43 N20 O17 W7 E0 dur4 | Who picks up the bill at a client lunch
+     1 Having already paid quietly at the desk, say, "This one's on us. You can host next time" | 
+     2 Wrestle over the bill at the table until it gets awkward | 
+     3 Go along with it and let the client pay | 
+  >> ACTION 1 | Month 21 event 3: Client lunch. Option 1 wins: smooth professional etiquette, pay discreetly.
+M21 L4 H9 D10 S44 N22 O17 W7 E3 dur4 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 2 | Q7 Energy 1/3: L4+ rule - Skill learning (2E). S+1 H-1.
+  >> ACTION 6 | Q7 Energy 2/3: Health recovery (1E) - H+2. Weakest of H/D/N at 9.
+M21 L4 H10 D10 S45 N22 O17 W7 E0 dur4 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 4 | Q7 Main Action: L4+ rule - Apply for rotation. S+2 N+1.
+M22 L4 H10 D10 S47 N23 O17 W7 E0 dur5 | Load-test results clash with what product expected
+   DESC The load test you ran shows the system can only take 60% of the expected QPS. The product owner insists the last demo was fine, so your method must be wrong. The go-live deadline does not move. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Invite product to review the scripts and scenarios with you | 
+     2 Stand by the numbers and ask to cut scope or slip the date | 
+     3 Tweak the test parameters until they 'pass', as product asked | 
+  >> ACTION 1 | Month 22: Load test conflict with Product. Option 3 R+. Option 1 (S+ N+ O+ R-=3) wins. Collaborative approach.
+M22 L4 H10 D10 S49 N24 O17 W7 E0 dur5 | A colleague keeps @channel-ing questions already answered in the docs
+     1 DM her a doc link and suggest checking the wiki or asking the owner before using @channel | 
+     2 Call Tessa out in the channel: "Could you read the docs before asking?" | 
+     3 Ignore it like everyone else and leave the question hanging | 
+  >> ACTION 1 | Month 22 event 2: New joiner overusing @channel. Option 1 (S+ N+ R-=2) wins. Private DM guidance.
+M22 L4 H10 D10 S50 N26 O17 W7 E0 dur5 | Colleagues want you to join a group pay demand
+     1 Back a written case through a staff representative, and do not corner anyone | 
+     2 Decline the group pressure and make your own pay-review case on your contribution | 
+     3 Join in, and block the doorway so your manager cannot leave until you have an answer | 
+     4 Want to join but fear the blowback, so half-agree and then pull out at the last minute | 
+  >> ACTION 1 | Month 22 event 3: Group pay demand. Options 3&4 dropped. Option 1 (via staff rep, S+ N+ R-=2) beats Option 2 (S+1=1).
+M23 L4 H10 D10 S51 N26 O17 W8 E0 dur6 | Load-test results clash with what product expected
+   DESC You find the demo used an ideal path with an extremely high cache-hit rate. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Retest and issue a realistic capacity report | 
+     2 Compromise: ship, but with rate limits | 
+  >> ACTION 1 | Review N=1: Option 2 R+ (cutting corners). Option 1: honest retest, only ethical choice.
+M23 L4 H10 D10 S53 N27 O18 W8 E0 dur6 | Pushed to sign a settlement agreement on the spot
+     1 Ask for time, take independent legal advice, and only sign a settlement you agree with | 
+     2 Sign the settlement today to get it over with, because you are tired of being chased | 
+     3 Lose your temper, tear up the paper and walk out | 
+  >> ACTION 1 | Review N=1: Option 2 = gambling on legal document (banned). Option 3 R++. Option 1: request time, seek legal advice. Only professional choice.
+M23 L4 H10 D10 S53 N27 O18 W9 E0 dur6 | The client praises a feature you did not build
+     1 Say in the room that what is live is next-day sync, and forecasting is a later proposal | 
+     2 Keep quiet in the room and clarify in writing after the meeting | 
+     3 Stay silent and let the review pass | 
+  >> ACTION 2 | Review N=1: Option 3 hides problem (banned). Option 1 lowers N. Option 2 has NO marks - honest clarification in writing after meeting.
+M24 L4 H10 D10 S54 N27 O18 W10 E0 dur7 | Telling the client the project will be late
+   DESC An upstream dependency has failed on a project you own. You now know you will be a week late, and the original delivery date is three days away. The client cares a lot about this one and has even put their own name behind it internally. You need to decide how to tell them. | EVENTS [Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:
+
+The feedback covers schedule, collaboration and your sense of risk. The summary: “This isn’t a reprimand. But don’t look like someone who works hard and never wins. Same bar in six months.”
+
+Half-year performance bonus (B): +0.7
+
+Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, smiling, you've been doing all right lately. Keep it up.
+     1 Tell them at once, with a cause analysis, a recovery plan and a new timetable | 
+     2 Wait until delivery day in case you still make it | 
+     3 Report 'on time', then quietly work late and try to catch up | 
+  >> ACTION 1 | Month 24: Post-B review, project delayed. Options 2&3 R+. Option 1: transparent client communication with recovery plan.
+M24 L4 H9 D10 S56 N28 O19 W10 E0 dur7 | Where personal use of work kit stops
+     1 Stop using work kit for the personal project immediately, and move it onto your own machines | 
+     2 Ask your manager and compliance whether the current use sits inside policy, and get it in writing | 
+  >> ACTION 2 | Month 24: Personal use of work kit. Option 2 (S+ N+ R-=2) beats Option 1 (S+ R-=1). Get written confirmation.
+M24 L4 H9 D10 S56 N29 O18 W10 E0 dur7 | Where personal use of work kit stops
+     1 Cut weekend use as advised, and move most of the development onto personal kit in your own time | 
+     2 Keep using it, but avoid commit times colleagues can see, and stay quiet about it | 
+  >> ACTION 1 | Month 24 follow-up: Compliance advised reduce weekend use. Option 2 R+ (hiding). Option 1: follow advice, move to personal kit.
+M24 L4 H9 D10 S56 N30 O18 W10 E3 dur7 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 1 | Q8 Energy 1/3: High-intensity work (2E) - O+2 H-1 D-1. Aggressive Output push per rule 4.
+  >> ACTION 7 | Q8 Energy 2/3: Prepare report materials (1E) - O+1 D+1. Total O+3 for quarter.
+M24 L4 H8 D10 S56 N30 O21 W10 E0 dur7 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 1 | Q8 Main Action: Rule 4 (Output gap named) - Apply for a key project. O+2 S+1 N+1.
+M25 L4 H8 D10 S57 N31 O23 W11 E0 dur8 | Telling the client the project will be late
+   DESC You were straight with them early. The client is not pleased, but respects that you were professional and took responsibility: 'At least you didn't hide it. I can explain that internally.' Then they push: could you ship a usable core first and the rest next week? | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.
+     1 Check what is feasible, then offer phased delivery: the core first, the rest after | 
+     2 To keep them happy, promise both the core and the full version by the original date | 
+  >> ACTION 1 | Month 25: Client follow-up on delayed project. Option 2 R+. Option 1: honest phased delivery.
+M25 L4 H8 D10 S59 N32 O25 W11 E0 dur8 | A collaborator shifts the blame in a meeting
+     1 Walk through the timeline and the email trail, and set out who owned what | 
+     2 Take some of the blame for now to steady the client, and leave Chloe for later | 
+     3 Hit back in the room: Chloe did not provide the integration environment on time | 
+     4 Stay silent and ask your manager to unpick it | 
+  >> ACTION 1 | Month 25 event 2: Chloe blameshifting. Option 3 R+. Option 1 (evidence-based timeline, S+ N+ O+ R-=3) wins.
+M25 L4 H8 D10 S60 N31 O25 W11 E0 dur8 | A collaborator shifts the blame in a meeting
+     1 Draft a joint improvement plan, copy your manager, and invite Chloe to co-author it | 
+     2 Write only your own part and make clear where it ends | 
+  >> ACTION 1 | Month 25 event 3: Joint improvement plan. Option 1 (S+ N+ O+ R-=3) wins. L4 leadership - draft and collaborate.
+M26 L4 H8 D10 S61 N32 O26 W12 E0 dur9 | A database migration window clashes with peak trading
+   DESC You are leading the membership database migration from MySQL 5.7 to 8.0, scheduled for Sunday 02:00–06:00. On Friday, product announces that a peak trading period has been brought forward to Monday midnight. Chris, the DBA, says: 'The rollback script is not fully tested. Going ahead is a big risk.' | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet.
+     1 Ask to delay the migration and protect peak trading first | 
+     2 Cut testing short and go ahead as planned | 
+     3 Propose dual-write with a two-week canary cutover | 
+  >> ACTION 3 | Month 26: DB migration vs peak trading. Option 2 R++. Tie between 1&3 - Option 3 (dual-write canary) wins as best L4 engineering.
+M26 L4 H8 D10 S63 N33 O26 W12 E0 dur9 | Stay deep in the internals, or move to the application layer where results show faster?
+     1 Weigh your strengths, interest, and long-term value, then make a clear-eyed choice | 
+     2 Chase quick wins and easier reviews, and follow the crowd into the application layer | 
+     3 Stay on internals out of snobbery, look down on the application layer, and ignore the practical return | 
+  >> ACTION 1 | Month 26 event 2: Tech direction choice. Tiebreaker: Option 1 (R-) beats Option 2 (R0). Strategic career choice.
+M26 L4 H8 D10 S64 N33 O26 W12 E0 dur9 | Raising a technical objection on another team's API design
+     1 Comment publicly on the shared design doc, with the load-test data attached | 
+     2 Take their owner aside for a 1:1 and walk through the load-test results privately | 
+  >> ACTION 2 | Month 26 event 3: API bottleneck found in other team's design. Option 2: private 1:1 with data, respectful and effective.
+M27 L4 H8 D10 S63 N35 O25 W12 E0 dur10 | Raising a technical objection on another team's API design
+   DESC Their owner thanks you for the private heads-up, admits it was an oversight, and is willing to change the design. They add, offhand: "Let's keep this between us — no need to air it in the channel, or it will look as if our review missed it." You need to decide whether to share the finding with the wider teams so others can learn from it. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, uneasy, you're on your own now.
+     1 Agree the fix in the 1:1, then record the problem and the decision in the design doc | 
+     2 Anonymise it as a "performance review lesson" and share it with both teams | 
+  >> ACTION 1 | Month 27: API performance issue. HR uneasy. Option 2 R+. Option 1: fix + document + respect relationship.
+M27 L4 H8 D10 S62 N36 O24 W12 E0 dur10 | A database migration window clashes with peak trading
+     1 Take it on and ask your manager to drop the other work | 
+     2 Refuse to build the tool, and force a straight choice between delaying and rushing | 
+  >> ACTION 1 | Month 27: Dual-write tool conflicts with rewards work. Option 1 (S+ N+ O+ R-=3) wins. Transparent trade-off management.
+M27 L4 H7 D10 S64 N36 O25 W12 E0 dur10 | How long will the old stack last, and should you switch now?
+     1 While the demand lasts and you can still think calmly, start learning a new direction now | 
+     2 Tell yourself it will last for years yet, and stay put | 
+     3 Panic and grab at every new direction, dabbling in all of them and finishing none | 
+  >> ACTION 1 | Month 27 event 3: Old tech stack declining. Option 2 R+ (denial). Option 1: proactive new direction learning.
+M27 L4 H6 D10 S66 N36 O25 W12 E3 dur10 | Quarterly energy allocation
+   DESC A new quarter begins and you have 3 Energy points. Unused Energy does not roll over. Plan your energy actions: you can combine several, as long as the total cost is no more than 3, and you can leave some or all of your Energy unused. The system applies each chosen action’s status_updates to your visible stats. | EVENTS 
+     1 High-intensity work | Push hard on delivery. Output rises, Health and Dignity fall, and HiddenRisk goes up.
+     2 Skill learning | Spend time learning. Skill rises for the long run, but you are tired in the short term.
+     3 Network maintenance | Keep up relationships inside and outside the team. Network and Dignity rise slightly.
+     4 Defuse legacy risk | Clear up old problems before they bite. HiddenRisk goes down.
+     5 Mental recovery | Take time to reset. Dignity gets a solid boost.
+     6 Health recovery | Rest and recover. Health gets a solid boost.
+     7 Prepare report materials | Write up your visible wins early. Output and Dignity rise a little.
+     8 Reserve energy (no action) | Leave the rest of your Energy unused this quarter. It does not roll over.
+  >> ACTION 6 | Q9 Energy 1/3: Rule 2 priority - Health recovery (1E) - H+2. Health was falling 9→8→7→6.
+  >> ACTION 4 | Q9 Energy 2/3: Rule 3 requires Defuse legacy risk (2E) - HiddenRisk-1. HR uneasy = risk priority.
+M27 L4 H8 D10 S66 N36 O25 W12 E0 dur10 | Quarterly main action
+   DESC This quarter you may pick one main action towards your career goals, or none. Each main action changes your stats straight away. Choose based on your visible stats, the promotion windows and your long-term plan. The system applies the chosen action’s status_updates. | EVENTS 
+     1 Apply for a key project | Join a high-profile project. Output, Skill and Network all rise.
+     2 Report results to your manager | Tell leadership about your wins. You become more visible and better recognised.
+     3 Fight for resources | Push for budget, headcount, or support for your work.
+     4 Apply for rotation | Rotate into another team to broaden your skills. Skill rises strongly.
+     5 Showcase results | Present your results to a wider audience. Output and Dignity rise.
+     6 Build a mentorship | Work with a senior mentor. Network and Skill improve.
+     7 Repair a key relationship | Mend a strained relationship. Network and Dignity recover.
+     8 Lay low and reduce risk | Keep your head down. Health recovers and HiddenRisk falls.
+     9 No action | Skip the main action this quarter. Your stats do not change.
+  >> ACTION 8 | Q9 Main Action: Rule 3 (HR uneasy) requires Lay low and reduce risk. H+1 HiddenRisk-1.
+M28 L4 H9 D10 S66 N36 O25 W13 E0 dur11 | One conference place, and a question about Jo
+   DESC The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, frowning, the risks have piled up. Deal with them yourself.
+     1 Give Jo fair credit for her strengths and say she would be a good fit | 
+     2 Praise Jo, and briefly add your own recent relevant work | 
+     3 Say you each have strengths, and suggest choosing whoever fits the brief best | 
+     4 Hint at gaps in Jo's recent work | 
+  >> ACTION 2 | Month 28: Conference place competition. HR frowning. Option 4 R+. Option 2 (praise Jo + self-advocacy, S+ N+ O+ R-=3) wins.
+M28 L4 H9 D10 S67 N35 O26 W13 E0 dur11 | An undeclared relationship that looks like a conflict of interest
+     1 Raise it anonymously with HR as a conflict-of-interest risk and ask them to look into it | 
+     2 Say nothing. It is their private life, and you have no hard evidence | 
+  >> ACTION 1 | Month 28 event 2: Undeclared relationship COI. Option 2 R+ (ignoring problem). Option 1: anonymous HR report per policy.
+M28 L4 H9 D10 S67 N33 O26 W13 E0 dur11 | An undeclared relationship that looks like a conflict of interest
+     1 If confronted, own it and explain you raised a conflict of interest and meant nothing personal by it | 
+     2 Stay anonymous and carry on as normal in the team | 
+  >> ACTION 1 | Month 28 event 3: Report traced back. Option 2 R+. Option 1: own it, explain COI principle, not personal.
+M29 L4 H9 D10 S67 N32 O26 W14 E0 dur12 | One conference place, and a question about Jo
+   DESC Your manager listens and says, 'Noted.' The list comes out and you are going. Jo takes the day off and is noticeably cooler with you afterwards. When you get back, your manager wants you to give the team a 30-minute talk on the conference. | EVENTS Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, angry, what were you waiting for? Everything you buried is about to go off.
+     1 Thank Jo in the talk for her earlier groundwork, then go and speak to her afterwards | 
+     2 Keep the talk on what you got out of it and reinforce your manager's good impression | 
+  >> ACTION 1 | Review N=1: HR angry. Option 2 (ignores Jo). Option 1 (thank Jo + speak privately, S+ N+ R-=2) wins. Repair relationship.
+M29 L4 H9 D10 S68 N34 O26 W14 E0 dur12 | The new manager's first team meeting: make an impression?
+     1 Come prepared and give a clear, professional update on your work and thinking, without hogging the floor | 
+     2 Talk over people, overstate your role, and put colleagues down to make yourself look good | 
+     3 Keep your head down and say nothing all meeting, terrified of saying the wrong thing | 
+  >> ACTION 1 | Review N=1: New manager first meeting. Option 2 R+. Option 1 (S+ N+ O+ R-=3) wins. Professional first impression.
+M29 L4 H9 D10 S69 N35 O26 W14 E0 dur12 | Should you put serious time into an emerging technology?
+     1 Treat it as an investment: make a plan, learn it properly, and look for chances to practise | 
+     2 Skip it as too much hassle and tell yourself you'll pick it up if you ever need it | 
+     3 Bookmark tutorials and sign up for a course so you look like you're learning, but never do the work | 
+  >> ACTION 2 | Review N=1: HR angry. Option 3 corner-cutting. Option 1 O- mark. Option 2 has no marks - keep focus during risk period.
+M30 L4 H9 D8 S68 N35 O23 W13 E0 dur13 | None
+   DESC  | EVENTS [Half-year talk] Your line manager takes you into a meeting room for 1:1 feedback on the last six months:
+
+Your manager goes through the half-year checklist: “Acceptable overall. Boxes ticked, no standout wins, no disasters. Keep going. Flag blockers early and don’t suffer in silence.” The tone is neutral.
+
+Half-year performance bonus (B): +0.7
+
+Monthly base salary: +0.7 (L4)
+
+An HR partner you get on with says, angry, what were you waiting for? Everything you buried is about to go off.
+
+Trust crisis — a second major blow-up. The company says you have used up its trust, and it is time to take 

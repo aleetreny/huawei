@@ -7,6 +7,7 @@ import argparse,hashlib,json,math,random
 from pathlib import Path
 import gpt_principios as B
 import planner as P
+from datapaths import deepseek_dir as _dsdir
 R=B.R
 class Controller(P.Planner):
     def __init__(self,arm,seed,labels,params):
@@ -32,7 +33,7 @@ def run():
     pp=B.ROOT/'lab/data/ingenieria-inversa/politica_optima.json'
     params=json.loads(pp.read_text()) if pp.exists() else P.DEFAULT
     print('Planner params from',pp if pp.exists() else 'P.DEFAULT',flush=True)
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)];labels=[json.loads(p.read_text()) for p in paths]
     out={'meta':{'games':a.games,'seed':a.seed,'context':'privileged true current risk/caps/thresholds, known menu effects. No next-node lookahead; conditional fixed two label files. Not model performance.',
      'params':params,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'catalog_sha256':hashlib.sha256(cp.read_bytes()).hexdigest(),
      'label_sha256':[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths]},'arms':{}}

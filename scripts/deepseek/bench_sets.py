@@ -7,9 +7,10 @@ import gzip
 import json
 import sys
 from pathlib import Path
+from datapaths import deepseek_dir as _dsdir
 
 REPO = Path(__file__).resolve().parents[2]
-RUNS = Path.home() / "careerlab-data" / "deepseek" / "runs"
+RUNS = _dsdir() / "runs"
 items = {json.loads(x)["id"]: json.loads(x) for x in gzip.open(REPO / "lab/data/transmision/bank-items.jsonl.gz", "rt")}
 
 

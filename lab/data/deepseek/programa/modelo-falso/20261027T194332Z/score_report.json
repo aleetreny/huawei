@@ -1,0 +1,28 @@
+{
+  "submission_name": "gradient-depression",
+  "submission_dir": "~/careerlab-data/formato/sol-probe",
+  "skill_name": "submission-skills",
+  "drive_session_id": "career-sim-runner-c4ad71e2f1ea",
+  "session_id": "",
+  "play_exit_code": 1,
+  "termination_reason": "max_continuations",
+  "token_usage": {
+    "input_tokens": 240,
+    "output_tokens": 120,
+    "total_tokens": 360,
+    "total_cost": 0.0,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "input_tokens": 240,
+        "output_tokens": 120,
+        "total_tokens": 360,
+        "total_cost": 0.0
+      }
+    }
+  },
+  "ending_score": {},
+  "output_dir": "~/careerlab-data/formato/slot-fake/runner/.career_sim_runner/career_emu/outputs/gradient-depression/20261027T194332Z",
+  "events_log": "~/careerlab-data/formato/slot-fake/runner/.career_sim_runner/career_emu/outputs/gradient-depression/20261027T194332Z/events-20261027T194332Z.jsonl",
+  "transcript_log": "~/careerlab-data/formato/slot-fake/runner/.career_sim_runner/career_emu/outputs/gradient-depression/20261027T194332Z/transcript-20261027T194332Z.log",
+  "scored_at": "2026-10-27T19:43:36.080952+00:00"
+}

@@ -116,3 +116,27 @@ Read the supplied public handbook/rules and current manual including its review 
 ## Auditoría desde principios básicos — objetivo75 de partida
 
 [Informe, datos y Relevo](gpt-principios/README.md), rama `alejandro/gpt-principios`. Búsqueda pública, recuperación reproducida y pruebas offline sin nuevas llamadas: magnitud de riesgo interactúa con el controlador; el beneficio del margen prudente no supera al veto conocido al retirar contexto ideal. Ningún75 estable demostrado. No sustituir t13-read-v2. Objetivo abierto.
+
+## Relevo — datos en Git (29 oct)
+
+**Qué se ha subido.** Todo lo de DeepSeek que sólo estaba en este Mac, con el texto del juego incluido, en [`lab/data/deepseek/`](../../data/deepseek/README.md) (25 MB, 282 archivos, ninguno de más de 50 MB):
+- **Partidas oficiales:** las 21, con sus registros, notas y fichas por llamada. Entre ellas, seis partidas cortadas que se daban por perdidas; su registro en bruto seguía en los huecos del programa. Una es la de `t13-read-v3`, que llega al mes 48 en L5.
+- **Tablas resumen:** `partidas.csv` y `decisiones.csv.gz` (2.831 decisiones).
+- **Bancos:** los 11 brazos.
+- **Percepción:** las etiquetas y las lecturas en bruto.
+- **Otros datos:** las listas de situaciones, el registro de llamadas, los datos de gpt-principios y de los sustitutos, y lo medido del programa con el modelo falso.
+
+Decisión del equipo (NORMAS §1.6, cambiada hoy). Antes de subir se buscaron claves, cabeceras de autorización y rutas personales, también dentro de los comprimidos: no queda ninguna.
+
+**Qué no se ha subido y por qué:**
+- **Claves** (`nim.env`, `own-openrouter/.env`): nunca van a Git.
+- **Instalaciones del programa oficial** (9–15 GB): son software y se reinstalan.
+- **`items.jsonl`:** se rehace del banco.
+- **Vídeo y ZIP del corte 1:** copiados a iCloud Drive (`huawei-entrega-copia/cut1`).
+- **Partidas con Claude del laboratorio local:** no son de DeepSeek.
+
+Detalle en la §5 de su README.
+
+**Cómo se usa.** `scripts/deepseek/export_data.py` rehace la carpeta desde `~/careerlab-data`. `scripts/deepseek/datapaths.py` hace que los scripts lean la copia de Git cuando no está el Mac, y `materialize` rehace la estructura antigua. Comprobado: el banco v4 frente a v9 da lo mismo con la copia, y `real_audit.py` lee los `.gz`.
+
+**Siguiente paso.** Quien juegue o pase un banco nuevo vuelve a exportar y sube.
