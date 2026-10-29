@@ -54,3 +54,7 @@ El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramie
 ## Relevo — diagnóstico del estancamiento (29 octubre, sin API)
 
 [Diagnóstico y vías de mejora](diagnostico-estancamiento.md): contrastadas las versiones hasta cp-v12/ex-v1 y recalculado juego+fichas desde score reports. v4 63,108; cp-v5a 62,658; cp-v12 57,852 antes de calidad. No hay superioridad de juego demostrada, ni evidencia para atribuir toda la diferencia al azar. Prioridades: control v4 con sólo bucle, auditoría de decisiones críticas con títulos reservados, ex-v1 incremental y validación de la réplica por familia. Sin nuevas partidas, modelos ni cambios de manual. Siguiente responsable: seguir el Relevo del informe; DeepSeek expresamente excluido por el usuario. Solicitar integración en main.
+
+## Relevo — mv-3/mv-4 y consistencia de 77,78
+
+[Auditoría de las actualizaciones](mv-3-mv-4-consistencia.md): score reports y transiciones verificados desde huawei-mejora (a160964, documentación posterior sin commit). Ocho puntuadas, media 58,095; seis completas, 68,12; una en L6/77,78. Diferencia con 69,62: nivel y riqueza principalmente. Hallada contradicción ejecutada con el veto a lo anónimo bajo HR angry. Prioridad: aplicación del modo estricto y primeras ventanas de ascenso perdidas, conservando bucle mv-4. Sin API ni partidas; no prometer todas a 77,78. Solicitar integración de este diagnóstico en main.
