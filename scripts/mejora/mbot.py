@@ -98,3 +98,21 @@ if __name__ == "__main__":
     B = "beta=v4fam+ep=RRR.RNR.SLR.SLR+mp=KP.KP.ROT.ROT+qh=5+hcare=2+hlow=5"
     for extra in ("", "+l1v=1+l1det=0.3", "+l1v=1+l1det=0.5", "+l1v=1+l1det=0.7", "+l1v=1+l1det=1"):
         print(extra or "base", loss_rate(B + extra))
+
+
+class EndBot(QL1Bot):
+    """QL1Bot + endhd: en el último trimestre, Health y Mental recovery hasta el tope antes que Defuse (cada punto de
+    Health o Dignity vale 0,75 de nota final; Defuse, 2 de energía por 1 punto de riesgo = 1 de nota)."""
+
+    def energy(self, rep, st):
+        if self.flags_x.get("endhd") and st.month >= 46:
+            self._tick(st)
+            e = st.energy
+            if st.health < 10 and e >= 1:
+                return "Health recovery"
+            if st.dignity < 10 and e >= 1:
+                return "Mental recovery"
+            if self.hr != D.C.FRIENDLY and e >= 2:
+                return "Defuse legacy risk"
+            return "Network maintenance" if e >= 1 else None
+        return super().energy(rep, st)
