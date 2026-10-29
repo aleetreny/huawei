@@ -104,18 +104,19 @@ Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada 
 - Texto visible en el banco: 184 caracteres por situación con cp-v4 (v4: varios cientos); notas 103 caracteres (v4: 258).
 - **En el banco DeepSeek sí junta `take_action` y `observe` en una respuesta:** 108 respuestas con las dos frente a 27 con `take_action` sola (cp-v4); 97 frente a 32 (cp-v1b). En el runner real no (§5.4).
 
-### 5.4 Partida oficial: fichas por mes
-`cp-v3` (= cp-v1b sin la llamada al handbook; mismas reglas que cp-v4) en juego desde las 02:02 UTC en el hueco 1 (`deepseek-pilo-b37dbff8-dff20f-00000-a1`). A mitad (mes 14, 106 llamadas):
-- **una llamada por respuesta** (la única respuesta con dos llamadas es la inicial, Skill + handbook, como en v4): la pareja `take_action` + `observe` que DeepSeek sí hace en el banco no aparece en el runner;
-- el trimestre sí va con un solo `observe` (5 llamadas por trimestre en vez de 8);
-- **el historial crece 570 fichas por llamada** (v4: 608): 432 son resultados de herramientas y envoltorio (igual que v4) y 138 lo que escribe el modelo (v4: 176). El texto visible baja de 133 a 66 caracteres por llamada y las notas de 235 a 82, pero cada llamada lleva de serie el `session_id`, el `call_goal` en chino que pide JiuwenSwarm y el nombre de la herramienta: ~110 fichas que no se pueden quitar;
-- proyección: ~385 llamadas, ~57 M de fichas, **~1,2 M por mes, nota de fichas ~72** (v4: 61–66). Es +0,6 a +1,0 de versión, no los +3 que daría la pareja de llamadas.
+### 5.4 Partidas oficiales
 
-**Lectura.** Con una llamada por respuesta, el ahorro posible desde el Skill está casi agotado: el 76 % de lo que crece el historial son resultados de `observe` que no dependen de nosotros. Lo único que cambiaría la escala es que DeepSeek junte `take_action` y `observe` (−45 % de llamadas → nota de fichas 90+). Lo hace en el banco y no en el runner; la diferencia es el mensaje de sistema de JiuwenSwarm o el patrón de las primeras respuestas (sonda `--paired` en curso).
+**`cp-v3` (una llamada por respuesta), hueco 1, 02:02–03:10 UTC: 56,92, 48 meses, 57,4 M de fichas (1,20 M por mes, nota de fichas 72,1), 1,73 USD.**
+- Fichas: 390 llamadas (182 `observe`, 204 `take_action`); el historial crece 561 por llamada (423 de herramientas y envoltorio, 138 del modelo: `session_id`, `call_goal` en chino, nota de 89 caracteres y 66 caracteres de texto). Trimestres con un `observe`. Sólo la respuesta inicial lleva dos llamadas. La proyección de §2 para este bucle (~72) se cumple.
+- Juego: L2 en el mes 12 (perdió el del 6 con Output 1), L3 en el 18, L4 en el 30, y ahí se queda (Skill 44 → 95, 2,8 al mes; L5 exige llegar a tiempo). Health baja toda la partida (4 en el mes 3, 5 al final), dinero 23,7, Network 36, riesgo final 1 (RR. HH. frowning en los meses 12 y 37–39, sin explosión). Las reglas nuevas se cumplen: Skill learning y Apply for rotation en todos los trimestres de L4 salvo cuando RR. HH. pedía Defuse y Lay low.
+- Auditoría de decisiones contra el catálogo (`real_audit.py`): elige la mejor opción el 67 % en L1, 60 % en L2, 88 % en L3 y 64 % en L4 (las dos partidas completas de v4: 61 %, 90 %, 78 %, 83 %). El exceso de L4 viene de preferir Health, que estaba baja. No hay señal de que el silencio empeore las historias; es una partida de la cola baja de la familia (v5 y v7 sacaron 66,7 y 67,3; una de v4 se quedó en L1).
+- **Coste:** 1,73 USD por 57 M de fichas, cuando v4 pagó 0,81 por 70 M: el proveedor que sirvió esta partida cobra más (la ruta la fija la organización). Cuenta para el presupuesto, no para la nota.
+
+**`cp-v5a` (dos llamadas por respuesta), hueco 2, desde las 02:32 UTC.** A mitad (mes 36, 03:11): 161 llamadas, **120 respuestas con dos llamadas y 41 con una**; contexto 186 mil. Proyección: ~215 llamadas, ~30 M de fichas, **~0,6 M por mes, nota de fichas ~95**. Segunda partida de `cp-v5a` en el hueco 1 desde las 03:15.
 
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (8 tandas): ~0,21 USD. Banco `ds-cp1b`: 0,12. Bancos `ds-v4-rep2` y `ds-cp3`: ~0,25 (en curso). Partida `cp-v3`: pendiente de `total_cost`.
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: pendientes. **Total hasta las 03:15: ~2,6 USD.**
 
 ## Relevo (29 oct, 02:10 UTC)
 1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2): el coste es cuadrático en las llamadas, y el modelo escribe menos de lo que parecía (el texto en inglés de las trazas es razonamiento oculto). Prueba del runner con un modelo falso (§3): varias llamadas por respuesta se ejecutan en orden. Manual `cp-v1`→`cp-v4` (§4) y sondas con DeepSeek (§5.1): el silencio y las notas cortas se obedecen; las dos llamadas por respuesta, en el banco sí y en la sonda no. Juez (§5.2): Sonnet baja 6–8 puntos; `cp-v4` lo intenta arreglar. Banco (§5.3): elecciones iguales al 90 %, pérdida algo mayor, ruido por medir.
