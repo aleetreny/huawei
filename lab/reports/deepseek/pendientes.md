@@ -4,11 +4,13 @@
 
 Las reglas añadidas en cp-v8–cp-v11 quedan fuera mientras la réplica no esté calibrada. Lo que más puntos tiene es no hundirse (4 de 19 partidas largas) y llegar antes a L5 (C57, C58).
 
-**Siguientes pasos, por orden:**
-1. **Calibrar la réplica con las 35 partidas reales** (0 USD; §6). Sin eso, ninguna regla nueva que se apoye en la réplica debe entrar: su lectura ruidosa saca ~42 frente a ~65 en la realidad.
-2. **Comprobar si el juego empeoró al cambiar las reglas.** Las partidas completas de la familia cp sacan de media 65,2 (13), frente a ~69 de las de t13-read v4/v5/v7 (4). Prueba barata: `t13-read-v4` tal cual + sólo el bucle de cp-v10, 2 partidas.
-3. **Script en partida**: estado, techos y trimestre una vez por trimestre, y asesor sólo en los momentos críticos, con la condición de estabilidad de C48. Permitido por C49. Se diseña en la réplica calibrada; línea `script-partida`.
-4. **Reglas generales de BDCI, en banco** (~0,2 USD): freno de salud por carga de trabajo, y proyecto clave en L4 cuando falta Output (C48).
+**Siguientes pasos, por orden (29 oct, noche, tras la línea Exploración):**
+1. **Hecho: la réplica calibrada con las partidas reales** ([exploracion](../exploracion/README.md) §1). Un modelo de elección ajustado a las 2.743 decisiones reales predice el 87 % de las elecciones de DeepSeek y reproduce las partidas (completas 65,4 frente a 65,3). Dice que las reglas mueven la media ±1–2 y que el hueco hasta el planificador perfecto es percepción, sobre todo en el mes previo de L1.
+2. **Probar `exploracion/ex-v1`** (cp-v12 + trimestre por tramos + freno de salud + texto para la rúbrica): sondas de la pareja y banco de L1, ~0,2 USD; si pasa, candidato al corte 2. Réplica +1,8 de partidas; juez de calidad +8. Plan: [plan-deepseek.md](../exploracion/plan-deepseek.md).
+3. **Banco de L1 de `exploracion/ex-v3`** (~0,12 USD): lo discreto antes que plantarse en público en el mes previo de L1. Réplica +0,3; Sonnet cambia justo las decisiones previstas.
+4. **«v4 frente a cp»** ya no hace falta jugarlo: en la réplica calibrada las reglas de historias de las dos familias valen lo mismo (+0,7 ± 0,4 para v4); los 5 puntos entre completas reales son azar (exploracion §1).
+5. **Script en partida (C49, C60):** medido (exploracion §4). Detectar techos con el menú vale +0,0; decidir historias con un script, −3 a −4,5; el híbrido de Winfred, −0,7 a −3,0. `exploracion/ex-s1` queda como demostración, con sondas opcionales.
+6. Reglas generales de BDCI: ya en la réplica calibrada (exploracion §5). Proyecto clave por defecto en L1–L3 y rotación desde L4; freno de salud +0,9.
 
 Este es el sitio único de lo que falta probar con la clave. Quien gaste DeepSeek mantiene la lista: al terminar una prueba, actualiza la fila y pasa el resultado a [HALLAZGOS](../../../HALLAZGOS.md). Los comandos exactos están en el informe de cada línea, que es la fuente; aquí sólo se enlazan.
 
@@ -41,6 +43,10 @@ Quien juegue o pase un banco nuevo vuelve a exportar con `uv run python scripts/
 | `suelo/suelo-v1` | v4-c5 | min + prudencia tras una explosión (B35) + campo «Blow-ups» | Réplica: un tercio menos de crisis con lectura ruidosa; juez 54/62 (castiga la línea de estado de 7 campos) | Nada | El mismo banco, ≈ 0,3 USD más |
 | `stat-perception/v4-lean` (rama `leah/workspace`) | v4 | Línea de estado corta, notas cortas, Skill desde L4, plan a 48 meses | Rúbrica 74,3 frente a 70,2; Haiku elige igual que con v4 (92–93 %); notas −25 % | Nada | Va con v4-lean-q |
 | `stat-perception/v4-lean-q` (rama `leah/workspace`) | v4-lean | Trimestre planificado tras **un solo `observe`** | Modelo de fichas: −15 % (+0,7 de nota) | Nada | 1 partida para medir fichas por mes y que no haya acciones rechazadas, ≈ 0,8 USD. [09-v4-lean](https://github.com/aleetreny/huawei/blob/leah/workspace/lab/reports/stat-perception/09-v4-lean.md) |
+| **`exploracion/ex-v1`** | cp-v12 | Trimestre: informes en el nivel inicial; Health recovery desde 5; L2–L3 informe, red, informe + proyecto clave; desde L4 Skill learning + informe + rotación. Historias: freno con Health ≤ 3. Texto para la rúbrica; la nota del ejemplo literal pierde «Reviews here» | Réplica calibrada +1,8 de partidas (muertes por salud 6,5 % → 1,1 %); juez Opus 84/83, Sonnet 72/71 (cp-v12 73/72, 66/66); lint y cumplimiento sin errores | Nada | Sondas de la pareja (~0,06 USD) y banco de L1 (~0,12). Si pasan, corte 2. [plan](../exploracion/plan-deepseek.md) |
+| `exploracion/ex-v3` | ex-v1 | En el mes previo de L1, con RR. HH. amable o quiet y sin otro riesgo en el mes, lo discreto (en privado, por escrito después) antes que corregir, negarse o plantarse en público | Réplica +0,3 sobre ex-v1; Sonnet en el banco de L1: pérdida 4,71 → 3,90, cambia las decisiones previstas | Nada | Banco de L1 (~0,12 USD); entra si deja ≤ 18 elecciones que bajan N/O y ≤ 9 arriesgadas |
+| `exploracion/ex-s1` | ex-v1 | Script con estado (C60) en una tercera llamada de cada respuesta | 1.470 marcas de «lleno» sin falsos en las partidas reales; réplica +0,0 | Nada | Opcional: sondas de tres llamadas (~0,06 USD). No entregar sin partidas |
+| `exploracion/ex-v2` (descartado) | ex-v1 | Revisar la opción elegida en el mes previo de L1 | Sonnet: 24 frente a 24 elecciones que bajan N/O | — | No probar |
 | `formato/script-v1`, `script-v3` (en pausa) | — | Un script decide con las etiquetas de DeepSeek | — | 76,87 y 13,23; 66,55, 60,45 y 32,59: más techo, menos suelo (C23, C35) | Sólo si una idea concreta gana en la réplica |
 
 **Descartados con DeepSeek:**

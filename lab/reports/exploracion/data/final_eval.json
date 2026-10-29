@@ -1,0 +1,154 @@
+{
+ "cp-v12 T=1": {
+  "partida": 58.07,
+  "ee": 0.26,
+  "completas": 0.796,
+  "media_completas": 65.46,
+  "fallos": {
+   "dismissed": 0.105,
+   "health": 0.065,
+   "trust": 0.033,
+   "broke": 0.001
+  },
+  "version_media": 62.24,
+  "P(v>64.75)": 0.474,
+  "P(v>68.17)": 0.324,
+  "P(v>70)": 0.214,
+  "P(v>72)": 0.101,
+  "P(v>74)": 0.028,
+  "P(v>76)": 0.003
+ },
+ "ex-v1 (sólo trimestre) T=1": {
+  "partida": 59.37,
+  "ee": 0.25,
+  "completas": 0.828,
+  "media_completas": 65.79,
+  "fallos": {
+   "dismissed": 0.106,
+   "health": 0.031,
+   "trust": 0.034,
+   "broke": 0.001
+  },
+  "version_media": 63.98,
+  "P(v>64.75)": 0.546,
+  "P(v>68.17)": 0.41,
+  "P(v>70)": 0.296,
+  "P(v>72)": 0.163,
+  "P(v>74)": 0.059,
+  "P(v>76)": 0.011
+ },
+ "ex-v1 T=1": {
+  "partida": 59.91,
+  "ee": 0.25,
+  "completas": 0.842,
+  "media_completas": 65.81,
+  "fallos": {
+   "dismissed": 0.113,
+   "health": 0.011,
+   "trust": 0.033,
+   "broke": 0.001
+  },
+  "version_media": 64.46,
+  "P(v>64.75)": 0.569,
+  "P(v>68.17)": 0.43,
+  "P(v>70)": 0.312,
+  "P(v>72)": 0.172,
+  "P(v>74)": 0.063,
+  "P(v>76)": 0.012
+ },
+ "ex-v3 T=1": {
+  "partida": 60.23,
+  "ee": 0.24,
+  "completas": 0.847,
+  "media_completas": 65.92,
+  "fallos": {
+   "dismissed": 0.107,
+   "health": 0.011,
+   "trust": 0.033,
+   "broke": 0.002
+  },
+  "version_media": 64.75,
+  "P(v>64.75)": 0.584,
+  "P(v>68.17)": 0.444,
+  "P(v>70)": 0.324,
+  "P(v>72)": 0.182,
+  "P(v>74)": 0.067,
+  "P(v>76)": 0.013
+ },
+ "cp-v12 T=0.7": {
+  "partida": 59.71,
+  "ee": 0.25,
+  "completas": 0.829,
+  "media_completas": 66.19,
+  "fallos": {
+   "dismissed": 0.104,
+   "health": 0.048,
+   "trust": 0.019,
+   "broke": 0.0
+  },
+  "version_media": 63.69,
+  "P(v>64.75)": 0.543,
+  "P(v>68.17)": 0.397,
+  "P(v>70)": 0.279,
+  "P(v>72)": 0.145,
+  "P(v>74)": 0.048,
+  "P(v>76)": 0.007
+ },
+ "ex-v1 (sólo trimestre) T=0.7": {
+  "partida": 60.78,
+  "ee": 0.25,
+  "completas": 0.851,
+  "media_completas": 66.61,
+  "fallos": {
+   "dismissed": 0.104,
+   "health": 0.026,
+   "trust": 0.019,
+   "broke": 0.0
+  },
+  "version_media": 65.22,
+  "P(v>64.75)": 0.599,
+  "P(v>68.17)": 0.479,
+  "P(v>70)": 0.366,
+  "P(v>72)": 0.22,
+  "P(v>74)": 0.093,
+  "P(v>76)": 0.021
+ },
+ "ex-v1 T=0.7": {
+  "partida": 61.24,
+  "ee": 0.24,
+  "completas": 0.862,
+  "media_completas": 66.59,
+  "fallos": {
+   "dismissed": 0.108,
+   "health": 0.01,
+   "trust": 0.02,
+   "broke": 0.0
+  },
+  "version_media": 65.62,
+  "P(v>64.75)": 0.619,
+  "P(v>68.17)": 0.496,
+  "P(v>70)": 0.379,
+  "P(v>72)": 0.228,
+  "P(v>74)": 0.096,
+  "P(v>76)": 0.022
+ },
+ "ex-v3 T=0.7": {
+  "partida": 61.57,
+  "ee": 0.24,
+  "completas": 0.869,
+  "media_completas": 66.64,
+  "fallos": {
+   "dismissed": 0.101,
+   "health": 0.01,
+   "trust": 0.02,
+   "broke": 0.0
+  },
+  "version_media": 65.92,
+  "P(v>64.75)": 0.636,
+  "P(v>68.17)": 0.512,
+  "P(v>70)": 0.392,
+  "P(v>72)": 0.237,
+  "P(v>74)": 0.1,
+  "P(v>76)": 0.023
+ }
+}
