@@ -30,7 +30,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Cerradas y juntadas en `main`** (sus informes siguen en su carpeta): Motor (`lab/reports/ingenieria-inversa/`, réplica al 99,3 %), Categorías (`lab/reports/question-bank/`), Transmisión (`lab/reports/transmision/`), Palancas (`lab/reports/palancas/`), Mecánicas emergentes (`lab/reports/mecanicas-emergentes/`), la auditoría desde principios básicos (`lab/reports/deepseek/gpt-principios/`) el 28 oct, **Huevos de Pascua** (`lab/reports/huevos-pascua/`): no hay atajos de ascenso en el juego de desarrollo, pero la tercera evaluación en L1 se salva con el riesgo a cero (HALLAZGOS B28–B30); y **Calidad** (`lab/reports/calidad-skills/`): candidato `lab/policies-src/calidad/v4-c5`, +4,2 de calidad con las mismas elecciones que v4 en el banco con Haiku (C24, C25). Sólo bots y Claude, 0 USD.
 
-**Pendiente para la línea DeepSeek (con la clave):** confirmar `v4-c5` con el juez y el banco de DeepSeek (≈ 1,3 USD; comandos y regla de decisión en [calidad-skills §4](lab/reports/calidad-skills/README.md)) y llevar B30 al manual.
+**Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en un solo sitio, [pendientes.md](lab/reports/deepseek/pendientes.md). Son seis candidatos (c5, t0/t1, suelo-min/suelo-v1, v4-lean-q), con su coste, sus comandos y su regla de decisión.
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
