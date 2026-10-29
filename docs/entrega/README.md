@@ -9,6 +9,7 @@ Material para los cortes de entrega (no es la entrega en sí).
 | [skills_design-draft.md](skills_design-draft.md) | English draft for final design/skills_design.md; reconcile with frozen t13-read-v2 |
 | [decision_report-draft.md](decision_report-draft.md) | English draft for final design/decision_report.md; evidence, uncertainty and limitations |
 | [t19-compliance.md](t19-compliance.md) | Internal status-line wording review; do not package as a design deliverable |
+| [cut2/](cut2/PREPARAR.md) | Corte 2: borradores en inglés (`README.md`, `skills_design.md`, `decision_report.md`) con `TODO(manual)` y los pasos para cerrarlo; empaquetar con `scripts/entrega/build_cut.py` |
 
 ## Evidence map for the design drafts (internal; not for the submission ZIP)
 
