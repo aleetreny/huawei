@@ -87,19 +87,28 @@ La sonda reconstruye la petición exacta del runner (mensaje de sistema de Jiuwe
 
 Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto (2.421 palabras) y en su lote queda igual o por encima de c5 con los dos jueces. El juez se mueve ±5 entre lotes: léase «no baja». **El texto a entregar es el de `cp-v4`**; falta comprobar en el banco de DeepSeek que elige como cp-v3 (en curso).
 
-### 5.3 Banco de DeepSeek: ¿cambian las elecciones? (`scripts/deepseek/bench.py`, 69 situaciones de hacia-80: 40 de control y 29 de control de riesgo; 0,12 USD por brazo)
+### 5.3 Banco de DeepSeek: ¿cambian las elecciones? (`scripts/deepseek/bench.py`, 69 situaciones de hacia-80: 40 de control y 29 de control de riesgo; ~0,13 USD por brazo)
 
-| Serie | `t13-read-v4` (pasada 1) | `cp-v1b` |
-|---|---|---|
-| Control (40): pérdida por decisión / elige la mejor / arriesgadas | 0,38 / 88 % / 3 | 0,77 / 82 % / 2 |
-| Control de riesgo (29) | 0,93 / 66 % / 1 | 1,04 / 59 % / 0 |
-| Misma elección que v4 | — | 36 de 40 · 24 de 26 |
+| Brazo | Control (40): pérdida / mejor / arriesgadas | Control de riesgo (29): pérdida / mejor / arriesgadas | Misma elección que v4 (pasada 1) |
+|---|---|---|---|
+| `t13-read-v4`, pasada 1 (`ds-v4-full10`) | 0,38 / 88 % / 3 | 0,93 / 66 % / 1 | — |
+| `t13-read-v4`, pasada 2 (`ds-v4-rep2`) | 0,23 / 92 % / 1 | 0,84 / 66 % / 1 | 64 de 68 |
+| `cp-v1b` | 0,77 / 82 % / 2 | 1,04 / 59 % / 0 | 60 de 66 |
+| **`cp-v4`** | **0,34 / 90 % / 2** | **0,79 / 66 % / 2** | 62 de 68 (66 de 68 con la pasada 2) |
 
-- 90 % de coincidencia, igual que v4 consigo mismo (B21). De las 4 elecciones distintas del control, dos son cp-v1b más prudente en el mes previo (rechaza el riesgo +2 que v4 acepta por la excepción; una le sale mejor y otra peor), y dos son errores de lectura (una «callarse» leída como sin riesgo, −10 puntos de q). Para saber si el +0,39 es ruido corren una segunda pasada de v4 y una de `cp-v3` sobre las mismas 69.
-- Texto visible: 63 caracteres por situación (v4: cientos); nota 102 caracteres (v4: 258).
+- **`cp-v4` elige como v4 dentro del ruido de v4 consigo mismo** (62–66 de 68 frente a 64 de 68 entre dos pasadas de v4), con la misma pérdida por decisión. Las reglas nuevas (arranque atascado, tamaño del riesgo, Skill desde L4) no tocan estas situaciones, como se esperaba; lo que se comprueba es que el bucle de silencio y las notas cortas no cambian las elecciones.
+- La pasada de `cp-v1b` salió peor (0,77) por dos errores de lectura y dos elecciones más prudentes en el mes previo; la de `cp-v4`, con las mismas reglas, sale igual que v4: era ruido de pasada (una pasada de v4 difiere de otra en 0,15 de pérdida y 4 elecciones).
+- Texto visible en el banco: 184 caracteres por situación con cp-v4 (v4: varios cientos); notas 103 caracteres (v4: 258).
+- **En el banco DeepSeek sí junta `take_action` y `observe` en una respuesta:** 108 respuestas con las dos frente a 27 con `take_action` sola (cp-v4); 97 frente a 32 (cp-v1b). En el runner real no (§5.4).
 
 ### 5.4 Partida oficial: fichas por mes
-`cp-v3` (= cp-v1b sin la llamada al handbook) en juego desde las 02:02 UTC en el hueco 1 (`deepseek-pilo-b37dbff8-dff20f-00000-a1`). Lo que decide: fichas por mes (v4: 1,35–1,47 M), si hay respuestas con dos llamadas, si el trimestre va con un `observe`, y ninguna acción rechazada. Análisis con `python3 scripts/comprobante/gametokens.py <run>`.
+`cp-v3` (= cp-v1b sin la llamada al handbook; mismas reglas que cp-v4) en juego desde las 02:02 UTC en el hueco 1 (`deepseek-pilo-b37dbff8-dff20f-00000-a1`). A mitad (mes 14, 106 llamadas):
+- **una llamada por respuesta** (la única respuesta con dos llamadas es la inicial, Skill + handbook, como en v4): la pareja `take_action` + `observe` que DeepSeek sí hace en el banco no aparece en el runner;
+- el trimestre sí va con un solo `observe` (5 llamadas por trimestre en vez de 8);
+- **el historial crece 570 fichas por llamada** (v4: 608): 432 son resultados de herramientas y envoltorio (igual que v4) y 138 lo que escribe el modelo (v4: 176). El texto visible baja de 133 a 66 caracteres por llamada y las notas de 235 a 82, pero cada llamada lleva de serie el `session_id`, el `call_goal` en chino que pide JiuwenSwarm y el nombre de la herramienta: ~110 fichas que no se pueden quitar;
+- proyección: ~385 llamadas, ~57 M de fichas, **~1,2 M por mes, nota de fichas ~72** (v4: 61–66). Es +0,6 a +1,0 de versión, no los +3 que daría la pareja de llamadas.
+
+**Lectura.** Con una llamada por respuesta, el ahorro posible desde el Skill está casi agotado: el 76 % de lo que crece el historial son resultados de `observe` que no dependen de nosotros. Lo único que cambiaría la escala es que DeepSeek junte `take_action` y `observe` (−45 % de llamadas → nota de fichas 90+). Lo hace en el banco y no en el runner; la diferencia es el mensaje de sistema de JiuwenSwarm o el patrón de las primeras respuestas (sonda `--paired` en curso).
 
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).

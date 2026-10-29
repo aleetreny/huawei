@@ -76,6 +76,7 @@ async def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--start", type=int, default=0, help="how many recorded decisions to replay before DeepSeek takes over")
     ap.add_argument("--stop-usd", type=float, default=0.5)
+    ap.add_argument("--paired", action="store_true", help="replay the recorded decisions as [take_action, observe] pairs")
     a = ap.parse_args()
     bundle = Path(a.bundle)
     sp, name, skill_text = system_prompt(bundle)
@@ -109,9 +110,13 @@ async def main() -> None:
     rec_actions = [(json.loads(args), s) for n, args, s in trace if n.endswith("take_action")]
     for i in range(a.start):
         act, res = rec_actions[i]
-        add([call(PFX + "take_action", act)], [res])
-        pos += 1
-        add([call(PFX + "observe", {"session_id": sid})], [observes[pos][1]])
+        if a.paired:  # history as if the model had already been pairing the two calls
+            pos += 1
+            add([call(PFX + "take_action", act), call(PFX + "observe", {"session_id": sid})], [res, observes[pos][1]])
+        else:
+            add([call(PFX + "take_action", act)], [res])
+            pos += 1
+            add([call(PFX + "observe", {"session_id": sid})], [observes[pos][1]])
     ds = DeepSeek(concurrency=1, stop_usd=a.stop_usd)
     log = []
     try:
