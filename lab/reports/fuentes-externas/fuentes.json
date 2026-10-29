@@ -59,6 +59,36 @@
       "url": "https://github.com/Colinfornia/Techarena-Project",
       "equipo": "Colinfornia",
       "nota": "README vacío (27 oct); vigilar por si lo llena"
+    },
+    {
+      "url": "https://github.com/Xianmuyingyue/careersim-bdci26-postmortem",
+      "equipo": "悟空 (CCF BDCI 2026)",
+      "nota": "postmortem del mismo reto en BDCI: 109 partidas, deduplicación por hash, mejor partida 76,28"
+    },
+    {
+      "url": "https://github.com/YUMinRan/CareerSim-BDCI26",
+      "equipo": "熊起707 (BDCI)",
+      "nota": "truncado del Skill a ~60 k caracteres, libro de 44 partidas con fichas"
+    },
+    {
+      "url": "https://github.com/smileDSG/CareerSim-BDCI26",
+      "equipo": "熊起707 (BDCI)",
+      "nota": "motivos de nota 0, auditoría de sobreajuste"
+    },
+    {
+      "url": "https://github.com/Winfred666/CareerSim-BDCI26",
+      "equipo": "winfred (BDCI)",
+      "nota": "script que decide sólo si su elección es estable con ruido de percepción"
+    },
+    {
+      "url": "https://github.com/ShaFuFuDeLiu/Competitions-CareerSim-BDCI26",
+      "equipo": "BDCI",
+      "nota": "tablas de eventos descodificadas: ejemplo de lo que da un 0; no copiar"
+    },
+    {
+      "url": "https://gitcode.com/openJiuwen/agent-store",
+      "equipo": "openJiuwen (repositorio de los premiados de BDCI)",
+      "nota": "los premiados deben subir aquí su método; vacío para este reto el 29 oct"
     }
   ],
   "paginas": [

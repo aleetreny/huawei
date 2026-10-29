@@ -1,0 +1,15 @@
+{
+  "family": "exploracion",
+  "name": "ex-v2",
+  "parents": [
+    "ex-v1"
+  ],
+  "idea_origin": "Exploración line, 29 Oct: replica calibrated on the 2,743 real DeepSeek story decisions (choice model, scripts/exploracion/); quality judge on cp-v12",
+  "operator": "ex-v1 + a last check of the chosen option in the review month at the starting level",
+  "hypothesis": "In the review month at the starting level DeepSeek loses a point of Network or Output in 22 % of real decisions; where it departs from the perfect-information planner it picks integrity gestures (Dignity +2, Network or Output -1/-2). A re-check of the chosen option, with the published fact that Dignity tops out at 10, should catch part of those losses. Calibrated replica: +0.5 to +0.9 if half of the losses are caught with few false alarms; -3.7 with 20 % false alarms. Earlier hints in the same direction (t13-read-v9, cp-v9 step 4) did not move the L1 bank: this is a procedural check on the chosen option, not a reading hint.",
+  "predicted_behaviour": "L1 bank (ids-l1prep90): Network/Output-lowering choices down from 22-27 to 18 or fewer, risky choices not above 8.",
+  "refutation": "L1 bank: 20 or more Network/Output-lowering choices, or more than 8 risky choices.",
+  "skill_count": 1,
+  "change": "ex-v1 + one paragraph at the end of story step 4.",
+  "notes": "Evidence: lab/reports/exploracion/README.md (replica calibrated on the real DeepSeek decisions, quarter search, Sonnet bank, quality judges). The Skill states observations from our runs as ours, with no thresholds, titles or fixed answers; margins on the published 0-10 ranges are marked as ours. Test plan: lab/reports/exploracion/plan-deepseek.md."
+}

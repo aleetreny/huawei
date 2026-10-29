@@ -134,3 +134,93 @@ La clasificación sigue sin notas.
 - nuestra v4: 1,35–1,47 M por mes.
 
 Esos datos pueden servir para calibrar la lectura simulada de DeepSeek de las líneas Suelo y Techo y para medir de qué está hecho el historial. Son texto del juego: no van a Git.
+
+## Notas oficiales del corte 1 (29 oct)
+
+En resumen: quedamos 13.º con 64,75. Sólo 34 de los 227 equipos tienen nota mayor que 0, y el top 10 empieza en 68,17. Lo que nos separa de los primeros es sobre todo el juego (HALLAZGOS C45).
+
+| Puesto | Equipo | Nota |
+|---:|---|---:|
+| 1 | ShenzhenFan01's team | 75,99 |
+| 2 | gengyuan's team | 74,59 |
+| 3 | ruifeng's team | 72,51 |
+| 4 | aman_abdulsalam's team | 71,99 |
+| 5 | ShanshanMao's team | 71,77 |
+| 6 | PHP Security | 71,72 |
+| 7 | MattKep7777's team | 70,88 |
+| 8 | Yuanyuan's team | 70,59 |
+| 9 | Sky's team | 69,87 |
+| 10 | manocw's team | 68,17 |
+| 11 | Chinese can fly | 67,40 |
+| 12 | IQ2 Only | 65,86 |
+| **13** | **Gradient Depression** (el nuestro, creado el 21 oct) | **64,75** |
+| 17 | Saul Goodman (Kingjinsight) | 56,69 |
+| 18 | KSL | 56,00 |
+| 26 | Gradient Depression (el otro, homónimo) | 46,78 |
+
+Lectura:
+- **Nuestra nota.** Con calidad ~65 y fichas ~63 (v4), 64,75 implica una media de partidas de ~65. Es justo lo que esperábamos de v4 contando un hundimiento cada ~9 partidas, así que el juego de evaluación no parece muy distinto del de desarrollo.
+- **Lo que hace falta para llegar arriba.** Para 75,99 hace falta una media de partidas de ~73–74 aunque las fichas y la calidad fueran casi perfectas. El líder juega mejor; no sólo gasta menos.
+- **Con `cp-v10`.** Con fichas ~97 y las mismas partidas, quedaríamos en ~68: en el borde del top 10, que subirá tras el corte 2.
+- **Kingjinsight.** Su v3.1 sacó 56,69 oficial, ~10 puntos de media de partidas por debajo de sus partidas locales: una partida oficial mala pesa mucho.
+
+La búsqueda de los repos de los diez primeros está en marcha.
+
+## BDCI: el mismo reto, antes, en China (29 oct)
+
+En resumen: ninguno de los 12 equipos que nos superan en TechArena UK tiene repos públicos. Lo nuevo viene de **CCF BDCI 2026** (jul–oct de 2026), la misma competición de Huawei openJiuwen («Agent 职场长程生存与晋升挑战»). Usa el mismo motor `career-emulator`, DeepSeek V4 Flash y JiuwenSwarm, terminó el 5 oct, y varios equipos han publicado después sus análisis. Hallazgos C46–C48.
+
+Fuentes (clonadas en `~/ext/`, sin ejecutar nada suyo):
+
+| Repo | Equipo | Qué tiene |
+|---|---|---|
+| Xianmuyingyue/careersim-bdci26-postmortem | 悟空, 12.º el 5 oct | 3 Skills, documentos de diseño, 109 partidas locales; deduplicación por hash; mejor partida 76,28 (L6 en el mes 42) |
+| YUMinRan/CareerSim-BDCI26 y smileDSG/CareerSim-BDCI26 | 熊起707 (oficial 56) | Truncado del Skill a ~60 k caracteres, motivos para un 0, libro de partidas con fichas (0,7–0,85 M al mes) |
+| Winfred666/CareerSim-BDCI26 | winfred | Expertos por indicador con anclas −3…+3; el script decide sólo si su elección es estable con ruido de percepción |
+| ShaFuFuDeLiu/Competitions-CareerSim-BDCI26 | — | Tablas de eventos descodificadas: es justo lo que daba un 0. Sólo como aviso |
+
+**Cumplimiento.** Dos de estas guías sacan sus cifras de descodificar el dataset y el simulador de BDCI. No se lee el simulador de BDCI (`openJiuwen-ai/CareerSim-BDCI26`, NORMAS §4) y ninguna cifra suya pasa a un Skill. Además, los parámetros difieren de los nuestros: allí el bonus C/D es negativo.
+
+**Lo buscado sin resultado:**
+- Alias de los 12 primeros en GitHub: ShenzhenFan01, MattKep7777 y aman_abdulsalam no existen; los demás existen pero no tienen repos del reto, o son nombres demasiado genéricos.
+- Búsqueda de código en GitHub (`show_employee_handbook`, `check_latest_logs`, «Defuse legacy risk», `career_emulator`).
+- LinkedIn, Zhihu, CSDN, Bilibili y Hugging Face.
+
+### BDCI: material oficial y premiados (29 oct)
+
+- **Dónde se jugó.** El reto estaba en xir.cn (competition/1165), no en DataFountain.
+- **Premiados.** 乃龙 63,31 · 我们两个真厉害 62,43 · 这次肯定队 62,2 · xx 61,29 · finewords 61,1, sobre 70 (63,31 ≈ 90 en nuestra escala).
+  - Ninguno ha publicado su método. Tenían que subirlo a gitcode.com/openJiuwen/agent-store, y para este reto sigue vacío.
+  - Tres equipos con mejor nota que el 4.º y el 5.º no entraron entre los finalistas. Probablemente, la revisión manual.
+- **Formato.** Cada entrega se jugaba 3 veces, y la nota bailaba mucho: el primero sacó 63,31, 57,71 y 42,74 en días distintos. Un paquete idéntico conservaba la nota.
+- **Los ceros.** 43 con motivo en las 7 actas diarias:
+  - respuestas fijas en el Skill o el manifest, ~10;
+  - modo de agente erróneo, 9;
+  - paquete incompleto, 8;
+  - consecuencias ocultas en tablas, 5;
+  - leer estado oculto, 4;
+  - descodificar el motor, 2.
+- **Lo que dijeron los organizadores en su vídeo de dudas (28 jul):**
+  - el simulador de la evaluación es el mismo que el de desarrollo; sólo cambia el juego de datos;
+  - el nombre de cada opción coincide con su efecto, así que el agente puede deducir el efecto del texto;
+  - el riesgo se acumula hasta un umbral, por lo que hay que planificar a largo plazo;
+  - las fichas y el tiempo cuentan;
+  - no hay que optimizar a lo bruto una sola dimensión.
+- **Copias locales:** actas, transcripción del vídeo y documentación oficial en chino, en `/root/ext/bdci-web/`, en el contenedor de la nube y fuera de Git.
+
+### BDCI: vídeo oficial de dudas, segunda pasada (29 oct)
+
+**Conclusión:** el vídeo no trae ninguna regla nueva. Confirma lo que ya teníamos.
+
+Esta vez se leyó la única diapositiva del reto entera y el audio se transcribió con Whisper large-v3. Copias en `/root/ext/bdci-web/video/`, en el contenedor de la nube y fuera de Git.
+
+Lo que sirve:
+1. **El nombre de cada opción coincide con su efecto**, y se puede deducir del texto («siempre sigue la lógica de la vida real»). Los textos de respuesta del juego «suelen ser pistas de los mecanismos ocultos».
+2. **Riesgo oculto:** se acumula hasta un umbral y estalla más tarde, y también lo suben las historias de cada mes, sin decir cuáles.
+3. **Ascenso:** mira Skill, Network y Output «acumulados a largo plazo»; un buen mes no lo garantiza.
+4. **Qué conviene subir:** el nivel y la riqueza, siempre; la salud basta con mantenerla por encima del suelo.
+5. **Nada de optimizar a lo bruto** una sola dimensión.
+6. **Trimestre:** la energía que no se gasta se pierde, y todas las acciones tienen efectos secundarios.
+7. **Historias:** cada elección cambia también el rumbo de las historias siguientes.
+8. **Evaluación:** mismo motor que en desarrollo y otro juego de datos; cuentan los recursos consumidos; no hace falta un sistema de varios agentes.
+9. **Datos oficiales:** no enseñan ninguna historia real del juego.

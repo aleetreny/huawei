@@ -1,0 +1,16 @@
+{
+  "family": "comprobante",
+  "name": "cp-v9",
+  "parents": [
+    "v4-c5",
+    "v4-t0",
+    "suelo-v1-min"
+  ],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter; Leah's branch leah/workspace, not a registered parent)",
+  "operator": "cp-v8 + four rules from the audit of 10 completed DeepSeek games",
+  "hypothesis": "Same story choices and tokens as cp-v5a/cp-v8; fewer second blow-ups after a first one; more Output at level 5 so that a game reaching L5 by month 36 can clear the L6 bar at month 48.",
+  "predicted_behaviour": "Same tokens and story choices as cp-v8 (bank within v4 repeat noise); from level 5 the quarter is Skill learning + Prepare report + Apply for a key project; after a blow-up Defuse every quarter.",
+  "refutation": "A blow-up followed by quarters without Defuse legacy risk, or a level-5 quarter without Prepare report materials or Apply for a key project, or a drop of more than 5 against cp-v8 with the quality judge in the same batch.",
+  "skill_count": 1,
+  "change": "cp-v8 plus two rules that the replica supports and no story-rule change: (1) after a blow-up read the HR remark one step worse for the rest of the run (stories and quarters; replica: trust crises -10 to -17 %, Q -0.2 exact); (2) quarterly line 6: from level 5 Skill learning + Prepare report materials + Apply for a key project (replica: Q equal, final Output +2.5; cp-v8 missed L6 at month 48 by Output alone). Three story-rule changes tried on 29 Oct were removed after the L1 bank (ds-cp9-l1: 28 Network/Output-losing picks of 90 vs 27 for cp-v5a and 24-25 for v4): a review-month reading hint from the catalogue, a \"not moving\" rule on the Best field, and step 4 before wellbeing at N = 1. The manifest stays in prose: a literal tool_calls block inside the instruction broke the pairing in a cold probe (0 of 6)."
+}

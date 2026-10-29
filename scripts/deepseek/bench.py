@@ -148,6 +148,7 @@ async def run_item(ds: DeepSeek, it: dict[str, Any], sp: str, skills: list, arm:
                                       {"role": "user", "content": continue_prompt(observes[0])}]
     usage = {"input": 0, "cache_read": 0, "cache_create": 0, "output": 0, "reasoning": 0, "cost": 0.0, "calls": 0}
     texts: list[str] = []
+    replies: list[list[str]] = []  # tool names per model reply (several calls in one reply = one inner list)
     nudges = 0
     t0 = time.perf_counter()
     for _ in range(MAX_TURNS):
@@ -161,6 +162,7 @@ async def run_item(ds: DeepSeek, it: dict[str, Any], sp: str, skills: list, arm:
         usage["cost"] += float(u.get("cost") or 0.0)
         usage["calls"] += 1
         calls = msg.get("tool_calls") or []
+        replies.append([str((c.get("function") or {}).get("name")) for c in calls])
         am: dict[str, Any] = {"role": "assistant", "content": msg.get("content") or ""}
         if calls:
             am["tool_calls"] = calls
@@ -196,6 +198,7 @@ async def run_item(ds: DeepSeek, it: dict[str, Any], sp: str, skills: list, arm:
             "handbook_calls": sum(1 for e in game.record if e.get("tool") == "show_employee_handbook"),
             "invalid": sum(1 for e in game.record if e.get("invalid")), "prefix_steps": len(observes) - 1,
             "seconds": round(time.perf_counter() - t0, 1), "usage": usage, "texts": texts[-3:],
+            "text_chars": sum(len(t) for t in texts), "replies": replies,
             "tools": [e["tool"] for e in game.record]}
 
 
