@@ -1,7 +1,7 @@
 {
  "kingjinsight/techarena-uk-2026": {
   "sha": "e6c33cbde514792006fb70c824a8f5242a704a04",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": [
    {
     "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
@@ -98,7 +98,7 @@
  },
  "krsnkkv/ksl_techarena": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -111,7 +111,7 @@
  },
  "krsnkkv/techarena-career-simu": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -124,7 +124,7 @@
  },
  "shriyasaxena/techarena-career-simu": {
   "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -137,42 +137,42 @@
  },
  "lrado-253/ksl-techarena": {
   "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "artepace/slopathone_winningteam": {
   "sha": "e7354810ce161485f7156ab3875dc727b5a22fbc",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "peidi-l/preliminary": {
   "sha": "00d9008576aed09825cb73b9880e3cf32c184cfd",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "ray23257/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "yulong111/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "bernardoguterres/huawei-gradient-depression": {
   "sha": null,
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "rickyyyy-bit/techarena-huawei": {
   "sha": "373a56cdc2b1650890d13375c7e3feb3997085e0",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "colinfornia/techarena-project": {
   "sha": "b74a7ffc5d185a7a0c15a05eab05493dc0bb0244",
-  "visto": "2026-10-29T09:09Z",
+  "visto": "2026-10-29T10:35Z",
   "scores": []
  },
  "clasificacion": [
@@ -793,6 +793,14 @@
    "Cut-off 2": "—"
   },
   {
+   "equipo": "Hinton's CaucAsian Homies",
+   "creado": "2026-09-25",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
    "equipo": "christyww's team",
    "creado": "2026-10-07",
    "puesto": "—",
@@ -851,6 +859,22 @@
   {
    "equipo": "YanYing Tech",
    "creado": "2026-10-17",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "mxa2098's team",
+   "creado": "2026-10-18",
+   "puesto": "—",
+   "Score": "0",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
+   "equipo": "ALKK's team",
+   "creado": "2026-10-20",
    "puesto": "—",
    "Score": "0",
    "Cut-off 1": "—",
@@ -1011,14 +1035,6 @@
   {
    "equipo": "Roonila's team",
    "creado": "2026-09-24",
-   "puesto": "—",
-   "Score": "0",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Hinton's CaucAsian Homies",
-   "creado": "2026-09-25",
    "puesto": "—",
    "Score": "0",
    "Cut-off 1": "—",
@@ -1561,14 +1577,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "mxa2098's team",
-   "creado": "2026-10-18",
-   "puesto": "—",
-   "Score": "0",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Sakshi's team",
    "creado": "2026-10-18",
    "puesto": "—",
@@ -1618,14 +1626,6 @@
   },
   {
    "equipo": "jayajad's team",
-   "creado": "2026-10-20",
-   "puesto": "—",
-   "Score": "0",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "ALKK's team",
    "creado": "2026-10-20",
    "puesto": "—",
    "Score": "0",
