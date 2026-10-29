@@ -82,8 +82,10 @@ La sonda reconstruye la petición exacta del runner (mensaje de sistema de Jiuwe
 | `calidad/v4-c5` | 64,0 · 65,3 | 68,7 · 69,7 |
 | `cp-v1` | 64,7 | 62,3 |
 | `cp-v2` | 63,3 | 61,0 |
+| `calidad/v4-c5` (tercer lote) | 62,7 | 64,0 |
+| **`cp-v4`** (mismas reglas, texto más corto) | **64,0** | **69,3** |
 
-Sonnet baja 6–8 puntos (≈ −0,7 de versión) y repite tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto; medido en §5.2 cuando termine.
+Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada de historias es densa, el arranque atascado y «Best» parecen mecánicas inventadas, la línea de L4 es rígida. `cp-v4` reescribe lo mismo más corto (2.421 palabras) y en su lote queda igual o por encima de c5 con los dos jueces. El juez se mueve ±5 entre lotes: léase «no baja». **El texto a entregar es el de `cp-v4`**; falta comprobar en el banco de DeepSeek que elige como cp-v3 (en curso).
 
 ### 5.3 Banco de DeepSeek: ¿cambian las elecciones? (`scripts/deepseek/bench.py`, 69 situaciones de hacia-80: 40 de control y 29 de control de riesgo; 0,12 USD por brazo)
 
@@ -103,7 +105,7 @@ Sonnet baja 6–8 puntos (≈ −0,7 de versión) y repite tres quejas: la casca
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
 - Sondas `turnprobe` (8 tandas): ~0,21 USD. Banco `ds-cp1b`: 0,12. Bancos `ds-v4-rep2` y `ds-cp3`: ~0,25 (en curso). Partida `cp-v3`: pendiente de `total_cost`.
 
-## Relevo (29 oct, 03:20 UTC)
+## Relevo (29 oct, 02:10 UTC)
 1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2): el coste es cuadrático en las llamadas, y el modelo escribe menos de lo que parecía (el texto en inglés de las trazas es razonamiento oculto). Prueba del runner con un modelo falso (§3): varias llamadas por respuesta se ejecutan en orden. Manual `cp-v1`→`cp-v4` (§4) y sondas con DeepSeek (§5.1): el silencio y las notas cortas se obedecen; las dos llamadas por respuesta, en el banco sí y en la sonda no. Juez (§5.2): Sonnet baja 6–8 puntos; `cp-v4` lo intenta arreglar. Banco (§5.3): elecciones iguales al 90 %, pérdida algo mayor, ruido por medir.
 2. **Resultados.** Tablas de §2–§5. Datos: `~/careerlab-data/comprobante/` (sondas, probe falso, ids), `~/careerlab-data/deepseek/runs/ds-cp1b` (banco), partida en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-b37dbff8-*`. Juez en `lab/reports/deepseek/comprobante-data/`.
 3. **A medias.** La partida de medición; los dos bancos de ruido; el juez de `cp-v4`. No hay aún recomendación de corte.
