@@ -7,7 +7,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts/transmision'))
 import runbench as RB
-DATA=Path.home()/'careerlab-data/deepseek/gpt-decision-audit'
+from datapaths import deepseek_dir as _dsdir
+DATA=_dsdir()/'gpt-decision-audit'
 REPORT=ROOT/'lab/reports/deepseek/gpt-principios'
 ARMS={'native':'native-craft-v1','audit':'decisional-check-v1','repeat':'native-craft-v1'}
 

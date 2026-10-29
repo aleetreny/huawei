@@ -1,0 +1,14 @@
+base [exact]                       Q 59.36±0.35 | L6+  16% | pasa L1  91% -> Q  63.2, L6+  17% | Skill fin 117.8 | {'dismissed': 175, 'ok': 1608, 'trust': 179, 'broke': 10, 'health': 28}
+                                   ascensos m6:73% m12:75% m18:55% m24:45% m30:19% m36:24% m42:39% m48:35%
+rt=safe0 [exact]                   Q 57.91±0.35 | L6+  13% | pasa L1  90% -> Q  61.8, L6+  14% | Skill fin 115.9 | {'dismissed': 183, 'ok': 1559, 'trust': 221, 'health': 26, 'broke': 11}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:19% m36:22% m42:37% m48:33%
+rt=safe0+all [exact]               Q 57.91±0.35 | L6+  13% | pasa L1  90% -> Q  61.8, L6+  14% | Skill fin 115.9 | {'dismissed': 183, 'ok': 1559, 'trust': 221, 'health': 26, 'broke': 11}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:19% m36:22% m42:37% m48:33%
+rt=safe0+lv2 [exact]               Q 57.91±0.35 | L6+  13% | pasa L1  90% -> Q  61.8, L6+  14% | Skill fin 115.9 | {'dismissed': 183, 'ok': 1559, 'trust': 221, 'health': 26, 'broke': 11}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:19% m36:22% m42:37% m48:33%
+rt=safe0+all+lv2 [exact]           Q 57.91±0.35 | L6+  13% | pasa L1  90% -> Q  61.8, L6+  14% | Skill fin 115.9 | {'dismissed': 183, 'ok': 1559, 'trust': 221, 'health': 26, 'broke': 11}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:19% m36:22% m42:37% m48:33%
+rt=safe0+all+lv2+dprot=7 [exact]   Q 58.01±0.35 | L6+  13% | pasa L1  91% -> Q  61.7, L6+  14% | Skill fin 115.7 | {'dismissed': 175, 'ok': 1562, 'trust': 224, 'health': 30, 'broke': 9}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:19% m36:22% m42:38% m48:33%
+qskill=4+dprot=7+rt=safe0+all+lv2 [exact] Q 58.77±0.36 | L6+  23% | pasa L1  91% -> Q  62.5, L6+  25% | Skill fin 124.5 | {'dismissed': 175, 'ok': 1549, 'trust': 222, 'health': 45, 'broke': 9}
+                                   ascensos m6:73% m12:75% m18:54% m24:44% m30:21% m36:29% m42:36% m48:37%

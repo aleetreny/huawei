@@ -6,6 +6,8 @@ Rama `alejandro/deepseek`, Mac de Alejandro (donde está la clave). Encargo: [pr
 
 ## Conclusiones (27 oct, 20:05 UTC)
 
+**28 oct: [hacia-80.md](hacia-80.md).** Una media de 80 está por encima del techo (jugador perfecto: 72,4). Hoy: auditoría de 419 decisiones reales y banco. `t13-read-v8`, `perceive-v5` y `t13-read-v9` descartados, sin partidas (1,6 USD). `t13-read-v4` sigue siendo el mejor. Siguiente paso: trimestre por script.
+
 **Lo más importante: primeras partidas completas de DeepSeek.** `t13-read-v4` saca **71,67** y `t13-read-v5` 66,71 (48 meses, L5, riesgo 0, Health y Dignity al máximo). Antes de hoy, las tres partidas oficiales de DeepSeek habían acabado eliminadas. **Manual recomendado para el corte 1: [`t13-read-v4`](../../policies-src/deepseek/t13-read-v4/)** (commit `09d5735`). Detalles en [mejora-nota.md](mejora-nota.md).
 
 Lo aprendido antes, con el banco y el simulador:
@@ -56,6 +58,8 @@ Presupuesto de la línea: 5 USD (parar a 3 y preguntar). Saldo de la clave al em
 - Datos fuera de Git (llevan texto del juego): `~/careerlab-data/deepseek/` (respuestas de DeepSeek, etiquetas, ejecuciones del banco).
 
 ## Relevo
+
+**28 oct, sustitutos:** [sustitutos.md](sustitutos.md). El más parecido a DeepSeek es Sonnet 5 (95 sobre 100); para Output gratis, Qwen local. Haiku 5.5, el que usábamos, ve Output mejor que DeepSeek. No se han buscado más créditos gratis: Azure for Students tiene cuota 0 para DeepSeek (denegada), y los regalos chinos o de terceros son de V4.1 o no llegan a una partida. Pendiente: créditos de Google Cloud (1.500 €) para montar el modelo de abril en 8 × H100; falta que se carguen y la cuota de GPU.
 
 **27 oct, clave propia:** preparada sin comprar ([clave-propia.md](clave-propia.md)); el archivo `~/careerlab-data/own-openrouter/.env` espera la clave.
 
@@ -112,3 +116,27 @@ Read the supplied public handbook/rules and current manual including its review 
 ## Auditoría desde principios básicos — objetivo75 de partida
 
 [Informe, datos y Relevo](gpt-principios/README.md), rama `alejandro/gpt-principios`. Búsqueda pública, recuperación reproducida y pruebas offline sin nuevas llamadas: magnitud de riesgo interactúa con el controlador; el beneficio del margen prudente no supera al veto conocido al retirar contexto ideal. Ningún75 estable demostrado. No sustituir t13-read-v2. Objetivo abierto.
+
+## Relevo — datos en Git (29 oct)
+
+**Qué se ha subido.** Todo lo de DeepSeek que sólo estaba en este Mac, con el texto del juego incluido, en [`lab/data/deepseek/`](../../data/deepseek/README.md) (25 MB, 282 archivos, ninguno de más de 50 MB):
+- **Partidas oficiales:** las 21, con sus registros, notas y fichas por llamada. Entre ellas, seis partidas cortadas que se daban por perdidas; su registro en bruto seguía en los huecos del programa. Una es la de `t13-read-v3`, que llega al mes 48 en L5.
+- **Tablas resumen:** `partidas.csv` y `decisiones.csv.gz` (2.831 decisiones).
+- **Bancos:** los 11 brazos.
+- **Percepción:** las etiquetas y las lecturas en bruto.
+- **Otros datos:** las listas de situaciones, el registro de llamadas, los datos de gpt-principios y de los sustitutos, y lo medido del programa con el modelo falso.
+
+Decisión del equipo (NORMAS §1.6, cambiada hoy). Antes de subir se buscaron claves, cabeceras de autorización y rutas personales, también dentro de los comprimidos: no queda ninguna.
+
+**Qué no se ha subido y por qué:**
+- **Claves** (`nim.env`, `own-openrouter/.env`): nunca van a Git.
+- **Instalaciones del programa oficial** (9–15 GB): son software y se reinstalan.
+- **`items.jsonl`:** se rehace del banco.
+- **Vídeo y ZIP del corte 1:** copiados a iCloud Drive (`huawei-entrega-copia/cut1`).
+- **Partidas con Claude del laboratorio local:** no son de DeepSeek.
+
+Detalle en la §5 de su README.
+
+**Cómo se usa.** `scripts/deepseek/export_data.py` rehace la carpeta desde `~/careerlab-data`. `scripts/deepseek/datapaths.py` hace que los scripts lean la copia de Git cuando no está el Mac, y `materialize` rehace la estructura antigua. Comprobado: el banco v4 frente a v9 da lo mismo con la copia, y `real_audit.py` lee los `.gz`.
+
+**Siguiente paso.** Quien juegue o pase un banco nuevo vuelve a exportar y sube.

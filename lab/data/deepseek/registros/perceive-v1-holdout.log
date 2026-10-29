@@ -1,0 +1,12 @@
+perceive v1 r1 holdout: 114 questions, 114 to run
+  25/114 spent 0.4889 USD
+  50/114 spent 0.4912 USD
+  75/114 spent 0.4935 USD
+  100/114 spent 0.4966 USD
+done; line spend (logged) 0.5005 USD
+perceive v1 r2 holdout: 114 questions, 114 to run
+  25/114 spent 0.6957 USD
+  50/114 spent 0.6978 USD
+  75/114 spent 0.7001 USD
+  100/114 spent 0.7030 USD
+done; line spend (logged) 0.7054 USD

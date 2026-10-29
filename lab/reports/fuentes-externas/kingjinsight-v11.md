@@ -92,5 +92,45 @@ Hecho: lectura completa del repo, tabla de notas, arquitectura, contraste con HA
 ## Vigilancia periódica (desde el 28 oct)
 
 - `scripts/fuentes-externas/vigilar.py` revisa cada repo de `fuentes.json` con `git ls-remote`. Si cambia, lo clona en `~/ext/` y saca las notas de sus `score_report.json`. El último estado visto queda en `estado.json`. No ejecuta nada de esos repos.
-- Una revisión programada lo corre cada 6 horas, busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS.
-- La clasificación oficial (`techarena-uk.hydro.ac`) no se puede leer desde la nube mientras ese dominio no esté permitido en los ajustes de red del entorno.
+- Una revisión programada lo corre una vez al día (19:43, hora UK), busca repos nuevos y, si hay algo de valor, lo pasa a HALLAZGOS. Hay otra el 31 oct, tras el corte 2.
+- **Clasificación oficial:** desde el 28 oct a las 19:30 UTC el dominio está permitido. `vigilar.py` la lee como JSON (cabecera `Accept: application/json`) y guarda sólo equipo, puesto y notas. El JSON de Hydro trae también correos, IP y códigos de invitación de cada equipo, y eso no se guarda. Los nombres de equipo que son un correo se guardan como «(correo)».
+- El 28 oct había 227 equipos y ninguno tenía aún nota del corte 1.
+- **Hay dos equipos llamados «Gradient Depression».** El nuestro es el creado el 21 oct; el otro se creó el 24 oct. Cada uno tiene tres miembros. `vigilar.py` distingue el nuestro por la fecha de creación.
+
+## Barrido amplio (28 oct, 18:30 UTC)
+
+En resumen, lo único con valor sigue siendo Kingjinsight (secciones 1–5, C37–C42). Lo demás está vacío o no tiene que ver con el reto.
+
+- **Nuevas:** `rickyyyy-bit/TechArena-Huawei` («Jon8652's team») sólo tiene dos Skills preliminares genéricos, sin partidas, porque no tenían clave. `Colinfornia/Techarena-Project` sólo tiene un README vacío. Las dos se vigilan. `Sherlock-shy` y `QuantumBitstream` son forks del repo oficial sin cambios.
+- **Sin cambios:** KSL (las cuatro copias), Artepace y peidi-L. Ray23257, YuLong111 y bernardoguterres siguen privadas. No hay versiones nuevas de los paquetes del motor en PyPI desde el 25 oct.
+- **Kingjinsight coincide con nuestra réplica:**
+  - Sus topes medidos en L1 (O3 N3 S9) cuadran con lo nuestro.
+  - Su «Skill ≥ ~90 y nota A para pasar de L4 a L5» coincide con `THRESH[4]` (Skill 90).
+  - Su escalera de frases de RR. HH. y su fórmula de nota leída del log no aportan nada que la réplica no tenga.
+- **Sin resultado:**
+  - GitHub: búsquedas por techarena, tech-arena, techarena-uk, jiuwenswarm, career survival y career sim, nombres de repo adivinados, y los forks y perfiles de los equipos conocidos.
+  - Web, en inglés y en chino: LinkedIn, YouTube, Medium y Bilibili.
+  - Sin relación con el reto: otros retos de TechArena (CTR y otros) y la edición 2025.
+- **No accesibles desde la nube:** huggingface.co, gitee.com, gitlab.com, reddit.com, techarena-uk.hydro.ac y la documentación en readthedocs. La API de GitHub tampoco; se usan `git ls-remote` y clones.
+
+## Primera revisión diaria (28 oct, 19:45 UTC)
+
+No hay nada nuevo: los repos no han cambiado y la clasificación sigue sin notas.
+- **Hugging Face** (modelos, datasets y spaces; búsquedas techarena, career-survival, jiuwen y career_emu): nada del reto.
+- **Gitee** (API de búsqueda): nada. Algunas consultas cortan la conexión.
+- **Reddit:** la API JSON no se puede usar desde la sesión, porque el clasificador de permisos la bloquea como bot, y el buscador web no indexa reddit.com. Queda sin cubrir.
+
+## Revisión del 29 oct (madrugada)
+
+Hay tres repos con commits nuevos y ninguno aporta nada:
+- **Artepace** ha subido su v3 en un ZIP: cuatro Skills, documentos y nada de notas.
+- **rickyyyy-bit** (Jon8652's team) tiene su v3: una partida local de 64,52 en L5, con 48,6 M de fichas. Les falta el vídeo para que la entrega sea válida.
+- **peidi-L** ha refinado el preliminar.
+
+La clasificación sigue sin notas.
+
+**Fuente de datos sin explotar: las 13 partidas de Kingjinsight.** Son partidas reales de DeepSeek. Cada una trae `events-*.jsonl` con todas las llamadas (unas 790 `tool_call`/`tool_result` en una partida de 48 meses), las fichas de entrada y salida, y el registro de `check_latest_logs` con lo que cambió cada elección. Ejemplos de fichas:
+- su v3.1: 45,6 M en total, de las que sólo 98 mil son de salida, 0,95 M por mes;
+- nuestra v4: 1,35–1,47 M por mes.
+
+Esos datos pueden servir para calibrar la lectura simulada de DeepSeek de las líneas Suelo y Techo y para medir de qué está hecho el historial. Son texto del juego: no van a Git.

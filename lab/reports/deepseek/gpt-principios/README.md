@@ -28,6 +28,9 @@ Los planes detallados, resultados y comprobaciones de integridad están en los a
 
 ## Relevo
 
+29 oct: [diagnóstico de errores compartidos](shared-reading-errors.md). Dos lecturas repiten 192 de los 285 errores iniciales de Output y 151 de los 185 de riesgo positivo. La siguiente prueba debe cambiar la representación de las alternativas y medir valor de carrera. C40 ya está descartado en main. Se solicita integrar este diagnóstico; no hay un candidato nuevo validado.
+
+
 Se ha integrado main y reescrito la documentación de la PR #23. HALLAZGOS conserva la versión de main, sin duplicar las antiguas filas C24–C31; ESTADO contiene una sola línea de apoyo. La validación completa pasa con 313 tests y un aviso preexistente de Authlib. La revisión de los archivos JSON y comprimidos no encontró narrativas del juego. Se solicita integrar esta PR en main tras su revisión.
 
 La comparación de 48 lecturas de Sonnet ya terminó. Con memoria de retornos, las pérdidas evitables pasaron de 2 a 3 y el riesgo se mantuvo en 2; una señal de agotamiento de salud presente en el control desapareció. Es una comparación de decisiones aisladas, no una mejora de carrera, y no justifica promover el paquete. El resultado está en `return-packet-probe-results.json`. No quedan actores de esta tanda que reanudar.
