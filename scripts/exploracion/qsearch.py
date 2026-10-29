@@ -85,13 +85,19 @@ def score(spec, games, seed):
     return float(np.mean([r["q"] for r in out])), out
 
 
-def search(games=1500, seed=777, base_extra="beta=v4fam+qh=5"):
+GRID = [(("RRR", "RNR", "RNN"), ("KP", "REP", "MEN")),
+        (("RNR", "RRR", "RNN", "SLN", "SLR"), ("KP", "ROT", "MEN")),
+        (("SLN", "SLR", "RNR", "RRR"), ("ROT", "KP")),
+        (("SLN", "SLR", "RRR", "RNR"), ("ROT", "KP"))]
+
+
+def search(games=1200, seed=777, base_extra="beta=v4fam+qh=5", rounds=1):
     ep = ["RRR", "RNR", "SLN", "SLN"]; mp = ["KP", "KP", "ROT", "ROT"]
     best = None
-    for rnd in range(2):
+    for rnd in range(rounds):
         for b in range(4):
             res = []
-            for e, m in itertools.product(EPLANS, MAINS):
+            for e, m in itertools.product(*GRID[b]):
                 ep2, mp2 = list(ep), list(mp)
                 ep2[b], mp2[b] = e, m
                 spec = f"{base_extra}+ep={'.'.join(ep2)}+mp={'.'.join(mp2)}"

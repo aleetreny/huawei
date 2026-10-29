@@ -1,0 +1,14 @@
+{
+  "family": "exploracion",
+  "name": "ex-v1",
+  "parents": [
+    "cp-v12"
+  ],
+  "idea_origin": "Exploración line, 29 Oct: replica calibrated on the 2,743 real DeepSeek story decisions (choice model, scripts/exploracion/); quality judge on cp-v12",
+  "operator": "cp-v12 rules and turn loop + quarterly changes backed by the calibrated replica + rewrite for the quality rubric",
+  "hypothesis": "Same story behaviour as cp-v12 (story steps unchanged in substance), better quarters: Prepare report materials with every free Energy point at the starting level, Health recovery from Health 5 (not 4), Skill learning only above Health 5, plus a hard Health brake in stories at Health 3 or below. Calibrated replica: +1.4 over cp-v12 rules (fewer Health deaths). Quality: phased 48-month plan, near-limit table, observations marked as ours.",
+  "predicted_behaviour": "Pairing as cp-v12 (turn loop text unchanged); quarters at the starting level all to reports; no Health death; game scores like the family with fewer sinks by Health.",
+  "refutation": "Pairing below 90 % in sondas (the loop section changed one note field), or choices on the L1 bank beyond v4 repeat noise, or Health deaths in games.",
+  "skill_count": 1,
+  "change": "cp-v12 -> ex-v1: status line without 'Reviews here' (stalled start read from Months at current level); quarterly lines renumbered (removed the review-talk line, which never fired in our games, C57), line 2 margin Health 5, starting-level quarter to reports, levels 2-3 quarter in v4 order; story step 3 adds a Health 3 brake; 48-month table, review calendar and near-limit table rewritten as observations."
+}
