@@ -134,3 +134,34 @@ La clasificación sigue sin notas.
 - nuestra v4: 1,35–1,47 M por mes.
 
 Esos datos pueden servir para calibrar la lectura simulada de DeepSeek de las líneas Suelo y Techo y para medir de qué está hecho el historial. Son texto del juego: no van a Git.
+
+## Notas oficiales del corte 1 (29 oct)
+
+En resumen: quedamos 13.º con 64,75. Sólo 34 de los 227 equipos tienen nota mayor que 0, y el top 10 empieza en 68,17. Lo que nos separa de los primeros es sobre todo el juego (HALLAZGOS C45).
+
+| Puesto | Equipo | Nota |
+|---:|---|---:|
+| 1 | ShenzhenFan01's team | 75,99 |
+| 2 | gengyuan's team | 74,59 |
+| 3 | ruifeng's team | 72,51 |
+| 4 | aman_abdulsalam's team | 71,99 |
+| 5 | ShanshanMao's team | 71,77 |
+| 6 | PHP Security | 71,72 |
+| 7 | MattKep7777's team | 70,88 |
+| 8 | Yuanyuan's team | 70,59 |
+| 9 | Sky's team | 69,87 |
+| 10 | manocw's team | 68,17 |
+| 11 | Chinese can fly | 67,40 |
+| 12 | IQ2 Only | 65,86 |
+| **13** | **Gradient Depression** (el nuestro, creado el 21 oct) | **64,75** |
+| 17 | Saul Goodman (Kingjinsight) | 56,69 |
+| 18 | KSL | 56,00 |
+| 26 | Gradient Depression (el otro, homónimo) | 46,78 |
+
+Lectura:
+- **Nuestra nota.** Con calidad ~65 y fichas ~63 (v4), 64,75 implica una media de partidas de ~65. Es justo lo que esperábamos de v4 contando un hundimiento cada ~9 partidas, así que el juego de evaluación no parece muy distinto del de desarrollo.
+- **Lo que hace falta para llegar arriba.** Para 75,99 hace falta una media de partidas de ~73–74 aunque las fichas y la calidad fueran casi perfectas. El líder juega mejor; no sólo gasta menos.
+- **Con `cp-v10`.** Con fichas ~97 y las mismas partidas, quedaríamos en ~68: en el borde del top 10, que subirá tras el corte 2.
+- **Kingjinsight.** Su v3.1 sacó 56,69 oficial, ~10 puntos de media de partidas por debajo de sus partidas locales: una partida oficial mala pesa mucho.
+
+La búsqueda de los repos de los diez primeros está en marcha.

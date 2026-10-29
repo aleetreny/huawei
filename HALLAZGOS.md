@@ -41,14 +41,14 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Techos y estancamiento | B5, B22, B23, B38, C18 |
 | Percepción de DeepSeek | A6, B7, B17, B18, B19, B21, B26, C4, C11, C12, C26, C27 |
 | Cómo obedece la IA el manual | A7, B10, B11, B12, B13, B20, B23, B25, C2, C5, C6, C7, C8, C13, C21 |
-| Partidas con DeepSeek | C3, C18, C19, C22, C23, C35 |
+| Partidas con DeepSeek | C3, C18, C19, C22, C23, C35, C45 |
 | Partidas con Claude | C1, C15, C33, C36 |
 | Fichas (10 %) | C10 (corregido por C31), C17, C22, C31, C43 |
 | Calidad del SKILL.md (10 %) | C24, C25, C32 |
 | Programa oficial (JiuwenSwarm) | B10, B25, B27, C17, C22, C43 |
 | Réplica, bots y método | B1, B3, B9, B14, B26, C16, C20, C28, C44 |
 | Normas y cumplimiento | C34, C37, C38 |
-| Otros equipos | C37, C39, C40, C41, C42 |
+| Otros equipos | C37, C39, C40, C41, C42, C45 |
 | Descartado | sección X |
 
 
@@ -208,6 +208,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | C42 | `DeepSeek, otros equipos` **Ningún repo público de otro equipo muestra una media estable por encima de 70 ni llega a L6.** Kingjinsight: 73,1 en una partida (C37); Artepace: 68,6 en una partida de su primera versión; KSL: 57,38 en L4. Todos acaban en L5 o menos y tienen la misma varianza que nosotros. Del de Artepace vale la forma del informe de decisiones (principios, qué está validado y qué no) como modelo para el jurado. | [fuentes-externas](lab/reports/fuentes-externas/kingjinsight-v11.md) |
 | C43 | `Programa (situaciones grabadas)` **Lo que pesa cada llamada en el contexto que no se comprime (C17):** la respuesta de `observe` ocupa ~1.200 caracteres en una historia y ~2.400 en una fase trimestral; cada entrada del registro, ~320, así que un `check_latest_logs` de 30 entradas mete ~10.000 caracteres (≈ 2.500 fichas) de golpe, lo que diez decisiones. Desde el Skill sólo cabe pedir un `observe` por decisión, `check_latest_logs` sólo sin la nota a la vista y con pocas entradas, y notas cortas; no se ha medido si DeepSeek lo obedece. | [suelo](lab/reports/suelo/README.md) §3 |
 | C44 | `Haiku, banco` **Las reglas del suelo no cambian lo que elige Haiku; sólo DeepSeek puede confirmarlas.** En un banco de 176 situaciones trampa (L1 tras dos evaluaciones sin ascenso, mes previo en L1, todas las opciones arriesgadas, tras una explosión), Haiku elige lo mismo con `v4-c5`, `suelo-v1` y `suelo-v1-min` en el 95 % de los casos (repetir v4 da 92 %, C24) y sigue tomando «lo abierto y documentado» aunque sea el riesgo mayor (una carta firmada a la dirección, +3, frente a una salida discreta, +1). Sí rellena desde cero los campos nuevos de la nota («Reviews here: 2» en los meses 13–17 de L1) y escribe notas un 30 % más cortas con `suelo-v1`. El juez de calidad da a `suelo-v1-min` 62/66 (Haiku/Sonnet) frente a 61/63 de v4-c5, y a `suelo-v1` 54/62: la línea de estado de siete campos cuesta. | [suelo](lab/reports/suelo/README.md) §5 |
+| C45 | `Juego oficial, corte 1` **La nota oficial de v4 (64,75, puesto 13 de 34 con nota) cuadra con lo que esperábamos de nuestras partidas: el juego de evaluación no parece muy distinto del de desarrollo, y lo que nos separa de arriba es el juego, no sólo las fichas.** Con calidad ~65 y fichas ~63, 64,75 implica una media de partidas de ~65. Es justo la esperanza de v4 con 1 de cada ~9 hundidas (suelo §1, 64–66), y descarta que las tres partidas terminaran como las nuestras (~71). El primero (75,99) necesita una media de partidas de ~73–74 aunque tuviera fichas y calidad casi perfectas. El top 10 empieza en 68,17: con el bucle de fichas (+3,3) y las mismas partidas, quedaríamos en ~68, justo en el borde. Saul Goodman (Kingjinsight, C37) sacó 56,69 con su v3.1, unos 10 puntos de media de partidas por debajo de sus dos partidas locales (68,81 y 58,87). | [clasificación oficial](https://techarena-uk.hydro.ac/contest/6aad0b0020562bf065d1654f/scoreboard), `lab/reports/fuentes-externas/estado.json` |
 
 ## X. Descartado (no repetir sin una razón nueva)
 
