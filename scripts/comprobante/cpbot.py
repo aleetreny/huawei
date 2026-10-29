@@ -17,6 +17,7 @@ class CPBot(T.V4Bot):
         self.lockdown=bool(f.get('lockdown',False)) # after a blow-up: HR remark read one step worse for the rest of the run
         self.lockq=bool(f.get('lockq',False))       # after a blow-up: Defuse+Lay low every quarter only (stories unchanged)
         self.atpromo=None
+        self.q1out=bool(f.get('q1out',False))   # level 1: Energy to Prepare report materials (x3), main action key project
         self.rfnarrow=int(f.get('rfnarrow',0))  # N=1 exception narrowed: loss-free options kept only if their risk <= this (replica risk units); 0 = wide (base)
         self.rf2=bool(f.get('rf2',False))   # review-first (step 4 before risk) also at N=2 when HR friendly, counter 0
         self.rf2l1=bool(f.get('rf2l1',False)) # same, only at level 1
@@ -100,6 +101,8 @@ class CPBot(T.V4Bot):
             return super().energy(rep,st)
         if hr!=FRIENDLY and e==3:
             return "Defuse legacy risk"
+        if self.q1out and st.level==1 and e>=1:
+            return "Prepare report materials" if st.output<R.cap(1,'output') else ("Network maintenance" if st.network<R.cap(1,'network') else "Health recovery" if st.health<10 else "Prepare report materials")
         if st.level>=self.qskill or (self.qoracle or self.qlag) and st.level>=4:
             tgt=self._target(st) if (self.qoracle or self.qlag) else None
             if tgt is None and self.l5q and st.level>=5:

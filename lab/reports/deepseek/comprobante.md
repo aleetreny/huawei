@@ -352,6 +352,33 @@ Lo que cambia respecto a cp-v5a y debe decir `skills_design.md` (en inglés), si
 4. **Evidencia que se puede citar:** cp-v5a 66,27 · 65,10 · 68,13 con 615–654 mil fichas por mes (sus tres partidas son del padre, no de cp-v10); cp-v10: 8 de 8 sondas ancladas emparejan (5 en un proveedor sin razonamiento, 3 en uno con razonamiento) frente a 3 de 6 de cp-v5a el mismo día, y la partida de confirmación de §6.10. Las reglas de historias son las de v4-c5 + t0 + suelo-v1-min, sin cambios desde cp-v5a.
 5. **Lo que no se dice:** nada de proveedores concretos ni de contar con uno; nada de umbrales; el calendario de evaluaciones y el tamaño del riesgo van como observaciones de nuestras partidas.
 
+### 6.13 Segunda partida de cp-v10 (pedida por Alejandro, 29 oct 14:30 UTC: «olvídate del corte, quiero ver cómo actúa en partidas completas»)
+
+Predicción antes de lanzarla: la pareja de llamadas en ≥ 90 % de las respuestas de historia sea cual sea el proveedor; si el proveedor no sirve razonamiento, narración de ~250 fichas por decisión y 0,5–0,7 M de fichas por mes; si sirve, silencio y ~0,6 M. Juego: la misma familia (ascenso en el mes 6 con ~70 % de probabilidad; L4 en el 24–30; trimestres de L4 con Skill learning y rotación; **si llega a L5, trimestres con Skill learning + Prepare report materials + Apply for a key project**, que es la regla nueva que sólo una partida completa puede enseñar; si hay una explosión, Defuse y Lay low cada trimestre después). Lo que no decide: ninguna regla cambia por su nota (regla 1); lo que sí enseña: si las dos reglas de trimestre y cierre se ejecutan cuando toca, y el coste real de fichas de una partida completa narradora.
+
+### 6.14 Los primeros seis meses de las 14 partidas con registro, y una regla de trimestre que sale de ahí
+
+| Partida | Mes 6 | Health m1–m6 | Output m1–m6 | Trimestre del mes 3 |
+|---|---|---|---|---|
+| v4 71,67 | sube | 5 4 5 4 2 7 | 0 1 1 3 3 5 | Health, Network, Network + proyecto |
+| v4 70,22 | sube | 4 6 8 7 7 7 | 0 −1 1 3 3 5 | Network, informe, Health + proyecto |
+| v7 67,27 | sube | 6 5 6 6 5 7 | 1 3 3 3 3 6 | Health, Network, informe + proyecto |
+| v5 66,71 | sube | 6 7 5 6 3 4 | 0 1 1 3 3 5 | Skill learning, Network + proyecto |
+| cp-v5a 66,27 | **no** | 4 3 6 6 5 6 | 0 3 3 3 3 3 | Health, Network, informe + proyecto |
+| cp-v5a 65,10 | **no** | 5 6 5 5 3 8 | 2 3 3 3 3 3 | Network, Skill learning + proyecto |
+| cp-v5a 68,13 | sube | 5 4 6 6 3 5 | 0 −1 0 3 3 4 | Health, Network, Network + proyecto |
+| cp-v7 62,25 | **no** | 5 4 6 6 6 5 | 1 1 2 3 3 3 | Health, Network, Network + proyecto |
+| cp-v7 69,88 | sube | 4 4 6 6 6 5 | 0 0 3 3 3 3 | Health, Network, informe + proyecto |
+| cp-v7 28,56 | sube | 5 5 5 5 5 5 | 2 3 3 3 2 3 | Health, Network, informe + proyecto |
+| cp-v8 68,20 | sube | 5 4 5 5 6 8 | 0 0 0 3 3 2 | Network, informe, Network + proyecto |
+| cp-v8 28,28 | **no** | 4 1 7 7 7 7 | 0 −1 −1 2 2 3 | Health, Health, Network + proyecto |
+| cp-v10 22,98 | **no** | 4 4 5 4 4 2 | 0 0 2 2 2 3 | Skill learning, Network + proyecto |
+| cp-v3 56,92 | **no** | 4 4 5 4 4 8 | 1 3 3 3 3 1 | Health, Network, informe + Lay low |
+
+- **Network llega a su tope del nivel inicial en el mes 1–2 y Skill en el 3–4; Output es el rezagado:** llega al umbral en el mes 4 en seis partidas y en el mes 6 en las tres atascadas (en dos de ellas bajó a −1 en el mes 2). El trimestre del mes 3 gasta casi siempre en Network maintenance con Network ya en el tope (inútil) y Health recovery; sólo seis de catorce incluyen un informe.
+- **De los seis ascensos perdidos en el mes 6:** cuatro tienen una pérdida de Network u Output en una historia del mes 5 (la trampa estructural, §6.3), y dos (cp-v8 n.º 2 y cp-v10) llegaron al mes 5 con Output en 2 porque nunca lo compraron.
+- **Réplica (`cpbot.py`, flag `q1out`): en el nivel inicial, Energy a Prepare report materials hasta que Output deje de subir (después Network maintenance), proyecto clave de acción principal:** 60,27 frente a 59,83 con lectura exacta (+0,4) y 41,91 frente a 40,86 con la ruidosa (+1,0; error típico 0,4), con el mismo paso de L1 (91 % / 74 %) y sin más crisis. Es una regla de trimestre, así que la réplica es la prueba que pide la regla 3 de §6.8; se escribe en **`cp-v11`** (= cp-v10 + una frase en la línea 7 y en el manifest: «at your starting level, Prepare report materials comes first with every Energy point that lines 2 and 3 leave»). Lint sin errores; juez en `j-cp11.jsonl`. Health sigue teniendo prioridad (línea 2) y el riesgo también (línea 3).
+
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
 - Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas del 29 oct (cp-v9 ×3, cp-v5a control y 6 ancladas, cp-v10 8 ancladas): ~0,24. Bancos `ds-cp9-l1` 0,19, `ds-cp10-l1-GMICloud` 0,10, `ds-cp10-l1-DeepInfra` 0,12. Partidas `cp-v8` n.º 2 0,42 y `cp-v10` 0,28. **Total de la línea: 9.35 USD** (partidas 8.09 + llamadas sueltas 1.26; techo de Alejandro ~15).

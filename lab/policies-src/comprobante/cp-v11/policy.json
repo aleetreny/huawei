@@ -1,0 +1,16 @@
+{
+  "family": "comprobante",
+  "name": "cp-v11",
+  "parents": [
+    "v4-c5",
+    "v4-t0",
+    "suelo-v1-min"
+  ],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter; Leah's branch leah/workspace, not a registered parent)",
+  "operator": "cp-v10 + first-level quarter to Output",
+  "hypothesis": "Output reaches the first promotion bar earlier (month 3 instead of 4-6), so fewer first promotions are lost to a slow Output; nothing else changes.",
+  "predicted_behaviour": "Replica (exact / noisy): +0.4 / +1.0 over cp-v10 rules, L1 pass 91 % / 74 %. In games: Prepare report materials in the month-3 quarter, Output at 3 by month 3-4.",
+  "refutation": "Month-3 quarter without Prepare report materials, or a judge drop of more than 5 against cp-v10, or more month-6 misses than the family (6 of 14) over several games.",
+  "skill_count": 1,
+  "change": "cp-v10 plus one sentence in quarterly line 7: at the starting level, Energy left after recovery and risk goes to Prepare report materials first, then Network maintenance; same in the manifest. Evidence: in 14 real games Network hits its first-level best in month 1-2 and Skill in month 3-4, but Output reaches the bar in month 4 (6 games) or month 6 (the 3 stuck games), and the month-3 quarter mostly bought Health recovery and Network maintenance; replica cpbot q1out: Q +0.4 exact, +1.0 noisy."
+}
