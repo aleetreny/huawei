@@ -1,0 +1,16 @@
+{
+  "family": "comprobante",
+  "name": "cp-v12",
+  "parents": [
+    "v4-c5",
+    "v4-t0",
+    "suelo-v1-min"
+  ],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter; Leah's branch leah/workspace, not a registered parent)",
+  "operator": "cp-v5a rules + cp-v10 turn loop",
+  "hypothesis": "Same play as cp-v5a (identical story and quarterly rules) with a turn loop that pairs take_action + observe whatever the provider, and quarterly menu numbers learned from the run itself. Proposed by Alejandro on 29 Oct after the v8->v11 branch sank 3 of 5 games.",
+  "predicted_behaviour": "Pair in >= 90 % of story replies on any provider; tokens per month under 0.7 M if completed; first quarter in two replies, later quarters in one; story and quarterly choices as cp-v5a (bank within v4 repeat noise). Game scores: the family distribution (about 66 when completed, one sink in five to seven).",
+  "refutation": "Pairing below 60 % in a game, or a quarterly menu error, or choices that differ from cp-v5a on the L1 bank beyond v4 repeat noise.",
+  "skill_count": 1,
+  "change": "cp-v5a with only its Turn loop section and the turn-loop sentences of the manifest replaced by cp-v10's (first three replies spelled out with the Continue screen as the first pair; silence \"if you can\" with the pair independent of text; first quarter Energy -> observe -> main action -> observe, later quarters in one reply). No other text changes: no cp-v8 exception, no level-5 quarter, no post-blow-up rule, no observation rewording."
+}
