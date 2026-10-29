@@ -421,7 +421,7 @@ Alejandro separa lo probado (el bucle) de lo no probado (las reglas de trimestre
 
 **Predicción antes de las partidas (3 si el presupuesto llega, ~0,7 USD cada una completa):** pareja ≥ 90 % de las respuestas de historia con cualquier proveedor; fichas < 0,7 M por mes en las completas; primer trimestre en dos respuestas y el resto en una, sin errores de menú; elecciones de historias y trimestres como cp-v5a (mismo texto). Notas: la distribución de la familia (completas ~62–72, un hundimiento cada 5–7). **Qué se hará según salga:** si la pareja sale y no hay error de menú, cp-v12 pasa a ser la base de cualquier entrega (cp-v5a con el bucle robusto); su media de 3 se compara con la de cp-v5a (66,5) sólo como dato, no como decisión. Si la pareja falla en una partida completa, el bucle de cp-v10 no es tan robusto como dicen las sondas y se vuelve a cp-v5a. Ninguna regla de historias o trimestre cambia por lo que salga.
 
-**Partidas de cp-v12 (hueco 1, una tras otra desde las 16:40 UTC):**
+**Partidas de cp-v12 (hueco 1, una tras otra desde las 16:40 UTC; Alejandro pidió a las 17:30 que no arrancara la tercera: se impidió cambiando un byte del bundle fuente, que `build_solution` rechaza antes de empezar una partida, sin tocar la segunda; el byte se revierte al acabar):**
 
 | # | Nota | Meses | Ascensos | Fichas/mes | Parejas | Razonamiento | Proveedor (por el razonamiento) |
 |---|---:|---:|---|---:|---|---:|---|
