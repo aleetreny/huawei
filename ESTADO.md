@@ -42,6 +42,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en [pendientes.md](lab/reports/deepseek/pendientes.md), con su coste, sus comandos y su regla de decisión.
 
+**Apoyo a DeepSeek (actualización mv-3/mv-4, sin API):** [consistencia de 77,78](lab/reports/deepseek/gpt-principios/mv-3-mv-4-consistencia.md): revisadas nueve intentadas de Mejora desde su worktree; ocho puntuadas (58,095), seis completas (68,12), una L6. Prioridades: modo estricto realmente aplicado y adelantar ascensos sin crisis.
+
 **Apoyo a DeepSeek (29 oct, diagnóstico sin API):** [estancamiento y vías de mejora](lab/reports/deepseek/gpt-principios/diagnostico-estancamiento.md): eficiencia mejorada, juego aún sin superioridad demostrada; control de política/bucle y evaluación de decisiones críticas antes de nuevas versiones.
 
 **Apoyo a DeepSeek:** `alejandro/gpt-principios` (PR #23): [auditoría adversarial del corte 2](lab/reports/deepseek/gpt-principios/auditoria-cut2.md), handbook corregido y documentos cp-v5a actualizados; propuesta trimestral pendiente del comprobador, sin API.
