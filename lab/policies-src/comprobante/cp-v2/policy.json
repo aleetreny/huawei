@@ -1,0 +1,16 @@
+{
+  "family": "comprobante",
+  "name": "cp-v2",
+  "parents": [
+    "v4-c5",
+    "v4-t0",
+    "suelo-v1-min"
+  ],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter; Leah's branch leah/workspace, not a registered parent)",
+  "operator": "merge candidates + new turn loop",
+  "hypothesis": "With one tool call per reply, silence and one-line notes cut what each call adds to the history from ~608 to ~430 tokens and the one-observe quarter removes ~45 calls: ~44 M tokens per game (0.9 M per month, token score ~83) against 65-70 M for v4, with the same decisions.",
+  "predicted_behaviour": "No visible text, notes of one line, 16 quarterly observes instead of ~61, no handbook call, tokens per month under 1.0 M in an official game; same story choices as v4 on the bank within repeat noise; Skill learning and Apply for rotation every quarter from level 4.",
+  "refutation": "DeepSeek keeps one tool call per reply or writes analysis anyway (tokens per month above 1.1 M), or story choices move away from v4 more than a repeat of v4 does, or a missed first promotion or a trust crisis appears that v4 avoids.",
+  "skill_count": 1,
+  "change": "cp-v1 without the two-calls-per-reply demand (DeepSeek keeps one tool call per reply whatever the wording: turnprobe cp-v1, v1b, v1c). Keeps: no written analysis, one-line notes, one observe per quarterly phase, no show_employee_handbook call, four-field status line, c5 text, t0 quarter from level 4, suelo-min stalled start and size of the risk."
+}

@@ -86,7 +86,12 @@ def main():
             news.append(f"clasificación: no se pudo leer ({e})")
             continue
         old = {(r["equipo"], r.get("creado"), r["puesto"]): r for r in state.get("clasificacion", [])}
-        con_nota = [r for r in tabla if any(v not in ("—", "0", "", None) for k, v in r.items() if k not in ("equipo", "creado", "puesto"))]
+        def nota(v):
+            try:
+                return float(v)
+            except (TypeError, ValueError):
+                return 0.0
+        con_nota = [r for r in tabla if any(nota(v) > 0 for k, v in r.items() if k not in ("equipo", "creado", "puesto"))]
         cambios = [r for r in con_nota if old.get((r["equipo"], r["creado"], r["puesto"])) != r]
         if cambios:
             news.append(f"clasificación: {len(con_nota)} de {len(tabla)} equipos con nota; {len(cambios)} filas nuevas o cambiadas")

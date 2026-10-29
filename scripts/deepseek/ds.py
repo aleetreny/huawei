@@ -113,6 +113,8 @@ class DeepSeek:
         if BACKEND == "openrouter" and self._spent >= self.stop_usd:
             raise BudgetStop(f"line spend {self._spent:.3f} USD >= stop {self.stop_usd} USD")
         body: dict[str, Any] = {"model": self.model, "messages": messages, "temperature": temperature}
+        if os.environ.get("DS_PROVIDER"):  # research probes only (never the official runner): pin the serving provider to attribute behaviour
+            body["provider"] = {"order": [os.environ["DS_PROVIDER"]], "allow_fallbacks": False}
         if BACKEND == "openrouter":
             body["usage"] = {"include": True}
         else:
