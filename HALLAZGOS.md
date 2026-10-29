@@ -1,6 +1,6 @@
 # Hallazgos, por importancia
 
-Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Actualizado el 27 oct 2026 a las 16:00 UTC con las tres líneas activas: **motor** (rama `main-1nddsg`), **categorías** (rama `alejandro/optimistic-gauss-edyw1j`) y **transmisión** (rama `alejandro/transmision`); a las 18:00 UTC, con la línea **palancas** (rama `alejandro/palancas`: B22, B23, C9, C10 y tres filas de X); el 28 oct, con la búsqueda de huevos de Pascua (B28, B29 y una fila de X) y la línea Calidad (C24, C25); por la tarde, los hallazgos sueltos de las ramas abiertas de DeepSeek, Leah, Matteo y Codex (B31, B32, C26–C36 y ocho filas de X), y los repos públicos de otros participantes (C37–C42); por la noche, la línea Suelo (B33–B35, C43, C44 y dos filas de X); de madrugada, la línea Techo (B36–B38 y tres filas de X).
+Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un solo sitio. Las filas están agrupadas por nivel; para buscar por tema, usa el mapa de abajo. El historial de cambios está en `git log HALLAZGOS.md`. Lo que falta probar con DeepSeek está en [pendientes.md](lab/reports/deepseek/pendientes.md).
 
 **Niveles**
 - **A:** decide la nota y está confirmado con muchos datos.
@@ -17,6 +17,40 @@ Todo lo que sabemos del juego y de cómo hacer que la IA lo juegue bien, en un s
 - `Método`: cómo medimos.
 
 Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como número, umbral, título de evento ni respuesta fija: las normas lo prohíben aunque sea cierto ([NORMAS.md](NORMAS.md)).
+
+## Lo esencial antes de tocar el manual
+
+1. **80 de media no es alcanzable.** La nota máxima es 75,8 acabando en L5 y 79,6 en L6, y un jugador perfecto saca 72,4 de media (B31). Lo realista: completas de ~70–72 y que ninguna de las 3 se hunda.
+2. **Lo que más resta son los hundimientos:** quedarse en L1 o una crisis de confianza, en una de cada ~9 partidas. La tercera evaluación de L1 se salva con el riesgo oculto a 0 (B30, B33).
+3. **DeepSeek obedece las reglas del trimestre y lee el Skill** (B20). En las historias, en cambio, elige según cómo lee las opciones, y la redacción casi no lo mueve (C26, C27). Las palancas que funcionan son las del trimestre y las condiciones que DeepSeek ve por sí mismo (nivel, «Review in N»). Los campos que tiene que llevar él, no los rellena (C18).
+4. **Percepción:** ve bien el riesgo (83 %) y mal las subidas de Skill y Output (45 % y 49 %) (B17, A6).
+5. **Fichas:** ~64 de 100. El gasto crece con el cuadrado del número de llamadas, porque el historial no se comprime (C17, C31, C43).
+6. **Calidad del SKILL.md:** un solo Skill, sin umbrales y con criterios concretos (C24, C25, C32).
+7. **Sustitutos:** Sonnet 5 se parece más a DeepSeek que Haiku (C28). Haiku no cambia de elección con el texto (C24, C44), así que un banco con Haiku sólo sirve para descartar regresiones.
+8. **Prohibido:** números, umbrales, títulos o respuestas fijas en el Skill, y leer el registro del motor desde el disco (NORMAS §4, C37).
+
+## Mapa por tema
+
+| Tema | Filas |
+|---|---|
+| Nota final y techo | A1, A5, B5, B6, B16, B31, B32 |
+| Ascensos y evaluaciones | A2, B4, B29, B36, C30, C41 |
+| Trampa de L1 (primer ascenso) | A4, B30, B33, C18, C29, C40 |
+| Riesgo oculto y crisis de confianza | A3, B2, B8, B24, B34, B35, C9, C14, C20, C38, C39 |
+| Trimestre (energía y acción principal) | A7, B15, B20, B28, B37, C30 |
+| Techos y estancamiento | B5, B22, B23, B38, C18 |
+| Percepción de DeepSeek | A6, B7, B17, B18, B19, B21, B26, C4, C11, C12, C26, C27 |
+| Cómo obedece la IA el manual | A7, B10, B11, B12, B13, B20, B23, B25, C2, C5, C6, C7, C8, C13, C21 |
+| Partidas con DeepSeek | C3, C18, C19, C22, C23, C35 |
+| Partidas con Claude | C1, C15, C33, C36 |
+| Fichas (10 %) | C10 (corregido por C31), C17, C22, C31, C43 |
+| Calidad del SKILL.md (10 %) | C24, C25, C32 |
+| Programa oficial (JiuwenSwarm) | B10, B25, B27, C17, C22, C43 |
+| Réplica, bots y método | B1, B3, B9, B14, B26, C16, C20, C28, C44 |
+| Normas y cumplimiento | C34, C37, C38 |
+| Otros equipos | C37, C39, C40, C41, C42 |
+| Descartado | sección X |
+
 
 ## A. Deciden la nota
 

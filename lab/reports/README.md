@@ -2,6 +2,8 @@
 
 Cada línea de trabajo tiene su carpeta con un `README.md` (o `resumen.md`) que empieza por las conclusiones y acaba en un Relevo. Lo aprendido de todas está resumido, por importancia, en [HALLAZGOS.md](../../HALLAZGOS.md).
 
+**Para mejorar el manual de DeepSeek, empieza por [deepseek/pendientes.md](deepseek/pendientes.md)**: todos los candidatos y lo que falta confirmar con la clave.
+
 ## Líneas activas
 
 | Carpeta | Línea | Empieza por |
