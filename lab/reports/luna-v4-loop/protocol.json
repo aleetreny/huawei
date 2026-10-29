@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-29",
+  "authorization": "Matteo explicitly requested exactly two Luna careers, t13-read-v4 with only the efficient loop, and progress every three game months.",
+  "model_requested": "gpt-6-luna",
+  "actor": "native fresh-context Luna agents",
+  "game_count": 2,
+  "bundle_sha256": "e96e8843edf70c132e8d1a6ede54fc05ac4991a53a6ebb31e9004d6cee33e31d",
+  "v4_parent_sha256": "f78c8b8834082a8c816c65cd9bf3704407f37b51b9355d515d9836bc3efffea7",
+  "change": "Only Turn loop and supporting manifest execution prefix/name; all text from Status line to end byte-identical to v4.",
+  "ports": {
+    "game-1": 51372,
+    "game-2": 51373
+  },
+  "transport_sha256": "86be0afa2ad8576ee961b215e161a152be643e0ec4d5579e7a6d5e952a4e933b",
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": false
+  },
+  "limits": [
+    "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+    "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+    "Native tools are instruction-restricted, not a certified sandbox",
+    "Only requested model configuration is recorded; no independent backend receipt"
+  ],
+  "rules": [
+    "Exactly one new_game attempt per session",
+    "No replacement for a loss; play until public ending",
+    "Only five official game MCP tools via bridge",
+    "No empirical lookup or analyst coaching to player",
+    "Keep both outcome records and rejected actions",
+    "Notify parent after every completed quarter; do not expose private reasoning"
+  ]
+}
