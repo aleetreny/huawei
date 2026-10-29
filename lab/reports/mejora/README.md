@@ -1,8 +1,19 @@
 # Línea Mejora: un manual mejor que `t13-read-v4`
 
-**Conclusión (29 oct, noche; provisional).** PENDIENTE (banco, sondas y partidas).
+**Conclusión (29 oct, 22:45 UTC).** **`mejora/mv-4` es mejor manual que v4 en todo lo que se puede medir con precisión, pero en 9 partidas reales no juega visiblemente mejor:**
+- **Fichas:** 95–100 en sus partidas completas frente a ~64 de v4. A igualdad de partidas son **+3,3 de nota de versión**.
+- **Decisiones del mes previo de L1** (banco de DeepSeek, 90 situaciones): pérdida **2,51** por decisión frente a 3,31–3,68 de v4 y 3,6–4,4 de la familia cp. Es la mejor de 9 variantes, sin empeorar el control de riesgo (0,84 frente a 0,93) ni el general (0,34 frente a 0,38).
+- **Calidad** (jueces de Claude): 73 frente a 69.
+- **Partidas** (mv-3 y mv-4, mismas reglas de juego): 68,64 · **77,78 (L6, la mejor partida de DeepSeek del proyecto)** · 66,06 · cortada · 63,35 · 69,62 · 37,06 · 18,98 · 63,27.
+  - Las 6 completas promedian 68,1, como v4 y su familia.
+  - Hubo 3 hundidas: un defecto de mv-3, ya arreglado; una crisis de confianza; un despido en L1. Es la tasa de siempre (~25 %), y con 9 partidas no se distinguen ±5 puntos de media.
+- **Dos defectos encontrados y arreglados por el camino:**
+  - la redacción del bucle de `ex-v1` no empareja con DeepInfra (0 de 3 sondas);
+  - con el texto de mv-3 el agente acaba respuestas sin llamada y una partida se quedó sin nota (`max_continuations`). mv-4 lo corrige: 1–2 por partida, como cp-v12.
 
-Pregunta: ¿qué manual saca más nota de versión que `t13-read-v4` (corte 1: 64,75), partiendo de sus reglas? Rama `alejandro/mejora-v4` (worktree `~/huawei-mejora`), subtrabajo de la línea DeepSeek. Candidato: [`lab/policies-src/mejora/mv-1`](../../policies-src/mejora/mv-1). Scripts: `scripts/mejora/`. Presupuesto aprobado por Alejandro: 5 USD de DeepSeek (clave en 28,63 USD usados al empezar, 29 oct 18:10 UTC).
+En nota de versión esperada, mv-4 ≈ v4 + 3,5 (fichas y calidad) + lo que valgan sus mejores decisiones en L1 (réplica +1 a +2, sin confirmar en partidas). Lo que sigue decidiendo la nota son los hundimientos, y sus causas son variadas (§8).
+
+Pregunta: ¿qué manual saca más nota de versión que `t13-read-v4` (corte 1: 64,75), partiendo de sus reglas? Rama `alejandro/mejora-v4` (worktree `~/huawei-mejora`), subtrabajo de la línea DeepSeek. Candidato: [`lab/policies-src/mejora/mv-4`](../../policies-src/mejora/mv-4). Scripts: `scripts/mejora/`. Presupuesto aprobado por Alejandro: 5 USD de DeepSeek; **gastados 3,23** (clave de 28,63 a 31,86 USD usados, 18:10–22:40 UTC; quedan 18,14).
 
 ## 1. Dónde está la nota, desde los datos reales
 
@@ -89,6 +100,12 @@ Programa oficial (slot 1, juego de desarrollo, runner `00b084a8`), `careerlab.ta
 | mv-3 n.º 2 | **77,78** | completa, **L6** | 6, 12, 18, 36, 48 | 134 / 53 / 43 / 20 / 0 | 486 mil (100) | 0 | 0,29 |
 | mv-3 n.º 3 | **66,06** | completa, L5 | 12, 18, 30, 48 | 109 / 32 / 34 / 18 / 0 | 533 mil (98,7) | 7 | 0,30 |
 | mv-3 n.º 4 | — | **cortada por el programa** (`max_continuations`), mes ~14, L1 | — | — | — | 21 | 0,13 |
+| mv-4 n.º 1 | **63,35** | completa, L5 | 12, 24, 30, 48 | 98 / 36 / 26 / 18 / 0 | 615 mil (95,4) | 2 | 0,35 |
+| cp-v12 (control, misma noche) | 20,73 | **despedida en L1** (mes 24) | — | — | 282 mil (50) | 1 | 0,18 |
+| mv-4 n.º 2 | **69,62** | completa, L5 | 6, 12, 24, 42 | 129 / 54 / 25 / 19 / 0 | 461 mil (100) | 1 | 0,45 |
+| mv-4 n.º 3 | 37,06 | **crisis de confianza** (mes 27, L4) | 6, 12, 18 | 66 / 32 / 10 / — / — | (50) | 1 | 0,12 |
+| mv-4 n.º 4 | 18,98 | **despedida en L1** (mes 24) | — | 9 / 2 / 7 / — / — | (50) | 2 | ~0,2 |
+| mv-4 n.º 5 | **63,27** | completa, L5 | 6, 18, 24, 48 | 110 / 40 / 30 / 15 / 0 | 499 mil (100) | 2 | 0,30 |
 
 - **N.º 1.** Perdió el ascenso del mes 6 (RR. HH. ya «frowning» en el mes 5: el modo estricto anuló la excepción y Output quedó en 2), pero encadenó 12, 18 y 24 y llegó a L5 en el 42 con Skill 123. El trimestre se cumplió como estaba escrito (mes 3: toda la energía a informes).
 - **N.º 2: la mejor partida de DeepSeek del proyecto** (antes, 76,87 de `script-v1`). Ascendió en cada evaluación hasta L4 en el mes 18 (el ritmo del planificador perfecto), L5 en el 36 y L6 en el 48. En los meses de evaluación de L1 eligió lo que el planificador elige en el banco («bromear con lo de los snacks», «charlar unos minutos y volver al plazo», «prometer una evaluación de impacto», «un no firme a la merienda y comer otro día»): la lectura nueva actúa en partida real.
@@ -96,8 +113,56 @@ Programa oficial (slot 1, juego de desarrollo, runner `00b084a8`), `careerlab.ta
 - **Los dos ascensos del mes 6 perdidos no son la trampa de antes.** En la n.º 1 el riesgo acumulado en los meses 1–4 activó el modo estricto, que anula la excepción del mes previo; en la n.º 3 faltaba Skill. En la n.º 2 los meses previos de L1 salieron como en el planificador; en la n.º 1, en el mes 11, repitió una vez el «declinar con educación» que cuesta Network (la falsa alarma de mv-1), y aun así ascendió en el 12.
 - **N.º 4: la partida se quedó sin nota.** El agente terminó 21 respuestas sin ninguna llamada y el programa la cerró al llegar a 20 reanudaciones, hacia el mes 14 y todavía en L1. El vigilante no lanzó la 5 ni la 6. En esas respuestas el modelo escribe la llamada como XML dentro del texto y **la salida llega corrompida carácter a carácter** («mcp_career-ulator-engine_take_ation», «aprameter», «tring="tue"»); una vez en el historial, el patrón se repite. El registro de JiuwenSwarm no guarda qué proveedor de OpenRouter sirvió cada llamada.
 - **Respuestas sin llamada por partida** (`jiuwen.log`, `tool_call_count=0`): cp-v12 1 y 2, cp-v10 1; mv-3 9, 3, 7 y 21. No es que narre más: la media de texto visible por llamada es parecida (cp-v12 53–194 caracteres, mv-3 167–189; cp-v10 narró 708 y sólo paró una vez). Las de cp se jugaron hacia mediodía UTC y las de mv-3 de 18:25 a 21:30: puede ser el proveedor de esa franja o el texto. Prueba en curso, a la misma hora: `mv-4` (mv-3 + «nunca termines una respuesta sólo con texto» en la instrucción del manifest; 3 de 3 sondas emparejadas con DeepInfra), una partida de control de cp-v12 y otra de mv-4.
+- **Resultado de la prueba de las paradas (misma franja, 20:17–21:47 UTC):** mv-4 1 y 1; el control cp-v12 1. La frase de mv-4 en el manifest («never end a reply with text only…») las corta, y el proveedor de esa noche no rompía todas las partidas: el exceso era propio del texto de mv-3. Con n = 2 es una señal, no una prueba; partidas 3–5 de mv-4 en curso.
+- **mv-4 n.º 1 (63,35), por qué fue lenta.** Mes 6: la última historia del mes 5 sólo ofrecía negarse (Network −1) o dos opciones con riesgo +2/+3; eligió bien y perdió el punto (la pérdida forzosa de C58). En L2, con RR. HH. «frowning», el modo estricto forzó fuera de la ventana de evaluación opciones de «arreglo completo» que bajaron Output de 5 a −1, y perdió el ascenso del 18. Llegó a Health 1 en el mes 37 pese al freno.
+- **mv-4 n.º 3 (37,06).** Ascendió en 6, 12 y 18 (L4 en el 18, el ritmo del planificador), pero en L4 el riesgo subió de «quiet» a «frowning» en los meses 22–25 y explotó; con RR. HH. ya «angry» eligió «denunciarlo de forma anónima a RR. HH.» (lo anónimo está en la lista de riesgo y el modo estricto debía descartarlo) y llegó la segunda explosión. No era un mes de evaluación (la regla nueva no actuaba): es el fallo de C55, opciones «correctas» que DeepSeek no lee como arriesgadas.
+- **Control cp-v12 (20,73).** Se quedó en L1 hasta el despido del mes 24: la trampa que ataca la lectura nueva.
 - **Paradas del agente.** En 9 respuestas el proveedor escribió las llamadas como texto (XML roto y con erratas: `mcp_career-emulaor-engne_tak_ction`), el runner no vio ninguna llamada y tuvo que reanudar la partida (8 reanudaciones; el programa corta en 20 y la partida quedaría a medias). cp-v12 tuvo 1–2 por partida. Cada reanudación trae un `check_latest_logs` y un `observe` de más: 224 llamadas al modelo frente a ~170, y 704 mil fichas por mes. Es la degradación de algunos proveedores cuando el modelo narra mucho (C56), no las reglas.
+
+## 8. Qué decide ahora la nota: los hundimientos
+
+En las 10 partidas de esta noche (9 de mv, 1 de control) hubo 4 hundidas, y cada una por una causa distinta:
+
+| Partida | Causa | ¿Qué la habría evitado? |
+|---|---|---|
+| mv-3 n.º 4 | respuestas sin llamada con salida corrompida → `max_continuations` | arreglado en mv-4 (frase del manifest) |
+| mv-4 n.º 3 | riesgo que sube en L4 sin que DeepSeek lo vea; con RR. HH. «angry» elige una denuncia anónima → segunda explosión | percepción del riesgo de opciones «correctas» (C55); quizá «tras una explosión, sólo opciones que bajan el riesgo» (B35) |
+| mv-4 n.º 4 | L1: una nota de reconocimiento en el mes 5 (Output −1, la pista nueva no bastó), una pérdida forzosa en el 11 (todas las alternativas con riesgo +2/+3) y RR. HH. no sonriente en el 18 | aceptar el riesgo pequeño del mes previo de L1 con más decisión; rescate del mes 18 (B30) |
+| cp-v12 (control) | L1, tres evaluaciones perdidas | lo mismo |
+
+En partidas, el primer ascenso en el mes 6 salió 3 de 8 en mv (v4: 5 de 6; cp: 5 de 14). Todas llegan al mes 5 con S9 N3 O3 casi siempre (cp, v4 y mv por igual): lo que decide son las 3 historias del mes 5, que es justo lo que mide el banco y donde mv-3 es el mejor. Con estas muestras, la diferencia entre familias en partidas no se separa del azar.
 
 ## Relevo
 
-PENDIENTE.
+1. **Hecho y por qué.**
+   - Diagnóstico desde los datos reales: las completas se separan por el ritmo de ascensos y las notas de DeepSeek muestran que pierde el mes previo de L1 por leer mal costes sociales y de tiempo (§1–§2).
+   - Réplica calibrada con el modelo de elección de v4 (§3).
+   - Candidatos mv-1 → mv-4 (§4), banco de DeepSeek (§5), sondas (§6), 10 partidas reales (§7), análisis de hundimientos (§8).
+   - Juez de calidad.
+   - Exportación de todo lo pagado a `lab/data/deepseek/` (NORMAS §1.6), con `export_data.py` arreglado para llamadas con argumentos corrompidos.
+2. **Resultados y datos.**
+   - Bancos: `lab/data/deepseek/bancos/ds-mv1`, `ds-mv3`.
+   - Partidas: `lab/data/deepseek/partidas/mv-3__*`, `mv-4__*` y `cp-v12__5be05936-00002`; tabla en `partidas.csv`.
+   - Sondas: `~/careerlab-data/mejora/turnprobe-*.json`.
+   - Jueces: `data/j01.jsonl`, `j02.jsonl`.
+   - Réplica: `scripts/mejora/l1arms.py` y `mbot.py`, con las órdenes del §3.
+   - Gasto: 3,23 USD.
+3. **Qué falló o quedó a medias.**
+   - mv-3 tenía un defecto (paradas) que sólo se vio en partidas.
+   - La lectura nueva mejora el banco, pero no se ha podido ver en los ascensos reales de L1 (3 de 8).
+   - No hay pasada de banco de mv-4 (sus reglas de historias son las de mv-3; sólo cambia una frase del manifest sobre el formato de respuesta).
+4. **Siguiente paso.**
+   - **Para entregar:** mv-4 es el mejor candidato para la nota de versión. Fichas y calidad suman ~+3,5 sobre v4 a igualdad de partidas. Frente a cp-v12 o ex-v1 tiene la lectura de L1 y los dos arreglos (bucle, paradas). Hay que adaptar los documentos de `docs/entrega/cut2/` a mv-4 y empaquetar con `scripts/entrega/build_cut.py`.
+   - **Para subir la media de partidas:** atacar los hundimientos (§8).
+     - En L1: que DeepSeek acepte con más decisión el riesgo pequeño del mes previo cuando toda opción segura pierde (réplica: veto con riesgo ≤ 1 = +2,5) y el rescate del mes 18.
+     - En L4: prudencia tras la primera explosión.
+     - Cada idea se prueba primero en el banco (~0,2 USD), no en partidas.
+   - Órdenes para repetir el banco de un candidato nuevo, del mismo modo que §5:
+
+   ```bash
+   CAREERLAB_TARGET_ENV=~/huawei/local-runs/official-runner/.env uv run python scripts/deepseek/bench.py run --variant lab/policies-src/mejora/<candidato>/bundle --name ds-<candidato> --ids lab/data/deepseek/ids/ids-v9-all.txt --slots 16
+   ```
+
+   ```bash
+   uv run python scripts/deepseek/bench_sets.py lab/data/deepseek/ids/ids-v9-sets.json ds-<candidato> ds-mv3 ds-v4-full10
+   ```

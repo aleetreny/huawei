@@ -197,7 +197,10 @@ def decisions(g: dict, cat_by_title: dict) -> list[dict]:
                 rows[-1]["_after"] = new.get("current_state", {}).get("status", {})
             obs = new
         elif e["kind"] == "tool_call" and p.get("tool_call", {}).get("name", "").endswith("take_action") and obs:
-            a = json.loads(p["tool_call"].get("arguments") or "{}")
+            try:
+                a = json.loads(p["tool_call"].get("arguments") or "{}")
+            except ValueError:  # arguments corrupted by the serving provider (mejora §7); the game rejected the call
+                continue
             ce, st = obs.get("current_event", {}), obs.get("current_state", {})
             title = ce.get("title", "")
             kind = "energia" if title.startswith("Quarterly energy") else "accion" if title.startswith("Quarterly main") else "historia"
