@@ -28,6 +28,8 @@ Los planes detallados, resultados y comprobaciones de integridad están en los a
 
 ## Relevo
 
+Corrección del handbook: los dos contadores sí están publicados por show_employee_handbook; se retira ese P0. Documentos de corte 2 reescritos para cp-v5a actual, propuesta de observación trimestral y coste orientativo en auditoria-cut2.md. Manual intacto; integrar en main.
+
 29 oct: [auditoría adversarial del corte 2](auditoria-cut2.md). Bloquea empaquetar cp-v5a sin corregir contadores no publicados, suposición de IDs trimestrales y documentos aún de v4. Lint: 0 ERROR y 12 REVIEW; notas verificadas 66,27 / 65,10 / 68,13, eficiencia media 94,5759. Sólo lectura, lint y cuentas sobre resultados existentes; 0 USD. Quien empaquete debe aplicar los cambios y declarar que la revisión aún no tiene carreras propias. Solicito integrar este informe en main.
 
 Revisión prioritaria: [Comprobante y dirección actualizada](revision-comprobante.md). Sustituye la base v4 de la propuesta anterior por cp-v5a para nuevas ideas; identifica el cierre con RR. HH. atrasado y las colisiones salud/riesgo como prioridades. Sólo lectura e ideación, sin pruebas.

@@ -1,86 +1,48 @@
 # Skills design — Gradient Depression
 
-**Submission `TODO(manual: version name)`, Cut 2 (30 October 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files. TODO(manual: confirm the Skill name and that there is still one Skill and no script.)
+Submission: **cp-v5a**, Cut 2, 30 October 2026. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. The bundle contains one `career-rules` Skill and a manifest instruction, without scripts or reference files. This document describes the existing candidate, not a proposed revision.
 
-This version keeps the structure of our Cut 1 submission (`t13-read-v4`) and changes TODO(manual: one sentence on what changes and where).
+## Task and design
 
-## 1. Our understanding of the task
+The agent manages a 48-month career through monthly stories, quarterly actions and six-monthly reviews. It reads the current choices for likely consequences, then applies priorities separately for stories and quarterly phases. A single Skill keeps those priorities together; the manifest repeats scope, risk precautions, review protection and the response protocol. The Skill is reread when it is no longer in view.
 
-Career Survival asks a single agent to sustain a career while developing it. The public handbook describes a 48-month horizon, monthly story choices, quarterly Energy and main actions, and six-monthly reviews. Growth competes with wellbeing, working relationships, money and hidden risk. Story outcomes are not shown before choosing, so the agent has to infer the likely consequence of each option from its wording.
+## Turn loop and efficiency
 
-We separate three questions: what does this option probably change, what does the career need now, and which instruction applies in this phase? Our research found failures at all three layers. More detailed strategy did not automatically improve play: instructions were sometimes followed in the wrong phase, and correct priorities were applied to misread options. The Skill is built around those three questions.
+During ordinary story decisions, the agent requests `take_action` and then `observe` in one assistant response, using a literal `tool_calls` array example. In our local official-runner tests the calls execute in order, so the observation reads the resulting state. Each action still passes through the official MCP interface and normal validation and logging. “Decide silently” asks the model to omit redundant narrative while retaining a concise action note and tool results. The intended saving comes from fewer model round trips and less repeated text, not altered token accounting, scores or evaluation artifacts. This is not an instruction to override higher-priority requirements or conceal errors.
 
-The agent decides only from the current run: `observe` (state, events, choices), the handbook, review talks, the monthly HR remark, warnings and its own recent log entries. The Skill supplies priorities, a reading guide and a note format, not answers for named events, numerical thresholds or a model of hidden risk.
+The current quarterly instruction goes further: after observing the quarterly menu it requests all Energy actions, the main action and a final observation in one response. It assumes option numbers remain stable across quarters. This is an implementation assumption, not a guarantee in the public interface documentation; it is a known portability and review concern. Actual execution does not always follow the requested batching. A failed call triggers another observation and a valid choice.
 
-## 2. One Skill, with the key scope repeated in the manifest
+At startup the agent observes, reads events and recovers its latest note through `check_latest_logs` when needed. The Skill currently tells it not to call the handbook because the guidance is included in the Skill.
 
-The design has one discoverable `career-rules` Skill used on every turn. It contains the turn loop, the status line, the story procedure and the quarterly priority list.
+## Memory
 
-- **Why one Skill.** Earlier multi-Skill versions let the agent retrieve one relevant-looking rule while missing another. A single Skill was retrieved consistently in our DeepSeek and proxy-model tests.
-- **Why the manifest repeats the scope.** In development careers, DeepSeek read the Skill early and then relied on its context; it did not reopen supporting files. The manifest instruction therefore states the three behaviours that matter most: keep stories and quarterly phases apart, drop options that may bury a problem, and protect Skill, Network and Output just before a review. It also asks the agent to reread the Skill whenever its rules are no longer in view, for example after a summary.
-- **No delegation.** Everything runs in one agent; there is no team mode and no sub-agent.
+Each note contains `Review in N | Now S.. N.. O.. | Best S.. N.. O.. | Reviews here: 0`, followed by at most one short reason. Now records observed Skill, Network and Output. Best records their maxima at the current level and resets after promotion. Reviews here counts reviews without promotion and resets after promotion. Missing memory is rebuilt with Best equal to Now and the review count zero.
 
-## 3. Turn loop and status line
+The review switch uses `6 - (current_month mod 6)`. The candidate treats N=1 as the last month before a review and N=2 as preparation time. The published six-month interval supports anticipation, but the exact within-month boundary is an assumption of this candidate rather than an additional published rule.
 
-Each turn is: `observe`, read `events` first, decide with the section for the current phase, then `take_action` with a note. If the last note is not in view, the agent calls `check_latest_logs` to recover it. A rejected action leads to reading the error, observing again and choosing a valid option.
+## Story decisions
 
-Every note starts with one status line, which is the agent's compact memory:
+The reading guide asks for likely directions of Skill, Network, Output, Health, Dignity, Wealth and hidden risk. These are working interpretations of option text; observed feedback takes precedence.
 
-`Review in N | Now S N O | Best S N O | Stalled: none | Concerns this month: 0`
+The ordered steps are survival, risk, wellbeing, review protection and growth. A step is skipped if it would remove every option. When all options appear risky, the candidate uses a qualitative hierarchy of risk and reversibility. With friendly or quiet HR feedback and N=1, protecting growth statistics takes precedence over avoiding mild risk, except during its stalled-start mode. Severe concealment and gambling remain excluded. Wellbeing otherwise precedes review protection. Growth counts predicted improvements, weights a statistic explicitly identified as lagging twice, and subtracts predicted losses. End-of-career preferences favour wellbeing and risk control.
 
-- **Review in N** is computed from the visible month and the published six-month review schedule. It is a switch: the review-preparation steps apply only when N is 1 or 2, which keeps a narrow preference from leaking into the rest of the career.
-- **Now** and **Best** record Skill, Network and Output as observed, and the best value of each seen at the current level. A stat below its Best has lost ground the agent should repair before a review. Best resets on promotion.
-- **Stalled** records an expected gain that did not appear in this run. In quarterly phases the agent writes `Expect …` from the displayed effects of its action and compares it with the next observation. It is provisional and is cleared on promotion or when the stat rises again. It is not a claim about a hidden limit.
-- **Concerns this month** counts story choices the agent itself judged might bury a problem. It records the agent's judgement, not a hidden-risk value.
+## Quarterly priorities
 
-The note stays well under 1,000 characters, which also limits token use.
+The first applicable line determines the plan:
 
-## 4. Stories: read consequences, then choose in a fixed order
+1. Final quarter: reduce risk and recover wellbeing, then maintain relationships; report results when HR is friendly, otherwise lay low.
+2. Near a limit: recover first. The candidate uses Health or Dignity at 4 or below, or falling for three months, as its own precautionary margin, not a published failure threshold; negative Wealth or zero Network also trigger recovery.
+3. HR feedback: quiet calls for Defuse; more concerning feedback adds Lay low. Its stalled-start mode treats quiet feedback more conservatively.
+4. A review explicitly identifies a lagging statistic: invest in that statistic.
+5. From L4: prioritise Skill learning and rotation, with remaining Energy for Network or Output, subject to preceding recovery and risk rules.
+6. Earlier levels: develop Skill, Network and Output, prioritising lost ground, and apply for a key project.
 
-The story section first asks for the likely sign of each option's effect on Skill, Network, Output, Health, Dignity, Wealth and hidden risk. The reading guide describes in general terms what tends to raise or lower each one: own judgement and preparation build Skill; delivering and making results visible builds Output; helping and crediting others builds Network; hiding, shortcuts, private or partial fixes and open conflict add hidden risk. It also says that missing a risky option costs more than flagging a safe one.
+The L4 preference is a strategy choice, not a published promotion threshold. Its wellbeing-first ordering can leave insufficient Energy for risk reduction.
 
-The agent then applies five ordered steps, skipping a step only if it would remove every option:
+## Handbook provenance and limits
 
-1. **Survive:** drop options that could end the run now.
-2. **Risk:** drop options that may add hidden risk; when the HR remark is not the friendly one, or a concern was already recorded this month, also drop private, anonymous, partial or postponed fixes.
-3. **Wellbeing:** protect Health and Dignity when they are low or falling.
-4. **Review close (N = 1 or 2):** avoid options that may lower Network or Output, and in the review month Skill as well. Repair a stat that fell below its Best. While the HR remark is friendly or quiet, this step comes before avoiding a *mild* risk in the review month. Hiding, denying, blaming, gambling and cutting corners stay excluded in every month.
-5. **Grow:** choose the option that raises most of Skill, Network and Output that are not stalled, weighting a stat the latest review talk named as lagging. In the final quarter, prefer Health, Dignity and lower risk.
+The in-game employee handbook returned by `show_employee_handbook`, under “Risk and failure → Ways people say a run ends”, describes dismissal after two weak half-year reviews and a trust crisis after a second blow-up. Our archived tool-output copy is `lab/data/transmision/handbook.md`, lines 141–147. These statements are available through the permitted interface; they are not deductions from package internals.
 
-## 5. Quarterly phases: first matching line wins
+They do not establish that two reviews without promotion equal two weak reviews, or that the next review is necessarily a final chance. The candidate's stalled-start intervention makes that additional inference and should not be attributed to the handbook. Likewise, fixed future menu numbers and the relative risk hierarchy are not published guarantees. These limitations are disclosed rather than certified as official mechanics.
 
-The quarterly list chooses Energy and main actions only, never a story option. The agent spends affordable Energy one action at a time and observes again. The first matching line wins:
-
-1. the final quarter of the career (recover, defuse risk, report results);
-2. low or falling Health or Dignity, or Network or Wealth near zero for months (recover first);
-3. an HR remark that is not friendly (defuse risk; lay low while it stays worrying);
-4. a lagging stat named in a review talk (invest in it until the next review);
-5. Network and Output both stalled (turn to Skill);
-6. otherwise, invest in the growth stats that are not stalled, with a main action that matches what is still rising.
-
-Concrete, ordered quarterly directions were followed much more reliably than general goals in our obedience tests.
-
-## 6. What changed from earlier versions, and why
-
-| Version | Change | Reason, from our development careers |
-|---|---|---|
-| `t13-read-v1` | Reading guide for consequences and risk | DeepSeek recognised risk better than Skill or Output effects |
-| `t13-read-v2` | Review protection moved into the Skill body and the manifest; strict story/quarter separation; stricter risk step | A quarterly rule leaked into stories; "constructive-sounding" private or phased fixes caused a trust crisis |
-| `t13-read-v3` | In the review month, keeping Skill, Network and Output comes before a mild risk while HR is calm | Promotions were lost by one point in the last story before a review |
-| `t13-read-v4` (Cut 1) | `Best` per level; protect Network and Output from two months before a review and repair losses at once | A career lost Output with two months to go while chasing Network it could no longer raise |
-| **TODO(manual: version name)** | TODO(manual: change) | TODO(manual: the log finding behind it) |
-
-## 7. Generalisation, scope and limits
-
-TODO(manual: if sections 2–5 changed, update them to match the submitted Skill word for word before packaging; the reviewers compare this document with the Skill.)
-
-
-The Skill contains no event titles, fixed answers, dataset references, months tied to specific events or unpublished thresholds. Every rule is phrased in terms of what the agent observes: the HR remark, review talks, the displayed effects of quarterly actions and its own notes. The same procedure applies if event wording or order changes.
-
-The main limits we know of:
-
-- **Perception.** DeepSeek still misses part of the options that lower Output or Network. A single lost point before an early review can delay a promotion.
-- **Memory fields.** DeepSeek fills the status line reliably but rarely marks a stat as Stalled, so the stall-based quarterly lines seldom fire. TODO(manual: if this version adds a quarterly rule for later levels, say how it avoids depending on Stalled.)
-- **Long context.** Each run accumulates a long history. Short notes keep token use down, but late in a run some model calls returned a generic refusal instead of an action.
-
-The companion decision report gives the evidence and its limits.
+Compared with Cut 1, cp-v5a combines shorter notes and grouped calls with a stalled-start response, an all-options-risky rule and an explicit Skill priority at senior levels. It removes the earlier Stalled and Concerns memory fields. No event identifiers, event-title answer table, executable policy or simulator is shipped. The decision report separates measured results from assumptions and untested changes.
