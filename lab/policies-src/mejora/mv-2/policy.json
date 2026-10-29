@@ -1,0 +1,16 @@
+{
+  "family": "mejora",
+  "name": "mv-2",
+  "parents": [
+    "mv-1",
+    "cp-v12"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-1 with the Turn loop and Status line sections copied verbatim from cp-v12 (literal tool_calls block with 'Reviews here: 0', status line with Reviews here); stalled start also read from Reviews here",
+  "hypothesis": "mv-1 (ex-v1's loop wording) paired 0 of 3 probes on DeepInfra (3 of 3 on GMICloud), while cp-v10/cp-v12's exact loop paired 5 of 5 on DeepInfra; restoring the exact cp-v12 sections restores the pair on providers without a reasoning channel. Story rules identical to mv-1.",
+  "predicted_behaviour": "3 of 3 DeepInfra probes paired.",
+  "refutation": "Fewer than 3 of 3 paired on DeepInfra.",
+  "skill_count": 1,
+  "change": "mv-1 -> mv-2: Turn loop and Status line sections replaced by cp-v12's, byte for byte; stalled-start bullet reads 'Reviews here is 2, or Months at current level 12 or more'.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}
