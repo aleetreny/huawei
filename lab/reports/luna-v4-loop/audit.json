@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "new_games": 2,
+  "terminal_games": 2,
+  "invalid_actions": 0,
+  "model_tokens_measured": false,
+  "dedicated_servers_stopped": true,
+  "bundles_unchanged": true,
+  "trajectory_hashes_verified": true
+}

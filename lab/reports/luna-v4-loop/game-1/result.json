@@ -1,0 +1,81 @@
+{
+  "job_id": "game-1",
+  "session_id": "68eba26e049f47be9cc53c3268fa5730",
+  "outcome": "eliminated",
+  "survival_months": 24,
+  "quantitative_score": 32.26,
+  "ending_score": {
+    "outcome": "eliminated",
+    "survival_months": 24,
+    "completed": false,
+    "quantitative_score": 32.26,
+    "competition_partial_score": 22.58,
+    "dimensions": [
+      {
+        "name": "level",
+        "label": "Career level",
+        "raw_value": 2.0,
+        "normalized_score": 20.0,
+        "weight": 0.3,
+        "weighted_score": 6.0
+      },
+      {
+        "name": "wealth",
+        "label": "Total wealth",
+        "raw_value": 8.2,
+        "normalized_score": 10.25,
+        "weight": 0.2,
+        "weighted_score": 2.05
+      },
+      {
+        "name": "resilience",
+        "label": "Health & dignity",
+        "raw_value": 17.0,
+        "normalized_score": 85.0,
+        "weight": 0.15,
+        "weighted_score": 12.75
+      },
+      {
+        "name": "skill",
+        "label": "Professional skill",
+        "raw_value": 9.0,
+        "normalized_score": 7.5,
+        "weight": 0.15,
+        "weighted_score": 1.12
+      },
+      {
+        "name": "risk_control",
+        "label": "Risk control",
+        "raw_value": 0.0,
+        "normalized_score": 100.0,
+        "weight": 0.1,
+        "weighted_score": 10.0
+      },
+      {
+        "name": "network",
+        "label": "Workplace network",
+        "raw_value": 2.0,
+        "normalized_score": 3.33,
+        "weight": 0.1,
+        "weighted_score": 0.33
+      }
+    ]
+  },
+  "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+  "interruption": null,
+  "steps": 95,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 0.0,
+  "tool_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "observe": 96,
+    "take_action": 95
+  },
+  "tool_seconds": {},
+  "actor_usage": {},
+  "trajectory_path": "/Users/matteozabban/careerlab-data/luna-v4-loop-20261029/game-1/trajectory.jsonl",
+  "resumed": false,
+  "db_root": null
+}
