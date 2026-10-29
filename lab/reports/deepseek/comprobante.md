@@ -233,17 +233,25 @@ En el catálogo (936 opciones), **las opciones que suben Dignity 2 o más cuesta
 
 Con lectura ruidosa (misma batería): cierre tras explosión 41,0 frente a 40,9, crisis 576 frente a 639. Lectura: **el trimestre de L5 no mueve la media en la réplica** (el planificador óptimo gana por las historias, no por el trimestre, como ya dijo Techo), pero sí sube Output ~2,5 sin bajar Skill, que es justo lo que le faltó a cp-v8 para L6. El cierre tras explosión cuesta 0,2 en lectura exacta y recorta las crisis un 10–17 %.
 
-### 6.6 Candidato `cp-v9` (`lab/policies-src/comprobante/cp-v9`)
+### 6.6 Candidato `cp-v9` (`lab/policies-src/comprobante/cp-v9`): lo que pasó las pruebas y lo que no
 
-cp-v8 más seis cambios, ninguno con números nuevos (lint: 14 avisos REVIEW, los de cp-v8 más uno por «Health above 4» en la línea nueva; 2.897 palabras frente a 2.507):
-1. **Tras una explosión**, el resto de la partida se lee el comentario de RR. HH. un paso peor (sonriente = quiet → Defuse cada trimestre; quiet = frowning → también Lay low), y la excepción del mes previo deja de aplicarse (B35; réplica §6.5: crisis −10 a −17 %).
-2. **En el mes previo (N = 1), el paso 4 va antes que el de bienestar**, salvo que una opción pueda llevar Health al fondo (la partida de b37dbff8 perdió el mes 6 por «gimnasio, proteger Health» con Output 3 → 2).
-3. **Pista de lectura en el paso 4**, sacada del catálogo (§6.3): la opción que implica, ayuda o da crédito a otros casi nunca cuesta Output (12 % de las seguras); la que usa el propio juicio, poco (21 %); el gesto de integridad fuerte cuesta Network la mitad de las veces (52 %); el descanso, a menudo Output (39 %).
-4. **Techo del nivel sin campo nuevo:** un indicador que lleva tres notas igual a su Best, habiendo elegido opciones que debían subirlo, está en su techo: una subida más no vale nada (en Crecer y en el trimestre), una pérdida sigue costando. Es la detección «anclada» de Techo (B38, +0,7 en la réplica con lectura exacta) escrita sobre el campo Best que DeepSeek sí rellena, y la razón de fondo del karaoke del mes 5 (Network +3 inútil frente a Output +1).
-5. **Trimestre desde L5 (línea 6 nueva):** Skill learning + Prepare report materials y Apply for a key project; L4 sigue como t0. Neutro en la réplica, +2,5 de Output final; es lo que le faltó a cp-v8 para L6.
-6. **El bloque literal `tool_calls: [...]` también en la instrucción del manifest**, que va en el mensaje de sistema de cada llamada, con «from the very first story to the last», contra el arranque narrador de la segunda partida de cp-v8.
+**Texto final: cp-v8 más dos reglas de trimestre y cierre, ninguna de historias** (lint: 13 avisos REVIEW, los de cp-v8 más uno por «Health above 4»; 2.707 palabras frente a 2.507):
+1. **Tras una explosión**, el resto de la partida se lee el comentario de RR. HH. un paso peor (sonriente = quiet → Defuse cada trimestre; quiet = frowning → también Lay low), y la excepción del mes previo deja de aplicarse (B35; réplica §6.5: crisis −10 a −17 %, −0,2 de nota con lectura exacta).
+2. **Trimestre desde L5 (línea 6 nueva):** Skill learning + Prepare report materials y Apply for a key project; L4 sigue como t0. Neutro en la réplica, +2,5 de Output final; es lo que le faltó a cp-v8 para L6 en el mes 48.
+3. El manifest se queda **en prosa**: el bloque literal `tool_calls: [...]` dentro de la instrucción rompió el emparejamiento en una sonda en frío (0 de 6, en la que con el manifest en prosa salió 6 de 6 con el mismo Skill; las dos servidas por DeepInfra, §6.9).
 
-Pruebas (se rellenan abajo): juez Haiku/Sonnet × 3 contra cp-v8 en la misma tanda (`comprobante-data/j-cp9.jsonl` con el texto intermedio: Haiku 62,7 frente a 61,3, Sonnet 59,3 frente a 66,7; las quejas de Sonnet son las de siempre, mecánica inventada del calendario de evaluaciones y densidad, no las reglas nuevas; `j-cp9b.jsonl` con el texto final); banco de L1 con la evaluación cerca (`ds-cp9-l1`, 90 situaciones, ~0,15 USD) contra v4 (24–25 elecciones que bajan Network u Output de 90; 6–7 arriesgadas) y cp-v5a (27; 8); sonda de arranque en frío (`turnprobe-cp-v9.json`: ¿empareja y calla en 6 de 6?).
+**Tres reglas de historias probadas y quitadas el mismo día** (regla 3 de §6.8: una regla de historias pasa primero por el banco):
+- pista de lectura del catálogo en el paso 4 (implicar a otros casi nunca cuesta Output; el gesto de integridad fuerte cuesta Network la mitad de las veces);
+- «no se mueve»: un indicador igual a su Best en las tres últimas notas no cuenta como subida;
+- el paso 4 antes que el de bienestar en N = 1.
+
+Banco `ds-cp9-l1` (90 situaciones de L1 con la evaluación cerca, 0,12 USD, servido por DeepInfra): **pérdida 4,20 por decisión, 61 % mejor, 28 elecciones que bajan Network u Output, 5 arriesgadas**, frente a v4 3,31 / 3,68 (24–25; 6–7) y cp-v5a 4,42 (27; 8). Las tres reglas juntas no mueven las elecciones de DeepSeek en el mes previo (28 frente a 27), como ya pasó con `t13-read-v9` (hacia-80 §6): **segunda vez en la misma dirección sin resultado → se cierra la dirección** (regla 5). La primera versión de «no se mueve» hablaba de «techo por nivel» y le valió un 0 del juez Haiku por contradecir el rango publicado (0–sin tope) de los tres indicadores; reescrita como «no se mueve», el juez volvía a cp-v8 (`j-cp9c`: Haiku 63 / Sonnet 65 frente a 64 / 63), pero tampoco pasó el banco.
+
+**Réplica, excepción del mes previo estrecha frente a ancha** (`rfnarrow`): si en N = 1 sólo se protegen las opciones sin pérdida cuyo riesgo real es 1 como mucho (lo que DeepSeek hace de hecho), frente a protegerlas todas (lo que dice el texto y hace el bot): 59,65 frente a 59,83; despidos 218 frente a 175, crisis 149 frente a 179. **Ampliar la excepción en el texto vale +0,2 en la réplica**: no merece banco ni partida.
+
+Juez del texto final (`j-cp9d.jsonl`, Haiku y Sonnet × 3, misma tanda que cp-v8): se anota abajo.
+
+Qué cambiaría una decisión de entrega: nada de cp-v9 toca las historias ni el bucle; sus dos reglas sólo actúan tras una explosión o desde L5. Con 3 partidas (~2,7 USD) no se puede ver una diferencia de +0,3–0,5 de media: **cp-v9 no se juega** (regla 4). Es la base para el corte 3 sólo si Alejandro prefiere llevar las dos reglas de la réplica sin partidas; con pruebas, cp-v5a.
 
 ### 6.7 Lo que falta, en números, y qué manual es el ganador
 
@@ -267,9 +275,23 @@ Presupuesto de la línea hasta ~15 USD en total si cada gasto lo merece. El cort
 
 Avisos suyos sobre cp-v9: el uso de «Best» para detectar techos choca con B38 (la marca sólo funciona anclada a un valor) y C18 (DeepSeek no rellena campos que tiene que llevar él); la regla «no se mueve» de cp-v9 usa sólo el campo Best, que sí rellena, y compara con las últimas tres notas, pero **hay que medir en el banco si la aplica** antes de creerla.
 
+### 6.9 El proveedor que sirve la llamada decide el bucle de fichas (29 oct, 11:40 UTC)
+
+`~/careerlab-data/deepseek/calls.jsonl` guarda el proveedor que OpenRouter eligió para cada llamada de las sondas y los bancos (no las partidas: JiuwenSwarm no lo registra). `deepseek-v4-flash` se reparte entre doce proveedores (Baidu 10.736 llamadas, GMICloud 2.531, DeepInfra 674, Parasail 671, Venice 632, SiliconFlow 356, Relace 300, Cloudflare 61 …).
+
+| Sondas en frío (`turnprobe`) | Proveedor | Empareja | Texto visible | Razonamiento oculto |
+|---|---|---|---|---|
+| cp-v5a, 28–29 oct madrugada | GMICloud, SiliconFlow | 6 de 6 | 0 | sí (200–1.000 por decisión) |
+| cp-v5a, 29 oct 10:45 (control) | DeepInfra | 0 de 6 | 387–1.050 caracteres en inglés | **0** |
+| cp-v9 (manifest con bloque) | DeepInfra | 0 de 6 | 113–246, chino | 0 |
+| cp-v9 (manifest en prosa), sonda 1 | DeepInfra | **6 de 6** | 102–402, chino | 0 |
+| cp-v9 (manifest en prosa), sonda 2 | DeepInfra | 0 de 6 | 189–550, chino | 0 |
+
+Partidas (sin proveedor registrado, pero con el razonamiento oculto total de `gametokens`): las siete que emparejaron tienen 72–132 mil fichas de razonamiento oculto; la segunda de cp-v8, que narró y no emparejó, **24 mil**. Lectura: **cuando el proveedor no sirve el canal de razonamiento, DeepSeek piensa en voz alta en el contenido, y el texto antes de la llamada rompe el patrón de dos llamadas** (CP3: lo que mantiene la pareja es el historial). Con DeepInfra la pareja sale a cara o cruz en la primera respuesta y luego se mantiene (6 de 6 o 0 de 6). La nota oficial usa «organiser-controlled upstream routing» (`docs/mcp.rst`): si ese proveedor no sirve razonamiento, las fichas de cualquier manual vuelven a ~1,3 M por mes (nota ~65) y lo que queda de cp-v5a es su juego (igual que v4). No podemos elegir el proveedor en la entrega («Do not add OpenRouter provider routing settings»); sí anclarlo en nuestras sondas para medir (`DS_PROVIDER`, sólo en `ds.py`, nunca en el runner). Sondas ancladas de cp-v5a (3 en DeepInfra, 3 en GMICloud, ~0,07 USD): se anotan abajo. Lo que vale medir después, si DeepInfra narra siempre: qué texto consigue la pareja también sin canal de razonamiento (por ejemplo, exigir que la primera respuesta de la carrera, el «Continue», lleve ya las dos llamadas, para sembrar el patrón).
+
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas de hoy (cp-v9 ×3, cp-v5a control): ~0,06. Banco `ds-cp9-l1`: ~0,12. **Total de la línea: ~8,9 USD** (techo nuevo ~15; uso de la clave 17,40 → ~26,3).
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas de hoy (cp-v9 ×3, cp-v5a control, 6 ancladas): ~0,13. Banco `ds-cp9-l1`: 0,12. **Total de la línea: ~8,95 USD** (techo nuevo ~15; uso de la clave 17,40 → ~26,4).
 
 ## Relevo (29 oct, 05:25 UTC; cierre de la línea)
 1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2); prueba del runner con un modelo falso (§3); manuales `cp-v1`→`cp-v8` (§4); sondas con DeepSeek del bucle (§5.1); juez (§5.2); bancos de control, riesgo y L1 (§5.3); **9 partidas oficiales** (§5.4): cp-v3 56,92; cp-v5a 66,27 · 65,10 · 68,13; cp-v7 62,25 · 69,88 · 28,56; cp-v8 68,20. La conclusión y la recomendación de cortes están en la cabecera: **cp-v5a al corte 2; cp-v8 candidato al corte 3 si consigue 2–3 partidas sin regresión.**
