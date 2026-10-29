@@ -4,6 +4,23 @@
 
 Este es el sitio único de lo que falta probar con la clave. Quien gaste DeepSeek mantiene la lista: al terminar una prueba, actualiza la fila y pasa el resultado a [HALLAZGOS](../../../HALLAZGOS.md). Los comandos exactos están en el informe de cada línea, que es la fuente; aquí sólo se enlazan.
 
+**Datos (29 oct).** Todo lo pagado de DeepSeek está en Git en [`lab/data/deepseek/`](../../data/deepseek/README.md):
+- **Partidas oficiales:** las 21, en `partidas/`, con `partidas.csv` y `decisiones.csv.gz`.
+- **Bancos:** `bancos/<brazo>/`.
+- **Etiquetas de percepción:** `etiquetas/`.
+- **Listas de situaciones:** `ids/`.
+
+Los scripts leen `~/careerlab-data/deepseek` si existe y, si no (en la nube), la copia de Git, que `uv run python scripts/deepseek/datapaths.py materialize` deja con la estructura de siempre. Equivalencias:
+
+| En el Mac | En Git |
+|---|---|
+| `~/careerlab-data/huawei-deepseek/runs/<run>/` | `lab/data/deepseek/partidas/<manual>__<id>/` |
+| `~/careerlab-data/deepseek/runs/<brazo>/` | `lab/data/deepseek/bancos/<brazo>/` |
+| `~/careerlab-data/deepseek/labels/` | `lab/data/deepseek/etiquetas/` |
+| `~/careerlab-data/deepseek/ids-*.txt` | `lab/data/deepseek/ids/` |
+
+Quien juegue o pase un banco nuevo vuelve a exportar con `uv run python scripts/deepseek/export_data.py`.
+
 ## 1. Árbol de manuales
 
 | Manual | Padre | Qué cambia | Medido sin DeepSeek | Medido con DeepSeek | Qué falta y coste |

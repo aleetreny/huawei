@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse, hashlib, json, math, random
 from pathlib import Path
 import gpt_principios as B
+from datapaths import deepseek_dir as _dsdir
 R=B.R
 
 class Controller(B.Controller):
@@ -33,7 +34,7 @@ def run():
     ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     catpath=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json'
     cat=R.Catalog(json.loads(catpath.read_text()))
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)]
     labels=[json.loads(p.read_text()) for p in paths]
     required={f'{n}:{k}' for n,nd in cat.nodes.items() for k in nd['choices']}
     assert all(required<=set(lab) for lab in labels)

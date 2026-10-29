@@ -1,0 +1,10 @@
+~/huawei-ds/.venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+ds-v8-full10: 100 items, 100 to run
+  20/100 spent 2.1790 USD
+  40/100 spent 2.2212 USD
+  60/100 spent 2.2721 USD
+  80/100 spent 2.3086 USD
+  100/100 spent 2.3501 USD
+ds-v8-full10: done; line spend (logged) 2.3501 USD

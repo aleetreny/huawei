@@ -1,0 +1,6 @@
+19:07 slot 1 game 1 of t13-read-v5 (key usage 5.679641565)
+19:56 slot 1 game 1 of t13-read-v4 (key usage 7.879217687)
+20:22 slot 1 game 1 done (exit 0)
+scripts/deepseek/gameloop.sh:25: permission denied: ~/careerlab-data/deepseek/games/t13-read-v4-slot1-1.err
+20:22 slot 1 game 1 done (exit 0)
+scripts/deepseek/gameloop.sh:27: parse error near `done'

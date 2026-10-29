@@ -1,0 +1,2435 @@
+[
+ {
+  "type": "function",
+  "function": {
+   "name": "wiki_ingest",
+   "description": "Ingest a source file (PDF, TXT, MD) or a directory into the LLM Wiki. By default, identical files (by SHA-256) are skipped perfectly (deduplication). Set `force=True` if the user explicitly asks to re-ingest, rebuild, or force the ingestion. The `workspace` parameter is the root folder where the `.llm_wiki` will be created. If the user specifies a target directory like 'wiki_lib' or 'bibliography', pass that exact path as `workspace`.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "source": {
+      "type": "string",
+      "description": "source"
+     },
+     "workspace": {
+      "type": "string",
+      "description": "workspace",
+      "default": ""
+     },
+     "force": {
+      "type": "boolean",
+      "description": "force",
+      "default": false
+     },
+     "sys_operation": {
+      "type": "object",
+      "description": "Object",
+      "nullable": true,
+      "default": null
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "additionalProperties": false,
+    "title": "wiki ingest",
+    "required": [
+     "source"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "wiki_query",
+   "description": "Query the LLM Wiki's compiled knowledge base directly via Natural Language. The `workspace` parameter is the folder containing the `.llm_wiki`. If the user specifies a target directory like 'wiki_lib' or 'bibliography', pass that exact path as `workspace`.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "query"
+     },
+     "workspace": {
+      "type": "string",
+      "description": "workspace",
+      "default": ""
+     },
+     "sys_operation": {
+      "type": "object",
+      "description": "Object",
+      "nullable": true,
+      "default": null
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "additionalProperties": false,
+    "title": "wiki query",
+    "required": [
+     "query"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "wiki_lint",
+   "description": "Health-check and trigger automatic repairs of broken links, orphans, or anomalies in the LLM Wiki. The `workspace` parameter is the root folder containing the `.llm_wiki`. If the user specifies a target directory like 'wiki_lib' or 'bibliography', pass that exact path as `workspace`.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "workspace": {
+      "type": "string",
+      "description": "workspace",
+      "default": ""
+     },
+     "sys_operation": {
+      "type": "object",
+      "description": "Object",
+      "nullable": true,
+      "default": null
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "additionalProperties": false,
+    "title": "wiki lint"
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "fetch_webpage",
+   "description": "通常配合 paid_search 或 free_search 使用：先搜索，再抓取结果页，不要只依赖摘要。抓取网页文本，返回状态码、标题和正文文本。通常配合 free_search 使用：先搜索，再抓取前几个结果页，而不是只依赖搜索摘要。可设置 max_chars=0 关闭截断，也可以调大 timeout_seconds 处理慢站点。适用场景：文档、博客、新闻、API 参考等普通网页。代码仓地址（GitHub/GitLab/Gitee/Gitcode/Bitbucket 等）一般不适合用本工具——网页只能看到渲染后的目录页;要读源码、看历史、跨文件搜索，更顺手的方式是用 shell 工具(bash 或 powershell)执行 `git clone` 拉到本地。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "url": {
+      "type": "string",
+      "description": "要抓取的网页 URL。"
+     },
+     "max_chars": {
+      "type": "integer",
+      "description": "返回内容最大字符数；设为 0 表示不截断。",
+      "default": 20000
+     },
+     "timeout_seconds": {
+      "type": "integer",
+      "description": "请求超时时间（秒）；慢站点可适当调大。",
+      "default": 45
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "url"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "audio_metadata",
+   "description": "识别音频时长，并在配置了 ACR 信息时尝试识别歌曲标题、歌手和发布时间。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "audio_path_or_url": {
+      "type": "string",
+      "description": "本地音频路径或公网 http(s) 音频 URL，不支持 sandbox-only 路径"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "audio_path_or_url"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "search_skill",
+   "description": "Search installable skills from SkillNet, ClawHub, TeamSkillsHub, and builtin directory. Use the returned identifier with install_skill (SkillNet URL, ClawHub slug, TeamSkillsHub asset_id, or skill name when source is builtin).",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "Search query for the skill."
+     },
+     "source": {
+      "type": "string",
+      "enum": [
+       "auto",
+       "skillnet",
+       "clawhub",
+       "teamskillshub",
+       "builtin"
+      ],
+      "description": "Skill source to search. Defaults to skillnet. Use auto to search all sources including builtin. Use builtin to search locally available builtin skills.",
+      "default": "skillnet"
+     },
+     "limit": {
+      "type": "integer",
+      "description": "Maximum number of skills to return.",
+      "default": 10
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "query"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "install_skill",
+   "description": "Install a skill. For skills found via search_skill, pass the identifier and matching source. For builtin skills (not yet installed but available locally), use source='builtin' and identifier=skill_name directly — no prior search needed.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "identifier": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string",
+      "enum": [
+       "skillnet",
+       "clawhub",
+       "teamskillshub",
+       "builtin"
+      ],
+      "description": "Explicit source matching search_skill items, or 'builtin' for locally available skills that don't need online search. Use teamskillshub for Team Skills Hub."
+     },
+     "timeout_sec": {
+      "type": "integer",
+      "description": "Installation timeout in seconds.",
+      "default": 60
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "identifier",
+     "source"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "uninstall_skill",
+   "description": "Uninstall an installed skill by name.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "Installed skill name to remove."
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "name"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "acp_chat",
+   "description": "Send a user message to an external ACP-compatible agent subprocess defined in config.yaml under acp_agents.<name> (command + args). Use for Codex CLI, Gemini CLI, or any other stdio ACP agent. Parameter agent is the profile key, message is the prompt. Set new_session=true to restart the subprocess and ACP session for that profile.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "agent": {
+      "type": "string",
+      "description": "agent"
+     },
+     "message": {
+      "type": "string",
+      "description": "message"
+     },
+     "new_session": {
+      "type": "boolean",
+      "description": "new session",
+      "default": false
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "additionalProperties": false,
+    "title": "acp chat",
+    "required": [
+     "agent",
+     "message"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "video_understanding",
+   "description": "Analyze and understand video content. Use this tool when the user provides a video file path (e.g., .mp4, .mov, .avi) or video URL and asks questions about the video content, such as describing scenes, actions, people, or objects in the video. Input: query (question about the video) and video_path (local file path or HTTP/HTTPS URL).",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "inputs": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "inputs"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "additionalProperties": true,
+    "title": "video understanding",
+    "required": [
+     "inputs"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "read_file",
+   "description": "增强版文件读取工具。支持文本、图片、PDF 与 Jupyter Notebook。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "file_path": {
+      "type": "string",
+      "description": "要读取的绝对路径"
+     },
+     "offset": {
+      "type": "integer",
+      "description": "要跳过的行数（0 表示从头读取）。仅在文件过大无法一次读完时提供"
+     },
+     "limit": {
+      "type": "integer",
+      "description": "最多读取的行数（默认及上限均为 2000）。仅在文件过大无法一次读完时提供"
+     },
+     "pages": {
+      "type": "string",
+      "description": "PDF 专属页码范围，例如 '1-5'、'3'、'10-20'。每次最多 20 页"
+     },
+     "caption": {
+      "type": "string",
+      "description": "可选。读取 skills/… 下的图片时，填入 SKILL.md 中的图片说明文字（Markdown alt），用于多模态用户提示。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "file_path"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "write_file",
+   "description": "写入文件内容。如果文件已存在，将完全覆盖。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "file_path": {
+      "type": "string",
+      "description": "要写入的文件路径"
+     },
+     "content": {
+      "type": "string",
+      "description": "要写入的内容"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "file_path",
+     "content"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "edit_file",
+   "description": "增强版文件编辑工具，对已有文件执行精确的字符串替换操作，仅传输差量。\n\n核心行为：\n- 前置读取要求：编辑前必须通过 read_file 完整读取过该文件\n- 唯一性验证：old_string 须唯一匹配；多个匹配时须设置 replace_all=true 或提供更多上下文\n- 引号容错：自动尝试直引号与弯引号互转后匹配\n- 去消毒处理：自动将 HTML 实体（&lt; &gt; &amp; 等）还原为原始字符后匹配\n- 新文件创建：old_string='' 且目标文件不存在时创建新文件\n- 格式化处理：自动去除 new_string 行尾空白（.md/.mdx 文件除外）；保留文件原有行尾风格（LF/CRLF）\n- 外部修改检测：写入前通过时间戳 + 文件大小双重校验，若文件被外部修改则拒绝写入\n\n拒绝条件：文件超过 1 GiB / old_string 与 new_string 相同 / .ipynb 文件 / 文件不存在且 old_string 非空 / 文件已存在且 old_string 为空",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "file_path": {
+      "type": "string",
+      "description": "目标文件的绝对路径"
+     },
+     "old_string": {
+      "type": "string",
+      "description": "要替换的原始文本（空字符串可用于创建新文件或向空文件写入内容）。必须在文件中唯一匹配，否则须设置 replace_all=true 或提供更多上下文"
+     },
+     "new_string": {
+      "type": "string",
+      "description": "替换后的文本，必须与 old_string 不同"
+     },
+     "replace_all": {
+      "type": "boolean",
+      "description": "是否替换文件中所有匹配项，默认 false"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "file_path",
+     "old_string",
+     "new_string"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "glob",
+   "description": "使用 glob 模式查找文件。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "pattern": {
+      "type": "string",
+      "description": "glob 模式（如 *.py, **/*.js）"
+     },
+     "path": {
+      "type": "string",
+      "description": "搜索目录，省略时默认当前工作目录"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "pattern"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "list_files",
+   "description": "列出目录内容。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string",
+      "description": "目录路径"
+     },
+     "show_hidden": {
+      "type": "boolean",
+      "description": "显示隐藏文件"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": []
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "grep",
+   "description": "在文件中搜索内容。支持正则表达式。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "pattern": {
+      "type": "string",
+      "description": "搜索模式（正则表达式）"
+     },
+     "path": {
+      "type": "string",
+      "description": "搜索路径（文件或目录），默认为当前工作目录"
+     },
+     "ignore_case": {
+      "type": "boolean",
+      "description": "忽略大小写（兼容旧字段）"
+     },
+     "glob": {
+      "type": "string",
+      "description": "glob 过滤模式，例如 *.py 或 *.{ts,tsx}"
+     },
+     "output_mode": {
+      "type": "string",
+      "enum": [
+       "content",
+       "files_with_matches",
+       "count"
+      ],
+      "description": "输出模式：content、files_with_matches 或 count，默认 content"
+     },
+     "-B": {
+      "type": "integer",
+      "description": "每个匹配前显示的上下文行数，仅在 content 模式生效"
+     },
+     "-A": {
+      "type": "integer",
+      "description": "每个匹配后显示的上下文行数，仅在 content 模式生效"
+     },
+     "-C": {
+      "type": "integer",
+      "description": "每个匹配前后都显示的上下文行数，仅在 content 模式生效"
+     },
+     "context": {
+      "type": "integer",
+      "description": "-C 的别名，用于设置前后对称上下文行数"
+     },
+     "-n": {
+      "type": "boolean",
+      "description": "在 content 模式显示行号，默认 true"
+     },
+     "-i": {
+      "type": "boolean",
+      "description": "大小写不敏感搜索"
+     },
+     "type": {
+      "type": "string",
+      "description": "文件类型过滤，例如 py、js、ts，需要 rg"
+     },
+     "head_limit": {
+      "type": "integer",
+      "description": "只返回前 N 条记录或行。0 表示不限制，默认 250"
+     },
+     "offset": {
+      "type": "integer",
+      "description": "先跳过前 N 条记录或行，再应用 head_limit，默认 0"
+     },
+     "multiline": {
+      "type": "boolean",
+      "description": "启用多行正则模式，需要 rg"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "pattern"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "bash",
+   "description": "执行 Shell 命令并返回输出。\n\n工作目录在命令之间保持不变，但 Shell 状态（变量、函数、alias）不保留。Shell 环境从用户的 profile（bash 或 zsh）初始化。\n\nWindows 注意：`cmd`/PowerShell 自带 `mkdir` **不支持 `-p`**，不要在 cmd/PowerShell 中使用 `mkdir -p`。只有运行环境信息显示 Git Bash 或非 WSL stub 的 PATH bash 可用，并且实际使用 bash/Git Bash 时，POSIX `mkdir -p` 才适用。否则应使用 PowerShell `New-Item ... -Force` 或 cmd 逐级 `mkdir`。\n\n重要：避免使用本工具执行 `find`、`grep`、`cat`、`head`、`tail`、`sed`、`awk` 或 `echo` 命令，除非明确指示或确认专用工具无法完成任务。请使用对应的专用工具，以获得更好的体验：\n\n - 文件搜索：使用 glob 工具（不要用 find 或 ls）\n - 内容搜索：使用 grep 工具（不要用 grep 或 rg 命令）\n - 读取文件：使用 read_file 工具（不要用 cat/head/tail）\n - 编辑文件：使用 edit_file 工具（不要用 sed/awk）\n - 写入文件：使用 write_file 工具（不要用 echo > 或 cat <<EOF）\n - 输出文本：直接输出（不要用 echo/printf）\n虽然 bash 工具也能做到，但专用工具提供更好的用户体验，并且更方便审查和授权。\n\n# 使用说明\n - 创建文件或目录前，先用本工具执行 `ls` 确认父目录存在且位置正确\n - 路径包含空格时必须用双引号括起（例如 cd \"path with spaces/file.txt\"）\n - 尽量使用绝对路径维持当前工作目录，避免使用 `cd`；除非用户明确要求\n - 可通过 timeout 参数指定超时（秒），默认 300 秒，上限 3600 秒\n - 可将 run_in_background 设为 true 来后台运行命令。仅在不需要立即获取结果时使用，命令完成后会收到通知。使用该参数时无需在命令末尾加 `&`\n - 发出多条命令时：\n   - 独立命令：在同一消息中多次并行调用本工具。例如需要同时运行 \"git status\" 和 \"git diff\"，发送一条消息包含两次并行调用\n   - 依赖命令：在单次调用中用 `&&` 串联\n   - 仅在不关心前序命令是否失败时使用 `;`\n   - 不要用换行分隔命令（引号字符串内换行可以）\n - Git 命令规范：\n   - 优先创建新提交而非修改已有提交\n   - 执行破坏性操作（如 git reset --hard、git push --force、git checkout --）前，先考虑是否有更安全的替代方案，只在确实必要时使用\n   - 除非用户明确要求，不要跳过 hooks（--no-verify）或绕过签名（--no-gpg-sign）。hook 失败时应排查并修复根本原因\n   - 用户分享代码仓 URL 让你「看看这个仓库」或「分析一下」时，首选动作是 `git clone <url> <本地路径>`；克隆完再用 read_file/grep/glob 等专用工具读源码，比抓取仓库主页能拿到的信息完整得多\n   - 用 `git worktree add` 创建 worktree 时，目标路径必须位于当前项目目录下的 `.worktrees/<name>`，例如 `git worktree add .worktrees/feature-x -b feature-x HEAD`。严禁使用 `../` 或项目目录之外的路径作为 worktree 目标——项目同级目录属于越界，会污染项目外部空间。base 分支未指定时用当前分支（`HEAD`），不要臆测 `main`。\n - 避免不必要的 `sleep` 命令：\n   - 能立即执行的命令之间不要 sleep\n   - 长时间运行的命令使用 `run_in_background: true`，无需 sleep 等待\n   - 不要在 sleep 循环中重试失败命令——排查根本原因\n   - 等待后台任务完成时会自动通知——不要轮询\n   - 如必须轮询外部进程，使用检查命令（如 `gh run view`）而非先 sleep\n   - 如必须 sleep，保持短时间（1-5 秒）",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "command": {
+      "type": "string",
+      "description": "要执行的命令"
+     },
+     "timeout": {
+      "type": "integer",
+      "description": "可选超时时间（秒），默认 300，上限 3600。对于长时间运行的任务，建议适当增大该值以避免任务被提前中断"
+     },
+     "description": {
+      "type": "string",
+      "description": "用简洁的主动语态描述该命令的作用。不要在描述中使用 \"复杂\" 或 \"风险\" 等词——直接描述它做什么。\n\n对于简单命令（git、npm、常用 CLI 工具），保持简短（5-10 个字）：\n- ls → \"列出当前目录文件\"\n- git status → \"显示工作区状态\"\n- npm install → \"安装项目依赖\"\n\n对于不易一眼看懂的命令（管道命令、冷门参数等），补充足够上下文说明其用途：\n- find . -name \"*.tmp\" -exec rm {} \\; → \"递归查找并删除所有 .tmp 文件\"\n- git reset --hard origin/main → \"丢弃所有本地更改，与远程 main 对齐\"\n- curl -s url | jq '.data[]' → \"从 URL 获取 JSON 并提取 data 数组元素\""
+     },
+     "run_in_background": {
+      "type": "boolean",
+      "description": "设为 true 以后台运行命令。仅在不需要立即获取结果时使用，命令完成后会收到通知"
+     },
+     "workdir": {
+      "type": "string",
+      "description": "执行目录（相对或绝对路径），默认为工作区根目录；不能越出工作区沙箱"
+     },
+     "max_output_chars": {
+      "type": "integer",
+      "description": "最大输出字符数，默认 20000：超出部分会被截断并写入临时文件（结果中会给出文件路径，可按需读取），防止超大输出撑爆上下文；显式传 0 表示不限制（谨慎使用）"
+     },
+     "shell_type": {
+      "type": "string",
+      "enum": [
+       "auto",
+       "cmd",
+       "powershell",
+       "bash",
+       "sh"
+      ],
+      "description": "指定 Shell 类型，可选值：auto/cmd/powershell/bash/sh，默认 auto。cmd/PowerShell 不支持 `mkdir -p`；只有环境信息显示 Git Bash 或非 WSL stub 的 PATH bash 可用时，才对 POSIX 语法使用 auto/bash/sh。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "command"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "skill_tool",
+   "description": "使用此工具查看特定技能的内容。成功时默认附带技能根目录的 ASCII 目录树（directory_tree）以及嵌套子技能相对路径列表（discovered_skill_names，含 SKILL.md 的子目录）；加载子技能请再次调用本工具，并设置 relative_file_path（如 designer/SKILL.md）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "skill_name": {
+      "type": "string",
+      "description": "技能的名称"
+     },
+     "relative_file_path": {
+      "type": "string",
+      "description": "可选。查看技能目录中指定路径（relative_file_path）下的特定文件。留空则查看主 SKILL.md 文件。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "skill_name"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "code",
+   "description": "执行代码（Python 或 JavaScript）。\n\n每次调用在独立进程中执行，变量与对象不跨调用保留，请提交可独立运行的完整代码。\n\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "code": {
+      "type": "string",
+      "description": "要执行的代码"
+     },
+     "language": {
+      "type": "string",
+      "description": "编程语言，支持 python 或 javascript，默认 python"
+     },
+     "timeout": {
+      "type": "integer",
+      "description": "超时时间（秒），默认 300，上限 3600"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "code"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "task_tool",
+   "description": "启动新的子代理，自主处理复杂、多步骤任务。\n\ntask_tool 启动专门的子代理来自主处理复杂任务。每种子代理类型都有特定的能力和可用工具。\n\n可用代理类型及其工具：\n\n- general-purpose: 通用型子代理，继承主代理的工具与能力（文件读写、bash、MCP、skills 等），适合执行独立的复杂子任务（调研、搜代码、多步实现等）。子代理运行在独立上下文窗口中，中间工具调用结果不会污染主代理上下文。当你在搜索关键词或文件时，如果不确定前几次尝试就能找到正确匹配，就用这个子代理来帮你搜索。 (Tools: wiki_ingest, wiki_query, wiki_lint, free_search, fetch_webpage, audio_metadata, search_skill, install_skill, uninstall_skill, acp_chat)\n- browser_agent: 专用浏览器子代理，直接使用 Playwright MCP 工具执行网页任务。 (Tools: browser_probe_cards, browser_probe_interactives, browser_custom_action, browser_list_custom_actions, browser_runtime_health)\n  Available Playwright capabilities:\n    - core: Navigate, inspect, and interact with web pages using the standard Playwright browser tools. (Tools: browser_click, browser_close, browser_drag, browser_drop, browser_evaluate, browser_file_upload, browser_fill_form, browser_find, browser_handle_dialog, browser_hover, browser_navigate, browser_navigate_back, browser_press_key, browser_select_option, browser_snapshot, browser_tabs, browser_take_screenshot, browser_type, browser_wait_for)\n    - advanced_code: Run a preplanned Playwright code snippet only when deterministic browser tools, compact probes, evaluate, snapshot, and batch are insufficient. (Tools: browser_run_code)\n    - unsafe_dev: Enable unrestricted browser code execution only for explicitly requested local development or debugging; this replaces advanced_code when both are requested. (Tools: browser_run_code_unsafe)\n    - pdf: Save the current browser page as a PDF artifact. (Tools: browser_pdf_save)\n    - vision: Use coordinate-based mouse interactions for tasks that require visual positioning. (Tools: browser_mouse_click_xy, browser_mouse_down, browser_mouse_drag_xy, browser_mouse_move_xy, browser_mouse_up, browser_mouse_wheel)\n    - devtools: Use Playwright developer tools for annotations, highlighting, tracing, and video capture. (Tools: browser_annotate, browser_console_messages, browser_hide_highlight, browser_highlight, browser_resize, browser_resume, browser_start_tracing, browser_start_video, browser_stop_tracing, browser_stop_video, browser_video_chapter, browser_video_hide_actions, browser_video_show_actions)\n    - config: Inspect the resolved Playwright MCP configuration when diagnosing browser runtime setup. (Tools: browser_get_config)\n    - network: Change browser network state and add, inspect, or remove request mocks for network testing. (Tools: browser_network_request, browser_network_requests, browser_network_state_set, browser_route, browser_route_list, browser_unroute)\n    - storage: Inspect or modify cookies and browser storage, including saving or restoring sensitive session state. (Tools: browser_cookie_clear, browser_cookie_delete, browser_cookie_get, browser_cookie_list, browser_cookie_set, browser_localstorage_clear, browser_localstorage_delete, browser_localstorage_get, browser_localstorage_list, browser_localstorage_set, browser_sessionstorage_clear, browser_sessionstorage_delete, browser_sessionstorage_get, browser_sessionstorage_list, browser_sessionstorage_set, browser_set_storage_state, browser_storage_state)\n    - testing: Generate Playwright locators and verify expected elements, lists, text, or values. (Tools: browser_generate_locator, browser_verify_element_visible, browser_verify_list_visible, browser_verify_text_visible, browser_verify_value)\n\n使用 task_tool 时，请通过 subagent_type 参数选择要使用的子代理类型。使用 task_tool 时，必须显式指定 subagent_type，且其值必须与上方「可用代理类型」列表中的名称完全一致。\n当 subagent_type 为 \"browser_agent\" 时，还必须指定 browser_capabilities，并从上方浏览器能力目录中选择额外能力类别。仅使用核心浏览器能力时传入空列表；其他子代理类型不要提供 browser_capabilities。\n\n何时不使用 task_tool：\n\n- 如果你想读取某个具体文件路径，直接用 read_file 或 glob，比用 task_tool 更快\n- 如果你在查找某个具体的类定义（如 \"class Foo\"），直接用 grep 或 glob，比用 task_tool 更快\n- 如果你在 2-3 个特定文件内搜索代码，直接用 read_file，比用 task_tool 更快\n- 其他与上述代理描述无关的任务\n\n使用注意事项：\n\n- task_description 应包含完整的上下文信息——子代理没有本次对话的任何记忆\n- 子代理完成后会返回一条消息给你。该结果对用户不可见。如需向用户展示结果，你应发送一条文字消息，简明总结子代理的结果。\n- 每次 task_tool 调用都是全新启动——请提供完整的任务描述。\n- 子代理的输出通常应当被信任。\n- 明确告知子代理你期望它写代码还是仅做调研（搜索、读文件、抓取网页等），因为它不知道用户的意图。\n- 如果子代理的描述中提到应主动使用它，你应尽量在用户没有明确要求时就使用它。自行判断。\n- 如果用户明确要求\"并行\"运行子代理，你必须在同一条消息中发出多个 task_tool 调用。例如，如果你需要同时启动 build-validator 子代理和 test-runner 子代理，请在同一条消息中发出两个 tool 调用。\n\n## 如何写好任务描述\n\n像给一位刚走进房间的聪明同事做简报一样描述任务——子代理没看过本次对话，不知道你尝试过什么，也不理解这个任务为什么重要。\n- 说明你想达成什么目标以及为什么。\n- 描述你已经了解到的信息或已排除的可能性。\n- 提供足够的问题背景，让子代理能够自主判断，而不是只能机械执行狭窄的指令。\n- 如果需要简短回复，请明确说明（\"在 200 字内汇报\"）。\n- 查找类任务：直接给出精确命令。调研类任务：给出要回答的问题——规定好的步骤在前提不成立时只会成为累赘。\n\n简短的命令式描述会产生浅层、泛泛的结果。\n\n**永远不要委托理解。** 不要写\"根据你的发现修复 bug\"或\"根据调研结果实现它\"。这类说法把综合分析推给了子代理，而不是你自己完成。写出的描述应能证明你已经理解了问题：包含文件路径、行号、具体需要修改的内容。\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subagent_type": {
+      "type": "string",
+      "description": "子代理类型（必填，须与上方「可用代理类型」列表中的名称完全一致；不要使用列表中未出现的名称）"
+     },
+     "task_description": {
+      "type": "string",
+      "description": "任务描述（必填，需包含完整上下文）"
+     },
+     "browser_capabilities": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "浏览器子代理所需的额外能力类别列表；仅使用核心能力时传入空列表"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subagent_type",
+     "task_description"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "todo_create",
+   "description": "\n创建当前会话的待办事项列表，用于跟踪进度、组织复杂任务，帮助用户了解整体执行情况。\n\n## 使用方式\n\n入参为 JSON 数组（每个任务必须包含 id 字段）：\n    {\"tasks\": [{\"id\": \"translate_doc\", \"content\": \"翻译文档\", \"activeForm\": \"正在翻译文档\", \"description\": \"将文档翻译为目标语言\", \"selected_model_id\": \"fast\"}, {\"id\": \"analyze_arch\", \"content\": \"分析代码架构\", \"activeForm\": \"正在分析代码架构\", \"description\": \"梳理代码模块结构与依赖关系\", \"selected_model_id\": \"smart\"}]}\n\n## 规则\n\n- **id 字段为必填**：必须为每个任务指定简短、语义清晰的唯一字符串 ID（如 \"translate_doc\"、\"analyze_code\"），禁止使用随机字符或 UUID。同一会话内 ID 不得重复。此 ID 在后续 todo_modify 中用于精准定位任务，是跨轮次更新状态的唯一依据\n- 第一个任务自动设为 in_progress，其余为 pending\n- 同一时间只能有一个 in_progress 任务\n- 任务描述必须具体、可执行、清晰明确\n- 调用本工具会覆盖当前会话的任务列表；若需追加任务，请使用 todo_modify\n- 当没有获取到当前可用模型信息时，不要添加 selected_model_id 字段；否则必须添加 selected_model_id 指定执行任务的模型 ID\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "tasks": {
+      "type": "array",
+      "description": "子任务列表，JSON 数组格式。每个元素为任务对象，必填字段：\n- id：任务唯一标识符，由你自行指定，必须简短且语义清晰（如 \"translate_doc\"、\"analyze_code\"），禁止使用随机字符或 UUID；同一会话内 ID 不得重复；后续 todo_modify 按此 ID 精准定位任务\n- content：任务摘要描述\n- activeForm：content 的进行语态（如 content 为「翻译文档」，activeForm 为「正在翻译文档」）\n- description：任务详细内容\n可选字段：\n- selected_model_id：执行任务的模型 ID，见系统提示词「模型选择策略」",
+      "items": {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string",
+         "description": "任务唯一标识符，由你自行指定的简短语义字符串（如 \"translate_doc\"），禁止使用 UUID，同一会话内须唯一"
+        },
+        "content": {
+         "type": "string",
+         "description": "任务摘要描述"
+        },
+        "activeForm": {
+         "type": "string",
+         "description": "content 的进行语态"
+        },
+        "description": {
+         "type": "string",
+         "description": "任务详细内容"
+        },
+        "selected_model_id": {
+         "type": "string",
+         "description": "执行此任务使用的模型 ID。见系统提示词「模型选择策略」。若任务结果不满意，可通过 todo_modify 更换更强的模型 ID 后重试。"
+        }
+       },
+       "required": [
+        "id",
+        "content",
+        "activeForm",
+        "description"
+       ]
+      }
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "tasks"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "todo_list",
+   "description": "\n检索并显示当前会话的所有待办事项。\n\n## 何时使用 todo_list（而非 todo_modify）\n\n使用 todo_list 的场景：\n- 需要查看当前任务全貌和各任务ID，再决定如何更新\n- 不确定当前有哪些任务处于 in_progress 或 pending\n\n使用 todo_modify 的场景（不需要先调用 todo_list）：\n- 已知任务 ID，直接更新任务信息\n- 任务刚完成，立即标记为 completed\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": []
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "todo_get",
+   "description": "\n根据任务 ID 获取单个任务的完整详情。\n\n入参：id（任务唯一标识符）\n\n返回：完整的任务信息，包括 id、content（任务摘要）、activeForm、description（任务详细内容）、status、depends_on、result_summary、meta_data、selected_model_id。\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "description": "任务唯一标识符"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "id"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "todo_modify",
+   "description": "\n修改当前会话的待办事项，包括：更新（update）、删除（delete）、取消（cancel）、追加（append）、在其后插入（insert_after）、在其前插入（insert_before）\n\n重要说明：\n- 若需重新规划整个任务列表，请调用 todo_create\n- 支持批量处理同一时点发生的结构变更，避免连续多次调用。状态流转应随执行进度即时更新：单次 update 的状态变更通常只涉及当前任务和下一任务，不要将多个 pending 任务批量改为 completed\n- **id 使用你在 todo_create 时自定义的语义 ID**（如 \"translate_doc\"），不要使用 UUID\n- **只传入发生变化的字段**：update 每次调用只需给出 id 加上实际改变的字段（通常只是 status），不要把 content、description、activeForm 等未变化的字段重新完整传一遍\n\naction 支持的操作类型：\n\nupdate：修改现有任务的状态或标题（id 不可修改，只需传入发生变化的字段，其余字段保持不传即可）：\n    {\n        \"action\": \"update\",\n        \"todos\": [\n            {\"id\": \"translate_doc\", \"status\": \"completed\"},\n            {\"id\": \"analyze_code\", \"status\": \"in_progress\"}\n        ]\n    }\n\n支持修改 selected_model_id：若任务 selected_model_id 不为空，且执行结果质量不佳（输出不准确、逻辑错误、未达预期），应根据模型描述更新质量更高的模型ID：\n    {\n        \"action\": \"update\",\n        \"todos\": [\n            {\"id\": \"translate_doc\", \"selected_model_id\": \"smart\", \"status\": \"pending\"}\n        ]\n    }\n\ncancel：将指定任务标记为 cancelled（任务将被忽略，不再执行）：\n    {\n        \"action\": \"cancel\",\n        \"ids\": [\"translate_doc\", \"analyze_code\"]\n    }\n\ndelete：从列表中永久删除指定任务：\n    {\n        \"action\": \"delete\",\n        \"ids\": [\"translate_doc\"]\n    }\n\nappend：在列表末尾追加新任务（id 由你指定，须简短语义且唯一）：\n    {\n        \"action\": \"append\",\n        \"todos\": [\n            {\"id\": \"write_report\", \"content\": \"新任务内容\", \"activeForm\": \"执行新任务\", \"description\": \"任务的详细描述\", \"status\": \"pending\"}\n        ]\n    }\n\ninsert_after：在指定任务之后插入新任务（目标任务状态须为 in_progress 或 pending）：\n    {\n        \"action\": \"insert_after\",\n        \"todo_data\": {\"target_id\": \"translate_doc\", \"items\": [{\"id\": \"review_translation\", \"content\": \"插入的任务\", \"activeForm\": \"执行插入的任务\", \"description\": \"任务的详细描述\", \"status\": \"pending\", \"selected_model_id\": \"fast\"}]}\n    }\n\ninsert_before：在指定任务之前插入新任务（目标任务状态须为 pending）：\n    {\n        \"action\": \"insert_before\",\n        \"todo_data\": {\"target_id\": \"analyze_code\", \"items\": [{\"id\": \"setup_env\", \"content\": \"插入的任务\", \"activeForm\": \"执行插入的任务\", \"description\": \"任务的详细描述\", \"status\": \"pending\"}]}\n    }\n\n核心规则：\n- update 操作：id 字段不可修改，其他字段支持部分更新\n- 同一时间只能有一个任务处于 in_progress\n- insert_after：目标任务状态必须为 in_progress 或 pending\n- insert_before：目标任务状态必须为 pending\n- 如果任务的 selected_model_id 为空时，任何操作都不要更改 selected_model_id 字段\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "action": {
+      "type": "string",
+      "description": "要执行的操作类型",
+      "enum": [
+       "update",
+       "delete",
+       "cancel",
+       "append",
+       "insert_after",
+       "insert_before"
+      ]
+     },
+     "ids": {
+      "type": "array",
+      "description": "要操作的任务 ID 列表",
+      "items": {
+       "type": "string"
+      }
+     },
+     "todos": {
+      "type": "array",
+      "description": "根据 action 字段处理的待办事项数组。支持修改 selected_model_id：若某任务执行结果质量不佳（输出不准确、逻辑错误、未达预期），应将 selected_model_id 更新为更高等级的模型 ID，然后将任务状态重置为 pending 或 in_progress 以触发重新执行。",
+      "items": {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string",
+         "description": "任务唯一标识符，由你自行指定的简短语义字符串（如 \"translate_doc\"），禁止使用 UUID，同一会话内须唯一"
+        },
+        "content": {
+         "type": "string",
+         "description": "任务摘要描述"
+        },
+        "activeForm": {
+         "type": "string",
+         "description": "content 的进行语态"
+        },
+        "description": {
+         "type": "string",
+         "description": "任务详细内容"
+        },
+        "status": {
+         "type": "string",
+         "description": "任务状态",
+         "enum": [
+          "pending",
+          "in_progress",
+          "completed",
+          "cancelled"
+         ]
+        },
+        "selected_model_id": {
+         "type": "string",
+         "description": "执行此任务使用的模型 ID。见系统提示词「模型选择策略」。若任务结果不满意，可通过 todo_modify 更换更强的模型 ID 后重试。"
+        }
+       },
+       "required": [
+        "id"
+       ]
+      }
+     },
+     "todo_data": {
+      "type": "object",
+      "description": "用于 insert_after/insert_before 操作的对象",
+      "properties": {
+       "target_id": {
+        "type": "string",
+        "description": "目标任务 ID"
+       },
+       "items": {
+        "type": "array",
+        "description": "要插入的任务列表",
+        "items": {
+         "type": "object",
+         "properties": {
+          "id": {
+           "type": "string",
+           "description": "任务唯一标识符，由你自行指定的简短语义字符串（如 \"translate_doc\"），禁止使用 UUID，同一会话内须唯一"
+          },
+          "content": {
+           "type": "string",
+           "description": "任务摘要描述"
+          },
+          "activeForm": {
+           "type": "string",
+           "description": "content 的进行语态"
+          },
+          "description": {
+           "type": "string",
+           "description": "任务详细内容"
+          },
+          "status": {
+           "type": "string",
+           "description": "任务状态",
+           "enum": [
+            "pending",
+            "in_progress",
+            "completed",
+            "cancelled"
+           ]
+          },
+          "selected_model_id": {
+           "type": "string",
+           "description": "执行此任务使用的模型 ID。见系统提示词「模型选择策略」。若任务结果不满意，可通过 todo_modify 更换更强的模型 ID 后重试。"
+          }
+         },
+         "required": [
+          "id"
+         ]
+        }
+       }
+      },
+      "required": [
+       "target_id",
+       "items"
+      ]
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "action"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "ask_user",
+   "description": "中断执行并向用户请求输入。支持两种模式：\n1. 纯文本查询：只传 `query` —— 用户自由输入回答。\n2. 结构化选项：传 `query` + `questions` —— 用户从预定义选项中选择。当你希望用户在特定选项间做选择时（如「应用更新」vs「跳过」）使用 `questions`。每次调用最多询问 4 个问题。自由输入题不提供选项；否则必须提供 2-4 个选项。对于单选问题，选项可携带 `preview`（markdown，如带围栏代码块的 ASCII mockup）展示在选项旁，用于对比具体产物；仅在视觉对比有助于用户决策时使用。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "向用户展示的问题（必填）。"
+     },
+     "questions": {
+      "type": "array",
+      "description": "带选项的结构化问题。当希望用户从预定义选项中选择而非自由输入时使用。每次调用最多询问 4 个问题。自由输入题不提供选项；否则必须提供 2-4 个选项。用户始终可以选择「其他」进行自定义输入。",
+      "items": {
+       "type": "object",
+       "properties": {
+        "question": {
+         "type": "string",
+         "minLength": 1,
+         "description": "The question to present to the user."
+        },
+        "header": {
+         "type": "string",
+         "description": "A short label displayed as a chip/tag."
+        },
+        "options": {
+         "type": "array",
+         "description": "Available choices for this question (2-4 items).",
+         "maxItems": 4,
+         "anyOf": [
+          {
+           "maxItems": 0
+          },
+          {
+           "minItems": 2
+          }
+         ],
+         "items": {
+          "type": "object",
+          "properties": {
+           "label": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Display text for this option (1-5 words)."
+           },
+           "description": {
+            "type": "string",
+            "description": "Explanation of what this option means."
+           },
+           "preview": {
+            "type": "string",
+            "description": "Optional preview content rendered beside this option when comparing concrete artifacts the user should visually compare (e.g. ASCII mockups, code snippets). Markdown is supported; use fenced code blocks for monospace mockups so alignment is preserved. Only rendered for single-select questions; ignored for multi-select."
+           }
+          },
+          "required": [
+           "label"
+          ]
+         }
+        },
+        "multi_select": {
+         "type": "boolean",
+         "default": false,
+         "description": "Allow multiple selections instead of just one."
+        }
+       },
+       "required": [
+        "question"
+       ]
+      },
+      "maxItems": 4
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "query"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron",
+   "description": "使用 action 接口：status、list、add、update、remove、run、runs、wake，并兼容结构化 schedule/payload/delivery 字段。处理“2分钟后”“明天上午9点”“下周一”这类时间时，优先根据系统提示中已提供的当前日期与时间直接换算并调用 cron，不要为了简单的时间换算先调用 code 或 bash。创建一次性提醒时，schedule.at 默认直接使用用户当前本地时区偏移来写，例如 +08:00；除非用户明确要求，否则不要改写成 Z 或 UTC。给当前聊天创建提醒时，优先使用 payload.kind=systemEvent 和 sessionTarget=current。向用户确认创建结果时，优先按 schedule.at 里的原始时区/偏移表述，不要自行改写成 UTC。\n\n【投递频道】delivery.channel / targets：用户未明确指定时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**\n\n【强制：wake_offset_seconds】这是提前唤醒秒数，不是任务执行时间。除非用户明确说“提前 X 秒/分钟唤醒/准备/执行”，否则**禁止**传 wake_offset_seconds 字段；不要根据任务类型、提醒/查询场景、距离触发时间或历史记录推断为 60 或其他正值。用户未明确指定时必须省略该字段，后端会默认使用 0 秒（到点执行，不提前唤醒）。\n\n【重要：cron 表达式格式】只支持7段式(Quartz格式)：秒 分 时 日 月 周 年。字段取值范围：秒(0-59)，分(0-59)，时(0-23)，日(1-31)，月(1-12)，周(1-7或?)，年(1970-2099或*)。日和周字段：不能同时指定具体值，其中一个必须用?表示'不指定'。年份字段：*表示跨年周期，固定年份只在该年执行。真正只执行一次：所有字段均为固定值(无*和?)，如'0 30 17 29 4 ? 2026'表示2026年4月29日17:30:00执行一次。例：每天9点 -> '0 0 9 * * ? *'；每15分钟 -> '0 */15 * * * ? *'；每周一9点 -> '0 0 9 ? * MON *'。注意：一次性任务建议优先使用 schedule.at (ISO8601格式)，cron更适合周期性任务。\n\n【重要：cron 表达式限制】标准 cron 的 */X 语义是'当字段值能被 X 整除时触发'，而非'每隔 X 单位触发'。只有当周期单位能被 X 整除时，间隔才是均匀的。以下是各字段的限制：\n- 秒/分(0-59)：*/X 仅支持 X 整除60的值：1/2/3/4/5/6/10/12/15/20/30。  例如 */40 实际在每小时第0分和第40分触发（间隔40分→20分交替），并非每40分钟。  用户要求'每隔40分钟'时，必须先告知此限制并让用户确认是否接受不均匀间隔，  或建议改用整除60的间隔（如20分钟或30分钟）。未经用户确认不得直接创建。\n- 小时(0-23)：*/X 仅支持 X 整除24的值：1/2/3/4/6/8/12。  例如 */5 实际在每天0/5/10/15/20时触发（间隔5h→4h→5h→4h交替），并非每5小时。  用户要求'每隔5小时'时，必须告知限制并让用户确认，或建议改用整除24的间隔。\n- 日(1-31)：*/X 不可靠，因为不同月份天数不同（28/29/30/31）。  例如 */15 在2月只触发1、15日（共2次），在31天月份触发1、16、31日（共3次）。  用户要求'每隔X天'时，建议改用'每周X'或指定固定日期（如每月1号、15号）。\n- 月(1-12)：*/X 仅支持 X 整除12的值：1/2/3/4/6。  例如 */5 实际在1/5/10月触发，并非每5个月均匀触发。\n- 周(1-7)：*/X 仅支持 X 整除7的值：1/7。1=SUN,7=SAT。  例如 */2 实际在SUN/TUE/THU触发，并非'每隔2周'。  用户要求'每隔2周'时，应直接指定具体星期几或建议简化为'每周一'。\n处理'每隔X分钟/小时/天'需求时，务必检查 X 是否整除对应周期单位；若不整除，必须告知用户限制，让用户确认后再创建，或建议替代方案。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "action": {
+      "type": "string",
+      "enum": [
+       "status",
+       "list",
+       "add",
+       "update",
+       "remove",
+       "run",
+       "runs",
+       "wake"
+      ],
+      "description": "要执行的 cron 操作"
+     },
+     "job": {
+      "type": "object",
+      "required": [],
+      "additionalProperties": true,
+      "properties": {
+       "name": {
+        "type": "string",
+        "description": "任务名称"
+       },
+       "enabled": {
+        "type": "boolean",
+        "description": "任务是否启用"
+       },
+       "schedule": {
+        "type": "object",
+        "description": "结构化调度定义，支持 at/every/cron",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "kind": {
+          "type": "string",
+          "enum": [
+           "at",
+           "every",
+           "cron"
+          ],
+          "description": "调度类型：at、every 或 cron"
+         },
+         "at": {
+          "type": "string",
+          "description": "一次性执行时间，ISO 8601"
+         },
+         "everyMs": {
+          "type": "integer",
+          "description": "循环间隔，毫秒"
+         },
+         "anchorMs": {
+          "type": "integer",
+          "description": "every 调度的起始锚点毫秒时间戳"
+         },
+         "expr": {
+          "type": "string",
+          "description": "cron表达式(Quartz格式)。7段式：秒 分 时 日 月 周 年。日和周：不能同时指定具体值，其中一个用?。年份：*跨年周期，固定年份只在该年执行。一次性：所有字段固定值，如'0 0 17 28 3 ? 2026'。例：每天9点'0 0 9 * * ? *'；每15分钟'0 */15 * * * ? *'。详见工具描述。"
+         },
+         "tz": {
+          "type": "string",
+          "description": "cron 调度使用的时区"
+         },
+         "staggerMs": {
+          "type": "integer",
+          "description": "cron 调度的可选抖动毫秒数"
+         }
+        }
+       },
+       "payload": {
+        "type": "object",
+        "description": "结构化任务负载，支持 systemEvent 或 agentTurn",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "kind": {
+          "type": "string",
+          "enum": [
+           "systemEvent",
+           "agentTurn"
+          ],
+          "description": "负载类型：systemEvent 或 agentTurn"
+         },
+         "text": {
+          "type": "string",
+          "description": "systemEvent提醒文本。不要包含时间/频率信息（如'每隔40分钟'、'每天9点'）"
+         },
+         "message": {
+          "type": "string",
+          "description": "agentTurn 发送给代理的消息"
+         },
+         "model": {
+          "type": "string",
+          "description": "agentTurn 可选模型覆盖"
+         },
+         "thinking": {
+          "type": "string",
+          "description": "agentTurn 的思考预算或模式"
+         },
+         "timeoutSeconds": {
+          "type": "integer",
+          "description": "agentTurn 超时时间（秒）"
+         },
+         "allowUnsafeExternalContent": {
+          "type": "boolean",
+          "description": "是否允许不安全的外部内容"
+         },
+         "lightContext": {
+          "type": "boolean",
+          "description": "是否使用轻量上下文执行"
+         },
+         "deliver": {
+          "type": "string",
+          "description": "agentTurn 自带的投递策略字段"
+         },
+         "channel": {
+          "type": "string",
+          "description": "agentTurn 的默认投递频道"
+         },
+         "to": {
+          "type": "string",
+          "description": "agentTurn 的目标收件人"
+         },
+         "bestEffortDeliver": {
+          "type": "boolean",
+          "description": "是否最佳努力投递"
+         },
+         "fallbacks": {
+          "type": "array",
+          "description": "agentTurn 的回退投递列表",
+          "items": {
+           "type": "string",
+           "description": "agentTurn 的回退投递列表"
+          }
+         }
+        }
+       },
+       "delivery": {
+        "type": "object",
+        "description": "提醒结果的投递方式",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "mode": {
+          "type": "string",
+          "enum": [
+           "none",
+           "announce",
+           "webhook"
+          ],
+          "description": "投递模式：none、announce 或 webhook"
+         },
+         "channel": {
+          "type": "string",
+          "description": "announce 模式投递频道。用户未明确指定时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**"
+         },
+         "to": {
+          "type": "string",
+          "description": "目标收件人或会话标识"
+         },
+         "accountId": {
+          "type": "string",
+          "description": "投递账号标识"
+         },
+         "bestEffort": {
+          "description": "announce/webhook 是否最佳努力投递"
+         },
+         "failureDestination": {
+          "description": "失败时的兜底投递目标"
+         }
+        }
+       },
+       "sessionTarget": {
+        "type": "string",
+        "description": "会话目标：main、isolated、current 或 session:<id>"
+       },
+       "wakeMode": {
+        "type": "string",
+        "enum": [
+         "now",
+         "next-heartbeat"
+        ],
+        "description": "唤醒模式：now 或 next-heartbeat"
+       },
+       "deleteAfterRun": {
+        "type": "boolean",
+        "description": "执行后是否自动删除该任务"
+       },
+       "cron_expr": {
+        "type": "string",
+        "description": "兼容层cron表达式(Quartz格式)。7段式：秒 分 时 日 月 周 年。日和周：不能同时指定具体值，其中一个用?。年份：*跨年周期，固定年份只在该年执行。一次性：所有字段固定值，如'0 0 17 28 3 ? 2026'。例：每天9点'0 0 9 * * ? *'；每15分钟'0 */15 * * * ? *'。详见工具描述。"
+       },
+       "timezone": {
+        "type": "string",
+        "description": "兼容层时区字段"
+       },
+       "wake_offset_seconds": {
+        "type": "integer",
+        "description": "提前唤醒秒数，不是任务执行时间。除非用户明确说“提前 X 秒/分钟唤醒/准备/执行”，否则禁止传该字段；不要根据任务类型、提醒/查询场景、距离触发时间或历史记录推断为 60 或其他正值。用户未明确指定时必须省略，后端默认 0 秒（到点执行，不提前唤醒）。",
+        "default": 0
+       },
+       "description": {
+        "type": "string",
+        "description": "具体任务内容，到点执行时发给助手。不要包含时间/频率信息（如'每隔40分钟'、'每天9点'）"
+       },
+       "targets": {
+        "type": "string",
+        "description": "目标频道。用户未明确指定时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**"
+       }
+      },
+      "description": "用于 add 的任务对象；支持结构化字段和兼容层字段"
+     },
+     "jobId": {
+      "type": "string",
+      "description": "用于 update/remove/run/runs 的任务 ID"
+     },
+     "patch": {
+      "type": "object",
+      "required": [],
+      "additionalProperties": true,
+      "properties": {
+       "name": {
+        "type": "string",
+        "description": "任务名称"
+       },
+       "enabled": {
+        "type": "boolean",
+        "description": "任务是否启用"
+       },
+       "schedule": {
+        "type": "object",
+        "description": "结构化调度定义，支持 at/every/cron",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "kind": {
+          "type": "string",
+          "enum": [
+           "at",
+           "every",
+           "cron"
+          ],
+          "description": "调度类型：at、every 或 cron"
+         },
+         "at": {
+          "type": "string",
+          "description": "一次性执行时间，ISO 8601"
+         },
+         "everyMs": {
+          "type": "integer",
+          "description": "循环间隔，毫秒"
+         },
+         "anchorMs": {
+          "type": "integer",
+          "description": "every 调度的起始锚点毫秒时间戳"
+         },
+         "expr": {
+          "type": "string",
+          "description": "cron表达式(Quartz格式)。7段式：秒 分 时 日 月 周 年。日和周：不能同时指定具体值，其中一个用?。年份：*跨年周期，固定年份只在该年执行。一次性：所有字段固定值，如'0 0 17 28 3 ? 2026'。例：每天9点'0 0 9 * * ? *'；每15分钟'0 */15 * * * ? *'。详见工具描述。"
+         },
+         "tz": {
+          "type": "string",
+          "description": "cron 调度使用的时区"
+         },
+         "staggerMs": {
+          "type": "integer",
+          "description": "cron 调度的可选抖动毫秒数"
+         }
+        }
+       },
+       "payload": {
+        "type": "object",
+        "description": "结构化任务负载，支持 systemEvent 或 agentTurn",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "kind": {
+          "type": "string",
+          "enum": [
+           "systemEvent",
+           "agentTurn"
+          ],
+          "description": "负载类型：systemEvent 或 agentTurn"
+         },
+         "text": {
+          "type": "string",
+          "description": "systemEvent提醒文本。不要包含时间/频率信息（如'每隔40分钟'、'每天9点'）"
+         },
+         "message": {
+          "type": "string",
+          "description": "agentTurn 发送给代理的消息"
+         },
+         "model": {
+          "type": "string",
+          "description": "agentTurn 可选模型覆盖"
+         },
+         "thinking": {
+          "type": "string",
+          "description": "agentTurn 的思考预算或模式"
+         },
+         "timeoutSeconds": {
+          "type": "integer",
+          "description": "agentTurn 超时时间（秒）"
+         },
+         "allowUnsafeExternalContent": {
+          "type": "boolean",
+          "description": "是否允许不安全的外部内容"
+         },
+         "lightContext": {
+          "type": "boolean",
+          "description": "是否使用轻量上下文执行"
+         },
+         "deliver": {
+          "type": "string",
+          "description": "agentTurn 自带的投递策略字段"
+         },
+         "channel": {
+          "type": "string",
+          "description": "agentTurn 的默认投递频道"
+         },
+         "to": {
+          "type": "string",
+          "description": "agentTurn 的目标收件人"
+         },
+         "bestEffortDeliver": {
+          "type": "boolean",
+          "description": "是否最佳努力投递"
+         },
+         "fallbacks": {
+          "type": "array",
+          "description": "agentTurn 的回退投递列表",
+          "items": {
+           "type": "string",
+           "description": "agentTurn 的回退投递列表"
+          }
+         }
+        }
+       },
+       "delivery": {
+        "type": "object",
+        "description": "提醒结果的投递方式",
+        "required": [],
+        "additionalProperties": true,
+        "properties": {
+         "mode": {
+          "type": "string",
+          "enum": [
+           "none",
+           "announce",
+           "webhook"
+          ],
+          "description": "投递模式：none、announce 或 webhook"
+         },
+         "channel": {
+          "type": "string",
+          "description": "announce 模式投递频道。用户未明确指定时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**"
+         },
+         "to": {
+          "type": "string",
+          "description": "目标收件人或会话标识"
+         },
+         "accountId": {
+          "type": "string",
+          "description": "投递账号标识"
+         },
+         "bestEffort": {
+          "description": "announce/webhook 是否最佳努力投递"
+         },
+         "failureDestination": {
+          "description": "失败时的兜底投递目标"
+         }
+        }
+       },
+       "sessionTarget": {
+        "type": "string",
+        "description": "会话目标：main、isolated、current 或 session:<id>"
+       },
+       "wakeMode": {
+        "type": "string",
+        "enum": [
+         "now",
+         "next-heartbeat"
+        ],
+        "description": "唤醒模式：now 或 next-heartbeat"
+       },
+       "deleteAfterRun": {
+        "type": "boolean",
+        "description": "执行后是否自动删除该任务"
+       },
+       "cron_expr": {
+        "type": "string",
+        "description": "兼容层cron表达式(Quartz格式)。7段式：秒 分 时 日 月 周 年。日和周：不能同时指定具体值，其中一个用?。年份：*跨年周期，固定年份只在该年执行。一次性：所有字段固定值，如'0 0 17 28 3 ? 2026'。例：每天9点'0 0 9 * * ? *'；每15分钟'0 */15 * * * ? *'。详见工具描述。"
+       },
+       "timezone": {
+        "type": "string",
+        "description": "兼容层时区字段"
+       },
+       "wake_offset_seconds": {
+        "type": "integer",
+        "description": "提前唤醒秒数，不是任务执行时间。除非用户明确说“提前 X 秒/分钟唤醒/准备/执行”，否则禁止传该字段；不要根据任务类型、提醒/查询场景、距离触发时间或历史记录推断为 60 或其他正值。用户未明确指定时必须省略，后端默认 0 秒（到点执行，不提前唤醒）。",
+        "default": 0
+       },
+       "description": {
+        "type": "string",
+        "description": "具体任务内容，到点执行时发给助手。不要包含时间/频率信息（如'每隔40分钟'、'每天9点'）"
+       },
+       "targets": {
+        "type": "string",
+        "description": "目标频道。用户未明确指定时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**"
+       }
+      },
+      "description": "用于 update 的补丁对象"
+     },
+     "includeDisabled": {
+      "type": "boolean",
+      "description": "list 时是否包含已禁用任务"
+     },
+     "text": {
+      "type": "string",
+      "description": "wake 动作要发送的提示文本"
+     },
+     "mode": {
+      "type": "string",
+      "enum": [
+       "now",
+       "next-heartbeat"
+      ],
+      "description": "wake 的触发模式"
+     },
+     "contextMessages": {
+      "type": "integer",
+      "description": "保留给上下文提示的兼容字段"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "action"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_list_jobs",
+   "description": "列出所有 cron 定时任务。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": []
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_get_job",
+   "description": "根据任务 ID 获取单个 cron 定时任务的详细信息。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "description": "要查询的任务 ID"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "job_id"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_create_job",
+   "description": "\n创建新的 cron 定时任务，使用扁平字段（name, cron_expr, timezone, targets, description, wake_offset_seconds）。\n\n【targets】用户未明确指定投递渠道时不填，系统自动使用当前对话渠道；**禁止从历史记录推断。**\n\n【强制：wake_offset_seconds】除非用户明确说“提前 X 秒/分钟唤醒/准备/执行”，否则**禁止**传 wake_offset_seconds。\n用户未明确指定时必须省略该字段，后端会默认使用 0 秒（到点执行，不提前唤醒）。\n不要因为是查询/准备类任务而传 60 或其他正值；禁止从任务类型、距离触发时间或历史记录推断。\n\n【重要：cron 表达式格式】只支持7段式(Quartz格式)：秒 分 时 日 月 周 年。\n日和周字段：不能同时指定具体值，其中一个必须用?表示'不指定'。\n年份字段：*表示跨年周期执行，固定年份只在该年执行。\n真正只执行一次：所有字段均为固定值（无*和?），如'0 0 17 28 3 ? 2026'。\n例：每天9点 -> '0 0 9 * * ? *'；每15分钟 -> '0 */15 * * * ? *'；每周一9点 -> '0 0 9 ? * MON *'。\n\n【重要：cron 表达式限制】标准 cron 的 */X 语义是'当字段值能被 X 整除时触发'，而非'每隔 X 单位触发'。\n只有当周期单位能被 X 整除时，间隔才是均匀的。以下是各字段的限制：\n- 秒/分(0-59)：*/X 仅支持 X 整除60的值：1/2/3/4/5/6/10/12/15/20/30。\n  例如 */40 实际在每小时第0分和第40分触发（间隔40分→20分交替），并非每40分钟。\n  用户要求'每隔40分钟'时，必须先告知此限制并让用户确认是否接受不均匀间隔，\n  或建议改用整除60的间隔（如20分钟或30分钟）。未经用户确认不得直接创建。\n- 小时(0-23)：*/X 仅支持 X 整除24的值：1/2/3/4/6/8/12。\n  例如 */5 实际在每天0/5/10/15/20时触发（间隔5h→4h→5h→4h交替），并非每5小时。\n- 日(1-31)：*/X 不可靠，因为不同月份天数不同（28/29/30/31）。\n- 月(1-12)：*/X 仅支持 X 整除12的值：1/2/3/4/6。\n- 周(1-7)：*/X 仅支持 X 整除7的值：1/7。1=SUN,7=SAT。\n\n处理'每隔X分钟/小时/天'需求时，务必检查 X 是否整除对应周期单位；\n若不整除，必须告知用户限制，让用户确认后再创建，或建议替代方案。\n",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "任务名称"
+     },
+     "cron_expr": {
+      "type": "string",
+      "description": "Cron表达式(Quartz格式)。7段式：秒 分 时 日 月 周 年。日和周：不能同时指定具体值，其中一个用?。年份：*跨年周期，固定年份只在该年执行。一次性：所有字段固定值，如'0 0 17 28 3 ? 2026'。例：每天9点'0 0 9 * * ? *'；每15分钟'0 */15 * * * ? *'。详见工具描述。"
+     },
+     "timezone": {
+      "type": "string",
+      "description": "时区，如 Asia/Shanghai",
+      "default": "Asia/Shanghai"
+     },
+     "targets": {
+      "type": "string",
+      "description": "Legacy compatibility target channel",
+      "enum": [
+       "web",
+       "tui",
+       "feishu",
+       "whatsapp",
+       "wecom",
+       "xiaoyi",
+       "wechat",
+       "dingtalk"
+      ]
+     },
+     "enabled": {
+      "type": "boolean",
+      "description": "是否启用",
+      "default": true
+     },
+     "description": {
+      "type": "string",
+      "description": "具体任务内容，到点执行时发给助手。不要包含时间/频率信息（如'每隔40分钟'、'每天9点'）"
+     },
+     "wake_offset_seconds": {
+      "type": "integer",
+      "description": "提前唤醒秒数，不是任务执行时间。除非用户明确说“提前 X 秒/分钟唤醒/准备/执行”，否则禁止传该字段；用户未明确指定时必须省略，后端默认 0 秒（到点执行，不提前唤醒）。不要根据任务类型、提醒/查询场景、距离触发时间或历史记录推断为 60 或其他正值。",
+      "default": 0
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "name",
+     "cron_expr",
+     "timezone",
+     "description"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_update_job",
+   "description": "使用扁平字段更新已有的 cron 定时任务。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "description": "要更新的任务 ID"
+     },
+     "patch": {
+      "type": "object",
+      "description": "要更新的字段",
+      "additionalProperties": true
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "job_id",
+     "patch"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_delete_job",
+   "description": "根据任务 ID 删除 cron 定时任务。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "description": "要删除的任务 ID"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "job_id"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_toggle_job",
+   "description": "启用或禁用指定的 cron 定时任务。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "description": "要启用/禁用的任务 ID"
+     },
+     "enabled": {
+      "type": "boolean",
+      "description": "是否启用该任务"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "job_id",
+     "enabled"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "cron_preview_job",
+   "description": "预览 cron 定时任务的下 N 次计划执行时间。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "description": "要预览的任务 ID"
+     },
+     "count": {
+      "type": "integer",
+      "description": "预览的执行次数（1-50，默认 5）",
+      "default": 5
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "job_id"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "submit_goal_report",
+   "description": "仅当本次用户消息中包含 <goal_task> 标签（即处于 Goal 执行轮）时才调用本工具；普通对话轮（无 <goal_task>）绝不要调用本工具。本工具用于提交当前 goal 尝试的结构化结果。这是本次 goal 尝试的最终工具动作；工具调用成功后不要再调用其他工具，已有进展但目标仍可继续推进时使用 continue；只有具备可审计完成证据时才使用 complete；只有缺少用户输入、权限、依赖、外部服务或环境状态且无法继续任何有意义推进时才使用 blocked。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "status": {
+      "type": "string",
+      "enum": [
+       "continue",
+       "complete",
+       "blocked"
+      ],
+      "description": "当前 goal 尝试结果：continue、complete 或 blocked。目标尚未完成但仍可推进时，不要报告 blocked。"
+     },
+     "evidence": {
+      "type": "string",
+      "description": "支持该状态的可审计证据，例如测试输出、命令结果、文件路径、工具结果、完成证明，或确切阻塞原因。"
+     },
+     "remaining_work": {
+      "type": "string",
+      "description": "目标未完成时说明剩余工作；完成时可以为空。"
+     },
+     "next_instruction": {
+      "type": "string",
+      "description": "status=continue 时给出下一次尝试的具体、可执行指令；其他状态可以为空。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "status",
+     "evidence"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "get_current_goal",
+   "description": "查询当前会话的持续目标（goal）。当你不确定当前 goal 任务是什么、或用户提到「目标 / 继续目标 / 那个任务」时调用。返回 objective、status、attempt_count 与上一次评估（last_assessment）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": []
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "memory_search",
+   "description": "在长期记忆中检索过往信息（决策、偏好、人物、日期、TODO 等），返回相关片段与引用线索。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "检索关键词或问题"
+     },
+     "max_results": {
+      "type": "integer",
+      "description": "最多返回条数（可选）"
+     },
+     "min_score": {
+      "type": "number",
+      "description": "最小相关度阈值（可选）"
+     },
+     "session_key": {
+      "type": "string",
+      "description": "会话键（可选，用于上下文隔离/过滤）"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "query"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "memory_get",
+   "description": "按行号切片读取 memory/ 下的记忆 Markdown 文件内容（from_line + lines）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string",
+      "description": "memory/ 下的目标文件路径（相对路径）"
+     },
+     "from_line": {
+      "type": "integer",
+      "description": "起始行号（可选）"
+     },
+     "lines": {
+      "type": "integer",
+      "description": "读取行数（可选）"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "path"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "write_memory",
+   "description": "写入记忆内容到 memory/ 下的 Markdown 文件；支持覆盖写或追加写（append）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string",
+      "description": "memory/ 下的目标文件路径（相对路径）"
+     },
+     "content": {
+      "type": "string",
+      "description": "要写入的内容"
+     },
+     "append": {
+      "type": "boolean",
+      "description": "是否追加写入（默认 false）"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "path",
+     "content"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "edit_memory",
+   "description": "在 memory/ 下的记忆文件中做精确字符串替换（old_text → new_text）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string",
+      "description": "memory/ 下的目标文件路径（相对路径）"
+     },
+     "old_text": {
+      "type": "string",
+      "description": "要替换的原始文本"
+     },
+     "new_text": {
+      "type": "string",
+      "description": "替换后的新文本"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "path",
+     "old_text",
+     "new_text"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "read_memory",
+   "description": "按 offset/limit 读取 memory/ 下记忆文件的部分内容（用于分页阅读）。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string",
+      "description": "memory/ 下的目标文件路径（相对路径）"
+     },
+     "offset": {
+      "type": "integer",
+      "description": "从第几行开始读取（可选）"
+     },
+     "limit": {
+      "type": "integer",
+      "description": "最多读取多少行（可选）"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "path"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "prepare_skill_evolution",
+   "description": "在起草新经验前创建技能演进 review ref；仅在用户明确确认后调用，必须提供 subject 对象并设置 user_confirmed=true。返回的 ref 供后续 review 和变更工具使用。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "user_intent": {
+      "type": "string",
+      "description": "用户已确认的演进意图或反馈摘要。"
+     },
+     "user_confirmed": {
+      "type": "boolean",
+      "description": "用户明确同意演进该 skill 后必须为 true。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subject",
+     "user_confirmed"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "evolve_review_task",
+   "description": "为已准备的 evolution_review_ref 启动受限演进 reviewer；使用 prepare_skill_evolution 返回的 ref，如提供 subject 必须保持一致，proposal 只能来自 review 结果。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "evolution_review_ref": {
+      "type": "string",
+      "description": "prepare_skill_evolution 返回的 evolution_review_ref。"
+     },
+     "user_intent": {
+      "type": "string",
+      "description": "可选；用户已确认的演进意图或反馈摘要。"
+     },
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "evolution_review_ref"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "list_skill_experiences",
+   "description": "查询已持久化的演进经验索引，用于聚焦查找或覆盖溢出索引；只返回元数据，不返回全文。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "min_score": {
+      "type": "number",
+      "description": "最低分数过滤。"
+     },
+     "limit": {
+      "type": "integer",
+      "default": 20,
+      "description": "最多返回的索引条目数。"
+     },
+     "cursor": {
+      "type": "string",
+      "description": "上一页溢出响应返回的游标。"
+     },
+     "target": {
+      "type": "string",
+      "enum": [
+       "description",
+       "body",
+       "script"
+      ],
+      "description": "结构化 target 过滤；可选值：description, body, script。"
+     },
+     "section": {
+      "type": "string",
+      "enum": [
+       "Collaboration",
+       "Constraints",
+       "Examples",
+       "Instructions",
+       "Roles",
+       "Scripts",
+       "Troubleshooting",
+       "Workflow"
+      ],
+      "description": "结构化 section 过滤；可选值：Collaboration, Constraints, Examples, Instructions, Roles, Scripts, Troubleshooting, Workflow。"
+     },
+     "query": {
+      "type": "string",
+      "description": "仅在索引字段上匹配的字面量 OR 查询；多个词用 | 分隔，不是自然语言查询。"
+     },
+     "sort": {
+      "type": "string",
+      "enum": [
+       "score_desc",
+       "updated_desc"
+      ],
+      "default": "score_desc",
+      "description": "索引排序方式。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subject"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "read_skill_experiences",
+   "description": "读取指定演进经验记录的全文内容。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "record_ids": {
+      "type": "array",
+      "description": "要读取的经验记录 ID。",
+      "items": {
+       "type": "string"
+      }
+     },
+     "max_content_chars": {
+      "type": "integer",
+      "default": 2000,
+      "description": "每条记录最多返回的内容字符数。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subject",
+     "record_ids"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "evolve_skill_experiences",
+   "description": "接受已完成 evolution review 中的已审查 Skill 演进 proposals；subject、review ref 和 proposal ID 必须与 review 结果一致，不要改写 proposal 内容。运行时会校验 ref、对象、ID 及草稿。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "evolution_review_ref": {
+      "type": "string",
+      "description": "包含已审查 proposals 的已完成 Evolution Review Ref。"
+     },
+     "selected_proposal_ids": {
+      "type": "array",
+      "description": "从已完成 review result 中选择要接受的 proposal_id 列表；不要复制或改写 proposal 正文。",
+      "items": {
+       "type": "string"
+      }
+     },
+     "selection_reason": {
+      "type": "string",
+      "description": "可选；说明为什么接受这些 proposals，仅用于审计和审批摘要。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subject",
+     "evolution_review_ref",
+     "selected_proposal_ids"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "simplify_skill_experiences",
+   "description": "对已有演进经验执行经过校验的删除、合并、改写或保留动作；必须提供 subject 和非空 actions 数组并符合 schema。即使未安装 Interrupt rail，工具自身也会校验记录引用和动作字段并安全失败。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "subject": {
+      "type": "object",
+      "description": "演进目标对象。",
+      "properties": {
+       "kind": {
+        "type": "string",
+        "enum": [
+         "skill",
+         "swarm-skill"
+        ],
+        "description": "演进对象类型。可选值：skill（常规技能）、swarm-skill（多智能体团队技能）。"
+       },
+       "name": {
+        "type": "string",
+        "description": "演进对象名称。"
+       }
+      },
+      "required": [
+       "kind",
+       "name"
+      ]
+     },
+     "actions": {
+      "type": "array",
+      "description": "要执行的精简动作。",
+      "items": {
+       "type": "object",
+       "properties": {
+        "action": {
+         "type": "string",
+         "enum": [
+          "DELETE",
+          "MERGE",
+          "REFINE",
+          "KEEP"
+         ],
+         "description": "动作类型；可选值：DELETE, MERGE, REFINE, KEEP。"
+        },
+        "record_id": {
+         "type": "string",
+         "description": "主记录 ID。"
+        },
+        "merge_remove_ids": {
+         "type": "array",
+         "description": "MERGE 时被移除的记录 ID。",
+         "items": {
+          "type": "string"
+         }
+        },
+        "new_content": {
+         "type": "string",
+         "description": "MERGE 或 REFINE 使用的替换内容。"
+        },
+        "reason": {
+         "type": "string",
+         "description": "执行该动作的原因。"
+        }
+       },
+       "required": [
+        "action",
+        "record_id"
+       ]
+      }
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "subject",
+     "actions"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "send_file_to_user",
+   "description": "【文件发送工具】当需要将生成的文件、导出的数据、创建的文档等发送给用户时使用此工具。使用场景包括：用户请求导出/下载文件、任务完成后需要交付文件、生成报告/文档后发送给用户。参数格式：abs_file_path_list 接受单个路径字符串或路径数组，路径必须是绝对路径。示例：'/tmp/report.pdf' 或 ['/tmp/file1.csv', '/tmp/file2.xlsx']。target_channels 可选：指定文件投递目标，每项可以是 channel id（如 'web'）或 team 人类席位名（如 'human-player-1'）。省略时默认投给最近发起请求的人类成员（按 session 记录的发起者）；web 发起或无人类成员时投 web。多 app 场景定向到指定 feishu 用户时，传入该用户的 member_name（不会误投其它 app）；跨端投递（如把文件发给飞书用户、或发给 web）时传入对应 member_name 或 'web'。",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "abs_file_path_list": {
+      "type": "string",
+      "description": "要发送的文件绝对路径。可以是单个路径字符串如 '/path/to/file.pdf'，或 JSON 数组字符串如 '[\"/path/file1.csv\", \"/path/file2.xlsx\"]'。支持任意文件类型（pdf、xlsx、docx、png、zip等）。"
+     },
+     "target_channels": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "可选：文件投递目标列表。每项可为 channel id（如 'web'）或 team 人类席位名（如 'human-player-1'）。省略时默认投给最近发起请求的人类成员；web 发起或无人类成员时投 web。定向到指定 feishu 用户传其 member_name；跨端投递传对应 member_name 或 'web'。"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "abs_file_path_list"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "mcp_career-emulator-engine_new_game",
+   "description": "Start a new Career Emulator session.",
+   "parameters": {
+    "properties": {
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "type": "object"
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "mcp_career-emulator-engine_observe",
+   "description": "Observe the current state and available choices for a session.\n\n:param session_id: UUID4 hex session id returned by ``new_game``.",
+   "parameters": {
+    "properties": {
+     "session_id": {
+      "type": "string"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "session_id"
+    ],
+    "type": "object"
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "mcp_career-emulator-engine_take_action",
+   "description": "Apply one choice to a Career Emulator session.\n\n:param session_id: UUID4 hex session id returned by ``new_game``.\n:param choice: One-based choice id from ``observe`` choices.\n:param notes: Agent note or reasoning retained in the player log.",
+   "parameters": {
+    "properties": {
+     "session_id": {
+      "type": "string"
+     },
+     "choice": {
+      "type": "integer"
+     },
+     "notes": {
+      "type": "string"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "session_id",
+     "choice",
+     "notes"
+    ],
+    "type": "object"
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "mcp_career-emulator-engine_check_latest_logs",
+   "description": "Return the last log entries for a Career Emulator session.\n\n:param session_id: UUID4 hex session id returned by ``new_game``.\n:param count: Number of recent log entries to return.",
+   "parameters": {
+    "properties": {
+     "session_id": {
+      "type": "string"
+     },
+     "count": {
+      "default": 10,
+      "type": "integer"
+     },
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "required": [
+     "session_id"
+    ],
+    "type": "object"
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "mcp_career-emulator-engine_show_employee_handbook",
+   "description": "Show the employee handbook as Markdown.",
+   "parameters": {
+    "properties": {
+     "call_goal": {
+      "type": "string",
+      "description": "一句简短中文，说明这次工具调用要达成的目标（仅界面展示），例如「调研 openJiuwen 官网信息」「创建三子棋对战团队」「通知 player-x 落子」。不要只写工具名或裸 URL；不影响工具实际执行。与工具自带的 display_name（成员/团队展示名）以及 send_message.summary 都不是同一个字段，调用 spawn_member / spawn_teammate / send_message / build_team 时也必须填写。"
+     }
+    },
+    "type": "object"
+   }
+  }
+ }
+]

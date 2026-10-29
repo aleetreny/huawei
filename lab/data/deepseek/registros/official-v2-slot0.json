@@ -1,0 +1,33 @@
+[
+  {
+    "game": 1,
+    "started": true,
+    "job_id": "deepseek-pilo-0b43b18e-dff20f-00000-a1",
+    "policy_id": "0b43b18e8c260664",
+    "model_name": "deepseek-v4-flash",
+    "outcome": "interrupted",
+    "score": null,
+    "survival_months": null,
+    "interruption": "budget watchdog: the key spent USD 1.3005 during the game, above the USD 1.20 cap",
+    "cost_usd": 1.375802,
+    "cost_settled": true,
+    "usage_before": 2.712105854,
+    "usage_after": 4.087907538,
+    "limit_remaining_after": 45.912092462000004,
+    "tokens": null,
+    "total_tokens": null,
+    "runner_cost": null,
+    "termination_reason": null,
+    "wall_seconds": 0.0,
+    "watchdog_spend_usd": 1.3005282650000005,
+    "max_usd_per_game": 1.2,
+    "reserve_usd": 15.0,
+    "actor_id": "dff20fcea96c188d",
+    "env_id": "a00cc82743c5752c",
+    "solution_sha256": "d34d6c2d42b44f272282a6b92c46cb776f8dc24fc86bbda4ad5c20741d8907c3",
+    "run_dir": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-0b43b18e-dff20f-00000-a1",
+    "trajectory": null,
+    "redacted_files": 0,
+    "stopped": "game cost USD 1.3758, above the USD 1.20 cap"
+  }
+]

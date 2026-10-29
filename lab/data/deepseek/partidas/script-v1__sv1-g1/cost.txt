@@ -1,0 +1,8 @@
+usage_before=7.879217687
+url=ws://127.0.0.1:20092
+play_exit=0
+usage_after=9.876752695
+termination_reason: None
+token_usage: {"input_tokens": 28122123, "output_tokens": 68785, "total_tokens": 28190908, "total_cost": 0.832135, "by_model": {"unknown": {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0, "total_cost": 0.0}, "deepseek-v4-flash": {"input_tokens": 28122123, "output_tokens": 68785, "total_tokens": 28190908, "total_cost": 0.832135}}}
+quantitative_score: 13.23
+DONE

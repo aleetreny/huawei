@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse, copy, hashlib, itertools, json, math, random
 from pathlib import Path
 import gpt_incertidumbre as U
+from datapaths import deepseek_dir as _dsdir
 B=U.B
 R=B.R
 
@@ -56,7 +57,7 @@ class Controller(U.Controller):
 def run():
     ap=argparse.ArgumentParser();ap.add_argument('--games',type=int,default=400);ap.add_argument('--seed',type=int,default=202620270);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     catpath=B.ROOT/'lab/data/ingenieria-inversa/catalog_v2.json';cat=R.Catalog(json.loads(catpath.read_text()))
-    paths=[Path.home()/f'careerlab-data/deepseek/labels/ds-v3-r{r}-full.json' for r in (1,2)]
+    paths=[_dsdir()/f'labels/ds-v3-r{r}-full.json' for r in (1,2)]
     labels=[json.loads(p.read_text()) for p in paths]
     out={'meta':{'games':a.games,'seed':a.seed,'design':'Fixed two arms; same story choices and utility; jointly enumerate quarter instead of greedy. Known menu deltas, learned ceilings, lagged HR. Conditional on frozen labels.',
       'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
