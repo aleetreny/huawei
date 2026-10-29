@@ -10,5 +10,6 @@
   "predicted_behaviour": "Three calls in at least 90 % of story replies; quarters follow the printed plan; tokens per month under 0.6 M.",
   "refutation": "Pairing (take_action + observe in one reply) below 90 % in probes, or script errors in more than 5 % of calls.",
   "skill_count": 1,
-  "change": "ex-v1 + script/brief.py, a Run memory section and a third call in the literal reply block and in the manifest."
+  "change": "ex-v1 + script/brief.py, a Run memory section and a third call in the literal reply block and in the manifest.",
+  "notes": "Evidence: lab/reports/exploracion/README.md (replica calibrated on the real DeepSeek decisions, quarter search, Sonnet bank, quality judges). The Skill states observations from our runs as ours, with no thresholds, titles or fixed answers; margins on the published 0-10 ranges are marked as ours. Test plan: lab/reports/exploracion/plan-deepseek.md."
 }

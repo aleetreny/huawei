@@ -10,5 +10,6 @@
   "predicted_behaviour": "L1 bank: Network/Output-lowering choices 18 or fewer, risky choices 9 or fewer.",
   "refutation": "L1 bank: more than 21 Network/Output-lowering choices or more than 9 risky choices.",
   "skill_count": 1,
-  "change": "ex-v1 + one paragraph at the end of story step 4."
+  "change": "ex-v1 + one paragraph at the end of story step 4.",
+  "notes": "Evidence: lab/reports/exploracion/README.md (replica calibrated on the real DeepSeek decisions, quarter search, Sonnet bank, quality judges). The Skill states observations from our runs as ours, with no thresholds, titles or fixed answers; margins on the published 0-10 ranges are marked as ours. Test plan: lab/reports/exploracion/plan-deepseek.md."
 }

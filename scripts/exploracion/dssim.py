@@ -216,7 +216,8 @@ class XBot(DSBot):
                     extra[j] -= pen
                 if lab.get("network", 0) > 0.5 and lab.get("output", 0) >= 0:
                     extra[j] += bonus
-        if f.get("privb") is not None and st.level == 1 and n == 1 and self.hr <= int(f.get("privhr", 1)) and self.concerns == 0:
+        if f.get("privb") is not None and st.level <= int(f.get("privlv", 1)) and n <= int(f.get("privn", 1)) \
+                and self.hr <= int(f.get("privhr", 1)) and self.concerns == 0:
             for j, k in enumerate(ks):
                 kd = text_kind(node, k)
                 if kd == "priv":

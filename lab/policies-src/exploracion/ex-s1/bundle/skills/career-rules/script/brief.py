@@ -4,8 +4,8 @@ this script keeps the run's own record in one small file and prints a one-line b
 
 It uses only what the official tools returned in this run (the stats in observe, the HR remark as the agent
 classified it, the quarterly actions the agent took) and the handbook's published action directions. It never
-sees event text and knows nothing about any event. The record belongs to one run: a new session id starts it
-from scratch, so nothing is carried from one run to the next.
+sees event text and knows nothing about any event. The record belongs to one run: it lives in a file named after
+the run's session id, so a new run starts from scratch and never opens another run's record.
 
 Usage (from the agent's projects folder; one line):
   python3 ../skills/career-rules/script/brief.py <sid> <month> <level> <H> <D> <S> <N> <O> <W> <hr> [q=E,E,E:M] [b]
@@ -26,7 +26,7 @@ import json
 import sys
 from pathlib import Path
 
-STATE = Path("career-brief-state.json")   # in the current working directory (the agent's projects folder)
+STATE_DIR = Path(".")   # the current working directory (the agent's projects folder)
 GROWTH = ("S", "N", "O")
 # Quarterly menus in the order the game lists them (the handbook's order), with the published directions.
 ENERGY = {1: ("High-intensity work", "O", 2), 2: ("Skill learning", "S", 2), 3: ("Network maintenance", "N", 1),
@@ -39,9 +39,14 @@ MAIN = {1: ("Apply for a key project", "SNO"), 2: ("Report results to your manag
 HEALTH_LOW, DIGNITY_LOW = 5, 4
 
 
+def state_file(sid: str) -> Path:
+    """One file per run, named after the run's session id: a new run never opens another run's file."""
+    return STATE_DIR / f"career-brief-{''.join(c for c in sid if c.isalnum())[:8]}.json"
+
+
 def load(sid: str) -> dict:
     try:
-        d = json.loads(STATE.read_text())
+        d = json.loads(state_file(sid).read_text())
         if d.get("sid") == sid:
             return d
     except (OSError, ValueError):
@@ -166,7 +171,7 @@ def main(argv: list[str]) -> str:
         out.append(f"blow-ups so far {d['blowups']}: a second ends the run")
     if month % 3 == 0 and not q:
         out.append("quarter plan: " + plan_quarter(d, month, level, h, dg, now, w, hr))
-    STATE.write_text(json.dumps(d))
+    state_file(sid).write_text(json.dumps(d))
     return " | ".join(out)
 
 
