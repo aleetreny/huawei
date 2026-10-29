@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "lab" / "reports" / "fuentes-externas" / "fuentes.json"
 STATE = ROOT / "lab" / "reports" / "fuentes-externas" / "estado.json"
 EXT = Path.home() / "ext"
+NOSOTROS, NOS_CREADO = "Gradient Depression", "2026-10-21"  # hay otro equipo con el mismo nombre, creado el 24 oct
 ENV = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_LFS_SKIP_SMUDGE="1")
 
 
@@ -48,7 +49,7 @@ def clasificacion(url):
         u = d["udict"].get(str(r[1].get("raw")), {})
         notas = {cols[i]: c.get("value") for i, c in enumerate(r) if i >= 2}
         nombre = re.sub(r"[\w.+-]+@[\w.-]+", "(correo)", u.get("displayName") or "")  # hay equipos con el correo por nombre
-        out.append({"equipo": nombre, "puesto": r[0].get("value"), **notas})
+        out.append({"equipo": nombre, "creado": (u.get("regat") or "")[:10], "puesto": r[0].get("value"), **notas})
     return out
 
 
@@ -84,14 +85,14 @@ def main():
         except Exception as e:
             news.append(f"clasificación: no se pudo leer ({e})")
             continue
-        old = {(r["equipo"], r["puesto"]): r for r in state.get("clasificacion", [])}
-        con_nota = [r for r in tabla if any(v not in ("—", "0", "", None) for k, v in r.items() if k not in ("equipo", "puesto"))]
-        cambios = [r for r in con_nota if old.get((r["equipo"], r["puesto"])) != r]
+        old = {(r["equipo"], r.get("creado"), r["puesto"]): r for r in state.get("clasificacion", [])}
+        con_nota = [r for r in tabla if any(v not in ("—", "0", "", None) for k, v in r.items() if k not in ("equipo", "creado", "puesto"))]
+        cambios = [r for r in con_nota if old.get((r["equipo"], r["creado"], r["puesto"])) != r]
         if cambios:
             news.append(f"clasificación: {len(con_nota)} de {len(tabla)} equipos con nota; {len(cambios)} filas nuevas o cambiadas")
             for r in sorted(con_nota, key=lambda r: -float(r.get("Score") or 0))[:15]:
                 news.append(f"    {r}")
-            news += [f"    nosotros: {r}" for r in tabla if r["equipo"] == "Gradient Depression"]
+            news += [f"    nosotros: {r}" for r in tabla if r["equipo"] == NOSOTROS and r["creado"] == NOS_CREADO]
         state["clasificacion"] = tabla
     json.dump(state, open(STATE, "w"), indent=1, ensure_ascii=False)
     print("\n".join(news) if news else "sin cambios")
