@@ -135,10 +135,13 @@ Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada 
 | `cp-v5a` 2 | 65,10 | 615k | 95,4 | 12, 18, ~30, <48 | 0,84 |
 | `cp-v5a` 3 | 68,13 | 638k | 94,5 | 6, 12, 18, 42 | 0,91 |
 | **media `cp-v5a`** | **66,5** | **636k** | **94,6** | | |
+| `cp-v7` 1 (cp-v5a sin «Lay low por Health») | 62,25 | 450k | **100** | 6, 12, 18, 30 (L5; Skill 92, dinero 19) | 0,65 |
 | `cp-v3` (una llamada por respuesta) | 56,92 | 1.196k | 72,1 | 12, 18, 30 | 1,73 |
 | `t13-read-v4` (referencia) | 71,67 · 70,22 · (atascada en L1) | 1.470k · 1.354k | 61,2 · 65,8 | 6, 12, 24, 42 | 0,81 · 0,72 |
 
-**Nota de versión estimada de `cp-v5a`: 0,8 × 66,5 + 0,1 × 65 + 0,1 × 94,6 ≈ 69,2.** Las mismas tres partidas con las fichas y la calidad de v4 darían ~65,8.
+**Nota de versión estimada de `cp-v5a`: 0,8 × 66,5 + 0,1 × 65 + 0,1 × 94,6 ≈ 69,2.** Las mismas tres partidas con las fichas y la calidad de v4 darían ~65,8. Con la partida de `cp-v7` la familia nueva suma cuatro partidas completas (media 65,4; v4: dos completas de 71 y una atascada), ninguna hundida.
+
+`cp-v7` 1 gastó aún menos (167 llamadas: los 16 trimestres enteros en una respuesta cada uno, 163 `observe` para 204 acciones) y sacó la nota de fichas máxima, 100. Su juego fue el más flojo de los cuatro (Skill 92, dinero 19): la auditoría da 75 % / 70 % / 79 % / 80 % de mejores elecciones en L1–L4, como las demás; la diferencia está en la suerte de las historias, no en una regla distinta (sólo cambia la frase del trimestre con Health baja, que esta partida no usó en el mes 3).
 
 **Lectura de las dos partidas nuevas (56,9 y 66,3) frente a las de v4 (71,7 y 70,2, y una atascada en L1):** las dos pierden el ascenso del mes 6 por un punto en el mes previo y llegan a cada nivel seis meses más tarde; Health anda baja en todas (también en las de v4) y come trimestres. Nada de eso lo causa el bucle de llamadas: el banco dice que elige igual que v4 (§5.3) y la auditoría también. Son dos partidas de la mitad baja de la familia t13 (v5 66,7; v7 67,3; v4 15 atascada), y con n = 2 no se puede separar más. La tercera partida (68,13) ascendió en el mes 6 y en el 18, como la mejor partida que tenemos hasta el 24.
 
@@ -146,7 +149,7 @@ Con cp-v1 y cp-v2 Sonnet bajaba 6–8 puntos y repetía tres quejas: la cascada 
 
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. **Total hasta las 04:00: ~5,6 USD; dos partidas de `cp-v7` en juego (~0,9 cada una).**
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partida `cp-v7` 1: 0,65. **Total hasta las 04:30: ~6,3 USD; partida 2 de `cp-v7` en juego.**
 
 ## Relevo (29 oct, 03:40 UTC)
 1. **Hecho y por qué.** §2–§5. Lo nuevo desde las 02:10: `cp-v3` jugado (56,92; fichas 72 con una llamada por respuesta); descubierto que el patrón del historial decide si DeepSeek junta `take_action` y `observe`, y que un ejemplo literal del formato lo provoca desde frío (`cp-v5a`, 6 de 6 en la sonda; 162 de 221 respuestas en la partida real); `cp-v5a` jugado: 66,27 con 654 mil fichas por mes (nota de fichas 94). Juez: cp-v4 = c5; cp-v5a ~5 por debajo con Sonnet por el bloque del ejemplo. Banco: cp-v4 elige como v4 dentro del ruido de v4 consigo mismo.
