@@ -32,7 +32,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en un solo sitio, [pendientes.md](lab/reports/deepseek/pendientes.md). Son seis candidatos (c5, t0/t1, suelo-min/suelo-v1, v4-lean-q), con su coste, sus comandos y su regla de decisión.
 
-**Apoyo a DeepSeek:** `alejandro/gpt-principios` ([líneas propuestas](lab/reports/deepseek/gpt-principios/lineas-salto.md), PR #23): ocho líneas de investigación vinculadas a v4, Formato, Suelo y Techo; otro modelo comprobará las hipótesis.
+**Apoyo a DeepSeek:** `alejandro/gpt-principios` ([líneas propuestas](lab/reports/deepseek/gpt-principios/lineas-salto.md), PR #23): revisión detallada de Comprobante; nuevas prioridades sobre cp-v5a: cierre, conflictos salud/riesgo y protocolos de decisión. Otro modelo comprobará las hipótesis.
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
