@@ -1,0 +1,18 @@
+{
+  "scope": "Immediate catalog-based outcomes in 24 historical states, no full-career or DeepSeek transfer claim. Partial counts are not comparable until both arms complete.",
+  "arms": {
+    "absolute": {
+      "n": 3,
+      "positive_risk": 0,
+      "avoidable_growth_loss": 1,
+      "health_zero": 0
+    },
+    "pairwise": {
+      "n": 2,
+      "positive_risk": 0,
+      "avoidable_growth_loss": 1,
+      "health_zero": 0
+    }
+  },
+  "pending": 43
+}

@@ -28,6 +28,8 @@ Los planes detallados, resultados y comprobaciones de integridad están en los a
 
 ## Relevo
 
+29 oct, prueba de representación en marcha: `gpt_pairwise_probe.py` compara 24 estados históricos, dos brazos y máximo 48 lecturas Sonnet, sin partidas nuevas. Proceso observado vivo en la sesión 99501. No lanzar otro mientras siga activo. Los resultados parciales no permiten comparar brazos. Datos originales fuera de Git, en `~/careerlab-data/deepseek/gpt-pairwise-probe/`. Analizar al terminar con `uv run python scripts/deepseek/gpt_pairwise_score.py`; cualquier aumento de riesgo bloquea la promoción. Esta prueba es exploratoria, de una sola carrera de Sonnet, y no demuestra corrección de los errores compartidos de DeepSeek. El tratamiento incluye además una advertencia contra inferir riesgo sólo por ciertas palabras; si mejora, habrá que separar ese efecto del formato de comparación. Los 313 tests del repositorio pasan; no validan la eficacia del tratamiento.
+
 29 oct: [diagnóstico de errores compartidos](shared-reading-errors.md). Dos lecturas repiten 192 de los 285 errores iniciales de Output y 151 de los 185 de riesgo positivo. La siguiente prueba debe cambiar la representación de las alternativas y medir valor de carrera. C40 ya está descartado en main. Se solicita integrar este diagnóstico; no hay un candidato nuevo validado.
 
 
