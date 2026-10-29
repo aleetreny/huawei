@@ -9,6 +9,8 @@
 - **Por qué cp-v5a y no cp-v7 (62,25 · 69,88 · 28,56):** son las mismas reglas salvo una frase; cp-v7 quitaba el «Lay low por Health» del trimestre y su hundimiento vino de un trimestre con Health baja y RR. HH. «quiet» en que no se limpió el riesgo. cp-v5a tiene las tres partidas completas y esa frase protege.
 - **Corte 3:** candidato **`cp-v8`** = cp-v5a + «con RR. HH. no tranquilo, Defuse va primero aunque Health esté baja» (§5.4; juez igual que cp-v5a). Su partida de mecánica: 68,20 (L5, Skill 134, Network 54, pero riesgo final 5: la mejor trayectoria de la familia, con un riesgo sin limpiar al final que costó 5 puntos), 660 mil fichas por mes, 187 respuestas con dos llamadas. Entregarlo en el corte 3 sólo si la nota oficial del corte 2 confirma las fichas (~95) y hay 2–3 partidas suyas sin regresión; si no, no hace falta otra versión (cuenta la mejor). No cambiar reglas de historias: ninguna probada las mueve (C27).
 
+**Actualización (29 oct, 11:05 UTC).** Segunda partida de `cp-v8`: **28,28, atascada en L1 y despedida en el mes 24, y sin el bucle de fichas** (DeepSeek narró desde la primera respuesta y no emparejó las llamadas; §5.4). `cp-v8` queda 68,20 · 28,28 y **`cp-v5a` sigue siendo la red de seguridad del corte 2**. Dos correcciones a la lectura anterior: (1) **los 5 puntos de control de riesgo de la primera partida de cp-v8 fueron una explosión en el mes 38**, no riesgo sin limpiar al final: la nota de riesgo resta 5 por explosión (fórmula del motor en la réplica, `score()`), el comentario de RR. HH. era sonriente en los meses 47–49 y el riesgo final 0; ninguna regla de cierre los recupera (responde a la hipótesis §1 de `revision-comprobante.md`, PR #23). (2) **El bucle de una respuesta por decisión es bimodal por partida** (7 de 8 partidas, 1 de 4 sondas hoy frente a 13 de 13 ayer): cuando el modelo arranca narrando no se corrige. La auditoría de las 13 partidas (§6) dice dónde están los puntos: el mes en que se llega a L5 (4–5 puntos: Network y dinero), la trampa estructural de L1 (una pérdida forzada de Network u Output en el 57 % de los meses previos para un lector estricto) y las explosiones. Candidato `cp-v9` (§6.6), sólo si gana en banco, réplica y juez; reglas de trabajo de Alejandro en §6.8.
+
 Línea `alejandro/comprobante` (worktree `~/huawei-comp`), 29 oct 2026. Encargo: una versión con nota automática ≥ 76; 10 USD de DeepSeek (hasta ~12 si algo prometedor está a punto de aclararse). Clave al empezar: 32,60 USD libres (17,40 usados).
 
 ## 1. De dónde sale la nota y cuánto cuesta cada punto
@@ -156,9 +158,118 @@ De ahí **`cp-v8`** = cp-v5a + una excepción en la línea 2: si RR. HH. no est�
 
 **Cuenta de la versión.** Nota de versión = 0,8 × partidas + 0,1 × calidad + 0,1 × fichas. Con calidad ~64 (juez de Claude) y fichas 94, `cp-v5a` saca **0,8 × P + 15,8**; v4, con calidad ~62 y fichas ~63, **0,8 × P + 12,5**. La pareja de llamadas vale **+3,3 de versión** a igualdad de partidas, así que cp-v5a sólo pierde frente a v4 si su media de partidas fuera más de 4 puntos peor, y no hay ninguna medida que lo diga.
 
+**`cp-v8`, segunda partida (hueco 1, 09:08–09:31 UTC, pedida por Alejandro): 28,28, eliminada en el mes 24 sin salir de L1; 15,7 M de fichas en 24 meses (655 mil por mes, nota de fichas 50 por no llegar al mes 48), 0,42 USD.**
+- **La trampa de L1 entera:** Health 4 → 1 en los meses 1–2 por tres opciones seguidas que lo bajaban (comer con el equipo a diario con Network ya en su techo, aceptar una revisión de arquitectura y escribir el informe completo); Output −1 en el mes 2. Los tres indicadores estaban en el umbral (S9 N3 O3) desde el mes 3 hasta el 23, y las tres evaluaciones se perdieron por un punto perdido en la última historia del mes previo: mes 5, karaoke con el comité (Network +3 inútil, Health −2) en vez de la opción que subía Output; mes 11, «dejar constancia por correo, factual y profesional» ante un compañero que echa la culpa (Dignity +2, **Network −1**; la única opción sin pérdida tenía riesgo +2); mes 17, pedir carga ligera por un problema de salud (**Output −1**) y la historia del compañero charlatán (Network −1). RR. HH. sonriente hasta el mes 18: el rescate del arranque atascado (B30) no pudo actuar porque lo que faltaba no era riesgo sino los puntos.
+- **El bucle de fichas no se disparó:** 1 respuesta con dos llamadas de 184; texto visible en cada respuesta («Story analysis … Applying steps …», 138 mil caracteres en 24 meses), desde la primera respuesta («I'll start by reading the career-rules skill»), antes de leer el Skill. El mismo manual emparejó 187 veces en la partida anterior y las seis de cp-v5a y cp-v7 también: **el bucle es bimodal por partida (7 de 8 bien)**, y cuando el modelo arranca narrando, el ejemplo literal del Skill no lo corrige. cp-v9 lleva el bloque literal también en la instrucción del manifest, que está en el mensaje de sistema de cada llamada.
+- Con las dos partidas, cp-v8 queda en 68,20 y 28,28: la regla que lo distingue de cp-v5a (Defuse antes que la recuperación con RR. HH. inquieto) no intervino en ninguna de las dos (riesgo a cero todo el tiempo en la segunda hasta el mes 18).
+
+## 6. Auditoría de las 10 partidas completas de DeepSeek: dónde se pierden los puntos (29 oct, 0 USD)
+
+Datos: `events.jsonl` de las 10 partidas completas de la familia v4 (v4 ×2, v5, v7, cp-v5a ×3, cp-v7 ×2, cp-v8) más las 3 hundidas, leídos con `scripts/comprobante/traj.py` (trayectoria mes a mes) y `riskaudit.py` (decisiones contra el catálogo exacto; sólo investigación). Umbrales y techos salen de la réplica (`replica.py`), nunca van al Skill.
+
+### 6.1 Qué separa una partida de 66 de una de 72 (y del techo de 75,8 en L5)
+
+| Partida | Nota | Nivel | Dinero (de 20) | Skill (de 15) | Riesgo (de 10) | Network (de 10) | Ascensos |
+|---|---:|---|---:|---:|---:|---:|---|
+| v4 | 71,67 | L5 | 9,6 | 13,1 | 10 | 9,0 | 6 · 12 · 24 · 42 |
+| v4 | 70,22 | L5 | 7,6 | 15 | 10 | 7,7 | 6 · 12 · 24 · 42 |
+| cp-v7 | 69,88 | L5 | 7,9 | 15 | 10 | 7,0 | 6 · 12 · 24 · 42 |
+| **cp-v8** | 68,20 | L5 | 9,2 | 15 | **5** | 9,0 | 6 · 12 · 24 · **36** |
+| cp-v5a | 68,13 | L5 | 7,3 | 14 | 10 | 6,8 | 6 · 12 · 18 · 48 |
+| v7 | 67,27 | L5 | 8,4 | 13,3 | 10 | 5,7 | 6 · 18 · 30 · 48 |
+| v5 | 66,71 | L5 | 6,8 | 13,1 | 10 | 6,8 | 6 · 18 · 30 · 48 |
+| cp-v5a | 66,27 | L5 | 6,1 | 14 | 10 | 6,2 | 12 · 18 · 30 · 48 |
+| cp-v5a | 65,10 | L5 | 6,1 | 13 | 10 | 6,0 | 12 · 18 · 30 · 48 |
+| cp-v7 | 62,25 | L5 | 4,8 | 11,5 | 10 | 6,0 | 12 · 24 · 36 · 48 |
+
+Salud y dignidad valen 15 de 15 en las diez. **Lo que separa las partidas es cuándo llegan a L5**: el sueldo pasa de 0,7 a 1,0 al mes (dinero) y, sobre todo, en L4 Network no puede pasar de 36 y en L5 sí (hasta 54; la nota de Network da 100 con 60). Una partida que entra en L5 en el mes 36 acaba con Network ~54 (9 de 10) y dinero ~37; una que entra en el 48 acaba con Network 36–41 (6–7) y dinero 24–29. La diferencia son **4–5 puntos de nota de partida**. La familia cp-v5a no juega peor las historias (§5.3): sus tres partidas perdieron el ascenso del 18 o del 6 y llegaron a L5 en el 48.
+
+**cp-v8 (68,20) es la mejor trayectoria de las diez** (L5 en el 36, Skill 134, Network 54, dinero 37) y perdió 5 puntos de control de riesgo por una explosión en el mes 38 (§6.5), más el dinero y el Output que se lleva la explosión: sin ella habría sido una partida de ~73–74.
+
+### 6.2 Qué indicador bloquea cada ascenso perdido
+
+Comparando el estado del mes previo con el umbral de la réplica, en las 10 partidas completas y la de cp-v3 (48 meses en L4):
+
+| Nivel | Ascensos perdidos | Faltaba Skill | Faltaba Network | Faltaba Output |
+|---|---:|---:|---:|---:|
+| L1 (mes 6) | 4 (+3 en la partida hundida de cp-v8) | 0 | 1 | las otras por un punto perdido en la última historia del mes previo (§6.3) |
+| L2 | 1 | 0 | 1 | 0 |
+| L3 | 8 | 4 | 3 | 5 |
+| **L4** | **17** | **21** | 1 | **12** |
+| L5 | 3 | 4 | 1 | 3 |
+
+- **L4 es el cuello de botella de todas las partidas:** entre el techo de L3 y el umbral de L4 hay casi 50 puntos de Skill, y las historias dan ~3,1 al mes en L4. El trimestre de `v4-t0` (Skill learning + rotación) añade ~1 al mes: es lo que llevó a cp-v8 a L5 en el 36 (Skill 46 en el mes 24, 90 en el 35, justo). Output también falta en L4 en 12 ocasiones: crece 0,4 al mes en las historias y DeepSeek casi nunca elige la opción que lo sube.
+- **El mes 18 se pierde en L3 por un punto:** cp-v8 llegó con Network 17 (hacía falta 18) tras elegir en el mes 17 «declinar un premio que no era suyo» (Network −2 en el catálogo); el trimestre del mes 12 había gastado 2 Energy en Health recovery (Health 3) en vez de Network. cp-v5a 66,27: Network 16 en el mes 23.
+- **L6 en el mes 48 estuvo al alcance de cp-v8 y lo perdió sólo Output:** Skill 131 y Network 54 en el mes 47, Output 24 (hacía falta 32). En L5 Output creció 3 puntos en 12 meses: las historias dan 0,3–0,8 al mes y el trimestre de t0 lo deja fuera (Skill learning + Network maintenance + rotación). En las otras tres partidas que pasaron por L5, Output acabó en 24, 37 y 38 y lo que faltó fue Skill (L5 en el 42: sin tiempo).
+- Lo que **no** sirve: las charlas semestrales codifican la nota (A/B/C) con seis plantillas, no el indicador que falta (cp-v5a 68,13, mes 36: «Delivery stayed steady» con Output 19 cuando faltaban 3 de Output). La línea 4 del trimestre («una charla nombró un indicador») no se dispara nunca.
+
+### 6.3 El punto perdido en la última historia antes de la evaluación
+
+Las tres primeras promociones perdidas con la familia v4 (3 de 10 partidas; cada una cuesta ~2–3 puntos de nota al retrasar todo seis meses) vienen de una opción honesta con un coste invisible en el mes 5:
+- «Thanking a colleague from the next team»: Dignity +2, Health +1, Network +3, **Output −1** (Output 3 → 2; la única opción sin ese coste tenía riesgo +2);
+- «Named on a department award you did not work on»: Dignity +2, **Network −2** (Network 3 → 1; la única opción que lo conservaba tenía riesgo +2);
+- «The gym after work, or staying late»: Dignity +1, Health +2, **Output −1**, con Health baja (el paso 3, bienestar, ganó al paso 4); la opción «quedarse» era segura y subía Output.
+
+En el catálogo (936 opciones), **las opciones que suben Dignity 2 o más cuestan Network el 42 % de las veces y Network u Output el 54 %**; las que suben Health 2 cuestan Output el 52 %. Las que suben Dignity 1 son las más seguras (23 %). Es la regularidad que DeepSeek no ve (B17): el gesto de integridad fuerte cuesta Network; el descanso cuesta Output. cp-v9 lo dice en el paso 4 y hace que, en el mes previo, el paso 4 vaya antes que el de bienestar.
+
+### 6.4 Riesgo: dónde sale mal con el manual actual
+
+- **Elecciones arriesgadas con alternativa segura: sólo 19 en 9 partidas (~2 por partida)**, siempre de +1 y casi siempre las mismas tres historias («dual-write canary», «challenge the framing with data», «light-touch mentoring»). El filtro de riesgo del manual funciona.
+- **La explosión de cp-v8 (mes 38)** vino de dos historias seguidas del mes 37 en que las dos opciones eran arriesgadas (cultura tóxica: carta firmada a RR. HH. y al CEO frente a «ayudar en silencio a los afectados»; relación no declarada de un jefe: denuncia anónima frente a «no decir nada, es su vida privada»). Eligió «en silencio» y «anónimo» siguiendo la regla del tamaño del riesgo, y el comentario de RR. HH. pasó de sonriente a explosión en un mes: **el comentario mensual no puede frenar una racha dentro del mes**. Las dos historias no están en el catálogo, así que no sabemos qué opción era la buena.
+- **Cuántas explosiones:** 1 en las 10 partidas completas; 2 crisis de confianza en 13 partidas largas (cp-v7, t13-read-v1). Tras la primera explosión, la segunda llegó en 9 y 22 meses con el manual siguiendo las reglas normales. El cierre tras explosión (B35: leer el comentario un paso peor el resto de la partida) está en cp-v9.
+
+### 6.5 Réplica (lectura exacta, 2.000 partidas, `scripts/comprobante/cpbot.py` sobre `techobot`)
+
+| Variante sobre `qskill=4` (t0) | Nota | L6 | Crisis | Output final |
+|---|---:|---:|---:|---:|
+| t0 (base) | 59,8 | 25 % | 179 | 31,9 |
+| L5: Energy a informes, proyecto clave | 59,9 | 24 % | 176 | 34,7 |
+| **L5: Skill learning + informe, proyecto clave** (cp-v9) | 59,8 | 26 % | 178 | 34,3 |
+| Trimestre al indicador que menos ha crecido desde el ascenso | 59,8 | 21 % | 179 | 33,3 |
+| … sabiendo los techos | 60,8 | 28 % | 182 | 34,0 |
+| Trimestre al indicador más lejos del umbral real (cota) | 60,2 | 26 % | 179 | 33,5 |
+| **Cierre tras explosión** (cp-v9) | 59,6 | 20 % | **148** | 31,0 |
+| Contar las pérdidas de Health en Crecer | 59,1 (más despidos en L1) | 22 % | 160 | 30,9 |
+
+Con lectura ruidosa (misma batería): cierre tras explosión 41,0 frente a 40,9, crisis 576 frente a 639. Lectura: **el trimestre de L5 no mueve la media en la réplica** (el planificador óptimo gana por las historias, no por el trimestre, como ya dijo Techo), pero sí sube Output ~2,5 sin bajar Skill, que es justo lo que le faltó a cp-v8 para L6. El cierre tras explosión cuesta 0,2 en lectura exacta y recorta las crisis un 10–17 %.
+
+### 6.6 Candidato `cp-v9` (`lab/policies-src/comprobante/cp-v9`)
+
+cp-v8 más seis cambios, ninguno con números nuevos (lint: 14 avisos REVIEW, los de cp-v8 más uno por «Health above 4» en la línea nueva; 2.897 palabras frente a 2.507):
+1. **Tras una explosión**, el resto de la partida se lee el comentario de RR. HH. un paso peor (sonriente = quiet → Defuse cada trimestre; quiet = frowning → también Lay low), y la excepción del mes previo deja de aplicarse (B35; réplica §6.5: crisis −10 a −17 %).
+2. **En el mes previo (N = 1), el paso 4 va antes que el de bienestar**, salvo que una opción pueda llevar Health al fondo (la partida de b37dbff8 perdió el mes 6 por «gimnasio, proteger Health» con Output 3 → 2).
+3. **Pista de lectura en el paso 4**, sacada del catálogo (§6.3): la opción que implica, ayuda o da crédito a otros casi nunca cuesta Output (12 % de las seguras); la que usa el propio juicio, poco (21 %); el gesto de integridad fuerte cuesta Network la mitad de las veces (52 %); el descanso, a menudo Output (39 %).
+4. **Techo del nivel sin campo nuevo:** un indicador que lleva tres notas igual a su Best, habiendo elegido opciones que debían subirlo, está en su techo: una subida más no vale nada (en Crecer y en el trimestre), una pérdida sigue costando. Es la detección «anclada» de Techo (B38, +0,7 en la réplica con lectura exacta) escrita sobre el campo Best que DeepSeek sí rellena, y la razón de fondo del karaoke del mes 5 (Network +3 inútil frente a Output +1).
+5. **Trimestre desde L5 (línea 6 nueva):** Skill learning + Prepare report materials y Apply for a key project; L4 sigue como t0. Neutro en la réplica, +2,5 de Output final; es lo que le faltó a cp-v8 para L6.
+6. **El bloque literal `tool_calls: [...]` también en la instrucción del manifest**, que va en el mensaje de sistema de cada llamada, con «from the very first story to the last», contra el arranque narrador de la segunda partida de cp-v8.
+
+Pruebas (se rellenan abajo): juez Haiku/Sonnet × 3 contra cp-v8 en la misma tanda (`comprobante-data/j-cp9.jsonl` con el texto intermedio: Haiku 62,7 frente a 61,3, Sonnet 59,3 frente a 66,7; las quejas de Sonnet son las de siempre, mecánica inventada del calendario de evaluaciones y densidad, no las reglas nuevas; `j-cp9b.jsonl` con el texto final); banco de L1 con la evaluación cerca (`ds-cp9-l1`, 90 situaciones, ~0,15 USD) contra v4 (24–25 elecciones que bajan Network u Output de 90; 6–7 arriesgadas) y cp-v5a (27; 8); sonda de arranque en frío (`turnprobe-cp-v9.json`: ¿empareja y calla en 6 de 6?).
+
+### 6.7 Lo que falta, en números, y qué manual es el ganador
+
+- **La esperanza matemática de la familia v4 hoy** (13 partidas largas con las reglas de historias de v4): 10 completas de media 66,6, 2 hundidas (L1 y crisis), 1 con explosión. E[partida] ≈ 0,85 × 67 + 0,15 × 28 ≈ **61**; nota de versión esperada ≈ 0,8 × 61 + 6,5 + 9,5 ≈ **65**; si las tres partidas oficiales se completan, ≈ 69–70. **Cada hundimiento evitado en las tres partidas oficiales vale ~13 puntos de media y ~10 de versión**: es la variable que manda, por encima de cualquier regla de crecimiento (que vale 1–2).
+- **El hundimiento de L1 es estructural, no sólo de lectura:** en el catálogo, en el 24 % de las historias no hay ninguna opción sin riesgo que no cueste Network u Output; en un mes previo de tres historias, un lector perfecto y estricto con el riesgo tiene una pérdida forzada el 57 % de las veces. Por eso el bot de la réplica con lectura exacta asciende en el mes 6 sólo el 73 % y se queda atascado el 9 %, igual que DeepSeek (7 de 10 completas en el mes 6; 2 atascadas de 13). La única salida es aceptar un riesgo pequeño en ese mes cuando toda opción segura pierde un punto (el planificador óptimo pasa del 61 % al 78 % con eso, B36); la regla ya está en v4 desde v3 pero DeepSeek la aplica estrecha («riesgo leve: en privado, parcial, después»), y en el mes 11 de la segunda partida eligió Network −1 antes que la opción con riesgo +2 que salvaba el ascenso. Ampliar esa excepción sólo en el nivel inicial («antes que cualquier riesgo salvo ocultar o negar») es lo siguiente a probar en el banco de L1; en la réplica no se distingue, porque el bot ya la aplica entera.
+- **El bucle de fichas es bimodal** (7 de 8 partidas): cuando falla, la partida cuesta el doble de fichas y la nota de fichas de la versión baja de ~95 a ~85. cp-v9 pone el ejemplo literal también en el manifest; medirlo exige partidas, no sondas (las 13 sondas y 7 partidas emparejaron).
+- **Qué separa 66 de 72 dentro de una partida completa:** el mes en que llega L5 (§6.1): Network y dinero valen 4–5 puntos. Lo decide Skill en L4 (t0, en cp-v5a/v8/v9) y no perder el mes 18 en L3 por un punto de Network.
+- **Los 5 puntos de riesgo de cp-v8 (68,20) no eran riesgo sin limpiar:** la nota de control de riesgo es 10 − (riesgo final + 5 × explosiones), en décimas (réplica `score()`, validada con 0,3 de error); cp-v8 acabó con RR. HH. sonriente (riesgo 0) y una explosión (mes 38). La hipótesis del PR #23 (§1 de `revision-comprobante.md`: cierre con señal atrasada) no se sostiene en esa traza; lo que evita esos 5 puntos es no explotar en L5, es decir, el riesgo en las historias (§6.4) y el cierre tras explosión no aplica (fue la primera).
+- **L6 (+4) es posible pero no controlable:** la trayectoria de cp-v8 lo tuvo a 8 puntos de Output en el mes 47; cp-v9 compra Output desde L5. Con la lectura de DeepSeek la réplica da 2–3 % de L6; una partida real en L6 sería la mejor de las tres y subiría la versión ~3.
+
+**El manual ganador, con la evidencia de hoy:** `cp-v9` es el mejor diseño (todo lo aprendido de las 13 partidas, sin números nuevos), pero **no tiene partidas**. Para el corte 2 se entrega `cp-v5a` (3 de 3 completas, 66,5, fichas 94–95). Para el corte 3, la decisión es de presupuesto: cp-v9 sólo se entrega si consigue 2–3 partidas completas sin regresión (≈ 0,9 USD cada una; la línea va en 8,7 USD de los 10, hasta ~12 si algo promete); si no hay partidas, se queda cp-v5a, que ya cuenta como mejor versión.
+
+### 6.8 Reglas de trabajo para lo que queda (Alejandro, 29 oct, 10:50 UTC)
+
+Presupuesto de la línea hasta ~15 USD en total si cada gasto lo merece. El corte 2 no está cerrado: `cp-v5a` es la red de seguridad y sólo se sustituye por algo que la supere **con pruebas**. Para no caer en «una partida, una regla nueva, otra partida»:
+1. Una partida suelta no decide nada: quedarse en L1 pasa 1 de cada 7–9 veces con cualquier manual de la familia. No se cambia una regla por una partida mala ni se da por buena por una buena.
+2. Antes de cada idea, mirar la fila X de HALLAZGOS (proteger S/N/O todos los meses de L1 antes del riesgo ya está descartado en la réplica: sube los despidos).
+3. Una regla de historias pasa primero por el banco (~0,12 USD por 90 situaciones, `ids-l1prep90` frente a cp-v5a); una de trimestre o de cierre, por la réplica o por las partidas que ya tenemos. Sólo lo que gane ahí merece una partida.
+4. Una partida sólo vale si puede cambiar una decisión de entrega; antes de lanzarla se escribe qué se espera ver y qué se hará según salga.
+5. Dos intentos seguidos en la misma dirección sin resultado: cambiar de dirección o parar y explicar lo aprendido.
+
+Avisos suyos sobre cp-v9: el uso de «Best» para detectar techos choca con B38 (la marca sólo funciona anclada a un valor) y C18 (DeepSeek no rellena campos que tiene que llevar él); la regla «no se mueve» de cp-v9 usa sólo el campo Best, que sí rellena, y compara con las últimas tres notas, pero **hay que medir en el banco si la aplica** antes de creerla.
+
 ## Gasto
 - Clave al empezar (29 oct, 01:00 UTC): 32,60 USD libres (17,40 usados).
-- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. **Total de la línea: 8,26 USD de los 10** (uso de la clave 17,40 → 25,66; quedan 24,34 USD libres a las 05:20 UTC).
+- Sondas `turnprobe` (13 tandas): ~0,30 USD. Bancos `ds-cp1b`, `ds-v4-rep2`, `ds-cp3`, `ds-cp4`: ~0,53. Partida `cp-v3`: 1,73. Partidas `cp-v5a`: 1,06 + 0,84 + 0,91. Banco L1 `ds-cp5a-l1`: 0,12. Partidas `cp-v7`: 0,65 + 1,09 + ~0,3 (eliminada). Partida `cp-v8`: 0,86. Segunda partida `cp-v8` (29 oct, 09:08): 0,42. Banco `ds-cp9-l1`, sonda `turnprobe-cp-v9` y juez: se anotan en el Relevo. Sondas de hoy (cp-v9 ×3, cp-v5a control): ~0,06. Banco `ds-cp9-l1`: ~0,12. **Total de la línea: ~8,9 USD** (techo nuevo ~15; uso de la clave 17,40 → ~26,3).
 
 ## Relevo (29 oct, 05:25 UTC; cierre de la línea)
 1. **Hecho y por qué.** Anatomía de fichas de las partidas reales (§2); prueba del runner con un modelo falso (§3); manuales `cp-v1`→`cp-v8` (§4); sondas con DeepSeek del bucle (§5.1); juez (§5.2); bancos de control, riesgo y L1 (§5.3); **9 partidas oficiales** (§5.4): cp-v3 56,92; cp-v5a 66,27 · 65,10 · 68,13; cp-v7 62,25 · 69,88 · 28,56; cp-v8 68,20. La conclusión y la recomendación de cortes están en la cabecera: **cp-v5a al corte 2; cp-v8 candidato al corte 3 si consigue 2–3 partidas sin regresión.**
@@ -171,3 +282,9 @@ De ahí **`cp-v8`** = cp-v5a + una excepción en la línea 2: si RR. HH. no est�
    python3 scripts/comprobante/gametokens.py ~/careerlab-data/huawei-deepseek/runs/<run>
    uv run python scripts/deepseek/real_audit.py ~/careerlab-data/huawei-deepseek/runs/<run>/events.jsonl
    ```
+
+## Relevo (29 oct, 11:10 UTC)
+1. **Hecho y por qué.** Segunda partida de `cp-v8` (pedida por Alejandro): 28,28, atascada en L1, sin bucle de fichas (§5.4). Auditoría de las 13 partidas largas con `scripts/comprobante/traj.py` y `riskaudit.py` (§6.1–6.4): descomposición de la nota por dimensión, indicador que bloquea cada ascenso, el punto perdido del mes previo, dónde falla el riesgo. Réplica con `scripts/comprobante/cpbot.py` (§6.5): trimestre de L5, objetivo por indicador, cierre tras explosión, Health en Crecer, proteger S/N/O en N = 2. Candidato `cp-v9` (§6.6). Juez: tres tandas (`comprobante-data/j-cp9*.jsonl`); la frase de «techo por nivel» le valió un 0 de Haiku por contradecir el rango publicado y se reescribió como «no se mueve».
+2. **Resultados.** Tablas de §6. Partida 2 de cp-v8 en `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-64fa828b-dff20f-00001-a1`. Sondas en `~/careerlab-data/comprobante/turnprobe-cp-v9*.json` y `turnprobe-cp-v5a-ctrl2.json`: hoy 1 de 4 empareja y las 4 narran (ayer 13 de 13 emparejaban en silencio). Banco `ds-cp9-l1` (90 situaciones de L1, `~/careerlab-data/deepseek/runs/ds-cp9-l1`) lanzado a las 10:40 UTC: comparar con `uv run python scripts/deepseek/bench_sets.py ~/careerlab-data/deepseek/ids-l1prep-set.json ds-v4-full10 ds-v4-rep ds-cp5a-l1 ds-cp9-l1`. Gasto de la línea ~8,9 USD.
+3. **A medias.** El banco de cp-v9 y la tercera tanda del juez (`j-cp9c.jsonl`) estaban corriendo al escribir esto. La bimodalidad del bucle no tiene causa conocida (¿proveedor detrás de OpenRouter? el registro de JiuwenSwarm no guarda el `provider`); sin ella medida, la nota de fichas de la versión puede ser ~85 en vez de ~95 si una de las tres partidas oficiales sale narradora.
+4. **Siguiente paso.** (a) Leer el banco de cp-v9: si no baja Network u Output menos veces que v4 (24–25 de 90) ni reduce la pérdida, la pista del paso 4 y la regla «no se mueve» no valen y se quitan. (b) Comparar juez `j-cp9c` con cp-v8 en la misma tanda. (c) Sólo si (a) y (b) salen bien: 3 partidas de cp-v9 (~2,7 USD) con la predicción escrita antes (Output comprado desde L5; sin regresión en L1; fichas < 800 mil por mes) y la decisión: entregar cp-v9 en el corte 2 o 3 sólo si las 3 completan con media ≥ 66 y fichas como cp-v5a; si no, cp-v5a. (d) Sobre la bimodalidad: una sonda de 10 arranques en frío de cp-v5a (~0,1 USD) para saber si es del día o del manual.

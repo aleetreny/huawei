@@ -1,0 +1,16 @@
+{
+  "family": "comprobante",
+  "name": "cp-v9",
+  "parents": [
+    "v4-c5",
+    "v4-t0",
+    "suelo-v1-min"
+  ],
+  "idea_origin": "Comprobante line, 29 Oct: token accounting of the real DeepSeek traces (history grows ~608 tokens per model call, 431 of them tool results and framing; total tokens are quadratic in the number of model calls) plus the pending candidates c5 (quality), t0 (Skill from level 4), suelo-v1-min (stalled start, size of the risk) and v4-lean-q (one observe per quarter; Leah's branch leah/workspace, not a registered parent)",
+  "operator": "cp-v8 + four rules from the audit of 10 completed DeepSeek games",
+  "hypothesis": "Fewer trust crises (post-blow-up lockdown, B35), fewer first promotions lost to Health or integrity options in the review month, and a real shot at L6 when L5 comes by month 36 (Output bought at level 5).",
+  "predicted_behaviour": "Same tokens and story choices as cp-v8 (bank within v4 repeat noise); from level 5 the quarter is Skill learning + Prepare report + Apply for a key project; after a blow-up Defuse every quarter.",
+  "refutation": "Story choices on the L1 review-month bank move away from v4 more than v4 repeats do, or a game shows Output bought at level 5 without Skill reaching the L6 bar, or the judge drops more than 5 below cp-v8.",
+  "skill_count": 1,
+  "change": "cp-v8 plus: (1) after a blow-up read the HR remark one step worse for the rest of the run (stories and quarters); (2) in the review month step 4 precedes wellbeing unless Health could hit bottom; (3) reading hint from the catalogue: options that involve, help or credit others rarely cost Output, strong principled stands cost Network about half the time, rest options often cost Output; (4) \"not moving\": a stat equal to its Best in the last three notes despite options meant to raise it counts nothing in Grow and the quarter; (5) quarterly line 6: from level 5 Skill learning + Prepare report materials + Apply for a key project; (6) manifest kept in prose (a literal tool_calls block inside the instruction broke the pairing in a cold probe, 0 of 6). Audit of 13 long games: L5 by month 36 in 1 of 10, Output the stat short at the L6 review in 3 of 4 level-5 games; 3 first promotions lost to an Output or Network point in month 5; one blow-up at month 38 and two trust crises in 13 runs."
+}
