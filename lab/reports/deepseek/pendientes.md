@@ -62,4 +62,10 @@ Cuenta la mejor versión de todas las publicadas. El corte 1 (v4) ya está dentr
 
 ## 6. Línea Comprobante (29 oct, rama `alejandro/comprobante`)
 
-Informe: [comprobante.md](comprobante.md). Lo nuevo: las fichas dependen sobre todo del **número de llamadas al modelo** (cada llamada reenvía el historial entero; el total es cuadrático en las llamadas), y el runner oficial **ejecuta en orden varias llamadas de una misma respuesta**. Un bucle de una respuesta por decisión (`take_action` + `observe`) y una por trimestre deja la partida en 0,4–0,7 M de fichas por mes (nota de fichas 90–100). Candidato `comprobante/cp-v1b` = c5 + t0 + suelo-v1-min + ese bucle, con línea de estado de cuatro campos. Pruebas en curso con DeepSeek: sonda del bucle, banco de 69 situaciones (control + riesgo), una partida de medición.
+Informe: [comprobante.md](comprobante.md). **Candidato para el corte 2: `comprobante/cp-v7`** (= v4-c5 + t0 + suelo-v1-min + bucle de una respuesta por decisión con `take_action` y `observe` juntos, sin texto, notas de una línea). Medido con DeepSeek:
+- fichas: 615–654 mil por mes en dos partidas completas de `cp-v5a` (nota de fichas 94–95; v4: 61–66), +3,2 de versión;
+- partidas: 66,27 y 65,10 (L5, riesgo 0), tercera en juego; `cp-v3` (una llamada por respuesta) 56,92;
+- banco: elige como v4 dentro del ruido (control, riesgo y L1);
+- juez: 63–69, como c5.
+
+Lo que queda por confirmar con la clave: la partida de `cp-v7` (en juego; sólo difiere de cp-v5a en que con Health baja el trimestre mantiene el proyecto clave en vez de Lay low). Lo que no hay que pagar: redacciones en prosa para la pareja de llamadas (0 de 5 en sondas; sólo el bloque literal `tool_calls: [...]` funciona).
