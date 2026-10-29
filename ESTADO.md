@@ -89,3 +89,5 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Reglas oficiales | `sh scripts/setup_official_runner.sh`, después `local-runs/official-runner/docs/` |
 | Entrega: guion del vídeo, presupuesto de DeepSeek | [docs/entrega/](docs/entrega/) |
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
+
+**Apoyo: hoja de ruta L6 (sin API).** [Encargo para Opus](lab/reports/deepseek/gpt-principios/hoja-ruta-opus-l6.md), rama alejandro/gpt-principios: priorizar ventanas de ascenso y P(L6 completo/Q≥77,78); hipótesis de Skill/Output, salud preventiva y aplicación del modo estricto antes de nuevos manuales. Documento propuesto, no experimentos ejecutados.
