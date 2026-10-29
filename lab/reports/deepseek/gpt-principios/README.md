@@ -28,6 +28,8 @@ Los planes detallados, resultados y comprobaciones de integridad están en los a
 
 ## Relevo
 
+Revisión prioritaria: [Comprobante y dirección actualizada](revision-comprobante.md). Sustituye la base v4 de la propuesta anterior por cp-v5a para nuevas ideas; identifica el cierre con RR. HH. atrasado y las colisiones salud/riesgo como prioridades. Sólo lectura e ideación, sin pruebas.
+
 Dirección ampliada del 29 oct: [ocho líneas vinculadas a las familias actuales](direccion-investigacion.md). Revisión del inventario completo de 21 partidas y auditorías, sin releer íntegramente todas las trazas ni ejecutar hipótesis. Otro modelo hará las comprobaciones.
 
 Encargo actualizado: sólo proponer líneas; otro modelo las comprobará. Prioridad: [líneas para el salto](lineas-salto.md). No lanzar más experimentos desde este chat.
