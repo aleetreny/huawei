@@ -1,0 +1,10 @@
+base [exact]                       Q 59.36±0.35 | L6+  16% | pasa L1  91% -> Q  63.2, L6+  17% | Skill fin 117.8 | {'dismissed': 175, 'ok': 1608, 'trust': 179, 'broke': 10, 'health': 28}
+                                   ascensos m6:73% m12:75% m18:55% m24:45% m30:19% m36:24% m42:39% m48:35%
+detect [exact]                     Q 60.09±0.34 | L6+  19% | pasa L1  91% -> Q  63.8, L6+  21% | Skill fin 120.0 | {'dismissed': 166, 'ok': 1619, 'trust': 174, 'health': 32, 'broke': 9}
+                                   ascensos m6:74% m12:76% m18:55% m24:45% m30:18% m36:27% m42:41% m48:35%
+caps [exact]                       Q 60.54±0.34 | L6+  23% | pasa L1  92% -> Q  64.1, L6+  26% | Skill fin 122.6 | {'ok': 1617, 'trust': 182, 'dismissed': 159, 'broke': 6, 'health': 36}
+                                   ascensos m6:74% m12:76% m18:57% m24:44% m30:19% m36:30% m42:40% m48:38%
+detect+qskill=4+dprot=7 [exact]    Q 60.62±0.35 | L6+  26% | pasa L1  91% -> Q  64.3, L6+  29% | Skill fin 128.0 | {'dismissed': 164, 'ok': 1624, 'trust': 170, 'health': 36, 'broke': 6}
+                                   ascensos m6:75% m12:76% m18:55% m24:44% m30:20% m36:33% m42:39% m48:38%
+caps+qskill=4+dprot=7 [exact]      Q 60.89±0.34 | L6+  27% | pasa L1  92% -> Q  64.3, L6+  30% | Skill fin 128.2 | {'ok': 1629, 'trust': 167, 'dismissed': 156, 'broke': 6, 'health': 42}
+                                   ascensos m6:75% m12:76% m18:57% m24:43% m30:21% m36:33% m42:39% m48:39%

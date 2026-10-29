@@ -1,0 +1,45 @@
+{
+  "scope": "Dos lecturas guardadas de DeepSeek v3; signos de opciones, sin ponderar por frecuencia ni valor de carrera. El acuerdo no certifica acierto. Catálogo v2 sólo como evaluador. No llamadas nuevas.",
+  "fields": {
+    "skill": {
+      "n": 956,
+      "first_wrong": 204,
+      "disagree": 125,
+      "both_same_wrong": 143,
+      "either_correct": 811
+    },
+    "network": {
+      "n": 956,
+      "first_wrong": 271,
+      "disagree": 170,
+      "both_same_wrong": 179,
+      "either_correct": 758
+    },
+    "output": {
+      "n": 956,
+      "first_wrong": 285,
+      "disagree": 174,
+      "both_same_wrong": 192,
+      "either_correct": 739
+    },
+    "risk": {
+      "n": 956,
+      "first_wrong": 418,
+      "disagree": 114,
+      "both_same_wrong": 344,
+      "either_correct": 593
+    },
+    "positive_risk": {
+      "n": 956,
+      "first_wrong": 185,
+      "both_same_wrong": 151,
+      "disagree": 62,
+      "either_correct": 805
+    }
+  },
+  "sources_sha256": {
+    "lab/data/deepseek/etiquetas/ds-v3-r1-full.json": "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+    "lab/data/deepseek/etiquetas/ds-v3-r2-full.json": "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d",
+    "lab/data/ingenieria-inversa/catalog_v2.json": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764"
+  }
+}
