@@ -1,0 +1,14 @@
+{
+  "family": "exploracion",
+  "name": "ex-v3",
+  "parents": [
+    "ex-v1"
+  ],
+  "idea_origin": "Exploración line, 29 Oct: replica calibrated on the 2,743 real DeepSeek story decisions (choice model, scripts/exploracion/); quality judge on cp-v12",
+  "operator": "ex-v1 + discreet handling preferred over public confrontation in the review month at the starting level",
+  "hypothesis": "In the L1 review month DeepSeek (and Sonnet in the bank) rejects private or written-afterwards options as hidden risk and picks public corrections, refusals or stands that cost Network or Output. In the catalog, options worded as private/quiet/later/in writing carry risk 2 or more only 11 % of the time and lose Network or Output 25 %; public stands, refusals and firm pushes lose them 46-64 % and are not less risky. Calibrated replica: +0.35 (penalty on public stands in the L1 review month).",
+  "predicted_behaviour": "L1 bank: Network/Output-lowering choices 18 or fewer, risky choices 9 or fewer.",
+  "refutation": "L1 bank: more than 21 Network/Output-lowering choices or more than 9 risky choices.",
+  "skill_count": 1,
+  "change": "ex-v1 + one paragraph at the end of story step 4."
+}

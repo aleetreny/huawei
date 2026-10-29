@@ -38,6 +38,24 @@ class B30Grade:
 if not isinstance(T.CAT.grade, B30Grade):
     T.CAT.grade = B30Grade(T.CAT.grade)
 
+import gzip as _gz, re as _re
+_ANS = {(a["node"], a["choice"]): a["text"] for a in json.load(_gz.open(ROOT / "lab/data/deepseek/otros/answers.json.gz", "rt"))}
+_PRIV = _re.compile(r"\bprivate(ly)?\b|in private|aside|1:1|one-to-one|\bquiet(ly)?\b|\blater\b|after the meeting|afterwards|in writing", _re.I)
+_HIDE = _re.compile(r"\bhide|\bdeny|cover up|conceal|anonym", _re.I)
+_CONF = _re.compile(r"in the room|in public|publicly|openly|in the meeting|in front of|\brefuse|\bdecline|say no|firm|insist|push back", _re.I)
+
+
+def text_kind(node, k):
+    t = _ANS.get((node, k), "")
+    if _HIDE.search(t):
+        return "hide"
+    if _PRIV.search(t):
+        return "priv"
+    if _CONF.search(t):
+        return "conf"
+    return ""
+
+
 LABELS = {f: json.load(open(ROOT / "lab/data/deepseek/etiquetas" / f"{f}.json"))
           for f in ("ds-v1-r1-full", "ds-v1-r2-full", "ds-v3-r1-full", "ds-v3-r2-full")}
 BETA = json.load(open(ROOT / "lab/data/exploracion/choice_beta.json"))
@@ -188,6 +206,23 @@ class XBot(DSBot):
                     x[CM.FEATS.index("w" + s)] = 0.0
             X.append(x); ks.append(k)
         X = np.array(X)
+        extra = np.zeros(len(ks))
+        if f.get("donly") is not None and n <= int(f.get("donlyn", 1)) and st.level <= int(f.get("donlylv", 1)):
+            pen = float(f["donly"]); bonus = float(f.get("nplus", 0))
+            for j, k in enumerate(ks):
+                lab = CM.mean_lab(option_labels(node, k))
+                growth = max(lab.get("skill", 0), lab.get("network", 0), lab.get("output", 0))
+                if lab.get("dignity", 0) > 0.5 and growth <= 0:
+                    extra[j] -= pen
+                if lab.get("network", 0) > 0.5 and lab.get("output", 0) >= 0:
+                    extra[j] += bonus
+        if f.get("privb") is not None and st.level == 1 and n == 1 and self.hr <= int(f.get("privhr", 1)) and self.concerns == 0:
+            for j, k in enumerate(ks):
+                kd = text_kind(node, k)
+                if kd == "priv":
+                    extra[j] += float(f["privb"])
+                elif kd == "conf":
+                    extra[j] -= float(f.get("confp", f["privb"]))
         beta = self.beta.copy()
         def mult(names, m):
             for nm in names:
@@ -201,13 +236,14 @@ class XBot(DSBot):
             mult(["gS", "wS", "LS+"], float(f["sk4"]))
         if f.get("hcare") is not None and st.health <= int(f.get("hlow", 4)):
             mult(["dH", "LH", "lowH_dH"], float(f["hcare"]))
-        if f.get("dcap") is not None and st.dignity >= int(f["dcap"]) and (f.get("dn") is None or n <= int(f["dn"])):
+        if f.get("dcap") is not None and st.dignity >= int(f["dcap"]) and (f.get("dn") is None or n <= int(f["dn"])) \
+                and (not f.get("dl1") or st.level == 1) and (not f.get("dhr") or self.hr <= 0):
             mult(["LD", "dD", "lowD_dD"], float(f.get("dmul", 0)))
         if f.get("hcapx") is not None and st.health >= int(f["hcapx"]):
             mult(["LH", "dH"], float(f.get("hmul", 0)))
         if f.get("allrisk") is not None:
             mult(["risk", "risky", "risk2", "LR+", "hr_risk", "hr_LR"], float(f["allrisk"]))
-        z = (X[:, self.cols] @ beta) / self.temp
+        z = (X[:, self.cols] @ beta + extra) / self.temp
         z -= z.max(); p = np.exp(z); p /= p.sum()
         allowed = np.ones(len(ks), bool)
 
@@ -278,11 +314,15 @@ class XBot(DSBot):
 
 class QXBot(XBot):
     """XBot + quarter variants: qh=H (Health recovery first while Health <= H), defat=r (Defuse only from HR level r),
-    layat=r (Lay low only from HR level r), kpdef (main action key project by default at L1-L3)."""
+    layat=r (Lay low only from HR level r), q1txt (text version of q1out, without ceiling knowledge: at the starting
+    level every Energy point left by the health and HR lines goes to Prepare report materials)."""
 
     def energy(self, rep, st):
         f = self.flags_x
         self._tick(st)
+        if f.get("q1txt") and st.level == 1 and st.month < 46 and st.health > int(f.get("qh", 4)) and st.dignity > 4 \
+                and not (self.hr != C.FRIENDLY and st.energy == 3):
+            return "Prepare report materials" if st.energy >= 1 else None
         if f.get("qh") and st.month < 46 and st.health <= int(f["qh"]) and st.energy >= 1 and st.health < 10:
             return "Health recovery"
         if f.get("defat") is not None and st.month < 46:
@@ -307,3 +347,73 @@ class QXBot(XBot):
             finally:
                 self.hr = saved
         return super().main(rep, st)
+
+
+class CapBot(QXBot):
+    """QXBot + what a stateful in-run script can add to the quarter (C60): it records the state before and after each
+    quarter (exact, from the observes) and the published effect of the actions taken; a stat that rose less than the
+    published total is marked full at its current value for the rest of the level (anchored, B38). Flags:
+    capdet (detect; 'truth' = know the ceilings, as an upper bound), and the planned Energy action on a full stat is
+    redirected (Output -> Network -> Skill learning -> Health recovery)."""
+
+    STAT = {"Prepare report materials": "output", "Network maintenance": "network", "Skill learning": "skill"}
+
+    def __init__(self, per, seed=0, flags=None, beta=None):
+        super().__init__(per, seed, flags, beta)
+        self.cap_mode = self.flags_x.get("capdet")
+        self.full, self.full_lv = {}, None
+        self.q_before, self.q_gain = None, {}
+
+    def _resolve(self, st):
+        if self.full_lv != st.level:
+            self.full, self.full_lv = {}, st.level
+            self.q_before = None
+        if self.q_before is not None:
+            for s, g in self.q_gain.items():
+                if g > 0 and getattr(st, s) < self.q_before[s] + g:
+                    self.full[s] = getattr(st, s)
+            self.q_before, self.q_gain = None, {}
+        for s in list(self.full):
+            if getattr(st, s) < self.full[s]:
+                del self.full[s]
+
+    def is_full(self, st, s):
+        if self.cap_mode == "truth":
+            return getattr(st, s) >= R.cap(st.level, s)
+        return s in self.full and getattr(st, s) >= self.full[s]
+
+    def story(self, rep, st, node):
+        if self.cap_mode:
+            self._resolve(st)
+        return super().story(rep, st, node)
+
+    def energy(self, rep, st):
+        if not self.cap_mode:
+            return super().energy(rep, st)
+        if st.energy == 3:
+            self._resolve(st)
+            self.q_before = {s: getattr(st, s) for s in R.GROWTH}
+            self.q_gain = {}
+        a = super().energy(rep, st)
+        if a in self.STAT and st.month < 46 and self.is_full(st, self.STAT[a]):
+            for alt in ("Prepare report materials", "Network maintenance", "Skill learning"):
+                s = self.STAT[alt]
+                cost = R.ENERGY_FX[alt][1]
+                if cost <= st.energy and not self.is_full(st, s) and not (alt == "Skill learning" and st.health <= 6):
+                    a = alt
+                    break
+            else:
+                a = "Health recovery" if st.health < 10 else ("Mental recovery" if st.dignity < 10 else a)
+        if a:
+            for s, v in R.ENERGY_FX.get(a, ({}, 0))[0].items():
+                if s in R.GROWTH:
+                    self.q_gain[s] = self.q_gain.get(s, 0) + v
+        return a
+
+    def main(self, rep, st):
+        a = super().main(rep, st)
+        if self.cap_mode and a:
+            for s, v in R.MAIN_FX.get(a, {}).items():
+                if s in R.GROWTH:
+                    self.q_gain[s] = self.q_gain.get(s, 0) + v
+        return a
