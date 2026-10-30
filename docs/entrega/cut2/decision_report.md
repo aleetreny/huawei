@@ -1,6 +1,6 @@
 # Decision report — Gradient Depression
 
-**Submission `TODO(manual: version name)`, Cut 2 (30 October 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
+**Submission `mv-5r`, Cut 2 (30 October 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
 
 ## 1. Our decision process
 
@@ -66,7 +66,28 @@ A complete `t13-read-v4` career used about 65–70 million tokens, roughly 1.4 m
 
 **How much headroom there is.** A research planner with full knowledge of every option's effect averages about 72 on development careers, and the best careers we have observed end at the sixth level. Our complete careers already reach the fifth level, so the remaining gains come from fewer early failures and a faster climb after the fourth level, not from a different overall approach.
 
-TODO(manual: the evidence for this version's change: bank and proxy results, and the DeepSeek careers played with it, with their scores. Say plainly how many careers there are and what they cannot show.)
+## 5c. Evidence for `mv-5r`
+
+Each change was tested from cheap to expensive, with the condition for dropping it written before the test: our replica, a bank of recorded DeepSeek situations answered again with each candidate Skill, short probes of the first turns with a fixed model provider, and only then complete careers.
+
+**Tokens.** Token efficiency is 10% of the version score and is full at 500 thousand tokens per game month or fewer. `t13-read-v4` used 1.35–1.47 million, which gives about 64 of 100. With one reply per decision and a one-line note, careers of this family used 0.3–0.5 million, and the complete `mv-5r` career used 461 thousand (efficiency 100).
+
+**Reply format.**
+- One wording of the two-call loop held the pair in 0 of 3 probes with a provider that does not reason privately: the agent narrated and sent `take_action` alone. The wording in `mv-5r` held it in 3 of 3 probes with that provider (18 of 18 replies) and with a provider that reasons privately.
+- One career of an earlier variant stopped without a score: 21 replies carried no tool call, because the model wrote the call as text, and the runner reached its continuation limit. After the manifest line "never end a reply with text only", careers had 0–2 such replies each.
+
+**Story choices in the bank.**
+- *The month before the first review* (90 situations): loss per decision against our research planner of 3.12 and 2.99 in two passes, against 3.31 and 3.68 for `t13-read-v4`. Our rule, fixed before the second pass, was to drop the variant if its two-pass mean was more than 0.3 worse than the family it came from; it was 3.06 against 3.04. One pass varies by about 0.4, so this is not evidence that it reads better than v4, only that it does not read worse.
+- *Review preparation at levels 2–4* (39 situations): 0.59, the same as v4. A variant that named the hidden costs at every level scored 0.96 and took more risk, which is why the text applies only at the starting level.
+
+**Careers.** All on the development game with the official runner and DeepSeek:
+
+| Skill | Scores (end) |
+|---|---|
+| `mv-5r` | **69.00** (48 months, level 5); 22.65 and 24.51 (dismissed at the starting level, month 24) |
+| Earlier variants with the same story rules | 68.64, **77.78** (level 6, our best career), 66.06, 63.35, 69.62, 63.27 (all complete); 37.06 (trust crisis); 18.98 (dismissed at the starting level); one stopped without a score |
+
+Across the 11 scored careers of this family, 7 were complete, with an average of 68.2, close to v4's complete careers; 4 collapsed. Three careers of `mv-5r` cannot separate it from v4 by a few points, and do not show that it plays better. In both of its dismissals the reviews at the starting level were lost on Network, mostly in situations where every alternative added risk.
 
 ## 6. Alternatives we did not promote
 
@@ -80,15 +101,19 @@ TODO(manual: the evidence for this version's change: bank and proxy results, and
 | A numerical hidden-risk counter | A proxy test identified only 4 of 21 genuinely concerning earlier choices; the concern count stays a judgement, not an estimate. |
 | A script that decides from model labels | A teammate's experiment reached our best single career (sixth level), but three of its seven careers ended early, and complete ones used about 1.6 times more tokens; not submitted. |
 | Softer risk wording, "Health and Dignity stop at 10", reworded risk cues | No gain in our banks, and the softer wording made genuinely risky private options more likely (section 5b). |
+| Hidden costs named before every review | Review preparation at levels 2–4 worsened from 0.59 to 0.96 with more risk taken; kept at the starting level only (section 5c). |
+| A Skill half as long, with the same loop | Chose like `mv-5r` but failed our risk control by one situation (2.00 against a limit of 1.3 fixed in advance); not promoted. |
+| A rewrite for document quality only | Claude reviewers scored it 73.5 against 74.5; below the +3 we required. |
+| v4's rules with only the new turn loop | The same token saving (302 and 432 thousand per month), but 23.23 and 58.95 in two careers; not enough to prefer it. |
 
 ## 7. Memory and measurement limitations
 
-The status line came from a specific memory use: retain an expected quarterly result and compare it with the next observation. In proxy tests the recorded state was carried forward in 97–100% of cases. In DeepSeek careers the line was always written, but `Stalled` was almost never filled, so that part of the design is largely unused.
+The status line came from a specific memory use: retain an expected quarterly result and compare it with the next observation. In proxy tests the recorded state was carried forward in 97–100% of cases. In DeepSeek careers the line was always written, but `Stalled` was almost never filled, so in `mv-5r` it was removed and the quarterly plan follows the level instead.
 
 Our bank measurements have known caveats: some story continuations and the end-of-career settlement were missing from early versions, and "right answer" mixed rule compliance with estimated value. The replica was corrected afterwards, but not every historical bank figure was recomputed, so we treat decision-level regret as provisional. Holdout checks were useful but not perfectly isolated.
 
-Two development careers per version cannot separate versions a few points apart. TODO(manual: why this version was chosen for Cut 2, and what the evidence cannot establish.)
+Two development careers per version cannot separate versions a few points apart. We chose `mv-5r` for Cut 2 because it keeps v4's story choices within what we can measure, keeps v4's risk when preparing later reviews, and adds what we could measure precisely: token efficiency of 100 instead of about 64 (about +3.3 points of version score at equal play) and no career stopped by replies without a tool call. The evidence cannot establish that it plays better than v4, and it does not change the main weakness: about one career in four still collapses, mostly at the first promotion. A planner that sees the effect of every option averages about 72 on the same game, and half of the losses before the first review had no clean alternative, so we expect further gains from avoiding collapses and reading options better, not from more rules.
 
 ## 8. What we learned about Skills
 
-Skills can supply priority, scope and memory discipline. They cannot guarantee that a model understands an unfamiliar option, and a helpful rule can become harmful in another phase. What worked for us was a loop: find a concrete failure in the logs, write the narrowest general rule that addresses it, check that it does not change unrelated choices, and confirm it in a complete career.
+Skills can supply priority, scope and memory discipline, and they are very effective at changing how an agent works: the reply format alone cut DeepSeek's token use by two thirds. They cannot guarantee that a model understands an unfamiliar option, and a helpful rule can become harmful in another phase. What worked for us was a loop: find a concrete failure in the logs, write the narrowest general rule that addresses it, check that it does not change unrelated choices, and confirm it in a complete career.
