@@ -1,0 +1,15 @@
+{
+  "family": "mejora",
+  "name": "mv-4q",
+  "parents": [
+    "mv-4"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-4 with quality-only edits: review calendar no longer reads as contradicting the handbook, level-4 plan described consistently with its main action, coaching's Skill/Output trade made explicit, a menu check before batched quarters, the handbook bonus mentioned, quick-reference review row fixed",
+  "hypothesis": "The Claude judges' main complaints about mv-3/mv-4 (82/79, 66/66) are textual inconsistencies that can be fixed without changing what DeepSeek chooses; Turn loop, Status line, manifest instruction and story steps stay byte-identical except one parenthesis.",
+  "predicted_behaviour": "Judges: mean >= mv-4 + 3 (73.25 -> 76+). Bench: q-loss within +0.3 of the reference on every set and agreement with the reference picks >= 85 %.",
+  "refutation": "Judge mean gain < 3, or any bench set worse by > 0.3, or agreement < 85 %.",
+  "skill_count": 1,
+  "change": "mv-4 -> mv-4q: see operator; protocol sections and manifest instruction unchanged.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}

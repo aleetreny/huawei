@@ -238,6 +238,47 @@ El criterio se cumple sólo en el subconjunto de preparación, y con cifras muy 
 
 Ninguna de las dos acerca el 78. En la réplica, todos los mecanismos medidos dejan P(A ≥ 78) por debajo del 0,3 % por tanda y P(Q ≥ 72) por debajo del 25 %. La brecha con el objetivo está cuantificada y no hay hoy un mecanismo que la cierre.
 
+## 10. Las dos variantes (30 oct): mv-5r se queda, mv-4q se descarta, y C68 se rebaja
+
+**mv-4q (sólo calidad): descartada.** Cambios:
+- el calendario de evaluación sin contradecir el orden del handbook;
+- el plan de L4 coherente con su acción principal;
+- el intercambio Skill/Output de guiar con preguntas, dicho explícitamente;
+- una comprobación del menú antes del trimestre en bloque;
+- el bonus del handbook;
+- la fila de evaluación de la tabla rápida.
+
+Protocolo y manifest idénticos. Jueces en la misma tanda (`data/j03.jsonl`, Opus y Sonnet × 3):
+
+| Manual | Opus | Sonnet | Media |
+|---|---|---|---:|
+| mv-4q | 84 · 79 · 84 | 66 · 62 · 66 | 73,5 |
+| mv-4 | 79 · 84 · 84 | 58 · 71 · 71 | 74,5 |
+
+El criterio previo era +3 o más: no se cumple, y no se gastó su banco. Lo que los jueces critican de verdad es la longitud del protocolo y la contabilidad de la nota. No se puede tocar sin arriesgar la pareja de llamadas (C69).
+
+**mv-5r (la lectura de costes ocultos sólo en el nivel inicial): se queda.**
+
+| Conjunto | mv-5r | mv-4 | v4 |
+|---|---|---|---|
+| Preparación L2–L4 (39): pérdida · riesgo sumado | **0,59 · 4** | 0,96 · 6 | 0,59 · 4 |
+| L1 (90), pérdida por decisión | 3,12 · 2,99 | 3,57 (mv-4) · 2,51 (mv-3) | 3,31 · 3,68 |
+| L1, elecciones que bajan N/O | 22 · 23 | 24 · 20 | 24 · 25 |
+
+- En la preparación de L2–L4 vuelve exactamente a v4.
+- El criterio previo para L1 (≤ 2,81, es decir, 2,51 + 0,3) no se cumplió en la primera pasada (3,12). Pero ese margen era más estrecho que el ruido entre pasadas: v4 varió 0,37 consigo mismo y mv-4 sacó 3,57 donde mv-3 sacó 2,51.
+- Regla fijada antes de repetir: abandonar si la media de dos pasadas de mv-5r supera en más de 0,3 la media de mv. Resultado: mv-5r 3,06 frente a 3,04. **Se queda.**
+- Sondas de la pareja con DeepInfra: 3 de 3 (18 de 18 respuestas).
+
+**C68 se rebaja.** Con dos pasadas por familia, la pérdida en el mes previo de L1 es mv 3,04 frente a v4 3,50 (diferencia 0,46, con un ruido de ~0,4 entre pasadas); en partidas reales, los errores de lectura son 4–5 % en mv frente a 0–5 % en v4. La lectura de costes ocultos corrige la regresión de la familia cp (8,6–12,2 %), pero **no hay prueba de que mejore a v4**. La lección de método: una sola pasada del banco de L1 no basta para decidir entre variantes, porque unas pocas situaciones con valores q muy grandes dominan la media.
+
+**Qué queda frente a v4, con pruebas:**
+- fichas 95–100 frente a ~64 (+3,3 de nota de versión a igualdad de partidas);
+- los dos arreglos de formato (C69, C70);
+- y, con mv-5r, el mismo riesgo que v4 al preparar las evaluaciones.
+
+El juego de historias es, en lo medible, el de v4.
+
 ## Relevo
 
 1. **Hecho y por qué.**

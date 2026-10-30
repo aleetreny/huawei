@@ -1,0 +1,15 @@
+{
+  "family": "mejora",
+  "name": "mv-5r",
+  "parents": [
+    "mv-4"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-4 with the 'Read the hidden costs' bullet, its comfort tie-break and the manifest parenthesis limited to the starting level",
+  "hypothesis": "In real games mv takes more risk than v4 in review-preparation months at L2-L4 (0.143 vs 0.029 per decision, Review in 2); held-out bench: 6 vs 4 risk points and q-loss 0.96 vs 0.59 on 39 such items. Above L1 there is margin between threshold and ceiling, so the hidden-cost reading buys little and pushes toward +1/+2 options to save Network or Output. Limiting it to the starting level should bring L2-L4 preparation behaviour back to v4 while keeping the L1 reading.",
+  "predicted_behaviour": "Held-out preparation set (39): risk sum <= 5 and q-loss <= 0.75. L1 bank (90): q-loss <= 2.81 (mv-3 2.51 + 0.3).",
+  "refutation": "L1 q-loss > 2.81, or preparation risk sum >= 6 (no change from mv-4).",
+  "skill_count": 1,
+  "change": "mv-4 -> mv-5r: step 4 bullet 'Read the hidden costs (starting level only)' and 'At the starting level, when every option that passes step 2 ...'; manifest parenthesis starts 'at your starting level'.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}
