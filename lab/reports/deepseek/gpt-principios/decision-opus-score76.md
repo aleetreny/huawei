@@ -1,5 +1,7 @@
 # Decisión revisada: qué merece investigar para una media general de 76+
 
+> **Revisión posterior, 30 oct:** [revision-opus-78.md](revision-opus-78.md) y [encargo vigente](encargo-opus-78.md). Se conserva este informe como evidencia histórica; sus prioridades han sido revisadas.
+
 **Conclusión: mantener mv-4 y concentrar el siguiente trabajo en errores de interpretación y de aplicación de prioridades identificables en las trazas; no abrir otro planificador ni una batería de reglas trimestrales. La evidencia actual no demuestra un camino hasta 76 de media sostenida.**
 
 Esta revisión **sustituye las prioridades** de hoja-ruta-opus-l6.md. Ese documento es demasiado amplio y propone como apuestas principales ideas cercanas a pruebas ya hechas. No enviarlo a Opus sin esta corrección. Entrega breve: encargo-opus-score76.md.
