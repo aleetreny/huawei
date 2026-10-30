@@ -10,7 +10,10 @@
   - **El bucle de fichas no es lo que hunde L1.** En igualdad de condiciones, las reglas de v4 con el bucle ascienden más que sin él, y aguantan sin el rastro de razonamiento; v4 sin bucle no.
   - **El 7 de 9 de v4 del 27 oct no se repite hoy:** 3 de 16, p = 0,009. Las condiciones del servicio cambian de un día a otro. Una partida suelta, o tres, no separan un manual de otro.
   - **v4 pierde en las historias de los meses 4–5** (2,1 decisiones por ventana que bajan Network u Output, frente a 1,0), no en el trimestre: los dos llegan al mes 4 con N3 O3.
-- **Siguiente paso para el corte 2:** comparar mv-5r con v4-loop en tramos fieles, ~15 por brazo, ~1,2 USD y ~30 min. Hace falta el permiso de Alejandro: la clave queda en ~12,5 USD.
+- **Qué pueden hacer los tramos (§7, 17:00 UTC).**
+  - El cruce que decide es salir de L1 antes del mes 12: si no, despido en 10 de 11 partidas reales. El arnés lo mide con `--stop-month 12`.
+  - Sirven de puerta y para diagnosticar. No sirven para afinar: una mejora de +3,6 de nota necesitaría ~250 tramos por brazo.
+- **Siguiente paso para el corte 2:** comparar mv-5r con v4-loop en tramos fieles hasta el mes 12, 15 por brazo, ~1,5 USD y ~45 min. Hace falta el permiso de Alejandro: la clave queda en ~12,5 USD.
 
 Pregunta: ¿podemos saber antes de gastar partidas enteras si un manual hace jugar mejor a DeepSeek? Rama `alejandro/tramos` (worktree `~/huawei-tramos`), subtrabajo de la línea DeepSeek. Scripts: `scripts/tramos/`. Datos: `~/careerlab-data/tramos/` (exportados a `lab/data/deepseek/tramos/`). Presupuesto aprobado en el chat: 2 USD de DeepSeek.
 
@@ -101,6 +104,48 @@ Motor oficial, juego de desarrollo, `deepseek-v4-flash` por la clave de la compe
 5. **Tramos posteriores** (L3–L4, crisis de confianza): bifurcar partidas reales con la réplica y un renderizador de observaciones idéntico al oficial. Sólo si lo de L1 da fruto; cuesta construirlo y sólo vale para cambios que no tocan los meses anteriores.
 6. **Partidas enteras** sólo para confirmar fichas, paradas (`max_continuations`) y que no hay regresiones tardías.
 
+## 7. Qué pueden hacer los tramos y qué no (30 oct, 17:00 UTC; 0 USD, con las 50 partidas reales de `lab/data/deepseek/`)
+
+**Conclusión: los tramos sirven de puerta y para diagnosticar; no sirven para afinar un manual.** La medida buena es salir de L1 antes del mes 12, y el arnés ya la mide. Sólo ven diferencias grandes, y la mejora que buscamos (~+3,6 de nota) es pequeña para cualquier prueba que podamos pagar.
+
+**Dónde se pierden los puntos** (42 partidas con nota, manuales de todas las líneas):
+
+| Tipo | Partidas | Nota media | Puntos de media que cuesta | Lo ven los tramos |
+|---|---:|---:|---:|---|
+| A. Atascada en L1, despedida en el mes 24 | 10 | 20,8 | ~10,7 | Sí, entero en los meses 0–12 |
+| B. Eliminada después de ascender (meses 10–30) | 6 | 32,8 | ~4,7 | No: 4 de 6 por crisis de riesgo (riesgo 10) en los meses 21–30 |
+| Completa | 26 | 65,6 | ~6,8 hasta el jugador perfecto (72,4) | En parte |
+
+- **El cruce que decide es el mes 12, no el 6.**
+  - Seguir en L1 en el mes 12 acaba en despido en 10 de 11 partidas.
+  - Las que fallan en el mes 6 pero salen de L1 en el 12 terminan las 10.
+  - Ascender en el mes 6 ayuda: 67,8 de media en las completas frente a 62,6, y las dos partidas de L6 ascendieron en el 6.
+- **Los tramos ya miden ese cruce.** El arnés para al ascender, así que `--stop-month 12` da «sale de L1 antes del mes 12» sin la orden `resume`: los que ascienden en el 6 paran allí y sólo siguen los que no. Coste ~0,04–0,08 USD por tramo.
+- **Fidelidad después del mes 6.** En las 50 partidas reales el contexto crece sin recortes: 44.000 fichas por llamada en el mes 1, 97.000 en el 12 y 241.000 en el 48, y ninguna partida lo compacta. El arnés debería seguir siendo fiel; se comprueba en la propia tanda con las fichas por llamada del mes 12 (~96.500 en las reales).
+- **Ojo con B.** 5 de las 6 partidas de tipo B habían ascendido en el mes 6. Empujar el ascenso a cualquier precio puede cambiar hundimientos de tipo A por crisis de riesgo más tarde, que los tramos de L1 no ven. Hace falta mirar también el riesgo con el que acaba el tramo; se puede calcular con la réplica a partir de las decisiones, sólo para investigar.
+
+**Cuántos tramos hacen falta** (P(salir de L1 antes del mes 12) por brazo; α 0,05, potencia 0,8; ~0,06 USD por tramo):
+
+| Diferencia entre brazos | Tramos por brazo | Coste |
+|---|---:|---:|
+| 20 % frente a 80 % (como v4 frente a v4-loop en el mes 6) | ~7–10 | ~1 USD |
+| 40 % frente a 80 % | ~20 | ~2,4 USD |
+| 60 % frente a 80 % | ~80 | ~9,5 USD |
+| 75 % frente a 85 % (A de 25 % a 15 %: +4,5 de media de partidas, +3,6 de nota) | ~250 | ~30 USD |
+
+**«Maximizar el comportamiento por partes», visto con crítica.**
+- **Optimizar por tramos, no.**
+  - Las mejoras que nos faltan son del tamaño de la última fila: no se pueden medir.
+  - Elegir el mejor de muchas variantes con 10 tramos cada una repite el error del banco: gana la que tuvo suerte.
+  - Las partes no son independientes. El manual es un solo texto que DeepSeek lee una vez en el mes 0, así que una regla para los meses 4–5 cambia toda la partida. El estado y el riesgo pasan de un tramo al siguiente.
+- **Reparar por tramos, sí.** El ciclo:
+  1. ver en los tramos la decisión exacta en que falla, con su razonamiento;
+  2. hacer un cambio mínimo, mejor quitando o aclarando que añadiendo;
+  3. comprobar con ~10–15 tramos por brazo, intercalados y con la regla escrita antes, que el fallo desaparece y que el riesgo no sube.
+  Sólo merecen la pena los cambios con efecto grande, que son los únicos que se ven.
+- **El mayor efecto medido no viene del contenido de las reglas.** Con las mismas reglas, v4 asciende en el mes 6 en 3 de 16 tramos y v4-loop en 14 de 18: pesa más cómo se le hace actuar que lo que dice el manual.
+- **Puerta antes de entregar o de jugar partidas.** Ningún candidato pasa si sale de L1 claramente menos que el control en tramos de la misma tanda. Si los tramos no separan a dos candidatos, deciden lo que sí es determinista (fichas y calidad) y el más simple.
+
 ## Relevo
 
 1. **Hecho y por qué.** El banco y las partidas se contradecían. En vez de otro manual:
@@ -120,10 +165,10 @@ Motor oficial, juego de desarrollo, `deepseek-v4-flash` por la clave de la compe
    - No hay comparación de mv-5r; la tanda fiel es pequeña.
    - Falta continuar los tramos hasta el mes 18 para medir despidos en L1 (el arnés guarda la base de datos, pero aún no tiene la orden `resume`).
 4. **Siguiente paso.**
-   - **Para el corte 2 (hoy):** mv-5r frente a v4-loop, 15 tramos fieles por brazo (~1,2 USD, ~30 min). Regla, escrita antes de mirar: se entrega el que más asciende en el mes 6. Si la diferencia es menor de 3 tramos, decide lo de siempre: fichas, calidad y riesgo en el banco reservado (C77).
+   - **Para el corte 2 (hoy):** mv-5r frente a v4-loop, 15 tramos fieles por brazo hasta el mes 12 (~1,5 USD, ~45 min). Regla, escrita antes de mirar: se entrega el que más tramos saca de L1 antes del mes 12 (§7). Si la diferencia es menor de 3 tramos, decide lo de siempre: fichas, calidad y riesgo en el banco reservado (C77). Comprobar también que las fichas por llamada del mes 12 rondan las ~96.500 de las partidas reales.
 
    ```bash
-   cd ~/huawei-tramos && CAREERLAB_MCP_EXE=$HOME/huawei/.venv/bin/career-emulator-engine-mcp TRAMOS_DATA=$HOME/careerlab-data/tramos/r3 uv run python -u scripts/tramos/fiel.py run --arm mv5r=lab/policies-src/mejora/mv-5r/bundle --arm v4loop=lab/policies-src/mejora/v4-loop/bundle --per-arm 15 --parallel 14 --budget 1.25
+   cd ~/huawei-tramos && CAREERLAB_MCP_EXE=$HOME/huawei/.venv/bin/career-emulator-engine-mcp TRAMOS_DATA=$HOME/careerlab-data/tramos/r3 uv run python -u scripts/tramos/fiel.py run --arm mv5r=lab/policies-src/mejora/mv-5r/bundle --arm v4loop=lab/policies-src/mejora/v4-loop/bundle --per-arm 15 --parallel 14 --budget 1.6 --stop-month 12
    ```
 
    ```bash
@@ -131,6 +176,7 @@ Motor oficial, juego de desarrollo, `deepseek-v4-flash` por la clave de la compe
    ```
 
    - **Después:**
-     - orden `resume` para seguir los tramos que no ascienden hasta el mes 12 y el 18 (P(despido en L1));
+     - en `analiza.py`, contar «sale de L1 antes del mes 12» y el riesgo con el que acaba el tramo (con la réplica, sólo para investigar), por el cambio de A por B (§7);
+     - orden `resume` para continuar los tramos de las tandas ya jugadas (con `--stop-month 12` ya no hace falta para medir L1);
      - repetir fijando un proveedor sin razonamiento, para medir la robustez (sólo para investigar, como `DS_PROVIDER` en `scripts/deepseek/ds.py`; hay que añadirlo a `fiel.py`);
      - con el `top_p` 0,1 y el razonamiento en el historial, volver a pasar el banco para ver cuánto cambia su orden.
