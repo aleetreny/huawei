@@ -1,7 +1,7 @@
 {
  "kingjinsight/techarena-uk-2026": {
   "sha": "e6c33cbde514792006fb70c824a8f5242a704a04",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": [
    {
     "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
@@ -98,7 +98,7 @@
  },
  "krsnkkv/ksl_techarena": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -111,7 +111,7 @@
  },
  "krsnkkv/techarena-career-simu": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -124,7 +124,7 @@
  },
  "shriyasaxena/techarena-career-simu": {
   "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -137,42 +137,64 @@
  },
  "lrado-253/ksl-techarena": {
   "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "artepace/slopathone_winningteam": {
-  "sha": "c7ba173276e120f2fe28bbaa78e284a4b4038c3c",
-  "visto": "2026-10-29T19:44Z",
-  "scores": []
+  "sha": "5f493dba93238b63f732697529ef6f4556626742",
+  "visto": "2026-10-30T19:44Z",
+  "scores": [
+   {
+    "archivo": "tools/experiments/tests/fixtures/reports/career_emu_1/score_report.json",
+    "q": 65.17,
+    "meses": 48,
+    "nivel": null,
+    "fichas": null
+   },
+   {
+    "archivo": "tools/experiments/tests/fixtures/reports/career_emu_2/score_report.json",
+    "q": 26.24,
+    "meses": 19,
+    "nivel": null,
+    "fichas": null
+   },
+   {
+    "archivo": "tools/experiments/tests/fixtures/reports/career_emu_3/score_report.json",
+    "q": 50.35,
+    "meses": 48,
+    "nivel": null,
+    "fichas": null
+   }
+  ]
  },
  "peidi-l/preliminary": {
   "sha": "00d9008576aed09825cb73b9880e3cf32c184cfd",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "ray23257/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "yulong111/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "bernardoguterres/huawei-gradient-depression": {
   "sha": null,
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "rickyyyy-bit/techarena-huawei": {
-  "sha": "9132de57e87f53ff0b3e5105c76b94a1bb46a03e",
-  "visto": "2026-10-29T19:44Z",
+  "sha": "b6b9a9532899fde94d1ec2465542b5b2e7881609",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "colinfornia/techarena-project": {
   "sha": "b74a7ffc5d185a7a0c15a05eab05493dc0bb0244",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "clasificacion": [
@@ -969,6 +991,14 @@
    "Cut-off 2": "—"
   },
   {
+   "equipo": "sae1u26's team",
+   "creado": "2026-10-21",
+   "puesto": "—",
+   "Score": "0.00",
+   "Cut-off 1": "—",
+   "Cut-off 2": "—"
+  },
+  {
    "equipo": "manni's team",
    "creado": "2026-10-24",
    "puesto": "—",
@@ -1681,14 +1711,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "sae1u26's team",
-   "creado": "2026-10-21",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Majd's team",
    "creado": "2026-10-21",
    "puesto": "—",
@@ -1995,32 +2017,32 @@
  ],
  "xianmuyingyue/careersim-bdci26-postmortem": {
   "sha": "9a0bfefac61daebf1cee6f6d8d45308719e6bd06",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "yuminran/careersim-bdci26": {
   "sha": "89d757d14f6fbd48f33b8e36a6f294f1930a55c5",
-  "visto": "2026-10-29T19:44Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "smiledsg/careersim-bdci26": {
   "sha": "ce3497505f61c8306353f2a8e15256fdf21e9494",
-  "visto": "2026-10-29T19:45Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "winfred666/careersim-bdci26": {
   "sha": "ba46dd419ca66ce531d77b7cdfe6c9b0a6a7972b",
-  "visto": "2026-10-29T19:45Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "shafufudeliu/competitions-careersim-bdci26": {
   "sha": "e01cb02a53f7999a9ae50473dc8c39ee6a4d2724",
-  "visto": "2026-10-29T19:45Z",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  },
  "https://gitcode.com/openjiuwen/agent-store": {
-  "sha": "525ee8ad368b25d866000e7f275ac2650826b3d2",
-  "visto": "2026-10-29T19:45Z",
+  "sha": "bc39082c2362a2847236943f800562648dc9a928",
+  "visto": "2026-10-30T19:44Z",
   "scores": []
  }
 }
