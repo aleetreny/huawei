@@ -353,10 +353,29 @@ Fuera del protocolo, el diff con v4 son esas tres frases. Lint limpio; 10.661 ca
 - ≤ 3 respuestas sin llamada por partida;
 - en el banco, elecciones dentro del rango de las dos pasadas de v4.
 
+**Partidas (30 oct, 1,03 USD con la partida 3 de mv-5r; Alejandro aprobó bajar de 15):**
+
+| Partida | Nota | Fin | Ascensos (mes) | Fichas por mes (nota) | Llamadas | Paradas | Coste |
+|---|---:|---|---|---|---:|---:|---:|
+| v4-loop n.º 1 | 23,23 | **despedida en L1** (mes 24) | — | 302 mil (50 por no terminar) | 81 | 1 | 0,22 |
+| v4-loop n.º 2 | **58,95** | completa, L5 | 6, 12, 30, 48 | **432 mil (100)** | 169 | 1 | 0,72 |
+
+- **Las fichas, confirmadas.** v4 con el bucle gasta 300–430 mil por mes, frente a 1,35–1,47 M de v4 (nota de fichas 100 frente a ~64), con 1 respuesta sin llamada por partida. Se cumple la parte del predicho que depende del manual.
+- **N.º 1, L1.**
+  - Mes 6: llegó al mes 5 con Network en 1, y «negarse al intercambio de favores» la dejó abajo.
+  - Mes 12: «guiar con preguntas» costó Output en el mes previo (el coste oculto que v4 no lee).
+  - Mes 18: RR. HH. había estado «angry» y «frowning», así que la tercera evaluación no podía salir.
+- **N.º 2, L3.** Skill y Network en su tope desde el mes 18; Output, 13 y 11 en las evaluaciones de los meses 18 y 24, frente a ~14 necesarios. Pérdidas de Output en los meses previos; el trimestre de v4 no la empuja como el de ex-v1.
+- **El juego, sin conclusión.** Dos partidas no distinguen v4-loop de v4.
+- **Despidos en L1 con cualquier manual:** 6 en las últimas 14 partidas (desde el 29 oct por la tarde: cp-v12, mv-4, mv-5r ×2, v4-loop y una cortada en L1), frente a 4 de 22 antes. No hay señal de proveedor en el razonamiento oculto por llamada, y la diferencia puede ser azar (p ≈ 0,2), pero hay que vigilarla.
+
 ## Relevo (30 oct, para seguir en un chat nuevo)
 
 1. **Estado.**
-   - **Nuevo (30 oct, tarde): `mejora/v4-loop`** = v4 tal cual + sólo el protocolo de fichas de cp-v12 (§12). Empareja 3 de 3 con DeepInfra; falta jugarlo para confirmar las fichas. Es la versión «igual que v4, pero gastando menos» que pidió Alejandro.
+   - **Nuevo (30 oct, tarde): `mejora/v4-loop`** = v4 tal cual + sólo el protocolo de fichas de cp-v12 (§12). Es la versión «igual que v4, pero gastando menos» que pidió Alejandro.
+     - Empareja 3 de 3 con DeepInfra.
+     - Dos partidas: 23,23 (despido en L1) y 58,95 (L5), con **fichas confirmadas: 302 y 432 mil por mes** (nota 100 frente a ~64 de v4) y 1 parada por partida.
+     - Su juego son las reglas de v4.
    - El candidato anterior era **`mejora/mv-5r`**:
      - las reglas de historias de v4 (vía ex-v1), con la lectura de costes ocultos sólo en el nivel inicial;
      - el trimestre por tramos y el freno de salud de ex-v1;
@@ -388,7 +407,7 @@ Fuera del protocolo, el diff con v4 son esas tres frases. Lint limpio; 10.661 ca
    - Bancos en `lab/data/deepseek/bancos/ds-mv*` y `ds-v4-riesgo`; conjuntos en `lab/data/mejora/`.
    - Partidas en `lab/data/deepseek/partidas/mv-*` (tabla en `partidas.csv`).
    - Jueces en `data/j0*.jsonl`.
-   - Gasto de la línea: 5,96 USD (3,23 el 29 oct y 2,74 el 30 oct); la clave queda en ~15,40 USD.
+   - Gasto de la línea: 6,90 USD (3,23 el 29 oct y 3,67 el 30 oct); la clave queda en 14,44 USD, por debajo de los 15 de reserva con permiso de Alejandro.
    - Para empezar en un chat nuevo:
 
    ```bash
