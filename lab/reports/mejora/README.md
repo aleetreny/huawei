@@ -126,11 +126,117 @@ En las 10 partidas de esta noche (9 de mv, 1 de control) hubo 4 hundidas, y cada
 | Partida | Causa | ¿Qué la habría evitado? |
 |---|---|---|
 | mv-3 n.º 4 | respuestas sin llamada con salida corrompida → `max_continuations` | arreglado en mv-4 (frase del manifest) |
-| mv-4 n.º 3 | riesgo que sube en L4 sin que DeepSeek lo vea; con RR. HH. «angry» elige una denuncia anónima → segunda explosión | percepción del riesgo de opciones «correctas» (C55); quizá «tras una explosión, sólo opciones que bajan el riesgo» (B35) |
+| mv-4 n.º 3 | riesgo acumulado en L4 en los meses 22–25, varias historias con todas las opciones a +1; en el mes 26 eligió la denuncia anónima (+1) frente a «no decir nada» (+2), la menor (corregido el 30 oct, §9) → segunda explosión | riesgo sin beneficio antes de RR. HH. adverso (§9) |
 | mv-4 n.º 4 | L1: una nota de reconocimiento en el mes 5 (Output −1, la pista nueva no bastó), una pérdida forzosa en el 11 (todas las alternativas con riesgo +2/+3) y RR. HH. no sonriente en el 18 | aceptar el riesgo pequeño del mes previo de L1 con más decisión; rescate del mes 18 (B30) |
 | cp-v12 (control) | L1, tres evaluaciones perdidas | lo mismo |
 
-En partidas, el primer ascenso en el mes 6 salió 3 de 8 en mv (v4: 5 de 6; cp: 5 de 14). Todas llegan al mes 5 con S9 N3 O3 casi siempre (cp, v4 y mv por igual): lo que decide son las 3 historias del mes 5, que es justo lo que mide el banco y donde mv-3 es el mejor. Con estas muestras, la diferencia entre familias en partidas no se separa del azar.
+En partidas, el primer ascenso en el mes 6 salió **4 de 8 puntuadas** en mv (corregido el 30 oct: antes ponía 3; v4: 5 de 6; cp: 5 de 14). **No todas llegan preparadas al mes 5:** mv-3 n.º 3 con Skill 1 y Output 1, y otras tres con Output 1–2. Con estas muestras, la diferencia entre familias en partidas no se separa del azar.
+
+## 9. Revisión del 30 oct: mapa de pérdidas, contraste con la auditoría de Codex y riesgo
+
+Contrasta [revision-opus-78.md](../deepseek/gpt-principios/revision-opus-78.md) y [encargo-opus-78.md](../deepseek/gpt-principios/encargo-opus-78.md) (commit `95f3159`) con las partidas reales. Scripts: `scripts/mejora/lossmap.py`, `p72.py`; tabla de calibración regenerada con las partidas mv (`calib_data.py`, 4.893 historias).
+
+**Correcciones aceptadas.**
+- Los 72,4 (juego real) y 74,4 (réplica) del planificador son resultados medidos con información perfecta, **no un techo demostrado** (A5 ya lo decía). Retiro «77,78 de media no es realista» como afirmación; lo que sí dicen los datos es que ningún mecanismo medido lo acerca.
+- Primer ascenso en el mes 6: 4 de 8 puntuadas, no 3. No todas llegan llenas al mes 5.
+- La denuncia anónima del mes 26 (mv-4 n.º 3) era +1 frente a +2: eligió el riesgo menor; no fue un incumplimiento.
+
+**Mapa de pérdidas por evaluación** (`lossmap.py`; evaluaciones sin ascenso de las partidas reales, indicador que faltó y causa en los dos meses previos):
+
+| Tramo | Familia | Lectura errónea | Excepción +1 no usada | Forzosa | Crecimiento insuficiente |
+|---|---|---:|---:|---:|---:|
+| L1 | v4 (6 partidas) | 0 | 1 | 2 | — |
+| L1 | cp (15) | 8 | 3 | 10 | — |
+| L1 | mv (9) | 1 | 2 | 7 | — |
+| L2–L3 | v4 / cp / mv | 2 / 4 / 1 | 2 / 3 / 1 | 4 / 8 / 3 | 3 / 3 / 2 |
+| L4+ | v4 / cp / mv | 0 / 7 / 2 | 1 / 5 / 4 | 5 / 5 / 7 | **11 / 27 / 16** |
+
+**Las 11 decisiones de mv que perdieron N/O/S en el mes previo de L1:**
+
+| Alternativa limpia disponible | Casos |
+|---|---:|
+| sin riesgo (lectura errónea) | 3 |
+| con riesgo +1 (la excepción ya escrita) | 2 |
+| con riesgo +2 | 3 |
+| ninguna | 3 |
+
+**Errores de lectura en partidas reales**, en las ventanas de evaluación de L1. Es la prueba en contexto y con historial largo, y separa los títulos que se usaron para elegir variantes:
+
+| Familia | Títulos vistos en el banco | Títulos nuevos |
+|---|---:|---:|
+| v4 | 5,0 % | 0 % |
+| cp | 8,6 % | 12,2 % |
+| mv | 4,1 % | 4,8 % |
+
+En L2–L3 las tres familias están en 1,5–4 %. **La lectura nueva de mv devuelve a v4 lo que la familia cp había perdido, pero no mejora a v4.** La ventaja de 2,51 frente a 3,3–3,7 en el banco de L1 está probablemente inflada por haber elegido sobre ese banco (C68 queda matizado).
+
+**Skill en L4.** DeepSeek ya elige casi todo el Skill seguro disponible: 0,86–0,93 por decisión frente a 0,93–0,94 de la mejor alternativa segura, es decir, deja 0,2–0,3 al mes. El ritmo de L4 (18 meses en todas las familias) no se arregla con lectura de historias.
+
+**Riesgo elegido por decisión** (positivo; L2+):
+
+| Familia | Review in 1 | Review in 2 | Resto | RR. HH. adverso |
+|---|---:|---:|---:|---:|
+| v4 | 0,210 | **0,029** | 0,111 | 0,136 |
+| cp | 0,172 | 0,113 | 0,120 | 0,175 |
+| mv | 0,190 | **0,143** | 0,109 | 0,158 |
+
+En L4+, mv suma 0,161 por decisión (v4 0,110), y el riesgo sin beneficio (había una opción sin riesgo con igual o más crecimiento útil) es 0,030 frente a 0,009. Las elecciones arriesgadas de mv en el mes de preparación son casi todas «+1/+2 para no perder Output o Network» en L2–L4, donde sí hay margen entre umbral y techo.
+
+**Réplica con la métrica del objetivo** (`p72.py`, 3.000 partidas, calidad supuesta 75):
+
+| Brazo | Media | P(Q ≥ 72) | L6 | Despidos | Crisis | P(A ≥ 78) por tanda |
+|---|---:|---:|---:|---:|---:|---:|
+| Base tipo mv-4 | 60,6 | 17,7 % | 12,9 % | 9,7 % | 3,9 % | 0,12 % |
+| + veto L1, detección 50 %, riesgo ≤ 1 | 61,9 | 20,4 % | 14,6 % | 7,6 % | 4,0 % | 0,15 % |
+| + veto L1, detección 50 %, riesgo ≤ 2 | 62,0 | 20,6 % | 15,2 % | 6,5 % | 4,9 % | 0,17 % |
+| + veto L1 perfecto, riesgo ≤ 2 | 63,7 | 24,0 % | 18,0 % | 2,5 % | 6,7 % | 0,25 % |
+| Percepción perfecta de todas las opciones (preferencias actuales) | 61,9 | 19,3 % | 21,5 % | 7,1 % | 5,4 % | 0,17 % |
+
+**Decisión sobre la regla de riesgo pequeño en L1: descartada.**
+- mv-4 ya permite riesgo +1 en el mes previo con RR. HH. amable o quiet.
+- Sólo 2 de las 11 pérdidas reales están en ese terreno, así que la interpretación de la regla no es el problema principal.
+- Ampliarla a +2 cambia despidos por crisis (réplica: 6,5 % frente a 7,6 % de despidos y 4,9 % frente a 4,0 % de crisis), con +0,1 de media.
+- Si algún día se reabre, estos son los controles que haría falta:
+  - sólo el nivel inicial y sólo Review in 1;
+  - sólo con RR. HH. amable, no quiet;
+  - sólo la primera elección arriesgada del mes;
+  - nunca en el arranque atascado;
+  - Defuse y Lay low obligatorios en el trimestre siguiente;
+  - como criterio de abandono, que las crisis no suban en la réplica ni en el control de riesgo del banco.
+
+**Banco reservado de riesgo (DeepSeek, 0,55 USD).** 140 situaciones nunca usadas para elegir variantes (`lab/data/mejora/ids-riesgo-sets.json`):
+- 39 de preparación de evaluación (Review in 2) en L2–L4;
+- 101 de «tentación», donde una opción arriesgada da tanto crecimiento útil como la mejor segura.
+
+Criterio fijado antes de mirar: hay candidato si mv-4 suma ≥ 30 % más riesgo que v4 y pierde ≥ 0,3 más por decisión.
+
+| Conjunto | Brazo | Pérdida por decisión | Mejor opción | Riesgo sumado |
+|---|---|---:|---:|---:|
+| Preparación L2–L4 (39) | mv-4 | 0,96 | 72 % | 6 |
+| Preparación L2–L4 (39) | v4 | 0,59 | 77 % | 4 |
+| Tentación (101) | mv-4 | 0,37 | 75 % | 12 |
+| Tentación (101) | v4 | 0,46 | 74 % | 13 |
+
+El criterio se cumple sólo en el subconjunto de preparación, y con cifras muy pequeñas (2 puntos de riesgo); en el total no hay diferencia (0,54 frente a 0,50). La dirección coincide con las partidas reales (0,143 frente a 0,029 por decisión en Review in 2), pero es una señal débil. Además, la mayor parte de la diferencia con v4 viene de la base de cp, no de la lectura nueva: cp ya tenía 0,113.
+
+**Qué adopto de la auditoría:**
+- el objetivo como nota automática con calidad y eficiencia, informando P(Q ≥ 72) y contando las interrupciones;
+- el mapa de pérdidas por ventana;
+- probar sobre títulos y decisiones no usados para elegir;
+- una modificación por candidato y la calidad en una variante separada;
+- el protocolo de mv-4 byte a byte.
+
+**Qué descarto, con los datos de arriba:**
+- la regla de riesgo pequeño en L1;
+- empujar Skill en las historias de L4 (no hay margen);
+- el último trimestre como apuesta grande (+0,1);
+- la afirmación de que C68 mejora a v4 (en partidas, igual que v4).
+
+**Siguiente prueba con más valor por dólar.** Dos candidatos separados, como máximo:
+- **mv-5r:** la viñeta «Read the hidden costs» y su desempate sólo en el nivel inicial, para que en L2+ el paso 4 vuelva a ser el de v4. Prueba: banco de preparación (39) + L1 (90), ~0,25 USD. Se abandona si la pérdida en L1 sube más de 0,3 sobre 2,51 o si el riesgo en preparación no baja al nivel de v4.
+- **mv-4q:** sólo calidad (quitar duplicados y ambigüedades, protocolo idéntico). Se mide primero gratis con los jueces de Claude y después se comprueba en el banco que elige igual que mv-4 (~0,3 USD).
+
+Ninguna de las dos acerca el 78. En la réplica, todos los mecanismos medidos dejan P(A ≥ 78) por debajo del 0,3 % por tanda y P(Q ≥ 72) por debajo del 25 %. La brecha con el objetivo está cuantificada y no hay hoy un mecanismo que la cierre.
 
 ## Relevo
 
