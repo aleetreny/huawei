@@ -1,0 +1,474 @@
+{
+  "coverage": {
+    "stories": 1056,
+    "matched": 1050,
+    "invalid_or_missing_choice": 4,
+    "unmatched_or_ambiguous": 2
+  },
+  "groups": {
+    "all": {
+      "all_options_risky": 51,
+      "all_risky_selected_above_min": 7,
+      "locally_dominated_raw_effects": 16,
+      "n": 1050,
+      "risk_positive": 114,
+      "risk_at_least_2": 18,
+      "positive_risk_with_nonpositive_alternative": 62,
+      "NO_loss": 254,
+      "NO_loss_with_safe_NO_preserving_alternative": 70,
+      "health_loss_when_health_le3": 3
+    },
+    "mv-4": {
+      "all_options_risky": 38,
+      "all_risky_selected_above_min": 5,
+      "locally_dominated_raw_effects": 10,
+      "n": 580,
+      "risk_positive": 77,
+      "risk_at_least_2": 10,
+      "positive_risk_with_nonpositive_alternative": 38,
+      "NO_loss": 143,
+      "NO_loss_with_safe_NO_preserving_alternative": 36,
+      "health_loss_when_health_le3": 3
+    },
+    "L1": {
+      "all_options_risky": 12,
+      "all_risky_selected_above_min": 2,
+      "locally_dominated_raw_effects": 6,
+      "n": 268,
+      "risk_positive": 29,
+      "risk_at_least_2": 5,
+      "positive_risk_with_nonpositive_alternative": 17,
+      "NO_loss": 61,
+      "NO_loss_with_safe_NO_preserving_alternative": 26,
+      "health_loss_when_health_le3": 1
+    },
+    "review_far": {
+      "all_options_risky": 34,
+      "all_risky_selected_above_min": 5,
+      "locally_dominated_raw_effects": 12,
+      "n": 704,
+      "risk_positive": 66,
+      "risk_at_least_2": 8,
+      "positive_risk_with_nonpositive_alternative": 31,
+      "NO_loss": 176,
+      "NO_loss_with_safe_NO_preserving_alternative": 56,
+      "health_loss_when_health_le3": 2
+    },
+    "hr_mild": {
+      "all_options_risky": 43,
+      "all_risky_selected_above_min": 6,
+      "locally_dominated_raw_effects": 14,
+      "n": 917,
+      "risk_positive": 97,
+      "risk_at_least_2": 17,
+      "positive_risk_with_nonpositive_alternative": 54,
+      "NO_loss": 214,
+      "NO_loss_with_safe_NO_preserving_alternative": 53,
+      "health_loss_when_health_le3": 2
+    },
+    "review_near": {
+      "all_options_risky": 17,
+      "all_risky_selected_above_min": 2,
+      "locally_dominated_raw_effects": 4,
+      "n": 346,
+      "risk_positive": 48,
+      "risk_at_least_2": 10,
+      "positive_risk_with_nonpositive_alternative": 31,
+      "NO_loss": 78,
+      "NO_loss_with_safe_NO_preserving_alternative": 14,
+      "health_loss_when_health_le3": 1
+    },
+    "near_L1": {
+      "all_options_risky": 6,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 95,
+      "risk_positive": 15,
+      "risk_at_least_2": 3,
+      "positive_risk_with_nonpositive_alternative": 9,
+      "NO_loss": 19,
+      "NO_loss_with_safe_NO_preserving_alternative": 4,
+      "health_loss_when_health_le3": 0
+    },
+    "hr_adverse": {
+      "all_options_risky": 7,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 106,
+      "risk_positive": 14,
+      "risk_at_least_2": 1,
+      "positive_risk_with_nonpositive_alternative": 6,
+      "NO_loss": 34,
+      "NO_loss_with_safe_NO_preserving_alternative": 12,
+      "health_loss_when_health_le3": 1
+    },
+    "L2": {
+      "all_options_risky": 6,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 1,
+      "n": 162,
+      "risk_positive": 13,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 7,
+      "NO_loss": 42,
+      "NO_loss_with_safe_NO_preserving_alternative": 9,
+      "health_loss_when_health_le3": 0
+    },
+    "near_L2": {
+      "all_options_risky": 1,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 0,
+      "n": 54,
+      "risk_positive": 6,
+      "risk_at_least_2": 1,
+      "positive_risk_with_nonpositive_alternative": 5,
+      "NO_loss": 12,
+      "NO_loss_with_safe_NO_preserving_alternative": 4,
+      "health_loss_when_health_le3": 0
+    },
+    "L3": {
+      "all_options_risky": 2,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 1,
+      "n": 162,
+      "risk_positive": 9,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 7,
+      "NO_loss": 39,
+      "NO_loss_with_safe_NO_preserving_alternative": 11,
+      "health_loss_when_health_le3": 0
+    },
+    "near_L3": {
+      "all_options_risky": 1,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 0,
+      "n": 54,
+      "risk_positive": 5,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 4,
+      "NO_loss": 12,
+      "NO_loss_with_safe_NO_preserving_alternative": 3,
+      "health_loss_when_health_le3": 0
+    },
+    "L4": {
+      "all_options_risky": 29,
+      "all_risky_selected_above_min": 4,
+      "locally_dominated_raw_effects": 4,
+      "n": 369,
+      "risk_positive": 54,
+      "risk_at_least_2": 9,
+      "positive_risk_with_nonpositive_alternative": 24,
+      "NO_loss": 92,
+      "NO_loss_with_safe_NO_preserving_alternative": 16,
+      "health_loss_when_health_le3": 2
+    },
+    "near_L4": {
+      "all_options_risky": 8,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 1,
+      "n": 120,
+      "risk_positive": 20,
+      "risk_at_least_2": 4,
+      "positive_risk_with_nonpositive_alternative": 12,
+      "NO_loss": 32,
+      "NO_loss_with_safe_NO_preserving_alternative": 3,
+      "health_loss_when_health_le3": 1
+    },
+    "L5": {
+      "all_options_risky": 2,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 4,
+      "n": 86,
+      "risk_positive": 8,
+      "risk_at_least_2": 0,
+      "positive_risk_with_nonpositive_alternative": 6,
+      "NO_loss": 19,
+      "NO_loss_with_safe_NO_preserving_alternative": 8,
+      "health_loss_when_health_le3": 0
+    },
+    "near_L5": {
+      "all_options_risky": 1,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 1,
+      "n": 23,
+      "risk_positive": 2,
+      "risk_at_least_2": 0,
+      "positive_risk_with_nonpositive_alternative": 1,
+      "NO_loss": 3,
+      "NO_loss_with_safe_NO_preserving_alternative": 0,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-3": {
+      "all_options_risky": 13,
+      "all_risky_selected_above_min": 2,
+      "locally_dominated_raw_effects": 6,
+      "n": 470,
+      "risk_positive": 37,
+      "risk_at_least_2": 8,
+      "positive_risk_with_nonpositive_alternative": 24,
+      "NO_loss": 111,
+      "NO_loss_with_safe_NO_preserving_alternative": 34,
+      "health_loss_when_health_le3": 0
+    },
+    "L6": {
+      "all_options_risky": 0,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 0,
+      "n": 3,
+      "risk_positive": 1,
+      "risk_at_least_2": 0,
+      "positive_risk_with_nonpositive_alternative": 1,
+      "NO_loss": 1,
+      "NO_loss_with_safe_NO_preserving_alternative": 0,
+      "health_loss_when_health_le3": 0
+    }
+  },
+  "pergame": {
+    "mv-4__0f4bf379-00000": {
+      "all_options_risky": 9,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 144,
+      "risk_positive": 18,
+      "risk_at_least_2": 3,
+      "positive_risk_with_nonpositive_alternative": 8,
+      "NO_loss": 30,
+      "NO_loss_with_safe_NO_preserving_alternative": 8,
+      "health_loss_when_health_le3": 1
+    },
+    "mv-4__0f4bf379-00001": {
+      "all_options_risky": 8,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 144,
+      "risk_positive": 17,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 9,
+      "NO_loss": 34,
+      "NO_loss_with_safe_NO_preserving_alternative": 10,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-4__0f4bf379-00002": {
+      "all_options_risky": 7,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 79,
+      "risk_positive": 15,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 8,
+      "NO_loss": 26,
+      "NO_loss_with_safe_NO_preserving_alternative": 5,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-4__0f4bf379-00003": {
+      "all_options_risky": 4,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 69,
+      "risk_positive": 9,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 5,
+      "NO_loss": 16,
+      "NO_loss_with_safe_NO_preserving_alternative": 4,
+      "health_loss_when_health_le3": 1
+    },
+    "mv-4__0f4bf379-00004": {
+      "all_options_risky": 10,
+      "all_risky_selected_above_min": 1,
+      "locally_dominated_raw_effects": 2,
+      "n": 144,
+      "risk_positive": 18,
+      "risk_at_least_2": 1,
+      "positive_risk_with_nonpositive_alternative": 8,
+      "NO_loss": 37,
+      "NO_loss_with_safe_NO_preserving_alternative": 9,
+      "health_loss_when_health_le3": 1
+    },
+    "mv-3__e8cdf663-00000": {
+      "all_options_risky": 4,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 2,
+      "n": 143,
+      "risk_positive": 10,
+      "risk_at_least_2": 1,
+      "positive_risk_with_nonpositive_alternative": 6,
+      "NO_loss": 32,
+      "NO_loss_with_safe_NO_preserving_alternative": 8,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-3__e8cdf663-00001": {
+      "all_options_risky": 2,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 1,
+      "n": 143,
+      "risk_positive": 7,
+      "risk_at_least_2": 2,
+      "positive_risk_with_nonpositive_alternative": 5,
+      "NO_loss": 32,
+      "NO_loss_with_safe_NO_preserving_alternative": 11,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-3__e8cdf663-00002": {
+      "all_options_risky": 5,
+      "all_risky_selected_above_min": 2,
+      "locally_dominated_raw_effects": 3,
+      "n": 143,
+      "risk_positive": 14,
+      "risk_at_least_2": 4,
+      "positive_risk_with_nonpositive_alternative": 9,
+      "NO_loss": 34,
+      "NO_loss_with_safe_NO_preserving_alternative": 10,
+      "health_loss_when_health_le3": 0
+    },
+    "mv-3__e8cdf663-00003": {
+      "all_options_risky": 2,
+      "all_risky_selected_above_min": 0,
+      "locally_dominated_raw_effects": 0,
+      "n": 41,
+      "risk_positive": 6,
+      "risk_at_least_2": 1,
+      "positive_risk_with_nonpositive_alternative": 4,
+      "NO_loss": 13,
+      "NO_loss_with_safe_NO_preserving_alternative": 5,
+      "health_loss_when_health_le3": 0
+    }
+  },
+  "adverse_risk_cases_distinct_nodes": 6,
+  "adverse_risk_nodes_in_multiple_games": 0,
+  "scored": [
+    {
+      "run": "mv-3__e8cdf663-00000",
+      "Q": 68.64,
+      "completed": true,
+      "E": 91.82439833333333,
+      "dimensions": {
+        "level": 15.0,
+        "wealth": 7.48,
+        "resilience": 13.5,
+        "skill": 15.0,
+        "risk_control": 10.0,
+        "network": 7.67
+      }
+    },
+    {
+      "run": "mv-3__e8cdf663-00001",
+      "Q": 77.78,
+      "completed": true,
+      "E": 100,
+      "dimensions": {
+        "level": 18.0,
+        "wealth": 10.95,
+        "resilience": 15.0,
+        "skill": 15.0,
+        "risk_control": 10.0,
+        "network": 8.83
+      }
+    },
+    {
+      "run": "mv-3__e8cdf663-00002",
+      "Q": 66.06,
+      "completed": true,
+      "E": 98.67680333333334,
+      "dimensions": {
+        "level": 15.0,
+        "wealth": 8.6,
+        "resilience": 13.5,
+        "skill": 13.62,
+        "risk_control": 10.0,
+        "network": 5.33
+      }
+    },
+    {
+      "run": "mv-4__0f4bf379-00000",
+      "Q": 63.35,
+      "completed": true,
+      "E": 95.39443916666666,
+      "dimensions": {
+        "level": 15.0,
+        "wealth": 6.6,
+        "resilience": 13.5,
+        "skill": 12.25,
+        "risk_control": 10.0,
+        "network": 6.0
+      }
+    },
+    {
+      "run": "mv-4__0f4bf379-00001",
+      "Q": 69.62,
+      "completed": true,
+      "E": 100,
+      "dimensions": {
+        "level": 15.0,
+        "wealth": 6.38,
+        "resilience": 14.25,
+        "skill": 15.0,
+        "risk_control": 10.0,
+        "network": 9.0
+      }
+    },
+    {
+      "run": "mv-4__0f4bf379-00002",
+      "Q": 37.06,
+      "completed": false,
+      "E": 50,
+      "dimensions": {
+        "level": 12.0,
+        "wealth": 2.48,
+        "resilience": 9.0,
+        "skill": 8.25,
+        "risk_control": 0.0,
+        "network": 5.33
+      }
+    },
+    {
+      "run": "mv-4__0f4bf379-00003",
+      "Q": 18.98,
+      "completed": false,
+      "E": 50,
+      "dimensions": {
+        "level": 3.0,
+        "wealth": 1.78,
+        "resilience": 6.75,
+        "skill": 1.12,
+        "risk_control": 6.0,
+        "network": 0.33
+      }
+    },
+    {
+      "run": "mv-4__0f4bf379-00004",
+      "Q": 63.27,
+      "completed": true,
+      "E": 100,
+      "dimensions": {
+        "level": 15.0,
+        "wealth": 7.6,
+        "resilience": 11.25,
+        "skill": 13.75,
+        "risk_control": 9.0,
+        "network": 6.67
+      }
+    }
+  ],
+  "summary": {
+    "n": 8,
+    "Q": 58.095000000000006,
+    "E": 85.73695510416667,
+    "version_if_D73": 62.34969551041667,
+    "completed_Q": 68.12,
+    "completed_dimensions": {
+      "level": 15.5,
+      "wealth": 7.935000000000001,
+      "resilience": 13.5,
+      "skill": 14.103333333333333,
+      "risk_control": 9.833333333333334,
+      "network": 7.25
+    },
+    "target_Q_if_E100": {
+      "70": 73.75,
+      "73": 73.375,
+      "80": 72.5,
+      "90": 71.25,
+      "100": 70.0
+    }
+  }
+}

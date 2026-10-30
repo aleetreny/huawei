@@ -45,6 +45,8 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en [pendientes.md](lab/reports/deepseek/pendientes.md), con su coste, sus comandos y su regla de decisión.
 
+**Apoyo — revisión para Opus, 30 oct (integración selectiva):** [encargo 72+ frecuente / 78 automático](lab/reports/deepseek/gpt-principios/encargo-opus-78.md), [evidencia](lab/reports/deepseek/gpt-principios/revision-opus-78.md), C73. Con eficiencia 100, calidad 80 exige juego medio 75. Prioridades propuestas: ventanas de evaluación perdidas, riesgo innecesario y calidad por separado. Sólo documentación y auditorías offline; candidato y operación intactos. Opus puede valorar qué aporta a su trabajo actual. Sin DeepSeek ni partidas nuevas; no hay garantía de 78 consistente.
+
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
 **Coordinación entre chats (27 oct).** La clave es compartida: medir el coste de cada partida con `total_cost` del informe, nunca con la diferencia de saldo; el vigilante de `careerlab.target` sólo apunta (`CAREERLAB_TARGET_NEVER_STOP=1`) y **ninguna partida lanzada se corta**. Arrancar instancias de JiuwenSwarm de una en una, con `lsof` antes: dos a la vez chocan en los puertos. No tocar `local-runs/official-runner/.env`.
