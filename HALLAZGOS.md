@@ -48,7 +48,7 @@ Cada hallazgo lleva su fuente. Nada de esta página entra en una Skill como núm
 | Fichas (10 %) | C10 (corregido por C31), C17, C22, C31, C43, **C51, C53, C54, C56, C59** (bucle de dos llamadas por respuesta: nota de fichas ~95–100); C69, C70 (la redacción del bucle y las respuestas sin llamada); C79 (`v4-loop`: v4 con el bucle, 302–432 mil por mes) |
 | Calidad del SKILL.md (10 %) | C24, C25, C32, C66, C76, C78 |
 | Programa oficial (JiuwenSwarm) | B10, B25, B27, C17, C22, C43, C52, C56, C60, C63 (script con estado, medido), C70 (respuestas sin llamada y `max_continuations`) |
-| Réplica, bots y método | B1, B3, B9, B14, B26, C16, C20, C28, C44, **C61** (réplica calibrada con las decisiones reales), C67, C71, C73, C73, C74, C76; tramos-2 (tramos fieles con DeepSeek, provisional) |
+| Réplica, bots y método | B1, B3, B9, B14, B26, C16, C20, C28, C44, **C61** (réplica calibrada con las decisiones reales), C67, C71, C73, C73, C74, C76; tramos-2 (tramos fieles con DeepSeek, provisional), tramos-4 (qué miden los tramos) |
 | Normas y cumplimiento | C34, C37, C38, C46, C49, C60 |
 | Otros equipos | C37, C39, C40, C41, C42, C45, C46, C47, C48, C50 |
 | Descartado | sección X |
