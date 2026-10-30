@@ -1,5 +1,7 @@
 # Desde principios básicos: qué falta para 75 de partida con DeepSeek
 
+> **Actualización vigente, 30 octubre:** [encargo para Opus](encargo-opus-78.md) y [revisión con evidencia](revision-opus-78.md). El objetivo actual es 72+ frecuente y 78 automático. El contenido anterior que sigue es histórico; sus instrucciones de objetivo y candidato no sustituyen esta revisión. Ningún 78 consistente está demostrado. Sin DeepSeek en este encargo.
+
 **Todavía no hemos reproducido 75 consistente ni identificado la técnica de los equipos que lo consiguen. Sí hemos encontrado un fallo causal del controlador: tratar todo aumento de riesgo como un único punto puede destruir carreras incluso con percepción perfecta.** No presentar esta auditoría como una solución ya probada con DeepSeek.
 
 Objetivo confirmado por Alejandro: **nota de partida ≈75, repetible, con DeepSeek**, no nota ponderada de entrega. Restricción: ninguna llamada nueva a la API de DeepSeek. Esta carpeta apoya la línea DeepSeek; rama `alejandro/gpt-principios`. No abre otra línea activa ni reemplaza t13-read-v2.
@@ -132,3 +134,12 @@ Además, [la auditoría del runtime](runtime-audit.md) descubre una traza oficia
 **Relevo de la continuación:** proceso terminado con208 resultados; no reanudar ni repetir. Para reproducir sólo el análisis, `uv run python scripts/deepseek/gpt_decision_score.py` exige que estén los208 resultados y usa efectosv2, sin Q antiguo. Si hay un fallo de transporte o tope de cuota, inspeccionar el resultado concreto antes de reintentar; no reiniciar por tiempo de observación agotado. No interpretar el banco como75 ni llamar a DeepSeek.
 
 **Cierre del segundo checkpoint:** la prueba negativa de autocomprobación separa adherencia de calidad. La siguiente prueba requiere feedback público nuevo y debe distinguir aprendizaje nativo del calibrador por grupos que ya falló. [Diseño y datos](decision-audit.md). El runtime en chino es una discrepancia concreta con parche revisable; la causalidad y el75 siguen sin demostrar. No se alteró ninguna instancia ni se inició una partida DeepSeek.
+
+
+## Relevo — integración de revisión 78 (30 octubre)
+
+Integrados selectivamente el encargo, informe, dos salidas agregadas y dos scripts de auditoría desde `fbaab60`. No se integra la rama histórica completa: los manuales, motor, runner y documentos de entrega quedan intactos. ESTADO y HALLAZGOS enlazan la revisión. El encargo es material para que Opus valore si aporta algo a su trabajo actual, no una orden de sustituirlo.
+
+Reproducir sin modelos ni partidas: `uv run --offline python scripts/deepseek/gpt_score78_audit.py > /tmp/score78-audit.json`. Comparar con `score78-audit.json`. La auditoría anterior se reproduce con `python3 scripts/deepseek/gpt_mv_evidence.py`. La ganancia causal, transferencia al agente y calidad oficial siguen pendientes. Siguiente paso: lectura crítica por Opus e incorporación únicamente de ideas útiles; no lanzar DeepSeek.
+
+Validación de integración: `uv run --offline pytest -q`, 313 tests aprobados (aviso de deprecación de Authlib); las dos auditorías reproducen sus JSON byte a byte; `git diff --check` limpio. Integración autorizada por Alejandro, preparada directamente sobre origin/main, sin cambios en políticas, motor, runner ni entrega.

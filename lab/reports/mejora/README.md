@@ -1,5 +1,7 @@
 # Línea Mejora: un manual mejor que `t13-read-v4`
 
+**Línea cerrada el 30 oct y juntada en `main` (hallazgos C68–C79). Para seguir, lee primero el Relevo del final.**
+
 **Actualización (30 oct).** El candidato es **`mejora/mv-5r`**. En lo medible, juega las historias como v4 (la ventaja de lectura en L1 quedó dentro del ruido al repetir el banco). Lo que aporta es fichas 95–100 y no cortarse por respuestas sin llamada. Una versión corta y otra sólo de calidad no mejoraron nada (§9–§11 y Relevo).
 
 **Conclusión anterior (29 oct, 22:45 UTC).** **`mejora/mv-4` es mejor manual que v4 en todo lo que se puede medir con precisión, pero en 9 partidas reales no juega visiblemente mejor:**
@@ -328,7 +330,7 @@ Jueces de Claude: 71,3 tras añadir el plan por fases, los tonos de RR. HH. y «
 - obedece el trimestre;
 - un manual de la mitad de largo elige igual.
 
-Lo que falla es la percepción de los costes y los intercambios forzosos, y eso no cambia con la longitud. Lo que sí trajo el texto añadido fueron efectos secundarios: más paradas con mv-3 (C70) y más riesgo al preparar evaluaciones en L2–L4 (mejora-7). Un manual simple no los tiene, pero tampoco sube el techo. La falsa alarma «ayudar cuesta Output» aparece en 2 de 4 pasadas del texto de L1. Es el punto débil de esa viñeta y merece un control en cualquier versión futura.
+Lo que falla es la percepción de los costes y los intercambios forzosos, y eso no cambia con la longitud. Lo que sí trajo el texto añadido fueron efectos secundarios: más paradas con mv-3 (C70) y más riesgo al preparar evaluaciones en L2–L4 (C75). Un manual simple no los tiene, pero tampoco sube el techo. La falsa alarma «ayudar cuesta Output» aparece en 2 de 4 pasadas del texto de L1. Es el punto débil de esa viñeta y merece un control en cualquier versión futura.
 
 ## 12. `v4-loop`: v4 tal cual con el bucle de fichas (30 oct)
 
@@ -384,8 +386,8 @@ Fuera del protocolo, el diff con v4 son esas tres frases. Lint limpio; 10.661 ca
    - Frente a v4, lo probado es:
      - fichas 95–100 (≈ +3,3 de nota de versión a igualdad de partidas);
      - sin respuestas sin llamada que corten la partida (C70);
-     - el mismo riesgo que v4 al preparar evaluaciones (mejora-9).
-   - En el juego de historias es, en lo medible, v4: la ventaja de lectura en L1 quedó dentro del ruido al repetir el banco (mejora-8).
+     - el mismo riesgo que v4 al preparar evaluaciones (C77).
+   - En el juego de historias es, en lo medible, v4: la ventaja de lectura en L1 quedó dentro del ruido al repetir el banco (C76).
    - Partidas de mv-5r: 22,65 (despido en L1) · 69,00 · 24,51 (despido en L1). En las dos despedidas, las tres evaluaciones de L1 cayeron por Network: pérdidas forzosas (la historia del antiguo compañero que pesca información, negarse = Network −1 frente a alternativas +2/+3), proteger Output a costa de Network y un desplome de Network en los meses 15–16. **mv-5r no ascendió en el mes 6 en ninguna de las tres.** En partidas reales no hay prueba de que mv-5r supere a v4, y la trampa de L1 sigue siendo el problema número uno.
 2. **Lo que se ha descartado con datos** (no repetir sin una razón nueva):
    - aceptar más riesgo en el mes previo de L1: cambia despidos por crisis (§9);
