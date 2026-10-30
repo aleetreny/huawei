@@ -1,5 +1,7 @@
 # Auditoría desde principios básicos
 
+**Encargo vigente (30 oct): [72+ frecuente y 78 automático](encargo-opus-78.md), con [revisión y evidencia](revision-opus-78.md).** Sustituye las propuestas anteriores de L6/76. Los relevos de abajo son históricos: no ejecutar sus prioridades sin leer la revisión vigente. No hay autorización para usar DeepSeek.
+
 **Todavía no se ha demostrado una puntuación de partida de 75 de forma consistente.** Esta investigación apoya la línea DeepSeek y distingue resultados reales, pruebas con otros modelos y simulaciones. No se han realizado nuevas llamadas a la API de DeepSeek.
 
 ## Qué se ha aprendido
@@ -57,7 +59,7 @@ El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramie
 
 ## Relevo — mv-3/mv-4 y consistencia de 77,78
 
-[Auditoría de las actualizaciones](mv-3-mv-4-consistencia.md): score reports y transiciones verificados desde huawei-mejora (a160964, documentación posterior sin commit). Ocho puntuadas, media 58,095; seis completas, 68,12; una en L6/77,78. Diferencia con 69,62: nivel y riqueza principalmente. Hallada contradicción ejecutada con el veto a lo anónimo bajo HR angry. Prioridad: aplicación del modo estricto y primeras ventanas de ascenso perdidas, conservando bucle mv-4. Sin API ni partidas; no prometer todas a 77,78. Solicitar integración de este diagnóstico en main.
+[Auditoría de las actualizaciones](mv-3-mv-4-consistencia.md): score reports y transiciones verificados desde huawei-mejora (a160964, documentación posterior sin commit). Ocho puntuadas, media 58,095; seis completas, 68,12; una en L6/77,78. Diferencia con 69,62: nivel y riqueza principalmente. **Corrección posterior:** la denuncia anónima tenía riesgo +1 frente a +2; no era una contradicción demostrada con el fallback. Las prioridades de este relevo están sustituidas. Sin API ni partidas; no prometer todas a 77,78.
 
 ## Relevo — hoja de ruta para Opus: L6 repetible
 
@@ -66,3 +68,13 @@ El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramie
 ## Relevo — decisión revisada para 76 general
 
 [Informe](decision-opus-score76.md) y [encargo acotado para Opus](encargo-opus-score76.md) sustituyen la hoja amplia de L6. Auditados 1.050 registros, fórmula oficial y pruebas negativas previas. Corrección material: denuncia anónima con +1 frente a +2, no error demostrado; priorizar errores previos recuperables. Script scripts/deepseek/gpt_mv_evidence.py y salida mv-evidence.json; sin API ni partidas. Dos hipótesis como máximo, basadas en casos repetidos, antes de cambiar políticas. Actualizado ESTADO, commit/push y solicitar integración.
+
+## Relevo — revisión para 78 automático (30 octubre)
+
+**Hecho:** [revisión adversarial](revision-opus-78.md) y [único encargo vigente](encargo-opus-78.md). Corregido el objetivo: 72 de juego con calidad/eficiencia 100 sólo da 77,6. Las tres mejores carreras mv existentes darían 77,338 incluso con calidad 100; es descriptivo, no evaluación válida. Confirmadas las 16 acciones dominadas en resultados aceptados; siete repiten un nodo y ya bajan riesgo. Modelos fijos anteriores predicen 86,5–86,9 % de las 1.050 decisiones mv emparejadas, menos en grupos críticos. Sin reajuste, APIs ni carreras.
+
+**Datos y reproducción:** `score78-audit.json`; `uv run --offline python scripts/deepseek/gpt_score78_audit.py > /tmp/score78-audit.json`. Incluye cobertura, comprobación de aceptación, continuaciones locales, predicción y sensibilidad de objetivo. Cinco registros emparejados no se reconciliaron con un único resultado crudo; no se afirman rechazados. No se incluyen narrativas en la salida.
+
+**Pendiente:** estimar ganancia de carrera por mecanismos, demostrar transferencia y calidad oficial. No hay candidato nuevo ni garantía de consistencia. Priorizar ventanas perdidas y riesgo innecesario; calidad en variante separada; preservar protocolo. Leído también `a340059` de Mejora: +0,1 de cierre declarado en el commit, sin tabla nueva verificable allí.
+
+**Siguiente paso:** usar `encargo-opus-78.md`, manteniendo la prohibición de DeepSeek. Verificar reproducción y diff, commit/push en la rama propia y solicitar integración documental en main. No se han tocado los cambios ajenos del workspace.

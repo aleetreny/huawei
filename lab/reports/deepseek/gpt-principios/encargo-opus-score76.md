@@ -1,5 +1,7 @@
 # Encargo acotado para Opus
 
+> **Histórico, sustituido el 30 oct:** usar exclusivamente [encargo-opus-78.md](encargo-opus-78.md). La nueva revisión corrige el objetivo, la prioridad de los casos dominados y el papel de la calidad.
+
 **Objetivo: aumentar la media general hacia 76+, no repetir exactamente 77,78 ni maximizar L6 a costa de derrotas.** Lee ESTADO.md, NORMAS.md, HALLAZGOS.md y lab/reports/deepseek/gpt-principios/decision-opus-score76.md. Ese informe sustituye las prioridades de la hoja de ruta anterior.
 
 Mantén mv-4 como control y congela su bucle de herramientas. No uses DeepSeek, no gastes APIs ni lances partidas oficiales. Trabaja primero con trazas pagadas y réplica. No cambies el manual antes de identificar un mecanismo recuperable.

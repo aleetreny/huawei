@@ -1,6 +1,6 @@
 # mv-3 / mv-4: convertir el 77,78 en rendimiento repetible
 
-> **Corrección posterior:** la denuncia anónima tenía riesgo +1 frente a +2 de la otra opción: no prueba incumplimiento del modo estricto. Véase [revisión de evidencia](decision-opus-score76.md), que sustituye esa interpretación y las prioridades derivadas.
+> **Corrección posterior:** la denuncia anónima tenía riesgo +1 frente a +2 de la otra opción: no prueba incumplimiento del modo estricto. Para las prioridades actuales, usar [revisión para 78](revision-opus-78.md) y [encargo vigente](encargo-opus-78.md).
 
 **Conclusión: 77,78 demuestra un recorrido alcanzable, no una política que lo garantice; faltan tanto ascensos tempranos como protección fiable frente a crisis. El objetivo práctico debe ser elevar la frecuencia de carreras de ese nivel y reducir la cola de pérdidas.**
 
@@ -58,7 +58,7 @@ La ganadora llega a L4 en 18 y dedica 18 meses a ese nivel; alcanza L5 en 36 y d
 ## Por qué el mismo manual no reproduce la ganadora
 
 - Historias y decisiones distintas producen trayectorias distintas. La ganadora demuestra que estas reglas pueden aprovechar una trayectoria favorable; no separa cuánto fue lectura mejor y cuánto fue la secuencia de oportunidades.
-- Hay errores evitables. En mv-4/3, mes 26, HR angry, la nota dice explícitamente «Report conflict of interest to HR anonymously» y la acción elegida es la denuncia anónima. El propio manual excluye lo anónimo en modo estricto. No falta escribir una advertencia genérica: falla aplicarla a la opción concreta.
+- Hay errores potencialmente evitables, pero la denuncia anónima del mes 26 no los demuestra: la alternativa tenía más riesgo (+2 frente a +1). El fallback permite elegir el menor cuando todas son arriesgadas. El diagnóstico inicial de incumplimiento era incorrecto.
 - Hay intercambios forzosos. El informe identifica en mv-4/1 una última historia de mes 5 con pérdida de Network o alternativas de riesgo +2/+3. No llamar error a toda pérdida del ascenso ni resolverlo aumentando indiscriminadamente tolerancia al riesgo.
 - Hay retrasos previos al mes crítico: mv-3/3 llega al mes 5 con Skill 3 en la última observación preacción. Proteger sólo Network/Output al final no recupera toda la preparación perdida.
 - Hay pérdidas posteriores a un arranque perfecto: mv-4/3 consigue L4 en 18 como la ganadora y termina en crisis en 27. Acelerar sin controlar riesgo no da consistencia.
@@ -68,7 +68,7 @@ Una de las correcciones del informe: mv-4/5 acaba con riesgo **1**, no 0 como su
 ## Plan priorizado para acercarnos a carreras de 77–78
 
 1. **Conservar la corrección operativa de mv-4.** Volver a mv-3 sólo porque contiene el máximo observado recuperaría un defecto conocido sin prueba de mejor política.
-2. **Banco de aplicación del modo estricto, separado del banco L1.** Partir de decisiones ya pagadas con HR adverso y después de una explosión. Distinguir contradicción explícita con una regla de incertidumbre semántica y de menú sin salida segura. Probar primero una aclaración localizada del conflicto entre «reportar un problema» y «hacerlo anónimamente»: que el canal/mecanismo de la acción no desaparezca detrás de su intención. No un revisor genérico adicional (ya falló), ni veto universal a reportar. Mantener controles de crecimiento y riesgo; demostrar efecto antes de carreras nuevas.
+2. **Prioridad histórica corregida:** auditar alternativas antes de atribuir fallos al modo estricto. El caso anónimo no sostiene una aclaración específica. El nuevo encargo evalúa riesgo innecesario anterior a la crisis y menús sin salida segura, con controles de crecimiento y falsas alarmas.
 3. **Diagnóstico de preparación a lo largo de cada nivel.** Auditar la primera ventana perdida, no sólo la última decisión: qué indicador faltó, cuándo apareció el déficit y qué acciones seguras disponibles podían repararlo. En L1 incluir Skill temprana; en L2/L3, Network y Output; en L4/L5, Skill y Output. Sólo formular una regla nueva si varios fallos comparten un mecanismo y no una historia particular.
 4. **Medir rutas a L6 y conservación, además de supervivencia.** Hitos descriptivos de referencia: L4 hacia 18, L5 hacia 36, L6 al final; no respuestas fijas ni umbrales ocultos trasladados al Skill. Reportar tasa de cada hito, crisis, eliminaciones, gasto patrimonial y componente de bienestar. Salvar una carrera de 19 llevándola a 65 sube la media, pero no cumple por sí solo el objetivo de 77,78.
 5. **Validación nueva y aislada.** Reservar títulos completos; controles repetidos y agrupación por partida/historia; evaluar coste del error y cola mala. No mezclar las correcciones anteriores en otro manual antes de medir cada una. Con la prohibición actual, usar datos guardados y réplica para localizar mecanismos; cualquier nueva prueba del modelo real queda pendiente de autorización.

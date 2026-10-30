@@ -1,6 +1,6 @@
 # Encargo para Opus: L6 repetible y carreras de 77–78
 
-> **Sustituida para el siguiente encargo:** leer [decisión revisada](decision-opus-score76.md) y [encargo acotado](encargo-opus-score76.md). La revisión encontró experimentos negativos que despriorizan varias ideas de esta hoja y corrigió el diagnóstico de la denuncia anónima.
+> **Histórica, sustituida:** leer [revisión para 78](revision-opus-78.md) y [único encargo vigente](encargo-opus-78.md). Las revisiones encontraron experimentos negativos que despriorizan varias ideas de esta hoja y corrigieron el diagnóstico de la denuncia anónima.
 
 **Conclusión: el objetivo central es completar L6 conservando riqueza, bienestar y control de riesgo; optimizar sólo supervivencia o ganancia inmediata de indicadores no basta. Esta hoja de ruta propone experimentos, no resultados ya obtenidos.**
 
@@ -58,7 +58,7 @@ El candidato debe ser selectivo: no bajar globalmente ambición ni repetir un me
 
 ### C. Modo estricto que evalúe el mecanismo, no la buena intención
 
-Separar «quiere arreglar/reportar algo» de «lo hace de forma anónima, parcial, privada o tarde». La crisis de mv-4/3 contiene una contradicción explícita con el filtro ya escrito. Probar una aclaración localizada de precedencia o representación, no añadir un revisor genérico (ya falló) ni un veto universal a reportar.
+Hipótesis histórica: separar intención constructiva del mecanismo de la acción. **Corrección:** la denuncia anónima de mv-4/3 ofrecía +1 frente a +2 de riesgo; no prueba contradicción con el filtro/fallback. No usar ese caso para justificar una regla nueva. Las prioridades vigentes están en la revisión para 78.
 
 Banco con HR adverso y después de explosión, más controles de reparación segura y de todas-las-opciones-malas. Analizar también el riesgo temprano que obliga luego a gastar trimestres limpiando y pierde crecimiento. No esperar a la primera explosión para medir daño: aunque sobreviva, la penalización y los recursos de recuperación perjudican 77,78.
 

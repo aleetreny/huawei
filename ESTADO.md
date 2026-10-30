@@ -45,11 +45,7 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 
 **Pendiente para la línea DeepSeek (con la clave):** todo lo que falta confirmar está en [pendientes.md](lab/reports/deepseek/pendientes.md), con su coste, sus comandos y su regla de decisión.
 
-**Apoyo a DeepSeek (actualización mv-3/mv-4, sin API):** [consistencia de 77,78](lab/reports/deepseek/gpt-principios/mv-3-mv-4-consistencia.md): revisadas nueve intentadas de Mejora desde su worktree; ocho puntuadas (58,095), seis completas (68,12), una L6. Prioridades: modo estricto realmente aplicado y adelantar ascensos sin crisis.
-
-**Apoyo a DeepSeek (29 oct, diagnóstico sin API):** [estancamiento y vías de mejora](lab/reports/deepseek/gpt-principios/diagnostico-estancamiento.md): eficiencia mejorada, juego aún sin superioridad demostrada; control de política/bucle y evaluación de decisiones críticas antes de nuevas versiones.
-
-**Apoyo a DeepSeek:** `alejandro/gpt-principios` (PR #23): [auditoría adversarial del corte 2](lab/reports/deepseek/gpt-principios/auditoria-cut2.md), handbook corregido y documentos cp-v5a actualizados; propuesta trimestral pendiente del comprobador, sin API.
+**Apoyo a DeepSeek — encargo vigente, 30 oct:** `alejandro/gpt-principios`, [encargo para Opus: 72+ frecuente y 78 automático](lab/reports/deepseek/gpt-principios/encargo-opus-78.md) y [revisión adversarial](lab/reports/deepseek/gpt-principios/revision-opus-78.md). Con eficiencia 100, calidad 80 exige juego medio 75. Auditadas 1.050 decisiones mv: modelos antiguos ~87 % de acierto global, 75–79 % en grupos críticos; siete de las 16 dominadas repiten un nodo y ya reducen riesgo. Prioridad: pérdidas por ventanas de evaluación, riesgo innecesario y calidad por separado. Sustituye las hojas de L6/76 y el diagnóstico erróneo de la denuncia anónima (+1 frente a +2). **Sin DeepSeek, API, partidas ni cambios del candidato.** Siguiente paso: seguir el nuevo encargo; no hay un 78 consistente demostrado. Solicitar integración documental en main.
 
 **Otras ramas.** Las de Matteo (`matteo/...`, `matteo-review/cut1`, `matteo-t4-growth`) y la de Leah (`leah/workspace`) las gestionan ellos.
 
@@ -89,7 +85,3 @@ Si sólo puedes leer tres archivos: este, [HALLAZGOS.md](HALLAZGOS.md) (todo lo 
 | Reglas oficiales | `sh scripts/setup_official_runner.sh`, después `local-runs/official-runner/docs/` |
 | Entrega: guion del vídeo, presupuesto de DeepSeek | [docs/entrega/](docs/entrega/) |
 | Historia del proyecto hasta el 26 oct (carrera de manuales, ESTADO antiguo, investigación inicial) | [docs/historico/](docs/historico/README.md) |
-
-**Apoyo: hoja de ruta L6 (sustituida por revisión de evidencia, sin API).** [Encargo para Opus](lab/reports/deepseek/gpt-principios/hoja-ruta-opus-l6.md), rama alejandro/gpt-principios: priorizar ventanas de ascenso y P(L6 completo/Q≥77,78); hipótesis de Skill/Output, salud preventiva y aplicación del modo estricto antes de nuevos manuales. Documento propuesto, no experimentos ejecutados.
-
-**Apoyo: decisión revisada para 76 general.** [Encargo acotado para Opus](lab/reports/deepseek/gpt-principios/encargo-opus-score76.md): máximo dos mecanismos demostrables de lectura/prioridades; evitar repetir planificación trimestral y salud ya probadas. Auditoría de 1.050 registros y corrección del caso anónimo en [informe](lab/reports/deepseek/gpt-principios/decision-opus-score76.md). Sin DeepSeek, APIs ni partidas nuevas.
