@@ -330,10 +330,34 @@ Jueces de Claude: 71,3 tras añadir el plan por fases, los tonos de RR. HH. y «
 
 Lo que falla es la percepción de los costes y los intercambios forzosos, y eso no cambia con la longitud. Lo que sí trajo el texto añadido fueron efectos secundarios: más paradas con mv-3 (C70) y más riesgo al preparar evaluaciones en L2–L4 (mejora-7). Un manual simple no los tiene, pero tampoco sube el techo. La falsa alarma «ayudar cuesta Output» aparece en 2 de 4 pasadas del texto de L1. Es el punto débil de esa viñeta y merece un control en cualquier versión futura.
 
+## 12. `v4-loop`: v4 tal cual con el bucle de fichas (30 oct)
+
+**Por qué.** Todas las versiones que ahorran fichas se construyeron sobre v4 con tres cambios de reglas ya metidos: cp-v1 … cp-v12 sobre v4-c5 + v4-t0 + suelo-v1-min, y las mv sobre ex-v1, que viene de cp. **Nadie había probado v4 con sólo el protocolo de llamadas cambiado**, así que cuando una partida salía peor no se sabía si era el bucle o las reglas nuevas.
+
+**Qué es.** El SKILL.md de v4 byte a byte, salvo:
+- las secciones «Turn loop» y «Status line» de cp-v12, que son las que emparejan con cualquier proveedor (C59, C69);
+- las frases del bucle en el manifest de cp-v12, más «never end a reply with text only» (C70);
+- los dos campos de la nota que la línea de cp-v12 no tiene, traducidos:
+  - «Concerns this month ≥ 1» pasa a «ya elegiste este mes una opción que podía enterrar un problema»;
+  - las menciones a «Stalled» se quitan.
+
+  DeepSeek dejó Concerns en 0 en las 77 notas de v4 y Stalled en «none» en el 94 %, así que el comportamiento real no cambia.
+
+Fuera del protocolo, el diff con v4 son esas tres frases. Lint limpio; 10.661 caracteres.
+
+**Sondas de la pareja con DeepInfra: 3 de 3** (18 de 18 respuestas). Sin partidas todavía.
+
+**Predicción escrita antes de jugar:**
+- pareja en ≥ 90 % de las respuestas de historia;
+- ≤ 0,55 M fichas por mes (nota de fichas 100 frente a ~64 de v4);
+- ≤ 3 respuestas sin llamada por partida;
+- en el banco, elecciones dentro del rango de las dos pasadas de v4.
+
 ## Relevo (30 oct, para seguir en un chat nuevo)
 
 1. **Estado.**
-   - El candidato es **`mejora/mv-5r`**:
+   - **Nuevo (30 oct, tarde): `mejora/v4-loop`** = v4 tal cual + sólo el protocolo de fichas de cp-v12 (§12). Empareja 3 de 3 con DeepInfra; falta jugarlo para confirmar las fichas. Es la versión «igual que v4, pero gastando menos» que pidió Alejandro.
+   - El candidato anterior era **`mejora/mv-5r`**:
      - las reglas de historias de v4 (vía ex-v1), con la lectura de costes ocultos sólo en el nivel inicial;
      - el trimestre por tramos y el freno de salud de ex-v1;
      - el bucle de dos llamadas de cp-v12 byte a byte;
