@@ -78,6 +78,10 @@ Informes: [percepcion](../../reports/deepseek/percepcion.md), [categorizacion](.
 - **`programa/`**: lo que recibe el agente oficial, medido con un modelo falso a 0 USD (línea Formato, B27): `obs_seq.txt`, `tools.json` (las 52 herramientas), `fake.log`, `fake_llm.py`, `peek.py` y las tres partidas falsas (`modelo-falso/`).
 - **`otros/`**: `answers.json.gz` (una fila por respuesta del catálogo con su texto; `scripts/question-bank/`), `items-g1.jsonl.gz` (bloque general del banco que usa `obedience.py`) y `public-v11/` (manual y partida públicos del equipo Kingjinsight, [fuentes-externas](../../reports/fuentes-externas/kingjinsight-v11.md)).
 
+## 4b. `tramos/<tanda>/`: tramos fieles (línea Tramos, 30 oct)
+
+Principio de partidas jugadas por DeepSeek contra el motor oficial con la petición exacta de JiuwenSwarm, hasta la primera observación del mes 6 ([tramos](../../reports/tramos/README.md)). Por tanda: `<brazo>-<n>.json.gz` (decisiones, notas, estado al parar, llamadas con fichas, coste y proveedor), `<brazo>-<n>.messages.json.gz` (todos los mensajes, con el texto del juego) y `calls.jsonl.gz`. Tandas: `smoke` (2 tramos hasta el mes 2), `r1-sin-razonamiento` (26 tramos, sin el razonamiento en el historial: ablación), `r2-fiel` (8 tramos, arnés fiel). Las crea `scripts/tramos/fiel.py run`, las copia aquí `fiel.py export` (rutas personales cambiadas por `~`) y las lee `scripts/tramos/analiza.py --data lab/data/deepseek/tramos/<tanda>`. Coste: 1,92 USD.
+
 ## 5. Lo que no se ha subido y por qué
 
 | Qué | Dónde está | Por qué no |
