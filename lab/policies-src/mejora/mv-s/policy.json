@@ -1,0 +1,15 @@
+{
+  "family": "mejora",
+  "name": "mv-s",
+  "parents": [
+    "mv-5r"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "mv-5r with the Skill body rewritten short: same turn loop, status line and manifest; story rules as five ordered 'first rule that applies' lines with explicit conditions; quarter as three lines and a table by level",
+  "hypothesis": "DeepSeek gains from a manual mainly on risk avoidance (bank: no manual 1.37 vs t13-read 0.91, risk 46 vs 33), while the long review-month machinery does not beat no manual before reviews (0.89 vs 1.03-1.08). A short manual with the same decisions written as ordered rules keeps the useful part, removes cross-references and side effects, and costs fewer tokens and less judge penalty for length.",
+  "predicted_behaviour": "L1 bank q-loss <= 3.5 (v4 mean); L2-L4 preparation <= 0.89; riskcheck <= 1.3; control <= 0.6; judges >= mv-4 - 2 (72.5).",
+  "refutation": "Any bank set above its limit, or judges below 72.5.",
+  "skill_count": 1,
+  "change": "mv-5r -> mv-s: Skill body ~45 % shorter; protocol sections byte-identical; manifest identical.",
+  "notes": "Evidence: lab/reports/mejora/README.md. No thresholds, titles or fixed answers; the cues are general reading habits written as our observations."
+}

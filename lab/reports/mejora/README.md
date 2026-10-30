@@ -279,6 +279,54 @@ El criterio previo era +3 o más: no se cumple, y no se gastó su banco. Lo que 
 
 El juego de historias es, en lo medible, el de v4.
 
+## 11. Partidas de mv-5r y la vía «manual simple» (30 oct)
+
+**Dos partidas de mv-5r** (0,89 USD):
+
+| Partida | Nota | Fin | Ascensos (mes) | Fichas por mes (nota) | Paradas | Coste |
+|---|---:|---|---|---|---:|---:|
+| mv-5r n.º 1 | 22,65 | **despedida en L1** (mes 24) | — | (50) | 0 | 0,23 |
+| mv-5r n.º 2 | **69,00** | completa, L5 | 12, 18, 30, 42 | 461 mil (100) | 1 | 0,66 |
+
+La mecánica funciona: pareja de llamadas, fichas 100 y 0–1 paradas. La n.º 1 cayó en la trampa de L1 de siempre:
+- RR. HH. ya estaba «frowning» en el mes 3, así que el modo estricto anuló la excepción.
+- En el mes 5, «negarse y ceñirse a los hechos» costó Network.
+- En el mes 11, una comida para dar las gracias costó Output.
+- En el mes 17, «nombrar sólo a quienes hicieron el trabajo» (uno de los costes que la viñeta nombra) costó Network, con el riesgo por encima de 0.
+
+**¿Le damos demasiadas indicaciones?** (propuesta de Alejandro). Lo que ya decían los bancos pagados, comparando DeepSeek **sin manual** con manuales en las mismas situaciones:
+
+| Conjunto | Sin manual | t13-final | t13-read-v1 |
+|---|---|---|---|
+| General (320): pérdida · riesgo | 1,37 · 46 | 0,92 · 45 | 0,91 · 33 |
+| Antes de evaluación (51): pérdida | **0,89** | 1,03 | 1,08 |
+
+El manual sirve sobre todo para no coger riesgo. Las reglas de los meses de evaluación no ganan a DeepSeek sin manual.
+
+**`mejora/mv-s`:**
+- protocolo de llamadas y línea de estado byte a byte, y el mismo manifest que mv-5r;
+- el resto en cinco reglas ordenadas («la primera que aplica»), un trimestre en tres líneas y una tabla por nivel;
+- 9.681 caracteres, frente a 17.380 de mv-5r y 9.377 de v4.
+
+Jueces de Claude: 71,3 tras añadir el plan por fases, los tonos de RR. HH. y «gasta los 3 puntos» (70,2 sin ellos), frente a 71,8 de mv-5r.
+
+| Conjunto | mv-s | Límite fijado antes | Referencias |
+|---|---:|---:|---|
+| L1 (90) | 3,20 | ≤ 3,5 ✓ | mv-5r 3,12 · 2,99; v4 3,31 · 3,68 |
+| Preparación L2–L4 (39) | 0,72 | ≤ 0,89 ✓ | mv-5r y v4 0,59; mv-4 0,96 |
+| Control de riesgo (29) | **2,00** | ≤ 1,3 ✗ | v4 0,93; mv-3 0,84; mv-1 2,23 |
+| Control general (40) | 0,47 | ≤ 0,6 ✓ | v4 0,38; mv-3 0,34 |
+
+- El control de riesgo falla por **una sola situación**: L1, mes 11, Network bajo su Best. Eligió «declinar con educación» (−32) en vez de «ayudar esta vez», la falsa alarma que ya tuvo mv-1. Sin ella sacaría 0,93.
+- **Por el criterio fijado, mv-s queda descartada.** Tampoco mejora nada medido: juega como mv-5r con la mitad de texto, y el ahorro de fichas es de ~7 mil por mes, despreciable.
+
+**Conclusión sobre la hipótesis.** DeepSeek no se «pierde» con el manual largo:
+- sus notas citan el paso correcto;
+- obedece el trimestre;
+- un manual de la mitad de largo elige igual.
+
+Lo que falla es la percepción de los costes y los intercambios forzosos, y eso no cambia con la longitud. Lo que sí trajo el texto añadido fueron efectos secundarios: más paradas con mv-3 (C70) y más riesgo al preparar evaluaciones en L2–L4 (mejora-7). Un manual simple no los tiene, pero tampoco sube el techo. La falsa alarma «ayudar cuesta Output» aparece en 2 de 4 pasadas del texto de L1. Es el punto débil de esa viñeta y merece un control en cualquier versión futura.
+
 ## Relevo
 
 1. **Hecho y por qué.**
