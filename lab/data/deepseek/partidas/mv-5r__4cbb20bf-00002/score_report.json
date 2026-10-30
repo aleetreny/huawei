@@ -1,0 +1,84 @@
+{
+  "submission_name": "Gradient Depression",
+  "submission_dir": "~/careerlab-data/huawei-deepseek/target-solutions/4cbb20bf269096a9/solution",
+  "skill_name": "submission-skills",
+  "drive_session_id": "career-sim-runner-fc800c95546e",
+  "session_id": "afb0830545344a7ebaa27dd439f753d8",
+  "play_exit_code": 0,
+  "termination_reason": null,
+  "token_usage": {
+    "input_tokens": 7557812,
+    "output_tokens": 72210,
+    "total_tokens": 7630022,
+    "total_cost": 0.231478,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "input_tokens": 7557812,
+        "output_tokens": 72210,
+        "total_tokens": 7630022,
+        "total_cost": 0.231478
+      }
+    }
+  },
+  "ending_score": {
+    "competition_partial_score": 17.16,
+    "completed": false,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 10.0,
+        "raw_value": 1.0,
+        "weight": 0.3,
+        "weighted_score": 3.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 11.5,
+        "raw_value": 9.2,
+        "weight": 0.2,
+        "weighted_score": 2.3
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 65.0,
+        "raw_value": 13.0,
+        "weight": 0.15,
+        "weighted_score": 9.75
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 7.5,
+        "raw_value": 9.0,
+        "weight": 0.15,
+        "weighted_score": 1.12
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 80.0,
+        "raw_value": 2.0,
+        "weight": 0.1,
+        "weighted_score": 8.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 3.33,
+        "raw_value": 2.0,
+        "weight": 0.1,
+        "weighted_score": 0.33
+      }
+    ],
+    "outcome": "eliminated",
+    "quantitative_score": 24.51,
+    "survival_months": 24
+  },
+  "output_dir": "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T115233Z",
+  "events_log": "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T115233Z/events-20261030T115233Z.jsonl",
+  "transcript_log": "~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T115233Z/transcript-20261030T115233Z.log",
+  "scored_at": "2026-10-30T12:05:08.047844+00:00"
+}

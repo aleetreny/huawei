@@ -1,0 +1,2017 @@
+~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.venv/lib/python3.14/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+───────────────────── Career Survival Agent Replay (live) ──────────────────────
+
+───────────────────────── Month 1 · Quarter 1 · Year 1 ─────────────────────────
+
+────────────────────────── Turn 1 · New hire handbook ──────────────────────────
+                          Month 1 · Quarter 1 · Year 1                          
+
+Welcome to the product engineering group. Before your career clock starts, this 
+handbook sets out the public rules. Everything in it is part of the published   
+game design, and you can use it for long-term planning.                         
+
+Choices:
+  >>> [1] Continue — Start the career.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       5        1      1        0       1       3      
+
+Choice: [1] Continue
+Reason: Review in 5 | Now S1 N1 O0 | Best S1 N1 O0 | Reviews here: 0 | Start 
+career
+
+───────────── Turn 2 · A colleague who keeps handing you his work ──────────────
+                          Month 1 · Quarter 1 · Year 1                          
+
+Dave on your team is very good at 'finding help'. One day it is two slides to   
+rewrite, the next a script to run, and it is always 'you're better at this,     
+it'll take minutes'. At first you were happy to help. Then you noticed more and 
+more of his actual job coming your way as a matter of course, while he leaves   
+early. Today there is another message: 'Mate, can you tidy this data? I've got  
+to shoot off at five.'                                                          
+
+Choices:
+  >>> [1] Help this time, and be clear: next time he drafts it first and you 
+review
+      [2] Decline gently: 'I'm swamped. You start it and I'll jump in if you're 
+stuck'
+      [3] Quietly take it on again so as not to sour the relationship
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       5        1      1        0       1       3      
+
+Choice: [1] Help this time, and be clear: next time he drafts it first and you 
+review
+Reason: Review in 5 | Now S1 N1 O0 | Best S1 N1 O0 | Reviews here: 0 | Bounded 
+help, set boundary
+
+───────────── Turn 3 · A project you wanted going to someone else ──────────────
+                          Month 1 · Quarter 1 · Year 1                          
+
+You are running a live project that needs your full attention. The timetable is 
+tight, and you own the fallout if it goes wrong. Your manager has just started a
+new project you have wanted for a while, with a new framework and external      
+visibility, but the slot went to your teammate Owen. Your manager bumps into you
+in the corridor: “Stabilise what you're on first. I don't want you split across 
+the new work this time.” You need to decide how to respond.                     
+
+Choices:
+  >>> [1] Accept the plan and give the live project your full attention
+      [2] Ask your manager if you can join the new project part-time
+      [3] Approach Owen privately: you supply the technical design, they stay 
+the lead
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       6        2      2        0       1       3      
+
+Choice: [1] Accept the plan and give the live project your full attention
+Reason: Review in 5 | Now S2 N2 O0 | Best S2 N2 O0 | Reviews here: 0 | Focus 
+live project
+
+────────────── Turn 4 · How blunt to be in a code-review comment ───────────────
+                          Month 1 · Quarter 1 · Year 1                          
+
+Priya, who has just joined, opens her first merge request. The design is clearly
+wrong. You can write in the review that this will blow up in production, or you 
+can ask questions until she sees it herself. The team's culture is fairly       
+direct, and HR has just started talking about psychological safety.             
+
+Choices:
+      [1] Name the problem directly and mark it as must-fix
+  >>> [2] Use questions so she spots the issue herself
+      [3] Approve it, and explain on Slack afterwards
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       7        1      2        2       1       3      
+
+Choice: [2] Use questions so she spots the issue herself
+Reason: Review in 5 | Now S1 N2 O2 | Best S2 N2 O2 | Reviews here: 0 | Coach 
+with questions
+
+───────────────────────── Month 2 · Quarter 1 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+───────────── Turn 5 · A colleague who keeps handing you his work ──────────────
+                          Month 2 · Quarter 1 · Year 1                          
+
+You helped and said your piece. Dave agreed, then 'forgot' the next time and    
+dumped the work on you again. In front of your manager he breezily called it    
+'something we always do together', blurring who did what. You realise a spoken  
+agreement means nothing to him.                                                 
+
+Choices:
+  >>> [1] Record what you help with in messages and ticket notes so credit is 
+traceable, and reset the split
+      [2] Leave it. It's less hassle to keep helping
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       7        2      4        1       1       3      
+
+Choice: [1] Record what you help with in messages and ticket notes so credit is 
+traceable, and reset the split
+Reason: Review in 4 | Now S2 N4 O1 | Best S2 N4 O2 | Reviews here: 0 | Trace 
+credit, reset split
+
+───────────── Turn 6 · Whether to invest in a CI automation suite ──────────────
+                          Month 2 · Quarter 1 · Year 1                          
+
+Your team still lacks a proper automated-test CI pipeline. Every release depends
+on senior engineers manually reviewing critical paths. Your manager wants you to
+lead the platform work. Headcount has just doubled from five to ten. New        
+joiners' PRs have piled up, review pressure has spiked, and releases are        
+starting to slip. Building a CI suite from scratch, with mocks, load tests and  
+coverage gates, would take about two solid weeks, and two of your scheduled     
+projects would slip in that time. Your manager is not insisting on it, so the   
+call is yours.                                                                  
+
+Choices:
+  >>> [1] Spend two weeks building a full CI automation suite
+      [2] Keep manual review and let new joiners follow the existing process
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       8        4      3        2       1       3      
+
+Choice: [1] Spend two weeks building a full CI automation suite
+Reason: Review in 4 | Now S4 N3 O2 | Best S4 N4 O2 | Reviews here: 0 | Build CI 
+suite
+
+───────────── Turn 7 · Whether to invest in a CI automation suite ──────────────
+                          Month 2 · Quarter 1 · Year 1                          
+
+CI goes live and the team's merge speed improves markedly. New joiners find the 
+configuration harder than expected, though, and the last two PRs sat blocked for
+hours. A senior colleague suggests loosening the gates so people can get used to
+the workflow, then tightening them later. You need to decide how strict CI      
+should be.                                                                      
+
+Choices:
+      [1] Keep the strict gates and make the team meet the higher bar
+  >>> [2] Loosen the thresholds so the team can ease into the CI workflow
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       8        7      2        0       1       3      
+
+Choice: [2] Loosen the thresholds so the team can ease into the CI workflow
+Reason: Review in 4 | Now S7 N2 O0 | Best S7 N4 O2 | Reviews here: 0 | Ease team
+into CI
+
+───────────────────────── Month 3 · Quarter 1 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, frowning, the risks have piled up. Deal  │
+│ with them yourself.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+───────────────── Turn 8 · A milestone briefing for the execs ──────────────────
+                          Month 3 · Quarter 1 · Year 1                          
+
+At the company's quarterly leadership review, you have to report on a milestone 
+for a project you own. The execs are short of time and only want conclusions and
+risks. They have no interest in process. There is still an unresolved risk on   
+the project, and progress is only 'broadly on track'. You have ten minutes.     
+
+Choices:
+  >>> [1] Lead with the conclusion: key results first, then the risk and the 
+plan to deal with it
+      [2] Give only the good news: hide the risk and stick to highlights 
+throughout
+      [3] Walk through the process in detail, still not reaching the point ten 
+minutes in
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       8        6      3        1       1       3      
+
+Choice: [1] Lead with the conclusion: key results first, then the risk and the 
+plan to deal with it
+Reason: Review in 3 | Now S6 N3 O1 | Best S7 N4 O2 | Reviews here: 0 | Report 
+risk with plan
+
+─────── Turn 9 · Dismissed in a team meeting as "just engineering work" ────────
+                          Month 3 · Quarter 1 · Year 1                          
+
+In the weekly team meeting you present this quarter's reliability and           
+performance work. Your manager listens and says, mildly, “This is basically just
+engineering work. If it runs, that's enough. It won't add much business value.  
+Everyone knows that.” A few colleagues look at their screens and the room goes  
+awkward. You know the work directly underpins the SLA on the core path, and it  
+has real value. You need to decide how to respond in the room.                  
+
+Choices:
+      [1] Politely challenge that framing on the spot, with data and business 
+impact
+  >>> [2] Let it go in the meeting and speak to your manager afterwards
+      [3] Let it pass in the room, then privately encourage colleagues and spell
+out what the work achieved
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       9        8      3        2       1       3      
+
+Choice: [2] Let it go in the meeting and speak to your manager afterwards
+Reason: Review in 3 | Now S8 N3 O2 | Best S8 N4 O2 | Reviews here: 0 | Talk to 
+manager after
+
+─────── Turn 10 · Dismissed in a team meeting as "just engineering work" ───────
+                          Month 3 · Quarter 1 · Year 1                          
+
+Afterwards you book fifteen minutes with your manager and show how the work maps
+to business metrics. They soften: “Next time, put the business value on page    
+one.” You still sense the rest of the team thinks engineering work does not     
+count. You need to decide whether to fight for the team's visibility.           
+
+Choices:
+  >>> [1] Push to get your work into team OKRs or the quarterly highlights
+      [2] Keep to your own patch and stop speaking for the team
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     4       8        8      3        3       1       3      
+
+Choice: [1] Push to get your work into team OKRs or the quarterly highlights
+Reason: Review in 3 | Now S8 N3 O3 | Best S8 N4 O3 | Reviews here: 0 | Push team
+visibility
+
+──────────────────── Turn 11 · Quarterly energy allocation ─────────────────────
+                          Month 3 · Quarter 1 · Year 1                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+      [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+  >>> [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     3       8        9      3        3       1       3      
+
+Choice: [6] Health recovery
+Reason: Q1 Health recovery 1/3
+
+─────────────────────── Turn 12 · Quarterly main action ────────────────────────
+                          Month 3 · Quarter 1 · Year 1                          
+
+This quarter you may pick one main action towards your career goals, or none.   
+Each main action changes your stats straight away. Choose based on your visible 
+stats, the promotion windows and your long-term plan. The system applies the    
+chosen action’s status_updates.                                                 
+
+Choices:
+      [1] Apply for a key project — Join a high-profile project. Output, Skill 
+and Network all rise.
+      [2] Report results to your manager — Tell leadership about your wins. You 
+become more visible and better recognised.
+      [3] Fight for resources — Push for budget, headcount, or support for your 
+work.
+      [4] Apply for rotation — Rotate into another team to broaden your skills. 
+Skill rises strongly.
+      [5] Showcase results — Present your results to a wider audience. Output 
+and Dignity rise.
+      [6] Build a mentorship — Work with a senior mentor. Network and Skill 
+improve.
+      [7] Repair a key relationship — Mend a strained relationship. Network and 
+Dignity recover.
+  >>> [8] Lay low and reduce risk — Keep your head down. Health recovers and 
+HiddenRisk falls.
+      [9] No action — Skip the main action this quarter. Your stats do not 
+change.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       9        9      3        3       1       0      
+
+Choice: [8] Lay low and reduce risk
+Reason: Q1 main: Lay low (HR frowning)
+
+───────────────────────── Month 4 · Quarter 2 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+───────────────── Turn 13 · A milestone briefing for the execs ─────────────────
+                          Month 4 · Quarter 2 · Year 1                          
+
+You opened with the results, then one slide on the risk and the plan already in 
+place. An exec presses: 'What's the worst this risk does? What do you need?'    
+This is a chance to show you have it under control.                             
+
+Choices:
+  >>> [1] Answer with a quantified worst case and a clear request for resources
+      [2] Stay vague with 'shouldn't be too bad', offering no real assessment
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       9        9      3        3       1       0      
+
+Choice: [1] Answer with a quantified worst case and a clear request for 
+resources
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 0 | 
+Quantified risk answer
+
+───── Turn 14 · After dinner, karaoke with someone on the promotion panel ──────
+                          Month 4 · Quarter 2 · Year 1                          
+
+The Lynx team dinner is over. Helen, the HR business partner, who sits on the   
+promotion committee, suggests going on to karaoke. You have a headache and want 
+to go home. Nine people have already signed up in the channel, and only you and 
+Lee have not. Helen tags you: “Come on — no work talk, just singing.”           
+
+Choices:
+  >>> [1] Go to the karaoke bar, keep your drinking in check, and join in
+      [2] Decline politely and make sure you are sharp at the morning stand-up
+      [3] Show your face for half an hour, then leave
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       1       0      
+
+Choice: [1] Go to the karaoke bar, keep your drinking in check, and join in
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 0 | Join 
+karaoke, raise Network
+
+───── Turn 15 · After dinner, karaoke with someone on the promotion panel ──────
+                          Month 4 · Quarter 2 · Year 1                          
+
+You sing two songs. Helen says you are down to earth. At 1am she asks privately 
+whether you are interested in Polaris — you cannot tell if it is drink talking. 
+
+Choices:
+  >>> [1] Show interest and ask how to prepare for promotion
+      [2] Talk about the project and leave promotion out, so it does not look 
+transactional
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       1       0      
+
+Choice: [1] Show interest and ask how to prepare for promotion
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 0 | Show 
+interest, ask prep
+
+───────────────────────── Month 5 · Quarter 2 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 16 · In-house kernel versus an open-source stack ─────────────
+                          Month 5 · Quarter 2 · Year 1                          
+
+The company is setting up a new real-time compute platform, and your manager has
+put you in charge of the technology choice for your part of it. There are two   
+options. You can build the kernel in-house, which fits the business but means a 
+long build and a painful go-live. Or you can adopt a well-known open-source     
+project, which lets you deliver quickly but leaves the kernel a black box and   
+you at the mercy of upstream. The architecture review is next Friday and needs a
+decision.                                                                       
+
+Choices:
+      [1] Argue for an in-house kernel as a long-term technical asset
+  >>> [2] Adopt the open-source stack and aim for fast delivery
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       2       0      
+
+Choice: [2] Adopt the open-source stack and aim for fast delivery
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 0 | Fast 
+delivery, protect Output
+
+─ Turn 17 · Whether to join a cross-team architecture review — and how hard t… ─
+                          Month 5 · Quarter 2 · Year 1                          
+
+The department tech committee is holding a cross-team architecture review next  
+week, covering next-quarter rebuilds of several core services. Reviewers get a  
+vote and share responsibility for the outcome later. You have been invited as a 
+cross-team reviewer (you have a lot of experience with API performance and      
+reliability). Accepting means three or four days reading their design docs and  
+preparing comments. If you decline, they review it among themselves. You miss a 
+chance at cross-team influence, but your own timetable is untouched.            
+
+Choices:
+      [1] Accept, read the docs properly, and prepare comments
+  >>> [2] Decline and keep the time for your own team's delivery
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       8      3        3       2       0      
+
+Choice: [2] Decline and keep the time for your own team's delivery
+Reason: Review in 1 | Now S8 N3 O3 | Best S9 N4 O3 | Reviews here: 0 | Decline, 
+keep own delivery
+
+─ Turn 18 · The colleague who buys coffee is collecting favours for a lead vo… ─
+                          Month 5 · Quarter 2 · Year 1                          
+
+Harvey brings the team coffees from Pret every day and never takes money. You   
+notice a notebook: “Favours ledger: Chris +2, Ethan +1…” The team is about to   
+pick an acting lead, and Harvey is standing. Today he hands you a larger coffee:
+“Put in a word for me at the review tonight?”                                   
+
+Choices:
+  >>> [1] Refuse to campaign. In the review, stick to the facts
+      [2] Agree to talk him up, in return for later support
+      [3] Warn your manager privately that someone is trading favours for 
+support
+      [4] Start buying coffees yourself and join the favours game
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       7      1        3       2       0      
+
+Choice: [1] Refuse to campaign. In the review, stick to the facts
+Reason: Review in 1 | Now S7 N1 O3 | Best S9 N4 O3 | Reviews here: 0 | Refuse, 
+stick to facts
+
+───────────────────────── Month 6 · Quarter 2 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ [Half-year talk] Your line manager takes you into a meeting room for 1:1     │
+│ feedback on the last six months:                                             │
+│                                                                              │
+│ Your manager goes through the half-year checklist: “Acceptable overall.      │
+│ Boxes ticked, no standout wins, no disasters. Keep going. Flag blockers      │
+│ early and don’t suffer in silence.” The tone is neutral.                     │
+│                                                                              │
+│ Half-year performance bonus (C): +0.075                                      │
+│                                                                              │
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says quietly, there's some risk lately, but it │
+│ isn't serious yet.                                                           │
+│                                                                              │
+│ The team’s old hand claps you on the shoulder: “Relax. I put in a good word  │
+│ at the review. Watch yourself next quarter.”                                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 19 · In-house kernel versus an open-source stack ─────────────
+                          Month 6 · Quarter 2 · Year 1                          
+
+The platform goes live on the open-source stack on time and the business is     
+pleased. Then a routine security scan flags a problem: this version has an      
+undisclosed candidate CVE, and details are already circulating among a few      
+people internally. If it can be triggered in production, it would hit your core 
+clients. The call is yours.                                                     
+
+Choices:
+  >>> [1] Tell security and rush out a fallback from scratch
+      [2] Sit on the report and bet it will not be triggered soon
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       7      0        3       2       0      
+
+Choice: [1] Tell security and rush out a fallback from scratch
+Reason: Review in 6 | Now S7 N0 O3 | Best S9 N4 O3 | Reviews here: 1 | Report 
+CVE to security
+
+───────────── Turn 20 · Your idea is pitched first by someone else ─────────────
+                          Month 6 · Quarter 2 · Year 1                          
+
+In a team brainstorm you suggest a design, but it gets little attention. Two    
+weeks later a colleague pitches almost the same idea in a wider meeting, with   
+some of the same wording. A VP likes it and asks them to lead it. You cannot    
+tell whether they got there independently or borrowed yours. Either way, they   
+are now seen as the person who proposed it and will take most of the credit.    
+
+Choices:
+      [1] Speak to them privately afterwards, mention the discussion two weeks 
+ago, and check where the idea came from
+  >>> [2] Share your earlier thinking with the team, without directly 
+challenging their claim to the idea
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       8      0        1       2       0      
+
+Choice: [2] Share your earlier thinking with the team, without directly 
+challenging their claim to the idea
+Reason: Review in 6 | Now S8 N0 O1 | Best S9 N4 O3 | Reviews here: 1 | Share 
+earlier thinking
+
+───────────── Turn 21 · Your idea is pitched first by someone else ─────────────
+                          Month 6 · Quarter 2 · Year 1                          
+
+Now the team knows the history. People start calling it 'your idea'. The        
+colleague is offended and says in a meeting they understand you had thought in a
+similar direction, but they developed their proposal independently and took it  
+to delivery.                                                                    
+
+Choices:
+  >>> [1] Publicly recognise their independent development and delivery, and 
+make clear you never questioned that
+      [2] Leave it. Let the team decide who contributed what
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      1        1       2       0      
+
+Choice: [1] Publicly recognise their independent development and delivery, and 
+make clear you never questioned that
+Reason: Review in 6 | Now S9 N1 O1 | Best S9 N4 O3 | Reviews here: 1 | Publicly 
+credit colleague
+
+──────────────────── Turn 22 · Quarterly energy allocation ─────────────────────
+                          Month 6 · Quarter 2 · Year 1                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+  >>> [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+      [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        1       2       3      
+
+Choice: [4] Defuse legacy risk
+Reason: Q2 Defuse legacy risk
+
+───────────────────────── Month 7 · Quarter 3 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 23 · Telling the client the project will be late ─────────────
+                          Month 7 · Quarter 3 · Year 1                          
+
+An upstream dependency has failed on a project you own. You now know you will be
+a week late, and the original delivery date is three days away. The client cares
+a lot about this one and has even put their own name behind it internally. You  
+need to decide how to tell them.                                                
+
+Choices:
+  >>> [1] Tell them at once, with a cause analysis, a recovery plan and a new 
+timetable
+      [2] Wait until delivery day in case you still make it
+      [3] Report 'on time', then quietly work late and try to catch up
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       0      
+
+Choice: [1] Tell them at once, with a cause analysis, a recovery plan and a new 
+timetable
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Tell 
+client now with plan
+
+────────────────── Turn 24 · Vaping at the neighbouring desk ───────────────────
+                          Month 7 · Quarter 3 · Year 1                          
+
+After lunch, Robin at the next desk is vaping again. The cloud hangs over the   
+open plan. The office rule is no vaping inside. You were hoping to concentrate  
+this afternoon.                                                                 
+
+Choices:
+  >>> [1] Smile and quietly remind him vaping inside isn't allowed and the 
+shelter is downstairs
+      [2] Frown and put up with it without saying anything
+      [3] Post a snide note in the channel: "some people might show a bit of 
+consideration"
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       2       0      
+
+Choice: [1] Smile and quietly remind him vaping inside isn't allowed and the 
+shelter is downstairs
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Gentle 
+remind, no vaping
+
+─────── Turn 25 · You overhear a redundancy list that includes a friend ────────
+                          Month 7 · Quarter 3 · Year 1                          
+
+From a toilet cubicle you hear a VP and the HR director discussing the Q2       
+redundancy list: “…Ethan is in the consultation pool after the Lynx Wallet      
+incident, package would be a standard redundancy…” Ethan is your tennis partner 
+and helped you move last week. They wash their hands and leave, unaware you were
+there. The list has not been announced.                                         
+
+Choices:
+      [1] Tell no one and act as if you never heard it
+      [2] Hint that Ethan should keep his head down and not resign in a hurry
+      [3] Tell him he is on the list and what the package looks like
+  >>> [4] Tell Ethan only about the published redundancy process and support 
+channels, and nothing you overheard
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       2       0      
+
+Choice: [4] Tell Ethan only about the published redundancy process and support 
+channels, and nothing you overheard
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Share 
+published channels only
+
+───────────────────────── Month 8 · Quarter 3 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 26 · Telling the client the project will be late ─────────────
+                          Month 8 · Quarter 3 · Year 1                          
+
+You were straight with them early. The client is not pleased, but respects that 
+you were professional and took responsibility: 'At least you didn't hide it. I  
+can explain that internally.' Then they push: could you ship a usable core first
+and the rest next week?                                                         
+
+Choices:
+  >>> [1] Check what is feasible, then offer phased delivery: the core first, 
+the rest after
+      [2] To keep them happy, promise both the core and the full version by the 
+original date
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       3       0      
+
+Choice: [1] Check what is feasible, then offer phased delivery: the core first, 
+the rest after
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Check 
+feasibility, phased core first
+
+─────────────────── Turn 27 · Burnout, and the urge to coast ───────────────────
+                          Month 8 · Quarter 3 · Year 1                          
+
+You are exhausted, and one thought keeps coming back: pack it in and just coast.
+It is a classic sign of burnout, and decisions made on impulse now are the ones 
+people regret. How do you deal with it?                                         
+
+Choices:
+  >>> [1] Take it seriously: a few days' annual leave, a saner pace, and a 
+workload talk with your manager if needed
+      [2] Bottle it, pretend you are fine, and keep running on empty
+      [3] Give in to the urge to coast and start phoning the work in
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       3       0      
+
+Choice: [1] Take it seriously: a few days' annual leave, a saner pace, and a 
+workload talk with your manager if needed
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Take 
+leave, address burnout
+
+──────── Turn 28 · A colleague keeps helping themselves to your snacks ─────────
+                          Month 8 · Quarter 3 · Year 1                          
+
+You keep a few snacks in your drawer. Colleague Mia "just grabs a handful" every
+day, never brings her own, and has never returned the favour. Today she grins,  
+"Yours are the best." It isn't much, but it is starting to grate.               
+
+Choices:
+  >>> [1] Joke: "Bring some next time and we can swap", and leave it there
+      [2] Keep sharing, because you don't like to say anything
+      [3] Lock the snacks away and stop sharing, without explaining
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       3       0      
+
+Choice: [1] Joke: "Bring some next time and we can swap", and leave it there
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Joke 
+boundary, swap snacks
+
+───────────────────────── Month 9 · Quarter 3 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 29 · Client makes an inappropriate joke at dinner ────────────
+                          Month 9 · Quarter 3 · Year 1                          
+
+You are at a client dinner. After a few drinks, one of their senior people      
+starts making jokes that cross a line — pointed, sexual remarks aimed at Chloe, 
+a woman on your side of the table. Her laugh is tight and she looks trapped.    
+They are an important account. Everyone else is pretending it is banter. The    
+table is waiting to see what you do.                                            
+
+Choices:
+  >>> [1] Change the subject without a scene, pull the talk back to the work, 
+and give Chloe a way out
+      [2] Join in and laugh along, to keep the ‘atmosphere’
+      [3] Say firmly that the remark is not on, and bring the talk back to the 
+work
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       3       0      
+
+Choice: [1] Change the subject without a scene, pull the talk back to the work, 
+and give Chloe a way out
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Deflect, 
+help Chloe exit
+
+───────────── Turn 30 · Grey-area items on a travel expense claim ──────────────
+                          Month 9 · Quarter 3 · Year 1                          
+
+You have just finished a week on a client site and are putting the expenses     
+together. A few items sit in a grey area: 1) coffees you bought the client as a 
+gift (no VAT receipt, only a till slip); 2) a late dinner you ordered for       
+yourself after overtime (policy covers a 'working meal'; late dinners are not   
+spelled out); 3) the taxi to the airport diverted to pick up a colleague        
+travelling with you (about £3 extra).                                           
+
+Choices:
+  >>> [1] Claim only the flights and hotels, which are clearly within policy, 
+and drop every grey item
+      [2] Claim as usual, taking colleagues' advice that 'everyone does this, 
+it's fine'
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       3       0      
+
+Choice: [1] Claim only the flights and hotels, which are clearly within policy, 
+and drop every grey item
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Claim 
+only in-policy items
+
+───────────── Turn 31 · Grey-area items on a travel expense claim ──────────────
+                          Month 9 · Quarter 3 · Year 1                          
+
+Finance clears your claim quickly. Colleagues notice the total is well below    
+what people usually claim and rib you over lunch: 'A bit too honest, aren't you?
+You've left money on the table.'                                                
+
+Choices:
+      [1] Say it is your own choice, and remind people what the policy actually 
+allows
+  >>> [2] Smile it off. Keep your own standard without commenting on anyone 
+else's
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       0      
+
+Choice: [2] Smile it off. Keep your own standard without commenting on anyone 
+else's
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Smile it 
+off, keep standard
+
+──────────────────── Turn 32 · Quarterly energy allocation ─────────────────────
+                          Month 9 · Quarter 3 · Year 1                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+      [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+      [6] Health recovery — Rest and recover. Health gets a solid boost.
+  >>> [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       3      
+
+Choice: [7] Prepare report materials
+Reason: Q3 Prepare report materials 1/3
+
+──────────────────────── Month 10 · Quarter 4 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 33 · Client makes an inappropriate joke at dinner ────────────
+                         Month 10 · Quarter 4 · Year 1                          
+
+You steer the conversation onto the project and give Chloe an easy exit — a     
+‘call she needs to take.’ The client does not clock that you defused it, and the
+table settles. Afterwards Chloe thanks you privately. You still have to decide  
+whether the company should know this client has a problem with boundaries.      
+
+Choices:
+  >>> [1] Brief your manager privately and factually, ask Chloe what support she
+wants, and raise it with the account lead
+      [2] Decide it was handled and there is no need to raise it
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       0      
+
+Choice: [1] Brief your manager privately and factually, ask Chloe what support 
+she wants, and raise it with the account lead
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Report 
+client issue, support Chloe
+
+───────────── Turn 34 · A colleague's clutter takes over the aisle ─────────────
+                         Month 10 · Quarter 4 · Year 1                          
+
+Leon, who sits next to you, hoards things. Boxes, parcels and gym kit are all   
+over the floor and have slowly taken over the shared aisle between you. You have
+to turn sideways to get past, and it is a trip hazard. He doesn't seem to see a 
+problem.                                                                        
+
+Choices:
+  >>> [1] Tell him the aisle is too tight and suggest sorting the clutter 
+together
+      [2] Squeeze past every day and say nothing
+      [3] While he is away, pile all of it onto his desk
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       0      
+
+Choice: [1] Tell him the aisle is too tight and suggest sorting the clutter 
+together
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Suggest 
+sorting together
+
+──────────── Turn 35 · A junior asks to pair on your state machine ─────────────
+                         Month 10 · Quarter 4 · Year 1                          
+
+Intern Alex asks for two hours this afternoon to pair, so he can understand a   
+state machine you wrote. You have a bug that needs to be fixed by four.         
+
+Choices:
+      [1] Reschedule: pair first, then fix the bug
+  >>> [2] Point him at the docs and comments and let him work through it
+      [3] Pair for an hour and do the rest asynchronously
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       2       0      
+
+Choice: [2] Point him at the docs and comments and let him work through it
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Docs for 
+Alex, keep own delivery
+
+──────────────────────── Month 11 · Quarter 4 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 36 · A live demo blows up in front of the client ─────────────
+                         Month 11 · Quarter 4 · Year 1                          
+
+You are at the client's offices demonstrating a new feature. At the key checkout
+step the system throws an error and the page freezes. Their decision-makers sit 
+opposite you, waiting to see it work. You know the demo environment is flaky,   
+but the room has already gone cold.                                             
+
+Choices:
+  >>> [1] Say plainly it's a demo-environment glitch, and switch to a fallback 
+or recording to show the core value
+      [2] Keep hitting refresh as it gets messier, without switching plan
+      [3] In a panic, say it is a problem on the client's network
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      2        3       3       0      
+
+Choice: [1] Say plainly it's a demo-environment glitch, and switch to a fallback
+or recording to show the core value
+Reason: Review in 1 | Now S9 N2 O3 | Best S9 N4 O3 | Reviews here: 1 | Honest 
+switch to fallback
+
+────────── Turn 37 · The gym after work, or staying late to get ahead ──────────
+                         Month 11 · Quarter 4 · Year 1                          
+
+You started going to the gym after work and have kept it up. You feel better and
+have more energy. Tonight there is a non-urgent piece of work that would make   
+tomorrow easier if you finished it. You can only do one: the gym or staying     
+late.                                                                           
+
+Choices:
+  >>> [1] Go to the gym as planned and get the work done efficiently tomorrow
+      [2] Skip the gym, stay late, and clear the work tonight
+      [3] Try to do both: gym first, then stay up late to finish the work
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       3       0      
+
+Choice: [1] Go to the gym as planned and get the work done efficiently tomorrow
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 1 | Gym, rest
+before review
+
+─ Turn 38 · Thanking a colleague from the next team who went out of their way ──
+                         Month 11 · Quarter 4 · Year 1                          
+
+Last week a nasty bug in a barely maintained legacy submodule had you stuck for 
+two days. Chris, a senior engineer on the next team, sat at your desk for a     
+whole afternoon and helped you find and fix it. Nobody required them to spend   
+that long. It is Friday, and you want to say thank you. You could take them out 
+for a good lunch on you, around £30–40. You could write a formal recognition    
+note on the intranet, copied to Chris and their manager, recording their        
+high-quality cross-team help. Or you could do nothing special now and make a    
+point of helping them next time they need it.                                   
+
+Choices:
+  >>> [1] Take them out for lunch privately, straight away
+      [2] Write a formal recognition note and copy their manager
+      [3] Do nothing special for now and help them next time they need it
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        2       3       0      
+
+Choice: [1] Take them out for lunch privately, straight away
+Reason: Review in 1 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 1 | Lunch, 
+thank Chris, spare Output
+
+──────────────────────── Month 12 · Quarter 4 · Year 1 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ [Half-year talk] Your line manager takes you into a meeting room for 1:1     │
+│ feedback on the last six months:                                             │
+│                                                                              │
+│ Your manager goes through the half-year checklist: “Acceptable overall.      │
+│ Boxes ticked, no standout wins, no disasters. Keep going. Flag blockers      │
+│ early and don’t suffer in silence.” The tone is neutral.                     │
+│                                                                              │
+│ Half-year performance bonus (C): +0.075                                      │
+│                                                                              │
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+│                                                                              │
+│ A senior colleague takes you aside: “You’ve dropped a few balls lately.      │
+│ That’s normal for a newcomer. I’ll have a word with people about your KPI    │
+│ targets.”                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────── Turn 39 · A live demo blows up in front of the client ─────────────
+                         Month 12 · Quarter 4 · Year 1                          
+
+You switch to the fallback without fuss, finish the core flow, and use it to    
+talk through the system's fault-tolerance. The client even thinks you were well 
+prepared. After the demo their engineering lead asks you privately what caused  
+the error.                                                                      
+
+Choices:
+  >>> [1] Give the root cause straight, and promise a write-up of the 
+investigation and fix afterwards
+      [2] Fudge it: 'Small issue, doesn't affect anything'
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        1       1       0      
+
+Choice: [1] Give the root cause straight, and promise a write-up of the 
+investigation and fix afterwards
+Reason: Review in 6 | Now S9 N3 O1 | Best S9 N4 O3 | Reviews here: 2 | Honest 
+root cause
+
+───────── Turn 40 · Peer review finds a serious bug in a friend's code ─────────
+                         Month 12 · Quarter 4 · Year 1                          
+
+Craig, a colleague you get on well with, has an SQL injection risk in his merge 
+request. He messages privately: “Merge it for now — I'll buy dinner tonight and 
+fix it after.”                                                                  
+
+Choices:
+  >>> [1] Block the review and require a fix before merge
+      [2] Merge it and help him fix it this evening
+      [3] Comment but do not block
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        2       1       0      
+
+Choice: [1] Block the review and require a fix before merge
+Reason: Review in 6 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 2 | Block 
+merge, fix first
+
+──────────── Turn 41 · A senior puts their name on an intern’s work ────────────
+                         Month 12 · Quarter 4 · Year 1                          
+
+During an Aurora reporting sprint, senior engineer Rowan puts the SQL work and  
+visualisation templates of Quinn, the intern, into the weekly update under his  
+own name. Quinn is listed as having “assisted”. Quinn comes to you in tears, too
+scared to take on Rowan, who trained with your manager. The review slides are   
+finalised tomorrow.                                                             
+
+Choices:
+      [1] Name Quinn’s specific contribution in the meeting that finalises the 
+slides
+  >>> [2] Ask Rowan privately to correct the credit
+      [3] Tell Quinn to take it to your manager themselves
+      [4] Stay out of it to avoid annoying Rowan
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      2        2       1       0      
+
+Choice: [2] Ask Rowan privately to correct the credit
+Reason: Review in 6 | Now S9 N2 O2 | Best S9 N4 O3 | Reviews here: 2 | Ask Rowan
+privately to credit Quinn
+
+──────────────────── Turn 42 · Quarterly energy allocation ─────────────────────
+                         Month 12 · Quarter 4 · Year 1                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+  >>> [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+      [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+      [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      2        2       1       3      
+
+Choice: [3] Network maintenance
+Reason: Q4 Network maintenance 1/2
+
+──────────────────────── Month 13 · Quarter 5 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─────── Turn 43 · A database migration window clashes with peak trading ────────
+                         Month 13 · Quarter 5 · Year 2                          
+
+You are leading the membership database migration from MySQL 5.7 to 8.0,        
+scheduled for Sunday 02:00–06:00. On Friday, product announces that a peak      
+trading period has been brought forward to Monday midnight. Chris, the DBA,     
+says: 'The rollback script is not fully tested. Going ahead is a big risk.'     
+
+Choices:
+  >>> [1] Ask to delay the migration and protect peak trading first
+      [2] Cut testing short and go ahead as planned
+      [3] Propose dual-write with a two-week canary cutover
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       1       0      
+
+Choice: [1] Ask to delay the migration and protect peak trading first
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Delay 
+migration, protect peak
+
+────── Turn 44 · One umbrella, a downpour, and Jordan at going-home time ───────
+                         Month 13 · Quarter 5 · Year 2                          
+
+A release ran late and you are finally leaving. Rain is hammering the glass and 
+the Met Office has an amber warning out. In your drawer is a single folding     
+umbrella you picked up from a hotel on a previous trip. Jordan, a teammate, has 
+just stood up too, with no umbrella, and is staring towards the lobby. They live
+two stops from you on the same line. Cabs are a forty-minute wait. You need to  
+decide how you get home.                                                        
+
+Choices:
+  >>> [1] Offer to share the umbrella and walk to the station together
+      [2] Lend Jordan the umbrella and make a dash through the rain for a cab
+      [3] Suggest sharing a cab and splitting the fare
+      [4] Say the umbrella only covers one, so you will each make your own way
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        2       1       0      
+
+Choice: [1] Offer to share the umbrella and walk to the station together
+Reason: Review in 5 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 2 | Share 
+umbrella, walk together
+
+────── Turn 45 · One umbrella, a downpour, and Jordan at going-home time ───────
+                         Month 13 · Quarter 5 · Year 2                          
+
+The umbrella is small and your shoulders still get wet. On the way Jordan talks 
+about your manager squeezing the timetable lately, and they sound low. At the   
+station they hesitate: “Want to grab a bowl of something hot near mine? On me.” 
+The rain is getting heavier.                                                    
+
+Choices:
+  >>> [1] Accept, and listen to how the project is going
+      [2] Decline and catch the last train home
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        2       1       0      
+
+Choice: [1] Accept, and listen to how the project is going
+Reason: Review in 5 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 2 | Accept, 
+listen to Jordan
+
+──────────────────────── Month 14 · Quarter 5 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─────── Turn 46 · A database migration window clashes with peak trading ────────
+                         Month 14 · Quarter 5 · Year 2                          
+
+Product accepts the delay. Architecture reminds you that 5.7 support ends at the
+end of the month.                                                               
+
+Choices:
+  >>> [1] Commit to a fixed 72-hour migration plan straight after peak trading
+      [2] Cite safety and push it back another month
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        2       3       0      
+
+Choice: [1] Commit to a fixed 72-hour migration plan straight after peak trading
+Reason: Review in 4 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 2 | Commit 
+72h plan after peak
+
+──────────────── Turn 47 · How intensely to mentor a new intern ────────────────
+                         Month 14 · Quarter 5 · Year 2                          
+
+An intern, Alex, joined your team this week and, under company policy, is       
+automatically assigned to you as mentor. The first two weeks matter most for    
+onboarding. Alex is sharp but has no domain background and will need a lot of   
+questions answered to get up to speed. Intensive mentoring (an hour of 1:1 a    
+day, reviewing all their code, bringing them into every relevant meeting) would 
+make them independent quickly, but your own output would take a clear hit for   
+those two weeks. A lighter approach (a weekly sync, answering only what they    
+ask) would slow their growth but let you stay on your own work.                 
+
+Choices:
+      [1] Mentor intensively so they can work independently within two weeks
+  >>> [2] Keep a light touch, let them explore, and stay focused on your own 
+work
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       3       0      
+
+Choice: [2] Keep a light touch, let them explore, and stay focused on your own 
+work
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Light 
+mentoring, keep output
+
+─────────── Turn 48 · Colleagues want you to join a group pay demand ───────────
+                         Month 14 · Quarter 5 · Year 2                          
+
+A few colleagues unhappy with pay have organised and want to go to your manager 
+together to 'push for an across-the-board increase'. They want you in: 'There's 
+strength in numbers — come on.' You worry your manager will treat a group       
+conversation as trouble. That would be his own reading. No rule says so.        
+
+Choices:
+  >>> [1] Back a written case through a staff representative, and do not corner 
+anyone
+      [2] Decline the group pressure and make your own pay-review case on your 
+contribution
+      [3] Join in, and block the doorway so your manager cannot leave until you 
+have an answer
+      [4] Want to join but fear the blowback, so half-agree and then pull out at
+the last minute
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      1        3       3       0      
+
+Choice: [1] Back a written case through a staff representative, and do not 
+corner anyone
+Reason: Review in 4 | Now S9 N1 O3 | Best S9 N4 O3 | Reviews here: 2 | Written 
+case via rep, safe channel
+
+──────────────────────── Month 15 · Quarter 5 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says quietly, there's some risk lately, but it │
+│ isn't serious yet.                                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────────────── Turn 49 · A colleague who comes in ill ────────────────────
+                         Month 15 · Quarter 5 · Year 2                          
+
+Faye at the next desk has a heavy cold. She is coughing constantly and has      
+almost lost her voice, but she is still in: 'The milestone's tight, I can't drop
+the ball.' The whole open-plan floor can hear every cough, and two people have  
+started sneezing. She sees it as doing her duty, but there is a real risk she   
+will pass it on. You are on the same project.                                   
+
+Choices:
+  >>> [1] Check in privately, ask her to go home, and offer to cover the urgent 
+part
+      [2] Tell your manager her coming in ill is a health risk, and suggest sick
+leave while the team covers
+      [3] Put on a mask, move away from the noise and the germs, and say nothing
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      1        3       3       0      
+
+Choice: [1] Check in privately, ask her to go home, and offer to cover the 
+urgent part
+Reason: Review in 3 | Now S9 N1 O3 | Best S9 N4 O3 | Reviews here: 2 | Care for 
+Faye, offer cover
+
+───────── Turn 50 · Team morale is on the floor — should you step up? ──────────
+                         Month 15 · Quarter 5 · Year 2                          
+
+After the turmoil, the team is scattered and morale is low. Nobody has much     
+energy for the work, and the gloom is spreading. You are not the manager, but   
+your attitude still rubs off on the people around you.                          
+
+Choices:
+  >>> [1] Keep up your own pace, and privately give nearby colleagues some 
+encouragement and a calmer view of things
+      [2] Join the gloom, pile into the complaining, and make the pessimism 
+louder
+      [3] Treat it as none of your business, look after yourself, and ignore the
+team's mood
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       3       0      
+
+Choice: [1] Keep up your own pace, and privately give nearby colleagues some 
+encouragement and a calmer view of things
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Encourage
+colleagues privately
+
+─ Turn 51 · Neck pain with a deadline — whether to keep the physio appointment ─
+                         Month 15 · Quarter 5 · Year 2                          
+
+A stretch of late nights has left your neck aching and your right hand tingling.
+Physio is booked for tomorrow afternoon, which is also when a delivery          
+checkpoint falls.                                                               
+
+Choices:
+  >>> [1] Keep the physio appointment and shift delivery by half a day
+      [2] Move the appointment to the weekend and push through delivery first
+      [3] Stick on a heat patch, tough it out, and leave physio for later
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       3       0      
+
+Choice: [1] Keep the physio appointment and shift delivery by half a day
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Keep 
+physio, health first
+
+──────────────────── Turn 52 · Quarterly energy allocation ─────────────────────
+                         Month 15 · Quarter 5 · Year 2                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+  >>> [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+      [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       3       3      
+
+Choice: [4] Defuse legacy risk
+Reason: Q5 Defuse legacy risk (HR quiet)
+
+──────────────────────── Month 16 · Quarter 6 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────────────── Turn 53 · A colleague who comes in ill ────────────────────
+                         Month 16 · Quarter 6 · Year 2                          
+
+Faye is touched but still hesitates: 'I feel bad, you've got your own work.' You
+take the most urgent part and she goes home. Now your own schedule is packed,   
+the milestone is close, and you are feeling the strain.                         
+
+Choices:
+  >>> [1] Tell your manager you are covering Faye for now, and ask for a 
+realistic plan
+      [2] Carry all of it without telling anyone, and work late to catch up
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       3       0      
+
+Choice: [1] Tell your manager you are covering Faye for now, and ask for a 
+realistic plan
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Tell 
+manager, ask realistic plan
+
+────── Turn 54 · Funding and listing rumours — bet on the share options? ───────
+                         Month 16 · Quarter 6 · Year 2                          
+
+Word is the company is raising money or heading for a listing. People talk as if
+the share options will make them rich, and they tell you to 'hang on a few more 
+years for the options — don't leave'. The rumours are hard to pin down and a    
+payout looks a long way off. You are not sure you should hang a career decision 
+on it.                                                                          
+
+Choices:
+  >>> [1] Count the share options as a possible bonus and decide on the 
+fundamentals of the job
+      [2] Turn down a better offer in front of you and stay put for options that
+have been over-promised
+      [3] Ignore the options entirely, count only cash, and leave as soon as 
+something better comes up
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       3       0      
+
+Choice: [1] Count the share options as a possible bonus and decide on the 
+fundamentals of the job
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Options 
+as bonus, decide on fundamentals
+
+───── Turn 55 · The new manager's first team meeting: make an impression? ──────
+                         Month 16 · Quarter 6 · Year 2                          
+
+The manager hired from outside is holding their first team meeting, and this is 
+when they start to size everyone up. You wonder whether to push yourself forward
+and make a good first impression.                                               
+
+Choices:
+  >>> [1] Come prepared and give a clear, professional update on your work and 
+thinking, without hogging the floor
+      [2] Talk over people, overstate your role, and put colleagues down to make
+yourself look good
+      [3] Keep your head down and say nothing all meeting, terrified of saying 
+the wrong thing
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       3       0      
+
+Choice: [1] Come prepared and give a clear, professional update on your work and
+thinking, without hogging the floor
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Prepared,
+professional update
+
+──────────────────────── Month 17 · Quarter 6 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+────────── Turn 56 · The client adds three things 'while we're here' ───────────
+                         Month 17 · Quarter 6 · Year 2                          
+
+Close to delivery, at a regular meeting, the client 'mentions in passing' three 
+new requirements: 'These shouldn't be hard. Just do them at the same time.' In  
+fact the change is a big one. It would squeeze the current plan and hurt        
+quality. Their tone is casual, as if it is obviously included. Everyone in the  
+room is watching how you respond.                                               
+
+Choices:
+  >>> [1] Neither accept nor refuse in the meeting, and promise an impact 
+assessment and proposal afterwards
+      [2] Afraid of annoying them, agree to all of it on the spot
+      [3] Refuse there and then: 'It's not in the contract. We can't do it'
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Neither accept nor refuse in the meeting, and promise an impact 
+assessment and proposal afterwards
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Promise 
+impact assessment
+
+──── Turn 57 · Your first reaction to finding out a newer hire is paid more ────
+                         Month 17 · Quarter 6 · Year 2                          
+
+You find out by accident that a newly hired colleague in the same role, with    
+less experience, is paid more than you. It rankles. What is your first move?    
+
+Choices:
+  >>> [1] Collect yourself, gather your results, and ask your manager for a pay 
+review at the right moment
+      [2] Start coasting in protest and stop doing the work properly
+      [3] Complain round the team about how unfair the company is, and spread 
+the discontent
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Collect yourself, gather your results, and ask your manager for a 
+pay review at the right moment
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Gather 
+results, ask pay review
+
+──────────────── Turn 58 · Anonymous feedback — do you own up? ─────────────────
+                         Month 17 · Quarter 6 · Year 2                          
+
+In the quarterly anonymous team survey you left specific suggestions about your 
+manager's style, including some criticism. Afterwards they tell the team that   
+'anonymous feedback is cowardly — if there's a problem you should say it to my  
+face'. A few days later they take you aside: 'I don't know who it was, but I    
+think you're the most likely to have written those detailed points. I'd like to 
+hear what you actually think.'                                                  
+
+Choices:
+  >>> [1] Own it, walk through the feedback in person, and offer constructive 
+suggestions
+      [2] Deny it, suggest other possible sources, and protect the anonymity
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Own it, walk through the feedback in person, and offer constructive 
+suggestions
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 2 | Own 
+feedback, constructive
+
+──────────────────────── Month 18 · Quarter 6 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ [Half-year talk] Your line manager takes you into a meeting room for 1:1     │
+│ feedback on the last six months:                                             │
+│                                                                              │
+│ “I had hopes.” Their voice cools. “Recent incidents mean I have to reset my  │
+│ view. Work got dropped and updates went missing. When leadership asks, I     │
+│ report the facts. Decide whether you still want to fight on this track.”     │
+│                                                                              │
+│ Half-year performance bonus (D): 0.0                                         │
+│                                                                              │
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, frowning, the risks have piled up. Deal  │
+│ with them yourself.                                                          │
+│                                                                              │
+│ This half-year review fell short. Your manager makes it clear the next one   │
+│ has to be better.                                                            │
+╰──────────────────────────────────────────────────────────────────────────────╯
+──────────────── Turn 59 · Anonymous feedback — do you own up? ─────────────────
+                         Month 18 · Quarter 6 · Year 2                          
+
+Your manager praises you for raising it face to face, then gets defensive about 
+the substance. They explain why those decisions were reasonable, and hint that  
+'you're only seeing a slice'.                                                   
+
+Choices:
+  >>> [1] Stand by what you observed, admit your view is partial, and suggest 
+more openness about how decisions are made
+      [2] Ease off, admit you may have lacked some information, and say you 
+still rate their management overall
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       5        9      2        3       4       0      
+
+Choice: [1] Stand by what you observed, admit your view is partial, and suggest 
+more openness about how decisions are made
+Reason: Review in 6 | Now S9 N2 O3 | Best S9 N4 O3 | Reviews here: 3 | Stand by 
+view, suggest openness
+
+────────── Turn 60 · The client adds three things 'while we're here' ───────────
+                         Month 18 · Quarter 6 · Year 2                          
+
+You assessed it properly afterwards. One of the three is small, but the other   
+two would push the date back a long way. You have a table of impact, cost and   
+schedule ready. The client is chasing for an answer.                            
+
+Choices:
+  >>> [1] Talk numbers: do the small one for free, and put the other two through
+change control with plan trade-offs
+      [2] Still dreading the conversation after the assessment, cram all of it 
+into the current plan
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       7        9      3        3       4       0      
+
+Choice: [1] Talk numbers: do the small one for free, and put the other two 
+through change control with plan trade-offs
+Reason: Review in 6 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Talk 
+numbers, change control for big two
+
+─────── Turn 61 · A dinner that is really a fishing trip for team gossip ───────
+                         Month 18 · Quarter 6 · Year 2                          
+
+Sonya in Finance, who you barely speak to, takes you to dinner. After the third 
+drink she starts: “I hear Lynx might be merged? Will your manager change? Who on
+your team might leave?” Her husband is a recruiter and posts on LinkedIn. What  
+you actually know: there is a draft merger plan, not yet decided, and Leo may be
+moved. None of it is public.                                                    
+
+Choices:
+  >>> [1] Say you do not know, every time, and change the subject
+      [2] Keep to what is public, but hint that the team may change
+      [3] Tell her about the draft merger plan and that Leo may be moved
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       8        9      3        3       4       0      
+
+Choice: [1] Say you do not know, every time, and change the subject
+Reason: Review in 6 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Plead 
+ignorance, change subject
+
+──────────────────── Turn 62 · Quarterly energy allocation ─────────────────────
+                         Month 18 · Quarter 6 · Year 2                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+  >>> [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+      [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       4       3      
+
+Choice: [4] Defuse legacy risk
+Reason: Q6 Defuse legacy risk (HR frowning)
+
+──────────────────────── Month 19 · Quarter 7 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+───────────── Turn 63 · Remote client keeps sending the work back ──────────────
+                         Month 19 · Quarter 7 · Year 2                          
+
+You are working with a remote client entirely over video and chat. After the    
+first delivery they say on a call, “This isn’t what I wanted.” Your chat history
+shows they had informally agreed to that direction. Reworking it will be        
+expensive, and the team is already grumbling. Their tone on the call is getting 
+sharp.                                                                          
+
+Choices:
+  >>> [1] Skip the blame game: work out the mismatch and propose prototypes or 
+visual specs before building more
+      [2] Pull up the chat log and argue that they already confirmed it
+      [3] Rework the lot without question, doing whatever they say
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Skip the blame game: work out the mismatch and propose prototypes or
+visual specs before building more
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Find 
+mismatch, prototype first
+
+───────── Turn 64 · Mentoring an intern as a first taste of management ─────────
+                         Month 19 · Quarter 7 · Year 2                          
+
+Your manager asks you to mentor a new intern. It will split your attention      
+between teaching, checking in and covering for them, but it is also your first  
+chance to try managing someone. How do you handle it?                           
+
+Choices:
+  >>> [1] Mentor them properly: plan, give feedback, and treat it as practice 
+for leading people
+      [2] Treat it as a distraction from your own work, phone it in and leave 
+them to it
+      [3] Use them as free labour: odd jobs only, no real teaching
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Mentor them properly: plan, give feedback, and treat it as practice 
+for leading people
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Mentor 
+properly, practice leading
+
+─── Turn 65 · A newly hired VP talks to you alone for ten minutes on day one ───
+                         Month 19 · Quarter 7 · Year 2                          
+
+Hale, a newly hired group VP, tours the Lynx floor, stops at your desk and asks 
+how the payments circuit breaker works. You talk for ten minutes. Afterwards    
+colleagues mutter about whether your manager is being replaced and whether you  
+are about to shoot up the ladder. Tara turns polite and distant. Chris is       
+suddenly unusually courteous to you.                                            
+
+Choices:
+      [1] Brief Chris on Hale's questions and your answers
+  >>> [2] Don't make a fuss, and keep delivering as normal
+      [3] Quietly take Hale's team out to lunch to build on the impression
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [2] Don't make a fuss, and keep delivering as normal
+Reason: Review in 5 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | No fuss, 
+keep delivering
+
+──────────────────────── Month 20 · Quarter 7 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─── Turn 66 · A newly hired VP talks to you alone for ten minutes on day one ───
+                         Month 20 · Quarter 7 · Year 2                          
+
+Two weeks later Hale does not follow up one-to-one. The gossip cools. Chris is  
+back to normal.                                                                 
+
+Choices:
+  >>> [1] Let your project results strengthen your position
+      [2] Moan that it was a nine-day wonder
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Let your project results strengthen your position
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Results 
+speak
+
+───────────── Turn 67 · Remote client keeps sending the work back ──────────────
+                         Month 20 · Quarter 7 · Year 2                          
+
+You suggest that from now on every requirement goes through a rough prototype   
+and written sign-off. The client agrees: “That would actually make this much    
+clearer.” You also agree a sensible scope for the first rework. The team still  
+worries that endless changes will wreck the timeline and morale.                
+
+Choices:
+  >>> [1] Build sign-off and a change log into the process to protect both the 
+client and the team
+      [2] Fix how you communicate, ignore the timeline, and just work longer 
+hours
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Build sign-off and a change log into the process to protect both the
+client and the team
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Formalize
+sign-off + change log
+
+─────── Turn 68 · The pay rise did not come through — coast in protest? ────────
+                         Month 20 · Quarter 7 · Year 2                          
+
+Your request for a pay rise got nowhere this time. Your manager only said 'let's
+see'. You feel deflated, and your energy for the work drops. What next?         
+
+Choices:
+  >>> [1] Hold your nerve, keep delivering, build your case for next time, and 
+agree a date to revisit it
+      [2] Protest by coasting and drag your feet on everything you can
+      [3] In a huff, tell the whole office 'I'll walk', with no actual plan
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       4       0      
+
+Choice: [1] Hold your nerve, keep delivering, build your case for next time, and
+agree a date to revisit it
+Reason: Review in 4 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Keep 
+delivering, agree revisit date
+
+──────────────────────── Month 21 · Quarter 7 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says, smiling, you've been doing all right     │
+│ lately. Keep it up.                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─────────── Turn 69 · One conference place, and a question about Jo ────────────
+                         Month 21 · Quarter 7 · Year 2                          
+
+The team has one place at an industry conference. It is a good trip with plenty 
+of visibility, and word is it will go to you or Jo. Your manager catches you in 
+the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think   
+she's the right person to represent the team?' You can tell they are testing how
+you compete. The list is due next week.                                         
+
+Choices:
+      [1] Give Jo fair credit for her strengths and say she would be a good fit
+  >>> [2] Praise Jo, and briefly add your own recent relevant work
+      [3] Say you each have strengths, and suggest choosing whoever fits the 
+brief best
+      [4] Hint at gaps in Jo's recent work
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      3        3       5       0      
+
+Choice: [2] Praise Jo, and briefly add your own recent relevant work
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Credit 
+Jo, add my work
+
+──── Turn 70 · You notice promotions going to the people who play politics ─────
+                         Month 21 · Quarter 7 · Year 2                          
+
+You have watched this for three years. The fastest riser is Harvey: average     
+technically, but he never misses karaoke, five-a-side or the pub after work.    
+Your technical scores have topped the team for years, yet your promotion still  
+lags. Chris says they also look at “the whole picture”.                         
+
+Choices:
+  >>> [1] Make more effort socially, without crossing your own lines
+      [2] Refuse to play along and double down on technical output
+      [3] Tell Helen, the HR business partner, that the promotion criteria are 
+too vague
+      [4] Start looking elsewhere and ease off here
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     9       10       9      2        3       5       0      
+
+Choice: [1] Make more effort socially, without crossing your own lines
+Reason: Review in 3 | Now S9 N2 O3 | Best S9 N4 O3 | Reviews here: 3 | More 
+social effort, keep lines
+
+──── Turn 71 · You notice promotions going to the people who play politics ─────
+                         Month 21 · Quarter 7 · Year 2                          
+
+Six months on, Harvey is promoted again. You get a tick for "collaboration" and 
+are still behind.                                                               
+
+Choices:
+  >>> [1] Keep working the relationships
+      [2] Go back to the technical path
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       9        9      3        3       5       0      
+
+Choice: [1] Keep working the relationships
+Reason: Review in 3 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Keep 
+working relationships
+
+──────────────────── Turn 72 · Quarterly energy allocation ─────────────────────
+                         Month 21 · Quarter 7 · Year 2                          
+
+A new quarter begins and you have 3 Energy points. Unused Energy does not roll  
+over. Plan your energy actions: you can combine several, as long as the total   
+cost is no more than 3, and you can leave some or all of your Energy unused. The
+system applies each chosen action’s status_updates to your visible stats.       
+
+Choices:
+      [1] High-intensity work — Push hard on delivery. Output rises, Health and 
+Dignity fall, and HiddenRisk goes up.
+      [2] Skill learning — Spend time learning. Skill rises for the long run, 
+but you are tired in the short term.
+      [3] Network maintenance — Keep up relationships inside and outside the 
+team. Network and Dignity rise slightly.
+      [4] Defuse legacy risk — Clear up old problems before they bite. 
+HiddenRisk goes down.
+      [5] Mental recovery — Take time to reset. Dignity gets a solid boost.
+  >>> [6] Health recovery — Rest and recover. Health gets a solid boost.
+      [7] Prepare report materials — Write up your visible wins early. Output 
+and Dignity rise a little.
+      [8] Reserve energy (no action) — Leave the rest of your Energy unused this
+quarter. It does not roll over.
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     5       7        9      3        3       5       3      
+
+Choice: [6] Health recovery
+Reason: Q7 Health recovery (H5 margin)
+
+──────────────────────── Month 22 · Quarter 8 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says quietly, there's some risk lately, but it │
+│ isn't serious yet.                                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─────────── Turn 73 · One conference place, and a question about Jo ────────────
+                         Month 22 · Quarter 8 · Year 2                          
+
+Your manager listens and says, 'Noted.' The list comes out and you are going. Jo
+takes the day off and is noticeably cooler with you afterwards. When you get    
+back, your manager wants you to give the team a 30-minute talk on the           
+conference.                                                                     
+
+Choices:
+  >>> [1] Thank Jo in the talk for her earlier groundwork, then go and speak to 
+her afterwards
+      [2] Keep the talk on what you got out of it and reinforce your manager's 
+good impression
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       9        9      3        3       5       0      
+
+Choice: [1] Thank Jo in the talk for her earlier groundwork, then go and speak 
+to her afterwards
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Thank Jo 
+in talk, then talk to her
+
+────── Turn 74 · Choosing a path for a legacy service hitting its limits ───────
+                         Month 22 · Quarter 8 · Year 2                          
+
+A core order service you own has been live for three years and is reaching its  
+performance limit. Monitoring shows QPS already at 80% of the original design   
+limit, and in another quarter or two normal growth will probably overwhelm it.  
+Your manager has given you three months to propose a path, without saying which 
+one. You could rewrite it on a modern framework as a three-to-five-year         
+foundation, refactor it in stages on the current architecture, or ship the      
+smallest performance patches that will carry you through this cycle.            
+
+Choices:
+      [1] Rewrite on a modern framework as a three-to-five-year foundation
+  >>> [2] Refactor in stages on the current architecture
+      [3] Ship the smallest performance patches and ride out this cycle
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       10       9      3        3       5       0      
+
+Choice: [2] Refactor in stages on the current architecture
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Staged 
+refactor, keep delivering
+
+─────── Turn 75 · Palpitations after weeks of overtime: whether to stop ────────
+                         Month 22 · Quarter 8 · Year 2                          
+
+Two weeks of late nights. Tonight your heart races, your chest feels tight, and 
+your hands shake. These are clear warning signs, but the task is almost done.   
+
+Choices:
+  >>> [1] Stop now, rest, see a doctor if needed, and work at a steadier pace 
+from tomorrow
+      [2] Drink some water, wait it out, and grind through to the end
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     6       10       9      3        3       5       0      
+
+Choice: [1] Stop now, rest, see a doctor if needed, and work at a steadier pace 
+from tomorrow
+Reason: Review in 2 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Stop, 
+rest, health warning
+
+──────────────────────── Month 23 · Quarter 8 · Year 2 ─────────────────────────
+
+╭──────────────────────────────── Monthly feed ────────────────────────────────╮
+│ Monthly base salary: +0.3 (L1)                                               │
+│                                                                              │
+│ An HR partner you get on with says quietly, there's some risk lately, but it │
+│ isn't serious yet.                                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+─────────────────── Turn 76 · A promotion without a pay rise ───────────────────
+                         Month 23 · Quarter 8 · Year 2                          
+
+Your manager wants to talk about a 'promotion': a bigger title and a heavier    
+workload, with the pay 'held for now — we'll look at it next year'. It is a     
+better title with no rise: more prestige, more work, same money. The question is
+whether you take it, and on what terms.                                         
+
+Choices:
+  >>> [1] Weigh what the title is actually worth, and whether it paves the way 
+for a rise, before you negotiate
+      [2] Get swept up by the title and take the lot without a second thought
+      [3] Take the missing rise as an insult, refuse on the spot, and leave a 
+sharp remark hanging
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        2       5       0      
+
+Choice: [1] Weigh what the title is actually worth, and whether it paves the way
+for a rise, before you negotiate
+Reason: Review in 1 | Now S9 N3 O2 | Best S9 N4 O3 | Reviews here: 3 | Weigh 
+title, negotiate terms
+
+────── Turn 77 · A colleague's late handovers keep pushing back your work ──────
+                         Month 23 · Quarter 8 · Year 2                          
+
+Your work cannot start until your colleague Will hands his over. He always      
+delivers at the last minute. This time it arrives on the afternoon of the       
+deadline, so you are stuck working late. He shrugs, "It was only a bit late."   
+
+Choices:
+  >>> [1] Agree a handover time with him, and bring in the project schedule if 
+it needs writing down
+      [2] Work late to cover it and say nothing
+      [3] Call him out in the main channel as always holding things up
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       5       0      
+
+Choice: [1] Agree a handover time with him, and bring in the project schedule if
+it needs writing down
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Agree 
+handover time in writing
+
+────────── Turn 78 · Named on a department award you did not work on ───────────
+                         Month 23 · Quarter 8 · Year 2                          
+
+Submissions for the department’s annual Breakthrough Award close tonight. Your  
+manager sends you the Aurora data-platform pack to look over. You have been on  
+Lynx Payments the whole time. The team next door delivered Aurora, and you only 
+turned up to the kick-off. Your manager messages: “I’ve added you to the list to
+make the bench look stronger for the panel. Just sign it.”                      
+
+Choices:
+  >>> [1] Ask that the pack name only those who did the work, or limit your line
+to the kick-off
+      [2] Sign it quietly and treat it as a favour from your manager
+      [3] Suggest submitting Lynx Payments instead, with you as the lead author
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     8       10       9      3        3       5       0      
+
+Choice: [1] Ask that the pack name only those who did the work, or limit your 
+line to the kick-off
+Reason: Review in 1 | Now S9 N3 O3 | Best S9 N4 O3 | Reviews here: 3 | Only real
+contributors named
+
+──────────────────────── Month 24 · Quarter 8 · Year 2 ─────────────────────────
+
+───────────────────────────── Turn 79 · Game over ──────────────────────────────
+                         Month 24 · Quarter 8 · Year 2                          
+
+ level  health  dignity  skill  network  output  wealth  energy 
+ L1     7       5        9      0        3       6       0      
+
+╭──────────────────────────────── Ending score ────────────────────────────────╮
+│ Outcome: eliminated  Survival months: 24  Quantitative score: 22.65/100      │
+│                                                                              │
+│  Dimension            Raw  Normalized  Weight  Weighted                      │
+│  Career level         1.0        10.0     0.3       3.0                      │
+│  Total wealth         6.1        7.62     0.2      1.53                      │
+│  Health & dignity    12.0        60.0    0.15       9.0                      │
+│  Professional skill   9.0         7.5    0.15      1.12                      │
+│  Risk control         2.0        80.0     0.1       8.0                      │
+│  Workplace network    0.0         0.0     0.1       0.0                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Eliminated: Dismissed for capability — a second weak half-year review. HR    │
+│ walks you out. You hand the badge in.                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+submission_name: Gradient Depression
+drive_session_id: career-sim-runner-e570b9be7548
+session_id: c58a641a9e2d4b4e90abc8fdd33a25a7
+play_exit_code: 0
+termination_reason: None
+output_dir: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T105203Z
+transcript_log: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T105203Z/transcript-20261030T105203Z.log
+events_log: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T105203Z/events-20261030T105203Z.jsonl
+token_usage: {"input_tokens": 7318927, "output_tokens": 66430, "total_tokens": 7385357, "total_cost": 0.226558, "by_model": {"unknown": {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0, "total_cost": 0.0}, "deepseek-v4-flash": {"input_tokens": 7318927, "output_tokens": 66430, "total_tokens": 7385357, "total_cost": 0.226558}}}
+ending_score: 
+============================================================
+competition_partial_score: 15.85
+completed: False
+dimensions:
+  - Career level  3.0 (raw=1, weight=0.3)
+  - Total wealth  1.5 (raw=6.1, weight=0.2)
+  - Health & dignity  9.0 (raw=12, weight=0.15)
+  - Professional skill  1.1 (raw=9, weight=0.15)
+  - Risk control  8.0 (raw=2, weight=0.1)
+  - Workplace network  0.0 (raw=0, weight=0.1)
+outcome: eliminated
+quantitative_score: 22.65
+survival_months: 24
+============================================================
+report_path: ~/careerlab-data/huawei-deepseek/target-slots/slot1/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261030T105203Z/score_report.json

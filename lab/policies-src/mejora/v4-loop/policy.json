@@ -1,0 +1,17 @@
+{
+  "family": "mejora",
+  "name": "v4-loop",
+  "parents": [
+    "t13-read-v4",
+    "cp-v12",
+    "mv-4"
+  ],
+  "idea_origin": "DeepSeek line, 27 Oct night; ideas from Matteo's observed-growth-v10 (branch matteo/main): best value at the level, two-month review window, repair at once",
+  "operator": "t13-read-v4 byte for byte except: Turn loop and Status line sections replaced by cp-v12's (the pairing that holds on every provider, C59, C69); the manifest's loop sentences from cp-v12 plus mv-4's 'never end a reply with text only' (C70); the two note fields v4 no longer has (Concerns this month, Stalled) translated: 'Concerns >= 1' -> 'already chose an option this month that might bury a problem', Stalled clauses removed (DeepSeek left Stalled at 'none' in 94 % of v4 notes and Concerns at 0 in 77 of 77).",
+  "hypothesis": "Every token-saving manual so far (cp-v1 ... cp-v12, mv-*) was built on v4-c5 + v4-t0 + suelo-v1-min, so a worse game could come from those rule changes. v4's own rules with only the call protocol changed should choose like v4 (silence does not change choices, C54) and spend <= 500k tokens per month (token score 100 instead of ~64).",
+  "predicted_behaviour": "DeepInfra probes 3 of 3 paired; in games, pair in >= 90 % of story replies, <= 0.55 M tokens per month, <= 3 text-only replies; bank choices as v4 (q-loss within v4's two passes +/- 0.4).",
+  "refutation": "Probes unpaired, or games above 0.7 M tokens per month, or bank loss beyond v4's range.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Story and quarterly rules are v4's. Built because nobody had tested v4 with only the call protocol changed."
+}
