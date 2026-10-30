@@ -1,6 +1,8 @@
 # Línea Mejora: un manual mejor que `t13-read-v4`
 
-**Conclusión (29 oct, 22:45 UTC).** **`mejora/mv-4` es mejor manual que v4 en todo lo que se puede medir con precisión, pero en 9 partidas reales no juega visiblemente mejor:**
+**Actualización (30 oct).** El candidato es **`mejora/mv-5r`**. En lo medible, juega las historias como v4 (la ventaja de lectura en L1 quedó dentro del ruido al repetir el banco). Lo que aporta es fichas 95–100 y no cortarse por respuestas sin llamada. Una versión corta y otra sólo de calidad no mejoraron nada (§9–§11 y Relevo).
+
+**Conclusión anterior (29 oct, 22:45 UTC).** **`mejora/mv-4` es mejor manual que v4 en todo lo que se puede medir con precisión, pero en 9 partidas reales no juega visiblemente mejor:**
 - **Fichas:** 95–100 en sus partidas completas frente a ~64 de v4. A igualdad de partidas son **+3,3 de nota de versión**.
 - **Decisiones del mes previo de L1** (banco de DeepSeek, 90 situaciones): pérdida **2,51** por decisión frente a 3,31–3,68 de v4 y 3,6–4,4 de la familia cp. Es la mejor de 9 variantes, sin empeorar el control de riesgo (0,84 frente a 0,93) ni el general (0,34 frente a 0,38).
 - **Calidad** (jueces de Claude): 73 frente a 69.
@@ -287,6 +289,7 @@ El juego de historias es, en lo medible, el de v4.
 |---|---:|---|---|---|---:|---:|
 | mv-5r n.º 1 | 22,65 | **despedida en L1** (mes 24) | — | (50) | 0 | 0,23 |
 | mv-5r n.º 2 | **69,00** | completa, L5 | 12, 18, 30, 42 | 461 mil (100) | 1 | 0,66 |
+| mv-5r n.º 3 | 24,51 | **despedida en L1** (mes 24) | — | (50) | 0 | 0,23 |
 
 La mecánica funciona: pareja de llamadas, fichas 100 y 0–1 paradas. La n.º 1 cayó en la trampa de L1 de siempre:
 - RR. HH. ya estaba «frowning» en el mes 3, así que el modo estricto anuló la excepción.
@@ -327,7 +330,57 @@ Jueces de Claude: 71,3 tras añadir el plan por fases, los tonos de RR. HH. y «
 
 Lo que falla es la percepción de los costes y los intercambios forzosos, y eso no cambia con la longitud. Lo que sí trajo el texto añadido fueron efectos secundarios: más paradas con mv-3 (C70) y más riesgo al preparar evaluaciones en L2–L4 (mejora-7). Un manual simple no los tiene, pero tampoco sube el techo. La falsa alarma «ayudar cuesta Output» aparece en 2 de 4 pasadas del texto de L1. Es el punto débil de esa viñeta y merece un control en cualquier versión futura.
 
-## Relevo
+## Relevo (30 oct, para seguir en un chat nuevo)
+
+1. **Estado.**
+   - El candidato es **`mejora/mv-5r`**:
+     - las reglas de historias de v4 (vía ex-v1), con la lectura de costes ocultos sólo en el nivel inicial;
+     - el trimestre por tramos y el freno de salud de ex-v1;
+     - el bucle de dos llamadas de cp-v12 byte a byte;
+     - «never end a reply with text only» en el manifest.
+   - Frente a v4, lo probado es:
+     - fichas 95–100 (≈ +3,3 de nota de versión a igualdad de partidas);
+     - sin respuestas sin llamada que corten la partida (C70);
+     - el mismo riesgo que v4 al preparar evaluaciones (mejora-9).
+   - En el juego de historias es, en lo medible, v4: la ventaja de lectura en L1 quedó dentro del ruido al repetir el banco (mejora-8).
+   - Partidas de mv-5r: 22,65 (despido en L1) · 69,00 · 24,51 (despido en L1). En las dos despedidas, las tres evaluaciones de L1 cayeron por Network: pérdidas forzosas (la historia del antiguo compañero que pesca información, negarse = Network −1 frente a alternativas +2/+3), proteger Output a costa de Network y un desplome de Network en los meses 15–16. **mv-5r no ascendió en el mes 6 en ninguna de las tres.** En partidas reales no hay prueba de que mv-5r supere a v4, y la trampa de L1 sigue siendo el problema número uno.
+2. **Lo que se ha descartado con datos** (no repetir sin una razón nueva):
+   - aceptar más riesgo en el mes previo de L1: cambia despidos por crisis (§9);
+   - empujar Skill en las historias de L4: DeepSeek ya toma el 93 % del Skill seguro (§9);
+   - el último trimestre como apuesta grande: +0,1 (§9);
+   - una versión sólo de calidad (`mv-4q`, §10) y una versión corta (`mv-s`, §11): ninguna mejora lo medido;
+   - creer que DeepSeek se pierde con el manual largo: con la mitad de texto elige igual (§11).
+3. **Lo que decide la nota y sigue abierto.**
+   - Los hundimientos (~25 %), sobre todo la trampa de L1. Las pérdidas del mes previo son en su mayoría forzosas (sin alternativa limpia con riesgo ≤ 1), y el riesgo acumulado pronto activa el modo estricto y anula la excepción (§9, §11).
+   - El ritmo de L4: 18 meses en todas las familias.
+   - En la réplica, todos los mecanismos medidos dejan P(Q ≥ 72) por debajo del 25 % y P(A ≥ 78) por debajo del 0,3 % por tanda. Hace falta una idea nueva, no otra regla del mismo tipo.
+4. **Método aprendido.**
+   - Repetir siempre el banco: una pasada de L1 varía ~0,4.
+   - Fijar el criterio de abandono antes de mirar.
+   - Comprobar en las decisiones reales de las partidas (`calib_data.py` y `lossmap.py`) y en situaciones no usadas para elegir.
+   - Cualquier cambio en «Turn loop» o «Status line» necesita sondas con DeepInfra (C69).
+   - La falsa alarma «ayudar cuesta Output» del texto de L1 sale en 2 de 4 pasadas: vigilarla.
+5. **Datos y órdenes.**
+   - Bancos en `lab/data/deepseek/bancos/ds-mv*` y `ds-v4-riesgo`; conjuntos en `lab/data/mejora/`.
+   - Partidas en `lab/data/deepseek/partidas/mv-*` (tabla en `partidas.csv`).
+   - Jueces en `data/j0*.jsonl`.
+   - Gasto de la línea: 5,96 USD (3,23 el 29 oct y 2,74 el 30 oct); la clave queda en ~15,40 USD.
+   - Para empezar en un chat nuevo:
+
+   ```bash
+   cd ~/huawei-mejora && git pull && uv run python scripts/exploracion/calib_data.py && uv run python scripts/mejora/lossmap.py
+   ```
+
+   ```bash
+   CAREERLAB_TARGET_ENV=~/huawei/local-runs/official-runner/.env uv run python scripts/deepseek/bench.py run --variant lab/policies-src/mejora/<candidato>/bundle --name ds-<candidato> --ids lab/data/mejora/ids-mvs.txt --slots 14
+   ```
+
+   ```bash
+   uv run python scripts/deepseek/bench_sets.py lab/data/mejora/ids-mvs-sets.json ds-<candidato> ds-mvs
+   ```
+
+### Relevo anterior (29 oct, noche)
+
 
 1. **Hecho y por qué.**
    - Diagnóstico desde los datos reales: las completas se separan por el ritmo de ascensos y las notas de DeepSeek muestran que pierde el mes previo de L1 por leer mal costes sociales y de tiempo (§1–§2).
