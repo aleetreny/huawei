@@ -239,3 +239,8 @@ Lo que sirve:
 
   Con 3 partidas no se distingue de nuestro cp-v5a (66,5).
 - **Jon8652's team** sólo ha restaurado su v3. **agent-store** no tiene nada del reto.
+
+## Revisión diaria del 31 oct (19:45 UTC)
+
+- **Kingjinsight/TechArena-UK-2026 ya no es público.** No se puede clonar y la web da error. Lo que sacamos de él está en este informe y en HALLAZGOS (C37–C42). Sus partidas no se copian a nuestro repo: es su decisión no publicarlas.
+- **Clasificación:** el corte 2 sigue sin notas publicadas.
