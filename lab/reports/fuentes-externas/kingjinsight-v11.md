@@ -224,3 +224,18 @@ Lo que sirve:
 7. **Historias:** cada elección cambia también el rumbo de las historias siguientes.
 8. **Evaluación:** mismo motor que en desarrollo y otro juego de datos; cuentan los recursos consumidos; no hace falta un sistema de varios agentes.
 9. **Datos oficiales:** no enseñan ninguna historia real del juego.
+
+## Revisión tras el corte 2 (31 oct, 14:00 UTC)
+
+- **Clasificación:** las notas del corte 2 aún no han salido (la columna «Cut-off 2» sigue vacía). Seguimos 13.º con 64,75.
+- **Artepace** ha publicado 15 partidas nuevas con DeepSeek (`run_outputs/`, `lab/results.csv`).
+  - Su mejor manual, `sonnet_ilya1`, lo redactó Sonnet; son tres Skills de ~16 k caracteres en total. Saca 61,16, 65,88 y 73,25: las tres completas en L5, media 66,8, con ~1,0–1,3 M de fichas al mes.
+  - `haiku_ilya1` saca 65,58, 58,02 y 69,25.
+  - Sus versiones anteriores (V3, V4, V5) se hunden casi siempre en L1 o L2: 7 de 11 partidas.
+- **Ideas suyas que no tenemos tal cual:**
+  1. **Bandera de riesgo «pegajosa» en la nota.** Un elogio o un comentario tranquilo no borra un `risk:serious` anterior, y tras una explosión la bandera se mantiene hasta dos trimestres seguidos sin comentario de riesgo.
+  2. **Guardia de dinero.** Con la riqueza en pantalla muy baja, nunca elegir una opción que cueste dinero. Es justo uno de los dos fallos del script en C23.
+  3. **Lo que no se cobra antes del mes 48 no se empieza.** Invertir sólo en lo que dé fruto antes del final.
+
+  Con 3 partidas no se distingue de nuestro cp-v5a (66,5).
+- **Jon8652's team** sólo ha restaurado su v3. **agent-store** no tiene nada del reto.
