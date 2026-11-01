@@ -1,0 +1,16 @@
+{
+  "family": "corte3",
+  "name": "c3-k5",
+  "parents": [
+    "c3-k4",
+    "c3-k2"
+  ],
+  "idea_origin": "Corte 3 line, 1 Nov: real-game analysis of the third L1 review (risk, not Network, decides it) and the external critic",
+  "operator": "c3-k4 with the stalled-start order of c3-k2 restored (no added risk, then prefer risk-lowering options, then keep S/N/O), keeping c3-k3's rule that the mild-risk exception is off while stalled: the only third-review rescues in faithful segments (3 of 8) came with that order, against 0 of 6 without a protocol.",
+  "hypothesis": "Same L1 exit-by-month-12 as v4-loop in faithful segments (tramos), more third-review rescues, higher quality score, faster L4 to L5.",
+  "predicted_behaviour": "tramos to month 18: exit L1 at least as often as v4-loop; pairing intact.",
+  "refutation": "Clearly fewer L1 exits than v4-loop in the same batch, or broken pairing.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Built 1 Nov for the last cut."
+}
