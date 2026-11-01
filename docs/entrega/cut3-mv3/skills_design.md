@@ -75,7 +75,7 @@ Concrete, ordered quarterly directions were followed much more reliably than gen
 | **`mv-5r`** | "Never end a reply with text only" in the manifest | One career stopped without a score after 21 replies carried no tool call. **Removed again in `mv-3`**: the same line also says to put the decision in the call and not in prose, and with it our careers ended earlier more often (below) |
 | **`mv-5r`** | Hidden costs named before a review, at the starting level only | DeepSeek applied the review rule but misread costs (for example, that a polite refusal keeps Network); used at every level, the same text added risk before later reviews |
 | **`mv-5r`** | Quarterly plan by level and a Health brake; `Stalled` and `Concerns` fields removed | DeepSeek rarely filled the stall field, so v4's stall-based quarterly lines seldom fired |
-| **`mv-3`** (Cut 3) | Hidden costs named before every review again, as in our best development careers | Restricting them to the starting level (Cut 2) did not improve play in our careers and scored 45.44 officially; this Skill completed 5 of its 7 development careers with an average of 71.4, two at the sixth level |
+| **`mv-3`** (Cut 3) | Hidden costs named before every review again, as in our best development careers | Restricting them to the starting level (Cut 2) did not improve play in our careers and scored 45.44 officially; this Skill completed 7 of its 9 development careers with an average of 70.1, two at the sixth level |
 
 ## 7. Generalisation, scope and limits
 

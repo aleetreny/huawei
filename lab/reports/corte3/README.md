@@ -77,12 +77,12 @@ Alejandro paró la búsqueda de versiones nuevas y pidió decidir entre mv-3 y m
 
 | Manual | Completas | No completas |
 |---|---|---|
-| **mv-3** | 68,64 · 77,78 (L6) · 66,06 (29–30 oct); **74,12 (L6)** · **70,38** (1 nov). Media 71,4 | cortada por `max_continuations` en L1 (29 oct); 31,01 (L1 hasta el mes 24) |
-| mv-4 | 63,35 · 69,62 · 63,27 (30 oct); 59,99 (1 nov). Media 64,1 | 37,06 y 37,39 (crisis de confianza), 18,98 (despido en L1), 31,34 (ruina en el mes 10) |
+| **mv-3** | 68,64 · 77,78 (L6) · 66,06 (29–30 oct); **74,12 (L6)** · 70,38 · 63,31 · 70,12 (1 nov). Media 70,1 | cortada por `max_continuations` en L1 (29 oct); 31,01 (L1 hasta el mes 24) |
+| mv-4 | 63,35 · 69,62 · 63,27 (30 oct); 59,99 · 69,70 (1 nov). Media 65,2 | 37,06, 37,39 y 32,73 (crisis de confianza), 18,98 (despido en L1), 31,34 (ruina en el mes 10) |
 
 Hipótesis (sin probar): la frase de mv-4 quita el razonamiento escrito cuando el proveedor no razona en oculto. El precio de mv-3 es el riesgo de corte por respuestas sin llamada (1 de 7).
 
-**Entregado en el corte 3: mv-3**, paquete `~/careerlab-data/entrega/cut3/gradient-depression-mv-3-cut3.zip` (`content_sha256` aee52f38…, validación oficial OK, copia en iCloud Drive `huawei-entrega-copia/cut3/`), documentos en `docs/entrega/cut3-mv3/`, vídeo del corte 2 (diseño de mv-5r, hermano de mv-3).
+**Entregado en el corte 3: mv-3**, paquete `~/careerlab-data/entrega/cut3/gradient-depression-mv-3-cut3.zip` (`content_sha256` e632d7fe…, reconstruido a las 15:10 con los números finales; validación oficial OK, copia en iCloud Drive `huawei-entrega-copia/cut3/`), documentos en `docs/entrega/cut3-mv3/`, vídeo del corte 2 (diseño de mv-5r, hermano de mv-3).
 
 Otras variantes jugadas hoy, para el registro: `c3-x1` 60,62 · 63,02 · 61,53; `c3-x2` 63,62 · 62,73; `c3-x4` 59,89 · 19,62 (apagón); `c3-x5` 41,32 (crisis). El modo crecimiento sube antes pero explota.
 

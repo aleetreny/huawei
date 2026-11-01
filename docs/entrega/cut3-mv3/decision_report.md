@@ -72,17 +72,17 @@ A complete `t13-read-v4` career used about 65–70 million tokens, roughly 1.4 m
 
 **Tokens.** Token efficiency is 10% of the version score and is full at 500 thousand tokens per game month or fewer. `t13-read-v4` used 1.35–1.47 million, about 64 of 100. With one reply per decision and a one-line note, careers of this family used 0.46–0.70 million (efficiency 92–100).
 
-**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (two trust crises and one dismissal in six careers, against none in the careers without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `mv-3` is the Skill without that line.
+**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (five of ten careers ended early, against two of nine without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `mv-3` is the Skill without that line.
 
 **Careers** (development game, official runner, DeepSeek):
 
 | Skill | Scores (end) |
 |---|---|
 | `mv-3`, 29–30 October | 68.64, **77.78** (sixth level), 66.06 (complete); one stopped by the runner around month 15, after 21 replies without a tool call |
-| `mv-3`, 1 November | **74.12** (sixth level), 70.38 (complete); 31.01 (still at the starting level at month 24) |
-| The same Skill with the manifest line "never end a reply with text only" | 63.35, 69.62, 63.27, 59.99 (complete); 37.06 and 37.39 (trust crises), 18.98 (dismissed at the starting level), 31.34 (broke at month 10) |
+| `mv-3`, 1 November | **74.12** (sixth level), 70.38, 63.31, 70.12 (complete); 31.01 (still at the starting level at month 24) |
+| The same Skill with the manifest line "never end a reply with text only" | 63.35, 69.62, 63.27, 59.99, 69.70 (complete); 37.06, 37.39 and 32.73 (trust crises), 18.98 (dismissed at the starting level), 31.34 (broke at month 10) |
 
-`mv-3`'s complete careers averaged 71.4, the best of any Skill we tested, and two of five reached the sixth level; the starting level remains its weak point.
+`mv-3`'s seven complete careers (of nine) averaged 70.1, the best of any Skill we tested, and two reached the sixth level; the starting level remains its weak point.
 
 ## 5d. What we learned after Cut 2, and two alternatives we did not promote
 
