@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "assigned": 768,
+  "replayed_actions": 38388,
+  "groups": {
+    "network": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 4,
+      "trust_death": 6,
+      "health_death": 0,
+      "first_promotion_by_6": 118,
+      "first_promoted_alive_at_7": 118,
+      "second_promotion_by_12": 92,
+      "second_promotion_and_alive": 92,
+      "alive_through_12": 182
+    },
+    "control": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 3,
+      "trust_death": 5,
+      "health_death": 0,
+      "first_promotion_by_6": 149,
+      "first_promoted_alive_at_7": 149,
+      "second_promotion_by_12": 135,
+      "second_promotion_and_alive": 131,
+      "alive_through_12": 184
+    },
+    "skill": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 0,
+      "trust_death": 3,
+      "health_death": 0,
+      "first_promotion_by_6": 143,
+      "first_promoted_alive_at_7": 143,
+      "second_promotion_by_12": 132,
+      "second_promotion_and_alive": 131,
+      "alive_through_12": 189
+    },
+    "output": {
+      "assigned": 192,
+      "resolved": 192,
+      "broke": 4,
+      "trust_death": 8,
+      "health_death": 0,
+      "first_promotion_by_6": 146,
+      "first_promoted_alive_at_7": 146,
+      "second_promotion_by_12": 108,
+      "second_promotion_and_alive": 108,
+      "alive_through_12": 180
+    }
+  },
+  "narrative_override_trace": {
+    "network": {
+      "narrative_overrides": 240,
+      "higher_empirical_rate_after_incident": 33
+    },
+    "skill": {
+      "narrative_overrides": 317,
+      "higher_empirical_rate_after_incident": 14
+    },
+    "output": {
+      "narrative_overrides": 270,
+      "higher_empirical_rate_after_incident": 47
+    }
+  },
+  "scope": "Complete initial denominators, reproducible blocked assignment, past-only incident memory, every public action replayed and outcomes independently reconstructed"
+}

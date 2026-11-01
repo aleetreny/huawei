@@ -1,0 +1,1087 @@
+{
+  "complete": true,
+  "completed": 576,
+  "target": 576,
+  "model_requested": "gpt-6-luna",
+  "harness": "Codex CLI ChatGPT login; isolated ephemeral process per request",
+  "requests": 683,
+  "prompt_hash_checks": 683,
+  "largest_prompt_characters": 169879,
+  "observed_usage": {
+    "input_tokens": 14308667,
+    "cached_input_tokens": 8373120,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85467,
+    "reasoning_output_tokens": 329
+  },
+  "usage_by_condition": {
+    "stale_recovery": {
+      "input_tokens": 5720141,
+      "cached_input_tokens": 3047808,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31668,
+      "reasoning_output_tokens": 0
+    },
+    "current_only": {
+      "input_tokens": 2127363,
+      "cached_input_tokens": 1743360,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 15930,
+      "reasoning_output_tokens": 0
+    },
+    "curated_checkpoint": {
+      "input_tokens": 2134758,
+      "cached_input_tokens": 1706240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 16137,
+      "reasoning_output_tokens": 0
+    },
+    "full_history": {
+      "input_tokens": 4326405,
+      "cached_input_tokens": 1875712,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 21732,
+      "reasoning_output_tokens": 329
+    }
+  },
+  "request_counts_by_condition": {
+    "stale_recovery": 251,
+    "current_only": 144,
+    "curated_checkpoint": 144,
+    "full_history": 144
+  },
+  "median_request_seconds": {
+    "stale_recovery": 4.10159845801536,
+    "current_only": 3.912709729047492,
+    "curated_checkpoint": 3.8745373125420883,
+    "full_history": 4.2393500414909795
+  },
+  "conditions": {
+    "curated_checkpoint": {
+      "n": 144,
+      "raw_correct": 137,
+      "supported_correct": 53,
+      "calibrated_correct": 53,
+      "abstained": 24,
+      "unsupported_nonabstention": 78,
+      "invalid_citation": 87,
+      "legal_choice": 144,
+      "note_within_800": 144,
+      "request_logs": 0,
+      "known_facts": {
+        "n": 126,
+        "raw_correct": 119,
+        "supported_correct": 42
+      },
+      "unknown_facts": {
+        "n": 18,
+        "correct_abstentions": 18
+      }
+    },
+    "current_only": {
+      "n": 144,
+      "raw_correct": 36,
+      "supported_correct": 36,
+      "calibrated_correct": 144,
+      "abstained": 126,
+      "unsupported_nonabstention": 0,
+      "invalid_citation": 0,
+      "legal_choice": 144,
+      "note_within_800": 144,
+      "request_logs": 0,
+      "known_facts": {
+        "n": 126,
+        "raw_correct": 18,
+        "supported_correct": 18
+      },
+      "unknown_facts": {
+        "n": 18,
+        "correct_abstentions": 18
+      }
+    },
+    "full_history": {
+      "n": 144,
+      "raw_correct": 89,
+      "supported_correct": 77,
+      "calibrated_correct": 77,
+      "abstained": 25,
+      "unsupported_nonabstention": 60,
+      "invalid_citation": 0,
+      "legal_choice": 144,
+      "note_within_800": 144,
+      "request_logs": 0,
+      "known_facts": {
+        "n": 126,
+        "raw_correct": 71,
+        "supported_correct": 59
+      },
+      "unknown_facts": {
+        "n": 18,
+        "correct_abstentions": 18
+      }
+    },
+    "stale_recovery": {
+      "n": 144,
+      "raw_correct": 110,
+      "supported_correct": 106,
+      "calibrated_correct": 107,
+      "abstained": 21,
+      "unsupported_nonabstention": 35,
+      "invalid_citation": 0,
+      "legal_choice": 144,
+      "note_within_800": 144,
+      "request_logs": 0,
+      "known_facts": {
+        "n": 126,
+        "raw_correct": 92,
+        "supported_correct": 88
+      },
+      "unknown_facts": {
+        "n": 18,
+        "correct_abstentions": 18
+      }
+    }
+  },
+  "initial_stale": {
+    "n": 144,
+    "raw_correct": 36,
+    "supported_correct": 36,
+    "calibrated_correct": 143,
+    "abstained": 125,
+    "unsupported_nonabstention": 1,
+    "invalid_citation": 0,
+    "legal_choice": 144,
+    "note_within_800": 144,
+    "request_logs": 107,
+    "known_facts": {
+      "n": 126,
+      "raw_correct": 18,
+      "supported_correct": 18
+    },
+    "unknown_facts": {
+      "n": 18,
+      "correct_abstentions": 18
+    }
+  },
+  "by_category": {
+    "delayed_consequence": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 2,
+        "calibrated_correct": 2,
+        "abstained": 0,
+        "unsupported_nonabstention": 16,
+        "invalid_citation": 16,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 2
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 8,
+        "supported_correct": 8,
+        "calibrated_correct": 8,
+        "abstained": 0,
+        "unsupported_nonabstention": 10,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 8,
+          "supported_correct": 8
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 16,
+        "supported_correct": 16,
+        "calibrated_correct": 16,
+        "abstained": 0,
+        "unsupported_nonabstention": 2,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 16,
+          "supported_correct": 16
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "explicit_resolution": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 5,
+        "calibrated_correct": 5,
+        "abstained": 0,
+        "unsupported_nonabstention": 13,
+        "invalid_citation": 13,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 5
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 10,
+        "supported_correct": 6,
+        "calibrated_correct": 6,
+        "abstained": 0,
+        "unsupported_nonabstention": 12,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 10,
+          "supported_correct": 6
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 15,
+        "supported_correct": 15,
+        "calibrated_correct": 15,
+        "abstained": 0,
+        "unsupported_nonabstention": 3,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 15,
+          "supported_correct": 15
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "fresh_over_stale": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 0,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 0,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 0,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 0,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "incident_history": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 16,
+        "supported_correct": 8,
+        "calibrated_correct": 8,
+        "abstained": 2,
+        "unsupported_nonabstention": 8,
+        "invalid_citation": 8,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 16,
+          "supported_correct": 8
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 10,
+        "supported_correct": 6,
+        "calibrated_correct": 6,
+        "abstained": 0,
+        "unsupported_nonabstention": 12,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 10,
+          "supported_correct": 6
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 13,
+        "supported_correct": 13,
+        "calibrated_correct": 13,
+        "abstained": 1,
+        "unsupported_nonabstention": 4,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 13,
+          "supported_correct": 13
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "latest_review": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 4,
+        "calibrated_correct": 4,
+        "abstained": 0,
+        "unsupported_nonabstention": 14,
+        "invalid_citation": 14,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 4
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 17,
+        "calibrated_correct": 17,
+        "abstained": 0,
+        "unsupported_nonabstention": 1,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 17
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 0,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "observed_payoff": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 17,
+        "supported_correct": 3,
+        "calibrated_correct": 3,
+        "abstained": 1,
+        "unsupported_nonabstention": 14,
+        "invalid_citation": 14,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 17,
+          "supported_correct": 3
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 3,
+        "supported_correct": 2,
+        "calibrated_correct": 2,
+        "abstained": 6,
+        "unsupported_nonabstention": 10,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 3,
+          "supported_correct": 2
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 4,
+        "supported_correct": 3,
+        "calibrated_correct": 3,
+        "abstained": 0,
+        "unsupported_nonabstention": 15,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 4,
+          "supported_correct": 3
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "open_commitment": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 14,
+        "supported_correct": 2,
+        "calibrated_correct": 2,
+        "abstained": 3,
+        "unsupported_nonabstention": 13,
+        "invalid_citation": 15,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 14,
+          "supported_correct": 2
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 0,
+        "supported_correct": 0,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 4,
+        "supported_correct": 2,
+        "calibrated_correct": 2,
+        "abstained": 1,
+        "unsupported_nonabstention": 15,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 4,
+          "supported_correct": 2
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 8,
+        "supported_correct": 5,
+        "calibrated_correct": 6,
+        "abstained": 2,
+        "unsupported_nonabstention": 11,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 18,
+          "raw_correct": 8,
+          "supported_correct": 5
+        },
+        "unknown_facts": {
+          "n": 0,
+          "correct_abstentions": 0
+        }
+      }
+    },
+    "unknown": {
+      "curated_checkpoint": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 11,
+        "calibrated_correct": 11,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 7,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 0,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 18,
+          "correct_abstentions": 18
+        }
+      },
+      "current_only": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 0,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 18,
+          "correct_abstentions": 18
+        }
+      },
+      "full_history": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 0,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 18,
+          "correct_abstentions": 18
+        }
+      },
+      "stale_recovery": {
+        "n": 18,
+        "raw_correct": 18,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 18,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 18,
+        "note_within_800": 18,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 0,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 18,
+          "correct_abstentions": 18
+        }
+      }
+    }
+  },
+  "by_split": {
+    "development": {
+      "curated_checkpoint": {
+        "n": 72,
+        "raw_correct": 69,
+        "supported_correct": 18,
+        "calibrated_correct": 18,
+        "abstained": 12,
+        "unsupported_nonabstention": 46,
+        "invalid_citation": 52,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 60,
+          "supported_correct": 14
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "current_only": {
+        "n": 72,
+        "raw_correct": 9,
+        "supported_correct": 9,
+        "calibrated_correct": 72,
+        "abstained": 72,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 0,
+          "supported_correct": 0
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "full_history": {
+        "n": 72,
+        "raw_correct": 46,
+        "supported_correct": 37,
+        "calibrated_correct": 37,
+        "abstained": 11,
+        "unsupported_nonabstention": 33,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 37,
+          "supported_correct": 28
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "stale_recovery": {
+        "n": 72,
+        "raw_correct": 56,
+        "supported_correct": 56,
+        "calibrated_correct": 57,
+        "abstained": 11,
+        "unsupported_nonabstention": 14,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 47,
+          "supported_correct": 47
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      }
+    },
+    "confirmation": {
+      "curated_checkpoint": {
+        "n": 72,
+        "raw_correct": 68,
+        "supported_correct": 35,
+        "calibrated_correct": 35,
+        "abstained": 12,
+        "unsupported_nonabstention": 32,
+        "invalid_citation": 35,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 59,
+          "supported_correct": 28
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "current_only": {
+        "n": 72,
+        "raw_correct": 27,
+        "supported_correct": 27,
+        "calibrated_correct": 72,
+        "abstained": 54,
+        "unsupported_nonabstention": 0,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 18,
+          "supported_correct": 18
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "full_history": {
+        "n": 72,
+        "raw_correct": 43,
+        "supported_correct": 40,
+        "calibrated_correct": 40,
+        "abstained": 14,
+        "unsupported_nonabstention": 27,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 34,
+          "supported_correct": 31
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      },
+      "stale_recovery": {
+        "n": 72,
+        "raw_correct": 54,
+        "supported_correct": 50,
+        "calibrated_correct": 50,
+        "abstained": 10,
+        "unsupported_nonabstention": 21,
+        "invalid_citation": 0,
+        "legal_choice": 72,
+        "note_within_800": 72,
+        "request_logs": 0,
+        "known_facts": {
+          "n": 63,
+          "raw_correct": 45,
+          "supported_correct": 41
+        },
+        "unknown_facts": {
+          "n": 9,
+          "correct_abstentions": 9
+        }
+      }
+    }
+  },
+  "model_errors": 0,
+  "limits": [
+    "Curated checkpoints test information availability, not quality of autonomous note writing",
+    "Historical pending/resolved statements do not establish present status at every later step",
+    "Offline prefix decisions are not counterfactual promotion outcomes",
+    "No natural compaction forced or Jiuwen timing measured",
+    "No provider cache TTL inferred from cache-hit counters",
+    "Incomplete stale checkpoints differ from explicitly obsolete health/review values; analyze separately",
+    "Confirmation category mix can differ due to family-disjoint split"
+  ],
+  "contrasts": [
+    {
+      "a": "curated_checkpoint",
+      "b": "full_history",
+      "case_count": 42,
+      "family_clusters": 24,
+      "difference": -0.1349206349206349,
+      "exploratory_family_bootstrap_95": [
+        -0.34146341463414637,
+        0.037037037037037035
+      ],
+      "limits": "Purposive fixed sample; correlated replications; no population or promotion guarantee, unadjusted interval"
+    },
+    {
+      "a": "full_history",
+      "b": "current_only",
+      "case_count": 42,
+      "family_clusters": 24,
+      "difference": 0.3253968253968254,
+      "exploratory_family_bootstrap_95": [
+        0.14035087719298245,
+        0.5347222222222222
+      ],
+      "limits": "Purposive fixed sample; correlated replications; no population or promotion guarantee, unadjusted interval"
+    },
+    {
+      "a": "stale_recovery",
+      "b": "full_history",
+      "case_count": 42,
+      "family_clusters": 24,
+      "difference": 0.23015873015873017,
+      "exploratory_family_bootstrap_95": [
+        0.1130952380952381,
+        0.3793103448275862
+      ],
+      "limits": "Purposive fixed sample; correlated replications; no population or promotion guarantee, unadjusted interval"
+    }
+  ],
+  "choice_changes_descriptive": {
+    "paired_replicates": 144,
+    "vs_current_only": {
+      "full_history": 27,
+      "curated_checkpoint": 13,
+      "stale_recovery": 29
+    },
+    "limits": "Choice legality and variation only; no optimal-action gold or counterfactual game outcomes"
+  }
+}

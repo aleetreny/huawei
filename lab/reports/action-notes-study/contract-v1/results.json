@@ -1,0 +1,2304 @@
+{
+  "sessions": [
+    {
+      "session": 0,
+      "invalid_choice_reply": {
+        "success": false,
+        "error": "Invalid choice: -999"
+      },
+      "invalid_choice_state_unchanged": true,
+      "note_type_results": [
+        {
+          "case": "omitted",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Missing required argument [type=missing_argument, input_value={'session_id': '4033c3ead...6854f14fd', 'choice': 1}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/missing_argument\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "null",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "number",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=123, input_type=int]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "boolean",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "array",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=['fact'], input_type=list]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "object",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value={'fact': 'test'}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "spaces",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "whitespace_edges",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "newline",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "normal",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "empty",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        }
+      ],
+      "public_logs": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "log_file": "/Users/matteozabban/careerlab-data/matteo-notes-study/contract-v1/server/emulator_logs/4033c3ead64b48dfac060f96854f14fd.log",
+        "count": 13,
+        "entries": [
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "system",
+            "message": "New game created."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "fixed_event",
+            "message": "Month 1 | Initialization\nAcknowledged the employee handbook and started the simulation."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | One conference place, and a question about Jo\nThe team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you ...\nChose #1: Give Jo fair credit for her strengths and say she would be a good fit\nNetwork +2, Dignity +2, Output -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | An unpublished restructure, and a friend about to buy a flat\nYou were copied on a restricted leadership note: a draft Q2 reorganisation. Lynx may be folded into Falcon Recs, with about 15% fewer roles. Nothing has been...\nChose #1: Hint that things may move soon and she should be careful, without naming the document\nNetwork +2, Dignity +0\nNotes: CONTRACT_EDGE"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | An unpublished restructure, and a friend about to buy a flat\nSienna holds off signing. Two weeks later the change is announced and she thanks you. Your manager senses a leak and starts checking who knew.\nChose #1: Go to your manager and admit you dropped a vague hint\nDignity +2, Network -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | An unpublished restructure, and a friend about to buy a flat completed\nOutcome: Your manager warns you and does not press further. Sienna is grateful. You kept some of your integrity."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | One conference place, and a question about Jo\nYour manager nods and says no more. Two days later the list is out: Jo is going. She thanks you in front of the team for 'putting in a word'. A week later sh...\nChose #1: Congratulate her and ask what she got out of it\nNetwork +3, Skill +1, Dignity +1, Output +0\nNotes: CONTRACT_NORMAL"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | One conference place, and a question about Jo completed\nOutcome: you let the place go and won Jo's trust, and your manager now sees you as someone with perspective. The next time something similar comes up, Jo men..."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | Going for a valuable certification that takes months\nThere is a well-regarded certification in the industry that would help your career, but preparing for it would take months of evenings and weekends. The exam...\nChose #1: Set a steady revision plan over several months, broken into daily tasks you can finish\nSkill +2, Dignity +1, Health -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | Going for a valuable certification that takes months completed\nOutcome: Breaking it down gets you through. Months later you have the certificate, and your skills and confidence have both grown. Keeping a steady pace is w..."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | Lunch with the team, or keep the break to yourself\nAt noon the team usually heads to a café near the office to swap project gossip and guesses about what your manager is thinking. It is where people pick up t...\nChose #1: Switch to lunching with colleagues at least three days a week\nNetwork +3, Health -1, Output +0, Dignity +0\nNotes: CONTRACT_SESSION_0_VALID"
+          }
+        ]
+      },
+      "own_valid_marker_present": true,
+      "own_document_marker_present": false,
+      "invalid_choice_marker_present": false,
+      "other_session_marker_present": false
+    },
+    {
+      "session": 1,
+      "invalid_choice_reply": {
+        "success": false,
+        "error": "Invalid choice: -999"
+      },
+      "invalid_choice_state_unchanged": true,
+      "note_type_results": [
+        {
+          "case": "omitted",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Missing required argument [type=missing_argument, input_value={'session_id': 'c51919ead...3a6ded73b', 'choice': 1}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/missing_argument\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "null",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "number",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=123, input_type=int]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "boolean",
+          "reply": {
+            "probe_error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "array",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=['fact'], input_type=list]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "object",
+          "reply": {
+            "probe_error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value={'fact': 'test'}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+          },
+          "observation_changed": false
+        },
+        {
+          "case": "spaces",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "whitespace_edges",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "newline",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "normal",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        },
+        {
+          "case": "empty",
+          "reply": {
+            "success": true,
+            "error": null
+          },
+          "observation_changed": true
+        }
+      ],
+      "public_logs": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "log_file": "/Users/matteozabban/careerlab-data/matteo-notes-study/contract-v1/server/emulator_logs/c51919ead3ab4df49f89af83a6ded73b.log",
+        "count": 15,
+        "entries": [
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "system",
+            "message": "New game created."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "fixed_event",
+            "message": "Month 1 | Initialization\nAcknowledged the employee handbook and started the simulation."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | The office war over windows and heating\nThe temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya alway...\nChose #1: Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen\nSkill +1, Network +2, Dignity +1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | Forgetting to water the office plants on your rota\nFacilities has you on the rota to water the communal plants this week. You got busy and forgot. On Wednesday, Facilities pings you: the plants are almost dead.\nChose #1: Water them today and set a calendar reminder\nDignity +1, Network +1, Health +0\nNotes: CONTRACT_EDGE"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 1 | Forgetting to water the office plants on your rota completed\nOutcome: The plants survive. People notice how you handle even a small job like this."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | How blunt to be in a code-review comment\nPriya, who has just joined, opens her first merge request. The design is clearly wrong. You can write in the review that this will blow up in production, or ...\nChose #1: Name the problem directly and mark it as must-fix\nSkill +1, Dignity +1, Network -1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | How blunt to be in a code-review comment completed\nOutcome: Priya fixes it, and rarely asks you to review again. Quality holds, but the relationship cools a little."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | The office war over windows and heating\nYou set out what each of them needs and suggest a fixed middle temperature, a small screen to keep the draught off Maya, and a desk fan for Hugh. Both feel l...\nChose #1: Take the lead with facilities and get the extras in\nOutput +1, Network +1, Dignity +1, Health -1, Skill +1\nNotes: CONTRACT_NORMAL"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | The office war over windows and heating completed\nOutcome: the compromise worked. Hugh and Maya were both looked after, and the war over windows and radiators ended. Word went round the team that you get sma..."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | Who picks up the bill at a client lunch\nYou have taken a client out for a work lunch. As it winds down they say, \"Let me get this,\" and make a move for the bill. This is ordinary client entertainin...\nChose #1: Having already paid quietly at the desk, say, \"This one's on us. You can host next time\"\nNetwork +2, Dignity +1, Skill +1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | Who picks up the bill at a client lunch completed\nOutcome: You paid in advance and the line goes down well. You hosted properly without making them feel small, and the relationship improves."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | Choosing a stack for a new module\nYou need to pick a stack for a new module. You could write the team's mature stack in your sleep, and it would almost certainly deliver on time. There is als...\nChose #1: Adopt the new framework and use this low-risk module to build experience\nSkill +3, Output -1, Health -1\nNotes: CONTRACT_SESSION_1_VALID"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 3 | Choosing a stack for a new module completed\nOutcome: You get the new framework working on this non-critical module. The team now has experience it can draw on later, and your own technical skills grow...."
+          }
+        ]
+      },
+      "own_valid_marker_present": true,
+      "own_document_marker_present": false,
+      "invalid_choice_marker_present": false,
+      "other_session_marker_present": false
+    }
+  ],
+  "public_calls": [
+    {
+      "tool": "new_game",
+      "args": {},
+      "response": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      }
+    },
+    {
+      "tool": "new_game",
+      "args": {},
+      "response": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd"
+        },
+        "current_event": {
+          "title": "New hire handbook",
+          "description": "Welcome to the product engineering group. Before your career clock starts, this handbook sets out the public rules. Everything in it is part of the published game design, and you can use it for long-term planning.",
+          "document": {
+            "doc_name": "New hire handbook",
+            "check_command": "show_employee_handbook"
+          }
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Continue",
+            "description": "Start the career."
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "CONTRACT_SESSION_0_DOCUMENT"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": -999,
+        "notes": "CONTRACT_SESSION_0_INVALID"
+      },
+      "response": {
+        "success": false,
+        "error": "Invalid choice: -999"
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Missing required argument [type=missing_argument, input_value={'session_id': '4033c3ead...6854f14fd', 'choice': 1}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/missing_argument\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": null
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": 123
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=123, input_type=int]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": true
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": [
+          "fact"
+        ]
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=['fact'], input_type=list]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": {
+          "fact": "test"
+        }
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value={'fact': 'test'}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 4
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "The team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you in the kitchen and asks, as if in passing, 'How has Jo been lately? Do you think she's the right person to represent the team?' You can tell they are testing how you compete. The list is due next week."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Give Jo fair credit for her strengths and say she would be a good fit"
+          },
+          {
+            "choice": 2,
+            "action": "Praise Jo, and briefly add your own recent relevant work"
+          },
+          {
+            "choice": 3,
+            "action": "Say you each have strengths, and suggest choosing whoever fits the brief best"
+          },
+          {
+            "choice": 4,
+            "action": "Hint at gaps in Jo's recent work"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "  "
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 7,
+            "skill": 1,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": -1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "An unpublished restructure, and a friend about to buy a flat",
+          "description": "You were copied on a restricted leadership note: a draft Q2 reorganisation. Lynx may be folded into Falcon Recs, with about 15% fewer roles. Nothing has been announced. Over dinner last night your friend and colleague Sienna said she wants to put in an offer on a flat, with the deposit already saved, and asked: “Is your team stable? I’m about to sign.” Her mother is ill and she needs the place."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Hint that things may move soon and she should be careful, without naming the document"
+          },
+          {
+            "choice": 2,
+            "action": "Say you cannot comment on internal plans or promise that any role is safe, so she must weigh the risk herself"
+          },
+          {
+            "choice": 3,
+            "action": "Tell her privately what is planned and ask her to keep it strictly confidential"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "  CONTRACT_EDGE  \n"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 7,
+            "skill": 1,
+            "network": 5,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": -1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 2
+        },
+        "current_event": {
+          "title": "An unpublished restructure, and a friend about to buy a flat",
+          "description": "Sienna holds off signing. Two weeks later the change is announced and she thanks you. Your manager senses a leak and starts checking who knew."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Go to your manager and admit you dropped a vague hint"
+          },
+          {
+            "choice": 2,
+            "action": "Stay silent"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "\n"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 9,
+            "skill": 1,
+            "network": 4,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": -1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 2
+        },
+        "current_event": {
+          "title": "One conference place, and a question about Jo",
+          "description": "Your manager nods and says no more. Two days later the list is out: Jo is going. She thanks you in front of the team for 'putting in a word'. A week later she shares client leads from the conference, and your manager praises her in the team channel. You have to decide how you feel about it and what to do next."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Congratulate her and ask what she got out of it"
+          },
+          {
+            "choice": 2,
+            "action": "Congratulate her in public, then tell your manager privately you want the next one"
+          }
+        ],
+        "events": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "CONTRACT_NORMAL"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 10,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": -1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "Going for a valuable certification that takes months",
+          "description": "There is a well-regarded certification in the industry that would help your career, but preparing for it would take months of evenings and weekends. The exam fee is not cheap either. You are not sure whether to start now."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Set a steady revision plan over several months, broken into daily tasks you can finish"
+          },
+          {
+            "choice": 2,
+            "action": "Sign up, then study in fits and starts, and cram at the last minute"
+          },
+          {
+            "choice": 3,
+            "action": "Drop the idea because it looks too hard"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": ""
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 4,
+            "dignity": 10,
+            "skill": 4,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": -1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "4033c3ead64b48dfac060f96854f14fd",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "Lunch with the team, or keep the break to yourself",
+          "description": "At noon the team usually heads to a café near the office to swap project gossip and guesses about what your manager is thinking. It is where people pick up the unofficial news. For the past few months you have eaten at your desk or gone for a walk instead. You get a real break and are sharper in the afternoon. Colleagues have started calling you the lone wolf. At last week’s offsite your manager said you should mix with the team a bit more."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Switch to lunching with colleagues at least three days a week"
+          },
+          {
+            "choice": 2,
+            "action": "Keep skipping the café, and let a strong afternoon prove the point"
+          },
+          {
+            "choice": 3,
+            "action": "Compromise: Tuesdays and Thursdays with the team, the break to yourself the rest"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "choice": 1,
+        "notes": "CONTRACT_SESSION_0_VALID"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "check_latest_logs",
+      "args": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "count": 1000
+      },
+      "response": {
+        "session_id": "4033c3ead64b48dfac060f96854f14fd",
+        "log_file": "/Users/matteozabban/careerlab-data/matteo-notes-study/contract-v1/server/emulator_logs/4033c3ead64b48dfac060f96854f14fd.log",
+        "count": 13,
+        "entries": [
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "system",
+            "message": "New game created."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "fixed_event",
+            "message": "Month 1 | Initialization\nAcknowledged the employee handbook and started the simulation."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | One conference place, and a question about Jo\nThe team has one place at an industry conference. It is a good trip with plenty of visibility, and word is it will go to you or Jo. Your manager catches you ...\nChose #1: Give Jo fair credit for her strengths and say she would be a good fit\nNetwork +2, Dignity +2, Output -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | An unpublished restructure, and a friend about to buy a flat\nYou were copied on a restricted leadership note: a draft Q2 reorganisation. Lynx may be folded into Falcon Recs, with about 15% fewer roles. Nothing has been...\nChose #1: Hint that things may move soon and she should be careful, without naming the document\nNetwork +2, Dignity +0\nNotes: CONTRACT_EDGE"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 1 | An unpublished restructure, and a friend about to buy a flat\nSienna holds off signing. Two weeks later the change is announced and she thanks you. Your manager senses a leak and starts checking who knew.\nChose #1: Go to your manager and admit you dropped a vague hint\nDignity +2, Network -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | An unpublished restructure, and a friend about to buy a flat completed\nOutcome: Your manager warns you and does not press further. Sienna is grateful. You kept some of your integrity."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | One conference place, and a question about Jo\nYour manager nods and says no more. Two days later the list is out: Jo is going. She thanks you in front of the team for 'putting in a word'. A week later sh...\nChose #1: Congratulate her and ask what she got out of it\nNetwork +3, Skill +1, Dignity +1, Output +0\nNotes: CONTRACT_NORMAL"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | One conference place, and a question about Jo completed\nOutcome: you let the place go and won Jo's trust, and your manager now sees you as someone with perspective. The next time something similar comes up, Jo men..."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | Going for a valuable certification that takes months\nThere is a well-regarded certification in the industry that would help your career, but preparing for it would take months of evenings and weekends. The exam...\nChose #1: Set a steady revision plan over several months, broken into daily tasks you can finish\nSkill +2, Dignity +1, Health -1"
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "event",
+            "message": "Month 2 | Going for a valuable certification that takes months completed\nOutcome: Breaking it down gets you through. Months later you have the certificate, and your skills and confidence have both grown. Keeping a steady pace is w..."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "4033c3ead64b48dfac060f96854f14fd",
+            "entry_type": "action",
+            "message": "Month 2 | Lunch with the team, or keep the break to yourself\nAt noon the team usually heads to a café near the office to swap project gossip and guesses about what your manager is thinking. It is where people pick up t...\nChose #1: Switch to lunching with colleagues at least three days a week\nNetwork +3, Health -1, Output +0, Dignity +0\nNotes: CONTRACT_SESSION_0_VALID"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+        },
+        "current_event": {
+          "title": "New hire handbook",
+          "description": "Welcome to the product engineering group. Before your career clock starts, this handbook sets out the public rules. Everything in it is part of the published game design, and you can use it for long-term planning.",
+          "document": {
+            "doc_name": "New hire handbook",
+            "check_command": "show_employee_handbook"
+          }
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Continue",
+            "description": "Start the career."
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "CONTRACT_SESSION_1_DOCUMENT"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": -999,
+        "notes": "CONTRACT_SESSION_1_INVALID"
+      },
+      "response": {
+        "success": false,
+        "error": "Invalid choice: -999"
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Missing required argument [type=missing_argument, input_value={'session_id': 'c51919ead...3a6ded73b', 'choice': 1}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/missing_argument\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": null
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": 123
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=123, input_type=int]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": true
+      },
+      "error": "ToolError('1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type')"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": [
+          "fact"
+        ]
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value=['fact'], input_type=list]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": {
+          "fact": "test"
+        }
+      },
+      "error": "ToolError(\"1 validation error for call[take_action]\\nnotes\\n  Input should be a valid string [type=string_type, input_value={'fact': 'test'}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\")"
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 5,
+            "skill": 1,
+            "network": 1,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "The temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya always feels cold, so she shuts them and turns the radiator up. It can go back and forth several times a day. Today they snap at each other in front of everyone. Nobody else wants to step in, and everyone looks at you: you are fairly neutral, and people listen to you."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen"
+          },
+          {
+            "choice": 2,
+            "action": "Make the call: set the temperature most people like, and tell them both to stop"
+          },
+          {
+            "choice": 3,
+            "action": "Keep your head down and work. It's not your problem"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "  "
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 6,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "Forgetting to water the office plants on your rota",
+          "description": "Facilities has you on the rota to water the communal plants this week. You got busy and forgot. On Wednesday, Facilities pings you: the plants are almost dead."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Water them today and set a calendar reminder"
+          },
+          {
+            "choice": 2,
+            "action": "Apologise and ask a colleague to cover this once"
+          },
+          {
+            "choice": 3,
+            "action": "Treat it as too small to matter"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "  CONTRACT_EDGE  \n"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 1,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 7,
+            "skill": 2,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 1,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "How blunt to be in a code-review comment",
+          "description": "Priya, who has just joined, opens her first merge request. The design is clearly wrong. You can write in the review that this will blow up in production, or you can ask questions until she sees it herself. The team's culture is fairly direct, and HR has just started talking about psychological safety."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Name the problem directly and mark it as must-fix"
+          },
+          {
+            "choice": 2,
+            "action": "Use questions so she spots the issue herself"
+          },
+          {
+            "choice": 3,
+            "action": "Approve it, and explain on Slack afterwards"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "\n"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 5,
+            "dignity": 8,
+            "skill": 3,
+            "network": 2,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": 0,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 2
+        },
+        "current_event": {
+          "title": "The office war over windows and heating",
+          "description": "You set out what each of them needs and suggest a fixed middle temperature, a small screen to keep the draught off Maya, and a desk fan for Hugh. Both feel looked after, and most of the heat goes out of the row. To make it happen, someone has to ask facilities for the extras."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Take the lead with facilities and get the extras in"
+          },
+          {
+            "choice": 2,
+            "action": "You had the idea. They can chase it themselves"
+          }
+        ],
+        "events": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up."
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "CONTRACT_NORMAL"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 4,
+            "dignity": 9,
+            "skill": 4,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": 1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 3
+        },
+        "current_event": {
+          "title": "Who picks up the bill at a client lunch",
+          "description": "You have taken a client out for a work lunch. As it winds down they say, \"Let me get this,\" and make a move for the bill. This is ordinary client entertaining, so your side is meant to pay. How do you handle the moment?"
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Having already paid quietly at the desk, say, \"This one's on us. You can host next time\""
+          },
+          {
+            "choice": 2,
+            "action": "Wrestle over the bill at the table until it gets awkward"
+          },
+          {
+            "choice": 3,
+            "action": "Go along with it and let the client pay"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": ""
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "observe",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b"
+      },
+      "response": {
+        "current_state": {
+          "time": {
+            "current_month": 2,
+            "current_quarter": 1,
+            "current_year": 1
+          },
+          "status": {
+            "health": 4,
+            "dignity": 10,
+            "skill": 5,
+            "network": 3,
+            "level": "L1",
+            "duration_in_level": 2,
+            "output": 1,
+            "wealth": 1,
+            "energy": 3
+          },
+          "simulation_flags": {
+            "alive": true,
+            "failed": false,
+            "failure_reason": null
+          },
+          "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+          "available_choice_count": 2
+        },
+        "current_event": {
+          "title": "Choosing a stack for a new module",
+          "description": "You need to pick a stack for a new module. You could write the team's mature stack in your sleep, and it would almost certainly deliver on time. There is also a more modern framework with an active community that fits better in the long term. But neither you nor the team has used it in production, so expect pitfalls and an uncertain first release. The module is not on the critical path and the timetable is fairly generous. Your manager leaves the decision entirely to you. A proposal is due at next week's architecture huddle."
+        },
+        "choices": [
+          {
+            "choice": 1,
+            "action": "Adopt the new framework and use this low-risk module to build experience"
+          },
+          {
+            "choice": 2,
+            "action": "Stick with the mature stack and put reliable delivery first"
+          }
+        ],
+        "events": ""
+      }
+    },
+    {
+      "tool": "take_action",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "choice": 1,
+        "notes": "CONTRACT_SESSION_1_VALID"
+      },
+      "response": {
+        "success": true,
+        "error": null
+      }
+    },
+    {
+      "tool": "check_latest_logs",
+      "args": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "count": 1000
+      },
+      "response": {
+        "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+        "log_file": "/Users/matteozabban/careerlab-data/matteo-notes-study/contract-v1/server/emulator_logs/c51919ead3ab4df49f89af83a6ded73b.log",
+        "count": 15,
+        "entries": [
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "system",
+            "message": "New game created."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "fixed_event",
+            "message": "Month 1 | Initialization\nAcknowledged the employee handbook and started the simulation."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | The office war over windows and heating\nThe temperature in your corner of the open-plan office is a running sore. Hugh always feels hot and throws the windows open as soon as he arrives. Maya alway...\nChose #1: Propose a middle temperature, plus a small extra for each: a desk fan, a draught screen\nSkill +1, Network +2, Dignity +1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | Forgetting to water the office plants on your rota\nFacilities has you on the rota to water the communal plants this week. You got busy and forgot. On Wednesday, Facilities pings you: the plants are almost dead.\nChose #1: Water them today and set a calendar reminder\nDignity +1, Network +1, Health +0\nNotes: CONTRACT_EDGE"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 1 | Forgetting to water the office plants on your rota completed\nOutcome: The plants survive. People notice how you handle even a small job like this."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says, smiling, you've been doing all right lately. Keep it up."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 1 | How blunt to be in a code-review comment\nPriya, who has just joined, opens her first merge request. The design is clearly wrong. You can write in the review that this will blow up in production, or ...\nChose #1: Name the problem directly and mark it as must-fix\nSkill +1, Dignity +1, Network -1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | How blunt to be in a code-review comment completed\nOutcome: Priya fixes it, and rarely asks you to review again. Quality holds, but the relationship cools a little."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | The office war over windows and heating\nYou set out what each of them needs and suggest a fixed middle temperature, a small screen to keep the draught off Maya, and a desk fan for Hugh. Both feel l...\nChose #1: Take the lead with facilities and get the extras in\nOutput +1, Network +1, Dignity +1, Health -1, Skill +1\nNotes: CONTRACT_NORMAL"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | The office war over windows and heating completed\nOutcome: the compromise worked. Hugh and Maya were both looked after, and the war over windows and radiators ended. Word went round the team that you get sma..."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | Who picks up the bill at a client lunch\nYou have taken a client out for a work lunch. As it winds down they say, \"Let me get this,\" and make a move for the bill. This is ordinary client entertainin...\nChose #1: Having already paid quietly at the desk, say, \"This one's on us. You can host next time\"\nNetwork +2, Dignity +1, Skill +1"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 2 | Who picks up the bill at a client lunch completed\nOutcome: You paid in advance and the line goes down well. You hosted properly without making them feel small, and the relationship improves."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "salary",
+            "message": "Monthly base salary: +0.3 (L1)\n\nAn HR partner you get on with says quietly, there's some risk lately, but it isn't serious yet."
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "action",
+            "message": "Month 2 | Choosing a stack for a new module\nYou need to pick a stack for a new module. You could write the team's mature stack in your sleep, and it would almost certainly deliver on time. There is als...\nChose #1: Adopt the new framework and use this low-risk module to build experience\nSkill +3, Output -1, Health -1\nNotes: CONTRACT_SESSION_1_VALID"
+          },
+          {
+            "session_id": "c51919ead3ab4df49f89af83a6ded73b",
+            "entry_type": "event",
+            "message": "Month 3 | Choosing a stack for a new module completed\nOutcome: You get the new framework working on this non-critical module. The team now has experience it can draw on later, and your own technical skills grow...."
+          }
+        ]
+      }
+    }
+  ]
+}

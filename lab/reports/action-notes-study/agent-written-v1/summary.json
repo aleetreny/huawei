@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "pairs": 16,
+  "requests": 32,
+  "observed_usage": {
+    "input_tokens": 657361,
+    "cached_input_tokens": 409600,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4651,
+    "reasoning_output_tokens": 0
+  },
+  "by_budget": {
+    "128": {
+      "n": 8,
+      "exact_correct": 2,
+      "diagnostic_normalized_correct": 2,
+      "writer_within_budget": 0
+    },
+    "800": {
+      "n": 8,
+      "exact_correct": 2,
+      "diagnostic_normalized_correct": 2,
+      "writer_within_budget": 3
+    }
+  },
+  "stop": []
+}

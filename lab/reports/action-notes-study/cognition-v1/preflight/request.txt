@@ -1,0 +1,1 @@
+Return ready=true. Do not use tools, browse, read files, or perform any other action. This is a route preflight, not a game.

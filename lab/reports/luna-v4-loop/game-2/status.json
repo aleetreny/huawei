@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "batches": 199,
+  "actions": 197,
+  "rejected": 0,
+  "new_game_attempts": 1,
+  "tool_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "observe": 199,
+    "take_action": 197
+  },
+  "updated_at": "2026-10-29T15:41:07.387932+00:00",
+  "session_id": "6772f86e077a4881b35a590614e640cf",
+  "last_state": {
+    "time": {
+      "current_month": 49,
+      "current_quarter": 17,
+      "current_year": 5
+    },
+    "status": {
+      "health": 10,
+      "dignity": 10,
+      "skill": 115,
+      "network": 54,
+      "level": "L5",
+      "duration_in_level": 8,
+      "output": 29,
+      "wealth": 26,
+      "energy": 0
+    },
+    "simulation_flags": {
+      "alive": false,
+      "failed": true,
+      "failure_reason": "Completed the 48-month simulation."
+    },
+    "session_id": "6772f86e077a4881b35a590614e640cf",
+    "error": "GAME OVER: Completed the 48-month simulation.",
+    "available_choice_count": 0
+  },
+  "month": 49
+}

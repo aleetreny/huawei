@@ -1,0 +1,808 @@
+{
+  "questions_7_12": 200,
+  "available_answers": 505,
+  "tried_answers": 346,
+  "remaining_answers": 159,
+  "missing": [
+    {
+      "question": "00e033f627f55fffdfa7",
+      "choice": 1,
+      "title": "An intern accidentally emails a rant about the manager"
+    },
+    {
+      "question": "02e87049e1e676d522c1",
+      "choice": 2,
+      "title": "Pitching against a cheaper rival"
+    },
+    {
+      "question": "0679c322b3269814203b",
+      "choice": 1,
+      "title": "A senior puts their name on an intern’s work"
+    },
+    {
+      "question": "08151241cabf120c7952",
+      "choice": 2,
+      "title": "A live demo blows up in front of the client"
+    },
+    {
+      "question": "090bbfa486ec5ebc5fa4",
+      "choice": 2,
+      "title": "A Glassdoor post about the company is doing the rounds"
+    },
+    {
+      "question": "090bbfa486ec5ebc5fa4",
+      "choice": 3,
+      "title": "A Glassdoor post about the company is doing the rounds"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 3,
+      "title": "You overhear a redundancy list that includes a friend"
+    },
+    {
+      "question": "0afdec335efa43eeda84",
+      "choice": 4,
+      "title": "You overhear a redundancy list that includes a friend"
+    },
+    {
+      "question": "10e31593ad2172e3a0a4",
+      "choice": 2,
+      "title": "Balancing a promising idea against delivery pressure"
+    },
+    {
+      "question": "114a3ec1f8ca55441507",
+      "choice": 3,
+      "title": "Burnout, and the urge to coast"
+    },
+    {
+      "question": "12df6b448627fccc13cd",
+      "choice": 3,
+      "title": "Vaping at the neighbouring desk"
+    },
+    {
+      "question": "14ae322f7c1dfd8195ee",
+      "choice": 2,
+      "title": "Whether to share the method you have kept to yourself"
+    },
+    {
+      "question": "14ae322f7c1dfd8195ee",
+      "choice": 3,
+      "title": "Whether to share the method you have kept to yourself"
+    },
+    {
+      "question": "1567246a4384a2cdf44a",
+      "choice": 2,
+      "title": "A milestone briefing for the execs"
+    },
+    {
+      "question": "16156f4419883d230aac",
+      "choice": 2,
+      "title": "Who picks up the bill at a client lunch"
+    },
+    {
+      "question": "16156f4419883d230aac",
+      "choice": 3,
+      "title": "Who picks up the bill at a client lunch"
+    },
+    {
+      "question": "186abf971eb503bcfd48",
+      "choice": 2,
+      "title": "Anonymous feedback — do you own up?"
+    },
+    {
+      "question": "20675b1c01b7bc3194d3",
+      "choice": 2,
+      "title": "A colleague accidentally posts internal architecture online"
+    },
+    {
+      "question": "20f82cb5af27b6e04930",
+      "choice": 1,
+      "title": "Thanking a colleague from the next team who went out of their way"
+    },
+    {
+      "question": "219796ea776d2c775386",
+      "choice": 2,
+      "title": "Remote client keeps sending the work back"
+    },
+    {
+      "question": "26a3c794dfa9e474bc67",
+      "choice": 2,
+      "title": "A live demo blows up in front of the client"
+    },
+    {
+      "question": "27004f907057db1eacef",
+      "choice": 1,
+      "title": "A former colleague at a competitor fishes for intel"
+    },
+    {
+      "question": "2b0337fbf8924f090951",
+      "choice": 2,
+      "title": "Anonymous feedback — do you own up?"
+    },
+    {
+      "question": "2e962c9bda99e889c476",
+      "choice": 2,
+      "title": "Client makes an inappropriate joke at dinner"
+    },
+    {
+      "question": "3bd9a48ec551ad5cc12f",
+      "choice": 2,
+      "title": "You notice promotions going to the people who play politics"
+    },
+    {
+      "question": "3f305487f5bd85b0e672",
+      "choice": 3,
+      "title": "A senior puts their name on an intern’s work"
+    },
+    {
+      "question": "40d7b3885578e4bb492f",
+      "choice": 2,
+      "title": "A project you wanted going to someone else"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 2,
+      "title": "One conference place, and a question about Jo"
+    },
+    {
+      "question": "4a29dedbdac94bbf3cf1",
+      "choice": 4,
+      "title": "One conference place, and a question about Jo"
+    },
+    {
+      "question": "4b5e4cf484abb708f023",
+      "choice": 2,
+      "title": "A collaborator shifts the blame in a meeting"
+    },
+    {
+      "question": "4cac1c33ea209531c741",
+      "choice": 2,
+      "title": "A milestone briefing for the execs"
+    },
+    {
+      "question": "4d9a3352e869e139b978",
+      "choice": 1,
+      "title": "An engagement survey that asks for your staff ID"
+    },
+    {
+      "question": "56a136c934290844622d",
+      "choice": 2,
+      "title": "Escape room: your manager is slowing you down, a quiet colleague is flying"
+    },
+    {
+      "question": "58210c4fdb7342668907",
+      "choice": 1,
+      "title": "How blunt to be in a code-review comment"
+    },
+    {
+      "question": "5825e236479b6253ef8f",
+      "choice": 2,
+      "title": "A drunk colleague at the Christmas party"
+    },
+    {
+      "question": "588a735f62c42334bff7",
+      "choice": 1,
+      "title": "Health check returning the wrong status"
+    },
+    {
+      "question": "592d8cf08efa83324335",
+      "choice": 1,
+      "title": "Do you say the code was AI-generated?"
+    },
+    {
+      "question": "5a7afa19b0be2a2ea269",
+      "choice": 3,
+      "title": "Dismissed in a team meeting as \"just engineering work\""
+    },
+    {
+      "question": "5d7ef9ba9e8c6a4d57af",
+      "choice": 3,
+      "title": "Pushed on stage at the Christmas party"
+    },
+    {
+      "question": "5eb4e0c00b0a01f58ed8",
+      "choice": 2,
+      "title": "A milestone briefing for the execs"
+    },
+    {
+      "question": "5f1a73478de26a93c387",
+      "choice": 2,
+      "title": "Raising a technical objection on another team's API design"
+    },
+    {
+      "question": "5f2611200426ebb83d9f",
+      "choice": 2,
+      "title": "Team morale is on the floor — should you step up?"
+    },
+    {
+      "question": "5f2611200426ebb83d9f",
+      "choice": 3,
+      "title": "Team morale is on the floor — should you step up?"
+    },
+    {
+      "question": "624dec369b574242bbba",
+      "choice": 2,
+      "title": "Lunch with the team, or keep the break to yourself"
+    },
+    {
+      "question": "635a13c05e8f37651f57",
+      "choice": 2,
+      "title": "A dinner that is really a fishing trip for team gossip"
+    },
+    {
+      "question": "6375bb3c41d2f4149463",
+      "choice": 2,
+      "title": "Annual bonus cut and paid in instalments"
+    },
+    {
+      "question": "6375bb3c41d2f4149463",
+      "choice": 3,
+      "title": "Annual bonus cut and paid in instalments"
+    },
+    {
+      "question": "637bec756c41b3656f8b",
+      "choice": 2,
+      "title": "Your idea is pitched first by someone else"
+    },
+    {
+      "question": "639a96e0b44c4421dc00",
+      "choice": 1,
+      "title": "Mentoring a graduate who breaks things"
+    },
+    {
+      "question": "65d2e3f9e56005788fcd",
+      "choice": 3,
+      "title": "You overhear an unpublished project naming you"
+    },
+    {
+      "question": "667cd136d203b05d83fe",
+      "choice": 2,
+      "title": "Telling the client the project will be late"
+    },
+    {
+      "question": "66ab6f5983c01987e66b",
+      "choice": 2,
+      "title": "A colleague keeps @channel-ing questions already answered in the docs"
+    },
+    {
+      "question": "66ab6f5983c01987e66b",
+      "choice": 3,
+      "title": "A colleague keeps @channel-ing questions already answered in the docs"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 1,
+      "title": "Colleagues want you to join a group pay demand"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 2,
+      "title": "Colleagues want you to join a group pay demand"
+    },
+    {
+      "question": "6975dcedb9a29a982108",
+      "choice": 3,
+      "title": "Colleagues want you to join a group pay demand"
+    },
+    {
+      "question": "69843c907fffa45cf3fe",
+      "choice": 1,
+      "title": "A colleague who comes in ill"
+    },
+    {
+      "question": "6a4fdc4d9e76fd821ea9",
+      "choice": 2,
+      "title": "Pushed on stage at the Christmas party"
+    },
+    {
+      "question": "6d15d3e34b52bc30ef8f",
+      "choice": 3,
+      "title": "Christmas-party rehearsals eating your evenings"
+    },
+    {
+      "question": "6de9ed2b92cf4c326c75",
+      "choice": 2,
+      "title": "A chatty, skiving colleague eating into your time"
+    },
+    {
+      "question": "70de304d58128484e2c0",
+      "choice": 2,
+      "title": "Do you say the code was AI-generated?"
+    },
+    {
+      "question": "72154315656d4fbb0e29",
+      "choice": 2,
+      "title": "A dependent team is late — do you escalate in the open?"
+    },
+    {
+      "question": "723ec1ad94fd801da3dc",
+      "choice": 2,
+      "title": "Remote client keeps sending the work back"
+    },
+    {
+      "question": "723ec1ad94fd801da3dc",
+      "choice": 3,
+      "title": "Remote client keeps sending the work back"
+    },
+    {
+      "question": "72f6a1a9c3a2854687a1",
+      "choice": 1,
+      "title": "A newly hired VP talks to you alone for ten minutes on day one"
+    },
+    {
+      "question": "72f6a1a9c3a2854687a1",
+      "choice": 3,
+      "title": "A newly hired VP talks to you alone for ten minutes on day one"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 1,
+      "title": "Forced ranking: scoring a colleague who is also a friend"
+    },
+    {
+      "question": "73aee64dc9a235328bd2",
+      "choice": 4,
+      "title": "Forced ranking: scoring a colleague who is also a friend"
+    },
+    {
+      "question": "77e5ff211f375d0feb2b",
+      "choice": 2,
+      "title": "The company tries to keep you after you look elsewhere"
+    },
+    {
+      "question": "780e7ab477ba3f4e6c67",
+      "choice": 1,
+      "title": "A drunk colleague at the Christmas party"
+    },
+    {
+      "question": "7952b8ed4f689d6403f9",
+      "choice": 1,
+      "title": "Dependency upgrade breaks the build"
+    },
+    {
+      "question": "7952b8ed4f689d6403f9",
+      "choice": 2,
+      "title": "Dependency upgrade breaks the build"
+    },
+    {
+      "question": "79e3c97e2a52a289275c",
+      "choice": 2,
+      "title": "Forced ranking: scoring a colleague who is also a friend"
+    },
+    {
+      "question": "7c07fb8f93306b9e7868",
+      "choice": 2,
+      "title": "A senior puts their name on an intern’s work"
+    },
+    {
+      "question": "7d9602917fa92a4e4120",
+      "choice": 2,
+      "title": "A recruiter rings — do you take the call?"
+    },
+    {
+      "question": "7d9602917fa92a4e4120",
+      "choice": 3,
+      "title": "A recruiter rings — do you take the call?"
+    },
+    {
+      "question": "8222d6708408b8c7a8dc",
+      "choice": 1,
+      "title": "One umbrella, a downpour, and Jordan at going-home time"
+    },
+    {
+      "question": "82c66d84af797d83b374",
+      "choice": 1,
+      "title": "In-house senior architect certification over the weekend"
+    },
+    {
+      "question": "82c66d84af797d83b374",
+      "choice": 3,
+      "title": "In-house senior architect certification over the weekend"
+    },
+    {
+      "question": "843c90a5b7ac76ba8845",
+      "choice": 3,
+      "title": "A leaver asks you to keep work files off the company systems"
+    },
+    {
+      "question": "85973978d8712a1b09c8",
+      "choice": 1,
+      "title": "A colleague who keeps handing you his work"
+    },
+    {
+      "question": "86af6fb4eac8dfb1e349",
+      "choice": 1,
+      "title": "A leaver asks you to keep work files off the company systems"
+    },
+    {
+      "question": "86e6bb1b860f0d95f32a",
+      "choice": 4,
+      "title": "Late-night work messages and the manager's reaction"
+    },
+    {
+      "question": "8945397b4afad63b76fa",
+      "choice": 2,
+      "title": "Pushed on stage at the Christmas party"
+    },
+    {
+      "question": "89c95e64b3e77cb7e55f",
+      "choice": 2,
+      "title": "The office war over windows and heating"
+    },
+    {
+      "question": "8a49b751043ad778cb00",
+      "choice": 1,
+      "title": "Forced ranking: scoring a colleague who is also a friend"
+    },
+    {
+      "question": "8b3254122fafdfd1fccd",
+      "choice": 2,
+      "title": "The company tries to keep you after you look elsewhere"
+    },
+    {
+      "question": "92bd832f6387d1df2a03",
+      "choice": 2,
+      "title": "A former colleague asks you for internal company material"
+    },
+    {
+      "question": "92bd832f6387d1df2a03",
+      "choice": 3,
+      "title": "A former colleague asks you for internal company material"
+    },
+    {
+      "question": "92d60e1102fbc4dd82a8",
+      "choice": 2,
+      "title": "Dismissed in a team meeting as \"just engineering work\""
+    },
+    {
+      "question": "935ce04cf1c887774aa2",
+      "choice": 2,
+      "title": "A new colleague with no sense of privacy"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 3,
+      "title": "An intern accidentally emails a rant about the manager"
+    },
+    {
+      "question": "983b9732d645fe899fc1",
+      "choice": 4,
+      "title": "An intern accidentally emails a rant about the manager"
+    },
+    {
+      "question": "996daa4b258fecec8ab3",
+      "choice": 1,
+      "title": "The new manager's first team meeting: make an impression?"
+    },
+    {
+      "question": "996daa4b258fecec8ab3",
+      "choice": 2,
+      "title": "The new manager's first team meeting: make an impression?"
+    },
+    {
+      "question": "99fba8eae37aa1b10782",
+      "choice": 2,
+      "title": "Escape room: your manager is slowing you down, a quiet colleague is flying"
+    },
+    {
+      "question": "9ae6f1428d463060ce82",
+      "choice": 2,
+      "title": "Lunch with the team, or keep the break to yourself"
+    },
+    {
+      "question": "9bff63e83208242c4425",
+      "choice": 1,
+      "title": "Choosing a stack for a new module"
+    },
+    {
+      "question": "9c19b9e6c7fd7c9a815c",
+      "choice": 1,
+      "title": "A metrics problem, ten minutes before the briefing"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 2,
+      "title": "A collaborator shifts the blame in a meeting"
+    },
+    {
+      "question": "9d4ecf1568e64ad6ef7a",
+      "choice": 3,
+      "title": "A collaborator shifts the blame in a meeting"
+    },
+    {
+      "question": "9f48c1d9caad36d658c8",
+      "choice": 3,
+      "title": "A manager-free channel shares a screenshot of your boss"
+    },
+    {
+      "question": "a0df1e71074770c2fd87",
+      "choice": 1,
+      "title": "Another department’s major incident: do you volunteer?"
+    },
+    {
+      "question": "a116f653986d7aa36dec",
+      "choice": 1,
+      "title": "An unpublished restructure, and a friend about to buy a flat"
+    },
+    {
+      "question": "a313e10e3eac2f386baf",
+      "choice": 2,
+      "title": "An intern accidentally emails a rant about the manager"
+    },
+    {
+      "question": "a599898c637ac410affb",
+      "choice": 2,
+      "title": "Late-night work messages and the manager's reaction"
+    },
+    {
+      "question": "a7b6addbeab1a87dab84",
+      "choice": 4,
+      "title": "You notice promotions going to the people who play politics"
+    },
+    {
+      "question": "a8103e386a97a8b81208",
+      "choice": 2,
+      "title": "An unpublished restructure, and a friend about to buy a flat"
+    },
+    {
+      "question": "a85cb10008613b91a70a",
+      "choice": 1,
+      "title": "One conference place, and a question about Jo"
+    },
+    {
+      "question": "a971aa9122bbb7e600f7",
+      "choice": 2,
+      "title": "A project you wanted going to someone else"
+    },
+    {
+      "question": "aa364b018b077712b0bc",
+      "choice": 2,
+      "title": "A new colleague with no sense of privacy"
+    },
+    {
+      "question": "aa4946f3c929eb07b881",
+      "choice": 1,
+      "title": "The client adds three things 'while we're here'"
+    },
+    {
+      "question": "ab0727539ef9c44913c1",
+      "choice": 2,
+      "title": "Caffeine dependence and a broken sleep pattern"
+    },
+    {
+      "question": "adb60eb71c7f3b8e7571",
+      "choice": 2,
+      "title": "You overhear a redundancy list that includes a friend"
+    },
+    {
+      "question": "b0816f87a837d11997ea",
+      "choice": 2,
+      "title": "A live demo blows up in front of the client"
+    },
+    {
+      "question": "b51095020c08904e26f1",
+      "choice": 2,
+      "title": "A colleague hogging the printer"
+    },
+    {
+      "question": "b73def3034a63de89fc7",
+      "choice": 1,
+      "title": "A colleague who keeps handing you his work"
+    },
+    {
+      "question": "b853f0c7f29012670d54",
+      "choice": 2,
+      "title": "A colleague's late handovers keep pushing back your work"
+    },
+    {
+      "question": "c3ad32ba3fed96273cb7",
+      "choice": 1,
+      "title": "One conference place, and a question about Jo"
+    },
+    {
+      "question": "c4ab6d613e9a2ec7fb7a",
+      "choice": 1,
+      "title": "A merge conflict wrecks release day"
+    },
+    {
+      "question": "c7d4b068456766f4a8b5",
+      "choice": 1,
+      "title": "Lunch with the team, or keep the break to yourself"
+    },
+    {
+      "question": "cb730e4833582a8f3094",
+      "choice": 2,
+      "title": "Forgetting to water the office plants on your rota"
+    },
+    {
+      "question": "cb730e4833582a8f3094",
+      "choice": 3,
+      "title": "Forgetting to water the office plants on your rota"
+    },
+    {
+      "question": "cb7cd0f86360f885cc1d",
+      "choice": 2,
+      "title": "A new colleague with no sense of privacy"
+    },
+    {
+      "question": "cc53762c8bc823dbb4d1",
+      "choice": 2,
+      "title": "After dinner, karaoke with someone on the promotion panel"
+    },
+    {
+      "question": "ce9330b27ef1f63b8ab7",
+      "choice": 2,
+      "title": "The client praises a feature you did not build"
+    },
+    {
+      "question": "ceca8bafd65f3ae3abc9",
+      "choice": 2,
+      "title": "Pitching against a cheaper rival"
+    },
+    {
+      "question": "cf15ec0fa824eb814dee",
+      "choice": 2,
+      "title": "Client makes an inappropriate joke at dinner"
+    },
+    {
+      "question": "cf15ec0fa824eb814dee",
+      "choice": 3,
+      "title": "Client makes an inappropriate joke at dinner"
+    },
+    {
+      "question": "d0cbd41207e16ec50d08",
+      "choice": 2,
+      "title": "A newly hired VP talks to you alone for ten minutes on day one"
+    },
+    {
+      "question": "d1bc3bb6495b950bacea",
+      "choice": 2,
+      "title": "The client adds three things 'while we're here'"
+    },
+    {
+      "question": "d25683135cb5e4db749e",
+      "choice": 2,
+      "title": "Christmas-party rehearsals eating your evenings"
+    },
+    {
+      "question": "d55e086f34a676cecc5f",
+      "choice": 2,
+      "title": "A colleague keeps helping themselves to your snacks"
+    },
+    {
+      "question": "d55e086f34a676cecc5f",
+      "choice": 3,
+      "title": "A colleague keeps helping themselves to your snacks"
+    },
+    {
+      "question": "d77c562aadcacf5e5922",
+      "choice": 1,
+      "title": "A collaborator shifts the blame in a meeting"
+    },
+    {
+      "question": "d7a59595be7aa011d2fe",
+      "choice": 1,
+      "title": "You notice promotions going to the people who play politics"
+    },
+    {
+      "question": "db163c0798e4cb8201ac",
+      "choice": 3,
+      "title": "A merge conflict wrecks release day"
+    },
+    {
+      "question": "dc3504fc9a7ed5fed336",
+      "choice": 2,
+      "title": "Whether to volunteer as lunch-and-learn speaker"
+    },
+    {
+      "question": "dc3504fc9a7ed5fed336",
+      "choice": 3,
+      "title": "Whether to volunteer as lunch-and-learn speaker"
+    },
+    {
+      "question": "ddba1544407e812ebf52",
+      "choice": 2,
+      "title": "A job spec from the big tech firm you have always wanted to join"
+    },
+    {
+      "question": "ddba1544407e812ebf52",
+      "choice": 3,
+      "title": "A job spec from the big tech firm you have always wanted to join"
+    },
+    {
+      "question": "de8d090c6e08553050c8",
+      "choice": 1,
+      "title": "Named on a department award you did not work on"
+    },
+    {
+      "question": "de8d090c6e08553050c8",
+      "choice": 3,
+      "title": "Named on a department award you did not work on"
+    },
+    {
+      "question": "e1fcabc5aa5ad600fd83",
+      "choice": 1,
+      "title": "At the demo, your manager praises Product and not engineering"
+    },
+    {
+      "question": "e1fcabc5aa5ad600fd83",
+      "choice": 3,
+      "title": "At the demo, your manager praises Product and not engineering"
+    },
+    {
+      "question": "e3ded0affde319f9ba9e",
+      "choice": 2,
+      "title": "An engagement survey that asks for your staff ID"
+    },
+    {
+      "question": "e687420fc05fdd442658",
+      "choice": 1,
+      "title": "Whether to share the method you have kept to yourself"
+    },
+    {
+      "question": "ea21e12d970a3cbe05c7",
+      "choice": 1,
+      "title": "A chatty, skiving colleague eating into your time"
+    },
+    {
+      "question": "ef5c5c484ad48a658343",
+      "choice": 2,
+      "title": "Pitching against a cheaper rival"
+    },
+    {
+      "question": "f1c441606c214c908aa4",
+      "choice": 1,
+      "title": "Whether to join a cross-team architecture review — and how hard to push"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 2,
+      "title": "One umbrella, a downpour, and Jordan at going-home time"
+    },
+    {
+      "question": "f25f1fbfc4d46935811d",
+      "choice": 4,
+      "title": "One umbrella, a downpour, and Jordan at going-home time"
+    },
+    {
+      "question": "f83868dcab1a15f54324",
+      "choice": 1,
+      "title": "The client praises a feature you did not build"
+    },
+    {
+      "question": "f8ed59cca187aa36e9ee",
+      "choice": 2,
+      "title": "Seated with a senior leader at the Christmas party"
+    },
+    {
+      "question": "f95d02291063c7ade004",
+      "choice": 1,
+      "title": "Abnormal health-check results: push through or see a doctor"
+    },
+    {
+      "question": "f95d02291063c7ade004",
+      "choice": 2,
+      "title": "Abnormal health-check results: push through or see a doctor"
+    },
+    {
+      "question": "fb8028b887815804f4d3",
+      "choice": 2,
+      "title": "Emergency hotfix — do you skip the process?"
+    },
+    {
+      "question": "fbc58cf33400241af0f3",
+      "choice": 2,
+      "title": "Emergency hotfix — do you skip the process?"
+    },
+    {
+      "question": "fd98a10e3b7601a3edfc",
+      "choice": 2,
+      "title": "The client adds three things 'while we're here'"
+    }
+  ],
+  "totals": {
+    "eliminated": 32,
+    "twelve_month_window": 16
+  },
+  "elapsed_seconds": 11.0
+}

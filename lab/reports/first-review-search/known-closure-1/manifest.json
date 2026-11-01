@@ -1,0 +1,56 @@
+{
+  "catalogue": "lab/reports/first-review-search/questions.json",
+  "input_sha256": "b5ffe7297c51075ea0d2306bc451bfa3c049ffad082cb3875b0e363aed23854e",
+  "runs": 1024,
+  "workers": 4,
+  "choice_seed": 320026,
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "initial_frontier": {
+    "frozen_available_pairs": 526,
+    "initially_tried_pairs": 521,
+    "initial_targets": 5,
+    "closed_targets": 0,
+    "remaining": [
+      {
+        "question": "62590001dc1d070e49df",
+        "choice": 2,
+        "title": "Mentoring a graduate who breaks things"
+      },
+      {
+        "question": "70cdb731398967478a3c",
+        "choice": 2,
+        "title": "The company tries to keep you after you look elsewhere"
+      },
+      {
+        "question": "70cdb731398967478a3c",
+        "choice": 3,
+        "title": "The company tries to keep you after you look elsewhere"
+      },
+      {
+        "question": "ae9ad6afa12adc953619",
+        "choice": 2,
+        "title": "You overhear a redundancy list that includes a friend"
+      },
+      {
+        "question": "eac3fd1ff4c1ed32ce84",
+        "choice": 2,
+        "title": "Palpitations after weeks of overtime: whether to stop"
+      }
+    ],
+    "evidence": [],
+    "new_available_pairs": 0,
+    "frozen_catalogue_complete": false
+  },
+  "stop": "frozen targets closed, or run cap; all started games finish their six-month window"
+}

@@ -1,0 +1,86 @@
+{
+  "name": "agent-written-checkpoint-exploratory-v1",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "max_seconds_per_request": 180,
+  "max_requests": 32,
+  "created_at": "2026-10-27T18:07:45.683580+00:00",
+  "schedule": [
+    {
+      "case_id": "NC24",
+      "budget": 800
+    },
+    {
+      "case_id": "NC06",
+      "budget": 800
+    },
+    {
+      "case_id": "NC00",
+      "budget": 800
+    },
+    {
+      "case_id": "NC36",
+      "budget": 800
+    },
+    {
+      "case_id": "NC24",
+      "budget": 128
+    },
+    {
+      "case_id": "NC12",
+      "budget": 128
+    },
+    {
+      "case_id": "NC18",
+      "budget": 800
+    },
+    {
+      "case_id": "NC42",
+      "budget": 800
+    },
+    {
+      "case_id": "NC30",
+      "budget": 800
+    },
+    {
+      "case_id": "NC42",
+      "budget": 128
+    },
+    {
+      "case_id": "NC30",
+      "budget": 128
+    },
+    {
+      "case_id": "NC12",
+      "budget": 800
+    },
+    {
+      "case_id": "NC36",
+      "budget": 128
+    },
+    {
+      "case_id": "NC06",
+      "budget": 128
+    },
+    {
+      "case_id": "NC18",
+      "budget": 128
+    },
+    {
+      "case_id": "NC00",
+      "budget": 128
+    }
+  ],
+  "script_sha256": "8c495f86be98d030e3939d50cfd4af76fca41152baa2e4f3c29cfac663026bec",
+  "parent_cases_sha256": "36a375c35dd7f4ffa30a0a791c305f80c39d018bf900790226f7b87c0ae90d2b",
+  "selection": "First ID per category from completed fixed benchmark, not selected by errors; reused cases, exploratory not confirmation",
+  "writer": "Question and gold withheld; only current/public prefix/Skill and budget; only updated_note crosses boundary",
+  "overflow": "Record violation; enforce budget with prefix truncation and ellipsis before reader",
+  "reader": "Fresh process; current plus actual generated note plus factual question; no history/recovery; CHECKPOINT citation explicitly available",
+  "limits": [
+    "One writer/reader pair per case/budget, no precision or promotion guarantee",
+    "Semantic answer normalization is diagnostic, exact answer separately preserved",
+    "Not natural Jiuwen compression: a controlled loss of history with a generated checkpoint",
+    "Cannot pool this new note/citation procedure with the previous576 decisions"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "game": "game-2",
+  "outcome": "completed",
+  "score": 64.9,
+  "survival_months": 48,
+  "failure_reason": "Completed the 48-month simulation.",
+  "final_stats": {
+    "health": 10,
+    "dignity": 10,
+    "skill": 115,
+    "network": 54,
+    "level": "L5",
+    "duration_in_level": 8,
+    "output": 29,
+    "wealth": 26,
+    "energy": 0
+  },
+  "actions": 197,
+  "rejected_actions": 0,
+  "new_game_attempts": 1,
+  "public_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "observe": 199,
+    "take_action": 197
+  },
+  "native_bridge_batches": 199,
+  "story_batches": 144,
+  "paired_story_batches": 144,
+  "quarter_batches": 50,
+  "reviews": {
+    "6": "C",
+    "12": "C",
+    "18": "B",
+    "24": "B",
+    "30": "B",
+    "36": "B",
+    "42": "B",
+    "48": "B"
+  },
+  "level_transitions": [
+    {
+      "month": 1,
+      "level": "L1"
+    },
+    {
+      "month": 12,
+      "level": "L2"
+    },
+    {
+      "month": 18,
+      "level": "L3"
+    },
+    {
+      "month": 30,
+      "level": "L4"
+    },
+    {
+      "month": 42,
+      "level": "L5"
+    }
+  ],
+  "public_blowup_months": [
+    15
+  ],
+  "note_field_coverage": {
+    "Review in ": 197,
+    "Now S": 197,
+    "Best S": 197,
+    "Stalled:": 197,
+    "Concerns this month:": 197
+  },
+  "note_chars_max": 211,
+  "note_chars_median": 165,
+  "public_trajectory_sha256": "d38b63b2668bce69c46a167ed2e32c8d3ded0787ef095bffbca38950c42e816a",
+  "limits": [
+    "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+    "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+    "Native tools are instruction-restricted, not a certified sandbox",
+    "Only requested model configuration is recorded; no independent backend receipt"
+  ]
+}

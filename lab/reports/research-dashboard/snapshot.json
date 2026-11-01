@@ -1,0 +1,776 @@
+{
+  "asOf": "27 ottobre 2026 · dati locali",
+  "studies": [
+    {
+      "id": "filter",
+      "title": "Filtro di sostenibilità",
+      "scope": "Nuove partite dall’inizio · 192 per braccio",
+      "decision": "Filtro non adottato: stessa promozione, meno sopravvivenza del controllo.",
+      "arms": [
+        {
+          "id": "control",
+          "label": "Attuale",
+          "n": 192,
+          "promotion": 122,
+          "survival": 190,
+          "trust": 0,
+          "broke": 2
+        },
+        {
+          "id": "balanced",
+          "label": "Congiunta",
+          "n": 192,
+          "promotion": 120,
+          "survival": 165,
+          "trust": 19,
+          "broke": 8
+        },
+        {
+          "id": "constrained",
+          "label": "Filtrata",
+          "n": 192,
+          "promotion": 122,
+          "survival": 181,
+          "trust": 6,
+          "broke": 5
+        }
+      ],
+      "source": "constrained-growth-study/study-v1/results.json",
+      "contrasts": {
+        "balanced_minus_control": {
+          "broke": {
+            "difference": 0.03125,
+            "newcombe95": [
+              -0.0024034187527227358,
+              0.07037181764463721
+            ]
+          },
+          "trust_death": {
+            "difference": 0.09895833333333333,
+            "newcombe95": [
+              0.05910854656338001,
+              0.14937923156399277
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": 0.04166666666666674,
+            "newcombe95": [
+              -0.04495016830361945,
+              0.1275068804688625
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": 0.04166666666666674,
+            "newcombe95": [
+              -0.04495016830361945,
+              0.1275068804688625
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": 0.01041666666666674,
+            "newcombe95": [
+              -0.08490574878828848,
+              0.10547464303635654
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": -0.01041666666666663,
+            "newcombe95": [
+              -0.10602967299514908,
+              0.08546452321013713
+            ]
+          },
+          "alive_through_12": {
+            "difference": -0.13020833333333337,
+            "newcombe95": [
+              -0.18695798114258297,
+              -0.08028349883628609
+            ]
+          }
+        },
+        "constrained_minus_control": {
+          "broke": {
+            "difference": 0.015625,
+            "newcombe95": [
+              -0.014989654398087405,
+              0.04992895260330706
+            ]
+          },
+          "trust_death": {
+            "difference": 0.03125,
+            "newcombe95": [
+              0.005390753216741227,
+              0.06648991719610431
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": 0.00520833333333337,
+            "newcombe95": [
+              -0.08306367401692102,
+              0.09337470317557504
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": 0.00520833333333337,
+            "newcombe95": [
+              -0.08306367401692102,
+              0.09337470317557504
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": 0.00520833333333337,
+            "newcombe95": [
+              -0.09019585947671444,
+              0.1004798192342739
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.09547985499763742,
+              0.09547985499763742
+            ]
+          },
+          "alive_through_12": {
+            "difference": -0.046875,
+            "newcombe95": [
+              -0.08991406768139232,
+              -0.01025048770819001
+            ]
+          }
+        },
+        "constrained_minus_balanced": {
+          "broke": {
+            "difference": -0.015624999999999997,
+            "newcombe95": [
+              -0.056789208095741395,
+              0.023567245487736085
+            ]
+          },
+          "trust_death": {
+            "difference": -0.06770833333333333,
+            "newcombe95": [
+              -0.12087047839317733,
+              -0.018260347384672734
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": -0.03645833333333337,
+            "newcombe95": [
+              -0.12208755102637281,
+              0.0498414824654308
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": -0.03645833333333337,
+            "newcombe95": [
+              -0.12208755102637281,
+              0.0498414824654308
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": -0.00520833333333337,
+            "newcombe95": [
+              -0.10019031144953926,
+              0.08990536811693262
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": 0.01041666666666663,
+            "newcombe95": [
+              -0.08546452321013713,
+              0.10602967299514908
+            ]
+          },
+          "alive_through_12": {
+            "difference": 0.08333333333333337,
+            "newcombe95": [
+              0.023570729684764334,
+              0.14488490338237223
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cash-light",
+      "title": "Riserva leggera",
+      "scope": "Nuove partite dall’inizio · 256 per braccio",
+      "decision": "Segnale favorevole in questo studio; usata nel riferimento dei bot.",
+      "arms": [
+        {
+          "id": "baseline",
+          "label": "Senza riserva",
+          "n": 256,
+          "promotion": 125,
+          "survival": 217,
+          "trust": 4,
+          "broke": 35
+        },
+        {
+          "id": "reserve",
+          "label": "Riserva leggera",
+          "n": 256,
+          "promotion": 166,
+          "survival": 246,
+          "trust": 5,
+          "broke": 5
+        }
+      ],
+      "source": "financial-reserve-study/calibration-v1/results.json",
+      "contrasts": {
+        "reserve_minus_baseline": {
+          "broke": {
+            "difference": -0.1171875,
+            "newcombe95": [
+              -0.16596780338991596,
+              -0.07253690010550773
+            ]
+          },
+          "trust_death": {
+            "difference": 0.00390625,
+            "newcombe95": [
+              -0.022429715159419963,
+              0.031005058074902492
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01478385642587143,
+              0.01478385642587143
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": 0.05078125,
+            "newcombe95": [
+              -0.024081234044232055,
+              0.12494003066347607
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": 0.0625,
+            "newcombe95": [
+              -0.012952224014210284,
+              0.1370607247915904
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": 0.1640625,
+            "newcombe95": [
+              0.07883005775169329,
+              0.24597285547783382
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": 0.16015625,
+            "newcombe95": [
+              0.07442479324401777,
+              0.24260508496529018
+            ]
+          },
+          "alive_through_12": {
+            "difference": 0.11328125,
+            "newcombe95": [
+              0.06336394100047249,
+              0.16550937359701173
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "cash-strong",
+      "title": "Riserva forte",
+      "scope": "Nuove partite dall’inizio · 256 per braccio",
+      "decision": "Meno insolvenze, nessun miglioramento delle promozioni con sopravvivenza.",
+      "arms": [
+        {
+          "id": "baseline",
+          "label": "Senza riserva",
+          "n": 256,
+          "promotion": 160,
+          "survival": 228,
+          "trust": 2,
+          "broke": 26
+        },
+        {
+          "id": "reserve",
+          "label": "Riserva forte",
+          "n": 256,
+          "promotion": 152,
+          "survival": 248,
+          "trust": 6,
+          "broke": 2
+        }
+      ],
+      "source": "financial-reserve-study/study-v1/results.json",
+      "contrasts": {
+        "reserve_minus_baseline": {
+          "broke": {
+            "difference": -0.09375,
+            "newcombe95": [
+              -0.13720951983292423,
+              -0.056480444137197265
+            ]
+          },
+          "trust_death": {
+            "difference": 0.015625,
+            "newcombe95": [
+              -0.008227638385567684,
+              0.04296241189012687
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01478385642587143,
+              0.01478385642587143
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": -0.015625,
+            "newcombe95": [
+              -0.08877550861667245,
+              0.05772572018188428
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": -0.01171875,
+            "newcombe95": [
+              -0.08510075911220577,
+              0.06181534973333738
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": -0.03515625,
+            "newcombe95": [
+              -0.11833108782575588,
+              0.04870967094613955
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": -0.03125,
+            "newcombe95": [
+              -0.11485368579675431,
+              0.05297443910740052
+            ]
+          },
+          "alive_through_12": {
+            "difference": 0.078125,
+            "newcombe95": [
+              0.03435716077486183,
+              0.1248715679244359
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "priorities",
+      "title": "Priorità separate",
+      "scope": "Nuove partite dall’inizio · 192 per braccio",
+      "decision": "Nessuna variante adottata. Spingere un solo indicatore non basta.",
+      "arms": [
+        {
+          "id": "control",
+          "label": "Attuale",
+          "n": 192,
+          "promotion": 131,
+          "survival": 184,
+          "trust": 5,
+          "broke": 3
+        },
+        {
+          "id": "skill",
+          "label": "Più tecnica",
+          "n": 192,
+          "promotion": 131,
+          "survival": 189,
+          "trust": 3,
+          "broke": 0
+        },
+        {
+          "id": "network",
+          "label": "Più relazioni",
+          "n": 192,
+          "promotion": 92,
+          "survival": 182,
+          "trust": 6,
+          "broke": 4
+        },
+        {
+          "id": "output",
+          "label": "Più risultati",
+          "n": 192,
+          "promotion": 108,
+          "survival": 180,
+          "trust": 8,
+          "broke": 4
+        }
+      ],
+      "source": "growth-gap-study/study-v1/results.json",
+      "contrasts": {
+        "skill": {
+          "broke": {
+            "difference": -0.015625,
+            "newcombe95": [
+              -0.04492427936429986,
+              0.0065286534188315724
+            ]
+          },
+          "trust_death": {
+            "difference": -0.010416666666666668,
+            "newcombe95": [
+              -0.04542677724663961,
+              0.02243918379510276
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": -0.03125,
+            "newcombe95": [
+              -0.11607600992442053,
+              0.05412613034347506
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": -0.03125,
+            "newcombe95": [
+              -0.11607600992442053,
+              0.05412613034347506
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": -0.015625,
+            "newcombe95": [
+              -0.10692040699039579,
+              0.07602693707489287
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.0924936886130784,
+              0.0924936886130784
+            ]
+          },
+          "alive_through_12": {
+            "difference": 0.02604166666666663,
+            "newcombe95": [
+              -0.009662708967111577,
+              0.06578412877499906
+            ]
+          }
+        },
+        "network": {
+          "broke": {
+            "difference": 0.005208333333333332,
+            "newcombe95": [
+              -0.026726013889619985,
+              0.0383490252511708
+            ]
+          },
+          "trust_death": {
+            "difference": 0.005208333333333332,
+            "newcombe95": [
+              -0.03225663867009548,
+              0.04345635161254821
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": -0.16145833333333326,
+            "newcombe95": [
+              -0.24975152877831186,
+              -0.06952053651681983
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": -0.16145833333333326,
+            "newcombe95": [
+              -0.24975152877831186,
+              -0.06952053651681983
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": -0.22395833333333331,
+            "newcombe95": [
+              -0.3159026458501841,
+              -0.1260303129566707
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": -0.20312499999999994,
+            "newcombe95": [
+              -0.2961246990865284,
+              -0.10464986417604823
+            ]
+          },
+          "alive_through_12": {
+            "difference": -0.01041666666666674,
+            "newcombe95": [
+              -0.056322605142189106,
+              0.03461698189982108
+            ]
+          }
+        },
+        "output": {
+          "broke": {
+            "difference": 0.005208333333333332,
+            "newcombe95": [
+              -0.026726013889619985,
+              0.0383490252511708
+            ]
+          },
+          "trust_death": {
+            "difference": 0.015624999999999997,
+            "newcombe95": [
+              -0.023567245487736085,
+              0.056789208095741395
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": -0.015625,
+            "newcombe95": [
+              -0.09971685374740644,
+              0.06872881025974864
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": -0.015625,
+            "newcombe95": [
+              -0.09971685374740644,
+              0.06872881025974864
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": -0.140625,
+            "newcombe95": [
+              -0.23344678217623838,
+              -0.04420457661616123
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": -0.11979166666666663,
+            "newcombe95": [
+              -0.213658970198629,
+              -0.022815621964006105
+            ]
+          },
+          "alive_through_12": {
+            "difference": -0.02083333333333337,
+            "newcombe95": [
+              -0.06892890471501385,
+              0.025748108766649784
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "joint",
+      "title": "Crescita congiunta",
+      "scope": "Nuove partite dall’inizio · 192 per braccio",
+      "decision": "Vantaggio incerto sulle promozioni; sopravvivenza peggiore.",
+      "arms": [
+        {
+          "id": "control",
+          "label": "Attuale",
+          "n": 192,
+          "promotion": 107,
+          "survival": 182,
+          "trust": 7,
+          "broke": 3
+        },
+        {
+          "id": "balanced",
+          "label": "Congiunta",
+          "n": 192,
+          "promotion": 116,
+          "survival": 169,
+          "trust": 17,
+          "broke": 6
+        }
+      ],
+      "source": "growth-gap-study/balanced-v1/results.json",
+      "contrasts": {
+        "balanced": {
+          "broke": {
+            "difference": 0.015625,
+            "newcombe95": [
+              -0.018174326328266772,
+              0.052338514794553474
+            ]
+          },
+          "trust_death": {
+            "difference": 0.052083333333333336,
+            "newcombe95": [
+              0.002914830536741131,
+              0.10421576681534717
+            ]
+          },
+          "health_death": {
+            "difference": 0.0,
+            "newcombe95": [
+              -0.01961514606675411,
+              0.01961514606675411
+            ]
+          },
+          "first_promotion_by_6": {
+            "difference": 0.03645833333333337,
+            "newcombe95": [
+              -0.05041959309457131,
+              0.1226474031740335
+            ]
+          },
+          "first_promoted_alive_at_7": {
+            "difference": 0.03645833333333337,
+            "newcombe95": [
+              -0.05041959309457131,
+              0.1226474031740335
+            ]
+          },
+          "second_promotion_by_12": {
+            "difference": 0.07291666666666674,
+            "newcombe95": [
+              -0.025141673745210785,
+              0.16902580633600128
+            ]
+          },
+          "second_promotion_and_alive": {
+            "difference": 0.046875,
+            "newcombe95": [
+              -0.05143503451421383,
+              0.1439192747410979
+            ]
+          },
+          "alive_through_12": {
+            "difference": -0.06770833333333326,
+            "newcombe95": [
+              -0.12620179324403924,
+              -0.01128940395025227
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "incidents",
+      "title": "Memoria degli incidenti",
+      "scope": "512 carriere eleggibili al mese 6 · effetti aggregati del fattoriale",
+      "decision": "Pacchetto memoria + lookup favorevole; non misura la sola memoria.",
+      "arms": [
+        {
+          "id": "False",
+          "label": "Senza guardia",
+          "n": 256,
+          "promotion": 174,
+          "survival": 211,
+          "trust": 20
+        },
+        {
+          "id": "True",
+          "label": "Con guardia",
+          "n": 256,
+          "promotion": 194,
+          "survival": 227,
+          "trust": 4
+        }
+      ],
+      "source": "trust-risk-study/factorial-v1/results.json",
+      "contrasts": {}
+    }
+  ],
+  "sources": {
+    "lab/reports/constrained-growth-study/study-v1/results.json": "e3ea3ffd3ce50f505a946bfaa58ca3c2b717d8a10431ac5342a98da23e82190b",
+    "lab/reports/financial-reserve-study/calibration-v1/results.json": "12d67b9613e6ad86c516c7d4aed4b1d31ca36337c3311343d69e67f6809f65fe",
+    "lab/reports/financial-reserve-study/study-v1/results.json": "3a48a3e0dfb72fc2f512c380050d11712f9205666fad6e58519acb7e942163c2",
+    "lab/reports/growth-gap-study/study-v1/results.json": "223a40fca3318c3f430300ff72ad46f0d87db7b3546f6b0fb5c73b2c63eccb89",
+    "lab/reports/growth-gap-study/balanced-v1/results.json": "7b7211628f22b4910d400bea0aab45ca5def9d65a6792cbe4f4f47ee8f971802",
+    "lab/reports/trust-risk-study/factorial-v1/results.json": "f78384af3a7197138e97932f2a6f3e7ba2e380a691755b174ffe9e32b80208d2",
+    "lab/reports/known-catalogue-closure/coverage-audit.json": "bf6275137fc5952fccddbfd117d869b18081174711527518f4e69d8d61e8eaf9",
+    "lab/reports/financial-reserve-study/extended-questions.json": "aba008ea01287249bcd09eee52acb8280e227b8b8b2e93f44a98bc14d0442996",
+    "lab/reports/constrained-growth-study/study-v1/independent-audit.json": "f42cc6a611d53cac415bc2f09b11ffe0b92773914b3f319ef89e1402c0ad0c10",
+    "lab/reports/matteo-observed-growth-haiku-pilot.json": "eda9b25daf857fd4caaf1e1628281ad9394ea7a58cd3e03b3e05aa2eed55b27d",
+    "lab/reports/matteo-observed-growth-haiku-4.md": "3fbc89d8fa8f592e4ebe3c9399b52743fd64af55593dc2ea81846ddd32081859",
+    "lab/policies-src/matteo-feedback-growth/observed-growth-v1/bundle/skills/observed-growth/SKILL.md": "269f963bcdce1c2a61439a030b1ad751aef601bcdad7aa14730d7526cd817b48",
+    "lab/reports/trust-risk-study/first-year-strategy-draft.md": "bf1fe50ab9d825951456e25eb0576006f87cd321973a51064a7bf77d39c9c75b",
+    "lab/registry/evaluations.jsonl": "34ec195d704e7903edabd880872e265523423607dc26273e74016a420e62b894",
+    "lab/registry/policies.jsonl": "2746d7fc9ed0883350ae072899284067b599caae2dc2f378dfb9e7f587782a38",
+    "lab/registry/actors.jsonl": "b5c42dbe0495f751c48705e02320c3775d57edc5937f7a04fc303aa8f8d6dbb4",
+    "lab/registry-origins/matteo/evaluations.jsonl": "bb2e0a216c0e570866c3647ef44891e83459f014920545a5412504f247536718"
+  },
+  "coverage": {
+    "first": {
+      "titles": 89,
+      "phases": 213,
+      "story": 510,
+      "answers": 528
+    },
+    "second": {
+      "titles": 126,
+      "phases": 266,
+      "story": 646,
+      "answers": 663
+    }
+  },
+  "personalRun": {
+    "score": 70.94,
+    "policy": "observed-growth-v1",
+    "actor": "Haiku",
+    "months": 48,
+    "level": "L5",
+    "levelMonth": 42,
+    "blockMean": 40.85,
+    "completed": 1,
+    "blockN": 4,
+    "job": "matteo-pilo-f03981da-017798-00001-a1"
+  },
+  "localTeamRecord": {
+    "score": 73.14,
+    "actor": "Sonnet",
+    "policy": "m3-sustainable-career-v0-1",
+    "scope": "Singolo record completato nel registro locale; modelli diversi."
+  }
+}

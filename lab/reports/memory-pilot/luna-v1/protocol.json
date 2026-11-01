@@ -1,0 +1,42 @@
+{
+  "name": "luna-champion-memory-single-pilot-v1",
+  "created_at": "2026-10-27T16:00:10.804673+00:00",
+  "actor": "native-subagent",
+  "model": "gpt-6-luna",
+  "authorization": "Matteo explicitly chose GPT-6 Luna + Ale champion with memory; exactly one exploratory career",
+  "parent": "targeted-1026-201334",
+  "parent_source_commit": "26e976f9acbe44761f77457d9314e69ea31c4934",
+  "bundle_sha256": "d5d71bb2af09a8db48970eae830dfd8f6dde8e16e6795cc97fc7b983fa33a6b4",
+  "source_bundle_sha256": "d5d71bb2af09a8db48970eae830dfd8f6dde8e16e6795cc97fc7b983fa33a6b4",
+  "port": 59630,
+  "environment": {
+    "engine": "1.0.6",
+    "dataset": "1.0.8",
+    "fastmcp": "2.14.7",
+    "engine_env": {
+      "CAREER_EMULATOR_ACTIVE_LONG_CHAIN_LIMIT": "1",
+      "CAREER_EMULATOR_MONTHLY_EVENT_LIMIT": "3",
+      "CAREER_EMULATOR_MAX_NOTE_LENGTH": "1000"
+    },
+    "split": "dev",
+    "competition_mode": true
+  },
+  "dependencies": {
+    "/Users/matteozabban/Documents/Tech_Arena/huawei/scripts/native_memory_pilot.py": "70d0e380fa24abd65c5dd6e11acc8c4d9be2d999ef46bdd05c40fc5b60d96900",
+    "/Users/matteozabban/Documents/Tech_Arena/huawei/careerlab/mcp_client.py": "25e0b0886f349be2fef73aecdbb5f56485c7a9bf53b2e4c76435434dfd835d2c",
+    "/Users/matteozabban/Documents/Tech_Arena/huawei/careerlab/config.py": "cc5464d02f311c0ec7b164c3b2cc56a7ec12fd3b617db53af1eb5de79cc9dbd4"
+  },
+  "harness": "Native Codex Luna, fresh-context child. Parent supplies frozen identity/skill only, no empirical lookup or advice. CLI bridge makes public MCP calls via local HTTP; take_action also observes and returns next observation.",
+  "stop": "One new_game only, play until explicit ending; never replace a loss, no adaptive edits, no other run or resumption of Haiku4+4",
+  "outcomes": [
+    "Ending score and survival",
+    "Observed promotions and review outcomes",
+    "Memory records in notes and factual accuracy",
+    "Tool/action counts and note length; model tokens only if actually exposed"
+  ],
+  "limits": [
+    "One unseeded game, no same-actor control, no superiority or memory-causality claim",
+    "Different actor and harness from Haiku/DeepSeek",
+    "Native model token accounting may be unavailable; do not infer from note lengths"
+  ]
+}

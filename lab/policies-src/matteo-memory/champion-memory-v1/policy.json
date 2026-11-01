@@ -1,0 +1,15 @@
+{
+  "family": "matteo-memory",
+  "name": "champion-memory-v1",
+  "parents": [
+    "targeted-1026-201334"
+  ],
+  "hypothesis": "An explicit compact current-run record of incident history, unresolved commitments, review weakness and realised investment benefits improves continuity and avoids forgetting compared with the unchanged parent; one pilot checks feasibility only.",
+  "change": "Keep every parent priority unchanged; append one short memory section and require its facts in the existing action note. No new strategy rules, numerical thresholds, event mappings or runtime changes.",
+  "predicted_behaviour": "Action notes carry compact current-run facts, distinguish incident history from current warnings, preserve open commitments and verified payoffs; log recovery occurs only when context is missing. Existing safety and weak-review plans remain active.",
+  "refutation": "Feasibility fails if the agent omits or fabricates memory, loses incident history after a calmer warning, or stops before an explicit ending for a memory-related reason. One episode cannot establish a score or survival advantage.",
+  "skill_count": 1,
+  "notes": "User confirmed GPT-6 Luna + Ale champion on 27 October 2026. Exactly one isolated native-model pilot authorised; no central registration, no shared race restart. Parent frozen from cloud26e976f; separate from the unplayed Haiku4+4 study.",
+  "idea_origin": "Matteo requests one exploratory game with memory on the current champion",
+  "operator": "refine"
+}

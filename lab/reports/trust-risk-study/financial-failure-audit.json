@@ -1,0 +1,1243 @@
+{
+  "financial_deaths": 50,
+  "wealth_at_assignment": {
+    "-1": 15,
+    "0": 24,
+    "1": 4,
+    "-2": 7
+  },
+  "first_loss_month": {
+    "4": 15,
+    "5": 3,
+    "1": 10,
+    "2": 13,
+    "3": 8,
+    "6": 1
+  },
+  "had_coffee_favour_spending": 43,
+  "coffee_first_loss_before_assignment": 35,
+  "cases": [
+    {
+      "run": 1,
+      "wealth_at_assignment": -1,
+      "failure_month": 12,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Admit you were not part of the core work",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 42,
+          "month": 10,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 23,
+      "wealth_at_assignment": -1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 29,
+          "month": 7,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": -1,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 34,
+      "wealth_at_assignment": 0,
+      "failure_month": 12,
+      "losses": [
+        {
+          "step": 19,
+          "month": 5,
+          "choice": "Sign it quietly and treat it as a favour from your manager",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Admit you were not part of the core work",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 40,
+          "month": 10,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 39,
+      "wealth_at_assignment": 1,
+      "failure_month": 13,
+      "losses": [
+        {
+          "step": 18,
+          "month": 5,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 28,
+          "month": 7,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 2,
+          "after": 0
+        },
+        {
+          "step": 41,
+          "month": 10,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 48,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 3,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Tell her privately what is planned and ask her to keep it strictly confidential",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 56,
+      "wealth_at_assignment": -2,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": -1,
+          "after": -2
+        },
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Sign it quietly and treat it as a favour from your manager",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Admit you were not part of the core work",
+          "before": -1,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 75,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Admit you were not part of the core work",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 81,
+      "wealth_at_assignment": 0,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 28,
+          "month": 7,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 94,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 3,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 19,
+          "month": 5,
+          "choice": "Sign it quietly and treat it as a favour from your manager",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Admit you were not part of the core work",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 116,
+      "wealth_at_assignment": -1,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 121,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 26,
+          "month": 7,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 122,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 145,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 30,
+          "month": 8,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 146,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 167,
+      "wealth_at_assignment": 1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 2,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 2,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 200,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 2,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Hold off for now and email privately after the meeting",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 205,
+      "wealth_at_assignment": 0,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 28,
+          "month": 7,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 206,
+      "wealth_at_assignment": 0,
+      "failure_month": 11,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Accept the promise. Credit in the docs is enough",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 256,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 35,
+          "month": 9,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 271,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 2,
+          "month": 1,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 18,
+          "month": 5,
+          "choice": "Fill it in honestly, with examples and no swearing",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 286,
+      "wealth_at_assignment": 0,
+      "failure_month": 13,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 38,
+          "month": 10,
+          "choice": "Keep manual review and let new joiners follow the existing process",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "step": 39,
+          "month": 10,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 40,
+          "month": 11,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": -1,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 292,
+      "wealth_at_assignment": 0,
+      "failure_month": 12,
+      "losses": [
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 32,
+          "month": 9,
+          "choice": "Carry on with the release and gamble that the code path will not be hit",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 312,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 313,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 341,
+      "wealth_at_assignment": 0,
+      "failure_month": 11,
+      "losses": [
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 29,
+          "month": 8,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 32,
+          "month": 9,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 347,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 30,
+          "month": 8,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 378,
+      "wealth_at_assignment": -2,
+      "failure_month": 7,
+      "losses": [
+        {
+          "step": 3,
+          "month": 1,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 18,
+          "month": 5,
+          "choice": "Message Chris privately about team morale, without saying how you know",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 387,
+      "wealth_at_assignment": -2,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 5,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 416,
+      "wealth_at_assignment": 0,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 28,
+          "month": 7,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 472,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 7,
+          "month": 3,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Stop using work kit for the personal project immediately, and move it onto your own machines",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 473,
+      "wealth_at_assignment": -2,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 474,
+      "wealth_at_assignment": -2,
+      "failure_month": 8,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Approach Owen privately: you supply the technical design, they stay the lead",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 512,
+      "wealth_at_assignment": -2,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Tell him he is on the list and what the package looks like",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 522,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 9,
+          "month": 3,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 17,
+          "month": 5,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 19,
+          "month": 6,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 26,
+          "month": 7,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 536,
+      "wealth_at_assignment": 0,
+      "failure_month": 7,
+      "losses": [
+        {
+          "step": 2,
+          "month": 1,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 541,
+      "wealth_at_assignment": 0,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Stay in the corner and listen to the rest",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 16,
+          "month": 5,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 26,
+          "month": 7,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 29,
+          "month": 8,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": -1,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 553,
+      "wealth_at_assignment": 1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 2,
+          "month": 1,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 9,
+          "month": 3,
+          "choice": "Admit you were not part of the core work",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Carry on with the release and gamble that the code path will not be hit",
+          "before": 2,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 556,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 3,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Tell him he is on the list and what the package looks like",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 561,
+      "wealth_at_assignment": 0,
+      "failure_month": 11,
+      "losses": [
+        {
+          "step": 18,
+          "month": 5,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 2,
+          "after": 0
+        },
+        {
+          "step": 26,
+          "month": 7,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 30,
+          "month": 8,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 572,
+      "wealth_at_assignment": -1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 16,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 18,
+          "month": 5,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 573,
+      "wealth_at_assignment": -1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 14,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 575,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 16,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 594,
+      "wealth_at_assignment": 0,
+      "failure_month": 11,
+      "losses": [
+        {
+          "step": 6,
+          "month": 2,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 32,
+          "month": 8,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 33,
+          "month": 9,
+          "choice": "Carry on with the release and gamble that the code path will not be hit",
+          "before": -1,
+          "after": -3
+        }
+      ]
+    },
+    {
+      "run": 625,
+      "wealth_at_assignment": -2,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Do nothing special for now and help them next time they need it",
+          "before": 0,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 648,
+      "wealth_at_assignment": 0,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 9,
+          "month": 3,
+          "choice": "Admit you were not part of the core work",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "run": 659,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 3,
+          "month": 1,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 22,
+          "month": 6,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 672,
+      "wealth_at_assignment": -1,
+      "failure_month": 9,
+      "losses": [
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 20,
+          "month": 6,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 0,
+          "after": -1
+        },
+        {
+          "step": 27,
+          "month": 7,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 675,
+      "wealth_at_assignment": -1,
+      "failure_month": 10,
+      "losses": [
+        {
+          "step": 4,
+          "month": 2,
+          "choice": "Sit on the report and bet it will not be triggered soon",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 15,
+          "month": 4,
+          "choice": "Suggest sharing a cab and splitting the fare",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "step": 16,
+          "month": 4,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 0,
+          "after": -1
+        }
+      ]
+    },
+    {
+      "run": 702,
+      "wealth_at_assignment": 1,
+      "failure_month": 13,
+      "losses": [
+        {
+          "step": 21,
+          "month": 6,
+          "choice": "Claim only the flights and hotels, which are clearly within policy, and drop every grey item",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "step": 26,
+          "month": 7,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 2,
+          "after": 0
+        },
+        {
+          "step": 38,
+          "month": 10,
+          "choice": "Keep manual review and let new joiners follow the existing process",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 40,
+          "month": 11,
+          "choice": "Admit you got the assessment wrong and accept whatever sanction is appropriate",
+          "before": -1,
+          "after": -2
+        }
+      ]
+    },
+    {
+      "run": 704,
+      "wealth_at_assignment": 0,
+      "failure_month": 12,
+      "losses": [
+        {
+          "step": 8,
+          "month": 3,
+          "choice": "Start buying coffees yourself and join the favours game",
+          "before": 1,
+          "after": -1
+        },
+        {
+          "step": 32,
+          "month": 8,
+          "choice": "Focus on core logic and risk, and leave the nits to the author",
+          "before": 1,
+          "after": -1
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Selected failures, not a treatment comparison",
+    "Net visible wealth changes may include settlement; discretionary-loss attribution is descriptive"
+  ]
+}

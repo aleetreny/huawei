@@ -1,0 +1,64 @@
+{
+  "game": "game-1",
+  "outcome": "eliminated",
+  "score": 32.26,
+  "survival_months": 24,
+  "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+  "final_stats": {
+    "health": 10,
+    "dignity": 7,
+    "skill": 9,
+    "network": 2,
+    "level": "L2",
+    "duration_in_level": 1,
+    "output": 3,
+    "wealth": 8,
+    "energy": 0
+  },
+  "actions": 95,
+  "rejected_actions": 0,
+  "new_game_attempts": 1,
+  "public_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "observe": 96,
+    "take_action": 95
+  },
+  "native_bridge_batches": 96,
+  "story_batches": 69,
+  "paired_story_batches": 69,
+  "quarter_batches": 25,
+  "reviews": {
+    "6": "C",
+    "12": "C",
+    "18": "D",
+    "24": "C"
+  },
+  "level_transitions": [
+    {
+      "month": 1,
+      "level": "L1"
+    },
+    {
+      "month": 24,
+      "level": "L2"
+    }
+  ],
+  "public_blowup_months": [],
+  "note_field_coverage": {
+    "Review in ": 95,
+    "Now S": 95,
+    "Best S": 95,
+    "Stalled:": 95,
+    "Concerns this month:": 95
+  },
+  "note_chars_max": 101,
+  "note_chars_median": 82,
+  "public_trajectory_sha256": "20e59c9cfb95fbb48558f9efda21474dc3b79d1413ef6e7154445d4efbff92b8",
+  "limits": [
+    "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+    "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+    "Native tools are instruction-restricted, not a certified sandbox",
+    "Only requested model configuration is recorded; no independent backend receipt"
+  ]
+}

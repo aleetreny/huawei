@@ -1,0 +1,10 @@
+{
+  "requested_model": "gpt-6-luna",
+  "fork_context": "none",
+  "players": [
+    "/root/luna_game_1",
+    "/root/luna_game_2"
+  ],
+  "user_authorization": "Two Luna games with v4+loop, quarterly progress",
+  "limits": "Requested model recorded; no independent backend-resolution receipt"
+}

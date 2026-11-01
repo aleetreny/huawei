@@ -1,0 +1,15 @@
+{
+  "benchmark_requests": 683,
+  "preflight_requests": 1,
+  "cache_requests": 3,
+  "unique_threads": 719,
+  "observed_usage": {
+    "input_tokens": 15037662,
+    "cached_input_tokens": 8819840,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 90241,
+    "reasoning_output_tokens": 329
+  },
+  "limits": "Usage counters, not an invoice or provider TTL measurement",
+  "agent_written_requests": 32
+}

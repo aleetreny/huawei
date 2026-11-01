@@ -1,0 +1,161 @@
+{
+  "model_requested": "gpt-6-luna",
+  "new_games": 2,
+  "complete": true,
+  "mean_score": 48.58,
+  "completed_careers": 1,
+  "games": [
+    {
+      "game": "game-1",
+      "outcome": "eliminated",
+      "score": 32.26,
+      "survival_months": 24,
+      "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+      "final_stats": {
+        "health": 10,
+        "dignity": 7,
+        "skill": 9,
+        "network": 2,
+        "level": "L2",
+        "duration_in_level": 1,
+        "output": 3,
+        "wealth": 8,
+        "energy": 0
+      },
+      "actions": 95,
+      "rejected_actions": 0,
+      "new_game_attempts": 1,
+      "public_calls": {
+        "show_employee_handbook": 1,
+        "new_game": 1,
+        "observe": 96,
+        "take_action": 95
+      },
+      "native_bridge_batches": 96,
+      "story_batches": 69,
+      "paired_story_batches": 69,
+      "quarter_batches": 25,
+      "reviews": {
+        "6": "C",
+        "12": "C",
+        "18": "D",
+        "24": "C"
+      },
+      "level_transitions": [
+        {
+          "month": 1,
+          "level": "L1"
+        },
+        {
+          "month": 24,
+          "level": "L2"
+        }
+      ],
+      "public_blowup_months": [],
+      "note_field_coverage": {
+        "Review in ": 95,
+        "Now S": 95,
+        "Best S": 95,
+        "Stalled:": 95,
+        "Concerns this month:": 95
+      },
+      "note_chars_max": 101,
+      "note_chars_median": 82,
+      "public_trajectory_sha256": "20e59c9cfb95fbb48558f9efda21474dc3b79d1413ef6e7154445d4efbff92b8",
+      "limits": [
+        "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+        "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+        "Native tools are instruction-restricted, not a certified sandbox",
+        "Only requested model configuration is recorded; no independent backend receipt"
+      ]
+    },
+    {
+      "game": "game-2",
+      "outcome": "completed",
+      "score": 64.9,
+      "survival_months": 48,
+      "failure_reason": "Completed the 48-month simulation.",
+      "final_stats": {
+        "health": 10,
+        "dignity": 10,
+        "skill": 115,
+        "network": 54,
+        "level": "L5",
+        "duration_in_level": 8,
+        "output": 29,
+        "wealth": 26,
+        "energy": 0
+      },
+      "actions": 197,
+      "rejected_actions": 0,
+      "new_game_attempts": 1,
+      "public_calls": {
+        "show_employee_handbook": 1,
+        "new_game": 1,
+        "observe": 199,
+        "take_action": 197
+      },
+      "native_bridge_batches": 199,
+      "story_batches": 144,
+      "paired_story_batches": 144,
+      "quarter_batches": 50,
+      "reviews": {
+        "6": "C",
+        "12": "C",
+        "18": "B",
+        "24": "B",
+        "30": "B",
+        "36": "B",
+        "42": "B",
+        "48": "B"
+      },
+      "level_transitions": [
+        {
+          "month": 1,
+          "level": "L1"
+        },
+        {
+          "month": 12,
+          "level": "L2"
+        },
+        {
+          "month": 18,
+          "level": "L3"
+        },
+        {
+          "month": 30,
+          "level": "L4"
+        },
+        {
+          "month": 42,
+          "level": "L5"
+        }
+      ],
+      "public_blowup_months": [
+        15
+      ],
+      "note_field_coverage": {
+        "Review in ": 197,
+        "Now S": 197,
+        "Best S": 197,
+        "Stalled:": 197,
+        "Concerns this month:": 197
+      },
+      "note_chars_max": 211,
+      "note_chars_median": 165,
+      "public_trajectory_sha256": "d38b63b2668bce69c46a167ed2e32c8d3ded0787ef095bffbca38950c42e816a",
+      "limits": [
+        "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+        "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+        "Native tools are instruction-restricted, not a certified sandbox",
+        "Only requested model configuration is recorded; no independent backend receipt"
+      ]
+    }
+  ],
+  "limits": [
+    "Two unseeded games, no control, cannot infer superiority or causal loop benefit",
+    "Native Luna is not official JiuwenSwarm/DeepSeek; no official token efficiency measured",
+    "Native tools are instruction-restricted, not a certified sandbox",
+    "Only requested model configuration is recorded; no independent backend receipt"
+  ]
+}

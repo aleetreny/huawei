@@ -1,0 +1,2882 @@
+[
+  {
+    "case_id": "NC32",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC15",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC18",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC45",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC39",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC04",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC18",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC13",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC03",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC02",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC22",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC12",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC08",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC12",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC20",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC19",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC35",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC09",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC46",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC09",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC38",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC46",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC09",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC23",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC43",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC26",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC31",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC12",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC47",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC23",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC10",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC10",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC18",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC12",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC01",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC17",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC37",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC41",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC47",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC44",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC08",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC42",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC35",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC40",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC40",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC01",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC21",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC09",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC12",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC16",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC16",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC02",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC42",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC46",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC14",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC37",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC39",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC19",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC16",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC09",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC29",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC44",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC32",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC27",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC04",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC10",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC31",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC32",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC13",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC01",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC38",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC15",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC04",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC01",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC21",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC44",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC03",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC07",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC43",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC01",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC13",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC43",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC29",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC46",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC22",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC13",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC44",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC22",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC28",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC21",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC18",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC16",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC19",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC15",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC02",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC32",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC03",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC13",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC04",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC03",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC47",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC08",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC13",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC15",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC30",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC28",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC45",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC43",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC28",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC30",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC42",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC03",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC23",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC44",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC31",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC46",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC12",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC37",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC22",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC31",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC07",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC24",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC37",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC26",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC44",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC26",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC46",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC39",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC07",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC15",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC11",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC38",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC28",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC14",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC39",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC15",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC05",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC01",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC11",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC05",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC41",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC04",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC41",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC41",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC02",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC18",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC44",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC04",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC33",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC36",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC17",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC41",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC05",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC13",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC11",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC23",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC31",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC21",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC27",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC12",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC39",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC46",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC13",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC42",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC15",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC43",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC41",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC28",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC43",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC17",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC06",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC40",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC18",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC18",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC30",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC34",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC08",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC14",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC41",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC34",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC32",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC12",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC30",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC36",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC18",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC06",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC14",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC05",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC18",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC22",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC28",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC24",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC15",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC17",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC04",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC08",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC39",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC12",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC14",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC34",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC01",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC38",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC35",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC31",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC30",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC39",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC16",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC44",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC29",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC37",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC01",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC10",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC28",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC27",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC08",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC34",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC03",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC35",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC07",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC42",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC30",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC30",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC31",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC20",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC23",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC36",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC23",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC30",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC40",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC45",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC18",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC16",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC03",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC04",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC15",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC14",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC44",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC11",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC14",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC19",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC16",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC07",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC28",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC14",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC14",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC33",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC08",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC13",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC41",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC16",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC15",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC39",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC09",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC46",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC31",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC05",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC24",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC36",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC38",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC41",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC09",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC06",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC04",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC35",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC44",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC31",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC42",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC30",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC23",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC23",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC44",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC23",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC45",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC14",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC43",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC31",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC46",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC20",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC06",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC17",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC22",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC01",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC29",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC04",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC41",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC07",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC36",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC46",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC20",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC08",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC16",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC08",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC28",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC06",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC32",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC04",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC24",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC22",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC07",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC07",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC44",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC30",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC27",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC21",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC07",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC22",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC41",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC28",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC22",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC19",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC12",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC39",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC03",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC39",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC42",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC07",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC46",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC29",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC41",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC20",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC03",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC34",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC42",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC32",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC22",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC47",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC45",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC32",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC09",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC47",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC09",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC36",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC09",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC34",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC47",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC26",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC42",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC32",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC01",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC12",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC28",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC42",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC15",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC23",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC33",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC37",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC30",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC13",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC40",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC06",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC08",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC02",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC09",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC42",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC23",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC17",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC00",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC13",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC19",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC03",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC31",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC09",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC14",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC08",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC43",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC21",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC16",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC32",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC43",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC27",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC43",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC12",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC03",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC42",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC26",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC32",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC22",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC10",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC18",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC14",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC07",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC16",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC08",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC21",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC32",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC13",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC39",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC38",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC10",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC43",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC26",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC06",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC15",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC25",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC01",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC40",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC02",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC17",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC28",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC05",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC19",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC27",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC46",
+    "condition": "full_history",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC11",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC11",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC04",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC29",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC24",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC27",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC16",
+    "condition": "stale_recovery",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC30",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC35",
+    "condition": "current_only",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC40",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC01",
+    "condition": "curated_checkpoint",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC33",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC07",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC39",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC24",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC00",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC34",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC31",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC35",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC43",
+    "condition": "full_history",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC22",
+    "condition": "full_history",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC20",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC05",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC25",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC18",
+    "condition": "stale_recovery",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC47",
+    "condition": "stale_recovery",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC45",
+    "condition": "curated_checkpoint",
+    "replicate": 1
+  },
+  {
+    "case_id": "NC03",
+    "condition": "curated_checkpoint",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC38",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC36",
+    "condition": "current_only",
+    "replicate": 0
+  },
+  {
+    "case_id": "NC23",
+    "condition": "current_only",
+    "replicate": 2
+  },
+  {
+    "case_id": "NC29",
+    "condition": "full_history",
+    "replicate": 0
+  }
+]

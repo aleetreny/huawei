@@ -1,0 +1,77 @@
+{
+  "verified": true,
+  "records": 713,
+  "assigned": 512,
+  "target": 512,
+  "groups": {
+    "101": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 1,
+      "second_promotion": 55,
+      "survived": 59,
+      "second_promotion_and_alive": 55
+    },
+    "001": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 2,
+      "second_promotion": 48,
+      "survived": 58,
+      "second_promotion_and_alive": 46
+    },
+    "110": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 4,
+      "second_promotion": 44,
+      "survived": 56,
+      "second_promotion_and_alive": 43
+    },
+    "010": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 5,
+      "second_promotion": 48,
+      "survived": 51,
+      "second_promotion_and_alive": 47
+    },
+    "000": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 5,
+      "second_promotion": 45,
+      "survived": 54,
+      "second_promotion_and_alive": 43
+    },
+    "100": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 6,
+      "second_promotion": 46,
+      "survived": 50,
+      "second_promotion_and_alive": 41
+    },
+    "111": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 1,
+      "second_promotion": 52,
+      "survived": 57,
+      "second_promotion_and_alive": 49
+    },
+    "011": {
+      "assigned": 64,
+      "resolved": 64,
+      "trust_death": 0,
+      "second_promotion": 44,
+      "survived": 53,
+      "second_promotion_and_alive": 44
+    }
+  },
+  "checks": {
+    "full_plan_6": 512,
+    "full_plan_9": 485
+  },
+  "scope": "Random assignment precedes intervention, incident memory uses only past responses, assigned public energy plans and report outcomes agree with raw archive"
+}

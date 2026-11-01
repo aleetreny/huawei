@@ -1,0 +1,8 @@
+{
+  "task": "/root/luna_memory_player",
+  "requested_model": "gpt-6-luna",
+  "fork_turns": "none",
+  "authorization": "User explicitly selected GPT-6 Luna + Ale champion on 27 October 2026",
+  "isolation": "Fresh conversational context; installed frozen Skill + public tools only by instruction; native agent tool permissions are not sandbox-restricted to MCP",
+  "token_accounting": "No per-agent usage receipt exposed by collaboration tools; do not estimate billed tokens from note sizes"
+}

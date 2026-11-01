@@ -1,0 +1,121 @@
+{
+  "complete": true,
+  "new_games": 1,
+  "model_requested": "gpt-6-luna",
+  "actor_harness": "Native Codex Luna, fresh-context child. Parent supplies frozen identity/skill only, no empirical lookup or advice. CLI bridge makes public MCP calls via local HTTP; take_action also observes and returns next observation.",
+  "outcome": "eliminated",
+  "score": 25.76,
+  "survival_months": 24,
+  "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+  "promotions": [],
+  "review_grade_messages": [
+    {
+      "month": 6,
+      "grade": "C"
+    },
+    {
+      "month": 12,
+      "grade": "C"
+    },
+    {
+      "month": 18,
+      "grade": "C"
+    },
+    {
+      "month": 24,
+      "grade": "D"
+    }
+  ],
+  "actions": 93,
+  "rejected": 0,
+  "public_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "take_action": 93,
+    "observe_automatic_after_action_or_start": 94,
+    "check_latest_logs_terminal_capture": 1
+  },
+  "notes": {
+    "characters_total": 32515,
+    "characters_median": 370,
+    "characters_max": 496,
+    "words_total": 4709
+  },
+  "final_status": {
+    "health": 8,
+    "dignity": 5,
+    "skill": 9,
+    "network": 2,
+    "level": "L1",
+    "duration_in_level": 24,
+    "output": 0,
+    "wealth": 10,
+    "energy": 0
+  },
+  "ending_score": {
+    "outcome": "eliminated",
+    "survival_months": 24,
+    "completed": false,
+    "quantitative_score": 25.76,
+    "competition_partial_score": 18.03,
+    "dimensions": [
+      {
+        "name": "level",
+        "label": "Career level",
+        "raw_value": 1.0,
+        "normalized_score": 10.0,
+        "weight": 0.3,
+        "weighted_score": 3.0
+      },
+      {
+        "name": "wealth",
+        "label": "Total wealth",
+        "raw_value": 10.2,
+        "normalized_score": 12.75,
+        "weight": 0.2,
+        "weighted_score": 2.55
+      },
+      {
+        "name": "resilience",
+        "label": "Health & dignity",
+        "raw_value": 13.0,
+        "normalized_score": 65.0,
+        "weight": 0.15,
+        "weighted_score": 9.75
+      },
+      {
+        "name": "skill",
+        "label": "Professional skill",
+        "raw_value": 9.0,
+        "normalized_score": 7.5,
+        "weight": 0.15,
+        "weighted_score": 1.12
+      },
+      {
+        "name": "risk_control",
+        "label": "Risk control",
+        "raw_value": 1.0,
+        "normalized_score": 90.0,
+        "weight": 0.1,
+        "weighted_score": 9.0
+      },
+      {
+        "name": "network",
+        "label": "Workplace network",
+        "raw_value": 2.0,
+        "normalized_score": 3.33,
+        "weight": 0.1,
+        "weighted_score": 0.33
+      }
+    ]
+  },
+  "raw_public_trace_sha256": "8cef595c67c664792d4fdbfc8e157b9cae10fe1ca7b6c57d9efd401dc0ae8197",
+  "archive_sha256": "7f8e74d1d4d346ae93e29f7f58f1b5120fc56cab2584a78db8e6c3367ce781e8",
+  "limits": [
+    "One exploratory game, no same-model baseline or causal memory comparison",
+    "Manual note presence is not proof of correct memory; semantic audit required",
+    "No native-model token/currency receipt exposed; character/word counts are not billed tokens",
+    "Different native harness from Haiku or official DeepSeek; no pooled comparison",
+    "Only requested model configuration is recorded; no separate backend-resolution receipt"
+  ]
+}

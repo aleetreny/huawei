@@ -1,0 +1,42 @@
+{
+  "status": "eliminated",
+  "batches": 96,
+  "actions": 95,
+  "rejected": 0,
+  "new_game_attempts": 1,
+  "tool_calls": {
+    "show_employee_handbook": 1,
+    "new_game": 1,
+    "observe": 96,
+    "take_action": 95
+  },
+  "updated_at": "2026-10-29T15:32:47.332037+00:00",
+  "session_id": "68eba26e049f47be9cc53c3268fa5730",
+  "last_state": {
+    "time": {
+      "current_month": 24,
+      "current_quarter": 8,
+      "current_year": 2
+    },
+    "status": {
+      "health": 10,
+      "dignity": 7,
+      "skill": 9,
+      "network": 2,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 8,
+      "energy": 0
+    },
+    "simulation_flags": {
+      "alive": false,
+      "failed": true,
+      "failure_reason": "Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in."
+    },
+    "session_id": "68eba26e049f47be9cc53c3268fa5730",
+    "error": "GAME OVER: Dismissed for capability — a second weak half-year review. HR walks you out. You hand the badge in.",
+    "available_choice_count": 0
+  },
+  "month": 24
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "question": "df11785dea15a7d1cda0",
+    "answer": 2,
+    "run": 2,
+    "step": 22,
+    "month": 6,
+    "choice": {
+      "choice": 2,
+      "action": "Say you followed team custom, and suggest Finance stop chasing individuals and set a clear rule"
+    },
+    "batch": "known-closure-2",
+    "event": {
+      "title": "Grey-area items on a travel expense claim",
+      "description": "The claim goes through. Next month a spot audit flags your late-dinner line as 'possible non-compliance'. Finance asks you to explain or repay."
+    },
+    "reply": {
+      "success": true,
+      "error": null
+    },
+    "before": {
+      "health": 8,
+      "dignity": 9,
+      "skill": 10,
+      "network": 5,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 1,
+      "energy": 0
+    },
+    "after": {
+      "health": 8,
+      "dignity": 8,
+      "skill": 10,
+      "network": 4,
+      "level": "L2",
+      "duration_in_level": 1,
+      "output": 3,
+      "wealth": 1,
+      "energy": 3
+    },
+    "after_feedback": "",
+    "episode_outcome": "six_month_window",
+    "failure": null
+  }
+]

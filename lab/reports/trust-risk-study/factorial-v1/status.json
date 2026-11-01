@@ -1,0 +1,11 @@
+{
+  "attempts_started": 713,
+  "assigned": 512,
+  "target": 512,
+  "outcomes": {
+    "ineligible_prefix": 190,
+    "eliminated": 84,
+    "twelve_month_window": 438,
+    "unassigned_after_schedule_full": 1
+  }
+}

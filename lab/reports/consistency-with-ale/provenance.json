@@ -1,0 +1,20 @@
+{
+  "source_ref": "origin/cloud-lab-run",
+  "source_commit": "26e976f9acbe44761f77457d9314e69ea31c4934",
+  "source_commit_date": "2026-10-26T23:25:55Z",
+  "sources": {
+    "lab/fastloop/lessons.md": {
+      "snapshot": "sources/ale-lessons.md",
+      "sha256": "a08d0ef35b9ea378eeb61f581eaf7442c090896ff1d41664d9c82e602f9efe91"
+    },
+    "lab/reports/carrera-rapida.md": {
+      "snapshot": "sources/ale-race-status.md",
+      "sha256": "ee636f1c1f0e551563165315ef0a5c978dcc7cdb83486701abe0ddb9ff62c1ab"
+    },
+    "lab/reports/decision-research/cycles/002/interpretation.md": {
+      "snapshot": "sources/ale-decision-research.md",
+      "sha256": "241979387534f1b50b3710a046b93f9496accfce0e7d421a2052c7d0afad067d"
+    }
+  },
+  "scope": "Read-only comparison, no merge or changes to Ale branch, no games or LLM gameplay calls"
+}
