@@ -35,7 +35,7 @@ def policy_classes() -> dict[str, type]:
         for obj in vars(mod).values():
             if isinstance(obj, type) and issubclass(obj, policies.Base) and obj is not policies.Base:
                 found[obj.name] = obj
-    for extra in ("replica_bot",):
+    for extra in ("replica_bot", "prober"):
         try:
             mod = __import__(extra)
             for obj in vars(mod).values():
