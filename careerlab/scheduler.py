@@ -22,6 +22,7 @@ from careerlab.actors.claude_cli import ClaudeWorkerConfig, run_claude_episode
 from careerlab.actors.scripted import make_scripted
 from careerlab.config import Settings
 from careerlab.episode import run_driven_episode
+from careerlab.episode import EpisodeResult, atomic_write_json
 from careerlab.mcp_client import GameClient, ServerSpec
 from careerlab.pool import ServerPool
 from careerlab.store import Registry
@@ -56,6 +57,15 @@ class Scheduler:
         self.settings, self.registry = settings, registry
         self.owner = owner or f"{socket.gethostname()}:{os.getpid()}:{uuid.uuid4().hex[:6]}"
         self.heartbeat = settings.data_dir / "scheduler.heartbeat.json"
+        self.last_batch: list[dict[str,Any]] = []
+
+    def _batch(self,jobs,kind,batch_out=None):
+        self.last_batch=[{k:j[k] for k in ("job_id","actor_id","env_id","purpose")} for j in jobs]
+        payload={"owner":self.owner,"kind":kind,"jobs":self.last_batch,"created_at":time.time()}
+        self.registry.decide("execution_batch_started",self.owner,payload,"explicit batch membership before execution")
+        if batch_out is not None:
+            batch_out.parent.mkdir(parents=True,exist_ok=True)
+            atomic_write_json(batch_out,payload)
 
     def _beat(self, state: dict[str, Any]) -> None:
         beat_dir = self.settings.data_dir / "heartbeats"
@@ -187,6 +197,7 @@ class Scheduler:
     async def run_claude(self, concurrency: int = 2, limit: int | None = None, purpose: str | None = None,
                          max_five_hour: float = 0.95) -> dict[str, int]:
         jobs = self.registry.lease(self.owner, limit or 10**9, actor_kind="claude-cli", purpose=purpose)
+        self._batch(jobs,"claude-cli",batch_out)
         counts: dict[str, int] = {}
         sem = asyncio.Semaphore(concurrency)
         actors = {r["actor_id"]: json.loads(r["config"]) for r in self.registry.db.execute("SELECT * FROM actors")}

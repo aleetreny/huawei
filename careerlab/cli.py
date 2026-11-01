@@ -140,6 +140,9 @@ def _actor(reg: Registry, spec: str) -> tuple[str, str]:
                                  skills_mode=skills_mode, cli_version=cli_version(load_settings()),
                                  stop_at_month=int(stop) if stop else None)
         return reg.register_actor("claude-cli", cfg.record()), kind
+    if kind == "jiuwenswarm-target" and name in ("", "competition-key"):
+        from careerlab.actors.official_runner import TargetConfig
+        return reg.register_actor(kind,TargetConfig("competition-key").record()),kind
     raise SystemExit(f"unknown actor kind {kind}")
 
 
@@ -179,8 +182,8 @@ def cmd_run(args: argparse.Namespace) -> int:
         stop = Path(args.stop_file) if args.stop_file else s.data_dir / "fastloop" / "STOP-SCHEDULER"
         print(asyncio.run(sched.run_claude_continuous(args.slots, stop, max_five_hour=args.max_five_hour, purpose=args.purpose)))
     else:
-        print(asyncio.run(sched.run_claude(concurrency=args.slots, limit=args.limit, purpose=args.purpose,
-                                           max_five_hour=args.max_five_hour)))
+        print(asyncio.run(sched.run_target(concurrency=args.slots or 1,limit=args.limit,purpose=args.purpose,
+                    phase=args.budget_phase,reservation_usd=args.reserve_usd,batch_out=Path(args.batch_out) if args.batch_out else None)))
     return 0
 
 
@@ -372,8 +375,8 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--why", required=True, help="decision rationale recorded in the registry")
     e.set_defaults(fn=cmd_enqueue)
     run = sub.add_parser("run")
-    run.add_argument("--kind", choices=["scripted", "claude-cli"], default="scripted")
-    run.add_argument("--slots", type=int, default=8)
+    run.add_argument("--kind", choices=["scripted", "claude-cli", "jiuwenswarm-target"], default="scripted")
+    run.add_argument("--slots", type=int)
     run.add_argument("--limit", type=int)
     run.add_argument("--purpose")
     run.add_argument("--max-five-hour", type=float, default=0.95, help="pause new Claude episodes above this five-hour utilisation")
@@ -422,6 +425,8 @@ def main(argv: list[str] | None = None) -> int:
     im = sub.add_parser("import", help="load lab/registry/*.jsonl into this machine's registry (hand-off)")
     im.add_argument("--dir")
     im.set_defaults(fn=cmd_import)
+    from careerlab.adaptive_cli import add_commands
+    add_commands(sub)
     args = parser.parse_args(argv)
     return args.fn(args)
 

@@ -24,6 +24,8 @@ import contextlib
 import json
 import math
 import os
+import math
+import re
 import shutil
 import signal
 import socket
@@ -40,6 +42,37 @@ RUNNER_COMMIT = "00b084a8"
 INSTANCE = "career_emu"
 PLAY_GRACE_S = 900.0  # the runner stops driving at --timeout-s and still writes its report; kill only after this
 DATASET_RELOAD = ("career-emulator-engine", "update", "--source", "distribution", "--split", "dev")
+
+
+def credentials_path(settings: Settings) -> Path:
+    return Path(os.environ.get("CAREERLAB_TARGET_ENV") or settings.data_dir/"secrets"/"competition.env").expanduser().resolve()
+
+
+def credential_status(settings: Settings) -> dict[str,Any]:
+    """Never return secret values, contents, or parser exceptions containing them."""
+    path=credentials_path(settings)
+    values={}
+    if path.is_file():
+        for line in path.read_text().splitlines():
+            match=re.match(r"^\s*(API_BASE|API_KEY|MODEL_NAME)\s*=\s*(.*?)\s*$",line)
+            if match:
+                values[match[1]]=match[2].strip().strip("\"'")
+    present={k:bool(values.get(k)) for k in ("API_BASE","API_KEY","MODEL_NAME")}
+    return {"configured":all(present.values()),"fields_present":present,"env_file":str(path),
+            "runner_present":(settings.runner_dir/".git").exists()}
+
+
+def development_bundle(bundle: Path, run_dir: Path) -> Path:
+    """Ephemeral local-play wrapper, never the team's final design documents."""
+    out=run_dir/"development-submission"
+    shutil.copytree(bundle,out,dirs_exist_ok=True)
+    (out/"design").mkdir(exist_ok=True)
+    for name in ("README.md","design/skills_design.md","design/decision_report.md"):
+        if not (out/name).exists():
+            (out/name).write_text("# Development evaluation fixture\n\nThis directory is an isolated local-play wrapper, not a final submission. "
+                                 "The registered manifest and Skills are copied unchanged. Results are recorded separately; "
+                                 "no superiority or final document-quality claim is made.\n")
+    return out
 
 
 @dataclass(frozen=True)
