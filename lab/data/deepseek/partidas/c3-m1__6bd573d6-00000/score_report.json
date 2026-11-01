@@ -1,0 +1,28 @@
+{
+  "submission_name": "Gradient Depression",
+  "submission_dir": "~/careerlab-data/huawei-deepseek/target-solutions/6bd573d66deb567e/solution",
+  "skill_name": "submission-skills",
+  "drive_session_id": "career-sim-runner-fb9374f7e23d",
+  "session_id": "88e643244ed04eb38c336f0feedfd0b5",
+  "play_exit_code": 1,
+  "termination_reason": "max_continuations",
+  "token_usage": {
+    "input_tokens": 3354896,
+    "output_tokens": 21460,
+    "total_tokens": 3376356,
+    "total_cost": 0.111568,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "input_tokens": 3354896,
+        "output_tokens": 21460,
+        "total_tokens": 3376356,
+        "total_cost": 0.111568
+      }
+    }
+  },
+  "ending_score": {},
+  "output_dir": "~/careerlab-data/huawei-deepseek/target-slots/slot4/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261101T114808Z",
+  "events_log": "~/careerlab-data/huawei-deepseek/target-slots/slot4/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261101T114808Z/events-20261101T114808Z.jsonl",
+  "transcript_log": "~/careerlab-data/huawei-deepseek/target-slots/slot4/runner/.career_sim_runner/career_emu/outputs/Gradient Depression/20261101T114808Z/transcript-20261101T114808Z.log",
+  "scored_at": "2026-11-01T11:52:46.073608+00:00"
+}

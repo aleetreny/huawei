@@ -1,0 +1,98 @@
+{
+  "job_id": "deepseek-pilo-a5337ccd-dff20f-00000-a1",
+  "session_id": "513206b1627146b4a89199653d18e3a9",
+  "outcome": "completed",
+  "survival_months": 48,
+  "quantitative_score": 60.62,
+  "ending_score": {
+    "competition_partial_score": 42.44,
+    "completed": true,
+    "dimensions": [
+      {
+        "label": "Career level",
+        "name": "level",
+        "normalized_score": 50.0,
+        "raw_value": 5.0,
+        "weight": 0.3,
+        "weighted_score": 15.0
+      },
+      {
+        "label": "Total wealth",
+        "name": "wealth",
+        "normalized_score": 32.5,
+        "raw_value": 26.0,
+        "weight": 0.2,
+        "weighted_score": 6.5
+      },
+      {
+        "label": "Health & dignity",
+        "name": "resilience",
+        "normalized_score": 100.0,
+        "raw_value": 20.0,
+        "weight": 0.15,
+        "weighted_score": 15.0
+      },
+      {
+        "label": "Professional skill",
+        "name": "skill",
+        "normalized_score": 84.17,
+        "raw_value": 101.0,
+        "weight": 0.15,
+        "weighted_score": 12.62
+      },
+      {
+        "label": "Risk control",
+        "name": "risk_control",
+        "normalized_score": 50.0,
+        "raw_value": 5.0,
+        "weight": 0.1,
+        "weighted_score": 5.0
+      },
+      {
+        "label": "Workplace network",
+        "name": "network",
+        "normalized_score": 65.0,
+        "raw_value": 39.0,
+        "weight": 0.1,
+        "weighted_score": 6.5
+      }
+    ],
+    "outcome": "completed",
+    "quantitative_score": 60.62,
+    "survival_months": 48
+  },
+  "failure_reason": null,
+  "interruption": null,
+  "steps": 0,
+  "rejected_actions": 0,
+  "ambiguous_actions": 0,
+  "wall_seconds": 1831.9,
+  "tool_calls": {},
+  "tool_seconds": {},
+  "actor_usage": {
+    "tokens": {
+      "input_tokens": 32295789,
+      "output_tokens": 127555,
+      "total_tokens": 32423344,
+      "total_cost": 0.32067100000000004,
+      "by_model": {
+        "deepseek-v4-flash": {
+          "input_tokens": 32295789,
+          "output_tokens": 127555,
+          "total_tokens": 32423344,
+          "total_cost": 0.32067100000000004
+        }
+      }
+    },
+    "total_tokens": 32423344,
+    "runner_cost": 0.32067100000000004,
+    "termination_reason": null,
+    "play_exit_code": 0,
+    "key_cost_usd": 1.485678,
+    "key_cost_settled": true
+  },
+  "trajectory_path": "~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-a5337ccd-dff20f-00000-a1/events.jsonl",
+  "resumed": false,
+  "db_root": null,
+  "periods": null
+}

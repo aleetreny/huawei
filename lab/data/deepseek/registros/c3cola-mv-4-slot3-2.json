@@ -1,0 +1,46 @@
+[
+  {
+    "game": 1,
+    "started": true,
+    "job_id": "deepseek-conf-0f4bf379-dff20f-00001-a1",
+    "policy_id": "0f4bf3797c0cc182",
+    "model_name": "deepseek-v4-flash",
+    "outcome": "completed",
+    "score": 59.99,
+    "survival_months": 48,
+    "interruption": null,
+    "cost_usd": 0.848847,
+    "cost_settled": true,
+    "usage_before": 47.277230401,
+    "usage_after": 48.126077827,
+    "limit_remaining_after": 1.8739221729999969,
+    "tokens": {
+      "input_tokens": 25752912,
+      "output_tokens": 78008,
+      "total_tokens": 25830920,
+      "total_cost": 0.539899,
+      "by_model": {
+        "deepseek-v4-flash": {
+          "input_tokens": 25752912,
+          "output_tokens": 78008,
+          "total_tokens": 25830920,
+          "total_cost": 0.539899
+        }
+      }
+    },
+    "total_tokens": 25830920,
+    "runner_cost": 0.539899,
+    "termination_reason": null,
+    "wall_seconds": 1446.9,
+    "watchdog_spend_usd": null,
+    "max_usd_per_game": 0.3,
+    "reserve_usd": 0.0,
+    "actor_id": "dff20fcea96c188d",
+    "env_id": "a00cc82743c5752c",
+    "solution_sha256": "9a85efd99f7bf4deedcfa817cc5a0e2766cc20e24a4cf956618730fc1168a27d",
+    "run_dir": "~/careerlab-data/huawei-deepseek/runs/deepseek-conf-0f4bf379-dff20f-00001-a1",
+    "trajectory": "~/careerlab-data/huawei-deepseek/runs/deepseek-conf-0f4bf379-dff20f-00001-a1/events.jsonl",
+    "redacted_files": 0,
+    "stopped": "game cost USD 0.8488, above the USD 0.30 cap"
+  }
+]
