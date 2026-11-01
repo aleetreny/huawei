@@ -1,6 +1,6 @@
 # Decision report — Gradient Depression
 
-**Submission `VERSION`, Cut 3 (1 November 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
+**Submission `mv-3`, Cut 3 (1 November 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
 
 ## 1. Our decision process
 
@@ -66,22 +66,23 @@ A complete `t13-read-v4` career used about 65–70 million tokens, roughly 1.4 m
 
 **How much headroom there is.** A research planner with full knowledge of every option's effect averages about 72 on development careers, and the best careers we have observed end at the sixth level. Our complete careers already reach the fifth level, so the remaining gains come from fewer early failures and a faster climb after the fourth level, not from a different overall approach.
 
-## 5c. Evidence for `VERSION`
+## 5c. Evidence for `mv-3`
 
-`VERSION` is the Skill behind our best development careers. Our Cut 2 version (`mv-5r`) differed from it in one paragraph: it named the hidden costs of polite or helpful options before the starting-level reviews only, because on a bank of recorded situations the text seemed to add risk before later reviews. In careers that restriction did not help: `mv-5r` scored 69.00, 22.65 and 24.51 in development and 45.44 officially.
+`mv-3` is the Skill behind our best development careers. Our Cut 2 version (`mv-5r`) differed from it in one paragraph: it named the hidden costs of polite or helpful options before the starting-level reviews only, because on a bank of recorded situations the text seemed to add risk before later reviews. In careers that restriction did not help: `mv-5r` scored 69.00, 22.65 and 24.51 in development and 45.44 officially.
 
 **Tokens.** Token efficiency is 10% of the version score and is full at 500 thousand tokens per game month or fewer. `t13-read-v4` used 1.35–1.47 million, about 64 of 100. With one reply per decision and a one-line note, careers of this family used 0.46–0.70 million (efficiency 92–100).
 
-**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (two trust crises and one dismissal in six careers, against none in the careers without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `VERSION` is the Skill without that line.
+**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (two trust crises and one dismissal in six careers, against none in the careers without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `mv-3` is the Skill without that line.
 
 **Careers** (development game, official runner, DeepSeek):
 
-| Date | Scores (end) |
+| Skill | Scores (end) |
 |---|---|
-| 29–30 October | 68.64, **77.78** (sixth level), 66.06, 63.35, 69.62, 63.27 (all complete); 37.06 (trust crisis at level 4); 18.98 (dismissed at the starting level); one stopped without a score |
-| 1 November | TODO(manual: careers) |
+| `mv-3`, 29–30 October | 68.64, **77.78** (sixth level), 66.06 (complete); one stopped by the runner around month 15, after 21 replies without a tool call |
+| `mv-3`, 1 November | **74.12** (sixth level), 70.38 (complete); 31.01 (still at the starting level at month 24) |
+| The same Skill with the manifest line "never end a reply with text only" | 63.35, 69.62, 63.27, 59.99 (complete); 37.06 and 37.39 (trust crises), 18.98 (dismissed at the starting level), 31.34 (broke at month 10) |
 
-Its complete careers averaged 68.1, the best of any family we tested; the starting level remains its weak point.
+`mv-3`'s complete careers averaged 71.4, the best of any Skill we tested, and two of five reached the sixth level; the starting level remains its weak point.
 
 ## 5d. What we learned after Cut 2, and two alternatives we did not promote
 
@@ -89,7 +90,7 @@ Its complete careers averaged 68.1, the best of any family we tested; the starti
 
 **Replays of the first months over-promised.** We built faithful replays of the start of a career (the exact request JiuwenSwarm sends, against the official engine) to compare Skills cheaply. A rebuild of our Cut 1 rules with a stalled-start protocol left the starting level more often there (79% against 73%), and two independent reviewers scored its text highest. In five complete careers it scored 58.06, 52.32, 28.76, 24.90 and 28.34: three dismissals at the starting level and two slow climbs that the replays, which stop at the first promotion, could not see.
 
-**Playing bolder did not raise the ceiling.** A variant of `VERSION` that accepted one mild risk a month while the HR remark was friendly, to climb faster, completed five careers at 60.62, 63.02, 61.53, 63.62 and 62.73, with blow-ups in two; all of them stalled at level 4 for 18–24 months. We went back to the Skill of our best careers.
+**Playing bolder did not raise the ceiling.** A variant of `mv-3` that accepted one mild risk a month while the HR remark was friendly, to climb faster, completed five careers at 60.62, 63.02, 61.53, 63.62 and 62.73, with blow-ups in two; all of them stalled at level 4 for 18–24 months. We went back to the Skill of our best careers.
 
 ## 6. Alternatives we did not promote
 
@@ -103,7 +104,7 @@ Its complete careers averaged 68.1, the best of any family we tested; the starti
 | A numerical hidden-risk counter | A proxy test identified only 4 of 21 genuinely concerning earlier choices; the concern count stays a judgement, not an estimate. |
 | A script that decides from model labels | A teammate's experiment reached our best single career (sixth level), but three of its seven careers ended early, and complete ones used about 1.6 times more tokens; not submitted. |
 | Softer risk wording, "Health and Dignity stop at 10", reworded risk cues | No gain in our banks, and the softer wording made genuinely risky private options more likely (section 5b). |
-| Hidden costs at the starting level only (Cut 2) | On recorded situations, naming them before every review seemed to add risk before later reviews (0.96 against 0.59); in careers the restriction did not help and Cut 2 scored 45.44 officially, so `VERSION` names them before every review (section 5c). |
+| Hidden costs at the starting level only (Cut 2) | On recorded situations, naming them before every review seemed to add risk before later reviews (0.96 against 0.59); in careers the restriction did not help and Cut 2 scored 45.44 officially, so `mv-3` names them before every review (section 5c). |
 | A Skill half as long, with the same loop | Chose like `mv-5r` but failed our risk control by one situation (2.00 against a limit of 1.3 fixed in advance); not promoted. |
 | A rewrite for document quality only | Claude reviewers scored it 73.5 against 74.5; below the +3 we required. |
 | v4's rules with only the new turn loop | The same token saving (302 and 432 thousand per month), but 23.23 and 58.95 in two careers; not enough to prefer it. |

@@ -1,6 +1,6 @@
 # Skills design — Gradient Depression
 
-**Submission `VERSION`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
+**Submission `mv-3`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
 
 This version keeps the story judgement of our Cut 1 submission (`t13-read-v4`): the reading guide, the list of risky wording and the five ordered story steps. It changes how the agent works: each decision is one reply with two tool calls, the status line is shorter, the quarterly plan follows the level and has a Health brake, and the hidden costs of polite or helpful options are named before every review. It is the Skill of our best development careers, one of which reached the sixth level; our Cut 2 version differed from it only in naming those costs at the starting level alone.
 
@@ -72,10 +72,10 @@ Concrete, ordered quarterly directions were followed much more reliably than gen
 | `t13-read-v4` (Cut 1) | `Best` per level; protect Network and Output from two months before a review and repair losses at once | A career lost Output with two months to go while chasing Network it could no longer raise |
 | **`mv-5r`** (Cut 2) | One reply per decision (`take_action` + `observe`); one-line note | v4 used 1.35–1.47 million tokens per game month: several replies per decision, each resending the whole history |
 | **`mv-5r`** | A loop wording tested with two model providers | Another wording broke with a provider that does not reason privately: the agent narrated and sent the action alone |
-| **`mv-5r`** | "Never end a reply with text only" in the manifest | One career stopped without a score after 21 replies carried no tool call. **Removed again in `VERSION`**: the same line also says to put the decision in the call and not in prose, and with it our careers ended earlier more often (below) |
+| **`mv-5r`** | "Never end a reply with text only" in the manifest | One career stopped without a score after 21 replies carried no tool call. **Removed again in `mv-3`**: the same line also says to put the decision in the call and not in prose, and with it our careers ended earlier more often (below) |
 | **`mv-5r`** | Hidden costs named before a review, at the starting level only | DeepSeek applied the review rule but misread costs (for example, that a polite refusal keeps Network); used at every level, the same text added risk before later reviews |
 | **`mv-5r`** | Quarterly plan by level and a Health brake; `Stalled` and `Concerns` fields removed | DeepSeek rarely filled the stall field, so v4's stall-based quarterly lines seldom fired |
-| **`VERSION`** (Cut 3) | Hidden costs named before every review again, as in our best development careers | Restricting them to the starting level (Cut 2) did not improve play in our careers and scored 45.44 officially; with them before every review, development careers completed 6 times in 8 with an average of 68.1, one at the sixth level |
+| **`mv-3`** (Cut 3) | Hidden costs named before every review again, as in our best development careers | Restricting them to the starting level (Cut 2) did not improve play in our careers and scored 45.44 officially; this Skill completed 5 of its 7 development careers with an average of 71.4, two at the sixth level |
 
 ## 7. Generalisation, scope and limits
 
