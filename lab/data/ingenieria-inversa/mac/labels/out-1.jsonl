@@ -1,0 +1,232 @@
+{"node": "018d96935057", "k": 1, "tags": ["ESCALATE", "TRANSPARENT", "PROCESS"], "integrity": 2}
+{"node": "018d96935057", "k": 2, "tags": ["COLLABORATE", "OWN", "CONCEAL"], "integrity": 0}
+{"node": "03bc33cddf88", "k": 1, "tags": ["LEARN", "OWN"], "integrity": 2}
+{"node": "03bc33cddf88", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "03bc33cddf88", "k": 3, "tags": ["LEARN"], "integrity": -1}
+{"node": "07f7c3477a61", "k": 1, "tags": ["TRANSPARENT", "COLLABORATE", "OWN"], "integrity": 2}
+{"node": "07f7c3477a61", "k": 2, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "0a9e3caf4970", "k": 1, "tags": ["CONFIDENTIAL", "BOUNDARY"], "integrity": 1}
+{"node": "0a9e3caf4970", "k": 2, "tags": ["GOSSIP"], "integrity": -1}
+{"node": "0a9e3caf4970", "k": 3, "tags": ["GOSSIP"], "integrity": -2}
+{"node": "0d41ef234c09", "k": 1, "tags": ["PROCESS", "TRANSPARENT", "COLLABORATE"], "integrity": 2}
+{"node": "0d41ef234c09", "k": 2, "tags": ["COLLABORATE", "APPEASE"], "integrity": 0}
+{"node": "0d41ef234c09", "k": 3, "tags": ["SHORTCUT", "CONFRONT"], "integrity": -2}
+{"node": "0e1dcfcee727", "k": 1, "tags": ["HELP", "TRANSPARENT", "QUALITY"], "integrity": 2}
+{"node": "0e1dcfcee727", "k": 2, "tags": ["CONCEAL"], "integrity": -1}
+{"node": "0f975ddc5526", "k": 1, "tags": ["PROCESS", "COLLABORATE", "OWN"], "integrity": 2}
+{"node": "0f975ddc5526", "k": 2, "tags": ["QUALITY", "PROCESS"], "integrity": 1}
+{"node": "14eca1b3be70", "k": 1, "tags": ["OWN", "TRANSPARENT", "PROCESS"], "integrity": 2}
+{"node": "14eca1b3be70", "k": 2, "tags": ["BOUNDARY", "COLLABORATE"], "integrity": 1}
+{"node": "168dba5be21a", "k": 1, "tags": ["TRANSPARENT", "PROCESS", "OWN"], "integrity": 2}
+{"node": "168dba5be21a", "k": 2, "tags": ["CONCEAL", "PASSIVE"], "integrity": -1}
+{"node": "19f27bf33801", "k": 1, "tags": ["LEARN", "QUALITY", "OWN"], "integrity": 2}
+{"node": "19f27bf33801", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "1b60e9026be0", "k": 1, "tags": ["TRANSPARENT", "OWN", "HELP"], "integrity": 2}
+{"node": "1b60e9026be0", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "1ddb9e7a8fd1", "k": 1, "tags": ["OWN", "QUALITY"], "integrity": 2}
+{"node": "1ddb9e7a8fd1", "k": 2, "tags": ["APPEASE", "PASSIVE"], "integrity": -1}
+{"node": "1fd3c946c998", "k": 1, "tags": ["VISIBILITY", "HELP", "COLLABORATE"], "integrity": 2}
+{"node": "1fd3c946c998", "k": 2, "tags": ["VISIBILITY", "CONCEAL"], "integrity": 0}
+{"node": "1fd3c946c998", "k": 3, "tags": ["CONCEAL", "PASSIVE"], "integrity": -1}
+{"node": "21c9b9147fa9", "k": 1, "tags": ["COLLABORATE"], "integrity": 1}
+{"node": "21c9b9147fa9", "k": 2, "tags": ["VISIBILITY", "APPEASE"], "integrity": -1}
+{"node": "21c9b9147fa9", "k": 3, "tags": ["PASSIVE"], "integrity": 0}
+{"node": "24cd954dc776", "k": 1, "tags": ["TRANSPARENT", "OWN", "ESCALATE"], "integrity": 2}
+{"node": "24cd954dc776", "k": 2, "tags": ["CONCEAL"], "integrity": -1}
+{"node": "270e81bd6397", "k": 1, "tags": ["TRANSPARENT", "OWN", "COLLABORATE"], "integrity": 2}
+{"node": "270e81bd6397", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "286812cbad17", "k": 1, "tags": ["BOUNDARY", "OWN"], "integrity": 2}
+{"node": "286812cbad17", "k": 2, "tags": ["APPEASE", "OVERWORK"], "integrity": -1}
+{"node": "29d7b9b01079", "k": 1, "tags": ["OWN", "SELF_CARE"], "integrity": 2}
+{"node": "29d7b9b01079", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "2aec8a18e126", "k": 1, "tags": ["HELP", "TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "2aec8a18e126", "k": 2, "tags": ["HELP", "BOUNDARY", "OWN"], "integrity": 2}
+{"node": "2aec8a18e126", "k": 3, "tags": ["ESCALATE", "PASSIVE"], "integrity": 0}
+{"node": "2aec8a18e126", "k": 4, "tags": ["PASSIVE", "APPEASE"], "integrity": -1}
+{"node": "2df0b2cd5662", "k": 1, "tags": ["TRANSPARENT", "QUALITY", "PROCESS"], "integrity": 2}
+{"node": "2df0b2cd5662", "k": 2, "tags": ["COLLABORATE", "QUALITY", "TRANSPARENT"], "integrity": 2}
+{"node": "300820081fbe", "k": 1, "tags": ["TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "300820081fbe", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "3387abd67dfe", "k": 1, "tags": ["PROCESS", "QUALITY", "OWN", "TRANSPARENT"], "integrity": 2}
+{"node": "3387abd67dfe", "k": 2, "tags": ["CONCEAL", "PASSIVE"], "integrity": -1}
+{"node": "3972f45b76ab", "k": 1, "tags": ["TRANSPARENT", "ESCALATE", "OWN"], "integrity": 2}
+{"node": "3972f45b76ab", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "3b488977854a", "k": 1, "tags": ["DECEIVE", "CONCEAL"], "integrity": -1}
+{"node": "3b488977854a", "k": 2, "tags": ["TRANSPARENT", "PROCESS"], "integrity": 2}
+{"node": "3d8172a6f9b2", "k": 1, "tags": ["QUALITY", "OWN"], "integrity": 2}
+{"node": "3d8172a6f9b2", "k": 2, "tags": ["VISIBILITY"], "integrity": -1}
+{"node": "40890a450f1c", "k": 1, "tags": ["TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "40890a450f1c", "k": 2, "tags": ["DECEIVE"], "integrity": -2}
+{"node": "463563d349a8", "k": 1, "tags": ["OWN", "TRANSPARENT"], "integrity": 2}
+{"node": "463563d349a8", "k": 2, "tags": ["PASSIVE", "CONCEAL"], "integrity": -1}
+{"node": "49cad4b1bdb2", "k": 1, "tags": ["TRANSPARENT", "OWN", "PROCESS"], "integrity": 2}
+{"node": "49cad4b1bdb2", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "4c86f5e3ca5c", "k": 1, "tags": ["VISIBILITY", "OWN", "TRANSPARENT"], "integrity": 2}
+{"node": "4c86f5e3ca5c", "k": 2, "tags": ["GOSSIP", "VISIBILITY"], "integrity": -2}
+{"node": "4c86f5e3ca5c", "k": 3, "tags": ["APPEASE"], "integrity": -1}
+{"node": "51a246f17b72", "k": 1, "tags": ["QUALITY", "TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "51a246f17b72", "k": 2, "tags": ["SHORTCUT", "CONCEAL"], "integrity": -2}
+{"node": "51a246f17b72", "k": 3, "tags": ["SHORTCUT", "CONCEAL", "OWN"], "integrity": -1}
+{"node": "54e5c54d627f", "k": 1, "tags": ["TRANSPARENT", "OWN", "ESCALATE"], "integrity": 2}
+{"node": "54e5c54d627f", "k": 2, "tags": ["CONCEAL", "PASSIVE"], "integrity": -1}
+{"node": "57b0f72c07c2", "k": 1, "tags": ["SELF_CARE", "BOUNDARY", "COLLABORATE"], "integrity": 2}
+{"node": "57b0f72c07c2", "k": 2, "tags": ["OVERWORK", "APPEASE"], "integrity": -1}
+{"node": "58898ba74773", "k": 1, "tags": ["OWN", "TRANSPARENT", "COLLABORATE"], "integrity": 2}
+{"node": "58898ba74773", "k": 2, "tags": ["APPEASE", "SHORTCUT"], "integrity": -1}
+{"node": "5b304c0c74aa", "k": 1, "tags": ["DECEIVE", "APPEASE"], "integrity": -2}
+{"node": "5b304c0c74aa", "k": 2, "tags": ["TRANSPARENT", "OWN", "PROCESS"], "integrity": 2}
+{"node": "5dd8637a70d4", "k": 1, "tags": ["LEARN", "OWN"], "integrity": 2}
+{"node": "5dd8637a70d4", "k": 2, "tags": ["CONFRONT", "LEARN"], "integrity": 0}
+{"node": "620f31dc7c8e", "k": 1, "tags": ["PROCESS", "OWN"], "integrity": 2}
+{"node": "620f31dc7c8e", "k": 2, "tags": ["OWN"], "integrity": 0}
+{"node": "620f31dc7c8e", "k": 3, "tags": ["PASSIVE", "GOSSIP"], "integrity": -1}
+{"node": "63f37880930a", "k": 1, "tags": ["COLLABORATE", "VISIBILITY"], "integrity": 1}
+{"node": "63f37880930a", "k": 2, "tags": ["LEARN", "QUALITY"], "integrity": 1}
+{"node": "6675f6eb93a2", "k": 1, "tags": ["TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "6675f6eb93a2", "k": 2, "tags": ["DECEIVE"], "integrity": -2}
+{"node": "6a1d1ec95b66", "k": 1, "tags": ["COLLABORATE", "OWN", "VISIBILITY"], "integrity": 1}
+{"node": "6a1d1ec95b66", "k": 2, "tags": ["BOUNDARY", "SELF_CARE"], "integrity": 0}
+{"node": "6d0915d4c6c3", "k": 1, "tags": ["PROCESS", "BOUNDARY", "COLLABORATE"], "integrity": 2}
+{"node": "6d0915d4c6c3", "k": 2, "tags": ["CONFRONT", "GOSSIP"], "integrity": -2}
+{"node": "6e016db0f86a", "k": 1, "tags": ["COLLABORATE", "PROCESS", "OWN"], "integrity": 2}
+{"node": "6e016db0f86a", "k": 2, "tags": ["CONFRONT", "PASSIVE"], "integrity": -1}
+{"node": "6ef410af405f", "k": 1, "tags": ["OWN", "LEARN", "COLLABORATE"], "integrity": 2}
+{"node": "6ef410af405f", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "7234f844b95c", "k": 1, "tags": ["TRANSPARENT", "LEARN", "COLLABORATE"], "integrity": 2}
+{"node": "7234f844b95c", "k": 2, "tags": ["DECEIVE", "PASSIVE"], "integrity": -1}
+{"node": "7234f844b95c", "k": 3, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "7352a0e1aef9", "k": 1, "tags": ["OWN", "QUALITY"], "integrity": 2}
+{"node": "7352a0e1aef9", "k": 2, "tags": ["APPEASE"], "integrity": -1}
+{"node": "74a86f489578", "k": 1, "tags": ["HELP", "COLLABORATE", "SELF_CARE"], "integrity": 2}
+{"node": "74a86f489578", "k": 2, "tags": ["APPEASE", "OVERWORK"], "integrity": -1}
+{"node": "758728710c9c", "k": 1, "tags": ["OWN", "LEARN"], "integrity": 2}
+{"node": "758728710c9c", "k": 2, "tags": ["GOSSIP", "CONFRONT"], "integrity": -2}
+{"node": "758728710c9c", "k": 3, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "77488149beeb", "k": 1, "tags": ["COLLABORATE", "HELP", "OWN"], "integrity": 2}
+{"node": "77488149beeb", "k": 2, "tags": ["OWN", "BOUNDARY"], "integrity": 1}
+{"node": "77488149beeb", "k": 3, "tags": ["PASSIVE"], "integrity": 0}
+{"node": "78d7cfb4cd70", "k": 1, "tags": ["COLLABORATE", "OWN"], "integrity": 2}
+{"node": "78d7cfb4cd70", "k": 2, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "7ada24db9b30", "k": 1, "tags": ["TRANSPARENT", "PROCESS"], "integrity": 2}
+{"node": "7ada24db9b30", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -1}
+{"node": "7ada24db9b30", "k": 3, "tags": ["TRANSPARENT", "ESCALATE"], "integrity": 2}
+{"node": "7f809673d971", "k": 1, "tags": ["SELF_CARE", "OWN"], "integrity": 2}
+{"node": "7f809673d971", "k": 2, "tags": ["OVERWORK"], "integrity": -1}
+{"node": "805cf4026a03", "k": 1, "tags": ["PROCESS", "TRANSPARENT", "COLLABORATE", "BOUNDARY"], "integrity": 2}
+{"node": "805cf4026a03", "k": 2, "tags": ["APPEASE", "CONCEAL"], "integrity": -1}
+{"node": "80d596434dd5", "k": 1, "tags": ["BOUNDARY", "COLLABORATE", "OWN"], "integrity": 2}
+{"node": "80d596434dd5", "k": 2, "tags": ["APPEASE", "OVERWORK"], "integrity": -1}
+{"node": "80d596434dd5", "k": 3, "tags": ["PASSIVE", "SHORTCUT"], "integrity": -1}
+{"node": "82d4b8110ef5", "k": 1, "tags": ["OWN", "QUALITY"], "integrity": 2}
+{"node": "82d4b8110ef5", "k": 2, "tags": ["VISIBILITY", "TRANSPARENT"], "integrity": 0}
+{"node": "82d4b8110ef5", "k": 3, "tags": ["COLLABORATE", "HELP", "VISIBILITY"], "integrity": 0}
+{"node": "850b7ff65ee4", "k": 1, "tags": ["TRANSPARENT", "BOUNDARY", "QUALITY"], "integrity": 2}
+{"node": "850b7ff65ee4", "k": 2, "tags": ["APPEASE", "PASSIVE", "OVERWORK"], "integrity": -1}
+{"node": "850b7ff65ee4", "k": 3, "tags": ["ESCALATE", "TRANSPARENT"], "integrity": 1}
+{"node": "872c2542242f", "k": 1, "tags": ["TRANSPARENT", "COLLABORATE"], "integrity": 2}
+{"node": "872c2542242f", "k": 2, "tags": ["APPEASE"], "integrity": 0}
+{"node": "8b6248c5eb13", "k": 1, "tags": ["COLLABORATE", "OWN", "BOUNDARY", "TRANSPARENT"], "integrity": 2}
+{"node": "8b6248c5eb13", "k": 2, "tags": ["CONFRONT", "PROCESS"], "integrity": -1}
+{"node": "8e3aff4f9b76", "k": 1, "tags": ["TRANSPARENT", "OWN", "BOUNDARY"], "integrity": 2}
+{"node": "8e3aff4f9b76", "k": 2, "tags": ["APPEASE"], "integrity": 0}
+{"node": "8e3aff4f9b76", "k": 3, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "9080e113a19c", "k": 1, "tags": ["OWN", "COLLABORATE", "HELP"], "integrity": 2}
+{"node": "9080e113a19c", "k": 2, "tags": ["PASSIVE", "BOUNDARY"], "integrity": -1}
+{"node": "927ed56a73ab", "k": 1, "tags": ["HELP", "TRANSPARENT", "COLLABORATE"], "integrity": 2}
+{"node": "927ed56a73ab", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "944fa5bf9273", "k": 1, "tags": ["VISIBILITY", "BOUNDARY", "OWN"], "integrity": 2}
+{"node": "944fa5bf9273", "k": 2, "tags": ["APPEASE", "PASSIVE"], "integrity": -1}
+{"node": "944fa5bf9273", "k": 3, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "989090f05b39", "k": 1, "tags": ["COLLABORATE", "PROCESS", "BOUNDARY"], "integrity": 2}
+{"node": "989090f05b39", "k": 2, "tags": ["APPEASE", "VISIBILITY"], "integrity": -1}
+{"node": "989090f05b39", "k": 3, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "9a1fc53ea201", "k": 1, "tags": ["OWN", "PROCESS"], "integrity": 2}
+{"node": "9a1fc53ea201", "k": 2, "tags": ["TRANSPARENT", "COLLABORATE"], "integrity": 1}
+{"node": "9a1fc53ea201", "k": 3, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "9c3a2272f29c", "k": 1, "tags": ["OWN", "QUALITY", "VISIBILITY"], "integrity": 2}
+{"node": "9c3a2272f29c", "k": 2, "tags": ["PASSIVE", "SHORTCUT"], "integrity": -1}
+{"node": "9e7e8aa0f326", "k": 1, "tags": ["OWN", "TRANSPARENT"], "integrity": 2}
+{"node": "9e7e8aa0f326", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "9f1b3214cac8", "k": 1, "tags": ["HELP", "OWN", "COLLABORATE"], "integrity": 2}
+{"node": "9f1b3214cac8", "k": 2, "tags": ["BOUNDARY", "PASSIVE"], "integrity": -1}
+{"node": "a3e5e635212d", "k": 1, "tags": ["QUALITY", "OWN", "TRANSPARENT"], "integrity": 2}
+{"node": "a3e5e635212d", "k": 2, "tags": ["SHORTCUT"], "integrity": -2}
+{"node": "a6ec66a39db6", "k": 1, "tags": ["COLLABORATE", "QUALITY", "OWN"], "integrity": 2}
+{"node": "a6ec66a39db6", "k": 2, "tags": ["BOUNDARY"], "integrity": 0}
+{"node": "a955c62d2667", "k": 1, "tags": ["OWN", "COLLABORATE"], "integrity": 1}
+{"node": "a955c62d2667", "k": 2, "tags": ["VISIBILITY", "CONFRONT"], "integrity": -1}
+{"node": "ab5f34d4cbe1", "k": 1, "tags": ["QUALITY", "PROCESS", "BOUNDARY"], "integrity": 2}
+{"node": "ab5f34d4cbe1", "k": 2, "tags": ["SHORTCUT", "APPEASE"], "integrity": -1}
+{"node": "ad0a82ef8777", "k": 1, "tags": ["TRANSPARENT", "OWN", "PROCESS"], "integrity": 2}
+{"node": "ad0a82ef8777", "k": 2, "tags": ["CONFRONT", "PROCESS"], "integrity": -1}
+{"node": "b065278afba1", "k": 1, "tags": ["DECEIVE", "APPEASE"], "integrity": -2}
+{"node": "b065278afba1", "k": 2, "tags": ["TRANSPARENT", "QUALITY", "PROCESS"], "integrity": 2}
+{"node": "b3f7d30c02d4", "k": 1, "tags": ["TRANSPARENT", "COLLABORATE", "OWN"], "integrity": 2}
+{"node": "b3f7d30c02d4", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -1}
+{"node": "b74621ceb19e", "k": 1, "tags": ["TRANSPARENT", "OWN", "PROCESS"], "integrity": 2}
+{"node": "b74621ceb19e", "k": 2, "tags": ["DECEIVE", "CONCEAL"], "integrity": -2}
+{"node": "b8bb70d839d4", "k": 1, "tags": ["QUALITY", "ESCALATE"], "integrity": 2}
+{"node": "b8bb70d839d4", "k": 2, "tags": ["SHORTCUT"], "integrity": -2}
+{"node": "b8bb70d839d4", "k": 3, "tags": ["QUALITY", "OWN", "COLLABORATE"], "integrity": 2}
+{"node": "baa67f453b26", "k": 1, "tags": ["TRANSPARENT", "PROCESS", "ESCALATE", "QUALITY"], "integrity": 2}
+{"node": "baa67f453b26", "k": 2, "tags": ["QUALITY", "PROCESS"], "integrity": 1}
+{"node": "bb8eb260914a", "k": 1, "tags": ["OWN", "SELF_CARE"], "integrity": 2}
+{"node": "bb8eb260914a", "k": 2, "tags": ["SHORTCUT"], "integrity": -1}
+{"node": "bb8eb260914a", "k": 3, "tags": ["SELF_CARE", "PASSIVE"], "integrity": 1}
+{"node": "bd04d6e787f9", "k": 1, "tags": ["SELF_CARE", "BOUNDARY"], "integrity": 1}
+{"node": "bd04d6e787f9", "k": 2, "tags": ["VISIBILITY", "OVERWORK"], "integrity": -1}
+{"node": "bf16e66fcb1f", "k": 1, "tags": ["HELP", "BOUNDARY", "TRANSPARENT"], "integrity": 2}
+{"node": "bf16e66fcb1f", "k": 2, "tags": ["PASSIVE", "CONFIDENTIAL"], "integrity": 0}
+{"node": "c146648a91af", "k": 1, "tags": ["COLLABORATE", "VISIBILITY"], "integrity": 1}
+{"node": "c146648a91af", "k": 2, "tags": ["BOUNDARY", "SELF_CARE", "QUALITY"], "integrity": 2}
+{"node": "c146648a91af", "k": 3, "tags": ["COLLABORATE", "SELF_CARE", "BOUNDARY"], "integrity": 1}
+{"node": "c399a11d5d5d", "k": 1, "tags": ["COLLABORATE", "TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "c399a11d5d5d", "k": 2, "tags": ["PROCESS"], "integrity": 1}
+{"node": "c6a8b64ee0da", "k": 1, "tags": ["PROCESS", "BOUNDARY", "OWN"], "integrity": 2}
+{"node": "c6a8b64ee0da", "k": 2, "tags": ["APPEASE", "SHORTCUT"], "integrity": -1}
+{"node": "c6a8b64ee0da", "k": 3, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "c9ee8f93505b", "k": 1, "tags": ["OWN"], "integrity": 2}
+{"node": "c9ee8f93505b", "k": 2, "tags": ["GOSSIP", "CONFRONT"], "integrity": -1}
+{"node": "ce19f6fbc898", "k": 1, "tags": ["ESCALATE", "TRANSPARENT", "HELP", "PROCESS"], "integrity": 2}
+{"node": "ce19f6fbc898", "k": 2, "tags": ["PASSIVE", "APPEASE"], "integrity": -1}
+{"node": "d0bc6fbafd8a", "k": 1, "tags": ["TRANSPARENT", "ESCALATE", "OWN", "PROCESS"], "integrity": 2}
+{"node": "d0bc6fbafd8a", "k": 2, "tags": ["CONCEAL"], "integrity": -1}
+{"node": "d389f5a4418e", "k": 1, "tags": ["VISIBILITY", "TRANSPARENT", "HELP"], "integrity": 1}
+{"node": "d389f5a4418e", "k": 2, "tags": ["VISIBILITY", "CONFRONT"], "integrity": -1}
+{"node": "d389f5a4418e", "k": 3, "tags": ["PASSIVE"], "integrity": 0}
+{"node": "d674ff2c9f08", "k": 1, "tags": ["ESCALATE", "BOUNDARY", "COLLABORATE"], "integrity": 2}
+{"node": "d674ff2c9f08", "k": 2, "tags": ["OVERWORK", "APPEASE", "OWN"], "integrity": 0}
+{"node": "d7ae23484f41", "k": 1, "tags": ["OWN", "LEARN"], "integrity": 2}
+{"node": "d7ae23484f41", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "d8c4685218df", "k": 1, "tags": ["QUALITY", "OWN", "PROCESS"], "integrity": 2}
+{"node": "d8c4685218df", "k": 2, "tags": ["SHORTCUT"], "integrity": -1}
+{"node": "d8c4685218df", "k": 3, "tags": ["SHORTCUT", "PASSIVE"], "integrity": -1}
+{"node": "dd42ec7d098d", "k": 1, "tags": ["TRANSPARENT", "BOUNDARY", "COLLABORATE"], "integrity": 2}
+{"node": "dd42ec7d098d", "k": 2, "tags": ["DECEIVE", "APPEASE"], "integrity": -1}
+{"node": "dd42ec7d098d", "k": 3, "tags": ["GOSSIP"], "integrity": -1}
+{"node": "df3a5694d7b3", "k": 1, "tags": ["ESCALATE", "PROCESS", "TRANSPARENT", "OWN"], "integrity": 2}
+{"node": "df3a5694d7b3", "k": 2, "tags": ["SELF_CARE", "PASSIVE"], "integrity": 0}
+{"node": "e265df4c26ea", "k": 1, "tags": ["OWN", "TRANSPARENT", "PROCESS", "ESCALATE"], "integrity": 2}
+{"node": "e265df4c26ea", "k": 2, "tags": ["GOSSIP", "CONFRONT"], "integrity": -2}
+{"node": "e4d9556b8ea5", "k": 1, "tags": ["TRANSPARENT", "OWN", "COLLABORATE"], "integrity": 2}
+{"node": "e4d9556b8ea5", "k": 2, "tags": ["CONCEAL", "PASSIVE"], "integrity": -1}
+{"node": "e895c77e599a", "k": 1, "tags": ["OWN", "QUALITY"], "integrity": 2}
+{"node": "e895c77e599a", "k": 2, "tags": ["GOSSIP"], "integrity": -1}
+{"node": "ed337e5b57b4", "k": 1, "tags": ["HELP", "TRANSPARENT"], "integrity": 2}
+{"node": "ed337e5b57b4", "k": 2, "tags": ["PASSIVE"], "integrity": -1}
+{"node": "f0e348bd43db", "k": 1, "tags": ["TRANSPARENT", "OWN", "PROCESS"], "integrity": 2}
+{"node": "f0e348bd43db", "k": 2, "tags": ["CONFRONT"], "integrity": -1}
+{"node": "f2ae5b8d98cb", "k": 1, "tags": ["COLLABORATE", "LEARN"], "integrity": 2}
+{"node": "f2ae5b8d98cb", "k": 2, "tags": ["COLLABORATE", "VISIBILITY", "TRANSPARENT"], "integrity": 1}
+{"node": "f4b3d2e1b543", "k": 1, "tags": ["TRANSPARENT", "COLLABORATE"], "integrity": 2}
+{"node": "f4b3d2e1b543", "k": 2, "tags": ["QUALITY", "OWN"], "integrity": 1}
+{"node": "f4b3d2e1b543", "k": 3, "tags": ["PASSIVE", "GOSSIP"], "integrity": -1}
+{"node": "f696567d0062", "k": 1, "tags": ["OWN"], "integrity": 2}
+{"node": "f696567d0062", "k": 2, "tags": ["PASSIVE", "SHORTCUT"], "integrity": -1}
+{"node": "f919cb29457e", "k": 1, "tags": ["COLLABORATE", "OWN"], "integrity": 2}
+{"node": "f919cb29457e", "k": 2, "tags": ["TRANSPARENT", "PASSIVE"], "integrity": 1}
+{"node": "fce9f15f4099", "k": 1, "tags": ["SELF_CARE", "OWN"], "integrity": 2}
+{"node": "fce9f15f4099", "k": 2, "tags": ["OVERWORK", "PASSIVE"], "integrity": -1}
+{"node": "fe69155b8239", "k": 1, "tags": ["TRANSPARENT", "QUALITY", "ESCALATE", "OWN"], "integrity": 2}
+{"node": "fe69155b8239", "k": 2, "tags": ["CONCEAL", "ESCALATE"], "integrity": -1}
+{"node": "fe69155b8239", "k": 3, "tags": ["CONCEAL", "PASSIVE"], "integrity": -2}
