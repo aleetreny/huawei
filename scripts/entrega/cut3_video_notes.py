@@ -1,4 +1,4 @@
-"""Copies the speaker notes of guion.md into the presentation pages (their `notesdata` block).
+"""Copies the speaker notes of each script (guion.md, guion-c.md) into its presentation pages (their `notesdata` block).
 
     python3 scripts/entrega/cut3_video_notes.py [presentacion.html presentacion-b.html ...]
 """
@@ -9,10 +9,12 @@ import sys
 from pathlib import Path
 
 DIR = Path(__file__).resolve().parents[2] / "docs/entrega/cut3-video"
+# Each presentation page and the script its speaker notes come from.
+SCRIPTS = {"presentacion.html": "guion.md", "presentacion-b.html": "guion.md", "presentacion-c.html": "guion-c.md"}
 
 
-def speaker_notes() -> dict[str, str]:
-    text = (DIR / "guion.md").read_text(encoding="utf-8").split("## Notas de grabación")[0]
+def speaker_notes(script: str = "guion.md") -> dict[str, str]:
+    text = (DIR / script).read_text(encoding="utf-8").split("## Notas de grabación")[0]
     notes: dict[str, list[str]] = {}
     current = None
     for line in text.splitlines():
@@ -28,9 +30,9 @@ def speaker_notes() -> dict[str, str]:
 
 
 def main() -> None:
-    notes = speaker_notes()
-    data = json.dumps(notes, ensure_ascii=False).replace("</", "<\\/")
-    for name in sys.argv[1:] or ["presentacion.html", "presentacion-b.html"]:
+    for name in sys.argv[1:] or list(SCRIPTS):
+        notes = speaker_notes(SCRIPTS.get(name, "guion.md"))
+        data = json.dumps(notes, ensure_ascii=False).replace("</", "<\\/")
         page = DIR / name
         html, n = re.subn(r'(<script type="application/json" id="notesdata">).*?(</script>)',
                           lambda m: m.group(1) + data + m.group(2), page.read_text(encoding="utf-8"), flags=re.S)

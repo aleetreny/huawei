@@ -1,6 +1,6 @@
 # Vídeo del corte 3 (`mv-3`)
 
-**Conclusión:** guion de ~8:45 en inglés, presentación animada (artifact y PDF) y hoja de comprobación listos para grabar; todo coincide con el `SKILL.md`, el manifiesto y `docs/entrega/cut3-mv3/`, cuyos documentos se corrigieron en cuatro cifras para que digan lo mismo que el vídeo ([comprobación §4](comprobacion.md)).
+**Conclusión:** la presentación para grabar es la versión final en lenguaje llano (`presentacion-c.html` con `guion-c.md`, ~6:50); hay además dos versiones anteriores para el jurado técnico (guion de ~8:45) y la hoja de comprobación; todo coincide con el `SKILL.md`, el manifiesto y `docs/entrega/cut3-mv3/`, cuyos documentos se corrigieron en cuatro cifras para que digan lo mismo que el vídeo ([comprobación §4](comprobacion.md)).
 
 Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta carpeta va en el ZIP salvo el `presentation.mp4` que se grabe.
 
@@ -12,6 +12,9 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 | [presentacion.pdf](presentacion.pdf) | La misma presentación en PDF, una página por diapositiva y sin animaciones |
 | [presentacion-b.html](presentacion-b.html) | **Segunda opción** (artifact: https://claude.ai/artifact/YSBvZYSEpuV8zmvXxNPAcJ). Cuaderno de laboratorio: papel cuadriculado, tinta negra y un solo color (subrayador), una frase clave por diapositiva y menos texto, con tono de equipo universitario. Mismas 14 diapositivas en el mismo orden, así que el guion y las notas sirven igual; `#p5` abre la página 5 |
 | [presentacion-b.pdf](presentacion-b.pdf) | La segunda opción en PDF |
+| [presentacion-c.html](presentacion-c.html) | **Versión final, la elegida para grabar** (artifact: https://claude.ai/artifact/ADQFaooyqAaX4B9KzqLU3J). Mismo cuaderno que la B, pero contada para cualquier persona, sin jerga, como el recorrido completo (de dónde partimos, qué falló, dónde acabamos). 18 diapositivas, casi todas con un dibujo; las cinco preguntas oficiales siguen en orden (p. 5–16). Notas del orador de `guion-c.md`; `#p9` abre la página 9 |
+| [presentacion-c.pdf](presentacion-c.pdf) | La versión final en PDF |
+| [guion-c.md](guion-c.md) | Guion en lenguaje llano para la versión final (917 palabras, ~6:50 a ritmo tranquilo) |
 | [slides.pptx](slides.pptx) | Versión anterior en PowerPoint, con el guion en las notas del orador |
 | [comprobacion.md](comprobacion.md) | Cada afirmación con su fuente y su comprobación contra el Skill y los documentos entregados; las diferencias encontradas |
 | `scripts/entrega/cut3_video_slides.py` | Genera `slides.pptx`; toma las notas del orador de `guion.md` |

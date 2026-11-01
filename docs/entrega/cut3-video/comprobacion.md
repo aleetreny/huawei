@@ -105,3 +105,28 @@ for m in ['mv-3','mv-4']:
 ```
 
 - Duración: 1.266 palabras habladas; ~8:45 a 145 palabras por minuto (contado por bloque en el script de [guion.md](guion.md)).
+
+## 6. Versión final en lenguaje llano (presentación C y `guion-c.md`)
+
+La versión C cuenta lo mismo con palabras de todos los días. Estas son las simplificaciones, con la cifra o la frase de origen, para que el jurado no encuentre contradicciones con el Skill ni con los documentos:
+
+| En la versión C | Qué es en los documentos | Fuente |
+|---|---|---|
+| «the manual» / «a Skill» | El Skill `career-rules` más la instrucción del manifiesto | SD §2 |
+| «80 % how the careers go, 10 % how much it reads, 10 % how good the manual is» | live play 80 %, token efficiency 10 %, document design quality 10 % | `competition-rules.rst` |
+| «the organisers run it three times» | la nota de partidas es la media de tres partidas oficiales | `competition-rules.rst` |
+| «a practice copy that makes the same move 99 times in 100… nothing from it goes into the manual» | réplica: 99,3 % de pasos; sólo para investigar | DR §2; HALLAZGOS B1 |
+| «83 % of risky answers… about half of the answers that help it grow» | riesgo 83 %; subidas de Skill 45 % y de Output 49 % | DR §4; B17 |
+| «three questions» y «a one-line diary» | las tres preguntas de SD §1 y la línea de estado de S | SD §1, §3; S «Status line» |
+| «guard its scores in the two months before each review» | proteger Network y Output dos meses antes, reparar enseguida | M; S paso 4 |
+| «avoid any answer that might bury a problem» | «drop options that may bury a problem» | M; S paso 2 |
+| «word pieces» y «1.4 M → 0.6 M a month» | fichas por mes de juego: 1,35–1,47 M (v4) y media 0,60 M (mv-3, completas) | DR §5c; CSV |
+| «with that sentence, five of eleven ended early; without it, seven of nine finished, averaging 70.1, two at level six» | mv-4 frente a mv-3 | DR §5c (corregido); CSV |
+| «three times, a cheap test said better, full careers said worse» | banco del corte 2, tramos y revisores de la reconstrucción del corte 1, réplica para la variante valiente | DR §5c, §5d; C3 §6 |
+| «a helper program: one great career, 3 of 7 ended early, 1.6× the reading» | advisor con script de otra línea | DR §6 |
+| «only things the AI can see… no secret answers, no hidden game numbers» | sin títulos de eventos, respuestas fijas ni umbrales no publicados; márgenes propios marcados como nuestros | SD §7; S «Published and ours» |
+| «about one career in four still falls, mostly at the very start» | «About one career in four still collapses, mostly by never leaving the starting level» | SD §7 |
+| «changes how it works, not what it understands» | «Skills can supply priority, scope and memory discipline… cannot guarantee that a model understands» | DR §8 |
+| «70.1 on average in its finished practice careers», «less than half the reading», «no secret answers» | media de 7 completas de 9; 43 % de las fichas por mes del corte 1 | DR §5c; CSV |
+
+Lo único que la versión C no dice con detalle (la regla de la evaluación inminente, el modo estricto, el trimestre por nivel) está en los documentos; no contradice nada. El guion C dura ~6:50 a 135 palabras por minuto.
