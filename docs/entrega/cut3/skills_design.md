@@ -1,6 +1,6 @@
 # Skills design — Gradient Depression
 
-**Submission `c3-k2`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
+**Submission `c3-k3`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
 
 This version keeps the story judgement of our Cut 1 submission (`t13-read-v4`): the reading guide, the list of risky wording and the five ordered story steps. It keeps the way of working introduced in Cut 2 (`mv-5r`): each decision is one reply with two tool calls and a one-line note. What is new targets the starting level, where most of our failed careers ended: the first two reviews and the third one need opposite attitudes to hidden risk, and the Skill now says so.
 
@@ -44,9 +44,11 @@ The story section first asks for the likely sign of each option's effect on Skil
 The agent then applies five ordered steps, skipping a step only if it would remove every option:
 
 1. **Survive:** drop options that could end the run now.
-2. **Risk:** drop options that may add hidden risk. If the HR remark is not the friendly one, or a risky choice was already made this month, also drop private, anonymous, partial or postponed fixes. If every option looks risky, the smallest and most reversible risk wins. Two context rules adjust this step:
-   - **Before a review, while the HR remark is friendly or quiet:** keeping Skill, Network and Output comes before avoiding a *mild* risk, in the month before any review and, at the starting level, also in the month before that. Hiding, denying, blaming, gambling and cutting corners stay excluded in every month.
-   - **Stalled start** (two reviews at the starting level without a promotion): until the next review, no option that may add risk, whatever it saves; among the rest, the one that documents, reports, follows the process or fixes fully, while keeping Skill, Network and Output.
+2. **Risk:** the first matching case applies.
+   - **Stalled start** (two reviews at the starting level without a promotion): until the next review, first drop every option that may add risk, whatever it saves, including private, partial or temporary fixes; then keep Skill, Network and Output as in the review month; only then prefer the option that documents, reports, follows the process or fixes fully.
+   - **Review exception** (not stalled, HR remark friendly or quiet, the month before any review, or either of the two months before a review at the starting level): keeping Skill, Network and Output comes before avoiding a *mild* risk. Hiding, denying, blaming, gambling and cutting corners stay excluded in every month.
+   - **Strict mode** (the HR remark is not the friendly one, or a risky choice was already made this month): also drop private, anonymous, partial or postponed fixes, and prefer an option that documents, reports, owns or fully fixes the problem.
+   - **Otherwise** drop options that may add risk. In every case, if every option looks risky, the smallest and most reversible risk wins.
 3. **Wellbeing:** with Health at 3 or below (our margin), drop anything that may lower it, even before a review; with Health or Dignity low or falling, drop options that lower them; avoid spending when Wealth is below zero, and prefer involving someone when Network is at zero.
 4. **Review close (N = 1 or 2):** first repair Network or Output if it is under its Best. Otherwise avoid options that may lower Network or Output, and in the review month Skill as well: going against a person may cost Network; giving up time or credit from one's own delivery may cost Output; avoiding the work or the learning may cost Skill.
 5. **Grow:** choose the option that raises most of Skill, Network and Output, counting twice a stat the latest review talk named as lagging, minus one for each it lowers. In the last quarter of the career, prefer Health, Dignity and lower risk. Ties go to lower risk, then Health and Dignity, then the option that costs no money.
@@ -77,10 +79,10 @@ Concrete, ordered quarterly directions were followed much more reliably than gen
 | `t13-read-v4` (Cut 1) | `Best` per level; protect Network and Output from two months before a review and repair losses at once | A career lost Output with two months to go while chasing Network it could no longer raise |
 | `mv-5r` (Cut 2) | One reply per decision (`take_action` + `observe`); one-line note; "never end a reply with text only"; Health brake; level-4 Skill quarter | v4 used 1.35–1.47 million tokens per game month; one career stopped after 21 replies without a tool call |
 | `mv-5r` (Cut 2) | Hidden costs of polite or helpful options named at the starting level | DeepSeek misread some costs; in later checks this did not improve the first review in careers, and Cut 2 lost two of its three official careers at the starting level |
-| **`c3-k2`** (Cut 3) | v4's story rules with the Cut 2 loop | In faithful replays of the first months, v4's rules with the one-reply loop won the first review far more often than without it |
-| **`c3-k2`** | Mild-risk exception in both months before the first two reviews at the starting level | Those reviews were decided by one point of Network or Output, not by the HR remark |
-| **`c3-k2`** | Stalled-start protocol: no added risk, defuse every quarter, keep Network and Output | Seven of the eleven careers that reached the third starting-level review lost it to hidden risk with all three stats in place |
-| **`c3-k2`** | A 48-month table, a review calendar, margins labelled as ours, a quick reference near limits | Reviewers of our documents found a dangling reference, vague limits and a quarterly line that contradicted the one-reply loop |
+| **`c3-k3`** (Cut 3) | v4's story rules with the Cut 2 loop | In faithful replays of the first months, v4's rules with the one-reply loop won the first review far more often than without it |
+| **`c3-k3`** | Mild-risk exception in both months before the first two reviews at the starting level | Those reviews were decided by one point of Network or Output, not by the HR remark |
+| **`c3-k3`** | Stalled-start protocol: no added risk, defuse every quarter, keep Network and Output | Seven of the eleven careers that reached the third starting-level review lost it to hidden risk with all three stats in place |
+| **`c3-k3`** | A 48-month table, a review calendar, margins labelled as ours, a quick reference near limits | Reviewers of our documents found a dangling reference, vague limits and a quarterly line that contradicted the one-reply loop |
 
 ## 7. Generalisation, scope and limits
 

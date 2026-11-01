@@ -1,6 +1,6 @@
 # Decision report — Gradient Depression
 
-**Submission `c3-k2`, Cut 3 (1 November 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
+**Submission `c3-k3`, Cut 3 (1 November 2026).** All scores below come from our own development runs with the official runner and the designated model, or from our local tools. None is an organiser-issued evaluation.
 
 ## 1. Our decision process
 
@@ -76,13 +76,13 @@ What it did not fix is the starting level. In development, `mv-5r` scored 69.00 
 
 **The third starting-level review is lost to hidden risk, not to a missing stat.** In our 50 development careers, the first review at the starting level was won about half the time, the second about as often by careers that had lost the first, and the third by 1 of the 11 careers that reached it. Looking at the state just before that third review: seven of those careers had Skill, Network and Output in place and received a weak review with a worried HR remark; three had a friendly remark but lost one point of Network or Output in the last story of that month; one was promoted. The weak review itself cost Network and Dignity, which at first made these careers look as if they had failed on Network. The reviews at months 6 and 12 at the starting level were weak in the same way whatever the HR remark said. So the starting level needs two attitudes to hidden risk: a mild risk is worth taking to keep Network and Output before the first two reviews, and none can be taken before the third.
 
-**Spending a whole quarter on Health before the first review cost the review.** In development careers whose quarter before the first review went entirely to Health recovery, the first review was won 6 times in 19; with one point on Health and the rest on the stats the review needs, 9 in 11. Several Cut 2 family Skills had an explicit "Health recovery first" margin that pushed the agent into the first pattern. `c3-k2` keeps a Health brake for stories and for a Health of 3 or below, and otherwise buys one point of Health and spends the rest on the review.
+**Spending a whole quarter on Health before the first review cost the review.** In development careers whose quarter before the first review went entirely to Health recovery, the first review was won 6 times in 19; with one point on Health and the rest on the stats the review needs, 9 in 11. Several Cut 2 family Skills had an explicit "Health recovery first" margin that pushed the agent into the first pattern. `c3-k3` keeps a Health brake for stories and for a Health of 3 or below, and otherwise buys one point of Health and spends the rest on the review.
 
 **Our situation bank did not reproduce careers.** Each recent candidate improved on the bank and did not improve in careers. The bank asked one month at a time with the Skill freshly read, a short English system prompt, six tools and default sampling; in a career, JiuwenSwarm's system prompt, 52 tools, a low `top_p` and 40–500 earlier replies sit between the Skill and the decision, and the model's earlier reasoning is returned in the history. We built faithful replays instead: DeepSeek plays the start of a real game against the official engine with the exact request JiuwenSwarm builds, up to the point where it leaves the starting level. They cost about 2–5 cents each, so they can be compared in batches of a few dozen.
 
-**New early failures.** In faithful replays some careers ended before the first review: Health reached zero after a run of effortful options in the two months before the review, and one career went broke when Wealth, displayed as 0, was in fact below zero. `c3-k2` puts both brakes in the always-visible manifest instruction as well as in the Skill.
+**New early failures.** In faithful replays some careers ended before the first review: Health reached zero after a run of effortful options in the two months before the review, and one career went broke when Wealth, displayed as 0, was in fact below zero. `c3-k3` puts both brakes in the always-visible manifest instruction as well as in the Skill.
 
-## 5e. Evidence for `c3-k2`
+## 5e. Evidence for `c3-k3`
 
 TODO(manual: tramos and careers)
 
@@ -101,7 +101,10 @@ TODO(manual: tramos and careers)
 | Hidden costs named before every review | Review preparation at levels 2–4 worsened from 0.59 to 0.96 with more risk taken; kept at the starting level only (section 5c). |
 | A Skill half as long, with the same loop | Chose like `mv-5r` but failed our risk control by one situation (2.00 against a limit of 1.3 fixed in advance); not promoted. |
 | A rewrite for document quality only | Claude reviewers scored it 73.5 against 74.5; below the +3 we required. |
-| v4's rules with only the new turn loop | The same token saving (302 and 432 thousand per month), but 23.23 and 58.95 in two careers; not enough to prefer it. |
+| v4's rules with only the new turn loop | The same token saving (302 and 432 thousand per month), but 23.23 and 58.95 in two careers; not enough to prefer it at Cut 2. Faithful replays later showed it left the starting level as often as our other candidates, and it became the base of `c3-k3`. |
+| A cost mark for every option before choosing, at the starting level | In faithful replays the share of decisions that lost Network or Output in the two months before the first review stayed at 21–25%, the same as without marks; not promoted. |
+| "Health recovery first" whenever Health is 5 or below | Before the first review it spent the last quarter's Energy on Health instead of the stats the review needed (section 5d); replaced by one point of Health and the rest on the review, with a stronger brake at Health 3 or below. |
+| `mv-5r` again | Official Cut 2 score 45.44; in development, no promotion at the first review in three careers. |
 
 ## 7. Memory and measurement limitations
 
@@ -109,7 +112,7 @@ The status line came from a specific memory use: retain an expected quarterly re
 
 Our bank measurements have known caveats: some story continuations and the end-of-career settlement were missing from early versions, and "right answer" mixed rule compliance with estimated value. The replica was corrected afterwards, but not every historical bank figure was recomputed, so we treat decision-level regret as provisional. Holdout checks were useful but not perfectly isolated.
 
-Two development careers per version cannot separate versions a few points apart. We chose `mv-5r` for Cut 2 because it keeps v4's story choices within what we can measure, keeps v4's risk when preparing later reviews, and adds what we could measure precisely: token efficiency of 100 instead of about 64 (about +3.3 points of version score at equal play) and no career stopped by replies without a tool call. The evidence cannot establish that it plays better than v4, and it does not change the main weakness: about one career in four still collapses, mostly at the first promotion. A planner that sees the effect of every option averages about 72 on the same game, and half of the losses before the first review had no clean alternative, so we expect further gains from avoiding collapses and reading options better, not from more rules.
+Neither faithful replays of the first months nor a handful of complete careers can separate versions a few points apart. We chose `c3-k3` for Cut 3 because it keeps what we could measure precisely (token efficiency of 100, no career stopped by replies without a tool call, the loop wording that held with every provider we tried), leaves the starting level at least as often as the alternatives in faithful replays, closes the failure routes we could see in our logs (a stalled start lost to hidden risk, Health or Wealth run to zero, a quarter before the first review spent entirely on Health), and scores at the level of our best Skill text with two independent reviewers using the published criteria. It does not fix perception: DeepSeek still loses Network or Output in about one decision in five before the first review.
 
 ## 8. What we learned about Skills
 
