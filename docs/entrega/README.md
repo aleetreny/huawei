@@ -10,6 +10,7 @@ Material para los cortes de entrega (no es la entrega en sí).
 | [decision_report-draft.md](decision_report-draft.md) | English draft for final design/decision_report.md; evidence, uncertainty and limitations |
 | [t19-compliance.md](t19-compliance.md) | Internal status-line wording review; do not package as a design deliverable |
 | [cut2/](cut2/PREPARAR.md) | Corte 2: borradores en inglés (`README.md`, `skills_design.md`, `decision_report.md`) con `TODO(manual)` y los pasos para cerrarlo; empaquetar con `scripts/entrega/build_cut.py` |
+| [cut2/video-script-en.md](cut2/video-script-en.md) | Corte 2 (`mv-5r`): guion en inglés para leer en el vídeo, enlace a la presentación y fuente de cada cifra |
 
 ## Evidence map for the design drafts (internal; not for the submission ZIP)
 
