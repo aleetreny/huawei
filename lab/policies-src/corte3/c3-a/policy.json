@@ -1,0 +1,15 @@
+{
+  "family": "corte3",
+  "name": "c3-a",
+  "parents": [
+    "c3-k"
+  ],
+  "idea_origin": "Corte 3 line, 1 Nov: real-game analysis of the third L1 review (risk, not Network, decides it) and the external critic",
+  "operator": "c3-k plus: at the starting level with Review in 1 or 2, the one short line of text the loop already allows before the two calls lists every option's likely cost (S-, N-, O-, risk, ok) and the agent picks an ok option if any (external critic, idea A': deliberation that stays in the history whatever the provider).",
+  "hypothesis": "More L1 exits by month 12 than c3-k, above all when the provider returns no reasoning; pairing intact.",
+  "predicted_behaviour": "tramos to month 18: exit L1 at least as often as v4-loop; pairing intact.",
+  "refutation": "Clearly fewer L1 exits than v4-loop in the same batch, or broken pairing.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Built 1 Nov for the last cut."
+}

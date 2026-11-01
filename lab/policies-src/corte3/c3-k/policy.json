@@ -1,0 +1,16 @@
+{
+  "family": "corte3",
+  "name": "c3-k",
+  "parents": [
+    "v4-loop",
+    "mv-5r"
+  ],
+  "idea_origin": "Corte 3 line, 1 Nov: real-game analysis of the third L1 review (risk, not Network, decides it) and the external critic",
+  "operator": "v4-loop with Turn loop and Status line byte for byte; adds (1) the mild-risk exception also with Review in 2 at the starting level (reviews 6 and 12 grade C regardless of risk), (2) the stalled-start rule the Status line already cited (zero-risk protocol for the third review, quarterly Defuse first), (3) mv-5r's health brake and level-4 Skill quarter, (4) a 48-month table and a near-limit table for the quality rubric; manifest sentences for (1) and (2).",
+  "hypothesis": "Same L1 exit-by-month-12 as v4-loop in faithful segments (tramos), more third-review rescues, higher quality score, faster L4 to L5.",
+  "predicted_behaviour": "tramos to month 18: exit L1 at least as often as v4-loop; pairing intact.",
+  "refutation": "Clearly fewer L1 exits than v4-loop in the same batch, or broken pairing.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Built 1 Nov for the last cut."
+}
