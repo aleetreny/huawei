@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Game</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --wash: rgba(11,11,11,0.04);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --good: #0ca30c; --accent: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --accent: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.05);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --accent: #3987e5;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--ink); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 24px 24px 56px; }
+@media (max-width: 520px) { .wrap { padding: 18px 16px 40px; } }
+a { color: var(--accent); }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: 24px; margin: 4px 0 2px; font-weight: 650; }
+.sub { color: var(--ink-2); margin: 0 0 16px; }
+.live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2); }
+.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--good); animation: pulse 1.6s infinite; }
+.live.done::before { animation: none; background: var(--muted); }
+@keyframes pulse { 50% { opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .live::before { animation: none; } }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(12, 1fr); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; min-width: 0; }
+.s3 { grid-column: span 3; } .s8 { grid-column: span 8; } .s4 { grid-column: span 4; } .s12 { grid-column: span 12; }
+@media (max-width: 900px) { .s8, .s4 { grid-column: span 12; } .s3 { grid-column: span 6; } }
+.label { color: var(--ink-2); font-size: 13px; }
+.value { font-size: 30px; font-weight: 650; line-height: 1.1; margin: 6px 0 2px; }
+.note { color: var(--muted); font-size: 12px; }
+h2 { font-size: 15px; margin: 0 0 2px; font-weight: 650; }
+.desc { color: var(--ink-2); font-size: 13px; margin: 0 0 10px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--ink-2); font-size: 12px; margin: 0 0 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.key { width: 14px; height: 2px; border-radius: 1px; display: inline-block; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--muted); font-size: 11px; font-family: inherit; }
+svg .ink { fill: var(--ink); } svg .ink2 { fill: var(--ink-2); }
+.gridline { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+.axisline { stroke: var(--axis); stroke-width: 1; shape-rendering: crispEdges; }
+.feed { list-style: none; margin: 0; padding: 0; }
+.feed li { padding: 8px 0; border-bottom: 1px solid var(--grid); display: grid; grid-template-columns: 54px 64px 1fr; gap: 8px; align-items: baseline; }
+.feed li:last-child { border-bottom: 0; }
+.feed .m { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; }
+.tag { font-size: 11px; font-weight: 650; color: var(--ink-2); border: 1px solid var(--border); border-radius: 999px; padding: 1px 7px; text-align: center; }
+.feed .a { font-weight: 600; }
+.feed .n { color: var(--ink-2); font-size: 12px; display: block; font-weight: 400; }
+#tip { position: fixed; pointer-events: none; z-index: 20; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 8px 10px; font-size: 12px; box-shadow: 0 6px 24px rgba(0,0,0,.12); opacity: 0; min-width: 150px; }
+#tip .r { display: flex; align-items: center; gap: 7px; color: var(--ink-2); }
+#tip .v { font-weight: 650; color: var(--ink); min-width: 22px; text-align: right; }
+.empty { border: 1px dashed var(--axis); border-radius: 12px; padding: 18px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Gradient Depression · live game</div>
+  <h1 id="title">Waiting for game data…</h1>
+  <p class="sub"><span id="live" class="live">live</span> · <span id="updated"></span> · <a href="index.html">back to the results panel</a></p>
+
+  <div class="grid" id="tiles"></div>
+
+  <div class="grid" style="margin-top:14px">
+    <div class="card s8">
+      <h2>Growth: Skill, Network, Output, Wealth</h2>
+      <p class="desc">Value after every decision. Vertical lines mark the half-year reviews; labels at the top mark promotions.</p>
+      <div class="legend" id="leg1"></div>
+      <div id="growth"></div>
+    </div>
+    <div class="card s4">
+      <h2>Latest decisions</h2>
+      <p class="desc">With the player's own notes.</p>
+      <ul class="feed" id="feed"></ul>
+    </div>
+    <div class="card s12">
+      <h2>Health and Dignity (0–10)</h2>
+      <p class="desc">Health at 0 ends the career; quarter ends are where recovery happens.</p>
+      <div class="legend" id="leg2"></div>
+      <div id="wellbeing"></div>
+    </div>
+  </div>
+</div>
+<div id="tip"></div>
+<script>
+(() => {
+"use strict";
+const NS = "http://www.w3.org/2000/svg", $ = (s) => document.querySelector(s);
+const GROWTH = [["skill", "Skill", "var(--s1)"], ["network", "Network", "var(--s2)"], ["output", "Output", "var(--s3)"], ["wealth", "Wealth", "var(--s4)"]];
+const WELL = [["health", "Health", "var(--s6)"], ["dignity", "Dignity", "var(--s5)"]];
+function el(tag, attrs = {}, parent) {
+  const n = tag.startsWith("svg:") ? document.createElementNS(NS, tag.slice(4)) : document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) k === "text" ? (n.textContent = v) : n.setAttribute(k, v);
+  if (parent) parent.appendChild(n); return n;
+}
+const tip = $("#tip");
+function legend(host, series) { host.replaceChildren(); for (const [, name, c] of series) { const s = el("span", {}, host); el("span", { class: "key", style: `background:${c}` }, s); s.append(name); } }
+
+function chart(host, pts, series, { yMin = null, yMax = null, H = 280, data }) {
+  const W = Math.max(320, host.clientWidth || 700), l = 34, r = 70, t = 22, b = 26;
+  host.replaceChildren();
+  const svg = el("svg:svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, host);
+  if (!pts.length) return;
+  const vals = pts.flatMap((p) => series.map(([k]) => p[k])).filter((v) => typeof v === "number");
+  const lo = yMin ?? Math.min(0, ...vals), hi = yMax ?? Math.max(10, ...vals);
+  const step = (hi - lo) > 60 ? 20 : (hi - lo) > 24 ? 10 : (hi - lo) > 12 ? 5 : 2;
+  const top = Math.ceil(hi / step) * step, bot = Math.floor(lo / step) * step;
+  const n = Math.max(pts.length - 1, 1), x = (i) => l + (i / n) * (W - l - r), y = (v) => t + (1 - (v - bot) / (top - bot || 1)) * (H - t - b);
+  for (let v = bot; v <= top; v += step) { el("svg:line", { x1: l, x2: W - r, y1: y(v), y2: y(v), class: v === 0 ? "axisline" : "gridline" }, svg); el("svg:text", { x: l - 6, y: y(v) + 4, "text-anchor": "end", text: v }, svg); }
+  // review months (6, 12, ...): first point of that month
+  const firstOf = {}; pts.forEach((p, i) => { if (!(p.month in firstOf)) firstOf[p.month] = i; });
+  for (const m of Object.keys(firstOf).map(Number).filter((m) => m % 6 === 0)) {
+    const xi = x(firstOf[m]);
+    el("svg:line", { x1: xi, x2: xi, y1: t, y2: H - b, class: "axisline" }, svg);
+    el("svg:text", { x: xi, y: H - 8, "text-anchor": "middle", text: `M${m}` }, svg);
+  }
+  for (const pr of data.promotions) {
+    const i = firstOf[pr.month]; if (i == null) continue;
+    el("svg:text", { x: x(i), y: t - 8, "text-anchor": "middle", class: "ink", "font-weight": 650, text: `↑ ${pr.level}` }, svg);
+  }
+  const ends = [];
+  for (const [k, name, c] of series) {
+    const d = pts.map((p, i) => (i ? "L" : "M") + x(i).toFixed(1) + "," + y(p[k]).toFixed(1)).join("");
+    el("svg:path", { d, fill: "none", stroke: c, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    const last = pts[pts.length - 1];
+    el("svg:circle", { cx: x(n), cy: y(last[k]), r: 4, fill: c, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    ends.push({ y: y(last[k]), text: `${last[k]} ${name}` });
+  }
+  ends.sort((a, b2) => a.y - b2.y);
+  for (let i = 1; i < ends.length; i++) if (ends[i].y - (ends[i - 1].ly ?? ends[i - 1].y) < 13) ends[i].ly = (ends[i - 1].ly ?? ends[i - 1].y) + 13;
+  for (const e of ends) el("svg:text", { x: x(n) + 8, y: (e.ly ?? e.y) + 4, class: "ink2", text: e.text }, svg);
+  // crosshair
+  const cross = el("svg:line", { y1: t, y2: H - b, class: "axisline", opacity: 0 }, svg);
+  const hit = el("svg:rect", { x: l, y: t, width: W - l - r, height: H - t - b, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", (e) => {
+    const box = svg.getBoundingClientRect(), px = ((e.clientX - box.left) / box.width) * W;
+    const i = Math.max(0, Math.min(n, Math.round(((px - l) / (W - l - r)) * n))), p = pts[i];
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", 1);
+    tip.replaceChildren(); el("div", { style: "color:var(--muted)", text: `Month ${p.month} · ${p.level}` }, tip);
+    for (const [k, name, c] of series) { const row = el("div", { class: "r" }, tip); el("span", { class: "v", text: p[k] }, row); el("span", { class: "key", style: `background:${c}` }, row); row.append(name); }
+    tip.style.left = Math.min(e.clientX + 14, innerWidth - 180) + "px"; tip.style.top = e.clientY + 14 + "px"; tip.style.opacity = 1;
+  });
+  hit.addEventListener("pointerleave", () => { tip.style.opacity = 0; cross.setAttribute("opacity", 0); });
+}
+
+function tiles(d) {
+  const host = $("#tiles"); host.replaceChildren();
+  const last = d.points[d.points.length - 1] || {};
+  const grade = d.grades.length ? d.grades.map((g) => g.grade).join(" ") : "–";
+  const end = d.ending;
+  const items = [
+    ["Month", `${last.month ?? "–"} / 48`, `${d.n_decisions} decisions so far`],
+    ["Level", last.level ?? "–", d.promotions.length ? d.promotions.map((p) => `${p.level} at M${p.month}`).join(" · ") : "no promotion yet"],
+    ["Review grades", grade, "a review every six months"],
+    end ? ["Final score", end.quantitative_score != null ? (+end.quantitative_score).toFixed(1) : "–", `${end.outcome} · ${end.survival_months} months`]
+        : ["Status", "Playing", "the page refreshes on its own"],
+  ];
+  for (const [l, v, n] of items) { const c = el("div", { class: "card s3" }, host); el("div", { class: "label", text: l }, c); el("div", { class: "value", text: v }, c); el("div", { class: "note", text: n }, c); }
+}
+function feed(d) {
+  const host = $("#feed"); host.replaceChildren();
+  for (const x of [...d.decisions].reverse()) {
+    const li = el("li", {}, host);
+    el("span", { class: "m", text: `M${x.month}` }, li);
+    el("span", { class: "tag", text: x.kind }, li);
+    const a = el("span", { class: "a", text: x.action }, li);
+    if (x.notes) el("span", { class: "n", text: x.notes }, a);
+  }
+}
+let timer = null;
+async function load() {
+  let d;
+  try { d = await (await fetch("live/game.json?t=" + Date.now(), { cache: "no-store" })).json(); } catch (e) { return; }
+  $("#title").textContent = d.label || d.job;
+  $("#updated").textContent = "updated " + new Date(d.updated * 1000).toLocaleTimeString();
+  $("#live").classList.toggle("done", !!d.ending); $("#live").textContent = d.ending ? "finished" : "live";
+  tiles(d); feed(d);
+  chart($("#growth"), d.points, GROWTH, { data: d }); chart($("#wellbeing"), d.points, WELL, { yMin: 0, yMax: 10, H: 200, data: d });
+  if (d.ending && timer) { clearInterval(timer); timer = null; }
+}
+legend($("#leg1"), GROWTH); legend($("#leg2"), WELL);
+load(); timer = setInterval(load, 4000);
+})();
+</script>
+</body>
+</html>

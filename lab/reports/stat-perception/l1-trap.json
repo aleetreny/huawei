@@ -1,0 +1,436 @@
+{
+ "base": {
+  "score": 49.697265,
+  "se": 0.4242797081764253,
+  "stuck_l1": 0.232,
+  "dismissed": 441,
+  "trust": 376,
+  "missed_m6": 0.461,
+  "why_failed": {
+   "m6:network": 458,
+   "m6:skill": 130,
+   "m6:output": 669,
+   "m12:output": 334,
+   "m18:grade D": 454,
+   "m24:grade D": 441,
+   "m12:network": 225,
+   "m18:network": 101,
+   "m18:output": 123,
+   "m24:output": 144,
+   "m24:network": 101,
+   "m12:skill": 23,
+   "m24:skill": 2,
+   "m18:skill": 1
+  },
+  "no_losses": {
+   "forced": 3432,
+   "avoidable": 1680
+  },
+  "entry": {
+   "entered at the bar": 950,
+   "entered short": 431
+  }
+ },
+ "cat1": {
+  "score": 49.457545,
+  "se": 0.43941814990589645,
+  "stuck_l1": 0.2125,
+  "dismissed": 352,
+  "trust": 412,
+  "missed_m6": 0.418,
+  "why_failed": {
+   "m6:output": 652,
+   "m12:network": 146,
+   "m18:output": 129,
+   "m18:grade D": 385,
+   "m24:output": 123,
+   "m24:grade D": 352,
+   "m6:skill": 120,
+   "m6:network": 328,
+   "m12:output": 315,
+   "m24:network": 71,
+   "m18:network": 60,
+   "m12:skill": 11,
+   "m18:skill": 3,
+   "m24:skill": 2
+  },
+  "no_losses": {
+   "forced": 3157,
+   "avoidable": 1384
+  }
+ },
+ "cat2": {
+  "score": 46.74051,
+  "se": 0.47241195486301857,
+  "stuck_l1": 0.261,
+  "dismissed": 320,
+  "trust": 416,
+  "missed_m6": 0.4425,
+  "why_failed": {
+   "m6:output": 713,
+   "m12:network": 146,
+   "m12:output": 345,
+   "m18:output": 149,
+   "m18:grade D": 381,
+   "m24:skill": 1,
+   "m24:output": 121,
+   "m24:grade D": 320,
+   "m6:network": 315,
+   "m6:skill": 117,
+   "m24:network": 55,
+   "m18:network": 70,
+   "m12:skill": 14,
+   "m6:dignity": 3,
+   "m18:skill": 3,
+   "m18:dignity": 1,
+   "m12:grade D": 1
+  },
+  "no_losses": {
+   "avoidable": 1105,
+   "forced": 3120
+  }
+ },
+ "nofirst": {
+  "score": 49.79653,
+  "se": 0.42247971878652707,
+  "stuck_l1": 0.229,
+  "dismissed": 429,
+  "trust": 379,
+  "missed_m6": 0.4595,
+  "why_failed": {
+   "m6:network": 461,
+   "m6:skill": 134,
+   "m6:output": 669,
+   "m12:output": 316,
+   "m18:grade D": 446,
+   "m24:network": 106,
+   "m24:output": 136,
+   "m24:grade D": 429,
+   "m12:network": 233,
+   "m18:output": 125,
+   "m18:network": 93,
+   "m12:skill": 22,
+   "m24:skill": 2,
+   "m18:skill": 1
+  },
+  "no_losses": {
+   "forced": 3370,
+   "avoidable": 1678
+  }
+ },
+ "tworeads": {
+  "score": 48.250005,
+  "se": 0.4359308899302562,
+  "stuck_l1": 0.2685,
+  "dismissed": 516,
+  "trust": 371,
+  "missed_m6": 0.472,
+  "why_failed": {
+   "m6:network": 553,
+   "m12:network": 278,
+   "m12:output": 363,
+   "m18:grade D": 532,
+   "m24:skill": 2,
+   "m24:output": 187,
+   "m24:grade D": 516,
+   "m18:output": 168,
+   "m6:output": 603,
+   "m18:network": 131,
+   "m6:skill": 117,
+   "m24:network": 160,
+   "m12:skill": 23,
+   "m18:skill": 5
+  },
+  "no_losses": {
+   "forced": 3856,
+   "avoidable": 1940
+  }
+ },
+ "vote": {
+  "score": 50.184035,
+  "se": 0.4306607570678185,
+  "stuck_l1": 0.245,
+  "dismissed": 450,
+  "trust": 301,
+  "missed_m6": 0.488,
+  "why_failed": {
+   "m6:network": 652,
+   "m12:network": 275,
+   "m12:output": 307,
+   "m18:grade D": 468,
+   "m24:skill": 6,
+   "m24:output": 139,
+   "m24:grade D": 450,
+   "m18:network": 122,
+   "m18:output": 122,
+   "m24:network": 121,
+   "m6:output": 545,
+   "m6:skill": 146,
+   "m12:skill": 26,
+   "m18:skill": 3
+  },
+  "no_losses": {
+   "forced": 3434,
+   "avoidable": 1988
+  },
+  "entry": {
+   "entered at the bar": 997,
+   "entered short": 453
+  }
+ },
+ "cat2+nofirst": {
+  "score": 46.4229,
+  "se": 0.4701258686896581,
+  "stuck_l1": 0.265,
+  "dismissed": 338,
+  "trust": 416,
+  "missed_m6": 0.441,
+  "why_failed": {
+   "m6:output": 711,
+   "m12:network": 153,
+   "m12:output": 355,
+   "m6:network": 316,
+   "m18:grade D": 386,
+   "m24:grade D": 338,
+   "m6:skill": 117,
+   "m18:output": 141,
+   "m24:network": 58,
+   "m24:output": 141,
+   "m18:network": 70,
+   "m12:skill": 13,
+   "m6:dignity": 3,
+   "m18:skill": 2,
+   "m12:dignity": 1,
+   "m12:grade D": 1
+  },
+  "no_losses": {
+   "avoidable": 1139,
+   "forced": 3145
+  }
+ },
+ "cat2+tworeads": {
+  "score": 46.55742,
+  "se": 0.4691837542151366,
+  "stuck_l1": 0.2685,
+  "dismissed": 370,
+  "trust": 421,
+  "missed_m6": 0.447,
+  "why_failed": {
+   "m6:output": 666,
+   "m12:network": 174,
+   "m12:output": 362,
+   "m18:output": 159,
+   "m18:grade D": 418,
+   "m6:network": 377,
+   "m24:grade D": 370,
+   "m6:skill": 99,
+   "m24:network": 70,
+   "m24:output": 147,
+   "m18:network": 78,
+   "m6:dignity": 2,
+   "m12:skill": 17,
+   "m24:skill": 2,
+   "m18:skill": 3,
+   "m18:dignity": 1,
+   "m12:dignity": 1,
+   "m12:grade D": 1
+  },
+  "no_losses": {
+   "forced": 3437,
+   "avoidable": 1057
+  }
+ },
+ "perfect": {
+  "score": 55.652215,
+  "se": 0.3884104436137648,
+  "stuck_l1": 0.131,
+  "dismissed": 244,
+  "trust": 352,
+  "missed_m6": 0.3415,
+  "why_failed": {
+   "m6:network": 348,
+   "m6:output": 506,
+   "m12:network": 131,
+   "m18:grade D": 258,
+   "m24:skill": 2,
+   "m24:output": 58,
+   "m24:grade D": 244,
+   "m12:output": 184,
+   "m24:network": 49,
+   "m12:skill": 11,
+   "m18:output": 58,
+   "m18:network": 41,
+   "m6:skill": 88,
+   "m18:skill": 3,
+   "m12:grade D": 1
+  },
+  "no_losses": {
+   "forced": 2600,
+   "avoidable": 784
+  },
+  "entry": {
+   "entered at the bar": 655,
+   "entered short": 287
+  }
+ },
+ "perfect+cat2": {
+  "score": 50.249210000000005,
+  "se": 0.4669258150888084,
+  "stuck_l1": 0.209,
+  "dismissed": 282,
+  "trust": 429,
+  "missed_m6": 0.395,
+  "why_failed": {
+   "m6:output": 636,
+   "m12:output": 290,
+   "m12:dignity": 3,
+   "m18:grade D": 321,
+   "m6:network": 310,
+   "m12:network": 116,
+   "m18:output": 104,
+   "m24:grade D": 282,
+   "m12:skill": 10,
+   "m18:dignity": 2,
+   "m6:skill": 76,
+   "m18:network": 45,
+   "m24:output": 91,
+   "m24:network": 44,
+   "m18:skill": 2,
+   "m6:dignity": 6,
+   "m12:grade D": 2
+  },
+  "no_losses": {
+   "forced": 2909,
+   "avoidable": 779
+  }
+ },
+ "fill": {
+  "score": 49.688010000000006,
+  "se": 0.4240025300545933,
+  "stuck_l1": 0.231,
+  "dismissed": 438,
+  "trust": 378,
+  "missed_m6": 0.461,
+  "why_failed": {
+   "m6:network": 457,
+   "m6:skill": 136,
+   "m6:output": 667,
+   "m12:output": 333,
+   "m18:grade D": 452,
+   "m24:grade D": 438,
+   "m12:network": 222,
+   "m18:network": 101,
+   "m24:output": 146,
+   "m18:output": 121,
+   "m24:network": 95,
+   "m12:skill": 24,
+   "m24:skill": 2,
+   "m18:skill": 1
+  },
+  "no_losses": {
+   "forced": 3416,
+   "avoidable": 1680
+  },
+  "entry": {
+   "entered at the bar": 1018,
+   "entered short": 361
+  }
+ },
+ "fill+cat1": {
+  "score": 49.36048,
+  "se": 0.43958685010381293,
+  "stuck_l1": 0.2145,
+  "dismissed": 352,
+  "trust": 417,
+  "missed_m6": 0.421,
+  "why_failed": {
+   "m6:output": 651,
+   "m12:network": 142,
+   "m18:output": 130,
+   "m18:grade D": 386,
+   "m24:output": 120,
+   "m24:grade D": 352,
+   "m6:skill": 127,
+   "m6:network": 327,
+   "m12:output": 315,
+   "m18:network": 61,
+   "m24:network": 71,
+   "m12:skill": 11,
+   "m18:skill": 3,
+   "m24:skill": 2
+  },
+  "no_losses": {
+   "forced": 3156,
+   "avoidable": 1389
+  },
+  "entry": {
+   "entered at the bar": 896,
+   "entered short": 341
+  }
+ },
+ "fill+vote": {
+  "score": 50.141574999999996,
+  "se": 0.4303977225014727,
+  "stuck_l1": 0.245,
+  "dismissed": 450,
+  "trust": 306,
+  "missed_m6": 0.4865,
+  "why_failed": {
+   "m6:network": 648,
+   "m12:network": 272,
+   "m12:output": 312,
+   "m18:grade D": 468,
+   "m24:skill": 6,
+   "m24:output": 141,
+   "m24:grade D": 450,
+   "m6:output": 541,
+   "m6:skill": 150,
+   "m18:network": 123,
+   "m18:output": 121,
+   "m24:network": 116,
+   "m12:skill": 26,
+   "m18:skill": 3
+  },
+  "no_losses": {
+   "forced": 3424,
+   "avoidable": 1991
+  },
+  "entry": {
+   "entered at the bar": 1051,
+   "entered short": 396
+  }
+ },
+ "perfect+fill": {
+  "score": 55.54098,
+  "se": 0.38971620203535867,
+  "stuck_l1": 0.1325,
+  "dismissed": 245,
+  "trust": 356,
+  "missed_m6": 0.3435,
+  "why_failed": {
+   "m6:network": 351,
+   "m6:output": 506,
+   "m12:network": 128,
+   "m18:grade D": 259,
+   "m24:skill": 2,
+   "m24:output": 56,
+   "m24:grade D": 245,
+   "m12:output": 189,
+   "m24:network": 49,
+   "m18:network": 42,
+   "m18:output": 61,
+   "m12:skill": 11,
+   "m6:skill": 94,
+   "m18:skill": 3,
+   "m12:grade D": 1
+  },
+  "no_losses": {
+   "forced": 2615,
+   "avoidable": 785
+  },
+  "entry": {
+   "entered at the bar": 712,
+   "entered short": 237
+  }
+ }
+}

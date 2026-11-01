@@ -1,0 +1,1154 @@
+{
+ "prior": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.6827586206896552,
+     "up_precision": 0.7279411764705882,
+     "down_recall": 0.0,
+     "down_precision": 0.0,
+     "accuracy": 0.7765237020316027
+    },
+    "network": {
+     "up_recall": 0.6753246753246753,
+     "up_precision": 0.5842696629213483,
+     "down_recall": 0.7226277372262774,
+     "down_precision": 0.5657142857142857,
+     "accuracy": 0.5620767494356659
+    },
+    "output": {
+     "up_recall": 0.1553398058252427,
+     "up_precision": 0.41025641025641024,
+     "down_recall": 0.07142857142857142,
+     "down_precision": 0.5555555555555556,
+     "accuracy": 0.6207674943566591
+    },
+    "health": {
+     "up_recall": 0.0,
+     "up_precision": 0.0,
+     "down_recall": 0.379746835443038,
+     "down_precision": 0.7692307692307693,
+     "accuracy": 0.8058690744920993
+    },
+    "dignity": {
+     "up_recall": 0.8792270531400966,
+     "up_precision": 0.8125,
+     "down_recall": 0.9312977099236641,
+     "down_precision": 0.580952380952381,
+     "accuracy": 0.6952595936794582
+    },
+    "mean_accuracy": 0.692099322799097
+   },
+   "pairwise": {
+    "skill": 0.8144329896907216,
+    "network": 0.7636363636363637,
+    "output": 0.5445859872611465,
+    "health": 0.6791666666666667,
+    "dignity": 0.85431654676259
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.6392405063291139,
+     "up_precision": 0.7112676056338029,
+     "down_recall": 0.0,
+     "down_precision": 0.0,
+     "accuracy": 0.7626774847870182
+    },
+    "network": {
+     "up_recall": 0.5780346820809249,
+     "up_precision": 0.5747126436781609,
+     "down_recall": 0.6850393700787402,
+     "down_precision": 0.41626794258373206,
+     "accuracy": 0.4949290060851927
+    },
+    "output": {
+     "up_recall": 0.14035087719298245,
+     "up_precision": 0.2962962962962963,
+     "down_recall": 0.10126582278481013,
+     "down_precision": 0.42105263157894735,
+     "accuracy": 0.592292089249493
+    },
+    "health": {
+     "up_recall": 0.0,
+     "up_precision": 0.0,
+     "down_recall": 0.3904761904761905,
+     "down_precision": 0.7592592592592593,
+     "accuracy": 0.7667342799188641
+    },
+    "dignity": {
+     "up_recall": 0.8486238532110092,
+     "up_precision": 0.7551020408163265,
+     "down_recall": 0.8189655172413793,
+     "down_precision": 0.4148471615720524,
+     "accuracy": 0.5821501014198783
+    },
+    "mean_accuracy": 0.6397565922920891
+   },
+   "pairwise": {
+    "skill": 0.7731707317073171,
+    "network": 0.7310606060606061,
+    "output": 0.49712643678160917,
+    "health": 0.6702898550724637,
+    "dignity": 0.8263157894736842
+   }
+  }
+ },
+ "ale": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.1724137931034483,
+     "up_precision": 0.9615384615384616,
+     "down_recall": 0.3684210526315789,
+     "down_precision": 0.7,
+     "accuracy": 0.6930022573363431
+    },
+    "network": {
+     "up_recall": 0.6428571428571429,
+     "up_precision": 0.8608695652173913,
+     "down_recall": 0.7372262773722628,
+     "down_precision": 0.8278688524590164,
+     "accuracy": 0.7291196388261851
+    },
+    "output": {
+     "up_recall": 0.5242718446601942,
+     "up_precision": 0.675,
+     "down_recall": 0.38571428571428573,
+     "down_precision": 0.5294117647058824,
+     "accuracy": 0.7020316027088036
+    },
+    "health": {
+     "up_recall": 0.6071428571428571,
+     "up_precision": 0.6296296296296297,
+     "down_recall": 0.5063291139240507,
+     "down_precision": 0.9090909090909091,
+     "accuracy": 0.8577878103837472
+    },
+    "dignity": {
+     "up_recall": 0.5748792270531401,
+     "up_precision": 0.9296875,
+     "down_recall": 0.6106870229007634,
+     "down_precision": 0.7079646017699115,
+     "accuracy": 0.6162528216704289
+    },
+    "mean_accuracy": 0.7196388261851017
+   },
+   "pairwise": {
+    "skill": 0.5876288659793815,
+    "network": 0.8218181818181818,
+    "output": 0.7388535031847133,
+    "health": 0.75,
+    "dignity": 0.8039568345323741
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.2974683544303797,
+     "up_precision": 0.9591836734693877,
+     "down_recall": 0.43478260869565216,
+     "down_precision": 0.47619047619047616,
+     "accuracy": 0.7281947261663286
+    },
+    "network": {
+     "up_recall": 0.5086705202312138,
+     "up_precision": 0.7927927927927928,
+     "down_recall": 0.6535433070866141,
+     "down_precision": 0.7477477477477478,
+     "accuracy": 0.6754563894523327
+    },
+    "output": {
+     "up_recall": 0.5,
+     "up_precision": 0.75,
+     "down_recall": 0.5316455696202531,
+     "down_precision": 0.56,
+     "accuracy": 0.7281947261663286
+    },
+    "health": {
+     "up_recall": 0.631578947368421,
+     "up_precision": 0.631578947368421,
+     "down_recall": 0.5047619047619047,
+     "down_precision": 0.9137931034482759,
+     "accuracy": 0.8296146044624746
+    },
+    "dignity": {
+     "up_recall": 0.5275229357798165,
+     "up_precision": 0.8846153846153846,
+     "down_recall": 0.6724137931034483,
+     "down_precision": 0.7222222222222222,
+     "accuracy": 0.6551724137931034
+    },
+    "mean_accuracy": 0.7233265720081136
+   },
+   "pairwise": {
+    "skill": 0.6682926829268293,
+    "network": 0.7727272727272727,
+    "output": 0.7068965517241379,
+    "health": 0.7644927536231884,
+    "dignity": 0.7421052631578947
+   }
+  }
+ },
+ "plain": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.4896551724137931,
+     "up_precision": 0.922077922077922,
+     "down_recall": 0.47368421052631576,
+     "down_precision": 0.3,
+     "accuracy": 0.7494356659142212
+    },
+    "network": {
+     "up_recall": 0.6363636363636364,
+     "up_precision": 0.8521739130434782,
+     "down_recall": 0.7664233576642335,
+     "down_precision": 0.75,
+     "accuracy": 0.7042889390519187
+    },
+    "output": {
+     "up_recall": 0.46601941747572817,
+     "up_precision": 0.6956521739130435,
+     "down_recall": 0.45714285714285713,
+     "down_precision": 0.5333333333333333,
+     "accuracy": 0.7042889390519187
+    },
+    "health": {
+     "up_recall": 0.7142857142857143,
+     "up_precision": 0.3448275862068966,
+     "down_recall": 0.620253164556962,
+     "down_precision": 0.5,
+     "accuracy": 0.7246049661399548
+    },
+    "dignity": {
+     "up_recall": 0.7681159420289855,
+     "up_precision": 0.9085714285714286,
+     "down_recall": 0.8778625954198473,
+     "down_precision": 0.6764705882352942,
+     "accuracy": 0.7291196388261851
+    },
+    "mean_accuracy": 0.7223476297968398
+   },
+   "pairwise": {
+    "skill": 0.7319587628865979,
+    "network": 0.8454545454545455,
+    "output": 0.7133757961783439,
+    "health": 0.7791666666666667,
+    "dignity": 0.8938848920863309
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.5506329113924051,
+     "up_precision": 0.8787878787878788,
+     "down_recall": 0.4782608695652174,
+     "down_precision": 0.3548387096774194,
+     "accuracy": 0.7728194726166329
+    },
+    "network": {
+     "up_recall": 0.6242774566473989,
+     "up_precision": 0.8709677419354839,
+     "down_recall": 0.7086614173228346,
+     "down_precision": 0.656934306569343,
+     "accuracy": 0.691683569979716
+    },
+    "output": {
+     "up_recall": 0.6228070175438597,
+     "up_precision": 0.7319587628865979,
+     "down_recall": 0.6582278481012658,
+     "down_precision": 0.611764705882353,
+     "accuracy": 0.7565922920892495
+    },
+    "health": {
+     "up_recall": 0.868421052631579,
+     "up_precision": 0.4714285714285714,
+     "down_recall": 0.6,
+     "down_precision": 0.5727272727272728,
+     "accuracy": 0.7403651115618661
+    },
+    "dignity": {
+     "up_recall": 0.6972477064220184,
+     "up_precision": 0.8539325842696629,
+     "down_recall": 0.8189655172413793,
+     "down_precision": 0.6168831168831169,
+     "accuracy": 0.6754563894523327
+    },
+    "mean_accuracy": 0.7273833671399594
+   },
+   "pairwise": {
+    "skill": 0.7682926829268293,
+    "network": 0.8106060606060606,
+    "output": 0.8017241379310345,
+    "health": 0.8152173913043478,
+    "dignity": 0.8403508771929824
+   }
+  }
+ },
+ "defs": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7517241379310344,
+     "up_precision": 0.7266666666666667,
+     "down_recall": 0.6842105263157895,
+     "down_precision": 0.09701492537313433,
+     "accuracy": 0.54627539503386
+    },
+    "network": {
+     "up_recall": 0.6558441558441559,
+     "up_precision": 0.8706896551724138,
+     "down_recall": 0.7591240875912408,
+     "down_precision": 0.7323943661971831,
+     "accuracy": 0.7155756207674944
+    },
+    "output": {
+     "up_recall": 0.5339805825242718,
+     "up_precision": 0.7051282051282052,
+     "down_recall": 0.6285714285714286,
+     "down_precision": 0.4583333333333333,
+     "accuracy": 0.690744920993228
+    },
+    "health": {
+     "up_recall": 0.75,
+     "up_precision": 0.3333333333333333,
+     "down_recall": 0.6582278481012658,
+     "down_precision": 0.5977011494252874,
+     "accuracy": 0.7494356659142212
+    },
+    "dignity": {
+     "up_recall": 0.8115942028985508,
+     "up_precision": 0.9281767955801105,
+     "down_recall": 0.8473282442748091,
+     "down_precision": 0.7350993377483444,
+     "accuracy": 0.7720090293453724
+    },
+    "mean_accuracy": 0.6948081264108352
+   },
+   "pairwise": {
+    "skill": 0.8530927835051546,
+    "network": 0.8218181818181818,
+    "output": 0.7611464968152867,
+    "health": 0.8291666666666667,
+    "dignity": 0.8884892086330936
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7341772151898734,
+     "up_precision": 0.7388535031847133,
+     "down_recall": 0.6086956521739131,
+     "down_precision": 0.09859154929577464,
+     "accuracy": 0.5740365111561866
+    },
+    "network": {
+     "up_recall": 0.5895953757225434,
+     "up_precision": 0.864406779661017,
+     "down_recall": 0.6456692913385826,
+     "down_precision": 0.6890756302521008,
+     "accuracy": 0.691683569979716
+    },
+    "output": {
+     "up_recall": 0.5175438596491229,
+     "up_precision": 0.7195121951219512,
+     "down_recall": 0.620253164556962,
+     "down_precision": 0.4083333333333333,
+     "accuracy": 0.6855983772819473
+    },
+    "health": {
+     "up_recall": 0.8157894736842105,
+     "up_precision": 0.5166666666666667,
+     "down_recall": 0.6095238095238096,
+     "down_precision": 0.6153846153846154,
+     "accuracy": 0.7728194726166329
+    },
+    "dignity": {
+     "up_recall": 0.7568807339449541,
+     "up_precision": 0.8418367346938775,
+     "down_recall": 0.75,
+     "down_precision": 0.6397058823529411,
+     "accuracy": 0.6937119675456389
+    },
+    "mean_accuracy": 0.6835699797160244
+   },
+   "pairwise": {
+    "skill": 0.8439024390243902,
+    "network": 0.7916666666666666,
+    "output": 0.7183908045977011,
+    "health": 0.7934782608695652,
+    "dignity": 0.8192982456140351
+   }
+  }
+ },
+ "defs2": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7172413793103448,
+     "up_precision": 0.7272727272727273,
+     "down_recall": 0.5789473684210527,
+     "down_precision": 0.10185185185185185,
+     "accuracy": 0.5891647855530474
+    },
+    "network": {
+     "up_recall": 0.6493506493506493,
+     "up_precision": 0.8264462809917356,
+     "down_recall": 0.6788321167883211,
+     "down_precision": 0.775,
+     "accuracy": 0.690744920993228
+    },
+    "output": {
+     "up_recall": 0.6407766990291263,
+     "up_precision": 0.5454545454545454,
+     "down_recall": 0.32857142857142857,
+     "down_precision": 0.2948717948717949,
+     "accuracy": 0.6275395033860045
+    },
+    "health": {
+     "up_recall": 0.7857142857142857,
+     "up_precision": 0.44,
+     "down_recall": 0.620253164556962,
+     "down_precision": 0.620253164556962,
+     "accuracy": 0.7878103837471784
+    },
+    "dignity": {
+     "up_recall": 0.7777777777777778,
+     "up_precision": 0.9096045197740112,
+     "down_recall": 0.7862595419847328,
+     "down_precision": 0.762962962962963,
+     "accuracy": 0.7516930022573364
+    },
+    "mean_accuracy": 0.689390519187359
+   },
+   "pairwise": {
+    "skill": 0.8350515463917526,
+    "network": 0.8145454545454546,
+    "output": 0.6624203821656051,
+    "health": 0.8,
+    "dignity": 0.8669064748201439
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7088607594936709,
+     "up_precision": 0.7133757961783439,
+     "down_recall": 0.4782608695652174,
+     "down_precision": 0.09649122807017543,
+     "accuracy": 0.6064908722109533
+    },
+    "network": {
+     "up_recall": 0.5549132947976878,
+     "up_precision": 0.8807339449541285,
+     "down_recall": 0.6220472440944882,
+     "down_precision": 0.7314814814814815,
+     "accuracy": 0.6896551724137931
+    },
+    "output": {
+     "up_recall": 0.6578947368421053,
+     "up_precision": 0.5319148936170213,
+     "down_recall": 0.5063291139240507,
+     "down_precision": 0.425531914893617,
+     "accuracy": 0.6328600405679513
+    },
+    "health": {
+     "up_recall": 0.7368421052631579,
+     "up_precision": 0.5384615384615384,
+     "down_recall": 0.5619047619047619,
+     "down_precision": 0.6082474226804123,
+     "accuracy": 0.7667342799188641
+    },
+    "dignity": {
+     "up_recall": 0.7110091743119266,
+     "up_precision": 0.8707865168539326,
+     "down_recall": 0.7672413793103449,
+     "down_precision": 0.7007874015748031,
+     "accuracy": 0.7079107505070994
+    },
+    "mean_accuracy": 0.6807302231237322
+   },
+   "pairwise": {
+    "skill": 0.8317073170731707,
+    "network": 0.8011363636363636,
+    "output": 0.7212643678160919,
+    "health": 0.782608695652174,
+    "dignity": 0.8157894736842105
+   }
+  }
+ },
+ "cues": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.6620689655172414,
+     "up_precision": 0.7868852459016393,
+     "down_recall": 0.7368421052631579,
+     "down_precision": 0.1590909090909091,
+     "accuracy": 0.6613995485327314
+    },
+    "network": {
+     "up_recall": 0.6233766233766234,
+     "up_precision": 0.8205128205128205,
+     "down_recall": 0.7737226277372263,
+     "down_precision": 0.7571428571428571,
+     "accuracy": 0.7020316027088036
+    },
+    "output": {
+     "up_recall": 0.5339805825242718,
+     "up_precision": 0.7142857142857143,
+     "down_recall": 0.6428571428571429,
+     "down_precision": 0.4368932038834951,
+     "accuracy": 0.6749435665914221
+    },
+    "health": {
+     "up_recall": 0.75,
+     "up_precision": 0.3888888888888889,
+     "down_recall": 0.6455696202531646,
+     "down_precision": 0.3923076923076923,
+     "accuracy": 0.6681715575620768
+    },
+    "dignity": {
+     "up_recall": 0.8599033816425121,
+     "up_precision": 0.8855721393034826,
+     "down_recall": 0.8015267175572519,
+     "down_precision": 0.7142857142857143,
+     "accuracy": 0.7539503386004515
+    },
+    "mean_accuracy": 0.6920993227990971
+   },
+   "pairwise": {
+    "skill": 0.8350515463917526,
+    "network": 0.8218181818181818,
+    "output": 0.7802547770700637,
+    "health": 0.775,
+    "dignity": 0.8830935251798561
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.6518987341772152,
+     "up_precision": 0.7862595419847328,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.13131313131313133,
+     "accuracy": 0.6632860040567952
+    },
+    "network": {
+     "up_recall": 0.5953757225433526,
+     "up_precision": 0.8728813559322034,
+     "down_recall": 0.6535433070866141,
+     "down_precision": 0.6434108527131783,
+     "accuracy": 0.6835699797160243
+    },
+    "output": {
+     "up_recall": 0.5964912280701754,
+     "up_precision": 0.6666666666666666,
+     "down_recall": 0.6455696202531646,
+     "down_precision": 0.4396551724137931,
+     "accuracy": 0.6896551724137931
+    },
+    "health": {
+     "up_recall": 0.8157894736842105,
+     "up_precision": 0.45588235294117646,
+     "down_recall": 0.6095238095238096,
+     "down_precision": 0.423841059602649,
+     "accuracy": 0.665314401622718
+    },
+    "dignity": {
+     "up_recall": 0.7568807339449541,
+     "up_precision": 0.812807881773399,
+     "down_recall": 0.7758620689655172,
+     "down_precision": 0.6428571428571429,
+     "accuracy": 0.6876267748478702
+    },
+    "mean_accuracy": 0.6778904665314401
+   },
+   "pairwise": {
+    "skill": 0.7951219512195122,
+    "network": 0.7954545454545454,
+    "output": 0.735632183908046,
+    "health": 0.7427536231884058,
+    "dignity": 0.8263157894736842
+   }
+  }
+ },
+ "contrast": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7655172413793103,
+     "up_precision": 0.7207792207792207,
+     "down_recall": 0.6842105263157895,
+     "down_precision": 0.10236220472440945,
+     "accuracy": 0.5665914221218962
+    },
+    "network": {
+     "up_recall": 0.6688311688311688,
+     "up_precision": 0.8442622950819673,
+     "down_recall": 0.781021897810219,
+     "down_precision": 0.7328767123287672,
+     "accuracy": 0.7200902934537246
+    },
+    "output": {
+     "up_recall": 0.5728155339805825,
+     "up_precision": 0.6704545454545454,
+     "down_recall": 0.6714285714285714,
+     "down_precision": 0.4845360824742268,
+     "accuracy": 0.6997742663656885
+    },
+    "health": {
+     "up_recall": 0.8571428571428571,
+     "up_precision": 0.36363636363636365,
+     "down_recall": 0.620253164556962,
+     "down_precision": 0.620253164556962,
+     "accuracy": 0.7652370203160271
+    },
+    "dignity": {
+     "up_recall": 0.7874396135265701,
+     "up_precision": 0.9261363636363636,
+     "down_recall": 0.8015267175572519,
+     "down_precision": 0.7720588235294118,
+     "accuracy": 0.7629796839729119
+    },
+    "mean_accuracy": 0.7029345372460497
+   },
+   "pairwise": {
+    "skill": 0.8582474226804123,
+    "network": 0.8345454545454546,
+    "output": 0.7802547770700637,
+    "health": 0.825,
+    "dignity": 0.8776978417266187
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7784810126582279,
+     "up_precision": 0.7365269461077845,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.08904109589041095,
+     "accuracy": 0.5679513184584178
+    },
+    "network": {
+     "up_recall": 0.5953757225433526,
+     "up_precision": 0.8442622950819673,
+     "down_recall": 0.6692913385826772,
+     "down_precision": 0.6854838709677419,
+     "accuracy": 0.691683569979716
+    },
+    "output": {
+     "up_recall": 0.5614035087719298,
+     "up_precision": 0.6881720430107527,
+     "down_recall": 0.620253164556962,
+     "down_precision": 0.4224137931034483,
+     "accuracy": 0.691683569979716
+    },
+    "health": {
+     "up_recall": 0.7105263157894737,
+     "up_precision": 0.4153846153846154,
+     "down_recall": 0.6,
+     "down_precision": 0.6057692307692307,
+     "accuracy": 0.7383367139959433
+    },
+    "dignity": {
+     "up_recall": 0.7339449541284404,
+     "up_precision": 0.8290155440414507,
+     "down_recall": 0.75,
+     "down_precision": 0.6590909090909091,
+     "accuracy": 0.6876267748478702
+    },
+    "mean_accuracy": 0.6754563894523327
+   },
+   "pairwise": {
+    "skill": 0.8634146341463415,
+    "network": 0.8011363636363636,
+    "output": 0.7241379310344828,
+    "health": 0.8079710144927537,
+    "dignity": 0.8175438596491228
+   }
+  }
+ },
+ "reason": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7724137931034483,
+     "up_precision": 0.7368421052631579,
+     "down_recall": 0.631578947368421,
+     "down_precision": 0.0975609756097561,
+     "accuracy": 0.5778781038374717
+    },
+    "network": {
+     "up_recall": 0.6623376623376623,
+     "up_precision": 0.8571428571428571,
+     "down_recall": 0.781021897810219,
+     "down_precision": 0.7328767123287672,
+     "accuracy": 0.708803611738149
+    },
+    "output": {
+     "up_recall": 0.5048543689320388,
+     "up_precision": 0.6666666666666666,
+     "down_recall": 0.6714285714285714,
+     "down_precision": 0.46078431372549017,
+     "accuracy": 0.6749435665914221
+    },
+    "health": {
+     "up_recall": 0.8214285714285714,
+     "up_precision": 0.36507936507936506,
+     "down_recall": 0.6962025316455697,
+     "down_precision": 0.5789473684210527,
+     "accuracy": 0.7539503386004515
+    },
+    "dignity": {
+     "up_recall": 0.8115942028985508,
+     "up_precision": 0.8936170212765957,
+     "down_recall": 0.8702290076335878,
+     "down_precision": 0.76,
+     "accuracy": 0.7697516930022573
+    },
+    "mean_accuracy": 0.6970654627539503
+   },
+   "pairwise": {
+    "skill": 0.8505154639175257,
+    "network": 0.8363636363636363,
+    "output": 0.7611464968152867,
+    "health": 0.8375,
+    "dignity": 0.8902877697841727
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7911392405063291,
+     "up_precision": 0.7183908045977011,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.08496732026143791,
+     "accuracy": 0.5537525354969574
+    },
+    "network": {
+     "up_recall": 0.5664739884393064,
+     "up_precision": 0.8448275862068966,
+     "down_recall": 0.6929133858267716,
+     "down_precision": 0.6984126984126984,
+     "accuracy": 0.6876267748478702
+    },
+    "output": {
+     "up_recall": 0.5350877192982456,
+     "up_precision": 0.7261904761904762,
+     "down_recall": 0.6455696202531646,
+     "down_precision": 0.425,
+     "accuracy": 0.6835699797160243
+    },
+    "health": {
+     "up_recall": 0.7368421052631579,
+     "up_precision": 0.45901639344262296,
+     "down_recall": 0.6476190476190476,
+     "down_precision": 0.5862068965517241,
+     "accuracy": 0.7484787018255578
+    },
+    "dignity": {
+     "up_recall": 0.7247706422018348,
+     "up_precision": 0.8359788359788359,
+     "down_recall": 0.7586206896551724,
+     "down_precision": 0.6376811594202898,
+     "accuracy": 0.6754563894523327
+    },
+    "mean_accuracy": 0.6697768762677484
+   },
+   "pairwise": {
+    "skill": 0.8585365853658536,
+    "network": 0.7897727272727273,
+    "output": 0.7385057471264368,
+    "health": 0.8007246376811594,
+    "dignity": 0.8228070175438597
+   }
+  }
+ },
+ "trade": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.4689655172413793,
+     "up_precision": 0.8717948717948718,
+     "down_recall": 0.7368421052631579,
+     "down_precision": 0.3888888888888889,
+     "accuracy": 0.7494356659142212
+    },
+    "network": {
+     "up_recall": 0.525974025974026,
+     "up_precision": 0.9,
+     "down_recall": 0.5766423357664233,
+     "down_precision": 0.8404255319148937,
+     "accuracy": 0.672686230248307
+    },
+    "output": {
+     "up_recall": 0.3786407766990291,
+     "up_precision": 0.5652173913043478,
+     "down_recall": 0.45714285714285713,
+     "down_precision": 0.36363636363636365,
+     "accuracy": 0.618510158013544
+    },
+    "health": {
+     "up_recall": 0.42857142857142855,
+     "up_precision": 0.21818181818181817,
+     "down_recall": 0.5443037974683544,
+     "down_precision": 0.8269230769230769,
+     "accuracy": 0.7697516930022573
+    },
+    "dignity": {
+     "up_recall": 0.357487922705314,
+     "up_precision": 0.9135802469135802,
+     "down_recall": 0.5648854961832062,
+     "down_precision": 0.8222222222222222,
+     "accuracy": 0.54627539503386
+    },
+    "mean_accuracy": 0.6713318284424379
+   },
+   "pairwise": {
+    "skill": 0.729381443298969,
+    "network": 0.7563636363636363,
+    "output": 0.6464968152866242,
+    "health": 0.7625,
+    "dignity": 0.75
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.4936708860759494,
+     "up_precision": 0.8764044943820225,
+     "down_recall": 0.5217391304347826,
+     "down_precision": 0.27906976744186046,
+     "accuracy": 0.7505070993914807
+    },
+    "network": {
+     "up_recall": 0.3930635838150289,
+     "up_precision": 0.7391304347826086,
+     "down_recall": 0.5275590551181102,
+     "down_precision": 0.7052631578947368,
+     "accuracy": 0.6004056795131846
+    },
+    "output": {
+     "up_recall": 0.35964912280701755,
+     "up_precision": 0.5125,
+     "down_recall": 0.4050632911392405,
+     "down_precision": 0.3137254901960784,
+     "accuracy": 0.5963488843813387
+    },
+    "health": {
+     "up_recall": 0.631578947368421,
+     "up_precision": 0.3870967741935484,
+     "down_recall": 0.47619047619047616,
+     "down_precision": 0.6944444444444444,
+     "accuracy": 0.744421906693712
+    },
+    "dignity": {
+     "up_recall": 0.41743119266055045,
+     "up_precision": 0.900990099009901,
+     "down_recall": 0.5689655172413793,
+     "down_precision": 0.717391304347826,
+     "accuracy": 0.592292089249493
+    },
+    "mean_accuracy": 0.6567951318458418
+   },
+   "pairwise": {
+    "skill": 0.7463414634146341,
+    "network": 0.7159090909090909,
+    "output": 0.6350574712643678,
+    "health": 0.7318840579710145,
+    "dignity": 0.7280701754385965
+   }
+  }
+ },
+ "vote5": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7379310344827587,
+     "up_precision": 0.7697841726618705,
+     "down_recall": 0.6842105263157895,
+     "down_precision": 0.11711711711711711,
+     "accuracy": 0.6139954853273137
+    },
+    "network": {
+     "up_recall": 0.6428571428571429,
+     "up_precision": 0.8761061946902655,
+     "down_recall": 0.781021897810219,
+     "down_precision": 0.7430555555555556,
+     "accuracy": 0.7155756207674944
+    },
+    "output": {
+     "up_recall": 0.5048543689320388,
+     "up_precision": 0.7222222222222222,
+     "down_recall": 0.6571428571428571,
+     "down_precision": 0.5,
+     "accuracy": 0.708803611738149
+    },
+    "health": {
+     "up_recall": 0.8214285714285714,
+     "up_precision": 0.3898305084745763,
+     "down_recall": 0.6582278481012658,
+     "down_precision": 0.5842696629213483,
+     "accuracy": 0.7629796839729119
+    },
+    "dignity": {
+     "up_recall": 0.8164251207729468,
+     "up_precision": 0.9184782608695652,
+     "down_recall": 0.8625954198473282,
+     "down_precision": 0.7583892617449665,
+     "accuracy": 0.781038374717833
+    },
+    "mean_accuracy": 0.7164785553047405
+   },
+   "pairwise": {
+    "skill": 0.845360824742268,
+    "network": 0.8309090909090909,
+    "output": 0.7738853503184714,
+    "health": 0.8416666666666667,
+    "dignity": 0.8938848920863309
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7468354430379747,
+     "up_precision": 0.7564102564102564,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.10317460317460317,
+     "accuracy": 0.6105476673427992
+    },
+    "network": {
+     "up_recall": 0.6069364161849711,
+     "up_precision": 0.8677685950413223,
+     "down_recall": 0.6535433070866141,
+     "down_precision": 0.664,
+     "accuracy": 0.691683569979716
+    },
+    "output": {
+     "up_recall": 0.5614035087719298,
+     "up_precision": 0.7529411764705882,
+     "down_recall": 0.6708860759493671,
+     "down_precision": 0.4608695652173913,
+     "accuracy": 0.7139959432048681
+    },
+    "health": {
+     "up_recall": 0.7894736842105263,
+     "up_precision": 0.5172413793103449,
+     "down_recall": 0.6095238095238096,
+     "down_precision": 0.5981308411214953,
+     "accuracy": 0.7647058823529411
+    },
+    "dignity": {
+     "up_recall": 0.7339449541284404,
+     "up_precision": 0.8333333333333334,
+     "down_recall": 0.7672413793103449,
+     "down_precision": 0.6496350364963503,
+     "accuracy": 0.6855983772819473
+    },
+    "mean_accuracy": 0.6933062880324543
+   },
+   "pairwise": {
+    "skill": 0.8463414634146341,
+    "network": 0.7916666666666666,
+    "output": 0.7557471264367817,
+    "health": 0.7971014492753623,
+    "dignity": 0.8245614035087719
+   }
+  }
+ },
+ "vote5b": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7172413793103448,
+     "up_precision": 0.7591240875912408,
+     "down_recall": 0.6842105263157895,
+     "down_precision": 0.125,
+     "accuracy": 0.6207674943566591
+    },
+    "network": {
+     "up_recall": 0.6428571428571429,
+     "up_precision": 0.8839285714285714,
+     "down_recall": 0.7737226277372263,
+     "down_precision": 0.762589928057554,
+     "accuracy": 0.7200902934537246
+    },
+    "output": {
+     "up_recall": 0.5533980582524272,
+     "up_precision": 0.7808219178082192,
+     "down_recall": 0.6428571428571429,
+     "down_precision": 0.5294117647058824,
+     "accuracy": 0.7313769751693002
+    },
+    "health": {
+     "up_recall": 0.8571428571428571,
+     "up_precision": 0.43636363636363634,
+     "down_recall": 0.6455696202531646,
+     "down_precision": 0.6071428571428571,
+     "accuracy": 0.7832957110609481
+    },
+    "dignity": {
+     "up_recall": 0.8164251207729468,
+     "up_precision": 0.9037433155080213,
+     "down_recall": 0.8549618320610687,
+     "down_precision": 0.7619047619047619,
+     "accuracy": 0.7742663656884876
+    },
+    "mean_accuracy": 0.7259593679458239
+   },
+   "pairwise": {
+    "skill": 0.8376288659793815,
+    "network": 0.8272727272727273,
+    "output": 0.7898089171974523,
+    "health": 0.8333333333333334,
+    "dignity": 0.8830935251798561
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7278481012658228,
+     "up_precision": 0.756578947368421,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.11403508771929824,
+     "accuracy": 0.6328600405679513
+    },
+    "network": {
+     "up_recall": 0.5953757225433526,
+     "up_precision": 0.8728813559322034,
+     "down_recall": 0.6299212598425197,
+     "down_precision": 0.6722689075630253,
+     "accuracy": 0.6855983772819473
+    },
+    "output": {
+     "up_recall": 0.5964912280701754,
+     "up_precision": 0.7311827956989247,
+     "down_recall": 0.6329113924050633,
+     "down_precision": 0.5434782608695652,
+     "accuracy": 0.7342799188640974
+    },
+    "health": {
+     "up_recall": 0.7894736842105263,
+     "up_precision": 0.5454545454545454,
+     "down_recall": 0.5714285714285714,
+     "down_precision": 0.594059405940594,
+     "accuracy": 0.7647058823529411
+    },
+    "dignity": {
+     "up_recall": 0.7247706422018348,
+     "up_precision": 0.8449197860962567,
+     "down_recall": 0.7758620689655172,
+     "down_precision": 0.6617647058823529,
+     "accuracy": 0.6957403651115619
+    },
+    "mean_accuracy": 0.7026369168356998
+   },
+   "pairwise": {
+    "skill": 0.8390243902439024,
+    "network": 0.7916666666666666,
+    "output": 0.7701149425287356,
+    "health": 0.8007246376811594,
+    "dignity": 0.8140350877192982
+   }
+  }
+ },
+ "vote7": {
+  "design": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.7103448275862069,
+     "up_precision": 0.7686567164179104,
+     "down_recall": 0.6842105263157895,
+     "down_precision": 0.12871287128712872,
+     "accuracy": 0.6275395033860045
+    },
+    "network": {
+     "up_recall": 0.6558441558441559,
+     "up_precision": 0.8782608695652174,
+     "down_recall": 0.7664233576642335,
+     "down_precision": 0.7720588235294118,
+     "accuracy": 0.7268623024830699
+    },
+    "output": {
+     "up_recall": 0.5339805825242718,
+     "up_precision": 0.7746478873239436,
+     "down_recall": 0.6571428571428571,
+     "down_precision": 0.5168539325842697,
+     "accuracy": 0.7291196388261851
+    },
+    "health": {
+     "up_recall": 0.8214285714285714,
+     "up_precision": 0.39655172413793105,
+     "down_recall": 0.6329113924050633,
+     "down_precision": 0.6329113924050633,
+     "accuracy": 0.7787810383747178
+    },
+    "dignity": {
+     "up_recall": 0.8067632850241546,
+     "up_precision": 0.9382022471910112,
+     "down_recall": 0.8549618320610687,
+     "down_precision": 0.7619047619047619,
+     "accuracy": 0.7855530474040632
+    },
+    "mean_accuracy": 0.7295711060948081
+   },
+   "pairwise": {
+    "skill": 0.8376288659793815,
+    "network": 0.8236363636363636,
+    "output": 0.7866242038216561,
+    "health": 0.825,
+    "dignity": 0.8920863309352518
+   }
+  },
+  "eval": {
+   "scores": {
+    "skill": {
+     "up_recall": 0.689873417721519,
+     "up_precision": 0.7517241379310344,
+     "down_recall": 0.5652173913043478,
+     "down_precision": 0.11818181818181818,
+     "accuracy": 0.6308316430020284
+    },
+    "network": {
+     "up_recall": 0.5664739884393064,
+     "up_precision": 0.8672566371681416,
+     "down_recall": 0.6220472440944882,
+     "down_precision": 0.6991150442477876,
+     "accuracy": 0.6815415821501014
+    },
+    "output": {
+     "up_recall": 0.5350877192982456,
+     "up_precision": 0.7439024390243902,
+     "down_recall": 0.6329113924050633,
+     "down_precision": 0.5,
+     "accuracy": 0.7221095334685599
+    },
+    "health": {
+     "up_recall": 0.7631578947368421,
+     "up_precision": 0.5686274509803921,
+     "down_recall": 0.580952380952381,
+     "down_precision": 0.61,
+     "accuracy": 0.7748478701825557
+    },
+    "dignity": {
+     "up_recall": 0.7247706422018348,
+     "up_precision": 0.8540540540540541,
+     "down_recall": 0.75,
+     "down_precision": 0.6796875,
+     "accuracy": 0.7018255578093306
+    },
+    "mean_accuracy": 0.7022312373225151
+   },
+   "pairwise": {
+    "skill": 0.824390243902439,
+    "network": 0.7954545454545454,
+    "output": 0.764367816091954,
+    "health": 0.7934782608695652,
+    "dignity": 0.8192982456140351
+   }
+  }
+ }
+}

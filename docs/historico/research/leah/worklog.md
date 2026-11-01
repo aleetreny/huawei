@@ -2,6 +2,49 @@
 
 Everything done on branch `leah/workspace`, newest first. Each entry links to the full report.
 
+## 27 Oct 2026, 16:00 UTC: stat perception (step c of Alejandro's question bank)
+
+- **What.** Haiku labelled the 936 dev answers 7 ways (Pro account, 0.62 USD list; no Max quota). Each way was scored on a reserved half of the events and in the replica of `main-1nddsg` (1,000 games per arm, same seeds).
+- **Results.**
+  - A direction for every stat on every option, instead of Ale's salient tags: 49.1 → 53.3.
+  - A vote of 5 ways: 54.4, against 46.7 category only and 58.1 perfect.
+  - **Output is the stat worth perceiving (+2.5 if perfect); Skill isn't (−2.1).**
+  - Short meanings beat checklists and halve trust crises. One gain and one cost per option collapses (39.7). Calling self-promotion an Output gain backfires (48.1).
+- **Report.** [lab/reports/stat-perception/README.md](../../lab/reports/stat-perception/README.md).
+
+## 27 Oct 2026, 16:30 UTC: one Haiku smoke test of l6-routine-v1
+
+- **Line 5 obeyed 4 of 4 times** (Health, Mental, Report, then key project), with no Skill learning at L1. The other 3 quarters correctly went to the Health and HR-remark lines.
+- **Lost anyway:** dismissed at month 24 at L1 (Q 23.0). Each review found Network or Output a point short, lost in pre-review stories after the routine had reached the L1 ceiling.
+- **Why it doesn't judge the manual.** The rule meant to stop those losses lives in `reference/review-month.md`, which this branch's actor can't open: "Reference file unavailable" appears 12 times. The fair test is Alejandro's `#official` actor.
+- **Tokens:** about 214k a month. New checker: `scripts/leah/line5_check.py`. Details in [l6-routine.md](l6-routine.md).
+
+## 27 Oct 2026, 15:30 UTC: l6-routine-v1, the L6 bots' routine in Alejandro's T20 format
+
+- **What.** Alejandro's `t10-countdown` with one line changed. At L1–L3, Energy follows the fixed routine of the energy bots that reached L6: Health recovery, Mental recovery, then Prepare report materials, every quarter. The main action is a key project, with no Skill learning. It replaces "lift whichever stat is furthest from the review".
+- **Why.** The idea is in Alejandro's independent-chats plan. A fixed routine needs no judgement; t10's judgement line is the kind that sent the polish game's Energy to Skill learning at L1.
+- **Checks.** Lint has no errors; its 4 REVIEW notes are inherited from t10's lines. 302 tests pass.
+- **Not done.** No games. The fair test is Alejandro's T20 bank and interleaved games. Details in [l6-routine.md](l6-routine.md).
+
+## 27 Oct 2026, 10:00 UTC: one Haiku game of f3-lean-polish-v1, live game page
+
+- **Result.** 28.5, dismissed at month 24, never left L1.
+  - The rewrite changed behaviour: the explicit main-action order meant **no key projects at all** (f3-lean: 49%) and 26% Skill learning.
+  - The token lines worked: notes 60% shorter, about 13% fewer tokens per month.
+  - Recommendation: submit **f3-lean-v1 as written** tonight. Details in [f3-lean-polish.md](f3-lean-polish.md).
+- **Live game page.** `lab/panel/live.html`, fed by `scripts/panel/live.py`, follows a running game every 4 seconds: stats after each decision, reviews, promotions and the latest decisions with notes.
+- **Panel.**
+  - It now builds from `origin/main`, where the race ended: 521 race games, plus the origins `leah` (6), `matteo` (30) and `deepseek` (1).
+  - Games imported from other machines are no longer double-counted as race games.
+  - The page reloads `data.js` fresh every time.
+
+## 27 Oct 2026: f3-lean-polish-v1, the R1 candidate rewritten for the rubric and tokens
+
+- **What.** A copy of f3-lean-v1 (the cloud's R1 recommendation) with the **same rules**, regrouped by turn type to fit the official document-quality rubric, plus token instructions (one `observe` per decision, notes of a few words). 287 words; lint-clean.
+- **Why.** Telling the tied top manuals apart would need about 130 games each, so the text-only 20% of the automated score (document quality and tokens) is what can still move today. Token gains are small: DeepSeek's one game used about 670k tokens a month, about 93 if completed.
+- **Not done.** No game has been played with it. Submitting it is the team's call (T9).
+- **Write-up.** [f3-lean-polish.md](f3-lean-polish.md).
+
 ## 26 Oct 2026, 17:05 UTC: v1 ×3, v2 and v3 (5 Haiku games)
 
 - **Results.**

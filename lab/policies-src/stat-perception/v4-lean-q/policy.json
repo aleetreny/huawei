@@ -1,0 +1,11 @@
+{
+  "family": "stat-perception",
+  "name": "v4-lean-q",
+  "parents": [],
+  "idea_origin": "Leah's stat-perception line, experiment 09: v4-lean plus planning the quarter after a single observe (Energy and main-action choice numbers are the same every quarter in our runs; Formato found planning the quarter at once loses nothing in the replica)",
+  "operator": "one-line change",
+  "hypothesis": "Each observe adds ~650 tokens to an uncompressed history and each call resends the whole context. Planning the quarter after one observe removes about 2 calls per quarter; in the token model that cuts ~15% of tokens per game without depending on how much the model writes.",
+  "predicted_behaviour": "Same quarterly actions as v4-lean; about 32 fewer calls per game; tokens per month about 15% below v4-lean in official games; no rejected actions beyond an occasional observe after a failed call.",
+  "refutation": "Rejected or wrong quarterly actions, or no drop in tokens per month against v4-lean in official games.",
+  "skill_count": 1
+}

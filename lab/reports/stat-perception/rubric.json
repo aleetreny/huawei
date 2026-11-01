@@ -1,0 +1,132 @@
+{
+ "t13-read-v4": {
+  "career-rules": {
+   "scores": [
+    72,
+    74,
+    72,
+    72,
+    72,
+    72
+   ],
+   "mean": 72.3,
+   "weaknesses": [
+    "The status line is heavy and fiddly (Review in N, Now, Best, Stalled with Expect, Concerns). It adds many steps and error risk per turn and eats note space, which hurts followability.",
+    "It presents unpublished or inferred mechanics as rules: 'Missing a risky option costs far more than flagging a safe one', and the claim that a lost point in the review month can cost the promotion. It also asserts that hidden risk rises with specific behaviours, including 'challenging the company even through a formal channel'. These read like dataset-derived heuristics rather than handbook content, which is a conduct-rule risk, though they are not thresholds.",
+    "The HR remark taxonomy quotes specific phrases ('you are doing all right', 'some risk, nothing serious yet', 'you are on your own'), which hints at internal knowledge of the game text rather than the handbook. They are visible at run time but not published.",
+    "The review-month rule that tolerates 'mild risk' for Skill, Network and Output conflicts with the handbook's warnings about blow-ups and the trust crisis, and a gamble on promotion could contradict its own risk-first logic.",
+    "Ambiguities remain: 'lower part of range', 'several months' and 'comfortable' are undefined, and the story and quarterly phases overlap on the review rules. Vague handling of the Dignity and Health trade-off against the review push.",
+    "Little long-horizon planning beyond the review cycle: no guidance on pacing promotions across the 48 months, saving Wealth, or the two-weak-reviews dismissal risk, which the handbook publishes. Performance grade and bonus are not discussed.",
+    "Energy allocation rules do not use the 3-point budget cleanly, e.g. 'Defuse legacy risk' (2) plus another action must fit in 3, and the conflict resolution among lines 2-6 is first-match-only, so combined needs are dropped.",
+    "The status line bookkeeping (Best, Stalled, Expect, Concerns) is heavy and fiddly. It risks errors and adds token cost, and the Stalled logic is ambiguous because stat gains are noisy and delayed.",
+    "Some claims read like unpublished mechanics presented as rules: 'Missing a risky option costs far more than flagging a safe one', 'Promotions are lost here', and a month-before-review deadline. They are framed as 'our plan' or heuristics, but a strict reviewer could flag them as implied hidden thresholds or trigger conditions.",
+    "The hidden-risk keyword list is broad, and 'when in doubt treat as risky' can make the agent over-avoid. Combined with the HR-remark gating it may reject nearly all options and make the guidance contradictory (for example the risk step versus the review-month exception).",
+    "Quarterly guidance is vague on numbers: 'lower part of its range', 'comfortable', 'near zero for months' have no concrete criteria. The rule order also front-loads Defuse legacy risk (2 of 3 Energy) every quarter under a non-friendly remark, which leaves little Energy for growth.",
+    "Strategy looks only weakly across 48 months: there is no early-versus-late investment plan (for example front-loading Skill and Network for promotion, or saving Wealth). The two-weak-reviews dismissal risk and the trust-crisis (second blow-up) rule are not tied to explicit actions.",
+    "The Skill is long and dense for an agent to follow in every turn, with some redundancy between sections.",
+    "The status line is heavy: five fields, plus Expect values, Best resets and Stalled bookkeeping. This risks errors, wastes tokens, and relies on the agent copying notes from logs.",
+    "The Stalled mechanism infers 'expected gains that did not show up' from noisy single observations. Stats vary for other reasons, so the agent may wrongly stop investing in a stat.",
+    "The review-month rule (N = 1) leans toward accepting 'mild risk' and dropping honest but costly options. This weakens the risk rules and could cause the trust-crisis ending. It also treats a review-timing plan as if it were a known rule.",
+    "'Missing a risky option costs far more than flagging a safe one' and the classification of risk keywords read as confident, unpublished claims about hidden-risk mechanics. They are heuristics presented as fact, and some are questionable (for example, challenging the company even through a formal channel counts as risky).",
+    "The quarterly lines are a rigid 'first matching line wins' with vague triggers ('lower part of its range', 'for several months', 'near zero'). There are no numeric guides, so the agent has to guess.",
+    "Defuse legacy risk is made routine for any non-friendly HR remark, at a cost of 2 of 3 Energy, which crowds out growth. The handbook only says its effect is hidden.",
+    "Skill learning is reduced to 'while Health is comfortable', with no definition. Whether the final-quarter rule applies in months 46-47 is not addressed. Dignity and Wealth rarely drive story choices beyond a tiebreak.",
+    "Only a single Skill covers everything, and it is dense with nested conditions, so it is hard to follow consistently.",
+    "Several mechanics are asserted as if known rather than inferred: how options 'usually move' stats, the idea that the HR remark has specific friendly/quiet/frowning tiers, and that missing a risky option 'costs far more' than flagging a safe one. These border on unpublished event-probability or trigger claims. The HR-remark wording is only observable in-run, and presenting fixed tiers risks being read as encoded dev-set knowledge.",
+    "Strong claims such as 'Promotions are lost here' and the review-month rule that mild risk is acceptable are presented as fact and conflict with the 'protect against hidden risk' stance. They are also unpublished-mechanic assertions.",
+    "The status line is heavy: Best/Stalled/Expect/Concerns bookkeeping in every note under a 1,000-character limit is complex and error-prone, and Stalled can wrongly suppress investments because gains are noisy and delayed.",
+    "The final-quarter rule only starts at month 48 and the story rule says 'final quarter' loosely, so the look-ahead across 48 months is thin. There is little long-horizon planning for Wealth, the two-bad-review dismissal risk, or the timing of promotions across years.",
+    "Rule 2 thresholds ('lower part', 'several months', 'near zero') are vague, with no concrete decision criteria near the limits, and the Energy action rules never give a concrete allocation across the 3 points (for example, how to combine a 2-cost and a 1-cost action).",
+    "Review-month logic misses that performance review grades also depend on level and that reviews every 6 months are tied to promotion windows. The 'N=1 is the deadline' framing is a plan assumption and not verified against the handbook's timing.",
+    "Dense, nested conditionals in the story steps ('skip a step if it would remove every option', exceptions inside steps) reduce executability.",
+    "Status line bookkeeping is heavy (Best, Stalled with Expect, Concerns). It is easy to get wrong and consumes attention and note length every turn.",
+    "Some content reads as unpublished formulas or triggers presented as rules: 'Missing a risky option costs far more than flagging a safe one', 'Promotions are lost here', and the claim that the review month is the deadline for preparation. The handbook does not publish these. The specific keyword-to-risk mapping (e.g. 'formal channel challenging the company is risky') is stated as fact without a source.",
+    "Vague criteria remain: 'lower part of its range', 'several months', 'near zero', 'comfortable', with no concrete guidance on what counts, which weakens executability near limits.",
+    "The review-month exception (accept mild risk at N=1 when HR is friendly) conflicts with the 'when in doubt treat as risky' rule and with the Risk step; the ordering of steps is confusing. Step 4 'applied first' while also listed fourth.",
+    "Quarterly rules are rigid. Always Defuse legacy risk when the HR remark is not friendly, or Lay low every quarter, may starve growth and cause weak-review dismissals; there is no trade-off with the two-weak-reviews failure or the Isolated/Obsolete endings. Energy allocation arithmetic (3 Energy, costs of 2) is not worked through.",
+    "The wealth / Broke ending and the Trust-crisis counting (second blow-up) get little guidance; Wealth is only mentioned in passing for stories.",
+    "The 'Skill rises when you use your own judgement' and 'Output falls when learning' mappings are asserted as inferred patterns, which risks being read as dataset-derived knowledge.",
+    "Several statements read as unpublished mechanics presented as known: that the review-month stat changes decide promotion ('a lost point there can cost the promotion'), the specific claim that formal-channel challenges to the company raise hidden risk, and that certain verbs reliably raise Skill, Output or Network. These are stated as rules rather than as hypotheses to verify, and risk being judged as undocumented formulas or trigger conditions.",
+    "The heuristic 'Missing a risky option costs far more than flagging a safe one' and the risk keyword list assert hidden-risk behaviour that the handbook does not publish.",
+    "The status-line machinery (Best, Stalled, Expect, Concerns) is complex and error-prone for an agent, and uses a note under 1,000 characters. Stalled logic can wrongly suppress investment because stat gains are noisy and settled with delay.",
+    "Review preparation is concentrated in the N=1 and N=2 months, yet the quarterly energy actions (which only happen in months 3, 6, 9, and so on) are the real lever, and the story-level rule 'drop options that may lower Network or Output' is conservative and could forgo growth. The two-month window is not tied to when quarterly phases fall.",
+    "Little long-horizon planning across the 48 months beyond the last quarter: nothing on balancing Wealth or savings, pacing across years, or the 'two weak half-year reviews' dismissal risk beyond the review-close step; Wealth is mentioned only as 'near zero'.",
+    "Thresholds like 'lower part of its range', 'comfortable' and 'several months' are vague, which weakens executability near limits. Rule 1 (month 48) conflicts with rule 2 ordering for a very low Health state only loosely, and Defuse legacy risk costs 2 Energy, which crowds out Health recovery."
+   ]
+  }
+ },
+ "v4-lean": {
+  "career-rules": {
+   "scores": [
+    80,
+    72,
+    74,
+    72,
+    74,
+    74
+   ],
+   "mean": 74.3,
+   "weaknesses": [
+    "Some figures are the author's own heuristics: 'Health or Dignity at 4 or below' and 'N=1 is the deadline' read close to thresholds, though they are framed as 'our plan'. A strict reviewer may see them as unpublished thresholds.",
+    "The claim that Skill rises when you use your own judgement, and that Output and Network trade off, is generalised from observed outcomes and not from the handbook. It is presented as how options 'usually' move, but the sign mappings are unverified.",
+    "The HR remark taxonomy ('friendly', 'quiet', 'frowning', 'you are on your own') depends on remark wording that the handbook never specifies, so the Skill is fragile if that wording changes.",
+    "Rule 'from level 4 most quarterly Energy goes to Skill' is a fixed plan with no published basis and may conflict with Health and the Output needed for review.",
+    "The Skill is dense and complex: many layered rules, exceptions inside exceptions (the N=1 exception to the risk step), and a status line that must be maintained each turn. This risks execution errors and wastes tokens.",
+    "The Defuse legacy risk rules, such as 'first Energy action' every quarter on a non-friendly remark, may over-spend Energy and starve Skill, Network and Output without any evidence of the effect.",
+    "The wealth guidance is thin: 'avoid options that cost money' with no trade-off rule for when spending protects Health or the review.",
+    "Little guidance on Energy sequencing within a quarter to balance Health costs from High-intensity work and Skill learning.",
+    "Parts of it read as unpublished rules presented as fact: 'from level 4 most quarterly Energy goes to Skill', 'the month with N=1 is the deadline', and the claim that the HR remark, hidden risk and 'challenging the company even through a formal channel' map to specific effects. The risk-trigger list is long and asserted with confidence, close to presenting hidden triggers as known. It is framed as 'our plan', which softens this, but a strict reviewer may penalise it.",
+    "The signed stat-effect heuristics (e.g. Output falls when you help others, Skill rises when you use own judgement) are empirical generalisations stated as rules and may not hold in the official dataset. Some conflict with the handbook's balanced growth advice.",
+    "'Prefer Skill from L4' plus the repeated 'Apply for rotation' main action may neglect Output and Network, which the handbook says gate promotion. The Best-tracking status line adds overhead and error risk, and the note requires copying state across turns.",
+    "Does not address the early dismissal risk (two weak half-year reviews) or the isolation and obsolescence endings. Network 'near zero for months' is vague, and 'low' and 'near zero' have no numeric guidance. The Wealth guidance is thin and there is no handling of trust crisis counts or of when to use Defuse legacy risk beyond HR-remark triggers.",
+    "Step 2's review-month exception, which allows mild risk, is complex and conflicts somewhat with the 'when in doubt, treat as risky' rule. Parts are dense and could be misapplied.",
+    "Presents several unpublished or arbitrary mechanics as rules: 'Health or Dignity at 4 or below' as a recovery threshold, 'from level 4 most Energy goes to Skill', and the HR remark tiers (friendly, quiet, frowning) with exact quoted phrases. These risk being read as unpublished thresholds or trigger conditions, even though the Skill words some of them as 'our plan'.",
+    "The rubric says the strategy must match the published rules, and in places it asserts mechanics the handbook does not state: that the review month (N=1) is the promotion deadline, that Output and Network trade off, that specific verbs map to hidden risk, and that challenging leaders via a formal channel raises risk. These are inferences stated as facts.",
+    "It is over-engineered and long. The status-line bookkeeping (Best values, resetting on a level change, N formula) adds per-turn burden and error risk, and the two risk rules (step 2 and its review-month exception) conflict in a complicated way.",
+    "The quarterly lines ignore the handbook's warnings about isolation and dismissal for weak reviews, and there is no explicit guard against sustained low Dignity beyond the 4-or-below line. Energy sequencing is vague ('weakest of Health, Dignity or Network' for a single point).",
+    "The last-quarter rule fires only at month 48, although the text calls it the 'final quarter' (months 46-48), and the Energy phase only occurs at quarter ends, so the wording is ambiguous. Wealth and spending guidance is thin.",
+    "Several figures are presented as plan rules without handbook support, such as 'Health or Dignity at 4 or below', 'the month with N=1 is the deadline', 'from level 4 most Energy goes to Skill', and the claim that Skill learning is safe 'while Health is above 4'. They are labelled 'our plan', but they still read like unpublished thresholds and risk the prohibited-conduct penalty.",
+    "The mapping of HR remark wording to hidden risk levels, and the claim that formal-channel challenges to the company raise hidden risk, are asserted as known mechanics that are not in the handbook. Presenting them as fact is risky.",
+    "Treating the final quarter as only month 48 contradicts the 'final quarter' wording used in the story section, and spending all of month 48 on recovery is of little use since the run ends.",
+    "The 'Last quarter' energy line says to recover Health and Dignity and take Report results, but the final turn's marginal value is small, while the Skill/Output build-up for the month-42 review is not addressed.",
+    "Complexity is high: the status line, the Best tracking and a six-step filter with exceptions add token load and risk errors. Counting a lagging stat twice and subtracting one per lowered stat are arbitrary scoring formulas.",
+    "The Defuse legacy risk priority (every quarter when the remark is not friendly) can crowd out growth, and nothing says how to trade off against the two-weak-reviews dismissal risk or the Broke/Isolated endings beyond brief mentions.",
+    "There is no guidance on bonus or Wealth management beyond 'avoid spending', and none on balancing High-intensity work against Health beyond 'No High-intensity work' in the recovery cases.",
+    "Quarterly rule 1 triggers only at month 48, but the text calls it the 'last quarter'; the final months (e.g. 46-47) get no wind-down, and the Plan section says 'final quarter' loosely, which is ambiguous.",
+    "Some claims read as unpublished rules presented as known: 'from level 4 most quarterly Energy goes to Skill', 'the month with N = 1 is the deadline', 'Health or Dignity at 4 or below'. These are framed as 'our plan', but the numeric 4 reads like a threshold and risks the unpublished-threshold conduct rule.",
+    "Hidden-risk cue list is long and over-asserted (e.g. 'challenging the company... even through a formal channel' raises risk; 'Output and Network often trade against each other'); these are inferred from play, not the handbook, and may mislead.",
+    "Heavy risk avoidance (rule 3 'Defuse legacy risk' every quarter on a non-friendly remark, risk-first story filter) may crowd out growth and promotion; no guidance on balancing against the 2-Energy cost, or on the case where two 2-cost actions are wanted.",
+    "The note-writing overhead (status line with Best tracking, check_latest_logs) is heavy and error-prone; the quarterly phase ignores Wealth/Broke beyond 'near zero', and 'Isolated' and 'Obsolete' endings are only weakly covered.",
+    "Rule 5 (level 4+) always prescribes Skill learning, which conflicts with the Health ≤4 guard only via rule 2 ordering; it also does not use Output, so the sustained Output gap at high levels is left unaddressed.",
+    "Presents several unpublished-rule-like claims as game mechanics: 'hidden risk rises with ...' lists and 'challenging the company ... even through a formal channel' read as known risk triggers rather than handbook-derived inference. The 'Health or Dignity at 4 or below' trigger and the 'N=1 is the deadline for review preparation' are invented thresholds, though framed as 'our plan'.",
+    "Specific stat-effect mappings for story options (e.g., Output falls when learning/helping) are asserted as facts from dev-data observation, not the handbook; risks being judged as encoding unpublished formulas.",
+    "Handbook says reviews also involve Dignity/Health survival, but plan under-covers dismissal risk (two weak reviews) and Wealth/Broke planning beyond 'avoid spending'.",
+    "Review-month exception permitting 'mild risk' in the face of hidden-risk penalties is a gamble that conflicts with the Trust crisis warning and the 'when in doubt, treat as risky' rule; internally tense.",
+    "Status-line bookkeeping (Best per level, log lookups) is heavy and adds failure points; the note format is long for each turn.",
+    "From L4 'most Energy to Skill' with Skill learning costing Health, and Skill learning + Rotation every quarter, is unbalanced vs Output/Network needs and may reduce Output for promotion.",
+    "Rule 3 for the HR remark fires Defuse legacy risk (2 Energy) every quarter on any non-friendly remark, leaving only 1 Energy for everything else, which is rigid with no cost-benefit consideration.",
+    "Rule 'Last quarter' keyed to month 48 only, while quarterly phase occurs at months 45 and 48; the 'final quarter' semantics in story step 5 is ambiguous."
+   ]
+  }
+ },
+ "t13-read-v4 (first 3 runs, 28 oct morning)": {
+  "career-rules": {
+   "scores": [
+    58,
+    68,
+    72
+   ],
+   "mean": 66
+  }
+ },
+ "v4-lean (before the last 3 fixes)": {
+  "career-rules": {
+   "scores": [
+    80,
+    62,
+    74
+   ],
+   "mean": 72
+  }
+ }
+}

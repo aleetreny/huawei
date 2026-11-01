@@ -1,0 +1,11 @@
+{
+  "family": "stat-perception",
+  "name": "v4-lean",
+  "parents": [],
+  "idea_origin": "Leah's stat-perception line, experiments 07-08: t13-read-v4 (Cut 1) with less writing per decision, the rubric reviewer's complaints addressed and the L4 quarter line made visible; parent t13-read-v4 is not registered on this machine",
+  "operator": "lean rewrite, same decision rules",
+  "hypothesis": "Each DeepSeek decision adds ~1,150 tokens to an uncompressed history; v4's long status line (Stalled, Expect, Concerns), long notes and free-form reasoning are part of it. A shorter status line, one-reason notes and no analysis outside the note should cut tokens per month, raise the SKILL.md rubric score, and keep the same choices; making quarterly line 5 'Level 4 or above' instead of 'Stalled' (never filled in by DeepSeek) adds Skill from L4.",
+  "predicted_behaviour": "Rubric reviewer above v4's 66; on the T20 bank, the same choices as v4 in at least 9 of 10 story situations and fewer tokens per situation; in official DeepSeek games, tokens per month below v4's 1.35-1.47 M.",
+  "refutation": "Rubric not above v4, more than 1 in 10 story choices changed on the bank, or no drop in tokens per month in official games.",
+  "skill_count": 1
+}

@@ -5,7 +5,7 @@ A single static page with the race leaderboard, how scores change over time, and
 ## Open it
 
 ```sh
-git fetch origin                                   # newest race results on origin/cloud-lab-run
+git fetch origin                                   # race results (the closed race ended on origin/main)
 uv run python scripts/panel/build.py               # writes lab/panel/data.js
 python3 -m http.server 8795 --directory lab/panel  # then open http://localhost:8795
 ```
@@ -19,6 +19,21 @@ uv run python scripts/panel/build.py --exploration ~/techarena-career-sim/explor
 ```
 
 That summary goes to `lab/panel/data/exploration.json`, holding final scores only. The 346 MB of raw games stay out of Git.
+
+## Follow a running game live
+
+```sh
+uv run python scripts/panel/live.py ~/careerlab-data/huawei-<origin>/runs/<job_id> "label shown on the page" &
+python3 -m http.server 8795 --directory lab/panel  # then open http://localhost:8795/live.html
+```
+
+`live.py` re-reads the worker's transcript every 4 seconds and writes `lab/panel/live/game.json`. It stops by itself when the game ends. `live.html` shows:
+- the month, level, review grades and the final score;
+- Skill, Network, Output and Wealth after every decision, with review lines and promotion marks;
+- Health and Dignity;
+- the latest 12 decisions with the player's notes.
+
+The committed `live/game.json` is the f3-lean-polish-v1 game of 27 Oct.
 
 ## What it shows
 
