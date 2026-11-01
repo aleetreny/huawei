@@ -33,7 +33,7 @@ La hoja de comprobación encontró cuatro diferencias de cifras con `decision_re
 
 ## ZIP final (1 nov, tarde)
 
-Llegaron dos ZIP con el vídeo grabado (8:33, 1080p): uno con H.264 a 4,4 Mb/s (291 MB) y otro con HEVC a 1,3 Mb/s (86 MB). Los fotogramas comparados (diapositivas y cámara) se ven iguales. **Los dos llevaban los documentos antiguos**, sin las cuatro correcciones. Paquete final, con el vídeo ligero y los documentos corregidos, validado con el validador oficial: `~/careerlab-data/entrega/cut3-final/gradient-depression-mv-3-cut3.zip` (`content_sha256` e5e1773b…).
+Llegaron dos ZIP con el vídeo grabado (8:33, 1080p): uno con H.264 a 4,4 Mb/s (291 MB) y otro con HEVC a 1,3 Mb/s (86 MB). Los fotogramas comparados (diapositivas y cámara) se ven iguales. **Los dos llevaban los documentos antiguos**, sin las cuatro correcciones. Paquete final: el vídeo H.264 recodificado a 2,6 Mb/s (1080p, 8:33, 173 MB; se reproduce en cualquier equipo y queda por debajo de los 203 MB del ZIP del corte 1, que se subió bien) y los documentos corregidos. Pasa el validador oficial: `~/careerlab-data/entrega/cut3-final/gradient-depression-mv-3-cut3.zip` (`content_sha256` e5e1773b…). El SKILL.md y el manifiesto son byte a byte los de `lab/policies-src/mejora/mv-3/bundle/`, los de las 9 partidas de mv-3 (`target-solutions/e8cdf663…`) y los del paquete de las 15:10; el manifiesto no lleva la frase de mv-4.
 
 ## Relevo
 
