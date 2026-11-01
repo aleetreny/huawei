@@ -1,0 +1,701 @@
+<meta charset="utf-8">
+<title>How We Taught an AI a Career</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:wght@400;700&family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: a student lab notebook. Each slide is one page of squared paper: one sentence, highlighted where it
+   matters, and one drawing in ink. Two inks only (black and a highlighter), plus pencil greys and a
+   handwritten margin note now and then. Deliberately single-theme: it is paper. */
+:root {
+  --paper: #ffffff;
+  --desk: #e9ebee;
+  --grid: rgba(38, 72, 120, .085);
+  --ink: #17191c;
+  --ink-2: #555b63;
+  --ink-3: #9aa1a9;
+  --rule: rgba(23, 25, 28, .14);
+  --hl: #ffe04a;
+  --display: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --hand: "Caveat", "Bradley Hand", "Comic Sans MS", cursive;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--desk); color: var(--ink); font-family: var(--body);
+  overflow: hidden; -webkit-font-smoothing: antialiased;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+#viewport { position: fixed; inset: 0; }
+#stage {
+  width: 1280px; height: 720px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px; background-position: -1px -1px;
+  border-radius: 4px; box-shadow: 0 1px 0 var(--rule), 0 24px 60px rgba(23, 25, 28, .16);
+  overflow: hidden;
+}
+
+/* ---------- pages ---------- */
+.slide { position: absolute; inset: 0 0 64px; padding: 56px 80px 24px; display: none; }
+.slide.on { display: block; }
+.slide.leave { display: block; animation: pageOut .36s cubic-bezier(.5, 0, .9, .5) both; pointer-events: none; }
+.slide.leave.back { animation-name: pageOutBack; }
+@keyframes pageOut { to { opacity: 0; transform: translateY(-34px) rotate(-.8deg); } }
+@keyframes pageOutBack { to { opacity: 0; transform: translateY(34px) rotate(.8deg); } }
+.slide.on.enter .r { animation: write .6s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 110ms + 140ms); }
+@keyframes write { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* the highlighter: the one colour, swiped on after the words land */
+.hl { background: linear-gradient(100deg, transparent .2em, var(--hl) .2em, var(--hl) calc(100% - .15em), transparent calc(100% - .15em)) no-repeat 0 72% / 100% .62em; padding: 0 .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.slide.on.enter .hl { animation: swipe .55s cubic-bezier(.3, .6, .2, 1) both; animation-delay: calc(var(--h, 0) * 1ms + 700ms); }
+@keyframes swipe { from { background-size: 0% .62em; } to { background-size: 100% .62em; } }
+
+.kicker { font: 600 15px var(--mono); letter-spacing: .04em; color: var(--ink-2); margin: 0 0 14px; }
+.kicker b { color: var(--ink); }
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance; color: var(--ink); }
+h2 { font-size: 60px; line-height: 1.02; font-weight: 800; letter-spacing: -.02em; max-width: 1080px; }
+.lead { font-size: 24px; line-height: 1.4; color: var(--ink-2); margin: 18px 0 0; max-width: 820px; }
+p { margin: 0; }
+.hand { font-family: var(--hand); font-size: 30px; line-height: 1; color: var(--ink-2); transform: rotate(-3deg); display: inline-block; }
+.num { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; line-height: .9; font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--mono); }
+.dim { color: var(--ink-3); }
+.row { display: flex; gap: 48px; align-items: flex-start; }
+.row > * { min-width: 0; }
+.fig svg { display: block; width: 100%; height: auto; overflow: visible; }
+.fig text { font-family: var(--mono); fill: var(--ink-2); font-size: 15px; }
+.ink { stroke: var(--ink); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.draw { stroke-dasharray: var(--len, 1200); stroke-dashoffset: 0; }
+.slide.on.enter .draw { animation: draw 1.1s cubic-bezier(.4, .2, .2, 1) both; animation-delay: calc(var(--d, 0) * 1ms + 350ms); }
+@keyframes draw { from { stroke-dashoffset: var(--len, 1200); } to { stroke-dashoffset: 0; } }
+.grow { transform-box: fill-box; transform-origin: left center; }
+.slide.on.enter .grow { animation: growX 1s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 1ms + 450ms); }
+@keyframes growX { from { transform: scaleX(0); } to { transform: none; } }
+.pop { transform-box: fill-box; transform-origin: center; }
+.slide.on.enter .pop { animation: pop .45s cubic-bezier(.2, .9, .3, 1.4) both; animation-delay: calc(var(--d, 0) * 1ms + 500ms); }
+@keyframes pop { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: none; } }
+
+/* ---------- tabs (navigator) ---------- */
+#nav {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: 3;
+  display: flex; align-items: center; gap: 20px; padding: 0 32px;
+  border-top: 1px solid var(--rule); background: var(--paper);
+}
+#tabs { display: flex; gap: 6px; flex: 1; min-width: 0; }
+#tabs button {
+  font: 600 14px var(--mono); color: var(--ink-3); background: transparent; border: 0; border-bottom: 3px solid transparent;
+  padding: 8px 10px; cursor: pointer; white-space: nowrap;
+}
+#tabs button:hover { color: var(--ink); }
+#tabs button.cur { color: var(--ink); border-bottom-color: var(--ink); }
+.navbtn { font: 600 15px var(--mono); color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.navbtn:hover { background: var(--hl); }
+#nav button:focus-visible { outline: 3px solid var(--hl); outline-offset: 2px; }
+#page { font: 600 14px var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+#notes {
+  position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 9;
+  width: min(880px, calc(100% - 32px)); max-height: 40vh; overflow: auto;
+  background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink); border-radius: 10px;
+  padding: 14px 20px 16px; box-shadow: 0 18px 50px rgba(23, 25, 28, .25);
+}
+#notes .top { display: flex; justify-content: space-between; font: 600 13px var(--mono); color: var(--ink-2); margin-bottom: 8px; }
+#notes p { font-size: 17px; line-height: 1.55; white-space: pre-line; }
+.why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 48px; }
+.why .num { font-size: 120px; }
+.why p.num { color: var(--ink); margin: 0; }
+.why p { font-size: 22px; line-height: 1.4; color: var(--ink-2); margin-top: 12px; }
+
+/* ---------- version C: drawings first, words second ---------- */
+.slide { padding: 50px 80px 20px; }
+h2 { font-size: 58px; }
+.cap { font-size: 24px; line-height: 1.35; color: var(--ink-2); margin-top: 16px; max-width: 900px; }
+.art { margin-top: 28px; }
+.art svg { display: block; width: 100%; height: auto; overflow: visible; }
+.art text { font-family: var(--body); fill: var(--ink); }
+.art .lbl { font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: -.01em; }
+.art .sm { font-size: 20px; fill: var(--ink-2); }
+.art .hw { font-family: var(--hand); font-size: 30px; fill: var(--ink-2); }
+.art .big { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; }
+.ink { stroke: var(--ink); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.ink.thin { stroke-width: 2; }
+.ink.soft { stroke: var(--ink-3); }
+.fillink { fill: var(--ink); }
+.fillhl { fill: var(--hl); }
+.fillpaper { fill: var(--paper); }
+.grow { transform-box: fill-box; transform-origin: left bottom; }
+.slide.on.enter .grow { animation: growX 1s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 1ms + 450ms); }
+.growy { transform-box: fill-box; transform-origin: center bottom; }
+.slide.on.enter .growy { animation: growY .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 1ms + 450ms); }
+@keyframes growX { from { transform: scaleX(0); } to { transform: none; } }
+@keyframes growY { from { transform: scaleY(0); } to { transform: none; } }
+.slide.on.enter .wob { animation: wob 2.4s ease-in-out infinite; animation-delay: 1.2s; transform-box: fill-box; transform-origin: center; }
+@keyframes wob { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-4deg); } }
+.tag { font: 600 15px var(--mono); color: var(--ink-2); }
+.tag b { color: var(--ink); background: var(--hl); padding: 2px 6px; border-radius: 3px; }
+.cover2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 30px; align-items: center; height: 100%; }
+.cover2 h1 { font-size: 80px; font-weight: 800; letter-spacing: -.035em; line-height: .98; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  @page { size: 1280px 720px; margin: 0; }
+  html, body { height: auto; overflow: visible; background: var(--paper); padding: 0; }
+  #viewport { position: static; }
+  #stage { position: static; transform: none !important; height: auto; border-radius: 0; box-shadow: none; overflow: visible; background: none; }
+  #nav, #notes { display: none !important; }
+  .slide { display: block !important; position: relative; inset: auto; height: 720px; padding-top: 58px; break-after: page; page-break-after: always;
+           background-color: var(--paper); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 32px 32px; }
+  .slide::after { content: attr(data-foot); position: absolute; left: 80px; bottom: 26px; font: 600 13px var(--mono); color: var(--ink-3); }
+  *, *::before, *::after { animation: none !important; }
+}
+</style>
+
+<div id="viewport">
+  <div id="stage" role="region" aria-roledescription="slide deck" aria-label="How we taught an AI a career">
+
+    <!-- 1 cover -->
+    <section class="slide" data-chap="0" data-foot="Gradient Depression · Huawei TechArena UK 2026 · p. 1">
+      <div class="cover2">
+        <div>
+          <p class="kicker r" style="--i:0"><b>Gradient Depression</b> · Huawei TechArena UK 2026</p>
+          <h1 class="r" style="--i:1">We wrote the manual.<br><span class="hl" style="--h:300">An AI lived the career.</span></h1>
+          <p class="r" style="--i:2; margin-top: 28px"><span class="hand">the whole story, start to finish</span></p>
+        </div>
+        <div class="art r" style="--i:3; margin:0">
+          <svg viewBox="0 0 560 360" role="img" aria-label="A manual, an arrow to an AI, an arrow to a career ladder">
+            <!-- book -->
+            <path class="ink" d="M20 120 L120 100 L220 120 L220 270 L120 250 L20 270 Z"/><path class="ink" d="M120 100 L120 250"/>
+            <path class="ink thin" d="M40 145 L100 133 M40 170 L100 158 M40 195 L100 183 M140 133 L200 145 M140 158 L200 170 M140 183 L200 195"/>
+            <text x="120" y="310" text-anchor="middle" class="sm">our manual</text>
+            <path class="ink draw" style="--len:60; --d:200" d="M235 185 L280 185"/><path class="ink" d="M270 175 L282 185 L270 195"/>
+            <!-- robot -->
+            <rect class="ink" x="300" y="130" width="100" height="90" rx="14"/><circle class="fillink" cx="330" cy="170" r="8"/><circle class="fillink" cx="370" cy="170" r="8"/>
+            <path class="ink" d="M330 198 Q350 210 370 198"/><path class="ink" d="M350 130 L350 108"/><circle class="fillhl" cx="350" cy="102" r="9"/><circle class="ink thin" cx="350" cy="102" r="9"/>
+            <rect class="ink" x="315" y="226" width="70" height="44" rx="8"/>
+            <text x="350" y="310" text-anchor="middle" class="sm">the AI</text>
+            <path class="ink draw" style="--len:60; --d:450" d="M410 185 L455 185"/><path class="ink" d="M445 175 L457 185 L445 195"/>
+            <!-- ladder -->
+            <path class="ink" d="M480 280 L480 60 M540 280 L540 60"/>
+            <path class="ink thin" d="M480 245 L540 245 M480 205 L540 205 M480 165 L540 165 M480 125 L540 125 M480 85 L540 85"/>
+            <path class="fillhl" d="M510 40 l6 14 15 1 -12 9 4 15 -13 -8 -13 8 4 -15 -12 -9 15 -1z"/>
+            <text x="510" y="310" text-anchor="middle" class="sm">a career</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 the game -->
+    <section class="slide" data-chap="0" data-foot="The game · p. 2">
+      <p class="kicker r" style="--i:0">The game</p>
+      <h2 class="r" style="--i:1">An AI lives <span class="hl">48 months</span> in a company</h2>
+      <div class="art r" style="--i:2">
+        <svg id="cal" viewBox="0 0 1120 300" role="img" aria-label="Four years of twelve months; every month three choices; a review every six months"></svg>
+      </div>
+    </section>
+
+    <!-- 3 how you lose -->
+    <section class="slide" data-chap="0" data-foot="The game · p. 3">
+      <p class="kicker r" style="--i:0">The game</p>
+      <h2 class="r" style="--i:1">Three ways to lose</h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 360" role="img" aria-label="Fired for never being promoted; hidden trouble that explodes twice; burnout. The only clue to hidden trouble is HR's tone.">
+          <!-- door -->
+          <g transform="translate(70 20)">
+            <rect class="ink" x="40" y="20" width="130" height="200" rx="4"/><circle class="fillink" cx="150" cy="125" r="7"/>
+            <path class="ink draw" style="--len:120; --d:300" d="M190 120 L270 120"/><path class="ink" d="M255 105 L272 120 L255 135"/>
+            <text x="120" y="275" text-anchor="middle" class="lbl">Fired</text><text x="120" y="308" text-anchor="middle" class="sm">never promoted</text>
+          </g>
+          <!-- two bombs -->
+          <g transform="translate(430 20)">
+            <circle class="ink wob" cx="80" cy="140" r="60"/><path class="ink" d="M115 92 Q130 60 160 62"/><path class="fillhl wob" d="M160 50 l8 10 12 -2 -6 11 7 10 -12 -1 -6 11 -3 -12 -12 -3 11 -6z"/>
+            <circle class="ink soft" cx="200" cy="160" r="40"/><path class="ink soft" d="M225 128 Q235 108 255 110"/>
+            <text x="130" y="275" text-anchor="middle" class="lbl">Hidden trouble</text><text x="130" y="308" text-anchor="middle" class="sm">explodes twice</text>
+          </g>
+          <!-- battery -->
+          <g transform="translate(810 20)">
+            <rect class="ink" x="20" y="80" width="180" height="100" rx="12"/><rect class="fillink" x="200" y="112" width="14" height="36" rx="3"/>
+            <rect class="fillink growy" x="36" y="96" width="26" height="68" rx="3" style="--d:300"/>
+            <text x="110" y="275" text-anchor="middle" class="lbl">Burnout</text><text x="110" y="308" text-anchor="middle" class="sm">nothing left</text>
+          </g>
+        </svg>
+      </div>
+      <p class="cap r" style="--i:3">The only clue to hidden trouble: <span class="hl" style="--h:600">the tone of HR's monthly comment.</span></p>
+    </section>
+
+    <!-- 4 our job -->
+    <section class="slide" data-chap="0" data-foot="Our job · p. 4">
+      <p class="kicker r" style="--i:0">Our job</p>
+      <h2 class="r" style="--i:1">We don't play. <span class="hl">We write the manual.</span></h2>
+      <div class="art r" style="--i:2">
+        <svg id="score" viewBox="0 0 1120 340" role="img" aria-label="The AI plays three careers with our manual. Score: 80 percent how the careers go, 10 percent how much it reads, 10 percent how good the manual is.">
+          <g transform="translate(0 10)">
+            <text x="0" y="30" class="sm">the organisers run it</text>
+            <g id="threeRuns"></g>
+          </g>
+          <text x="0" y="190" class="sm">and score it</text>
+          <rect class="fillink grow" x="0" y="206" width="880" height="56" style="--d:300"/>
+          <rect class="fillhl grow" x="884" y="206" width="114" height="56" style="--d:600"/>
+          <rect class="ink grow" x="1002" y="206" width="116" height="56" style="--d:800; stroke-width:3"/>
+          <text x="24" y="243" style="fill: var(--paper); font-size: 24px; font-weight: 700">80% how the careers go</text>
+          <path class="ink thin" d="M941 266 L941 292 M1060 266 L1060 322"/>
+          <text x="930" y="298" text-anchor="end" style="font-size: 20px; font-weight: 700">10% how much it reads</text>
+          <text x="1049" y="328" text-anchor="end" style="font-size: 20px; font-weight: 700">10% how good the manual is</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 5 Q1 practice copy -->
+    <section class="slide" data-chap="1" data-foot="Question 1 · How we designed it · p. 5">
+      <p class="tag r" style="--i:0"><b>Question 1 of 5</b> · How we designed it</p>
+      <h2 class="r" style="--i:1; margin-top:10px">First, we studied the game <span class="hl">from outside</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="From our own games we built a practice copy that makes the same move as the real game 99 times in 100. Used only for testing; nothing from it goes into the manual.">
+          <g><rect class="ink" x="20" y="30" width="280" height="190" rx="10"/>
+            <path class="ink thin" d="M50 70 h220 M50 105 h170 M50 140 h200 M50 175 h120"/>
+            <text x="160" y="262" text-anchor="middle" class="lbl">the real game</text></g>
+          <text x="400" y="150" text-anchor="middle" class="big" style="font-size:90px">≈</text>
+          <g><rect class="ink" x="500" y="30" width="280" height="190" rx="10" style="stroke-dasharray: 10 8"/>
+            <path class="ink thin" d="M530 70 h220 M530 105 h170 M530 140 h200 M530 175 h120"/>
+            <text x="640" y="262" text-anchor="middle" class="lbl">our practice copy</text></g>
+          <text x="860" y="130" class="big" style="font-size:110px">99<tspan style="font-size:50px" dx="6">/100</tspan></text>
+          <text x="862" y="180" class="sm">same move as the real game</text>
+          <text x="20" y="318" class="hw">for testing ideas only · nothing from it goes into the manual</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 6 Q1 the real problem -->
+    <section class="slide" data-chap="1" data-foot="Question 1 · How we designed it · p. 6">
+      <p class="tag r" style="--i:0"><b>Question 1 of 5</b> · How we designed it</p>
+      <h2 class="r" style="--i:1">It sees danger. <span class="hl">It misses chances.</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="The AI spotted 83 percent of risky answers, but only about half of the answers that help it grow.">
+          <!-- eye -->
+          <path class="ink" d="M20 165 Q140 50 260 165 Q140 280 20 165 Z"/><circle class="ink" cx="140" cy="165" r="48"/><circle class="fillink" cx="140" cy="165" r="20"/>
+          <text x="380" y="80" class="lbl">risky answers spotted</text>
+          <rect x="380" y="98" width="700" height="44" rx="4" fill="var(--grid)"/>
+          <rect class="fillink grow" x="380" y="98" width="581" height="44" rx="4" style="--d:200"/>
+          <text x="975" y="132" class="big" style="font-size:34px">83%</text>
+          <text x="380" y="215" class="lbl">answers that help it grow</text>
+          <rect x="380" y="233" width="700" height="44" rx="4" fill="var(--grid)"/>
+          <rect class="fillhl grow" x="380" y="233" width="329" height="44" rx="4" style="--d:500"/>
+          <text x="723" y="267" class="big" style="font-size:34px">~ half</text>
+        </svg>
+      </div>
+      <p class="cap r" style="--i:3">So the manual teaches it <strong>how to read an answer</strong>, in plain words.</p>
+    </section>
+
+    <!-- 7 Q1 the manual -->
+    <section class="slide" data-chap="1" data-foot="Question 1 · How we designed it · p. 7">
+      <p class="tag r" style="--i:0"><b>Question 1 of 5</b> · How we designed it</p>
+      <h2 class="r" style="--i:1">Three questions, <span class="hl">every single time</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 210" role="img" aria-label="Three questions: what will this change, what do I need now, which rule fits this moment.">
+          <g id="bubbles"></g>
+        </svg>
+      </div>
+      <div class="art r" style="--i:3; margin-top: 18px">
+        <svg viewBox="0 0 1120 150" role="img" aria-label="A one-line diary in every note: months until review, scores now, best scores so far.">
+          <rect x="0" y="10" width="1120" height="64" rx="6" class="fillpaper"/><rect x="0" y="10" width="1120" height="64" rx="6" class="ink"/>
+          <text id="sline" x="24" y="52" style="font-family: var(--mono); font-size: 24px">Review in N | Now S.. N.. O.. | Best S.. N.. O.. | Reviews here: 0</text>
+          <g id="spoint"></g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 8 Q2 three tries -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 8">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · What went wrong, and what we changed</p>
+      <h2 class="r" style="--i:1">Three tries, <span class="hl">one stumble</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 360" role="img" aria-label="Official scores out of 100: first version 64.75, second 45.44, third not known yet.">
+          <path class="ink thin soft" d="M120 300 L1060 300"/>
+          <g id="tries"></g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 9 lesson 1 -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 9">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · Lesson 1</p>
+      <h2 class="r" style="--i:1">Promotions lost <span class="hl">by a single point</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="A score bar one point short of the line, just before the review. Fix: guard your scores in the two months before each review.">
+          <text x="0" y="40" class="sm">score just before the review</text>
+          <path class="ink" d="M0 70 L520 70" style="stroke-dasharray: 4 8"/><text x="530" y="78" class="sm">needed</text>
+          <rect class="fillink growy" x="80" y="80" width="90" height="200" style="--d:200"/>
+          <rect class="fillink growy" x="220" y="80" width="90" height="200" style="--d:350"/>
+          <rect class="ink growy" x="360" y="100" width="90" height="180" style="--d:500"/>
+          <text x="405" y="92" text-anchor="middle" class="hw" style="fill:var(--ink)">−1</text>
+          <path class="ink thin soft" d="M40 280 L500 280"/>
+          <text x="265" y="312" text-anchor="middle" class="sm">the three scores it protects</text>
+          <path class="ink draw" style="--len:120; --d:900" d="M620 175 L720 175"/><path class="ink" d="M705 160 L722 175 L705 190"/>
+          <rect class="fillhl" x="760" y="105" width="350" height="140" rx="8"/>
+          <text x="790" y="160" class="lbl">Guard your scores</text>
+          <text x="790" y="200" class="lbl">before each review</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 10 lesson 2 -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 10">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · Lesson 2</p>
+      <h2 class="r" style="--i:1">"Nice" answers <span class="hl">hid trouble</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="A gift box labelled 'a quiet private chat' and 'fix it bit by bit' with a bomb inside. Fix: avoid anything that buries a problem.">
+          <rect class="ink" x="60" y="120" width="300" height="180" rx="6"/>
+          <path class="ink" d="M210 120 L210 300"/>
+          <path class="ink wob" d="M40 120 L380 120 L380 80 L40 80 Z"/>
+          <path class="ink" d="M210 80 Q170 30 150 60 Q170 80 210 80 Q250 30 270 60 Q250 80 210 80"/>
+          <circle class="fillink" cx="300" cy="230" r="34"/><path class="ink" d="M320 200 Q335 180 350 185"/><path class="fillhl wob" d="M352 172 l6 8 10 -2 -5 9 6 8 -10 -1 -5 9 -2 -10 -10 -2 9 -5z"/>
+          <text x="400" y="170" class="hw">"a quiet private chat"</text>
+          <text x="400" y="215" class="hw">"fix it bit by bit"</text>
+          <path class="ink draw" style="--len:120; --d:900" d="M640 190 L740 190"/><path class="ink" d="M725 175 L742 190 L725 205"/>
+          <rect class="fillhl" x="770" y="120" width="340" height="140" rx="8"/>
+          <text x="800" y="175" class="lbl">Avoid anything that</text>
+          <text x="800" y="215" class="lbl">buries a problem</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 11 lesson 3 -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 11">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · Lesson 3</p>
+      <h2 class="r" style="--i:1">It was <span class="hl">re-reading everything</span>, every step</h2>
+      <div class="art r" style="--i:2">
+        <svg id="reading" viewBox="0 0 1120 360" role="img" aria-label="At every step the AI re-reads all that happened so far, so reading grows faster and faster. Answering each situation in one go cut it from about 1.4 million word pieces a month to about 0.6 million."></svg>
+      </div>
+    </section>
+
+    <!-- 12 lesson 4 -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 12">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · Lesson 4</p>
+      <h2 class="r" style="--i:1">One extra sentence <span class="hl">made it worse</span></h2>
+      <div class="art r" style="--i:2">
+        <svg id="careers" viewBox="0 0 1120 330" role="img" aria-label="Without the extra sentence, 7 of 9 practice careers finished, average 70.1, two at level 6. With it, 6 of 11 finished and 5 ended early."></svg>
+      </div>
+      <p class="cap r" style="--i:3">The sentence was meant to fix a glitch. <span class="hand" style="font-size:28px">our guess: it stopped the AI thinking out loud</span></p>
+    </section>
+
+    <!-- 13 lesson 5 -->
+    <section class="slide" data-chap="2" data-foot="Question 2 · What went wrong · p. 13">
+      <p class="tag r" style="--i:0"><b>Question 2 of 5</b> · Lesson 5</p>
+      <h2 class="r" style="--i:1">Quick tests fooled us. <span class="hl">Full careers didn't.</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="Three changes: a quick test said better, full careers said worse, each time.">
+          <text x="300" y="30" text-anchor="middle" class="sm">quick test</text>
+          <text x="600" y="30" text-anchor="middle" class="sm">full careers</text>
+          <g id="fooled"></g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 14 Q3 -->
+    <section class="slide" data-chap="3" data-foot="Question 3 · No extra programs · p. 14">
+      <p class="tag r" style="--i:0"><b>Question 3 of 5</b> · Scripts and extra files</p>
+      <h2 class="r" style="--i:1">One manual. <span class="hl">No extra programs.</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="We tried a helper program: one great career, but 3 of its 7 careers ended early and it read 1.6 times more.">
+          <!-- gear -->
+          <g transform="translate(150 150)">
+            <circle class="ink" r="70"/><circle class="ink" r="26"/>
+            <g class="ink"><path d="M0 -70 L0 -96 M0 70 L0 96 M-70 0 L-96 0 M70 0 L96 0 M49 -49 L68 -68 M-49 49 L-68 68 M49 49 L68 68 M-49 -49 L-68 -68"/></g>
+          </g>
+          <text x="150" y="300" text-anchor="middle" class="sm">a helper program we tried</text>
+          <g transform="translate(360 0)">
+            <text x="0" y="80" class="big" style="font-size:72px">1</text><text x="60" y="78" class="lbl">great career</text>
+            <text x="0" y="170" class="big" style="font-size:72px">3/7</text><text x="150" y="168" class="lbl">ended early</text>
+            <text x="0" y="260" class="big" style="font-size:72px">1.6×</text><text x="170" y="258" class="lbl">more reading</text>
+          </g>
+          <text x="820" y="150" class="hw" style="fill:var(--ink)">the real problem is</text>
+          <text x="820" y="190" class="hw" style="fill:var(--ink)">reading the situations.</text>
+          <text x="820" y="230" class="hw" style="fill:var(--ink)">a helper can't fix that.</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 15 Q4 -->
+    <section class="slide" data-chap="4" data-foot="Question 4 · How well it adapts · p. 15">
+      <p class="tag r" style="--i:0"><b>Question 4 of 5</b> · How well it adapts</p>
+      <h2 class="r" style="--i:1">It only uses <span class="hl">what it can see</span></h2>
+      <div class="art r" style="--i:2">
+        <svg id="sees" viewBox="0 0 1120 330" role="img" aria-label="The manual uses only what the AI sees: HR's tone, review talks, the menu of actions, the calendar and its own notes. No secret answers. Weak spot: about one career in four still falls, mostly at the start."></svg>
+      </div>
+    </section>
+
+    <!-- 16 Q5 -->
+    <section class="slide" data-chap="5" data-foot="Question 5 · What we learned · p. 16">
+      <p class="tag r" style="--i:0"><b>Question 5 of 5</b> · What we learned about AI manuals</p>
+      <h2 class="r" style="--i:1">A manual changes <span class="hl">how</span> it works, not <span class="hl" style="--h:250">what it understands</span></h2>
+      <div class="art r" style="--i:2">
+        <svg viewBox="0 0 1120 300" role="img" aria-label="Good at: habits, order, how much it reads. Not good at: understanding which answer costs what.">
+          <g transform="translate(130 120)"><circle class="ink" r="62"/><circle class="ink" r="22"/><path class="ink" d="M0 -62 L0 -86 M0 62 L0 86 M-62 0 L-86 0 M62 0 L86 0 M44 -44 L61 -61 M-44 44 L-61 61 M44 44 L61 61 M-44 -44 L-61 -61"/></g>
+          <text x="260" y="95" class="lbl">✓ habits, order, reading</text>
+          <text x="260" y="140" class="sm">what it does, step by step</text>
+          <g transform="translate(700 50)"><path class="ink" d="M60 0 C120 0 130 80 95 110 L95 140 L25 140 L25 110 C-10 80 0 0 60 0 Z"/><path class="ink thin" d="M30 160 L90 160 M38 178 L82 178"/></g>
+          <text x="860" y="95" class="lbl">✗ understanding</text>
+          <text x="860" y="140" class="sm">which answer costs what</text>
+        </svg>
+      </div>
+      <p class="cap r" style="--i:3"><span class="hand" style="font-size:34px">priorities and discipline, yes · understanding, no</span></p>
+    </section>
+
+    <!-- 17 journey -->
+    <section class="slide" data-chap="6" data-foot="Wrap-up · p. 17">
+      <p class="kicker r" style="--i:0">Wrap-up</p>
+      <h2 class="r" style="--i:1">The whole journey <span class="hl">in one picture</span></h2>
+      <div class="art r" style="--i:2">
+        <svg id="journey" viewBox="0 0 1120 380" role="img" aria-label="Study the game, build a practice copy, first manual scored 64.75, cut the reading, stumble at 45.44, test on full careers, mv-3."></svg>
+      </div>
+    </section>
+
+    <!-- 18 end -->
+    <section class="slide" data-chap="6" data-foot="Wrap-up · p. 18">
+      <p class="kicker r" style="--i:0">Where we ended</p>
+      <h2 class="r" style="--i:1">mv-3: the manual of <span class="hl">our best careers</span></h2>
+      <div class="why">
+        <div class="r" style="--i:2"><p class="num" data-count="70.1">70.1</p><p>average of its finished practice careers (7 of 9)</p></div>
+        <div class="r" style="--i:3"><p class="num">&lt;½</p><p>the reading of our first version</p></div>
+        <div class="r" style="--i:4"><p class="num">0</p><p>secret answers inside</p></div>
+      </div>
+      <p class="r" style="--i:5; margin-top: 38px; display:flex; justify-content: space-between; align-items: baseline; gap: 20px">
+        <span class="hand" style="font-size: 50px">Thanks for watching!</span>
+        <span class="mono dim" style="font-size: 13px; text-align:right">practice-run scores, not official ones,<br>except 64.75 and 45.44</span>
+      </p>
+    </section>
+
+    <nav id="nav" aria-label="Pages">
+      <button class="navbtn" id="prev" type="button" aria-label="Previous page">←</button>
+      <div id="tabs"></div>
+      <span id="page"></span>
+      <button class="navbtn" id="notesbtn" type="button" aria-pressed="false">notes</button>
+      <button class="navbtn" id="next" type="button" aria-label="Next page">→</button>
+    </nav>
+  </div>
+</div>
+
+<aside id="notes" hidden aria-live="polite"><div class="top"><span>speaker notes</span><span>N to hide</span></div><p id="notestext"></p></aside>
+
+<script type="application/json" id="notesdata">{"1": "Hi, we are Gradient Depression, a student team. This is the story of how we taught an AI to survive a career, and what we learned on the way.", "2": "Here is the game. An AI lives forty-eight months in a company. Every month it faces three situations and picks an answer, without seeing what that answer will do. Every six months there is a performance review, and a good one means a promotion.", "3": "There are three ways to lose. Never getting promoted, and being fired. Letting hidden trouble pile up until it explodes, twice. Or burning out. And the AI never sees the hidden trouble directly: its only clue is the tone of a monthly comment from HR.", "4": "The twist: we do not play. We write the manual the AI reads before it starts, called a Skill. The organisers then run the AI with our manual three times. Most of the score is how well those careers go. A little is how much the AI has to read, and a little is how good the manual is.", "5": "So, question one: how did we design it?\nFirst, we studied the game from the outside. Using only our own games, we built a practice copy that makes the same move as the real game ninety-nine times in a hundred. We used it to test ideas cheaply. Nothing from it goes into the manual.", "6": "Then we found the real problem. The AI is good at spotting danger: it caught eighty-three percent of risky answers. But it caught only about half of the answers that would help it grow. So the manual teaches it how to read an answer, in plain words.", "7": "The manual makes the AI ask three questions every time. What will this answer change? What does my career need right now? And which rule fits this moment? It also keeps a one-line diary in every note: how long until the next review, its scores now, and its best scores so far. That line is its memory.", "8": "Question two: what did we learn from watching it play?\nWe submitted three times. The first scored sixty-four point seven five. The second dropped to forty-five point four four. The third is the version we are presenting now, and we do not know its score yet.", "9": "Lesson one. In the logs, the AI often missed a promotion by a single point, lost just before the review. So the manual now tells it to guard its scores in the two months before each review.", "10": "Lesson two. Some answers sounded responsible, like a quiet private chat or fixing things bit by bit. But they hid trouble that exploded later. So the manual tells it to avoid any answer that might bury a problem.", "11": "Lesson three. The AI was reading far too much. At every step it re-reads everything that has happened so far, so the more steps, the faster the reading grows. We taught it to answer each situation in one go. Its reading dropped from about one point four million word pieces a month to about zero point six.", "12": "Lesson four, the surprising one. In one career the AI kept writing its answers as text instead of acting, and the run was stopped. We added one sentence to fix that glitch. Careers got worse: with that sentence, five of eleven ended early. Without it, seven of nine finished, averaging seventy point one, and two reached level six. We think, but cannot prove, that the sentence stopped the AI from thinking out loud. So we left it out.", "13": "Lesson five. Quick tests fooled us. Three times, a cheap test said a change was better, and full careers said it was worse. So in the end we trusted only full careers.", "14": "Question three: why no extra programs or files?\nWe were allowed to add small helper programs, and we tried one. It had one excellent career, but three of its seven careers ended early, and it read one point six times more. The AI's real problem is reading the situations, and a helper cannot fix that. So we kept one manual and nothing else.", "15": "Question four: how well would it adapt?\nThe manual only uses things the AI can actually see: the tone of HR's comment, the review talks, the menu of actions, the calendar and its own notes. No secret answers, no hidden game numbers. So if the stories change, the same method still works. Its weak spot: about one career in four still falls, mostly at the very start.", "16": "Question five: what did we learn about manuals for AI?\nA manual is very good at changing how an AI works: its habits, its order, how much it reads. It is much weaker at changing what the AI understands. You can tell it to protect a score, but you cannot make it see which answer will cost that score.", "17": "So here is the whole journey. We started by studying the game and building a practice copy. We wrote a first manual and scored sixty-four point seven five. We cut the reading. We stumbled with the second version. Then we stopped trusting quick tests and compared full careers, and that led us to mv-3.", "18": "mv-3 is the manual behind our best careers: seventy point one on average in its finished practice careers, less than half the reading of our first version, and no secret answers inside. All these career scores come from our own practice runs, except the two official scores. Thank you for watching."}</script>
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const TABS = ['Start', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Wrap-up'];
+  const NOTES = JSON.parse(document.getElementById('notesdata').textContent || '{}');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, text) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
+  const add = (parent, tag, attrs, text) => parent.appendChild(el(tag, attrs, text));
+  let cur = -1;
+
+  /* p.2: four years of twelve months, three dots each, a star every six months */
+  const cal = document.getElementById('cal');
+  for (let m = 0; m < 48; m++) {
+    const yr = Math.floor(m / 12), mo = m % 12, x = 110 + mo * 82, y = 18 + yr * 62;
+    const review = (m + 1) % 6 === 0;
+    add(cal, 'rect', { x, y, width: 70, height: 48, rx: 4, class: 'pop', style: '--d:' + m * 14, fill: review ? 'var(--hl)' : 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': review ? 3 : 1.5 });
+    for (let k = 0; k < 3; k++) add(cal, 'circle', { cx: x + 20 + k * 15, cy: y + 24, r: 4, fill: 'var(--ink)', class: 'pop', style: '--d:' + (m * 14 + 60) });
+    if (yr === 0 && mo === 0) add(cal, 'text', { x: x + 35, y: y - 4, 'text-anchor': 'middle', class: 'sm', style: 'font-size:14px' }, 'month 1');
+  }
+  ['year 1', 'year 2', 'year 3', 'year 4'].forEach((t, i) => add(cal, 'text', { x: 0, y: 50 + i * 62, class: 'sm' }, t));
+  add(cal, 'text', { x: 110, y: 296, class: 'hw' }, '● ● ●  three choices a month');
+  add(cal, 'rect', { x: 560, y: 272, width: 34, height: 26, rx: 3, fill: 'var(--hl)', stroke: 'var(--ink)', 'stroke-width': 3 });
+  add(cal, 'text', { x: 606, y: 296, class: 'hw' }, 'review every six months: a chance to be promoted');
+
+  /* p.4: three runs */
+  const runs = document.getElementById('threeRuns');
+  for (let i = 0; i < 3; i++) {
+    const x = 210 + i * 300;
+    const g = add(runs, 'g', { class: 'pop', style: '--d:' + i * 160 });
+    g.appendChild(el('rect', { x, y: 50, width: 240, height: 80, rx: 8, class: 'ink' }));
+    g.appendChild(el('path', { d: `M${x + 24} 115 L${x + 80} 98 L${x + 130} 104 L${x + 180} 76 L${x + 216} 66`, class: 'ink' }));
+    g.appendChild(el('text', { x: x + 120, y: 152, 'text-anchor': 'middle', class: 'sm', style: 'font-size:16px' }, 'career ' + (i + 1)));
+  }
+
+  /* p.7: three question bubbles */
+  const bub = document.getElementById('bubbles');
+  ['What will this change?', 'What do I need now?', 'Which rule fits now?'].forEach((q, i) => {
+    const x = i * 380;
+    const g = add(bub, 'g', { class: 'pop', style: '--d:' + i * 200 });
+    g.appendChild(el('path', { d: `M${x + 20} 20 h320 a16 16 0 0 1 16 16 v100 a16 16 0 0 1 -16 16 h-230 l-40 40 v-40 h-50 a16 16 0 0 1 -16 -16 v-100 a16 16 0 0 1 16 -16 z`, class: 'ink', fill: 'var(--paper)' }));
+    g.appendChild(el('text', { x: x + 34, y: 72, class: 'big', style: 'font-size:40px' }, (i + 1) + ''));
+    g.appendChild(el('text', { x: x + 34, y: 122, class: 'lbl', style: 'font-size:26px' }, q));
+  });
+
+  /* p.7: point at the parts of the status line, measured so the labels sit under the right words */
+  function pointStatus() {
+    const t = document.getElementById('sline'), g = document.getElementById('spoint'), str = t.textContent;
+    let ok = true;
+    g.textContent = '';
+    [['Review in N', 'months to the review'], ['Now S.. N.. O..', 'scores now'], ['Best S.. N.. O..', 'best so far'], ['Reviews here: 0', 'reviews at this level']].forEach(([part, label]) => {
+      const i = str.indexOf(part);
+      let x = 0;
+      try { x = t.getStartPositionOfChar(i).x + t.getSubStringLength(i, part.length) / 2; } catch (e) { x = 0; }
+      if (!(x > 0)) { ok = false; x = 24 + (i + part.length / 2) * 14.45; } /* hidden slide: estimate from the monospace width */
+      g.appendChild(el('path', { d: `M${x} 80 L${x} 108`, class: 'ink thin' }));
+      g.appendChild(el('text', { x, y: 138, 'text-anchor': 'middle', class: 'hw' }, label));
+    });
+    return ok;
+  }
+  pointStatus();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(pointStatus);
+
+  /* p.8: three tries on a 0–100 scale, bar height 2.4 px per point */
+  const tries = document.getElementById('tries');
+  [['1st version', 64.75, 'var(--ink)', 'official'], ['2nd version', 45.44, 'var(--ink-3)', 'official'], ['mv-3', null, 'var(--hl)', 'not known yet']].forEach((t, i) => {
+    const x = 180 + i * 300, h = t[1] ? t[1] * 2.6 : 150;
+    if (t[1]) add(tries, 'rect', { x, y: 300 - h, width: 160, height: h, fill: t[2], class: 'growy', style: '--d:' + i * 220 });
+    else add(tries, 'rect', { x, y: 300 - h, width: 160, height: h, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 3, 'stroke-dasharray': '10 8', class: 'growy', style: '--d:' + i * 220 });
+    add(tries, 'text', { x: x + 80, y: 300 - h - 18, 'text-anchor': 'middle', class: 'big', style: 'font-size:46px' }, t[1] ? t[1].toFixed(2) : '?');
+    add(tries, 'text', { x: x + 80, y: 334, 'text-anchor': 'middle', class: 'lbl', style: 'font-size:24px' }, t[0]);
+    add(tries, 'text', { x: x + 80, y: 358, 'text-anchor': 'middle', class: 'sm', style: 'font-size:16px' }, t[3]);
+  });
+  add(tries, 'text', { x: 660, y: 60, class: 'hw' }, 'stumble ↓');
+
+  /* p.11: reading grows with every step — before vs after */
+  const rd = document.getElementById('reading');
+  add(rd, 'text', { x: 0, y: 26, class: 'sm' }, 'before: several replies per decision');
+  for (let k = 0; k < 12; k++) add(rd, 'rect', { x: 10 + k * 40, y: 250 - (k + 1) * 17, width: 30, height: (k + 1) * 17, fill: 'var(--ink-3)', class: 'growy', style: '--d:' + k * 50 });
+  add(rd, 'text', { x: 10, y: 285, class: 'sm', style: 'font-size:16px' }, 'each step re-reads everything so far');
+  add(rd, 'text', { x: 560, y: 26, class: 'sm' }, 'after: one reply per decision');
+  for (let k = 0; k < 6; k++) add(rd, 'rect', { x: 570 + k * 40, y: 250 - (k + 1) * 17, width: 30, height: (k + 1) * 17, fill: 'var(--ink)', class: 'growy', style: '--d:' + (700 + k * 50) });
+  add(rd, 'text', { x: 0, y: 350, class: 'big', style: 'font-size:56px; fill:var(--ink-3)' }, '1.4 M');
+  add(rd, 'text', { x: 200, y: 350, class: 'big', style: 'font-size:56px' }, '→');
+  add(rd, 'rect', { x: 268, y: 304, width: 190, height: 56, fill: 'var(--hl)' });
+  add(rd, 'text', { x: 278, y: 350, class: 'big', style: 'font-size:56px' }, '0.6 M');
+  add(rd, 'text', { x: 480, y: 340, class: 'hw' }, 'word pieces read per month, on average');
+
+  /* p.12: one dot per practice career */
+  const cr = document.getElementById('careers');
+  const rows = [
+    { name: 'without it', y: 60, done: 7, early: 2, six: 2, note: '7 of 9 finished · avg 70.1' },
+    { name: 'with it', y: 190, done: 6, early: 5, six: 0, note: '6 of 11 finished' }
+  ];
+  rows.forEach((r, ri) => {
+    add(cr, 'text', { x: 0, y: r.y + 10, class: 'lbl' }, r.name);
+    let n = 0;
+    for (let k = 0; k < r.done + r.early; k++) {
+      const x = 250 + k * 56, ok = k < r.done;
+      if (ok && k < r.six) add(cr, 'circle', { cx: x, cy: r.y, r: 25, fill: 'var(--hl)', class: 'pop', style: '--d:' + (ri * 600 + k * 70) });
+      add(cr, 'circle', { cx: x, cy: r.y, r: 17, fill: ok ? 'var(--ink)' : 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': 3, class: 'pop', style: '--d:' + (ri * 600 + k * 70 + 40) });
+      if (!ok) add(cr, 'path', { d: `M${x - 8} ${r.y - 8} L${x + 8} ${r.y + 8} M${x + 8} ${r.y - 8} L${x - 8} ${r.y + 8}`, class: 'ink thin' });
+      n++;
+    }
+    add(cr, 'text', { x: 250 + n * 56 + 10, y: r.y + 9, class: 'sm', style: 'fill:var(--ink); font-weight:700' }, r.note);
+  });
+  /* legend drawn with the same marks */
+  add(cr, 'circle', { cx: 262, cy: 284, r: 10, fill: 'var(--ink)' });
+  add(cr, 'text', { x: 282, y: 291, class: 'sm', style: 'font-size:18px' }, 'finished');
+  add(cr, 'circle', { cx: 432, cy: 284, r: 10, fill: 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': 2.5 });
+  add(cr, 'path', { d: 'M427 279 L437 289 M437 279 L427 289', class: 'ink thin' });
+  add(cr, 'text', { x: 452, y: 291, class: 'sm', style: 'font-size:18px' }, 'ended early');
+  add(cr, 'circle', { cx: 632, cy: 284, r: 15, fill: 'var(--hl)' });
+  add(cr, 'circle', { cx: 632, cy: 284, r: 10, fill: 'var(--ink)' });
+  add(cr, 'text', { x: 656, y: 291, class: 'sm', style: 'font-size:18px' }, 'reached level 6');
+
+  /* p.13: three times fooled */
+  const fo = document.getElementById('fooled');
+  [['2nd version', 'safer'], ['old rules, rebuilt', 'climbs faster'], ['bolder play', 'climbs faster']].forEach((t, i) => {
+    const y = 80 + i * 90;
+    add(fo, 'text', { x: 0, y: y + 10, class: 'lbl', style: 'font-size:26px' }, t[0]);
+    const g1 = add(fo, 'g', { class: 'pop', style: '--d:' + i * 300 });
+    g1.appendChild(el('circle', { cx: 300, cy: y, r: 28, fill: 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': 3 }));
+    g1.appendChild(el('path', { d: `M287 ${y} L297 ${y + 11} L315 ${y - 12}`, class: 'ink' }));
+    add(fo, 'path', { d: `M345 ${y} L540 ${y}`, class: 'ink thin soft draw', style: '--len:200; --d:' + (i * 300 + 150) });
+    const g2 = add(fo, 'g', { class: 'pop', style: '--d:' + (i * 300 + 300) });
+    g2.appendChild(el('circle', { cx: 600, cy: y, r: 28, fill: 'var(--hl)', stroke: 'var(--ink)', 'stroke-width': 3 }));
+    g2.appendChild(el('path', { d: `M589 ${y - 11} L611 ${y + 11} M611 ${y - 11} L589 ${y + 11}`, class: 'ink' }));
+  });
+  add(fo, 'text', { x: 700, y: 175, class: 'hw', style: 'fill:var(--ink)' }, '→ so we trusted');
+  add(fo, 'text', { x: 700, y: 215, class: 'hw', style: 'fill:var(--ink)' }, '    only full careers');
+
+  /* p.15: what the AI sees */
+  const se = document.getElementById('sees');
+  add(se, 'path', { d: 'M440 150 Q560 50 680 150 Q560 250 440 150 Z', class: 'ink' });
+  add(se, 'circle', { cx: 560, cy: 150, r: 40, class: 'ink' }); add(se, 'circle', { cx: 560, cy: 150, r: 16, fill: 'var(--ink)' });
+  [['HR\'s tone', 150, 34], ['review talks', 120, 132], ['the menu of actions', 150, 230], ['the calendar', 970, 60], ['its own notes', 990, 220]].forEach((t, i) => {
+    const [label, x, y] = t;
+    const g = add(se, 'g', { class: 'pop', style: '--d:' + i * 150 });
+    g.appendChild(el('rect', { x: x - 120, y: y - 30, width: 240, height: 54, rx: 27, fill: 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': 2.5 }));
+    g.appendChild(el('text', { x, y: y + 5, 'text-anchor': 'middle', class: 'lbl', style: 'font-size:22px' }, label));
+    const ex = x < 560 ? x + 120 : x - 120;
+    add(se, 'path', { d: `M${ex} ${y} L${x < 560 ? 445 : 675} 150`, class: 'ink thin soft' });
+  });
+  add(se, 'text', { x: 560, y: 318, 'text-anchor': 'middle', class: 'hw', style: 'fill:var(--ink)' }, 'no secret answers · weak spot: ~1 career in 4 still falls, mostly at the start');
+
+  /* p.17: the journey as a path with stops */
+  const jo = document.getElementById('journey');
+  const stops = [
+    [70, 290, 'study the game', ''], [250, 140, 'practice copy', ''], [430, 280, '1st manual', '64.75'],
+    [610, 130, 'less reading', ''], [790, 300, 'stumble', '45.44'], [960, 160, 'full-career tests', ''], [1070, 60, 'mv-3', '★']
+  ];
+  const d = 'M' + stops.map(s => s[0] + ' ' + s[1]).join(' L ');
+  add(jo, 'path', { d, class: 'ink draw', style: '--len:1900; --d:0; stroke-dasharray: 1900' });
+  stops.forEach((s, i) => {
+    const last = i === stops.length - 1;
+    add(jo, 'circle', { cx: s[0], cy: s[1], r: last ? 26 : 14, fill: last ? 'var(--hl)' : 'var(--paper)', stroke: 'var(--ink)', 'stroke-width': 3, class: 'pop', style: '--d:' + (300 + i * 170) });
+    const above = s[1] > 200;
+    const halo = '; paint-order: stroke; stroke: var(--paper); stroke-width: 10px; stroke-linejoin: round';
+    add(jo, 'text', { x: last ? s[0] - 40 : s[0], y: last ? s[1] + 8 : (above ? s[1] - 30 : s[1] + 46), 'text-anchor': last ? 'end' : 'middle', class: 'lbl', style: 'font-size:' + (last ? 34 : 22) + 'px' + halo }, s[2]);
+    if (s[3] && !last) add(jo, 'text', { x: s[0], y: above ? s[1] + 50 : s[1] - 28, 'text-anchor': 'middle', class: 'big', style: 'font-size:30px; fill:var(--ink-2)' + halo }, s[3]);
+  });
+  add(jo, 'text', { x: 70, y: 360, 'text-anchor': 'middle', class: 'hw' }, 'start');
+
+  /* tabs and paging */
+  const tabs = document.getElementById('tabs'), tabBtns = [];
+  TABS.forEach((name, ci) => {
+    const first = slides.findIndex(s => +s.dataset.chap === ci);
+    if (first < 0) return;
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = name; b.dataset.chap = ci;
+    b.addEventListener('click', () => go(first)); tabs.appendChild(b); tabBtns.push(b);
+  });
+  function countUp(s) {
+    if (reduce || document.hidden) return;
+    s.querySelectorAll('[data-count]').forEach(e => {
+      const end = parseFloat(e.dataset.count), dec = (e.dataset.count.split('.')[1] || '').length, t0 = performance.now() + 450;
+      const step = now => { const k = Math.min(1, Math.max(0, (now - t0) / 900)); e.textContent = (end * (1 - Math.pow(1 - k, 3))).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    });
+  }
+  function go(i, from) {
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    if (i === cur) return;
+    const back = cur > i, old = slides[cur];
+    if (old) { old.classList.remove('on', 'enter', 'back'); old.classList.add('leave'); old.classList.toggle('back', back); setTimeout(() => old.classList.remove('leave', 'back'), 360); }
+    const s = slides[i];
+    s.classList.remove('leave'); s.classList.add('on'); s.classList.remove('enter'); void s.offsetWidth; s.classList.add('enter');
+    cur = i; countUp(s);
+    if (s.querySelector('#sline')) pointStatus();
+    tabBtns.forEach(b => { const on = +b.dataset.chap === +s.dataset.chap; b.classList.toggle('cur', on); b.setAttribute('aria-current', on ? 'page' : 'false'); });
+    document.getElementById('page').textContent = 'p. ' + (i + 1) + ' / ' + slides.length;
+    document.getElementById('notestext').textContent = NOTES[i + 1] || '';
+    if (from !== 'hash') { try { history.replaceState(null, '', '#p' + (i + 1)); } catch (e) {} }
+  }
+  function toggleNotes() { const n = document.getElementById('notes'); n.hidden = !n.hidden; document.getElementById('notesbtn').setAttribute('aria-pressed', String(!n.hidden)); }
+  document.getElementById('prev').addEventListener('click', () => go(cur - 1));
+  document.getElementById('next').addEventListener('click', () => go(cur + 1));
+  document.getElementById('notesbtn').addEventListener('click', toggleNotes);
+  document.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+    else if (e.key === 'Home') go(0); else if (e.key === 'End') go(slides.length - 1);
+    else if (e.key === 'n' || e.key === 'N') toggleNotes();
+  });
+  let tx = null; const st = document.getElementById('stage');
+  st.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  st.addEventListener('touchend', e => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); });
+  function fit() { const vw = document.documentElement.clientWidth - 24, vh = document.documentElement.clientHeight - 24; st.style.transform = 'translate(-50%, -50%) scale(' + Math.min(vw / 1280, vh / 720) + ')'; }
+  window.addEventListener('resize', fit); fit();
+  const m = /^#p(\d+)$/.exec(location.hash || '');
+  go(m ? +m[1] - 1 : 0, 'hash');
+})();
+</script>

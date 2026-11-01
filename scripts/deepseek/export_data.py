@@ -132,8 +132,10 @@ def runner_of(slot: Path) -> str:
 def games() -> list[dict]:
     """One dict per official game: id, manual, source files."""
     names, out = policy_names(), []
-    for d in sorted((SRC / "huawei-deepseek" / "runs").glob("deepseek-pilo-*")):
-        pid, n = d.name.split("-")[2], d.name.split("-")[4]
+    runs = SRC / "huawei-deepseek" / "runs"
+    for d in sorted(runs.glob("deepseek-pilo-*")) + sorted(runs.glob("deepseek-conf-*")):
+        kind, pid, n = d.name.split("-")[1], d.name.split("-")[2], d.name.split("-")[4]
+        n = n if kind == "pilo" else f"{kind}{n}"  # confirmation games (1 Nov) reuse the pilot numbering
         actor = json.loads(read_text(d / "actor.json")) if (d / "actor.json").exists() else {}
         raw = SRC / RAW_FOR_RUN[d.name] if d.name in RAW_FOR_RUN else None
         out.append({

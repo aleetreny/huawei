@@ -1,0 +1,15 @@
+{
+  "family": "corte3",
+  "name": "c3-x1",
+  "parents": [
+    "c3-m1"
+  ],
+  "idea_origin": "Mejora line, 29 Oct: v4 story rules (through ex-v1) plus the part of t13-read-v9 that improved the DeepSeek L1 bank (hidden social and time costs in the review months), without v9's global relaxation of the risk list",
+  "operator": "c3-m1 plus a growth exception: with the friendly HR remark, one mild risk a month is accepted when it grows S/N/O more than any safe option (the replica planner's rule worth +5.4, B36).",
+  "hypothesis": "Higher upside (faster L4-L5, some L6) at the cost of more trust crises; chosen by Alejandro's call to play for the tail, not the mean.",
+  "predicted_behaviour": "3 of 3 DeepInfra probes paired; in games <= 3 text-only replies.",
+  "refutation": "Probes unpaired, or games with as many stops as mv-3.",
+  "skill_count": 1,
+  "change": "mv-3 -> mv-4: manifest instruction, after 'Never send take_action alone and never observe in a reply of its own.', adds 'Never end a reply with text only: until the run is over, every reply carries its tool calls, so put the decision in the take_action call, not in prose.'",
+  "notes": "Built 1 Nov after Alejandro pointed at mv-3 as the best manual so far."
+}

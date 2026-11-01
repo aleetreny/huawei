@@ -1,0 +1,15 @@
+{
+  "family": "corte3",
+  "name": "c3-a3",
+  "parents": [
+    "c3-a2"
+  ],
+  "idea_origin": "Corte 3 line, 1 Nov: real-game analysis of the third L1 review (risk, not Network, decides it) and the external critic",
+  "operator": "c3-a2 with the stalled-start protocol reordered (no added risk, then keep S/N/O, then prefer risk-lowering) and the mild-risk exception limited to Reviews here 0 or 1, after a faithful segment where the agent applied the exception and a thorough-but-slow preference while stalled.",
+  "hypothesis": "Same L1 exit-by-month-12 as v4-loop in faithful segments (tramos), more third-review rescues, higher quality score, faster L4 to L5.",
+  "predicted_behaviour": "tramos to month 18: exit L1 at least as often as v4-loop; pairing intact.",
+  "refutation": "Clearly fewer L1 exits than v4-loop in the same batch, or broken pairing.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Built 1 Nov for the last cut."
+}

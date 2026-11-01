@@ -1,0 +1,822 @@
+<meta charset="utf-8">
+<title>mv-3 Career Run</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a 1280×720 stage per slide, read like the agent's own run. Each slide opens with a tool call
+   typed into the log line at the top; the slide is what `observe` returns. The 48-month career track
+   along the bottom is the navigator. Deliberately single-theme: a monitor at the end of a long shift. */
+:root {
+  --tray: #0d1014;
+  --panel: #151a20;
+  --raised: #1c232b;
+  --line: rgba(222, 230, 238, .13);
+  --line-strong: rgba(222, 230, 238, .28);
+  --fg: #eaeef2;
+  --fg-body: rgba(234, 238, 242, .84);
+  --fg-soft: rgba(234, 238, 242, .62);
+  --muted: #7d8794;
+  --gold: #f1b64e;      /* promotion: the accent */
+  --gold-dim: rgba(241, 182, 78, .16);
+  --teal: #6ccdb4;      /* friendly HR remark, safe */
+  --teal-dim: rgba(108, 205, 180, .14);
+  --coral: #ef8268;     /* hidden risk, early endings */
+  --coral-dim: rgba(239, 130, 104, .14);
+  --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--tray); color: var(--fg); font-family: var(--body);
+  overflow: hidden; -webkit-font-smoothing: antialiased;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+#viewport { position: fixed; inset: 0; }
+#stage {
+  width: 1280px; height: 720px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  background: var(--panel);
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px var(--line), 0 30px 80px rgba(0, 0, 0, .55);
+  overflow: hidden;
+}
+#stage::before { /* faint scan grid, the only texture */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 36px; opacity: .22;
+  mask-image: radial-gradient(120% 80% at 70% 10%, #000 20%, transparent 75%);
+}
+
+/* ---------- log line (top) ---------- */
+#log {
+  position: absolute; left: 0; right: 0; top: 0; height: 52px; z-index: 3;
+  display: flex; align-items: center; gap: 14px; padding: 0 40px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: 14px; color: var(--fg-soft); white-space: nowrap;
+}
+#log .prompt { color: var(--gold); }
+#log .call { overflow: hidden; text-overflow: ellipsis; }
+#log .call b { color: var(--fg); font-weight: 600; }
+#log .caret { width: 8px; height: 17px; background: var(--gold); animation: blink 1s steps(1) infinite; flex: none; }
+#log .team { margin-left: auto; color: var(--muted); }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- slides ---------- */
+.slide {
+  position: absolute; left: 0; right: 0; top: 52px; bottom: 76px;
+  padding: 34px 64px 18px; display: none;
+}
+.slide.on { display: block; }
+.slide.leave { display: block; animation: leave .38s cubic-bezier(.4, 0, .9, .6) both; pointer-events: none; }
+.slide.leave.back { animation-name: leaveBack; }
+.slide.on.enter .r { animation: rise .62s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 90ms + 120ms); }
+.slide.on.enter.back .r { animation-name: riseBack; }
+@keyframes leave { to { opacity: 0; transform: translateX(-48px); filter: blur(5px); } }
+@keyframes leaveBack { to { opacity: 0; transform: translateX(48px); filter: blur(5px); } }
+@keyframes rise { from { opacity: 0; transform: translate(26px, 10px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes riseBack { from { opacity: 0; transform: translate(-26px, 10px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+
+.eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+h2 { font-size: 46px; line-height: 1.04; font-weight: 750; font-stretch: 112%; letter-spacing: -.01em; margin-bottom: 24px; max-width: 1050px; }
+h3 { font-size: 22px; font-weight: 700; font-stretch: 105%; line-height: 1.2; }
+p, li { font-size: 20px; line-height: 1.5; color: var(--fg-body); margin: 0; }
+.small { font-size: 16px; line-height: 1.45; color: var(--fg-soft); }
+.note { font-size: 14px; color: var(--muted); font-style: italic; }
+.mono { font-family: var(--mono); }
+.gold { color: var(--gold); } .teal { color: var(--teal); } .coral { color: var(--coral); } .soft { color: var(--fg-soft); }
+strong { color: var(--fg); font-weight: 600; }
+.cols { display: grid; gap: 40px; align-items: start; }
+.cols > * { min-width: 0; }
+.stack { display: grid; gap: 14px; align-content: start; }
+.panel { background: var(--raised); border-radius: 12px; padding: 22px 24px; }
+.panel.teal-bg { background: var(--teal-dim); }
+.panel.coral-bg { background: var(--coral-dim); }
+.panel.gold-bg { background: var(--gold-dim); }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.big { font-family: var(--display); font-weight: 800; font-stretch: 118%; line-height: .95; font-variant-numeric: tabular-nums; }
+code, .code { font-family: var(--mono); font-size: 16px; color: var(--fg); }
+.statusline {
+  font-family: var(--mono); font-size: 19px; color: var(--fg); background: var(--tray);
+  border-radius: 10px; padding: 16px 20px; box-shadow: inset 0 0 0 1px var(--line);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.statusline .k { color: var(--gold); }
+.statusline .sep { color: var(--muted); }
+
+/* ---------- navigator: the career track (bottom) ---------- */
+#nav {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 76px; z-index: 3;
+  border-top: 1px solid var(--line); background: var(--tray);
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 22px; padding: 0 28px;
+}
+#nav .navbtns button {
+  font: 500 13px var(--mono); color: var(--fg-soft); background: transparent; border: 1px solid var(--line-strong);
+  border-radius: 999px; padding: 7px 13px; cursor: pointer;
+}
+#nav .navbtns button:hover { color: var(--fg); border-color: var(--fg-soft); }
+#nav .navbtns button:focus-visible, .stop:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.navbtns { display: flex; gap: 8px; }
+#track { position: relative; height: 46px; display: flex; gap: 4px; align-items: flex-end; }
+.chap { display: grid; gap: 6px; flex: var(--n) 1 0; min-width: 0; }
+.chap .cname { font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; overflow: hidden; }
+.chap.cur .cname { color: var(--gold); }
+.stops { display: flex; gap: 4px; }
+.stop {
+  flex: 1; height: 12px; border-radius: 3px; background: var(--line-strong); border: 0; padding: 0; cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+.stop.done { background: rgba(241, 182, 78, .45); }
+.stop.cur { background: var(--gold); transform: scaleY(1.5); }
+#count { font: 500 13px var(--mono); color: var(--fg-soft); font-variant-numeric: tabular-nums; }
+
+/* ---------- speaker notes ---------- */
+#notes {
+  position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 9;
+  width: min(900px, calc(100% - 32px)); max-height: 40vh; overflow: auto;
+  background: rgba(13, 16, 20, .96); border: 1px solid var(--line-strong); border-radius: 12px;
+  padding: 16px 20px 18px; box-shadow: 0 20px 50px rgba(0, 0, 0, .6);
+}
+#notes .label { margin-bottom: 8px; display: flex; justify-content: space-between; }
+#notes p { font-size: 17px; line-height: 1.55; white-space: pre-line; }
+
+/* ---------- slide-specific ---------- */
+/* 1 */
+.title-wrap { display: grid; grid-template-columns: 1fr 360px; gap: 48px; height: 100%; align-content: center; }
+.title-wrap h1 { font-size: 168px; font-weight: 800; font-stretch: 125%; line-height: .86; letter-spacing: -.03em; }
+.title-wrap h1 span { color: var(--gold); }
+.title-wrap .sub { font-family: var(--display); font-size: 40px; font-weight: 600; font-stretch: 100%; line-height: 1.1; margin-top: 22px; color: var(--fg); }
+.qlist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; align-content: center; counter-reset: q; }
+.qlist li { font-size: 17px; line-height: 1.35; color: var(--fg-soft); display: grid; grid-template-columns: 40px 1fr; align-items: baseline; }
+.qlist li::before { counter-increment: q; content: "Q" counter(q); font: 600 13px var(--mono); color: var(--gold); }
+
+/* 2 */
+.months { display: grid; grid-template-columns: repeat(48, 1fr); gap: 3px; align-items: end; height: 92px; }
+.months i { display: block; height: 46px; border-radius: 2px; background: var(--line-strong); }
+.months i.q { height: 58px; background: rgba(108, 205, 180, .55); }
+.months i.rv { height: 92px; background: var(--gold); }
+.slide.on.enter .months i { animation: fillIn .5s both; animation-delay: calc(var(--m) * 18ms + 300ms); }
+@keyframes fillIn { from { transform: scaleY(.1); opacity: .2; } to { transform: none; opacity: 1; }}
+.months i { transform-origin: bottom; }
+.legend { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 12px; }
+.legend span { display: inline-flex; gap: 8px; align-items: center; font-size: 15px; color: var(--fg-soft); }
+.legend b { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.tones { display: flex; gap: 6px; margin-top: 12px; }
+.tones span { flex: 1; text-align: center; font: 500 13px var(--mono); padding: 8px 4px; border-radius: 6px; color: var(--tray); }
+
+/* 3 */
+.qrow { display: grid; grid-template-columns: 54px 1fr; gap: 18px; align-items: start; }
+.qnum { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font: 800 22px var(--display); color: var(--tray); }
+.bars { display: grid; gap: 18px; }
+.bar { display: grid; gap: 6px; }
+.bar .track { height: 18px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.bar .fill { height: 100%; border-radius: 4px; width: var(--w); transform-origin: left; }
+.slide.on.enter .bar .fill { animation: growX 1s cubic-bezier(.2, .7, .2, 1) both; animation-delay: .6s; }
+@keyframes growX { from { transform: scaleX(0); } to { transform: none; } }
+.bar .row { display: flex; justify-content: space-between; align-items: baseline; }
+.bar .row .big { font-size: 40px; }
+
+/* 4 */
+.loop svg { width: 100%; height: auto; display: block; overflow: visible; }
+.loop text { font-family: var(--body); fill: var(--fg-body); }
+.loop .t-mono { font-family: var(--mono); }
+.steps { display: flex; gap: 8px; }
+.slide.on .stepchip { animation: pulse 5s infinite; animation-delay: calc(var(--s) * 1s); }
+.stepchip { stroke-width: 2; stroke: transparent; }
+@keyframes pulse { 0%, 14% { stroke: var(--gold); fill: rgba(241, 182, 78, .30); } 24%, 100% { stroke: transparent; fill: var(--raised); } }
+
+/* 5 */
+.file { background: var(--tray); border-radius: 12px; box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+.file .head { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--line); font: 500 14px var(--mono); color: var(--fg-soft); }
+.file .body { padding: 16px 18px; display: grid; gap: 9px; }
+.file .h { font: 500 16px var(--mono); color: var(--fg); }
+.file .h::before { content: "## "; color: var(--muted); }
+.file .h.h1::before { content: "# "; }
+.manifest { font: 400 15px/1.62 var(--mono); color: var(--fg-soft); }
+.manifest mark { background: var(--gold-dim); color: var(--fg); border-radius: 3px; padding: 1px 3px; }
+
+/* 6 */
+.tl { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 18px; }
+.tl::before { content: ""; position: absolute; left: 0; right: 0; top: 49px; height: 2px; background: var(--line-strong); transform-origin: left; }
+.slide.on.enter .tl::before { animation: growX 1.1s cubic-bezier(.2, .7, .2, 1) both .2s; }
+.cut { display: grid; gap: 10px; justify-items: start; position: relative; }
+.cut .when { font: 600 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--fg-soft); }
+.cut .dot { width: 22px; height: 22px; border-radius: 50%; border: 4px solid var(--panel); margin: 6px 0 4px; }
+.cut .name { font: 600 22px var(--mono); color: var(--fg); }
+.cut .big { font-size: 92px; }
+.cut .what { font-size: 17px; color: var(--fg-soft); line-height: 1.45; max-width: 330px; }
+
+/* 7 */
+.lr { display: grid; grid-template-columns: 1fr 56px 1.18fr; align-items: stretch; gap: 0; }
+.lr + .lr { margin-top: 14px; }
+.lr .l { background: var(--coral-dim); border-radius: 12px; padding: 16px 20px; display: grid; align-content: center; }
+.lr .r2 { background: var(--teal-dim); border-radius: 12px; padding: 16px 20px; display: grid; align-content: center; gap: 4px; }
+.lr .arrow { display: grid; place-items: center; color: var(--fg-soft); font: 400 26px var(--mono); }
+.lr p { font-size: 18px; line-height: 1.42; }
+.quote { font-family: var(--mono); font-size: 15px; line-height: 1.5; color: var(--fg); }
+.quote::before { content: "“"; color: var(--teal); } .quote::after { content: "”"; color: var(--teal); }
+.src { font: 500 12px var(--mono); color: var(--muted); }
+
+/* 8, 9 charts */
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font-family: var(--mono); font-size: 14px; fill: var(--fg-soft); }
+.chart .tick { stroke: var(--line); }
+.chart .axis { stroke: var(--line-strong); }
+.grow { transform-box: fill-box; transform-origin: left center; }
+.slide.on.enter .grow { animation: growX 1.1s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 1ms + 500ms); }
+.drop { transform-box: fill-box; transform-origin: center; }
+.slide.on.enter .drop { animation: pop .5s cubic-bezier(.2, .9, .3, 1.3) both; animation-delay: calc(var(--d, 0) * 1ms + 500ms); }
+@keyframes pop { from { opacity: 0; transform: translateY(-30px) scale(.4); } to { opacity: 1; transform: none; } }
+.replies { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* 10 */
+.vs { display: grid; grid-template-columns: 210px 1fr 1fr; gap: 14px 20px; align-items: stretch; }
+.vs .who { font-family: var(--display); font-weight: 700; font-stretch: 108%; font-size: 22px; display: grid; align-content: center; }
+.vs .cheap, .vs .real { border-radius: 12px; padding: 16px 20px; font-size: 17px; line-height: 1.45; color: var(--fg-body); display: grid; align-content: center; }
+.vs .cheap { background: var(--raised); }
+.vs .real { background: var(--coral-dim); position: relative; }
+.vs .head { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.slide.on.enter .vs .real { animation: flip .7s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i) * 90ms + 520ms); transform-origin: left; }
+@keyframes flip { from { opacity: 0; transform: perspective(700px) rotateY(-55deg); } to { opacity: 1; transform: none; } }
+
+/* 11 */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--raised); border-radius: 14px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+.card .k { font: 600 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+.card p { font-size: 18px; }
+
+/* 12, 13 */
+.ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; }
+.ticks li { font-size: 18px; line-height: 1.42; position: relative; padding-left: 26px; }
+.ticks li::before { content: "▸"; color: var(--teal); position: absolute; left: 0; }
+.ticks.x li::before { content: "▸"; color: var(--coral); }
+.verdict { margin-top: 18px; background: var(--gold); color: var(--tray); border-radius: 14px; padding: 16px 26px; font-family: var(--display); font-size: 28px; font-weight: 750; font-stretch: 110%; line-height: 1.15; }
+
+/* 14 */
+.closing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 10px; }
+.closing .big { font-size: 100px; color: var(--gold); }
+.closing p { font-size: 18px; margin-top: 10px; }
+.thanks { font-family: var(--display); font-size: 64px; font-weight: 800; font-stretch: 122%; margin-top: 46px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .dotrun { display: none; }
+}
+
+/* ---------- print / PDF: every slide on its own page, at rest ---------- */
+@media print {
+  @page { size: 1280px 720px; margin: 0; }
+  html, body { height: auto; overflow: visible; background: var(--panel); padding: 0; }
+  #viewport { position: static; display: block; }
+  #stage { position: static; transform: none !important; border-radius: 0; box-shadow: none; overflow: visible; height: auto; background: transparent; }
+  #stage::before, #log, #nav, #notes { display: none !important; }
+  .slide { display: block !important; position: relative; top: 0; left: 0; right: 0; bottom: auto; height: 720px;
+           padding-top: 56px; page-break-after: always; break-after: page; background: var(--panel); }
+  .slide::after { content: attr(data-foot); position: absolute; left: 64px; right: 64px; bottom: 26px;
+                  font: 500 12px var(--mono); color: var(--muted); }
+  *, *::before, *::after { animation: none !important; }
+  .dotrun { display: none; }
+}
+</style>
+
+<div id="viewport">
+  <div id="stage" role="region" aria-roledescription="slide deck" aria-label="mv-3 presentation">
+    <div id="log" aria-live="polite"><span class="prompt">›</span><span class="call" id="logcall"></span><span class="caret" aria-hidden="true"></span><span class="team">Gradient Depression · Cut 3</span></div>
+
+    <!-- 1 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="0" data-log='new_game() · <b>career-rules</b> loaded' data-foot="Gradient Depression · Huawei TechArena UK 2026 · Career Survival · Cut 3 · 1/14">
+      <div class="title-wrap">
+        <div>
+          <p class="eyebrow r" style="--i:0">Gradient Depression · Huawei TechArena UK 2026 · Career Survival</p>
+          <h1 class="r" style="--i:1">mv<span>-</span>3</h1>
+          <p class="sub r" style="--i:2">One Skill.<br>One reply per decision.</p>
+          <p class="small r" style="--i:3; margin-top:26px">Final submission, Cut 3 · 1 November 2026</p>
+        </div>
+        <ol class="qlist r" style="--i:4" aria-label="The five questions, in order">
+          <li>How we thought while designing</li>
+          <li>What the logs showed, and what we changed</li>
+          <li>Why no scripts or reference files</li>
+          <li>How general and robust it is</li>
+          <li>What Skills add to an agent, and where they fall short</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 2 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="0" data-log='observe() → <b>48 months</b> · 3 stories a month · a review every 6 months' data-foot="The task · 2/14">
+      <p class="eyebrow r" style="--i:0">The task</p>
+      <h2 class="r" style="--i:1">A DeepSeek agent lives a 48-month career</h2>
+      <div class="r" style="--i:2">
+        <div class="months" id="months" aria-label="48 months: a quarterly phase every 3 months, a review every 6"></div>
+        <div class="legend">
+          <span><b style="background:var(--line-strong)"></b>month: 3 stories, effects hidden</span>
+          <span><b style="background:rgba(108,205,180,.55)"></b>quarter: Energy and a main action</span>
+          <span><b style="background:var(--gold)"></b>review every six months: a chance to be promoted</span>
+        </div>
+      </div>
+      <div class="cols r" style="--i:3; grid-template-columns: 1fr 1fr; margin-top: 30px; gap: 24px">
+        <div class="panel coral-bg stack">
+          <h3 class="coral">Ways to lose</h3>
+          <p class="small" style="color:var(--fg-body)">Never promoted, and dismissed · hidden risk blows up twice, a trust crisis · burnout or ruin</p>
+        </div>
+        <div class="panel stack">
+          <h3>The only gauge of hidden risk</h3>
+          <p class="small" style="color:var(--fg-body)">The tone of the monthly HR remark, as the Skill classifies it:</p>
+          <div class="tones" aria-hidden="true">
+            <span style="background:var(--teal)">friendly</span>
+            <span style="background:#b9cf88">quiet</span>
+            <span style="background:var(--gold)">uneasy</span>
+            <span style="background:#ef9e72">frowning</span>
+            <span style="background:var(--coral)">angry</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="1" data-log='event: <b>“How did you think while designing the Skills?”</b>' data-foot="Q1 · How we thought · 3/14">
+      <p class="eyebrow r" style="--i:0">Q1 · How we thought</p>
+      <h2 class="r" style="--i:1">Three questions behind every decision</h2>
+      <div class="cols" style="grid-template-columns: 1.25fr 1fr; gap: 48px">
+        <div class="stack" style="gap: 22px">
+          <div class="qrow r" style="--i:2"><div class="qnum" style="background:var(--gold)">1</div>
+            <div><h3>What does this option probably change?</h3><p class="small">A reading guide in general words: what tends to move each stat and hidden risk. No event names, no answers.</p></div></div>
+          <div class="qrow r" style="--i:3"><div class="qnum" style="background:var(--teal)">2</div>
+            <div><h3>What does the career need now?</h3><p class="small">Fixed priorities: stay in the run, then win the next review, then grow.</p></div></div>
+          <div class="qrow r" style="--i:4"><div class="qnum" style="background:var(--fg-soft)">3</div>
+            <div><h3>Which rule applies in this phase?</h3><p class="small">Scope: a switch the agent computes, <span class="mono">Review in N</span>.</p></div></div>
+        </div>
+        <div class="panel r" style="--i:5; padding: 26px 28px">
+          <p class="label">Why question 1 is the hardest</p>
+          <p class="small" style="margin: 6px 0 22px">Isolated-option tests with DeepSeek, before any Skill</p>
+          <div class="bars">
+            <div class="bar"><div class="row"><span class="small">risky options spotted</span><span class="big coral">83%</span></div><div class="track"><div class="fill" style="--w:83%; background:var(--coral)"></div></div></div>
+            <div class="bar"><div class="row"><span class="small">options that raise Skill</span><span class="big gold">45%</span></div><div class="track"><div class="fill" style="--w:45%; background:var(--gold)"></div></div></div>
+            <div class="bar"><div class="row"><span class="small">options that raise Output</span><span class="big gold">49%</span></div><div class="track"><div class="fill" style="--w:49%; background:var(--gold)"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="1" data-log='take_action(…) + observe() · <b>one reply</b>' data-foot="Q1 · How we thought · 4/14">
+      <p class="eyebrow r" style="--i:0">Q1 · How we thought</p>
+      <h2 class="r" style="--i:1">The decision loop the Skill sets</h2>
+      <div class="loop r" style="--i:2">
+        <svg viewBox="0 0 1152 290" role="img" aria-label="observe, then a story goes through five ordered steps or a quarter takes the first matching line, then one reply carries take_action and observe, and the loop starts again">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--fg-soft)"/></marker></defs>
+          <!-- observe -->
+          <rect x="0" y="70" width="210" height="120" rx="12" fill="var(--raised)"/>
+          <text x="22" y="108" class="t-mono" style="font-size:20px; fill:var(--fg)">observe</text>
+          <text x="22" y="138" style="font-size:15px">Read events first:</text>
+          <text x="22" y="160" style="font-size:15px">HR remark, review talk</text>
+          <!-- story -->
+          <rect x="270" y="10" width="560" height="116" rx="12" fill="var(--gold-dim)"/>
+          <text x="292" y="42" style="font-size:18px; font-weight:600; fill:var(--fg)">Story: five ordered steps</text>
+          <g style="font-size:15px">
+            <rect class="stepchip" style="--s:0" x="292" y="62" width="96" height="40" rx="8" fill="var(--raised)"/><text x="340" y="88" text-anchor="middle">Survive</text>
+            <rect class="stepchip" style="--s:1" x="396" y="62" width="96" height="40" rx="8" fill="var(--raised)"/><text x="444" y="88" text-anchor="middle">Risk</text>
+            <rect class="stepchip" style="--s:2" x="500" y="62" width="110" height="40" rx="8" fill="var(--raised)"/><text x="555" y="88" text-anchor="middle">Wellbeing</text>
+            <rect class="stepchip" style="--s:3" x="618" y="62" width="104" height="40" rx="8" fill="var(--raised)"/><text x="670" y="88" text-anchor="middle">Review</text>
+            <rect class="stepchip" style="--s:4" x="730" y="62" width="82" height="40" rx="8" fill="var(--raised)"/><text x="771" y="88" text-anchor="middle">Grow</text>
+          </g>
+          <!-- quarter -->
+          <rect x="270" y="140" width="560" height="110" rx="12" fill="var(--teal-dim)"/>
+          <text x="292" y="172" style="font-size:18px; font-weight:600; fill:var(--fg)">Quarter: the first matching line wins</text>
+          <text x="292" y="200" style="font-size:15px">last quarter · near a limit · HR remark ·</text>
+          <text x="292" y="224" style="font-size:15px">level 4+ · levels 2–3 · starting level</text>
+          <!-- reply -->
+          <rect x="890" y="60" width="262" height="140" rx="12" fill="var(--fg)"/>
+          <text x="912" y="96" class="t-mono" style="font-size:15px; fill:var(--panel); font-weight:600">ONE REPLY</text>
+          <text x="912" y="128" class="t-mono" style="font-size:16px; fill:var(--panel)">take_action(choice,</text>
+          <text x="912" y="150" class="t-mono" style="font-size:16px; fill:var(--panel)">  notes)</text>
+          <text x="912" y="176" class="t-mono" style="font-size:16px; fill:var(--panel)">observe()</text>
+          <!-- arrows -->
+          <path d="M212 112 C240 112 240 68 266 68" fill="none" stroke="var(--fg-soft)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M212 148 C240 148 240 195 266 195" fill="none" stroke="var(--fg-soft)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M832 68 C860 68 860 110 886 110" fill="none" stroke="var(--fg-soft)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M832 195 C860 195 860 150 886 150" fill="none" stroke="var(--fg-soft)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M1021 202 L1021 274 L105 274 L105 194" fill="none" stroke="var(--line-strong)" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#ah)"/>
+          <text x="563" y="266" text-anchor="middle" style="font-size:14px; fill:var(--muted)">the result and the next situation come back together</text>
+          <circle class="dotrun" r="7" fill="var(--gold)">
+            <animateMotion dur="5s" repeatCount="indefinite" path="M105 130 L240 112 L300 68 L812 68 L886 110 L1021 130 L1021 274 L105 274 Z"/>
+          </circle>
+        </svg>
+      </div>
+      <div class="r" style="--i:3; margin-top: 18px">
+        <p class="label" style="margin-bottom: 8px">Every note starts with the status line: the agent's memory and the scope switch</p>
+        <div class="statusline"><span class="k">Review in N</span> <span class="sep">|</span> Now S.. N.. O.. <span class="sep">|</span> <span class="k">Best</span> S.. N.. O.. <span class="sep">|</span> Reviews here: 0</div>
+        <p class="small" style="margin-top: 8px">Review rules switch on only when N is 1 or 2 · Best resets on promotion · notes survive summaries</p>
+      </div>
+    </section>
+
+    <!-- 5 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="1" data-log='read_skill(<b>career-rules</b>) · once, early' data-foot="Q1 · How we thought · 5/14">
+      <p class="eyebrow r" style="--i:0">Q1 · How we thought</p>
+      <h2 class="r" style="--i:1">One Skill, with the essentials repeated in the manifest</h2>
+      <div class="cols" style="grid-template-columns: 0.82fr 1.18fr; gap: 24px">
+        <div class="file r" style="--i:2">
+          <div class="head"><span>skills/career-rules/SKILL.md</span><span>7 sections</span></div>
+          <div class="body">
+            <span class="h h1">Career rules</span>
+            <span class="h">What this Skill is for</span>
+            <span class="h">The 48 months at a glance</span>
+            <span class="h">Turn loop</span>
+            <span class="h">Status line</span>
+            <span class="h">Story decisions</span>
+            <span class="h">Quarterly phases: first matching line wins</span>
+            <span class="h">Near a limit: quick reference</span>
+          </div>
+        </div>
+        <div class="file r" style="--i:3">
+          <div class="head"><span>manifest.json · instruction (excerpts)</span><span>repeats the essentials</span></div>
+          <div class="body manifest">
+            <span>“Follow the career-rules Skill and <mark>reread it whenever its rules are not in view</mark>.</span>
+            <span><mark>Decide stories only with its Story decisions and quarterly phases only with its quarterly list.</mark></span>
+            <span>Turn loop: answer each situation with <mark>ONE reply</mark> whose tool_calls array holds exactly two calls … <mark>drop options that may bury a problem</mark> … <mark>In the two months before a review, keep Network and Output at their best</mark> … <mark>From level 4 on</mark>, every quarterly phase goes to Skill … <mark>Every note is one line</mark>.”</span>
+          </div>
+        </div>
+      </div>
+      <p class="small r" style="--i:4; margin-top: 18px">With several Skills, the agent opened the one that looked relevant and missed rules in another. It reads the Skill early and then works from context, so the manifest carries what matters most.</p>
+    </section>
+
+    <!-- 6 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="2" data-log='event: <b>“What did you find in the logs, and how did you change it?”</b>' data-foot="Q2 · From the logs to the changes · 6/14">
+      <p class="eyebrow r" style="--i:0">Q2 · From the logs to the changes</p>
+      <h2 class="r" style="--i:1">Three cuts, three versions</h2>
+      <div class="tl">
+        <div class="cut r" style="--i:2"><span class="when">Cut 1 · 27 Oct</span><span class="dot" style="background:var(--fg-soft)"></span><span class="name">t13-read-v4</span>
+          <span class="big" data-count="64.75">64.75</span><span class="small">official · 13th of 34</span>
+          <span class="what">Reading guide, five story steps, review protection, a status line</span></div>
+        <div class="cut r" style="--i:3"><span class="when">Cut 2 · 30 Oct</span><span class="dot" style="background:var(--coral)"></span><span class="name">mv-5r</span>
+          <span class="big coral" data-count="45.44">45.44</span><span class="small">official</span>
+          <span class="what">One reply per decision; hidden costs named at the starting level only</span></div>
+        <div class="cut r" style="--i:4"><span class="when">Cut 3 · 1 Nov</span><span class="dot" style="background:var(--gold)"></span><span class="name">mv-3</span>
+          <span class="big gold">?</span><span class="small">official score not known yet</span>
+          <span class="what">Hidden costs named before every review; no extra manifest line</span></div>
+      </div>
+    </section>
+
+    <!-- 7 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="2" data-log='check_latest_logs(count=…) · <b>three findings</b>' data-foot="Q2 · From the logs to the changes · 7/14">
+      <p class="eyebrow r" style="--i:0">Q2 · From the logs to the changes</p>
+      <h2 class="r" style="--i:1">What the logs showed, and the rule it became</h2>
+      <div class="lr r" style="--i:2">
+        <div class="l"><p>Promotions lost by <strong>one point</strong> of Network or Output, in the last story before a review</p></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="r2"><span class="quote">In the two months before a review, keep Network and Output at their best this level and repair any loss at once</span><span class="src">manifest · plus the Best value in the status line</span></div>
+      </div>
+      <div class="lr r" style="--i:3">
+        <div class="l"><p>Options that <strong>sounded responsible</strong>, like a private talk or a phased fix, carried hidden risk the model missed</p></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="r2"><span class="quote">drop options that may bury a problem (private, anonymous, partial, later, hidden, skipping work to save time)</span><span class="src">manifest · plus a strict mode when the HR remark is not friendly</span></div>
+      </div>
+      <div class="lr r" style="--i:4">
+        <div class="l"><p>The agent obeyed the review rule but <strong>misread costs</strong>: its notes treated a polite refusal as keeping Network</p></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="r2"><span class="quote">Network falls whenever someone is let down, even politely or fairly</span><span class="src">SKILL.md · Story step 4, “Read the hidden costs”</span></div>
+      </div>
+    </section>
+
+    <!-- 8 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="2" data-log='tokens per game month: <b>1.4 M → 0.6 M</b> on average' data-foot="Q2 · From the logs to the changes · 8/14">
+      <p class="eyebrow r" style="--i:0">Q2 · From the logs to the changes</p>
+      <h2 class="r" style="--i:1">Every call resends the whole history</h2>
+      <div class="chart r" style="--i:2">
+        <svg viewBox="0 0 1152 196" role="img" aria-label="Tokens per game month on the official efficiency scale. Cut 1: 1.35 to 1.47 million. mv-3 complete careers: 0.49 to 0.78 million, 0.60 on average. Efficiency is full at 0.5 million or fewer and zero at 3 million.">
+          <rect x="190" y="18" width="160" height="128" fill="var(--teal-dim)"/>
+          <text x="198" y="38" style="fill:var(--teal); font-size:13px">full efficiency</text>
+          <g id="tokticks"></g>
+          <text x="0" y="66" style="font-size:16px; fill:var(--fg)">Cut 1</text>
+          <text x="0" y="86" style="font-size:13px">t13-read-v4</text>
+          <rect class="grow" x="622" y="56" width="38" height="26" rx="5" fill="var(--coral)" style="--d:0"/>
+          <text x="674" y="75" style="fill:var(--coral); font-size:16px">1.35–1.47 M</text>
+          <text x="0" y="122" style="font-size:16px; fill:var(--fg)">mv-3</text>
+          <text x="0" y="142" style="font-size:13px">complete careers</text>
+          <rect class="grow" x="347" y="112" width="92" height="26" rx="5" fill="var(--gold)" style="--d:250"/>
+          <line x1="382" x2="382" y1="106" y2="144" stroke="var(--fg)" stroke-width="3"/>
+          <text x="452" y="131" style="fill:var(--gold); font-size:16px">0.49–0.78 M · mean 0.60</text>
+        </svg>
+      </div>
+      <div class="replies r" style="--i:3; margin-top: 8px">
+        <div class="panel stack" style="gap:8px">
+          <p class="label">Before · several replies per decision</p>
+          <code>reply → take_action(…)</code>
+          <code>reply → observe(…)</code>
+          <p class="small">each reply resends everything so far, so cost grows faster than the number of replies</p>
+        </div>
+        <div class="panel teal-bg stack" style="gap:8px">
+          <p class="label">Now · one reply, two tool calls</p>
+          <code>tool_calls: [take_action(…), observe(…)]</code>
+          <p class="small">DeepSeek kept this pattern only when the Skill showed the literal shape of the reply</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="2" data-log='diff mv-3 mv-4 → <b>one manifest line</b>' data-foot="Q2 · From the logs to the changes · 9/14">
+      <p class="eyebrow r" style="--i:0">Q2 · From the logs to the changes</p>
+      <h2 class="r" style="--i:1">A fix that made play worse</h2>
+      <div class="panel gold-bg r" style="--i:2; padding: 14px 20px">
+        <p style="font-size:17px"><strong>mv-4 = mv-3 + one manifest line,</strong> added after a career was stopped by the runner when 21 replies carried no tool call: <span class="mono" style="font-size:15px; color:var(--fg)">“Never end a reply with text only … put the decision in the take_action call, not in prose.”</span></p>
+      </div>
+      <div class="chart r" style="--i:3; margin-top: 10px">
+        <svg id="strip" viewBox="0 0 1152 246" role="img" aria-label="Final scores of each development career. mv-3: seven complete careers from 63.31 to 77.78, mean 70.1, two at the sixth level; one ended at 31.01; one stopped without a score. mv-4: six complete careers from 59.47 to 69.70, mean 64.2; five ended early between 18.98 and 37.39."></svg>
+      </div>
+      <p class="note r" style="--i:4; margin-top: 16px">Hypothesis, not proven: the line removes the short written reasoning the model needs when its provider does not reason privately. Development careers with the official runner and DeepSeek, not official scores.</p>
+    </section>
+
+    <!-- 10 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="2" data-log='lesson: <b>cheap tests misled us</b> · full careers did not' data-foot="Q2 · From the logs to the changes · 10/14">
+      <p class="eyebrow r" style="--i:0">Q2 · From the logs to the changes</p>
+      <h2 class="r" style="--i:1">Cheap tests misled us. Full careers did not</h2>
+      <div class="vs">
+        <span></span><span class="head r" style="--i:2">What the cheap test said</span><span class="head r" style="--i:2">What full careers showed</span>
+        <div class="who r" style="--i:3">Cut 2</div>
+        <div class="cheap r" style="--i:3">A bank of recorded situations: the hidden-cost text adds risk at later levels, so keep it to the starting level</div>
+        <div class="real" style="--i:3">2 of 3 careers collapsed at the starting level; 45.44 officially</div>
+        <div class="who r" style="--i:4">Cut 1 rules, rebuilt</div>
+        <div class="cheap r" style="--i:4">Replays of the first months: leaves the starting level 79% of the time against 73%; top text score from two reviewers</div>
+        <div class="real" style="--i:4">3 of 5 careers dismissed at the starting level</div>
+        <div class="who r" style="--i:5">A bolder variant</div>
+        <div class="cheap r" style="--i:5">Accept one mild risk a month while the HR remark is friendly, to climb faster</div>
+        <div class="real" style="--i:5">Climbed no higher than mv-3; blow-ups in two careers</div>
+      </div>
+      <p class="small r" style="--i:6; margin-top: 20px">So we submitted the Skill of our best complete careers.</p>
+    </section>
+
+    <!-- 11 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="3" data-log='event: <b>“Why did you use scripts or reference files, or why not?”</b>' data-foot="Q3 · Scripts and reference files · 11/14">
+      <p class="eyebrow r" style="--i:0">Q3 · Scripts and reference files</p>
+      <h2 class="r" style="--i:1">None, by choice</h2>
+      <div class="cards">
+        <div class="card r" style="--i:2"><span class="k gold">Advisor script · a teammate's line</span><h3>One excellent career, too many early ends</h3>
+          <p>Its best career reached the sixth level, but 3 of its 7 careers ended early, and complete ones used about 1.6 times the tokens.</p></div>
+        <div class="card r" style="--i:3"><span class="k soft">Script with state · our research replica</span><h3>Added nothing</h3>
+          <p>What fails is reading the options, and a script reads them no better than the model that feeds it.</p></div>
+        <div class="card r" style="--i:4"><span class="k teal">Reference files</span><h3>Not reopened</h3>
+          <p>The agent read the Skill early and did not reopen supporting files.</p></div>
+      </div>
+      <p class="small r" style="--i:5; margin-top: 22px">Scripts that use only data from the current run were allowed by the organisers. mv-3 is one Skill and the manifest: no scripts, no reference files.</p>
+    </section>
+
+    <!-- 12 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="4" data-log='event: <b>“How general and robust are your Skills?”</b>' data-foot="Q4 · Generality and robustness · 12/14">
+      <p class="eyebrow r" style="--i:0">Q4 · Generality and robustness</p>
+      <h2 class="r" style="--i:1">Built only on what the agent can see</h2>
+      <div class="cols" style="grid-template-columns: 1fr 1fr; gap: 24px">
+        <div class="panel teal-bg r" style="--i:2">
+          <h3 class="teal" style="margin-bottom: 14px">The Skill relies on</h3>
+          <ul class="ticks">
+            <li>the tone of the HR remark</li>
+            <li>review talks and warnings</li>
+            <li>effects shown in the quarterly menu</li>
+            <li>its own one-line notes</li>
+            <li>the published calendar: a review every six months, with protection kept on if the talk comes late</li>
+          </ul>
+          <p class="small" style="margin-top: 14px">No event titles, fixed answers or hidden thresholds. Our observations are marked as ours, and the game's signals come first. Turn loop verified with two model providers.</p>
+        </div>
+        <div class="panel coral-bg r" style="--i:3">
+          <h3 class="coral" style="margin-bottom: 14px">Known limits</h3>
+          <ul class="ticks x">
+            <li>Perception: about one career in four still collapses, mostly at the starting level</li>
+            <li>Third review at the starting level: won by <strong>1 of the 11</strong> careers that reached it, lost to hidden risk rather than missing stats</li>
+            <li>The countdown assumes the six-month cycle</li>
+            <li>Some providers sometimes write a tool call as text</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="5" data-log='event: <b>“What do Skills add for an agent, and where do they fall short?”</b>' data-foot="Q5 · Agents and Skills · 13/14">
+      <p class="eyebrow r" style="--i:0">Q5 · Agents and Skills</p>
+      <h2 class="r" style="--i:1">Skills change how an agent works, not what it sees</h2>
+      <div class="cols" style="grid-template-columns: 1fr 1fr; gap: 24px">
+        <div class="panel teal-bg r" style="--i:2">
+          <h3 class="teal" style="margin-bottom: 14px">Strong at</h3>
+          <ul class="ticks">
+            <li>Format: one reply per decision cut tokens per month to less than half on average</li>
+            <li>Concrete quarterly directions are followed far more often than general goals</li>
+          </ul>
+        </div>
+        <div class="panel coral-bg r" style="--i:3">
+          <h3 class="coral" style="margin-bottom: 14px">Weak at</h3>
+          <ul class="ticks x">
+            <li>Perception: “protect Output” is obeyed, yet the model misses which option costs Output</li>
+            <li>Scope: an earlier manual changed about 1 in 5 unrelated story choices</li>
+            <li>One sentence can change how the model plays, as mv-4 showed</li>
+          </ul>
+        </div>
+      </div>
+      <p class="verdict r" style="--i:4">Skills give an agent priorities and discipline, not understanding.</p>
+    </section>
+
+    <!-- 14 ─────────────────────────────────────────────── -->
+    <section class="slide" data-chap="6" data-log='run complete · <b>mv-3</b> submitted' data-foot="Why mv-3 · 14/14">
+      <p class="eyebrow r" style="--i:0">Why we submitted mv-3</p>
+      <h2 class="r" style="--i:1">The Skill of our best complete careers</h2>
+      <div class="closing">
+        <div class="r" style="--i:2"><span class="big" data-count="70.1">70.1</span><p>mean of 7 complete development careers out of 9; two reached the sixth level</p></div>
+        <div class="r" style="--i:3"><span class="big">&lt;½</span><p>the tokens per game month of our first cut, on average</p></div>
+        <div class="r" style="--i:4"><span class="big">0</span><p>event titles, fixed answers or hidden thresholds in the Skill</p></div>
+      </div>
+      <p class="thanks r" style="--i:5">Thank you.</p>
+      <p class="note r" style="--i:6; margin-top: 10px">Scores are from our development careers with the official runner and DeepSeek, except the two official cut scores (64.75 and 45.44).</p>
+    </section>
+
+    <nav id="nav" aria-label="Slides">
+      <div class="navbtns"><button id="prev" type="button" aria-label="Previous slide">←</button><button id="next" type="button" aria-label="Next slide">→</button></div>
+      <div id="track"></div>
+      <div class="navbtns"><span id="count"></span><button id="notesbtn" type="button" aria-pressed="false">Notes</button></div>
+    </nav>
+  </div>
+</div>
+
+<aside id="notes" hidden aria-live="polite"><div class="label"><span>Speaker notes</span><span>N to hide</span></div><p id="notestext"></p></aside>
+
+<script type="application/json" id="notesdata">{"1": "Hello. We are Gradient Depression. Our final submission for Career Survival is one Skill, called mv-3. We answer the five questions in order, and along the way we explain why this is the version we submitted.", "2": "The task in brief. A DeepSeek agent lives a forty-eight-month career. Each month it answers three stories with hidden effects. Each quarter it spends Energy. Every six months, a review can promote it. It loses by never being promoted, by hidden risk blowing up, or by burning out. Its only gauge of hidden risk is the tone of a monthly HR remark.", "3": "Question one: how did we think while designing?\nWe started from why careers fail, and found failures at three layers. So every decision rests on three questions. What does this option probably change? What does the career need now? Which rule applies in this phase?\nThe first question is the hardest. In isolated tests, DeepSeek spotted eighty-three percent of risky options, but only about half of the options that raise Skill or Output. So the story section opens with a reading guide: in general words, what tends to move each stat and hidden risk. No event names, no answers.", "4": "The second question is priorities, in a fixed order: stay in the run, win the next review, then grow. Every story goes through five ordered steps: survive, drop risk, protect wellbeing, protect the review, and only then grow. Quarterly phases are a short list where the first matching line wins, with a plan per level and a Health brake.\nThe third question is scope, because a rule that helps before a review can hurt elsewhere. Every note starts with a status line: months to the next review, Skill, Network and Output now, the best values held at this level, and reviews received here. \"Review in N\" is a switch: the review rules apply only when N is one or two. The line is also the agent's memory.", "5": "We use one Skill, because with several, the agent opened one and missed rules in another. And since it reads the Skill early and then works from context, the manifest repeats the essentials.", "6": "Question two: what did the logs show, and what did we change?\nOur path first. Cut one, t13-read-v4, scored sixty-four point seven five officially, thirteenth of thirty-four. Cut two, mv-5r, scored forty-five point four four. Cut three is mv-3; we do not know its score yet.", "7": "Three findings shaped the story rules.\nOne: early careers lost promotions by one point of Network or Output, in the last story before a review. So we added the \"Best\" value: protect Network and Output in the two months before a review, and repair any loss at once.\nTwo: responsible-sounding options, like a private talk or a phased fix, carried hidden risk the model missed. That became a list of risky wording, and a strict mode when the HR remark is not friendly.\nThree: the notes showed the agent obeyed the review rule but misread costs: it believed a polite refusal kept Network. In our runs, it did not. So the Skill names those costs: Network falls when someone is let down, even politely; Output falls when your time goes to someone else's work.", "8": "The fourth finding was tokens: cut one used about one point four million per game month. Every call resends the whole history, so cost grows faster than the number of replies. We moved to one reply per decision, with two tool calls, take_action then observe; DeepSeek only did it when the Skill showed the literal shape of that reply. mv-3 uses half a million to zero point eight million per month: on average, less than half.", "9": "Our most honest example. One mv-3 career was stopped by the runner after twenty-one replies carried no tool call. The obvious fix was one manifest line: never end a reply with text only; put the decision in the call, not in prose. That line is the only difference in mv-4. It treated the symptom, but in full careers mv-4 ended early five times in eleven, while mv-3 completed seven of nine, averaging seventy point one, two at the sixth level. Our unproven hypothesis: the line removed the short written reasoning the model needs when its provider does not reason privately.", "10": "The main lesson: cheap tests misled us more than once. For cut two, a bank of recorded situations said the hidden-cost text added risk at later levels, so we kept it to the starting level; two of three careers then collapsed there. On the last day, a rebuild of our cut-one rules won in replays of the first months and with our quality reviewers; in five full careers, three were dismissed at the starting level. A bolder variant did not climb higher, and some of its careers blew up. Full careers never misled us, so we submitted the Skill of our best careers.", "11": "Question three: why no scripts and no reference files?\nScripts using only data from the current run were allowed, and we tried them. A teammate's advisor script had one excellent career at the sixth level, but three of its seven careers ended early, and complete ones used about one point six times more tokens. In our research replica, a script that kept state added nothing. What fails is reading the options, and a script cannot read them better than the model that feeds it. Reference files had a delivery problem: the agent did not reopen supporting files. So everything lives in one Skill and the manifest.", "12": "Question four: how general and robust is it?\nThe Skill holds no event titles, no fixed answers and no hidden thresholds. Every rule rests on what the agent can see: the HR remark, the review talks, the effects shown in the quarterly menu, and its own notes. The only calendar is the published one, a review every six months, and if a review talk comes late, the Skill keeps protecting until it appears. Our own observations are marked as such, and the game's signals come first, so if wording or order changes, the same procedure applies. The turn loop held with two model providers, one that reasons privately and one that does not.\nThe limits are real. Perception: about one career in four still collapses, mostly at the starting level, where the third review was won by only one of the eleven careers that reached it, and hidden risk, not missing stats, was the reason. The countdown assumes a six-month cycle. And some providers sometimes write a tool call as text.", "13": "Question five: agents and Skills.\nSkills are very good at changing how an agent works. The reply format alone cut tokens to less than half, and concrete quarterly directions were followed far more often than general goals.\nThey are weak at changing what an agent perceives. \"Protect Output before a review\" is obeyed, but it cannot make the model see which option costs Output.\nRules also leak: one earlier manual changed about one in five unrelated story choices, so scope must be written in, as a switch the agent computes.\nAnd one sentence can change how the model plays, as mv-4 showed. A Skill has to be measured in the real loop, over whole careers.\nOur conclusion: Skills give an agent priorities and discipline, not understanding.", "14": "So we submitted mv-3: the best record in complete careers, less than half the tokens of our first cut, and rules built only on what the agent can see. Apart from the two official cut scores, every score here comes from our own development runs. Thank you."}</script>
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const CHAPTERS = ['Opening', 'Q1 Design', 'Q2 Logs', 'Q3', 'Q4', 'Q5', 'End'];
+  const NOTES = JSON.parse(document.getElementById('notesdata').textContent || '{}');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur = -1, typing = null;
+
+  /* 48-month track on slide 2 */
+  const months = document.getElementById('months');
+  for (let m = 1; m <= 48; m++) {
+    const i = document.createElement('i');
+    i.style.setProperty('--m', m);
+    if (m % 6 === 0) i.className = 'rv'; else if (m % 3 === 0) i.className = 'q';
+    months.appendChild(i);
+  }
+
+  /* token axis on slide 8: 0–3 M, x = 190 + 320·M (the official efficiency scale) */
+  const tk = document.getElementById('tokticks');
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, text) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
+  [0, 0.5, 1, 1.5, 2, 2.5, 3].forEach(v => {
+    const x = 190 + 320 * v;
+    tk.appendChild(el('line', { x1: x, x2: x, y1: 18, y2: 150, class: 'tick' }));
+    tk.appendChild(el('text', { x, y: 170, 'text-anchor': 'middle' }, v + ' M'));
+    tk.appendChild(el('text', { x, y: 190, 'text-anchor': 'middle', style: 'font-size:12px; fill:var(--muted)' }, 'eff. ' + Math.round(Math.min(100, (3 - v) / 2.5 * 100))));
+  });
+
+  /* strip plot on slide 9: score 0–100 → x = 200 + 7.5·score */
+  const strip = document.getElementById('strip');
+  const X = s => 200 + 7.5 * s;
+  [0, 20, 40, 60, 80, 100].forEach(v => {
+    strip.appendChild(el('line', { x1: X(v), x2: X(v), y1: 20, y2: 196, class: 'tick' }));
+    strip.appendChild(el('text', { x: X(v), y: 218, 'text-anchor': 'middle' }, v));
+  });
+  strip.appendChild(el('text', { x: X(50), y: 14, 'text-anchor': 'middle', style: 'font-size:12px; fill:var(--muted)' }, 'final score of each development career'));
+  const rows = [
+    { name: 'mv-3', sub: 'submitted', y: 70, mean: 70.1, color: 'var(--gold)', done: [68.64, 77.78, 66.06, 74.12, 70.38, 63.31, 70.12], six: [77.78, 74.12], early: [31.01], noscore: 1,
+      summary: ['7 of 9 complete', 'mean 70.1 · 2 at level 6'] },
+    { name: 'mv-4', sub: '+ one line', y: 156, mean: 64.2, color: 'var(--fg-soft)', done: [63.35, 69.62, 63.27, 59.99, 69.70, 59.47], six: [], early: [37.06, 37.39, 32.73, 18.98, 31.34], noscore: 0,
+      summary: ['6 of 11 complete', 'mean 64.2 · 5 ended early'] }
+  ];
+  let delay = 0;
+  rows.forEach(r => {
+    strip.appendChild(el('text', { x: 0, y: r.y + 2, style: 'font-size:18px; fill:var(--fg)' }, r.name));
+    strip.appendChild(el('text', { x: 0, y: r.y + 22, style: 'font-size:13px' }, r.sub));
+    strip.appendChild(el('line', { x1: X(0), x2: X(100), y1: r.y, y2: r.y, class: 'axis' }));
+    const pts = r.done.map(s => ({ s, done: true })).concat(r.early.map(s => ({ s, done: false }))).sort((a, b) => a.s - b.s);
+    let last = -99, flip = 1;
+    pts.forEach(p => {
+      let dy = 0;
+      if (p.s - last < 1.5) { dy = 12 * flip; flip = -flip; } else flip = 1;
+      last = p.s;
+      const c = el('circle', { cx: X(p.s), cy: r.y + dy, r: 9, class: 'drop', style: '--d:' + delay,
+        fill: p.done ? r.color : 'var(--panel)', stroke: p.done ? 'none' : 'var(--coral)', 'stroke-width': 3 });
+      c.appendChild(el('title', {}, p.s.toFixed(2) + (p.done ? ' · complete' : ' · ended early')));
+      strip.appendChild(c);
+      if (r.six.includes(p.s)) strip.appendChild(el('circle', { cx: X(p.s), cy: r.y + dy, r: 15, fill: 'none', stroke: 'var(--gold)', 'stroke-width': 1.5, class: 'drop', style: '--d:' + (delay + 300) }));
+      delay += 55;
+    });
+    if (r.noscore) {
+      const x = X(0) - 34;
+      strip.appendChild(el('text', { x, y: r.y + 6, 'text-anchor': 'middle', class: 'drop', style: '--d:' + delay + '; font-size:20px; fill:var(--coral)' }, '×'));
+      strip.appendChild(el('text', { x, y: r.y + 30, 'text-anchor': 'middle', style: 'font-size:11px; fill:var(--muted)' }, 'no score'));
+    }
+    strip.appendChild(el('line', { x1: X(r.mean), x2: X(r.mean), y1: r.y - 24, y2: r.y + 24, stroke: 'var(--fg)', 'stroke-width': 2, 'stroke-dasharray': '3 3' }));
+    strip.appendChild(el('text', { x: X(100) + 22, y: r.y - 2, style: 'font-size:15px; fill:' + r.color }, r.summary[0]));
+    strip.appendChild(el('text', { x: X(100) + 22, y: r.y + 18, style: 'font-size:13px' }, r.summary[1]));
+  });
+  strip.appendChild(el('circle', { cx: X(4), cy: 202, r: 0 })); // keeps bbox stable
+  const lg = [['filled: complete', 'var(--fg-soft)'], ['hollow: ended early', 'var(--coral)'], ['ring: sixth level', 'var(--gold)'], ['dashed: mean of complete', 'var(--fg)']];
+  lg.forEach((l, i) => strip.appendChild(el('text', { x: X(0) + i * 190, y: 242, style: 'font-size:12px; fill:' + l[1] }, l[0])));
+
+  /* navigator: one stop per slide, grouped by chapter */
+  const track = document.getElementById('track');
+  const stops = [];
+  CHAPTERS.forEach((name, ci) => {
+    const idx = slides.map((s, i) => [s, i]).filter(([s]) => +s.dataset.chap === ci).map(([, i]) => i);
+    if (!idx.length) return;
+    const c = document.createElement('div');
+    c.className = 'chap'; c.style.setProperty('--n', idx.length); c.dataset.chap = ci;
+    c.innerHTML = '<span class="cname">' + name + '</span><div class="stops"></div>';
+    idx.forEach(i => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'stop'; b.setAttribute('aria-label', 'Slide ' + (i + 1));
+      b.addEventListener('click', () => go(i));
+      c.querySelector('.stops').appendChild(b);
+      stops[i] = b;
+    });
+    track.appendChild(c);
+  });
+
+  function typeLog(html) {
+    const call = document.getElementById('logcall');
+    clearInterval(typing);
+    if (reduce || document.hidden) { call.innerHTML = html; return; }
+    const tmp = document.createElement('div'); tmp.innerHTML = html;
+    const full = tmp.textContent; let n = 0;
+    call.textContent = '';
+    typing = setInterval(() => {
+      n += 3;
+      if (n >= full.length) { clearInterval(typing); call.innerHTML = html; return; }
+      call.textContent = full.slice(0, n);
+    }, 16);
+  }
+
+  function countUp(slide) {
+    if (reduce) return;
+    slide.querySelectorAll('[data-count]').forEach(e => {
+      const end = parseFloat(e.dataset.count), dec = (e.dataset.count.split('.')[1] || '').length, t0 = performance.now() + 450;
+      const step = now => {
+        const k = Math.min(1, Math.max(0, (now - t0) / 900)), v = end * (1 - Math.pow(1 - k, 3));
+        e.textContent = v.toFixed(dec);
+        if (k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  function go(i, from) {
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    if (i === cur) return;
+    const back = cur > i;
+    const old = slides[cur];
+    if (old) {
+      old.classList.remove('on', 'enter', 'back');
+      old.classList.add('leave'); old.classList.toggle('back', back);
+      setTimeout(() => old.classList.remove('leave', 'back'), 380);
+    }
+    const s = slides[i];
+    s.classList.remove('leave');
+    s.classList.add('on'); s.classList.toggle('back', back);
+    s.classList.remove('enter'); void s.offsetWidth; s.classList.add('enter');
+    cur = i;
+    typeLog(s.dataset.log);
+    countUp(s);
+    stops.forEach((b, j) => { b.classList.toggle('cur', j === i); b.classList.toggle('done', j < i); b.setAttribute('aria-current', j === i ? 'step' : 'false'); });
+    document.querySelectorAll('.chap').forEach(c => c.classList.toggle('cur', +c.dataset.chap === +s.dataset.chap));
+    document.getElementById('count').textContent = (i + 1) + ' / ' + slides.length;
+    document.getElementById('notestext').textContent = NOTES[i + 1] || '';
+    if (from !== 'hash') { try { history.replaceState(null, '', '#s' + (i + 1)); } catch (e) {} }
+  }
+
+  function toggleNotes() {
+    const n = document.getElementById('notes');
+    n.hidden = !n.hidden;
+    document.getElementById('notesbtn').setAttribute('aria-pressed', String(!n.hidden));
+  }
+
+  document.getElementById('prev').addEventListener('click', () => go(cur - 1));
+  document.getElementById('next').addEventListener('click', () => go(cur + 1));
+  document.getElementById('notesbtn').addEventListener('click', toggleNotes);
+  document.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+    else if (e.key === 'Home') go(0);
+    else if (e.key === 'End') go(slides.length - 1);
+    else if (e.key === 'n' || e.key === 'N') toggleNotes();
+  });
+  let tx = null;
+  document.getElementById('stage').addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  document.getElementById('stage').addEventListener('touchend', e => {
+    if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
+  });
+
+  function fit() {
+    const st = document.getElementById('stage');
+    const vw = document.documentElement.clientWidth - 24, vh = document.documentElement.clientHeight - 24;
+    st.style.transform = 'translate(-50%, -50%) scale(' + Math.min(vw / 1280, vh / 720) + ')';
+  }
+  window.addEventListener('resize', fit); fit();
+
+  const m = /^#s(\d+)$/.exec(location.hash || '');
+  go(m ? +m[1] - 1 : 0, 'hash');
+})();
+</script>
