@@ -44,7 +44,7 @@ uv sync
 uv run career-emulator-engine update --source distribution --split dev
 ```
 
-El programa oficial de participación (JiuwenSwarm) se instala con `sh scripts/setup_official_runner.sh` en `local-runs/official-runner/`, con las reglas en su `docs/`.
+El programa oficial de participación (JiuwenSwarm) se instala con `sh scripts/setup_official_runner.sh` en `local-runs/official-runner/`. Las reglas oficiales (`handbook.rst`, `competition-rules.rst`, `failure-and-ending.rst`, `mcp.rst`…) están en su `docs/`, [en línea](https://techarena-career-sim.readthedocs.io/en/latest/handbook.html) y copiadas en `~/careerlab-data/reglas-oficiales/` del Mac de Alejandro.
 
 ## 4. Lo que no cuadra todavía
 

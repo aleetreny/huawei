@@ -34,14 +34,15 @@ Cada línea tiene su informe en `lab/reports/<línea>/` y su código en `scripts
 
 ## 3. Qué está fuera de Git
 
-En el Mac de Alejandro, `~/careerlab-data/` (3,6 GB tras la limpieza del 1 nov):
+En el Mac de Alejandro, `~/careerlab-data/` (1,7 GB tras la limpieza del 1 nov):
 
-- `entrega/`: ZIP y vídeos de los tres cortes (~1,8 GB);
+- `entrega/`: la carpeta `solution/` de cada corte, sin el vídeo (los vídeos y los ZIP se borraron el 1 nov; el Skill y los documentos están en Git);
+- `reglas-oficiales/` y `literatura/`: las reglas del programa oficial y la bibliografía de competiciones parecidas;
 - `ingenieria-inversa/`: lotes brutos de bots jugados en el Mac (se rehacen con bots);
 - `palancas/`, `deepseek/`, `comprobante/`, `tramos/`…: bancos y registros intermedios que se rehacen con CPU; todo lo que costó dinero de DeepSeek está en [lab/data/deepseek/](lab/data/deepseek/README.md);
 - `respaldo-git-2026-11-01.bundle`: copia de todas las ramas antes de juntarlas y de reescribir la autoría.
 
-Las instalaciones del programa oficial (`target-slots`, `formato/slot-*`) se borraron: se rehacen con `sh scripts/setup_official_runner.sh`.
+Las instalaciones del programa oficial (`target-slots`, `formato/slot-*`, `local-runs/`) se borraron: se rehacen con `sh scripts/setup_official_runner.sh`.
 
 ## 4. Decisiones que siguen valiendo
 
