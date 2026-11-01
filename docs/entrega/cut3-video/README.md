@@ -10,10 +10,12 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 | [guion.md](guion.md) | Guion hablado completo, en inglés, con tiempos por bloque y la diapositiva de cada párrafo (`[Sn]`); notas de grabación al final |
 | [presentacion.html](presentacion.html) | **La presentación para grabar** (artifact: https://claude.ai/artifact/8GaV8coHbdR1EeKANBtX4T). 14 diapositivas animadas: cada una se abre como una llamada del agente en la línea de registro y la barra de abajo es la carrera de 48 meses. Flechas o espacio para avanzar, N para las notas del orador (el guion), `#s5` en el enlace abre la diapositiva 5 |
 | [presentacion.pdf](presentacion.pdf) | La misma presentación en PDF, una página por diapositiva y sin animaciones |
+| [presentacion-b.html](presentacion-b.html) | **Segunda opción** (artifact: https://claude.ai/artifact/YSBvZYSEpuV8zmvXxNPAcJ). Cuaderno de laboratorio: papel cuadriculado, tinta negra y un solo color (subrayador), una frase clave por diapositiva y menos texto, con tono de equipo universitario. Mismas 14 diapositivas en el mismo orden, así que el guion y las notas sirven igual; `#p5` abre la página 5 |
+| [presentacion-b.pdf](presentacion-b.pdf) | La segunda opción en PDF |
 | [slides.pptx](slides.pptx) | Versión anterior en PowerPoint, con el guion en las notas del orador |
 | [comprobacion.md](comprobacion.md) | Cada afirmación con su fuente y su comprobación contra el Skill y los documentos entregados; las diferencias encontradas |
 | `scripts/entrega/cut3_video_slides.py` | Genera `slides.pptx`; toma las notas del orador de `guion.md` |
-| `scripts/entrega/cut3_video_notes.py` | Copia las notas del orador de `guion.md` a `presentacion.html` |
+| `scripts/entrega/cut3_video_notes.py` | Copia las notas del orador de `guion.md` a las dos presentaciones |
 
 ## Resumen de lo hecho (1 nov)
 
