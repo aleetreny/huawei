@@ -86,6 +86,6 @@ The main limits we know of:
 - **Perception.** DeepSeek still misreads part of the options that lower Output or Network. About one career in four still collapses, mostly by never leaving the starting level.
 - **Review calendar.** The countdown assumes the published six-month review cycle. If the talk arrives later than expected, the Skill keeps protecting; a different calendar would shift the countdown.
 - **Reply format.** The turn loop was verified with two model providers, not with all of them. Some providers occasionally write a tool call as text. In our careers of this Skill this happened 2–7 times per career, and once 21 times, when the runner stopped the career; we accept that risk because the alternative wording cost more in play (decision report, section 5c).
-- **Long context.** Each run accumulates a long history. One-reply decisions and one-line notes keep it to about a third of our Cut 1 version.
+- **Long context.** Each run accumulates a long history. One-reply decisions and one-line notes keep it to less than half of our Cut 1 version.
 
 The companion decision report gives the evidence and its limits.

@@ -2,7 +2,7 @@
 
 Cada afirmación del [guion](guion.md) y de las [diapositivas](slides.pptx), con su fuente en este repo (rama `alejandro/corte3`) y la comprobación contra lo entregado: el Skill `lab/policies-src/mejora/mv-3/bundle/` (SKILL.md y manifest.json) y los documentos `docs/entrega/cut3-mv3/` (README, `skills_design.md`, `decision_report.md`).
 
-**Resultado:** todo lo que el vídeo dice del Skill coincide con el SKILL.md, el manifiesto y los documentos. Hay **cuatro diferencias de cifras** entre los datos más recientes y `decision_report.md`; ninguna es sobre el Skill, pero el jurado lee las dos cosas. Están en §4 con la propuesta de arreglo; **no he tocado los documentos entregados**.
+**Resultado:** todo lo que el vídeo dice del Skill coincide con el SKILL.md, el manifiesto y los documentos. Las **cuatro diferencias de cifras** que había con `decision_report.md` están corregidas en los documentos (§4, 1 nov, a petición de Alejandro); el Skill no se ha tocado.
 
 Abreviaturas: **S** = `SKILL.md`, **M** = `manifest.json`, **SD** = `skills_design.md`, **DR** = `decision_report.md`, **C3** = `lab/reports/corte3/README.md`, **CSV** = `lab/data/deepseek/partidas.csv`, **E** = `docs/entrega/cut3-video/ENCARGO.md`.
 
@@ -49,18 +49,18 @@ Abreviaturas: **S** = `SKILL.md`, **M** = `manifest.json`, **SD** = `skills_desi
 | T10 | Corte 1: ~1,4 M fichas por mes de juego (S8) | 1,35–1,47 M | HALLAZGOS C51, C53; DR §5 y §5c | Sí |
 | T11 | Cada llamada reenvía todo el historial; el coste crece más deprisa que el número de respuestas (S8) | — | HALLAZGOS C51 (cuadrático); SD §3 | Sí |
 | T12 | DeepSeek sólo emparejaba las llamadas con la forma literal de la respuesta en el Skill (S8) | 0/5–0/6 sin ejemplo, 6/6 con él | HALLAZGOS C53 | No está en DR/SD, pero no lo contradice (S lleva ese bloque) |
-| T13 | mv-3: 0,5–0,8 M fichas por mes; de media, menos de la mitad que el corte 1 (S8, S13, S14) | 0,49–0,78 M; media 0,60 M (43 % de ~1,4 M) | CSV, filas `mv-3` completas, (entrada + salida) / 48; E §4 | **Diferencia ⚠ D2** |
+| T13 | mv-3: 0,5–0,8 M fichas por mes; de media, menos de la mitad que el corte 1 (S8, S13, S14) | 0,49–0,78 M; media 0,60 M (43 % de ~1,4 M) | CSV, filas `mv-3` completas, (entrada + salida) / 48; E §4 | Sí, tras corregir DR §5c y §8 y SD §7 (**D2**) |
 | T14 | Eficiencia de fichas completa con ≤ 0,5 M por mes (S8) | 0,5 M | `competition-rules.rst` (Token efficiency); E §4 | Sí (DR §5c) |
 | T15 | Una carrera de mv-3 cortada por el programa tras 21 respuestas sin llamada (S9) | 21 | DR §5c; C3 §7; CSV `mv-3__e8cdf663-00003` (`max_continuations`, mes 15) | Sí |
-| T16 | mv-4 terminó antes 5 veces de 11 (S9) | 5 de 11 | CSV (11 filas `mv-4`, 6 completas); E §4 | **Diferencia ⚠ D1** |
+| T16 | mv-4 terminó antes 5 veces de 11 (S9) | 5 de 11 | CSV (11 filas `mv-4`, 6 completas); E §4 | Sí, tras corregir DR §5c (**D1**) |
 | T17 | mv-3: 7 completas de 9, media 70,1, dos en el sexto nivel (S9, S14) | 70,06 → 70,1; L6: 77,78 y 74,12 | CSV; C3 §7; E §4 | Sí (DR §5c) |
-| T18 | mv-4: media de las completas 64,2; ninguna en el sexto nivel (S9) | 64,23 | CSV (63,35 · 69,62 · 63,27 · 59,99 · 69,70 · 59,47); E §4 | DR no da la media; ver **D1** |
-| T19 | No completas: mv-3, 1 cortada por el programa y 1 acabada en el mes 24; mv-4, 3 crisis de confianza, 1 despido, 1 ruina (S9) | 31,01; 37,06 · 37,39 · 32,73 · 18,98 · 31,34 | CSV; DR §5c | Sí; ver **D4** sobre el 31,01 |
+| T18 | mv-4: media de las completas 64,2; ninguna en el sexto nivel (S9) | 64,23 | CSV (63,35 · 69,62 · 63,27 · 59,99 · 69,70 · 59,47); E §4 | Sí (DR §5c lista ya las seis completas; no da la media) |
+| T19 | No completas: mv-3, 1 cortada por el programa y 1 acabada en el mes 24; mv-4, 3 crisis de confianza, 1 despido, 1 ruina (S9) | 31,01; 37,06 · 37,39 · 32,73 · 18,98 · 31,34 | CSV; DR §5c | Sí (DR §5c: «dismissed at month 24 after a stalled start», **D4**) |
 | T20 | Hipótesis sin probar: la frase quita el razonamiento escrito cuando el proveedor no razona en privado (S9) | — | C3 §7; DR §5c («plausibly») | Sí, dicho como hipótesis |
 | T21 | Corte 2: el banco decía que el texto de costes añadía riesgo en niveles altos; se restringió al nivel inicial; 2 de 3 partidas se hundieron en ese nivel (S10) | 69,00 · 22,65 · 24,51 | DR §5c y §6; CSV `mv-5r` (dos eliminadas en L1 en el mes 24) | Sí |
 | T22 | Reconstrucción de las reglas del corte 1: mejor en los tramos (79 % frente a 73 %) y con dos revisores; en 5 partidas, 3 despidos en el nivel inicial (S10) | 79 %/73 %; 58,06 · 52,32 · 28,76 · 24,90 · 28,34 | DR §5d; C3 §6; E §4 | Sí |
 | T23 | Variante «valiente»: no llegó más alto que mv-3 y hubo explosiones (S10) | 60,62 · 63,02 · 61,53 · 63,62 · 62,73 | DR §5d; C3 §6–§7 | Sí. No digo «subían antes», porque DR §5d dice que se atascaron en L4 |
-| T24 | Advisor con script (otra línea): su mejor partida llegó al sexto nivel; 3 de 7 terminaron antes; las completas gastaban ~1,6 veces más fichas (S11) | 76,87; 3/7; 1,6× | DR §6; CSV filas `script-v*` | Sí; ver **D3** |
+| T24 | Advisor con script (otra línea): su mejor partida llegó al sexto nivel; 3 de 7 terminaron antes; las completas gastaban ~1,6 veces más fichas (S11) | 76,87; 3/7; 1,6× | DR §6; CSV filas `script-v*` | Sí, tras corregir DR §6 (**D3**) |
 | T25 | Los scripts que usan sólo datos de la partida estaban permitidos (S11) | — | HALLAZGOS C49; ESTADO §5 | Sí |
 | T26 | En la réplica, un script con estado no añadió nada (S11) | +0,0 | HALLAZGOS C63 | No está en DR/SD; no los contradice. La réplica se menciona sólo como herramienta de investigación (E §7) |
 | T27 | Cerca de una partida de cada cuatro se hunde, sobre todo en el nivel inicial (S12) | ~1/4 | SD §7 «Perception» | Sí |
@@ -77,14 +77,16 @@ Abreviaturas: **S** = `SKILL.md`, **M** = `manifest.json`, **SD** = `skills_desi
 - No se presenta ninguna nota de desarrollo como oficial; el corte 3 se da como desconocido.
 - No se menciona a Claude: los «quality reviewers» de S10 son los «two independent reviewers» de DR §5d.
 
-## 4. Diferencias con `decision_report.md` (avisar a Alejandro)
+## 4. Diferencias con los documentos entregados: corregidas (1 nov)
 
-| | Qué dice el vídeo | Qué dicen los documentos entregados | Qué es lo correcto | Propuesta |
-|---|---|---|---|---|
-| **D1** | mv-4 terminó antes 5 de 11; 6 completas, media 64,2 | DR §5c: «five of ten careers ended early» y lista 5 completas (falta 59,47). C3 §7 igual (5 completas, 65,2) | CSV: 11 partidas de mv-4, 6 completas (`mv-4__0f4bf379-conf00005`, 59,47, L5, mes 49). E §4 ya lo recoge | Antes de reconstruir el ZIP, en DR §5c cambiar «five of ten» por «five of eleven» y añadir 59.47 a la lista de completas. Si no se toca DR, decir en el vídeo «about half» y quitar el «6 of 11» de S9 |
-| **D2** | mv-3 gasta 0,5–0,8 M por mes; de media menos de la mitad que el corte 1 | DR §5c: «careers of this family used 0.46–0.70 million (efficiency 92–100)»; SD §7: «about a third of our Cut 1 version»; DR §8: «cut … by two thirds» | CSV, completas de mv-3: 0,49–0,78 M (eficiencia 89–100, media ~96); media 0,60 M. Lo de DR es «la familia», no mv-3 sola | No es contradicción estricta, pero «a third» y «two thirds» exageran para mv-3 (43 %). El vídeo no los repite. Si se toca DR, «0.49–0.78 million for `mv-3` (efficiency 89–100)» |
-| **D3** | El advisor con script: «its best career reached the sixth level» | DR §6: «reached our best single career (sixth level)» | 76,87 (advisor) < 77,78 (mv-3, 29 oct). DR §5c dice que mv-3 es «the Skill behind our best development careers» | Contradicción interna de DR. Arreglo: «reached the sixth level (76.87)». El vídeo ya usa la redacción correcta |
-| **D4** | La partida 31,01 de mv-3 «ended at month 24» | DR §5c: «still at the starting level at month 24»; E §4 igual | CSV: `mv-3__e8cdf663-conf00001`, `eliminada`, 24 meses, **nivel L2** | Comprobar en la partida (`python3 scripts/corte3/partida.py <run_dir>`) si ascendió en el mes 24 y aun así fue despedida, o si el CSV registra mal el nivel. El vídeo no entra en el detalle |
+Alejandro eligió corregir los documentos en vez de cambiar el vídeo. Cambios en la rama `alejandro/video-cut3`; el Skill no cambia.
+
+| | Antes | Ahora | Por qué |
+|---|---|---|---|
+| **D1** | DR §5c: mv-4 «five of ten careers ended early»; la tabla no tenía el 59,47 | «five of eleven»; la tabla lista las seis completas, con 59.47 | CSV: 11 partidas de mv-4, 6 completas (`mv-4__0f4bf379-conf00005`, 59,47). También en C3 §7 (media 64,2) |
+| **D2** | DR §5c: «careers of this family used 0.46–0.70 million (efficiency 92–100)»; DR §8: «by two thirds»; SD §7: «about a third of our Cut 1 version» | «the seven complete careers of `mv-3` used 0.49–0.78 million (efficiency 89–100)»; «per game month by more than half»; «less than half of our Cut 1 version» | CSV, completas de mv-3: 0,49–0,78 M, media 0,60 M, el 43 % de ~1,4 M |
+| **D3** | DR §6: el advisor «reached our best single career (sixth level)» | «reached the sixth level in its best career (76.87)» | La mejor partida del proyecto es de mv-3 (77,78) |
+| **D4** | DR §5c: 31,01 «still at the starting level at month 24» | «dismissed at month 24 after a stalled start» | `decisiones.csv.gz`: en L1 hasta el mes 23; `score_report.json` de la partida: despido por una segunda evaluación floja en el mes 24, con nivel 2 en el informe final. La nueva frase es cierta en los dos casos |
 
 ## 5. Cómo se comprobó
 

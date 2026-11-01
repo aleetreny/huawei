@@ -77,8 +77,8 @@ Alejandro paró la búsqueda de versiones nuevas y pidió decidir entre mv-3 y m
 
 | Manual | Completas | No completas |
 |---|---|---|
-| **mv-3** | 68,64 · 77,78 (L6) · 66,06 (29–30 oct); **74,12 (L6)** · 70,38 · 63,31 · 70,12 (1 nov). Media 70,1 | cortada por `max_continuations` en L1 (29 oct); 31,01 (L1 hasta el mes 24) |
-| mv-4 | 63,35 · 69,62 · 63,27 (30 oct); 59,99 · 69,70 (1 nov). Media 65,2 | 37,06, 37,39 y 32,73 (crisis de confianza), 18,98 (despido en L1), 31,34 (ruina en el mes 10) |
+| **mv-3** | 68,64 · 77,78 (L6) · 66,06 (29–30 oct); **74,12 (L6)** · 70,38 · 63,31 · 70,12 (1 nov). Media 70,1 | cortada por `max_continuations` en L1 (29 oct); 31,01 (despedida en el mes 24 tras una evaluación floja; en L1 al menos hasta el mes 23, aunque el informe final da nivel 2) |
+| mv-4 | 63,35 · 69,62 · 63,27 (30 oct); 59,99 · 69,70 · 59,47 (1 nov). Media 64,2 | 37,06, 37,39 y 32,73 (crisis de confianza), 18,98 (despido en L1), 31,34 (ruina en el mes 10) |
 
 Hipótesis (sin probar): la frase de mv-4 quita el razonamiento escrito cuando el proveedor no razona en oculto. El precio de mv-3 es el riesgo de corte por respuestas sin llamada (1 de 7).
 

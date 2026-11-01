@@ -1,6 +1,6 @@
 # Vídeo del corte 3 (`mv-3`)
 
-**Conclusión:** guion de ~8:45 en inglés, 14 diapositivas y hoja de comprobación listos para grabar; todo lo que dicen del Skill coincide con el `SKILL.md`, el manifiesto y `docs/entrega/cut3-mv3/`, pero antes de grabar hay que decidir cuatro diferencias de cifras con `decision_report.md` ([comprobación §4](comprobacion.md#4-diferencias-con-decision_reportmd-avisar-a-alejandro)).
+**Conclusión:** guion de ~8:45 en inglés, presentación animada (artifact y PDF) y hoja de comprobación listos para grabar; todo coincide con el `SKILL.md`, el manifiesto y `docs/entrega/cut3-mv3/`, cuyos documentos se corrigieron en cuatro cifras para que digan lo mismo que el vídeo ([comprobación §4](comprobacion.md)).
 
 Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta carpeta va en el ZIP salvo el `presentation.mp4` que se grabe.
 
@@ -22,20 +22,16 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 3. **Diapositivas** ([slides.pptx](slides.pptx)). Una idea por diapositiva: el juego, las tres preguntas, el diagrama del bucle de decisión con la línea de estado literal, Skill frente a manifiesto, la línea de tiempo de los tres cortes, registros → reglas, fichas, la tabla mv-3 frente a mv-4, pruebas baratas frente a carreras, scripts, robustez y límites, agentes y Skills, y el cierre. Fuentes Cambria y Calibri. Pasa el validador de la skill de pptx; la revisión visual se hizo con un visor en el navegador (sin LibreOffice en el Mac), así que la tipografía real puede variar un poco en PowerPoint o Keynote.
 4. **Hoja de comprobación** ([comprobacion.md](comprobacion.md)). 22 afirmaciones sobre el Skill y 31 de cifras y hechos, cada una con su fuente. Lo del Skill coincide en todo.
 
-## Diferencias encontradas (no he tocado los documentos entregados)
+## Diferencias con los documentos entregados: corregidas
 
-- **D1 (la importante):** `decision_report.md` §5c dice que mv-4 terminó antes en «five of ten» y no lista la partida 59,47; en `partidas.csv` hay 11 partidas de mv-4 (6 completas, media 64,2), como dice el encargo. El vídeo dice 5 de 11. Arreglar el informe antes de reconstruir el ZIP o, si no, cambiar el vídeo a «about half».
-- **D2:** el informe da 0,46–0,70 M fichas por mes para «la familia»; mv-3 solo gasta 0,49–0,78 M. Los documentos dicen «a third» y «two thirds» del corte 1; para mv-3 es ~43 %. El vídeo dice «on average, less than half».
-- **D3:** `decision_report.md` §6 llama a la mejor partida del advisor «our best single career», pero mv-3 tiene una mejor (77,78 frente a 76,87).
-- **D4:** la partida 31,01 de mv-3 figura «at the starting level at month 24» en el informe, pero `partidas.csv` dice L2. El vídeo no entra en el detalle.
+La hoja de comprobación encontró cuatro diferencias de cifras con `decision_report.md` (mv-4 tenía 11 partidas, no 10; fichas de mv-3 frente a las de «la familia»; la «mejor partida» del advisor; el nivel de la partida 31,01). Alejandro eligió corregir los documentos: cambios en `docs/entrega/cut3-mv3/decision_report.md` (§5c, §6, §8), `skills_design.md` (§7) y `lab/reports/corte3/README.md` (§7), detallados en [comprobacion.md](comprobacion.md) §4. El Skill no cambia, y el vídeo y los documentos dicen ahora lo mismo.
 
 ## Relevo
 
-1. **Qué he hecho y por qué.** Las tres piezas del encargo §6 (diapositivas, guion y hoja de comprobación), más este resumen. Rama `alejandro/video-cut3` (worktree `~/huawei-video`), salida de `alejandro/corte3`. Sin DeepSeek, sin API y sin tocar el Skill ni `docs/entrega/cut3-mv3/`.
+1. **Qué he hecho y por qué.** Las tres piezas del encargo §6 (diapositivas, guion y hoja de comprobación), más este resumen. Rama `alejandro/video-cut3` (worktree `~/huawei-video`), salida de `alejandro/corte3`. Sin DeepSeek, sin API y sin tocar el Skill. En `docs/entrega/cut3-mv3/` sólo se corrigieron cuatro cifras, a petición de Alejandro.
 2. **Resultados.** Los ficheros de la tabla de arriba.
-3. **Qué queda a medias.** Las diferencias D1–D4 las tiene que decidir Alejandro. No se ha grabado el vídeo. No he podido ver las diapositivas en PowerPoint o Keynote: Keynote pidió una pantalla de alta («Usage Status») y no hay LibreOffice.
+3. **Qué queda a medias.** No se ha grabado el vídeo, y el ZIP hay que reconstruirlo desde esta rama (worktree `~/huawei-video`) para que lleve los documentos corregidos. No he podido ver las diapositivas en PowerPoint o Keynote: Keynote pidió una pantalla de alta («Usage Status») y no hay LibreOffice.
 4. **Siguiente paso.**
-   - Decidir D1 (y, si se quiere, D2–D4) en `docs/entrega/cut3-mv3/decision_report.md`.
    - Si cambia el guion, copiar las notas a la presentación y volver a publicarla en el mismo artifact; el PDF se rehace con Chrome sin cabecera (servir la carpeta con `python3 -m http.server` y abrirla con `--headless=new --print-to-pdf`):
 
      ```bash

@@ -70,17 +70,17 @@ A complete `t13-read-v4` career used about 65–70 million tokens, roughly 1.4 m
 
 `mv-3` is the Skill behind our best development careers. Our Cut 2 version (`mv-5r`) differed from it in one paragraph: it named the hidden costs of polite or helpful options before the starting-level reviews only, because on a bank of recorded situations the text seemed to add risk before later reviews. In careers that restriction did not help: `mv-5r` scored 69.00, 22.65 and 24.51 in development and 45.44 officially.
 
-**Tokens.** Token efficiency is 10% of the version score and is full at 500 thousand tokens per game month or fewer. `t13-read-v4` used 1.35–1.47 million, about 64 of 100. With one reply per decision and a one-line note, careers of this family used 0.46–0.70 million (efficiency 92–100).
+**Tokens.** Token efficiency is 10% of the version score and is full at 500 thousand tokens per game month or fewer. `t13-read-v4` used 1.35–1.47 million, about 64 of 100. With one reply per decision and a one-line note, the seven complete careers of `mv-3` used 0.49–0.78 million (efficiency 89–100).
 
-**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (five of ten careers ended early, against two of nine without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `mv-3` is the Skill without that line.
+**Reply format.** The two-call loop held with a provider that does not reason privately (18 of 18 replies in probes) and with one that does. One development career of this Skill stopped without a score after 21 replies carried no tool call, because the model wrote the call as text. A manifest line, "never end a reply with text only … put the decision in the take_action call, not in prose", brought such replies to 1–2 per career, but the same Skill with that line ended early more often (five of eleven careers ended early, against two of nine without it), plausibly because it also discouraged the short written reasoning the model uses when its provider does not reason privately. `mv-3` is the Skill without that line.
 
 **Careers** (development game, official runner, DeepSeek):
 
 | Skill | Scores (end) |
 |---|---|
 | `mv-3`, 29–30 October | 68.64, **77.78** (sixth level), 66.06 (complete); one stopped by the runner around month 15, after 21 replies without a tool call |
-| `mv-3`, 1 November | **74.12** (sixth level), 70.38, 63.31, 70.12 (complete); 31.01 (still at the starting level at month 24) |
-| The same Skill with the manifest line "never end a reply with text only" | 63.35, 69.62, 63.27, 59.99, 69.70 (complete); 37.06, 37.39 and 32.73 (trust crises), 18.98 (dismissed at the starting level), 31.34 (broke at month 10) |
+| `mv-3`, 1 November | **74.12** (sixth level), 70.38, 63.31, 70.12 (complete); 31.01 (dismissed at month 24 after a stalled start) |
+| The same Skill with the manifest line "never end a reply with text only" | 63.35, 69.62, 63.27, 59.99, 69.70, 59.47 (complete); 37.06, 37.39 and 32.73 (trust crises), 18.98 (dismissed at the starting level), 31.34 (broke at month 10) |
 
 `mv-3`'s seven complete careers (of nine) averaged 70.1, the best of any Skill we tested, and two reached the sixth level; the starting level remains its weak point.
 
@@ -102,7 +102,7 @@ A complete `t13-read-v4` career used about 65–70 million tokens, roughly 1.4 m
 | Unstructured log inspection | One variant raised log consultation to 96% without improving choices; logs are retrieved only to recover the status line. |
 | More elaborate planning | Rollout improvement did not beat the reference planner (−0.27 ± 1.48 SE in 40 paired careers). |
 | A numerical hidden-risk counter | A proxy test identified only 4 of 21 genuinely concerning earlier choices; the concern count stays a judgement, not an estimate. |
-| A script that decides from model labels | A teammate's experiment reached our best single career (sixth level), but three of its seven careers ended early, and complete ones used about 1.6 times more tokens; not submitted. |
+| A script that decides from model labels | A teammate's experiment reached the sixth level in its best career (76.87), but three of its seven careers ended early, and complete ones used about 1.6 times more tokens; not submitted. |
 | Softer risk wording, "Health and Dignity stop at 10", reworded risk cues | No gain in our banks, and the softer wording made genuinely risky private options more likely (section 5b). |
 | Hidden costs at the starting level only (Cut 2) | On recorded situations, naming them before every review seemed to add risk before later reviews (0.96 against 0.59); in careers the restriction did not help and Cut 2 scored 45.44 officially, so `mv-3` names them before every review (section 5c). |
 | A Skill half as long, with the same loop | Chose like `mv-5r` but failed our risk control by one situation (2.00 against a limit of 1.3 fixed in advance); not promoted. |
@@ -119,4 +119,4 @@ A handful of development careers cannot separate versions a few points apart, an
 
 ## 8. What we learned about Skills
 
-Skills can supply priority, scope and memory discipline, and they are very effective at changing how an agent works: the reply format alone cut DeepSeek's token use by two thirds. They cannot guarantee that a model understands an unfamiliar option, and a helpful rule can become harmful in another phase. What worked for us was a loop: find a concrete failure in the logs, write the narrowest general rule that addresses it, check that it does not change unrelated choices, and confirm it in a complete career.
+Skills can supply priority, scope and memory discipline, and they are very effective at changing how an agent works: the reply format alone cut DeepSeek's token use per game month by more than half. They cannot guarantee that a model understands an unfamiliar option, and a helpful rule can become harmful in another phase. What worked for us was a loop: find a concrete failure in the logs, write the narrowest general rule that addresses it, check that it does not change unrelated choices, and confirm it in a complete career.
