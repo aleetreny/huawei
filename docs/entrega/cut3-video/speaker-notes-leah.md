@@ -45,13 +45,13 @@ Question two: what did the logs teach us?
 We submitted three times. The first manual scored sixty-four point seven five. The second dropped to forty-five point four four. The third is the one we present today, and we do not know its score yet. Every change came from reading what the AI actually did.
 
 ### 9 · Lesson 1: lost by one point (3:20–3:40)
-Lesson one. Again and again, the AI missed a promotion by a single point, lost in the last story before the review. It was not a bad strategy, just one bad moment. So the manual now guards Skill, Network and Output in the two months before each review, remembers the best value it reached at this level, and repairs any loss at once.
+Lesson one. Again and again, the AI missed a promotion by a single point, lost in the last story before the review. It was not a bad strategy, just one bad moment. So the manual now guards Network and Output in the two months before each review, and Skill too in the last month, remembers the best value it reached at this level, and repairs any loss at once.
 
 ### 10 · Lesson 2: nice answers that hide trouble (3:40–4:00)
 Lesson two. Some answers sounded responsible: a quiet private chat, a fix done bit by bit, an anonymous report. In the logs, those were exactly the ones that exploded later. So the manual names them. Anything that might bury a problem is dropped, and when in doubt, an answer counts as risky.
 
 ### 11 · Lesson 3: reading too much (4:00–4:35)
-Lesson three. The AI was reading far too much. At every step it re-reads the whole history, so the cost grows with the square of the number of steps. The fix was fewer turns: one reply with two calls, act and then look, and a whole quarter in one reply. Reading dropped from about one point four million word pieces a month to about zero point six, and the efficiency score went from the sixties to the high nineties.
+Lesson three. The AI was reading far too much. At every step it re-reads the whole history, so the cost grows with the square of the number of steps. The fix was fewer turns: one reply with two calls, act and then look, and after the first quarter, a whole quarter in one reply. Reading dropped from about one point four million word pieces a month to about zero point six, and the efficiency score went from the sixties to the high nineties.
 
 *Pause after "the square of the number of steps": it is the insight.*
 
@@ -103,9 +103,9 @@ mv-3 is the manual behind our best careers: seventy point one on average in its 
 | Status line: Review in N, Now, Best (it also has Reviews here, not named in the script) | mv-3 SKILL.md, "Status line" | yes |
 | One Skill because with several the agent opened one and lost rules | `ENCARGO.md` §5.1; HALLAZGOS B13 | yes |
 | Official 64.75 and 45.44; third score unknown (rank not said: it was 13th after cut 1, 28th now) | `ENCARGO.md` §4; ESTADO 1 Nov | yes |
-| Protect S/N/O two months before a review, Best, repair at once | mv-3 manifest and SKILL.md step 4 | yes |
+| Protect Network and Output two months before a review, Skill too in the last month; Best; repair at once | mv-3 manifest and SKILL.md step 4 (N = 2: Network and Output; N = 1: also Skill) | yes |
 | Private, partial, anonymous answers dropped; "when in doubt, risky" | mv-3 manifest; SKILL.md "Hidden risk" | yes |
-| Cost grows with the square of steps; one reply with two calls; whole quarter in one reply | HALLAZGOS C51–C53; mv-3 manifest and "Turn loop" | yes |
+| Cost grows with the square of steps; one reply with two calls; whole quarter in one reply after the first quarter | HALLAZGOS C51–C53; mv-3 manifest, SKILL.md "Turn loop" 3; skills_design.md §3 | yes |
 | 1.4 M → ~0.6 M tokens a month; efficiency from the sixties to the high nineties | v4 1.35–1.47 M (score ~64); mv-3 0.49–0.78 M (89–100, mean ~96 in completed) — `ENCARGO.md` §4 | yes |
 | With the extra sentence 5 of 11 ended early; without, 7 of 9 finished, 70.1, two at L6 | mv-4: 6 completed + 5 not completed; mv-3: 7 of 9, mean 70.1, 77.78 and 74.12 at L6 — `ENCARGO.md` §4 | yes |
 | Thinking-out-loud explanation is a hypothesis | `ENCARGO.md` §3.8 | yes (said as a guess) |
@@ -114,6 +114,9 @@ mv-3 is the manual behind our best careers: seventy point one on average in its 
 | Uses only visible signals; observations marked "in our runs"; trust the game first | mv-3 SKILL.md "Published and ours" | yes |
 | Different providers of the same model | `ENCARGO.md` §3.5, §5.4 | yes |
 | About one career in four still falls, mostly at the start | Alejandro's slide 15; mv-3: 2 of 9 not completed, 1 at the first level | consistent (round wording, from the slide) |
+
+| No scripts, no reference files; one Skill plus the manifest | docs/entrega/cut3-mv3/README.md and skills_design.md §2 | yes |
+| The removed "never end a reply with text only" line is not in mv-3 | docs/entrega/cut3-mv3/README.md (changes since Cut 2); mv-3 manifest | yes |
 
 Not said, on purpose (`ENCARGO.md` §7): event titles or game text, engine thresholds as rules, the replica as a source of rules, any claim about the official cut-3 score, Claude as a contributor.
 
