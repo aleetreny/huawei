@@ -1,7 +1,7 @@
 {
  "kingjinsight/techarena-uk-2026": {
   "sha": null,
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": [
    {
     "archivo": "runs/v10_run1_20261028T022003Z/score_report.json",
@@ -98,7 +98,7 @@
  },
  "krsnkkv/ksl_techarena": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -111,7 +111,7 @@
  },
  "krsnkkv/techarena-career-simu": {
   "sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -124,7 +124,7 @@
  },
  "shriyasaxena/techarena-career-simu": {
   "sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": [
    {
     "archivo": ".career_sim_runner/career_emu/outputs/KSL/20261027T213715Z/score_report.json",
@@ -137,12 +137,12 @@
  },
  "lrado-253/ksl-techarena": {
   "sha": "65afe204024bb1c4e09296524d115961f0b09b7d",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "artepace/slopathone_winningteam": {
   "sha": "7e1e0f71e36ccec0189f1fde26c735cb6339444e",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": [
    {
     "archivo": "run_outputs/fired/LEGACY-decision-mind_1/score_report.json",
@@ -260,32 +260,32 @@
  },
  "peidi-l/preliminary": {
   "sha": "00d9008576aed09825cb73b9880e3cf32c184cfd",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "ray23257/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "yulong111/techarena-career-sim": {
   "sha": null,
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "bernardoguterres/huawei-gradient-depression": {
   "sha": null,
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "rickyyyy-bit/techarena-huawei": {
   "sha": "24475865ddccc4f2c6e25b39baf1bc9408cbe1ab",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "colinfornia/techarena-project": {
   "sha": "b74a7ffc5d185a7a0c15a05eab05493dc0bb0244",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "clasificacion": [
@@ -295,7 +295,7 @@
    "puesto": "1",
    "Score": "75.99",
    "Cut-off 1": "75.99",
-   "Cut-off 2": "—"
+   "Cut-off 2": "67.44"
   },
   {
    "equipo": "gengyuan's team",
@@ -303,132 +303,316 @@
    "puesto": "2",
    "Score": "74.59",
    "Cut-off 1": "74.59",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "ruifeng's team",
-   "creado": "2026-10-08",
-   "puesto": "3",
-   "Score": "72.51",
-   "Cut-off 1": "72.51",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "aman_abdulsalam's team",
-   "creado": "2026-10-19",
-   "puesto": "4",
-   "Score": "71.99",
-   "Cut-off 1": "71.99",
-   "Cut-off 2": "—"
+   "Cut-off 2": "70.33"
   },
   {
    "equipo": "ShanshanMao's team",
    "creado": "2026-10-14",
-   "puesto": "5",
-   "Score": "71.77",
+   "puesto": "3",
+   "Score": "73.64",
    "Cut-off 1": "71.77",
-   "Cut-off 2": "—"
+   "Cut-off 2": "73.64"
+  },
+  {
+   "equipo": "Not Cheating",
+   "creado": "2026-09-21",
+   "puesto": "4",
+   "Score": "73.28",
+   "Cut-off 1": "—",
+   "Cut-off 2": "73.28"
+  },
+  {
+   "equipo": "Jackwz's team",
+   "creado": "2026-09-29",
+   "puesto": "5",
+   "Score": "73.01",
+   "Cut-off 1": "52.34",
+   "Cut-off 2": "73.01"
+  },
+  {
+   "equipo": "Gradient Depression",
+   "creado": "2026-10-24",
+   "puesto": "6",
+   "Score": "72.93",
+   "Cut-off 1": "46.78",
+   "Cut-off 2": "72.93"
+  },
+  {
+   "equipo": "ruifeng's team",
+   "creado": "2026-10-08",
+   "puesto": "7",
+   "Score": "72.67",
+   "Cut-off 1": "72.51",
+   "Cut-off 2": "72.67"
+  },
+  {
+   "equipo": "Panic's team",
+   "creado": "2026-10-16",
+   "puesto": "8",
+   "Score": "72.55",
+   "Cut-off 1": "—",
+   "Cut-off 2": "72.55"
+  },
+  {
+   "equipo": "Jon8652's team",
+   "creado": "2026-10-05",
+   "puesto": "9",
+   "Score": "72.52",
+   "Cut-off 1": "—",
+   "Cut-off 2": "72.52"
+  },
+  {
+   "equipo": "aman_abdulsalam's team",
+   "creado": "2026-10-19",
+   "puesto": "10",
+   "Score": "71.99",
+   "Cut-off 1": "71.99",
+   "Cut-off 2": "44.33"
   },
   {
    "equipo": "PHP Security",
    "creado": "2026-10-19",
-   "puesto": "6",
+   "puesto": "11",
    "Score": "71.72",
    "Cut-off 1": "71.72",
-   "Cut-off 2": "—"
+   "Cut-off 2": "57.92"
+  },
+  {
+   "equipo": "hyeok9855's team",
+   "creado": "2026-10-22",
+   "puesto": "12",
+   "Score": "71.05",
+   "Cut-off 1": "—",
+   "Cut-off 2": "71.05"
   },
   {
    "equipo": "MattKep7777's team",
    "creado": "2026-10-17",
-   "puesto": "7",
+   "puesto": "13",
    "Score": "70.88",
    "Cut-off 1": "70.88",
-   "Cut-off 2": "—"
+   "Cut-off 2": "46.02"
+  },
+  {
+   "equipo": "fins house",
+   "creado": "2026-10-21",
+   "puesto": "14",
+   "Score": "70.73",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.73"
   },
   {
    "equipo": "Yuanyuan's team",
    "creado": "2026-09-24",
-   "puesto": "8",
+   "puesto": "15",
    "Score": "70.59",
    "Cut-off 1": "70.59",
    "Cut-off 2": "—"
   },
   {
+   "equipo": "Janarthanan_Gnanamurthy's team",
+   "creado": "2026-10-21",
+   "puesto": "16",
+   "Score": "70.56",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.56"
+  },
+  {
+   "equipo": "Simple",
+   "creado": "2026-10-19",
+   "puesto": "17",
+   "Score": "70.48",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.48"
+  },
+  {
+   "equipo": "mxa2098's team",
+   "creado": "2026-10-18",
+   "puesto": "18",
+   "Score": "70.17",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.17"
+  },
+  {
+   "equipo": "The Pem Queens",
+   "creado": "2026-10-24",
+   "puesto": "19",
+   "Score": "70.03",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.03"
+  },
+  {
+   "equipo": "JasonXu's team",
+   "creado": "2026-10-14",
+   "puesto": "20",
+   "Score": "70.00",
+   "Cut-off 1": "—",
+   "Cut-off 2": "70.00"
+  },
+  {
    "equipo": "Sky's team",
    "creado": "2026-10-07",
-   "puesto": "9",
+   "puesto": "21",
    "Score": "69.87",
    "Cut-off 1": "69.87",
    "Cut-off 2": "—"
   },
   {
+   "equipo": "bulentdayioglu's team",
+   "creado": "2026-10-21",
+   "puesto": "22",
+   "Score": "69.20",
+   "Cut-off 1": "—",
+   "Cut-off 2": "69.20"
+  },
+  {
+   "equipo": "TLL",
+   "creado": "2026-10-23",
+   "puesto": "23",
+   "Score": "68.83",
+   "Cut-off 1": "—",
+   "Cut-off 2": "68.83"
+  },
+  {
+   "equipo": "IQ2 Only",
+   "creado": "2026-10-15",
+   "puesto": "24",
+   "Score": "68.50",
+   "Cut-off 1": "65.86",
+   "Cut-off 2": "68.50"
+  },
+  {
    "equipo": "manocw's team",
    "creado": "2026-10-25",
-   "puesto": "10",
+   "puesto": "25",
    "Score": "68.17",
    "Cut-off 1": "68.17",
-   "Cut-off 2": "—"
+   "Cut-off 2": "67.53"
+  },
+  {
+   "equipo": "Yy.'s team",
+   "creado": "2026-10-14",
+   "puesto": "26",
+   "Score": "67.94",
+   "Cut-off 1": "0.00",
+   "Cut-off 2": "67.94"
   },
   {
    "equipo": "Chinese can fly",
    "creado": "2026-10-21",
-   "puesto": "11",
+   "puesto": "27",
    "Score": "67.40",
    "Cut-off 1": "67.40",
    "Cut-off 2": "—"
   },
   {
-   "equipo": "IQ2 Only",
-   "creado": "2026-10-15",
-   "puesto": "12",
-   "Score": "65.86",
-   "Cut-off 1": "65.86",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Gradient Depression",
    "creado": "2026-10-21",
-   "puesto": "13",
+   "puesto": "28",
    "Score": "64.75",
    "Cut-off 1": "64.75",
-   "Cut-off 2": "—"
+   "Cut-off 2": "45.44"
+  },
+  {
+   "equipo": "Winner Winner Chicken Dinner",
+   "creado": "2026-10-20",
+   "puesto": "29",
+   "Score": "63.42",
+   "Cut-off 1": "—",
+   "Cut-off 2": "63.42"
   },
   {
    "equipo": "Jomo works",
    "creado": "2026-10-14",
-   "puesto": "14",
+   "puesto": "30",
    "Score": "60.85",
    "Cut-off 1": "60.85",
    "Cut-off 2": "—"
   },
   {
+   "equipo": "Blank",
+   "creado": "2026-10-25",
+   "puesto": "31",
+   "Score": "60.26",
+   "Cut-off 1": "—",
+   "Cut-off 2": "60.26"
+  },
+  {
    "equipo": "Hachimi Mambo",
    "creado": "2026-10-15",
-   "puesto": "15",
-   "Score": "58.12",
+   "puesto": "32",
+   "Score": "58.88",
    "Cut-off 1": "58.12",
-   "Cut-off 2": "—"
+   "Cut-off 2": "58.88"
+  },
+  {
+   "equipo": "Siyu Hou's team",
+   "creado": "2026-10-23",
+   "puesto": "33",
+   "Score": "58.67",
+   "Cut-off 1": "—",
+   "Cut-off 2": "58.67"
+  },
+  {
+   "equipo": "Out of Distribution",
+   "creado": "2026-10-23",
+   "puesto": "34",
+   "Score": "57.27",
+   "Cut-off 1": "49.31",
+   "Cut-off 2": "57.27"
+  },
+  {
+   "equipo": "ZZ Bond",
+   "creado": "2026-10-25",
+   "puesto": "34",
+   "Score": "57.27",
+   "Cut-off 1": "—",
+   "Cut-off 2": "57.27"
   },
   {
    "equipo": "学习小伙伴",
    "creado": "2026-10-21",
-   "puesto": "16",
+   "puesto": "36",
    "Score": "57.22",
    "Cut-off 1": "57.22",
-   "Cut-off 2": "—"
+   "Cut-off 2": "30.60"
+  },
+  {
+   "equipo": "YanYing Tech",
+   "creado": "2026-10-17",
+   "puesto": "37",
+   "Score": "56.69",
+   "Cut-off 1": "—",
+   "Cut-off 2": "56.69"
   },
   {
    "equipo": "Saul Goodman",
    "creado": "2026-10-25",
-   "puesto": "17",
+   "puesto": "37",
    "Score": "56.69",
    "Cut-off 1": "56.69",
    "Cut-off 2": "—"
   },
   {
+   "equipo": "Pranati Sattarapu's team",
+   "creado": "2026-10-15",
+   "puesto": "39",
+   "Score": "56.59",
+   "Cut-off 1": "—",
+   "Cut-off 2": "56.59"
+  },
+  {
+   "equipo": "Grassmoo",
+   "creado": "2026-10-25",
+   "puesto": "40",
+   "Score": "56.54",
+   "Cut-off 1": "55.51",
+   "Cut-off 2": "56.54"
+  },
+  {
    "equipo": "KSL",
    "creado": "2026-10-25",
-   "puesto": "18",
+   "puesto": "41",
    "Score": "56.00",
    "Cut-off 1": "56.00",
    "Cut-off 2": "—"
@@ -436,159 +620,215 @@
   {
    "equipo": "Jayverm's team",
    "creado": "2026-10-23",
-   "puesto": "19",
+   "puesto": "42",
    "Score": "55.78",
    "Cut-off 1": "55.78",
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Grassmoo",
+   "equipo": "seankwong's team",
    "creado": "2026-10-25",
-   "puesto": "20",
-   "Score": "55.51",
-   "Cut-off 1": "55.51",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "One team",
-   "creado": "2026-10-11",
-   "puesto": "21",
-   "Score": "53.44",
-   "Cut-off 1": "53.44",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Jackwz's team",
-   "creado": "2026-09-29",
-   "puesto": "22",
-   "Score": "52.34",
-   "Cut-off 1": "52.34",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Oolong's team",
-   "creado": "2026-10-25",
-   "puesto": "23",
-   "Score": "51.16",
-   "Cut-off 1": "51.16",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "K2 Nova's team",
-   "creado": "2026-10-14",
-   "puesto": "24",
-   "Score": "50.19",
-   "Cut-off 1": "50.19",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Out of Distribution",
-   "creado": "2026-10-23",
-   "puesto": "25",
-   "Score": "49.31",
-   "Cut-off 1": "49.31",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Gradient Depression",
-   "creado": "2026-10-24",
-   "puesto": "26",
-   "Score": "46.78",
-   "Cut-off 1": "46.78",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Attention Is All We Have",
-   "creado": "2026-10-23",
-   "puesto": "27",
-   "Score": "43.84",
-   "Cut-off 1": "43.84",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "TheREALPifteck's team",
-   "creado": "2026-10-22",
-   "puesto": "28",
-   "Score": "40.29",
-   "Cut-off 1": "40.29",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "ThatEpicCreeper's team",
-   "creado": "2026-10-13",
-   "puesto": "29",
-   "Score": "36.98",
-   "Cut-off 1": "36.98",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Spärk AI",
-   "creado": "2026-10-21",
-   "puesto": "30",
-   "Score": "32.33",
-   "Cut-off 1": "32.33",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Don't stop me now",
-   "creado": "2026-10-24",
-   "puesto": "31",
-   "Score": "32.06",
-   "Cut-off 1": "32.06",
-   "Cut-off 2": "—"
+   "puesto": "43",
+   "Score": "55.18",
+   "Cut-off 1": "—",
+   "Cut-off 2": "55.18"
   },
   {
    "equipo": "King of Workers",
    "creado": "2026-10-21",
-   "puesto": "32",
-   "Score": "31.77",
+   "puesto": "44",
+   "Score": "55.15",
    "Cut-off 1": "31.77",
-   "Cut-off 2": "—"
+   "Cut-off 2": "55.15"
+  },
+  {
+   "equipo": "One team",
+   "creado": "2026-10-11",
+   "puesto": "45",
+   "Score": "53.44",
+   "Cut-off 1": "53.44",
+   "Cut-off 2": "30.02"
+  },
+  {
+   "equipo": "Oolong's team",
+   "creado": "2026-10-25",
+   "puesto": "46",
+   "Score": "51.16",
+   "Cut-off 1": "51.16",
+   "Cut-off 2": "50.37"
+  },
+  {
+   "equipo": "Spärk AI",
+   "creado": "2026-10-21",
+   "puesto": "47",
+   "Score": "50.28",
+   "Cut-off 1": "32.33",
+   "Cut-off 2": "50.28"
+  },
+  {
+   "equipo": "K2 Nova's team",
+   "creado": "2026-10-14",
+   "puesto": "48",
+   "Score": "50.19",
+   "Cut-off 1": "50.19",
+   "Cut-off 2": "45.88"
   },
   {
    "equipo": "ROR",
    "creado": "2026-10-23",
-   "puesto": "33",
-   "Score": "31.68",
+   "puesto": "49",
+   "Score": "48.69",
    "Cut-off 1": "31.68",
-   "Cut-off 2": "—"
+   "Cut-off 2": "48.69"
   },
   {
-   "equipo": "The Raytirement Plan",
-   "creado": "2026-10-13",
-   "puesto": "34",
-   "Score": "31.01",
-   "Cut-off 1": "31.01",
-   "Cut-off 2": "—"
+   "equipo": "Don't stop me now",
+   "creado": "2026-10-24",
+   "puesto": "50",
+   "Score": "48.12",
+   "Cut-off 1": "32.06",
+   "Cut-off 2": "48.12"
+  },
+  {
+   "equipo": "Frappuccino",
+   "creado": "2026-10-22",
+   "puesto": "51",
+   "Score": "48.09",
+   "Cut-off 1": "—",
+   "Cut-off 2": "48.09"
   },
   {
    "equipo": "dataStream's team",
    "creado": "2026-09-30",
-   "puesto": "35",
-   "Score": "0.00",
+   "puesto": "52",
+   "Score": "45.25",
    "Cut-off 1": "0.00",
-   "Cut-off 2": "—"
+   "Cut-off 2": "45.25"
   },
   {
-   "equipo": "YuZheng's team",
+   "equipo": "R.A.P. conjecture",
+   "creado": "2026-10-22",
+   "puesto": "53",
+   "Score": "43.91",
+   "Cut-off 1": "—",
+   "Cut-off 2": "43.91"
+  },
+  {
+   "equipo": "Attention Is All We Have",
+   "creado": "2026-10-23",
+   "puesto": "54",
+   "Score": "43.84",
+   "Cut-off 1": "43.84",
+   "Cut-off 2": "31.09"
+  },
+  {
+   "equipo": "TheREALPifteck's team",
+   "creado": "2026-10-22",
+   "puesto": "55",
+   "Score": "40.29",
+   "Cut-off 1": "40.29",
+   "Cut-off 2": "0.00"
+  },
+  {
+   "equipo": "ZiyueF's team",
+   "creado": "2026-10-23",
+   "puesto": "56",
+   "Score": "37.88",
+   "Cut-off 1": "—",
+   "Cut-off 2": "37.88"
+  },
+  {
+   "equipo": "team 1",
+   "creado": "2026-10-19",
+   "puesto": "57",
+   "Score": "37.51",
+   "Cut-off 1": "—",
+   "Cut-off 2": "37.51"
+  },
+  {
+   "equipo": "ThatEpicCreeper's team",
    "creado": "2026-10-13",
-   "puesto": "35",
-   "Score": "0.00",
-   "Cut-off 1": "0.00",
-   "Cut-off 2": "—"
+   "puesto": "58",
+   "Score": "36.98",
+   "Cut-off 1": "36.98",
+   "Cut-off 2": "31.69"
   },
   {
-   "equipo": "Yy.'s team",
-   "creado": "2026-10-14",
-   "puesto": "35",
-   "Score": "0.00",
+   "equipo": "YahuiDuan's team",
+   "creado": "2026-10-25",
+   "puesto": "59",
+   "Score": "35.64",
+   "Cut-off 1": "—",
+   "Cut-off 2": "35.64"
+  },
+  {
+   "equipo": "kristy's team",
+   "creado": "2026-10-24",
+   "puesto": "60",
+   "Score": "35.30",
    "Cut-off 1": "0.00",
-   "Cut-off 2": "—"
+   "Cut-off 2": "35.30"
+  },
+  {
+   "equipo": "Foresight Agents",
+   "creado": "2026-10-13",
+   "puesto": "61",
+   "Score": "31.74",
+   "Cut-off 1": "—",
+   "Cut-off 2": "31.74"
   },
   {
    "equipo": "Jiawei_Wang's team",
    "creado": "2026-10-21",
-   "puesto": "35",
+   "puesto": "62",
+   "Score": "31.28",
+   "Cut-off 1": "0.00",
+   "Cut-off 2": "31.28"
+  },
+  {
+   "equipo": "The Raytirement Plan",
+   "creado": "2026-10-13",
+   "puesto": "63",
+   "Score": "31.08",
+   "Cut-off 1": "31.01",
+   "Cut-off 2": "31.08"
+  },
+  {
+   "equipo": "Craftman's team",
+   "creado": "2026-10-20",
+   "puesto": "64",
+   "Score": "29.88",
+   "Cut-off 1": "—",
+   "Cut-off 2": "29.88"
+  },
+  {
+   "equipo": "prardas's team",
+   "creado": "2026-10-14",
+   "puesto": "65",
+   "Score": "27.78",
+   "Cut-off 1": "—",
+   "Cut-off 2": "27.78"
+  },
+  {
+   "equipo": "wendoj's team",
+   "creado": "2026-09-30",
+   "puesto": "66",
+   "Score": "0.00",
+   "Cut-off 1": "—",
+   "Cut-off 2": "0.00"
+  },
+  {
+   "equipo": "christyww's team",
+   "creado": "2026-10-07",
+   "puesto": "66",
+   "Score": "0.00",
+   "Cut-off 1": "—",
+   "Cut-off 2": "0.00"
+  },
+  {
+   "equipo": "YuZheng's team",
+   "creado": "2026-10-13",
+   "puesto": "66",
    "Score": "0.00",
    "Cut-off 1": "0.00",
    "Cut-off 2": "—"
@@ -596,54 +836,22 @@
   {
    "equipo": "Winning team",
    "creado": "2026-10-23",
-   "puesto": "35",
+   "puesto": "66",
    "Score": "0.00",
    "Cut-off 1": "0.00",
    "Cut-off 2": "—"
   },
   {
-   "equipo": "kristy's team",
-   "creado": "2026-10-24",
-   "puesto": "35",
-   "Score": "0.00",
-   "Cut-off 1": "0.00",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Not Cheating",
-   "creado": "2026-09-21",
-   "puesto": "—",
+   "equipo": "Alexli's team",
+   "creado": "2026-10-25",
+   "puesto": "66",
    "Score": "0.00",
    "Cut-off 1": "—",
-   "Cut-off 2": "—"
+   "Cut-off 2": "0.00"
   },
   {
    "equipo": "shivareddy003's team",
    "creado": "2026-09-24",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "wendoj's team",
-   "creado": "2026-09-30",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Jon8652's team",
-   "creado": "2026-10-05",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "christyww's team",
-   "creado": "2026-10-07",
    "puesto": "—",
    "Score": "0.00",
    "Cut-off 1": "—",
@@ -674,30 +882,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Foresight Agents",
-   "creado": "2026-10-13",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "prardas's team",
-   "creado": "2026-10-14",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "JasonXu's team",
-   "creado": "2026-10-14",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "MAKE / BREAK",
    "creado": "2026-10-14",
    "puesto": "—",
@@ -714,14 +898,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Pranati Sattarapu's team",
-   "creado": "2026-10-15",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Miles Ahead",
    "creado": "2026-10-15",
    "puesto": "—",
@@ -731,14 +907,6 @@
   },
   {
    "equipo": "nmaatkazieva's team",
-   "creado": "2026-10-16",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Panic's team",
    "creado": "2026-10-16",
    "puesto": "—",
    "Score": "0.00",
@@ -762,23 +930,7 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "YanYing Tech",
-   "creado": "2026-10-17",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Yiblimac's team",
-   "creado": "2026-10-18",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "mxa2098's team",
    "creado": "2026-10-18",
    "puesto": "—",
    "Score": "0.00",
@@ -794,30 +946,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Simple",
-   "creado": "2026-10-19",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "team 1",
-   "creado": "2026-10-19",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Winner Winner Chicken Dinner",
-   "creado": "2026-10-20",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "ALKK's team",
    "creado": "2026-10-20",
    "puesto": "—",
@@ -826,39 +954,7 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Craftman's team",
-   "creado": "2026-10-20",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "bulentdayioglu's team",
-   "creado": "2026-10-21",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "nanva",
-   "creado": "2026-10-21",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "fins house",
-   "creado": "2026-10-21",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Janarthanan_Gnanamurthy's team",
    "creado": "2026-10-21",
    "puesto": "—",
    "Score": "0.00",
@@ -890,56 +986,8 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Frappuccino",
-   "creado": "2026-10-22",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "R.A.P. conjecture",
-   "creado": "2026-10-22",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "ILoveMahjong",
    "creado": "2026-10-22",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "hyeok9855's team",
-   "creado": "2026-10-22",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Siyu Hou's team",
-   "creado": "2026-10-23",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "ZiyueF's team",
-   "creado": "2026-10-23",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "TLL",
-   "creado": "2026-10-23",
    "puesto": "—",
    "Score": "0.00",
    "Cut-off 1": "—",
@@ -986,14 +1034,6 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "The Pem Queens",
-   "creado": "2026-10-24",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "Rawan's team",
    "creado": "2026-10-24",
    "puesto": "—",
@@ -1011,14 +1051,6 @@
   },
   {
    "equipo": "panther-0707's team",
-   "creado": "2026-10-25",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "Blank",
    "creado": "2026-10-25",
    "puesto": "—",
    "Score": "0.00",
@@ -1050,31 +1082,7 @@
    "Cut-off 2": "—"
   },
   {
-   "equipo": "Alexli's team",
-   "creado": "2026-10-25",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
    "equipo": "chkill",
-   "creado": "2026-10-25",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "YahuiDuan's team",
-   "creado": "2026-10-25",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "seankwong's team",
    "creado": "2026-10-25",
    "puesto": "—",
    "Score": "0.00",
@@ -1108,14 +1116,6 @@
   {
    "equipo": "Abdelrahman_Mohammed's team",
    "creado": "2026-10-24",
-   "puesto": "—",
-   "Score": "0.00",
-   "Cut-off 1": "—",
-   "Cut-off 2": "—"
-  },
-  {
-   "equipo": "ZZ Bond",
-   "creado": "2026-10-25",
    "puesto": "—",
    "Score": "0.00",
    "Cut-off 1": "—",
@@ -2108,32 +2108,32 @@
  ],
  "xianmuyingyue/careersim-bdci26-postmortem": {
   "sha": "9a0bfefac61daebf1cee6f6d8d45308719e6bd06",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "yuminran/careersim-bdci26": {
   "sha": "89d757d14f6fbd48f33b8e36a6f294f1930a55c5",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "smiledsg/careersim-bdci26": {
   "sha": "ce3497505f61c8306353f2a8e15256fdf21e9494",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "winfred666/careersim-bdci26": {
   "sha": "ba46dd419ca66ce531d77b7cdfe6c9b0a6a7972b",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "shafufudeliu/competitions-careersim-bdci26": {
   "sha": "e01cb02a53f7999a9ae50473dc8c39ee6a4d2724",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:46Z",
   "scores": []
  },
  "https://gitcode.com/openjiuwen/agent-store": {
   "sha": "14bbae3def808e7824b5cbd311f42caa5cf61b6c",
-  "visto": "2026-10-31T19:44Z",
+  "visto": "2026-11-01T10:47Z",
   "scores": []
  }
 }
