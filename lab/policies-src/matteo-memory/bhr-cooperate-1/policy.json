@@ -1,0 +1,15 @@
+{
+  "family": "matteo-memory",
+  "name": "bhr-cooperate-1",
+  "parents": [
+    "bhr-cooperate"
+  ],
+  "idea_origin": "Matteo (27 Oct): fix the problems of bhr-cooperate (Q 48.92 over 8; first review 6/8 with Network at ceiling 8/8, but 2 trust crises after unresolved HR warnings, 1 blackout, Output stuck low in L3, only 2/8 at L5). Quarterly lines adapted from Alejandro's T20 t10-countdown (validated obedience: HR remark by exclusion 18 -> 60 %, Skill at L4 14 -> 77 %, final month 70 -> 83 %).",
+  "operator": "targeted revision of bhr-cooperate",
+  "hypothesis": "Keeping 'engage, don't distance' for N = 1 but forbidding engagement that takes over others' work or buries risk, scoping it explicitly to N = 1, and adding first-match quarterly lines for Health, HR remark, L4 Skill and pre-review Output keeps first-review promotion near 6/8 while removing trust crises and blackouts and raising L5.",
+  "change": "bhr-cooperate plus: engage with words and brief help, not by taking over work; no covering, accepting others' blame or burying risk; explicit 'do not carry it into other months'; a first-match quarterly block (final month, Health 4 or less, non-mild HR remark -> Defuse + Lay low until mild, L4 -> Skill learning + rotation, review near and Output low -> Prepare report materials).",
+  "predicted_behaviour": "First review at least 3/4; no trust crisis or blackout in 4 games; at least 2/4 at L5.",
+  "refutation": "4 Haiku games with actor 017798b931bc18f8 (quota-limited). Reject if any trust crisis or blackout recurs together with first review at or below 2/4, or mean Q below BHR's 59.49 by more than its noise.",
+  "skill_count": 1,
+  "notes": "Branch matteo/main. Only 4 games by Matteo's request to save quota: anecdotal."
+}

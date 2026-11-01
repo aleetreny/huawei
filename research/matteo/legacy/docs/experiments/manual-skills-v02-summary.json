@@ -1,0 +1,60 @@
+{
+  "candidate": "v0.2-growth",
+  "candidate_commit": "d5a7a51",
+  "method": "One manual Codex-assisted run; no competition-model API calls or JiuwenSwarm execution.",
+  "actions": 199,
+  "completed_months": 48,
+  "score": 73.4,
+  "final_status": {
+    "health": 10,
+    "dignity": 10,
+    "skill": 128,
+    "network": 54,
+    "level": "L5",
+    "duration_in_level": 8,
+    "output": 35,
+    "wealth": 37,
+    "energy": 0
+  },
+  "wealth_in_ending_report": 37.5,
+  "promotions": [
+    {
+      "month": 6,
+      "level": "L2"
+    },
+    {
+      "month": 12,
+      "level": "L3"
+    },
+    {
+      "month": 24,
+      "level": "L4"
+    },
+    {
+      "month": 42,
+      "level": "L5"
+    }
+  ],
+  "review_grades": {
+    "6": "C",
+    "12": "B",
+    "18": "B",
+    "24": "B",
+    "30": "B",
+    "36": "A",
+    "42": "A",
+    "48": "B"
+  },
+  "skill_sha256": {
+    "career-quarterly-planning": "ac373ca0103639e1be5a3712d6224706f161c1b55b81184257ca7e0771a5636d",
+    "career-event-decisions": "37780d3d2b269961cd0b6457923a810bf3170fc625c1e94e515b6fa56159a74e",
+    "career-risk-review": "0ded50983d6d764daf41b7243bd0f1b23f7aa4df833c57d7a426a1eb8616f235"
+  },
+  "skills_unchanged_at_completion": true,
+  "ending_report": "Ending score (48-month completion, survived 48 months)\nQuantitative score: 73.4/100\n- Career level: 5 \u2192 50.0 (weight 30%, contribution 15.0)\n- Total wealth: 37.5 \u2192 46.9 (weight 20%, contribution 9.4)\n- Health & dignity: 20 \u2192 100.0 (weight 15%, contribution 15.0)\n- Professional skill: 128 \u2192 100.0 (weight 15%, contribution 15.0)\n- Risk control: 0 \u2192 100.0 (weight 10%, contribution 10.0)\n- Workplace network: 54 \u2192 90.0 (weight 10%, contribution 9.0)",
+  "limitations": [
+    "Single unpaired run, with different events and ongoing conversational context.",
+    "No causal estimate of Skill effects or hidden promotion requirements.",
+    "Explicit completion report overrides misleading terminal failed/alive flags."
+  ]
+}

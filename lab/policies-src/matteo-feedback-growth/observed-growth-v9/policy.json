@@ -1,0 +1,16 @@
+{
+  "family": "matteo-feedback-growth",
+  "name": "observed-growth-v9",
+  "parents": [
+    "observed-growth-v7",
+    "observed-growth-v8"
+  ],
+  "idea_origin": "v7 lost Network or Output before reviews through rigid refusals; v8's broad collaborative rule held Network (8/8 at the first review) but lost Output (4/8) and did worse than v7 by month 12 (5/8 vs 8/9 out of L1).",
+  "operator": "targeted revision of v7 using the v8 result",
+  "hypothesis": "A narrower rule (honest without rigidity, but never at the cost of one's own delivery), with Output taking precedence over gestures of help when it is below its best before a review, plus immediate repair, keeps v8's Network gain without its Output loss.",
+  "change": "v7 text with three story-choice lines added: honest without rigidity (brief or time-boxed help, raise privately, refuse only the improper part; flat refusal only if nothing else is honest); before a review, if Output is below best prefer delivering or showing a result over helping; repair a pre-review loss at once. Status line and allocation unchanged from v7.",
+  "predicted_behaviour": "At the first two reviews, Network and Output at the ceiling more often than v7 and v8; out of L1 by month 12 at least v7's 8/9.",
+  "refutation": "Run 8 Haiku episodes to the month-12 review with the same actor. Reject if fewer than v7's share leave L1 by month 12, or if Output at the ceiling at the first review is no better than v8 (4/8).",
+  "skill_count": 1,
+  "notes": "Branch matteo/observed-growth-v9. Tested to month 12 only, at Matteo's request."
+}

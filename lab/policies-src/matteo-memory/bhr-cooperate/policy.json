@@ -1,0 +1,15 @@
+{
+  "family": "matteo-memory",
+  "name": "bhr-cooperate",
+  "parents": [
+    "bhr"
+  ],
+  "idea_origin": "Matteo (27 Oct): bhr-countdown failed (first review 2/8 vs BHR 4/8): Haiku wrote the countdown and option marks but mis-marked costs. In the month-5 choices of the BHR and bhr-countdown games, every Network loss came from distancing options (refuse, stay quiet, stick to own work, write only own part, firm rebuke, set out who owned what, harsh fair grade); the one Output loss from postponing own work.",
+  "operator": "targeted revision of bhr (replaces bhr-countdown, deleted)",
+  "hypothesis": "Keeping the countdown switch but replacing the hidden-cost checklist with a visible-feature rule (engage with the person, never distance; do not postpone own work) cuts Network losses in the month before a review and raises first-review promotion above BHR's 4/8.",
+  "change": "BHR plus: 'Review in N' at the start of every note; for N = 1 only, choose options that engage with people and keep them on side, never distancing ones; do not postpone own deliverable; honesty limits; Health guard. Manifest instruction filled in.",
+  "predicted_behaviour": "In N = 1 months notes name the engaging option; Network at the first review mostly at its ceiling; first-review promotion at least 6/8; no blackouts.",
+  "refutation": "8 Haiku games with actor 017798b931bc18f8, stopped after the first review unless promising. Reject if first-review promotion is not above 4/8 or blackouts or trust crises rise.",
+  "skill_count": 1,
+  "notes": "Branch matteo/main. Inline in SKILL.md. bhr-countdown removed from the repo; its games stay in the registry (policy f1519df2f6601d3f)."
+}
