@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-28",
+  "meaning": "Read public tree metadata only. Inspect Skill helpers separately from official runner/engine and setup code; executable extension alone proves no technique or score.",
+  "repos": [
+    {
+      "repo": "Kingjinsight/TechArena-UK-2026",
+      "tree_sha": "3494933b2b793b73d13deea431a660fa74faf499",
+      "truncated": false,
+      "all_files": 7,
+      "runner_docs_tests_count": 0,
+      "candidate_helpers": []
+    },
+    {
+      "repo": "ShriyaSaxena/techarena-career-simu",
+      "tree_sha": "22cd4a1d788f40a6e722af15c78bffd7ee18779b",
+      "truncated": false,
+      "all_files": 106,
+      "runner_docs_tests_count": 36,
+      "candidate_helpers": []
+    },
+    {
+      "repo": "YuLong111/techarena-career-sim",
+      "tree_sha": "2541b8041bb2ad4be98ed6333696a49c8b319455",
+      "truncated": false,
+      "all_files": 96,
+      "runner_docs_tests_count": 36,
+      "candidate_helpers": []
+    },
+    {
+      "repo": "krsnkkv/KSL_TechArena",
+      "tree_sha": "1c28e60fc48a37ab17e69880fbc5d0af18062874",
+      "truncated": false,
+      "all_files": 106,
+      "runner_docs_tests_count": 36,
+      "candidate_helpers": []
+    },
+    {
+      "repo": "Artepace/slopathone_winningteam",
+      "tree_sha": "3151064933fb1b21b17d79e077d0eaea4b5d521b",
+      "truncated": false,
+      "all_files": 88,
+      "runner_docs_tests_count": 36,
+      "candidate_helpers": []
+    },
+    {
+      "repo": "peidi-L/preliminary",
+      "tree_sha": "00b0e745b7161a9eebd8784732163b18ac842acc",
+      "truncated": false,
+      "all_files": 4,
+      "runner_docs_tests_count": 0,
+      "candidate_helpers": []
+    }
+  ]
+}

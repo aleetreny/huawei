@@ -1,0 +1,1135 @@
+{
+  "meaning": "Correction of audit attribution only: actual public action logs replace stale prior quarterly menus. Original native-quarter-replay.json retained. Fixed actual story path/choices, no future stories in quarter ranking, no whole-agent Q inference. Alternative arms interpreted only if actual baseline reproduces outcome and Q within half a point.",
+  "script_sha256": "970c2ad531a93bbc0370c703ebf3c126f7c80225f6ffe722032a02fba0573f80",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "games": [
+    {
+      "game": "game-1",
+      "actual_Q": 66.86,
+      "fidelity": false,
+      "public_log_action_pairings": 197,
+      "stale_menu_quarter_attributions_repaired": 0,
+      "arms": {
+        "replay_actual": [
+          {
+            "Q": 65.71,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 104.0,
+            "network": 38.0,
+            "output": 30.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 33.5,
+            "risk": 2,
+            "blowups": 0,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 48,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 10,
+              "Network maintenance": 6,
+              "Apply for a key project": 13,
+              "Health recovery": 9,
+              "Defuse legacy risk": 7,
+              "Report results to your manager": 3,
+              "High-intensity work": 4,
+              "Mental recovery": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 65.93,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 104.0,
+            "network": 38.0,
+            "output": 30.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 34.4,
+            "risk": 2,
+            "blowups": 0,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 48,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 10,
+              "Network maintenance": 6,
+              "Apply for a key project": 13,
+              "Health recovery": 9,
+              "Defuse legacy risk": 7,
+              "Report results to your manager": 3,
+              "High-intensity work": 4,
+              "Mental recovery": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "observed_quarter": [
+          {
+            "Q": 64.34,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 109.0,
+            "network": 52.0,
+            "output": 38,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 32.2,
+            "risk": 1,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 30,
+              "Build a mentorship": 3,
+              "Health recovery": 4,
+              "Network maintenance": 4,
+              "Apply for rotation": 4,
+              "Apply for a key project": 8,
+              "Defuse legacy risk": 3,
+              "Skill learning": 2,
+              "Lay low and reduce risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 64.57,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 109.0,
+            "network": 52.0,
+            "output": 38,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 33.1,
+            "risk": 1,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 30,
+              "Build a mentorship": 3,
+              "Health recovery": 4,
+              "Network maintenance": 4,
+              "Apply for rotation": 4,
+              "Apply for a key project": 8,
+              "Defuse legacy risk": 3,
+              "Skill learning": 2,
+              "Lay low and reduce risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "main_aware_quarter": [
+          {
+            "Q": 64.17,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 113.0,
+            "network": 54.0,
+            "output": 38,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 32.2,
+            "risk": 2,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 28,
+              "Build a mentorship": 2,
+              "Health recovery": 5,
+              "Apply for rotation": 6,
+              "Apply for a key project": 8,
+              "Network maintenance": 4,
+              "Defuse legacy risk": 3,
+              "Skill learning": 2
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 64.4,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 113.0,
+            "network": 54.0,
+            "output": 38,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 33.1,
+            "risk": 2,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 28,
+              "Build a mentorship": 2,
+              "Health recovery": 5,
+              "Apply for rotation": 6,
+              "Apply for a key project": 8,
+              "Network maintenance": 4,
+              "Defuse legacy risk": 3,
+              "Skill learning": 2
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "calm_quarter": [
+          {
+            "Q": 66.42,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 109.0,
+            "network": 37.0,
+            "output": 28.0,
+            "health": 9.0,
+            "dignity": 10,
+            "wealth": 33.5,
+            "risk": 1,
+            "blowups": 0,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 48,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 22,
+              "Build a mentorship": 4,
+              "Health recovery": 4,
+              "Defuse legacy risk": 5,
+              "Network maintenance": 4,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 5,
+              "Skill learning": 4,
+              "Apply for rotation": 4
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 66.64,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 109.0,
+            "network": 37.0,
+            "output": 28.0,
+            "health": 9.0,
+            "dignity": 10,
+            "wealth": 34.4,
+            "risk": 1,
+            "blowups": 0,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 18,
+                "level": 3
+              },
+              {
+                "month": 24,
+                "level": 4
+              },
+              {
+                "month": 48,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 22,
+              "Build a mentorship": 4,
+              "Health recovery": 4,
+              "Defuse legacy risk": 5,
+              "Network maintenance": 4,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 5,
+              "Skill learning": 4,
+              "Apply for rotation": 4
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ]
+      },
+      "result_sha256": "f93bc06bd708989af840d0b36e1f584f1bfa5f36dffd3fb585a106ea9e27eb80"
+    },
+    {
+      "game": "game-2",
+      "actual_Q": 18.23,
+      "fidelity": true,
+      "public_log_action_pairings": 96,
+      "stale_menu_quarter_attributions_repaired": 0,
+      "arms": {
+        "replay_actual": [
+          {
+            "Q": 18.08,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 4.5,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Network maintenance": 8,
+              "Prepare report materials": 6,
+              "Apply for a key project": 5,
+              "Health recovery": 4,
+              "Report results to your manager": 1,
+              "Defuse legacy risk": 1,
+              "Mental recovery": 1,
+              "Repair a key relationship": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 18.31,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 5.4,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Network maintenance": 8,
+              "Prepare report materials": 6,
+              "Apply for a key project": 5,
+              "Health recovery": 4,
+              "Report results to your manager": 1,
+              "Defuse legacy risk": 1,
+              "Mental recovery": 1,
+              "Repair a key relationship": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "observed_quarter": [
+          {
+            "Q": 18.08,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 4.5,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 5,
+              "Network maintenance": 5,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 3,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 18.31,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 5.4,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 5,
+              "Network maintenance": 5,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 3,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "main_aware_quarter": [
+          {
+            "Q": 18.08,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 4.5,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 5,
+              "Network maintenance": 5,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 3,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 18.31,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 5.4,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 5,
+              "Network maintenance": 5,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 3,
+              "Apply for a key project": 3,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "calm_quarter": [
+          {
+            "Q": 18.08,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 4.5,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 6,
+              "Network maintenance": 4,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 4,
+              "Apply for a key project": 2,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 18.31,
+            "completed": false,
+            "alive": false,
+            "failure": "dismissed",
+            "month": 24,
+            "level": 1,
+            "skill": 9,
+            "network": 2,
+            "output": 3,
+            "health": 9,
+            "dignity": 5,
+            "wealth": 5.4,
+            "risk": 3,
+            "blowups": 1,
+            "promotions": [],
+            "actions": {
+              "Prepare report materials": 6,
+              "Network maintenance": 4,
+              "Health recovery": 3,
+              "Apply for rotation": 1,
+              "Skill learning": 1,
+              "Lay low and reduce risk": 4,
+              "Apply for a key project": 2,
+              "Defuse legacy risk": 3
+            },
+            "censored_original_path": false,
+            "learned": {
+              "output": 3,
+              "network": 3,
+              "skill": 9
+            },
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ]
+      },
+      "result_sha256": "2094493e6565fdce855958e88265391b1dfbd16c8962185f22844c91730e105f"
+    },
+    {
+      "game": "game-3",
+      "actual_Q": 64.15,
+      "fidelity": true,
+      "public_log_action_pairings": 196,
+      "stale_menu_quarter_attributions_repaired": 0,
+      "arms": {
+        "replay_actual": [
+          {
+            "Q": 63.83,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 127.0,
+            "network": 48.0,
+            "output": 37.0,
+            "health": 9,
+            "dignity": 10,
+            "wealth": 30.3,
+            "risk": 1,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 10,
+              "Network maintenance": 5,
+              "Health recovery": 8,
+              "Apply for a key project": 12,
+              "Defuse legacy risk": 10,
+              "High-intensity work": 2,
+              "Mental recovery": 1,
+              "Lay low and reduce risk": 2,
+              "Report results to your manager": 1,
+              "Showcase results": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 64.05,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 5,
+            "skill": 127.0,
+            "network": 48.0,
+            "output": 37.0,
+            "health": 9,
+            "dignity": 10,
+            "wealth": 31.2,
+            "risk": 1,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 42,
+                "level": 5
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 10,
+              "Network maintenance": 5,
+              "Health recovery": 8,
+              "Apply for a key project": 12,
+              "Defuse legacy risk": 10,
+              "High-intensity work": 2,
+              "Mental recovery": 1,
+              "Lay low and reduce risk": 2,
+              "Report results to your manager": 1,
+              "Showcase results": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "observed_quarter": [
+          {
+            "Q": 70.47,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 140.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 31.9,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 26,
+              "Apply for a key project": 7,
+              "Health recovery": 3,
+              "Build a mentorship": 3,
+              "Network maintenance": 10,
+              "Apply for rotation": 6,
+              "Skill learning": 3,
+              "Defuse legacy risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 70.7,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 140.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 32.8,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 26,
+              "Apply for a key project": 7,
+              "Health recovery": 3,
+              "Build a mentorship": 3,
+              "Network maintenance": 10,
+              "Apply for rotation": 6,
+              "Skill learning": 3,
+              "Defuse legacy risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "main_aware_quarter": [
+          {
+            "Q": 70.47,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 140.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 31.9,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 25,
+              "Apply for a key project": 7,
+              "Health recovery": 4,
+              "Apply for rotation": 7,
+              "Network maintenance": 10,
+              "Build a mentorship": 2,
+              "Skill learning": 3,
+              "Defuse legacy risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 70.7,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 140.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 32.8,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 25,
+              "Apply for a key project": 7,
+              "Health recovery": 4,
+              "Apply for rotation": 7,
+              "Network maintenance": 10,
+              "Build a mentorship": 2,
+              "Skill learning": 3,
+              "Defuse legacy risk": 1
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ],
+        "calm_quarter": [
+          {
+            "Q": 70.3,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 137.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 31.2,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 25,
+              "Apply for a key project": 8,
+              "Health recovery": 3,
+              "Lay low and reduce risk": 2,
+              "Network maintenance": 10,
+              "Defuse legacy risk": 2,
+              "Build a mentorship": 2,
+              "Skill learning": 3,
+              "Apply for rotation": 4
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          },
+          {
+            "Q": 70.53,
+            "completed": true,
+            "alive": true,
+            "failure": null,
+            "month": 49,
+            "level": 6,
+            "skill": 137.0,
+            "network": 57.0,
+            "output": 36.0,
+            "health": 10,
+            "dignity": 10,
+            "wealth": 32.1,
+            "risk": 0,
+            "blowups": 1,
+            "promotions": [
+              {
+                "month": 6,
+                "level": 2
+              },
+              {
+                "month": 12,
+                "level": 3
+              },
+              {
+                "month": 18,
+                "level": 4
+              },
+              {
+                "month": 36,
+                "level": 5
+              },
+              {
+                "month": 48,
+                "level": 6
+              }
+            ],
+            "actions": {
+              "Prepare report materials": 25,
+              "Apply for a key project": 8,
+              "Health recovery": 3,
+              "Lay low and reduce risk": 2,
+              "Network maintenance": 10,
+              "Defuse legacy risk": 2,
+              "Build a mentorship": 2,
+              "Skill learning": 3,
+              "Apply for rotation": 4
+            },
+            "censored_original_path": false,
+            "learned": {},
+            "proposal_switches": 0,
+            "branching_guard_exclusions": 0
+          }
+        ]
+      },
+      "result_sha256": "ab145373e99332bba12d6ecd0713d09588474363d7d3a0ec89ad80c01e66e03e"
+    }
+  ]
+}

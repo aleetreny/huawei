@@ -1,0 +1,101 @@
+{
+  "meaning": "Current installed public helper only. OpenRouter hostname is unrecognized by this injector even with unprefixed model. Does not prove the full live request, provider default, or historical model reasoning mode. Official-host positive control verifies injection. No API/client/env accessed.",
+  "source_sha256": {
+    "reasoning_config": "9728efd710da2ce16c7093dd2e46f5e527cc81fe81aac754eea084ce9e509672",
+    "reasoning_injector": "b6cc284101d0eb3e535b5038cd4ff6e5db2037b30b1c9bc83ab5918b784835c6"
+  },
+  "rows": [
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek/deepseek-v4-flash",
+      "requested_internal_level": null,
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek/deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek/deepseek-v4-flash",
+      "requested_internal_level": "off",
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek/deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek/deepseek-v4-flash",
+      "requested_internal_level": "high",
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek/deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": null,
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": "off",
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://openrouter.ai/api/v1",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": "high",
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": null,
+      "kwargs": {
+        "temperature": 0.95,
+        "model": "deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": "off",
+      "kwargs": {
+        "temperature": 0.95,
+        "extra_body": {
+          "thinking": {
+            "type": "disabled"
+          }
+        },
+        "model": "deepseek-v4-flash"
+      }
+    },
+    {
+      "base": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash",
+      "requested_internal_level": "high",
+      "kwargs": {
+        "temperature": 0.95,
+        "extra_body": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "reasoning_effort": "high",
+        "model": "deepseek-v4-flash"
+      }
+    }
+  ]
+}

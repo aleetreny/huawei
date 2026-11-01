@@ -1,0 +1,13 @@
+{
+  "n": 600,
+  "seed": 2026302900,
+  "arms": [
+    "quarter_learning",
+    "quarter_plus_logged_story_returns"
+  ],
+  "labels_sha256": [
+    "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+    "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+  ],
+  "scope": "Chosen nominal visible effects revealed only at the next decision after action committed, simulating public logged feedback. Never unseen alternatives or true caps supplied. Same controller/readings; single-action month/role guard in MeasuredLedger. Replica mechanism screen, not live efficacy or DS prediction."
+}

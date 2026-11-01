@@ -1,0 +1,137 @@
+{
+  "meaning": "Posthoc bottleneck attribution on saved replies, not a new rule, efficacy trial or proposal to use gold. Only numeric IDs/flags, no narrative.",
+  "rows": [
+    {
+      "id": "71bf09449bbc296b",
+      "month": 5,
+      "original": 1,
+      "recommendation": 1,
+      "gate": 1,
+      "original_true_growth_loss": true,
+      "original_flag_triggers": [],
+      "true_safe_options": [
+        2
+      ],
+      "safe_option_flags": {
+        "2": {
+          "time_diversion": "no",
+          "relationship_rupture": "unclear",
+          "unresolved_issue": "unclear",
+          "personal_payment": "no"
+        }
+      },
+      "recommended_flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "no",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "gate_added_risk": false,
+      "recommended_passes_text_gate": true
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "month": 5,
+      "original": 1,
+      "recommendation": 3,
+      "gate": 3,
+      "original_true_growth_loss": false,
+      "original_flag_triggers": [
+        "relationship_rupture"
+      ],
+      "true_safe_options": [
+        1
+      ],
+      "safe_option_flags": {
+        "1": {
+          "time_diversion": "no",
+          "relationship_rupture": "yes",
+          "unresolved_issue": "no",
+          "personal_payment": "no"
+        }
+      },
+      "recommended_flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "no",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "gate_added_risk": true,
+      "recommended_passes_text_gate": true
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "month": 11,
+      "original": 2,
+      "recommendation": 1,
+      "gate": 2,
+      "original_true_growth_loss": true,
+      "original_flag_triggers": [],
+      "true_safe_options": [
+        3
+      ],
+      "safe_option_flags": {
+        "3": {
+          "time_diversion": "no",
+          "relationship_rupture": "unclear",
+          "unresolved_issue": "unclear",
+          "personal_payment": "no"
+        }
+      },
+      "recommended_flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "no",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "gate_added_risk": false,
+      "recommended_passes_text_gate": true
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "month": 29,
+      "original": 2,
+      "recommendation": 1,
+      "gate": 1,
+      "original_true_growth_loss": false,
+      "original_flag_triggers": [
+        "time_diversion",
+        "relationship_rupture"
+      ],
+      "true_safe_options": [
+        1,
+        2,
+        3
+      ],
+      "safe_option_flags": {
+        "1": {
+          "time_diversion": "no",
+          "relationship_rupture": "no",
+          "unresolved_issue": "no",
+          "personal_payment": "no"
+        },
+        "2": {
+          "time_diversion": "yes",
+          "relationship_rupture": "yes",
+          "unresolved_issue": "unclear",
+          "personal_payment": "no"
+        },
+        "3": {
+          "time_diversion": "no",
+          "relationship_rupture": "no",
+          "unresolved_issue": "unclear",
+          "personal_payment": "no"
+        }
+      },
+      "recommended_flags": {
+        "time_diversion": "no",
+        "relationship_rupture": "no",
+        "unresolved_issue": "no",
+        "personal_payment": "no"
+      },
+      "gate_added_risk": false,
+      "recommended_passes_text_gate": true
+    }
+  ],
+  "script_sha256": "52db304e353d81979873849cd186c4ea865bac59008fc6d9d0c654bb66bd3b5a"
+}

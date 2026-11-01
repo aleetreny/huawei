@@ -1,0 +1,37 @@
+{
+  "n": 1,
+  "candidate": "t13-read-v4 unchanged",
+  "actor": {
+    "kind": "claude-cli",
+    "model": "sonnet",
+    "effort": null,
+    "skills_mode": "official",
+    "autocompact": null,
+    "max_continues": 3,
+    "timeout_s": 1800,
+    "cli_version": "2.1.303 (Claude Code)",
+    "prompts": "official-runner@00b084a8",
+    "tools": [
+      "mcp__career-emulator-engine__new_game",
+      "mcp__career-emulator-engine__observe",
+      "mcp__career-emulator-engine__take_action",
+      "mcp__career-emulator-engine__check_latest_logs",
+      "mcp__career-emulator-engine__show_employee_handbook"
+    ],
+    "isolation": "--setting-sources '' --strict-mcp-config --tools '' (or Skill) --no-session-persistence; scrubbed env",
+    "game_server": "per-episode stdio, --competition, fresh CAREER_EMULATOR_DB, official engine env"
+  },
+  "bundle_sha256": {
+    "manifest.json": "2b9605b80757955d992eb3d67e563271b545a030d9e18c6f5a9a8f57a209355d",
+    "skills/career-rules/SKILL.md": "ef8962852f0034a4bdda580f88f1626850e2329c456f0f0a1e61963d0c10f819"
+  },
+  "script_sha256": "e6b088b9aea69eb2a25ebd1cd0e4a5aae54ae4f40433f6d59d92205994140c60",
+  "rationale": "Existential capacity reference only, not a powered difference/consistency trial. Twelve matched menus show one fewer avoidable pre-review growth loss, same risk count. Test whether a full career with the stronger reader exposes a different failure. No retry or outcome replacement. No claim of DS transfer.",
+  "admission_limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "require_weekly_headroom_start_at_most": 0.4,
+    "max_claude_processes": 4
+  },
+  "scope": "Official game tools, isolated per-career server, CLI Skill-delivery emulation. Does not emulate all 52 Jiuwen tools. No new DS API. Do not interrupt a launched game for a weak score or a budget snapshot; no following game scheduled."
+}

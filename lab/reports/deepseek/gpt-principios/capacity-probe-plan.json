@@ -1,0 +1,78 @@
+{
+  "n_items": 12,
+  "n_calls_max": 25,
+  "models": [
+    "haiku",
+    "sonnet"
+  ],
+  "source_sha256": {
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g1/output/events-20261027T195612Z.jsonl": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv1-g2/output/events-20261027T200001Z.jsonl": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g1/output/events-20261027T210457Z.jsonl": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g2/output/events-20261027T210347Z.jsonl": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+    "/Users/alejandrotreny/careerlab-data/formato/runs/sv3-g3/output/events-20261027T210235Z.jsonl": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8"
+  },
+  "items_sha256": "c5bf276daeeb0a5ec1e010b2030de159e2f0eed5ce63ca621f70d3ffa1e50ac7",
+  "seed": 2026102809,
+  "selection": [
+    {
+      "id": "296dab11327d",
+      "pre_review": false
+    },
+    {
+      "id": "d0e4a10f3649",
+      "pre_review": true
+    },
+    {
+      "id": "2eacb385fd54",
+      "pre_review": true
+    },
+    {
+      "id": "872c2542242f",
+      "pre_review": false
+    },
+    {
+      "id": "6b61efeefb32",
+      "pre_review": false
+    },
+    {
+      "id": "0adf8ea56cf9",
+      "pre_review": true
+    },
+    {
+      "id": "944fa5bf9273",
+      "pre_review": false
+    },
+    {
+      "id": "fbbc5dc173d9",
+      "pre_review": true
+    },
+    {
+      "id": "1a36d76efe7f",
+      "pre_review": true
+    },
+    {
+      "id": "c0119ebd042a",
+      "pre_review": false
+    },
+    {
+      "id": "275f67d8928c",
+      "pre_review": false
+    },
+    {
+      "id": "e79bb72a3d10",
+      "pre_review": true
+    }
+  ],
+  "bundle_files_sha256": {
+    "manifest.json": "2b9605b80757955d992eb3d67e563271b545a030d9e18c6f5a9a8f57a209355d",
+    "skills/career-rules/SKILL.md": "ef8962852f0034a4bdda580f88f1626850e2329c456f0f0a1e61963d0c10f819"
+  },
+  "meaning": "Capacity diagnostic, 12 L1 menus balanced by public pre-review timing, selected without effect labels. Both models fresh same Skill/current panel, no prior logs supplied. Not a full career, score or claim of DS transfer. Never promote from n12 alone.",
+  "limits": {
+    "five_hour": 0.65,
+    "seven_day": 0.45,
+    "max_claude_processes": 4,
+    "concurrency": 1
+  }
+}

@@ -1,0 +1,708 @@
+{
+  "meaning": "Public before/after evidence from the player; exact catalog predictions only research diagnostics. Month/level transitions and multiple actions excluded from isolated-delta checks. Direct-effect comparison does not simulate explosions or startup cap exceptions. No next-action causal claim from last pre-action panel. Running streams provisional.",
+  "script_sha256": "b5aa437aef73d30e115ba2044ada03015527a1f8a1593e786e32ca12ce173eb0",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "games": [
+    {
+      "game": "game-1",
+      "outcome": "completed",
+      "Q": 66.86,
+      "counts": {
+        "actions": 198,
+        "accepted": 198,
+        "isolated_observed_deltas": 150,
+        "stories": 145,
+        "catalog_matched_stories": 144,
+        "catalog_positive_risk": 16,
+        "catalog_growth_loss": 31,
+        "catalog_pre_review_growth_loss": 6,
+        "isolated_story_direct_predictions": 112,
+        "isolated_story_all_direct_visible_match": 111,
+        "isolated_visible_energy_investments": 30,
+        "energy_spent_no_positive_visible_return": 7
+      },
+      "review_gates_reconstructed": [
+        {
+          "review_month": 6,
+          "old_level": 1,
+          "observed_after_level": 2,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 1,
+            "output": 3
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 3.0,
+            "output": 3
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 12,
+          "old_level": 2,
+          "observed_after_level": 2,
+          "last_action_before_growth": {
+            "skill": 21,
+            "network": 6,
+            "output": 4
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 21,
+            "network": 6,
+            "output": 3.0
+          },
+          "predicted_below_private_growth_gate": [
+            "output"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 18,
+          "old_level": 2,
+          "observed_after_level": 3,
+          "last_action_before_growth": {
+            "skill": 21,
+            "network": 7,
+            "output": 6
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 21,
+            "network": 7,
+            "output": 6
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 24,
+          "old_level": 3,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 37,
+            "network": 21,
+            "output": 16
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 37,
+            "network": 21,
+            "output": 16
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 30,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 53,
+            "network": 30,
+            "output": 25
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 52.0,
+            "network": 32.0,
+            "output": 24.0
+          },
+          "predicted_below_private_growth_gate": [
+            "skill"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 36,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 66,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 66,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_below_private_growth_gate": [
+            "skill"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 42,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 84,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 85.0,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_below_private_growth_gate": [
+            "skill"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 48,
+          "old_level": 4,
+          "observed_after_level": 5,
+          "last_action_before_growth": {
+            "skill": 102,
+            "network": 36,
+            "output": 25
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 103.0,
+            "network": 36,
+            "output": 25
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        }
+      ],
+      "blowup_months_observed_in_player_logs": [],
+      "hr_by_month_observed": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 3,
+        "7": 3,
+        "8": 1,
+        "9": 1,
+        "10": 2,
+        "11": 3,
+        "12": 2,
+        "13": 2,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 0,
+        "18": 1,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 1,
+        "26": 1,
+        "27": 0,
+        "28": 0,
+        "29": 1,
+        "30": 2,
+        "31": 2,
+        "32": 2,
+        "33": 1,
+        "34": 1,
+        "35": 0,
+        "36": 1,
+        "37": 1,
+        "38": 0,
+        "39": 0,
+        "40": 0,
+        "41": 0,
+        "42": 1,
+        "43": 0,
+        "44": 0,
+        "45": 1,
+        "46": 0,
+        "47": 0,
+        "48": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 3,
+        "8": 3,
+        "9": 1,
+        "10": 1,
+        "11": 2,
+        "12": 3,
+        "13": 2,
+        "14": 2,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 0,
+        "19": 1,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 1,
+        "27": 1,
+        "28": 0,
+        "29": 0,
+        "30": 1,
+        "31": 2,
+        "32": 2,
+        "33": 2,
+        "34": 1,
+        "35": 1,
+        "36": 0,
+        "37": 1,
+        "38": 1,
+        "39": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 1,
+        "44": 0,
+        "45": 0,
+        "46": 1,
+        "47": 0,
+        "48": 0
+      },
+      "streams": [
+        {
+          "file": "stream-0.jsonl",
+          "sha256": "dd587ba4075ac971e91e61933573c0368d49164a52921fe5a49b6e8f71c0a02c"
+        }
+      ]
+    },
+    {
+      "game": "game-2",
+      "outcome": "eliminated",
+      "Q": 18.23,
+      "counts": {
+        "actions": 97,
+        "accepted": 97,
+        "isolated_observed_deltas": 74,
+        "stories": 70,
+        "catalog_matched_stories": 69,
+        "catalog_positive_risk": 10,
+        "catalog_growth_loss": 19,
+        "catalog_pre_review_growth_loss": 3,
+        "isolated_story_direct_predictions": 53,
+        "isolated_story_all_direct_visible_match": 51,
+        "isolated_visible_energy_investments": 19,
+        "energy_spent_no_positive_visible_return": 6
+      },
+      "review_gates_reconstructed": [
+        {
+          "review_month": 6,
+          "old_level": 1,
+          "observed_after_level": 1,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 2.0,
+            "output": 3
+          },
+          "predicted_below_private_growth_gate": [
+            "network"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 12,
+          "old_level": 1,
+          "observed_after_level": 1,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 2
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 2.0
+          },
+          "predicted_below_private_growth_gate": [
+            "output"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 18,
+          "old_level": 1,
+          "observed_after_level": 1,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 24,
+          "old_level": 1,
+          "observed_after_level": 1,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        }
+      ],
+      "blowup_months_observed_in_player_logs": [
+        17
+      ],
+      "hr_by_month_observed": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 2,
+        "12": 0,
+        "13": 1,
+        "14": 3,
+        "15": 3,
+        "16": 3,
+        "17": 4,
+        "18": 2,
+        "19": 3,
+        "20": 2,
+        "21": 0,
+        "22": 2,
+        "23": 3,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 2,
+        "13": 0,
+        "14": 1,
+        "15": 3,
+        "16": 3,
+        "17": 3,
+        "18": 4,
+        "19": 2,
+        "20": 3,
+        "21": 2,
+        "22": 0,
+        "23": 2
+      },
+      "streams": [
+        {
+          "file": "stream-0.jsonl",
+          "sha256": "2153584f6103dd83acbec80d23c969f266f162aa6e3628e7ee529aea3259e160"
+        }
+      ]
+    },
+    {
+      "game": "game-3",
+      "outcome": "completed",
+      "Q": 64.15,
+      "counts": {
+        "actions": 197,
+        "accepted": 197,
+        "isolated_observed_deltas": 113,
+        "stories": 145,
+        "catalog_matched_stories": 144,
+        "catalog_positive_risk": 18,
+        "catalog_growth_loss": 29,
+        "catalog_pre_review_growth_loss": 5,
+        "isolated_story_direct_predictions": 112,
+        "isolated_story_all_direct_visible_match": 111
+      },
+      "review_gates_reconstructed": [
+        {
+          "review_month": 6,
+          "old_level": 1,
+          "observed_after_level": 2,
+          "last_action_before_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 9,
+            "network": 3,
+            "output": 3
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 12,
+          "old_level": 2,
+          "observed_after_level": 3,
+          "last_action_before_growth": {
+            "skill": 21,
+            "network": 7,
+            "output": 6
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 21,
+            "network": 7,
+            "output": 6
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 18,
+          "old_level": 3,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 38,
+            "network": 21,
+            "output": 14
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 38,
+            "network": 21,
+            "output": 15.0
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 24,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 56,
+            "network": 30,
+            "output": 26
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 56,
+            "network": 29.0,
+            "output": 26
+          },
+          "predicted_below_private_growth_gate": [
+            "skill",
+            "network"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 30,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 75,
+            "network": 36,
+            "output": 23
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 76.0,
+            "network": 36,
+            "output": 23
+          },
+          "predicted_below_private_growth_gate": [
+            "skill"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 36,
+          "old_level": 4,
+          "observed_after_level": 4,
+          "last_action_before_growth": {
+            "skill": 88,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 88,
+            "network": 36,
+            "output": 25.0
+          },
+          "predicted_below_private_growth_gate": [
+            "skill"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 42,
+          "old_level": 4,
+          "observed_after_level": 5,
+          "last_action_before_growth": {
+            "skill": 105,
+            "network": 36,
+            "output": 26
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 105,
+            "network": 34.0,
+            "output": 26.0
+          },
+          "predicted_below_private_growth_gate": [],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        },
+        {
+          "review_month": 48,
+          "old_level": 5,
+          "observed_after_level": 5,
+          "last_action_before_growth": {
+            "skill": 121,
+            "network": 43,
+            "output": 32
+          },
+          "predicted_after_last_action_growth": {
+            "skill": 121,
+            "network": 44.0,
+            "output": 32
+          },
+          "predicted_below_private_growth_gate": [
+            "skill",
+            "network"
+          ],
+          "meaning": "Replica-derived after actual chosen last event, not a directly observed pre-review state; private gate only for research, no causal counterfactual."
+        }
+      ],
+      "blowup_months_observed_in_player_logs": [
+        36
+      ],
+      "hr_by_month_observed": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 1,
+        "21": 1,
+        "22": 0,
+        "23": 0,
+        "24": 1,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0,
+        "31": 1,
+        "32": 0,
+        "33": 2,
+        "34": 2,
+        "35": 4,
+        "36": 0,
+        "37": 2,
+        "38": 1,
+        "39": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 1,
+        "46": 0,
+        "47": 0,
+        "48": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 1,
+        "22": 1,
+        "23": 0,
+        "24": 0,
+        "25": 1,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0,
+        "31": 0,
+        "32": 1,
+        "33": 0,
+        "34": 2,
+        "35": 2,
+        "36": 4,
+        "37": 0,
+        "38": 2,
+        "39": 1,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 1,
+        "47": 0,
+        "48": 0
+      },
+      "streams": [
+        {
+          "file": "stream-0.jsonl",
+          "sha256": "c6c2f9fca1bc78ead052a5e6327e7d0a5ee7359d593d7cd311798988e8c97fa2"
+        }
+      ]
+    },
+    {
+      "game": "game-4",
+      "outcome": "cancelled_before_start",
+      "Q": null,
+      "counts": {},
+      "review_gates_reconstructed": [],
+      "blowup_months_observed_in_player_logs": [],
+      "hr_by_month_observed": {},
+      "streams": []
+    }
+  ],
+  "archive_sha256": "deab81fbc05aa0f801b5316f4e11ea8131922b0a0b9c7255474cc024f6b9f7ec",
+  "uncompressed_sha256": "d4c2c8c4c6e4699ac33d7a6c76b5f8707e221930ab1f07ab52dff62ea21fe91a"
+}

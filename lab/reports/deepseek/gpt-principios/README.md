@@ -1,145 +1,80 @@
-# Desde principios básicos: qué falta para 75 de partida con DeepSeek
+# Auditoría desde principios básicos
 
-> **Actualización vigente, 30 octubre:** [encargo para Opus](encargo-opus-78.md) y [revisión con evidencia](revision-opus-78.md). El objetivo actual es 72+ frecuente y 78 automático. El contenido anterior que sigue es histórico; sus instrucciones de objetivo y candidato no sustituyen esta revisión. Ningún 78 consistente está demostrado. Sin DeepSeek en este encargo.
+**Encargo vigente (30 oct): [72+ frecuente y 78 automático](encargo-opus-78.md), con [revisión y evidencia](revision-opus-78.md).** Sustituye las propuestas anteriores de L6/76. Los relevos de abajo son históricos: no ejecutar sus prioridades sin leer la revisión vigente. No hay autorización para usar DeepSeek.
 
-**Todavía no hemos reproducido 75 consistente ni identificado la técnica de los equipos que lo consiguen. Sí hemos encontrado un fallo causal del controlador: tratar todo aumento de riesgo como un único punto puede destruir carreras incluso con percepción perfecta.** No presentar esta auditoría como una solución ya probada con DeepSeek.
+**Todavía no se ha demostrado una puntuación de partida de 75 de forma consistente.** Esta investigación apoya la línea DeepSeek y distingue resultados reales, pruebas con otros modelos y simulaciones. No se han realizado nuevas llamadas a la API de DeepSeek.
 
-Objetivo confirmado por Alejandro: **nota de partida ≈75, repetible, con DeepSeek**, no nota ponderada de entrega. Restricción: ninguna llamada nueva a la API de DeepSeek. Esta carpeta apoya la línea DeepSeek; rama `alejandro/gpt-principios`. No abre otra línea activa ni reemplaza t13-read-v2.
+## Qué se ha aprendido
 
-## 1. Qué entregamos y qué problema estamos resolviendo
+La partida de 76,87 del equipo es real. La auditoría reprodujo las 750 salidas del asesor, las 747 acciones aceptadas y las cinco memorias finales de sus trazas. La ejecución del programa fue fiel; su familia de estrategias no mantiene esa nota de forma consistente. Estos resultados ya están recogidos en C35 de HALLAZGOS.
 
-La entrega son Skills ingleses para un agente JiuwenSwarm `0.2.4b3`, modo `agent`, modelo designado `deepseek-v4-flash`. El agente juega una carrera de 48 meses: historias mensuales, presupuesto trimestral y evaluación semestral. Debe progresar sin destruir salud, dignidad, relaciones, patrimonio o confianza. Sólo las cinco herramientas oficiales y su información de la partida sirven para interactuar y aprender.
+Un modelo más capaz tampoco basta por sí solo. La referencia completa con Sonnet y v4 terminó en 49,95, mientras que las tres carreras anteriores con Haiku obtuvieron 66,86, 18,23 y 64,15. No son comparaciones aleatorizadas ni resultados transferibles automáticamente a DeepSeek. HALLAZGOS recoge esta limitación en C36.
 
-Fuentes primarias: [reglas oficiales](https://techarena-career-sim.readthedocs.io/en/latest/competition-rules.html), [manual](https://techarena-career-sim.readthedocs.io/en/latest/handbook.html), [runner público](https://github.com/RAI-Internal/techarena-career-sim). Reglas online contrastadas el 27 oct. No se han leído los paquetes internos del motor ni el dataset empaquetado.
+Las pruebas de autocomprobación, revisión factual, contexto fresco y predicción numérica no justificaron nuevos candidatos. Sus resultados y limitaciones se describen en [ideas del usuario](user-ideas.md) y en los archivos numéricos correspondientes. Las variantes descartadas no deben volver a presentarse como nuevas.
 
-El 80/10/10 explica la puntuación de entrega, **pero no explica el 75 de partida que describe el usuario**. No volver a usarlo como respuesta a este objetivo.
+La memoria de retornos ofrece una señal favorable en la réplica: aprender de consecuencias registradas, después de elegir, mejoró la media en 5,39 puntos en una primera tanda y en 4,30 en otras 600 semillas. Ambas comparaciones mantuvieron el mismo lector y controlador. No se pueden sumar esas diferencias a las notas reales de v4: falta demostrar el transporte y su eficacia con un modelo.
 
-Desde control básico, hay cuatro problemas distintos:
+Se encontró también una versión pública de otro participante con una partida de 73,1. Su traza reporta DeepSeek, pero una sola partida no demuestra repetibilidad ni identifica el método privado de los equipos mencionados por Alejandro. Su arquitectura combina memoria desde el registro, control trimestral por código y elección de historias por el modelo. No se han copiado sus reglas numéricas.
 
-1. **Estado e información:** qué acaba de cambiar, qué observaciones llegan con retraso y qué se conserva tras un resumen.
-2. **Consecuencias:** qué beneficios y daños plausibles tiene cada opción.
-3. **Decisión:** qué intercambios admitimos; una buena clasificación no obliga a elegir bien.
-4. **Ejecución:** que el agente aplique la regla correcta en la fase correcta y aprenda del resultado.
+## Informes
 
-La investigación anterior demuestra errores de percepción, pero no demuestra que arreglar una etiqueta aislada sea la intervención que más mejora al agente completo. Tampoco demuestra que el mejor planificador medido sea óptimo globalmente.
+- [Auditoría de las trazas de DeepSeek](format-trace-audit.md).
+- [Capacidad y feedback](capacity-and-learning.md).
+- [Ideas del usuario y pruebas de lectura](user-ideas.md).
+- [Piloto de carreras con Haiku](native-pilot.md).
+- [Reconstrucción de trimestres](native-quarter-replay.md).
+- [Auditoría del runtime](runtime-audit.md).
+- [Conclusiones y límites metodológicos](findings.md).
 
-## 2. Qué encontramos fuera
-
-Se buscaron el reto, DeepSeek, 75, Skills y soluciones en Exa y GitHub, incluyendo búsquedas `in:readme`, código y forks. Las búsquedas por nombre solas omitían repositorios con nombres distintos; ampliar a README encontró candidatos adicionales. El conector GitHub leyó archivos; `gh api` se usó para listar árboles y forks cuando la búsqueda de código no daba rutas.
-
-| Fuente pública | Qué se pudo comprobar | Qué no demuestra |
-|---|---|---|
-| [Kingjinsight/TechArena-UK-2026](https://github.com/Kingjinsight/TechArena-UK-2026/tree/main/preliminary) | Tres Skills preliminares: estado, filtro de integridad, trimestre | No aporta puntuaciones repetidas ni identidad del equipo de 75 |
-| [ShriyaSaxena/techarena-career-simu](https://github.com/ShriyaSaxena/techarena-career-simu/tree/main/preliminary) | Tres Skills generales; riesgo, prioridad y crecimiento | No aporta validación de 75 |
-| [YuLong111/techarena-career-sim](https://github.com/YuLong111/techarena-career-sim/tree/main/preliminary) | Un Skill con feedback, incertidumbre y continuidad | No aporta validación de 75 |
-| [krsnkkv/KSL_TechArena](https://github.com/krsnkkv/KSL_TechArena/tree/main/preliminary) | El Skill de historias coincide por SHA con el de Shriya | No es evidencia independiente de otra estrategia |
-| [Artepace/slopathone_winningteam](https://github.com/Artepace/slopathone_winningteam) | Su README dice que el diseño preliminar no se ha probado | El nombre del repo no acredita una victoria |
-| [peidi-L/preliminary](https://github.com/peidi-L/preliminary) | Un borrador general | No aporta pruebas de rendimiento |
-
-Se leyeron nueve Skills distintos, más la copia coincidente de KSL. Rutas y SHA en [public-search.json](public-search.json). No se ejecutó código ajeno ni se buscaron claves. Los resultados chinos de CareerSim-BDCI26 tienen reglas/plataformas distintas; no se toman como evidencia del reto UK.
-
-El [scoreboard público](https://techarena-uk.hydro.ac/contest/6aad0b0020562bf065d1654f/scoreboard), abierto en navegador hacia las 18:58 UTC del 27 oct, mostraba puntuaciones 0 y cortes vacíos. Eso **no refuta** las partidas locales que describe Alejandro. No tenemos aún un repo o una traza atribuible a esos equipos. No afirmar que sabemos cómo lo hacen, que mienten o que usan métodos prohibidos.
-
-## 3. Qué hemos probado ya y qué conclusiones sobreviven
-
-Orientación: ESTADO, NORMAS, HALLAZGOS y los informes motor/transmisión/categorías/DeepSeek/palancas. También se recuperó trabajo sin commit de esta misma rama: [análisis de trazas](../independent-designs/principles-evidence/phase-1.md), [auditoría de creencias](../independent-designs/principles-evidence/phase-2.md) y tres experimentos. No es una revisión ciega: había conocimiento histórico y se leyeron los archivos de orientación obligatorios.
-
-- El mejor planificador real medido promedia **72,39** en 360 partidas, mediana **74,9**. Es un resultado fuerte, no una prueba de que 75 sea imposible. M17 y M21 documentan búsquedas finitas de parámetros, no un certificado de optimalidad.
-- Las reglas de historias pueden contaminar otras decisiones; mejorar obediencia no basta si la interpretación es falsa.
-- Los tipos gruesos y los signos imperfectos pierden información; medir sólo recall de riesgo o Skill no mide el daño de la opción finalmente elegida.
-- Los dos fracasos históricos de DeepSeek no establecen su capacidad máxima. La revisión de trazas identifica pérdidas de promoción antes de la primera explosión y notas que obedecen una regla mientras describen mal su consecuencia.
-- La frase de A2 sobre todos los techos de L1 era demasiado fuerte: en la réplica Skill tiene margen; Network y Output son los frágiles sin margen. No trasladar sus números a un Skill.
-- Riesgo y no ascender son rutas dominantes en ciertos bots, no las únicas formas de perder. Salud y ruina también aparecen.
-- **Sobrevivir no basta:** deduplicando registros exportados por `job_id`, t13-final Haiku oficial tiene n=12, media57,24 y diez carreras completas de media64,53; f3-lean oficial n=43, media50,52 y treinta completas de media60,37. Ninguna de esas carreras alcanza75. También falta calidad entre las completadas.
-
-Las pruebas recuperadas comparan distintos controladores con dos lecturas DeepSeek **ya guardadas**, no al modelo ejecutando decisiones. El baseline observado da47,89; conocer todos los signos reales da53,92; imponer primero un veto de riesgo da53,43; signos reales más veto59,91; contexto ideal más signos reales67,05. En 2.000 semillas. Son resultados condicionales al controlador, no límites universales ni una predicción del agente.
-
-Auditamos la recuperación: cuatro brazos ×300 semillas coinciden fila a fila con sus resultados originales. Los primeros archivos recuperados no guardaban hash del script; no ocultar esa limitación.
-
-## 4. Pruebas nuevas: no repetir la carrera de manuales
-
-**Primer checkpoint offline:** ninguna partida oficial, llamada de modelo ni gasto nuevo. Sólo réplica y lecturas congeladas. La continuación con208 decisionesHaiku está documentada al final. Todos los brazos de un experimento parten de las mismas semillas; las trayectorias pueden divergir después de elegir. Los intervalos son incertidumbre sobre carreras simuladas **condicionada a dos lecturas fijas**, no sobre nuevas lecturas, nuevos eventos ni transferencia a otro modelo. No sumar ganancias de experimentos distintos.
-
-| Intervención | Datos | Resultado y decisión |
-|---|---|---|
-| Usar desacuerdo de dos lecturas para riesgo | 600 semillas/brazo | Veto con una lectura51,92; con dos52,95. Δ+1,03, IC95%[−0,14;+2,20]. No justifica un gran salto ni otra llamada |
-| Ser pesimista con todos los signos | Mismo experimento |50,82; peor que usar el desacuerdo sólo en riesgo. No llevarlo al modelo |
-| Planificar todo el trimestre con la misma utilidad miope |400/brazo |55,46→52,76; Δ−2,70[−3,88;−1,51]. Fallos de salud6→41. Optimizar el objetivo equivocado empeora; no refuta toda planificación conjunta |
-| Aumentar bienestar desde distintos niveles |800/brazo |Control53,69; desde L3 52,49; L4 53,07; L5 53,70; L6 53,68. Esta regla no resuelve el objetivo |
-| Calibración online por grupos, recuperada |2.000/brazo |47,89→47,82; sin mejora. Sólo refuta ese calibrador estrecho, no todo aprendizaje en partida |
-| Mantenimiento fijo de riesgo, recuperado |2.000/brazo |47,89→42,23; gastar en limpieza a calendario no sustituye buen control |
-
-Archivos: [resumen numérico](summary.csv), `uncertainty-screen.json`, `quarter-screen.json`, `objective-screen.json`; scripts correspondientes `gpt_incertidumbre.py`, `gpt_trimestre.py`, `gpt_objetivo.py` bajo `scripts/deepseek/`.
-
-## 5. Hallazgo nuevo: signo de riesgo no equivale a magnitud
-
-Se aisló la representación usando **el mismo Planner**, sin mirar la continuación futura de una historia. Todos los brazos disponen de contexto privilegiado: riesgo actual, techos y umbrales verdaderos, y efectos trimestrales conocidos. Este control es un diagnóstico de información; **no puede entregarse como Skill ni presentarse como nota esperable de DeepSeek**.
-
-Factorial de800 semillas por brazo:
-
-| Efectos visibles de historias | Riesgo de historias | Q media | Finalizan | Crisis |
-|---|---|---:|---:|---:|
-| Magnitudes exactas | Magnitud exacta |71,10|93,6%|23|
-| Magnitudes exactas | Sólo signo |53,95|54,1%|353|
-| Signos perfectos | Magnitud exacta |70,69|94,4%|9|
-| Signos perfectos | Sólo signo |58,11|66,8%|244|
-| Signos perfectos | Signo, con veto previo |64,13|85,5%|7|
-| Signos DeepSeek guardados | Signo DeepSeek |49,95|55,6%|228|
-| Signos DeepSeek guardados | Signo DeepSeek, con veto |55,14|69,8%|27|
-
-Manteniendo signos visibles perfectos, recuperar la magnitud del riesgo añade **12,58 puntos**, IC95%[11,18;13,97]. Con riesgo exacto, pasar de magnitudes visibles exactas a signos perfectos cambia−0,41[−1,20;+0,39]. No demuestra equivalencia, pero señala claramente dónde se concentra esta pérdida para este controlador.
-
-**La interpretación correcta no es que ahora necesitemos otra taxonomía.** La política admitía riesgos como si todo “+” fuera pequeño. Un controlador que recibe signos debe tratar la magnitud desconocida como incertidumbre, no como un coste exacto de un punto.
-
-Pantalla posterior de600 semillas nuevas: valorar conservadoramente cada riesgo positivo recupera, con signos perfectos,56,54→68,66/69,09; con signos DeepSeek,50,34→56,73/56,40. Para la variante intermedia, Δ+6,39[4,92;7,86]. No lee la magnitud verdadera de cada opción. Sigue usando contexto privilegiado del Planner; aún no es una vía a75.
-
-Datos: [factorial corregido](risk-factorial-corrected.json), [pantalla de márgenes](risk-margin-screen.json). El primer `risk-factorial.json` utilizaba magnitud exacta en el brazo `signs_veto` antes de aplicar el veto. Está marcado como sustituido para ese brazo; se corrigió y se reprodujeron todos los brazos. No usar su65,14 como resultado del veto con sólo signos.
-
-La prueba sin privilegios ya está terminada:2.000 semillas nuevas, controlador observado48,83; margen prudente51,37 (Δ+2,54, IC95%[1.77;3.31]); veto52,99. Caps aprendidos en la carrera y HR retrasado. No supera al veto ya conocido ni abre una vía demostrada a75. **No trasladar esta variante a Haiku como candidata prometedora.** Datos: [risk-margin-observed.json](risk-margin-observed.json).
-
-## 6. Qué NO sabemos y qué debe cambiar a continuación
-
-No hay evidencia para atribuir a los equipos una técnica concreta. Los Skills públicos leídos no aportan la demostración que buscamos. Las etiquetas guardadas y los bots muestran mecanismos; no sustituyen al agente completo. Más semillas sobre dos lecturas tampoco aportan más independencia del modelo.
-
-La vía que merece continuar es **medir la elección y su margen de daño**, no seguir optimizando acierto de etiquetas aisladas. Hace falta separar:
-
-- riesgo inadvertido de la opción elegida;
-- riesgo reconocido pero admitido por perseguir crecimiento;
-- errores de preservación antes de una evaluación;
-- retrasos de promoción y calidad final entre las carreras que sobreviven;
-- pérdidas por memoria, alcance de regla o ejecución.
-
-Antes de gastar cuota en un nuevo manual, exigir que una intervención sobreviva sin estado ideal. Si pasa, escribir una variante inglesa general con comprobación breve de la decisión propuesta, sin tablas de eventos, umbrales internos ni pesos investigados. Contrastar contra un control contemporáneo con el mismo actor y transporte. No vender una mejora de banco o Haiku como75 de DeepSeek. La verificación target queda pendiente mientras siga vigente la instrucción de no usar su API.
+Los planes detallados, resultados y comprobaciones de integridad están en los archivos JSON de esta carpeta. Los registros con narrativas y las respuestas originales permanecen en `~/careerlab-data/deepseek/`. Los archivos comprimidos contienen datos numéricos o copias de código, según su tipo; no se incluyen relatos de partidas.
 
 ## Relevo
 
-- **Hecho y por qué:** reconstrucción desde reglas públicas y trazas; auditoría de lo ya probado; búsqueda pública ampliada; recuperación reproducida; intervenciones sobre incertidumbre, objetivo, planificación e información. El objetivo sigue abierto.
-- **Resultados:** el factorial identifica el coste de comprimir magnitud de riesgo; una precaución derivada mejora el bot privilegiado, pero no alcanza75. Los demás intentos nuevos no justifican partidas con IA. Detalle y límites arriba; los JSON guardan resúmenes y hashes; cada `.json.gz` conserva el JSON original completo con resultados por semilla. Se comprimen para mantener revisable el diff.
-- **Datos:** no se han añadido textos de eventos ni claves a esta carpeta. Lecturas originales en `~/careerlab-data/deepseek/labels/ds-v3-r{1,2}-full.json`; datos narrativos siguen fuera del repo. Las tablas de esta carpeta son investigación, no archivos que deba leer el jugador.
-- **Coste:** cero API DeepSeek, cero partidas Claude, cero subagentes. No se han modificado candidatos actuales ni enviado entregas.
-- **Validación:** recuperación4×300 coincide exactamente; suite del repo313 tests pasa. Reproducir con `uv run python scripts/deepseek/gpt_riesgo.py --out /tmp/risk-factorial.json` y `uv run python scripts/deepseek/gpt_margen.py --out /tmp/risk-margin.json`. No apuntar `--out` a resultados congelados si se quiere conservarlos.
-- **Pendiente inmediato:** no repetir las variantes de esta carpeta. La precaución no mejora al veto observado. Investigar por separado la calidad de la decisión nativa del modelo, la compresión de consecuencias y los errores de ejecución: propuesta seguida de comprobación breve antes de actuar, con un control contemporáneo y consecuencias de la opción elegida como medida. Sólo pasar a partidas si una prueba de banco lo justifica; anunciar número y topes en ESTADO antes de lanzarla. Si se obtiene evidencia de los equipos75, contrastar versión, configuración, muestra y trazas públicas.
-- **Integración:** commit `4cd5ac8` publicado en `alejandro/gpt-principios`; [PR22](https://github.com/aleetreny/huawei/pull/22) abierto para revisión y unión a main. No marcar el objetivo como completado ni reemplazar automáticamente la entrega vigente.
+Corrección del handbook: los dos contadores sí están publicados por show_employee_handbook; se retira ese P0. Documentos de corte 2 reescritos para cp-v5a actual, propuesta de observación trimestral y coste orientativo en auditoria-cut2.md. Manual intacto; integrar en main.
 
-### Formato de los datos congelados
+29 oct: [auditoría adversarial del corte 2](auditoria-cut2.md). Bloquea empaquetar cp-v5a sin corregir contadores no publicados, suposición de IDs trimestrales y documentos aún de v4. Lint: 0 ERROR y 12 REVIEW; notas verificadas 66,27 / 65,10 / 68,13, eficiencia media 94,5759. Sólo lectura, lint y cuentas sobre resultados existentes; 0 USD. Quien empaquete debe aplicar los cambios y declarar que la revisión aún no tiene carreras propias. Solicito integrar este informe en main.
 
-Cada JSON de experimento es un resumen revisable con enlace y hash de su `.json.gz`. El archivo comprimido conserva todos los campos originales, incluidas las filas por semilla. Para comprobar o recuperar: `gzip -dc lab/reports/deepseek/gpt-principios/risk-margin-observed.json.gz > /tmp/risk-margin-observed-full.json`. Los hashes `uncompressed_sha256` se refieren a esos bytes originales. `summary.csv` conserva también el factorial inicial para trazabilidad: usar `risk-factorial-corrected.json` para `signs_veto`. No contar duplicados de reproducción como experimentos independientes.
+Revisión prioritaria: [Comprobante y dirección actualizada](revision-comprobante.md). Sustituye la base v4 de la propuesta anterior por cp-v5a para nuevas ideas; identifica el cierre con RR. HH. atrasado y las colisiones salud/riesgo como prioridades. Sólo lectura e ideación, sin pruebas.
 
-## Continuación: decisión nativa y entorno de ejecución
+Dirección ampliada del 29 oct: [ocho líneas vinculadas a las familias actuales](direccion-investigacion.md). Revisión del inventario completo de 21 partidas y auditorías, sin releer íntegramente todas las trazas ni ejecutar hipótesis. Otro modelo hará las comprobaciones.
 
-La prueba [propuesta + comprobación](decision-audit.md) ha terminado con Haiku5.5, actor real identificado en sus streams:92 situaciones de48 títulos, ambos brazos y24 repeticiones de control. Selección y hashes en `decision-audit-selection.json`. No son carreras completas. Ambas variantes pasan lint y las208 pruebas cargaron el Skill, sin acciones inválidas. La comprobación no mejoró: riesgo4→5/92, dominadas3→6/92, con cumplimiento92/92. No pasará a partidas. Datos narrativos fuera del repo en `~/careerlab-data/deepseek/gpt-decision-audit/`.
+Encargo actualizado: sólo proponer líneas; otro modelo las comprobará. Prioridad: [líneas para el salto](lineas-salto.md). No lanzar más experimentos desde este chat.
 
-Además, [la auditoría del runtime](runtime-audit.md) descubre una traza oficial de DeepSeek viva enmes33/L2 al terminar por `max_continuations`, con42 negativas genéricas en chino. Las tres preferencias actuales de idioma son `zh`. El parche inglés está preparado y probado con33 tests offline, sin aplicarlo a instancias ni tocar el ejecutor común de forma permanente. No prueba causalidad ni una nota mejor.
+29 oct, prueba de representación terminada: 48 lecturas válidas de Sonnet. Comparar alternativas mantiene las pérdidas evitables en 3 de 24, reduce el riesgo positivo de 4 a 2 y las elecciones que agotarían la salud de 1 a 0. No mejora el resultado principal y no se promueve a partidas. El tratamiento mezcla comparación y advertencia contra pistas léxicas; no identifica cuál produjo la diferencia. Resultados en `pairwise-probe-results.json`; análisis reproducible con `uv run python scripts/deepseek/gpt_pairwise_score.py`. Los 313 tests pasaron antes del cierre; desde entonces sólo se añadieron resultados y documentación. La sesión 99501 terminó con código 0. Se solicita integrar este checkpoint. Siguiente paso: completar la descomposición de historial de DeepSeek y buscar intervenciones que aporten información distinta a sus errores compartidos, sin repetir este banco.
 
-**Relevo de la continuación:** proceso terminado con208 resultados; no reanudar ni repetir. Para reproducir sólo el análisis, `uv run python scripts/deepseek/gpt_decision_score.py` exige que estén los208 resultados y usa efectosv2, sin Q antiguo. Si hay un fallo de transporte o tope de cuota, inspeccionar el resultado concreto antes de reintentar; no reiniciar por tiempo de observación agotado. No interpretar el banco como75 ni llamar a DeepSeek.
-
-**Cierre del segundo checkpoint:** la prueba negativa de autocomprobación separa adherencia de calidad. La siguiente prueba requiere feedback público nuevo y debe distinguir aprendizaje nativo del calibrador por grupos que ya falló. [Diseño y datos](decision-audit.md). El runtime en chino es una discrepancia concreta con parche revisable; la causalidad y el75 siguen sin demostrar. No se alteró ninguna instancia ni se inició una partida DeepSeek.
+29 oct: [diagnóstico de errores compartidos](shared-reading-errors.md). Dos lecturas repiten 192 de los 285 errores iniciales de Output y 151 de los 185 de riesgo positivo. La siguiente prueba debe cambiar la representación de las alternativas y medir valor de carrera. C40 ya está descartado en main. Se solicita integrar este diagnóstico; no hay un candidato nuevo validado.
 
 
-## Relevo — integración de revisión 78 (30 octubre)
+Se ha integrado main y reescrito la documentación de la PR #23. HALLAZGOS conserva la versión de main, sin duplicar las antiguas filas C24–C31; ESTADO contiene una sola línea de apoyo. La validación completa pasa con 313 tests y un aviso preexistente de Authlib. La revisión de los archivos JSON y comprimidos no encontró narrativas del juego. Se solicita integrar esta PR en main tras su revisión.
 
-Integrados selectivamente el encargo, informe, dos salidas agregadas y dos scripts de auditoría desde `fbaab60`. No se integra la rama histórica completa: los manuales, motor, runner y documentos de entrega quedan intactos. ESTADO y HALLAZGOS enlazan la revisión. El encargo es material para que Opus valore si aporta algo a su trabajo actual, no una orden de sustituirlo.
+La comparación de 48 lecturas de Sonnet ya terminó. Con memoria de retornos, las pérdidas evitables pasaron de 2 a 3 y el riesgo se mantuvo en 2; una señal de agotamiento de salud presente en el control desapareció. Es una comparación de decisiones aisladas, no una mejora de carrera, y no justifica promover el paquete. El resultado está en `return-packet-probe-results.json`. No quedan actores de esta tanda que reanudar.
 
-Reproducir sin modelos ni partidas: `uv run --offline python scripts/deepseek/gpt_score78_audit.py > /tmp/score78-audit.json`. Comparar con `score78-audit.json`. La auditoría anterior se reproduce con `python3 scripts/deepseek/gpt_mv_evidence.py`. La ganancia causal, transferencia al agente y calidad oficial siguen pendientes. Siguiente paso: lectura crítica por Opus e incorporación únicamente de ideas útiles; no lanzar DeepSeek.
+Tras la limpieza, la siguiente investigación prioritaria es descomponer el crecimiento del historial en las trazas reales de DeepSeek: observaciones, texto del modelo, notas, lecturas del Skill y consultas al registro. Las comprobaciones C39 y C40 son alternativas baratas. Antes de nuevas llamadas, comprobar la cuota y registrar el tamaño de la prueba en ESTADO.
 
-Validación de integración: `uv run --offline pytest -q`, 313 tests aprobados (aviso de deprecación de Authlib); las dos auditorías reproducen sus JSON byte a byte; `git diff --check` limpio. Integración autorizada por Alejandro, preparada directamente sobre origin/main, sin cambios en políticas, motor, runner ni entrega.
+El objetivo de 75 consistente sigue abierto. Esta PR aporta evidencia y herramientas; no entrega todavía una estrategia que lo consiga.
+
+## Relevo — diagnóstico del estancamiento (29 octubre, sin API)
+
+[Diagnóstico y vías de mejora](diagnostico-estancamiento.md): contrastadas las versiones hasta cp-v12/ex-v1 y recalculado juego+fichas desde score reports. v4 63,108; cp-v5a 62,658; cp-v12 57,852 antes de calidad. No hay superioridad de juego demostrada, ni evidencia para atribuir toda la diferencia al azar. Prioridades: control v4 con sólo bucle, auditoría de decisiones críticas con títulos reservados, ex-v1 incremental y validación de la réplica por familia. Sin nuevas partidas, modelos ni cambios de manual. Siguiente responsable: seguir el Relevo del informe; DeepSeek expresamente excluido por el usuario. Solicitar integración en main.
+
+## Relevo — mv-3/mv-4 y consistencia de 77,78
+
+[Auditoría de las actualizaciones](mv-3-mv-4-consistencia.md): score reports y transiciones verificados desde huawei-mejora (a160964, documentación posterior sin commit). Ocho puntuadas, media 58,095; seis completas, 68,12; una en L6/77,78. Diferencia con 69,62: nivel y riqueza principalmente. **Corrección posterior:** la denuncia anónima tenía riesgo +1 frente a +2; no era una contradicción demostrada con el fallback. Las prioridades de este relevo están sustituidas. Sin API ni partidas; no prometer todas a 77,78.
+
+## Relevo — hoja de ruta para Opus: L6 repetible
+
+[Encargo completo](hoja-ruta-opus-l6.md): diagnóstico de ventanas, planificación hacia atrás con información incompleta, tres mecanismos aislados (Skill/Output, salud que habilita crecimiento, aplicación del modo estricto), percepción crítica y cierre. Objetivos P(L6 completo) y P(Q≥77,78), con protección de la cola baja. Hipótesis aún sin ejecutar; prohibido DeepSeek en este encargo. Actualizada la rama con main que ya integra Mejora. Sin mensajes a otros chats. Solicitar integración documental.
+
+## Relevo — decisión revisada para 76 general
+
+[Informe](decision-opus-score76.md) y [encargo acotado para Opus](encargo-opus-score76.md) sustituyen la hoja amplia de L6. Auditados 1.050 registros, fórmula oficial y pruebas negativas previas. Corrección material: denuncia anónima con +1 frente a +2, no error demostrado; priorizar errores previos recuperables. Script scripts/deepseek/gpt_mv_evidence.py y salida mv-evidence.json; sin API ni partidas. Dos hipótesis como máximo, basadas en casos repetidos, antes de cambiar políticas. Actualizado ESTADO, commit/push y solicitar integración.
+
+## Relevo — revisión para 78 automático (30 octubre)
+
+**Hecho:** [revisión adversarial](revision-opus-78.md) y [único encargo vigente](encargo-opus-78.md). Corregido el objetivo: 72 de juego con calidad/eficiencia 100 sólo da 77,6. Las tres mejores carreras mv existentes darían 77,338 incluso con calidad 100; es descriptivo, no evaluación válida. Confirmadas las 16 acciones dominadas en resultados aceptados; siete repiten un nodo y ya bajan riesgo. Modelos fijos anteriores predicen 86,5–86,9 % de las 1.050 decisiones mv emparejadas, menos en grupos críticos. Sin reajuste, APIs ni carreras.
+
+**Datos y reproducción:** `score78-audit.json`; `uv run --offline python scripts/deepseek/gpt_score78_audit.py > /tmp/score78-audit.json`. Incluye cobertura, comprobación de aceptación, continuaciones locales, predicción y sensibilidad de objetivo. Cinco registros emparejados no se reconciliaron con un único resultado crudo; no se afirman rechazados. No se incluyen narrativas en la salida.
+
+**Pendiente:** estimar ganancia de carrera por mecanismos, demostrar transferencia y calidad oficial. No hay candidato nuevo ni garantía de consistencia. Priorizar ventanas perdidas y riesgo innecesario; calidad en variante separada; preservar protocolo. Leído también `a340059` de Mejora: +0,1 de cierre declarado en el commit, sin tabla nueva verificable allí.
+
+**Siguiente paso:** usar `encargo-opus-78.md`, manteniendo la prohibición de DeepSeek. Verificar reproducción y diff, commit/push en la rama propia y solicitar integración documental en main. No se han tocado los cambios ajenos del workspace.

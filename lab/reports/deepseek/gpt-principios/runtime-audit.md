@@ -1,52 +1,23 @@
-# El runtime también está en el camino al 75
+# Auditoría del runtime
 
-**Un ensayo oficial reciente quedó vivo en el mes33/L2 tras negativas repetidas; no se puede usar como derrota ni como prueba de capacidad máxima del modelo.** La configuración local observada pide chino. Preparar una ejecución inglesa comparable es una corrección comprobable sin gastar API, pero su efecto en Q sigue sin medirse.
+**Hay diferencias de ejecución verificadas, pero ninguna explica todavía el 75 consistente.**
 
-Esta auditoría es de sólo lectura sobre artefactos producidos por nuestras herramientas oficiales y sobre el código público del runner. No se han abierto bases de datos, paquetes internos del simulador, claves ni archivos de entorno; no se ha reanudado ninguna partida.
+Una traza de DeepSeek terminó viva en el mes 33, en L2, por el límite de continuaciones. Se contaron 42 negativas genéricas en chino. La preferencia de idioma actual no prueba la configuración histórica ni la causa de las negativas. El parche inglés se preparó y probó offline, sin aplicarlo a instancias activas.
 
-## Evidencia directa
+El historial crece durante la partida. La ausencia de razonamiento en el transcript no demuestra que esté desactivado: el runner omite esos fragmentos. Los datos de uso disponibles tampoco resuelven el modo efectivo del proveedor.
 
-Fuente: `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-0b43b18e-dff20f-00001-a1/`. El resumen reproducible está en [runtime-audit.json](runtime-audit.json).
+El inyector público de reasoning_level de Jiuwen no reconoce OpenRouter. Las pruebas sin red lo confirman, pero no determinan todos los parámetros de las solicitudes reales. No se ha verificado una vía entregable para cambiar esfuerzo desde el Skill; no se han modificado paquetes, credenciales ni slots.
 
-- El reporte de esa ejecución indica `max_continuations`, sin `ending_score`.
-- Hay138 observaciones y137 acciones correctas, sin rechazos de `take_action`.
-- La última observación es mes33, L2, Health6, Dignity10, Skill21, Network5, Output6, Wealth12. Sus flags dicen vivo y sin fracaso. No imputamos puntuación terminal a ese estado.
-- El primer bloque ejecuta106 acciones; los siguientes registros de finalización contienen poco progreso y muchos no añaden acciones. Hay41 `frame_final`; estos registros incluyen pares y no equivalen a41 reanudaciones independientes. El runner público limita las continuaciones a20.
-- El transcript visible contiene42 apariciones de una negativa genérica en chino. El colector excluye los deltas marcados como razonamiento. No copiamos historias ni texto narrativo al informe.
-- Las tres configuraciones actuales de slots (`slot0`, `slot1`, `slot2`) contienen `preferred_language: zh`. Son configuraciones actuales, no fingerprints históricos congelados: por eso no certifican por sí solas el idioma configurado durante cada ensayo pasado.
+La siguiente pregunta prioritaria es descomponer las fichas que deja cada decisión en el historial: observaciones, mensajes del modelo, notas, relecturas y consultas al registro.
 
-Otros dos reportes t13-read-v2 terminaron por watchdog de presupuesto. Sus deltas usan el gasto total de una clave compartida mientras había concurrencia: **no sumar esas cifras como costes independientes por partida**. Esta auditoría no modifica la contabilidad ni los límites. Las salidas v3/v4/v5 vistas vacías tampoco establecen terminación; no se reinicia nada a partir de un archivo vacío.
+## Evidencia y relevo
 
-## Qué cambia la interpretación
+Los detalles numéricos y criterios se conservan en [reasoning-adapter.json](reasoning-adapter.json) y en los archivos relacionados de esta carpeta. Los originales con narrativas permanecen fuera de Git. El historial de commits conserva las versiones extensas anteriores de este informe.
 
-Hay dos problemas distintos. El ensayo no llegó al final por una interrupción del ejecutor, pero tampoco llevaba una carrera fuerte: permanecía en L2. Evitar negativas o corregir el entorno no demuestra que vaya a alcanzar75. A la inversa, una interrupción sin score no demuestra una derrota estratégica.
+No repetir las colecciones terminadas ni presentar estos resultados como una solución para 75 consistente. Consultar el [Relevo principal](README.md#relevo) antes de continuar.
 
-No sabemos si las negativas dependen del idioma, del contenido, de la longitud del contexto, del servicio u otra condición. No se ha hecho una comparación causal y no se propone elegir un proveedor de hosting. Las reglas del reto prohíben preferencias de proveedor; el parche no las añade.
+## Conteo de herramientas en v4 (29 oct)
 
-El arranque de `careerlab.actors.official_runner.prepare_slot` usa stdin cerrado y deja que JiuwenSwarm tome su preferencia no interactiva. No fija explícitamente el idioma. El repositorio participante público [KSL_TechArena](https://github.com/krsnkkv/KSL_TechArena) documenta seleccionar inglés al inicializar; eso es una instrucción de instalación, **no evidencia de su puntuación ni de que sus autores sean el equipo de75**.
+Las dos partidas completas de v4 leen `skill_tool` una sola vez y llaman `check_latest_logs` una sola vez cada una. La de 71,67 registra 207 `observe` y 207 `take_action`; la de 70,22, 190 y 204 respectivamente. Se contaron sólo eventos completos, omitiendo las copias `delta` y deduplicando identificadores de llamada. Fuentes: `~/careerlab-data/huawei-deepseek/runs/deepseek-pilo-f78c8b88-dff20f-00000-a1/events.jsonl` y la terminada en `00002-a1`.
 
-## Cambio concreto preparado y probado
-
-El parche [english-runtime.patch.gz](../../../../scripts/deepseek/english-runtime.patch.gz) hace dos cosas para una futura ejecución autorizada:
-
-1. Configura `preferred_language: en` después de la preparación del slot, preservando los demás valores, el modelo, el modo y la versión fijada. No llama al modelo.
-2. Incluye el idioma en el registro/fingerprint del actor para impedir que los resultados viejos y nuevos se agrupen como si fueran el mismo actor.
-
-Se aplicó temporalmente a los módulos del laboratorio y se ejecutó `uv run pytest -q tests/test_target.py`: **33 tests pasan**, sin red ni gasto. Los tests nuevos verifican preservación exacta del resto de configuración (incluyendo CRLF), idempotencia, registro del idioma y error temprano ante configuración ausente o ambigua. Después se revirtió ese cambio temporal del ejecutor común. El parche queda revisable en la carpeta de código de esta línea; no se ha aplicado a ninguna instancia real ni se ha iniciado o parado una instancia.
-
-Para comprobarlo sin API en una copia limpia:
-
-```sh
-gzip -dc scripts/deepseek/english-runtime.patch.gz > /tmp/huawei-english-runtime.patch
-git apply /tmp/huawei-english-runtime.patch
-uv run pytest -q tests/test_target.py
-git apply --reverse /tmp/huawei-english-runtime.patch
-```
-
-Usar una copia limpia evita pisar cambios propios del ejecutor. Aplicar el parche no autoriza partidas ni gasto; sigue vigente la prohibición de llamar a DeepSeek para este objetivo.
-
-## Relevo
-
-- Hecho: auditoría de una traza oficial interrumpida, hashes de sus artefactos, estados visibles, conteo de acciones/negativas y lectura selectiva de la preferencia de idioma. Parche concreto y tests offline preparados.
-- No demostrado: causa de las negativas, mejora de puntuación o equivalencia con el entorno de evaluación. El objetivo75 sigue abierto.
-- Siguiente: integrar la corrección de configuración cuando se prepare una futura ejecución autorizada y conservar el nuevo fingerprint. No repetir una partida ahora ni incrementar `MAX_CONTINUATIONS` para hacer pasar una prueba local como si fuera la configuración oficial.
+El contenido de los resultados de `observe` suma 315.191 y 269.248 caracteres; los argumentos de `take_action`, 64.416 y 51.217. Son caracteres de las representaciones registradas, no fichas facturadas ni todo el historial: faltan mensajes visibles del modelo y envoltorios. No convertir estas proporciones en un ahorro de nota. El conteo sí descarta las relecturas de Skill y consultas repetidas al registro como fuente principal del crecimiento en estas dos carreras.

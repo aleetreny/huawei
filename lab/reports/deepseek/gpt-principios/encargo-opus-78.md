@@ -1,8 +1,5 @@
 # Encargo vigente para Opus — 30 octubre
 
-> **Para el Opus que ya está trabajando:** esta es una revisión externa para contrastar con tu investigación actual. Valora qué ideas aportan algo, cuáles ya has probado y cuáles descartas. No reinicies ni sustituyas tu plan por este documento. La sustitución de encargos mencionada abajo se refiere sólo a las propuestas anteriores de esta auditoría.
-
-
 **Investiga una mejora verificable de mv-4 hacia carreras de 72+ frecuentes y nota automática 78; no prometas una solución ni escribas otra versión sin justificar su ganancia. Este encargo sustituye los anteriores de L6 y de 76.**
 
 Lee ESTADO.md, NORMAS.md y HALLAZGOS.md; después `lab/reports/deepseek/gpt-principios/revision-opus-78.md`, que corrige las propuestas anteriores y contiene la evidencia. No uses DeepSeek, APIs de pago ni partidas oficiales. Usa archivos guardados y cálculo local. Conserva el protocolo operativo de mv-4. No pases texto ni respuestas de eventos al diseñador: entrega mecanismos agregados.

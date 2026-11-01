@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "games_per_arm": 400,
+    "seed": 202630280,
+    "script_sha256": "2933e4b902ec9263d87516ae869f7f5f5162e06434226696d9e9a229d950f56b",
+    "labels_sha256": [
+      "4d70f3ccdca790d485984a9f6776ccc4f6db6255608e5d14e4fcc7813d4e27c6",
+      "e6ff64f6458fc72b27071e5228ea71182c210d54e24751f0ea11730754d57c1d"
+    ],
+    "meaning": "Posthoc selected saved careers, new replica seeds. Replace annotations only on source-covered nodes; unseen nodes always use frozen DS baseline, never truth. Event-indexed annotations cannot be submitted. In-situ reading is frozen outside its original context: not an actor evaluation or proof of transfer. Full and sign arms differ only in magnitudes. Different source scripts must not be compared as randomized arms."
+  },
+  "sources": {
+    "sv1-g1": {
+      "nodes": 68,
+      "duplicate_occurrences_excluded": 0,
+      "annotation_selection": "first acted occurrence per node",
+      "advisor_sha256": "71dadd51562001a3fd0b88b62f84e1286883acfc4b1071b3c50d2e14e7799691",
+      "events_sha256": "f98b1203821d6dc2c0033c3f7e732677dec4be9395e77db597db381c2ccf5a20",
+      "arms": {
+        "standalone": {
+          "summary": {
+            "n": 400,
+            "mean": 52.16735,
+            "se": 1.024272550686082,
+            "at_least_75": 26,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 97,
+              "trust": 49,
+              "health": 9
+            }
+          }
+        },
+        "insitu_signs": {
+          "summary": {
+            "n": 400,
+            "mean": 52.977675,
+            "se": 1.0267783818695366,
+            "at_least_75": 25,
+            "completed": 255,
+            "failures": {
+              "completed": 255,
+              "dismissed": 93,
+              "trust": 41,
+              "health": 11
+            }
+          },
+          "paired_delta": {
+            "mean": 0.8103249999999997,
+            "ci95": [
+              -1.158787725703355,
+              2.7794377257033545
+            ]
+          }
+        },
+        "insitu_full": {
+          "summary": {
+            "n": 400,
+            "mean": 52.977675,
+            "se": 1.0267783818695366,
+            "at_least_75": 25,
+            "completed": 255,
+            "failures": {
+              "completed": 255,
+              "dismissed": 93,
+              "trust": 41,
+              "health": 11
+            }
+          },
+          "paired_delta": {
+            "mean": 0.8103249999999997,
+            "ci95": [
+              -1.158787725703355,
+              2.7794377257033545
+            ]
+          }
+        }
+      }
+    },
+    "sv1-g2": {
+      "nodes": 144,
+      "duplicate_occurrences_excluded": 0,
+      "annotation_selection": "first acted occurrence per node",
+      "advisor_sha256": "71dadd51562001a3fd0b88b62f84e1286883acfc4b1071b3c50d2e14e7799691",
+      "events_sha256": "06a373b85703607388d1d617c052df555d961bb85ab5534ce478a31386963e75",
+      "arms": {
+        "standalone": {
+          "summary": {
+            "n": 400,
+            "mean": 52.16735,
+            "se": 1.024272550686082,
+            "at_least_75": 26,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 97,
+              "trust": 49,
+              "health": 9
+            }
+          }
+        },
+        "insitu_signs": {
+          "summary": {
+            "n": 400,
+            "mean": 53.4687,
+            "se": 1.0338454680970275,
+            "at_least_75": 31,
+            "completed": 252,
+            "failures": {
+              "completed": 252,
+              "dismissed": 86,
+              "trust": 48,
+              "health": 14
+            }
+          },
+          "paired_delta": {
+            "mean": 1.3013499999999996,
+            "ci95": [
+              -1.0039396457625152,
+              3.606639645762514
+            ]
+          }
+        },
+        "insitu_full": {
+          "summary": {
+            "n": 400,
+            "mean": 53.4687,
+            "se": 1.0338454680970275,
+            "at_least_75": 31,
+            "completed": 252,
+            "failures": {
+              "completed": 252,
+              "dismissed": 86,
+              "trust": 48,
+              "health": 14
+            }
+          },
+          "paired_delta": {
+            "mean": 1.3013499999999996,
+            "ci95": [
+              -1.0039396457625152,
+              3.606639645762514
+            ]
+          }
+        }
+      }
+    },
+    "sv3-g1": {
+      "nodes": 143,
+      "duplicate_occurrences_excluded": 1,
+      "annotation_selection": "first acted occurrence per node",
+      "advisor_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "7613434328ee3a7fc1b182af35f0a471df8ab7c9e26d26820c18103d6a2249b9",
+      "arms": {
+        "standalone": {
+          "summary": {
+            "n": 400,
+            "mean": 52.16735,
+            "se": 1.024272550686082,
+            "at_least_75": 26,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 97,
+              "trust": 49,
+              "health": 9
+            }
+          }
+        },
+        "insitu_signs": {
+          "summary": {
+            "n": 400,
+            "mean": 52.730575,
+            "se": 0.9891062798711971,
+            "at_least_75": 22,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 81,
+              "health": 15,
+              "trust": 59
+            }
+          },
+          "paired_delta": {
+            "mean": 0.5632249999999996,
+            "ci95": [
+              -1.4094840828912671,
+              2.5359340828912664
+            ]
+          }
+        },
+        "insitu_full": {
+          "summary": {
+            "n": 400,
+            "mean": 52.27310000000001,
+            "se": 1.0240813187161255,
+            "at_least_75": 19,
+            "completed": 247,
+            "failures": {
+              "completed": 247,
+              "dismissed": 78,
+              "health": 29,
+              "trust": 46
+            }
+          },
+          "paired_delta": {
+            "mean": 0.1057499999999997,
+            "ci95": [
+              -2.0049639442548655,
+              2.2164639442548646
+            ]
+          }
+        }
+      }
+    },
+    "sv3-g2": {
+      "nodes": 27,
+      "duplicate_occurrences_excluded": 0,
+      "annotation_selection": "first acted occurrence per node",
+      "advisor_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "083e722642cbd6cb9bc049341a4c8415edd250ccbecabf64471b8deb88bf45f9",
+      "arms": {
+        "standalone": {
+          "summary": {
+            "n": 400,
+            "mean": 52.16735,
+            "se": 1.024272550686082,
+            "at_least_75": 26,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 97,
+              "trust": 49,
+              "health": 9
+            }
+          }
+        },
+        "insitu_signs": {
+          "summary": {
+            "n": 400,
+            "mean": 52.614525,
+            "se": 1.0171311161568963,
+            "at_least_75": 22,
+            "completed": 254,
+            "failures": {
+              "completed": 254,
+              "dismissed": 91,
+              "health": 8,
+              "trust": 47
+            }
+          },
+          "paired_delta": {
+            "mean": 0.447175,
+            "ci95": [
+              -1.5157562361562165,
+              2.4101062361562167
+            ]
+          }
+        },
+        "insitu_full": {
+          "summary": {
+            "n": 400,
+            "mean": 52.304224999999995,
+            "se": 1.0057911515816478,
+            "at_least_75": 18,
+            "completed": 250,
+            "failures": {
+              "completed": 250,
+              "dismissed": 91,
+              "trust": 50,
+              "health": 9
+            }
+          },
+          "paired_delta": {
+            "mean": 0.13687499999999983,
+            "ci95": [
+              -1.8677640814931156,
+              2.1415140814931153
+            ]
+          }
+        }
+      }
+    },
+    "sv3-g3": {
+      "nodes": 142,
+      "duplicate_occurrences_excluded": 1,
+      "annotation_selection": "first acted occurrence per node",
+      "advisor_sha256": "31434f064227f7892fab64a7f00bb1b63acbb11145eae62160a77bd9822ba270",
+      "events_sha256": "7d32057688e6a7e2a4d1aeab8102cbec7e747a62741498932bf1b5d583e437d8",
+      "arms": {
+        "standalone": {
+          "summary": {
+            "n": 400,
+            "mean": 52.16735,
+            "se": 1.024272550686082,
+            "at_least_75": 26,
+            "completed": 245,
+            "failures": {
+              "completed": 245,
+              "dismissed": 97,
+              "trust": 49,
+              "health": 9
+            }
+          }
+        },
+        "insitu_signs": {
+          "summary": {
+            "n": 400,
+            "mean": 55.79600000000001,
+            "se": 0.9839363294955894,
+            "at_least_75": 28,
+            "completed": 287,
+            "failures": {
+              "completed": 287,
+              "dismissed": 81,
+              "health": 9,
+              "trust": 23
+            }
+          },
+          "paired_delta": {
+            "mean": 3.6286499999999995,
+            "ci95": [
+              1.362407399255701,
+              5.894892600744297
+            ]
+          }
+        },
+        "insitu_full": {
+          "summary": {
+            "n": 400,
+            "mean": 56.073425,
+            "se": 0.989585734594897,
+            "at_least_75": 26,
+            "completed": 291,
+            "failures": {
+              "completed": 291,
+              "dismissed": 76,
+              "health": 15,
+              "trust": 18
+            }
+          },
+          "paired_delta": {
+            "mean": 3.906075,
+            "ci95": [
+              1.6875334226751177,
+              6.124616577324883
+            ]
+          }
+        }
+      }
+    }
+  },
+  "archive": {
+    "file": "insitu-label-screen.json.gz",
+    "sha256": "b14e3208e8df59d583664c0347ec5bbe3aec8b963b1f72604d2ac3e1ed1d827c",
+    "uncompressed_sha256": "6fe65668e1065da0afd9ad6bed427982a03563f1af910307ecfae739bccfcffb"
+  }
+}

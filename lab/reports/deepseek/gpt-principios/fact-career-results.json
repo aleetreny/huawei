@@ -1,0 +1,1077 @@
+{
+  "meaning": "All24critical original Sonnet career decisions; same factual reader/gate, same model family. Critic sees current public panel and v4 inline, never original choice/notes. Historical comparison, not randomized career efficacy. Literal evidence is not proof of entailment or game effects. Invalid evidence retained/falls back. No game Q or DS transfer.",
+  "script_sha256": "8099db7c012706010df04d4bba02a23eb252abacab2a7ccbe71b0502d81cf82e",
+  "catalog_sha256": "0231251abe3c6ba7714db30415d8afc3898d859a4bbc7c35bd44980422e81764",
+  "critic_models": {
+    "claude-sonnet-5-5": 24
+  },
+  "n_evidence_valid": 24,
+  "rejected_evidence_fallback_to_first": [],
+  "n_valid_literal_yes_flags": 38,
+  "critic_disagreements": 7,
+  "gate_changes": 2,
+  "arms": {
+    "first": {
+      "n": 24,
+      "positive_risk": 3,
+      "growth_loss": 9,
+      "avoidable_pre_review_loss": 2,
+      "avoidable_positive_risk": 0,
+      "health_zero_after": 0,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    },
+    "independent_read": {
+      "n": 24,
+      "positive_risk": 4,
+      "growth_loss": 10,
+      "avoidable_pre_review_loss": 3,
+      "avoidable_positive_risk": 2,
+      "health_zero_after": 1,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    },
+    "two_read_gate": {
+      "n": 24,
+      "positive_risk": 4,
+      "growth_loss": 9,
+      "avoidable_pre_review_loss": 2,
+      "avoidable_positive_risk": 1,
+      "health_zero_after": 0,
+      "dignity_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    }
+  },
+  "paired_gate_changes": {
+    "positive_risk": {
+      "improved": 0,
+      "worsened": 1
+    },
+    "growth_loss": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "avoidable_pre_review_loss": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "avoidable_positive_risk": {
+      "improved": 0,
+      "worsened": 1
+    },
+    "health_zero_after": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "dignity_zero_after": {
+      "improved": 0,
+      "worsened": 0
+    },
+    "wealth_cost_when_display_nonpositive": {
+      "improved": 0,
+      "worsened": 0
+    }
+  },
+  "risk_admission_block": true,
+  "rows": [
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": true,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "two_read_gate",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": true,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "first",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "two_read_gate",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": true,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "two_read_gate",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "independent_read",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "two_read_gate",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "unresolved_issue"
+      ]
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "independent_read",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "two_read_gate",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion",
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "first",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "two_read_gate",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "independent_read",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": true,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "independent_read",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "time_diversion"
+      ]
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "first",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "independent_read",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "two_read_gate",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": [
+        "relationship_rupture"
+      ]
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "first",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "independent_read",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "two_read_gate",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "avoidable_positive_risk": false,
+      "health_zero_after": false,
+      "dignity_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false,
+      "gate_triggers": []
+    }
+  ]
+}

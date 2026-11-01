@@ -1,0 +1,540 @@
+{
+  "meaning": "All24historical critical states. Numeric after-panel forecasts scored against own replica direct effects, not observed counterfactual outcomes. Displayed wealth is truncated; its MAE is conditional on displayed baseline. No Q/DS claim; source one career. Gold only after decisions.",
+  "models": {
+    "claude-sonnet-5-5": 24
+  },
+  "arms": {
+    "original": {
+      "n": 24,
+      "positive_risk": 3,
+      "growth_loss": 9,
+      "avoidable_pre_review_loss": 2,
+      "health_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    },
+    "forecast_reader": {
+      "n": 24,
+      "positive_risk": 3,
+      "growth_loss": 10,
+      "avoidable_pre_review_loss": 3,
+      "health_zero_after": 0,
+      "wealth_cost_when_display_nonpositive": 0
+    }
+  },
+  "prediction_metrics": {
+    "health": {
+      "n": 67,
+      "mae": 0.3283582089552239,
+      "sign_accuracy": 0.746268656716418
+    },
+    "dignity": {
+      "n": 67,
+      "mae": 0.22388059701492538,
+      "sign_accuracy": 0.8507462686567164
+    },
+    "skill": {
+      "n": 67,
+      "mae": 0.5223880597014925,
+      "sign_accuracy": 0.6417910447761194
+    },
+    "network": {
+      "n": 67,
+      "mae": 0.5253731343283583,
+      "sign_accuracy": 0.746268656716418
+    },
+    "output": {
+      "n": 67,
+      "mae": 0.4298507462686567,
+      "sign_accuracy": 0.7164179104477612
+    },
+    "wealth": {
+      "n": 67,
+      "mae": 0.1044776119402985,
+      "sign_accuracy": 0.9402985074626866
+    }
+  },
+  "risk_admission_block": false,
+  "rows": [
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "71bf09449bbc296b",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "30a555fdf7b5b972",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "original",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "dbc813dd86f7ebf2",
+      "arm": "forecast_reader",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "daf1df99d2300bd8",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3f8ab50bbf8f139d",
+      "arm": "forecast_reader",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "e5d4941f401ed671",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "8561ee88a915143c",
+      "arm": "forecast_reader",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "d2816c515a5a5d4a",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "08fbdb0808a3d875",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "cb250a02c41552cb",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "e85b9142d880585b",
+      "arm": "forecast_reader",
+      "choice": 3,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "5e8ee9dbb41f3300",
+      "arm": "forecast_reader",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "1b0c55046a0cf6ea",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "77015d2875a771a7",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "911ee4ef68574cc0",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "original",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3094c226dc9077a8",
+      "arm": "forecast_reader",
+      "choice": 2,
+      "positive_risk": true,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "33f85aa23413f8da",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "2592798ce2982351",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3427d4cf64bedb96",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "a6ef6fd62ff9c7f9",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "ce7c64dc65ac99a5",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "3e064a388f1a38c7",
+      "arm": "forecast_reader",
+      "choice": 2,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": true,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "original",
+      "choice": 3,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "6a877cecee1a019b",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": true,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "original",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    },
+    {
+      "id": "2e8f601ffa4400c9",
+      "arm": "forecast_reader",
+      "choice": 1,
+      "positive_risk": false,
+      "growth_loss": false,
+      "avoidable_pre_review_loss": false,
+      "health_zero_after": false,
+      "wealth_cost_when_display_nonpositive": false
+    }
+  ],
+  "script_sha256": "3430e9766fd82963a7c91a4990c7a83c86ff512e81027764823424b135cb6e9f"
+}

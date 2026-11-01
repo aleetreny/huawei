@@ -1,0 +1,17 @@
+{
+  "meaning": "Synthetic research probe, no new engine observations; check compatibility with B30, not validation across states.",
+  "rows": [
+    {
+      "risk": 0,
+      "grade_replica": "C"
+    },
+    {
+      "risk": 1,
+      "grade_replica": "D"
+    },
+    {
+      "risk": 2,
+      "grade_replica": "D"
+    }
+  ]
+}
