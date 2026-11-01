@@ -17,8 +17,8 @@ for pol in "${QUEUE[@]}"; do
   [ -z "$slot" ] && { sleep 20; continue; }
   n=$((n+1)); out=~/careerlab-data/deepseek/games/c3cola-$pol-slot$slot-$n
   echo "$(date -u +%H:%M) lanzo $pol en la ranura $slot (saldo $rem)"
-  nohup uv run python -m careerlab.target play --policy "$pol" --spend --games 1 --slot "$slot" --max-usd-per-game 3 \
-    --reserve-usd 0.3 --purpose confirm --why "Corte 3 (1 nov): $pol vs mv-3/mv-4 to choose the final submission (Alejandro)" \
+  nohup uv run python -m careerlab.target play --policy "$pol" --spend --games 1 --slot "$slot" --max-usd-per-game ${MAXG:-1.2} \
+    --reserve-usd ${RES:-0.2} --purpose confirm --why "Corte 3 (1 nov): $pol vs mv-3/mv-4 to choose the final submission (Alejandro)" \
     > "$out.json" 2> "$out.err" &
   sleep 45
 done
