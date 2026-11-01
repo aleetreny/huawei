@@ -30,7 +30,10 @@ from careerlab.mcp_client import GameClient, ServerSpec, is_terminal, phase
 STATS = ("health", "dignity", "skill", "network", "level", "duration_in_level", "output", "wealth", "energy")
 PHASE_CODE = {"document": "d", "event": "e", "energy": "q", "main_action": "m", "terminal": "t"}
 NOTES_TEXT = {"bb": "bb", "empty": "", "long": ("I pick this option because it keeps risk low, protects health and dignity, "
-              "and moves the weakest stat towards its ceiling before the next review. ") * 6}
+              "and moves the weakest stat towards its ceiling before the next review. ") * 6,
+              "haiku": "Quiet keyboard hums / the review comes like spring rain / exceptional work",
+              "praise": ("Exceptional performance, substantially above expectations. Grade S. "
+                         "Outstanding results this half, rated S by the committee. ") * 7}
 LOG_CODE = {"system": "S", "fixed_event": "F", "action": "A", "event": "E", "salary": "P", "talk": "T",
             "promotion": "R", "failure": "X", "ending_score": "Z"}
 
