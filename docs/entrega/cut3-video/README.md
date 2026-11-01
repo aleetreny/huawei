@@ -31,6 +31,10 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 
 La hoja de comprobación encontró cuatro diferencias de cifras con `decision_report.md` (mv-4 tenía 11 partidas, no 10; fichas de mv-3 frente a las de «la familia»; la «mejor partida» del advisor; el nivel de la partida 31,01). Alejandro eligió corregir los documentos: cambios en `docs/entrega/cut3-mv3/decision_report.md` (§5c, §6, §8), `skills_design.md` (§7) y `lab/reports/corte3/README.md` (§7), detallados en [comprobacion.md](comprobacion.md) §4. El Skill no cambia, y el vídeo y los documentos dicen ahora lo mismo.
 
+## ZIP final (1 nov, tarde)
+
+Llegaron dos ZIP con el vídeo grabado (8:33, 1080p): uno con H.264 a 4,4 Mb/s (291 MB) y otro con HEVC a 1,3 Mb/s (86 MB). Los fotogramas comparados (diapositivas y cámara) se ven iguales. **Los dos llevaban los documentos antiguos**, sin las cuatro correcciones. Paquete final, con el vídeo ligero y los documentos corregidos, validado con el validador oficial: `~/careerlab-data/entrega/cut3-final/gradient-depression-mv-3-cut3.zip` (`content_sha256` e5e1773b…).
+
 ## Relevo
 
 1. **Qué he hecho y por qué.** Las tres piezas del encargo §6 (diapositivas, guion y hoja de comprobación), más este resumen. Rama `alejandro/video-cut3` (worktree `~/huawei-video`), salida de `alejandro/corte3`. Sin DeepSeek, sin API y sin tocar el Skill. En `docs/entrega/cut3-mv3/` sólo se corrigieron cuatro cifras, a petición de Alejandro.
