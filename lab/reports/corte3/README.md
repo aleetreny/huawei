@@ -57,3 +57,16 @@ Precisión, mirando el estado justo antes de la última decisión del mes 17 en 
 | corte3-3 | `DeepSeek, tramos fieles` **Las marcas por opción antes de elegir no mejoran la lectura:** en los meses 4–5 de L1 se pierde N u O en el 21–25 % de las decisiones con v4-loop, c3-k y c3-a por igual. | §6 |
 | corte3-4 | `DeepSeek, tramos fieles` **En los tramos de hoy (proveedor mayoritario Baidu, con razonamiento) hay muertes tempranas:** salud a 0 en los meses 1–6 (v4-loop 3 de 15) y ruina con Wealth mostrado como 0. | §3, §6 |
 | corte3-5 | `Método (jueces de Claude, rúbrica oficial)` Arreglar una referencia colgante, la contradicción del trimestre con el bucle, márgenes sin marcar y el calendario de evaluaciones sube a v4-loop de 55–68 a 71–80, al nivel de mv-5r (74–78), sin tocar el bucle. | §4 |
+
+## 6. Partidas reales del 1 nov y lecciones de infraestructura
+
+| Manual | Partidas (nota, fin) |
+|---|---|
+| `c3-k2` | 58,06 (L5 en el 48, explosión en el 48, 906 mil fichas/mes) · 28,76 (despido en L1) |
+| `c3-k3` | 52,32 (24 meses en L2: Output corto en tres evaluaciones; 683 mil fichas/mes) |
+| `c3-k4` | 24,90 · 28,34 (despidos en L1) |
+| `c3-k5`, `c3-k6` ×2, `c3-m1` | **nulas**: el motor dejó de responder a las 11:49 (`execute invoke failed`) y el programa las cortó por `max_continuations` |
+
+- **La familia K juega peor en partidas que en tramos:** los tramos sólo llegan hasta salir de L1 y no ven el ritmo de L2–L4 (el trimestre de v4 en L2–L3 compra poco Output). Tres despidos en L1 de cinco, frente a ~20 % que daban los tramos. Se descarta y se vuelve a la base mv-3/mv-4 (6 completas, 68,1 de media), por indicación de Alejandro.
+- **Infraestructura:** las partidas terminadas en paralelo tienen la misma huella que las secuenciales de octubre (0 fallos del motor, 1–4 respuestas sin llamada), así que sus notas valen. Pero arrancar 12 motores de tramos con 5 partidas en curso tumbó los motores de 4 partidas. Regla desde las 12:00: como mucho 2 partidas a la vez, ningún tramo en paralelo, y se anula cualquier partida con fallos del motor.
+- **Variantes valientes** (Alejandro: jugar a la cola alta, no a la media): `c3-x1` = mv-4 + injertos de L1 + riesgo pequeño aceptado con RR. HH. amable cuando hace crecer S/N/O (regla del planificador, +5,4 en la réplica, B36); `c3-x2` = lo mismo también con RR. HH. «quiet» y High-intensity work desde L3.
