@@ -132,7 +132,7 @@ If a slide's text says otherwise, the slide wins: tell Alejandro.
 ## Cómo grabarlo en el Mac (Leah)
 
 1. **Prepara la pantalla:**
-   - Abre las diapositivas a pantalla completa (tecla `F` o el botón de pantalla completa) y comprueba que las flechas pasan de diapositiva.
+   - Pon Chrome a pantalla completa (`Cmd + Ctrl + F`): las diapositivas se ajustan solas al tamaño de la ventana (no tienen tecla propia de pantalla completa). Comprueba que las flechas pasan de diapositiva.
    - Las notas **no** van en pantalla (la tecla `N` las enseña y saldrían en el vídeo): imprímelas o léelas en el móvil o en otra pantalla.
    - Activa **No molestar** (Centro de control → Concentración) y cierra el resto de apps.
 2. **Si quieres salir en cámara** (el reglamento basta con una persona a cámara; las diapositivas son opcionales):
@@ -141,7 +141,7 @@ If a slide's text says otherwise, the slide wins: tell Alejandro.
    - Haz la ventana pequeña y ponla en una esquina de las diapositivas que no tape texto.
 3. **Graba la pantalla con tu voz:**
    - Pulsa `Cmd + Shift + 5`.
-   - Elige "Grabar toda la pantalla".
+   - Elige **"Grabar parte seleccionada"** y dibuja el recuadro justo alrededor de la diapositiva, sin la barra de claude.ai de arriba ni la de navegación de abajo.
    - En **Opciones → Micrófono**, elige el micrófono (el del Mac o unos auriculares con micro; mejor en una habitación sin eco).
    - Pulsa **Grabar**, espera dos segundos y empieza.
    - Para parar, pulsa el botón de stop de la barra de menús. El vídeo se guarda en el Escritorio como `.mov`.
