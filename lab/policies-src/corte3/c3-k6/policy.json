@@ -1,0 +1,16 @@
+{
+  "family": "corte3",
+  "name": "c3-k6",
+  "parents": [
+    "c3-k5",
+    "mv-5r"
+  ],
+  "idea_origin": "Corte 3 line, 1 Nov: real-game analysis of the third L1 review (risk, not Network, decides it) and the external critic",
+  "operator": "c3-k5 with mv-5r's quarterly line for levels 2 and 3 (reports, network, reports, key project; no Skill learning), the best L2-L3 quarter in the calibrated replica (C64); after a c3-k3 career stuck 24 months at L2 with Output short at three reviews. The starting-level quarter stays v4's (validated in faithful segments).",
+  "hypothesis": "Same L1 exit-by-month-12 as v4-loop in faithful segments (tramos), more third-review rescues, higher quality score, faster L4 to L5.",
+  "predicted_behaviour": "tramos to month 18: exit L1 at least as often as v4-loop; pairing intact.",
+  "refutation": "Clearly fewer L1 exits than v4-loop in the same batch, or broken pairing.",
+  "skill_count": 1,
+  "change": "see operator",
+  "notes": "Built 1 Nov for the last cut."
+}

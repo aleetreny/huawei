@@ -1,6 +1,6 @@
 # Skills design — Gradient Depression
 
-**Submission `c3-k5`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
+**Submission `c3-k6`, Cut 3 (1 November 2026).** One Skill, `skills/career-rules/SKILL.md`, plus the manifest instruction. JiuwenSwarm 0.2.4b3, single-agent `agent` mode. No scripts and no reference files.
 
 This version keeps the story judgement of our Cut 1 submission (`t13-read-v4`): the reading guide, the list of risky wording and the five ordered story steps. It keeps the way of working introduced in Cut 2 (`mv-5r`): each decision is one reply with two tool calls and a one-line note. What is new targets the starting level, where most of our failed careers ended: the first two reviews and the third one need opposite attitudes to hidden risk, and the Skill now says so.
 
@@ -65,7 +65,8 @@ The quarterly list chooses Energy and main actions only, never a story option. T
 4. **The HR remark,** classified by tone whatever its wording: if it is not friendly, defuse risk first, and lay low while it stays worrying.
 5. **A review talk named a lagging stat:** spend on that stat until the next review.
 6. **Level 4 and above:** Skill first: Skill learning while Health allows, one point on reports or on Network if Network lost ground, and Apply for rotation.
-7. **Otherwise:** reports, Network maintenance and Skill learning, and Apply for a key project.
+7. **Levels 2 and 3:** Output first: reports, Network maintenance, reports, and Apply for a key project; Skill grows in stories.
+8. **Starting level:** reports, Network maintenance and Skill learning, and Apply for a key project.
 
 Concrete, ordered quarterly directions were followed much more reliably than general goals in our obedience tests.
 
@@ -79,11 +80,12 @@ Concrete, ordered quarterly directions were followed much more reliably than gen
 | `t13-read-v4` (Cut 1) | `Best` per level; protect Network and Output from two months before a review and repair losses at once | A career lost Output with two months to go while chasing Network it could no longer raise |
 | `mv-5r` (Cut 2) | One reply per decision (`take_action` + `observe`); one-line note; "never end a reply with text only"; Health brake; level-4 Skill quarter | v4 used 1.35–1.47 million tokens per game month; one career stopped after 21 replies without a tool call |
 | `mv-5r` (Cut 2) | Hidden costs of polite or helpful options named at the starting level | DeepSeek misread some costs; in later checks this did not improve the first review in careers, and Cut 2 lost two of its three official careers at the starting level |
-| **`c3-k5`** (Cut 3) | v4's story rules with the Cut 2 loop | In faithful replays of the first months, v4's rules with the one-reply loop won the first review far more often than without it |
-| **`c3-k5`** | Mild-risk exception in both months before the first two reviews at the starting level | Those reviews were decided by one point of Network or Output, not by the HR remark |
-| **`c3-k5`** | Stalled-start protocol: no added risk, defuse every quarter, keep Network and Output | Seven of the eleven careers that reached the third starting-level review lost it to hidden risk with all three stats in place |
-| **`c3-k5`** | Concrete Health costs (extra work, a rewrite or thorough fix on top of the job, a course, late events) in the reading guide, the Wellbeing step and the manifest; one point of Health and the rest on the review in the quarter before it | In faithful replays some careers ran Health to zero before the first review by choosing effortful options at Health 2–4; spending a whole quarter on Health lost the first review |
-| **`c3-k5`** | A 48-month table, a review calendar, margins labelled as ours, a quick reference near limits | Reviewers of our documents found a dangling reference, vague limits and a quarterly line that contradicted the one-reply loop |
+| **`c3-k6`** (Cut 3) | v4's story rules with the Cut 2 loop | In faithful replays of the first months, v4's rules with the one-reply loop won the first review far more often than without it |
+| **`c3-k6`** | Mild-risk exception in both months before the first two reviews at the starting level | Those reviews were decided by one point of Network or Output, not by the HR remark |
+| **`c3-k6`** | Stalled-start protocol: no added risk, defuse every quarter, keep Network and Output | Seven of the eleven careers that reached the third starting-level review lost it to hidden risk with all three stats in place |
+| **`c3-k6`** | At levels 2 and 3 the quarter buys Output and Network (reports, Network maintenance, reports, key project) instead of spreading over Skill learning | A development career stayed 24 months at level 2 and lost three reviews there on Output; our replica ranked this quarter best for these levels |
+| **`c3-k6`** | Concrete Health costs (extra work, a rewrite or thorough fix on top of the job, a course, late events) in the reading guide, the Wellbeing step and the manifest; one point of Health and the rest on the review in the quarter before it | In faithful replays some careers ran Health to zero before the first review by choosing effortful options at Health 2–4; spending a whole quarter on Health lost the first review |
+| **`c3-k6`** | A 48-month table, a review calendar, margins labelled as ours, a quick reference near limits | Reviewers of our documents found a dangling reference, vague limits and a quarterly line that contradicted the one-reply loop |
 
 ## 7. Generalisation, scope and limits
 

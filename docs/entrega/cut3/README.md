@@ -1,4 +1,4 @@
-# c3-k5 — Gradient Depression
+# c3-k6 — Gradient Depression
 
 Submission for Huawei TechArena UK 2026, *Career Survival*, Cut 3 (final).
 
