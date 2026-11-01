@@ -70,3 +70,25 @@ Precisión, mirando el estado justo antes de la última decisión del mes 17 en 
 - **La familia K juega peor en partidas que en tramos:** los tramos sólo llegan hasta salir de L1 y no ven el ritmo de L2–L4 (el trimestre de v4 en L2–L3 compra poco Output). Tres despidos en L1 de cinco, frente a ~20 % que daban los tramos. Se descarta y se vuelve a la base mv-3/mv-4 (6 completas, 68,1 de media), por indicación de Alejandro.
 - **Infraestructura:** las partidas terminadas en paralelo tienen la misma huella que las secuenciales de octubre (0 fallos del motor, 1–4 respuestas sin llamada), así que sus notas valen. Pero arrancar 12 motores de tramos con 5 partidas en curso tumbó los motores de 4 partidas. Regla desde las 12:00: como mucho 2 partidas a la vez, ningún tramo en paralelo, y se anula cualquier partida con fallos del motor.
 - **Variantes valientes** (Alejandro: jugar a la cola alta, no a la media): `c3-x1` = mv-4 + injertos de L1 + riesgo pequeño aceptado con RR. HH. amable cuando hace crecer S/N/O (regla del planificador, +5,4 en la réplica, B36); `c3-x2` = lo mismo también con RR. HH. «quiet» y High-intensity work desde L3.
+
+## 7. Decisión final: mv-3 (Alejandro), y partidas de mv-3 frente a mv-4
+
+Alejandro paró la búsqueda de versiones nuevas y pidió decidir entre mv-3 y mv-4 con el dinero que quedaba (mismo SKILL.md; mv-4 añade al manifiesto «Never end a reply with text only… put the decision in the take_action call, not in prose»). Cola `scripts/corte3/cola.sh`, dos partidas a la vez como mucho.
+
+| Manual | Completas | No completas |
+|---|---|---|
+| **mv-3** | 68,64 · 77,78 (L6) · 66,06 (29–30 oct); **74,12 (L6)** · **70,38** (1 nov). Media 71,4 | cortada por `max_continuations` en L1 (29 oct); 31,01 (L1 hasta el mes 24) |
+| mv-4 | 63,35 · 69,62 · 63,27 (30 oct); 59,99 (1 nov). Media 64,1 | 37,06 y 37,39 (crisis de confianza), 18,98 (despido en L1), 31,34 (ruina en el mes 10) |
+
+Hipótesis (sin probar): la frase de mv-4 quita el razonamiento escrito cuando el proveedor no razona en oculto. El precio de mv-3 es el riesgo de corte por respuestas sin llamada (1 de 7).
+
+**Entregado en el corte 3: mv-3**, paquete `~/careerlab-data/entrega/cut3/gradient-depression-mv-3-cut3.zip` (`content_sha256` aee52f38…, validación oficial OK, copia en iCloud Drive `huawei-entrega-copia/cut3/`), documentos en `docs/entrega/cut3-mv3/`, vídeo del corte 2 (diseño de mv-5r, hermano de mv-3).
+
+Otras variantes jugadas hoy, para el registro: `c3-x1` 60,62 · 63,02 · 61,53; `c3-x2` 63,62 · 62,73; `c3-x4` 59,89 · 19,62 (apagón); `c3-x5` 41,32 (crisis). El modo crecimiento sube antes pero explota.
+
+## Relevo
+
+1. **Hecho y por qué.** Objetivo de Alejandro: superar 72,93 en el corte 3 con lo que quedaba de la clave. Diagnóstico de L1 con las 50 partidas pagadas (§2–§3), crítico externo, familia K (v4-loop + arreglos) medida en tramos fieles y en partidas (peor en partidas), variantes valientes (peores), y vuelta a mv-3 por indicación de Alejandro, confirmada en partidas.
+2. **Resultados y datos.** Tablas de §2, §6 y §7; tramos en `lab/data/deepseek/tramos/corte3/`; partidas en `~/careerlab-data/huawei-deepseek/runs/` (`deepseek-pilo-*` y `deepseek-conf-*` del 1 nov; resumen con `python3 scripts/corte3/partida.py <run_dir>`). Gasto de la clave: de 12,52 a ~0,5 USD.
+3. **Qué falló.** Los tramos no predicen la partida entera (no ven L2–L4). Arrancar 12 motores de tramos con 5 partidas en curso tumbó 4 partidas (nulas). Muchas versiones nuevas en un solo día: ninguna mejoró a mv-3.
+4. **Siguiente paso.** Subir el ZIP antes de las 24:00 UK (Alejandro). Si sale en el top 10, el jurado verá el vídeo del corte 2: describe mv-5r, que sólo difiere de mv-3 en un párrafo y una frase del manifiesto. Exportar las partidas del 1 nov a `lab/data/deepseek/` con `scripts/deepseek/export_data.py` y juntar la línea con `main` (HALLAZGOS: filas provisionales corte3-1…5 de §5 más «mv-3 frente a mv-4» de §7).
