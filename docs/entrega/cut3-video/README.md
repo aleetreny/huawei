@@ -8,9 +8,12 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 |---|---|
 | [ENCARGO.md](ENCARGO.md) | El encargo: reglas del vídeo, historia, números verificados |
 | [guion.md](guion.md) | Guion hablado completo, en inglés, con tiempos por bloque y la diapositiva de cada párrafo (`[Sn]`); notas de grabación al final |
-| [slides.pptx](slides.pptx) | 14 diapositivas (16:9), con el guion de cada una en las notas del orador |
+| [presentacion.html](presentacion.html) | **La presentación para grabar** (artifact: https://claude.ai/artifact/8GaV8coHbdR1EeKANBtX4T). 14 diapositivas animadas: cada una se abre como una llamada del agente en la línea de registro y la barra de abajo es la carrera de 48 meses. Flechas o espacio para avanzar, N para las notas del orador (el guion), `#s5` en el enlace abre la diapositiva 5 |
+| [presentacion.pdf](presentacion.pdf) | La misma presentación en PDF, una página por diapositiva y sin animaciones |
+| [slides.pptx](slides.pptx) | Versión anterior en PowerPoint, con el guion en las notas del orador |
 | [comprobacion.md](comprobacion.md) | Cada afirmación con su fuente y su comprobación contra el Skill y los documentos entregados; las diferencias encontradas |
 | `scripts/entrega/cut3_video_slides.py` | Genera `slides.pptx`; toma las notas del orador de `guion.md` |
+| `scripts/entrega/cut3_video_notes.py` | Copia las notas del orador de `guion.md` a `presentacion.html` |
 
 ## Resumen de lo hecho (1 nov)
 
@@ -33,7 +36,13 @@ Interno, en español. El vídeo y las diapositivas van en inglés. Nada de esta 
 3. **Qué queda a medias.** Las diferencias D1–D4 las tiene que decidir Alejandro. No se ha grabado el vídeo. No he podido ver las diapositivas en PowerPoint o Keynote: Keynote pidió una pantalla de alta («Usage Status») y no hay LibreOffice.
 4. **Siguiente paso.**
    - Decidir D1 (y, si se quiere, D2–D4) en `docs/entrega/cut3-mv3/decision_report.md`.
-   - Si cambia el guion, regenerar las diapositivas para que las notas sigan el texto:
+   - Si cambia el guion, copiar las notas a la presentación y volver a publicarla en el mismo artifact; el PDF se rehace con Chrome sin cabecera (servir la carpeta con `python3 -m http.server` y abrirla con `--headless=new --print-to-pdf`):
+
+     ```bash
+     python3 scripts/entrega/cut3_video_notes.py
+     ```
+
+   - La versión .pptx se regenera así:
 
      ```bash
      uv run --with python-pptx python scripts/entrega/cut3_video_slides.py
