@@ -83,7 +83,7 @@ uv run pytest -q
 
 ## Equipo
 
-Alejandro Treny, Matteo Zabban, Leah Benarroch y Ainhoa Rodríguez. Gran parte de la investigación se hizo con agentes de IA dirigidos por el equipo.
+Alejandro Treny, Matteo Zabban y Leah Benarroch. Gran parte de la investigación se hizo con agentes de IA dirigidos por el equipo.
 
 ## Sobre las normas
 
