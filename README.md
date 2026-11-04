@@ -21,7 +21,9 @@ Cómo enseñamos a una IA a sobrevivir una carrera de 48 meses escribiéndole s�
 |---|---|---:|---|
 | 1 · 27 oct | [`t13-read-v4`](lab/policies-src/deepseek/t13-read-v4/) | **64,75** (puesto 13; el top 10 empezaba en 68,17) | Reglas de lectura de historias y de trimestre afinadas con Haiku y DeepSeek |
 | 2 · 30 oct | [`mv-5r`](lab/policies-src/mejora/mv-5r/) | 45,44 | Reglas de v4 con el bucle de dos llamadas por respuesta (fichas ~95–100). La evaluación tiene mucho azar y nuestras partidas se hundieron (C80) |
-| 3 · 1 nov | [`mv-3`](lab/policies-src/mejora/mv-3/bundle/skills/career-rules/SKILL.md) | pendiente | El manual de nuestras mejores carreras: 7 de 9 completas, media 70,1 en práctica |
+| 3 · 1 nov | [`mv-3`](lab/policies-src/mejora/mv-3/bundle/skills/career-rules/SKILL.md) | **71,17** (nuestra mejor) | El manual de nuestras mejores carreras: 7 de 9 completas, media 70,1 en práctica |
+
+**Clasificación final:** puesto **28 de los 88 equipos con nota** (227 inscritos), con 71,17 de nota de versión, que da 49,82 de 70 en la etapa 1. El top 10, que pasa al jurado, empezaba en 73,24 de nota de versión: nos quedamos a ~2 puntos, en un campo muy apretado (del puesto 2 al 27, entre 71,5 y 75,5).
 
 Paquetes, documentos de diseño y vídeos de cada corte: [docs/entrega/](docs/entrega/README.md).
 

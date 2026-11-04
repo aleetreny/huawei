@@ -14,7 +14,7 @@ La competición ha terminado. Todas las ramas están juntadas en `main` y no que
 
 Presentación final publicada en GitHub Pages: <https://aleetreny.github.io/huawei/> (la monta `.github/workflows/pages.yml` desde `docs/entrega/cut3-video/presentacion-c.html`).
 
-**Resultado final (publicado el 4 nov).** La mejor versión fue la del corte 3, con 71,17. Etapa 1: 49,82 de 70 (0,7 × 71,17), **puesto 28**. El top 10, que pasa al jurado, empezaba en 51,27 de 70, que equivale a una nota de versión de 73,24: nos quedamos a ~2 puntos. Del puesto 2 al 27 todos estaban entre 71,5 y 75,5, así que el campo estaba muy apretado. El otro equipo que se llama «Gradient Depression» acabó 12.º. Fuente: la clasificación oficial.
+**Resultado final (publicado el 4 nov).** La mejor versión fue la del corte 3, con 71,17. Etapa 1: 49,82 de 70 (0,7 × 71,17), **puesto 28 de los 88 equipos con nota** (227 inscritos). El top 10, que pasa al jurado, empezaba en 51,27 de 70, que equivale a una nota de versión de 73,24: nos quedamos a ~2 puntos. Del puesto 2 al 27 todos estaban entre 71,5 y 75,5, así que el campo estaba muy apretado. El otro equipo que se llama «Gradient Depression» acabó 12.º. Fuente: la clasificación oficial.
 
 ## 2. Líneas de trabajo (todas cerradas)
 
